@@ -27,22 +27,6 @@
   width: 3.65rem;
   height: auto;
   flex: none;
-  overflow: visible;
-}
-
-.city-mark .wa-land {
-  fill: var(--header-ink);
-  stroke: var(--gold-bright);
-  stroke-width: 2.4;
-  stroke-linejoin: round;
-}
-
-.city-mark .wa-pin path {
-  fill: var(--gold-bright);
-}
-
-.city-mark .wa-pin circle {
-  fill: #1e4636;
 }
 
 .city-masthead-text {

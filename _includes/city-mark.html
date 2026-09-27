@@ -1,8 +1,1 @@
-{%- assign mark = site.data.wa_mark -%}
-<svg class="city-mark" viewBox="0 0 {{ mark.width }} {{ mark.height }}" aria-hidden="true" focusable="false">
-  <path class="wa-land" d="{{ mark.path }}"></path>
-  <g class="wa-pin" transform="translate({{ city.pin_x }} {{ city.pin_y }})">
-    <path d="M0,0 C-4.6,-14 -13.6,-24 -13.6,-36.2 C-13.6,-45.6 -8,-52 0,-52 C8,-52 13.6,-45.6 13.6,-36.2 C13.6,-24 4.6,-14 0,0 Z"></path>
-    <circle cx="0" cy="-36.2" r="5"></circle>
-  </g>
-</svg>
+<img class="city-mark" src="{{ '/assets/images/cities/wa/' | append: city.id | append: '.svg' | relative_url }}" alt="" width="1200" height="1170">

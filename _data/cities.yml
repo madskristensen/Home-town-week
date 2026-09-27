@@ -6,8 +6,6 @@
   name: Bellevue
   state: wa
   state_name: Washington
-  pin_x: 67.83
-  pin_y: 105.4
   description: Weekly family digests of Bellevue parks, the Thursday market, Kelsey Creek Farm, and KidsQuest.
   summary: >-
     Downtown Park, the Thursday market, Kelsey Creek Farm, and KidsQuest, picked each week for families.
@@ -15,8 +13,6 @@
   name: Bellingham
   state: wa
   state_name: Washington
-  pin_x: 61.24
-  pin_y: 65.32
   description: Weekly family digests of Bellingham markets, the library, Boulevard Park, and the Mount Baker Theatre.
   summary: >-
     The Saturday market, the library, Boulevard Park, and the Mount Baker Theatre, picked each week for families.
@@ -24,8 +20,6 @@
   name: Bothell
   state: wa
   state_name: Washington
-  pin_x: 67.74
-  pin_y: 100.13
   description: Weekly family digests of Bothell parks, the library, City Hall Plaza, and Anderson School.
   summary: >-
     The library, City Hall Plaza, the Landing, and Anderson School, picked each week for families.
@@ -33,8 +27,6 @@
   name: Edmonds
   state: wa
   state_name: Washington
-  pin_x: 63.65
-  pin_y: 98.36
   description: Weekly family digests of Edmonds markets, the library, the beach, and downtown shows.
   summary: >-
     The Saturday market, the library, the beach, and downtown shows, picked each week for families.
@@ -42,8 +34,6 @@
   name: Everett
   state: wa
   state_name: Washington
-  pin_x: 67.82
-  pin_y: 92.45
   description: Weekly family digests of Everett's Sunday market, Imagine Children's Museum, the library, and downtown.
   summary: >-
     The Sunday market, Imagine Children's Museum, the library, and downtown, picked each week for families.
@@ -51,8 +41,6 @@
   name: Ferndale
   state: wa
   state_name: Washington
-  pin_x: 58.58
-  pin_y: 62.0
   description: Weekly family digests of Ferndale parks, the library, Pioneer Park, and town events.
   summary: >-
     The library, Pioneer Park, Hovander, and town weekends, picked each week for families.
@@ -60,8 +48,6 @@
   name: Issaquah
   state: wa
   state_name: Washington
-  pin_x: 71.84
-  pin_y: 108.21
   description: Weekly family digests of Issaquah parks, markets, the hatchery, and Village Theatre.
   summary: >-
     The farmers market, Front Street, the salmon hatchery, and Village Theatre, picked each week for families.
@@ -69,8 +55,6 @@
   name: Kirkland
   state: wa
   state_name: Washington
-  pin_x: 67.66
-  pin_y: 102.89
   description: Weekly family digests of Kirkland parks, markets, library programs, and shows.
   summary: >-
     Marina Park, the waterfront markets, the library, and the Performance Center, picked each week for families.
@@ -78,8 +62,6 @@
   name: Lynnwood
   state: wa
   state_name: Washington
-  pin_x: 65.13
-  pin_y: 98.0
   description: Weekly family digests of Lynnwood's library, civic campus, and Scriber Lake Park.
   summary: >-
     The library, the civic campus, and Scriber Lake Park, picked each week for families.
@@ -87,8 +69,6 @@
   name: Mercer Island
   state: wa
   state_name: Washington
-  pin_x: 67.34
-  pin_y: 106.78
   description: Weekly family digests of Mercer Island's Sunday market, the library, Luther Burbank Park, and Island Books.
   summary: >-
     The Sunday market, the library, Luther Burbank, and Island Books, picked each week for families.
@@ -96,8 +76,6 @@
   name: Redmond
   state: wa
   state_name: Washington
-  pin_x: 69.73
-  pin_y: 103.15
   description: Weekly family digests of Redmond parks, events, and things to do.
   summary: >-
     Parks, the market, the library, and Marymoor, picked each week for families.
@@ -105,8 +83,6 @@
   name: Renton
   state: wa
   state_name: Washington
-  pin_x: 67.46
-  pin_y: 109.86
   description: Weekly family digests of Renton's Tuesday market, the library, and Gene Coulon Memorial Beach Park.
   summary: >-
     The Tuesday market, the library, and Gene Coulon, picked each week for families.
@@ -114,8 +90,6 @@
   name: Sammamish
   state: wa
   state_name: Washington
-  pin_x: 71.77
-  pin_y: 105.18
   description: Weekly family digests of Sammamish parks, the library, and the Commons.
   summary: >-
     The library, Beaver Lake, Pine Lake, and the Commons, picked each week for families.

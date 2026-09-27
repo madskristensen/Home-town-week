@@ -19,11 +19,13 @@
   {%- endif -%}
 {%- endif -%}
 {%- if use_city_mark -%}
-  {%- capture seo_image_path -%}/assets/images/og/{{ city.id }}.webp{%- endcapture -%}
+  {%- capture seo_image_path -%}/assets/images/cities/wa/{{ city.id }}.svg{%- endcapture -%}
   {%- assign seo_image_path = seo_image_path | strip -%}
   {%- capture seo_image_alt -%}{{ city.name }} on the Hometown Week map of Washington.{%- endcapture -%}
   {%- assign seo_image_alt = seo_image_alt | strip -%}
-  {%- assign seo_image_mime = "image/webp" -%}
+  {%- assign seo_image_width = 1200 -%}
+  {%- assign seo_image_height = 1170 -%}
+  {%- assign seo_image_mime = "image/svg+xml" -%}
 {%- elsif page.layout == "issue" and page.image -%}
   {%- assign seo_image_width = 1600 -%}
   {%- assign seo_image_height = 900 -%}
