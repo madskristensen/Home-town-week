@@ -5,6 +5,41 @@ Repo: madskristensen/Home-town-week
 Audited: 27 September 2026, against production and a local production build.  
 Baseline before fixes: `c59e0af` (inline CSS and no `tabindex="-1"` on `main` left as they were).
 
+## PageSpeed Insights, mobile home
+
+Report: https://pagespeed.web.dev/analysis/https-hometownweek-com/0hb4xv09b1?form_factor=mobile  
+Lighthouse 13.5.0, fetched 2026-09-27T11:28:20Z, Moto-class phone (412×823, DPR 1.75). No CrUX field data (“No Data”).
+
+| Category | Score |
+| --- | --- |
+| Performance | 90 |
+| SEO | 100 |
+| Accessibility | 100 |
+| Best practices | 100 |
+
+Lab metrics: FCP 2.7s, LCP 3.0s, Speed Index 2.7s, TTI 3.0s, TBT 0ms, CLS 0. The LCP element is the first city card, Bellevue Botanical Garden (`botanical-garden-800.webp`), already `fetchpriority="high"` and not lazy. LCP discovery passes.
+
+### High: render-blocking requests (fonts fixed; layout CSS already unblocked)
+
+“Render-blocking requests” scored 0, estimated savings 2,060ms. Two requests in that run:
+
+- `fonts.googleapis.com` CSS, 751ms. That stylesheet was the long pole. It then chains Fraunces and Outfit from `fonts.gstatic.com` (about 68KB and 33KB). The only layout shift on the page is those two files arriving (`CLS` still scores 0).
+- `/assets/css/main.css`, 159ms. The flash fix that landed in `ee04530` already removed the blocking `main.css` and `city.css` links. Layout CSS stays in the one inline `<style>` block, including `critical.css`, and `main` still has no `tabindex="-1"`. This change does not put those links back.
+
+**Fix:** Fraunces and Outfit latin and latin-ext woff2 files are served from `/assets/fonts/` (SIL Open Font License). The `@font-face` rules sit in that same first `<style>`, with `font-display: swap`. The Google stylesheet, its `media=print` swap, and the preconnects are gone, so first paint does not wait on a third-party CSS hop and does not need script to turn the fonts on. The font files are not preloaded, so they do not compete with the LCP photo. First paint uses the fallback stacks in `critical.css`, then swaps.
+
+### Medium: image delivery, 197 KiB
+
+Six home-page cards are flagged. On this phone the photo slot is about 380×214 CSS pixels (about 665×374 device pixels), and `sizes` resolves to `100vw`, so the browser picks the 800w file. There is no srcset candidate between the icon and 800. Ferndale, Bothell, and Edmonds are also compressed lightly (Ferndale’s 800w file is 123KB, of which Lighthouse attributes about 63KB to compression). The LCP photo itself is only about 17KB over size, and compression was not flagged for it. These are below-the-fold except Bellevue. Recompressing or adding a ~720w candidate would change the 800/1200/1600 set and the look of the photos, so it is not in this push.
+
+### Medium: cache lifetime, 390 KiB
+
+Every flagged URL is `Cache-Control: max-age=600` (10 minutes), which is what GitHub Pages sends for the apex host. The repo cannot set a longer lifetime. A CDN in front of Pages would be a hosting change, not a template change.
+
+### Not a problem in this run
+
+SEO, accessibility, and best-practices audits passed, including meta description, canonical, crawlable links, image alt, tap targets, and contrast. Unused CSS and unused JavaScript savings are zero. Document TTFB is not the issue. No third-party cookies. The home-page `city.css` prefetch from the earlier build is gone with the flash fix; city CSS is inlined only on city and Washington pages.
+
 Crawled without following redirects: home, `/wa/`, city homes (Redmond, Kirkland, Bellingham, Mercer Island, and the rest via the sitemap), year indexes, all 65 week digests, `/latest/`, legacy `/w38/` `/w39/` `/w40/`, a missing URL (404), `/about/`, `robots.txt`, `sitemap.xml`, and `feed.xml`. Also checked `http`, `www`, bare paths, and `madskristensen.github.io`.
 
 ## Already in good shape
@@ -77,7 +112,8 @@ City and year pages were already `CollectionPage`. The Washington hub was `WebPa
 - **Every `Event.url` is the digest URL.** `sameAs` holds the organizer link. That is a reasonable choice for a roundup. Pointing `url` at `sameAs` would match Google’s “official event page” hint and would also send the click off hometownweek.com.
 - **`/latest/` and `/w38/` are HTTP 200 with a meta refresh, not a 301.** GitHub Pages cannot emit a real redirect for those paths. Google treats a zero-delay refresh as a redirect, and the pages are `noindex` with the right canonical. Leave them.
 - **City names on the home page and on `/wa/` link to `/wa/{city}/latest/`.** The photo and the date already link to the canonical issue. The name link is an extra hop through a `noindex` URL. It is set that way so the href always tracks the newest issue. Linking the name straight at the issue URL would pass equity in one hop. Product choice, not changed here.
-- **Google Fonts CSS is still render-blocking.** Layout CSS is inlined before it, which is what stops the flash. A `display=swap` is already on the font URL. Do not switch the layout CSS back to a non-blocking trick.
+- **Home-page photos are heavier than the mobile slot.** See the PageSpeed section. The 800w file is the smallest srcset candidate, a few cards are lightly compressed, and GitHub Pages caches them for 10 minutes. Not changed here.
+- **Do not put `main.css` or `city.css` back on a blocking `<link>`.** The mobile report charged `main.css` about 159ms while that link still existed. `ee04530` removed it. The inline block, including `critical.css`, is what paints the masthead.
 
 ## Low
 
