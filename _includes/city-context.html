@@ -1,0 +1,15 @@
+{%- if page.city and page.state -%}
+{%- assign city = site.data.cities | where: "id", page.city | where: "state", page.state | first -%}
+{%- assign city_issues = site.issues | where: "city", page.city | where: "state", page.state | sort: "date" | reverse -%}
+{%- assign latest_issue = city_issues | first -%}
+{%- capture city_url -%}/{{ page.state }}/{{ page.city }}/{%- endcapture -%}
+{%- assign city_url = city_url | strip -%}
+{%- if page.year -%}
+{%- capture page_year_url -%}/{{ page.state }}/{{ page.city }}/{{ page.year }}/{%- endcapture -%}
+{%- assign page_year_url = page_year_url | strip -%}
+{%- endif -%}
+{%- if latest_issue -%}
+{%- capture latest_year_url -%}/{{ page.state }}/{{ page.city }}/{{ latest_issue.year }}/{%- endcapture -%}
+{%- assign latest_year_url = latest_year_url | strip -%}
+{%- endif -%}
+{%- endif -%}

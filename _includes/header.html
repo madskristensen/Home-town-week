@@ -1,0 +1,18 @@
+{%- include city-context.html -%}
+<header class="site-header{% if page.city %} site-header--city{% endif %}">
+  <div class="wrap">
+    {%- if page.url == "/" -%}
+    <a class="wordmark" href="{{ '/' | relative_url }}" aria-current="page">Hometown Week</a>
+    {%- else -%}
+    <a class="wordmark" href="{{ '/' | relative_url }}">Hometown Week</a>
+    {%- endif -%}
+    {%- if page.city and city -%}
+    <div class="city-masthead">
+      <p class="city-name">
+        <a href="{{ city_url | relative_url }}"{% if page.layout == "city" %} aria-current="page"{% endif %}>{{ city.name }}</a>
+      </p>
+      <p class="city-kicker">Weekly family digest</p>
+    </div>
+    {%- endif -%}
+  </div>
+</header>

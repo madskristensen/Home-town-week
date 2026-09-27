@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="{{ '/' | relative_url }}">Hometown Week</a>
+      {%- for city in site.data.cities -%}
+      {%- capture footer_city_url -%}/{{ city.state }}/{{ city.id }}/{%- endcapture -%}
+      <a href="{{ footer_city_url | strip | relative_url }}">{{ city.name }}</a>
+      {%- endfor -%}
+    </nav>
+    <p>Weekly family digests for the city you live in.</p>
+    <p class="copyright">&copy; {{ site.time | date: "%Y" }} Hometown Week</p>
+  </div>
+</footer>

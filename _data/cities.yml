@@ -1,0 +1,9 @@
+# Add a city by appending a block, then add wa/{state}/{id}/ pages.
+# See README for the page files each city needs.
+- id: redmond
+  name: Redmond
+  state: wa
+  state_name: Washington
+  description: Weekly family digests of Redmond parks, events, and things to do.
+  summary: >-
+    Parks, the market, the library, and Marymoor, picked each week for families.

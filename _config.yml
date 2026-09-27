@@ -1,0 +1,54 @@
+title: Hometown Week
+tagline: Weekly family digests
+description: >-
+  Weekly family digests for the city you live in. Parks, markets,
+  libraries, and the plans worth making.
+url: https://hometownweek.com
+baseurl: ""
+lang: en-US
+timezone: America/Los_Angeles
+logo: /assets/images/logo.png
+image: /assets/images/og-image.png
+image_alt: Hometown Week, a weekly family digest.
+
+# Canonical host is hometownweek.com. Before that domain is attached,
+# build the github.io project URL with:
+#   bundle exec jekyll build --config _config.yml,_config.github.yml
+
+# Issue dates can fall ahead of the build clock. Publish them anyway.
+future: true
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  # Keep "---" as typed so a typographic pass cannot invent em dashes.
+  typographic_symbols:
+    em_dash: "---"
+    en_dash: "--"
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-sitemap
+
+collections:
+  issues:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: issues
+    values:
+      layout: issue
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .bundle
+  - .ruby-version
+  - .gitignore
+  - _config.github.yml

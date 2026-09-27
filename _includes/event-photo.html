@@ -1,0 +1,11 @@
+<figure class="event-photo">
+  {%- include responsive-img.html
+       src=include.src
+       alt=include.alt
+       loading="lazy"
+       sizes="(min-width: 42rem) 40rem, 100vw" -%}
+  <figcaption>
+    {%- if include.credit -%}<span class="credit">{{ include.credit }}</span>{%- endif -%}
+    {%- if include.source -%}<a class="source" href="{{ include.source }}" rel="noopener">Source</a>{%- endif -%}
+  </figcaption>
+</figure>

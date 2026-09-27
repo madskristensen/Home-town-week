@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<article class="home wrap">
+  <h1>Hometown Week</h1>
+  <div class="lede">
+    {{ content }}
+  </div>
+  <section class="cities" aria-label="Cities">
+    <h2>Cities</h2>
+    {%- for city in site.data.cities -%}
+    {%- assign card_issues = site.issues | where: "city", city.id | where: "state", city.state | sort: "date" | reverse -%}
+    {%- assign card_latest = card_issues | first -%}
+    {%- capture card_url -%}/{{ city.state }}/{{ city.id }}/{%- endcapture -%}
+    {%- assign card_url = card_url | strip -%}
+    <article class="city-card">
+      {%- if card_latest.image -%}
+      <a class="city-card-photo" href="{{ card_url | relative_url }}">
+        {%- include responsive-img.html
+             src=card_latest.image
+             alt=card_latest.image_alt
+             priority="high"
+             sizes="(min-width: 42rem) 40rem, 100vw" -%}
+      </a>
+      {%- endif -%}
+      <div class="city-card-body">
+        <h3><a href="{{ card_url | relative_url }}">{{ city.name }}, {{ city.state_name }}</a></h3>
+        {%- if card_latest.range -%}
+        <p class="city-card-when">{{ card_latest.range }}</p>
+        {%- endif -%}
+        <p>{{ city.summary }}</p>
+        {%- if card_latest.image_credit -%}
+        <p class="photo-credit"><span>{{ card_latest.image_credit }}</span>{%- if card_latest.image_source_url -%} <a href="{{ card_latest.image_source_url }}" rel="noopener">Source</a>{%- endif -%}</p>
+        {%- endif -%}
+        <p class="cta"><a href="{{ card_url | relative_url }}">See {{ city.name }}</a></p>
+      </div>
+    </article>
+    {%- endfor -%}
+  </section>
+</article>
