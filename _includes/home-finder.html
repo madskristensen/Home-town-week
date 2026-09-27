@@ -97,7 +97,7 @@
   var section = document.getElementById("this-week");
   var button = document.getElementById("near-button");
   var note = document.getElementById("near-note");
-  var ask = document.getElementById("near-ask");
+  var weekTitle = document.getElementById("this-week-title");
   var card = document.getElementById("near-card");
   var message = document.getElementById("near-message");
   var form = document.getElementById("city-search");
@@ -107,7 +107,13 @@
   var status = document.getElementById("city-status");
   var pending = false;
 
+  function revealWeek() {
+    if (weekTitle) weekTitle.hidden = false;
+    if (section) section.classList.add("has-result");
+  }
+
   function showMessage(text) {
+    revealWeek();
     if (card) {
       card.hidden = true;
       card.removeAttribute("href");
@@ -117,11 +123,11 @@
       message.hidden = false;
       message.textContent = text;
     }
-    if (ask) ask.hidden = false;
   }
 
   function showCard(place, miles) {
     if (!card) return;
+    revealWeek();
     if (message) {
       message.hidden = true;
       message.textContent = "";
@@ -138,16 +144,23 @@
     if (place.summary) card.appendChild(el("span", "near-summary", place.summary));
     card.appendChild(el("span", "near-go", "Open this week's digest"));
     card.hidden = false;
-    if (ask) ask.hidden = true;
+  }
+
+  function setLocatePending(isPending) {
+    pending = isPending;
+    if (section) {
+      if (isPending) section.setAttribute("aria-busy", "true");
+      else section.removeAttribute("aria-busy");
+    }
+    if (!button) return;
+    button.disabled = isPending;
+    if (isPending) button.setAttribute("aria-busy", "true");
+    else button.removeAttribute("aria-busy");
+    button.setAttribute("aria-label", isPending ? "Looking nearby" : "Use my location");
   }
 
   function finishLookup() {
-    pending = false;
-    if (section) section.removeAttribute("aria-busy");
-    if (button) {
-      button.disabled = false;
-      button.textContent = "Use your location";
-    }
+    setLocatePending(false);
   }
 
   function locate() {
@@ -157,12 +170,7 @@
     }
     if (!window.isSecureContext || !navigator.geolocation) return;
     if (pending) return;
-    pending = true;
-    if (section) section.setAttribute("aria-busy", "true");
-    if (button) {
-      button.disabled = true;
-      button.textContent = "Looking nearby";
-    }
+    setLocatePending(true);
     navigator.geolocation.getCurrentPosition(function (pos) {
       finishLookup();
       var found = nearest(pos.coords.latitude, pos.coords.longitude, places);

@@ -10,16 +10,10 @@ layout: default
   </header>
 
   <section class="this-week" id="this-week" aria-labelledby="this-week-title">
-    <h2 id="this-week-title">This week</h2>
+    <h2 id="this-week-title" hidden>This week</h2>
     <div id="near-live" aria-live="polite">
       <a id="near-card" class="near-card" hidden></a>
       <p id="near-message" class="near-message" hidden></p>
-    </div>
-    <div class="near-ask" id="near-ask">
-      <p class="cta">
-        <button type="button" id="near-button" aria-describedby="near-note">Use your location</button>
-      </p>
-      <p id="near-note" class="near-note">Your browser asks first. We use the spot only to pick the nearest city, and we do not save it.</p>
     </div>
   </section>
 
@@ -27,10 +21,20 @@ layout: default
     <h2 id="finder-title">Find your city</h2>
     <form class="city-search" id="city-search" role="search" action="#states">
       <label for="city-query">Search cities</label>
-      <input id="city-query" type="search" placeholder="Redmond, Bend, Plano" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="search" aria-autocomplete="list" aria-expanded="false" aria-controls="city-matches" aria-describedby="city-hint">
+      <div class="city-field">
+        <input id="city-query" type="search" placeholder="Redmond, Bend, Plano" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="search" aria-autocomplete="list" aria-expanded="false" aria-controls="city-matches" aria-describedby="city-hint">
+        <button type="button" id="near-button" class="locate" aria-label="Use my location" aria-describedby="near-note">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="3.15" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="12" r="1.15" fill="currentColor"/>
+            <path d="M12 2.4v3M12 18.6v3M2.4 12h3M18.6 12h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
       <p id="city-empty" class="city-empty" hidden></p>
       <ul id="city-matches" class="city-matches" hidden></ul>
       <p id="city-hint" class="near-note">Type a city or a state. Each result opens this week's digest.</p>
+      <p id="near-note" class="near-note">Your browser asks first. We use the spot only to pick the nearest city, and we do not save it.</p>
       <p id="city-status" class="visually-hidden" aria-live="polite"></p>
     </form>
     <noscript>

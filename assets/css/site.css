@@ -297,8 +297,58 @@ img {
   text-underline-offset: 0.12em;
 }
 
-.this-week .cta {
-  margin-top: 0.85rem;
+.this-week:not(.has-result) {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.city-field {
+  position: relative;
+}
+
+.city-field:has(.locate:not([hidden])) input {
+  padding-right: 3.6rem;
+}
+
+.locate {
+  position: absolute;
+  top: 50%;
+  right: 0.28rem;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0.65rem;
+  background: transparent;
+  color: var(--forest);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.locate svg {
+  display: block;
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.locate:hover {
+  background: rgba(198, 161, 90, 0.28);
+}
+
+.locate:focus-visible {
+  background: rgba(198, 161, 90, 0.28);
+}
+
+.locate:disabled {
+  color: var(--gold);
+  cursor: progress;
 }
 
 .near-note,
@@ -335,6 +385,15 @@ img {
 .city-search input::placeholder {
   color: var(--muted);
   opacity: 1;
+}
+
+.city-search input[type="search"]::-webkit-search-decoration,
+.city-search input[type="search"]::-webkit-search-cancel-button,
+.city-search input[type="search"]::-webkit-search-results-button,
+.city-search input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
 }
 
 .city-matches {
