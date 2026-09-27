@@ -20,9 +20,11 @@
 # stay on the list. Do not crawl Stay Happening, news blogs, a wrong-city
 # AllEvents page, or a library calendar alone.
 #
-# Cadence: Monday maintains this list only (add, fix, or drop a URL).
-# Wednesday and Friday read the list and fill issue copy. They do not edit
-# sources. A seed run may do both once. After that, keep the split.
+# Cadence: Monday is the primary content fill from this list. Thursday is
+# the midweek content fill, a visible update before the weekend. Neither
+# edits sources. The first Friday of the month maintains this list only
+# (find a new URL or drop a stale one) and does not rewrite issue copy.
+# A seed run may do both once. After that, keep the split.
 - id: bainbridge-island
   name: Bainbridge Island
   state: wa

@@ -34,19 +34,21 @@ Open `http://127.0.0.1:4000/`. `_config.yml` sets `url` to `https://hometownweek
 
 Pushes to `main` run `.github/workflows/pages.yml`, which builds the site and deploys it with GitHub Actions. The workflow passes the Pages base path through, and that path is empty on the custom domain.
 
-## Weekly cadence
+## Update cadence
 
 `sources:` lives only on each city in `_data/cities.yml`. Do not add a separate sources file.
 
-Monday maintains that list: add a calendar, fix a URL, or drop a dead one. Monday does not rewrite issue copy.
+Monday is the primary content fill. Read the lists already in `cities.yml` and fill the week's digests from those URLs. Monday does not add or remove sources.
 
-Wednesday and Friday read the lists already in `cities.yml` and fill the week's digests from those URLs. Wednesday and Friday do not add or remove sources.
+Thursday is the midweek content fill, a visible update before the weekend. Read the same lists and update issue copy. Thursday does not add or remove sources.
+
+The first Friday of the month is source maintenance only: find a new calendar or drop a stale URL. That Friday does not rewrite issue copy.
 
 A first seed of a city can write the list and fill the open weeks in the same pass. After that, keep the split. Family events first. If a page does not print a clock, leave the clock out.
 
 ## Adding a city
 
-1. Add the city to `_data/cities.yml`, alphabetical within its state, with `lat` and `lon` for the city center in decimal degrees. The home page uses those coordinates to suggest the nearest digest. It does not call a geocoding service. Add a `sources:` list on that same city entry (name, url, type, notes). Do not put the list in a separate file. Types include city_hall, parks, allevents, theater, market, library, downtown, and venue. Cover city hall, AllEvents for that city and state, a local theater, plus parks, market, downtown, and the library as one source among several. Monday keeps this list current. Wednesday and Friday fill issues from it.
+1. Add the city to `_data/cities.yml`, alphabetical within its state, with `lat` and `lon` for the city center in decimal degrees. The home page uses those coordinates to suggest the nearest digest. It does not call a geocoding service. Add a `sources:` list on that same city entry (name, url, type, notes). Do not put the list in a separate file. Types include city_hall, parks, allevents, theater, market, library, downtown, and venue. Cover city hall, AllEvents for that city and state, a local theater, plus parks, market, downtown, and the library as one source among several. Monday and Thursday fill issues from it. The first Friday of the month keeps this list current.
 2. Add `{state}/{city}/index.html`, `{state}/{city}/{year}/index.html`, and `{state}/{city}/latest.html`, using the Redmond pages as the pattern.
 3. Add issues under `_issues/` with `city`, `state`, `year`, `slug`, and a permalink like `/wa/kirkland/2026/sep-28-oct-4/`.
 4. Put a state outline with a city pin at `assets/images/cities/{state}/{city}.svg`. Put photos in `assets/images/{city}/` at 800, 1200, and 1600 widths, and add `{city}_events.yml` under `_data/` if you want event structured data.
