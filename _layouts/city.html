@@ -14,6 +14,9 @@ layout: default
 <article class="city-home wrap">
   {%- include breadcrumbs.html -%}
   <h1>{{ city.name }}{% if featured_issue.range %} · {{ featured_issue.range }}{% endif %}</h1>
+  {%- if city.tagline -%}
+  <p class="hook">{{ city.tagline }}</p>
+  {%- endif -%}
   {%- if featured_issue -%}
     {%- if this_week -%}
     <section class="week-band" aria-label="This week">

@@ -5,6 +5,10 @@
 # names live in coming_soon.yml until a digest exists. City names stay out
 # of the site header. See README for the page files each city needs.
 #
+# tagline: one short local line for the city home and the issue masthead.
+# Name a park, market, harbor, or landmark. The header kicker stays
+# "Weekly family digest."
+#
 # sources: lives on each city entry here, not in a separate file. Each item
 # is a name, url, type, and notes. Types: city_hall, parks, allevents,
 # theater, market, library, downtown, venue. Prefer the city hall calendar,
@@ -25,6 +29,7 @@
   description: Weekly family digests of the Bainbridge farmers market, the library, and Eagle Harbor.
   summary: >-
     The Saturday market, the library, and Eagle Harbor, picked each week for families.
+  tagline: "The Saturday market, the library, and a walk on Eagle Harbor."
   sources:
     - name: "City of Bainbridge Island calendar"
       url: "https://www.bainbridgewa.gov/m/calendar"
@@ -63,6 +68,7 @@
   description: Weekly family digests of Bellevue parks, the Thursday market, Kelsey Creek Farm, and KidsQuest.
   summary: >-
     Downtown Park, the Thursday market, Kelsey Creek Farm, and KidsQuest, picked each week for families.
+  tagline: "Downtown Park, the Thursday market, Kelsey Creek Farm, and KidsQuest."
   sources:
     - name: "City of Bellevue calendar"
       url: "https://bellevuewa.gov/calendar"
@@ -113,6 +119,7 @@
   description: Weekly family digests of Bellingham markets, the library, Boulevard Park, and the Mount Baker Theatre.
   summary: >-
     The Saturday market, the library, Boulevard Park, and the Mount Baker Theatre, picked each week for families.
+  tagline: "The Saturday market, Boulevard Park, and the Mount Baker Theatre."
   sources:
     - name: "City of Bellingham"
       url: "https://cob.org/"
@@ -155,6 +162,7 @@
   description: Weekly family digests of Bothell parks, the library, City Hall Plaza, and Anderson School.
   summary: >-
     The library, City Hall Plaza, the Landing, and Anderson School, picked each week for families.
+  tagline: "The library, the Landing on the Sammamish River, and Anderson School."
   sources:
     - name: "City of Bothell calendar"
       url: "https://www.bothellwa.gov/m/calendar"
@@ -189,6 +197,7 @@
   description: Weekly family digests of Edmonds markets, the library, the beach, and downtown shows.
   summary: >-
     The Saturday market, the library, the beach, and downtown shows, picked each week for families.
+  tagline: "The Saturday market, the beach, and a show downtown."
   sources:
     - name: "City of Edmonds calendar"
       url: "https://www.edmondswa.gov/government/communications/calendars/calendar"
@@ -235,6 +244,7 @@
   description: Weekly family digests of Everett's Sunday market, Imagine Children's Museum, the library, and downtown.
   summary: >-
     The Sunday market, Imagine Children's Museum, the library, and downtown, picked each week for families.
+  tagline: "The Sunday market on Wetmore, Imagine Children's Museum, and the waterfront."
   sources:
     - name: "City of Everett calendar"
       url: "https://www.everettwa.gov/calendar.aspx"
@@ -277,6 +287,7 @@
   description: Weekly family digests of Ferndale parks, the library, Pioneer Park, and town events.
   summary: >-
     The library, Pioneer Park, Hovander, and town weekends, picked each week for families.
+  tagline: "Pioneer Park, Hovander, and the library."
   sources:
     - name: "City of Ferndale calendar"
       url: "https://cityofferndale.org/calendar.aspx"
@@ -311,6 +322,7 @@
   description: Weekly family digests of Gig Harbor's fall market, the library, and the harbor.
   summary: >-
     The Tuesday fall market, the library, and the harbor, picked each week for families.
+  tagline: "The Tuesday market, the library, and the harbor."
   sources:
     - name: "City of Gig Harbor calendar"
       url: "https://gigharborwa.gov/calendar.aspx"
@@ -349,6 +361,7 @@
   description: Weekly family digests of Issaquah parks, markets, the hatchery, and Village Theatre.
   summary: >-
     The farmers market, Front Street, the salmon hatchery, and Village Theatre, picked each week for families.
+  tagline: "Front Street, the salmon hatchery, and Village Theatre."
   sources:
     - name: "City of Issaquah calendar"
       url: "https://www.issaquahwa.gov/m/calendar"
@@ -387,6 +400,7 @@
   description: Weekly family digests of the Kenmore library, Log Boom Park, and Saint Edward State Park.
   summary: >-
     The library, Log Boom Park, and Saint Edward, picked each week for families.
+  tagline: "The library, the pier at Log Boom, and the beach at Saint Edward."
   sources:
     - name: "City of Kenmore"
       url: "https://www.kenmorewa.gov/"
@@ -425,6 +439,7 @@
   description: Weekly family digests of Kirkland parks, markets, library programs, and shows.
   summary: >-
     Marina Park, the waterfront markets, the library, and the Performance Center, picked each week for families.
+  tagline: "Marina Park, the waterfront markets, and the library."
   sources:
     - name: "City of Kirkland"
       url: "https://www.kirklandwa.gov/"
@@ -463,6 +478,7 @@
   description: Weekly family digests of Lacey library programs, Children's Day, and city parks.
   summary: >-
     The library, Children's Day, and Huntamer Park, picked each week for families.
+  tagline: "The library, Children's Day, and Huntamer Park."
   sources:
     - name: "City of Lacey"
       url: "https://cityoflacey.org/"
@@ -493,6 +509,7 @@
   description: Weekly family digests of the Lynden library, the Jansen Art Center, and Front Street.
   summary: >-
     The library, the Jansen Art Center, and Front Street, picked each week for families.
+  tagline: "The library, the Jansen on Front Street, and the Pioneer Museum."
   sources:
     - name: "City of Lynden calendar"
       url: "https://www.lyndenwa.org/calendar.aspx"
@@ -527,6 +544,7 @@
   description: Weekly family digests of Lynnwood's library, civic campus, and Scriber Lake Park.
   summary: >-
     The library, the civic campus, and Scriber Lake Park, picked each week for families.
+  tagline: "The library by the civic campus, and a loop at Scriber Lake."
   sources:
     - name: "City of Lynnwood"
       url: "https://www.lynnwoodwa.gov/"
@@ -565,6 +583,7 @@
   description: Weekly family digests of the Maple Valley farmers market, the library, and Lake Wilderness.
   summary: >-
     The Saturday market, the library, and Lake Wilderness, picked each week for families.
+  tagline: "The Saturday market, the library, and Lake Wilderness."
   sources:
     - name: "City of Maple Valley"
       url: "https://www.maplevalleywa.gov/"
@@ -599,6 +618,7 @@
   description: Weekly family digests of Mercer Island's Sunday market, the library, Luther Burbank Park, and Island Books.
   summary: >-
     The Sunday market, the library, Luther Burbank, and Island Books, picked each week for families.
+  tagline: "The Sunday market, Luther Burbank, and Island Books."
   sources:
     - name: "City of Mercer Island calendar"
       url: "https://www.mercerisland.gov/calendar"
@@ -633,6 +653,7 @@
   description: Weekly family digests of Mill Creek library storytimes, LEGO club, and the town center.
   summary: >-
     The library, LEGO club, and the town center, picked each week for families.
+  tagline: "Storytime and LEGO club, then the town center."
   sources:
     - name: "City of Mill Creek"
       url: "https://millcreekwa.gov/"
@@ -663,6 +684,7 @@
   description: Weekly family digests of the Poulsbo farmers market, Kids Club, and the library.
   summary: >-
     The Saturday market, Kids Club, and the library, picked each week for families.
+  tagline: "The Saturday market, Kids Club, and the library."
   sources:
     - name: "City of Poulsbo"
       url: "https://poulsbo.gov/"
@@ -701,6 +723,7 @@
   description: Weekly family digests of the Puyallup farmers market, Pioneer Park, and the library.
   summary: >-
     The Saturday market, Pioneer Park, and the library, picked each week for families.
+  tagline: "The Saturday market in Pioneer Park, and the library next door."
   sources:
     - name: "City of Puyallup calendar"
       url: "https://www.puyallupwa.gov/calendar.aspx"
@@ -743,6 +766,7 @@
   description: Weekly family digests of Redmond parks, events, and things to do.
   summary: >-
     Parks, the market, the library, and Marymoor, picked each week for families.
+  tagline: "The Saturday market, the library, and Marymoor."
   sources:
     - name: "City of Redmond calendar"
       url: "https://www.redmond.gov/Calendar.aspx"
@@ -781,6 +805,7 @@
   description: Weekly family digests of Renton's Tuesday market, the library, and Gene Coulon Memorial Beach Park.
   summary: >-
     The Tuesday market, the library, and Gene Coulon, picked each week for families.
+  tagline: "The Tuesday market, the library, and Gene Coulon on the lake."
   sources:
     - name: "City of Renton"
       url: "https://www.rentonwa.gov/"
@@ -815,6 +840,7 @@
   description: Weekly family digests of Sammamish parks, the library, and the Commons.
   summary: >-
     The library, Beaver Lake, Pine Lake, and the Commons, picked each week for families.
+  tagline: "The library at the Commons, then Beaver Lake or Pine Lake."
   sources:
     - name: "City of Sammamish"
       url: "https://www.sammamish.us/"
@@ -849,6 +875,7 @@
   description: Weekly family digests of the Woodinville library, Festival Street, and 21 Acres.
   summary: >-
     The library, Festival Street, and 21 Acres, picked each week for families.
+  tagline: "The library, Festival Street, and 21 Acres."
   sources:
     - name: "City of Woodinville calendar"
       url: "https://www.woodinville.gov/calendar.aspx"
@@ -887,6 +914,7 @@
   description: Weekly family digests of the Beaverton market, THPRD, downtown nights, and the library.
   summary: >-
     The Saturday market, THPRD, downtown nights, and the library, picked each week for families.
+  tagline: "The Saturday market, a downtown night, and the library."
   sources:
     - name: "City of Beaverton community calendar"
       url: "https://www.beavertonoregon.gov/community-events-and-meetings-calendar"
@@ -925,6 +953,7 @@
   description: Weekly family digests of the Tower Theatre, the Bend farmers market, the High Desert Museum, Fall Festival, and the downtown library.
   summary: >-
     The Tower Theatre, the Wednesday market, the High Desert Museum, and the Fall Festival, picked each week for families.
+  tagline: "The Wednesday market, the Tower Theatre, and the High Desert Museum."
   sources:
     - name: "City of Bend"
       url: "https://www.bendoregon.gov/"
@@ -975,6 +1004,7 @@
   description: Weekly family digests of Hillsboro's farmers markets and Brookwood Library storytimes.
   summary: >-
     The downtown market, Orenco, and Brookwood Library, picked each week for families.
+  tagline: "The downtown market, Orenco, and storytime at Brookwood."
   sources:
     - name: "City of Hillsboro"
       url: "https://www.hillsboro-oregon.gov/"
@@ -1017,6 +1047,7 @@
   description: Weekly family digests of the Lake Oswego farmers market, Lakewood, and the library.
   summary: >-
     The Saturday market, Lakewood, and the library, picked each week for families.
+  tagline: "The Saturday market at Millennium Plaza, a show at Lakewood, and the library."
   sources:
     - name: "City of Lake Oswego calendar"
       url: "https://www.ci.oswego.or.us/calendar"
@@ -1055,6 +1086,7 @@
   description: Weekly family digests of Finding Neverland at Lake City Playhouse, the Celtic Festival, downtown ArtWalk, and the library.
   summary: >-
     Finding Neverland, the Celtic Festival, the downtown ArtWalk, and the library, picked each week for families.
+  tagline: "The library, a downtown ArtWalk, and the lake."
   sources:
     - name: "City of Coeur d'Alene events calendar"
       url: "https://www.cdaid.org/events-calendar/"
@@ -1101,6 +1133,7 @@
   description: Weekly family digests of Eagle library storytime, the Saturday market, and Harvest Fest.
   summary: >-
     Thursday storytime, Heritage Park, and Harvest Fest, picked each week for families.
+  tagline: "Thursday storytime, Heritage Park, and Harvest Fest."
   sources:
     - name: "City of Eagle"
       url: "https://cityofeagle.org/"
@@ -1139,6 +1172,7 @@
   description: Weekly family digests of Meridian's Monday Night Market, Potato Days, Oktoberfest, and the Saturday market.
   summary: >-
     The Monday Night Market, Potato Days, Oktoberfest, and the Saturday market, picked each week for families.
+  tagline: "The Monday Night Market, the Saturday market, and a fall weekend downtown."
   sources:
     - name: "City of Meridian"
       url: "https://www.meridiancity.org/"
@@ -1181,6 +1215,7 @@
   description: Weekly family digests of Cornbelly's, Thanksgiving Point Spooktober, and the Lehi library.
   summary: >-
     Cornbelly's, Spooktober at Thanksgiving Point, and the library, picked each week for families.
+  tagline: "Cornbelly's, Spooktober at Thanksgiving Point, and the library."
   sources:
     - name: "Lehi City"
       url: "https://www.lehi-ut.gov/"
@@ -1227,6 +1262,7 @@
   description: Weekly family digests of SCERA shows and Orem library preschool storytimes.
   summary: >-
     Noises Off at the SCERA and preschool storytime, picked each week for families.
+  tagline: "A show at the SCERA, and preschool storytime at the library."
   sources:
     - name: "City of Orem"
       url: "https://www.orem.org/"
@@ -1273,6 +1309,7 @@
   description: Weekly family digests of the South Jordan farmers market and library storytimes.
   summary: >-
     The Saturday market at City Hall, storytime, and Baby and Me, picked each week for families.
+  tagline: "The Saturday market at City Hall, then storytime."
   sources:
     - name: "South Jordan calendar"
       url: "https://www.sjc.utah.gov/calendar.aspx"
@@ -1319,6 +1356,7 @@
   description: Weekly family digests of the Festival Park farmers market and Castle Rock library programs.
   summary: >-
     The Sunday market at Festival Park and Kids Corner storytimes, picked each week for families.
+  tagline: "The Sunday market at Festival Park, and storytime at the library."
   sources:
     - name: "Town of Castle Rock"
       url: "https://www.crgov.com/"
@@ -1361,6 +1399,7 @@
   description: Weekly family digests of Centennial Center Park festivals, a Parker kids show at the PACE Center, and Smoky Hill Library programs.
   summary: >-
     Tbilisoba at Centennial Center Park, a Parker kids show at the PACE Center, and Smoky Hill storytimes, picked each week for families.
+  tagline: "A festival at Centennial Center Park, and storytime at Smoky Hill."
   sources:
     - name: "City of Centennial"
       url: "https://www.centennialco.gov/"
@@ -1407,6 +1446,7 @@
   description: Weekly family digests of the Lincoln Center, Taste of Fort Collins, FoCo Fall Fest, Old Town, and Council Tree.
   summary: >-
     The Lincoln Center, Taste of Fort Collins, FoCo Fall Fest, and Council Tree, picked each week for families.
+  tagline: "The Lincoln Center, Old Town, and Council Tree."
   sources:
     - name: "City of Fort Collins"
       url: "https://www.fcgov.com/"
@@ -1457,6 +1497,7 @@
   description: Weekly family digests of Frisco markets, The Star, PGA movie nights, and the library.
   summary: >-
     The Star, PGA movie nights, and the library, picked each week for families.
+  tagline: "A night at The Star, a movie in the PGA District, and the library."
   sources:
     - name: "City of Frisco"
       url: "https://www.friscotexas.gov/"
@@ -1507,6 +1548,7 @@
   description: Weekly family digests of Family Fest at Red Tail Pavilion, Barktoberfest, and Plano library programs.
   summary: >-
     Family Fest, Barktoberfest, and the library, picked each week for families.
+  tagline: "Haggard Park, a kids' show, and the library."
   sources:
     - name: "City of Plano"
       url: "https://www.plano.gov/"
@@ -1561,6 +1603,7 @@
   description: Weekly family digests of Penfold Theatre, Round Rock parks events, National Night Out, and the library.
   summary: >-
     Penfold Theatre, the Play for All jamboree, National Night Out, and library storytimes, picked each week for families.
+  tagline: "A show at Penfold, and storytime at the library."
   sources:
     - name: "City of Round Rock"
       url: "https://www.roundrocktexas.gov/"

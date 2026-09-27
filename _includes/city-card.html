@@ -33,7 +33,11 @@
     {%- if card_latest.hook -%}
     <p class="city-card-hook">{{ card_latest.hook }}</p>
     {%- endif -%}
+    {%- if city.tagline -%}
+    <p>{{ city.tagline }}</p>
+    {%- elsif city.summary -%}
     <p>{{ city.summary }}</p>
+    {%- endif -%}
     {%- if card_latest.image_credit -%}
     <p class="photo-credit"><span>{{ card_latest.image_credit }}</span>{%- if card_latest.image_source_url -%} <a href="{{ card_latest.image_source_url }}" rel="noopener">Source</a>{%- endif -%}</p>
     {%- endif -%}

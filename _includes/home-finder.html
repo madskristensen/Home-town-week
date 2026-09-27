@@ -6,7 +6,7 @@
   {%- if city.lat and city.lon and place_issues.size > 0 -%}
     {%- if emitted -%},{%- endif -%}
     {%- capture place_href -%}/{{ city.state }}/{{ city.id }}/latest/{%- endcapture -%}
-    {"name":{{ city.name | jsonify }},"state":{{ city.state_name | jsonify }},"code":{{ city.state | jsonify }},"summary":{{ city.summary | jsonify }},"lat":{{ city.lat }},"lon":{{ city.lon }},"href":{{ place_href | strip | relative_url | jsonify }}}
+    {"name":{{ city.name | jsonify }},"state":{{ city.state_name | jsonify }},"code":{{ city.state | jsonify }},"summary":{{ city.tagline | default: city.summary | jsonify }},"lat":{{ city.lat }},"lon":{{ city.lon }},"href":{{ place_href | strip | relative_url | jsonify }}}
     {%- assign emitted = true -%}
   {%- endif -%}
 {%- endfor -%}
