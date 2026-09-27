@@ -43,3 +43,21 @@ Grades K–5. Pictures from the Hubble telescope, and the mysteries they helped 
 [Hubble](https://plano.libnet.info/event/16724871)
 
 Haggard Library has a business forum the same morning. That one is for adults, so it is not in this digest.
+
+## Also on stage
+
+### Beetlejuice JR
+<p class="event-when">Thu Oct 1 · 7:00 p.m. · Fri Oct 2 · 7:00 p.m. · Sat Oct 3 · 2:00 p.m. and 7:00 p.m.</p>
+<p class="event-place">North Texas Performing Arts, Willow Bend Center of the Arts, 6121 W Park Blvd</p>
+
+The same youth musical as last weekend. Saturday at 2:00 p.m. is the matinee if Family Fest's evening gate is the night plan. Tickets are $13 in advance, $15 from Sep. 20.
+
+[Beetlejuice JR](https://ntpa.org/event/beetlejuice-jr-plano/)
+
+### Let's Go... Somewhere Spooky!
+<p class="event-when">Sun Oct 4 · 3:00 p.m.</p>
+<p class="event-place">Robinson Fine Arts Center</p>
+
+A Plano Symphony family concert: brass and percussion through stories that include Beauty and the Beast. Visit Plano does not print an end time, so this issue does not add one. The listing does not add a street number. Use the ticket page for the door.
+
+[Visit Plano](https://events.visitplano.com/event/lets-go-somewhere-spooky)

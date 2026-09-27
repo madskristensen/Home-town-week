@@ -1,6 +1,6 @@
 ---
 title: "A movie night and a pumpkin market"
-description: "A PGA movie night, the Fall Market, and library programs in Frisco, Oct. 5 – 11, 2026."
+description: "A PGA movie night, the Fall Market, Plaza Live, Heritage Center, and library programs in Frisco, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: frisco
@@ -51,3 +51,45 @@ More than 50 vendors. Kids can sign up for pumpkin decorating from 10:00 a.m. to
 Grades K–5. Come and go. The listing is for children with special needs. For an accommodation under the ADA, the library asks for five business days' notice at (972) 292-5669 or library@friscotexas.gov.
 
 [Library events](https://friscolibrary.bibliocommons.com/v2/events)
+
+## Wednesday plaza, Saturday park and heritage, Tuesday library
+
+### Plaza Live
+<p class="event-when">Wed Oct 7 · 5:00–7:00 p.m.</p>
+<p class="event-place">4th Street Plaza, 8800 4th St</p>
+
+Local musicians in the plaza while you eat and shop. The series is the first and third Wednesdays. Oct. 7 is the first Wednesday of the month.
+
+[Plaza Live](https://www.friscotexas.gov/Calendar.aspx?EID=7708)
+
+### Nature Adventure at Frisco Commons Park
+<p class="event-when">Sat Oct 10 · 9:00–10:30 a.m.</p>
+<p class="event-place">Frisco Commons Park, 8000 McKinney Road</p>
+
+The parks calendar names the outing and the clock. It does not print a grade range on the listing used here. It is the same morning as the Fall Market in the PGA District, at a different park.
+
+[Nature Adventure](https://www.friscotexas.gov/calendar.aspx)
+
+### Second Saturday: Fall Fun at Heritage
+<p class="event-when">Sat Oct 10 · 10:00 a.m.–3:00 p.m.</p>
+<p class="event-place">Frisco Heritage Center, 6455 Page Street</p>
+
+Fall Fun runs through the middle of the day. Heritage How-To: Collage is inside that window, 12:00–2:00 p.m., at the same center.
+
+[City calendar](https://www.friscotexas.gov/calendar.aspx)
+
+### Game Design Basics
+<p class="event-when">Tue Oct 6 · 4:30–5:30 p.m.</p>
+<p class="event-place">Community Event Room A, Frisco Public Library</p>
+
+Basics for tabletop and video games. The listing includes teens and adults.
+
+[Game Design Basics](https://friscolibrary.bibliocommons.com/events/6a85e0a8d4b10d00300791ac)
+
+### Puzzle Pop-In
+<p class="event-when">Tue Oct 6 · 5:30–7:00 p.m.</p>
+<p class="event-place">Frisco Public Library, 8000 Dallas Parkway</p>
+
+Come and go. Use a library puzzle or bring one. Ages on the listing run from about 6 through teens and adults, so it can follow the game-design hour or stand on its own.
+
+[Puzzle Pop-In](https://friscolibrary.bibliocommons.com/events/6a7bcc4ad4b10d003005e5d3)

@@ -27,3 +27,8 @@ oct-5-oct-11:
     end: "2026-10-10T16:00:00-06:00"
     place: "Heritage Park, 185 E State Street, Eagle"
     same_as: "https://cityofeagle.org/303/Harvest-Fest"
+  - name: "Friends of the Eagle Library Book Sale"
+    start: "2026-10-09T11:00:00-06:00"
+    end: "2026-10-10T15:00:00-06:00"
+    place: "Community Hall, Eagle"
+    same_as: "https://cityofeagle.org/calendar.aspx"

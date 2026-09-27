@@ -1,6 +1,6 @@
 ---
-title: "One more Sunday on Wetmore"
-description: "The Everett Farmers Market, the library, and a regular day at Imagine Children's Museum, Sept. 28 – Oct. 4, 2026."
+title: "Storytime, a salmon lab, and the Sunday market"
+description: "Library storytimes, Wondrous Watersheds at Imagine Children's Museum, and the Everett Farmers Market, Sept. 28 – Oct. 4, 2026."
 date: 2026-09-28
 end_date: "2026-10-04"
 city: everett
@@ -8,7 +8,7 @@ state: wa
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "Sunday is the farmers market again. The museum is a regular visit this week, not a free night. October still has more market Sundays after this one."
+hook: "The library has storytime, a fairy-house craft, and Silly Circuits. Saturday the museum runs Wondrous Watersheds. Sunday is the farmers market again."
 permalink: /wa/everett/2026/sep-28-oct-4/
 image: /assets/images/everett/imagine-museum.webp
 image_alt: "Imagine Children's Museum on the corner of Wall and Hoyt in downtown Everett."
@@ -16,7 +16,7 @@ image_credit: "Photo: SounderBruce, CC BY-SA 4.0"
 image_source_url: "https://commons.wikimedia.org/wiki/File:Imagine_Children%27s_Museum_-_Wall_%26_Hoyt,_Everett,_WA.jpg"
 ---
 
-Sunday is the farmers market again. The museum is a regular visit this week, not a free night. October still has more market Sundays after this one.
+The library has storytime, a fairy-house craft, and Silly Circuits. Saturday the museum runs Wondrous Watersheds, which is not the free Thursday night. Sunday is the farmers market again. October still has more market Sundays after this one.
 
 ## Sunday market
 
@@ -40,7 +40,7 @@ Still the Sunday season. Visit Everett says the market runs through the end of O
    credit="Photo: SounderBruce, CC BY-SA 4.0"
    source="https://commons.wikimedia.org/wiki/File:Imagine_Children%27s_Museum_-_Wall_%26_Hoyt,_Everett,_WA.jpg" %}
 
-No Community Access Night and no Sensory Time fall in this Monday–Sunday span. Admission is the regular ticket. The floor is still the right age, about 1–12. Check hours on the museum site the day you go. The third-Sunday Sensory Time pattern points at Oct 18 for the next quiet morning.
+No Community Access Night and no Sensory Time fall in this Monday–Sunday span. Saturday's museum listing is Wondrous Watersheds, below, not the free Thursday night. A regular visit is still the paid ticket. The floor is about ages 1–12. The next Sensory Time on the city calendar is Sunday, Oct 18.
 
 [Imagine Children's Museum](https://www.imaginecm.org/)
 
@@ -56,9 +56,43 @@ No Community Access Night and no Sensory Time fall in this Monday–Sunday span.
    credit="Photo: Joe Mabel, CC BY-SA 3.0"
    source="https://commons.wikimedia.org/wiki/File:Everett_Library_01.jpg" %}
 
-The main library is the free indoor hour if the museum ticket is not the plan. No dated storytime for this week was confirmed on the pages checked. The calendar on the library site is the authority if a session appears.
+The library calendar lists several kids' hours this week. Main library programs are at 2702 Hoyt Ave. Evergreen Branch is at 9512 Evergreen Way.
 
-[Everett Public Library](https://www.epls.org/)
+### Toddler Storytime
+<p class="event-when">Tue Sep 29 · 10:30–11:00 a.m.</p>
+<p class="event-place">Activity room, Everett Public Library</p>
+
+### Preschool Storytime
+<p class="event-when">Wed Sep 30 · 10:30–11:30 a.m.</p>
+<p class="event-place">Activity room, Everett Public Library</p>
+
+### Make a Fairy House
+<p class="event-when">Thu Oct 1 · 1:00–3:00 p.m. and 4:00–6:00 p.m.</p>
+<p class="event-place">Auditorium, Everett Public Library</p>
+
+Two sessions of the same craft.
+
+### Baby Storytime
+<p class="event-when">Fri Oct 2 · 10:30–11:00 a.m.</p>
+<p class="event-place">Activity room, Everett Public Library</p>
+
+### Lego Engineers
+<p class="event-when">Fri Oct 2 · 3:30–4:30 p.m.</p>
+<p class="event-place">Activity room, Evergreen Branch, 9512 Evergreen Way</p>
+
+### Silly Circuits with KidQuest
+<p class="event-when">Sat Oct 3 · 2:00–3:00 p.m.</p>
+<p class="event-place">Auditorium, Everett Public Library</p>
+
+[Everett Public Library](https://www.epls.org/calendar)
+
+### Wondrous Watersheds
+<p class="event-when">Sat Oct 3 · 10:00 a.m.–2:00 p.m.</p>
+<p class="event-place">Imagine Children's Museum, 1502 Wall St</p>
+
+Hands-on salmon and stream activities. The city calendar places it at the museum, separate from a regular admission visit. It overlaps Silly Circuits at the library, so pick one Saturday block or split the family.
+
+[Wondrous Watersheds](https://www.everettwa.gov/Calendar.aspx?EID=7799)
 
 ## Night out
 

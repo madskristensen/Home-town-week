@@ -46,4 +46,22 @@ The market site says the season is May 10 through Oct 25, 2026, 10:30 a.m.–3:0
 
 [Everett Farmers Market](https://everettfarmersmarket.com/)
 
-Weekday library programs were not on a new list for this span. The museum on a regular-price day is the backup if Thursday does not work. The free window is this Thursday only.
+## Also this week
+
+### Sensory Time
+<p class="event-when">Sun Oct 18 · 9:00–11:00 a.m.</p>
+<p class="event-place">Imagine Children's Museum, 1502 Wall St</p>
+
+The city calendar lists a quiet morning the same Sunday as the market. Market hours start at 10:30 a.m., so the first part of Sensory Time is before the stalls open.
+
+### Costume Workshop: Animal Ears
+<p class="event-when">Sat Oct 17 · 12:30–2:00 p.m.</p>
+<p class="event-place">Room A, Evergreen Branch, 9512 Evergreen Way</p>
+
+### Lego Engineers
+<p class="event-when">Fri Oct 16 · 3:30–4:30 p.m.</p>
+<p class="event-place">Activity room, Evergreen Branch</p>
+
+[Everett Public Library](https://www.epls.org/calendar) · [City calendar](https://www.everettwa.gov/calendar.aspx)
+
+The museum on a regular-price day is the backup if Thursday does not work. The free window is this Thursday only.

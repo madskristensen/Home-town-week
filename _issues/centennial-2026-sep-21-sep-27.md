@@ -8,7 +8,7 @@ state: co
 year: 2026
 slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
-hook: "Saturday morning is a free health fair at the Trails Recreation Center. Family storytime at Smoky Hill overlaps the end of it."
+hook: "Saturday morning is a free health fair at the Trails Recreation Center. Family storytime at Smoky Hill overlaps the end of it. Sunday is a Latin America program at Southglenn Library."
 permalink: /co/centennial/2026/sep-21-sep-27/
 ---
 
@@ -33,3 +33,13 @@ Smoky Hill Library is at 5430 S Biscay Circle. The event page says the building 
 Short books, songs, and rhymes. Planned for ages 0–5. Register each child and each adult. Sensory support kits are available in the library for children who are anxious or overwhelmed. Registration closes at 10:30 a.m. that morning.
 
 [Family Storytime](https://arapahoelibraries.bibliocommons.com/v2/events/6aa80eb8ca248a002915ac4b)
+
+## Sunday at Southglenn
+
+### Discovering Latin America
+<p class="event-when">Sun Sep 27 · 2:00–3:30 p.m.</p>
+<p class="event-place">Southglenn Library, 6972 S Vine St</p>
+
+A bilingual look at regions of Latin America: people, music, food, animals, plants, and art, then a craft to take home. The library lists it in Spanish and English.
+
+[Discovering Latin America](https://arapahoelibraries.bibliocommons.com/events/6a70a7bbf4e5db3d00c62840)

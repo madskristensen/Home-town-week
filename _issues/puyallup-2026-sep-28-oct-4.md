@@ -1,6 +1,6 @@
 ---
-title: "Storytime returns, market stays"
-description: "Thursday storytimes at Puyallup Public Library and the Saturday market at Pioneer Park, Sept. 28 – Oct. 4, 2026."
+title: "Storytime, the market, and salmon homecoming"
+description: "Thursday storytimes, Play to Learn, the Saturday market, and salmon homecoming in Puyallup, Sept. 28 – Oct. 4, 2026."
 date: 2026-09-28
 end_date: "2026-10-04"
 city: puyallup
@@ -8,7 +8,7 @@ state: wa
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "Thursday morning is the first week of toddler and preschool storytime. Saturday is the market, with music in the park."
+hook: "Thursday morning is the first week of toddler and preschool storytime. Tuesday is Play to Learn. Saturday is the market, then salmon homecoming at the fish hatchery."
 permalink: /wa/puyallup/2026/sep-28-oct-4/
 image: /assets/images/puyallup/pioneer-pavilion.webp
 image_alt: "The pavilion at Pioneer Park in Puyallup, with a lawn and trees."
@@ -16,7 +16,7 @@ image_credit: "Photo: Joe Mabel, CC BY 3.0"
 image_source_url: "https://commons.wikimedia.org/wiki/File:Puyallup,_WA_-_Pioneer_Park_Pavilion_01.jpg"
 ---
 
-Thursday morning is the first week of toddler and preschool storytime. Saturday is the market, with music in the park.
+Thursday morning is the first week of toddler and preschool storytime. Tuesday is Play to Learn. Saturday is the market, then salmon homecoming at the fish hatchery.
 
 ## Thursday at the library
 
@@ -49,6 +49,24 @@ The season runs through Oct. 10, so this is the second-to-last Saturday. Music i
 The market site says 300 S Meridian. The city calendar says 330 S Meridian. Both are Pioneer Park.
 
 [Puyallup Farmers Market](https://puyallupfarmersmarket.com/) · [Market experience](https://puyallupfarmersmarket.com/market-experience/)
+
+### Puyallup Watershed Salmon Homecoming
+<p class="event-when">Sat Oct 3 · 11:00 a.m.–3:00 p.m.</p>
+<p class="event-place">Puyallup Historical Fish Hatchery, 1416 14th St SW</p>
+
+Free. The city calls it a family event for the salmon coming back to Clarks Creek. It overlaps the late market hours, so the market can be the first stop and the hatchery the second.
+
+[Salmon Homecoming](https://www.puyallupwa.gov/Calendar.aspx?EID=5462)
+
+## Tuesday
+
+### Play to Learn
+<p class="event-when">Tue Sep 29 · 10:00–11:30 a.m. and 1:00–2:30 p.m.</p>
+<p class="event-place">Puyallup Public Library meeting room</p>
+
+Two sessions on the city calendar. The short listing does not add an age line. Wednesday the library is closed for staff training, so do not plan a Wednesday visit.
+
+[City calendar](https://www.puyallupwa.gov/calendar.aspx)
 
 ## Next Saturday
 

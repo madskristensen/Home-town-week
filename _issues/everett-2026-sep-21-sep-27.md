@@ -1,6 +1,6 @@
 ---
-title: "Sunday market on Wetmore"
-description: "The Everett Farmers Market, the library, and the waterfront, Sept. 21 – 27, 2026."
+title: "Sunday market, and a week of storytimes"
+description: "The Everett Farmers Market, storytimes, Reading with Rover, and a bike repair clinic, Sept. 21 – 27, 2026."
 date: 2026-09-21
 end_date: "2026-09-27"
 city: everett
@@ -8,7 +8,7 @@ state: wa
 year: 2026
 slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
-hook: "Sunday is the farmers market on Wetmore. The rest of the week is the library and the waterfront. No second museum special is posted."
+hook: "Sunday is the farmers market on Wetmore. Before that, the library has storytime, a bike repair clinic, and Reading with Rover on Saturday."
 permalink: /wa/everett/2026/sep-21-sep-27/
 image: /assets/images/everett/everett-library.webp
 image_alt: "The Everett Public Library, a brick building with a columned entrance."
@@ -16,7 +16,7 @@ image_credit: "Photo: Joe Mabel, CC BY-SA 3.0"
 image_source_url: "https://commons.wikimedia.org/wiki/File:Everett_Library_01.jpg"
 ---
 
-Sunday is the farmers market on Wetmore. The rest of the week is the library and the waterfront. No second museum special is posted.
+Sunday is the farmers market on Wetmore. Before that, the main library has storytime most mornings, a bike repair clinic on Thursday, and Reading with Rover on Saturday. No second museum special is posted.
 
 ## Sunday
 
@@ -40,9 +40,37 @@ Same Sunday stall row as last week, and through the end of October. The city bui
    credit="Photo: Joe Mabel, CC BY-SA 3.0"
    source="https://commons.wikimedia.org/wiki/File:Everett_Library_01.jpg" %}
 
-No storytime inside this Monday–Sunday span was confirmed on the library pages checked for this issue. The branch calendar is the list if a session was added after this was written. The Evergreen Branch is the other city library. Hours for both are on the library site.
+The library calendar does list kids' programs this week. Main library storytime is in the activity room at 2702 Hoyt Ave. Evergreen Branch programs are at 9512 Evergreen Way.
 
-[Everett Public Library](https://www.epls.org/)
+### Toddler Storytime
+<p class="event-when">Tue Sep 22 · 10:30–11:00 a.m.</p>
+<p class="event-place">Activity room, Everett Public Library, 2702 Hoyt Ave</p>
+
+### Preschool Storytime
+<p class="event-when">Wed Sep 23 · 10:30–11:30 a.m.</p>
+<p class="event-place">Activity room, Everett Public Library</p>
+
+### Baby Storytime
+<p class="event-when">Fri Sep 25 · 10:30–11:00 a.m.</p>
+<p class="event-place">Activity room, Everett Public Library</p>
+
+### Reading with Rover
+<p class="event-when">Sat Sep 26 · 1:00–2:00 p.m.</p>
+<p class="event-place">Activity room, Everett Public Library</p>
+
+Read aloud to a dog. The city calendar places it at the main library.
+
+### Bike Repair Clinic
+<p class="event-when">Thu Sep 24 · 3:00–6:00 p.m.</p>
+<p class="event-place">Evergreen Branch, 9512 Evergreen Way</p>
+
+Free repairs from Sharing Wheels Community Bike Shop, for a bike or a mobility device. You can watch a mechanic or do the basic work yourself.
+
+### Teen Tabletop Gaming
+<p class="event-when">Fri Sep 25 · 2:00–4:00 p.m.</p>
+<p class="event-place">Evergreen Branch, 9512 Evergreen Way</p>
+
+[Everett Public Library](https://www.epls.org/calendar)
 
 ### Imagine Children's Museum
 <p class="event-when">Regular floor hours</p>
@@ -55,24 +83,3 @@ Community Access Night was Thursday, Sep 17. Sensory Time was Sunday, Sep 20. Ne
 ## Waterfront
 
 The Waterfront Center and the marina path are the open outing if the market is the only timed plan. Jetty Island's foot-ferry season is a summer schedule and should not be assumed in late September. Confirm with the city before you count on a boat.
-
-I used waterfront.webp but I downloaded everett images as imagine, theatre, and library. I did NOT download waterfront! I need to fix this issue to not reference waterfront.webp.
-
-Looking at my download list:
-- everett/imagine-museum
-- everett/everett-theatre
-- everett/everett-library
-
-No waterfront image was successfully... wait, the first script failed BEFORE everett waterfront. I had planned waterfront but the titles dict in the successful first batch included imagine and theatre, and the failed one was everett-library which was retried. I never downloaded waterfront. The issue I just wrote references waterfront.webp which doesn't exist. I must remove that photo include or the build will 404 the image. Jekyll won't fail the build for a missing image, but the page will be broken.
-
-I'll fix the Everett week 2 file to drop the waterfront photo, or download the waterfront image. Downloading is better for depth. Let me note to download it after writing, and also fix if download fails.
-
-I'll remove the photo include from the file in a follow-up if I don't download. Let me download waterfront quickly later. For now I'll continue writing and then fix the reference.
-
-Actually I'll edit the file now to remove the photo block so I don't ship a broken image. I can describe the waterfront without a photo.
-
-I'll StrReplace after this batch.
-
-Also I referenced File:Everett,_WA_-_Waterfront_Center_01.jpg which I didn't download. Remove it.
-
-Continue writing other files, then fix everett week 2.

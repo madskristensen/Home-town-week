@@ -1,6 +1,6 @@
 ---
-title: "Harvest Fest and a pumpkin giveaway"
-description: "Storytime with Stuffies and Eagle Harvest Fest at Heritage Park, Oct. 5 – 11, 2026."
+title: "A book sale, then Harvest Fest"
+description: "Storytime with Stuffies, a Friends book sale, and Eagle Harvest Fest, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: eagle
@@ -8,11 +8,11 @@ state: id
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Thursday is storytime. Saturday is Harvest Fest, with 1,500 pumpkins for kids and crafts from the library."
+hook: "Thursday is storytime. Friday the Friends book sale opens at Community Hall, and Saturday is Harvest Fest, with 1,500 pumpkins for kids."
 permalink: /id/eagle/2026/oct-5-oct-11/
 ---
 
-Thursday is storytime. Saturday is Harvest Fest, with 1,500 pumpkins for kids and crafts from the library.
+Thursday is storytime. Friday the Friends book sale opens at Community Hall, and Saturday is Harvest Fest, with 1,500 pumpkins for kids and crafts from the library.
 
 ## Thursday
 
@@ -23,6 +23,16 @@ Thursday is storytime. Saturday is Harvest Fest, with 1,500 pumpkins for kids an
 Ages birth to 5. The library asks families to build literacy skills through stories and songs. A stuffed animal is optional.
 
 [Oct. 8 storytime](https://boisemom.com/event/storytime-with-stuffies-eagle-public-library/2026-10-08/)
+
+## Friday into Saturday
+
+### Friends of the Eagle Library Book Sale
+<p class="event-when">Fri Oct 9 · 11:00 a.m. through Sat Oct 10 · 3:00 p.m.</p>
+<p class="event-place">Community Hall</p>
+
+The city calendar runs the fall Friends sale across those hours, so it overlaps Harvest Fest on Saturday. The listing names Community Hall and does not add a street number on the line used here.
+
+[City calendar](https://cityofeagle.org/calendar.aspx)
 
 ## Saturday
 

@@ -55,3 +55,29 @@ Free practice for grade-school children and adults, with teachers from Clover Pa
 The market site ends the season on Oct. 10. Music is 11:00 a.m.–1:00 p.m., posted as @uncledougmusic1. The market site says 300 S Meridian. The city calendar says 330 S Meridian.
 
 [Puyallup Farmers Market](https://puyallupfarmersmarket.com/) · [Market experience](https://puyallupfarmersmarket.com/market-experience/)
+
+### Friends of the Puyallup Public Library Book Sale
+<p class="event-when">Sat Oct 10 · 9:00 a.m.–3:00 p.m.</p>
+<p class="event-place">Puyallup Public Library</p>
+
+The same morning as ESL and the last market. The sale is at the library, not in the park.
+
+[City calendar](https://www.puyallupwa.gov/calendar.aspx)
+
+## Earlier in the week
+
+### Taylor Kyle's School of Magic Adventure
+<p class="event-when">Tue Oct 6 · 5:00–6:00 p.m.</p>
+<p class="event-place">Puyallup Public Library meeting room</p>
+
+On the city calendar as an evening in the meeting room. The short listing does not print an age range.
+
+### RPG Dice Creation Workshop
+<p class="event-when">Wed Oct 7 · 5:30–6:30 p.m.</p>
+<p class="event-place">Puyallup Public Library meeting room</p>
+
+Make dice the night after the magic hour. Same room, a new listing.
+
+The city calendar also lists Oktoberfest Northwest at the fairgrounds, 110 9th Ave SW, from Oct. 9 through Oct. 11. That listing does not print a daily clock, so this issue does not add one.
+
+[City calendar](https://www.puyallupwa.gov/calendar.aspx)

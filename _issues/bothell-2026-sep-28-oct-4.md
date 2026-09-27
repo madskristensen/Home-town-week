@@ -1,6 +1,6 @@
 ---
-title: "Storytime Monday, music Thursday"
-description: "Toddler and baby storytime, then Music and Movement at Bothell Library, Sept. 28 – Oct. 4, 2026."
+title: "Storytime Monday, a book sale Saturday"
+description: "Toddler and baby storytime, Music and Movement, and a Friends book sale at Bothell Library, Sept. 28 – Oct. 4, 2026."
 date: 2026-09-28
 end_date: "2026-10-04"
 city: bothell
@@ -8,7 +8,7 @@ state: wa
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "Monday is toddler storytime and baby storytime at Bothell Library. Thursday morning is Music and Movement, twice. The Landing is the afternoon if the library is enough."
+hook: "Monday is toddler storytime and baby storytime. Thursday morning is Music and Movement, twice. Saturday is the Friends book sale at the library."
 permalink: /wa/bothell/2026/sep-28-oct-4/
 image: /assets/images/bothell/bothell-landing.webp
 image_alt: "The Park at Bothell Landing, with trees along the Sammamish River."
@@ -16,7 +16,7 @@ image_credit: "Photo: Joe Mabel, CC BY-SA 4.0"
 image_source_url: "https://commons.wikimedia.org/wiki/File:Bothell_Landing_04.jpg"
 ---
 
-Monday is toddler storytime and baby storytime at Bothell Library. Thursday morning is Music and Movement, twice. The Landing is the afternoon if the library is enough.
+Monday is toddler storytime and baby storytime at Bothell Library. Thursday morning is Music and Movement, twice. Saturday is the Friends book sale in the same building. The Landing is the afternoon if the library is enough.
 
 ## Monday
 
@@ -47,6 +47,16 @@ Two sessions on the branch calendar. The page does not spell out the age range i
 Family Story Time, all ages with an adult at 10:00 and again at 10:45, is Thursday, Oct 8. That is next week.
 
 [Bothell Library](https://kcls.org/locations/bothell/)
+
+## Saturday
+
+### Friends of the Bothell Library Book Sale
+<p class="event-when">Sat Oct 3 · 11:00 a.m.–5:30 p.m.</p>
+<p class="event-place">Bothell Library, 18215 98th Ave NE</p>
+
+Browse donated books. Proceeds support library programs. The listing is open to kids through adults, so it is a family stop, not a members-only sale.
+
+[Book sale](https://kcls.bibliocommons.com/events/6a3481bc2ea730c17ab8096c)
 
 ## After the library
 

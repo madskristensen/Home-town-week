@@ -1,6 +1,6 @@
 ---
-title: "Market music in Pioneer Park"
-description: "Saturday farmers market and live music at Pioneer Park in Puyallup, Sept. 21 – 27, 2026."
+title: "Market music, and a zine workshop"
+description: "Saturday farmers market, live music, and a zine workshop at the library in Puyallup, Sept. 21 – 27, 2026."
 date: 2026-09-21
 end_date: "2026-09-27"
 city: puyallup
@@ -8,7 +8,7 @@ state: wa
 year: 2026
 slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
-hook: "Saturday is the farmers market in Pioneer Park, with music from 11:00 a.m. to 1:00 p.m. Library storytime does not start until October."
+hook: "Saturday is the farmers market in Pioneer Park, with music from 11:00 a.m. to 1:00 p.m. The same morning the library has a zine and comic workshop. Storytime does not start until October."
 permalink: /wa/puyallup/2026/sep-21-sep-27/
 image: /assets/images/puyallup/pioneer-pavilion.webp
 image_alt: "The pavilion at Pioneer Park in Puyallup, with a lawn and trees."
@@ -16,7 +16,7 @@ image_credit: "Photo: Joe Mabel, CC BY 3.0"
 image_source_url: "https://commons.wikimedia.org/wiki/File:Puyallup,_WA_-_Pioneer_Park_Pavilion_01.jpg"
 ---
 
-Saturday is the farmers market in Pioneer Park, with music from 11:00 a.m. to 1:00 p.m. Library storytime does not start until October.
+Saturday is the farmers market in Pioneer Park, with music from 11:00 a.m. to 1:00 p.m. The same morning the library has a zine and comic workshop. Storytime does not start until October.
 
 ## Saturday market
 
@@ -29,6 +29,14 @@ The market site lists Saturdays, 9:00 a.m. to 2:00 p.m., from Apr. 18 through Oc
 The address is written two ways. The market site says 300 S Meridian. The city calendar says 330 S Meridian. Both point at Pioneer Park and the pavilion. Use the park, and check the sign at the gate if a street number matters for parking.
 
 [Puyallup Farmers Market](https://puyallupfarmersmarket.com/) · [Market experience](https://puyallupfarmersmarket.com/market-experience/)
+
+### Zine and Comic Workshop
+<p class="event-when">Sat Sep 26 · 11:00 a.m.–2:00 p.m.</p>
+<p class="event-place">Puyallup Public Library meeting room</p>
+
+The city calendar lists this in the meeting room, overlapping the market's music hour. The short listing does not print an age range, so check the library note if you are bringing a young child. The library's street address is not on the event line used here.
+
+[City calendar](https://www.puyallupwa.gov/calendar.aspx)
 
 ## Storytime waits
 

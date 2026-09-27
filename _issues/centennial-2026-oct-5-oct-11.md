@@ -45,3 +45,31 @@ Ages 2–5. A monthly theme that mixes science, engineering, math, art, and lite
 A storytime for children and families on her series If Animals Disappeared. She writes and illustrates the books.
 
 [Arapahoe Libraries](https://arapahoelibraries.org/)
+
+A second session the same day is for tweens, 1:00–2:30 p.m., on her graphic novel Exposures.
+
+## More library hours
+
+### Family Tabletop Game Night
+<p class="event-when">Mon Oct 5 · 5:00–6:00 p.m.</p>
+<p class="event-place">Southglenn Library, 6972 S Vine St</p>
+
+Games, snacks, and music for families with kids from about 5 through teens.
+
+[Family Tabletop](https://arapahoelibraries.bibliocommons.com/events/6a96d5cc36204e08fbb8b48f)
+
+### Koelbel Kids
+<p class="event-when">Wed Oct 7 · 4:00–5:00 p.m.</p>
+<p class="event-place">Koelbel Library, 5955 S Holly St</p>
+
+Ages 5–8, with a grown-up. Stories, play, and a craft. Register each child. Drop-ins if there is room.
+
+[Koelbel Kids](https://arapahoelibraries.bibliocommons.com/events/6a96d10a36204e08fbb8b3c6)
+
+### Fall Fun Drop-In
+<p class="event-when">Sat Oct 10 · 2:00–4:00 p.m.</p>
+<p class="event-place">Southglenn Library, 6972 S Vine St</p>
+
+Snacks, pumpkin painting, and mask making. It starts after the Lily Williams hour at Smoky Hill.
+
+[Fall Fun Drop-In](https://arapahoelibraries.bibliocommons.com/events/6a96d6c460ccaf01c0228215)

@@ -46,6 +46,34 @@ This is the other Saturday matinee in the run, plus the regular evening. Wednesd
 
 [Lakewood](https://lakewood-center.org/)
 
+## Also Saturday, and Sunday for teens
+
+### Move and Dance
+<p class="event-when">Sat Oct 10 · 10:30–11:00 a.m.</p>
+<p class="event-place">Lake Oswego Public Library, 706 Fourth Street</p>
+
+Second Saturday. A short movement lab for children, from Energy in Motion. It overlaps the farmers market, so it is a library stop, not a second morning at the park.
+
+[Move and Dance](https://www.ci.oswego.or.us/kids/move-dance-0)
+
+### Lego Club
+<p class="event-when">Sat Oct 10 · 3:00–4:00 p.m.</p>
+<p class="event-place">Children's Library, lower level</p>
+
+Second Saturday drop-in. Bricks are provided. The matinee at Lakewood is 2:00 p.m., so Lego is the plan if you are not in the theater.
+
+[Lego Club](https://www.ci.oswego.or.us/kids/lego-club-0)
+
+### Joy Mail Project
+<p class="event-when">Sun Oct 11 · 11:00 a.m.–12:30 p.m.</p>
+<p class="event-place">Children's library, before public hours</p>
+
+Card-making for teens in 9th through 12th grade. No signup. Because it starts before the building opens, teens are admitted 10:45–11:05 a.m. at the north entrance by the parking lot.
+
+[Joy Mail](https://www.ci.oswego.or.us/teens/joy-mail-project-teen-volunteer-event-0)
+
+Monday is still Music and Movement in Mandarin, 10:30–11:00 a.m. Indoor Playground at 17525 Stafford Rd stays Tuesday and Thursday, 9:00 a.m.–1:00 p.m.
+
 ## The following week
 
 The same Freedom to Read page lists a censorship panel on Oct. 13 and a book discussion of *All Boys Aren't Blue* on Oct. 19 at the Lake Oswego Heritage House. Neither date is in this Monday-through-Sunday span.

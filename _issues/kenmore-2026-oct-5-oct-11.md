@@ -1,6 +1,6 @@
 ---
-title: "ASL stories on Saturday"
-description: "ASL storytime at Kenmore Library, with an adult punch-needle afternoon the day before, Oct. 5 – 11, 2026."
+title: "ASL stories, then family karaoke"
+description: "ASL storytime at Kenmore Library and family karaoke at Northlake Lutheran, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: kenmore
@@ -8,7 +8,7 @@ state: wa
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Saturday is storytime in American Sign Language. Friday afternoon is a drop-in punch-needle hour for adults."
+hook: "Saturday is storytime in American Sign Language. Friday afternoon is punch needle for adults, and Friday evening is family karaoke at Northlake Lutheran."
 permalink: /wa/kenmore/2026/oct-5-oct-11/
 image: /assets/images/kenmore/st-edward-beach.webp
 image_alt: "The beach at Saint Edward State Park in Kenmore, with driftwood along the water."
@@ -16,7 +16,7 @@ image_credit: "Photo: Joe Mabel, CC BY-SA 3.0"
 image_source_url: "https://commons.wikimedia.org/wiki/File:St_Edward_State_Park_beach_01.jpg"
 ---
 
-Saturday is storytime in American Sign Language. Friday afternoon is a drop-in punch-needle hour for adults.
+Saturday is storytime in American Sign Language. Friday afternoon is a drop-in punch-needle hour for adults, and Friday evening is family karaoke at Northlake Lutheran.
 
 ## Saturday
 
@@ -37,6 +37,14 @@ Teacher and storyteller Sam Sanders signs stories, movement, and rhymes for d/De
 Casual art with supplies, tea, snacks, and quiet music. October's material is punch needle. You can also bring your own project. Drop in. Registration is not required. Sponsored by the Kenmore Library Association. The listing is for adults, not a kids' craft.
 
 [Punch Needle](https://kcls.bibliocommons.com/events/6a721e20c7e02e3d006dc723)
+
+### Family Friendly Karaoke
+<p class="event-when">Fri Oct 9 · 6:30–8:00 p.m.</p>
+<p class="event-place">Northlake Lutheran Church, 6620 NE 185th Street</p>
+
+IMAGINE hosts this on the second Friday. All ages. Sing, or stay and cheer. Find Kenmore lists it as free. It is the same evening as the library's punch-needle hour, which ends at 4:00, so the two do not overlap.
+
+[Family karaoke](https://findkenmore.org/event/imagine-presents-family-friendly-karaoke-4/)
 
 ## Same as last week, new dates
 
