@@ -10,7 +10,7 @@ lang: en-US
 timezone: America/Los_Angeles
 logo: /assets/images/logo.png
 image: /assets/images/og-image.png
-image_alt: Hometown Week, a weekly family digest.
+image_alt: Hometown Week. Weekly family digests, with a map pin for each city.
 repository: madskristensen/Home-town-week
 
 author:
@@ -65,4 +65,5 @@ exclude:
   - .gitignore
   - _config.domain.yml
   - artifacts
+  - script
 

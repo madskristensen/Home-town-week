@@ -1,51 +1,32 @@
 {%- assign seo_description = page.description | default: site.description -%}
-{%- assign seo_image_path = page.image -%}
-{%- assign seo_image_alt = page.image_alt -%}
+{%- assign seo_image_path = nil -%}
+{%- assign seo_image_alt = nil -%}
 {%- assign seo_image_width = 1200 -%}
 {%- assign seo_image_height = 630 -%}
 {%- assign seo_image_mime = "image/png" -%}
-{%- assign use_city_mark = false -%}
+{%- assign use_map_og = false -%}
 {%- if city -%}
-  {%- if page.layout == "city" or page.layout == "year" -%}
-    {%- assign use_city_mark = true -%}
-  {%- elsif page.layout == "issue" -%}
-    {%- unless page.image -%}
-      {%- assign use_city_mark = true -%}
-    {%- endunless -%}
+  {%- if page.layout == "city" or page.layout == "year" or page.layout == "issue" -%}
+    {%- assign use_map_og = true -%}
   {%- endif -%}
 {%- endif -%}
 {%- comment -%}
-  Social cards reject SVG. City and year pages keep the map mark in the
-  header; Open Graph and Twitter use a WebP from an issue, or the site PNG.
+  Large share cards do not render the header SVG. City, year, and issue
+  pages point at a 1200x630 PNG of that city's map and pin. An issue
+  photo stays on the page itself. Home and other pages use the site card.
 {%- endcomment -%}
-{%- if use_city_mark -%}
-  {%- assign share_issue = nil -%}
-  {%- if featured_issue.image -%}
-    {%- if page.layout == "city" or page.layout == "year" -%}
-      {%- assign share_issue = featured_issue -%}
-    {%- endif -%}
-  {%- endif -%}
-  {%- unless share_issue -%}
-    {%- if city_issues -%}
-      {%- assign share_pool = city_issues | where_exp: "item", "item.image" -%}
-      {%- if page.layout == "year" -%}
-        {%- assign share_pool = share_pool | where: "year", page.year -%}
-      {%- endif -%}
-      {%- include current-issue.html issues=share_pool -%}
-      {%- assign share_issue = current_issue -%}
-    {%- endif -%}
-  {%- endunless -%}
-  {%- if share_issue -%}
-    {%- assign seo_image_path = share_issue.image -%}
-    {%- assign seo_image_alt = share_issue.image_alt -%}
+{%- if use_map_og -%}
+  {%- assign seo_image_path = "/assets/images/og/" | append: city.state | append: "/" | append: city.id | append: ".png" -%}
+  {%- capture seo_image_alt -%}Map of {{ city.name }} with a pin. Hometown Week.{%- endcapture -%}
+  {%- assign seo_image_alt = seo_image_alt | strip -%}
+{%- elsif page.image -%}
+  {%- assign seo_image_path = page.image -%}
+  {%- assign seo_image_alt = page.image_alt -%}
+  {%- if page.image contains ".webp" -%}
     {%- assign seo_image_width = 1600 -%}
     {%- assign seo_image_height = 900 -%}
     {%- assign seo_image_mime = "image/webp" -%}
   {%- endif -%}
-{%- elsif page.layout == "issue" and page.image -%}
-  {%- assign seo_image_width = 1600 -%}
-  {%- assign seo_image_height = 900 -%}
-  {%- assign seo_image_mime = "image/webp" -%}
 {%- endif -%}
 {%- if seo_image_path == nil or seo_image_path == "" -%}
   {%- assign seo_image_path = site.image -%}
