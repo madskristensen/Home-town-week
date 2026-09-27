@@ -1,6 +1,6 @@
 ---
-title: "Ages 4+ storytime is back on Tuesday"
-description: "Council Tree ages 4+ storytime in Fort Collins, Sept. 28 – Oct. 4, 2026."
+title: "Storytime Tuesday, art walk Friday"
+description: "Council Tree storytime and the Old Town First Friday art walk in Fort Collins, Sept. 28 – Oct. 4, 2026."
 date: 2026-09-28
 end_date: "2026-10-04"
 city: fort-collins
@@ -8,11 +8,21 @@ state: co
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "Tuesday's ages 4+ storytime at Council Tree is on the calendar again, after last Tuesday's cancellation."
+hook: "Tuesday's ages 4+ storytime at Council Tree is back. Friday night is the Old Town art walk, 6:00 to 9:00 p.m."
 permalink: /co/fort-collins/2026/sep-28-oct-4/
 ---
 
-Tuesday's ages 4+ storytime at Council Tree is on the calendar again, after last Tuesday's cancellation.
+Tuesday's ages 4+ storytime at Council Tree is on the calendar again, after last Tuesday's cancellation. Friday night is the Old Town art walk.
+
+## Friday in Old Town
+
+### First Friday Art Walk
+<p class="event-when">Fri Oct 2 · 6:00–9:00 p.m.</p>
+<p class="event-place">Old Town Square, 19 Old Town Square</p>
+
+AllEvents lists Downtown Fort Collins as the organizer. Galleries and shops stay open. The downtown play calendar is the place to confirm the night before you go.
+
+[AllEvents](https://allevents.in/fort-collins/downtown-fort-collins-first-friday-art-walk/200030660231813) · [Downtown calendar](https://downtownfortcollins.com/play/calendar)
 
 ## Tuesday
 

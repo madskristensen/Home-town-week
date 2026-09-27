@@ -681,9 +681,9 @@
   state_name: Oregon
   lat: 45.4871
   lon: -122.8037
-  description: Weekly family digests of Beaverton library storytimes and the Saturday farmers market.
+  description: Weekly family digests of the Beaverton market, THPRD, downtown nights, and the library.
   summary: >-
-    The library storytimes and the Saturday market, picked each week for families.
+    The Saturday market, THPRD, downtown nights, and the library, picked each week for families.
   sources:
     - name: "City of Beaverton community calendar"
       url: "https://www.beavertonoregon.gov/community-events-and-meetings-calendar"
@@ -719,9 +719,9 @@
   state_name: Oregon
   lat: 44.0582
   lon: -121.3153
-  description: Weekly family digests of the Bend farmers market, Northwest Crossing, and the downtown library.
+  description: Weekly family digests of the Bend farmers market, Fall Festival, and the downtown library.
   summary: >-
-    The Wednesday market, Northwest Crossing, and the downtown library, picked each week for families.
+    The Wednesday market, the Fall Festival, and the downtown library, picked each week for families.
   sources:
     - name: "City of Bend"
       url: "https://www.bendoregon.gov/"
@@ -795,9 +795,9 @@
   state_name: Oregon
   lat: 45.4207
   lon: -122.6706
-  description: Weekly family digests of the Lake Oswego farmers market, Farm Fresh Kids, and the library.
+  description: Weekly family digests of the Lake Oswego farmers market, Lakewood, and the library.
   summary: >-
-    The Saturday market, Farm Fresh Kids, and the library, picked each week for families.
+    The Saturday market, Lakewood, and the library, picked each week for families.
   sources:
     - name: "City of Lake Oswego calendar"
       url: "https://www.ci.oswego.or.us/calendar"
@@ -1053,9 +1053,9 @@
   state_name: Colorado
   lat: 40.5853
   lon: -105.0844
-  description: Weekly family digests of Council Tree storytimes and the Poudre Libraries calendar.
+  description: Weekly family digests of Council Tree storytimes, Old Town, and the Poudre Libraries calendar.
   summary: >-
-    Council Tree storytimes and the library calendar, picked each week for families.
+    Council Tree storytimes, the Old Town art walk, and the library, picked each week for families.
   sources:
     - name: "City of Fort Collins"
       url: "https://www.fcgov.com/"
@@ -1083,9 +1083,9 @@
   state_name: Texas
   lat: 33.1507
   lon: -96.8236
-  description: Weekly family digests of Frisco library story times, baby lap-sit, and kids' programs.
+  description: Weekly family digests of Frisco markets, The Star, PGA movie nights, and the library.
   summary: >-
-    Family story time, baby lap-sit, and kids' programs, picked each week for families.
+    The Star, PGA movie nights, and the library, picked each week for families.
   sources:
     - name: "City of Frisco"
       url: "https://www.friscotexas.gov/"

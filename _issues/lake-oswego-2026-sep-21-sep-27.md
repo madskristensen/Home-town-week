@@ -1,6 +1,6 @@
 ---
-title: "The Saturday market, and Banned Books Week"
-description: "The Lake Oswego farmers market and the library's Banned Books Week display, Sept. 21 – 27, 2026."
+title: "A Saturday matinee, then the market"
+description: "You Can't Take It With You at Lakewood, the Saturday market, and Banned Books Week in Lake Oswego, Sept. 21 – 27, 2026."
 date: 2026-09-21
 end_date: "2026-09-27"
 city: lake-oswego
@@ -8,11 +8,21 @@ state: or
 year: 2026
 slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
-hook: "Saturday is the farmers market at Millennium Plaza Park, with Farm Fresh Kids. The library's Freedom to Read Month starts with a banned-books display."
+hook: "Saturday has a 2:00 p.m. matinee of You Can't Take It With You at Lakewood, then the farmers market at Millennium Plaza Park. The library's Freedom to Read Month starts the same week."
 permalink: /or/lake-oswego/2026/sep-21-sep-27/
 ---
 
-Saturday is the farmers market at Millennium Plaza Park, with Farm Fresh Kids. The library's Freedom to Read Month starts with a banned-books display.
+Saturday has a 2:00 p.m. matinee of You Can't Take It With You at Lakewood, then the farmers market at Millennium Plaza Park. The library's Freedom to Read Month starts the same week.
+
+## At Lakewood
+
+### You Can't Take It With You
+<p class="event-when">Wed Sep 23 – Sat Sep 26 · evenings 7:30 p.m.</p>
+<p class="event-place">Lakewood Center for the Arts, 368 S State Street</p>
+
+Moss Hart and George S. Kaufman's family comedy runs Sep. 11 through Oct. 18. Evenings are Wednesday through Saturday at 7:30 p.m. This Saturday also has a 2:00 p.m. matinee. The site lists Sunday matinees in the run. Check the ticket page for Sunday, Sep. 27, before you count on it.
+
+[Lakewood](https://lakewood-center.org/)
 
 The Lake Oswego Public Library is at 706 4th Street. Freedom to Read Month on the library's page runs Sep. 22 through Oct. 19. Banned Books Week, Sep. 22–28, is the kickoff: a display of materials that have been banned or challenged, plus free buttons, stickers, and copies of the American Library Association's book report while supplies last.
 

@@ -1,6 +1,6 @@
 ---
-title: "A banned-book craft at the library"
-description: "A banned-book craft at the Lake Oswego library and the Saturday farmers market, Oct. 5 – 11, 2026."
+title: "A Saturday matinee and a market morning"
+description: "A Lakewood matinee, the Saturday market, and a banned-book craft in Lake Oswego, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: lake-oswego
@@ -8,11 +8,11 @@ state: or
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Tuesday is a drop-in banned-book page magnet craft at the library. Saturday is the farmers market, with Farm Fresh Kids."
+hook: "Tuesday is a drop-in banned-book craft at the library. Saturday is the farmers market in the morning and a 2:00 p.m. matinee of You Can't Take It With You."
 permalink: /or/lake-oswego/2026/oct-5-oct-11/
 ---
 
-Tuesday is a drop-in banned-book page magnet craft at the library. Saturday is the farmers market, with Farm Fresh Kids.
+Tuesday is a drop-in banned-book page magnet craft at the library. Saturday is the farmers market in the morning and a 2:00 p.m. matinee at Lakewood.
 
 Freedom to Read Month runs through Oct. 19. The library is at 706 4th Street.
 
@@ -35,6 +35,16 @@ The Freedom to Read page says to drop by the library for a banned book page magn
 Music 10:30 a.m.–12:30 p.m. Farm Fresh Kids is at the information booth.
 
 [Farmers' Market](https://www.ci.oswego.or.us/lofm)
+
+## Saturday evening, and a matinee
+
+### You Can't Take It With You
+<p class="event-when">Sat Oct 10 · 2:00 p.m. and 7:30 p.m.</p>
+<p class="event-place">Lakewood Center for the Arts, 368 S State Street</p>
+
+This is the other Saturday matinee in the run, plus the regular evening. Wednesday through Friday this week are 7:30 p.m. The show closes Oct. 18. White Christmas opens in November.
+
+[Lakewood](https://lakewood-center.org/)
 
 ## The following week
 

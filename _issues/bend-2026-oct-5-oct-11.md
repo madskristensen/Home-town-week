@@ -1,6 +1,6 @@
 ---
-title: "Storytime downtown, market on Wednesday"
-description: "Central Library storytimes and the Wednesday Bend farmers market, Oct. 5 – 11, 2026."
+title: "Storytime, the market, and film week"
+description: "Central Library storytimes, the Wednesday market, and Bend Film Festival, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: bend
@@ -8,11 +8,11 @@ state: or
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Wednesday morning is family storytime, then baby storytime, then the market on Brooks Alley. Saturday is family storytime again."
+hook: "Wednesday morning is family storytime, then the market on Brooks Alley. The Old Mill festival list puts Bend Film Festival on Wednesday through Sunday. Saturday storytime overlaps a Pokémon meetup."
 permalink: /or/bend/2026/oct-5-oct-11/
 ---
 
-Wednesday morning is family storytime, then baby storytime, then the market on Brooks Alley. Saturday is family storytime again.
+Wednesday morning is family storytime, then baby storytime, then the market on Brooks Alley. The Old Mill festival list puts Bend Film Festival on Wednesday through Sunday. Check the lineup before you bring kids. Saturday storytime overlaps a Pokémon meetup.
 
 ## Wednesday
 
@@ -39,6 +39,16 @@ The Saturday family storytime page lists both of these Wednesday sessions.
 Oct. 7 is the last Wednesday named in the hours block. The season line on the same site still says Oct. 14. If you are going the following Wednesday, check the market site that week. Pets are not allowed. Do not park in the library's designated spots.
 
 [Bend Farmers Market](https://www.bendfarmersmarket.com/)
+
+## Film week
+
+### Bend Film Festival
+<p class="event-when">Wed Oct 7 – Sun Oct 11</p>
+<p class="event-place">Downtown Bend</p>
+
+The Old Mill District's festival roundup lists Bend Film Festival for these five days and says the lineup and tickets are posted. It does not print individual screening times. This is an independent film festival, not a kids series, so read the lineup first.
+
+[Old Mill festival list](https://www.oldmilldistrict.com/bend-events/festivals/)
 
 ## Saturday
 

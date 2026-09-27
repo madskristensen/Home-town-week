@@ -10,6 +10,11 @@ sep-28-oct-4:
     end: "2026-09-29T10:30:00-06:00"
     place: "Council Tree Library, 2733 Council Tree Ave, Fort Collins"
     same_as: "https://poudrelibraries.librarycalendar.com/event/council-tree-ages-4-storytime-32377"
+  - name: "First Friday Art Walk"
+    start: "2026-10-02T18:00:00-06:00"
+    end: "2026-10-02T21:00:00-06:00"
+    place: "Old Town Square, Fort Collins"
+    same_as: "https://allevents.in/fort-collins/downtown-fort-collins-first-friday-art-walk/200030660231813"
 oct-5-oct-11:
   - name: "Council Tree Ages 4+ Storytime"
     start: "2026-10-06T10:00:00-06:00"
