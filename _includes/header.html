@@ -15,10 +15,13 @@
   {%- if page.city and city -%}
   <div class="wrap">
     <div class="city-masthead">
-      <p class="city-name">
-        <a href="{{ city_url | relative_url }}"{% if page.layout == "city" %} aria-current="page"{% endif %}>{{ city.name }}</a>
-      </p>
-      <p class="city-kicker">Weekly family digest</p>
+      {%- include city-mark.html -%}
+      <div class="city-masthead-text">
+        <p class="city-name">
+          <a href="{{ city_url | relative_url }}"{% if page.layout == "city" %} aria-current="page"{% endif %}>{{ city.name }}</a>
+        </p>
+        <p class="city-kicker">Weekly family digest</p>
+      </div>
     </div>
   </div>
   {%- endif -%}

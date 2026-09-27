@@ -5,18 +5,36 @@
 {%- assign seo_description = page.description | default: site.description -%}
 {%- assign seo_image_path = page.image -%}
 {%- assign seo_image_alt = page.image_alt -%}
-{%- if page.layout == "city" and featured_issue.image -%}
-  {%- assign seo_image_path = featured_issue.image -%}
-  {%- assign seo_image_alt = featured_issue.image_alt -%}
-{%- elsif page.layout == "city" or page.layout == "year" -%}
-  {%- if latest_issue.image -%}
-    {%- assign seo_image_path = latest_issue.image -%}
-    {%- assign seo_image_alt = latest_issue.image_alt -%}
+{%- assign seo_image_width = 1200 -%}
+{%- assign seo_image_height = 630 -%}
+{%- assign seo_image_mime = "image/png" -%}
+{%- assign use_city_mark = false -%}
+{%- if city -%}
+  {%- if page.layout == "city" or page.layout == "year" -%}
+    {%- assign use_city_mark = true -%}
+  {%- elsif page.layout == "issue" -%}
+    {%- unless page.image -%}
+      {%- assign use_city_mark = true -%}
+    {%- endunless -%}
   {%- endif -%}
+{%- endif -%}
+{%- if use_city_mark -%}
+  {%- capture seo_image_path -%}/assets/images/og/{{ city.id }}.webp{%- endcapture -%}
+  {%- assign seo_image_path = seo_image_path | strip -%}
+  {%- capture seo_image_alt -%}{{ city.name }} on the Hometown Week map of Washington.{%- endcapture -%}
+  {%- assign seo_image_alt = seo_image_alt | strip -%}
+  {%- assign seo_image_mime = "image/webp" -%}
+{%- elsif page.layout == "issue" and page.image -%}
+  {%- assign seo_image_width = 1600 -%}
+  {%- assign seo_image_height = 900 -%}
+  {%- assign seo_image_mime = "image/webp" -%}
 {%- endif -%}
 {%- if seo_image_path == nil or seo_image_path == "" -%}
   {%- assign seo_image_path = site.image -%}
   {%- assign seo_image_alt = site.image_alt -%}
+  {%- assign seo_image_width = 1200 -%}
+  {%- assign seo_image_height = 630 -%}
+  {%- assign seo_image_mime = "image/png" -%}
 {%- endif -%}
 {%- if page.url == "/" -%}
   {%- assign seo_title = site.title -%}
@@ -63,15 +81,9 @@
 <meta property="og:title" content="{{ seo_title | escape }}">
 <meta property="og:description" content="{{ seo_description | escape }}">
 <meta property="og:image" content="{{ seo_image }}">
-{%- if page.city -%}
-<meta property="og:image:width" content="1600">
-<meta property="og:image:height" content="900">
-<meta property="og:image:type" content="image/webp">
-{%- else -%}
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:type" content="image/png">
-{%- endif -%}
+<meta property="og:image:width" content="{{ seo_image_width }}">
+<meta property="og:image:height" content="{{ seo_image_height }}">
+<meta property="og:image:type" content="{{ seo_image_mime }}">
 {%- if seo_image_alt %}
 <meta property="og:image:alt" content="{{ seo_image_alt | escape }}">
 {%- endif %}
