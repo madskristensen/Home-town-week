@@ -7,7 +7,7 @@
   This week: Monday–Sunday span contains today.
   Coming up: week starts after this week's Monday, soonest first.
   Past issues: Sunday is before today, newest first.
-  Featured: this week, otherwise the soonest coming up, otherwise the newest past.
+  Featured: the current issue (this week, else nearest past, else soonest future).
 {%- endcomment -%}
 {%- assign today = site.data.calendar.today -%}
 {%- assign monday = site.data.calendar.monday -%}
@@ -16,12 +16,5 @@
 {%- assign this_week = this_week_issues | last -%}
 {%- assign coming_up = grouped_issues | where_exp: "item", "item.week_start > monday" | sort: "week_start" -%}
 {%- assign past_issues = grouped_issues | where_exp: "item", "item.week_end < today" | sort: "week_start" | reverse -%}
-{%- if this_week -%}
-  {%- assign featured_issue = this_week -%}
-{%- elsif coming_up.size > 0 -%}
-  {%- assign featured_issue = coming_up | first -%}
-{%- elsif past_issues.size > 0 -%}
-  {%- assign featured_issue = past_issues | first -%}
-{%- else -%}
-  {%- assign featured_issue = nil -%}
-{%- endif -%}
+{%- include current-issue.html issues=grouped_issues -%}
+{%- assign featured_issue = current_issue -%}

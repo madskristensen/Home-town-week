@@ -2,15 +2,16 @@
   One city on a state hub.
   Expects `city` from the parent loop.
   Pass priority="high" on the first card and loading="lazy" on the rest.
-  The city name goes to /{state}/{id}/latest/. The photo and the date go to that issue.
+  The city name, photo, and date go to the current Monday–Sunday issue.
+  The "home" link stays on the city index.
 {%- endcomment -%}
-{%- assign card_issues = site.issues | where: "city", city.id | where: "state", city.state | sort: "date" | reverse -%}
-{%- assign card_latest = card_issues | first -%}
+{%- assign card_issues = site.issues | where: "city", city.id | where: "state", city.state -%}
+{%- include current-issue.html issues=card_issues -%}
+{%- assign card_latest = current_issue -%}
 {%- capture card_url -%}/{{ city.state }}/{{ city.id }}/{%- endcapture -%}
 {%- assign card_url = card_url | strip -%}
 {%- if card_latest -%}
-  {%- capture name_href -%}/{{ city.state }}/{{ city.id }}/latest/{%- endcapture -%}
-  {%- assign name_href = name_href | strip -%}
+  {%- assign name_href = card_latest.url -%}
 {%- else -%}
   {%- assign name_href = card_url -%}
 {%- endif -%}

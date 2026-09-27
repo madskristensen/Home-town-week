@@ -2,7 +2,7 @@
 
 Weekly family digests for the city you live in. This is a Jekyll site for [hometownweek.com](https://hometownweek.com/).
 
-Washington, Oregon, Idaho, Utah, Colorado, and Texas each have a state hub. Live city names link to `/{state}/{city}/latest/`. The home page leads with this week's digest: an opt-in location lookup, a city search, and links to the state hubs. The full city list stays on those hubs and in the footer. The site header does not list cities. Names without a digest stay in `_data/coming_soon.yml` and do not link to issues.
+Washington, Oregon, Idaho, Utah, Colorado, and Texas each have a state hub. A city name on a state hub, and a result in Find your city, open the current Monday–Sunday issue. The home page leads with this week's digest: an opt-in location lookup, a city search, and links to the state hubs. The full city list stays on those hubs and in the footer. The site header does not list cities. Names without a digest stay in `_data/coming_soon.yml` and do not link to issues.
 
 ## URLs
 
@@ -19,7 +19,7 @@ Washington, Oregon, Idaho, Utah, Colorado, and Texas each have a state hub. Live
 
 An issue address is the Monday-through-Sunday span in lowercase, such as `sep-14-sep-20`, `sep-21-sep-27`, or `sep-28-oct-4`. Week numbers do not appear in addresses, titles, or headings. Older `/w38/`, `/w39/`, and `/w40/` addresses redirect to the new ones.
 
-`/wa/{city}/latest/` redirects to the newest issue for that city.
+`/{state}/{city}/latest/` redirects to the current issue for that city: the Monday–Sunday span that contains today in America/Los_Angeles. If that week is not published, it uses the nearest past issue, then the soonest future issue. It does not use the farthest-ahead draft.
 
 ## Local build
 

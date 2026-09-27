@@ -5,7 +5,8 @@
 {%- if page.city and page.state -%}
 {%- assign city = site.data.cities | where: "id", page.city | where: "state", page.state | first -%}
 {%- assign city_issues = site.issues | where: "city", page.city | where: "state", page.state | sort: "date" | reverse -%}
-{%- assign latest_issue = city_issues | first -%}
+{%- include current-issue.html issues=city_issues -%}
+{%- assign latest_issue = current_issue -%}
 {%- capture city_url -%}/{{ page.state }}/{{ page.city }}/{%- endcapture -%}
 {%- assign city_url = city_url | strip -%}
 {%- if page.year -%}

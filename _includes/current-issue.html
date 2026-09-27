@@ -1,0 +1,28 @@
+{%- comment -%}
+  Pick the issue to treat as current for a city.
+
+  Expects include.issues (one city's issues).
+  Sets current_issue.
+
+  Today is site.data.calendar.today in America/Los_Angeles (YYYY-MM-DD).
+  Week bounds are week_start / week_end from the date-span slug.
+
+  1. The Monday–Sunday span that contains today.
+  2. Otherwise the nearest published past week (latest week_end before today).
+  3. Otherwise the soonest future week.
+
+  Never the farthest-ahead draft. Sorting by date descending is the max
+  future week, and that is not this week.
+{%- endcomment -%}
+{%- assign today = site.data.calendar.today -%}
+{%- assign pool = include.issues -%}
+{%- assign current_span = pool | where_exp: "item", "item.week_start <= today and item.week_end >= today" | sort: "week_start" | last -%}
+{%- assign current_past = pool | where_exp: "item", "item.week_end < today" | sort: "week_end" | reverse | first -%}
+{%- assign current_future = pool | where_exp: "item", "item.week_start > today" | sort: "week_start" | first -%}
+{%- if current_span -%}
+  {%- assign current_issue = current_span -%}
+{%- elsif current_past -%}
+  {%- assign current_issue = current_past -%}
+{%- else -%}
+  {%- assign current_issue = current_future -%}
+{%- endif -%}

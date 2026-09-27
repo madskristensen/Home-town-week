@@ -20,15 +20,21 @@
 {%- endcomment -%}
 {%- if use_city_mark -%}
   {%- assign share_issue = nil -%}
-  {%- if page.layout == "city" and featured_issue.image -%}
-    {%- assign share_issue = featured_issue -%}
-  {%- elsif city_issues -%}
-    {%- assign share_pool = city_issues -%}
-    {%- if page.layout == "year" -%}
-      {%- assign share_pool = city_issues | where: "year", page.year -%}
+  {%- if featured_issue.image -%}
+    {%- if page.layout == "city" or page.layout == "year" -%}
+      {%- assign share_issue = featured_issue -%}
     {%- endif -%}
-    {%- assign share_issue = share_pool | where_exp: "item", "item.image" | first -%}
   {%- endif -%}
+  {%- unless share_issue -%}
+    {%- if city_issues -%}
+      {%- assign share_pool = city_issues | where_exp: "item", "item.image" -%}
+      {%- if page.layout == "year" -%}
+        {%- assign share_pool = share_pool | where: "year", page.year -%}
+      {%- endif -%}
+      {%- include current-issue.html issues=share_pool -%}
+      {%- assign share_issue = current_issue -%}
+    {%- endif -%}
+  {%- endunless -%}
   {%- if share_issue -%}
     {%- assign seo_image_path = share_issue.image -%}
     {%- assign seo_image_alt = share_issue.image_alt -%}
