@@ -10,9 +10,19 @@ slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
 hook: "Thursday night is storytime. AllEvents lists a fire open house Saturday, and the department page does not print this year's date."
 permalink: /id/eagle/2026/sep-28-oct-4/
+image: /assets/images/eagle/downtown-gazebo.webp
+image_alt: "A white gazebo on a lawn in downtown Eagle, with trees and storefronts behind it."
+image_credit: "Photo: Tamanoeconomico, CC BY-SA 4.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:City_of_Eagle_(1).jpg"
 ---
 
 Thursday night is storytime. AllEvents lists a fire open house Saturday, and the department page does not print this year's date.
+
+{% include event-photo.html
+   src="/assets/images/eagle/downtown-street.webp"
+   alt="Downtown Eagle, with a red-brick building, parked cars, and the mountains past the end of the street."
+   credit="Photo: Richard Mouser, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Downtown_Eagle,_Idaho._Photo_taken_by_Richard_Mouser_on_January_29th,_2019..jpg" %}
 
 The Saturday market ended Sep. 26. Harvest Fest is the following Saturday, Oct. 10, at Heritage Park. It is not this week. The city events page does not list another family day between the market and that Saturday.
 

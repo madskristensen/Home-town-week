@@ -10,9 +10,19 @@ slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
 hook: "Sunday is the free Cultural Xchange Festival at Millennium Plaza Park. Saturday has the farmers market on that lawn, and a matinee of You Can't Take It With You at Lakewood."
 permalink: /or/lake-oswego/2026/sep-21-sep-27/
+image: /assets/images/lake-oswego/lake.webp
+image_alt: "A lake in Lake Oswego, with houses along the far shore and evergreens in the foreground."
+image_credit: "Photo: Another Believer, CC BY-SA 4.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Lake_Oswego,_Oregon_(2018)_-_36.jpg"
 ---
 
 Sunday is the free Cultural Xchange Festival at Millennium Plaza Park. Saturday has the farmers market on that lawn, and a matinee of You Can't Take It With You at Lakewood. Sunday afternoon is also Korean storytime.
+
+{% include event-photo.html
+   src="/assets/images/lake-oswego/downtown-street.webp"
+   alt="A main street in Lake Oswego, with brick storefronts and outdoor seating."
+   credit="Photo: Another Believer, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Lake_Oswego,_Oregon_(2018)_-_15.jpg" %}
 
 ## At Lakewood
 

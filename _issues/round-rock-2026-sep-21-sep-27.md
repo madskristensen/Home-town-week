@@ -10,6 +10,10 @@ slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
 hook: "Clue is at Penfold Theatre Thursday through Sunday. Saturday morning Play for All is reserved for the Special Needs Family Jamboree."
 permalink: /tx/round-rock/2026/sep-21-sep-27/
+image: /assets/images/round-rock/library.webp
+image_alt: "The Round Rock Public Library, a modern building with a tall glass front and a stone-clad side."
+image_credit: "Photo: TerraFrost, CC BY 4.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Round_Rock_Public_Library_-_new_building.jpg"
 ---
 
 Clue is at Penfold Theatre Thursday through Sunday. Saturday morning Play for All is reserved for the Special Needs Family Jamboree.

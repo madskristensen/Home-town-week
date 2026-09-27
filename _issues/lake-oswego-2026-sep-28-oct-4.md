@@ -10,9 +10,19 @@ slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
 hook: "Sunday is the Lake Grove block party, and the library has a Día de los Muertos craft the same afternoon. Evenings at Lakewood are still the paid run of You Can't Take It With You."
 permalink: /or/lake-oswego/2026/sep-28-oct-4/
+image: /assets/images/lake-oswego/lake.webp
+image_alt: "A lake in Lake Oswego, with houses along the far shore and evergreens in the foreground."
+image_credit: "Photo: Another Believer, CC BY-SA 4.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Lake_Oswego,_Oregon_(2018)_-_36.jpg"
 ---
 
 Sunday is the Lake Grove block party, and the library has a Día de los Muertos craft the same afternoon. Saturday is the usual market at Millennium Plaza Park. Evenings at Lakewood are still the paid run of You Can't Take It With You.
+
+{% include event-photo.html
+   src="/assets/images/lake-oswego/downtown-street.webp"
+   alt="A main street in Lake Oswego, with brick storefronts and outdoor seating."
+   credit="Photo: Another Believer, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Lake_Oswego,_Oregon_(2018)_-_15.jpg" %}
 
 ## At Lakewood
 

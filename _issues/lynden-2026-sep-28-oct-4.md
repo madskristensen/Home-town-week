@@ -18,6 +18,12 @@ image_source_url: "https://commons.wikimedia.org/wiki/File:Lynden,_Washington_-_
 
 Friday morning is preschool storytime. Friday afternoon is a bats program for grades K–5.
 
+{% include event-photo.html
+   src="/assets/images/lynden/pioneer-museum.webp"
+   alt="The Lynden Pioneer Museum on Front Street, a dark building with a white-trimmed gable."
+   credit="Photo: Joe Mabel, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Lynden,_Washington_-_Lynden_Pioneer_Museum_01.jpg" %}
+
 Lynden Library is at 216 4th Street.
 
 ## Friday

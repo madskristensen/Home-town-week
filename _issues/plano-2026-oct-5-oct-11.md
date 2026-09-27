@@ -10,9 +10,19 @@ slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
 hook: "Sunday is Barktoberfest in the downtown arts district. Monday is a parachute party. Tuesday is the Big Pumpkin puppet show."
 permalink: /tx/plano/2026/oct-5-oct-11/
+image: /assets/images/plano/haggard-pavilion.webp
+image_alt: "A white pavilion with a red roof at Haggard Park in Plano, with a lawn in front."
+image_credit: "Photo: Michael Barera, CC BY-SA 4.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Plano_October_2015_01_(Haggard_Park).jpg"
 ---
 
 Sunday is Barktoberfest in the downtown arts district. Monday is a parachute party. Tuesday is the Big Pumpkin puppet show.
+
+{% include event-photo.html
+   src="/assets/images/plano/haggard-lawn.webp"
+   alt="The lawn at Haggard Park in Plano, with downtown buildings past the trees."
+   credit="Photo: Michael Barera, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Plano_October_2015_08_(Haggard_Park).jpg" %}
 
 Both programs need tickets, and the tickets are in person only, starting 30 minutes before.
 

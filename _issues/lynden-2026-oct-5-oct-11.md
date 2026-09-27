@@ -18,6 +18,12 @@ image_source_url: "https://commons.wikimedia.org/wiki/File:Lynden,_Washington_-_
 
 Friday is preschool storytime. Saturday is a reading festival at the library, listed on a community calendar that still needs a check against the library's own page.
 
+{% include event-photo.html
+   src="/assets/images/lynden/pioneer-museum.webp"
+   alt="The Lynden Pioneer Museum on Front Street, a dark building with a white-trimmed gable."
+   credit="Photo: Joe Mabel, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Lynden,_Washington_-_Lynden_Pioneer_Museum_01.jpg" %}
+
 ## Friday
 
 ### Preschool Storytime

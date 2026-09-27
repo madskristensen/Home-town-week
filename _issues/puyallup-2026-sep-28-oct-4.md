@@ -18,6 +18,12 @@ image_source_url: "https://commons.wikimedia.org/wiki/File:Puyallup,_WA_-_Pionee
 
 Thursday morning is the first week of toddler and preschool storytime. Tuesday is Play to Learn. Saturday is the market, then salmon homecoming at the fish hatchery.
 
+{% include event-photo.html
+   src="/assets/images/puyallup/library.webp"
+   alt="The Puyallup Public Library, a brick building with a columned entrance, seen from Pioneer Park."
+   credit="Photo: Joe Mabel, CC BY 3.0"
+   source="https://commons.wikimedia.org/wiki/File:Puyallup,_WA_-_Puyallup_Public_Library_01.jpg" %}
+
 ## Thursday at the library
 
 Both sessions are in the Puyallup Public Library meeting room. The series runs Thursdays from Oct. 1 through Nov. 12. The street address is not on these event pages.
@@ -53,6 +59,12 @@ The market site says 300 S Meridian. The city calendar says 330 S Meridian. Both
 ### Puyallup Watershed Salmon Homecoming
 <p class="event-when">Sat Oct 3 · 11:00 a.m.–3:00 p.m.</p>
 <p class="event-place">Puyallup Historical Fish Hatchery, 1416 14th St SW</p>
+
+{% include event-photo.html
+   src="/assets/images/puyallup/fish-hatchery.webp"
+   alt="The Puyallup Fish Hatchery beside a creek, with trees along the bank."
+   credit="Photo: KhronosTheGodOfTime, CC BY-SA 3.0"
+   source="https://commons.wikimedia.org/wiki/File:Puyallup_Fish_Hatchery.jpg" %}
 
 Free. The city calls it a family event for the salmon coming back to Clarks Creek. It overlaps the late market hours, so the market can be the first stop and the hatchery the second.
 

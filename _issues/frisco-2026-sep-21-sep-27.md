@@ -10,9 +10,19 @@ slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
 hook: "Saturday morning is Safety Town, then family story time. Evening is the Gallegos Park reopening, and FC Dallas hosts LAFC at Toyota Stadium."
 permalink: /tx/frisco/2026/sep-21-sep-27/
+image: /assets/images/frisco/commons-playground.webp
+image_alt: "A playground at Frisco Commons, with blue and green canopies over the play structure."
+image_credit: "Photo: Michael Barera, CC BY-SA 4.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Frisco_Commons_June_2019_01_(playground).jpg"
 ---
 
 Saturday morning is Safety Town, then family story time for walkers through age 5. Evening is the Gallegos Park reopening. That night FC Dallas hosts LAFC at Toyota Stadium.
+
+{% include event-photo.html
+   src="/assets/images/frisco/commons-amphitheater.webp"
+   alt="The amphitheater at Frisco Commons, with a covered stage and rows of benches."
+   credit="Photo: Michael Barera, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Frisco_Commons_June_2019_06_(amphitheater).jpg" %}
 
 The library is at 8000 Dallas Parkway. This week's posted hours are Sunday 1:00–6:00 p.m., Monday through Thursday 9:00 a.m.–9:00 p.m., Friday 9:00 a.m.–6:00 p.m., and Saturday 10:00 a.m.–6:00 p.m.
 

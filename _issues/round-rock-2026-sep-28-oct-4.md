@@ -10,6 +10,10 @@ slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
 hook: "Clue continues at Penfold Theatre Thursday through Sunday. Monday evening is family storytime, with ASL interpreting."
 permalink: /tx/round-rock/2026/sep-28-oct-4/
+image: /assets/images/round-rock/library.webp
+image_alt: "The Round Rock Public Library, a modern building with a tall glass front and a stone-clad side."
+image_credit: "Photo: TerraFrost, CC BY 4.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Round_Rock_Public_Library_-_new_building.jpg"
 ---
 
 Clue continues at Penfold Theatre Thursday through Sunday. Monday evening is family storytime, with ASL interpreting.

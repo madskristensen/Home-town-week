@@ -10,6 +10,10 @@ slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
 hook: "Saturday night is a camp-out at Frisco Commons, with dinner and a light breakfast covered. Wednesday morning is a building-block hour at the Heritage Center. Sunday the Allen Philharmonic plays at the library."
 permalink: /tx/frisco/2026/sep-28-oct-4/
+image: /assets/images/frisco/commons-playground.webp
+image_alt: "A playground at Frisco Commons, with blue and green canopies over the play structure."
+image_credit: "Photo: Michael Barera, CC BY-SA 4.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Frisco_Commons_June_2019_01_(playground).jpg"
 ---
 
 Saturday night is a camp-out at Frisco Commons, with dinner and a light breakfast covered. Wednesday morning is a building-block hour at the Heritage Center. Sunday the Allen Philharmonic plays a family concert at the library. Friday is a spooky movie in the PGA District.
@@ -55,6 +59,12 @@ Songs, rhymes, and books for walkers through age 5. Space is limited. Tickets ar
 ### Walnut Wednesday: Stack Attack
 <p class="event-when">Wed Sep 30 · 10:00–11:00 a.m.</p>
 <p class="event-place">The Depot, Frisco Heritage Center</p>
+
+{% include event-photo.html
+   src="/assets/images/frisco/heritage-museum.webp"
+   alt="The Frisco Heritage Museum, a stone building with a red roof and a tower."
+   credit="Photo: Michael Barera, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Frisco_Heritage_Center_June_2019_04_(Frisco_Heritage_Museum).jpg" %}
 
 Build with blocks from prompts. The city page does not print an age range. Heritage Center programs the same weekend use 6455 Page Street.
 

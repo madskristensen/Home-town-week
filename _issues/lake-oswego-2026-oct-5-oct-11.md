@@ -10,9 +10,19 @@ slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
 hook: "Saturday is the farmers market, then a 2:00 p.m. matinee of You Can't Take It With You. Tuesday is a free banned-book craft at the library. The matinee is the paid ticket."
 permalink: /or/lake-oswego/2026/oct-5-oct-11/
+image: /assets/images/lake-oswego/lake.webp
+image_alt: "A lake in Lake Oswego, with houses along the far shore and evergreens in the foreground."
+image_credit: "Photo: Another Believer, CC BY-SA 4.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Lake_Oswego,_Oregon_(2018)_-_36.jpg"
 ---
 
 Saturday is the farmers market, then a 2:00 p.m. matinee of You Can't Take It With You. Tuesday is a free banned-book craft at the library. The matinee is the paid ticket.
+
+{% include event-photo.html
+   src="/assets/images/lake-oswego/downtown-street.webp"
+   alt="A main street in Lake Oswego, with brick storefronts and outdoor seating."
+   credit="Photo: Another Believer, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Lake_Oswego,_Oregon_(2018)_-_15.jpg" %}
 
 Freedom to Read Month runs through Oct. 19. The library is at 706 4th Street.
 

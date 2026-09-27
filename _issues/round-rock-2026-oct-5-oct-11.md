@@ -10,6 +10,10 @@ slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
 hook: "Clue closes Sunday at Penfold Theatre. Tuesday is National Night Out in neighborhoods across town."
 permalink: /tx/round-rock/2026/oct-5-oct-11/
+image: /assets/images/round-rock/library.webp
+image_alt: "The Round Rock Public Library, a modern building with a tall glass front and a stone-clad side."
+image_credit: "Photo: TerraFrost, CC BY 4.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Round_Rock_Public_Library_-_new_building.jpg"
 ---
 
 Clue closes Sunday at Penfold Theatre. Tuesday is National Night Out in neighborhoods across town.

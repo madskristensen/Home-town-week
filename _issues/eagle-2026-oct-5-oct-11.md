@@ -10,9 +10,19 @@ slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
 hook: "Saturday is Harvest Fest at Heritage Park, with 1,500 pumpkins for kids. Thursday night is storytime, and the Friends book sale opens Friday."
 permalink: /id/eagle/2026/oct-5-oct-11/
+image: /assets/images/eagle/downtown-gazebo.webp
+image_alt: "A white gazebo on a lawn in downtown Eagle, with trees and storefronts behind it."
+image_credit: "Photo: Tamanoeconomico, CC BY-SA 4.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:City_of_Eagle_(1).jpg"
 ---
 
 Saturday is Harvest Fest at Heritage Park, with 1,500 pumpkins for kids and crafts from the library. Thursday night is storytime. Friday the Friends book sale opens at Community Hall.
+
+{% include event-photo.html
+   src="/assets/images/eagle/downtown-street.webp"
+   alt="Downtown Eagle, with a red-brick building, parked cars, and the mountains past the end of the street."
+   credit="Photo: Richard Mouser, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Downtown_Eagle,_Idaho._Photo_taken_by_Richard_Mouser_on_January_29th,_2019..jpg" %}
 
 ## Thursday
 

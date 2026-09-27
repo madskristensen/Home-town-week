@@ -10,9 +10,19 @@ slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
 hook: "Saturday night is the free Otsukimi moon-viewing festival at Haggard Park. The weekend also has a train show, Beetlejuice JR, and Around the World in 80 Days."
 permalink: /tx/plano/2026/sep-21-sep-27/
+image: /assets/images/plano/haggard-pavilion.webp
+image_alt: "A white pavilion with a red roof at Haggard Park in Plano, with a lawn in front."
+image_credit: "Photo: Michael Barera, CC BY-SA 4.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Plano_October_2015_01_(Haggard_Park).jpg"
 ---
 
 Saturday night is the free Otsukimi moon-viewing festival at Haggard Park. Monday is preschool storytime at Davis.
+
+{% include event-photo.html
+   src="/assets/images/plano/haggard-lawn.webp"
+   alt="The lawn at Haggard Park in Plano, with downtown buildings past the trees."
+   credit="Photo: Michael Barera, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Plano_October_2015_08_(Haggard_Park).jpg" %}
 
 ## Saturday night
 

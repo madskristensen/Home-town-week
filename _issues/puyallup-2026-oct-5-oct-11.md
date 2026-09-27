@@ -18,6 +18,12 @@ image_source_url: "https://commons.wikimedia.org/wiki/File:Puyallup,_WA_-_Pionee
 
 Saturday is the last farmers market of the season in Pioneer Park. Tuesday evening is a magic hour for grades K–6. Thursday morning is storytime.
 
+{% include event-photo.html
+   src="/assets/images/puyallup/library.webp"
+   alt="The Puyallup Public Library, a brick building with a columned entrance, seen from Pioneer Park."
+   credit="Photo: Joe Mabel, CC BY 3.0"
+   source="https://commons.wikimedia.org/wiki/File:Puyallup,_WA_-_Puyallup_Public_Library_01.jpg" %}
+
 ## Thursday storytime
 
 The Thursday series continues in the Puyallup Public Library meeting room. The Oct. 1 event pages name Oct. 8 as the next date. Those pages do not publish a separate link for Oct. 8 in the short listing used here, so confirm the room on the library calendar if you need a second page.

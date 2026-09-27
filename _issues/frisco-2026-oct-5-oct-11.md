@@ -10,9 +10,19 @@ slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
 hook: "Saturday's Fall Market has pumpkin decorating until 1:00 p.m. Friday is a spooky movie in the PGA District. Wednesday morning is lap-sit story time for babies who are not walking yet."
 permalink: /tx/frisco/2026/oct-5-oct-11/
+image: /assets/images/frisco/commons-playground.webp
+image_alt: "A playground at Frisco Commons, with blue and green canopies over the play structure."
+image_credit: "Photo: Michael Barera, CC BY-SA 4.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Frisco_Commons_June_2019_01_(playground).jpg"
 ---
 
 Saturday's Fall Market has pumpkin decorating until 1:00 p.m. Friday is a spooky movie in the PGA District. Wednesday morning is lap-sit story time for babies who are not walking yet. Sunday afternoon is a come-and-go craft for kids with special needs.
+
+{% include event-photo.html
+   src="/assets/images/frisco/commons-amphitheater.webp"
+   alt="The amphitheater at Frisco Commons, with a covered stage and rows of benches."
+   credit="Photo: Michael Barera, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Frisco_Commons_June_2019_06_(amphitheater).jpg" %}
 
 Frisco Public Library is at 8000 Dallas Parkway. Sunday hours are 1:00–6:00 p.m., so the craft is after the building opens. Wednesday is a regular 9:00 a.m.–9:00 p.m. day.
 

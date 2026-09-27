@@ -10,9 +10,19 @@ slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
 hook: "Thursday night is Beetlejuice JR. Saturday afternoon is a free Hubble program for grades K–5, then Family Fest at Red Tail Pavilion. Kids 5 and under are free with a parent."
 permalink: /tx/plano/2026/sep-28-oct-4/
+image: /assets/images/plano/haggard-pavilion.webp
+image_alt: "A white pavilion with a red roof at Haggard Park in Plano, with a lawn in front."
+image_credit: "Photo: Michael Barera, CC BY-SA 4.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Plano_October_2015_01_(Haggard_Park).jpg"
 ---
 
 Thursday night is Beetlejuice JR at Willow Bend. Saturday afternoon is a free Hubble program for grades K–5, then Family Fest at Red Tail Pavilion. Kids 5 and under are free with a parent. Sunday the Plano Symphony plays a family concert.
+
+{% include event-photo.html
+   src="/assets/images/plano/haggard-lawn.webp"
+   alt="The lawn at Haggard Park in Plano, with downtown buildings past the trees."
+   credit="Photo: Michael Barera, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Plano_October_2015_08_(Haggard_Park).jpg" %}
 
 ## Red Tail Pavilion
 

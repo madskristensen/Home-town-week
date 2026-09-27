@@ -82,4 +82,10 @@ Community Access Night was Thursday, Sep 17. Sensory Time was Sunday, Sep 20. Ne
 
 ## Waterfront
 
+{% include event-photo.html
+   src="/assets/images/everett/waterfront-center.webp"
+   alt="The Waterfront Center on the Everett waterfront, a dark building beside the marina."
+   credit="Photo: Joe Mabel, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Everett,_WA_-_Waterfront_Center_01.jpg" %}
+
 The Waterfront Center and the marina path are the open outing if the market is the only timed plan. Jetty Island's foot-ferry season is a summer schedule and should not be assumed in late September. Confirm with the city before you count on a boat.

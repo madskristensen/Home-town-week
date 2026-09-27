@@ -10,6 +10,10 @@ slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
 hook: "Sunday is Tbilisoba at Centennial Center Park. Kids under 12 are free. Wednesday is Spanish family storytime at Smoky Hill."
 permalink: /co/centennial/2026/sep-28-oct-4/
+image: /assets/images/centennial/civic-center.webp
+image_alt: "Centennial Civic Center on Arapahoe Road, with the city sign and flagpoles in front."
+image_credit: "Photo: Jeffrey Beall, CC BY 3.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Centennial,_Colorado.JPG"
 ---
 
 Sunday is Tbilisoba at Centennial Center Park. Kids under 12 are free. Wednesday is still Spanish family storytime at Smoky Hill.

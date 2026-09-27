@@ -10,9 +10,19 @@ slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
 hook: "Thursday night is storytime with stuffed animals. Saturday is the last market of the season at Heritage Park."
 permalink: /id/eagle/2026/sep-21-sep-27/
+image: /assets/images/eagle/downtown-gazebo.webp
+image_alt: "A white gazebo on a lawn in downtown Eagle, with trees and storefronts behind it."
+image_credit: "Photo: Tamanoeconomico, CC BY-SA 4.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:City_of_Eagle_(1).jpg"
 ---
 
 Thursday night is storytime with stuffed animals. Saturday is the last market of the season at Heritage Park.
+
+{% include event-photo.html
+   src="/assets/images/eagle/downtown-street.webp"
+   alt="Downtown Eagle, with a red-brick building, parked cars, and the mountains past the end of the street."
+   credit="Photo: Richard Mouser, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Downtown_Eagle,_Idaho._Photo_taken_by_Richard_Mouser_on_January_29th,_2019..jpg" %}
 
 ## Thursday
 

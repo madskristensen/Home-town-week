@@ -10,6 +10,10 @@ slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
 hook: "Tuesday night, The Snowy Day is a ticketed show at the PACE Center in Parker. Saturday is free: Lily Williams reads If Animals Disappeared at Smoky Hill, then pumpkin painting at Southglenn."
 permalink: /co/centennial/2026/oct-5-oct-11/
+image: /assets/images/centennial/civic-center.webp
+image_alt: "Centennial Civic Center on Arapahoe Road, with the city sign and flagpoles in front."
+image_credit: "Photo: Jeffrey Beall, CC BY 3.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Centennial,_Colorado.JPG"
 ---
 
 Tuesday night, The Snowy Day is a ticketed show at the PACE Center in Parker. Saturday is free: Lily Williams reads If Animals Disappeared at Smoky Hill, then pumpkin painting at Southglenn.

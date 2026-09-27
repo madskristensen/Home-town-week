@@ -18,6 +18,12 @@ image_source_url: "https://commons.wikimedia.org/wiki/File:Puyallup,_WA_-_Pionee
 
 Saturday is the farmers market in Pioneer Park, with music from 11:00 a.m. to 1:00 p.m. No weekday kids' storytime is posted until October.
 
+{% include event-photo.html
+   src="/assets/images/puyallup/library.webp"
+   alt="The Puyallup Public Library, a brick building with a columned entrance, seen from Pioneer Park."
+   credit="Photo: Joe Mabel, CC BY 3.0"
+   source="https://commons.wikimedia.org/wiki/File:Puyallup,_WA_-_Puyallup_Public_Library_01.jpg" %}
+
 ## Saturday market
 
 ### Puyallup Farmers Market

@@ -10,6 +10,10 @@ slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
 hook: "Saturday morning is a free health fair at the Trails Recreation Center. Family storytime at Smoky Hill overlaps the end of it. Sunday is a Latin America program at Southglenn Library."
 permalink: /co/centennial/2026/sep-21-sep-27/
+image: /assets/images/centennial/civic-center.webp
+image_alt: "Centennial Civic Center on Arapahoe Road, with the city sign and flagpoles in front."
+image_credit: "Photo: Jeffrey Beall, CC BY 3.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Centennial,_Colorado.JPG"
 ---
 
 Saturday morning is a free health fair at the Trails Recreation Center. Family storytime at Smoky Hill overlaps the end of it. Sunday is a Latin America program at Southglenn. No weekday kids' program is posted at Smoky Hill, Southglenn, or Koelbel this week.

@@ -48,6 +48,12 @@ English conversation practice. All levels. Registration is not required. This is
 
 ## Outside
 
+{% include event-photo.html
+   src="/assets/images/kenmore/st-edward-beach.webp"
+   alt="The beach at Saint Edward State Park in Kenmore, with driftwood along the water."
+   credit="Photo: Joe Mabel, CC BY-SA 3.0"
+   source="https://commons.wikimedia.org/wiki/File:St_Edward_State_Park_beach_01.jpg" %}
+
 Log Boom Park and Saint Edward are still the walks if Friday's sessions are full. No ticketed program is posted at either park this week.
 
 ## Saturday next
