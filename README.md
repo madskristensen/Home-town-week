@@ -2,20 +2,18 @@
 
 Weekly family digests for the city you live in. This is a Jekyll site for [hometownweek.com](https://hometownweek.com/).
 
-Washington editions are Bainbridge Island, Bellevue, Bellingham, Bothell, Edmonds, Everett, Ferndale, Gig Harbor, Issaquah, Kenmore, Kirkland, Lacey, Lynden, Lynnwood, Maple Valley, Mercer Island, Mill Creek, Poulsbo, Puyallup, Redmond, Renton, Sammamish, and Woodinville. Each city uses the same path, for example `/wa/kirkland/`.
-
-The home page is a directory, not a second digest. Live city names link to `/{state}/{city}/latest/`. Oregon, Idaho, Utah, Colorado, and Texas are listed as coming soon from `_data/coming_soon.yml`. Those names do not link to issues, and they stay out of the footer and the header.
+Washington, Oregon, Idaho, Utah, Colorado, and Texas each have a state hub. Live city names link to `/{state}/{city}/latest/`. The footer lists state hubs and city names. The site header does not. Names without a digest stay in `_data/coming_soon.yml` and do not link to issues.
 
 ## URLs
 
 | Page | Path |
 | --- | --- |
 | Home | `/` |
-| Washington | `/wa/` |
-| City | `/wa/{city}/`, for example `/wa/redmond/` or `/wa/bellevue/` |
-| Year | `/wa/{city}/2026/` |
-| Issue | `/wa/{city}/2026/sep-28-oct-4/` |
-| Latest | `/wa/{city}/latest/` |
+| State hub | `/{state}/`, for example `/wa/`, `/or/`, `/id/`, `/ut/`, `/co/`, `/tx/` |
+| City | `/{state}/{city}/`, for example `/wa/redmond/` or `/or/bend/` |
+| Year | `/{state}/{city}/2026/` |
+| Issue | `/{state}/{city}/2026/sep-28-oct-4/` |
+| Latest | `/{state}/{city}/latest/` |
 | About | `/about/` |
 | Feed | `/feed.xml` |
 
@@ -38,11 +36,11 @@ Pushes to `main` run `.github/workflows/pages.yml`, which builds the site and de
 
 ## Adding a city
 
-1. Add the city to `_data/cities.yml`.
-2. Add `wa/{state}/{city}/index.html`, `wa/{state}/{city}/{year}/index.html`, and `wa/{state}/{city}/latest.html`, using the Redmond pages as the pattern.
+1. Add the city to `_data/cities.yml`, alphabetical within its state.
+2. Add `{state}/{city}/index.html`, `{state}/{city}/{year}/index.html`, and `{state}/{city}/latest.html`, using the Redmond pages as the pattern.
 3. Add issues under `_issues/` with `city`, `state`, `year`, `slug`, and a permalink like `/wa/kirkland/2026/sep-28-oct-4/`.
-4. Put photos in `assets/images/{city}/` at 800, 1200, and 1600 widths, and add `{city}_events.yml` under `_data/` if you want event structured data.
+4. Put a state outline with a city pin at `assets/images/cities/{state}/{city}.svg`. Put photos in `assets/images/{city}/` at 800, 1200, and 1600 widths, and add `{city}_events.yml` under `_data/` if you want event structured data.
 
-The Washington hub and the footer read `_data/cities.yml` in list order, so keep that file alphabetical. The home directory lists those live cities first, then coming-soon names. When a coming-soon city gets a digest, add it here and remove it from `_data/coming_soon.yml`. Do not publish an empty issue just to make the name clickable. The site header does not list cities. It links to Washington. City names in the header appear only on that city's own pages.
+The footer and the home directory read `_data/cities.yml` in list order: states in block order, cities alphabetical inside each state. The home directory lists live cities first, then coming-soon names. When a coming-soon city gets a digest, add it here and remove it from `_data/coming_soon.yml`. Do not publish an empty issue just to make the name clickable. The site header does not list cities. It links to Washington. City names in the header appear only on that city's own pages.
 
 Every page inlines `assets/css/site.css` from the head. There is no separate city stylesheet and no render-blocking CSS link. State hubs still use the city cards.

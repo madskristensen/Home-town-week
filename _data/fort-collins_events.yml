@@ -1,0 +1,28 @@
+# Dated events listed on each fort-collins week.
+sep-21-sep-27:
+  - name: "Council Tree All Ages Storytime with ASL"
+    start: "2026-09-26T10:00:00-06:00"
+    place: "Council Tree Library, 2733 Council Tree Ave, Fort Collins"
+    same_as: "https://poudrelibraries.org/storytime/"
+sep-28-oct-4:
+  - name: "Council Tree Ages 4+ Storytime"
+    start: "2026-09-29T10:00:00-06:00"
+    end: "2026-09-29T10:30:00-06:00"
+    place: "Council Tree Library, 2733 Council Tree Ave, Fort Collins"
+    same_as: "https://poudrelibraries.librarycalendar.com/event/council-tree-ages-4-storytime-32377"
+oct-5-oct-11:
+  - name: "Council Tree Ages 4+ Storytime"
+    start: "2026-10-06T10:00:00-06:00"
+    end: "2026-10-06T10:30:00-06:00"
+    place: "Council Tree Library, 2733 Council Tree Ave, Fort Collins"
+    same_as: "https://poudrelibraries.librarycalendar.com/event/council-tree-ages-4-storytime-32377"
+  - name: "Council Tree Toddler Storytime"
+    start: "2026-10-05T10:00:00-06:00"
+    end: "2026-10-05T10:30:00-06:00"
+    place: "Council Tree Library, 2733 Council Tree Ave, Fort Collins"
+    same_as: "https://poudrelibraries.librarycalendar.com/events/week/2026/10/06"
+  - name: "Council Tree Toddler Storytime"
+    start: "2026-10-06T10:00:00-06:00"
+    end: "2026-10-06T10:30:00-06:00"
+    place: "Council Tree Library, 2733 Council Tree Ave, Fort Collins"
+    same_as: "https://poudrelibraries.librarycalendar.com/events/week/2026/10/06"

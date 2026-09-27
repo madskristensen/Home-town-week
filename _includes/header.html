@@ -7,7 +7,7 @@
     {%- endif -%}
     {%- unless page.city -%}
     <nav class="header-nav" aria-label="Washington">
-      <a href="{{ '/wa/' | relative_url }}"{% if page.layout == "state" %} aria-current="page"{% endif %}>Washington</a>
+      <a href="{{ '/wa/' | relative_url }}"{% if page.layout == "state" and page.state == "wa" %} aria-current="page"{% endif %}>Washington</a>
     </nav>
     {%- endunless -%}
   </div>

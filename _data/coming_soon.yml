@@ -1,35 +1,5 @@
 # Home directory only. These names are not in _data/cities.yml, so the
-# footer, the Washington hub, and the issue pages do not list them.
+# footer and the issue pages do not list them.
 # Do not link a city to /latest/ or add an empty issue until a real digest exists.
 # When a city launches, move it into _data/cities.yml and delete it here.
-- state: or
-  state_name: Oregon
-  cities:
-    - Beaverton
-    - Hillsboro
-    - Lake Oswego
-    - Bend
-- state: id
-  state_name: Idaho
-  cities:
-    - Meridian
-    - Eagle
-    - Coeur d'Alene
-- state: ut
-  state_name: Utah
-  cities:
-    - Lehi
-    - South Jordan
-    - Orem
-- state: co
-  state_name: Colorado
-  cities:
-    - Fort Collins
-    - Castle Rock
-    - Centennial
-- state: tx
-  state_name: Texas
-  cities:
-    - Frisco
-    - Plano
-    - Round Rock
+[]

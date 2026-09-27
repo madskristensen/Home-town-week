@@ -1,8 +1,8 @@
-# Add a city by appending a block, then add wa/{state}/{id}/ pages.
-# Keep this list alphabetical. The Washington hub, the footer, and the
-# home directory read it in this order. Coming-soon names live in
-# coming_soon.yml until a digest exists. City names stay out of the
-# site header. See README for the page files each city needs.
+# Add a city in alphabetical order within its state. State blocks stay in
+# the order the home directory and the footer should show them. Each state
+# hub reads only its own cities, in this order. Coming-soon names live in
+# coming_soon.yml until a digest exists. City names stay out of the site
+# header. See README for the page files each city needs.
 - id: bainbridge-island
   name: Bainbridge Island
   state: wa
@@ -164,3 +164,115 @@
   description: Weekly family digests of the Woodinville library, Festival Street, and 21 Acres.
   summary: >-
     The library, Festival Street, and 21 Acres, picked each week for families.
+- id: beaverton
+  name: Beaverton
+  state: or
+  state_name: Oregon
+  description: Weekly family digests of Beaverton library storytimes and the Saturday farmers market.
+  summary: >-
+    The library storytimes and the Saturday market, picked each week for families.
+- id: bend
+  name: Bend
+  state: or
+  state_name: Oregon
+  description: Weekly family digests of the Bend farmers market, Northwest Crossing, and the downtown library.
+  summary: >-
+    The Wednesday market, Northwest Crossing, and the downtown library, picked each week for families.
+- id: hillsboro
+  name: Hillsboro
+  state: or
+  state_name: Oregon
+  description: Weekly family digests of Hillsboro's farmers markets and Brookwood Library storytimes.
+  summary: >-
+    The downtown market, Orenco, and Brookwood Library, picked each week for families.
+- id: lake-oswego
+  name: Lake Oswego
+  state: or
+  state_name: Oregon
+  description: Weekly family digests of the Lake Oswego farmers market, Farm Fresh Kids, and the library.
+  summary: >-
+    The Saturday market, Farm Fresh Kids, and the library, picked each week for families.
+- id: coeur-dalene
+  name: Coeur d'Alene
+  state: id
+  state_name: Idaho
+  description: Weekly family digests of Coeur d'Alene library storytimes, stuffie sleepovers, and family swaps.
+  summary: >-
+    Library storytimes, the stuffie sleepover, and Saturday programs, picked each week for families.
+- id: eagle
+  name: Eagle
+  state: id
+  state_name: Idaho
+  description: Weekly family digests of Eagle library storytime, the Saturday market, and Harvest Fest.
+  summary: >-
+    Thursday storytime, Heritage Park, and Harvest Fest, picked each week for families.
+- id: meridian
+  name: Meridian
+  state: id
+  state_name: Idaho
+  description: Weekly family digests of Meridian library storytimes and the Main Street Market.
+  summary: >-
+    Pajama storytime, preschool storytime, and the Saturday market, picked each week for families.
+- id: lehi
+  name: Lehi
+  state: ut
+  state_name: Utah
+  description: Weekly family digests of Lehi library storytimes and Friday music and movement.
+  summary: >-
+    Library storytime and Friday music and movement, picked each week for families.
+- id: orem
+  name: Orem
+  state: ut
+  state_name: Utah
+  description: Weekly family digests of Orem library preschool storytimes.
+  summary: >-
+    Preschool storytime at the Orem Public Library, picked each week for families.
+- id: south-jordan
+  name: South Jordan
+  state: ut
+  state_name: Utah
+  description: Weekly family digests of South Jordan library storytimes, Toddler Time, and Baby and Me.
+  summary: >-
+    Storytime, Toddler Time, and Baby and Me, picked each week for families.
+- id: castle-rock
+  name: Castle Rock
+  state: co
+  state_name: Colorado
+  description: Weekly family digests of Castle Rock library storytimes and Bark for Books.
+  summary: >-
+    Kids Corner storytimes and Bark for Books, picked each week for families.
+- id: centennial
+  name: Centennial
+  state: co
+  state_name: Colorado
+  description: Weekly family digests of Smoky Hill Library storytimes and family programs in Centennial.
+  summary: >-
+    Smoky Hill storytimes and family programs, picked each week for families.
+- id: fort-collins
+  name: Fort Collins
+  state: co
+  state_name: Colorado
+  description: Weekly family digests of Council Tree storytimes and the Poudre Libraries calendar.
+  summary: >-
+    Council Tree storytimes and the library calendar, picked each week for families.
+- id: frisco
+  name: Frisco
+  state: tx
+  state_name: Texas
+  description: Weekly family digests of Frisco library story times, baby lap-sit, and kids' programs.
+  summary: >-
+    Family story time, baby lap-sit, and kids' programs, picked each week for families.
+- id: plano
+  name: Plano
+  state: tx
+  state_name: Texas
+  description: Weekly family digests of Plano library storytimes, puppet shows, and kids' programs.
+  summary: >-
+    Storytime, parachute play, and the puppet show, picked each week for families.
+- id: round-rock
+  name: Round Rock
+  state: tx
+  state_name: Texas
+  description: Weekly family digests of Round Rock library family storytime and preschool storytime.
+  summary: >-
+    Monday family storytime and Saturday storytime, picked each week for families.

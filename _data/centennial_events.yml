@@ -1,0 +1,24 @@
+# Dated events listed on each centennial week.
+sep-21-sep-27:
+  - name: "Family Storytime"
+    start: "2026-09-26T10:30:00-06:00"
+    end: "2026-09-26T11:00:00-06:00"
+    place: "Smoky Hill Library, 5430 S Biscay Circle, Centennial"
+    same_as: "https://arapahoelibraries.bibliocommons.com/v2/events/6aa80eb8ca248a002915ac4b"
+sep-28-oct-4:
+  - name: "Spanish Family Storytime"
+    start: "2026-09-30T16:00:00-06:00"
+    end: "2026-09-30T16:30:00-06:00"
+    place: "Smoky Hill Library, 5430 S Biscay Circle, Centennial"
+    same_as: "https://arapahoelibraries.bibliocommons.com/v2/events/6ab13eaa19094f0c6939215d"
+oct-5-oct-11:
+  - name: "Little Explorers"
+    start: "2026-10-06T10:00:00-06:00"
+    end: "2026-10-06T11:00:00-06:00"
+    place: "Meeting Room A, Smoky Hill Library, 5430 S Biscay Circle, Centennial"
+    same_as: "https://arapahoelibraries.bibliocommons.com/v2/events/6a96cdc529a7dd0d67482dae"
+  - name: "Meet Author Lily Williams"
+    start: "2026-10-10T11:00:00-06:00"
+    end: "2026-10-10T12:00:00-06:00"
+    place: "Smoky Hill Library, 5430 S Biscay Circle, Centennial"
+    same_as: "https://arapahoelibraries.org/"
