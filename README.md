@@ -4,6 +4,8 @@ Weekly family digests for the city you live in. This is a Jekyll site for [homet
 
 Washington editions are Bellevue, Bellingham, Bothell, Edmonds, Everett, Ferndale, Issaquah, Kirkland, Lynnwood, Mercer Island, Redmond, Renton, and Sammamish. Each city uses the same path, for example `/wa/kirkland/`.
 
+The home page is a directory, not a second digest. Live city names link to `/{state}/{city}/latest/`. Oregon, Idaho, Utah, Colorado, and Texas are listed as coming soon from `_data/coming_soon.yml`. Those names do not link to issues, and they stay out of the footer and the header.
+
 ## URLs
 
 | Page | Path |
@@ -41,6 +43,6 @@ Pushes to `main` run `.github/workflows/pages.yml`, which builds the site and de
 3. Add issues under `_issues/` with `city`, `state`, `year`, `slug`, and a permalink like `/wa/kirkland/2026/sep-28-oct-4/`.
 4. Put photos in `assets/images/{city}/` at 800, 1200, and 1600 widths, and add `{city}_events.yml` under `_data/` if you want event structured data.
 
-The Washington hub, the footer, and the home-page cards read `_data/cities.yml` in list order, so keep that file alphabetical. The site header does not list cities. It links to Washington. City names in the header appear only on that city's own pages.
+The Washington hub and the footer read `_data/cities.yml` in list order, so keep that file alphabetical. The home directory lists those live cities first, then coming-soon names. When a coming-soon city gets a digest, add it here and remove it from `_data/coming_soon.yml`. Do not publish an empty issue just to make the name clickable. The site header does not list cities. It links to Washington. City names in the header appear only on that city's own pages.
 
-City, year, and issue pages load `assets/css/city.css`. The home page does not, except through the shared card styles in `assets/css/main.css`.
+City, year, and issue pages inline `assets/css/city.css` with the shared sheet. The home page uses `assets/css/main.css` only. State hubs still use the city cards.

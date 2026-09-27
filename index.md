@@ -1,9 +1,5 @@
 ---
 layout: home
 title: Hometown Week
-description: Weekly family digests for Washington cities. Parks, markets, libraries, and the plans worth making.
+description: Weekly family digests. Parks, libraries, kids shows, and market mornings for the city you live in.
 ---
-
-Washington cities. One Monday-through-Sunday issue for each, every week.
-
-Parks, markets, the library, and the plans worth making with kids. The date on an issue is that week's span. Every city is on the [Washington page]({{ '/wa/' | relative_url }}).

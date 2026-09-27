@@ -1,6 +1,7 @@
 # Add a city by appending a block, then add wa/{state}/{id}/ pages.
 # Keep this list alphabetical. The Washington hub, the footer, and the
-# home-page cards all read it in this order. City names stay out of the
+# home directory read it in this order. Coming-soon names live in
+# coming_soon.yml until a digest exists. City names stay out of the
 # site header. See README for the page files each city needs.
 - id: bellevue
   name: Bellevue
