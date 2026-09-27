@@ -1,6 +1,6 @@
 ---
-title: "ArtWalk Friday, pumpkins Wednesday"
-description: "Second Friday ArtWalk, a pumpkin storytime, and a contra dance in Coeur d'Alene, Oct. 5 – 11, 2026."
+title: "Finding Neverland closes, ArtWalk Friday"
+description: "The last weekend of Finding Neverland, Second Friday ArtWalk, and a pumpkin storytime in Coeur d'Alene, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: coeur-dalene
@@ -8,11 +8,21 @@ state: id
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Friday night is the free downtown ArtWalk. Wednesday is pumpkin storytime. Sunday is a contra dance."
+hook: "Finding Neverland closes Sunday at Lake City Playhouse, with matinees Saturday and Sunday. Friday night is the free downtown ArtWalk."
 permalink: /id/coeur-dalene/2026/oct-5-oct-11/
 ---
 
-Friday night is the free downtown ArtWalk. Wednesday is pumpkin storytime. Sunday is a contra dance.
+Finding Neverland closes Sunday at Lake City Playhouse, with matinees Saturday and Sunday. Friday night is the free downtown ArtWalk.
+
+## At Lake City Playhouse
+
+### Finding Neverland
+<p class="event-when">Thu Oct 8 · 7:30 p.m. · Fri Oct 9 · 7:30 p.m. · Sat Oct 10 · 2:00 p.m. · Sun Oct 11 · 2:00 p.m.</p>
+<p class="event-place">Lake City Playhouse, 1320 E Garden Ave</p>
+
+Last weekend of the musical. The Spokesman-Review lists Thursdays and Fridays at 7:30 p.m. and Saturdays and Sundays at 2:00 p.m. The Press says the run closes Oct. 11. Tickets are $25 for adults, $23 for seniors and military, and $21.50 for students. Friday's 7:30 p.m. curtain overlaps ArtWalk, which runs until 8:00 p.m. Sunday's 2:00 p.m. matinee is the same hour as the library contra dance.
+
+[Spokesman-Review](https://www.spokesman.com/stories/2026/sep/24/hope-soars-in-finding-neverland/) · [Coeur d'Alene Press](https://cdapress.com/news/2026/sep/25/lake-city-playhouse-presents-finding-neverland/)
 
 ## Friday night
 

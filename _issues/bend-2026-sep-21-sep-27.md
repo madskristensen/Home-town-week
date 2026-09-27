@@ -1,6 +1,6 @@
 ---
-title: "Markets, and the museum is open"
-description: "The Bend markets and the High Desert Museum, Sept. 21 – 27, 2026."
+title: "A ski film Monday, markets after"
+description: "A Teton Gravity Research film at the Tower Theatre and the Bend markets, Sept. 21 – 27, 2026."
 date: 2026-09-21
 end_date: "2026-09-27"
 city: bend
@@ -8,11 +8,21 @@ state: or
 year: 2026
 slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
-hook: "Wednesday is the farmers market on Brooks Alley. Saturday is the last Northwest Crossing market. The High Desert Museum is open daily, with a harvest exhibit up through Oct. 11."
+hook: "Monday night the Tower screens a ski film at 6:00 and 8:00 p.m., with a child's ticket. Wednesday is the farmers market on Brooks Alley. Saturday is the last Northwest Crossing market."
 permalink: /or/bend/2026/sep-21-sep-27/
 ---
 
-Wednesday is the farmers market on Brooks Alley. Saturday is the last Northwest Crossing market. The High Desert Museum is open daily, with a harvest exhibit up through Oct. 11.
+Monday night the Tower screens a ski film at 6:00 and 8:00 p.m., with a child's ticket. Wednesday is the farmers market on Brooks Alley. Saturday is the last Northwest Crossing market.
+
+## Monday at the Tower
+
+### Actually, It Is Rocket Science
+<p class="event-when">Mon Sep 21 · 6:00 p.m. and 8:00 p.m.</p>
+<p class="event-place">Tower Theatre, 835 NW Wall St</p>
+
+Teton Gravity Research's ski and snowboard film, not a kids' play. The presenter lists an early showing at 6:00 p.m., doors at 5:00, and a late showing at 8:00 p.m., doors at 7:30. The Tower's events list has both of those clocks on Sep. 21. The Tower's 8:00 p.m. page prices general admission at $22 for adults and $12 for a child, plus an $8 historic preservation fee. Ages 3 and under are free.
+
+[8:00 p.m. listing](https://www.towertheatre.org/event/actually-it-is-rocket-science-9-21-26-8pm) · [Teton Gravity Research](https://tetongravity.myeventscenter.com/event/Bend-Or-Tower-Theatre-128536)
 
 ## Any day this week
 

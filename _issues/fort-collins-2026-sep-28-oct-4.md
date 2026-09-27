@@ -1,6 +1,6 @@
 ---
-title: "Storytime Tuesday, art walk Friday"
-description: "Council Tree storytime and the Old Town First Friday art walk in Fort Collins, Sept. 28 – Oct. 4, 2026."
+title: "Dance at the Lincoln Center, art walk Friday"
+description: "Pastries and Pirouettes at the Lincoln Center, Council Tree storytime, and the Old Town art walk in Fort Collins, Sept. 28 – Oct. 4, 2026."
 date: 2026-09-28
 end_date: "2026-10-04"
 city: fort-collins
@@ -8,11 +8,21 @@ state: co
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "Tuesday's ages 4+ storytime at Council Tree is back. Friday night is the Old Town art walk, 6:00 to 9:00 p.m."
+hook: "Friday and Saturday, Pastries and Pirouettes is at the Lincoln Center at 7:30 p.m. Tuesday's ages 4+ storytime at Council Tree is back. Friday night is also the Old Town art walk."
 permalink: /co/fort-collins/2026/sep-28-oct-4/
 ---
 
-Tuesday's ages 4+ storytime at Council Tree is on the calendar again, after last Tuesday's cancellation. Friday night is the Old Town art walk.
+Friday and Saturday, Pastries and Pirouettes is at the Lincoln Center at 7:30 p.m. Tuesday's ages 4+ storytime at Council Tree is back. Friday night is also the Old Town art walk.
+
+## At the Lincoln Center
+
+### Pastries and Pirouettes
+<p class="event-when">Fri Oct 2 · 7:30 p.m. · Sat Oct 3 · 7:30 p.m.</p>
+<p class="event-place">Magnolia Theatre, The Lincoln Center, 417 W Magnolia St</p>
+
+High Performance Dance Theatre's bakery-themed concert, with the junior company on the same bill. Regular tickets are $21. Seniors, students, and children 12 and under are $18. The Lincoln Center does not list an end time. Friday's 7:30 p.m. curtain overlaps the Old Town art walk, which runs until 9:00 p.m.
+
+[Lincoln Center](https://www.lctix.com/shows-tickets/pastries-pirouettes/)
 
 ## Friday in Old Town
 
@@ -30,7 +40,7 @@ AllEvents lists Downtown Fort Collins as the organizer. Galleries and shops stay
 <p class="event-when">Tue Sep 29 · 10:00–10:30 a.m.</p>
 <p class="event-place">Storytime Room, 2733 Council Tree Ave</p>
 
-Stories, songs, rhymes, and play for children ages 4 and up with their caregivers. The Oct. 6 event page lists Sep. 29 as another date in the series. The storytimes page also lists an 11:00 a.m. ages 4+ session on Mondays and Tuesdays. Last Tuesday's 11:00 a.m. page was a separate cancelled event, so check the week calendar if you want the later session.
+Stories, songs, rhymes, and play for children ages 4 and up with their caregivers. The Oct. 6 event page lists Sep. 29 as another date in the series. This Tuesday is on the calendar again, after last Tuesday's cancellation. The storytimes page also lists an 11:00 a.m. ages 4+ session on Mondays and Tuesdays. Last Tuesday's 11:00 a.m. page was a separate cancelled event, so check the week calendar if you want the later session.
 
 [Ages 4+ storytime](https://poudrelibraries.librarycalendar.com/event/council-tree-ages-4-storytime-32377) · [Storytimes](https://poudrelibraries.org/storytime/)
 

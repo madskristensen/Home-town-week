@@ -1,6 +1,6 @@
 ---
-title: "Sensory storytime, then a gear swap"
-description: "Sensory storytime, Harry Potter STEAM, and a baby gear swap at the Coeur d'Alene Public Library, Sept. 28 – Oct. 4, 2026."
+title: "Finding Neverland, then a gear swap"
+description: "Finding Neverland at Lake City Playhouse, sensory storytime, and a baby gear swap in Coeur d'Alene, Sept. 28 – Oct. 4, 2026."
 date: 2026-09-28
 end_date: "2026-10-04"
 city: coeur-dalene
@@ -8,11 +8,21 @@ state: id
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "Wednesday is sensory storytime, and registration is required. Saturday is a baby and toddler gear swap. Drop-off is Friday."
+hook: "Finding Neverland continues at Lake City Playhouse. Saturday's show is 7:30 p.m., not a matinee. Wednesday is sensory storytime, and registration is required."
 permalink: /id/coeur-dalene/2026/sep-28-oct-4/
 ---
 
-Wednesday is sensory storytime, and registration is required. Saturday is a baby and toddler gear swap. Drop-off is Friday.
+Finding Neverland continues at Lake City Playhouse. Saturday's show is 7:30 p.m., not a matinee. Wednesday is sensory storytime, and registration is required.
+
+## At Lake City Playhouse
+
+### Finding Neverland
+<p class="event-when">Thu Oct 1 · 7:30 p.m. · Fri Oct 2 · 7:30 p.m. · Sat Oct 3 · 7:30 p.m. · Sun Oct 4 · 2:00 p.m.</p>
+<p class="event-place">Lake City Playhouse, 1320 E Garden Ave</p>
+
+The musical about how Peter Pan got to the stage. The Spokesman-Review lists Thursdays and Fridays at 7:30 p.m. and Saturdays and Sundays at 2:00 p.m., with this Saturday, Oct. 3, moved to 7:30 p.m. The Press says the run closes Oct. 11. Tickets are $25 for adults, $23 for seniors and military, and $21.50 for students.
+
+[Spokesman-Review](https://www.spokesman.com/stories/2026/sep/24/hope-soars-in-finding-neverland/) · [Coeur d'Alene Press](https://cdapress.com/news/2026/sep/25/lake-city-playhouse-presents-finding-neverland/)
 
 Baby storytime is still Tuesday. Toddler storytime is still Thursday. Preschool storytime returns Friday, Oct. 2, on the newsletter's Friday list. LEGO club (From Books to Bricks, ages 6–12) is Tuesday at 4:00 p.m.
 

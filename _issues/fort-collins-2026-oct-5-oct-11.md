@@ -1,6 +1,6 @@
 ---
-title: "FoCo Fall Fest in Old Town"
-description: "FoCo Fall Fest in Old Town and Council Tree storytimes, Oct. 5 – 11, 2026."
+title: "Family magic, then Fall Fest"
+description: "Bill Blagg's Family Magic at the Lincoln Center, FoCo Fall Fest, and Council Tree storytimes, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: fort-collins
@@ -8,11 +8,21 @@ state: co
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "FoCo Fall Fest is free in Old Town Friday night through Sunday. Tuesday is still ages 4+ storytime at Council Tree."
+hook: "Saturday afternoon is Bill Blagg's Family Magic at the Lincoln Center. FoCo Fall Fest is free in Old Town Friday night through Sunday."
 permalink: /co/fort-collins/2026/oct-5-oct-11/
 ---
 
-FoCo Fall Fest is free in Old Town Friday night through Sunday. Tuesday is still ages 4+ storytime at Council Tree.
+Saturday afternoon is Bill Blagg's Family Magic at the Lincoln Center. FoCo Fall Fest is free in Old Town Friday night through Sunday.
+
+## At the Lincoln Center
+
+### Bill Blagg: Family Magic
+<p class="event-when">Sat Oct 10 · 4:00 p.m.</p>
+<p class="event-place">Performance Hall, The Lincoln Center, 417 W Magnolia St</p>
+
+A magic show billed for all ages, with more than 70 minutes on stage. The Lincoln Center does not list an end time. Regular tickets start at $32. A package price is $28. Saturday's show is during Fall Fest, which runs until 6:00 p.m. in Old Town.
+
+[Lincoln Center](https://www.lctix.com/shows-tickets/bill-blagg/)
 
 ## Old Town
 

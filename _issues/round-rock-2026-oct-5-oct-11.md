@@ -1,6 +1,6 @@
 ---
-title: "National Night Out, then storytime"
-description: "Round Rock National Night Out and library storytimes, Oct. 5 – 11, 2026."
+title: "Clue closes, National Night Out Tuesday"
+description: "The last weekend of Clue at Penfold Theatre, National Night Out, and library storytimes in Round Rock, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: round-rock
@@ -8,11 +8,21 @@ state: tx
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Tuesday is National Night Out in neighborhoods across town. Monday, Wednesday, and Saturday are still storytime at the library."
+hook: "Clue closes Sunday at Penfold Theatre. Tuesday is National Night Out in neighborhoods across town."
 permalink: /tx/round-rock/2026/oct-5-oct-11/
 ---
 
-Tuesday is National Night Out in neighborhoods across town. Monday, Wednesday, and Saturday are still storytime at the library.
+Clue closes Sunday at Penfold Theatre. Tuesday is National Night Out in neighborhoods across town.
+
+## At Penfold Theatre
+
+### Clue
+<p class="event-when">Thu Oct 8, Fri Oct 9, and Sat Oct 10 · 7:00–9:00 p.m. · Sun Oct 11 · 1:30–3:30 p.m.</p>
+<p class="event-place">Penfold Theatre, 2120 N Mays St, Suite 290</p>
+
+Last weekend. Sunday, Oct. 11, is the posted close. Rated PG-13 for gunshots, violence, innuendo, mild adult language, and strobe lights. Penfold lists about 90 minutes, tickets $29–$39, and pay-what-you-can Thursdays. The show page does not print a clock. The Round Rock visitors bureau lists these hours. A review lists Fridays and Saturdays at 7:30 p.m. and Sundays at 2:00 p.m., so check the ticket page the day you go.
+
+[Penfold](https://www.penfoldtheatre.org/event/clue/2026-10-11/) · [Round Rock CVB](https://goroundrock.com/series/clue-at-the-penfold-theatre/)
 
 ## Tuesday night
 

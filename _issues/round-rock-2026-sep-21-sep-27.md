@@ -1,6 +1,6 @@
 ---
-title: "A reserved park morning, then folklorico"
-description: "The Special Needs Family Jamboree and Ballet Folklorico in Round Rock, Sept. 21 – 27, 2026."
+title: "Clue at Penfold, then the park morning"
+description: "Clue at Penfold Theatre, the Special Needs Family Jamboree, and Ballet Folklorico in Round Rock, Sept. 21 – 27, 2026."
 date: 2026-09-21
 end_date: "2026-09-27"
 city: round-rock
@@ -8,11 +8,23 @@ state: tx
 year: 2026
 slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
-hook: "Saturday morning Play for All is reserved for the Special Needs Family Jamboree. The library's Saturday storytime that day is Ballet Folklorico instead."
+hook: "Clue is at Penfold Theatre Thursday through Sunday. Saturday morning Play for All is reserved for the Special Needs Family Jamboree."
 permalink: /tx/round-rock/2026/sep-21-sep-27/
 ---
 
-Saturday morning Play for All is reserved for the Special Needs Family Jamboree. The library's Saturday storytime that day is Ballet Folklorico instead.
+Clue is at Penfold Theatre Thursday through Sunday. Saturday morning Play for All is reserved for the Special Needs Family Jamboree.
+
+## At Penfold Theatre
+
+### Clue
+<p class="event-when">Thu Sep 24, Fri Sep 25, and Sat Sep 26 · 7:00–9:00 p.m. · Sun Sep 27 · 1:30–3:30 p.m.</p>
+<p class="event-place">Penfold Theatre, 2120 N Mays St, Suite 290</p>
+
+The board-game comedy, rated PG-13 for gunshots, violence, innuendo, mild adult language, and strobe lights. Better for older kids than for preschoolers. Penfold lists the run as Sep. 11 through Oct. 11, about 90 minutes, tickets $29–$39, and pay-what-you-can Thursdays. The show page does not print a clock. The Round Rock visitors bureau lists these hours. A review lists Fridays and Saturdays at 7:30 p.m. and Sundays at 2:00 p.m., so check the ticket page the day you go.
+
+[Penfold](https://www.penfoldtheatre.org/event/clue/2026-10-11/) · [Round Rock CVB](https://goroundrock.com/series/clue-at-the-penfold-theatre/)
+
+The library's Saturday storytime that day is Ballet Folklorico instead.
 
 The Monday evening family storytime list still skips this Monday. The posted Mondays around it are Sep. 14 and Sep. 28. Sep. 28 belongs to the next issue.
 

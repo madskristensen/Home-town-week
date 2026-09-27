@@ -17,6 +17,10 @@ sep-28-oct-4:
     place: "Smoky Hill Library, 5430 S Biscay Circle, Centennial"
     same_as: "https://arapahoelibraries.bibliocommons.com/v2/events/6ab13eaa19094f0c6939215d"
 oct-5-oct-11:
+  - name: "The Snowy Day and Other Stories"
+    start: "2026-10-06T18:30:00-06:00"
+    place: "PACE Center, 20000 Pikes Peak Ave, Parker"
+    same_as: "https://parkerarts.org/event/the-snowy-day-and-other-stories/"
   - name: "Little Explorers"
     start: "2026-10-06T10:00:00-06:00"
     end: "2026-10-06T11:00:00-06:00"

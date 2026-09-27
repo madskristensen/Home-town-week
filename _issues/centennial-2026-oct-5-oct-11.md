@@ -1,6 +1,6 @@
 ---
-title: "Little Explorers, then a picture-book author"
-description: "Little Explorers and a visit from author Lily Williams at Smoky Hill Library in Centennial, Oct. 5 – 11, 2026."
+title: "The Snowy Day in Parker, then a picture-book author"
+description: "The Snowy Day at the PACE Center in Parker, and a visit from author Lily Williams at Smoky Hill Library in Centennial, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: centennial
@@ -8,13 +8,23 @@ state: co
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Tuesday is Little Explorers for ages 2 to 5. Saturday, local author Lily Williams reads from If Animals Disappeared."
+hook: "Tuesday night, The Snowy Day plays at the PACE Center in Parker. Saturday, local author Lily Williams reads from If Animals Disappeared."
 permalink: /co/centennial/2026/oct-5-oct-11/
 ---
 
-Tuesday is Little Explorers for ages 2 to 5. Saturday, local author Lily Williams reads from If Animals Disappeared.
+Tuesday night, The Snowy Day plays at the PACE Center in Parker. Saturday, local author Lily Williams reads from If Animals Disappeared.
 
-Smoky Hill Library is at 5430 S Biscay Circle.
+## In Parker
+
+### The Snowy Day and Other Stories
+<p class="event-when">Tue Oct 6 · 6:30 p.m.</p>
+<p class="event-place">PACE Center, 20000 Pikes Peak Ave, Parker</p>
+
+This is in Parker, not Centennial. Shadow puppetry from Ezra Jack Keats: The Snowy Day, Whistle for Willie, Goggles!, and A Letter to Amy. Parker Arts lists it for pre-K through 3rd grade. Every child needs a ticket. The page does not list an end time.
+
+[Parker Arts](https://parkerarts.org/event/the-snowy-day-and-other-stories/)
+
+Smoky Hill Library is at 5430 S Biscay Circle. Tuesday morning is still Little Explorers.
 
 ## Tuesday
 
