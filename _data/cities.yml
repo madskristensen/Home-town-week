@@ -5,14 +5,17 @@
 # names live in coming_soon.yml until a digest exists. City names stay out
 # of the site header. See README for the page files each city needs.
 #
-# sources: is the Mon/Wed/Fri crawl list for that city. It lives on the city
-# entry here, not in a separate file. Each item is a name, url, type, and
-# notes. Types: city_hall, parks, allevents, theater, market, library,
-# downtown, venue. Prefer the city hall calendar, AllEvents for this city
-# and state, and a local theater (kids shows, family concerts, community
-# playhouses). Parks, markets, downtown, and the library stay on the list.
-# Do not crawl Stay Happening, news blogs, a wrong-city AllEvents page, or
-# a library calendar alone.
+# sources: lives on each city entry here, not in a separate file. Each item
+# is a name, url, type, and notes. Types: city_hall, parks, allevents,
+# theater, market, library, downtown, venue. Prefer the city hall calendar,
+# AllEvents for this city and state, and a local theater (kids shows, family
+# concerts, community playhouses). Parks, markets, downtown, and the library
+# stay on the list. Do not crawl Stay Happening, news blogs, a wrong-city
+# AllEvents page, or a library calendar alone.
+#
+# Cadence: Monday maintains this list only (add, fix, or drop a URL).
+# Wednesday and Friday read the list and fill issue copy. They do not edit
+# sources. A seed run may do both once. After that, keep the split.
 - id: bainbridge-island
   name: Bainbridge Island
   state: wa
@@ -845,6 +848,10 @@
       url: "https://www.hillsboro-oregon.gov/"
       type: city_hall
       notes: "Official city site for parks and civic events. Bots are often blocked."
+    - name: "Hillsboro Parks and Recreation calendar"
+      url: "https://www.hillsboro-oregon.gov/our-city/departments/parks-recreation/events/event-calendar"
+      type: parks
+      notes: "City parks events. Prefer family programs over meetings."
     - name: "Hillsboro Farmers' Markets"
       url: "https://hillsboromarkets.org/"
       type: market
@@ -955,6 +962,10 @@
       url: "https://cityofeagle.org/calendar.aspx"
       type: city_hall
       notes: "Heritage Park, Harvest Fest, and city events."
+    - name: "Eagle Saturday Market"
+      url: "https://cityofeagle.org/170/Eagle-Saturday-Market"
+      type: market
+      notes: "Saturday market page on the city site."
     - name: "Eagle Theatre Company"
       url: "https://eagletc.org/"
       type: theater
@@ -1049,6 +1060,10 @@
       url: "https://www.orem.org/"
       type: city_hall
       notes: "Official city site. Bots are often blocked."
+    - name: "Orem parks"
+      url: "https://orem.gov/parks-guide/"
+      type: parks
+      notes: "Parks guide and pavilion reservations. Recreation programs are at oremrecreation.com."
     - name: "Orem Public Library calendar"
       url: "https://orem.librarycalendar.com/events/month"
       type: library
@@ -1109,6 +1124,10 @@
       url: "https://www.crgov.com/calendar.aspx"
       type: city_hall
       notes: "Town events. Prefer parks and downtown over routine meetings."
+    - name: "Festival Park Farmers Market"
+      url: "https://www.crgov.com/3178/Festival-Park-Farmers-Market"
+      type: market
+      notes: "Sunday market season page on the town site."
     - name: "Downtown Castle Rock"
       url: "https://www.downtowncastlerock.com/"
       type: downtown
@@ -1139,6 +1158,10 @@
       url: "https://www.centennialco.gov/"
       type: city_hall
       notes: "Official city site for parks and civic events. Bots are often blocked."
+    - name: "Trails Park and Recreation District"
+      url: "https://tprd.org/"
+      type: parks
+      notes: "District events. The recreation center is at 16799 E Lake Ave in Centennial. If an event page and the index disagree on the date, use the event page and say what the index said."
     - name: "PACE Center"
       url: "https://parkerarts.org/"
       type: theater
@@ -1207,6 +1230,10 @@
       url: "https://www.friscotexas.gov/calendar.aspx"
       type: city_hall
       notes: "City special events and parks programming."
+    - name: "Visit Frisco"
+      url: "https://www.visitfrisco.com/"
+      type: downtown
+      notes: "Visitor guide and seasonal family roundups. Do not invent a kickoff time the guide does not print."
     - name: "Frisco Public Library events"
       url: "https://friscolibrary.bibliocommons.com/events/search/index"
       type: library
@@ -1238,9 +1265,13 @@
       type: city_hall
       notes: "Official city site."
     - name: "Plano Parks and Recreation"
-      url: "https://www.plano.gov/parks-and-recreation"
+      url: "https://www.plano.gov/parks-event-calendar"
       type: parks
-      notes: "Parks programs and special events."
+      notes: "Parks event calendar. The department page is plano.gov/parks-and-recreation."
+    - name: "Visit Plano events"
+      url: "https://events.visitplano.com/"
+      type: downtown
+      notes: "Downtown and visitor events, including Barktoberfest."
     - name: "Genesis Children's Theatre"
       url: "https://genesischildrenstheatre.org/"
       type: theater
@@ -1252,7 +1283,7 @@
     - name: "Eisemann Center calendar"
       url: "https://www.eisemanncenter.com/events-tickets/calendar/"
       type: theater
-      notes: "Family and public performances."
+      notes: "Family and public performances. The building is in Richardson, not Plano. Say so."
     - name: "Plano Public Library events"
       url: "https://plano.libnet.info/events"
       type: library
@@ -1275,6 +1306,10 @@
       url: "https://www.roundrocktexas.gov/"
       type: city_hall
       notes: "Official city site for parks and civic events. Bots are often blocked."
+    - name: "Round Rock visitors bureau"
+      url: "https://goroundrock.com/"
+      type: downtown
+      notes: "Visitor calendar. If it prints a clock the organizer does not, say both and do not lock a structured start time."
     - name: "Penfold Theatre"
       url: "https://www.penfoldtheatre.org/on-stage/calendar/"
       type: theater

@@ -1,6 +1,6 @@
 ---
-title: "Toddler Time, then two Tuesday storytimes"
-description: "Toddler Time, storytime, preschool, and Baby and Me at the South Jordan Library, Oct. 5 – 11, 2026."
+title: "Craft night Thursday, storytime before that"
+description: "Family craft night, Toddler Time, and storytime at the South Jordan Library, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: south-jordan
@@ -8,11 +8,31 @@ state: ut
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Monday is Toddler Time. Tuesday has storytime at 10:15 and again at 11:15. Thursday is Baby and Me."
+hook: "Thursday night is family craft night. Monday is Toddler Time at 10:15, then open play at 11:00."
 permalink: /ut/south-jordan/2026/oct-5-oct-11/
 ---
 
-Monday is Toddler Time. Tuesday has storytime at 10:15 and again at 11:15. Thursday is Baby and Me.
+Thursday night is family craft night. Monday is Toddler Time at 10:15, then open play at 11:00.
+
+## Thursday night
+
+### Family Craft Night
+<p class="event-when">Thu Oct 8 · 7:00–8:00 p.m.</p>
+<p class="event-place">South Jordan Meeting Room</p>
+
+Halloween crafts for the whole family. The morning Baby and Me session is the same Thursday at 10:15 a.m.
+
+[Family Craft Night](https://slcls.libnet.info/event/17176369)
+
+## Monday afternoon
+
+### Playtime for Littles
+<p class="event-when">Mon Oct 5 · 11:00 a.m.–12:00 p.m.</p>
+<p class="event-place">South Jordan Meeting Room</p>
+
+Drop-in play with toys, after Toddler Time. Best for ages 1–5.
+
+[Playtime for Littles](https://slcls.libnet.info/event/16789007)
 
 South Jordan Library is at 10673 S Redwood Rd, in the meeting room. Phone: 801-943-4636.
 

@@ -1,6 +1,6 @@
 ---
-title: "Preschool Wednesday, babies Thursday"
-description: "Preschool storytime and Baby and Me at the South Jordan Library, Sept. 28 – Oct. 4, 2026."
+title: "A puppet show, then storytime"
+description: "A puppet show, playtime, and storytime at the South Jordan Library, Sept. 28 – Oct. 4, 2026."
 date: 2026-09-28
 end_date: "2026-10-04"
 city: south-jordan
@@ -8,11 +8,31 @@ state: ut
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "Wednesday is preschool storytime. Thursday is Baby and Me, for newborns through 18 months."
+hook: "Tuesday is a Princess and the Frog puppet show. Monday is open play for ages 1 to 5. Wednesday is still preschool storytime."
 permalink: /ut/south-jordan/2026/sep-28-oct-4/
 ---
 
-Wednesday is preschool storytime. Thursday is Baby and Me, for newborns through 18 months.
+Tuesday is a Princess and the Frog puppet show. Monday is open play for ages 1 to 5. Wednesday is still preschool storytime.
+
+## Monday
+
+### Playtime for Littles
+<p class="event-when">Mon Sep 28 · 11:00 a.m.–12:00 p.m.</p>
+<p class="event-place">South Jordan Meeting Room</p>
+
+Drop-in play with toys. Best for ages 1–5. The same Monday list includes Toddler Time at 10:15 a.m.
+
+[Playtime for Littles](https://slcls.libnet.info/event/16789007)
+
+## Tuesday
+
+### Princess and the Frog puppet show
+<p class="event-when">Tue Sep 29 · 10:15–10:45 a.m.</p>
+<p class="event-place">South Jordan Meeting Room</p>
+
+A puppet show for families. The library's South Jordan listing prints this date and time.
+
+[Library listing](https://slcls.libnet.info/event/16789007)
 
 The branch is at 10673 S Redwood Rd. Phone: 801-943-4636.
 

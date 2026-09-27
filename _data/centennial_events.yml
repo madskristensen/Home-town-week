@@ -1,5 +1,10 @@
 # Dated events listed on each centennial week.
 sep-21-sep-27:
+  - name: "Health and Wellness Fair"
+    start: "2026-09-26T09:00:00-06:00"
+    end: "2026-09-26T12:30:00-06:00"
+    place: "Trails Recreation Center, 16799 E Lake Ave, Centennial"
+    same_as: "https://tprd.org/special-events/health-fair/"
   - name: "Family Storytime"
     start: "2026-09-26T10:30:00-06:00"
     end: "2026-09-26T11:00:00-06:00"
