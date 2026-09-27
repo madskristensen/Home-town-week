@@ -6,97 +6,60 @@ layout: default
   <header class="home-hero">
     <h1>Hometown Week</h1>
     <p class="home-kicker">Weekly family digests</p>
-    <p class="home-promise">Parks, libraries, kids shows, and market mornings.</p>
-    <p class="cta"><a href="#find-your-city">Find your city</a></p>
+    <p class="home-lead">The short version of the week in your city. Parks, the library, kids shows, and market mornings, written for families.</p>
   </header>
 
-  <section class="directory" aria-labelledby="find-your-city">
-    {%- comment -%}
-      The call to action focuses this heading. tabindex="-1" belongs here,
-      not on #main-content. iOS Safari scrolls a tabindex="-1" main to the
-      top on the back button (WebKit bug 272624).
-    {%- endcomment -%}
-    <h2 id="find-your-city" tabindex="-1">Find your city</h2>
-    <nav class="state-chips" aria-label="States">
+  <section class="this-week" id="this-week" aria-labelledby="this-week-title">
+    <h2 id="this-week-title">This week</h2>
+    <div id="near-live" aria-live="polite">
+      <a id="near-card" class="near-card" hidden></a>
+      <p id="near-message" class="near-message" hidden></p>
+    </div>
+    <div class="near-ask" id="near-ask">
+      <p class="cta">
+        <button type="button" id="near-button" aria-describedby="near-note">Use your location</button>
+      </p>
+      <p id="near-note" class="near-note">Your browser asks first. We use the spot only to pick the nearest city, and we do not save it.</p>
+    </div>
+  </section>
+
+  <section class="finder" aria-labelledby="finder-title">
+    <h2 id="finder-title">Find your city</h2>
+    <form class="city-search" id="city-search" role="search" action="#states">
+      <label for="city-query">Search cities</label>
+      <input id="city-query" type="search" placeholder="Redmond, Bend, Plano" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="search" aria-autocomplete="list" aria-expanded="false" aria-controls="city-matches" aria-describedby="city-hint">
+      <p id="city-empty" class="city-empty" hidden></p>
+      <ul id="city-matches" class="city-matches" hidden></ul>
+      <p id="city-hint" class="near-note">Type a city or a state. Each result opens this week's digest.</p>
+      <p id="city-status" class="visually-hidden" aria-live="polite"></p>
+    </form>
+    <noscript>
+      <p class="noscript-note">Location and city search need JavaScript. The state links below, and the city list in the footer, work without it.</p>
+    </noscript>
+
+    <h3 id="states">Browse by state</h3>
+    <nav class="state-browse" aria-label="Browse by state">
       {%- for state in live_states -%}
-      {%- assign chip_cities = site.data.cities | where: "state", state -%}
+      {%- assign state_cities = site.data.cities | where: "state", state -%}
       {%- capture state_hub -%}/{{ state }}/{%- endcapture -%}
-      <a class="state-chip state-chip--live" href="{{ state_hub | strip | relative_url }}">{{ chip_cities.first.state_name }}</a>
-      {%- endfor -%}
-      {%- for region in site.data.coming_soon -%}
-      {%- unless live_states contains region.state -%}
-      <a class="state-chip state-chip--soon" href="#{{ region.state_name | downcase }}">{{ region.state_name }} <span class="chip-note">Coming soon</span></a>
-      {%- endunless -%}
+      <a href="{{ state_hub | strip | relative_url }}">
+        <span class="state-name">{{ state_cities.first.state_name }}</span>
+        <span class="state-count">{%- if state_cities.size == 1 -%}1 city{%- else -%}{{ state_cities.size }} cities{%- endif -%}</span>
+      </a>
       {%- endfor -%}
     </nav>
-
-    {%- for state in live_states -%}
-    {%- assign state_cities = site.data.cities | where: "state", state -%}
-    {%- capture state_hub -%}/{{ state }}/{%- endcapture -%}
-    {%- capture state_heading -%}{{ state }}-title{%- endcapture -%}
-    <section class="dir-state" aria-labelledby="{{ state_heading }}">
-      <div class="dir-state-head">
-        <h3 id="{{ state_heading }}"><a href="{{ state_hub | strip | relative_url }}">{{ state_cities.first.state_name }}</a></h3>
-      </div>
-      <ul class="dir-cities">
-        {%- for city in state_cities -%}
-        {%- assign dir_issues = site.issues | where: "city", city.id | where: "state", city.state | sort: "date" | reverse -%}
-        {%- assign dir_latest = dir_issues | first -%}
-        <li class="dir-city">
-          {%- if dir_latest -%}
-          {%- capture latest_url -%}/{{ city.state }}/{{ city.id }}/latest/{%- endcapture -%}
-          <a href="{{ latest_url | strip | relative_url }}">
-            <span class="dir-name">{{ city.name }}</span>
-            {%- if dir_latest.range -%}
-            <span class="dir-when">{{ dir_latest.range }}</span>
-            {%- endif -%}
-          </a>
-          {%- else -%}
-          <span class="dir-pending">
-            <span class="dir-name">{{ city.name }}</span>
-            <span class="dir-when">Coming soon</span>
-          </span>
-          {%- endif -%}
-        </li>
-        {%- endfor -%}
-      </ul>
-    </section>
-    {%- endfor -%}
-
-    {%- for region in site.data.coming_soon -%}
-    {%- unless live_states contains region.state -%}
-    {%- capture region_id -%}{{ region.state_name | downcase }}{%- endcapture -%}
-    {%- capture region_heading -%}{{ region_id }}-title{%- endcapture -%}
-    <section class="dir-state" id="{{ region_id }}" aria-labelledby="{{ region_heading }}">
-      <div class="dir-state-head">
-        <h3 id="{{ region_heading }}">{{ region.state_name }}</h3>
-        <p class="dir-soon-label">Coming soon</p>
-      </div>
-      <ul class="dir-cities">
-        {%- for city_name in region.cities -%}
-        <li class="dir-city dir-city--soon">
-          <span class="dir-pending">
-            <span class="dir-name">{{ city_name }}</span>
-            <span class="visually-hidden">Coming soon</span>
-          </span>
-        </li>
-        {%- endfor -%}
-      </ul>
-    </section>
-    {%- endunless -%}
-    {%- endfor -%}
   </section>
 
   <section class="how" aria-labelledby="how-title">
     <h2 id="how-title">How it works</h2>
     <ol>
       <li>
-        <h3>Find your city</h3>
-        <p>Tap a name to open the newest issue.</p>
+        <h3>Open this week</h3>
+        <p>The newest issue for your city is one tap away.</p>
       </li>
       <li>
         <h3>Read the week</h3>
-        <p>Monday through Sunday: parks, libraries, kids shows, and market mornings.</p>
+        <p>Monday through Sunday, only the plans worth making.</p>
       </li>
       <li>
         <h3>Come back next week</h3>
@@ -105,3 +68,4 @@ layout: default
     </ol>
   </section>
 </article>
+{%- include home-finder.html -%}

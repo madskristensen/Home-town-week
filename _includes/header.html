@@ -5,9 +5,14 @@
     {%- else -%}
     <a class="wordmark" href="{{ '/' | relative_url }}">Hometown Week</a>
     {%- endif -%}
-    {%- unless page.city -%}
-    <nav class="header-nav" aria-label="Washington">
-      <a href="{{ '/wa/' | relative_url }}"{% if page.layout == "state" and page.state == "wa" %} aria-current="page"{% endif %}>Washington</a>
+    {%- unless page.city or page.url == "/" -%}
+    <nav class="header-nav" aria-label="States">
+      {%- assign header_states = site.data.cities | map: "state" | uniq -%}
+      {%- for state in header_states -%}
+      {%- assign header_cities = site.data.cities | where: "state", state -%}
+      {%- capture header_state_url -%}/{{ state }}/{%- endcapture -%}
+      <a href="{{ header_state_url | strip | relative_url }}"{% if page.layout == "state" and page.state == state %} aria-current="page"{% endif %}>{{ header_cities.first.state_name }}</a>
+      {%- endfor -%}
     </nav>
     {%- endunless -%}
   </div>

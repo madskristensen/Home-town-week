@@ -2,7 +2,7 @@
 
 Weekly family digests for the city you live in. This is a Jekyll site for [hometownweek.com](https://hometownweek.com/).
 
-Washington, Oregon, Idaho, Utah, Colorado, and Texas each have a state hub. Live city names link to `/{state}/{city}/latest/`. The footer lists state hubs and city names. The site header does not. Names without a digest stay in `_data/coming_soon.yml` and do not link to issues.
+Washington, Oregon, Idaho, Utah, Colorado, and Texas each have a state hub. Live city names link to `/{state}/{city}/latest/`. The home page leads with this week's digest: an opt-in location lookup, a city search, and links to the state hubs. The full city list stays on those hubs and in the footer. The site header does not list cities. Names without a digest stay in `_data/coming_soon.yml` and do not link to issues.
 
 ## URLs
 
@@ -36,11 +36,11 @@ Pushes to `main` run `.github/workflows/pages.yml`, which builds the site and de
 
 ## Adding a city
 
-1. Add the city to `_data/cities.yml`, alphabetical within its state.
+1. Add the city to `_data/cities.yml`, alphabetical within its state, with `lat` and `lon` for the city center in decimal degrees. The home page uses those coordinates to suggest the nearest digest. It does not call a geocoding service.
 2. Add `{state}/{city}/index.html`, `{state}/{city}/{year}/index.html`, and `{state}/{city}/latest.html`, using the Redmond pages as the pattern.
 3. Add issues under `_issues/` with `city`, `state`, `year`, `slug`, and a permalink like `/wa/kirkland/2026/sep-28-oct-4/`.
 4. Put a state outline with a city pin at `assets/images/cities/{state}/{city}.svg`. Put photos in `assets/images/{city}/` at 800, 1200, and 1600 widths, and add `{city}_events.yml` under `_data/` if you want event structured data.
 
-The footer and the home directory read `_data/cities.yml` in list order: states in block order, cities alphabetical inside each state. The home directory lists live cities first, then coming-soon names. When a coming-soon city gets a digest, add it here and remove it from `_data/coming_soon.yml`. Do not publish an empty issue just to make the name clickable. The site header does not list cities. It links to Washington. City names in the header appear only on that city's own pages.
+The footer reads `_data/cities.yml` in list order: states in block order, cities alphabetical inside each state. The home page uses the same order for its state links and its search index. It does not print every city. When a coming-soon city gets a digest, add it here (with `lat` and `lon`) and remove it from `_data/coming_soon.yml`. Do not publish an empty issue just to make the name clickable. The site header does not list cities. Away from the home page and away from a city page, it links to each state hub. City names in the header appear only on that city's own pages.
 
 Every page inlines `assets/css/site.css` from the head. There is no separate city stylesheet and no render-blocking CSS link. State hubs still use the city cards.
