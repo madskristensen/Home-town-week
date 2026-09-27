@@ -12,9 +12,9 @@ layout: default
     <h2>Cities</h2>
     {%- for city in state_cities -%}
     {%- if forloop.first -%}
-    {%- include city-card.html priority="high" link_name="latest" -%}
+    {%- include city-card.html priority="high" -%}
     {%- else -%}
-    {%- include city-card.html loading="lazy" link_name="latest" -%}
+    {%- include city-card.html loading="lazy" -%}
     {%- endif -%}
     {%- endfor -%}
   </section>

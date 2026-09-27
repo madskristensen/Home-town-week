@@ -45,4 +45,4 @@ Pushes to `main` run `.github/workflows/pages.yml`, which builds the site and de
 
 The Washington hub and the footer read `_data/cities.yml` in list order, so keep that file alphabetical. The home directory lists those live cities first, then coming-soon names. When a coming-soon city gets a digest, add it here and remove it from `_data/coming_soon.yml`. Do not publish an empty issue just to make the name clickable. The site header does not list cities. It links to Washington. City names in the header appear only on that city's own pages.
 
-City, year, and issue pages inline `assets/css/city.css` with the shared sheet. The home page uses `assets/css/main.css` only. State hubs still use the city cards.
+Every page inlines `assets/css/site.css` from the head. There is no separate city stylesheet and no render-blocking CSS link. State hubs still use the city cards.

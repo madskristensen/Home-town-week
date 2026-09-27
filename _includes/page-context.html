@@ -1,0 +1,14 @@
+{%- comment -%}
+  Once, from head.html, for the title, JSON-LD, and header.
+  City, year, and issue layouts include these again. Jekyll renders those
+  layouts on their own, so assigns here do not reach the page body.
+{%- endcomment -%}
+{%- include city-context.html -%}
+{%- if page.layout == "city" -%}
+  {%- include week-groups.html issues=city_issues -%}
+{%- elsif page.layout == "year" -%}
+  {%- assign year_issues = city_issues | where: "year", page.year -%}
+  {%- include week-groups.html issues=year_issues -%}
+{%- elsif page.layout == "issue" -%}
+  {%- include week-neighbors.html -%}
+{%- endif -%}
