@@ -1025,3 +1025,56 @@ img {
     text-align: right;
   }
 }
+
+/* Issue share row. Same sheet as the rest of the site. */
+
+.issue h1 {
+  margin-bottom: 0.5rem;
+}
+
+.issue-share {
+  margin: 0 0 1.2rem;
+}
+
+.share-prompt {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+}
+
+.share-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 0.95rem;
+  margin: 0.05rem 0 0;
+}
+
+.share-actions a,
+.share-actions button {
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0.5rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--link);
+  font: inherit;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.share-actions a:hover,
+.share-actions button:hover,
+.share-actions a:focus-visible,
+.share-actions button:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}

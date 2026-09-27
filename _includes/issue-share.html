@@ -1,0 +1,128 @@
+{%- comment -%}
+  Issue pages only. Intent links and the system share sheet.
+  No third-party widgets. Open Graph on the page is unchanged.
+{%- endcomment -%}
+{%- include city-context.html -%}
+{%- if city and page.title -%}
+{%- assign share_url = page.url | absolute_url -%}
+{%- capture share_sentence -%}{{ page.title }}. What's on in {{ city.name }}{% if page.range %}, {{ page.range }}{% endif %}.{%- endcapture -%}
+{%- assign share_sentence = share_sentence | strip -%}
+{%- capture share_plain -%}{{ share_sentence }} {{ share_url }}{%- endcapture -%}
+{%- capture mail_subject -%}{{ page.title }} | {{ city.name }}{% if page.range %}, {{ page.range }}{% endif %}{%- endcapture -%}
+{%- assign mail_subject = mail_subject | strip -%}
+{%- capture mail_body -%}{{ share_sentence }}
+
+{{ share_url }}{%- endcapture -%}
+{%- assign mail_body = mail_body | strip -%}
+{%- assign mail_subject_q = mail_subject | cgi_escape | replace: "+", "%20" -%}
+{%- assign mail_body_q = mail_body | cgi_escape | replace: "+", "%20" -%}
+{%- assign sms_body_q = share_plain | cgi_escape | replace: "+", "%20" -%}
+<div class="issue-share" data-url="{{ share_url | escape }}" data-title="{{ page.title | escape }}" data-text="{{ share_sentence | escape }}" data-plain="{{ share_plain | escape }}">
+  <p class="share-prompt" id="issue-share-label">Text this week to another parent</p>
+  <p class="share-actions" role="group" aria-labelledby="issue-share-label">
+    <button type="button" data-copy>Copy link</button>
+    <a href="mailto:?subject={{ mail_subject_q }}&amp;body={{ mail_body_q }}">Email</a>
+    <a data-sms href="sms:?&amp;body={{ sms_body_q }}">Text</a>
+    <button type="button" data-native hidden>Share</button>
+  </p>
+  <p class="share-status visually-hidden" data-status role="status"></p>
+</div>
+<script>
+(function () {
+  var root = document.querySelector(".issue-share");
+  if (!root) return;
+
+  var url = root.getAttribute("data-url") || "";
+  var title = root.getAttribute("data-title") || "";
+  var text = root.getAttribute("data-text") || "";
+  var plain = root.getAttribute("data-plain") || "";
+  if (url.indexOf("https://") !== 0) return;
+
+  var copyBtn = root.querySelector("[data-copy]");
+  var shareBtn = root.querySelector("[data-native]");
+  var sms = root.querySelector("[data-sms]");
+  var status = root.querySelector("[data-status]");
+
+  function announce(message) {
+    if (status) status.textContent = message;
+  }
+
+  var copyTimer = 0;
+
+  function markCopied(button) {
+    if (!button) return;
+    var label = button.getAttribute("data-label") || "Copy link";
+    button.textContent = "Copied";
+    announce("Link copied");
+    window.clearTimeout(copyTimer);
+    copyTimer = window.setTimeout(function () {
+      button.textContent = label;
+    }, 2000);
+  }
+
+  function fallbackCopy(value, onSuccess) {
+    var area = document.createElement("textarea");
+    area.value = value;
+    area.setAttribute("readonly", "");
+    area.style.position = "fixed";
+    area.style.left = "-9999px";
+    document.body.appendChild(area);
+    area.select();
+    var ok = false;
+    try {
+      ok = document.execCommand("copy");
+    } catch (err) {
+      ok = false;
+    }
+    document.body.removeChild(area);
+    if (ok) onSuccess();
+    else announce("Copy the address from the browser bar");
+  }
+
+  function copyLink(button) {
+    var done = function () { markCopied(button); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(plain).then(done).catch(function () {
+        fallbackCopy(plain, done);
+      });
+    } else {
+      fallbackCopy(plain, done);
+    }
+  }
+
+  if (sms && plain) {
+    var encoded = encodeURIComponent(plain);
+    var ios = /iPhone|iPad|iPod/.test(navigator.userAgent) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    sms.setAttribute("href", (ios ? "sms:&body=" : "sms:?body=") + encoded);
+  }
+
+  if (copyBtn) {
+    copyBtn.setAttribute("data-label", "Copy link");
+    copyBtn.addEventListener("click", function () {
+      copyLink(copyBtn);
+    });
+  }
+
+  var payload = { title: title, text: text, url: url };
+  var canNative = !!navigator.share;
+  if (canNative && navigator.canShare) {
+    try {
+      canNative = navigator.canShare(payload);
+    } catch (err) {
+      canNative = true;
+    }
+  }
+
+  if (canNative && shareBtn) {
+    shareBtn.hidden = false;
+    shareBtn.addEventListener("click", function () {
+      navigator.share(payload).catch(function (err) {
+        if (err && err.name === "AbortError") return;
+        copyLink(copyBtn);
+      });
+    });
+  }
+})();
+</script>
+{%- endif -%}
