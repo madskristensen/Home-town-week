@@ -1,6 +1,6 @@
 ---
-title: "Last market, and a library craft"
-description: "Storytime, the last Renton Farmers Market, and Tuesday Crafternoon, Sept. 28 – Oct. 4, 2026."
+title: "Noises Off opens, last market Tuesday"
+description: "Noises Off at Renton Civic Theatre, the last Renton Farmers Market, and library programs, Sept. 28 – Oct. 4, 2026."
 date: 2026-09-28
 end_date: "2026-10-04"
 city: renton
@@ -8,7 +8,7 @@ state: wa
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "Monday is storytime downtown. Tuesday is the last farmers market of 2026, and the library's crafternoon overlaps the first part of it."
+hook: "Friday, Noises Off opens at Renton Civic Theatre. Tuesday is the last farmers market of 2026."
 permalink: /wa/renton/2026/sep-28-oct-4/
 image: /assets/images/renton/downtown.webp
 image_alt: "Downtown Renton, with storefronts along the street."
@@ -16,7 +16,19 @@ image_credit: "Photo: Chris Light, CC BY-SA 4.0"
 image_source_url: "https://commons.wikimedia.org/wiki/File:Renton_Downtown_2015-06_722.jpg"
 ---
 
-Monday is storytime downtown. Tuesday is the last farmers market of 2026, and the library's crafternoon overlaps the first part of it.
+Friday, Noises Off opens at Renton Civic Theatre. Tuesday is the last farmers market of 2026.
+
+## At Renton Civic Theatre
+
+### Noises Off
+<p class="event-when">Opens Fri Oct 2 · closes Oct. 18</p>
+<p class="event-place">Renton Civic Theatre, 507 S 3rd St</p>
+
+Michael Frayn's backstage farce. The theatre lists opening night as Oct. 2 and closing night as Oct. 18, with a pay-what-you-can night on Oct. 12. The page does not print a clock or a child price, so this issue does not guess one. It is a full-length comedy, not a preschool show. Oct. 12 and Oct. 18 are after this week.
+
+[Noises Off](https://www.rentoncivictheatre.org/shows/noises-off)
+
+Monday is storytime downtown. The library's crafternoon overlaps the first part of Tuesday's market.
 
 ## Monday
 
