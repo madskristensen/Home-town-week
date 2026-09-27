@@ -52,7 +52,7 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Hometown Week",
+      "name": "Home",
       "item": {{ "/" | absolute_url | jsonify }}
     },
     {
@@ -74,7 +74,7 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Hometown Week",
+      "name": "Home",
       "item": {{ "/" | absolute_url | jsonify }}
     },
     {
@@ -93,7 +93,7 @@
     {
       "@type": "ListItem",
       "position": 4,
-      "name": {{ page.year | jsonify }},
+      "name": {{ page.year | append: "" | jsonify }},
       "item": {{ page_year_url | absolute_url | jsonify }}
     }
     {%- endif -%}

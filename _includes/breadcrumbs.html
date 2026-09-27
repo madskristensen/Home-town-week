@@ -2,14 +2,14 @@
 {%- if page.layout == "state" -%}
 <nav class="crumbs" aria-label="Breadcrumb">
   <ol>
-    <li><a href="{{ '/' | relative_url }}">Hometown Week</a></li>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
     <li><span aria-current="page">{{ page.title }}</span></li>
   </ol>
 </nav>
 {%- elsif page.layout == "city" or page.layout == "year" or page.layout == "issue" -%}
 <nav class="crumbs" aria-label="Breadcrumb">
   <ol>
-    <li><a href="{{ '/' | relative_url }}">Hometown Week</a></li>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
     <li><a href="{{ state_hub_url | relative_url }}">{{ city.state_name }}</a></li>
     <li>
       {%- if page.layout == "city" -%}
