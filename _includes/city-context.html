@@ -1,3 +1,7 @@
+{%- if page.state -%}
+{%- capture state_hub_url -%}/{{ page.state }}/{%- endcapture -%}
+{%- assign state_hub_url = state_hub_url | strip -%}
+{%- endif -%}
 {%- if page.city and page.state -%}
 {%- assign city = site.data.cities | where: "id", page.city | where: "state", page.state | first -%}
 {%- assign city_issues = site.issues | where: "city", page.city | where: "state", page.state | sort: "date" | reverse -%}

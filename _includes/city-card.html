@@ -1,0 +1,43 @@
+{%- comment -%}
+  Expects `city` from a parent loop over site.data.cities.
+  Pass priority="high" for the first card only.
+{%- endcomment -%}
+{%- assign card_issues = site.issues | where: "city", city.id | where: "state", city.state | sort: "date" | reverse -%}
+{%- assign card_latest = card_issues | first -%}
+{%- capture card_url -%}/{{ city.state }}/{{ city.id }}/{%- endcapture -%}
+{%- assign card_url = card_url | strip -%}
+{%- assign card_href = card_url -%}
+{%- if card_latest -%}
+{%- assign card_href = card_latest.url -%}
+{%- endif -%}
+<article class="city-card">
+  {%- if card_latest.image -%}
+  <a class="city-card-photo" href="{{ card_href | relative_url }}">
+    {%- include responsive-img.html
+         src=card_latest.image
+         alt=card_latest.image_alt
+         priority=include.priority
+         loading=include.loading
+         sizes="(min-width: 42rem) 40rem, 100vw" -%}
+  </a>
+  {%- endif -%}
+  <div class="city-card-body">
+    <h3><a href="{{ card_url | relative_url }}">{{ city.name }}, {{ city.state_name }}</a></h3>
+    {%- if card_latest.range -%}
+    <p class="city-card-when"><a href="{{ card_latest.url | relative_url }}">{{ card_latest.range }}</a></p>
+    {%- endif -%}
+    {%- if card_latest.hook -%}
+    <p class="city-card-hook">{{ card_latest.hook }}</p>
+    {%- endif -%}
+    <p>{{ city.summary }}</p>
+    {%- if card_latest.image_credit -%}
+    <p class="photo-credit"><span>{{ card_latest.image_credit }}</span>{%- if card_latest.image_source_url -%} <a href="{{ card_latest.image_source_url }}" rel="noopener">Source</a>{%- endif -%}</p>
+    {%- endif -%}
+    {%- if card_latest -%}
+    <p class="cta"><a href="{{ card_latest.url | relative_url }}">Read this week</a></p>
+    <p class="card-secondary"><a href="{{ card_url | relative_url }}">{{ city.name }} home</a></p>
+    {%- else -%}
+    <p class="cta"><a href="{{ card_url | relative_url }}">See {{ city.name }}</a></p>
+    {%- endif -%}
+  </div>
+</article>

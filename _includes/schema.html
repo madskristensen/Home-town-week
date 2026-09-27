@@ -43,6 +43,28 @@
 </script>
 {%- endif -%}
 {%- endif -%}
+{%- if page.layout == "state" -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Hometown Week",
+      "item": {{ "/" | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ page.title | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+  ]
+}
+</script>
+{%- endif -%}
 {%- if page.layout == "city" or page.layout == "year" or page.layout == "issue" -%}
 <script type="application/ld+json">
 {
@@ -58,13 +80,19 @@
     {
       "@type": "ListItem",
       "position": 2,
+      "name": {{ city.state_name | jsonify }},
+      "item": {{ state_hub_url | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
       "name": {{ city.name | jsonify }},
       "item": {{ city_url | absolute_url | jsonify }}
     }
     {%- if page.year -%},
     {
       "@type": "ListItem",
-      "position": 3,
+      "position": 4,
       "name": {{ page.year | jsonify }},
       "item": {{ page_year_url | absolute_url | jsonify }}
     }
@@ -72,7 +100,7 @@
     {%- if page.layout == "issue" -%},
     {
       "@type": "ListItem",
-      "position": 4,
+      "position": 5,
       "name": {{ page.range | jsonify }},
       "item": {{ page.url | absolute_url | jsonify }}
     }

@@ -157,7 +157,7 @@
 }
 </script>
 {%- endif -%}
-{%- if page.city -%}
+{%- if page.city or page.layout == "state" -%}
 {%- include schema.html -%}
 {%- endif -%}
 {%- endunless %}

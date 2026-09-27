@@ -1,9 +1,9 @@
 ---
 layout: home
 title: Hometown Week
-description: Weekly family digests for the city you live in. Parks, markets, libraries, and the plans worth making.
+description: Weekly family digests for Redmond, Kirkland, and Issaquah. Parks, markets, libraries, and the plans worth making.
 ---
 
-A weekly family digest for the town you live in. One issue each week, with parks, markets, library programs, and the local plans worth making.
+Three Eastside towns. One Monday-through-Sunday issue for each city, every week.
 
-Redmond, Washington is the first city on the list. Each issue covers Monday through Sunday, and the date you see is that span.
+Redmond, Kirkland, and Issaquah each get parks, markets, the library, and the plans worth making with kids. The date on an issue is that week's span.

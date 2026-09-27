@@ -1,15 +1,16 @@
 ---
 layout: default
 ---
-<article class="home wrap">
-  <h1>Hometown Week</h1>
-  <div class="lede">
+{%- assign state_cities = site.data.cities | where: "state", page.state -%}
+<article class="state-hub wrap">
+  {%- include breadcrumbs.html -%}
+  <h1>{{ page.title }}</h1>
+  <div class="dek prose">
     {{ content }}
   </div>
   <section class="cities" aria-label="Cities">
-    <h2>Eastside Washington</h2>
-    <p class="cities-intro"><a href="{{ '/wa/' | relative_url }}">All Washington cities</a></p>
-    {%- for city in site.data.cities -%}
+    <h2>Cities</h2>
+    {%- for city in state_cities -%}
     {%- if forloop.first -%}
     {%- include city-card.html priority="high" -%}
     {%- else -%}

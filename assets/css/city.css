@@ -43,14 +43,16 @@
 
 .city-home,
 .year-page,
-.issue {
+.issue,
+.state-hub {
   padding-top: 1.25rem;
   padding-bottom: 2.4rem;
 }
 
 .city-home h1,
 .year-page h1,
-.issue h1 {
+.issue h1,
+.state-hub h1 {
   margin: 0.2rem 0 1rem;
   font-size: clamp(1.85rem, 5.4vw, 2.55rem);
 }

@@ -151,9 +151,10 @@ img {
 
 .header-bar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.65rem 1rem;
 }
 
 .header-nav {
@@ -195,12 +196,19 @@ img {
 }
 
 .cities {
+  display: grid;
+  gap: 1.35rem;
   margin-top: 1.8rem;
 }
 
 .cities h2 {
-  margin: 0 0 0.8rem;
+  margin: 0;
   font-size: 1.15rem;
+}
+
+.cities-intro {
+  margin: -0.55rem 0 0.15rem;
+  font-weight: 600;
 }
 
 .city-card {
@@ -238,9 +246,27 @@ img {
 }
 
 .city-card-when {
-  margin: 0.35rem 0 0.55rem;
+  margin: 0.35rem 0 0.45rem;
   color: var(--gold);
   font-weight: 600;
+}
+
+.city-card-when a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.city-card-when a:hover,
+.city-card-when a:focus {
+  text-decoration: underline;
+}
+
+.city-card-hook {
+  margin: 0.15rem 0 0.55rem;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.35;
 }
 
 .photo-credit {
@@ -254,6 +280,11 @@ img {
 
 .city-card p {
   margin: 0.4rem 0 0;
+}
+
+.card-secondary {
+  margin: 0.75rem 0 0;
+  font-weight: 600;
 }
 
 .cta {
@@ -322,6 +353,29 @@ img {
 .footer-nav a:hover,
 .footer-nav a:focus {
   text-decoration: underline;
+}
+
+.footer-cities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+  align-items: baseline;
+  margin: 0 0 0.85rem;
+}
+
+.footer-cities a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-cities a:hover,
+.footer-cities a:focus {
+  text-decoration: underline;
+}
+
+.footer-cities a.footer-state {
+  color: var(--gold);
 }
 
 .site-footer p {

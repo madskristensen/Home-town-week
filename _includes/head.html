@@ -11,6 +11,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,650&family=Outfit:wght@400;500;600&display=swap">
 {%- include seo.html -%}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
-{%- if page.city %}
+{%- if page.city or page.layout == "state" %}
 <link rel="stylesheet" href="{{ '/assets/css/city.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 {%- endif %}

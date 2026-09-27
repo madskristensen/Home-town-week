@@ -2,15 +2,23 @@
   <div class="wrap">
     <nav class="footer-nav" aria-label="Footer">
       <a href="{{ '/' | relative_url }}">Hometown Week</a>
-      {%- for city in site.data.cities -%}
-      {%- capture footer_city_url -%}/{{ city.state }}/{{ city.id }}/{%- endcapture -%}
-      <a href="{{ footer_city_url | strip | relative_url }}">{{ city.name }}</a>
-      {%- endfor -%}
       <a href="{{ '/about/' | relative_url }}">About</a>
       <a href="{{ '/feed.xml' | relative_url }}">Feed</a>
       {%- if site.repository -%}
       <a href="https://github.com/{{ site.repository }}" rel="noopener">GitHub</a>
       {%- endif -%}
+    </nav>
+    <nav class="footer-cities" aria-label="Cities">
+      {%- assign footer_states = site.data.cities | map: "state" | uniq -%}
+      {%- for state in footer_states -%}
+      {%- assign state_cities = site.data.cities | where: "state", state -%}
+      {%- capture footer_state_url -%}/{{ state }}/{%- endcapture -%}
+      <a class="footer-state" href="{{ footer_state_url | strip | relative_url }}">{{ state_cities.first.state_name }}</a>
+      {%- for city in state_cities -%}
+      {%- capture footer_city_url -%}/{{ city.state }}/{{ city.id }}/{%- endcapture -%}
+      <a href="{{ footer_city_url | strip | relative_url }}">{{ city.name }}</a>
+      {%- endfor -%}
+      {%- endfor -%}
     </nav>
     <p>Built by {{ site.author.name }} for families who want the short version of the week.</p>
     <p class="copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>

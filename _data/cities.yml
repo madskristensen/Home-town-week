@@ -7,3 +7,17 @@
   description: Weekly family digests of Redmond parks, events, and things to do.
   summary: >-
     Parks, the market, the library, and Marymoor, picked each week for families.
+- id: kirkland
+  name: Kirkland
+  state: wa
+  state_name: Washington
+  description: Weekly family digests of Kirkland parks, markets, library programs, and shows.
+  summary: >-
+    Marina Park, the waterfront markets, the library, and the Performance Center, picked each week for families.
+- id: issaquah
+  name: Issaquah
+  state: wa
+  state_name: Washington
+  description: Weekly family digests of Issaquah parks, markets, the hatchery, and Village Theatre.
+  summary: >-
+    The farmers market, Front Street, the salmon hatchery, and Village Theatre, picked each week for families.
