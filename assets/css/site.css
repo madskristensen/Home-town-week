@@ -20,8 +20,8 @@
   --radius: 1rem;
   --measure: 40rem;
   --photo-filter: none;
-  --serif: "Fraunces", "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
-  --sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
+  --serif: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -81,7 +81,7 @@ h2,
 h3 {
   color: var(--ink);
   font-family: var(--serif);
-  font-weight: 560;
+  font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1.15;
 }
@@ -138,7 +138,7 @@ img {
   color: var(--forest);
   font-family: var(--serif);
   font-size: 1.05rem;
-  font-weight: 650;
+  font-weight: 700;
   letter-spacing: -0.02em;
   text-decoration: none;
 }
@@ -339,7 +339,7 @@ img {
   color: var(--ink);
   font-family: var(--serif);
   font-size: 1.32rem;
-  font-weight: 560;
+  font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.15;
 }
@@ -684,7 +684,7 @@ img {
   color: var(--header-ink);
   font-family: var(--serif);
   font-size: clamp(2.15rem, 7vw, 3rem);
-  font-weight: 560;
+  font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 0.95;
 }
@@ -825,7 +825,7 @@ img {
   margin: 0.2rem 0 0;
   font-family: var(--serif);
   font-size: 1.45rem;
-  font-weight: 560;
+  font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.25;
 }
@@ -855,7 +855,7 @@ img {
   color: var(--ink);
   font-family: var(--serif);
   font-size: 1.22rem;
-  font-weight: 560;
+  font-weight: 600;
   letter-spacing: -0.02em;
   text-decoration: none;
 }
@@ -915,7 +915,7 @@ img {
 
 .week-nav a {
   color: var(--ink);
-  font-weight: 650;
+  font-weight: 700;
   text-decoration: none;
 }
 
