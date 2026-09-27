@@ -6,9 +6,17 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   {%- include header.html -%}
-  <main id="main-content" tabindex="-1">
+  {%- comment -%}
+    Do not put tabindex="-1" on main. iOS Safari moves focus back to that
+    element on the back button and scrolls it to the top of the viewport
+    (WebKit bug 272624), so the home page loses its place.
+  {%- endcomment -%}
+  <main id="main-content">
     {{ content }}
   </main>
   {%- include footer.html -%}
+  <script>
+    if ("scrollRestoration" in history) history.scrollRestoration = "auto";
+  </script>
 </body>
 </html>
