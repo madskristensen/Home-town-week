@@ -4,6 +4,11 @@
 # in decimal degrees, for the home page nearest-city lookup. Coming-soon
 # names live in coming_soon.yml until a digest exists. City names stay out
 # of the site header. See README for the page files each city needs.
+#
+# sources: is the Mon/Wed/Fri crawl list for that city. Keep municipal,
+# parks, markets, downtown, and theaters ahead of the library. AllEvents is
+# a secondary sweep and must be the page for this city and state. Do not
+# crawl Stay Happening, news blogs, or a library calendar alone.
 - id: bainbridge-island
   name: Bainbridge Island
   state: wa
@@ -13,6 +18,31 @@
   description: Weekly family digests of the Bainbridge farmers market, the library, and Eagle Harbor.
   summary: >-
     The Saturday market, the library, and Eagle Harbor, picked each week for families.
+  sources:
+    - name: "City of Bainbridge Island calendar"
+      url: "https://www.bainbridgewa.gov/m/calendar"
+      type: municipal
+      notes: "City meetings and community events. Prefer parks, harbor, and family programs."
+    - name: "Bainbridge Island Farmers Market"
+      url: "https://www.bainbridgeislandfarmersmarket.com/"
+      type: market
+      notes: "Saturday market dates, music, and family hours."
+    - name: "Visit Bainbridge"
+      url: "https://www.bainbridgeisland.com/"
+      type: downtown
+      notes: "Downtown and island happenings beyond the library."
+    - name: "Bainbridge Performing Arts"
+      url: "https://www.bainbridgeperformingarts.org/"
+      type: theater
+      notes: "Family and youth shows on the island."
+    - name: "Kitsap Regional Library events"
+      url: "https://krl.bibliocommons.com/v2/events"
+      type: library
+      notes: "One library source. Filter to the Bainbridge branch."
+    - name: "AllEvents Bainbridge Island"
+      url: "https://allevents.in/bainbridge-island"
+      type: allevents
+      notes: "Secondary sweep. Confirm the listing is on Bainbridge Island, WA."
 - id: bellevue
   name: Bellevue
   state: wa
@@ -22,6 +52,39 @@
   description: Weekly family digests of Bellevue parks, the Thursday market, Kelsey Creek Farm, and KidsQuest.
   summary: >-
     Downtown Park, the Thursday market, Kelsey Creek Farm, and KidsQuest, picked each week for families.
+  sources:
+    - name: "City of Bellevue calendar"
+      url: "https://bellevuewa.gov/calendar"
+      type: municipal
+      notes: "City special events. Skip routine council unless it is parks, schools, or teens."
+    - name: "Bellevue Parks"
+      url: "https://bellevuewa.gov/city-government/departments/parks"
+      type: parks
+      notes: "Parks programs, Downtown Park, and Kelsey Creek."
+    - name: "Bellevue Farmers Market"
+      url: "https://bellevuefarmersmarket.org/"
+      type: market
+      notes: "Thursday market dates and family activities."
+    - name: "KidsQuest Children's Museum"
+      url: "https://www.kidsquestmuseum.org/"
+      type: venue
+      notes: "Museum hours and family programs in downtown Bellevue."
+    - name: "Meydenbauer Center"
+      url: "https://meydenbauer.com/"
+      type: theater
+      notes: "Family shows and public performances."
+    - name: "Bellevue Botanical Garden"
+      url: "https://bellevuebotanical.org/"
+      type: venue
+      notes: "Garden events and seasonal family days."
+    - name: "King County Library System events"
+      url: "https://kcls.bibliocommons.com/events"
+      type: library
+      notes: "One library source. Filter to Bellevue branches."
+    - name: "AllEvents Bellevue"
+      url: "https://allevents.in/bellevue"
+      type: allevents
+      notes: "Secondary sweep. This page is Bellevue, WA."
 - id: bellingham
   name: Bellingham
   state: wa
@@ -31,6 +94,31 @@
   description: Weekly family digests of Bellingham markets, the library, Boulevard Park, and the Mount Baker Theatre.
   summary: >-
     The Saturday market, the library, Boulevard Park, and the Mount Baker Theatre, picked each week for families.
+  sources:
+    - name: "City of Bellingham"
+      url: "https://cob.org/"
+      type: municipal
+      notes: "Official city site for civic and parks events. Bots are often blocked."
+    - name: "Bellingham Whatcom County Tourism events"
+      url: "https://www.bellingham.org/events"
+      type: downtown
+      notes: "Festivals, music, and public events calendar."
+    - name: "Downtown Bellingham"
+      url: "https://www.downtownbellingham.com/"
+      type: downtown
+      notes: "Downtown walks, markets, and street events."
+    - name: "Mount Baker Theatre"
+      url: "https://www.mountbakertheatre.com/"
+      type: theater
+      notes: "Family and public shows."
+    - name: "Whatcom County Library System events"
+      url: "https://www.wcls.org/events"
+      type: library
+      notes: "One library source. Filter to Bellingham and nearby branches families use."
+    - name: "AllEvents Bellingham"
+      url: "https://allevents.in/bellingham"
+      type: allevents
+      notes: "Secondary sweep. This page is Bellingham, WA."
 - id: bothell
   name: Bothell
   state: wa
@@ -40,6 +128,23 @@
   description: Weekly family digests of Bothell parks, the library, City Hall Plaza, and Anderson School.
   summary: >-
     The library, City Hall Plaza, the Landing, and Anderson School, picked each week for families.
+  sources:
+    - name: "City of Bothell calendar"
+      url: "https://www.bothellwa.gov/m/calendar"
+      type: municipal
+      notes: "City and parks events at City Hall Plaza and city parks."
+    - name: "Anderson School"
+      url: "https://www.mcmenamins.com/anderson-school"
+      type: venue
+      notes: "Public concerts and family-friendly events on the campus."
+    - name: "King County Library System events"
+      url: "https://kcls.bibliocommons.com/events"
+      type: library
+      notes: "One library source. Filter to the Bothell branch."
+    - name: "AllEvents Bothell"
+      url: "https://allevents.in/bothell"
+      type: allevents
+      notes: "Secondary sweep. This page is Bothell, WA."
 - id: edmonds
   name: Edmonds
   state: wa
@@ -49,6 +154,35 @@
   description: Weekly family digests of Edmonds markets, the library, the beach, and downtown shows.
   summary: >-
     The Saturday market, the library, the beach, and downtown shows, picked each week for families.
+  sources:
+    - name: "City of Edmonds calendar"
+      url: "https://www.edmondswa.gov/government/communications/calendars/calendar"
+      type: municipal
+      notes: "City events. Prefer beach, parks, and downtown over routine meetings."
+    - name: "Edmonds Downtown Alliance"
+      url: "https://edmondsdowntown.org/"
+      type: downtown
+      notes: "Downtown markets, art walks, and street events."
+    - name: "Edmonds Center for the Arts"
+      url: "https://www.edmondscenterforthearts.org/"
+      type: theater
+      notes: "Public performances, including family shows."
+    - name: "Edmonds Driftwood Players"
+      url: "https://edmondsdriftwoodplayers.org/"
+      type: theater
+      notes: "Community theater productions."
+    - name: "Cascadia Art Museum"
+      url: "https://www.cascadiaartmuseum.org/"
+      type: venue
+      notes: "Exhibits and family programs."
+    - name: "Sno-Isle Libraries events"
+      url: "https://sno-isle.bibliocommons.com/events"
+      type: library
+      notes: "One library source. Filter to Edmonds."
+    - name: "AllEvents Edmonds"
+      url: "https://allevents.in/edmonds"
+      type: allevents
+      notes: "Secondary sweep. This page is Edmonds, WA."
 - id: everett
   name: Everett
   state: wa
@@ -58,6 +192,35 @@
   description: Weekly family digests of Everett's Sunday market, Imagine Children's Museum, the library, and downtown.
   summary: >-
     The Sunday market, Imagine Children's Museum, the library, and downtown, picked each week for families.
+  sources:
+    - name: "City of Everett calendar"
+      url: "https://www.everettwa.gov/calendar.aspx"
+      type: municipal
+      notes: "City and parks events."
+    - name: "Everett Farmers Market"
+      url: "https://everettfarmersmarket.com/"
+      type: market
+      notes: "Sunday market dates and entertainment."
+    - name: "Imagine Children's Museum"
+      url: "https://www.imaginecm.org/events/"
+      type: venue
+      notes: "Kids museum exhibits and family days."
+    - name: "Schack Art Center"
+      url: "https://www.schack.org/"
+      type: venue
+      notes: "Downtown art shows and family workshops."
+    - name: "Visit Everett"
+      url: "https://www.visiteverett.com/"
+      type: downtown
+      notes: "Visitor calendar for downtown and waterfront events."
+    - name: "Sno-Isle Libraries events"
+      url: "https://sno-isle.bibliocommons.com/events"
+      type: library
+      notes: "One library source. Filter to Everett."
+    - name: "AllEvents Everett"
+      url: "https://allevents.in/everett"
+      type: allevents
+      notes: "Secondary sweep. This page is Everett, WA."
 - id: ferndale
   name: Ferndale
   state: wa
@@ -67,6 +230,19 @@
   description: Weekly family digests of Ferndale parks, the library, Pioneer Park, and town events.
   summary: >-
     The library, Pioneer Park, Hovander, and town weekends, picked each week for families.
+  sources:
+    - name: "City of Ferndale calendar"
+      url: "https://cityofferndale.org/calendar.aspx"
+      type: municipal
+      notes: "City events, Pioneer Park, and town weekends."
+    - name: "Whatcom County Library System events"
+      url: "https://www.wcls.org/events"
+      type: library
+      notes: "One library source. Filter to the Ferndale branch."
+    - name: "AllEvents Ferndale, WA"
+      url: "https://allevents.in/ferndale-wa"
+      type: allevents
+      notes: "Secondary sweep. Use ferndale-wa. allevents.in/ferndale is Ferndale, Michigan."
 - id: gig-harbor
   name: Gig Harbor
   state: wa
@@ -76,6 +252,23 @@
   description: Weekly family digests of Gig Harbor's fall market, the library, and the harbor.
   summary: >-
     The Tuesday fall market, the library, and the harbor, picked each week for families.
+  sources:
+    - name: "City of Gig Harbor calendar"
+      url: "https://gigharborwa.gov/calendar.aspx"
+      type: municipal
+      notes: "City and waterfront events."
+    - name: "Waterfront Farmers Market"
+      url: "https://www.waterfrontfarmersmarket.org/"
+      type: market
+      notes: "Official market at Skansie Brothers Park. Check the posted season before listing a Saturday."
+    - name: "Pierce County Library System"
+      url: "https://mypcls.org/"
+      type: library
+      notes: "One library source. Filter to Gig Harbor."
+    - name: "AllEvents Gig Harbor"
+      url: "https://allevents.in/gig-harbor"
+      type: allevents
+      notes: "Secondary sweep. This page is Gig Harbor, WA."
 - id: issaquah
   name: Issaquah
   state: wa
@@ -85,6 +278,31 @@
   description: Weekly family digests of Issaquah parks, markets, the hatchery, and Village Theatre.
   summary: >-
     The farmers market, Front Street, the salmon hatchery, and Village Theatre, picked each week for families.
+  sources:
+    - name: "City of Issaquah calendar"
+      url: "https://www.issaquahwa.gov/m/calendar"
+      type: municipal
+      notes: "City parks, hatchery-adjacent events, and civic programs."
+    - name: "Downtown Issaquah events"
+      url: "https://downtownissaquah.com/events/"
+      type: downtown
+      notes: "Front Street and downtown events."
+    - name: "Village Theatre"
+      url: "https://villagetheatre.org/"
+      type: theater
+      notes: "Mainstage and family shows in Issaquah."
+    - name: "Salmon Days"
+      url: "https://www.salmondays.org/"
+      type: venue
+      notes: "Festival weekend when it falls in the digest window."
+    - name: "King County Library System events"
+      url: "https://kcls.bibliocommons.com/events"
+      type: library
+      notes: "One library source. Filter to Issaquah."
+    - name: "AllEvents Issaquah"
+      url: "https://allevents.in/issaquah"
+      type: allevents
+      notes: "Secondary sweep. This page is Issaquah, WA."
 - id: kenmore
   name: Kenmore
   state: wa
@@ -94,6 +312,23 @@
   description: Weekly family digests of the Kenmore library, Log Boom Park, and Saint Edward State Park.
   summary: >-
     The library, Log Boom Park, and Saint Edward, picked each week for families.
+  sources:
+    - name: "City of Kenmore"
+      url: "https://www.kenmorewa.gov/"
+      type: municipal
+      notes: "Official city site for parks and civic events. Bots are often blocked."
+    - name: "Saint Edward State Park"
+      url: "https://parks.wa.gov/find-parks/state-parks/saint-edward-state-park"
+      type: parks
+      notes: "State park programs families in Kenmore actually use."
+    - name: "King County Library System events"
+      url: "https://kcls.bibliocommons.com/events"
+      type: library
+      notes: "One library source. Filter to Kenmore."
+    - name: "AllEvents Kenmore"
+      url: "https://allevents.in/kenmore"
+      type: allevents
+      notes: "Secondary sweep. This page is Kenmore, WA."
 - id: kirkland
   name: Kirkland
   state: wa
@@ -103,6 +338,27 @@
   description: Weekly family digests of Kirkland parks, markets, library programs, and shows.
   summary: >-
     Marina Park, the waterfront markets, the library, and the Performance Center, picked each week for families.
+  sources:
+    - name: "City of Kirkland"
+      url: "https://www.kirklandwa.gov/"
+      type: municipal
+      notes: "Official city site for parks, waterfront, and civic events. Bots are often blocked."
+    - name: "Kirkland Performance Center"
+      url: "https://www.kpcenter.org/"
+      type: theater
+      notes: "Public and family performances."
+    - name: "Kirkland Arts Center"
+      url: "https://kirklandartscenter.org/"
+      type: venue
+      notes: "Classes, exhibits, and family workshops."
+    - name: "King County Library System events"
+      url: "https://kcls.bibliocommons.com/events"
+      type: library
+      notes: "One library source. Filter to Kirkland."
+    - name: "AllEvents Kirkland"
+      url: "https://allevents.in/kirkland"
+      type: allevents
+      notes: "Secondary sweep. This page is Kirkland, WA."
 - id: lacey
   name: Lacey
   state: wa
@@ -112,6 +368,23 @@
   description: Weekly family digests of Lacey library programs, Children's Day, and city parks.
   summary: >-
     The library, Children's Day, and Huntamer Park, picked each week for families.
+  sources:
+    - name: "City of Lacey"
+      url: "https://cityoflacey.org/"
+      type: municipal
+      notes: "City site for civic events."
+    - name: "Lacey Parks, Culture and Recreation"
+      url: "https://laceyparks.org/events/"
+      type: parks
+      notes: "Parks events, including Huntamer Park and Children's Day."
+    - name: "Timberland Regional Library, Lacey"
+      url: "https://trl.org/locations/lacey"
+      type: library
+      notes: "One library source. Open the Lacey branch calendar."
+    - name: "AllEvents Lacey"
+      url: "https://allevents.in/lacey"
+      type: allevents
+      notes: "Secondary sweep. This page is Lacey, WA."
 - id: lynden
   name: Lynden
   state: wa
@@ -121,6 +394,27 @@
   description: Weekly family digests of the Lynden library, the Jansen Art Center, and Front Street.
   summary: >-
     The library, the Jansen Art Center, and Front Street, picked each week for families.
+  sources:
+    - name: "City of Lynden calendar"
+      url: "https://www.lyndenwa.org/calendar.aspx"
+      type: municipal
+      notes: "City and Front Street events."
+    - name: "Lynden Chamber of Commerce"
+      url: "https://www.lynden.org/"
+      type: downtown
+      notes: "Downtown and community events."
+    - name: "Jansen Art Center"
+      url: "https://www.jansenartcenter.org/"
+      type: theater
+      notes: "Art center shows and family workshops. Bots are often blocked."
+    - name: "Whatcom County Library System events"
+      url: "https://www.wcls.org/events"
+      type: library
+      notes: "One library source. Filter to Lynden."
+    - name: "AllEvents Lynden"
+      url: "https://allevents.in/lynden"
+      type: allevents
+      notes: "Secondary sweep. This page is Lynden, WA."
 - id: lynnwood
   name: Lynnwood
   state: wa
@@ -130,6 +424,19 @@
   description: Weekly family digests of Lynnwood's library, civic campus, and Scriber Lake Park.
   summary: >-
     The library, the civic campus, and Scriber Lake Park, picked each week for families.
+  sources:
+    - name: "City of Lynnwood"
+      url: "https://www.lynnwoodwa.gov/"
+      type: municipal
+      notes: "Official city site for the civic campus, parks, and rec. Bots are often blocked."
+    - name: "Sno-Isle Libraries events"
+      url: "https://sno-isle.bibliocommons.com/events"
+      type: library
+      notes: "One library source. Filter to Lynnwood."
+    - name: "AllEvents Lynnwood"
+      url: "https://allevents.in/lynnwood"
+      type: allevents
+      notes: "Secondary sweep. This page is Lynnwood, WA."
 - id: maple-valley
   name: Maple Valley
   state: wa
@@ -139,6 +446,23 @@
   description: Weekly family digests of the Maple Valley farmers market, the library, and Lake Wilderness.
   summary: >-
     The Saturday market, the library, and Lake Wilderness, picked each week for families.
+  sources:
+    - name: "City of Maple Valley"
+      url: "https://www.maplevalleywa.gov/"
+      type: municipal
+      notes: "City site for parks, Lake Wilderness, and civic events."
+    - name: "Maple Valley Farmers Market"
+      url: "https://www.maplevalleyfarmersmarket.com/"
+      type: market
+      notes: "Saturday market dates."
+    - name: "King County Library System events"
+      url: "https://kcls.bibliocommons.com/events"
+      type: library
+      notes: "One library source. Filter to Maple Valley."
+    - name: "AllEvents Maple Valley"
+      url: "https://allevents.in/maple-valley"
+      type: allevents
+      notes: "Secondary sweep. This page is Maple Valley, WA."
 - id: mercer-island
   name: Mercer Island
   state: wa
@@ -148,6 +472,23 @@
   description: Weekly family digests of Mercer Island's Sunday market, the library, Luther Burbank Park, and Island Books.
   summary: >-
     The Sunday market, the library, Luther Burbank, and Island Books, picked each week for families.
+  sources:
+    - name: "City of Mercer Island calendar"
+      url: "https://www.mercerisland.gov/calendar"
+      type: municipal
+      notes: "City parks, Luther Burbank, and community events."
+    - name: "Mercer Island Farmers Market"
+      url: "https://www.mifarmersmarket.org/"
+      type: market
+      notes: "Sunday market dates."
+    - name: "King County Library System events"
+      url: "https://kcls.bibliocommons.com/events"
+      type: library
+      notes: "One library source. Filter to Mercer Island."
+    - name: "AllEvents Mercer Island"
+      url: "https://allevents.in/mercer-island"
+      type: allevents
+      notes: "Secondary sweep. This page is Mercer Island, WA."
 - id: mill-creek
   name: Mill Creek
   state: wa
@@ -157,6 +498,19 @@
   description: Weekly family digests of Mill Creek library storytimes, LEGO club, and the town center.
   summary: >-
     The library, LEGO club, and the town center, picked each week for families.
+  sources:
+    - name: "City of Mill Creek"
+      url: "https://millcreekwa.gov/"
+      type: municipal
+      notes: "City site for town center and civic events. AllEvents has no Mill Creek, WA page. Do not use allevents.in/millcreek (Illinois) or allevents.in/mill-creek."
+    - name: "Mill Creek recreation catalog"
+      url: "https://secure.rec1.com/WA/city-of-mill-creek-wa/catalog"
+      type: parks
+      notes: "Parks and recreation registration and programs."
+    - name: "Sno-Isle Libraries events"
+      url: "https://sno-isle.bibliocommons.com/events"
+      type: library
+      notes: "One library source. Filter to Mill Creek."
 - id: poulsbo
   name: Poulsbo
   state: wa
@@ -166,6 +520,27 @@
   description: Weekly family digests of the Poulsbo farmers market, Kids Club, and the library.
   summary: >-
     The Saturday market, Kids Club, and the library, picked each week for families.
+  sources:
+    - name: "City of Poulsbo"
+      url: "https://poulsbo.gov/"
+      type: municipal
+      notes: "Official city site."
+    - name: "Poulsbo Parks and Recreation"
+      url: "https://poulsbo.gov/parks-recreation/"
+      type: parks
+      notes: "Parks programs and waterfront events."
+    - name: "Poulsbo Farmers Market"
+      url: "https://www.poulsbofarmersmarket.org/"
+      type: market
+      notes: "Saturday market dates."
+    - name: "Kitsap Regional Library events"
+      url: "https://krl.bibliocommons.com/v2/events"
+      type: library
+      notes: "One library source. Filter to Poulsbo."
+    - name: "AllEvents Poulsbo"
+      url: "https://allevents.in/poulsbo"
+      type: allevents
+      notes: "Secondary sweep. This page is Poulsbo, WA."
 - id: puyallup
   name: Puyallup
   state: wa
@@ -175,6 +550,23 @@
   description: Weekly family digests of the Puyallup farmers market, Pioneer Park, and the library.
   summary: >-
     The Saturday market, Pioneer Park, and the library, picked each week for families.
+  sources:
+    - name: "City of Puyallup calendar"
+      url: "https://www.puyallupwa.gov/calendar.aspx"
+      type: municipal
+      notes: "City events. Prefer Pioneer Park and family programs over routine meetings."
+    - name: "Puyallup Farmers' Market"
+      url: "https://puyallupfarmersmarket.com/"
+      type: market
+      notes: "Saturday market through the posted season."
+    - name: "Puyallup Public Library calendar"
+      url: "https://puyalluplibrary.libcal.com/"
+      type: library
+      notes: "One library source."
+    - name: "AllEvents Puyallup"
+      url: "https://allevents.in/puyallup"
+      type: allevents
+      notes: "Secondary sweep. This page is Puyallup, WA."
 - id: redmond
   name: Redmond
   state: wa
@@ -184,6 +576,27 @@
   description: Weekly family digests of Redmond parks, events, and things to do.
   summary: >-
     Parks, the market, the library, and Marymoor, picked each week for families.
+  sources:
+    - name: "City of Redmond calendar"
+      url: "https://www.redmond.gov/Calendar.aspx"
+      type: municipal
+      notes: "City parks, Marymoor-adjacent city events, and family programs."
+    - name: "Redmond Community"
+      url: "https://www.redmond.gov/101/Community"
+      type: parks
+      notes: "Parks and community programs hub."
+    - name: "Redmond Saturday Market"
+      url: "http://www.redmondsaturdaymarket.org/"
+      type: market
+      notes: "Saturday market season. HTTPS certificate fails; use the HTTP site."
+    - name: "King County Library System events"
+      url: "https://kcls.bibliocommons.com/events"
+      type: library
+      notes: "One library source. Filter to Redmond."
+    - name: "AllEvents Redmond"
+      url: "https://allevents.in/redmond"
+      type: allevents
+      notes: "Secondary sweep. This page is Redmond, WA, not Redmond, Oregon."
 - id: renton
   name: Renton
   state: wa
@@ -193,6 +606,23 @@
   description: Weekly family digests of Renton's Tuesday market, the library, and Gene Coulon Memorial Beach Park.
   summary: >-
     The Tuesday market, the library, and Gene Coulon, picked each week for families.
+  sources:
+    - name: "City of Renton"
+      url: "https://www.rentonwa.gov/"
+      type: municipal
+      notes: "Official city site for parks, Gene Coulon, and civic events. Bots are often blocked."
+    - name: "Renton Farmers Market"
+      url: "https://rentonfarmersmarket.com/"
+      type: market
+      notes: "Tuesday market dates."
+    - name: "King County Library System"
+      url: "https://kcls.org/"
+      type: library
+      notes: "One library source. Filter to Renton."
+    - name: "AllEvents Renton"
+      url: "https://allevents.in/renton"
+      type: allevents
+      notes: "Secondary sweep. This page is Renton, WA."
 - id: sammamish
   name: Sammamish
   state: wa
@@ -202,6 +632,19 @@
   description: Weekly family digests of Sammamish parks, the library, and the Commons.
   summary: >-
     The library, Beaver Lake, Pine Lake, and the Commons, picked each week for families.
+  sources:
+    - name: "City of Sammamish"
+      url: "https://www.sammamish.us/"
+      type: municipal
+      notes: "City site for Beaver Lake, Pine Lake, the Commons, and civic events."
+    - name: "King County Library System events"
+      url: "https://kcls.bibliocommons.com/events"
+      type: library
+      notes: "One library source. Filter to Sammamish."
+    - name: "AllEvents Sammamish"
+      url: "https://allevents.in/sammamish"
+      type: allevents
+      notes: "Secondary sweep. This page is Sammamish, WA."
 - id: woodinville
   name: Woodinville
   state: wa
@@ -211,6 +654,27 @@
   description: Weekly family digests of the Woodinville library, Festival Street, and 21 Acres.
   summary: >-
     The library, Festival Street, and 21 Acres, picked each week for families.
+  sources:
+    - name: "City of Woodinville calendar"
+      url: "https://www.woodinville.gov/calendar.aspx"
+      type: municipal
+      notes: "City and Festival Street events."
+    - name: "21 Acres"
+      url: "https://21acres.org/events/"
+      type: venue
+      notes: "Farm events and family programs."
+    - name: "Woodinville Chamber"
+      url: "https://woodinvillechamber.org/"
+      type: downtown
+      notes: "Community calendar and downtown listings."
+    - name: "King County Library System events"
+      url: "https://kcls.bibliocommons.com/events"
+      type: library
+      notes: "One library source. Filter to Woodinville."
+    - name: "AllEvents Woodinville"
+      url: "https://allevents.in/woodinville"
+      type: allevents
+      notes: "Secondary sweep. This page is Woodinville, WA."
 - id: beaverton
   name: Beaverton
   state: or
@@ -220,6 +684,35 @@
   description: Weekly family digests of Beaverton library storytimes and the Saturday farmers market.
   summary: >-
     The library storytimes and the Saturday market, picked each week for families.
+  sources:
+    - name: "City of Beaverton community calendar"
+      url: "https://www.beavertonoregon.gov/community-events-and-meetings-calendar"
+      type: municipal
+      notes: "City community events. Skip council and budget unless it is schools, parks, or teens."
+    - name: "Tualatin Hills Park and Recreation District"
+      url: "https://www.tualatinhillsparks.org/"
+      type: parks
+      notes: "Nature Center, day-off camps, and family classes. This is the parks district, not the city."
+    - name: "Beaverton City Library calendar"
+      url: "https://www.beavertonlibrary.org/m/calendar"
+      type: library
+      notes: "One library source. Storytimes, youth programs, and family fairs."
+    - name: "Beaverton Farmers Market events"
+      url: "https://www.beavertonfarmersmarket.com/event-calendar"
+      type: market
+      notes: "Saturday market hours and the music calendar."
+    - name: "Beaverton Downtown Association"
+      url: "https://downtownbeaverton.org/events/"
+      type: downtown
+      notes: "Fiesta on First, Downtown Sounds, night market, and street events."
+    - name: "The Reser"
+      url: "https://thereser.org/shows-and-events/"
+      type: theater
+      notes: "Public shows. Prefer family and kids performances."
+    - name: "AllEvents Beaverton"
+      url: "https://allevents.in/beaverton"
+      type: allevents
+      notes: "Secondary sweep. This page is Beaverton, OR."
 - id: bend
   name: Bend
   state: or
@@ -229,6 +722,43 @@
   description: Weekly family digests of the Bend farmers market, Northwest Crossing, and the downtown library.
   summary: >-
     The Wednesday market, Northwest Crossing, and the downtown library, picked each week for families.
+  sources:
+    - name: "City of Bend"
+      url: "https://www.bendoregon.gov/"
+      type: municipal
+      notes: "Official city site. Bots are often blocked. Prefer parks and downtown over council."
+    - name: "Bend Park and Recreation events"
+      url: "https://www.bendparksandrec.org/events/"
+      type: parks
+      notes: "Parks programs and family events."
+    - name: "Bend Farmers Market"
+      url: "https://www.bendfarmersmarket.com/"
+      type: market
+      notes: "Wednesday downtown market."
+    - name: "Northwest Crossing Farmers Market"
+      url: "https://www.nwxfarmersmarket.com/"
+      type: market
+      notes: "Saturday market. Check the posted final date."
+    - name: "Deschutes Public Library events"
+      url: "https://dpl.libnet.info/events"
+      type: library
+      notes: "One library source. Filter to Bend branches."
+    - name: "Tower Theatre"
+      url: "https://www.towertheatre.org/events"
+      type: theater
+      notes: "Downtown shows. Prefer family performances."
+    - name: "High Desert Museum"
+      url: "https://www.highdesertmuseum.org/events/"
+      type: venue
+      notes: "Family days and exhibit events."
+    - name: "Old Mill District"
+      url: "https://www.oldmilldistrict.com/"
+      type: downtown
+      notes: "District events and seasonal family programming."
+    - name: "AllEvents Bend"
+      url: "https://allevents.in/bend-us"
+      type: allevents
+      notes: "Secondary sweep. Use bend-us. allevents.in/bend redirects to the generic events page."
 - id: hillsboro
   name: Hillsboro
   state: or
@@ -238,6 +768,27 @@
   description: Weekly family digests of Hillsboro's farmers markets and Brookwood Library storytimes.
   summary: >-
     The downtown market, Orenco, and Brookwood Library, picked each week for families.
+  sources:
+    - name: "City of Hillsboro"
+      url: "https://www.hillsboro-oregon.gov/"
+      type: municipal
+      notes: "Official city site for parks and civic events. Bots are often blocked."
+    - name: "Hillsboro Farmers' Markets"
+      url: "https://hillsboromarkets.org/"
+      type: market
+      notes: "Downtown Saturday, Orenco Sunday, Tanasbourne, and Reed's Crossing."
+    - name: "Bag and Baggage Productions"
+      url: "https://bagnbaggage.org/"
+      type: theater
+      notes: "The Vault and Hillsboro productions. Prefer family shows."
+    - name: "Washington County Cooperative Library events"
+      url: "https://wccls.bibliocommons.com/v2/events"
+      type: library
+      notes: "One library source. Filter to Brookwood and Hillsboro branches."
+    - name: "AllEvents Hillsboro"
+      url: "https://allevents.in/hillsboro"
+      type: allevents
+      notes: "Secondary sweep. This page is Hillsboro, OR."
 - id: lake-oswego
   name: Lake Oswego
   state: or
@@ -247,6 +798,35 @@
   description: Weekly family digests of the Lake Oswego farmers market, Farm Fresh Kids, and the library.
   summary: >-
     The Saturday market, Farm Fresh Kids, and the library, picked each week for families.
+  sources:
+    - name: "City of Lake Oswego calendar"
+      url: "https://www.ci.oswego.or.us/calendar"
+      type: municipal
+      notes: "City calendar. Prefer parks, markets, and family events."
+    - name: "Lake Oswego Farmers' Market"
+      url: "https://www.ci.oswego.or.us/lofm"
+      type: market
+      notes: "Saturday market at Millennium Plaza Park."
+    - name: "First Sunday Market in Lake Grove"
+      url: "https://www.ci.oswego.or.us/lgfm"
+      type: market
+      notes: "Monthly Sunday market and themed block parties."
+    - name: "Lake Oswego Parks and Recreation"
+      url: "https://www.ci.oswego.or.us/parksrec"
+      type: parks
+      notes: "Parks and recreation programs."
+    - name: "Lake Oswego Public Library"
+      url: "https://www.ci.oswego.or.us/library"
+      type: library
+      notes: "One library source."
+    - name: "Lakewood Center for the Arts"
+      url: "https://lakewood-center.org/events/"
+      type: theater
+      notes: "Family and public performances."
+    - name: "AllEvents Lake Oswego"
+      url: "https://allevents.in/lake-oswego"
+      type: allevents
+      notes: "Secondary sweep. This page is Lake Oswego, OR."
 - id: coeur-dalene
   name: Coeur d'Alene
   state: id
@@ -256,6 +836,31 @@
   description: Weekly family digests of Coeur d'Alene library storytimes, stuffie sleepovers, and family swaps.
   summary: >-
     Library storytimes, the stuffie sleepover, and Saturday programs, picked each week for families.
+  sources:
+    - name: "City of Coeur d'Alene events calendar"
+      url: "https://www.cdaid.org/events-calendar/"
+      type: municipal
+      notes: "City events. Prefer parks and family programs."
+    - name: "Coeur d'Alene Parks and Recreation"
+      url: "https://www.cdaid.org/parks"
+      type: parks
+      notes: "Parks programs and facilities."
+    - name: "Coeur d'Alene Public Library events"
+      url: "https://cdalibrary.org/events/"
+      type: library
+      notes: "One library source. Use the library calendar, not the kids Substack mirror."
+    - name: "Community Library Network calendar"
+      url: "https://communitylibrary.libcal.com/"
+      type: library
+      notes: "County libraries families near Coeur d'Alene use. Keep it secondary to the city library."
+    - name: "Coeur d'Alene Symphony"
+      url: "https://cdasymphony.org/"
+      type: theater
+      notes: "Public concerts. Note when a concert is family-friendly."
+    - name: "AllEvents Coeur d'Alene"
+      url: "https://allevents.in/coeur-d-alene"
+      type: allevents
+      notes: "Secondary sweep. This page is Coeur d'Alene, ID."
 - id: eagle
   name: Eagle
   state: id
@@ -265,6 +870,19 @@
   description: Weekly family digests of Eagle library storytime, the Saturday market, and Harvest Fest.
   summary: >-
     Thursday storytime, Heritage Park, and Harvest Fest, picked each week for families.
+  sources:
+    - name: "City of Eagle"
+      url: "https://cityofeagle.org/"
+      type: municipal
+      notes: "Official city site."
+    - name: "City of Eagle calendar"
+      url: "https://cityofeagle.org/calendar.aspx"
+      type: municipal
+      notes: "Heritage Park, Harvest Fest, and city events."
+    - name: "AllEvents Eagle, ID"
+      url: "https://allevents.in/eagle-id"
+      type: allevents
+      notes: "Secondary sweep. Use eagle-id. allevents.in/eagle redirects to the generic events page."
 - id: meridian
   name: Meridian
   state: id
@@ -274,6 +892,27 @@
   description: Weekly family digests of Meridian library storytimes and the Main Street Market.
   summary: >-
     Pajama storytime, preschool storytime, and the Saturday market, picked each week for families.
+  sources:
+    - name: "City of Meridian"
+      url: "https://www.meridiancity.org/"
+      type: municipal
+      notes: "Official city site for parks and civic events. Bots are often blocked."
+    - name: "Meridian Main Street Market"
+      url: "https://meridianmainstreetmarket.com/"
+      type: market
+      notes: "Saturday market dates and hours."
+    - name: "Meridian Library District"
+      url: "https://www.mld.org/"
+      type: library
+      notes: "One library source. Storytimes and youth programs."
+    - name: "JUMP"
+      url: "https://jumpboise.org/"
+      type: venue
+      notes: "Family venue in nearby downtown Boise. Use only for a program that is an easy Meridian outing."
+    - name: "AllEvents Meridian, ID"
+      url: "https://allevents.in/meridian-id"
+      type: allevents
+      notes: "Secondary sweep. Use meridian-id. allevents.in/meridian is Meridian, Mississippi."
 - id: lehi
   name: Lehi
   state: ut
@@ -283,6 +922,27 @@
   description: Weekly family digests of Lehi library storytimes and Friday music and movement.
   summary: >-
     Library storytime and Friday music and movement, picked each week for families.
+  sources:
+    - name: "Lehi City"
+      url: "https://www.lehi-ut.gov/"
+      type: municipal
+      notes: "Official city site."
+    - name: "Lehi Parks"
+      url: "https://www.lehi-ut.gov/parks"
+      type: parks
+      notes: "Parks facilities and programs."
+    - name: "Lehi City Library calendar"
+      url: "https://lehicity.libcal.com/calendar"
+      type: library
+      notes: "One library source."
+    - name: "Thanksgiving Point calendar"
+      url: "https://thanksgivingpoint.org/calendar/"
+      type: venue
+      notes: "Family museum, gardens, and farm events in Lehi."
+    - name: "AllEvents Lehi"
+      url: "https://allevents.in/lehi-us"
+      type: allevents
+      notes: "Secondary sweep. Use lehi-us. allevents.in/lehi redirects to the generic events page."
 - id: orem
   name: Orem
   state: ut
@@ -292,6 +952,23 @@
   description: Weekly family digests of Orem library preschool storytimes.
   summary: >-
     Preschool storytime at the Orem Public Library, picked each week for families.
+  sources:
+    - name: "City of Orem"
+      url: "https://www.orem.org/"
+      type: municipal
+      notes: "Official city site. Bots are often blocked."
+    - name: "Orem Public Library calendar"
+      url: "https://orem.librarycalendar.com/events/month"
+      type: library
+      notes: "One library source."
+    - name: "SCERA"
+      url: "https://scera.org/events/"
+      type: theater
+      notes: "Family entertainment and performing arts."
+    - name: "AllEvents Orem"
+      url: "https://allevents.in/orem-us"
+      type: allevents
+      notes: "Secondary sweep. Use orem-us. allevents.in/orem redirects to the generic events page."
 - id: south-jordan
   name: South Jordan
   state: ut
@@ -301,6 +978,23 @@
   description: Weekly family digests of South Jordan library storytimes, Toddler Time, and Baby and Me.
   summary: >-
     Storytime, Toddler Time, and Baby and Me, picked each week for families.
+  sources:
+    - name: "South Jordan calendar"
+      url: "https://www.sjc.utah.gov/calendar.aspx"
+      type: municipal
+      notes: "City events and meetings. Prefer parks and family programs."
+    - name: "South Jordan facilities"
+      url: "https://www.sjc.utah.gov/Facilities"
+      type: parks
+      notes: "Parks, recreation centers, and facilities."
+    - name: "Salt Lake County Library events"
+      url: "https://slcls.libnet.info/"
+      type: library
+      notes: "One library source. Filter to South Jordan branches."
+    - name: "AllEvents South Jordan"
+      url: "https://allevents.in/south-jordan"
+      type: allevents
+      notes: "Secondary sweep. This page is South Jordan, UT."
 - id: castle-rock
   name: Castle Rock
   state: co
@@ -310,6 +1004,27 @@
   description: Weekly family digests of Castle Rock library storytimes and Bark for Books.
   summary: >-
     Kids Corner storytimes and Bark for Books, picked each week for families.
+  sources:
+    - name: "Town of Castle Rock"
+      url: "https://www.crgov.com/"
+      type: municipal
+      notes: "Official town site."
+    - name: "Town of Castle Rock calendar"
+      url: "https://www.crgov.com/calendar.aspx"
+      type: municipal
+      notes: "Town events. Prefer parks and downtown over routine meetings."
+    - name: "Downtown Castle Rock"
+      url: "https://www.downtowncastlerock.com/"
+      type: downtown
+      notes: "Downtown event calendar."
+    - name: "Douglas County Libraries programs"
+      url: "https://go.dcl.org/"
+      type: library
+      notes: "One library source. Filter to Castle Rock."
+    - name: "AllEvents Castle Rock, CO"
+      url: "https://allevents.in/castle-rock-co"
+      type: allevents
+      notes: "Secondary sweep. Use castle-rock-co. allevents.in/castle-rock redirects to the generic events page."
 - id: centennial
   name: Centennial
   state: co
@@ -319,6 +1034,19 @@
   description: Weekly family digests of Smoky Hill Library storytimes and family programs in Centennial.
   summary: >-
     Smoky Hill storytimes and family programs, picked each week for families.
+  sources:
+    - name: "City of Centennial"
+      url: "https://www.centennialco.gov/"
+      type: municipal
+      notes: "Official city site for parks and civic events. Bots are often blocked."
+    - name: "Arapahoe Libraries"
+      url: "https://arapahoelibraries.org/"
+      type: library
+      notes: "One library source. Filter to Smoky Hill and other Centennial branches."
+    - name: "AllEvents Centennial, CO"
+      url: "https://allevents.in/centennial-co"
+      type: allevents
+      notes: "Secondary sweep. Use centennial-co. allevents.in/centennial is Centennial, Wyoming."
 - id: fort-collins
   name: Fort Collins
   state: co
@@ -328,6 +1056,27 @@
   description: Weekly family digests of Council Tree storytimes and the Poudre Libraries calendar.
   summary: >-
     Council Tree storytimes and the library calendar, picked each week for families.
+  sources:
+    - name: "City of Fort Collins"
+      url: "https://www.fcgov.com/"
+      type: municipal
+      notes: "Official city site for parks, recreation, and the Lincoln Center. Bots are often blocked. Do not use lincolncenter.org, which is New York."
+    - name: "Downtown Fort Collins calendar"
+      url: "https://downtownfortcollins.com/play/calendar"
+      type: downtown
+      notes: "Old Town events and the play calendar."
+    - name: "Visit Fort Collins"
+      url: "https://www.visitftcollins.com/"
+      type: downtown
+      notes: "Official visitor guide and event roundups."
+    - name: "Poudre Libraries calendar"
+      url: "https://poudrelibraries.librarycalendar.com/events/month"
+      type: library
+      notes: "One library source. Filter to Council Tree and other Fort Collins branches."
+    - name: "AllEvents Fort Collins"
+      url: "https://allevents.in/fort-collins"
+      type: allevents
+      notes: "Secondary sweep. This page is Fort Collins, CO."
 - id: frisco
   name: Frisco
   state: tx
@@ -337,6 +1086,27 @@
   description: Weekly family digests of Frisco library story times, baby lap-sit, and kids' programs.
   summary: >-
     Family story time, baby lap-sit, and kids' programs, picked each week for families.
+  sources:
+    - name: "City of Frisco"
+      url: "https://www.friscotexas.gov/"
+      type: municipal
+      notes: "Official city site."
+    - name: "City of Frisco calendar"
+      url: "https://www.friscotexas.gov/calendar.aspx"
+      type: municipal
+      notes: "City special events and parks programming."
+    - name: "Frisco Public Library events"
+      url: "https://friscolibrary.bibliocommons.com/events/search/index"
+      type: library
+      notes: "One library source."
+    - name: "The Star in Frisco"
+      url: "https://www.thestarinfrisco.com/"
+      type: venue
+      notes: "Public events at the Cowboys headquarters campus. Use family-fit listings only."
+    - name: "AllEvents Frisco, TX"
+      url: "https://allevents.in/frisco"
+      type: allevents
+      notes: "Secondary sweep. This page is Frisco, TX, not Frisco, Colorado."
 - id: plano
   name: Plano
   state: tx
@@ -346,6 +1116,27 @@
   description: Weekly family digests of Plano library storytimes, puppet shows, and kids' programs.
   summary: >-
     Storytime, parachute play, and the puppet show, picked each week for families.
+  sources:
+    - name: "City of Plano"
+      url: "https://www.plano.gov/"
+      type: municipal
+      notes: "Official city site."
+    - name: "Plano Parks and Recreation"
+      url: "https://www.plano.gov/parks-and-recreation"
+      type: parks
+      notes: "Parks programs and special events."
+    - name: "Eisemann Center calendar"
+      url: "https://www.eisemanncenter.com/events-tickets/calendar/"
+      type: theater
+      notes: "Family and public performances."
+    - name: "Plano Public Library events"
+      url: "https://plano.libnet.info/events"
+      type: library
+      notes: "One library source."
+    - name: "AllEvents Plano"
+      url: "https://allevents.in/plano"
+      type: allevents
+      notes: "Secondary sweep. This page is Plano, TX."
 - id: round-rock
   name: Round Rock
   state: tx
@@ -355,3 +1146,16 @@
   description: Weekly family digests of Round Rock library family storytime and preschool storytime.
   summary: >-
     Monday family storytime and Saturday storytime, picked each week for families.
+  sources:
+    - name: "City of Round Rock"
+      url: "https://www.roundrocktexas.gov/"
+      type: municipal
+      notes: "Official city site for parks and civic events. Bots are often blocked."
+    - name: "Round Rock Public Library calendar"
+      url: "https://roundrocktexas.libcal.com/"
+      type: library
+      notes: "One library source."
+    - name: "AllEvents Round Rock"
+      url: "https://allevents.in/round-rock"
+      type: allevents
+      notes: "Secondary sweep. This page is Round Rock, TX."

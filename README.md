@@ -36,7 +36,7 @@ Pushes to `main` run `.github/workflows/pages.yml`, which builds the site and de
 
 ## Adding a city
 
-1. Add the city to `_data/cities.yml`, alphabetical within its state, with `lat` and `lon` for the city center in decimal degrees. The home page uses those coordinates to suggest the nearest digest. It does not call a geocoding service.
+1. Add the city to `_data/cities.yml`, alphabetical within its state, with `lat` and `lon` for the city center in decimal degrees. The home page uses those coordinates to suggest the nearest digest. It does not call a geocoding service. Add a `sources:` list on the city (name, url, type, notes) for the Monday, Wednesday, and Friday crawl: city calendar, parks, market, downtown, theater, AllEvents for that city and state, and the library as one source among several.
 2. Add `{state}/{city}/index.html`, `{state}/{city}/{year}/index.html`, and `{state}/{city}/latest.html`, using the Redmond pages as the pattern.
 3. Add issues under `_issues/` with `city`, `state`, `year`, `slug`, and a permalink like `/wa/kirkland/2026/sep-28-oct-4/`.
 4. Put a state outline with a city pin at `assets/images/cities/{state}/{city}.svg`. Put photos in `assets/images/{city}/` at 800, 1200, and 1600 widths, and add `{city}_events.yml` under `_data/` if you want event structured data.
