@@ -8,11 +8,11 @@ state: co
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Tuesday night, The Snowy Day plays at the PACE Center in Parker. Saturday, local author Lily Williams reads from If Animals Disappeared."
+hook: "Tuesday night, The Snowy Day is a ticketed show at the PACE Center in Parker. Saturday is free: Lily Williams reads If Animals Disappeared at Smoky Hill, then pumpkin painting at Southglenn."
 permalink: /co/centennial/2026/oct-5-oct-11/
 ---
 
-Tuesday night, The Snowy Day plays at the PACE Center in Parker. Saturday, local author Lily Williams reads from If Animals Disappeared.
+Tuesday night, The Snowy Day is a ticketed show at the PACE Center in Parker. Saturday is free: Lily Williams reads If Animals Disappeared at Smoky Hill, then pumpkin painting at Southglenn.
 
 ## In Parker
 

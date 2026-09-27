@@ -43,3 +43,8 @@ sep-28-oct-4:
     end: "2026-10-02T11:00:00-07:00"
     place: "Lynnwood Library, 19200 44th Ave W"
     same_as: "https://sno-isle.bibliocommons.com/events/6a640158c7e02e3d006b8867"
+  - name: "Hispanic Heritage Month Celebration"
+    start: "2026-10-03T12:00:00-07:00"
+    end: "2026-10-03T16:00:00-07:00"
+    place: "Lynnwood Library, 19200 44th Ave W"
+    same_as: "https://sno-isle.bibliocommons.com/events/6a9b3997aafa61002961aae5"

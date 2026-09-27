@@ -58,13 +58,21 @@ Free. The city calls it a family event for the salmon coming back to Clarks Cree
 
 [Salmon Homecoming](https://www.puyallupwa.gov/Calendar.aspx?EID=5462)
 
+### How to Make a Picture Book
+<p class="event-when">Sat Oct 3 · 3:00–4:00 p.m.</p>
+<p class="event-place">Puyallup Public Library meeting room</p>
+
+For grades 3–8. Author Rachel Michelle Wilson uses her picture book as a Mad Lib, and the room writes and illustrates one together. She says she will publish a video read-aloud afterward and send a link. It starts as salmon homecoming ends.
+
+[City calendar](https://www.puyallupwa.gov/calendar.aspx)
+
 ## Tuesday
 
 ### Play to Learn
 <p class="event-when">Tue Sep 29 · 10:00–11:30 a.m. and 1:00–2:30 p.m.</p>
 <p class="event-place">Puyallup Public Library meeting room</p>
 
-Two sessions on the city calendar. The short listing does not add an age line. Wednesday the library is closed for staff training, so do not plan a Wednesday visit.
+Free play for children and adults together, from Green Trike with the library. Two sessions. Registration is on the Green Trike page. Wednesday the library is closed for staff training, so do not plan a Wednesday visit.
 
 [City calendar](https://www.puyallupwa.gov/calendar.aspx)
 

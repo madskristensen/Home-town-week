@@ -1,6 +1,6 @@
 ---
-title: "Storytimes all week, including Tuesday night"
-description: "Toddler, baby, evening, and preschool storytimes, a science lab, homework help, and Spanish storytime at Lynnwood Library, Sept. 28 – Oct. 4, 2026."
+title: "Hispanic Heritage Saturday at the library"
+description: "A Hispanic Heritage Month celebration, a science lab, and storytimes at Lynnwood Library, Sept. 28 – Oct. 4, 2026."
 date: 2026-09-28
 end_date: "2026-10-04"
 city: lynnwood
@@ -8,7 +8,7 @@ state: wa
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "Monday is toddler storytime and a science lab. Tuesday morning is baby storytime, and Tuesday evening is family storytime. Wednesday is preschool storytime, Thursday is homework help, and Friday is storytime in Spanish."
+hook: "Saturday is a Hispanic Heritage Month celebration at Lynnwood Library, with kids' activities and folkloric dance. Monday afternoon is a science lab with Imagine Children's Museum. Tuesday evening is family storytime."
 permalink: /wa/lynnwood/2026/sep-28-oct-4/
 image: /assets/images/lynnwood/lynnwood-library.webp
 image_alt: "Lynnwood Library, a Sno-Isle Libraries branch beside the civic campus."
@@ -16,7 +16,17 @@ image_credit: "Photo: SounderBruce, CC BY-SA 4.0"
 image_source_url: "https://commons.wikimedia.org/wiki/File:Lynnwood_Library_-_Sno-Isle_01.jpg"
 ---
 
-Monday is toddler storytime and a science lab at Lynnwood Library. Tuesday morning is baby storytime, and Tuesday evening is family storytime. Wednesday is preschool storytime, Thursday is homework help, and Friday is storytime in Spanish.
+Saturday is a Hispanic Heritage Month celebration at Lynnwood Library, with kids' activities, folkloric dance, and free lunch for the first 250 people. Monday afternoon is a science lab with Imagine Children's Museum. Tuesday evening is family storytime if you cannot make a morning.
+
+## Saturday
+
+### Hispanic Heritage Month Celebration
+<p class="event-when">Sat Oct 3 · 12:00–4:00 p.m.</p>
+<p class="event-place">Lynnwood Library, 19200 44th Ave W</p>
+
+Culture, music, folkloric dancers, a loteria game, and kids' activities. Free lunch for the first 250 people. Sno-Isle hosts it with the Well Being Community Center and Mujeres con Actitud Latina. No ticket is listed.
+
+[Hispanic Heritage Month Celebration](https://sno-isle.bibliocommons.com/events/6a9b3997aafa61002961aae5)
 
 ## Monday and Tuesday
 
@@ -94,7 +104,7 @@ Storytime in Spanish for children under 5, with an adult. Songs, stories, and rh
    credit="Photo: PinchyCC, CC BY 4.0"
    source="https://commons.wikimedia.org/wiki/File:Scriber_Creek_in_Scriber_Lake_Park.jpg" %}
 
-Saturday and Sunday do not have a posted festival. The creek loop is the outing. The civic campus recreation center is the indoor backup. Drop-in hours are on the city site.
+Sunday does not have a second festival after Saturday's library celebration. The creek loop is the outing. The civic campus recreation center is the indoor backup. Drop-in hours are on the city site.
 
 [Lynnwood parks](https://www.lynnwoodwa.gov/Community/Play-Lynnwood)
 

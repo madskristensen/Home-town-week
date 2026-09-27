@@ -1,6 +1,6 @@
 ---
-title: "Sunday market, and a week of storytimes"
-description: "The Everett Farmers Market, storytimes, Reading with Rover, and a bike repair clinic, Sept. 21 – 27, 2026."
+title: "Sunday market, and Reading with Rover"
+description: "The Everett Farmers Market, Reading with Rover, and a bike repair clinic, Sept. 21 – 27, 2026."
 date: 2026-09-21
 end_date: "2026-09-27"
 city: everett
@@ -8,7 +8,7 @@ state: wa
 year: 2026
 slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
-hook: "Sunday is the farmers market on Wetmore. Before that, the library has storytime, a bike repair clinic, and Reading with Rover on Saturday."
+hook: "Sunday is the farmers market on Wetmore. Saturday, kids can read to a dog at the library. Thursday the Evergreen branch has a free bike repair clinic."
 permalink: /wa/everett/2026/sep-21-sep-27/
 image: /assets/images/everett/everett-library.webp
 image_alt: "The Everett Public Library, a brick building with a columned entrance."
@@ -16,7 +16,7 @@ image_credit: "Photo: Joe Mabel, CC BY-SA 3.0"
 image_source_url: "https://commons.wikimedia.org/wiki/File:Everett_Library_01.jpg"
 ---
 
-Sunday is the farmers market on Wetmore. Before that, the main library has storytime most mornings, a bike repair clinic on Thursday, and Reading with Rover on Saturday. No second museum special is posted.
+Sunday is the farmers market on Wetmore. Saturday, kids can read to a dog at the library. Thursday the Evergreen branch has a free bike repair clinic. Weekday mornings are storytime. No free museum night is posted this week. A regular Imagine Children's Museum visit is paid admission.
 
 ## Sunday
 

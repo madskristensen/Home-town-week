@@ -1,6 +1,6 @@
 ---
-title: "A book sale, then Harvest Fest"
-description: "Storytime with Stuffies, a Friends book sale, and Eagle Harvest Fest, Oct. 5 – 11, 2026."
+title: "Harvest Fest, with 1,500 pumpkins"
+description: "Eagle Harvest Fest, storytime, and a Friends book sale, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: eagle
@@ -8,11 +8,11 @@ state: id
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Thursday is storytime. Friday the Friends book sale opens at Community Hall, and Saturday is Harvest Fest, with 1,500 pumpkins for kids."
+hook: "Saturday is Harvest Fest at Heritage Park, with 1,500 pumpkins for kids. Thursday night is storytime, and the Friends book sale opens Friday."
 permalink: /id/eagle/2026/oct-5-oct-11/
 ---
 
-Thursday is storytime. Friday the Friends book sale opens at Community Hall, and Saturday is Harvest Fest, with 1,500 pumpkins for kids and crafts from the library.
+Saturday is Harvest Fest at Heritage Park, with 1,500 pumpkins for kids and crafts from the library. Thursday night is storytime. Friday the Friends book sale opens at Community Hall.
 
 ## Thursday
 

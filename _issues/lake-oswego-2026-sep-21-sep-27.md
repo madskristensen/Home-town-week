@@ -8,11 +8,11 @@ state: or
 year: 2026
 slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
-hook: "Saturday has a matinee at Lakewood and the farmers market at Millennium Plaza Park. Sunday that park hosts the Cultural Xchange Festival, and the library has Korean storytime."
+hook: "Sunday is the free Cultural Xchange Festival at Millennium Plaza Park. Saturday has the farmers market on that lawn, and a matinee of You Can't Take It With You at Lakewood."
 permalink: /or/lake-oswego/2026/sep-21-sep-27/
 ---
 
-Saturday has a 2:00 p.m. matinee of You Can't Take It With You at Lakewood, then the farmers market at Millennium Plaza Park. Sunday that park hosts the Cultural Xchange Festival. The library's Freedom to Read Month starts the same week, and Sunday afternoon is Korean storytime.
+Sunday is the free Cultural Xchange Festival at Millennium Plaza Park. Saturday has the farmers market on that lawn, and a matinee of You Can't Take It With You at Lakewood. Sunday afternoon is also Korean storytime.
 
 ## At Lakewood
 

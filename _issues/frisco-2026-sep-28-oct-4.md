@@ -1,6 +1,6 @@
 ---
-title: "Blocks, a camp-out, and Oktoberfest"
-description: "Walnut Wednesday, a camp-out at Frisco Commons, Oktoberfest, and a family concert at the library, Sept. 28 – Oct. 4, 2026."
+title: "A camp-out at Frisco Commons"
+description: "A camp-out at Frisco Commons, Walnut Wednesday, and a family concert at the library, Sept. 28 – Oct. 4, 2026."
 date: 2026-09-28
 end_date: "2026-10-04"
 city: frisco
@@ -8,11 +8,11 @@ state: tx
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "Wednesday is a building-block hour at the Heritage Center. Saturday night is a camp-out at Frisco Commons, the same day as Oktoberfest and Pop Up STEM. Sunday the Allen Philharmonic plays at the library."
+hook: "Saturday night is a camp-out at Frisco Commons, with dinner and a light breakfast covered. Wednesday morning is a building-block hour at the Heritage Center. Sunday the Allen Philharmonic plays at the library."
 permalink: /tx/frisco/2026/sep-28-oct-4/
 ---
 
-Wednesday is a building-block hour at the Heritage Center. Friday is a spooky movie in the PGA District. Saturday is Oktoberfest at The Star, Pop Up STEM, and a one-night camp-out at Frisco Commons. Sunday the Allen Philharmonic plays a family concert at the library.
+Saturday night is a camp-out at Frisco Commons, with dinner and a light breakfast covered. Wednesday morning is a building-block hour at the Heritage Center. Sunday the Allen Philharmonic plays a family concert at the library. Friday is a spooky movie in the PGA District.
 
 ## Friday
 
@@ -42,9 +42,13 @@ The library is at 8000 Dallas Parkway. Saturday hours that week are 10:00 a.m.�
 
 Grades K–5. Learn about habitats and ecosystems. The listing does not print an end time, so this issue does not add one. Come and go.
 
-The family story time series page shows many September dates and then jumps ahead. It does not show a family story time on Oct. 3 in the dates reviewed for this issue.
+### Family Story Time
+<p class="event-when">Sat Oct 3 · 10:30–11:00 a.m.</p>
+<p class="event-place">Storytime Room, Frisco Public Library</p>
 
-[Frisco library events](https://friscolibrary.bibliocommons.com/v2/events)
+Songs, rhymes, and books for walkers through age 5. Space is limited. Tickets are at the Youth Services desk starting an hour before. It ends well before Pop Up STEM at 3:00 p.m.
+
+[Family Story Time](https://friscolibrary.bibliocommons.com/events/6a57b29bf4e5db3d00c1e6a7)
 
 ## Wednesday blocks, Saturday night outside, Sunday music
 

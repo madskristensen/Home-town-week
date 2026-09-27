@@ -1,6 +1,6 @@
 ---
-title: "A movie night and a pumpkin market"
-description: "A PGA movie night, the Fall Market, Plaza Live, Heritage Center, and library programs in Frisco, Oct. 5 – 11, 2026."
+title: "Pumpkins at the Fall Market"
+description: "Pumpkin decorating at the Fall Market, a Friday movie, and lap-sit story time in Frisco, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: frisco
@@ -8,11 +8,11 @@ state: tx
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Wednesday is lap-sit story time. Friday is another spooky movie in the PGA District. Saturday's Fall Market has pumpkin decorating until 1:00 p.m."
+hook: "Saturday's Fall Market has pumpkin decorating until 1:00 p.m. Friday is a spooky movie in the PGA District. Wednesday morning is lap-sit story time for babies who are not walking yet."
 permalink: /tx/frisco/2026/oct-5-oct-11/
 ---
 
-Wednesday morning is lap-sit story time for babies who are not walking yet. Friday is another spooky movie in the PGA District. Saturday's Fall Market has pumpkin decorating until 1:00 p.m. Sunday afternoon is a come-and-go craft.
+Saturday's Fall Market has pumpkin decorating until 1:00 p.m. Friday is a spooky movie in the PGA District. Wednesday morning is lap-sit story time for babies who are not walking yet. Sunday afternoon is a come-and-go craft for kids with special needs.
 
 Frisco Public Library is at 8000 Dallas Parkway. Sunday hours are 1:00–6:00 p.m., so the craft is after the building opens. Wednesday is a regular 9:00 a.m.–9:00 p.m. day.
 
@@ -52,7 +52,7 @@ Grades K–5. Come and go. The listing is for children with special needs. For a
 
 [Library events](https://friscolibrary.bibliocommons.com/v2/events)
 
-## Wednesday plaza, Saturday park and heritage, Tuesday library
+## Wednesday plaza, Tuesday at the library
 
 ### Plaza Live
 <p class="event-when">Wed Oct 7 · 5:00–7:00 p.m.</p>
@@ -61,22 +61,6 @@ Grades K–5. Come and go. The listing is for children with special needs. For a
 Local musicians in the plaza while you eat and shop. The series is the first and third Wednesdays. Oct. 7 is the first Wednesday of the month.
 
 [Plaza Live](https://www.friscotexas.gov/Calendar.aspx?EID=7708)
-
-### Nature Adventure at Frisco Commons Park
-<p class="event-when">Sat Oct 10 · 9:00–10:30 a.m.</p>
-<p class="event-place">Frisco Commons Park, 8000 McKinney Road</p>
-
-The parks calendar names the outing and the clock. It does not print a grade range on the listing used here. It is the same morning as the Fall Market in the PGA District, at a different park.
-
-[Nature Adventure](https://www.friscotexas.gov/calendar.aspx)
-
-### Second Saturday: Fall Fun at Heritage
-<p class="event-when">Sat Oct 10 · 10:00 a.m.–3:00 p.m.</p>
-<p class="event-place">Frisco Heritage Center, 6455 Page Street</p>
-
-Fall Fun runs through the middle of the day. Heritage How-To: Collage is inside that window, 12:00–2:00 p.m., at the same center.
-
-[City calendar](https://www.friscotexas.gov/calendar.aspx)
 
 ### Game Design Basics
 <p class="event-when">Tue Oct 6 · 4:30–5:30 p.m.</p>

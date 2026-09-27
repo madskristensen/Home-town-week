@@ -8,7 +8,7 @@ state: wa
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "The library has storytime, a fairy-house craft, and Silly Circuits. Saturday the museum runs Wondrous Watersheds. Sunday is the farmers market again."
+hook: "Saturday the museum runs Wondrous Watersheds, a paid visit, not the free Thursday night. Sunday is the farmers market. Thursday at the library, kids build a fairy house."
 permalink: /wa/everett/2026/sep-28-oct-4/
 image: /assets/images/everett/imagine-museum.webp
 image_alt: "Imagine Children's Museum on the corner of Wall and Hoyt in downtown Everett."
@@ -16,7 +16,7 @@ image_credit: "Photo: SounderBruce, CC BY-SA 4.0"
 image_source_url: "https://commons.wikimedia.org/wiki/File:Imagine_Children%27s_Museum_-_Wall_%26_Hoyt,_Everett,_WA.jpg"
 ---
 
-The library has storytime, a fairy-house craft, and Silly Circuits. Saturday the museum runs Wondrous Watersheds, which is not the free Thursday night. Sunday is the farmers market again. October still has more market Sundays after this one.
+Saturday the museum runs Wondrous Watersheds, a paid visit, not the free Thursday night. Sunday is the farmers market. Thursday at the library, kids build a fairy house. October still has more market Sundays after this one.
 
 ## Sunday market
 

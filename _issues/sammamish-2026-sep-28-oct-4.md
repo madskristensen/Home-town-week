@@ -1,6 +1,6 @@
 ---
-title: "Mandarin stories, reading buddies, and codebreaking"
-description: "Mandarin storytime, Reading Buddies, a graphic novel club, and a codebreaking workshop at Sammamish Library, Sept. 28 – Oct. 4, 2026."
+title: "Codebreaking Saturday at the library"
+description: "A codebreaking workshop, Mandarin storytime, and a graphic novel club at Sammamish Library, Sept. 28 – Oct. 4, 2026."
 date: 2026-09-28
 end_date: "2026-10-04"
 city: sammamish
@@ -8,7 +8,7 @@ state: wa
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "Monday is Mandarin storytime. Wednesday is Reading Buddies. Thursday is a graphic novel club for ages 11 to 14, and Saturday is a codebreaking workshop. The Wednesday market does not come back this fall."
+hook: "Saturday afternoon is a codebreaking workshop for kids and tweens. Monday is Mandarin storytime, and Thursday the graphic novel club reads The Circuit."
 permalink: /wa/sammamish/2026/sep-28-oct-4/
 image: /assets/images/sammamish/pine-lake.webp
 image_alt: "Trees and shoreline at Pine Lake Park in Sammamish."
@@ -16,7 +16,7 @@ image_credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
 image_source_url: "https://commons.wikimedia.org/wiki/File:2025-10-21,_Pine_Lake_Park_(Sammamish,_Washington),_081014.jpg"
 ---
 
-Monday is Mandarin storytime at the library. Wednesday afternoon is Reading Buddies. Thursday is a graphic novel club for ages 11 to 14, and Saturday is a codebreaking workshop. The Wednesday market does not come back this fall.
+Saturday afternoon is a codebreaking workshop for kids and tweens. Monday is Mandarin storytime, and Thursday the graphic novel club reads The Circuit. The Wednesday market does not come back this fall.
 
 ## At the library
 

@@ -8,11 +8,11 @@ state: or
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Tuesday is a drop-in banned-book craft at the library. Saturday is the farmers market in the morning and a 2:00 p.m. matinee of You Can't Take It With You."
+hook: "Saturday is the farmers market, then a 2:00 p.m. matinee of You Can't Take It With You. Tuesday is a free banned-book craft at the library. The matinee is the paid ticket."
 permalink: /or/lake-oswego/2026/oct-5-oct-11/
 ---
 
-Tuesday is a drop-in banned-book page magnet craft at the library. Saturday is the farmers market in the morning and a 2:00 p.m. matinee at Lakewood.
+Saturday is the farmers market, then a 2:00 p.m. matinee of You Can't Take It With You. Tuesday is a free banned-book craft at the library. The matinee is the paid ticket.
 
 Freedom to Read Month runs through Oct. 19. The library is at 706 4th Street.
 

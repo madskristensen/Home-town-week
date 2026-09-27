@@ -1,6 +1,6 @@
 ---
-title: "Family Fest at Red Tail Pavilion"
-description: "Family Fest DFW at Red Tail Pavilion and a Hubble program in Plano, Sept. 28 – Oct. 4, 2026."
+title: "Beetlejuice JR, then Family Fest"
+description: "Beetlejuice JR, a free Hubble program, and Family Fest DFW in Plano, Sept. 28 – Oct. 4, 2026."
 date: 2026-09-28
 end_date: "2026-10-04"
 city: plano
@@ -8,11 +8,11 @@ state: tx
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "Friday is jazz and Saturday is neo soul at Red Tail Pavilion. Saturday afternoon is also Hubble at Schimelpfenig."
+hook: "Thursday night is Beetlejuice JR. Saturday afternoon is a free Hubble program for grades K–5, then Family Fest at Red Tail Pavilion. Kids 5 and under are free with a parent."
 permalink: /tx/plano/2026/sep-28-oct-4/
 ---
 
-Friday is jazz and Saturday is neo soul at Red Tail Pavilion. Saturday afternoon is also Hubble at Schimelpfenig.
+Thursday night is Beetlejuice JR at Willow Bend. Saturday afternoon is a free Hubble program for grades K–5, then Family Fest at Red Tail Pavilion. Kids 5 and under are free with a parent. Sunday the Plano Symphony plays a family concert.
 
 ## Red Tail Pavilion
 

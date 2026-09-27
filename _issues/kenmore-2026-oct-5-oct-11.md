@@ -8,7 +8,7 @@ state: wa
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Saturday is storytime in American Sign Language. Friday afternoon is punch needle for adults, and Friday evening is family karaoke at Northlake Lutheran."
+hook: "Saturday is storytime in American Sign Language. Friday evening is free family karaoke at Northlake Lutheran. Tuesday is drop-in homework help."
 permalink: /wa/kenmore/2026/oct-5-oct-11/
 image: /assets/images/kenmore/st-edward-beach.webp
 image_alt: "The beach at Saint Edward State Park in Kenmore, with driftwood along the water."
@@ -16,7 +16,7 @@ image_credit: "Photo: Joe Mabel, CC BY-SA 3.0"
 image_source_url: "https://commons.wikimedia.org/wiki/File:St_Edward_State_Park_beach_01.jpg"
 ---
 
-Saturday is storytime in American Sign Language. Friday afternoon is a drop-in punch-needle hour for adults, and Friday evening is family karaoke at Northlake Lutheran.
+Saturday is storytime in American Sign Language. Friday evening is free family karaoke at Northlake Lutheran. Tuesday is drop-in homework help for grades K–12.
 
 ## Saturday
 
@@ -28,15 +28,7 @@ Teacher and storyteller Sam Sanders signs stories, movement, and rhymes for d/De
 
 [ASL Story Time](https://kcls.bibliocommons.com/events/6a76c37ce30fe4845967df1c)
 
-## Friday for adults
-
-### Second Friday Arts: Punch Needle
-<p class="event-when">Fri Oct 9 · 2:00–4:00 p.m.</p>
-<p class="event-place">Kenmore Library meeting room</p>
-
-Casual art with supplies, tea, snacks, and quiet music. October's material is punch needle. You can also bring your own project. Drop in. Registration is not required. Sponsored by the Kenmore Library Association. The listing is for adults, not a kids' craft.
-
-[Punch Needle](https://kcls.bibliocommons.com/events/6a721e20c7e02e3d006dc723)
+## Friday evening
 
 ### Family Friendly Karaoke
 <p class="event-when">Fri Oct 9 · 6:30–8:00 p.m.</p>
@@ -46,7 +38,7 @@ IMAGINE hosts this on the second Friday. All ages. Sing, or stay and cheer. Find
 
 [Family karaoke](https://findkenmore.org/event/imagine-presents-family-friendly-karaoke-4/)
 
-## Same as last week, new dates
+## Tuesday homework
 
 ### Tutors
 <p class="event-when">Tue Oct 6 · 6:00–8:00 p.m.</p>
@@ -56,13 +48,7 @@ Drop-in homework help, grades K–12.
 
 [Tutors](https://kcls.bibliocommons.com/events/6a76b24b3f18b57d52344d53)
 
-### Talk Time
-<p class="event-when">Thu Oct 8 · 10:00 a.m.–12:00 p.m.</p>
-<p class="event-place">Kenmore Library</p>
-
-English conversation practice. Registration is not required.
-
-[Talk Time](https://kcls.bibliocommons.com/events/69151a57886bb73600ba8631)
+The library's Friday afternoon punch-needle hour and Thursday Talk Time are adult programs, so they are not the kids' plan.
 
 ## Outside
 

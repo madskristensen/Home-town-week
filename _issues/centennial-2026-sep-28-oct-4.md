@@ -1,6 +1,6 @@
 ---
 title: "Tbilisoba at Centennial Center Park"
-description: "Tbilisoba at Centennial Center Park and Spanish family storytime at Smoky Hill, Sept. 28 – Oct. 4, 2026."
+description: "Tbilisoba at Centennial Center Park and Spanish family storytime at Smoky Hill, Sept. 28 – Oct. 4, 2026. Kids under 12 are free at the festival."
 date: 2026-09-28
 end_date: "2026-10-04"
 city: centennial
@@ -8,7 +8,7 @@ state: co
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "Sunday is Tbilisoba at Centennial Center Park. Wednesday is Spanish family storytime at Smoky Hill, plus a music-and-art hour at Koelbel and a parent talk on AI and kids."
+hook: "Sunday is Tbilisoba at Centennial Center Park. Kids under 12 are free. Wednesday is Spanish family storytime at Smoky Hill."
 permalink: /co/centennial/2026/sep-28-oct-4/
 ---
 

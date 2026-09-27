@@ -8,11 +8,11 @@ state: or
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "Evenings at Lakewood are still You Can't Take It With You. Saturday is the market. Sunday is the Lake Grove block party, and the library has a Día de los Muertos craft the same afternoon."
+hook: "Sunday is the Lake Grove block party, and the library has a Día de los Muertos craft the same afternoon. Evenings at Lakewood are still the paid run of You Can't Take It With You."
 permalink: /or/lake-oswego/2026/sep-28-oct-4/
 ---
 
-Evenings at Lakewood are still You Can't Take It With You. Saturday is the usual market at Millennium Plaza Park. Sunday is the First Sunday Market in Lake Grove, themed as a back-to-school block party, and the library has a Día de los Muertos craft the same afternoon.
+Sunday is the Lake Grove block party, and the library has a Día de los Muertos craft the same afternoon. Saturday is the usual market at Millennium Plaza Park. Evenings at Lakewood are still the paid run of You Can't Take It With You.
 
 ## At Lakewood
 

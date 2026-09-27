@@ -12,7 +12,7 @@ hook: "Saturday morning is a free health fair at the Trails Recreation Center. F
 permalink: /co/centennial/2026/sep-21-sep-27/
 ---
 
-Saturday morning is a free health fair at the Trails Recreation Center. Family storytime at Smoky Hill overlaps the end of it.
+Saturday morning is a free health fair at the Trails Recreation Center. Family storytime at Smoky Hill overlaps the end of it. Sunday is a Latin America program at Southglenn. No weekday kids' program is posted at Smoky Hill, Southglenn, or Koelbel this week.
 
 ## Saturday morning
 

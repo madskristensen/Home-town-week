@@ -1,6 +1,6 @@
 ---
-title: "Storytime Monday, a book sale Saturday"
-description: "Toddler and baby storytime, Music and Movement, and a Friends book sale at Bothell Library, Sept. 28 – Oct. 4, 2026."
+title: "A Saturday book sale, and Monday storytime"
+description: "A Friends book sale and toddler storytime at Bothell Library, Sept. 28 – Oct. 4, 2026."
 date: 2026-09-28
 end_date: "2026-10-04"
 city: bothell
@@ -8,7 +8,7 @@ state: wa
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "Monday is toddler storytime and baby storytime. Thursday morning is Music and Movement, twice. Saturday is the Friends book sale at the library."
+hook: "Saturday is the Friends book sale at Bothell Library. Monday morning is toddler storytime, then baby storytime. Thursday is music and movement."
 permalink: /wa/bothell/2026/sep-28-oct-4/
 image: /assets/images/bothell/bothell-landing.webp
 image_alt: "The Park at Bothell Landing, with trees along the Sammamish River."
@@ -16,7 +16,7 @@ image_credit: "Photo: Joe Mabel, CC BY-SA 4.0"
 image_source_url: "https://commons.wikimedia.org/wiki/File:Bothell_Landing_04.jpg"
 ---
 
-Monday is toddler storytime and baby storytime at Bothell Library. Thursday morning is Music and Movement, twice. Saturday is the Friends book sale in the same building. The Landing is the afternoon if the library is enough.
+Saturday is the Friends book sale at Bothell Library. Monday morning is toddler storytime, then baby storytime. Thursday is music and movement. The Landing is the afternoon if the library is enough.
 
 ## Monday
 

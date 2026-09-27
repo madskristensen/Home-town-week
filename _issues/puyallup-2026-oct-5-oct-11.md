@@ -1,6 +1,6 @@
 ---
-title: "Last market Saturday"
-description: "The last Puyallup Farmers Market of the season, Thursday storytimes, and a Saturday ESL hour, Oct. 5 – 11, 2026."
+title: "The last market Saturday"
+description: "The last Puyallup Farmers Market, Thursday storytime, and a magic hour for grades K–6, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: puyallup
@@ -8,7 +8,7 @@ state: wa
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Saturday is the last farmers market of the season in Pioneer Park. Thursday storytime repeats, and the library has an ESL hour the same morning as the market."
+hook: "Saturday is the last farmers market of the season in Pioneer Park. Tuesday evening is a magic hour for grades K–6. Thursday morning is storytime."
 permalink: /wa/puyallup/2026/oct-5-oct-11/
 image: /assets/images/puyallup/pioneer-pavilion.webp
 image_alt: "The pavilion at Pioneer Park in Puyallup, with a lawn and trees."
@@ -16,7 +16,7 @@ image_credit: "Photo: Joe Mabel, CC BY 3.0"
 image_source_url: "https://commons.wikimedia.org/wiki/File:Puyallup,_WA_-_Pioneer_Park_Pavilion_01.jpg"
 ---
 
-Saturday is the last farmers market of the season in Pioneer Park. Thursday storytime repeats, and the library has an ESL hour the same morning as the market.
+Saturday is the last farmers market of the season in Pioneer Park. Tuesday evening is a magic hour for grades K–6. Thursday morning is storytime.
 
 ## Thursday storytime
 
@@ -64,20 +64,18 @@ The same morning as ESL and the last market. The sale is at the library, not in 
 
 [City calendar](https://www.puyallupwa.gov/calendar.aspx)
 
-## Earlier in the week
+## Tuesday
+
+### Play to Learn
+<p class="event-when">Tue Oct 6 · 10:00–11:30 a.m. and 1:00–2:30 p.m.</p>
+<p class="event-place">Puyallup Public Library meeting room</p>
+
+Free play for children and adults together, from Green Trike with the library. Two sessions. Registration is on the Green Trike page.
 
 ### Taylor Kyle's School of Magic Adventure
 <p class="event-when">Tue Oct 6 · 5:00–6:00 p.m.</p>
 <p class="event-place">Puyallup Public Library meeting room</p>
 
-On the city calendar as an evening in the meeting room. The short listing does not print an age range.
-
-### RPG Dice Creation Workshop
-<p class="event-when">Wed Oct 7 · 5:30–6:30 p.m.</p>
-<p class="event-place">Puyallup Public Library meeting room</p>
-
-Make dice the night after the magic hour. Same room, a new listing.
-
-The city calendar also lists Oktoberfest Northwest at the fairgrounds, 110 9th Ave SW, from Oct. 9 through Oct. 11. That listing does not print a daily clock, so this issue does not add one.
+For grades K–6. An interactive hour on the history and secrets of magic, then the kids try it themselves. Same day as Play to Learn, later, so a school-age kid can do both or pick the evening.
 
 [City calendar](https://www.puyallupwa.gov/calendar.aspx)
