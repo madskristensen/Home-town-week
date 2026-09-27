@@ -1,6 +1,6 @@
 ---
-title: "Pajama storytime and the Saturday market"
-description: "Preschool storytime, pajama storytime, and the Main Street Market in Meridian, Sept. 21 – 27, 2026."
+title: "Potato Days and a Monday market"
+description: "Potato Days, the Monday Night Market, and the Saturday market in Meridian, Sept. 21 – 27, 2026."
 date: 2026-09-21
 end_date: "2026-09-27"
 city: meridian
@@ -8,11 +8,11 @@ state: id
 year: 2026
 slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
-hook: "Monday morning is preschool storytime, twice. Tuesday night is pajamas, milk, and cookies. Saturday is the market at City Hall."
+hook: "Monday night is the market at Storey Park. Friday through Sunday is Potato Days at Kleiner Park. Saturday morning is still the Main Street Market."
 permalink: /id/meridian/2026/sep-21-sep-27/
 ---
 
-Monday morning is preschool storytime, twice. Tuesday night is pajamas, milk, and cookies. Saturday is the market at City Hall.
+Monday night is the market at Storey Park. Friday through Sunday is Potato Days at Kleiner Park. Saturday morning is still the Main Street Market.
 
 Pinnacle Library is at 1375 E Phenomenal Street. The district phone on the storytime pages is (208) 888-4451.
 
@@ -35,6 +35,26 @@ Early literacy: read, write, talk, sing, play, and count. The series lists Monda
 Wear pajamas, bring a stuffed friend, and the library lists milk and cookies. Weekly on Tuesdays, including Sep. 22, Sep. 29, and Oct. 6.
 
 [Pajama Storytime](https://www.mld.org/event/pajama-time-68274)
+
+## Monday night
+
+### Meridian Monday Night Market
+<p class="event-when">Mon Sep 21 · 4:00–9:00 p.m.</p>
+<p class="event-place">Storey Park, 205 E Franklin Road</p>
+
+Free. Produce, makers, baked goods, food trucks, and live entertainment, next to picnic tables and a playground. The chamber lists it every Monday from June 1 through Oct. 5, 2026, except Labor Day, Sep. 7. This Monday is on. So are Sep. 28 and Oct. 5.
+
+[Chamber listing](https://business.meridianchamber.org/events/details/meridian-monday-night-market-09-28-2026-16635)
+
+## Friday through Sunday
+
+### Potato Days
+<p class="event-when">Fri Sep 25, 5:00 p.m. through Sun Sep 27, 7:00 p.m.</p>
+<p class="event-place">Kleiner Memorial Park, 1900 N Records Ave</p>
+
+The Eventeny listing for the Meridian weekend uses that span, not a separate open and close for each day. It is Idaho's potato festival: food, live music, a beer garden, and a vendor area. The beer garden is the adult side. Parking notes on the same page point to 800 spots at Kleiner Park, overflow at The Village, and Riverside Elementary across the street. A second Potato Days weekend is Oct. 2–4 at the Idaho Botanical Garden in Boise, not at Kleiner.
+
+[Potato Days tickets](https://www.eventeny.com/events/potato-days-2026-25083/)
 
 ## Saturday
 

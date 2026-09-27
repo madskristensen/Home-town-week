@@ -17,6 +17,11 @@ sep-28-oct-4:
     place: "Schimelpfenig Library, 5024 Custer Road, Plano"
     same_as: "https://plano.libnet.info/event/16724871"
 oct-5-oct-11:
+  - name: "Downtown Plano Barktoberfest"
+    start: "2026-10-11T11:00:00-05:00"
+    end: "2026-10-11T17:00:00-05:00"
+    place: "Downtown Plano Arts District, 1021 E 15th Street"
+    same_as: "https://events.visitplano.com/event/barktoberfest"
   - name: "Parachute Party"
     start: "2026-10-05T11:00:00-05:00"
     end: "2026-10-05T11:30:00-05:00"

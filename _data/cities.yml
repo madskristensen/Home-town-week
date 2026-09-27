@@ -719,9 +719,9 @@
   state_name: Oregon
   lat: 44.0582
   lon: -121.3153
-  description: Weekly family digests of the Bend farmers market, Fall Festival, and the downtown library.
+  description: Weekly family digests of the Bend farmers market, the High Desert Museum, Fall Festival, and the downtown library.
   summary: >-
-    The Wednesday market, the Fall Festival, and the downtown library, picked each week for families.
+    The Wednesday market, the High Desert Museum, the Fall Festival, and the downtown library, picked each week for families.
   sources:
     - name: "City of Bend"
       url: "https://www.bendoregon.gov/"
@@ -833,9 +833,9 @@
   state_name: Idaho
   lat: 47.6777
   lon: -116.7805
-  description: Weekly family digests of Coeur d'Alene library storytimes, stuffie sleepovers, and family swaps.
+  description: Weekly family digests of the Coeur d'Alene Celtic Festival, downtown ArtWalk, and the library.
   summary: >-
-    Library storytimes, the stuffie sleepover, and Saturday programs, picked each week for families.
+    The Celtic Festival, the downtown ArtWalk, and the library, picked each week for families.
   sources:
     - name: "City of Coeur d'Alene events calendar"
       url: "https://www.cdaid.org/events-calendar/"
@@ -889,9 +889,9 @@
   state_name: Idaho
   lat: 43.6121
   lon: -116.3915
-  description: Weekly family digests of Meridian library storytimes and the Main Street Market.
+  description: Weekly family digests of Meridian's Monday Night Market, Potato Days, Oktoberfest, and the Saturday market.
   summary: >-
-    Pajama storytime, preschool storytime, and the Saturday market, picked each week for families.
+    The Monday Night Market, Potato Days, Oktoberfest, and the Saturday market, picked each week for families.
   sources:
     - name: "City of Meridian"
       url: "https://www.meridiancity.org/"
@@ -919,9 +919,9 @@
   state_name: Utah
   lat: 40.3916
   lon: -111.8508
-  description: Weekly family digests of Lehi library storytimes and Friday music and movement.
+  description: Weekly family digests of Cornbelly's, Thanksgiving Point Spooktober, and the Lehi library.
   summary: >-
-    Library storytime and Friday music and movement, picked each week for families.
+    Cornbelly's, Spooktober at Thanksgiving Point, and the library, picked each week for families.
   sources:
     - name: "Lehi City"
       url: "https://www.lehi-ut.gov/"
@@ -949,9 +949,9 @@
   state_name: Utah
   lat: 40.2969
   lon: -111.6946
-  description: Weekly family digests of Orem library preschool storytimes.
+  description: Weekly family digests of SCERA shows and Orem library preschool storytimes.
   summary: >-
-    Preschool storytime at the Orem Public Library, picked each week for families.
+    Noises Off at the SCERA and preschool storytime, picked each week for families.
   sources:
     - name: "City of Orem"
       url: "https://www.orem.org/"
@@ -975,9 +975,9 @@
   state_name: Utah
   lat: 40.5622
   lon: -111.9297
-  description: Weekly family digests of South Jordan library storytimes, Toddler Time, and Baby and Me.
+  description: Weekly family digests of the South Jordan farmers market and library storytimes.
   summary: >-
-    Storytime, Toddler Time, and Baby and Me, picked each week for families.
+    The Saturday market at City Hall, storytime, and Baby and Me, picked each week for families.
   sources:
     - name: "South Jordan calendar"
       url: "https://www.sjc.utah.gov/calendar.aspx"
@@ -1001,9 +1001,9 @@
   state_name: Colorado
   lat: 39.3722
   lon: -104.8561
-  description: Weekly family digests of Castle Rock library storytimes and Bark for Books.
+  description: Weekly family digests of the Festival Park farmers market and Castle Rock library programs.
   summary: >-
-    Kids Corner storytimes and Bark for Books, picked each week for families.
+    The Sunday market at Festival Park and Kids Corner storytimes, picked each week for families.
   sources:
     - name: "Town of Castle Rock"
       url: "https://www.crgov.com/"
@@ -1031,9 +1031,9 @@
   state_name: Colorado
   lat: 39.5807
   lon: -104.8772
-  description: Weekly family digests of Smoky Hill Library storytimes and family programs in Centennial.
+  description: Weekly family digests of Centennial Center Park festivals and Smoky Hill Library programs.
   summary: >-
-    Smoky Hill storytimes and family programs, picked each week for families.
+    Tbilisoba at Centennial Center Park and Smoky Hill storytimes, picked each week for families.
   sources:
     - name: "City of Centennial"
       url: "https://www.centennialco.gov/"
@@ -1053,9 +1053,9 @@
   state_name: Colorado
   lat: 40.5853
   lon: -105.0844
-  description: Weekly family digests of Council Tree storytimes, Old Town, and the Poudre Libraries calendar.
+  description: Weekly family digests of Taste of Fort Collins, FoCo Fall Fest, Old Town, and Council Tree.
   summary: >-
-    Council Tree storytimes, the Old Town art walk, and the library, picked each week for families.
+    Taste of Fort Collins, FoCo Fall Fest, the Old Town art walk, and Council Tree, picked each week for families.
   sources:
     - name: "City of Fort Collins"
       url: "https://www.fcgov.com/"
@@ -1113,9 +1113,9 @@
   state_name: Texas
   lat: 33.0198
   lon: -96.6989
-  description: Weekly family digests of Plano library storytimes, puppet shows, and kids' programs.
+  description: Weekly family digests of Family Fest at Red Tail Pavilion, Barktoberfest, and Plano library programs.
   summary: >-
-    Storytime, parachute play, and the puppet show, picked each week for families.
+    Family Fest, Barktoberfest, and the library, picked each week for families.
   sources:
     - name: "City of Plano"
       url: "https://www.plano.gov/"
@@ -1143,9 +1143,9 @@
   state_name: Texas
   lat: 30.5083
   lon: -97.6789
-  description: Weekly family digests of Round Rock library family storytime and preschool storytime.
+  description: Weekly family digests of Round Rock parks events, National Night Out, and the library.
   summary: >-
-    Monday family storytime and Saturday storytime, picked each week for families.
+    The Play for All jamboree, National Night Out, and library storytimes, picked each week for families.
   sources:
     - name: "City of Round Rock"
       url: "https://www.roundrocktexas.gov/"

@@ -1,6 +1,6 @@
 ---
-title: "Ages 4+ on Tuesday at Council Tree"
-description: "Council Tree storytimes in Fort Collins, Oct. 5 – 11, 2026."
+title: "FoCo Fall Fest in Old Town"
+description: "FoCo Fall Fest in Old Town and Council Tree storytimes, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: fort-collins
@@ -8,11 +8,33 @@ state: co
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Tuesday is ages 4+ storytime at 10:00 a.m. The same week's calendar also lists toddler storytime Monday and Tuesday."
+hook: "FoCo Fall Fest is free in Old Town Friday night through Sunday. Tuesday is still ages 4+ storytime at Council Tree."
 permalink: /co/fort-collins/2026/oct-5-oct-11/
 ---
 
-Tuesday is ages 4+ storytime at 10:00 a.m. The same week's calendar also lists toddler storytime Monday and Tuesday.
+FoCo Fall Fest is free in Old Town Friday night through Sunday. Tuesday is still ages 4+ storytime at Council Tree.
+
+## Old Town
+
+### FoCo Fall Fest
+<p class="event-when">Fri Oct 9 · 4:00–9:00 p.m.</p>
+<p class="event-place">Old Town Square</p>
+
+Free Friday kickoff. Makers, food, music, and kids' activities. The downtown page says the footprint grows up Linden Street on the weekend. Craft drinks are part of the festival. The kids' activities are the family reason to go early.
+
+### FoCo Fall Fest
+<p class="event-when">Sat Oct 10 · 10:00 a.m.–6:00 p.m.</p>
+<p class="event-place">Old Town Square</p>
+
+Free. Full festival day.
+
+### FoCo Fall Fest
+<p class="event-when">Sun Oct 11 · 10:00 a.m.–6:00 p.m.</p>
+<p class="event-place">Old Town Square</p>
+
+Free. Last day of this year's fest.
+
+[Downtown Fort Collins](https://downtownfortcollins.com/do/foco-fall-fest-1)
 
 Council Tree is at 2733 Council Tree Ave. Call (970) 221-6740 if a group of 6 or more is coming.
 

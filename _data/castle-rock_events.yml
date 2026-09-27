@@ -1,5 +1,10 @@
 # Dated events listed on each castle-rock week.
 sep-21-sep-27:
+  - name: "Festival Park Farmers Market"
+    start: "2026-09-27T09:00:00-06:00"
+    end: "2026-09-27T14:00:00-06:00"
+    place: "Festival Park, 300 Second St, Castle Rock"
+    same_as: "https://www.crgov.com/3178/Festival-Park-Farmers-Market"
   - name: "Baby Storytime"
     start: "2026-09-25T09:00:00-06:00"
     end: "2026-09-25T09:30:00-06:00"
@@ -16,6 +21,11 @@ sep-21-sep-27:
     place: "Kids Corner, Castle Rock Library, 100 S Wilcox Street"
     same_as: "https://go.dcl.org/event/14286732"
 sep-28-oct-4:
+  - name: "Festival Park Farmers Market"
+    start: "2026-10-04T09:00:00-06:00"
+    end: "2026-10-04T14:00:00-06:00"
+    place: "Festival Park, 300 Second St, Castle Rock"
+    same_as: "https://www.crgov.com/3178/Festival-Park-Farmers-Market"
   - name: "Storytime"
     start: "2026-09-28T18:30:00-06:00"
     end: "2026-09-28T19:00:00-06:00"
@@ -37,6 +47,11 @@ sep-28-oct-4:
     place: "Kids Corner, Castle Rock Library, 100 S Wilcox Street"
     same_as: "https://go.dcl.org/event/14286733"
 oct-5-oct-11:
+  - name: "Festival Park Farmers Market"
+    start: "2026-10-11T09:00:00-06:00"
+    end: "2026-10-11T14:00:00-06:00"
+    place: "Festival Park, 300 Second St, Castle Rock"
+    same_as: "https://www.crgov.com/calendar.aspx?EID=10771"
   - name: "Preschool Storytime"
     start: "2026-10-05T11:00:00-06:00"
     end: "2026-10-05T11:30:00-06:00"

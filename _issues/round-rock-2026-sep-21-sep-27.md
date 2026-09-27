@@ -1,6 +1,6 @@
 ---
-title: "The next Monday storytime is the 28th"
-description: "What the Round Rock Public Library has posted for families, Sept. 21 – 27, 2026."
+title: "A reserved park morning, then folklorico"
+description: "The Special Needs Family Jamboree and Ballet Folklorico in Round Rock, Sept. 21 – 27, 2026."
 date: 2026-09-21
 end_date: "2026-09-27"
 city: round-rock
@@ -8,16 +8,30 @@ state: tx
 year: 2026
 slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
-hook: "The Monday family storytime list skips this Monday. The next posted Monday session is Sep. 28, and Saturday storytime on that series starts Oct. 3."
+hook: "Saturday morning Play for All is reserved for the Special Needs Family Jamboree. The library's Saturday storytime that day is Ballet Folklorico instead."
 permalink: /tx/round-rock/2026/sep-21-sep-27/
 ---
 
-The Monday family storytime list skips this Monday. The next posted Monday session is Sep. 28, and Saturday storytime on that series starts Oct. 3.
+Saturday morning Play for All is reserved for the Special Needs Family Jamboree. The library's Saturday storytime that day is Ballet Folklorico instead.
 
-Round Rock Public Library is at 200 E Liberty Ave. Phone: 512-218-7000. Monday through Thursday 9:00 a.m.–9:00 p.m. Friday and Saturday 9:00 a.m.–6:00 p.m. Sunday 1:00–6:00 p.m. The second and third floors close 15 minutes early.
+The Monday evening family storytime list still skips this Monday. The posted Mondays around it are Sep. 14 and Sep. 28. Sep. 28 belongs to the next issue.
 
-The Monday evening family storytime page lists Aug. 31, Sep. 14, and then Sep. 28. Sep. 21 is not on that list. The Saturday family storytime page starts its "more dates" run at Oct. 3. This span does not have one of those two sessions.
+Round Rock Public Library is at 200 E Liberty Ave. Phone: 512-218-7000.
 
-If you want the next one on the calendar, it is Monday, Sep. 28, 6:30–7:00 p.m., in the Youth Program Space on the second floor, with ASL interpreting. That date belongs to the following issue.
+## Saturday morning
 
-[Monday family storytime](https://roundrocktexas.libcal.com/event/17124388)
+### Special Needs Family Jamboree
+<p class="event-when">Sat Sep 26 · 9:00 a.m.–12:00 p.m.</p>
+<p class="event-place">Play for All Abilities Park, 151 N A.W. Grimes Blvd</p>
+
+Casey's Circle and Round Rock Parks and Recreation host this morning for children with disabilities and their families. The park is closed to the general public, and registration is required. Vendors set up crafts, games, music, and snacks along a route through the park, and families can pick up information on local programs.
+
+[Casey's Circle jamboree](https://caseyscircle.org/jamboree/)
+
+### Round Rock Ballet Folklorico
+<p class="event-when">Sat Sep 26 · 11:00–11:30 a.m.</p>
+<p class="event-place">Meeting Room A and B, first floor, Round Rock Public Library</p>
+
+This performance takes the place of Saturday family storytime. All ages are welcome. The library says children 18 months to 6 years will enjoy it best. It is part of Hispanic Heritage Month.
+
+[Ballet Folklorico](https://roundrocktexas.libcal.com/event/17149800)

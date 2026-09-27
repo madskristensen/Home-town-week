@@ -6,6 +6,11 @@ sep-21-sep-27:
     place: "Smoky Hill Library, 5430 S Biscay Circle, Centennial"
     same_as: "https://arapahoelibraries.bibliocommons.com/v2/events/6aa80eb8ca248a002915ac4b"
 sep-28-oct-4:
+  - name: "Tbilisoba Festival"
+    start: "2026-10-04T12:00:00-06:00"
+    end: "2026-10-04T17:00:00-06:00"
+    place: "Centennial Center Park, 13050 E Peakview Ave, Centennial"
+    same_as: "https://ticketstripe.com/events/5665108868207288"
   - name: "Spanish Family Storytime"
     start: "2026-09-30T16:00:00-06:00"
     end: "2026-09-30T16:30:00-06:00"

@@ -1,6 +1,6 @@
 ---
-title: "Pumpkins, a therapy dog, and a Sunday dance"
-description: "A pumpkin-patch storytime, Paws to Read, and a contra dance in Coeur d'Alene, Oct. 5 – 11, 2026."
+title: "ArtWalk Friday, pumpkins Wednesday"
+description: "Second Friday ArtWalk, a pumpkin storytime, and a contra dance in Coeur d'Alene, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: coeur-dalene
@@ -8,11 +8,21 @@ state: id
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Wednesday afternoon is a pumpkin-patch storytime on Atlas Road. Saturday morning is reading to a therapy dog. Sunday is a contra dance."
+hook: "Friday night is the free downtown ArtWalk. Wednesday is pumpkin storytime. Sunday is a contra dance."
 permalink: /id/coeur-dalene/2026/oct-5-oct-11/
 ---
 
-Wednesday afternoon is a pumpkin-patch storytime on Atlas Road. Saturday morning is reading to a therapy dog. Sunday is a contra dance.
+Friday night is the free downtown ArtWalk. Wednesday is pumpkin storytime. Sunday is a contra dance.
+
+## Friday night
+
+### 2nd Friday ArtWalk
+<p class="event-when">Fri Oct 9 · 5:00–8:00 p.m.</p>
+<p class="event-place">Downtown Coeur d'Alene</p>
+
+Free, every second Friday. Galleries, pop-up art, live music, and shops. Sponsored by STCU. This Friday is the October date.
+
+[Visit Coeur d'Alene](https://coeurdalene.org/events/2nd-friday-artwalk/2026-10-09/)
 
 Tuesday is still baby storytime, plus LEGO club at 4:00 p.m. for ages 6–12. Thursday is toddler storytime. Friday, Oct. 9, is on the preschool list.
 

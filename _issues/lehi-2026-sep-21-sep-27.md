@@ -1,6 +1,6 @@
 ---
-title: "Three storytimes on Thursday"
-description: "Three Lehi library storytimes on Thursday and a Friday music class, Sept. 21 – 27, 2026."
+title: "Cornbelly's opens, storytime Thursday"
+description: "Cornbelly's opening week and Lehi library storytimes, Sept. 21 – 27, 2026."
 date: 2026-09-21
 end_date: "2026-09-27"
 city: lehi
@@ -8,11 +8,21 @@ state: ut
 year: 2026
 slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
-hook: "Thursday has three storytimes for ages 3 to 5. Friday morning is music and movement."
+hook: "Cornbelly's opens Monday at Thanksgiving Point and runs through October. Thursday is still three storytimes, and Friday is music and movement."
 permalink: /ut/lehi/2026/sep-21-sep-27/
 ---
 
-Thursday has three storytimes for ages 3 to 5. Friday morning is music and movement.
+Cornbelly's opens Monday at Thanksgiving Point and runs through October. Thursday is still three storytimes, and Friday is music and movement.
+
+## All week
+
+### Cornbelly's Corn Maze and Pumpkin Fest
+<p class="event-when">Opens Mon Sep 21 · through Oct. 31</p>
+<p class="event-place">3003 N Thanksgiving Way, Thanksgiving Point</p>
+
+The operator's calendar says the Lehi season is Sep. 21 through Oct. 31. Admission closes one hour before the closing time listed for that day. The season page does not print one set of hours for every day, so open the date you want before you go. This is a ticketed pumpkin festival and corn maze, not a free park afternoon.
+
+[Lehi calendar](https://cornbellys.com/pages/calendar)
 
 The library sessions are at 131 N 100 E. Park in the lot south of the building. No registration. Questions: 385-201-2413.
 

@@ -1,6 +1,6 @@
 ---
-title: "The last Saturday at Northwest Crossing"
-description: "The Bend Wednesday market and the last Northwest Crossing Saturday market, Sept. 21 – 27, 2026."
+title: "Markets, and the museum is open"
+description: "The Bend markets and the High Desert Museum, Sept. 21 – 27, 2026."
 date: 2026-09-21
 end_date: "2026-09-27"
 city: bend
@@ -8,11 +8,21 @@ state: or
 year: 2026
 slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
-hook: "Wednesday is the farmers market on Brooks Alley. Saturday is the last Northwest Crossing market of the season."
+hook: "Wednesday is the farmers market on Brooks Alley. Saturday is the last Northwest Crossing market. The High Desert Museum is open daily, with a harvest exhibit up through Oct. 11."
 permalink: /or/bend/2026/sep-21-sep-27/
 ---
 
-Wednesday is the farmers market on Brooks Alley. Saturday is the last Northwest Crossing market of the season.
+Wednesday is the farmers market on Brooks Alley. Saturday is the last Northwest Crossing market. The High Desert Museum is open daily, with a harvest exhibit up through Oct. 11.
+
+## Any day this week
+
+### High Desert Museum
+<p class="event-when">Open daily · 9:00 a.m.–5:00 p.m.</p>
+<p class="event-place">59800 S Highway 97</p>
+
+March through October the museum is open 9:00 a.m.–5:00 p.m. Miguel Almeida's The Hands That Feed is on view through Oct. 11: murals, sculptures, and animations about the people who harvest food for local markets. Free with museum admission, not a separate timed ticket.
+
+[Almeida exhibit](https://highdesertmuseum.org/events/exhibition-opening-miguel-almeida/)
 
 ## Wednesday
 

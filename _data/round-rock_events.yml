@@ -1,5 +1,15 @@
 # Dated events listed on each round-rock week.
-sep-21-sep-27: []
+sep-21-sep-27:
+  - name: "Special Needs Family Jamboree"
+    start: "2026-09-26T09:00:00-05:00"
+    end: "2026-09-26T12:00:00-05:00"
+    place: "Play for All Abilities Park, 151 N A.W. Grimes Blvd, Round Rock"
+    same_as: "https://caseyscircle.org/jamboree/"
+  - name: "Round Rock Ballet Folklorico"
+    start: "2026-09-26T11:00:00-05:00"
+    end: "2026-09-26T11:30:00-05:00"
+    place: "Meeting Room A and B, Round Rock Public Library, 200 E Liberty Ave"
+    same_as: "https://roundrocktexas.libcal.com/event/17149800"
 sep-28-oct-4:
   - name: "Family Storytime"
     start: "2026-09-28T18:30:00-05:00"
@@ -12,6 +22,11 @@ sep-28-oct-4:
     place: "Youth Program Space, 2nd floor, Round Rock Public Library, 200 E Liberty Ave"
     same_as: "https://roundrocktexas.libcal.com/event/17147730"
 oct-5-oct-11:
+  - name: "Round Rock National Night Out"
+    start: "2026-10-06T18:00:00-05:00"
+    end: "2026-10-06T21:00:00-05:00"
+    place: "Neighborhoods across Round Rock"
+    same_as: "https://www.roundrocktexas.gov/event/round-rock-national-night-out-2/"
   - name: "Family Storytime"
     start: "2026-10-05T18:30:00-05:00"
     end: "2026-10-05T19:00:00-05:00"

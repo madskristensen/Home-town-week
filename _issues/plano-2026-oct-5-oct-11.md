@@ -1,6 +1,6 @@
 ---
-title: "A parachute, then a big pumpkin"
-description: "A parachute party at Haggard Library and a pumpkin puppet show at Parr Library in Plano, Oct. 5 – 11, 2026."
+title: "Barktoberfest downtown on Sunday"
+description: "Barktoberfest in downtown Plano, plus a parachute party and a puppet show, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: plano
@@ -8,11 +8,11 @@ state: tx
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Monday is a parachute party for ages 3 to 5. Tuesday is a puppet show of Big Pumpkin for ages 0 to 5."
+hook: "Sunday is Barktoberfest in the downtown arts district. Monday is a parachute party. Tuesday is the Big Pumpkin puppet show."
 permalink: /tx/plano/2026/oct-5-oct-11/
 ---
 
-Monday is a parachute party for ages 3 to 5. Tuesday is a puppet show of Big Pumpkin for ages 0 to 5.
+Sunday is Barktoberfest in the downtown arts district. Monday is a parachute party. Tuesday is the Big Pumpkin puppet show.
 
 Both programs need tickets, and the tickets are in person only, starting 30 minutes before.
 
@@ -35,3 +35,13 @@ Ages 3–5. Rhymes and songs with giant parachutes. Haggard phone: 972-769-4250.
 Ages 0–5. A witch cannot pick a big pumpkin alone, and friends help. Parr phone: 972-769-4300.
 
 [Big Pumpkin](https://plano.libnet.info/event/16722488)
+
+## Sunday
+
+### Downtown Plano Barktoberfest
+<p class="event-when">Sun Oct 11 · 11:00 a.m.–5:00 p.m.</p>
+<p class="event-place">Downtown Plano Arts District, 1021 E 15th Street</p>
+
+Free. A dog-friendly fall market: pet vendors, handmade goods, and a dog costume contest. Visit Plano lists it 11:00 a.m. to 5:00 p.m. Leave the dog home if a crowd of costumes is too much, and the people-side shopping still works.
+
+[Visit Plano](https://events.visitplano.com/event/barktoberfest)

@@ -1,6 +1,6 @@
 ---
-title: "Hubble for grades K to 5"
-description: "A Hubble program for grades K to 5 at Schimelpfenig Library in Plano, Sept. 28 – Oct. 4, 2026."
+title: "Family Fest at Red Tail Pavilion"
+description: "Family Fest DFW at Red Tail Pavilion and a Hubble program in Plano, Sept. 28 – Oct. 4, 2026."
 date: 2026-09-28
 end_date: "2026-10-04"
 city: plano
@@ -8,11 +8,31 @@ state: tx
 year: 2026
 slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
-hook: "Saturday afternoon at Schimelpfenig is a Hubble program for grades K to 5. Tickets are in person, 30 minutes before."
+hook: "Friday is jazz and Saturday is neo soul at Red Tail Pavilion. Saturday afternoon is also Hubble at Schimelpfenig."
 permalink: /tx/plano/2026/sep-28-oct-4/
 ---
 
-Saturday afternoon at Schimelpfenig is a Hubble program for grades K to 5. Tickets are in person, 30 minutes before.
+Friday is jazz and Saturday is neo soul at Red Tail Pavilion. Saturday afternoon is also Hubble at Schimelpfenig.
+
+## Red Tail Pavilion
+
+### Family Fest DFW
+<p class="event-when">Fri Oct 2 · jazz night</p>
+<p class="event-place">Red Tail Pavilion, 2801 E Spring Creek Parkway</p>
+
+The festival site calls Friday a night of live jazz and Saturday the neo soul night. Each day needs its own ticket. Children 5 and under are free with a parent. Ages 6 and up need a ticket. No pets. Coolers and lawn chairs are allowed in your seating spot. Free parking is first come. Lots open 60 minutes before the start.
+
+The festival site does not print a start time. AllEvents lists the jazz night at 6:30 p.m. and the neo soul night at 5:45 p.m. Use the ticket page if those clocks differ from the gate.
+
+[Family Fest DFW](https://familyfestdfw.com/) · [Jazz night on AllEvents](https://allevents.in/plano/a-night-of-jazz-under-the-stars-family-fest-dfw-6th-annual/100001968323562762)
+
+### Family Fest DFW
+<p class="event-when">Sat Oct 3 · neo soul night</p>
+<p class="event-place">Red Tail Pavilion, 2801 E Spring Creek Parkway</p>
+
+Same rules as Friday. AllEvents lists 5:45 p.m. Hubble at Schimelpfenig is 3:00–4:00 p.m., so a family can do the library program and still make an evening gate if the AllEvents clock holds.
+
+[Neo soul night on AllEvents](https://allevents.in/plano/neo-soul-night-under-the-stars-family-fest-dfw-6th-annual/100001770266497749)
 
 ### Hubble: Space Telescope
 <p class="event-when">Sat Oct 3 · 3:00–4:00 p.m.</p>

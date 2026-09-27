@@ -1,6 +1,6 @@
 ---
-title: "Milk and cookies, then the market"
-description: "Preschool storytime, pajama storytime, and the Main Street Market in Meridian, Oct. 5 – 11, 2026."
+title: "The last Monday night market"
+description: "The last Monday Night Market, pajama storytime, and the Main Street Market in Meridian, Oct. 5 – 11, 2026."
 date: 2026-10-05
 end_date: "2026-10-11"
 city: meridian
@@ -8,11 +8,21 @@ state: id
 year: 2026
 slug: oct-5-oct-11
 range: "Oct. 5 – 11, 2026"
-hook: "Tuesday night is pajama storytime with milk and cookies. Saturday is the Main Street Market, still open through Oct. 17."
+hook: "Monday is the last Monday Night Market of the season. Tuesday is pajama storytime. Saturday is the Main Street Market."
 permalink: /id/meridian/2026/oct-5-oct-11/
 ---
 
-Tuesday night is pajama storytime with milk and cookies. Saturday is the Main Street Market, still open through Oct. 17.
+Monday is the last Monday Night Market of the season. Tuesday is pajama storytime. Saturday is the Main Street Market.
+
+## Monday night
+
+### Meridian Monday Night Market
+<p class="event-when">Mon Oct 5 · 4:00–9:00 p.m.</p>
+<p class="event-place">Storey Park, 205 E Franklin Road</p>
+
+Free. The chamber's series line ends this Monday, Oct. 5. Same setup as the earlier Mondays: produce, makers, food trucks, and a playground next door.
+
+[Market series](https://business.meridianchamber.org/events/details/meridian-monday-night-market-09-28-2026-16635)
 
 ## At Pinnacle
 
