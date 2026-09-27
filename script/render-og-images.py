@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Render Open Graph cards from the city map SVGs.
 
-Social apps do not use the header SVG, so each city gets a 1200x630 PNG
-of that same map and pin. The front page card is a cream sheet with a
-handful of those marks, not the flat green brand slab.
+Social apps do not use the header SVG. Each city gets a 1200x630 PNG of
+that same map and pin, used when a city or issue has no photo. The front
+page card is a cream sheet with a handful of those marks.
 
 Run from the repo root:
 
