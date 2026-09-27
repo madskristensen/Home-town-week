@@ -16,7 +16,8 @@ sitemap: false
   {%- assign feed_issues = site.issues | sort: "date" | reverse -%}
   {%- for issue in feed_issues -%}
   <entry>
-    <title>{{ issue.title | xml_escape }}</title>
+    {%- assign feed_city = site.data.cities | where: "id", issue.city | where: "state", issue.state | first -%}
+    <title>{{ issue.title | xml_escape }}{% if feed_city %} | {{ feed_city.name | xml_escape }}{% endif %}</title>
     <link href="{{ issue.url | absolute_url }}"/>
     <id>{{ issue.url | absolute_url }}</id>
     <updated>{{ issue.date | date_to_xmlschema }}</updated>

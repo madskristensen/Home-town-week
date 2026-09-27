@@ -64,4 +64,5 @@ exclude:
   - .ruby-version
   - .gitignore
   - _config.domain.yml
+  - artifacts
 

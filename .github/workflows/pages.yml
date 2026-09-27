@@ -20,6 +20,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          # Full history so sitemap lastmod can use each file's commit time.
+          # A depth of 1 makes every unchanged page look unmodified.
+          fetch-depth: 0
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1

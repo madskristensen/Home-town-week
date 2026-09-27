@@ -18,14 +18,28 @@
     {%- endunless -%}
   {%- endif -%}
 {%- endif -%}
+{%- comment -%}
+  Social cards reject SVG. City and year pages keep the map mark in the
+  header; Open Graph and Twitter use a WebP from an issue, or the site PNG.
+{%- endcomment -%}
 {%- if use_city_mark -%}
-  {%- capture seo_image_path -%}/assets/images/cities/wa/{{ city.id }}.svg{%- endcapture -%}
-  {%- assign seo_image_path = seo_image_path | strip -%}
-  {%- capture seo_image_alt -%}{{ city.name }} on the Hometown Week map of Washington.{%- endcapture -%}
-  {%- assign seo_image_alt = seo_image_alt | strip -%}
-  {%- assign seo_image_width = 1200 -%}
-  {%- assign seo_image_height = 1170 -%}
-  {%- assign seo_image_mime = "image/svg+xml" -%}
+  {%- assign share_issue = nil -%}
+  {%- if page.layout == "city" and featured_issue.image -%}
+    {%- assign share_issue = featured_issue -%}
+  {%- elsif city_issues -%}
+    {%- assign share_pool = city_issues -%}
+    {%- if page.layout == "year" -%}
+      {%- assign share_pool = city_issues | where: "year", page.year -%}
+    {%- endif -%}
+    {%- assign share_issue = share_pool | where_exp: "item", "item.image" | first -%}
+  {%- endif -%}
+  {%- if share_issue -%}
+    {%- assign seo_image_path = share_issue.image -%}
+    {%- assign seo_image_alt = share_issue.image_alt -%}
+    {%- assign seo_image_width = 1600 -%}
+    {%- assign seo_image_height = 900 -%}
+    {%- assign seo_image_mime = "image/webp" -%}
+  {%- endif -%}
 {%- elsif page.layout == "issue" and page.image -%}
   {%- assign seo_image_width = 1600 -%}
   {%- assign seo_image_height = 900 -%}
@@ -116,7 +130,11 @@
   "@type": "BlogPosting",
   "headline": {{ page.title | jsonify }},
   "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
-  "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
+  {%- assign schema_modified = page.date -%}
+  {%- if page.last_modified_at and page.last_modified_at > schema_modified -%}
+  {%- assign schema_modified = page.last_modified_at -%}
+  {%- endif %}
+  "dateModified": {{ schema_modified | date_to_xmlschema | jsonify }},
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": {{ canonical_url | jsonify }}
@@ -147,7 +165,26 @@
     {
       "@type": "BlogPosting",
       "headline": {{ issue.title | jsonify }},
-      "url": {{ issue.url | absolute_url | jsonify }}
+      "url": {{ issue.url | absolute_url | jsonify }},
+      "datePublished": {{ issue.date | date_to_xmlschema | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ],
+  {%- elsif page.layout == "state" %}
+  "@type": "CollectionPage",
+  "name": {{ seo_title | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "isPartOf": {
+    "@id": {{ site_id | jsonify }}
+  },
+  "hasPart": [
+    {%- assign state_cities = site.data.cities | where: "state", page.state -%}
+    {%- for state_city in state_cities -%}
+    {%- capture state_city_url -%}/{{ page.state }}/{{ state_city.id }}/{%- endcapture -%}
+    {
+      "@type": "CollectionPage",
+      "name": {{ state_city.name | jsonify }},
+      "url": {{ state_city_url | strip | absolute_url | jsonify }}
     }{% unless forloop.last %},{% endunless %}
     {%- endfor -%}
   ],

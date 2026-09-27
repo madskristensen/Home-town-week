@@ -4,24 +4,29 @@
 {%- if page.layout == "issue" -%}
 {%- assign events_key = page.city | append: "_events" -%}
 {%- assign events = site.data[events_key][page.slug] -%}
+{%- comment -%}
+  Event rich results require startDate. Undated place notes stay in the
+  prose and are left out of the ItemList.
+{%- endcomment -%}
 {%- if events -%}
+{%- assign dated_events = events | where_exp: "event", "event.start" -%}
+{%- if dated_events.size > 0 -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": {{ page.title | jsonify }},
+  "numberOfItems": {{ dated_events.size }},
   "itemListElement": [
-    {%- for event in events -%}
+    {%- for event in dated_events -%}
     {
       "@type": "ListItem",
       "position": {{ forloop.index }},
       "item": {
         "@type": "Event",
         "name": {{ event.name | jsonify }},
-        "url": {{ page.url | absolute_url | jsonify }}
-        {%- if event.start -%},
+        "url": {{ page.url | absolute_url | jsonify }},
         "startDate": {{ event.start | jsonify }}
-        {%- endif -%}
         {%- if event.end -%},
         "endDate": {{ event.end | jsonify }}
         {%- endif -%}
@@ -40,6 +45,7 @@
   ]
 }
 </script>
+{%- endif -%}
 {%- endif -%}
 {%- endif -%}
 {%- if page.layout == "state" -%}

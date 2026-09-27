@@ -1,6 +1,6 @@
 ---
 title: "Larry Murante at the Saturday market"
-description: "The Redmond Saturday Market with Larry Murante, Oct. 12 – 18, 2026."
+description: "The Redmond Saturday Market with Larry Murante from 11 to 1 on Willows Road, Oct. 12 – 18, 2026."
 date: 2026-10-12
 end_date: "2026-10-18"
 city: redmond

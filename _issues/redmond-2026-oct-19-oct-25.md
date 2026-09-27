@@ -1,6 +1,6 @@
 ---
 title: "Preston Lee at the Saturday market"
-description: "The Redmond Saturday Market with the Preston Lee Trio, Oct. 19 – 25, 2026."
+description: "The Redmond Saturday Market with the Preston Lee Trio from 11 to 1, Oct. 19 – 25, 2026."
 date: 2026-10-19
 end_date: "2026-10-25"
 city: redmond
