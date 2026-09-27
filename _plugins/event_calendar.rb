@@ -7,7 +7,7 @@ require "fileutils"
 module HometownWeek
   # Dated events in {city}_events.yml become static .ics files.
   # Undated events are skipped. Clocks stay in America/Los_Angeles.
-  # Issue pages add "Add to calendar" under the matching pick.
+  # Issue pages put an add-to-calendar icon on the gold date line.
   module EventCalendar
     ZONE = "America/Los_Angeles"
     MONTHS = %w[Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec].freeze
@@ -374,13 +374,24 @@ module HometownWeek
       CGI.unescapeHTML(html.to_s.gsub(/<[^>]+>/, " ")).gsub(/\s+/, " ").strip
     end
 
-    def link_paragraph(links)
-      anchors = links.map do |link|
-        label = links.length > 1 ? "Add to calendar, #{link[:when_label]}" : "Add to calendar"
-        href = CGI.escapeHTML(link[:href])
-        %(<a href="#{href}">#{CGI.escapeHTML(label)}</a>)
-      end
-      %(<p class="event-cal">#{anchors.join("")}</p>)
+    # Small calendar glyph. The link name lives on aria-label and title.
+    CALENDAR_ICON = '<svg class="cal-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.75" y="2.75" width="12.5" height="11.5" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.4"></rect><path d="M1.75 6.4h12.5M5 1.35v2.5M11 1.35v2.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg>'.freeze
+
+    def calendar_label(link, count)
+      count > 1 ? "Add to calendar, #{link[:when_label]}" : "Add to calendar"
+    end
+
+    def calendar_anchor(link, count)
+      label = calendar_label(link, count)
+      href = CGI.escapeHTML(link[:href])
+      safe = CGI.escapeHTML(label)
+      extra = count > 1 ? %(<span class="event-cal-when">#{CGI.escapeHTML(link[:when_label])}</span>) : ""
+      %(<a class="event-cal" href="#{href}" aria-label="#{safe}" title="#{safe}">#{CALENDAR_ICON}#{extra}</a>)
+    end
+
+    def calendar_actions(links)
+      anchors = links.map { |link| calendar_anchor(link, links.length) }
+      %(<span class="event-cals">#{anchors.join}</span>)
     end
 
     def inject!(html, groups)
@@ -433,13 +444,13 @@ module HometownWeek
         links = bucket && bucket[index]
         next part if links.nil? || links.empty?
 
-        snippet = link_paragraph(links)
-        if part.sub!(%r{(<p class="event-place">.*?</p>)}m) { "#{Regexp.last_match(1)}\n#{snippet}" }
-          part
-        elsif part.sub!(%r{(<p class="event-when">.*?</p>)}m) { "#{Regexp.last_match(1)}\n#{snippet}" }
+        snippet = calendar_actions(links)
+        if part.sub!(%r{(<p class="event-when"[^>]*>)(.*?)(</p>)}m) {
+          "#{Regexp.last_match(1)}#{Regexp.last_match(2)}#{snippet}#{Regexp.last_match(3)}"
+        }
           part
         else
-          part.sub(%r{</h3>}) { "#{Regexp.last_match(0)}\n#{snippet}" }
+          part.sub(%r{</h3>}) { "#{Regexp.last_match(0)}\n<p class=\"event-when\">#{snippet}</p>" }
         end
       end
       prelude + rendered.join

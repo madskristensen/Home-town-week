@@ -989,14 +989,48 @@ img {
   font-weight: 500;
 }
 
-.prose .event-cal {
-  display: flex;
+/* Calendar action sits on the gold date line, beside the time. */
+.prose .event-cals {
+  display: inline-flex;
   flex-wrap: wrap;
-  gap: 0.45rem 1rem;
-  margin: 0.15rem 0 0.75rem;
+  align-items: center;
+  gap: 0.15rem 0.45rem;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+
+.prose a.event-cal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.28rem;
+  min-width: 1.6rem;
+  min-height: 1.6rem;
+  padding: 0.15rem 0.22rem;
+  border-radius: 0.25rem;
+  color: var(--link);
   font-size: 0.95rem;
-  font-weight: 600;
-  line-height: 1.4;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.prose a.event-cal:hover,
+.prose a.event-cal:focus-visible {
+  background: color-mix(in srgb, var(--gold-bright) 38%, transparent);
+  text-decoration: none;
+}
+
+.prose .cal-icon {
+  display: block;
+  width: 1.2em;
+  height: 1.2em;
+  flex: none;
+}
+
+.prose .event-cal-when {
+  line-height: 1.2;
 }
 
 .suggest-event {
