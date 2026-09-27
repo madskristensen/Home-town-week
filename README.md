@@ -2,7 +2,7 @@
 
 Weekly family digests for the city you live in. This is a Jekyll site for [hometownweek.com](https://hometownweek.com/).
 
-Washington editions right now are Redmond, Kirkland, and Issaquah. Each city uses the same path, for example `/wa/kirkland/`.
+Washington editions right now are Redmond, Kirkland, Issaquah, Edmonds, and Ferndale. Each city uses the same path, for example `/wa/kirkland/`.
 
 ## URLs
 
@@ -10,7 +10,7 @@ Washington editions right now are Redmond, Kirkland, and Issaquah. Each city use
 | --- | --- |
 | Home | `/` |
 | Washington | `/wa/` |
-| City | `/wa/redmond/`, `/wa/kirkland/`, `/wa/issaquah/` |
+| City | `/wa/redmond/`, `/wa/kirkland/`, `/wa/issaquah/`, `/wa/edmonds/`, `/wa/ferndale/` |
 | Year | `/wa/{city}/2026/` |
 | Issue | `/wa/{city}/2026/w40/` |
 | Latest | `/wa/{city}/latest/` |

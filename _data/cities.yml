@@ -21,3 +21,17 @@
   description: Weekly family digests of Issaquah parks, markets, the hatchery, and Village Theatre.
   summary: >-
     The farmers market, Front Street, the salmon hatchery, and Village Theatre, picked each week for families.
+- id: edmonds
+  name: Edmonds
+  state: wa
+  state_name: Washington
+  description: Weekly family digests of Edmonds markets, the library, the beach, and downtown shows.
+  summary: >-
+    The Saturday market, the library, the beach, and downtown shows, picked each week for families.
+- id: ferndale
+  name: Ferndale
+  state: wa
+  state_name: Washington
+  description: Weekly family digests of Ferndale parks, the library, Pioneer Park, and town events.
+  summary: >-
+    The library, Pioneer Park, Hovander, and town weekends, picked each week for families.
