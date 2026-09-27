@@ -1045,55 +1045,54 @@ img {
   }
 }
 
-/* Issue share row. Same sheet as the rest of the site. */
+/* One share control on issue pages. Same sheet as the rest of the site. */
 
 .issue h1 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.45rem;
 }
 
 .issue-share {
-  margin: 0 0 1.2rem;
+  margin: 0 0 1.15rem;
 }
 
-.share-prompt {
-  margin: 0;
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1.08rem;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.35;
-}
-
-.share-actions {
-  display: flex;
-  flex-wrap: wrap;
+.share-button {
+  display: inline-flex;
   align-items: center;
-  column-gap: 0.95rem;
-  margin: 0.05rem 0 0;
-}
-
-.share-actions a,
-.share-actions button {
-  -webkit-appearance: none;
-  appearance: none;
-  padding: 0.5rem 0;
-  border: 0;
-  background: transparent;
-  color: var(--link);
+  gap: 0.4rem;
+  min-height: 2.25rem;
+  padding: 0.28rem 0.75rem 0.28rem 0.58rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--sheet);
+  color: var(--forest);
   font: inherit;
-  font-size: 0.98rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  line-height: 1.2;
-  text-align: left;
-  text-decoration: none;
+  line-height: 1;
   cursor: pointer;
 }
 
-.share-actions a:hover,
-.share-actions button:hover,
-.share-actions a:focus-visible,
-.share-actions button:focus-visible {
-  text-decoration: underline;
-  text-underline-offset: 0.16em;
+.share-button:hover,
+.share-button:focus-visible {
+  border-color: var(--gold-bright);
+  background: var(--page);
+}
+
+.share-icon {
+  display: block;
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: none;
+}
+
+.share-status:not(.visually-hidden) {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.share-copy-buffer {
+  position: fixed;
+  left: -9999px;
+  top: 0;
 }
