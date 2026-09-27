@@ -24,7 +24,7 @@
 
 .city-mark {
   display: block;
-  width: 6.1rem;
+  width: 6.6rem;
   height: auto;
   flex: none;
   filter: none;
@@ -58,7 +58,7 @@
 
 @media (min-width: 36rem) {
   .city-mark {
-    width: 7.4rem;
+    width: 8rem;
   }
 }
 
