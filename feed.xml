@@ -1,0 +1,26 @@
+---
+permalink: /feed.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title | xml_escape }}</title>
+  <subtitle>{{ site.description | xml_escape }}</subtitle>
+  <link href="{{ "/feed.xml" | absolute_url }}" rel="self"/>
+  <link href="{{ "/" | absolute_url }}"/>
+  <id>{{ "/" | absolute_url }}</id>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <author>
+    <name>{{ site.author.name | xml_escape }}</name>
+  </author>
+  {%- assign feed_issues = site.issues | sort: "date" | reverse -%}
+  {%- for issue in feed_issues -%}
+  <entry>
+    <title>{{ issue.title | xml_escape }}</title>
+    <link href="{{ issue.url | absolute_url }}"/>
+    <id>{{ issue.url | absolute_url }}</id>
+    <updated>{{ issue.date | date_to_xmlschema }}</updated>
+    <summary>{{ issue.description | xml_escape }}</summary>
+  </entry>
+  {%- endfor -%}
+</feed>

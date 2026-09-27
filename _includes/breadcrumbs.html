@@ -1,9 +1,15 @@
 {%- include city-context.html -%}
-{%- if page.layout == "year" or page.layout == "issue" -%}
+{%- if page.layout == "city" or page.layout == "year" or page.layout == "issue" -%}
 <nav class="crumbs" aria-label="Breadcrumb">
   <ol>
     <li><a href="{{ '/' | relative_url }}">Hometown Week</a></li>
-    <li><a href="{{ city_url | relative_url }}">{{ city.name }}</a></li>
+    <li>
+      {%- if page.layout == "city" -%}
+      <span aria-current="page">{{ city.name }}</span>
+      {%- else -%}
+      <a href="{{ city_url | relative_url }}">{{ city.name }}</a>
+      {%- endif -%}
+    </li>
     {%- if page.year -%}
     <li>
       {%- if page.layout == "year" -%}

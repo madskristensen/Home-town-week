@@ -6,8 +6,13 @@
       {%- capture footer_city_url -%}/{{ city.state }}/{{ city.id }}/{%- endcapture -%}
       <a href="{{ footer_city_url | strip | relative_url }}">{{ city.name }}</a>
       {%- endfor -%}
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="{{ '/feed.xml' | relative_url }}">Feed</a>
+      {%- if site.repository -%}
+      <a href="https://github.com/{{ site.repository }}" rel="noopener">GitHub</a>
+      {%- endif -%}
     </nav>
-    <p>Weekly family digests for the city you live in.</p>
-    <p class="copyright">&copy; {{ site.time | date: "%Y" }} Hometown Week</p>
+    <p>Built by {{ site.author.name }} for families who want the short version of the week.</p>
+    <p class="copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </div>
 </footer>
