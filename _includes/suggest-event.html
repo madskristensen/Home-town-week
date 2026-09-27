@@ -1,0 +1,16 @@
+{%- unless city -%}
+{%- include city-context.html -%}
+{%- endunless -%}
+{%- if city -%}
+{%- capture suggest_subject -%}Event idea for {{ city.name }}{%- endcapture -%}
+{%- capture suggest_body -%}I would like to suggest an event for Hometown Week in {{ city.name }}.
+
+Event name:
+Date and time:
+Place:
+Link:
+Short blurb:
+Who it's for (kids, families):
+{%- endcapture -%}
+<p class="suggest-event">Know something fun in {{ city.name }}? <a href="mailto:suggestions@hometownweek.com?subject={{ suggest_subject | strip | mail_escape }}&amp;body={{ suggest_body | strip | mail_escape }}">Suggest an event</a>.</p>
+{%- endif -%}

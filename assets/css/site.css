@@ -989,6 +989,25 @@ img {
   font-weight: 500;
 }
 
+.prose .event-cal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
+  margin: 0.15rem 0 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.suggest-event {
+  margin: 1.35rem 0 0;
+  font-size: 1.02rem;
+}
+
+.suggest-event a {
+  font-weight: 700;
+}
+
 .event-photo {
   margin: 0.75rem 0 1rem;
 }

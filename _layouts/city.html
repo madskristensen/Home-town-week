@@ -42,6 +42,7 @@ layout: default
   {%- if latest_year_url -%}
   <p class="year-link"><a href="{{ latest_year_url | relative_url }}">All {{ latest_issue.year }} issues</a></p>
   {%- endif -%}
+  {%- include suggest-event.html -%}
   {%- if city.summary -%}
   <p class="city-note">{{ city.summary }} Each issue is one Monday-through-Sunday week. Dates and details live on that issue.</p>
   {%- endif -%}
