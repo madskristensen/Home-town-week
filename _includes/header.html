@@ -7,11 +7,8 @@
     <a class="wordmark" href="{{ '/' | relative_url }}">Hometown Week</a>
     {%- endif -%}
     {%- unless page.city -%}
-    <nav class="header-nav" aria-label="Cities">
-      {%- for city in site.data.cities -%}
-      {%- capture header_city_url -%}/{{ city.state }}/{{ city.id }}/{%- endcapture -%}
-      <a href="{{ header_city_url | strip | relative_url }}">{{ city.name }}</a>
-      {%- endfor -%}
+    <nav class="header-nav" aria-label="Washington">
+      <a href="{{ '/wa/' | relative_url }}"{% if page.layout == "state" %} aria-current="page"{% endif %}>Washington</a>
     </nav>
     {%- endunless -%}
   </div>

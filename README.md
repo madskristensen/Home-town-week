@@ -2,7 +2,7 @@
 
 Weekly family digests for the city you live in. This is a Jekyll site for [hometownweek.com](https://hometownweek.com/).
 
-Washington editions right now are Redmond, Kirkland, Issaquah, Edmonds, and Ferndale. Each city uses the same path, for example `/wa/kirkland/`.
+Washington editions are Bellevue, Bellingham, Bothell, Edmonds, Everett, Ferndale, Issaquah, Kirkland, Lynnwood, Mercer Island, Redmond, Renton, and Sammamish. Each city uses the same path, for example `/wa/kirkland/`.
 
 ## URLs
 
@@ -10,7 +10,7 @@ Washington editions right now are Redmond, Kirkland, Issaquah, Edmonds, and Fern
 | --- | --- |
 | Home | `/` |
 | Washington | `/wa/` |
-| City | `/wa/redmond/`, `/wa/kirkland/`, `/wa/issaquah/`, `/wa/edmonds/`, `/wa/ferndale/` |
+| City | `/wa/{city}/`, for example `/wa/redmond/` or `/wa/bellevue/` |
 | Year | `/wa/{city}/2026/` |
 | Issue | `/wa/{city}/2026/sep-28-oct-4/` |
 | Latest | `/wa/{city}/latest/` |
@@ -41,4 +41,6 @@ Pushes to `main` run `.github/workflows/pages.yml`, which builds the site and de
 3. Add issues under `_issues/` with `city`, `state`, `year`, `slug`, and a permalink like `/wa/kirkland/2026/sep-28-oct-4/`.
 4. Put photos in `assets/images/{city}/` at 800, 1200, and 1600 widths, and add `{city}_events.yml` under `_data/` if you want event structured data.
 
-The home page and the footer both read `_data/cities.yml`. City, year, and issue pages load `assets/css/city.css`. The home page does not, except through the shared card styles in `assets/css/main.css`.
+The Washington hub, the footer, and the home-page cards read `_data/cities.yml` in list order, so keep that file alphabetical. The site header does not list cities. It links to Washington. City names in the header appear only on that city's own pages.
+
+City, year, and issue pages load `assets/css/city.css`. The home page does not, except through the shared card styles in `assets/css/main.css`.

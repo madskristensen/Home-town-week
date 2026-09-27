@@ -1,0 +1,15 @@
+# Dated events listed on each Lynnwood week.
+sep-14-sep-20:
+  - name: "Scriber Lake Park"
+    place: "Scriber Lake Park, Lynnwood"
+    same_as: "https://www.lynnwoodwa.gov/Community/Play-Lynnwood"
+sep-21-sep-27:
+  - name: "Lynnwood Library"
+    place: "Lynnwood Library, 19200 44th Ave W"
+    same_as: "https://www.sno-isle.org/locations/lynnwood/"
+sep-28-oct-4:
+  - name: "Preschool Storytime with Adrianna"
+    start: "2026-09-30T09:30:00-07:00"
+    end: "2026-09-30T10:00:00-07:00"
+    place: "Lynnwood Library, 19200 44th Ave W"
+    same_as: "https://sno-isle.bibliocommons.com/v2/events/6a3c228448c98c3600a21049"
