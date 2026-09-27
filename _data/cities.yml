@@ -5,10 +5,12 @@
 # names live in coming_soon.yml until a digest exists. City names stay out
 # of the site header. See README for the page files each city needs.
 #
-# tagline: one short local line for the city home and the issue masthead.
-# Use the city's public slogan when it has one. Otherwise name the place
-# (geography, character, or region), not a list of venues. The header
-# kicker stays "Weekly family digest."
+# tagline: a short place line under the city-home heading. Name the place
+# (geography, character, or region), not a list of venues. It is not the
+# masthead kicker.
+# slogan: the city's official slogan, and only when the city has one.
+# The masthead kicker prints slogan, or "Weekly family digest" when
+# slogan is absent. Do not put a place line in slogan.
 #
 # sources: lives on each city entry here, not in a separate file. Each item
 # is a name, url, type, and notes. Types: city_hall, parks, allevents,
@@ -69,7 +71,7 @@
   description: Weekly family digests for Bellevue. A city in a park.
   summary: >-
     A city in a park.
-  tagline: "A city in a park."
+  slogan: "A city in a park."
   sources:
     - name: "City of Bellevue calendar"
       url: "https://bellevuewa.gov/calendar"
@@ -163,7 +165,7 @@
   description: Weekly family digests for Bothell. Welcome to Bothell for a day, or a lifetime.
   summary: >-
     Welcome to Bothell for a day, or a lifetime.
-  tagline: "Welcome to Bothell for a day, or a lifetime."
+  slogan: "Welcome to Bothell for a day, or a lifetime."
   sources:
     - name: "City of Bothell calendar"
       url: "https://www.bothellwa.gov/m/calendar"
@@ -323,7 +325,7 @@
   description: Weekly family digests for Gig Harbor. The Maritime City.
   summary: >-
     The Maritime City.
-  tagline: "The Maritime City."
+  slogan: "The Maritime City."
   sources:
     - name: "City of Gig Harbor calendar"
       url: "https://gigharborwa.gov/calendar.aspx"
@@ -685,7 +687,7 @@
   description: Weekly family digests for Poulsbo. Little Norway.
   summary: >-
     Little Norway.
-  tagline: "Little Norway."
+  slogan: "Little Norway."
   sources:
     - name: "City of Poulsbo"
       url: "https://poulsbo.gov/"
@@ -767,7 +769,7 @@
   description: Weekly family digests for Redmond. Bicycle Capital of the Northwest.
   summary: >-
     Bicycle Capital of the Northwest.
-  tagline: "Bicycle Capital of the Northwest."
+  slogan: "Bicycle Capital of the Northwest."
   sources:
     - name: "City of Redmond calendar"
       url: "https://www.redmond.gov/Calendar.aspx"
@@ -1134,7 +1136,7 @@
   description: Weekly family digests for Eagle. Life, Done Right.
   summary: >-
     Life, Done Right.
-  tagline: "Life, Done Right."
+  slogan: "Life, Done Right."
   sources:
     - name: "City of Eagle"
       url: "https://cityofeagle.org/"
@@ -1173,7 +1175,7 @@
   description: Weekly family digests for Meridian. Built for business, designed for living.
   summary: >-
     Built for business, designed for living.
-  tagline: "Built for business, designed for living."
+  slogan: "Built for business, designed for living."
   sources:
     - name: "City of Meridian"
       url: "https://www.meridiancity.org/"
@@ -1263,7 +1265,7 @@
   description: Weekly family digests for Orem. Family City USA.
   summary: >-
     Family City USA.
-  tagline: "Family City USA."
+  slogan: "Family City USA."
   sources:
     - name: "City of Orem"
       url: "https://www.orem.org/"
@@ -1498,7 +1500,7 @@
   description: Weekly family digests for Frisco. Progress in Motion.
   summary: >-
     Progress in Motion.
-  tagline: "Progress in Motion."
+  slogan: "Progress in Motion."
   sources:
     - name: "City of Frisco"
       url: "https://www.friscotexas.gov/"
@@ -1549,7 +1551,7 @@
   description: Weekly family digests for Plano. City of Excellence.
   summary: >-
     City of Excellence.
-  tagline: "City of Excellence."
+  slogan: "City of Excellence."
   sources:
     - name: "City of Plano"
       url: "https://www.plano.gov/"
@@ -1604,7 +1606,7 @@
   description: Weekly family digests for Round Rock. Sports Capital of Texas.
   summary: >-
     Sports Capital of Texas.
-  tagline: "Sports Capital of Texas."
+  slogan: "Sports Capital of Texas."
   sources:
     - name: "City of Round Rock"
       url: "https://www.roundrocktexas.gov/"

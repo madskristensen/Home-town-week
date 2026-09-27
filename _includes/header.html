@@ -24,10 +24,7 @@
         <p class="city-name">
           <a href="{{ city_url | relative_url }}"{% if page.layout == "city" %} aria-current="page"{% endif %}>{{ city.name }}</a>
         </p>
-        <p class="city-kicker">Weekly family digest</p>
-        {%- if city.tagline and page.layout != "city" -%}
-        <p class="city-kicker">{{ city.tagline }}</p>
-        {%- endif -%}
+        <p class="city-kicker">{%- if city.slogan -%}{{ city.slogan }}{%- else -%}Weekly family digest{%- endif -%}</p>
       </div>
     </div>
   </div>
