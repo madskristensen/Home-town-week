@@ -1,6 +1,6 @@
 # Hometown Week
 
-Weekly family digests for the city you live in. This is a Jekyll site for GitHub Pages, published at [hometownweek.com](https://hometownweek.com).
+Weekly family digests for the city you live in. This is a Jekyll site for GitHub Pages. While setup continues, it is published at [madskristensen.github.io/Home-town-week](https://madskristensen.github.io/Home-town-week/).
 
 Redmond, Washington is the first city. More cities can use the same path, for example `/wa/kirkland/` later.
 
@@ -27,13 +27,7 @@ bundle install
 bundle exec jekyll serve
 ```
 
-The canonical host is `https://hometownweek.com` (`url` and `baseurl` in `_config.yml`). To preview the github.io project path before the custom domain is attached:
-
-```bash
-bundle exec jekyll build --config _config.yml,_config.github.yml
-```
-
-That overlay sets `url` to `https://madskristensen.github.io` and `baseurl` to `/Home-town-week`.
+Open `http://127.0.0.1:4000/Home-town-week/`. `_config.yml` sets `url` to `https://madskristensen.github.io` and `baseurl` to `/Home-town-week`.
 
 ## GitHub Pages
 
@@ -41,15 +35,18 @@ Pushes to `main` run `.github/workflows/pages.yml`, which builds the site and de
 
 1. In the repo, open **Settings → Pages**.
 2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-3. The `CNAME` file already sets the custom domain to `hometownweek.com`. Confirm that domain on the Pages settings page after the first deploy.
+3. Leave the custom domain blank for now. The site is the project URL above.
 
-## DNS for hometownweek.com
+`CNAME` is in the repo for later and is excluded from the build, so this deploy does not switch the host to hometownweek.com.
 
-Point the domain at GitHub Pages, then wait for the certificate.
+## hometownweek.com later
 
-- If your DNS host can use a CNAME on the apex (ALIAS, ANAME, or CNAME flattening), set `hometownweek.com` to `madskristensen.github.io`.
-- If the apex cannot be a CNAME, use GitHub's A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`.
-- Optional `www`: a CNAME from `www` to `madskristensen.github.io`. The `CNAME` file in this repo lists the apex only, which is the host Pages will serve.
+When DNS is ready:
+
+1. Build with the domain overlay: `bundle exec jekyll build --config _config.yml,_config.domain.yml`
+2. Stop excluding `CNAME` in `_config.yml` so `hometownweek.com` is published.
+3. Point DNS at Pages. If the host can CNAME the apex (ALIAS, ANAME, or CNAME flattening), set `hometownweek.com` to `madskristensen.github.io`. Otherwise use GitHub's A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`.
+4. Confirm the custom domain in Pages settings. Optional `www`: CNAME `www` to `madskristensen.github.io`. The `CNAME` file lists the apex only.
 
 ## Adding a city
 

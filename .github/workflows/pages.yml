@@ -35,16 +35,10 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: |
-          # configure-pages reports a project base path until the custom
-          # domain is attached. That build uses the github.io overlay.
-          # Once hometownweek.com is the Pages host, base_path is empty
-          # and the canonical url in _config.yml is used as-is.
-          BASE="${{ steps.pages.outputs.base_path }}"
-          if [ -n "$BASE" ]; then
-            bundle exec jekyll build --config _config.yml,_config.github.yml --baseurl "$BASE"
-          else
-            bundle exec jekyll build
-          fi
+          # Project site: https://madskristensen.github.io/Home-town-week/
+          # _config.yml sets baseurl to /Home-town-week. CNAME stays out of
+          # the artifact until hometownweek.com is ready.
+          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path || '/Home-town-week' }}"
 
       - name: Add IndexNow verification key
         env:
@@ -87,7 +81,7 @@ jobs:
         if: env.INDEXNOW_KEY != ''
         uses: bojieyang/indexnow-action@v3
         with:
-          sitemap-location: "https://hometownweek.com/sitemap.xml"
+          sitemap-location: "https://madskristensen.github.io/Home-town-week/sitemap.xml"
           key: ${{ env.INDEXNOW_KEY }}
           endpoint: "api.indexnow.org"
           failure-strategy: "error"

@@ -1,0 +1,5 @@
+# Later, when hometownweek.com should be the canonical host:
+#   bundle exec jekyll build --config _config.yml,_config.domain.yml
+# Also stop excluding CNAME in _config.yml so the domain file is published.
+url: https://hometownweek.com
+baseurl: ""

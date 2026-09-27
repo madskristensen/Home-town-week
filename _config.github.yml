@@ -1,4 +1,0 @@
-# Overlay for the project site before the custom domain is attached.
-# bundle exec jekyll build --config _config.yml,_config.github.yml
-url: https://madskristensen.github.io
-baseurl: /Home-town-week

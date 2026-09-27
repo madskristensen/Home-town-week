@@ -3,8 +3,10 @@ tagline: Weekly family digests
 description: >-
   Weekly family digests for the city you live in. Parks, markets,
   libraries, and the plans worth making.
-url: https://hometownweek.com
-baseurl: ""
+# Project site until hometownweek.com is attached. Switch with
+# _config.domain.yml when that domain should become canonical.
+url: https://madskristensen.github.io
+baseurl: /Home-town-week
 lang: en-US
 timezone: America/Los_Angeles
 logo: /assets/images/logo.png
@@ -14,7 +16,7 @@ repository: madskristensen/Home-town-week
 
 author:
   name: Mads Kristensen
-  url: https://hometownweek.com/about/
+  url: https://madskristensen.github.io/Home-town-week/about/
   twitter: madskristensen
 
 twitter:
@@ -25,10 +27,6 @@ social:
   name: Hometown Week
   links:
     - https://github.com/madskristensen/Home-town-week
-
-# Canonical host is hometownweek.com. Before that domain is attached,
-# build the github.io project URL with:
-#   bundle exec jekyll build --config _config.yml,_config.github.yml
 
 # Issue dates can fall ahead of the build clock. Publish them anyway.
 future: true
@@ -66,4 +64,7 @@ exclude:
   - .bundle
   - .ruby-version
   - .gitignore
-  - _config.github.yml
+  - _config.domain.yml
+  # Keep CNAME in the repo for later. Do not publish it yet, or Pages
+  # will leave the project URL and expect hometownweek.com.
+  - CNAME
