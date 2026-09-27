@@ -46,6 +46,10 @@
       url: "https://krl.bibliocommons.com/v2/events"
       type: library
       notes: "One library source. Filter to the Bainbridge branch."
+    - name: "Bainbridge Island Metro Parks special events"
+      url: "https://www.biparks.org/recreation/special-events"
+      type: parks
+      notes: "Park concerts, movies, and seasonal family events."
     - name: "AllEvents Bainbridge Island"
       url: "https://allevents.in/bainbridge-island"
       type: allevents
@@ -88,6 +92,14 @@
       url: "https://kcls.bibliocommons.com/events"
       type: library
       notes: "One library source. Filter to Bellevue branches."
+    - name: "Bellevue Downtown Association"
+      url: "https://www.bellevuedowntown.com/events"
+      type: downtown
+      notes: "Downtown festivals and public events."
+    - name: "Bellevue Youth Theatre"
+      url: "https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre/bellevue-youth-theatre-productions"
+      type: theater
+      notes: "City youth theatre productions."
     - name: "AllEvents Bellevue"
       url: "https://allevents.in/bellevue"
       type: allevents
@@ -122,6 +134,14 @@
       url: "https://www.wcls.org/events"
       type: library
       notes: "One library source. Filter to Bellingham and nearby branches families use."
+    - name: "Bellingham Farmers Market"
+      url: "https://www.bellinghamfarmers.org/"
+      type: market
+      notes: "Saturday market at Depot Market Square."
+    - name: "Bellingham Public Library calendar"
+      url: "https://bellinghampubliclibrary.libcal.com/calendar/BPL-Events"
+      type: library
+      notes: "City library storytimes and family programs. The county library list stays separate."
     - name: "AllEvents Bellingham"
       url: "https://allevents.in/bellingham"
       type: allevents
@@ -152,6 +172,10 @@
       url: "https://theattictheatre.org/"
       type: theater
       notes: "Community theater for Bothell, Woodinville, and Mill Creek. Confirm the venue on the ticket page."
+    - name: "Bothell Parks signature events"
+      url: "https://www.bothellwa.gov/1047/Signature-Events"
+      type: parks
+      notes: "Parks family events on Main Street."
     - name: "AllEvents Bothell"
       url: "https://allevents.in/bothell"
       type: allevents
@@ -190,6 +214,14 @@
       url: "https://sno-isle.bibliocommons.com/events"
       type: library
       notes: "One library source. Filter to Edmonds."
+    - name: "Edmonds Parks and Recreation events"
+      url: "https://www.edmondswa.gov/government/departments/parks_and_recreation/events"
+      type: parks
+      notes: "City family special events and park programs."
+    - name: "Edmonds Museum Summer Market"
+      url: "https://historicedmonds.org/edmonds-museum-summer-market/"
+      type: market
+      notes: "Saturday market on 5th Avenue North."
     - name: "AllEvents Edmonds"
       url: "https://allevents.in/edmonds"
       type: allevents
@@ -258,6 +290,14 @@
       url: "https://www.mountbakertheatre.com/"
       type: theater
       notes: "Nearest public stage, in Bellingham. Say it is in Bellingham. Also the Bellingham theater source."
+    - name: "Ferndale recreation and events"
+      url: "https://www.cityofferndale.org/284/Recreation-and-Events"
+      type: parks
+      notes: "Free parks and arts programs."
+    - name: "Ferndale Downtown Association"
+      url: "https://ferndaledowntown.com/news-events/"
+      type: downtown
+      notes: "Downtown family and street events."
     - name: "AllEvents Ferndale, WA"
       url: "https://allevents.in/ferndale-wa"
       type: allevents
@@ -288,6 +328,14 @@
       url: "https://www.ghostlightpa.com/"
       type: theater
       notes: "Gig Harbor community theater. Main space is the Nichols Community Center on Fox Island. Prefer kids classes and family shows."
+    - name: "PenMet Parks special events"
+      url: "https://penmetparks.org/special-events/"
+      type: parks
+      notes: "Peninsula park events families in Gig Harbor use."
+    - name: "Gig Harbor Downtown Waterfront Alliance"
+      url: "https://www.ghdwa.org/events"
+      type: downtown
+      notes: "Waterfront public events."
     - name: "AllEvents Gig Harbor"
       url: "https://allevents.in/gig-harbor"
       type: allevents
@@ -322,6 +370,10 @@
       url: "https://kcls.bibliocommons.com/events"
       type: library
       notes: "One library source. Filter to Issaquah."
+    - name: "Issaquah Farmers Market"
+      url: "https://www.issaquahwa.gov/778/Farmers-Market"
+      type: market
+      notes: "Saturday market at Pickering Barn."
     - name: "AllEvents Issaquah"
       url: "https://allevents.in/issaquah"
       type: allevents
@@ -352,6 +404,14 @@
       url: "https://seattlesperformers.com/"
       type: theater
       notes: "Nearest youth musical company, at Town Center at Lake Forest Park. Say it is in Lake Forest Park."
+    - name: "Northshore Farmers Markets"
+      url: "https://www.northshorefarmersmarkets.org/"
+      type: market
+      notes: "Kenmore Wednesday market by The Hangar. Skip the Woodinville Saturday market on the same site."
+    - name: "Find Kenmore events"
+      url: "https://findkenmore.org/events/"
+      type: downtown
+      notes: "Public family and community events in Kenmore."
     - name: "AllEvents Kenmore"
       url: "https://allevents.in/kenmore"
       type: allevents
@@ -382,6 +442,14 @@
       url: "https://kcls.bibliocommons.com/events"
       type: library
       notes: "One library source. Filter to Kirkland."
+    - name: "Kirkland Wednesday Market"
+      url: "https://kirklanddowntown.org/events/kirkland-market/"
+      type: market
+      notes: "Wednesday market at Marina Park."
+    - name: "Kirkland Downtown Association"
+      url: "https://kirklanddowntown.org/events/"
+      type: downtown
+      notes: "Downtown public events."
     - name: "AllEvents Kirkland"
       url: "https://allevents.in/kirkland"
       type: allevents
@@ -442,6 +510,10 @@
       url: "https://www.wcls.org/events"
       type: library
       notes: "One library source. Filter to Lynden."
+    - name: "Lynden Farmers Market"
+      url: "https://www.lyndenfarmersmarket.com/"
+      type: market
+      notes: "Saturday market at Centennial Park."
     - name: "AllEvents Lynden"
       url: "https://allevents.in/lynden"
       type: allevents
@@ -468,6 +540,18 @@
       url: "https://edmondsdriftwoodplayers.org/"
       type: theater
       notes: "Nearest community playhouse, in Edmonds. Say it is in Edmonds. Also an Edmonds theater source."
+    - name: "Lynnwood events calendar"
+      url: "https://www.lynnwoodwa.gov/Community/Events-Calendar"
+      type: city_hall
+      notes: "Family, park, and teen events."
+    - name: "Lynnwood recreation classes"
+      url: "https://www.lynnwoodwa.gov/Community/Play-Lynnwood/Lynnwood-Recreation-Classes-Activities"
+      type: parks
+      notes: "Youth, teen, and family recreation programs."
+    - name: "Lynnwood Farmers Market"
+      url: "https://www.lynnwoodfarmersmarket.com/"
+      type: market
+      notes: "Market at the Lynnwood City Center station plaza."
     - name: "AllEvents Lynnwood"
       url: "https://allevents.in/lynnwood"
       type: allevents
@@ -498,6 +582,10 @@
       url: "https://mvcac.clubexpress.com/"
       type: theater
       notes: "Local plays and the youth playwright festival. Check the posted dates."
+    - name: "Maple Valley Parks special events"
+      url: "https://www.maplevalleywa.gov/government/departments/parks_and_recreation/special_events/index.php"
+      type: parks
+      notes: "Kids festival, movies in the park, and holiday park events."
     - name: "AllEvents Maple Valley"
       url: "https://allevents.in/maple-valley"
       type: allevents
@@ -528,6 +616,10 @@
       url: "https://youththeatre.org/"
       type: theater
       notes: "Youth theater at 4400 86th Ave SE, Mercer Island. Prefer public performances over class-only dates."
+    - name: "Mercer Island Parks special events"
+      url: "https://www.mercerisland.gov/parksrec/page/city-special-events"
+      type: parks
+      notes: "Parks family events such as movie night and holiday parties."
     - name: "AllEvents Mercer Island"
       url: "https://allevents.in/mercer-island"
       type: allevents
@@ -558,6 +650,10 @@
       url: "https://theattictheatre.org/"
       type: theater
       notes: "Community theater for Mill Creek, Bothell, and Woodinville. Confirm the venue on the ticket page."
+    - name: "Mill Creek Town Center events"
+      url: "https://millcreektowncenter.biz/events2/"
+      type: downtown
+      notes: "Concerts, art walks, and holiday events at Town Center."
 - id: poulsbo
   name: Poulsbo
   state: wa
@@ -588,6 +684,10 @@
       url: "https://www.jewelboxpoulsbo.org/"
       type: theater
       notes: "Community theater at 225 NE Iverson St. Note the rating. Under-12 price does not make an adult comedy a kids show."
+    - name: "Visit Poulsbo events"
+      url: "https://visitpoulsbo.com/poulsbo-events-calendar/"
+      type: downtown
+      notes: "Downtown art walk, festivals, and community concerts."
     - name: "AllEvents Poulsbo"
       url: "https://allevents.in/poulsbo"
       type: allevents
@@ -622,6 +722,14 @@
       url: "https://manestagetheatre.com/"
       type: theater
       notes: "Puyallup community company. Family mission. Confirm dates on their ticket page."
+    - name: "Puyallup Main Street Association"
+      url: "https://www.puyallupmainstreet.com/"
+      type: downtown
+      notes: "Downtown festivals and market dates."
+    - name: "Washington State Fair calendar"
+      url: "https://www.thefair.com/events-calendar/"
+      type: venue
+      notes: "Public fair dates at the Puyallup fairgrounds. Skip dates outside the issue week."
     - name: "AllEvents Puyallup"
       url: "https://allevents.in/puyallup"
       type: allevents
@@ -656,6 +764,10 @@
       url: "https://www.secondstoryrep.org/"
       type: theater
       notes: "Redmond Town Center, 7325 166th Ave NE. Prefer the Theater for Young Audiences series over adult plays."
+    - name: "Experience Redmond events"
+      url: "https://experienceredmond.com/redmond-events/"
+      type: downtown
+      notes: "Downtown and community events."
     - name: "AllEvents Redmond"
       url: "https://allevents.in/redmond"
       type: allevents
@@ -686,6 +798,10 @@
       url: "https://www.rentoncivictheatre.org/"
       type: theater
       notes: "Community theater at 507 S 3rd St. Note the rating. Do not invent a clock the show page does not print."
+    - name: "Visit Renton events"
+      url: "https://visitrenton.com/renton-events/"
+      type: downtown
+      notes: "Festivals and family events."
     - name: "AllEvents Renton"
       url: "https://allevents.in/renton"
       type: allevents
@@ -712,6 +828,14 @@
       url: "https://www.spotlightrepnw.org/"
       type: theater
       notes: "Sammamish youth musical company. Shows are sometimes staged in Redmond. Say so when the venue is not in Sammamish."
+    - name: "Sammamish community events"
+      url: "https://www.sammamish.us/news/events/"
+      type: city_hall
+      notes: "Arts, youth, and parks programs."
+    - name: "Sammamish Farmers Market"
+      url: "https://www.sammamishfarmersmarket.org/"
+      type: market
+      notes: "Wednesday market at Sammamish Commons."
     - name: "AllEvents Sammamish"
       url: "https://allevents.in/sammamish"
       type: allevents
@@ -746,6 +870,10 @@
       url: "https://www.woodinvillerep.org/"
       type: theater
       notes: "Community theater at 14300 NE 145th St, Suite 100. Note the rating before calling a show family."
+    - name: "Woodinville Farmers Market"
+      url: "https://www.northshorefarmersmarkets.org/woodinville-farmers-market"
+      type: market
+      notes: "Saturday market on Festival Street."
     - name: "AllEvents Woodinville"
       url: "https://allevents.in/woodinville"
       type: allevents
@@ -830,6 +958,10 @@
       url: "https://www.oldmilldistrict.com/"
       type: downtown
       notes: "District events and seasonal family programming."
+    - name: "Downtown Bend Business Association"
+      url: "https://www.downtownbend.org/"
+      type: downtown
+      notes: "First Fridays and downtown street events."
     - name: "AllEvents Bend"
       url: "https://allevents.in/bend-us"
       type: allevents
@@ -864,6 +996,14 @@
       url: "https://wccls.bibliocommons.com/v2/events"
       type: library
       notes: "One library source. Filter to Brookwood and Hillsboro branches."
+    - name: "Hillsboro event calendar"
+      url: "https://www.hillsboro-oregon.gov/our-city/event-calendar"
+      type: city_hall
+      notes: "Citywide festivals and public programs."
+    - name: "Walters Cultural Arts Center"
+      url: "https://www.hillsboro-oregon.gov/our-city/departments/parks-recreation/facilities-rentals/walters-cultural-arts-center/wcac-calendar"
+      type: venue
+      notes: "City concerts and family shows."
     - name: "AllEvents Hillsboro"
       url: "https://allevents.in/hillsboro"
       type: allevents
@@ -940,6 +1080,14 @@
       url: "https://cdasymphony.org/"
       type: theater
       notes: "Public concerts. Note when a concert is family-friendly."
+    - name: "Kootenai County Farmers Markets"
+      url: "https://kootenaifarmersmarkets.org/calendars/market-calendar/"
+      type: market
+      notes: "Wednesday evening market at Riverstone is the Coeur d'Alene date. Skip other county markets."
+    - name: "Coeur d'Alene Downtown Association"
+      url: "https://cdadowntown.com/event-calendar/"
+      type: downtown
+      notes: "Downtown Oktoberfest, markets, and the lighting parade."
     - name: "AllEvents Coeur d'Alene"
       url: "https://allevents.in/coeur-d-alene"
       type: allevents
@@ -974,6 +1122,10 @@
       url: "https://eaglepubliclibrary.org/events/"
       type: library
       notes: "One library source. 100 N Stierman Way. Do not use Eagle Pass, Texas."
+    - name: "City of Eagle community events"
+      url: "https://www.cityofeagle.org/430/Events"
+      type: parks
+      notes: "Market, concerts, Harvest Fest, and Night of a Thousand Pumpkins."
     - name: "AllEvents Eagle, ID"
       url: "https://allevents.in/eagle-id"
       type: allevents
@@ -1008,6 +1160,14 @@
       url: "https://jumpboise.org/"
       type: venue
       notes: "Family venue in nearby downtown Boise. Use only for a program that is an easy Meridian outing."
+    - name: "Meridian Monday Night Market"
+      url: "https://www.basicallybrilliantevents.com/mondaymarket"
+      type: market
+      notes: "Monday evening market at Storey Park in the fall. The chamber calendar is the citywide list."
+    - name: "Meridian Chamber calendar"
+      url: "https://business.meridianchamber.org/events/calendar"
+      type: downtown
+      notes: "Chamber calendar, including the Monday market."
     - name: "AllEvents Meridian, ID"
       url: "https://allevents.in/meridian-id"
       type: allevents
@@ -1042,6 +1202,18 @@
       url: "https://thanksgivingpoint.org/calendar/"
       type: venue
       notes: "Family museum, gardens, and farm events in Lehi."
+    - name: "Lehi City events calendar"
+      url: "https://events.lehi-ut.gov/"
+      type: city_hall
+      notes: "Community events, concerts, and parades. Filter to family listings."
+    - name: "Lehi Recreation events"
+      url: "https://www.lehi-ut.gov/recreation-community/events/"
+      type: parks
+      notes: "Recreation special events such as outdoor movies."
+    - name: "Farmers Market Lehi"
+      url: "https://farmersmarketlehi.com/"
+      type: market
+      notes: "Market at 1020 W Main by Veterans Park. Use the posted Saturday and night-market dates."
     - name: "AllEvents Lehi"
       url: "https://allevents.in/lehi-us"
       type: allevents
@@ -1072,6 +1244,22 @@
       url: "https://scera.org/events/"
       type: theater
       notes: "Family entertainment and performing arts."
+    - name: "City of Orem events"
+      url: "https://orem.gov/events/"
+      type: city_hall
+      notes: "Festivals, the farmers market, and holiday programs."
+    - name: "Orem Parks and Recreation"
+      url: "https://rec.orem.gov/"
+      type: parks
+      notes: "Youth sports, swim, and family recreation programs. oremrecreation.com redirects here."
+    - name: "Orem Farmers Market"
+      url: "https://sunsetfarmersmarkets.com/orem"
+      type: market
+      notes: "Wednesday evening market at Orem City Center Park, May through October."
+    - name: "Orem City Center festivals"
+      url: "https://orem.gov/city-center-festivals/"
+      type: downtown
+      notes: "Dated family festivals on the City Center stage."
     - name: "AllEvents Orem"
       url: "https://allevents.in/orem-us"
       type: allevents
@@ -1102,6 +1290,22 @@
       url: "https://slcls.libnet.info/"
       type: library
       notes: "One library source. Filter to South Jordan branches."
+    - name: "South Jordan city events"
+      url: "https://sjc.utah.gov/197/City-Events"
+      type: city_hall
+      notes: "Special-event index for Summerfest, movies, and the farmers market."
+    - name: "South Jordan Parks and Recreation"
+      url: "https://sjc.utah.gov/194/Parks-Recreation"
+      type: parks
+      notes: "Parks department and the seasonal leisure guide."
+    - name: "South Jordan Farmers Market"
+      url: "https://sjc.utah.gov/557/South-Jordan-Farmers-Market"
+      type: market
+      notes: "Saturday market at Towne Center Drive. The city calendar is the date list."
+    - name: "The Gale Museum"
+      url: "https://www.sjc.utah.gov/336/The-Gale-Museum"
+      type: venue
+      notes: "City museum at 10300 S Beckstead Lane."
     - name: "AllEvents South Jordan"
       url: "https://allevents.in/south-jordan"
       type: allevents
@@ -1140,6 +1344,10 @@
       url: "https://go.dcl.org/"
       type: library
       notes: "One library source. Filter to Castle Rock."
+    - name: "Castle Rock Parks and Recreation"
+      url: "https://recreation.crgov.com/"
+      type: parks
+      notes: "Classes, passes, and park reservations."
     - name: "AllEvents Castle Rock, CO"
       url: "https://allevents.in/castle-rock-co"
       type: allevents
@@ -1170,6 +1378,22 @@
       url: "https://arapahoelibraries.org/"
       type: library
       notes: "One library source. Filter to Smoky Hill and other Centennial branches."
+    - name: "City of Centennial calendar"
+      url: "https://www.centennialco.gov/Calendar-Landing-Page"
+      type: city_hall
+      notes: "City meetings and community events."
+    - name: "Centennial community events"
+      url: "https://www.centennialco.gov/Residents/Get-Involved/Community-Events"
+      type: city_hall
+      notes: "Signature family events at Centennial Center Park."
+    - name: "South Suburban Parks and Recreation"
+      url: "https://www.ssprd.org/News-And-Events"
+      type: parks
+      notes: "Parks district west of I-25. Trails covers the east side."
+    - name: "Kids Wonder"
+      url: "https://www.kidswonder.net/"
+      type: venue
+      notes: "Indoor children's play space at 7562 S University Blvd."
     - name: "AllEvents Centennial, CO"
       url: "https://allevents.in/centennial-co"
       type: allevents
@@ -1208,6 +1432,18 @@
       url: "https://poudrelibraries.librarycalendar.com/events/month"
       type: library
       notes: "One library source. Filter to Council Tree and other Fort Collins branches."
+    - name: "City of Fort Collins event calendar"
+      url: "https://www.fortcollins.gov/Event-Folder/Event-Calendar"
+      type: city_hall
+      notes: "City recreation and open-space programs. fcgov.com/events redirects here."
+    - name: "Fort Collins Farmers Market"
+      url: "https://www.fortcollinsfarmersmarket.org/locations"
+      type: market
+      notes: "Sunday and Wednesday market at 1001 E Harmony Rd."
+    - name: "Fort Collins Museum of Discovery"
+      url: "https://fcmod.org/"
+      type: venue
+      notes: "Children's science and history museum at 408 Mason Ct."
     - name: "AllEvents Fort Collins"
       url: "https://allevents.in/fort-collins"
       type: allevents
@@ -1246,6 +1482,18 @@
       url: "https://www.thestarinfrisco.com/"
       type: venue
       notes: "Public events at the Cowboys headquarters campus. Use family-fit listings only."
+    - name: "Frisco Parks and Recreation"
+      url: "https://www.friscotexas.gov/1914/Parks-Recreation"
+      type: parks
+      notes: "Park programs. Dated items also appear on the city calendar."
+    - name: "Frisco Rotary Farmers Market"
+      url: "https://www.friscorotaryfarmersmarket.org/"
+      type: market
+      notes: "Saturday market at 3000 Internet Blvd."
+    - name: "Sci-Tech Discovery Center"
+      url: "https://mindstretchingfun.org/"
+      type: venue
+      notes: "Children's science museum at 8004 Dallas Pkwy."
     - name: "AllEvents Frisco, TX"
       url: "https://allevents.in/frisco"
       type: allevents
@@ -1288,6 +1536,18 @@
       url: "https://plano.libnet.info/events"
       type: library
       notes: "One library source."
+    - name: "City of Plano event calendar"
+      url: "https://www.plano.gov/event-calendar"
+      type: city_hall
+      notes: "Municipal and community dates."
+    - name: "ArtCentre of Plano"
+      url: "https://www.artcentreofplano.org/events-exhibitions"
+      type: venue
+      notes: "Exhibitions at 902 E 16th St."
+    - name: "Heritage Farmstead Museum"
+      url: "https://www.heritagefarmstead.org/events/"
+      type: venue
+      notes: "Family programs at 1900 W 15th St."
     - name: "AllEvents Plano"
       url: "https://allevents.in/plano"
       type: allevents
@@ -1318,6 +1578,18 @@
       url: "https://roundrocktexas.libcal.com/"
       type: library
       notes: "One library source."
+    - name: "City of Round Rock events"
+      url: "https://www.roundrocktexas.gov/events/"
+      type: city_hall
+      notes: "Civic, arts, and downtown events."
+    - name: "Round Rock Parks and Recreation"
+      url: "https://www.roundrocktexas.gov/city-departments/parks-and-recreation/"
+      type: parks
+      notes: "Parks programs and the seasonal guide."
+    - name: "Trailside Market"
+      url: "https://www.roundrocktexas.gov/series/trailside-market/"
+      type: market
+      notes: "Saturday market at Memorial Park, June through October."
     - name: "AllEvents Round Rock"
       url: "https://allevents.in/round-rock"
       type: allevents
