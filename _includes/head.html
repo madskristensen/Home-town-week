@@ -1,25 +1,24 @@
 <meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 {%- comment -%}
-  Layout CSS has to be available before the first paint. WebKit will paint
-  a frame before an external sheet applies, and it will not treat a
-  stylesheet that follows a <script> (including JSON-LD) as render-blocking.
-  Inline the same files, then a normal blocking link: no media=print swap,
-  no async/defer. relative_url keeps an empty baseurl on hometownweek.com.
+  WebKit paints a frame before an external stylesheet applies, and it will
+  not paint at all until every render-blocking sheet in the head has loaded.
+  Inlining main.css and city.css did not stop the flash while those files,
+  plus fonts.googleapis.com, were still blocking links: city pages waited on
+  a cold second sheet and the masthead stayed the default light background.
+  One style block, closed before any link or script, is the whole author
+  CSS. Do not add a blocking <link rel="stylesheet"> for these files.
+  The font sheet uses media=print so it cannot hold that first paint; the
+  stacks above cover the gap until onload switches it on.
 {%- endcomment -%}
-{%- assign css_version = site.time | date: '%s' -%}
 <style>
-{{ "/assets/css/main.css" | inline_css }}
+{%- inline_css /assets/css/critical.css -%}
+{%- inline_css /assets/css/main.css -%}
 {%- if page.city or page.layout == "state" -%}
-{{ "/assets/css/city.css" | inline_css }}
+{%- inline_css /assets/css/city.css -%}
 {%- endif -%}
 </style>
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ css_version }}">
-{%- if page.city or page.layout == "state" -%}
-<link rel="stylesheet" href="{{ '/assets/css/city.css' | relative_url }}?v={{ css_version }}">
-{%- elsif page.layout == "home" -%}
-<link rel="prefetch" href="{{ '/assets/css/city.css' | relative_url }}?v={{ css_version }}" as="style">
-{%- endif %}
 <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="48x48" href="{{ '/assets/images/icon-48.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/images/icon-192.png' | relative_url }}">
@@ -28,5 +27,7 @@
 <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,650&family=Outfit:wght@400;500;600&display=swap">
+{%- assign font_css = "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,650&family=Outfit:wght@400;500;600&display=swap" -%}
+<link rel="stylesheet" href="{{ font_css }}" media="print" onload="this.media='all';this.onload=null">
+<noscript><link rel="stylesheet" href="{{ font_css }}"></noscript>
 {%- include seo.html -%}
