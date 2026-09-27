@@ -24,9 +24,10 @@
 
 .city-mark {
   display: block;
-  width: 3.65rem;
+  width: 6.1rem;
   height: auto;
   flex: none;
+  filter: none;
 }
 
 .city-masthead-text {
@@ -57,7 +58,7 @@
 
 @media (min-width: 36rem) {
   .city-mark {
-    width: 4.45rem;
+    width: 7.4rem;
   }
 }
 
