@@ -3,6 +3,13 @@
 # home directory read it in this order. Coming-soon names live in
 # coming_soon.yml until a digest exists. City names stay out of the
 # site header. See README for the page files each city needs.
+- id: bainbridge-island
+  name: Bainbridge Island
+  state: wa
+  state_name: Washington
+  description: Weekly family digests of the Bainbridge farmers market, the library, and Eagle Harbor.
+  summary: >-
+    The Saturday market, the library, and Eagle Harbor, picked each week for families.
 - id: bellevue
   name: Bellevue
   state: wa
@@ -45,6 +52,13 @@
   description: Weekly family digests of Ferndale parks, the library, Pioneer Park, and town events.
   summary: >-
     The library, Pioneer Park, Hovander, and town weekends, picked each week for families.
+- id: gig-harbor
+  name: Gig Harbor
+  state: wa
+  state_name: Washington
+  description: Weekly family digests of Gig Harbor's fall market, the library, and the harbor.
+  summary: >-
+    The Tuesday fall market, the library, and the harbor, picked each week for families.
 - id: issaquah
   name: Issaquah
   state: wa
@@ -52,6 +66,13 @@
   description: Weekly family digests of Issaquah parks, markets, the hatchery, and Village Theatre.
   summary: >-
     The farmers market, Front Street, the salmon hatchery, and Village Theatre, picked each week for families.
+- id: kenmore
+  name: Kenmore
+  state: wa
+  state_name: Washington
+  description: Weekly family digests of the Kenmore library, Log Boom Park, and Saint Edward State Park.
+  summary: >-
+    The library, Log Boom Park, and Saint Edward, picked each week for families.
 - id: kirkland
   name: Kirkland
   state: wa
@@ -59,6 +80,20 @@
   description: Weekly family digests of Kirkland parks, markets, library programs, and shows.
   summary: >-
     Marina Park, the waterfront markets, the library, and the Performance Center, picked each week for families.
+- id: lacey
+  name: Lacey
+  state: wa
+  state_name: Washington
+  description: Weekly family digests of Lacey library programs, Children's Day, and city parks.
+  summary: >-
+    The library, Children's Day, and Huntamer Park, picked each week for families.
+- id: lynden
+  name: Lynden
+  state: wa
+  state_name: Washington
+  description: Weekly family digests of the Lynden library, the Jansen Art Center, and Front Street.
+  summary: >-
+    The library, the Jansen Art Center, and Front Street, picked each week for families.
 - id: lynnwood
   name: Lynnwood
   state: wa
@@ -66,6 +101,13 @@
   description: Weekly family digests of Lynnwood's library, civic campus, and Scriber Lake Park.
   summary: >-
     The library, the civic campus, and Scriber Lake Park, picked each week for families.
+- id: maple-valley
+  name: Maple Valley
+  state: wa
+  state_name: Washington
+  description: Weekly family digests of the Maple Valley farmers market, the library, and Lake Wilderness.
+  summary: >-
+    The Saturday market, the library, and Lake Wilderness, picked each week for families.
 - id: mercer-island
   name: Mercer Island
   state: wa
@@ -73,6 +115,27 @@
   description: Weekly family digests of Mercer Island's Sunday market, the library, Luther Burbank Park, and Island Books.
   summary: >-
     The Sunday market, the library, Luther Burbank, and Island Books, picked each week for families.
+- id: mill-creek
+  name: Mill Creek
+  state: wa
+  state_name: Washington
+  description: Weekly family digests of Mill Creek library storytimes, LEGO club, and the town center.
+  summary: >-
+    The library, LEGO club, and the town center, picked each week for families.
+- id: poulsbo
+  name: Poulsbo
+  state: wa
+  state_name: Washington
+  description: Weekly family digests of the Poulsbo farmers market, Kids Club, and the library.
+  summary: >-
+    The Saturday market, Kids Club, and the library, picked each week for families.
+- id: puyallup
+  name: Puyallup
+  state: wa
+  state_name: Washington
+  description: Weekly family digests of the Puyallup farmers market, Pioneer Park, and the library.
+  summary: >-
+    The Saturday market, Pioneer Park, and the library, picked each week for families.
 - id: redmond
   name: Redmond
   state: wa
@@ -94,3 +157,10 @@
   description: Weekly family digests of Sammamish parks, the library, and the Commons.
   summary: >-
     The library, Beaver Lake, Pine Lake, and the Commons, picked each week for families.
+- id: woodinville
+  name: Woodinville
+  state: wa
+  state_name: Washington
+  description: Weekly family digests of the Woodinville library, Festival Street, and 21 Acres.
+  summary: >-
+    The library, Festival Street, and 21 Acres, picked each week for families.

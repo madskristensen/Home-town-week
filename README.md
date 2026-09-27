@@ -2,7 +2,7 @@
 
 Weekly family digests for the city you live in. This is a Jekyll site for [hometownweek.com](https://hometownweek.com/).
 
-Washington editions are Bellevue, Bellingham, Bothell, Edmonds, Everett, Ferndale, Issaquah, Kirkland, Lynnwood, Mercer Island, Redmond, Renton, and Sammamish. Each city uses the same path, for example `/wa/kirkland/`.
+Washington editions are Bainbridge Island, Bellevue, Bellingham, Bothell, Edmonds, Everett, Ferndale, Gig Harbor, Issaquah, Kenmore, Kirkland, Lacey, Lynden, Lynnwood, Maple Valley, Mercer Island, Mill Creek, Poulsbo, Puyallup, Redmond, Renton, Sammamish, and Woodinville. Each city uses the same path, for example `/wa/kirkland/`.
 
 The home page is a directory, not a second digest. Live city names link to `/{state}/{city}/latest/`. Oregon, Idaho, Utah, Colorado, and Texas are listed as coming soon from `_data/coming_soon.yml`. Those names do not link to issues, and they stay out of the footer and the header.
 
