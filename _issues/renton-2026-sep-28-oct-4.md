@@ -62,6 +62,14 @@ Closing day of the 2026 season. The market site labels Sep 29 that way. The Rent
 
 The library and Piazza are both downtown. A family that wants the craft and the stalls can do the library from 3:30 to 5:00 and still have two hours of market. A family with one tired preschooler should pick one.
 
+### Reader's Theater for Kids
+<p class="event-when">Tue Sep 29 · 4:30–5:30 p.m.</p>
+<p class="event-place">Renton Highlands Library, 2801 NE 10th St</p>
+
+On the Highlands branch calendar as "Reader's Theater for Kids: From Story to Stage." The one-line listing does not add an age range or a registration rule. This is the Highlands branch, not the downtown library, so it does not stack with Tuesday Crafternoon unless you have two drivers. It overlaps the market the same way the downtown craft does.
+
+[Renton Highlands](https://kcls.org/locations/renton-highlands/)
+
 [This season](https://rentonfarmersmarket.com/thisseason.php) · [Renton Reporter](https://www.rentonreporter.com/2026/09/17/whats-going-on-around-renton-sept-17-edition/)
 
 ## After the market closes

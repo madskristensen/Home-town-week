@@ -52,3 +52,8 @@ sep-28-oct-4:
     end: "2026-09-29T19:00:00-07:00"
     place: "Piazza Park, 233 Burnett Ave S"
     same_as: "https://rentonfarmersmarket.com/thisseason.php"
+  - name: "Reader's Theater for Kids"
+    start: "2026-09-29T16:30:00-07:00"
+    end: "2026-09-29T17:30:00-07:00"
+    place: "Renton Highlands Library, 2801 NE 10th St"
+    same_as: "https://kcls.org/locations/renton-highlands/"

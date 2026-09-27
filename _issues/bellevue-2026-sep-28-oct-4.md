@@ -38,6 +38,18 @@ Towers, bridges, and building, geared to children 5 and older. Free with admissi
 
 [KidsQuest](https://www.kidsquestmuseum.org/)
 
+The Thursday farmers market is the last of the regular season. Thursday morning, before the stalls, is preschool storytime.
+
+## Thursday morning
+
+### Preschool Story Time
+<p class="event-when">Thu Oct 1 · 10:30–11:15 a.m.</p>
+<p class="event-place">Bellevue Library, third-floor programming space, 1111 110th Ave NE</p>
+
+Stories, music, movement, and rhymes for ages 3 to 5 with an adult. A short play time follows. No registration. Thursday hours are 10:00 a.m.–6:00 p.m., so this ends well before the market opens at 3:00.
+
+[Preschool Story Time](https://kcls.bibliocommons.com/v2/events/6a8df1aa81e9d60947cc7d51)
+
 ## Last Thursday market
 
 ### Bellevue Farmers Market
