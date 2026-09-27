@@ -3,10 +3,9 @@ tagline: Weekly family digests
 description: >-
   Weekly family digests for the city you live in. Parks, markets,
   libraries, and the plans worth making.
-# Project site until hometownweek.com is attached. Switch with
-# _config.domain.yml when that domain should become canonical.
-url: https://madskristensen.github.io
-baseurl: /Home-town-week
+# Custom domain is live.
+url: https://hometownweek.com
+baseurl: ""
 lang: en-US
 timezone: America/Los_Angeles
 logo: /assets/images/logo.png
@@ -16,7 +15,7 @@ repository: madskristensen/Home-town-week
 
 author:
   name: Mads Kristensen
-  url: https://madskristensen.github.io/Home-town-week/about/
+  url: https://hometownweek.com/about/
   twitter: madskristensen
 
 twitter:
@@ -65,6 +64,4 @@ exclude:
   - .ruby-version
   - .gitignore
   - _config.domain.yml
-  # Keep CNAME in the repo for later. Do not publish it yet, or Pages
-  # will leave the project URL and expect hometownweek.com.
-  - CNAME
+
