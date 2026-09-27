@@ -1,0 +1,17 @@
+{%- comment -%}
+  WebP srcset at 800, 1200, and the 1600 original.
+  src: root-relative path such as /assets/images/redmond/photo.webp
+{%- endcomment -%}
+{%- assign img_stem = include.src | split: "/" | last | split: "." | first -%}
+{%- assign img_base = include.src | split: img_stem | first -%}
+{%- assign img_sizes = include.sizes | default: "(min-width: 42rem) 40rem, 100vw" -%}
+<img
+  src="{{ include.src | relative_url }}"
+  srcset="{{ img_base | append: img_stem | append: '-800.webp' | relative_url }} 800w, {{ img_base | append: img_stem | append: '-1200.webp' | relative_url }} 1200w, {{ include.src | relative_url }} 1600w"
+  sizes="{{ img_sizes }}"
+  alt="{{ include.alt }}"
+  width="1600"
+  height="900"
+  {% if include.loading %}loading="{{ include.loading }}"{% endif %}
+  {% if include.priority %}fetchpriority="{{ include.priority }}"{% endif %}
+  decoding="async">

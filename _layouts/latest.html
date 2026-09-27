@@ -1,0 +1,27 @@
+{%- include city-context.html -%}
+<!doctype html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <title>Latest {{ city.name }} issue | {{ site.title }}</title>
+  {%- if latest_issue -%}
+  <link rel="canonical" href="{{ latest_issue.url | absolute_url }}">
+  <meta http-equiv="refresh" content="0; url={{ latest_issue.url | relative_url }}">
+  {%- elsif city_url -%}
+  <link rel="canonical" href="{{ city_url | absolute_url }}">
+  <meta http-equiv="refresh" content="0; url={{ city_url | relative_url }}">
+  {%- endif -%}
+</head>
+<body>
+  {%- if latest_issue -%}
+  <p><a href="{{ latest_issue.url | relative_url }}">{{ latest_issue.title }}</a></p>
+  <script>location.replace({{ latest_issue.url | relative_url | jsonify }});</script>
+  {%- elsif city_url -%}
+  <p><a href="{{ city_url | relative_url }}">{{ city.name }}</a></p>
+  {%- else -%}
+  <p><a href="{{ '/' | relative_url }}">Hometown Week</a></p>
+  {%- endif -%}
+</body>
+</html>

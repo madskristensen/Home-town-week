@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{%- include city-context.html -%}
+{%- assign year_issues = city_issues | where: "year", page.year -%}
+<article class="year-page wrap">
+  {%- include breadcrumbs.html -%}
+  <h1>{{ city.name }} in {{ page.year }}</h1>
+  <p class="dek">{{ city.name }} family digests for {{ page.year }}, newest first. Each issue covers Monday through Sunday: parks, markets, the library, and nights out nearby.</p>
+  <ul class="issue-list">
+    {%- for issue in year_issues -%}
+    <li>
+      <a href="{{ issue.url | relative_url }}">{{ issue.title }}</a>
+      <span class="meta"><time datetime="{{ issue.date | date: '%Y-%m-%d' }}/{{ issue.end_date }}">{{ issue.range }}</time></span>
+    </li>
+    {%- endfor -%}
+  </ul>
+</article>

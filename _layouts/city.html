@@ -1,0 +1,50 @@
+---
+layout: default
+---
+{%- include city-context.html -%}
+<article class="city-home wrap">
+  <h1>{{ city.name }}{% if latest_issue.range %} · {{ latest_issue.range }}{% endif %}</h1>
+  {%- if latest_issue -%}
+  <figure class="hero">
+    {%- if latest_issue.image -%}
+    <a href="{{ latest_issue.url | relative_url }}">
+      {%- include responsive-img.html
+           src=latest_issue.image
+           alt=latest_issue.image_alt
+           priority="high"
+           sizes="(min-width: 42rem) 40rem, 100vw" -%}
+    </a>
+    {%- endif -%}
+    {%- if latest_issue.image_credit or latest_issue.image_source_url -%}
+    <figcaption>
+      {%- if latest_issue.image_credit -%}<span class="credit">{{ latest_issue.image_credit }}</span>{%- endif -%}
+      {%- if latest_issue.image_source_url -%}<a class="source" href="{{ latest_issue.image_source_url }}" rel="noopener">Source</a>{%- endif -%}
+    </figcaption>
+    {%- endif -%}
+  </figure>
+  {%- if latest_issue.hook -%}
+  <p class="hook">{{ latest_issue.hook }}</p>
+  {%- endif -%}
+  <p class="cta"><a href="{{ latest_issue.url | relative_url }}">Read this week</a></p>
+  {%- endif -%}
+  {%- assign earlier_count = city_issues.size | minus: 1 -%}
+  {%- if earlier_count > 0 -%}
+  <section class="earlier" aria-label="Earlier weeks">
+    <h2>Earlier weeks</h2>
+    <ul class="issue-list">
+      {%- for issue in city_issues offset:1 limit:8 -%}
+      <li>
+        <a href="{{ issue.url | relative_url }}">{{ issue.title }}</a>
+        <span class="meta">{{ issue.range }}</span>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </section>
+  {%- endif -%}
+  {%- if latest_year_url -%}
+  <p class="year-link"><a href="{{ latest_year_url | relative_url }}">All {{ latest_issue.year }} issues</a></p>
+  {%- endif -%}
+  {%- if city.summary -%}
+  <p class="city-note">{{ city.summary }} Each issue is one Monday-through-Sunday week. Dates and details live on that issue.</p>
+  {%- endif -%}
+</article>
