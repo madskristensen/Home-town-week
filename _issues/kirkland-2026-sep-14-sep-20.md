@@ -6,10 +6,10 @@ end_date: "2026-09-20"
 city: kirkland
 state: wa
 year: 2026
-week: 38
+slug: sep-14-sep-20
 range: "Sept. 14 – 20, 2026"
 hook: "A kids' business fair and a mini parade at City Hall on Saturday, with waterfront markets on Wednesday and Friday."
-permalink: /wa/kirkland/2026/w38/
+permalink: /wa/kirkland/2026/sep-14-sep-20/
 image: /assets/images/kirkland/marina-pavilion.webp
 image_alt: "The open pavilion at Marina Park in Kirkland, with a curved roof, lawn, and Lake Washington behind it."
 image_credit: "Photo: City of Kirkland"

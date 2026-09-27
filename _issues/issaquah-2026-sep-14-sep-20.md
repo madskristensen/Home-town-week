@@ -6,10 +6,10 @@ end_date: "2026-09-20"
 city: issaquah
 state: wa
 year: 2026
-week: 38
+slug: sep-14-sep-20
 range: "Sept. 14 – 20, 2026"
 hook: "Culture Fest on the community center lawn Friday, the market at Pickering Barn Saturday morning, then music and art along Front Street."
-permalink: /wa/issaquah/2026/w38/
+permalink: /wa/issaquah/2026/sep-14-sep-20/
 image: /assets/images/issaquah/front-street-trolley.webp
 image_alt: "A yellow and green Issaquah Valley Trolley streetcar crossing Front Street, with downtown buildings behind it."
 image_credit: "Photo: Steve Morgan, CC BY-SA 4.0"

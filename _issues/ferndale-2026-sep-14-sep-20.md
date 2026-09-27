@@ -6,10 +6,10 @@ end_date: "2026-09-20"
 city: ferndale
 state: wa
 year: 2026
-week: 38
+slug: sep-14-sep-20
 range: "Sept. 14 – 20, 2026"
 hook: "Monday and Friday are storytimes at the library. Tuesday is free witch-dance practice. Friday night is a paid food and art walk downtown."
-permalink: /wa/ferndale/2026/w38/
+permalink: /wa/ferndale/2026/sep-14-sep-20/
 image: /assets/images/ferndale/hovander-barn.webp
 image_alt: "The red barn with a dark gambrel roof at Hovander Homestead Park, with grass in front and trees behind."
 image_credit: "Photo: Joe Mabel, CC BY-SA 4.0"

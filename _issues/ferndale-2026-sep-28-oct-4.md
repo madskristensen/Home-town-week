@@ -6,10 +6,10 @@ end_date: "2026-10-04"
 city: ferndale
 state: wa
 year: 2026
-week: 40
+slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
 hook: "The tiny paintings from last Saturday are on the wall at the library. Saturday night is a ticketed farm dinner south of town."
-permalink: /wa/ferndale/2026/w40/
+permalink: /wa/ferndale/2026/sep-28-oct-4/
 image: /assets/images/ferndale/hovander-autumn.webp
 image_alt: "A gravel path through autumn trees at Hovander Homestead Park, with a red barn in the distance."
 image_credit: "Photo: Robert Ashworth, CC BY 2.0"

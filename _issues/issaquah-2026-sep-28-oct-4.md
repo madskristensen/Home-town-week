@@ -6,10 +6,10 @@ end_date: "2026-10-04"
 city: issaquah
 state: wa
 year: 2026
-week: 40
+slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
 hook: "Salmon Days fills downtown Saturday and Sunday. The hatchery is the reason to go, and a free family dance follows Sunday afternoon at Pickering Barn."
-permalink: /wa/issaquah/2026/w40/
+permalink: /wa/issaquah/2026/sep-28-oct-4/
 image: /assets/images/issaquah/salmon-hatchery.webp
 image_alt: "The Issaquah Salmon Hatchery, a long building with a gray roof beside a creek, with yellow trees in front."
 image_credit: "Photo: Chris Light, CC BY-SA 4.0"

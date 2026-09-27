@@ -1,5 +1,5 @@
 # Dated events already listed on each Redmond week. No extra listings.
-w38:
+sep-14-sep-20:
   - name: "Welcoming Week"
     end: "2026-09-19"
     place: "Redmond"
@@ -52,7 +52,7 @@ w38:
     start: "2026-09-16T19:30:00-07:00"
     place: "Francis J. Gaudette Theatre, Issaquah"
     same_as: "https://villagetheatre.org/mainstage/ragtime/"
-w39:
+sep-21-sep-27:
   - name: "Teen Back to School Bash"
     start: "2026-09-26T12:00:00-07:00"
     end: "2026-09-26T15:00:00-07:00"
@@ -146,7 +146,7 @@ w39:
     end: "2026-10-01"
     place: "RHS Library, then Marymoor Village Community Center"
     same_as: "https://www.redmond.gov/2494/Teen-Center-Project"
-w40:
+sep-28-oct-4:
   - name: "Archaeology and Ice Cream"
     start: "2026-09-28T18:30:00-07:00"
     end: "2026-09-28T20:00:00-07:00"

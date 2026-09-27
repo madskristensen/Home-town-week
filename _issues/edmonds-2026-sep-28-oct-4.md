@@ -6,10 +6,10 @@ end_date: "2026-10-04"
 city: edmonds
 state: wa
 year: 2026
-week: 40
+slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
 hook: "Saturday afternoon is a Taylor Swift tribute matinee. The city's writers' conference fills the Frances Anderson Center the same weekend."
-permalink: /wa/edmonds/2026/w40/
+permalink: /wa/edmonds/2026/sep-28-oct-4/
 image: /assets/images/edmonds/ferry-beach.webp
 image_alt: "A Washington State ferry on the water, seen from the Edmonds beach, with driftwood in the foreground."
 image_credit: "Photo: KJRSeattle, CC BY-SA 4.0"

@@ -6,10 +6,10 @@ end_date: "2026-10-04"
 city: kirkland
 state: wa
 year: 2026
-week: 40
+slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
 hook: "The Wednesday market closes the season, Juanita Beach throws a free harvest festival on Saturday, and Swan Lake lights up the Performance Center that night and Sunday."
-permalink: /wa/kirkland/2026/w40/
+permalink: /wa/kirkland/2026/sep-28-oct-4/
 image: /assets/images/kirkland/juanita-beach.webp
 image_alt: "Juanita Beach Park on Lake Washington, with a sandy beach, lawn, and the Seattle skyline across the water."
 image_credit: "Photo: City of Kirkland"

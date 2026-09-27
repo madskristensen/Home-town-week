@@ -6,10 +6,10 @@ end_date: "2026-09-27"
 city: issaquah
 state: wa
 year: 2026
-week: 39
+slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
 hook: "Saturday is the last farmers market of the season, with story time in the meadow and studios open around town. Sunday is a 5K, a 10K, and a kids' fun run."
-permalink: /wa/issaquah/2026/w39/
+permalink: /wa/issaquah/2026/sep-21-sep-27/
 image: /assets/images/issaquah/farmers-market.webp
 image_alt: "Shoppers and white tents at an outdoor farmers market, with produce crates and a red barn behind the crowd."
 image_credit: "Photo: Visit Issaquah."

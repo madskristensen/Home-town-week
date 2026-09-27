@@ -6,11 +6,11 @@ end_date: "2026-10-04"
 city: redmond
 state: wa
 year: 2026
-week: 40
+slug: sep-28-oct-4
 range: "Sept. 28 – Oct. 4, 2026"
 hook: "Ice cream and archaeology Monday, drop-in play for little kids on Thursday, teen voice sessions midweek, then flapjacks, a farm festival weekend, and a Marymoor 5K on Sunday."
-permalink: /wa/redmond/2026/w40/
-image: /assets/images/redmond/w40-teen-lounge.webp
+permalink: /wa/redmond/2026/sep-28-oct-4/
+image: /assets/images/redmond/teen-lounge.webp
 image_alt: "Teens in the Teen Lounge at Redmond Community Center at Marymoor Village, with a neon sign that reads Teen Lounge."
 image_credit: "Photo: City of Redmond"
 image_source_url: "https://www.redmond.gov/ImageRepository/Document?documentID=40376"
@@ -149,7 +149,7 @@ Dog costume social at the brewery. Not a kids show. Optional pet outing. Free on
 <p class="event-place">Redmond Community Center at Marymoor Village, 6505 176th Ave NE</p>
 
 {% include event-photo.html
-   src="/assets/images/redmond/w39-marymoor-center.webp"
+   src="/assets/images/redmond/marymoor-center.webp"
    alt="Front of the Redmond Community Center at Marymoor Village, a low building with a covered entrance and young trees."
    credit="Photo: City of Redmond"
    source="https://www.redmond.gov/ImageRepository/Document?documentID=40382" %}

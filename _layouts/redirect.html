@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>This page has moved | {{ site.title }}</title>
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="{{ page.redirect | absolute_url }}">
+  <meta http-equiv="refresh" content="0; url={{ page.redirect | relative_url }}">
+</head>
+<body>
+  <main>
+    <h1>This page has moved</h1>
+    <p>The issue is now at <a href="{{ page.redirect | relative_url }}">{{ page.redirect }}</a>.</p>
+  </main>
+  <script>location.replace({{ page.redirect | relative_url | jsonify }});</script>
+</body>
+</html>

@@ -3,8 +3,7 @@
 {%- assign site_id = "/" | absolute_url | append: "#website" -%}
 {%- if page.layout == "issue" -%}
 {%- assign events_key = page.city | append: "_events" -%}
-{%- assign week_key = "w" | append: page.week -%}
-{%- assign events = site.data[events_key][week_key] -%}
+{%- assign events = site.data[events_key][page.slug] -%}
 {%- if events -%}
 <script type="application/ld+json">
 {

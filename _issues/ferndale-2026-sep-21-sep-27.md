@@ -6,10 +6,10 @@ end_date: "2026-09-27"
 city: ferndale
 state: wa
 year: 2026
-week: 39
+slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
 hook: "Saturday afternoon is free painting at the library. The same weekend, the rock club sells specimens at Pioneer Pavilion."
-permalink: /wa/ferndale/2026/w39/
+permalink: /wa/ferndale/2026/sep-21-sep-27/
 image: /assets/images/ferndale/pioneer-barn.webp
 image_alt: "The weathered Barr Barn at Pioneer Park in Ferndale, with a cupola and a small window near the roof."
 image_credit: "Photo: Joe Mabel, CC BY-SA 3.0"

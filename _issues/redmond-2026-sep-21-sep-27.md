@@ -6,11 +6,11 @@ end_date: "2026-09-27"
 city: redmond
 state: wa
 year: 2026
-week: 39
+slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
 hook: "A Saturday packed with a teen bash, a free kids carnival, BBQ, market finds, and a Downtown Park concert."
-permalink: /wa/redmond/2026/w39/
-image: /assets/images/redmond/w39-marymoor-center.webp
+permalink: /wa/redmond/2026/sep-21-sep-27/
+image: /assets/images/redmond/marymoor-center.webp
 image_alt: "Front of the Redmond Community Center at Marymoor Village, a low building with a covered entrance and young trees."
 image_credit: "Photo: City of Redmond"
 image_source_url: "https://www.redmond.gov/ImageRepository/Document?documentID=40382"
@@ -25,7 +25,7 @@ A Saturday packed with a teen bash, a free kids carnival, BBQ, market finds, and
 <p class="event-place">Redmond Community Center at Marymoor Village, 6505 176th Ave NE</p>
 
 {% include event-photo.html
-   src="/assets/images/redmond/w40-teen-lounge.webp"
+   src="/assets/images/redmond/teen-lounge.webp"
    alt="Teens in the Teen Lounge at Redmond Community Center at Marymoor Village, with a neon sign that reads Teen Lounge."
    credit="Photo: City of Redmond"
    source="https://www.redmond.gov/ImageRepository/Document?documentID=40376" %}
@@ -62,7 +62,7 @@ Public day; competition also Sun Sep 27. Inaugural KCBS BBQ competition. OneRedm
 <p class="event-place">Downtown Park, 16101 Redmond Way</p>
 
 {% include event-photo.html
-   src="/assets/images/redmond/w38-downtown-park.webp"
+   src="/assets/images/redmond/downtown-park.webp"
    alt="Downtown Park in Redmond, with the open pavilion, lawn, and a curved path."
    credit="Photo: City of Redmond"
    source="https://www.redmond.gov/ImageRepository/Document?documentID=9084" %}

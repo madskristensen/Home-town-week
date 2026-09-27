@@ -6,10 +6,10 @@ end_date: "2026-09-27"
 city: edmonds
 state: wa
 year: 2026
-week: 39
+slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
 hook: "Saturday has the street market, an indoor maker market, family storytime, and an evening concert in the galleries."
-permalink: /wa/edmonds/2026/w39/
+permalink: /wa/edmonds/2026/sep-21-sep-27/
 image: /assets/images/edmonds/cascadia.webp
 image_alt: "The glass and wood exterior of Cascadia Art Museum in Edmonds, with a sign by the entrance."
 image_credit: "Photo: SounderBruce, CC BY-SA 4.0"

@@ -6,10 +6,10 @@ end_date: "2026-09-20"
 city: edmonds
 state: wa
 year: 2026
-week: 38
+slug: sep-14-sep-20
 range: "Sept. 14 – 20, 2026"
 hook: "Saturday stacks the museum market with a downtown sidewalk sale. Friday night, Driftwood Players open the season."
-permalink: /wa/edmonds/2026/w38/
+permalink: /wa/edmonds/2026/sep-14-sep-20/
 image: /assets/images/edmonds/downtown.webp
 image_alt: "A downtown Edmonds plaza with a fountain, trees, and brick storefronts."
 image_credit: "Photo: Sea Cow, CC BY-SA 4.0"

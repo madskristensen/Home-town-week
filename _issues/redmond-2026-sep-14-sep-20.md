@@ -6,11 +6,11 @@ end_date: "2026-09-20"
 city: redmond
 state: wa
 year: 2026
-week: 38
+slug: sep-14-sep-20
 range: "Sept. 14 – 20, 2026"
 hook: "A welcoming, arts-filled week in Redmond: Art Walk Thursday, market and park concerts Saturday, and easy library and culture outings for the whole crew."
-permalink: /wa/redmond/2026/w38/
-image: /assets/images/redmond/w38-downtown-park.webp
+permalink: /wa/redmond/2026/sep-14-sep-20/
+image: /assets/images/redmond/downtown-park.webp
 image_alt: "Downtown Park in Redmond, with the open pavilion, lawn, and a curved path."
 image_credit: "Photo: City of Redmond"
 image_source_url: "https://www.redmond.gov/ImageRepository/Document?documentID=9084"

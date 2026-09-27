@@ -1,5 +1,5 @@
 # Dated events listed on each Kirkland week.
-w38:
+sep-14-sep-20:
   - name: "City Hall for All"
     start: "2026-09-19T12:00:00-07:00"
     end: "2026-09-19T16:00:00-07:00"
@@ -25,7 +25,7 @@ w38:
     end: "2026-09-15T21:00:00-07:00"
     place: "Studio East, 10718 NE 68th St"
     same_as: "https://studio-east.org/auditions"
-w39:
+sep-21-sep-27:
   - name: "Umbrella Fringe Festival"
     start: "2026-09-25"
     end: "2026-09-27"
@@ -90,7 +90,7 @@ w39:
     end: "2026-09-26T16:00:00-07:00"
     place: "Marymoor Park, Redmond"
     same_as: "https://engage.oneredmond.org/events/smoke-on-the-sound"
-w40:
+sep-28-oct-4:
   - name: "Kirkland Wednesday Market"
     start: "2026-09-30T15:00:00-07:00"
     end: "2026-09-30T19:00:00-07:00"

@@ -6,10 +6,10 @@ end_date: "2026-09-27"
 city: kirkland
 state: wa
 year: 2026
-week: 39
+slug: sep-21-sep-27
 range: "Sept. 21 – 27, 2026"
 hook: "Free dance and music you can take kids to, both waterfront markets, and a fringe weekend spread across Kirkland."
-permalink: /wa/kirkland/2026/w39/
+permalink: /wa/kirkland/2026/sep-21-sep-27/
 image: /assets/images/kirkland/umbrella-fringe.webp
 image_alt: "Umbrella Fringe Festival poster with a colorful umbrella over a crowd."
 image_credit: "Art: Kirkland Arts Center."
@@ -158,4 +158,4 @@ Studio East's Young Frankenstein company has a mandatory meet and greet Tue Sep 
 <p class="event-place">Marymoor Park, Redmond</p>
 
 A KCBS barbecue competition with free public attendance on Saturday, plus music. There is a beer garden. The Redmond digest has the longer note.  
-[OneRedmond](https://engage.oneredmond.org/events/smoke-on-the-sound) · [Redmond this week]({{ '/wa/redmond/2026/w39/' | relative_url }})
+[OneRedmond](https://engage.oneredmond.org/events/smoke-on-the-sound) · [Redmond this week]({{ '/wa/redmond/2026/sep-21-sep-27/' | relative_url }})
