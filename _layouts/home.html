@@ -11,9 +11,9 @@ layout: default
     <p class="cities-intro"><a href="{{ '/wa/' | relative_url }}">All Washington cities</a></p>
     {%- for city in site.data.cities -%}
     {%- if forloop.first -%}
-    {%- include city-card.html priority="high" -%}
+    {%- include city-card.html priority="high" link_name="latest" -%}
     {%- else -%}
-    {%- include city-card.html loading="lazy" -%}
+    {%- include city-card.html loading="lazy" link_name="latest" -%}
     {%- endif -%}
     {%- endfor -%}
   </section>
