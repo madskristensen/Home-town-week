@@ -17,6 +17,7 @@
   --shadow: 0 10px 30px rgba(28, 43, 36, 0.06);
   --radius: 1rem;
   --measure: 40rem;
+  --photo-filter: none;
   --serif: "Fraunces", "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
   --sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
 }
@@ -39,6 +40,13 @@
     --header-ink: #f7f1e6;
     --header-kicker: #f0d48a;
     --shadow: none;
+    --photo-filter: brightness(0.86) contrast(1.02);
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --photo-filter: none;
   }
 }
 
@@ -94,6 +102,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  filter: var(--photo-filter);
 }
 
 .skip-link {
@@ -138,6 +147,34 @@ img {
   height: 0.7rem;
   background: var(--gold-bright);
   border-radius: 0.16rem;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.header-nav a {
+  color: var(--forest);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.header-nav a:hover,
+.header-nav a:focus {
+  text-decoration: underline;
+}
+
+.page {
+  padding: 1.5rem 0 2.5rem;
 }
 
 .home {

@@ -3,6 +3,7 @@ layout: default
 ---
 {%- include city-context.html -%}
 <article class="city-home wrap">
+  {%- include breadcrumbs.html -%}
   <h1>{{ city.name }}{% if latest_issue.range %} · {{ latest_issue.range }}{% endif %}</h1>
   {%- if latest_issue -%}
   <figure class="hero">

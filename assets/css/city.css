@@ -10,6 +10,10 @@
   color: var(--header-ink);
 }
 
+.site-header--city .header-bar {
+  padding-bottom: 0.15rem;
+}
+
 .city-masthead {
   margin-top: 0.95rem;
   padding-bottom: 0.35rem;

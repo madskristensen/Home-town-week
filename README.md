@@ -13,6 +13,8 @@ Redmond, Washington is the first city. More cities can use the same path, for ex
 | Year | `/wa/redmond/2026/` |
 | Issue | `/wa/redmond/2026/w40/` |
 | Latest | `/wa/redmond/latest/` |
+| About | `/about/` |
+| Feed | `/feed.xml` |
 
 Issue addresses use the ISO week (`w40`). Week numbers stay in the URL only. Page titles and headings use the date span and the topic.
 
