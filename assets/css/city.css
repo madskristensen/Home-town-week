@@ -141,14 +141,37 @@
   font-weight: 600;
 }
 
-.earlier {
+.week-band {
   margin-top: 2rem;
 }
 
-.earlier h2,
+.week-band h2 {
+  margin: 0 0 0.45rem;
+  font-size: 1.45rem;
+}
+
 .prose h2 {
   margin: 2rem 0 0.45rem;
   font-size: 1.45rem;
+}
+
+.featured-title {
+  margin: 0.2rem 0 0;
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 560;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.featured-title a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.featured-title a:hover,
+.featured-title a:focus {
+  text-decoration: underline;
 }
 
 .issue-list {

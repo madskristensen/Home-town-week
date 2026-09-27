@@ -3,16 +3,27 @@ layout: default
 ---
 {%- include city-context.html -%}
 {%- assign year_issues = city_issues | where: "year", page.year -%}
+{%- include week-groups.html issues=year_issues -%}
 <article class="year-page wrap">
   {%- include breadcrumbs.html -%}
   <h1>{{ city.name }} in {{ page.year }}</h1>
-  <p class="dek">{{ city.name }} family digests for {{ page.year }}, newest first. Each issue covers Monday through Sunday: parks, markets, the library, and nights out nearby.</p>
-  <ul class="issue-list">
-    {%- for issue in year_issues -%}
-    <li>
-      <a href="{{ issue.url | relative_url }}">{{ issue.title }}</a>
-      <span class="meta"><time datetime="{{ issue.date | date: '%Y-%m-%d' }}/{{ issue.end_date }}">{{ issue.range }}</time></span>
-    </li>
-    {%- endfor -%}
-  </ul>
+  <p class="dek">{{ city.name }} family digests for {{ page.year }}. Each issue covers Monday through Sunday: parks, markets, the library, and nights out nearby.</p>
+  {%- if this_week_issues.size > 0 -%}
+  <section class="week-band" aria-label="This week">
+    <h2>This week</h2>
+    {%- include issue-list.html issues=this_week_issues -%}
+  </section>
+  {%- endif -%}
+  {%- if coming_up.size > 0 -%}
+  <section class="week-band" aria-label="Coming up">
+    <h2>Coming up</h2>
+    {%- include issue-list.html issues=coming_up -%}
+  </section>
+  {%- endif -%}
+  {%- if past_issues.size > 0 -%}
+  <section class="week-band" aria-label="Past issues">
+    <h2>Past issues</h2>
+    {%- include issue-list.html issues=past_issues -%}
+  </section>
+  {%- endif -%}
 </article>

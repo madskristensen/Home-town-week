@@ -1,8 +1,14 @@
 {%- include city-context.html -%}
+{%- if page.layout == "city" -%}
+  {%- include week-groups.html issues=city_issues -%}
+{%- endif -%}
 {%- assign seo_description = page.description | default: site.description -%}
 {%- assign seo_image_path = page.image -%}
 {%- assign seo_image_alt = page.image_alt -%}
-{%- if page.layout == "city" or page.layout == "year" -%}
+{%- if page.layout == "city" and featured_issue.image -%}
+  {%- assign seo_image_path = featured_issue.image -%}
+  {%- assign seo_image_alt = featured_issue.image_alt -%}
+{%- elsif page.layout == "city" or page.layout == "year" -%}
   {%- if latest_issue.image -%}
     {%- assign seo_image_path = latest_issue.image -%}
     {%- assign seo_image_alt = latest_issue.image_alt -%}
@@ -14,8 +20,8 @@
 {%- endif -%}
 {%- if page.url == "/" -%}
   {%- assign seo_title = site.title -%}
-{%- elsif page.layout == "city" and latest_issue -%}
-  {%- capture seo_title -%}{{ city.name }} · {{ latest_issue.range }}{%- endcapture -%}
+{%- elsif page.layout == "city" and featured_issue -%}
+  {%- capture seo_title -%}{{ city.name }} · {{ featured_issue.range }}{%- endcapture -%}
   {%- assign seo_title = seo_title | strip -%}
 {%- elsif page.layout == "issue" and city -%}
   {%- capture seo_title -%}{{ page.title }} | {{ city.name }}{%- endcapture -%}
