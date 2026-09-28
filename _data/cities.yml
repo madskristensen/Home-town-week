@@ -1,5 +1,5 @@
 # Add a city in alphabetical order within its state. State blocks stay in
-# the order the footer and the home page should show them. Each state hub
+# the order the home page should show them. Each state hub
 # reads only its own cities, in this order. lat and lon are the city center
 # in decimal degrees, for the home page nearby-city lookup. Coming-soon
 # names live in coming_soon.yml until a city page exists. The site header
