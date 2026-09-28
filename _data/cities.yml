@@ -1681,3 +1681,242 @@
       url: "https://allevents.in/round-rock"
       type: allevents
       notes: "Secondary sweep. This page is Round Rock, TX."
+- id: carlsbad
+  name: Carlsbad
+  state: ca
+  state_name: California
+  lat: 33.1581
+  lon: -117.3506
+  description: Upcoming family events in Carlsbad. A coastal city in northern San Diego County.
+  summary: >-
+    A coastal city in northern San Diego County.
+  tagline: "A coastal city in northern San Diego County."
+  slogan: "Village by the Sea."
+  sources:
+    - name: "City of Carlsbad"
+      url: "https://www.carlsbadca.gov/"
+      type: city_hall
+      notes: "Official city site. Bots are often blocked."
+    - name: "Carlsbad Parks and Recreation"
+      url: "https://www.carlsbadca.gov/"
+      type: parks
+      notes: "Pool and park events, including Alga Norte. Prefer the city listing when a news calendar and the city page disagree."
+    - name: "State Street Farmers' Market"
+      url: "https://www.carlsbad-village.com/do/state-street-farmers-market-5"
+      type: market
+      notes: "Wednesday market on State Street between Carlsbad Village Drive and Grand Avenue."
+    - name: "Carlsbad Village Association"
+      url: "https://www.carlsbad-village.com/"
+      type: downtown
+      notes: "Village events, including Halloween in the Village."
+    - name: "New Village Arts"
+      url: "https://newvillagearts.org/"
+      type: theater
+      notes: "Community theater at 2787 State Street. Use a posted performance time, not only the season span."
+    - name: "Carlsbad City Library"
+      url: "https://library.carlsbadca.gov/"
+      type: library
+      notes: "One library source. Dove Lane, Georgina Cole, and the Learning Center."
+    - name: "AllEvents Carlsbad"
+      url: "https://allevents.in/carlsbad"
+      type: allevents
+      notes: "Secondary sweep. Confirm Carlsbad, California."
+- id: folsom
+  name: Folsom
+  state: ca
+  state_name: California
+  lat: 38.6779
+  lon: -121.1761
+  description: Upcoming family events in Folsom. A city on the American River.
+  summary: >-
+    A city on the American River.
+  tagline: "A city on the American River."
+  slogan: "Distinctive by Nature."
+  sources:
+    - name: "City of Folsom"
+      url: "https://www.folsom.ca.us/"
+      type: city_hall
+      notes: "Official city site. Bots are often blocked. The about page uses Distinctive by Nature."
+    - name: "Folsom Parks and the Zoo Sanctuary"
+      url: "https://www.folsom.ca.us/"
+      type: parks
+      notes: "Zoo and park events at Folsom City Lions Park, 403 Stafford Street."
+    - name: "Historic Folsom"
+      url: "https://folsom.biz/"
+      type: downtown
+      notes: "Sutter Street market and historic-district listings. Prefer the event page's clock over a calendar-widget time zone."
+    - name: "Sutter Street Farmers Market"
+      url: "https://folsom.biz/events/sutter-street-farmers-market/2026-10-03"
+      type: market
+      notes: "Saturday market at Historic Folsom Plaza, 915 Sutter Street."
+    - name: "Harris Center for the Arts"
+      url: "https://www.harriscenter.net/"
+      type: theater
+      notes: "Public performances at 10 College Parkway, on the Folsom Lake College campus."
+    - name: "Folsom Public Library"
+      url: "https://www.library.folsom.ca.us/"
+      type: library
+      notes: "One library source. The library is next to Lions Park."
+    - name: "AllEvents Folsom"
+      url: "https://allevents.in/folsom"
+      type: allevents
+      notes: "Secondary sweep. Confirm Folsom, California."
+- id: irvine
+  name: Irvine
+  state: ca
+  state_name: California
+  lat: 33.6695
+  lon: -117.8231
+  description: Upcoming family events in Irvine. A master-planned city in central Orange County.
+  summary: >-
+    A master-planned city in central Orange County.
+  tagline: "A master-planned city in central Orange County."
+  slogan: "City of Innovation."
+  sources:
+    - name: "City of Irvine calendar"
+      url: "https://cityofirvine.gov/news-media/calendar-of-events"
+      type: city_hall
+      notes: "City special events. The 2026 Monster Splash listing does not name the pool."
+    - name: "Great Park"
+      url: "https://cityofirvine.gov/great-park"
+      type: parks
+      notes: "Festival grounds at 8000 Great Park Boulevard."
+    - name: "Irvine Certified Farmers Market"
+      url: "https://cityofirvine.gov/great-park/farmers-market"
+      type: market
+      notes: "Sundays, 10 a.m. to 2 p.m., at Stonegate Elementary, 100 Honors. Moved from Great Park in November 2024."
+    - name: "Irvine Global Village Festival"
+      url: "https://cityofirvine.gov/irvine-global-village-festival"
+      type: downtown
+      notes: "City multicultural festival at Great Park."
+    - name: "Irvine Barclay Theatre"
+      url: "https://thebarclay.org/"
+      type: theater
+      notes: "Public performances in Irvine. Use a family or all-ages show, and say if the listing is a general concert."
+    - name: "Irvine Public Library"
+      url: "https://www.cityofirvine.gov/irvine-public-library/find-events"
+      type: library
+      notes: "One library source. Heritage Park, University Park, and Katie Wheeler. The fall newsletter is the dated list."
+    - name: "AllEvents Irvine"
+      url: "https://allevents.in/irvine"
+      type: allevents
+      notes: "Secondary sweep. Confirm Irvine, California."
+- id: pleasanton
+  name: Pleasanton
+  state: ca
+  state_name: California
+  lat: 37.6624
+  lon: -121.8747
+  description: Upcoming family events in Pleasanton. A Tri-Valley city in the East Bay.
+  summary: >-
+    A Tri-Valley city in the East Bay.
+  tagline: "A Tri-Valley city in the East Bay."
+  slogan: "The City of Planned Progress."
+  sources:
+    - name: "City of Pleasanton"
+      url: "https://www.cityofpleasantonca.gov/"
+      type: city_hall
+      notes: "Official city site. Bots are often blocked."
+    - name: "Pleasanton Community Services"
+      url: "https://www.cityofpleasantonca.gov/"
+      type: parks
+      notes: "Parks and recreation programs. The Firehouse box office also sells tickets at the library counter."
+    - name: "Pleasanton Farmers' Market"
+      url: "https://www.pcfma.org/index.php/market/pleasanton-farmers-market"
+      type: market
+      notes: "Pacific Coast Farmers' Market Association. Saturdays, 9 a.m. to 1 p.m., at 46 W Angela Street, with the Downtown Association."
+    - name: "Pleasanton Downtown Association"
+      url: "https://www.pcfma.org/index.php/market/pleasanton-farmers-market"
+      type: downtown
+      notes: "The market page names the Downtown Association as partner. Use the PCFMA address, 46 W Angela Street, not a vendor's studio address."
+    - name: "Firehouse Arts Center"
+      url: "https://www.firehousearts.org/"
+      type: theater
+      notes: "City theater at 4444 Railroad Avenue. Children need their own ticket."
+    - name: "Pleasanton Public Library kids"
+      url: "https://www.cityofpleasantonca.gov/your-community/pleasanton-library/kids/"
+      type: library
+      notes: "One library source. Storytime clocks live on the programs calendar, not only the kids landing page."
+    - name: "AllEvents Pleasanton"
+      url: "https://allevents.in/pleasanton"
+      type: allevents
+      notes: "Secondary sweep. Confirm Pleasanton, California."
+- id: roseville
+  name: Roseville
+  state: ca
+  state_name: California
+  lat: 38.7521
+  lon: -121.2880
+  description: Upcoming family events in Roseville. A Placer County city in the Sacramento region.
+  summary: >-
+    A Placer County city in the Sacramento region.
+  tagline: "A Placer County city in the Sacramento region."
+  slogan: "Tradition, Pride, Progress."
+  sources:
+    - name: "City of Roseville"
+      url: "https://www.roseville.ca.gov/"
+      type: city_hall
+      notes: "Official city site. The 2010 council slogan is Tradition, Pride, Progress."
+    - name: "Roseville Parks, Recreation and Libraries"
+      url: "https://www.roseville.ca.gov/prl/library/events_classes_programs/youth_programs.php"
+      type: parks
+      notes: "Youth programs, Maidu Museum events, and park specials."
+    - name: "Maidu Park Farmers' Market"
+      url: "https://getplacergrown.com/places/maidu-park-market/"
+      type: market
+      notes: "PlacerGROWN listing. Sundays, 9 a.m. to 1 p.m., at 1550 Maidu Drive."
+    - name: "Downtown Roseville"
+      url: "https://www.roseville.ca.gov/"
+      type: downtown
+      notes: "Vernon Street and Downtown Library programs. City Hall is 311 Vernon Street."
+    - name: "Roseville Public Library youth programs"
+      url: "https://www.roseville.ca.gov/prl/library/events_classes_programs/youth_programs.php"
+      type: library
+      notes: "One library source. Downtown at 225 Taylor Street, Maidu at 1530 Maidu Drive, Martha Riley at 1501 Pleasant Grove Boulevard."
+    - name: "Roseville cultural arts"
+      url: "https://www.roseville.ca.gov/"
+      type: theater
+      notes: "City cultural programs. A show at a private playhouse needs that theater's own calendar."
+    - name: "AllEvents Roseville"
+      url: "https://allevents.in/roseville"
+      type: allevents
+      notes: "Secondary sweep. Confirm Roseville, California, not Roseville, Minnesota."
+- id: san-ramon
+  name: San Ramon
+  state: ca
+  state_name: California
+  lat: 37.7799
+  lon: -121.9780
+  description: Upcoming family events in San Ramon. A San Ramon Valley city in the East Bay.
+  summary: >-
+    A San Ramon Valley city in the East Bay.
+  tagline: "A San Ramon Valley city in the East Bay."
+  sources:
+    - name: "City of San Ramon"
+      url: "https://www.sanramon.ca.gov/"
+      type: city_hall
+      notes: "Official city site. No city motto on the city pages."
+    - name: "San Ramon Parks and Community Services"
+      url: "https://www.sanramon.ca.gov/our_city/departments_and_divisions/parks_community_services/nature_programs/upcoming_nature_events"
+      type: parks
+      notes: "Nature storytimes, Forest Home Farms, and Crow Canyon Gardens."
+    - name: "Forest Home Farms events"
+      url: "https://www.sanramon.ca.gov/our_city/departments_and_divisions/parks_community_services/forest_home_farms_historic_park/events"
+      type: parks
+      notes: "Saturday Fun on the Farm. The park is 19953 San Ramon Valley Boulevard."
+    - name: "San Ramon Farmers Market"
+      url: "https://citycenterbishopranch.com/events/san-ramon-farmers-market-8/"
+      type: market
+      notes: "Saturdays, 9 a.m. to 1 p.m., at City Center Bishop Ranch, 6000 Bollinger Canyon Road."
+    - name: "City Center Bishop Ranch"
+      url: "https://citycenterbishopranch.com/events/"
+      type: downtown
+      notes: "Public square events. The add-to-calendar widget can stamp Mountain time. Use the clock printed on the event page."
+    - name: "Contra Costa County Library"
+      url: "https://ccclib.org/"
+      type: library
+      notes: "One library source. Filter to the San Ramon branch."
+    - name: "AllEvents San Ramon"
+      url: "https://allevents.in/san-ramon-ca"
+      type: allevents
+      notes: "Secondary sweep. Use san-ramon-ca. allevents.in/san-ramon redirects to the generic events page."

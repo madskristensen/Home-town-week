@@ -2,7 +2,7 @@
 
 Upcoming family events for the city you live in. This is a Jekyll site for [hometownweek.com](https://hometownweek.com/).
 
-Washington, Oregon, Idaho, Utah, Colorado, and Texas each have a state hub. A city name on a state hub, and a result in Find your city, open that city's page. The home page leads with a location lookup, a city search, and a map of the states that already have events. Choosing a highlighted state opens that state's hub. The full city list stays on those hubs and in the footer. The site header does not list cities. Names without a page stay in `_data/coming_soon.yml` and do not link anywhere. State outlines live in `_data/us_map.json` (regenerate with `python3 script/build-us-map.py`). A state is highlighted only when `_data/cities.yml` includes one of its cities.
+Washington, Oregon, Idaho, Utah, Colorado, Texas, and California each have a state hub. A city name on a state hub, and a result in Find your city, open that city's page. The home page leads with a location lookup, a city search, and a map of the states that already have events. Choosing a highlighted state opens that state's hub. The full city list stays on those hubs and in the footer. The site header does not list cities. Names without a page stay in `_data/coming_soon.yml` and do not link anywhere. State outlines live in `_data/us_map.json` (regenerate with `python3 script/build-us-map.py`). A state is highlighted only when `_data/cities.yml` includes one of its cities.
 
 Weeks are not pages. A later Monday email may use a week, and that email is out of scope here.
 
@@ -11,7 +11,7 @@ Weeks are not pages. A later Monday email may use a week, and that email is out 
 | Page | Path |
 | --- | --- |
 | Home | `/` |
-| State hub | `/{state}/`, for example `/wa/`, `/or/`, `/id/`, `/ut/`, `/co/`, `/tx/` |
+| State hub | `/{state}/`, for example `/wa/`, `/or/`, `/id/`, `/ut/`, `/co/`, `/tx/`, `/ca/` |
 | City | `/{state}/{city}/`, for example `/wa/redmond/` or `/or/bend/` |
 | About | `/about/` |
 | Feed | `/feed.xml` |

@@ -41,6 +41,7 @@ HOME_MARKS = [
     ("ut", "lehi", "Lehi"),
     ("co", "fort-collins", "Fort Collins"),
     ("tx", "plano", "Plano"),
+    ("ca", "irvine", "Irvine"),
 ]
 
 
@@ -125,33 +126,36 @@ def city_card(city):
 
 
 def home_card():
-    # Two rows of three forest tiles. Each tile is that city's real map.
-    tile = 158
-    gap_x = 22
-    gap_y = 18
-    label_h = 28
-    cols = 3
+    # Four marks on the first row, three centered beneath them.
+    tile = 144
+    gap_x = 16
+    gap_y = 12
+    label_h = 24
+    cols = 4
     grid_w = cols * tile + (cols - 1) * gap_x
     origin_x = W - 56 - grid_w
-    origin_y = 118
+    origin_y = 148
+    rows = [HOME_MARKS[:4], HOME_MARKS[4:]]
     tiles = []
-    for i, (state, city_id, label) in enumerate(HOME_MARKS):
-        col = i % cols
-        row = i // cols
-        x = origin_x + col * (tile + gap_x)
-        y = origin_y + row * (tile + label_h + gap_y)
-        inset = 16
-        tiles.append(
-            f'<rect x="{x}" y="{y}" width="{tile}" height="{tile}" rx="28" fill="{FOREST}"/>'
-        )
-        tiles.append(
-            nested_map(state, city_id, x + inset, y + inset, tile - inset * 2, tile - inset * 2, stroke="3.4")
-        )
-        label_size = 16 if text_width(label, SANS, 16) < tile - 4 else 14
-        tiles.append(
-            f'<text x="{x + tile / 2}" y="{y + tile + 22}" text-anchor="middle" '
-            f'fill="{MUTED}" font-family="Liberation Sans" font-size="{label_size}">{xml_escape(label)}</text>'
-        )
+    index = 0
+    for row, marks in enumerate(rows):
+        row_w = len(marks) * tile + (len(marks) - 1) * gap_x
+        row_x = origin_x + (grid_w - row_w) / 2
+        for col, (state, city_id, label) in enumerate(marks):
+            x = row_x + col * (tile + gap_x)
+            y = origin_y + row * (tile + label_h + gap_y)
+            inset = 16
+            tiles.append(
+                f'<rect x="{x}" y="{y}" width="{tile}" height="{tile}" rx="28" fill="{FOREST}"/>'
+            )
+            tiles.append(
+                nested_map(state, city_id, x + inset, y + inset, tile - inset * 2, tile - inset * 2, stroke="3.4")
+            )
+            label_size = 16 if text_width(label, SANS, 16) < tile - 4 else 14
+            tiles.append(
+                f'<text x="{x + tile / 2}" y="{y + tile + 22}" text-anchor="middle" '
+                f'fill="{MUTED}" font-family="Liberation Sans" font-size="{label_size}">{xml_escape(label)}</text>'
+            )
     marks = "\n  ".join(tiles)
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
   <rect width="{W}" height="{H}" fill="{PAPER}"/>
