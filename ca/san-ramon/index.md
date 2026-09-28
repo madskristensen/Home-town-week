@@ -4,7 +4,11 @@ title: San Ramon
 city: san-ramon
 state: ca
 description: Upcoming family events in San Ramon. A San Ramon Valley city in the East Bay.
-hook: Friday morning is nature storytime at Crow Canyon Gardens. Saturday is the farmers market at City Center, then free farm crafts at Forest Home Farms.
+image: /assets/images/san-ramon/city-hall.webp
+image_alt: San Ramon City Hall, a curved concrete building with a reflecting pool and Mount Diablo behind it.
+image_credit: 'Photo: Mx. Granger, CC0'
+image_source_url: https://commons.wikimedia.org/wiki/File:San_Ramon_City_Hall.jpg
+hook: Friday morning is nature storytime at Crow Canyon Gardens. Sunday, Oct. 11 is the Run for Education at Iron Horse, with a kids zone until noon.
 ---
 
 ### Fall Nature Storytime: Apples
@@ -62,6 +66,20 @@ Same Saturday market. Indigenous People's Day at the farm starts at 11:00 a.m.
 Free. The Tribal Nations of the San Ramon Valley. Same Saturday hours as the other farm days.
 
 [Farm events](https://www.sanramon.ca.gov/our_city/departments_and_divisions/parks_community_services/forest_home_farms_historic_park/events)
+
+### Run for Education
+<p class="event-when">Sun Oct 11 · 8:00 a.m.–12:00 p.m.</p>
+<p class="event-place">Iron Horse Middle School, 12601 Alcosta Blvd</p>
+
+{% include event-photo.html
+   src="/assets/images/san-ramon/mount-diablo.webp"
+   alt="Mount Diablo seen across a field from San Ramon."
+   credit="Photo: OettingerCroat, public domain"
+   source="https://commons.wikimedia.org/wiki/File:Mt_Diablo_From_San_Ramon.jpg" %}
+
+The San Ramon Valley Education Foundation's 43rd run. The expo and kids zone at Iron Horse run 8:00 a.m. to noon, with inflatables, a face painter, a fire engine, and a patrol car. Face painting is 9:00 a.m. to noon. The 5K and the 1.5 mile start at 8:30 a.m. The Friendship Run is 9:45 a.m. The mini run starts in heats at 10:15 a.m. Recognition is at 11:00 a.m. The 10K starts at 8:15 a.m. at Charlotte Wood Middle School in Danville and finishes here. Registration is required. The page does not print a spectator price. The photo is Mount Diablo from San Ramon, not the school.
+
+[San Ramon Valley Education Foundation](https://srvef.org/the-run/)
 
 ### Fall Nature Storytime: Corn
 <p class="event-when">Fri Oct 16 · 10:15–11:00 a.m.</p>

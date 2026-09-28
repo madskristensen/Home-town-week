@@ -1698,9 +1698,9 @@
       type: city_hall
       notes: "Official city site. Bots are often blocked."
     - name: "Carlsbad Parks and Recreation"
-      url: "https://www.carlsbadca.gov/"
+      url: "https://www.carlsbadca.gov/residents/kids/events"
       type: parks
-      notes: "Pool and park events, including Alga Norte. Prefer the city listing when a news calendar and the city page disagree."
+      notes: "City special events, including Alga Norte. Prefer this page when a news calendar and the city page disagree."
     - name: "State Street Farmers' Market"
       url: "https://www.carlsbad-village.com/do/state-street-farmers-market-5"
       type: market
@@ -1752,7 +1752,15 @@
     - name: "Harris Center for the Arts"
       url: "https://www.harriscenter.net/"
       type: theater
-      notes: "Public performances at 10 College Parkway, on the Folsom Lake College campus."
+      notes: "Public performances at 10 College Parkway, on the Folsom Lake College campus. Use a posted show time."
+    - name: "Heart of Folsom"
+      url: "https://www.heartoffolsom.com/events"
+      type: venue
+      notes: "Folsom Central and Folsom Faire shopping-center events. The page often skips a street number."
+    - name: "Folsom Historic District"
+      url: "https://historicfolsom.org/"
+      type: downtown
+      notes: "Sutter Street races and historic-district listings. If the page skips a start time, leave the clock out."
     - name: "Folsom Public Library"
       url: "https://www.library.folsom.ca.us/"
       type: library
@@ -1793,6 +1801,14 @@
       url: "https://thebarclay.org/"
       type: theater
       notes: "Public performances in Irvine. Use a family or all-ages show, and say if the listing is a general concert."
+    - name: "Pretend City Children's Museum"
+      url: "https://www.pretendcity.org/events/"
+      type: venue
+      notes: "Kids museum at 29 Hubble. Toddler Town and Baby Steps charge their own fee. Other programs say they are included in admission."
+    - name: "Irvine Standard calendar"
+      url: "https://www.irvinestandard.com/calendar/"
+      type: downtown
+      notes: "Editor calendar for the Irvine Standard. Spectrum and Great Park listings. Not a CitySpark embed."
     - name: "Irvine Public Library"
       url: "https://www.cityofirvine.gov/irvine-public-library/find-events"
       type: library
@@ -1826,9 +1842,17 @@
       type: market
       notes: "Pacific Coast Farmers' Market Association. Saturdays, 9 a.m. to 1 p.m., at 46 W Angela Street, with the Downtown Association."
     - name: "Pleasanton Downtown Association"
-      url: "https://www.pcfma.org/index.php/market/pleasanton-farmers-market"
+      url: "https://www.pleasantondowntown.net/"
       type: downtown
-      notes: "The market page names the Downtown Association as partner. Use the PCFMA address, 46 W Angela Street, not a vendor's studio address."
+      notes: "Main Street events. Palooza does not print a clock. The market address stays the PCFMA address, 46 W Angela Street."
+    - name: "Museum on Main"
+      url: "https://www.museumonmain.org/ghost-walk"
+      type: venue
+      notes: "Downtown museum at 603 Main Street. Ghost Walk is a ticketed family tour."
+    - name: "Pleasanton cultural series"
+      url: "https://www.firehousearts.org/programs/cultural-celebration/"
+      type: venue
+      notes: "Library and Recreation celebrations. The Pleasanton Weekly reported the series. Its /calendar/ page is a CitySpark embed, so do not crawl that widget."
     - name: "Firehouse Arts Center"
       url: "https://www.firehousearts.org/"
       type: theater
@@ -1858,9 +1882,13 @@
       type: city_hall
       notes: "Official city site. The 2010 council slogan is Tradition, Pride, Progress."
     - name: "Roseville Parks, Recreation and Libraries"
-      url: "https://www.roseville.ca.gov/prl/library/events_classes_programs/youth_programs.php"
+      url: "https://www.roseville.ca.gov/programs_events/index.php"
       type: parks
-      notes: "Youth programs, Maidu Museum events, and park specials."
+      notes: "City specials, including Mahany and the indoor pool. Youth programs stay on the library youth page."
+    - name: "Roseville library youth programs"
+      url: "https://www.roseville.ca.gov/prl/library/events_classes_programs/youth_programs.php"
+      type: library
+      notes: "One library source. Downtown at 225 Taylor Street, Maidu at 1530 Maidu Drive, Martha Riley at 1501 Pleasant Grove Boulevard."
     - name: "Maidu Park Farmers' Market"
       url: "https://getplacergrown.com/places/maidu-park-market/"
       type: market
@@ -1868,11 +1896,7 @@
     - name: "Downtown Roseville"
       url: "https://www.roseville.ca.gov/"
       type: downtown
-      notes: "Vernon Street and Downtown Library programs. City Hall is 311 Vernon Street."
-    - name: "Roseville Public Library youth programs"
-      url: "https://www.roseville.ca.gov/prl/library/events_classes_programs/youth_programs.php"
-      type: library
-      notes: "One library source. Downtown at 225 Taylor Street, Maidu at 1530 Maidu Drive, Martha Riley at 1501 Pleasant Grove Boulevard."
+      notes: "Vernon Street and Downtown Library programs. City Hall is 311 Vernon Street. The Press Tribune calendar pages did not return event listings."
     - name: "Roseville cultural arts"
       url: "https://www.roseville.ca.gov/"
       type: theater
@@ -1916,6 +1940,14 @@
       url: "https://ccclib.org/"
       type: library
       notes: "One library source. Filter to the San Ramon branch."
+    - name: "Run for Education"
+      url: "https://srvef.org/the-run/"
+      type: venue
+      notes: "San Ramon Valley Education Foundation. Kids zone is at Iron Horse Middle School. The 10K starts in Danville."
+    - name: "Danville San Ramon"
+      url: "https://www.danvillesanramon.com/"
+      type: downtown
+      notes: "Editor community briefs. The paper's /calendar/ page is a CitySpark embed. Use a staff story, not that widget."
     - name: "AllEvents San Ramon"
       url: "https://allevents.in/san-ramon-ca"
       type: allevents
