@@ -21,7 +21,7 @@
   --map-quiet: #e4d3bd;
   --map-label: #f7f1e6;
   --radius: 2px;
-  --measure: 40rem;
+  --measure: 44rem;
   --photo-filter: none;
   --serif: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -107,7 +107,7 @@ img {
 }
 
 .wrap {
-  width: min(100% - 2.5rem, var(--measure));
+  width: min(100% - 3rem, var(--measure));
   margin-inline: auto;
 }
 
@@ -146,7 +146,7 @@ img {
   margin: 0.85rem 0 0;
   padding-top: 0.8rem;
   border-top: 2px solid var(--ink);
-  max-width: 36rem;
+  max-width: 42rem;
   color: var(--ink);
   font-family: var(--serif);
   font-size: clamp(1.25rem, 3.4vw, 1.5rem);
@@ -334,7 +334,7 @@ img {
 
 .city-kicker {
   margin: 0.4rem 0 0;
-  max-width: 34rem;
+  max-width: 40rem;
   color: var(--muted);
   font-size: 1rem;
   font-weight: 500;
