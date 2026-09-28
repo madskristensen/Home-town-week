@@ -8,71 +8,51 @@ image: /assets/images/gig-harbor/harbor.webp
 image_alt: Gig Harbor's waterfront, with boats, netsheds, and houses along the shore.
 image_credit: 'Photo: Dana Hutchinson, CC BY 3.0'
 image_source_url: https://commons.wikimedia.org/wiki/File:Gig_Harbor_Washington_(36995416).jpeg
-hook: Tuesday morning is storytime in the library, the first open Tuesday after the closure. Tuesday evening is the last fall market.
+hook: Tuesday morning is storytime at the library, and Tuesday evening is the last fall market. Saturday is the Scarecrow Festival at Sehmel Homestead Park. Thursday, Oct 8, is a waterfront history walk.
 ---
-
-### Play Time
-<p class="event-when">Mon Sep 28 · 11:00 a.m.–12:00 p.m.</p>
-<p class="event-place">Gig Harbor Library, large meeting room</p>
-
-[Play Time](https://piercecounty.libnet.info/event/16472134)
-
-### Tech Explorers
-<p class="event-when">Mon Sep 28 · 4:00–5:00 p.m.</p>
-<p class="event-place">Gig Harbor Library, large meeting room</p>
-
-[Tech Explorers](https://piercecounty.libnet.info/event/16472152)
 
 ### Story Time for Toddlers
 <p class="event-when">Tue Sep 29 · 10:15–11:15 a.m.</p>
-<p class="event-place">Gig Harbor Library, large meeting room</p>
+<p class="event-place">Gig Harbor Library, 4424 Point Fosdick Drive NW, large meeting room</p>
+
+Stories, songs, and movement for toddlers, about 18 months to 2 years. Families are welcome. Preschool storytime starts when this one ends.
 
 [Toddler storytime](https://piercecounty.libnet.info/event/16548541)
 
 ### Story Time for Preschoolers
 <p class="event-when">Tue Sep 29 · 11:15 a.m.–12:15 p.m.</p>
-<p class="event-place">Gig Harbor Library, large meeting room</p>
+<p class="event-place">Gig Harbor Library, 4424 Point Fosdick Drive NW, large meeting room</p>
 
-This starts when the toddler session ends.
+Stories, songs, and activities. This starts when the toddler session ends.
 
 [Preschool storytime](https://piercecounty.libnet.info/event/16548573)
 
-### Gig Harbor Fall Farmers Market
+### Fall Farmers Market
 <p class="event-when">Tue Sep 29 · 4:00–7:00 p.m.</p>
-<p class="event-place">B's Bagels parking lot, 3308 Uddenberg Lane</p>
+<p class="event-place">B's Butters and Bagels, 3308 Uddenberg Lane</p>
 
-The fall market ends this Tuesday. It does not continue into October. B's stays open until 7:00 p.m. on market days. The same evening, a teen Nintendo Switch hour runs 4:00–5:30 p.m. at the library, so the market and that hour overlap in time and not in place.
+The Gig Harbor Waterfront Alliance fall market runs Tuesdays in September, 4:00–7:00 p.m. This Tuesday is the last one. B's stays open until 7:00 p.m. on market days. The summer Waterfront Farmers Market at Skansie Brothers Park is not on the calendar. That site now points to the 2027 season.
 
-[Fall market](https://www.gigharbornow.org/news/arts-entertainment/gig-harbor-fall-farmers-market-tuesdays-in-september-4-to-7-pm/) · [Nintendo Switch](https://piercecounty.libnet.info/event/15978991)
+[Fall market](https://www.gigharbornow.org/news/arts-entertainment/gig-harbor-fall-farmers-market-tuesdays-in-september-4-to-7-pm/)
 
-### Random Fandom
-<p class="event-when">Wed Sep 30 · 4:00–5:00 p.m.</p>
-<p class="event-place">Gig Harbor Library, large meeting room</p>
+### Scarecrow Festival
+<p class="event-when">Sat Oct 3 · 11:00 a.m.–4:00 p.m.</p>
+<p class="event-place">Sehmel Homestead Park, 10123 78th Ave NW</p>
 
-The theme line says September is Disney and October is Hooky. September 30 is still September, so the posted theme is Disney.
+PenMet's fall festival. Free activities for kids, inflatables, a pumpkin launcher, a petting zoo, live music, food trucks, and a scarecrow contest. Vendor applications for 2026 are closed.
 
-[Random Fandom](https://piercecounty.libnet.info/event/16665542)
+[Scarecrow Festival](https://penmetparks.org/special-events/)
 
-### Chess Club
-<p class="event-when">Thu Oct 1 · 5:45–6:45 p.m.</p>
-<p class="event-place">Gig Harbor Library</p>
+### Pints, Myths and Maritime Spirits
+<p class="event-when">Thu Oct 8 · 5:30–7:00 p.m.</p>
+<p class="event-place">Direction Apparel, Gig Harbor</p>
 
-Chess is back at the library. Last week's session was at PenMet because the building was closed.
+{% include event-photo.html
+   src="/assets/images/gig-harbor/harbor.webp"
+   alt="Gig Harbor's waterfront, with boats, netsheds, and houses along the shore."
+   credit="Photo: Dana Hutchinson, CC BY 3.0"
+   source="https://commons.wikimedia.org/wiki/File:Gig_Harbor_Washington_(36995416).jpeg" %}
 
-[Chess Club](https://piercecounty.libnet.info/event/16447668)
+A ticketed walking tour from the Gig Harbor Waterfront Alliance, with Harbor WildWatch and the Harbor History Museum. The page says it is fit for all ages. Gather at Direction Apparel at 5:00 p.m. The walk starts at 5:30 and ends at 7 Seas Brewing at 7:00 p.m. Less than half a mile, with stops. The ticket includes a beverage at the start and at the end. A price is not posted, and the event page says tickets are not on sale.
 
-### Story Time for Babies
-<p class="event-when">Fri Oct 2 · 10:15–11:15 a.m.</p>
-<p class="event-place">Gig Harbor Library, large meeting room</p>
-
-[Baby storytime](https://piercecounty.libnet.info/event/16982302)
-
-### Story Time for Mixed Ages
-<p class="event-when">Fri Oct 2 · 11:15 a.m.–12:15 p.m.</p>
-<p class="event-place">Gig Harbor Library, large meeting room</p>
-
-[Mixed-ages storytime](https://piercecounty.libnet.info/event/16982309)
-
-Wednesday, 11:00 a.m.–12:00 p.m., is drop-in tech help for adults. Friday, 3:00–4:30 p.m., is Teen Council. The council description in the short feed stops at "First & Third Fr," so read the page before you treat it as a drop-in.
-
-[Tech help](https://piercecounty.libnet.info/event/15343394) · [Teen Council](https://piercecounty.libnet.info/event/17114890)
+[Pints, Myths and Maritime Spirits](https://www.ghdwa.org/event-details/pints-myths-and-maritime-spirits-2026-10-08-17-30)

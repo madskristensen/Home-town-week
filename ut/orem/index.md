@@ -8,12 +8,20 @@ image: /assets/images/orem/scera.webp
 image_alt: The SCERA Center for the Arts in Orem, with the SCERA name across the front of the building.
 image_credit: 'Photo: An Errant Knight, CC BY-SA 4.0'
 image_source_url: https://commons.wikimedia.org/wiki/File:SCERA_theater.JPG
-hook: Noises Off continues Monday, Thursday, Friday, and Saturday at 7:30 p.m. Storytime is Tuesday, Wednesday, and Thursday at 10:30 a.m.
+hook: Saturday night is the last Noises Off. Wednesday evening is the farmers market, and Monday is E.T. at the library.
 ---
+
+### Puppets and PJs Storytime
+<p class="event-when">Mon Sep 28 · 6:00–6:30 p.m.</p>
+<p class="event-place">Storytelling Wing, Orem Public Library, 58 N State St</p>
+
+Ages 0–7. Puppet skits, songs, and stories before bedtime. The next date on this listing is Oct. 26.
+
+[Puppets and PJs](https://orem.librarycalendar.com/event/puppets-pjs-storytime-16923)
 
 ### Noises Off
 <p class="event-when">Mon Sep 28, Thu Oct 1, Fri Oct 2, and Sat Oct 3 · 7:30 p.m.</p>
-<p class="event-place">SCERA Center for the Arts, 745 S State Street</p>
+<p class="event-place">SCERA Center for the Arts, 745 South State St</p>
 
 {% include event-photo.html
    src="/assets/images/orem/scera.webp"
@@ -21,40 +29,78 @@ hook: Noises Off continues Monday, Thursday, Friday, and Saturday at 7:30 p.m. S
    credit="Photo: An Errant Knight, CC BY-SA 4.0"
    source="https://commons.wikimedia.org/wiki/File:SCERA_theater.JPG" %}
 
-Same run as last week: Mondays, Thursdays, Fridays, and Saturdays at 7:30 p.m. through Oct. 10. Adults $16. Ages 3–11 and seniors 65+ are $12. A farce for families who can sit through a full play.
+Mondays, Thursdays, Fridays, and Saturdays at 7:30 p.m. through Oct. 10. Adults $16. Ages 3–11 and seniors 65+ are $12. A farce for families who can sit through a full play. Box office (801) 225-ARTS.
 
 [Noises Off](https://scera.org/events/noises-off/)
-
-Orem Public Library is at 58 N State Street. The preschool dates on the series include Sep. 29, Sep. 30, and Oct. 1.
 
 ### Preschool Storytime
 <p class="event-when">Tue Sep 29, Wed Sep 30, and Thu Oct 1 · 10:30–11:00 a.m.</p>
-<p class="event-place">Storytelling Wing</p>
+<p class="event-place">Storytelling Wing, Orem Public Library, 58 N State St</p>
 
-Ages 3–5. Stories, puppets, and activities. 30 minutes.
+Ages 3–5.
 
-[Tuesdays](https://orem.librarycalendar.com/event/preschool-storytime-16885) · [Wednesdays](https://orem.librarycalendar.com/event/preschool-storytime-16886) · [Thursdays](https://orem.librarycalendar.com/event/preschool-storytime-16884)
+[Tuesday](https://orem.librarycalendar.com/event/preschool-storytime-16873) · [Wednesday](https://orem.librarycalendar.com/event/preschool-storytime-16874) · [Thursday](https://orem.librarycalendar.com/event/preschool-storytime-16875)
 
-The library's week view for the following week also shows Toddler Tales at 10:00 and 11:00 a.m. on those weekdays, Bouncing Babies on Friday at 10:00 a.m., and Hora de Cuentos on Thursday at 4:00 p.m. That week view is dated Oct. 13, so this issue does not copy those clocks onto Sep. 29 through Oct. 1.
+### Orem Farmers Market
+<p class="event-when">Wed Sep 30, Wed Oct 7, Wed Oct 14, Wed Oct 21, and Wed Oct 28 · Time not posted</p>
+<p class="event-place">Orem City Center Park</p>
 
-[Week of Oct. 13](https://orem.librarycalendar.com/events/week/2026/10/13)
+The market page says every Wednesday evening from May through October, at Orem City Center Park. It does not print one clock for the market. Oct. 21 and Oct. 28 are still inside that season line. The City Center festival page has no family festival dated in this span. The Wednesday concert series there ended Sep. 16.
+
+[Orem market](https://sunsetfarmersmarkets.com/orem)
+
+### March of the Penguins
+<p class="event-when">Fri Oct 2 · 6:00–8:00 p.m.</p>
+<p class="event-place">Media Auditorium, Orem Public Library, 58 N State St</p>
+
+Rated G. The library's October film series lists this documentary on Friday. The Monday page for the series prints 6:00–8:00 p.m. and names Oct. 2 as another date.
+
+[October films](https://orem.librarycalendar.com/event/october-films-spooky-classics-17110)
+
+### Fall Book Sale
+<p class="event-when">Mon Oct 5 · 3:00–9:00 p.m. · Tue Oct 6 · 9:00 a.m.–1:00 p.m.</p>
+<p class="event-place">Library Hall, dōTERRA South Lobby, 58 N State St</p>
+
+Like-new and used books and media. Everyone is welcome. Proceeds support library programs. Take 50% off the total when you buy 25 or more items.
+
+[Monday hours](https://orem.librarycalendar.com/event/fall-book-sale-16529) · [Tuesday hours](https://orem.librarycalendar.com/event/fall-book-sale-16530)
+
+### E.T. the Extra-Terrestrial
+<p class="event-when">Mon Oct 5 · 6:00–8:00 p.m.</p>
+<p class="event-place">Library Hall, Ashton Auditorium, 58 N State St</p>
+
+Rated PG. The 1982 film, 1 hour 55 minutes, in the library's October series.
+
+[October films](https://orem.librarycalendar.com/event/october-films-spooky-classics-17110)
 
 ### Noises Off
 <p class="event-when">Mon Oct 5, Thu Oct 8, Fri Oct 9, and Sat Oct 10 · 7:30 p.m.</p>
-<p class="event-place">SCERA Center for the Arts, 745 S State Street</p>
+<p class="event-place">SCERA Center for the Arts, 745 South State St</p>
 
-Saturday, Oct. 10, is the last night in the posted run. Same prices: $16 adults, $12 for ages 3–11 and for seniors 65+. If You Give a Mouse a Cookie, the SCERA's show for younger kids, opens Oct. 19.
+Saturday, Oct. 10, is the last night in the posted run. Same prices: $16 adults, $12 for ages 3–11 and for seniors 65+. If You Give a Mouse a Cookie, the Theatre for Young Audiences show, opens Oct. 19. Public shows that week are Mondays and Fridays at 7:00 p.m., plus a fall-break show on Oct. 19 at 10:00 a.m.
 
-[Noises Off](https://scera.org/events/noises-off/)
+[Noises Off](https://scera.org/events/noises-off/) · [Mouse a Cookie](https://scera.org/events/if-you-give-a-mouse-a-cookie/)
 
 ### Preschool Storytime
 <p class="event-when">Tue Oct 6, Wed Oct 7, and Thu Oct 8 · 10:30–11:00 a.m.</p>
-<p class="event-place">Storytelling Wing, 58 N State Street</p>
+<p class="event-place">Storytelling Wing, Orem Public Library, 58 N State St</p>
 
-Ages 3–5. The series lists these three dates. Phone: (801) 229-7050. Weekday hours are 9:00 a.m.–9:00 p.m.
+Ages 3–5.
 
-[Tuesdays](https://orem.librarycalendar.com/event/preschool-storytime-16885) · [Wednesdays](https://orem.librarycalendar.com/event/preschool-storytime-16886) · [Thursdays](https://orem.librarycalendar.com/event/preschool-storytime-16884)
+[Tuesday](https://orem.librarycalendar.com/event/preschool-storytime-16876) · [Wednesday](https://orem.librarycalendar.com/event/preschool-storytime-16877) · [Thursday](https://orem.librarycalendar.com/event/preschool-storytime-16878)
 
-Bouncing Babies, listed on the Oct. 13 week view, is Friday, Oct. 16 at 10:00 a.m. That is the Friday after this span. Hora de Cuentos on that same week view is Thursday, Oct. 15 at 4:00 p.m., also after this span.
+### Utah Dance Film Festival
+<p class="event-when">Fri Oct 9 · 6:00 p.m. · Sat Oct 10 · 11:00 a.m.–9:30 p.m.</p>
+<p class="event-place">Library Hall, Ashton Auditorium, 58 N State St</p>
 
-[Week of Oct. 13](https://orem.librarycalendar.com/events/week/2026/10/13)
+Short dance films. The Saturday page prints 11:00 a.m.–9:30 p.m. and lists Friday as another date. The week view puts Friday at 6:00 p.m. and does not print an end time. The full schedule is on the festival site.
+
+[Saturday listing](https://orem.librarycalendar.com/event/library-hall-presents-utah-dance-film-festival-17024) · [Festival schedule](https://utdancefilmfest.com)
+
+### Preschool Storytime
+<p class="event-when">Tue Oct 13, Wed Oct 14, and Thu Oct 15 · 10:30–11:00 a.m.</p>
+<p class="event-place">Storytelling Wing, Orem Public Library, 58 N State St</p>
+
+Ages 3–5. Wednesday morning is also a farmers market evening, with no clock posted for the market.
+
+[Tuesday](https://orem.librarycalendar.com/event/preschool-storytime-16879) · [Wednesday](https://orem.librarycalendar.com/event/preschool-storytime-16880) · [Thursday](https://orem.librarycalendar.com/event/preschool-storytime-16881)

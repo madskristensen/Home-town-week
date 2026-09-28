@@ -8,7 +8,7 @@ image: /assets/images/folsom/powerhouse.webp
 image_alt: The stone Folsom Powerhouse beside the American River, with a penstock and a footbridge.
 image_credit: 'Photo: Sydchrismom, CC BY-SA 4.0'
 image_source_url: https://commons.wikimedia.org/wiki/File:Folsom_Powerhouse_Folsom_California.jpg
-hook: Wednesday morning is the Palladio market. Saturday is the Sutter Street market, then a free foam party. The soap box derby takes Sutter Street the next weekend.
+hook: Wednesday morning is the Palladio market. Saturday is the Sutter Street market, then a free foam party. Sunday, Oct. 11 is Family Pride at Lions Park.
 ---
 
 ### Living Smart Farmers Market
@@ -29,15 +29,15 @@ Free. Produce and local vendors. Palladio's events page prints this Wednesday an
    credit="Photo: Michael Hicks, CC BY 2.0"
    source="https://commons.wikimedia.org/wiki/File:Train_at_Historic_Folsom_station,_October_2013.jpg" %}
 
-Produce, flowers, and music. The listing repeats Saturdays. A free foam party starts at 1:00 p.m., when this market ends. American Landscapes is the same day at 5:00 p.m., at the Harris Center, not on Sutter Street. Palladio's Saturday market is the same hours, in a different parking lot. The photo is a train at Historic Folsom station, not the market stalls.
+Produce, flowers, and music. The listing repeats Saturdays and still prints Oct. 10, Oct. 17, Oct. 24, and Oct. 31 at the same clock. A free foam party starts at 1:00 p.m., when this market ends. American Landscapes is the same day at 5:00 p.m., at the Harris Center, not on Sutter Street. Palladio's Saturday market is the same hours, in a different parking lot. The photo is a train at Historic Folsom station, not the market stalls.
 
 [Oct. 3 listing](https://folsom.biz/events/sutter-street-farmers-market/2026-10-03)
 
 ### Living Smart Farmers Market
 <p class="event-when">Sat Oct 3 · 8:00 a.m.–1:00 p.m.</p>
-<p class="event-place">Palladio parking lot next to Nordstrom Rack</p>
+<p class="event-place">Palladio Parking 2, next to Nordstrom Rack</p>
 
-Free. Palladio Parking 2. The page says every Saturday, 8:00 a.m. to 1:00 p.m., June through October. The calendar that was fetched printed Oct. 3 and stopped at Oct. 6, so later Saturdays are not listed here. The Sutter Street market is the same hours, at 915 Sutter Street.
+Free. The page says every Saturday, 8:00 a.m. to 1:00 p.m., June through October. The calendar that was fetched printed Oct. 3 and stopped at Oct. 6, so later Saturdays are not listed here. The Sutter Street market is the same hours, at 915 Sutter Street.
 
 [Palladio events](https://gopalladio.com/events/)
 
@@ -45,7 +45,7 @@ Free. Palladio Parking 2. The page says every Saturday, 8:00 a.m. to 1:00 p.m., 
 <p class="event-when">Sat Oct 3 · 1:00–3:00 p.m.</p>
 <p class="event-place">Folsom Central and Folsom Faire</p>
 
-Free. All ages. Foam at Folsom Central, bubbles at Folsom Faire, and balloon twisting. Wear clothes that can get wet. The page does not print a street number. Supplies can run out. The Sutter Street market ends as this starts. American Landscapes is at 5:00 p.m.
+Free. All ages. Foam at Folsom Central, bubbles at Folsom Faire, and balloon twisting. Wear clothes that can get wet. The page does not print a street number. The Sutter Street market ends as this starts. American Landscapes is at 5:00 p.m.
 
 [Heart of Folsom](https://www.heartoffolsom.com/events)
 
@@ -61,7 +61,7 @@ The Pops Chorale and Orchestra. Choir, small groups, and instruments, built arou
 <p class="event-when">Tue Oct 6 · 10:00–11:00 a.m.</p>
 <p class="event-place">Palladio Piazza, 410 Palladio Pkwy</p>
 
-Ages 6 and under. Free. A parent stays. Storytime and activities on the grass. The listing says the season runs May through October, and it also prints November dates. This page keeps the October Tuesdays: Oct. 6 and Oct. 20. This Folsom Times listing prints 410 Palladio Parkway. Palladio's own events index puts Tot Tuesday at 350 Palladio Parkway. This page keeps the number on the listing it links.
+Ages 6 and under. Free. A parent stays. Storytime and activities on the grass. The Folsom Times listing prints 410 Palladio Parkway, Suite 1601, and says the hour repeats on the first and third Tuesday. It also prints Tue Oct. 20 at 10:00 a.m., plus November dates, while the description says the season runs May through October. This page keeps Oct. 6. Family Expo's own page puts the piazza at 350 Palladio Parkway. This page keeps the number on the listing it links.
 
 [Oct. 6 listing](https://folsom.biz/events/palladio-s-tot-tuesday-s-an-hour-of-storytime-activities/2026-10-06)
 
@@ -69,9 +69,9 @@ Ages 6 and under. Free. A parent stays. Storytime and activities on the grass. T
 <p class="event-when">Wed Oct 7 · 12:00 p.m.</p>
 <p class="event-place">Harris Center, 10 College Pkwy</p>
 
-The Panto Company USA, through the ClassACTS program. Interactive, for ages 5–12. The Harris page lists this noon show and does not print an end time or a ticket price. The Mountain Democrat reports that this noon performance is the one open to the public. The other shows that day are the school matinees.
+The Panto Company USA, through the ClassACTS program. Interactive, for ages 5–12. The Harris page lists this noon show and does not print an end time or a ticket price. A school-matinees link sits on the same site. This page does not invent a second clock.
 
-[Harris Center](https://www.harriscenter.net/cinderella) · [Mountain Democrat](https://www.mtdemocrat.com/prospecting/rare-public-performance-offered/article_f8a60b06-7600-4a47-8f9f-706d211e0b8d.html)
+[Harris Center](https://www.harriscenter.net/cinderella)
 
 ### Sutter Street Farmers Market
 <p class="event-when">Sat Oct 10 · 8:00 a.m.–1:00 p.m.</p>
@@ -99,7 +99,7 @@ Free. Games, a petting zoo, live performances, and vendor booths. Palladio's own
    credit="Photo: Sydchrismom, CC BY-SA 4.0"
    source="https://commons.wikimedia.org/wiki/File:Folsom_Powerhouse_Folsom_California.jpg" %}
 
-Gravity cars. Stock is ages 7–13, Super Stock 9–18, Masters 10–20. One double-elimination race on Saturday and one on Sunday. Spectators are welcome. Loaner cars are mentioned for racers. The historic district page does not print a start time. The photo is the Folsom Powerhouse, in the historic district, not the race course. The farmers market is on Sutter Street that morning.
+Gravity cars. Stock is ages 7–13, Super Stock 9–18, Masters 10–20. One double-elimination race on Saturday and one on Sunday. Spectators are welcome. The page mentions loaner cars, or building your own. It does not print a start time. The photo is the Folsom Powerhouse, in the historic district, not the race course. The farmers market is on Sutter Street that morning.
 
 [Historic Folsom](https://historicfolsom.org/event/soap-box-derby-historic-folsom-fall-rally/2026-10-10/)
 
@@ -121,7 +121,7 @@ Sunday's double-elimination race. Same missing start time. Family Pride at Lions
    credit="Photo: UncleVinny, CC BY 3.0"
    source="https://commons.wikimedia.org/wiki/File:Old_Dam,_Amer._River_763_-_panoramio.jpg" %}
 
-Free and open. Music, vendors, and crafts. Accessible parking and drop-off are in the Folsom Public Library lot, next to the park. Bike racks are there too. The photo is the old dam on the American River, not Lions Park.
+Free and open. Music, vendors, and crafts. Accessible drop-off is in the Folsom Public Library loop, next to the park. The photo is the old dam on the American River, not Lions Park.
 
 [Festival page](https://folsomfamilypride.org/event-information/)
 
@@ -129,102 +129,22 @@ Free and open. Music, vendors, and crafts. Accessible parking and drop-off are i
 <p class="event-when">Sat Oct 17 · 8:00 a.m.–1:00 p.m.</p>
 <p class="event-place">Historic Folsom Plaza, 915 Sutter St</p>
 
-Same Saturday market.
+Same Saturday market. The series page also prints Oct. 24 and Oct. 31.
 
 [Oct. 17 listing](https://folsom.biz/events/sutter-street-farmers-market/2026-10-17)
-
-### Tot Tuesday
-<p class="event-when">Tue Oct 20 · 10:00–11:00 a.m.</p>
-<p class="event-place">Palladio Piazza, 410 Palladio Pkwy</p>
-
-Same first-and-third Tuesday storytime. This is the last October date this page is keeping. Wild Howl-O-Ween is four days later.
-
-[Oct. 6 listing, which includes Oct. 20](https://folsom.biz/events/palladio-s-tot-tuesday-s-an-hour-of-storytime-activities/2026-10-06)
 
 ### Sutter Street Farmers Market
 <p class="event-when">Sat Oct 24 · 8:00 a.m.–1:00 p.m.</p>
 <p class="event-place">Historic Folsom Plaza, 915 Sutter St</p>
 
-Same Saturday market. It overlaps the first three hours of Wild Howl-O-Ween, which is at the zoo.
+Same Saturday market. The series page still lists this date.
 
 [Oct. 24 listing](https://folsom.biz/events/sutter-street-farmers-market/2026-10-24)
-
-### Wild Howl-O-Ween
-<p class="event-when">Sat Oct 24 · 10:00 a.m.–2:00 p.m.</p>
-<p class="event-place">Folsom City Zoo Sanctuary, 403 Stafford St</p>
-
-Costumes and a treat trail through the zoo. $10. Children under 2 are free. The contact on the listing is a city zoo address. The Sutter Street market opened two hours earlier, downtown.
-
-[Folsom Times listing](https://folsom.biz/events/wild-howl-o-ween/2026-10-24)
 
 ### Sutter Street Farmers Market
 <p class="event-when">Sat Oct 31 · 8:00 a.m.–1:00 p.m.</p>
 <p class="event-place">Historic Folsom Plaza, 915 Sutter St</p>
 
-Same Saturday market. The listing also prints Nov. 7, after the clocks change. ELF The Musical opens at the Harris Center on Nov. 4.
+Same Saturday market. This is the last Saturday the series page printed.
 
 [Oct. 31 listing](https://folsom.biz/events/sutter-street-farmers-market/2026-10-31)
-
-### ELF The Musical
-<p class="event-when">Wed Nov 4 · 7:30 p.m.</p>
-<p class="event-place">Harris Center, 10 College Pkwy</p>
-
-The touring musical, for kids and adults. The Harris page does not print an end time or a ticket price. The run is Wed Nov. 4 and Thu Nov. 5 at 7:30 p.m., Fri Nov. 6 and Sat Nov. 7 at 2:00 p.m. and 7:30 p.m., and Sun Nov. 8 at 10:00 a.m. and 3:00 p.m.
-
-[Harris Center](https://www.harriscenter.net/elf)
-
-### ELF The Musical
-<p class="event-when">Thu Nov 5 · 7:30 p.m.</p>
-<p class="event-place">Harris Center, 10 College Pkwy</p>
-
-Same show, second night.
-
-[Harris Center](https://www.harriscenter.net/elf)
-
-### ELF The Musical
-<p class="event-when">Fri Nov 6 · 2:00 p.m.</p>
-<p class="event-place">Harris Center, 10 College Pkwy</p>
-
-Friday matinee. A second show that day is at 7:30 p.m.
-
-[Harris Center](https://www.harriscenter.net/elf)
-
-### ELF The Musical
-<p class="event-when">Fri Nov 6 · 7:30 p.m.</p>
-<p class="event-place">Harris Center, 10 College Pkwy</p>
-
-Friday evening.
-
-[Harris Center](https://www.harriscenter.net/elf)
-
-### ELF The Musical
-<p class="event-when">Sat Nov 7 · 2:00 p.m.</p>
-<p class="event-place">Harris Center, 10 College Pkwy</p>
-
-Saturday matinee. Evening is 7:30 p.m.
-
-[Harris Center](https://www.harriscenter.net/elf)
-
-### ELF The Musical
-<p class="event-when">Sat Nov 7 · 7:30 p.m.</p>
-<p class="event-place">Harris Center, 10 College Pkwy</p>
-
-Saturday evening.
-
-[Harris Center](https://www.harriscenter.net/elf)
-
-### ELF The Musical
-<p class="event-when">Sun Nov 8 · 10:00 a.m.</p>
-<p class="event-place">Harris Center, 10 College Pkwy</p>
-
-Sunday morning. A second show is at 3:00 p.m.
-
-[Harris Center](https://www.harriscenter.net/elf)
-
-### ELF The Musical
-<p class="event-when">Sun Nov 8 · 3:00 p.m.</p>
-<p class="event-place">Harris Center, 10 College Pkwy</p>
-
-Sunday afternoon. Last show of the run.
-
-[Harris Center](https://www.harriscenter.net/elf)

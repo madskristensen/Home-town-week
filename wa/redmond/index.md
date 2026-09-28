@@ -8,7 +8,7 @@ image: /assets/images/redmond/teen-lounge.webp
 image_alt: Teens in the Teen Lounge at Redmond Community Center at Marymoor Village, with a neon sign that reads Teen Lounge.
 image_credit: 'Photo: City of Redmond'
 image_source_url: https://www.redmond.gov/ImageRepository/Document?documentID=40376
-hook: Ice cream and archaeology Monday, drop-in play for little kids on Thursday, teen voice sessions midweek, then flapjacks, a farm festival weekend, and a Marymoor 5K on Sunday.
+hook: Ice cream and archaeology Monday, toddler stories and drop-in play Thursday, teen sessions through the week, then flapjacks, a farm festival, and a Marymoor 5K on the weekend.
 ---
 
 ### Archaeology and Ice Cream
@@ -51,12 +51,6 @@ Monthly sustainability drop-in.
 Ages 12–18 (or middle/high school). Food, hands-on activities, share ideas. No names collected.  
 [Teen Center Project](https://www.redmond.gov/2494/Teen-Center-Project)
 
-### Teen Center idea drop-ins
-<p class="event-when">Wed Sep 30 and Thu Oct 1</p>
-<p class="event-place">RHS Library, then Marymoor Village Community Center</p>
-
-[Teen Center Project](https://www.redmond.gov/2494/Teen-Center-Project)
-
 ### Drop-In Play
 <p class="event-when">Thu Oct 1 · 10:00 a.m.–12:00 p.m.</p>
 <p class="event-place">Redmond Community Center at Marymoor Village, 6505 176th Ave NE</p>
@@ -67,8 +61,21 @@ Ages 12–18 (or middle/high school). Food, hands-on activities, share ideas. No
    credit="Photo: City of Redmond"
    source="https://www.redmond.gov/ImageRepository/Document?documentID=40382" %}
 
-Ages 0–6. An adult must stay. Drop-in fee on Amilia, and fee assistance is available. Thu Oct 1 is the slot confirmed for this window. The listing describes a Tuesday and Thursday pattern, so a Sep 29 session is only on the calendar if that series is running. Confirm on Amilia.  
+Ages 0–6. An adult must stay. Drop-in fee on Amilia, and fee assistance is available. The Oct 6 listing says the series is every Tuesday and Thursday, 10:00 a.m. to 12:00 p.m. Toddler Story Time at the library is the same morning, 10:30–11:30 a.m., so one caregiver has to pick.  
 [Experience Redmond](https://experienceredmond.com/event/drop-in-play-at-the-redmond-community-center-at-marymoor-village/2026-10-01/) · [Amilia](https://app.amilia.com/store/en/city-of-redmond/shop/activities/6788395)
+
+### Toddler Story Time
+<p class="event-when">Thu Oct 1 · 10:30–11:30 a.m.</p>
+<p class="event-place">Redmond Library, 15990 NE 85th St</p>
+
+{% include event-photo.html
+   src="/assets/images/redmond/redmond-library.webp"
+   alt="Redmond Library, a modern building with a glass front and a covered walkway."
+   credit="Photo: King County Library System."
+   source="https://kcls.org/locations/redmond/" %}
+
+Stories, music, movement, and rhymes for 18 months to age 3 with an adult, then 20 to 30 minutes of play. No registration. Space is limited. Tickets are at the front desk 30 minutes before the start. First come, first seated. The same page lists this hour again on Thu Oct 8 and Thu Oct 15.  
+[Toddler Story Time](https://kcls.bibliocommons.com/v2/events/6ab463b90c7bf418f4e3c6c1)
 
 ### Teen Center Project Drop-in Session 2
 <p class="event-when">Thu Oct 1 · 6:00–8:00 p.m.</p>
@@ -83,6 +90,13 @@ Ages 0–6. An adult must stay. Drop-in fee on Amilia, and fee assistance is ava
 Same teen invite as Wednesday.  
 [Teen Center Project](https://www.redmond.gov/2494/Teen-Center-Project) · [Calendar](https://www.redmond.gov/Calendar.aspx?EID=3553)
 
+### Lap Sit Baby Story Time
+<p class="event-when">Fri Oct 2 · 10:30–11:30 a.m.</p>
+<p class="event-place">Redmond Library, 15990 NE 85th St</p>
+
+Stories, music, movement, and rhymes for newborns to 18 months with an adult, then up to 20 minutes of play. No registration. Limited to 20 families. Tickets are at the front desk 30 minutes before the start. First come, first seated. The same page lists Fri Oct 9 and Fri Oct 16 at this hour.  
+[Lap Sit Baby Story Time](https://kcls.bibliocommons.com/v2/events/6ab463b60c7bf418f4e3c6b9)
+
 ### Redmond Saturday Market
 <p class="event-when">Sat Oct 3 · 9:00 a.m.–2:00 p.m.</p>
 <p class="event-place">9900 Willows Rd NE</p>
@@ -93,8 +107,8 @@ Same teen invite as Wednesday.
    credit="Photo: Redmond Saturday Market."
    source="http://www.redmondsaturdaymarket.org/" %}
 
-Season runs through Oct 31.  
-[redmondsaturdaymarket.org](http://www.redmondsaturdaymarket.org/)
+Season runs through Oct 31. The entertainment calendar names Elias Kauhane from 11:00 a.m. to 1:00 p.m. The homepage's "this week" line says Preston Lee & Friends and is undated. Use the calendar.  
+[Market calendar](http://redmondsaturdaymarket.org/Calendar.cshtml) · [redmondsaturdaymarket.org](http://www.redmondsaturdaymarket.org/)
 
 ### Exotics at Redmond Town Center
 <p class="event-when">Sat Oct 3 · 9:00–11:00 a.m.</p>
@@ -187,6 +201,33 @@ Between Velodrome Picnic Shelter and Climbing Wall; parking Lot I. Site opens 7:
 Dog costume social at the brewery. Not a kids show. Optional pet outing. Free on the AllEvents listing. No separate brewery page was verified.  
 [AllEvents](https://allevents.in/redmond)
 
+### Drop-In Play
+<p class="event-when">Tue Oct 6 · 10:00 a.m.–12:00 p.m.</p>
+<p class="event-place">Redmond Community Center at Marymoor Village, 6505 176th Ave NE</p>
+
+Same ages 0–6 session as Thursday. An adult must stay. Gym clothes and athletic shoes are recommended. Drop-in fee on Amilia, and fee assistance is available.  
+[Experience Redmond](https://experienceredmond.com/event/drop-in-play-at-the-redmond-community-center-at-marymoor-village/2026-10-06/)
+
+### Study with Dogs
+<p class="event-when">Wed Oct 7 · 3:30–4:30 p.m.</p>
+<p class="event-place">Redmond Library, 15990 NE 85th St</p>
+
+Therapy dogs from Reading with Rover while teens work on homework, exams, or academic skills. Middle and high school only. Age limits enforced. No registration.  
+[KCLS event](https://kcls.bibliocommons.com/v2/events/6a95ffdd4cb69d003e24c6a4)
+
+### Teen Center Project Community Visioning Session
+<p class="event-when">Thu Oct 8 · 6:00–8:00 p.m.</p>
+<p class="event-place">Redmond Senior & Community Center, Red Oak Community Room, 8703 160th Ave NE</p>
+
+{% include event-photo.html
+   src="/assets/images/redmond/senior-center.webp"
+   alt="People in the east entry of the Redmond Senior and Community Center, beside a bright geometric art wall."
+   credit="Photo: City of Redmond"
+   source="https://www.redmond.gov/ImageRepository/Document?documentID=24797" %}
+
+Open to everyone, and free. Free childcare for ages 3–12 for people who are attending the meeting. This follows the two teen-only drop-ins on Sep 30 and Oct 1.  
+[City calendar](https://www.redmond.gov/Calendar.aspx?EID=3554)
+
 ### Redmond Saturday Market
 <p class="event-when">Sat Oct 10 · 9:00 a.m.–2:00 p.m.</p>
 <p class="event-place">9900 Willows Rd NE</p>
@@ -234,6 +275,13 @@ The market homepage says the season runs May 2 through Oct 31, 9:00 a.m.–2:00 
 Free to walk. The address is 9900 Willows Rd NE.
 
 [Calendar](http://redmondsaturdaymarket.org/Calendar.cshtml) · [Market](http://www.redmondsaturdaymarket.org/)
+
+### Digital SAT Practice Test and Score Review
+<p class="event-when">Sun Oct 18 · 2:00–5:30 p.m.</p>
+<p class="event-place">Redmond Library, 15990 NE 85th St</p>
+
+Free practice test for grades 9–12, then a look at which question types cost the most points. Bring a charged laptop or tablet and a charger. A few devices are available. This is not an officially proctored exam. Register for the library session to attend in person, or for the online session to attend virtually.  
+[KCLS event](https://kcls.bibliocommons.com/v2/events/6aa89dd94b3b06003083ca77)
 
 ### Redmond Saturday Market
 <p class="event-when">Sat Oct 24 · 9:00 a.m.–2:00 p.m.</p>

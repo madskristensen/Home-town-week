@@ -8,7 +8,7 @@ image: /assets/images/kirkland/juanita-beach.webp
 image_alt: Juanita Beach Park on Lake Washington, with a sandy beach, lawn, and the Seattle skyline across the water.
 image_credit: 'Photo: City of Kirkland'
 image_source_url: https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park/Juanita-Beach-Park
-hook: The Wednesday market closes the season, Juanita Beach throws a free harvest festival on Saturday, and Swan Lake lights up the Performance Center that night and Sunday.
+hook: The Wednesday market closes the season. Saturday is a free harvest festival at Juanita Beach, with family math at Kingsgate that morning, and Swan Lake lights up the Performance Center that night and Sunday.
 ---
 
 ### Kirkland Wednesday Market
@@ -82,6 +82,15 @@ Sixth annual, and free. Craft and food vendors, food trucks, contests, a cornhol
 
 Bring a non-perishable food donation if you can. Parking is limited. Bike valet is complimentary, and a city shuttle runs from the North Kirkland Community Center. The festival page does not list the shuttle interval. Vendor applications are closed. Volunteers 16 and older can still sign up.  
 [Harvest Festival](https://www.kirklandwa.gov/Whats-Happening/Community-Events/Parks-and-Community-Services/Kirklands-Harvest-Festival)
+
+### SUMM Family Math Fun
+<p class="event-when">Sat Oct 3 · 11:30 a.m.–1:00 p.m.</p>
+<p class="event-place">Kingsgate Library, 12315 NE 143rd St</p>
+
+Free play-based math for ages 3 to 10 with a parent or caregiver. Games, a short circle time, and an allergy-friendly snack. Register online or at the information desk. The same series page also lists Sat Oct 10 at this hour.
+
+This starts half an hour after the Harvest Festival opens at Juanita Beach, and it ends at 1:00 p.m. Plan them as two separate outings.  
+[Family Math Fun](https://kcls.bibliocommons.com/v2/events/6a7f4c9b4027d701ebc45c62)
 
 ### Swan Lake: Symphony of Lights
 <p class="event-when">Sat Oct 3 · 7:00 p.m., and Sun Oct 4 · 4:00 p.m.</p>
@@ -234,8 +243,13 @@ On the KPC calendar at 7:00 p.m. Clay class ends at 5:00 p.m., so a parent who s
 
 An AC/DC tribute. KPC lists 8:00 p.m. Loud, and not a family matinee.
 
-Saturday, Oct 24, and Sunday, Oct 25, are marked as rental dates on the ticket calendar, not public KPC shows.
+[KPC tickets](https://www.kpcenter.org/get-tickets/)
 
+### Keep on Dancing
+<p class="event-when">Sun Oct 25 · 7:00 p.m.</p>
+<p class="event-place">Kirkland Performance Center, 350 Kirkland Ave</p>
+
+Tina's Dance Studios' annual showcase, with dancers of all ages and levels. The ticket calendar lists 7:00 p.m. and does not print a price. Saturday, Oct 24, is not listed as a public show on that calendar.  
 [KPC tickets](https://www.kpcenter.org/get-tickets/)
 
 No Wednesday market this week. The season ended Sep 30. Juanita Beach is the walk.

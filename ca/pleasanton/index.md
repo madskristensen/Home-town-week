@@ -25,7 +25,7 @@ Main Street closes for Weekends on Main at 4:00 p.m. this day, and it stays clos
 <p class="event-when">Sat Oct 3 · 9:00 a.m.–1:00 p.m.</p>
 <p class="event-place">46 W Angela St</p>
 
-Year-round, every Saturday, rain or shine. The Pacific Coast Farmers' Market Association runs it with the Pleasanton Downtown Association. Parking is in the lots and on the surrounding streets. A vendor page puts the market at 400 Main Street. This page uses the association's address. Palooza is the same day on Main Street, and the association does not print a start time for it.
+Year-round, every Saturday, rain or shine. The Pacific Coast Farmers' Market Association runs it with the Pleasanton Downtown Association. Parking is in the lots and on the surrounding streets. Palooza is the same day on Main Street, and the association does not print a start time for it. This page keeps the Saturdays through Oct. 17. The association still describes the market as every Saturday, so later weeks are the same market.
 
 [PCFMA](https://www.pcfma.org/index.php/market/pleasanton-farmers-market)
 
@@ -39,7 +39,7 @@ Year-round, every Saturday, rain or shine. The Pacific Coast Farmers' Market Ass
    credit="Photo: SelfieCity, CC BY-SA 4.0"
    source="https://commons.wikimedia.org/wiki/File:Pleasanton_Main_Street.jpg" %}
 
-Free. The Downtown Association's street fair, with live music, vendors, and a BMX bike show. The page does not print a start or end time. It does say Main Street is closed from 4:00 p.m. Friday, Oct. 2, until 6:00 a.m. Monday, Oct. 5. The Pleasanton Weekly reported this date in February as the Saturday of Weekends on Main.
+Free. The Downtown Association's street fair, with live music, vendors, and a BMX bike show. The page does not print a start or end time. It does say Main Street is closed from 4:00 p.m. Friday, Oct. 2, until 6:00 a.m. Monday, Oct. 5.
 
 [Downtown Association](https://www.pleasantondowntown.net/pleasanton-palooza-2026)
 
@@ -53,7 +53,7 @@ Free. The Downtown Association's street fair, with live music, vendors, and a BM
    credit="Photo: SelfieCity, CC BY-SA 4.0"
    source="https://commons.wikimedia.org/wiki/File:Museum_on_Main_and_Blue_Agave_in_Pleasanton.jpg" %}
 
-Family-friendly walking tour. Groups leave every 30 minutes from 6:00 to 8:00 p.m. The museum calls each tour about two hours. $25, or $20 for ages 12 and under. Arrive 10 minutes early. Costumes are fine. Rain or shine. Most stops are outside. One stop may need stairs. No pets except service animals. Tickets are non-refundable. The same departures run Sat Oct. 10, Fri Oct. 16, and Sat Oct. 17.
+Family-friendly walking tour. Groups leave every 30 minutes from 6:00 to 8:00 p.m. $25, or $20 for ages 12 and under. Arrive 10 minutes early. Costumes are fine. Rain or shine. Most stops are outside. One stop may need stairs. No pets except service animals. The same departures run Sat Oct. 10, Fri Oct. 16, and Sat Oct. 17.
 
 [Museum on Main](https://www.museumonmain.org/ghost-walk)
 
@@ -101,9 +101,9 @@ Free. All ages. Bags at the museum, then a clue list to candy at downtown shops.
 <p class="event-when">Sat Oct 17 · 1:00–3:00 p.m.</p>
 <p class="event-place">Pleasanton Senior Center, 5353 Sunol Blvd</p>
 
-Free. No registration. Music, dance, and Festival of Lights activities. The city's Library and Recreation Department runs this Cultural Celebration Series. The Pleasanton Weekly reported the series on Sep. 24. Boo Bash downtown ends as this starts.
+Free. Music, dance, storytelling, crafts, and light refreshments. Library staff lead storytime at 1:00 p.m. Srilaya School of Dance is at 1:30 p.m. Sthalam School of Dance is at 2:00 p.m. The city's Library and Recreation Department runs this Cultural Celebration Series. Boo Bash downtown ends as this starts. The Pleasanton Weekly calendar page is a CitySpark embed, so this listing uses the Firehouse page.
 
-[Firehouse Arts](https://www.firehousearts.org/programs/cultural-celebration/)
+[Firehouse Arts](https://www.firehousearts.org/calendar-event/diwali-celebration-2026/)
 
 ### Ghost Walk
 <p class="event-when">Sat Oct 17 · 6:00–8:00 p.m.</p>
@@ -112,43 +112,3 @@ Free. No registration. Music, dance, and Festival of Lights activities. The city
 Last night of the four. Same prices and departure window.
 
 [Museum on Main](https://www.museumonmain.org/ghost-walk)
-
-### Pleasanton Farmers' Market
-<p class="event-when">Sat Oct 24 · 9:00 a.m.–1:00 p.m.</p>
-<p class="event-place">46 W Angela St</p>
-
-Same Saturday market.
-
-[PCFMA](https://www.pcfma.org/index.php/market/pleasanton-farmers-market)
-
-### Pleasanton Farmers' Market
-<p class="event-when">Sat Oct 31 · 9:00 a.m.–1:00 p.m.</p>
-<p class="event-place">46 W Angela St</p>
-
-Same Saturday market, including Halloween morning.
-
-[PCFMA](https://www.pcfma.org/index.php/market/pleasanton-farmers-market)
-
-### Día de los Muertos
-<p class="event-when">Sat Nov 7 · 1:00–3:00 p.m.</p>
-<p class="event-place">Pleasanton Senior Center, 5353 Sunol Blvd</p>
-
-Free. No registration. Altars, storytelling, and crafts. Same series as Diwali.
-
-[Firehouse Arts](https://www.firehousearts.org/programs/cultural-celebration/)
-
-### Native American Heritage Month
-<p class="event-when">Sat Nov 14 · 11:00 a.m.–1:00 p.m.</p>
-<p class="event-place">Alviso Adobe Community Park</p>
-
-Free. No registration. History and hands-on activities. The Firehouse page does not print a street number for the park.
-
-[Firehouse Arts](https://www.firehousearts.org/programs/cultural-celebration/)
-
-### Lunar New Year
-<p class="event-when">Sat Jan 30 · 11:00 a.m.–1:00 p.m.</p>
-<p class="event-place">Lions Wayside Park</p>
-
-Free. No registration. Outdoor performances, storytelling, and crafts. The Firehouse page names the park and does not print a street. Later dates in the same series are Black History Month on Sat Feb. 27, 1:00–3:00 p.m., at the Pleasanton Public Library, and AAPI Heritage Month on Sat May 15, 11:00 a.m.–1:00 p.m., back at Lions Wayside Park.
-
-[Firehouse Arts](https://www.firehousearts.org/programs/cultural-celebration/)

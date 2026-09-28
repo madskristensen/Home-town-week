@@ -8,21 +8,8 @@ image: /assets/images/issaquah/salmon-hatchery.webp
 image_alt: The Issaquah Salmon Hatchery, a long building with a gray roof beside a creek, with yellow trees in front.
 image_credit: 'Photo: Chris Light, CC BY-SA 4.0'
 image_source_url: https://commons.wikimedia.org/wiki/File:Hatchery_6921.jpg
-hook: Salmon Days fills downtown Saturday and Sunday. The hatchery is the reason to go, and a free family dance follows Sunday afternoon at Pickering Barn.
+hook: Saturday and Sunday are Salmon Days downtown. The hatchery is the stop to make, and Sunday afternoon is a free family dance at Pickering Barn. Tuesday evening is storytime.
 ---
-
-### Story Stroll: Watercress
-<p class="event-when">Sat Sep 26, and up through Oct 3</p>
-<p class="event-place">Starts at Issaquah Library, 10 W Sunset Way</p>
-
-{% include event-photo.html
-   src="/assets/images/issaquah/issaquah-library.webp"
-   alt="Issaquah Library, a low building with a broad glass front and a covered walkway."
-   credit="Photo: King County Library System."
-   source="https://kcls.org/locations/issaquah/" %}
-
-Self-led pages of Watercress, by Andrea Wang and Jason Chin, from the library through historic downtown. KCLS lists Saturday as an all-day marker. The Downtown Issaquah Association has the stroll up Sep 5 through Oct 3.  
-[KCLS event](https://kcls.bibliocommons.com/v2/events/6a80b39d2dac6e00371f4f84)
 
 ### Snuggle Up Story Time
 <p class="event-when">Tue Sep 29 · 6:30–7:00 p.m.</p>
@@ -34,11 +21,50 @@ Self-led pages of Watercress, by Andrea Wang and Jason Chin, from the library th
    credit="Photo: King County Library System."
    source="https://kcls.org/locations/issaquah/" %}
 
-Stories, music, movement, and rhymes for newborns to 5 years, with an adult. Up to 30 minutes of play time follows. No registration. Space is limited. Miss Mack hosts.  
-[KCLS event](https://kcls.bibliocommons.com/v2/events/6a7104e288e9bf2800354857)
+Stories, music, movement, and rhymes for newborns to 5 years, with an adult. Up to 30 minutes of play time follows. No registration. Space is limited. Miss Mack hosts.
+
+[Snuggle Up Story Time](https://kcls.bibliocommons.com/v2/events/6a7104e288e9bf2800354857)
+
+### Rise & Shine Story Time
+<p class="event-when">Thu Oct 1 · 10:30–11:00 a.m.</p>
+<p class="event-place">Issaquah Library, 10 W Sunset Way</p>
+
+Same shape as Tuesday night: stories, music, and play time after, for newborns to 5 with an adult. No registration. Space is limited. A calm morning before the festival.
+
+[Rise & Shine Story Time](https://kcls.bibliocommons.com/v2/events/6a710898c7e02e3d006da0ee)
+
+### Story Stroll: Watercress
+<p class="event-when">Sat Oct 3 · all day</p>
+<p class="event-place">Starts at Issaquah Library, 10 W Sunset Way</p>
+
+A self-led walk through Watercress, by Andrea Wang, illustrated by Jason Chin. The story starts at the library and continues through historic downtown. The Downtown Issaquah Association lists the stroll from Sep 5 through Oct 3, so the pages are up on the first morning of Salmon Days. Free. Sponsored by the association and Friends of the Issaquah Library.
+
+[KCLS event](https://kcls.bibliocommons.com/v2/events/6a80b39d2dac6e00371f4f85) · [Downtown events](https://downtownissaquah.com/events/)
+
+### Grande Parade
+<p class="event-when">Sat Oct 3 · 10:00 a.m.</p>
+<p class="event-place">Starts at Confluence Park</p>
+
+The chamber lists a 10:00 a.m. start. The 2026 theme is "Stars, Stripes & Salmon." The route leaves Confluence Park, goes down Rainier Blvd N, turns onto NW Dogwood St, heads north on Front St, then turns onto NE Gilman Blvd toward the dispersal area. Road closures on the downtown info page begin at 9:00 a.m. and reopen after the last entry passes.
+
+[Parade](https://www.salmondays.org/sd-2026-parade)
+
+### Salmon Days Festival
+<p class="event-when">Sat Oct 3 and Sun Oct 4 · 10:00 a.m.–6:00 p.m.</p>
+<p class="event-place">Historic downtown Issaquah</p>
+
+{% include event-photo.html
+   src="/assets/images/issaquah/salmon-hatchery.webp"
+   alt="The Issaquah Salmon Hatchery, a long building with a gray roof beside a creek, with yellow trees in front."
+   credit="Photo: Chris Light, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Hatchery_6921.jpg" %}
+
+The 57th festival, hosted by the Greater Issaquah Chamber. The festival information page lists hours as 10:00 a.m.–6:00 p.m. both days. The star stop is the Issaquah Salmon Hatchery at 125 W Sunset Way. A bike valet sits at Rainier Blvd N and NW Dogwood St, staffed with Cascade Bicycle Club. The city's Pickering Barn farmers market page does not list an October Saturday. The downtown fall market starts the following week.
+
+[Salmon Days](https://www.salmondays.org/sd-2026-festival-information) · [City calendar](https://www.issaquahwa.gov/m/calendar/event/detail/14734)
 
 ### Ragtime
-<p class="event-when">Tue Sep 29–Fri Oct 2 · 7:30 p.m., Sat Oct 3 · 2:00 and 7:30 p.m., Sun Oct 4 · 2:00 p.m.</p>
+<p class="event-when">Through Sun Oct 18 · evenings 7:30 p.m.</p>
 <p class="event-place">Francis J. Gaudette Theatre, 303 Front St N</p>
 
 {% include event-photo.html
@@ -47,76 +73,27 @@ Stories, music, movement, and rhymes for newborns to 5 years, with an adult. Up 
    credit="Photo: Village Theatre."
    source="https://villagetheatre.org/mainstage/ragtime/" %}
 
-The theatre is inside the festival neighborhood. Saturday's 2:00 p.m. show sits in the middle of Salmon Days (10:00 a.m.–6:00 p.m.). The 7:30 p.m. show starts after the booths close. Sunday's 2:00 p.m. show overlaps both the festival and the start of the family dance at 3:00 p.m.
+The Issaquah run is Sep 15 through Oct 18. Evening performances begin at 7:30 p.m. Saturday's posted matinee is 2:00 p.m. This Saturday, Oct 3, the 2:00 p.m. show is ASL-interpreted, and the 7:30 p.m. show has pay-what-you-choose seats. A captioned matinee is Sat Oct 17 at 2:00 p.m. Thursday 2:00 p.m. and Sunday 7:30 p.m. do not happen every week, so check the ticket calendar before you promise one of those.
 
-TeenTix lists an ASL-interpreted performance at Sat Oct 3, 2:00 p.m., and pay-what-you-can seats at Sat Oct 3, 7:30 p.m., among other dates. Confirm with the box office. Visit Issaquah notes language and brief violence, and a run time of about 2 hours 50 minutes with intermission. May not suit young children. The Issaquah run continues through Oct 18.  
-[Ragtime](https://villagetheatre.org/mainstage/ragtime/) · [TeenTix](https://www.teentix.org/calendar/event/ragtime/) · [Audience note](https://www.visitissaquahwa.com/event/village-theatre-presents-ragtime-the-musical/2026-10-04/)
+Audience note from the theatre: racist and offensive language, and moments of violence, including murder. Guns are fired onstage. About 2 hours 50 minutes with intermission. Not for young children. Tickets start at $42 online. KIDSTAGE's next public Issaquah show, Footloose, is in December.
 
-### Rise & Shine Story Time
-<p class="event-when">Thu Oct 1 · 10:30–11:00 a.m.</p>
-<p class="event-place">Issaquah Library, 10 W Sunset Way</p>
-
-Same age range and the same shape: stories, music, play time after. No registration. Space is limited. A calm morning before the festival weekend.  
-[KCLS event](https://kcls.bibliocommons.com/v2/events/6a710898c7e02e3d006da0ee)
-
-### Salmon Days Festival
-<p class="event-when">Sat Oct 3 and Sun Oct 4 · 10:00 a.m.–6:00 p.m.</p>
-<p class="event-place">Historic downtown Issaquah</p>
-
-57th festival, hosted by the Greater Issaquah Chamber. The chamber's 2026 vendor guide lists festival hours as 10:00 a.m.–6:00 p.m. both days. Artisan booths, food, and the Field of Fun sit around Front Street and Sunset Way. The star stop is the Issaquah Salmon Hatchery at 125 W Sunset Way, where you can watch fish that made it back. The same guide points to the Kiwanis salmon bake on the south side of the hatchery grounds.
-
-There is no Saturday farmers market this week. The barn season ended Sep 26.  
-[Salmon Days](https://www.salmondays.org/) · [City calendar](https://www.issaquahwa.gov/m/calendar/event/detail/14734) · [Hours in the vendor guide](https://www.salmondays.org/_files/ugd/9db178_f7af0bfb46cf42eca62e59101b8c1de0.pdf)
-
-### Grande Parade
-<p class="event-when">Sat Oct 3 · 10:00 a.m.</p>
-<p class="event-place">Starts at Confluence Park</p>
-
-The chamber lists a 10:00 a.m. start. Road closures begin at 9:00 a.m. The route leaves Confluence Park, goes down Rainier Blvd N, turns onto NW Dogwood St, heads north on Front St, then turns onto NE Gilman Blvd toward the dispersal area by Boehm's Candies. Roads reopen after the last entry passes. The 2026 theme on the parade page is "Stars, Stripes & Salmon."  
-[Parade details](https://www.salmondays.org/sd-2026-parade) · [Downtown notes](https://www.salmondays.org/sd-2026-info-for-downtown)
-
-### Story Stroll: Watercress
-<p class="event-when">Up downtown through Sat Oct 3</p>
-<p class="event-place">Starts at Issaquah Library, 10 W Sunset Way</p>
-
-{% include event-photo.html
-   src="/assets/images/issaquah/issaquah-library.webp"
-   alt="Issaquah Library, a low building with a broad glass front and a covered walkway."
-   credit="Photo: King County Library System."
-   source="https://kcls.org/locations/issaquah/" %}
-
-A self-led walk through the picture book Watercress, by Andrea Wang, illustrated by Jason Chin. KCLS says the story starts at the library and continues through historic downtown. The Downtown Issaquah Association lists the stroll from Sep 5 through Oct 3. Free. Sponsored by the association and Friends of the Issaquah Library.  
-[KCLS event](https://kcls.bibliocommons.com/v2/events/6a80b39d2dac6e00371f4f84) · [Downtown calendar](https://downtownissaquah.com/calendar/)
-
-### Main stage
-<p class="event-when">Sat Oct 3 and Sun Oct 4, from noon</p>
-<p class="event-place">Downtown festival stage</p>
-
-The chamber's entertainment page lists:
-
-Saturday: The True Romans at noon, Roemen and the Whereabouts at 1:30 p.m., Foot Stompers at 3:00 p.m., Rumble Underground at 4:30 p.m.
-
-Sunday: Elizabeth Better at noon, Brian Nay Band at 1:30 p.m., The Nines at 3:00 p.m., a Madonna tribute at 4:30 p.m.
-
-The same page also lists a long run of youth and local bands, including School of Rock Issaquah. It does not label which day that second list belongs to, so check the page before you promise a kid a specific set.  
-[Entertainment](https://www.salmondays.org/sd-2026-entertainment)
-
-The city also lists a bike valet at Rainier Blvd N and NW Dogwood St, staffed with Cascade Bicycle Club.  
-[City calendar](https://www.issaquahwa.gov/m/calendar/event/detail/14734)
-
-### Story Stroll: Watercress
-<p class="event-when">Through Sat Oct 3</p>
-<p class="event-place">Starts at Issaquah Library, then downtown</p>
-
-The Downtown Issaquah Association lists the stroll through Oct 3, so the pages are up on the first morning of Salmon Days. It is an easy add if you are already walking Front Street. The KCLS description says the route starts at the library.  
-[KCLS event](https://kcls.bibliocommons.com/v2/events/6a80b39d2dac6e00371f4f84) · [Downtown calendar](https://downtownissaquah.com/calendar/)
+[Ragtime](https://villagetheatre.org/mainstage/ragtime/)
 
 ### Family Dance Party
 <p class="event-when">Sun Oct 4 · 3:00–6:00 p.m.</p>
 <p class="event-place">Pickering Barn, 1730 10th Ave NW</p>
 
-Free Hispanic Heritage Month dance with The Circle and the city. Music from Spanish-speaking countries, dance lessons, and snacks. Open to everyone. It overlaps the last hours of Salmon Days, and it is at the barn, not on Front Street. Downtown in the morning, Pickering in the afternoon, works. RSVP is on The Circle's page.  
+Free Hispanic Heritage Month dance with the city and The Circle. Music from Spanish-speaking countries, dance lessons, and snacks. Open to everyone. It overlaps the last hours of Salmon Days, and it is at the barn, not on Front Street. Downtown in the morning, Pickering in the afternoon, works.
+
 [City calendar](https://www.issaquahwa.gov/m/calendar/event/detail/14731) · [The Circle](https://www.thecircle-wa.org/event-details-registration/hispanic-heritage-month-celebration-3)
+
+### Story Stroll: Apple Pie Picnic
+<p class="event-when">Sat Oct 10 and Sat Oct 17 · all day</p>
+<p class="event-place">Starts at Issaquah Library, 10 W Sunset Way</p>
+
+The next downtown stroll, after Watercress comes down. Apple Pie Picnic, by Alicia Duran, illustrated by Brian Fitzgerald. Self-led from the library through historic downtown. KCLS lists both Saturdays as all day. Sponsored by the Downtown Issaquah Association and Friends of the Issaquah Library. Oct 17 is also Issaquah Goes Apples, so the pages are on the harvest route.
+
+[Oct 10](https://kcls.bibliocommons.com/v2/events/6aa0a306442d35226f67899a) · [Oct 17](https://kcls.bibliocommons.com/v2/events/6aa0a306442d35226f67899b)
 
 ### Fall Farm Fresh Market
 <p class="event-when">Sat Oct 10 · 9:00 a.m.–2:00 p.m.</p>
@@ -128,15 +105,13 @@ Free Hispanic Heritage Month dance with The Circle and the city. Music from Span
    credit="Photo: Visit Issaquah."
    source="https://www.visitissaquahwa.com/event/issaquah-farmers-market/2026-09-26/" %}
 
-Downtown Issaquah Association's fall market, with Ayala Farms. Saturdays from Oct 10 through Dec 5, 9:00 a.m.–2:00 p.m. Live music 11:00 a.m.–1:00 p.m. Visit Issaquah flags the next Saturday, Oct 17, as Issaquah Goes Apples, a special day on top of the market.
-
-The barn market from earlier in the fall does not restart. This is the Front Street season.
+Downtown Issaquah Association's fall market, with Ayala Farms. Visit Issaquah lists Saturdays from Oct 10 through Dec 5, 9:00 a.m.–2:00 p.m., and live music 11:00 a.m.–1:00 p.m. The series page lists this Saturday, then Oct 24. Oct 17 is the apple festival on top of the market.
 
 [Oct 10 listing](https://www.visitissaquahwa.com/event/fall-farm-fresh-market-2/2026-10-10/)
 
 ### Issaquah Goes Apples
 <p class="event-when">Sat Oct 17 · 9:00 a.m.–2:00 p.m.</p>
-<p class="event-place">Historic Shell Station, 232 Front St N, and La Piazza</p>
+<p class="event-place">Historic Shell Station, 232 Front St N</p>
 
 {% include event-photo.html
    src="/assets/images/issaquah/front-street-trolley.webp"
@@ -144,62 +119,22 @@ The barn market from earlier in the fall does not restart. This is the Front Str
    credit="Photo: Steve Morgan, CC BY-SA 4.0"
    source="https://commons.wikimedia.org/wiki/File:Issaquah_Valley_Trolley_car_519_crossing_Front_St_in_2014.jpg" %}
 
-The 11th annual harvest day, run by the Downtown Issaquah Association. It includes the Fall Farm Fresh Market, the Historically Hip Artisan Market, an apple cider press, scarecrow building, art, photo spots, and live music. Visit Issaquah lists the hours as 9:00 a.m.–2:00 p.m. at the Historic Shell Station.
+The 11th annual harvest day, from the Downtown Issaquah Association. Visit Issaquah lists the Farm Fresh Market, the Historically Hip Artisan Market, an apple cider press, scarecrow building, art, photo spots, and live music, 9:00 a.m.–2:00 p.m. at the Historic Shell Station. This is the same morning as the regular fall market. You do not need a second trip for produce. The captioned Ragtime matinee is 2:00 p.m., when the market ends.
 
-The association also points people to La Piazza, the parking lot next to Chicago Pastrami, and to other downtown stops. Fischer Meats lists a turkey carving demo at 1:00 p.m. on site that day. An apple-themed food tour of downtown restaurants is posted from Oct 17 through Oct 31. Menus can change.
-
-This is the same morning as the regular fall market. You do not need a second trip for produce.
-
-[Visit Issaquah](https://www.visitissaquahwa.com/event/issaquah-goes-apples/)
+[Issaquah Goes Apples](https://www.visitissaquahwa.com/event/issaquah-goes-apples/)
 
 ### Ragtime, captioned
 <p class="event-when">Sat Oct 17 · 2:00 p.m.</p>
 <p class="event-place">Francis J. Gaudette Theatre, 303 Front St N</p>
 
-{% include event-photo.html
-   src="/assets/images/issaquah/ragtime.webp"
-   alt="Three Ragtime performers on stage in period costume, with a woman in a feathered hat in front."
-   credit="Photo: Village Theatre."
-   source="https://villagetheatre.org/mainstage/ragtime/" %}
-
-Village Theatre lists a captioned performance at 2:00 p.m. The market ends at 2:00, so you cannot do the last hour of apples and the opening of the show. The Issaquah run ends Sunday, Oct 18. After that the production moves to Everett, opening Sat Oct 24.
-
-Language and brief violence. About 2 hours 50 minutes with intermission. Not for young children.
+Village Theatre lists a captioned performance at 2:00 p.m. The Issaquah run ends the next day, Sunday, Oct 18. After that the production moves to Everett. Language and violence, about 2 hours 50 minutes with intermission. Not for young children.
 
 [Ragtime](https://villagetheatre.org/mainstage/ragtime/)
-
-No kids' storytime was on the Issaquah library branch page for this week.
-
-### Ragtime
-<p class="event-when">Through Sun Oct 18</p>
-<p class="event-place">Francis J. Gaudette Theatre, 303 Front St N</p>
-
-{% include event-photo.html
-   src="/assets/images/issaquah/ragtime.webp"
-   alt="Three Ragtime performers on stage in period costume, with a woman in a feathered hat in front."
-   credit="Photo: Village Theatre."
-   source="https://villagetheatre.org/mainstage/ragtime/" %}
-
-The Issaquah run continues through Oct 18. The ticket calendar is the list of which nights have a show. This digest does not invent a curtain time that the calendar did not print for Oct 8, 9, or 10. Visit Issaquah notes language and brief violence, and a run of about 2 hours 50 minutes with intermission. Not a show for young children. Tickets from about $42 online.
-
-The captioned performance is next Saturday, Oct 17, at 2:00 p.m.
-
-[Ragtime](https://villagetheatre.org/mainstage/ragtime/)
-
-The Issaquah library branch page did not list upcoming storytimes for this week. Front Street after the market is the walk.
 
 ### Fall Farm Fresh Market
 <p class="event-when">Sat Oct 24 · 9:00 a.m.–2:00 p.m.</p>
 <p class="event-place">Historic Shell Station, 232 Front St N</p>
 
-{% include event-photo.html
-   src="/assets/images/issaquah/farmers-market.webp"
-   alt="Shoppers and white tents at an outdoor farmers market, with produce crates and a red barn behind the crowd."
-   credit="Photo: Visit Issaquah."
-   source="https://www.visitissaquahwa.com/event/issaquah-farmers-market/2026-09-26/" %}
+The next Saturday after the apple festival. Visit Issaquah's series page still lists it, 9:00 a.m.–2:00 p.m., and the season continues through Dec 5. Live music on the Oct 10 listing is 11:00 a.m.–1:00 p.m.
 
-The regular fall Saturday, not the apple festival. That was Oct 17. This series runs through Dec 5, 9:00 a.m.–2:00 p.m., with live music 11:00 a.m.–1:00 p.m. Ayala Farms is the farm named on the Visit Issaquah listing.
-
-[Fall market](https://www.visitissaquahwa.com/event/fall-farm-fresh-market-2/2026-10-10/)
-
-The Downtown Issaquah Association's apple food tour, tied to Issaquah Goes Apples, is posted through Oct 31. That is restaurant specials, not a second festival. Check each kitchen. The association said menus can change.
+[Fall market series](https://www.visitissaquahwa.com/series/fall-farm-fresh-market-3/)

@@ -8,173 +8,107 @@ image: /assets/images/ferndale/hovander-autumn.webp
 image_alt: A gravel path through autumn trees at Hovander Homestead Park, with a red barn in the distance.
 image_credit: 'Photo: Robert Ashworth, CC BY 2.0'
 image_source_url: https://commons.wikimedia.org/wiki/File:Autum_day_in_Hovander_Homestead_Park_(30506816535).jpg
-hook: The tiny paintings from last Saturday are on the wall at the library. Saturday night is a ticketed farm dinner south of town.
+hook: Monday morning is toddler storytime. Tuesday evening is the witches dance at Pioneer Pavilion. Sunday is the Bellingham Symphony, in Bellingham, with Shoestring Circus.
 ---
 
 ### Toddler Storytime
-<p class="event-when">Mon Sep 28 · 9:30–10:00 a.m. and 10:30–11:00 a.m.</p>
-<p class="event-place">Ferndale Library large meeting room</p>
+<p class="event-when">Mon Sep 28 · 9:30–10:00 a.m.</p>
+<p class="event-place">Ferndale Library, large meeting room</p>
 
-Ages 1–3, about 20 minutes. Both sessions are the same: concept books, simple stories, and movement. The next Monday, Oct 5, is outside this week.
+Ages 1–3, about 20 minutes. Concept books, simple stories, and movement. The same listing says an identical program at 10:30 a.m. Come to one.
 
-[9:30 session](https://wcls.libcal.com/event/16945225) · [10:30 session](https://wcls.libcal.com/event/16945254)
+[Toddler Storytime](https://wcls.libcal.com/event/16945225)
 
 ### Witches Dance
 <p class="event-when">Tue Sep 29 · 6:30–7:30 p.m.</p>
-<p class="event-place">Pioneer Pavilion, 2007 Cherry St</p>
+<p class="event-place">Pioneer Pavilion Community Center, 2007 Cherry St</p>
 
-Free. Registration required. Every Tuesday through Oct 27. Ages 12 and under need a parent or guardian in the room. Four practices is the mark if you want to perform later. You can also just learn the dance.
+{% include event-photo.html
+   src="/assets/images/ferndale/pioneer-barn.webp"
+   alt="The weathered Barr Barn at Pioneer Park in Ferndale, with a cupola and a small window near the roof."
+   credit="Photo: Joe Mabel, CC BY-SA 3.0"
+   source="https://commons.wikimedia.org/wiki/File:Ferndale,_WA_-_Pioneer_Park_-_barn_01.jpg" %}
+
+Free. Registration required. No experience needed. Every Tuesday from Sep 8 through Oct 27. Ages 12 and under need a parent or guardian in the room the whole time. Four practices is the mark if you want to perform later. You can also just learn the dance.
 
 [Witches Dance](https://cityofferndale.org/472/Ferndale-Witches-Dance)
 
 ### Preschool Storytime
 <p class="event-when">Fri Oct 2 · 10:30–11:00 a.m.</p>
-<p class="event-place">Ferndale Library large meeting room</p>
+<p class="event-place">Ferndale Library, large meeting room</p>
 
-Ages 3–5, 30 minutes. Longer stories, rhymes, and songs.
+Ages 3–5, 30 minutes. Longer stories, rhymes, and songs. The dated list also has Oct 9 and Oct 16, then jumps to Nov 6.
 
 [Preschool Storytime](https://wcls.libcal.com/event/16953399)
 
-LEGO Club is the Tuesday after this week, Oct 6, 4:00–5:00 p.m. in the large meeting room. Ages 4 and up, drop-in. The library provides the bricks.
-
-[LEGO Club](https://wcls.libcal.com/event/16483564)
-
-### Farm dinner at Evergreen Gardens
-<p class="event-when">Sat Oct 3 · 6:00–9:00 p.m.</p>
-<p class="event-place">Evergreen Gardens, 698 West Pole Rd</p>
-
-A family-style dinner for up to 50 guests, menu by The Skagit Table, with ingredients from local farms including Oak Meadows Farm. The hosts list wine and handcrafted mocktails. This is a slow adult evening in the garden, not a kids' program. The event page does not show a ticket price in the description.
-
-[Evergreen Gardens dinner](https://eventsateg.com/f2tdinner/oct-f2t-dinner)
-
 ### Tiny Art Show
-<p class="event-when">Sat Oct 3 and Sun Oct 4, during open hours, then through October</p>
-<p class="event-place">Ferndale Library, 2125 Main St</p>
+<p class="event-when">Sat Oct 3 through Sat Oct 31 · during open hours</p>
+<p class="event-place">Ferndale Library</p>
 
-Work from the Sep 26 Tiny Canvas Painting session. The library calls it an all-day exhibit during open hours for the month of October. Pickup of the canvases is the first week of November.
+Work from the Tiny Canvas Painting session. The library calls it an all-day exhibit during open hours for the month of October. Time not posted as a single clock.
 
-The branch page lists Monday–Thursday 9:00 a.m.–8:00 p.m., Friday 9:00 a.m.–6:00 p.m., Saturday 9:00 a.m.–5:00 p.m., and Sunday 1:00–5:00 p.m. The live hours grid for late September shows closing about 15 minutes earlier. Use the grid the day you go.
+[Tiny Art Show](https://wcls.libcal.com/event/17017795)
 
-[Tiny Art Show](https://wcls.libcal.com/event/17017795) · [Branch hours](https://www.wcls.org/libraries/)
+### BSO: Star-Cross'd Dreams
+<p class="event-when">Sun Oct 4 · 3:00 p.m.</p>
+<p class="event-place">Mount Baker Theatre, 104 N Commercial St, Bellingham</p>
 
-### Community Crafting Day at FrinGe
-<p class="event-when">Sat Oct 3 · time not posted</p>
-<p class="event-place">FrinGe Brewing</p>
+This one is in Bellingham, not Ferndale. Bellingham Symphony Orchestra with violinist Dawn Posey and Shoestring Circus. Run time 84 minutes. Doors at 1:45 p.m. A pre-concert talk at 2:00 p.m. is free for ticket holders. Tickets start at $20, including the historic-venue fee. Limited tickets.
 
-The Ferndale Arts Commission lists this date on the city's recreation page. The page says details are still being finalized, and that an event without its own link does not have specifics yet. No start time is posted.
-
-FrinGe is a brewery. Its taproom says well-behaved children and leashed pets are welcome. That is the taproom's general policy, not a description of the craft day. Confirm with the city before you treat it as a kids' workshop. Contact on the recreation page is Megan Juenemann, (360) 685-2353.
-
-[City recreation page](https://www.cityofferndale.org/284/Recreation-and-Events)
+[BSO: Star-Cross'd Dreams](https://www.mountbakertheatre.com/events-tickets/bso-star-crossd-dreams/)
 
 ### Toddler Storytime
-<p class="event-when">Mon Oct 5 · 9:30–10:00 a.m. and 10:30–11:00 a.m.</p>
-<p class="event-place">Ferndale Library large meeting room, 2125 Main St</p>
+<p class="event-when">Mon Oct 5 · 9:30–10:00 a.m.</p>
+<p class="event-place">Ferndale Library, large meeting room</p>
 
-Ages 1–3, about 20 minutes. The two sessions are the same: concept books, simple stories, and movement. Pick one.
+Ages 1–3. The listing also names an identical 10:30 a.m. sitting. Pick one.
 
-[9:30 session](https://wcls.libcal.com/event/16945228) · [10:30 session](https://wcls.libcal.com/event/16945256)
+[Toddler Storytime](https://wcls.libcal.com/event/16945225)
 
 ### LEGO Club
 <p class="event-when">Tue Oct 6 · 4:00–5:00 p.m.</p>
-<p class="event-place">Ferndale Library large meeting room, 2125 Main St</p>
+<p class="event-place">Ferndale Library, large meeting room</p>
 
-Drop-in for ages 4 and up. The library provides the bricks. The next club date on this series is Oct 20, not next Tuesday.
+Drop-in for ages 4 and up. The library provides the bricks. Witches Dance practice is the same evening at 6:30, at Pioneer Pavilion, not at the library.
 
 [LEGO Club](https://wcls.libcal.com/event/16483564)
 
 ### Witches Dance
 <p class="event-when">Tue Oct 6 · 6:30–7:30 p.m.</p>
-<p class="event-place">Pioneer Pavilion, 2007 Cherry St</p>
+<p class="event-place">Pioneer Pavilion Community Center, 2007 Cherry St</p>
 
-{% include event-photo.html
-   src="/assets/images/ferndale/pioneer-barn.webp"
-   alt="The weathered Barr Barn at Pioneer Park in Ferndale, with a cupola and a small window near the roof."
-   credit="Photo: Joe Mabel, CC BY-SA 3.0"
-   source="https://commons.wikimedia.org/wiki/File:Ferndale,_WA_-_Pioneer_Park_-_barn_01.jpg" %}
-
-Free. Registration required. Every Tuesday from Sep 8 through Oct 27. No experience needed. Ages 12 and under need a parent or guardian in the room the whole time. Four practices is the mark if you want to perform later. You can also just learn the dance.
-
-LEGO ends at 5:00. Practice starts at 6:30. There is time to eat if you leave the library on time. They are not the same building.
+Free, registration required, no experience needed. Ages 12 and under stay with a parent. LEGO Club ends at 5:00. There is time to eat if you leave the library on time.
 
 [Witches Dance](https://cityofferndale.org/472/Ferndale-Witches-Dance)
 
 ### Preschool Storytime
 <p class="event-when">Fri Oct 9 · 10:30–11:00 a.m.</p>
-<p class="event-place">Ferndale Library large meeting room, 2125 Main St</p>
+<p class="event-place">Ferndale Library, large meeting room</p>
 
-Ages 3–5, 30 minutes. Longer stories, rhymes, and songs. The dated series includes Oct 9 and Oct 16, then jumps to Nov 6. Friday Oct 23 is not on that list.
+Ages 3–5. Same Friday series as Oct 2. The next date on this list is Oct 16.
 
-[Preschool Storytime](https://wcls.libcal.com/event/16953400)
+[Preschool Storytime](https://wcls.libcal.com/event/16953399)
 
 ### Toddler Storytime
-<p class="event-when">Mon Oct 12 · 9:30–10:00 a.m. and 10:30–11:00 a.m.</p>
-<p class="event-place">Ferndale Library large meeting room, 2125 Main St</p>
+<p class="event-when">Mon Oct 12 · 9:30–10:00 a.m.</p>
+<p class="event-place">Ferndale Library, large meeting room</p>
 
-Ages 1–3, about 20 minutes. The sessions match. Come to one.
+Ages 1–3. Identical sessions at 9:30 and 10:30 a.m. The Monday list on this page continues after Oct 12.
 
-[9:30 session](https://wcls.libcal.com/event/16945228) · [10:30 session](https://wcls.libcal.com/event/16945256)
+[Toddler Storytime](https://wcls.libcal.com/event/16945225)
 
 ### Witches Dance
 <p class="event-when">Tue Oct 13 · 6:30–7:30 p.m.</p>
-<p class="event-place">Pioneer Pavilion, 2007 Cherry St</p>
+<p class="event-place">Pioneer Pavilion Community Center, 2007 Cherry St</p>
 
-{% include event-photo.html
-   src="/assets/images/ferndale/pioneer-barn.webp"
-   alt="The weathered Barr Barn at Pioneer Park in Ferndale, with a cupola and a small window near the roof."
-   credit="Photo: Joe Mabel, CC BY-SA 3.0"
-   source="https://commons.wikimedia.org/wiki/File:Ferndale,_WA_-_Pioneer_Park_-_barn_01.jpg" %}
+Free. Registration required. Tuesdays remain on the city page through Oct 27. LEGO Club is not listed on this Tuesday.
 
-Free, registration required, no experience needed. Ages 12 and under stay with a parent. The city runs this every Tuesday through Oct 27.
-
-LEGO Club is not this Tuesday. The next drop-in is Oct 20, 4:00–5:00 p.m., in the library meeting room.
-
-[Witches Dance](https://cityofferndale.org/472/Ferndale-Witches-Dance) · [LEGO Club, Oct 20](https://wcls.libcal.com/event/16483565)
-
-{% include event-photo.html
-   src="/assets/images/ferndale/hovander-autumn.webp"
-   alt="A gravel path through autumn trees at Hovander Homestead Park, with a red barn in the distance."
-   credit="Photo: Robert Ashworth, CC BY 2.0"
-   source="https://commons.wikimedia.org/wiki/File:Autum_day_in_Hovander_Homestead_Park_(30506816535).jpg" %}
-
-Hovander is the daytime walk if you want a farm without a ticket. No festival is posted there for this week.
+[Witches Dance](https://cityofferndale.org/472/Ferndale-Witches-Dance)
 
 ### Preschool Storytime
 <p class="event-when">Fri Oct 16 · 10:30–11:00 a.m.</p>
-<p class="event-place">Ferndale Library large meeting room, 2125 Main St</p>
+<p class="event-place">Ferndale Library, large meeting room</p>
 
 Ages 3–5. This is the last Friday on the current dated list until Nov 6.
 
-[Preschool Storytime](https://wcls.libcal.com/event/16953400)
-
-### Toddler Storytime
-<p class="event-when">Mon Oct 19 · 9:30–10:00 a.m. and 10:30–11:00 a.m.</p>
-<p class="event-place">Ferndale Library large meeting room, 2125 Main St</p>
-
-Ages 1–3. Identical sessions. The Monday series on these pages continues into November.
-
-[9:30 session](https://wcls.libcal.com/event/16945228) · [10:30 session](https://wcls.libcal.com/event/16945256)
-
-### LEGO Club
-<p class="event-when">Tue Oct 20 · 4:00–5:00 p.m.</p>
-<p class="event-place">Ferndale Library large meeting room, 2125 Main St</p>
-
-Drop-in, ages 4 and up. Bricks provided. The previous club date was Oct 6. The next one after this is Nov 3.
-
-[LEGO Club](https://wcls.libcal.com/event/16483565)
-
-### Witches Dance
-<p class="event-when">Tue Oct 20 · 6:30–7:30 p.m.</p>
-<p class="event-place">Pioneer Pavilion, 2007 Cherry St</p>
-
-{% include event-photo.html
-   src="/assets/images/ferndale/pioneer-maple.webp"
-   alt="A large maple tree with green leaves beside a wooden building in Ferndale's Pioneer Park."
-   credit="Photo: Robert Ashworth, CC BY 2.0"
-   source="https://commons.wikimedia.org/wiki/File:Maple_tree_in_Ferndale%27s_Pioneer_Park_(14768261021).jpg" %}
-
-Free. Registration required. One Tuesday remains after this one, Oct 27, which is the following week. Ages 12 and under need a parent in the room.
-
-There is a 90-minute gap between LEGO and practice. Eat, then drive to Cherry Street.
-
-[Witches Dance](https://cityofferndale.org/472/Ferndale-Witches-Dance)
+[Preschool Storytime](https://wcls.libcal.com/event/16953399)
