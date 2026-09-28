@@ -13,15 +13,18 @@ sitemap: false
   <author>
     <name>{{ site.author.name | xml_escape }}</name>
   </author>
-  {%- assign feed_issues = site.issues | sort: "date" | reverse -%}
-  {%- for issue in feed_issues -%}
+  {%- assign feed_pages = site.pages | where: "layout", "city" | sort: "url" -%}
+  {%- for city_page in feed_pages -%}
   <entry>
-    {%- assign feed_city = site.data.cities | where: "id", issue.city | where: "state", issue.state | first -%}
-    <title>{{ issue.title | xml_escape }}{% if feed_city %} | {{ feed_city.name | xml_escape }}{% endif %}</title>
-    <link href="{{ issue.url | absolute_url }}"/>
-    <id>{{ issue.url | absolute_url }}</id>
-    <updated>{{ issue.date | date_to_xmlschema }}</updated>
-    <summary>{{ issue.description | xml_escape }}</summary>
+    <title>{{ city_page.title | xml_escape }}</title>
+    <link href="{{ city_page.url | absolute_url }}"/>
+    <id>{{ city_page.url | absolute_url }}</id>
+    {%- if city_page.last_modified_at -%}
+    <updated>{{ city_page.last_modified_at | date_to_xmlschema }}</updated>
+    {%- else -%}
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    {%- endif -%}
+    <summary>{{ city_page.description | xml_escape }}</summary>
   </entry>
   {%- endfor -%}
 </feed>

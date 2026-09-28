@@ -1,8 +1,0 @@
-<ul class="issue-list">
-  {%- for issue in include.issues -%}
-  <li>
-    <a href="{{ issue.url | relative_url }}">{{ issue.title }}</a>
-    <span class="meta"><time datetime="{{ issue.week_start }}/{{ issue.week_end }}">{{ issue.range }}</time></span>
-  </li>
-  {%- endfor -%}
-</ul>

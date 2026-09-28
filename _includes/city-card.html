@@ -2,50 +2,34 @@
   One city on a state hub.
   Expects `city` from the parent loop.
   Pass priority="high" on the first card and loading="lazy" on the rest.
-  The city name, photo, and date go to the current Monday–Sunday issue.
-  The "home" link stays on the city index.
+  The name, photo, and hook open that city's page.
 {%- endcomment -%}
-{%- assign card_issues = site.issues | where: "city", city.id | where: "state", city.state -%}
-{%- include current-issue.html issues=card_issues -%}
-{%- assign card_latest = current_issue -%}
+{%- assign city_page = site.pages | where: "layout", "city" | where: "city", city.id | where: "state", city.state | first -%}
 {%- capture card_url -%}/{{ city.state }}/{{ city.id }}/{%- endcapture -%}
 {%- assign card_url = card_url | strip -%}
-{%- if card_latest -%}
-  {%- assign name_href = card_latest.url -%}
-{%- else -%}
-  {%- assign name_href = card_url -%}
-{%- endif -%}
 <article class="city-card">
-  {%- if card_latest.image -%}
-  <a class="city-card-photo" href="{{ card_latest.url | relative_url }}">
+  {%- if city_page.image -%}
+  <a class="city-card-photo" href="{{ card_url | relative_url }}">
     {%- include responsive-img.html
-         src=card_latest.image
-         alt=card_latest.image_alt
+         src=city_page.image
+         alt=city_page.image_alt
          priority=include.priority
          loading=include.loading
          sizes="(min-width: 42rem) 40rem, 100vw" -%}
   </a>
   {%- endif -%}
   <div class="city-card-body">
-    <h3><a href="{{ name_href | relative_url }}">{{ city.name }}, {{ city.state_name }}</a></h3>
-    {%- if card_latest.range -%}
-    <p class="city-card-when"><a href="{{ card_latest.url | relative_url }}">{{ card_latest.range }}</a></p>
-    {%- endif -%}
-    {%- if card_latest.hook -%}
-    <p class="city-card-hook">{{ card_latest.hook }}</p>
+    <h3><a href="{{ card_url | relative_url }}">{{ city.name }}, {{ city.state_name }}</a></h3>
+    {%- if city_page.hook -%}
+    <p class="city-card-hook">{{ city_page.hook }}</p>
     {%- endif -%}
     {%- if city.tagline -%}
     <p>{{ city.tagline }}</p>
     {%- elsif city.summary -%}
     <p>{{ city.summary }}</p>
     {%- endif -%}
-    {%- if card_latest.image_credit -%}
-    <p class="photo-credit"><span>{{ card_latest.image_credit }}</span>{%- if card_latest.image_source_url -%} <a href="{{ card_latest.image_source_url }}" rel="noopener">Source</a>{%- endif -%}</p>
-    {%- endif -%}
-    {%- if card_latest -%}
-    <p class="card-secondary"><a href="{{ card_url | relative_url }}">{{ city.name }} home</a></p>
-    {%- else -%}
-    <p class="cta"><a href="{{ card_url | relative_url }}">See {{ city.name }}</a></p>
+    {%- if city_page.image_credit -%}
+    <p class="photo-credit"><span>{{ city_page.image_credit }}</span>{%- if city_page.image_source_url -%} <a href="{{ city_page.image_source_url }}" rel="noopener">Source</a>{%- endif -%}</p>
     {%- endif -%}
   </div>
 </article>

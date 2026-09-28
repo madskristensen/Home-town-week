@@ -7,7 +7,7 @@ require "fileutils"
 module HometownWeek
   # Dated events in {city}_events.yml become static .ics files.
   # Undated events are skipped. Clocks stay in America/Los_Angeles.
-  # Issue pages put an add-to-calendar icon on the gold date line.
+  # The city page puts an add-to-calendar icon on the gold date line.
   module EventCalendar
     ZONE = "America/Los_Angeles"
     MONTHS = %w[Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec].freeze
@@ -187,27 +187,63 @@ module HometownWeek
       true
     end
 
+    def month_day_mentioned?(text, parsed)
+      return false unless parsed && parsed[:date]
+
+      mon = MONTHS[parsed[:date].month - 1]
+      day = parsed[:date].day
+      text.to_s.match?(/\b#{mon}[a-z]*\.?\s+#{day}\b/i)
+    end
+
+    def clock_mentioned?(text, parsed)
+      return false unless parsed && parsed[:time]
+
+      hour, min, = parsed[:time]
+      want = hour >= 12 ? "p.m." : "a.m."
+      hour12 = hour % 12
+      hour12 = 12 if hour12.zero?
+      needle = format("%d:%02d", hour12, min)
+      source = text.to_s
+      offset = 0
+      pattern = /(?<!\d)#{Regexp.escape(needle)}(?!\d)/
+      while (match = source.match(pattern, offset))
+        window = source[match.begin(0), 48].to_s
+        next_clock = window.index(/\d{1,2}:\d{2}/, needle.length)
+        slice = next_clock ? window[0, next_clock] : window
+        mer = slice[/a\.m\.|p\.m\./i] || window[/a\.m\.|p\.m\./i]
+        return true if mer && mer.downcase == want
+
+        offset = match.end(0)
+      end
+      false
+    end
+
+    # Same-named events on different days attach to the heading whose
+    # date line matches. A second session on that day uses the next heading.
     def assign_events(headings, events)
       assigned = Hash.new { |hash, key| hash[key] = [] }
+      used = Hash.new(0)
       events.each do |event|
         best = nil
-        best_score = 0
-        best_distance = 10_000
+        best_rank = nil
         headings.each_with_index do |heading, index|
           score = match_score(event[:key], heading[:key])
           next unless score.positive?
 
-          distance = (heading[:key].length - event[:key].length).abs
-          next unless score > best_score || (score == best_score && distance < best_distance)
+          when_text = heading[:when_text].to_s
+          clock_hit = clock_mentioned?(when_text, event[:start]) ? 0 : 1
+          date_hit = month_day_mentioned?(when_text, event[:start]) ? 0 : 1
+          rank = [clock_hit, date_hit, used[index], -score]
+          next unless best.nil? || (rank <=> best_rank).negative?
 
           best = index
-          best_score = score
-          best_distance = distance
+          best_rank = rank
         end
         next unless best
 
-        event[:score] = best_score
+        event[:score] = match_score(event[:key], headings[best][:key])
         assigned[best] << event
+        used[best] += 1
       end
       assigned
     end
@@ -514,16 +550,15 @@ module HometownWeek
     priority :low
 
     def generate(site)
-      issues = site.collections["issues"]
-      return unless issues
-
       linked = 0
       unmatched = 0
       undated = 0
       dtstamp = EventCalendar.stamp_utc(site.time)
 
-      issues.docs.each do |doc|
-        result = build_issue(site, doc, dtstamp)
+      site.pages.each do |page|
+        next unless page.data["layout"] == "city"
+
+        result = build_city(site, page, dtstamp)
         linked += result[:linked]
         unmatched += result[:unmatched]
         undated += result[:undated]
@@ -535,18 +570,26 @@ module HometownWeek
       )
     end
 
-    def build_issue(site, doc, dtstamp)
-      events, undated = load_events(site, doc)
-      headings = EventCalendar.markdown_headings(doc.content)
-      heading_rows = headings.map { |heading| { key: EventCalendar.normalize(heading[:text]), text: heading[:text], body: heading[:body] } }
+    def build_city(site, page, dtstamp)
+      events, undated = load_events(site, page)
+      headings = EventCalendar.markdown_headings(page.content)
+      heading_rows = headings.map do |heading|
+        when_text = heading[:body][/<p class="event-when">(.*?)<\/p>/m, 1].to_s
+        {
+          key: EventCalendar.normalize(heading[:text]),
+          text: heading[:text],
+          body: heading[:body],
+          when_text: when_text
+        }
+      end
       assigned = EventCalendar.assign_events(heading_rows, events)
       groups = Hash.new { |hash, key| hash[key] = [] }
       used = {}
       linked = 0
 
-      issue_path = doc.url.to_s
-      issue_url = EventCalendar.absolute_url(site, issue_path)
-      dir = "#{issue_path.sub(%r{\A/}, '').sub(%r{/\z}, '')}/calendar"
+      city_path = page.url.to_s
+      city_url = EventCalendar.absolute_url(site, city_path)
+      dir = "#{city_path.sub(%r{\A/}, '').sub(%r{/\z}, '')}/calendar"
 
       heading_rows.each_with_index do |heading, index|
         picks = (assigned[index] || []).sort_by { |event| EventCalendar.sort_key(event[:start]) }
@@ -554,15 +597,15 @@ module HometownWeek
           slug = unique_slug(used, EventCalendar.file_slug(event[:name], event[:start]))
           filename = "#{slug}.ics"
           blurb = EventCalendar.plain_blurb(heading[:body])
-          page_url = event[:same_as] && EventCalendar.http_url?(event[:same_as]) ? event[:same_as] : issue_url
+          page_url = event[:same_as] && EventCalendar.http_url?(event[:same_as]) ? event[:same_as] : city_url
           record = event.merge(
-            uid: "#{doc.data['city']}-#{doc.data['slug']}-#{slug}@hometownweek.com",
+            uid: "#{page.data['city']}-#{slug}@hometownweek.com",
             url: page_url,
-            description: EventCalendar.description_for(event, blurb, issue_url),
+            description: EventCalendar.description_for(event, blurb, city_url),
             when_label: EventCalendar.when_label(event[:start], event[:end])
           )
           href = EventCalendar.root_path(site, "/#{dir}/#{filename}")
-          site.static_files << CalendarFile.new(dir, filename, EventCalendar.build_ics(record, issue_url, dtstamp))
+          site.static_files << CalendarFile.new(dir, filename, EventCalendar.build_ics(record, city_url, dtstamp))
           linked += 1
           { href: href, when_label: record[:when_label] }
         end
@@ -570,17 +613,16 @@ module HometownWeek
       end
 
       matched = assigned.values.sum(&:size)
-      doc.data["calendar_groups"] = groups
+      page.data["calendar_groups"] = groups
       { linked: linked, unmatched: events.size - matched, undated: undated }
     end
 
-    def load_events(site, doc)
-      key = "#{doc.data['city']}_events"
-      week = site.data[key]
-      week = week[doc.data["slug"]] if week
+    def load_events(site, page)
+      key = "#{page.data['city']}_events"
+      rows = site.data[key]
       undated = 0
       events = []
-      Array(week).each do |item|
+      Array(rows).each do |item|
         next unless item.is_a?(Hash)
 
         start_parsed = EventCalendar.parse_when(item["start"])
@@ -616,13 +658,13 @@ module HometownWeek
   end
 end
 
-Jekyll::Hooks.register :documents, :post_render do |doc|
-  next unless doc.respond_to?(:collection) && doc.collection&.label == "issues"
+Jekyll::Hooks.register :pages, :post_render do |page|
+  next unless page.data["layout"] == "city"
 
-  groups = doc.data["calendar_groups"]
+  groups = page.data["calendar_groups"]
   next if groups.nil? || groups.empty?
 
-  doc.output = HometownWeek::EventCalendar.inject!(doc.output, groups)
+  page.output = HometownWeek::EventCalendar.inject!(page.output, groups)
 end
 
 module HometownWeek

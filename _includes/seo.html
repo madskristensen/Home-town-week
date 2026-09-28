@@ -9,41 +9,17 @@
   {%- assign map_og = "/assets/images/og/" | append: city.state | append: "/" | append: city.id | append: ".png" -%}
 {%- endif -%}
 {%- comment -%}
-  Share cards should feel like the place. An issue uses its hero photo.
-  A city or year page uses the current issue photo when that city has one.
-  Otherwise the card is the 1200x630 map and pin. Social apps do not
-  render the header SVG. Home uses the site card.
+  Share cards should feel like the place. A city page uses its hero photo
+  when it has one. Otherwise the card is the 1200x630 map and pin. Social
+  apps do not render the header SVG. Home uses the site card.
 {%- endcomment -%}
-{%- if page.layout == "issue" and page.image -%}
+{%- if page.layout == "city" and page.image -%}
   {%- assign seo_image_path = page.image -%}
   {%- assign seo_image_alt = page.image_alt -%}
   {%- assign seo_image_width = 1600 -%}
   {%- assign seo_image_height = 900 -%}
   {%- assign seo_image_mime = "image/webp" -%}
-{%- elsif page.layout == "city" or page.layout == "year" -%}
-  {%- assign share_issue = nil -%}
-  {%- if featured_issue.image -%}
-    {%- assign share_issue = featured_issue -%}
-  {%- elsif city_issues -%}
-    {%- assign share_pool = city_issues | where_exp: "item", "item.image" -%}
-    {%- if page.layout == "year" -%}
-      {%- assign share_pool = share_pool | where: "year", page.year -%}
-    {%- endif -%}
-    {%- include current-issue.html issues=share_pool -%}
-    {%- assign share_issue = current_issue -%}
-  {%- endif -%}
-  {%- if share_issue.image -%}
-    {%- assign seo_image_path = share_issue.image -%}
-    {%- assign seo_image_alt = share_issue.image_alt -%}
-    {%- assign seo_image_width = 1600 -%}
-    {%- assign seo_image_height = 900 -%}
-    {%- assign seo_image_mime = "image/webp" -%}
-  {%- elsif map_og -%}
-    {%- assign seo_image_path = map_og -%}
-    {%- capture seo_image_alt -%}Map of {{ city.name }} with a pin. Hometown Week.{%- endcapture -%}
-    {%- assign seo_image_alt = seo_image_alt | strip -%}
-  {%- endif -%}
-{%- elsif page.layout == "issue" and map_og -%}
+{%- elsif page.layout == "city" and map_og -%}
   {%- assign seo_image_path = map_og -%}
   {%- capture seo_image_alt -%}Map of {{ city.name }} with a pin. Hometown Week.{%- endcapture -%}
   {%- assign seo_image_alt = seo_image_alt | strip -%}
@@ -63,17 +39,7 @@
   {%- assign seo_image_height = 630 -%}
   {%- assign seo_image_mime = "image/png" -%}
 {%- endif -%}
-{%- if page.url == "/" -%}
-  {%- assign seo_title = site.title -%}
-{%- elsif page.layout == "city" and featured_issue -%}
-  {%- capture seo_title -%}{{ city.name }} · {{ featured_issue.range }}{%- endcapture -%}
-  {%- assign seo_title = seo_title | strip -%}
-{%- elsif page.layout == "issue" and city -%}
-  {%- capture seo_title -%}{{ page.title }} | {{ city.name }}{%- endcapture -%}
-  {%- assign seo_title = seo_title | strip -%}
-{%- else -%}
-  {%- assign seo_title = page.title | default: site.title -%}
-{%- endif -%}
+{%- assign seo_title = page.title | default: site.title -%}
 {%- assign canonical_url = page.url | absolute_url -%}
 {%- assign seo_image = seo_image_path | absolute_url -%}
 {%- assign org_id = "/" | absolute_url | append: "#organization" -%}
@@ -93,14 +59,6 @@
 {%- unless page.url == "/404.html" %}
 <link rel="canonical" href="{{ canonical_url }}">
 {%- endunless %}
-{%- if page.layout == "issue" -%}
-{%- if prev_issue -%}
-<link rel="prev" href="{{ prev_issue.url | absolute_url }}">
-{%- endif -%}
-{%- if next_issue -%}
-<link rel="next" href="{{ next_issue.url | absolute_url }}">
-{%- endif -%}
-{%- endif %}
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="{{ site.title | escape }}">
 <meta property="og:url" content="{{ canonical_url }}">
@@ -113,12 +71,7 @@
 {%- if seo_image_alt %}
 <meta property="og:image:alt" content="{{ seo_image_alt | escape }}">
 {%- endif %}
-{%- if page.layout == "issue" and page.date -%}
-<meta property="og:type" content="article">
-<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-{%- else -%}
 <meta property="og:type" content="website">
-{%- endif %}
 <meta name="twitter:card" content="summary_large_image">
 {%- if site.twitter.username %}
 <meta name="twitter:site" content="@{{ site.twitter.username | remove: '@' }}">
@@ -136,50 +89,47 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  {%- if page.layout == "issue" %}
-  "@type": "BlogPosting",
-  "headline": {{ page.title | jsonify }},
-  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
-  {%- assign schema_modified = page.date -%}
-  {%- if page.last_modified_at and page.last_modified_at > schema_modified -%}
-  {%- assign schema_modified = page.last_modified_at -%}
-  {%- endif %}
-  "dateModified": {{ schema_modified | date_to_xmlschema | jsonify }},
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": {{ canonical_url | jsonify }}
-  },
-  "@id": {{ page.url | append: "#article" | absolute_url | jsonify }},
-  "isPartOf": {
-    "@id": {{ site_id | jsonify }}
-  },
-  "author": {
-    "@type": "Person",
-    "@id": {{ "/about/#person" | absolute_url | jsonify }},
-    "name": {{ site.author.name | jsonify }},
-    "url": {{ "/about/" | absolute_url | jsonify }}
-  },
-  {%- elsif page.layout == "city" or page.layout == "year" %}
+  {%- if page.layout == "city" %}
   "@type": "CollectionPage",
   "name": {{ seo_title | jsonify }},
   "url": {{ canonical_url | jsonify }},
   "isPartOf": {
     "@id": {{ site_id | jsonify }}
   },
-  "hasPart": [
-    {%- assign digest_parts = city_issues -%}
-    {%- if page.layout == "year" -%}
-    {%- assign digest_parts = city_issues | where: "year", page.year -%}
-    {%- endif -%}
-    {%- for issue in digest_parts -%}
-    {
-      "@type": "BlogPosting",
-      "headline": {{ issue.title | jsonify }},
-      "url": {{ issue.url | absolute_url | jsonify }},
-      "datePublished": {{ issue.date | date_to_xmlschema | jsonify }}
-    }{% unless forloop.last %},{% endunless %}
-    {%- endfor -%}
-  ],
+  {%- assign events_key = page.city | append: "_events" -%}
+  {%- assign city_events = site.data[events_key] | where_exp: "event", "event.start" -%}
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": {{ "Upcoming events in " | append: city.name | jsonify }},
+    "itemListOrder": "https://schema.org/ItemListOrderAscending",
+    "numberOfItems": {{ city_events.size }},
+    "itemListElement": [
+      {%- for event in city_events -%}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "item": {
+          "@type": "Event",
+          "name": {{ event.name | jsonify }},
+          "url": {{ canonical_url | jsonify }},
+          "startDate": {{ event.start | jsonify }}
+          {%- if event.end -%},
+          "endDate": {{ event.end | jsonify }}
+          {%- endif -%}
+          {%- if event.place -%},
+          "location": {
+            "@type": "Place",
+            "name": {{ event.place | jsonify }}
+          }
+          {%- endif -%}
+          {%- if event.same_as -%},
+          "sameAs": {{ event.same_as | jsonify }}
+          {%- endif -%}
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {%- endfor -%}
+    ]
+  },
   {%- elsif page.layout == "state" %}
   "@type": "CollectionPage",
   "name": {{ seo_title | jsonify }},

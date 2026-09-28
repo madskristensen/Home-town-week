@@ -1,5 +1,7 @@
 # Hometown Week SEO audit
 
+The week-issue model this audit describes is retired. Each city is one page at `/{state}/{city}/` with a chronological list of upcoming events. There are no week URLs, year indexes, or `/latest/` redirects.
+
 Live site: https://hometownweek.com  
 Repo: madskristensen/Home-town-week  
 Audited: 27 September 2026, against production and a local production build.  

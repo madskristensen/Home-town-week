@@ -1,2 +1,0 @@
-{%- assign prev_issue = site.issues | where: "city", page.city | where: "state", page.state | where_exp: "item", "item.date < page.date" | sort: "date" | reverse | first -%}
-{%- assign next_issue = site.issues | where: "city", page.city | where: "state", page.state | where_exp: "item", "item.date > page.date" | sort: "date" | first -%}

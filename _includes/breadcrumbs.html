@@ -6,30 +6,12 @@
     <li><span aria-current="page">{{ page.title }}</span></li>
   </ol>
 </nav>
-{%- elsif page.layout == "city" or page.layout == "year" or page.layout == "issue" -%}
+{%- elsif page.layout == "city" -%}
 <nav class="crumbs" aria-label="Breadcrumb">
   <ol>
     <li><a href="{{ '/' | relative_url }}">Home</a></li>
     <li><a href="{{ state_hub_url | relative_url }}">{{ city.state_name }}</a></li>
-    <li>
-      {%- if page.layout == "city" -%}
-      <span aria-current="page">{{ city.name }}</span>
-      {%- else -%}
-      <a href="{{ city_url | relative_url }}">{{ city.name }}</a>
-      {%- endif -%}
-    </li>
-    {%- if page.year -%}
-    <li>
-      {%- if page.layout == "year" -%}
-      <span aria-current="page">{{ page.year }}</span>
-      {%- else -%}
-      <a href="{{ page_year_url | relative_url }}">{{ page.year }}</a>
-      {%- endif -%}
-    </li>
-    {%- endif -%}
-    {%- if page.layout == "issue" -%}
-    <li><span aria-current="page">{{ page.range }}</span></li>
-    {%- endif -%}
+    <li><span aria-current="page">{{ city.name }}</span></li>
   </ol>
 </nav>
 {%- endif -%}

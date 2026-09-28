@@ -5,12 +5,12 @@ layout: default
 <article class="home wrap">
   <header class="home-hero">
     <h1>Hometown Week</h1>
-    <p class="home-kicker">Weekly family digests</p>
-    <p class="home-lead">The short version of the week in your city. Parks, the library, kids shows, and market mornings, written for families.</p>
+    <p class="home-kicker">Family events, city by city</p>
+    <p class="home-lead">Parks, the library, kids shows, and market mornings, listed as far ahead as we have them.</p>
   </header>
 
   <section class="this-week" id="this-week" aria-labelledby="this-week-title">
-    <h2 id="this-week-title" hidden>This week</h2>
+    <h2 id="this-week-title" hidden>Near you</h2>
     <div id="near-live" aria-live="polite">
       <div id="near-results" hidden></div>
       <p id="near-message" class="near-message" hidden></p>
@@ -33,7 +33,7 @@ layout: default
       </div>
       <p id="city-empty" class="city-empty" hidden></p>
       <ul id="city-matches" class="city-matches" hidden></ul>
-      <p id="city-hint" class="near-note">Type a city or a state. Each result opens this week's digest.</p>
+      <p id="city-hint" class="near-note">Type a city or a state. Each result opens that city's upcoming events.</p>
       <p id="near-note" class="near-note">Your browser asks first. We use the spot only to find cities near you, and we do not save it.</p>
       <p id="city-status" class="visually-hidden" aria-live="polite"></p>
     </form>
@@ -42,7 +42,7 @@ layout: default
     </noscript>
 
     <h3 id="states">Pick a state</h3>
-    <p class="state-lead">Highlighted states have a weekly digest.</p>
+    <p class="state-lead">Highlighted states list upcoming family events.</p>
     <div class="state-map">
       <svg class="us-map" viewBox="{{ site.data.us_map.view_box }}" aria-hidden="true" focusable="false">
         <g class="us-quiet">
@@ -64,7 +64,7 @@ layout: default
         {%- endif -%}
         {%- endfor -%}
       </svg>
-      <nav class="state-key" aria-label="States with a weekly digest">
+      <nav class="state-key" aria-label="States with upcoming events">
         {%- for state in live_states -%}
         {%- assign state_cities = site.data.cities | where: "state", state -%}
         {%- capture state_hub -%}/{{ state }}/{%- endcapture -%}
@@ -81,16 +81,16 @@ layout: default
     <h2 id="how-title">How it works</h2>
     <ol>
       <li>
-        <h3>Open this week</h3>
-        <p>This week's issue for your city is one tap away.</p>
+        <h3>Find your city</h3>
+        <p>Search, use your location, or pick a state.</p>
       </li>
       <li>
-        <h3>Read the week</h3>
-        <p>Monday through Sunday, only the plans worth making.</p>
+        <h3>See what's coming</h3>
+        <p>A chronological list of family events, as far ahead as we have them.</p>
       </li>
       <li>
-        <h3>Come back next week</h3>
-        <p>A new issue takes the place of the last one.</p>
+        <h3>Check back</h3>
+        <p>Past events come off the list. New ones go on.</p>
       </li>
     </ol>
   </section>

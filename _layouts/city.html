@@ -2,48 +2,39 @@
 layout: default
 ---
 {%- include city-context.html -%}
-{%- include week-groups.html issues=city_issues -%}
-{%- if featured_issue -%}
-  {%- assign featured_url = featured_issue.url -%}
-  {%- assign coming_rest = coming_up | where_exp: "item", "item.url != featured_url" -%}
-  {%- assign past_rest = past_issues | where_exp: "item", "item.url != featured_url" -%}
-{%- else -%}
-  {%- assign coming_rest = coming_up -%}
-  {%- assign past_rest = past_issues -%}
-{%- endif -%}
 <article class="city-home wrap">
   {%- include breadcrumbs.html -%}
-  <h1>{{ city.name }}{% if featured_issue.range %} · {{ featured_issue.range }}{% endif %}</h1>
+  <h1>{{ city.name }}</h1>
   {%- if city.tagline -%}
-  <p class="hook">{{ city.tagline }}</p>
+  <p class="dek">{{ city.tagline }}</p>
   {%- endif -%}
-  {%- if featured_issue -%}
-    {%- if this_week -%}
-    <section class="week-band" aria-label="This week">
-      <h2>This week</h2>
-      {%- include issue-teaser.html issue=featured_issue current=true -%}
-    </section>
-    {%- else -%}
-    {%- include issue-teaser.html issue=featured_issue -%}
+  {%- include issue-share.html -%}
+  {%- if page.image -%}
+  <figure class="hero">
+    {%- include responsive-img.html
+         src=page.image
+         alt=page.image_alt
+         priority="high"
+         sizes="(min-width: 42rem) 40rem, 100vw" -%}
+    {%- if page.image_credit or page.image_source_url -%}
+    <figcaption>
+      {%- if page.image_credit -%}<span class="credit">{{ page.image_credit }}</span>{%- endif -%}
+      {%- if page.image_source_url -%}<a class="source" href="{{ page.image_source_url }}" rel="noopener">Source</a>{%- endif -%}
+    </figcaption>
     {%- endif -%}
+  </figure>
   {%- endif -%}
-  {%- if coming_rest.size > 0 -%}
-  <section class="week-band" aria-label="Coming up">
-    <h2>Coming up</h2>
-    {%- include issue-list.html issues=coming_rest -%}
-  </section>
+  {%- if page.hook -%}
+  <p class="hook">{{ page.hook }}</p>
   {%- endif -%}
-  {%- if past_rest.size > 0 -%}
-  <section class="week-band" aria-label="Past issues">
-    <h2>Past issues</h2>
-    {%- include issue-list.html issues=past_rest -%}
-  </section>
-  {%- endif -%}
-  {%- if latest_year_url -%}
-  <p class="year-link"><a href="{{ latest_year_url | relative_url }}">All {{ latest_issue.year }} issues</a></p>
+  {%- assign event_copy = content | strip -%}
+  {%- if event_copy != "" -%}
+  <div class="prose">
+    <h2>Upcoming</h2>
+    {{ content }}
+  </div>
+  {%- else -%}
+  <p>No upcoming events are listed yet.</p>
   {%- endif -%}
   {%- include suggest-event.html -%}
-  {%- if city.summary -%}
-  <p class="city-note">{{ city.summary }} Each issue is one Monday-through-Sunday week. Dates and details live on that issue.</p>
-  {%- endif -%}
 </article>

@@ -1,12 +1,11 @@
 {%- comment -%}
-  Issue pages only. One control: the system share sheet, or a quiet
-  copy of the issue URL when the sheet is unavailable.
-  No third-party widgets. Open Graph on the page is unchanged.
+  City pages. One control: the system share sheet, or a quiet copy of
+  the city URL when the sheet is unavailable. No third-party widgets.
 {%- endcomment -%}
 {%- include city-context.html -%}
 {%- if city and page.title -%}
 {%- assign share_url = page.url | absolute_url -%}
-{%- capture share_text -%}{{ page.title }}. What's on in {{ city.name }}{% if page.range %}, {{ page.range }}{% endif %}.{%- endcapture -%}
+{%- capture share_text -%}What's on in {{ city.name }}.{%- endcapture -%}
 {%- assign share_text = share_text | strip -%}
 <div class="issue-share" data-url="{{ share_url | escape }}" data-title="{{ page.title | escape }}" data-text="{{ share_text | escape }}">
   <button type="button" class="share-button" data-share>

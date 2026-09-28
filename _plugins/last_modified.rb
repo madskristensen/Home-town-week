@@ -5,65 +5,61 @@ require "pathname"
 require "time"
 
 module HometownWeek
-  # Sitemap lastmod has to be when the page changed, not the Monday the
-  # digest covers. jekyll-sitemap prints last_modified_at for pages only
-  # when it is set, and otherwise falls back to an issue's date.
+  # Sitemap lastmod is when the page changed. jekyll-sitemap prints
+  # last_modified_at for pages only when it is set.
   class LastModified < Jekyll::Generator
     priority :low
 
     def generate(site)
-      issues = site.collections["issues"]
-      return unless issues
+      page_times = {}
+      data_times = {}
 
-      issue_times = {}
-      issues.docs.each do |doc|
-        next if doc.data["sitemap"] == false
+      site.pages.each do |page|
+        next if page.data["sitemap"] == false
 
-        stamped = committed_at(site, doc)
-        next unless stamped
+        stamped = committed_at(site, page)
+        page_times[page] = stamped if stamped
+        next unless page.data["layout"] == "city"
 
-        doc.data["last_modified_at"] = stamped
-        issue_times[doc] = stamped
+        events = File.join(site.source, "_data", "#{page.data['city']}_events.yml")
+        next unless File.file?(events)
+
+        events_stamp = committed_at_path(site, events)
+        data_times[page] = events_stamp if events_stamp
       end
 
       site.pages.each do |page|
         next if page.data["sitemap"] == false
 
-        times = []
-        own = committed_at(site, page)
-        times << own if own
+        times = [page_times[page]]
+        if page.data["layout"] == "city"
+          times << data_times[page]
+        elsif page.url == "/"
+          times.concat(page_times.values)
+          times.concat(data_times.values)
+        elsif page.data["layout"] == "state"
+          state = page.data["state"].to_s
+          site.pages.each do |other|
+            next unless other.data["layout"] == "city" && other.data["state"].to_s == state
 
-        related = related_issues(site, page, issues.docs)
-        times.concat(related.filter_map { |doc| issue_times[doc] })
+            times << page_times[other]
+            times << data_times[other]
+          end
+        end
 
         latest = times.compact.max
         page.data["last_modified_at"] = latest if latest
       end
     end
 
-    def related_issues(_site, page, docs)
-      url = page.url.to_s
-      if url == "/" || page.data["layout"] == "state"
-        return docs
-      end
-
-      city = page.data["city"]
-      state = page.data["state"]
-      return [] unless city && state
-
-      matched = docs.select do |doc|
-        doc.data["city"].to_s == city.to_s && doc.data["state"].to_s == state.to_s
-      end
-      year = page.data["year"]
-      return matched unless year
-
-      matched.select { |doc| doc.data["year"].to_i == year.to_i }
-    end
-
     def committed_at(site, item)
       full = source_file(site, item)
       return nil unless full
 
+      committed_at_path(site, full)
+    end
+
+    def committed_at_path(site, full)
       root = File.expand_path(site.source)
       relative = Pathname.new(full).relative_path_from(Pathname.new(root)).to_s
       stdout, status = Open3.capture2(

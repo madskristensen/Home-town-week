@@ -2,14 +2,14 @@
 # the order the footer and the home page should show them. Each state hub
 # reads only its own cities, in this order. lat and lon are the city center
 # in decimal degrees, for the home page nearby-city lookup. Coming-soon
-# names live in coming_soon.yml until a digest exists. City names stay out
+# names live in coming_soon.yml until a city page exists. City names stay out
 # of the site header. See README for the page files each city needs.
 #
 # tagline: a short place line under the city-home heading. Name the place
 # (geography, character, or region), not a list of venues. It is not the
 # masthead kicker.
 # slogan: the city's official slogan, and only when the city has one.
-# The masthead kicker prints slogan, or "Weekly family digest" when
+# The masthead kicker prints slogan, or "Upcoming family events" when
 # slogan is absent. Do not put a place line in slogan.
 #
 # sources: lives on each city entry here, not in a separate file. Each item
@@ -20,18 +20,20 @@
 # stay on the list. Do not crawl Stay Happening, news blogs, a wrong-city
 # AllEvents page, or a library calendar alone.
 #
-# Cadence: Monday is the primary content fill from this list. Thursday is
-# the midweek content fill, a visible update before the weekend. Neither
-# edits sources. The first Friday of the month maintains this list only
-# (find a new URL or drop a stale one) and does not rewrite issue copy.
-# A seed run may do both once. After that, keep the split.
+# Cadence: Monday is the primary content fill from this list. Update the
+# city page upcoming list and {city}_events.yml, and delete events that
+# have ended. Thursday is the midweek content fill, a visible update before
+# the weekend. Neither edits sources, and neither creates week pages. The
+# first Friday of the month maintains this list only (find a new URL or
+# drop a stale one) and does not rewrite event copy. A seed run may do
+# both once. After that, keep the split.
 - id: bainbridge-island
   name: Bainbridge Island
   state: wa
   state_name: Washington
   lat: 47.6266
   lon: -122.5212
-  description: Weekly family digests for Bainbridge Island. An island city in Puget Sound.
+  description: Upcoming family events in Bainbridge Island. An island city in Puget Sound.
   summary: >-
     An island city in Puget Sound.
   tagline: "An island city in Puget Sound."
@@ -70,7 +72,7 @@
   state_name: Washington
   lat: 47.6101
   lon: -122.2015
-  description: Weekly family digests for Bellevue. A city in a park.
+  description: Upcoming family events in Bellevue. A city in a park.
   summary: >-
     A city in a park.
   slogan: "A city in a park."
@@ -121,7 +123,7 @@
   state_name: Washington
   lat: 48.7519
   lon: -122.4787
-  description: Weekly family digests for Bellingham. A bay city below Mount Baker.
+  description: Upcoming family events in Bellingham. A bay city below Mount Baker.
   summary: >-
     A bay city below Mount Baker.
   tagline: "A bay city below Mount Baker."
@@ -168,7 +170,7 @@
   state_name: Washington
   lat: 47.7601
   lon: -122.2054
-  description: Weekly family digests for Bothell. Welcome to Bothell for a day, or a lifetime.
+  description: Upcoming family events in Bothell. Welcome to Bothell for a day, or a lifetime.
   summary: >-
     Welcome to Bothell for a day, or a lifetime.
   slogan: "Welcome to Bothell for a day, or a lifetime."
@@ -203,7 +205,7 @@
   state_name: Washington
   lat: 47.8107
   lon: -122.3774
-  description: Weekly family digests for Edmonds. A waterfront town on Puget Sound.
+  description: Upcoming family events in Edmonds. A waterfront town on Puget Sound.
   summary: >-
     A waterfront town on Puget Sound.
   tagline: "A waterfront town on Puget Sound."
@@ -250,7 +252,7 @@
   state_name: Washington
   lat: 47.979
   lon: -122.2021
-  description: Weekly family digests for Everett. A port city on Port Gardner Bay.
+  description: Upcoming family events in Everett. A port city on Port Gardner Bay.
   summary: >-
     A port city on Port Gardner Bay.
   tagline: "A port city on Port Gardner Bay."
@@ -293,7 +295,7 @@
   state_name: Washington
   lat: 48.8465
   lon: -122.591
-  description: Weekly family digests for Ferndale. A Nooksack Valley town north of Bellingham.
+  description: Upcoming family events in Ferndale. A Nooksack Valley town north of Bellingham.
   summary: >-
     A Nooksack Valley town north of Bellingham.
   tagline: "A Nooksack Valley town north of Bellingham."
@@ -332,7 +334,7 @@
   state_name: Washington
   lat: 47.3293
   lon: -122.5801
-  description: Weekly family digests for Gig Harbor. The Maritime City.
+  description: Upcoming family events in Gig Harbor. The Maritime City.
   summary: >-
     The Maritime City.
   slogan: "The Maritime City."
@@ -375,7 +377,7 @@
   state_name: Washington
   lat: 47.5301
   lon: -122.0326
-  description: Weekly family digests for Issaquah. A foothill city at the south end of Lake Sammamish.
+  description: Upcoming family events in Issaquah. A foothill city at the south end of Lake Sammamish.
   summary: >-
     A foothill city at the south end of Lake Sammamish.
   tagline: "A foothill city at the south end of Lake Sammamish."
@@ -414,7 +416,7 @@
   state_name: Washington
   lat: 47.7573
   lon: -122.244
-  description: Weekly family digests for Kenmore. A lakeside city at the north end of Lake Washington.
+  description: Upcoming family events in Kenmore. A lakeside city at the north end of Lake Washington.
   summary: >-
     A lakeside city at the north end of Lake Washington.
   tagline: "A lakeside city at the north end of Lake Washington."
@@ -453,7 +455,7 @@
   state_name: Washington
   lat: 47.6815
   lon: -122.2087
-  description: Weekly family digests for Kirkland. A waterfront city on Lake Washington.
+  description: Upcoming family events in Kirkland. A waterfront city on Lake Washington.
   summary: >-
     A waterfront city on Lake Washington.
   tagline: "A waterfront city on Lake Washington."
@@ -492,7 +494,7 @@
   state_name: Washington
   lat: 47.0343
   lon: -122.8232
-  description: Weekly family digests for Lacey. A South Sound city beside Olympia.
+  description: Upcoming family events in Lacey. A South Sound city beside Olympia.
   summary: >-
     A South Sound city beside Olympia.
   tagline: "A South Sound city beside Olympia."
@@ -523,7 +525,7 @@
   state_name: Washington
   lat: 48.9465
   lon: -122.4527
-  description: Weekly family digests for Lynden. A Dutch community in the Nooksack Valley.
+  description: Upcoming family events in Lynden. A Dutch community in the Nooksack Valley.
   summary: >-
     A Dutch community in the Nooksack Valley.
   tagline: "A Dutch community in the Nooksack Valley."
@@ -562,7 +564,7 @@
   state_name: Washington
   lat: 47.8209
   lon: -122.3151
-  description: Weekly family digests for Lynnwood. A Snohomish County city north of Seattle.
+  description: Upcoming family events in Lynnwood. A Snohomish County city north of Seattle.
   summary: >-
     A Snohomish County city north of Seattle.
   tagline: "A Snohomish County city north of Seattle."
@@ -601,7 +603,7 @@
   state_name: Washington
   lat: 47.3926
   lon: -122.0454
-  description: Weekly family digests for Maple Valley. A foothill city in southeast King County.
+  description: Upcoming family events in Maple Valley. A foothill city in southeast King County.
   summary: >-
     A foothill city in southeast King County.
   tagline: "A foothill city in southeast King County."
@@ -636,7 +638,7 @@
   state_name: Washington
   lat: 47.5707
   lon: -122.2221
-  description: Weekly family digests for Mercer Island. An island city in Lake Washington.
+  description: Upcoming family events in Mercer Island. An island city in Lake Washington.
   summary: >-
     An island city in Lake Washington.
   tagline: "An island city in Lake Washington."
@@ -671,7 +673,7 @@
   state_name: Washington
   lat: 47.8601
   lon: -122.2043
-  description: Weekly family digests for Mill Creek. A planned city in south Snohomish County.
+  description: Upcoming family events in Mill Creek. A planned city in south Snohomish County.
   summary: >-
     A planned city in south Snohomish County.
   tagline: "A planned city in south Snohomish County."
@@ -702,7 +704,7 @@
   state_name: Washington
   lat: 47.7359
   lon: -122.6465
-  description: Weekly family digests for Poulsbo. Little Norway.
+  description: Upcoming family events in Poulsbo. Little Norway.
   summary: >-
     Little Norway.
   slogan: "Little Norway."
@@ -741,7 +743,7 @@
   state_name: Washington
   lat: 47.1854
   lon: -122.2929
-  description: Weekly family digests for Puyallup. A valley town beneath Mount Rainier.
+  description: Upcoming family events in Puyallup. A valley town beneath Mount Rainier.
   summary: >-
     A valley town beneath Mount Rainier.
   tagline: "A valley town beneath Mount Rainier."
@@ -784,7 +786,7 @@
   state_name: Washington
   lat: 47.674
   lon: -122.1215
-  description: Weekly family digests for Redmond. Bicycle Capital of the Northwest.
+  description: Upcoming family events in Redmond. Bicycle Capital of the Northwest.
   summary: >-
     Bicycle Capital of the Northwest.
   slogan: "Bicycle Capital of the Northwest."
@@ -823,7 +825,7 @@
   state_name: Washington
   lat: 47.4829
   lon: -122.2171
-  description: Weekly family digests for Renton. Where the Cedar River meets Lake Washington.
+  description: Upcoming family events in Renton. Where the Cedar River meets Lake Washington.
   summary: >-
     Where the Cedar River meets Lake Washington.
   tagline: "Where the Cedar River meets Lake Washington."
@@ -858,7 +860,7 @@
   state_name: Washington
   lat: 47.6163
   lon: -122.0356
-  description: Weekly family digests for Sammamish. A plateau city east of Lake Sammamish.
+  description: Upcoming family events in Sammamish. A plateau city east of Lake Sammamish.
   summary: >-
     A plateau city east of Lake Sammamish.
   tagline: "A plateau city east of Lake Sammamish."
@@ -893,7 +895,7 @@
   state_name: Washington
   lat: 47.7543
   lon: -122.1635
-  description: Weekly family digests for Woodinville. Wine country in the Sammamish Valley.
+  description: Upcoming family events in Woodinville. Wine country in the Sammamish Valley.
   summary: >-
     Wine country in the Sammamish Valley.
   tagline: "Wine country in the Sammamish Valley."
@@ -932,7 +934,7 @@
   state_name: Oregon
   lat: 45.4871
   lon: -122.8037
-  description: Weekly family digests for Beaverton. A westside city in the Tualatin Valley.
+  description: Upcoming family events in Beaverton. A westside city in the Tualatin Valley.
   summary: >-
     A westside city in the Tualatin Valley.
   tagline: "A westside city in the Tualatin Valley."
@@ -971,7 +973,7 @@
   state_name: Oregon
   lat: 44.0582
   lon: -121.3153
-  description: Weekly family digests for Bend. A high-desert city on the Deschutes River.
+  description: Upcoming family events in Bend. A high-desert city on the Deschutes River.
   summary: >-
     A high-desert city on the Deschutes River.
   tagline: "A high-desert city on the Deschutes River."
@@ -1022,7 +1024,7 @@
   state_name: Oregon
   lat: 45.5229
   lon: -122.9898
-  description: Weekly family digests for Hillsboro. Washington County's seat, in the Tualatin Valley.
+  description: Upcoming family events in Hillsboro. Washington County's seat, in the Tualatin Valley.
   summary: >-
     Washington County's seat, in the Tualatin Valley.
   tagline: "Washington County's seat, in the Tualatin Valley."
@@ -1065,7 +1067,7 @@
   state_name: Oregon
   lat: 45.4207
   lon: -122.6706
-  description: Weekly family digests for Lake Oswego. A lakeside city south of Portland.
+  description: Upcoming family events in Lake Oswego. A lakeside city south of Portland.
   summary: >-
     A lakeside city south of Portland.
   tagline: "A lakeside city south of Portland."
@@ -1104,7 +1106,7 @@
   state_name: Idaho
   lat: 47.6777
   lon: -116.7805
-  description: Weekly family digests for Coeur d'Alene. The Lake City.
+  description: Upcoming family events in Coeur d'Alene. The Lake City.
   summary: >-
     The Lake City.
   tagline: "The Lake City."
@@ -1151,7 +1153,7 @@
   state_name: Idaho
   lat: 43.6954
   lon: -116.354
-  description: Weekly family digests for Eagle. Life, Done Right.
+  description: Upcoming family events in Eagle. Life, Done Right.
   summary: >-
     Life, Done Right.
   slogan: "Life, Done Right."
@@ -1190,7 +1192,7 @@
   state_name: Idaho
   lat: 43.6121
   lon: -116.3915
-  description: Weekly family digests for Meridian. Built for business, designed for living.
+  description: Upcoming family events in Meridian. Built for business, designed for living.
   summary: >-
     Built for business, designed for living.
   slogan: "Built for business, designed for living."
@@ -1233,7 +1235,7 @@
   state_name: Utah
   lat: 40.3916
   lon: -111.8508
-  description: Weekly family digests for Lehi. A Utah Valley city at Point of the Mountain.
+  description: Upcoming family events in Lehi. A Utah Valley city at Point of the Mountain.
   summary: >-
     A Utah Valley city at Point of the Mountain.
   tagline: "A Utah Valley city at Point of the Mountain."
@@ -1284,7 +1286,7 @@
   state_name: Utah
   lat: 40.2969
   lon: -111.6946
-  description: Weekly family digests for Orem. Family City USA.
+  description: Upcoming family events in Orem. Family City USA.
   summary: >-
     Family City USA.
   slogan: "Family City USA."
@@ -1335,7 +1337,7 @@
   state_name: Utah
   lat: 40.5622
   lon: -111.9297
-  description: Weekly family digests for South Jordan. A southwest city in the Salt Lake Valley.
+  description: Upcoming family events in South Jordan. A southwest city in the Salt Lake Valley.
   summary: >-
     A southwest city in the Salt Lake Valley.
   tagline: "A southwest city in the Salt Lake Valley."
@@ -1382,7 +1384,7 @@
   state_name: Colorado
   lat: 39.3722
   lon: -104.8561
-  description: Weekly family digests for Castle Rock. A Front Range town south of Denver.
+  description: Upcoming family events in Castle Rock. A Front Range town south of Denver.
   summary: >-
     A Front Range town south of Denver.
   tagline: "A Front Range town south of Denver."
@@ -1425,7 +1427,7 @@
   state_name: Colorado
   lat: 39.5807
   lon: -104.8772
-  description: Weekly family digests for Centennial. A city on the plains south of Denver.
+  description: Upcoming family events in Centennial. A city on the plains south of Denver.
   summary: >-
     A city on the plains south of Denver.
   tagline: "A city on the plains south of Denver."
@@ -1472,7 +1474,7 @@
   state_name: Colorado
   lat: 40.5853
   lon: -105.0844
-  description: Weekly family digests for Fort Collins. A college town where the plains meet the Rockies.
+  description: Upcoming family events in Fort Collins. A college town where the plains meet the Rockies.
   summary: >-
     A college town where the plains meet the Rockies.
   tagline: "A college town where the plains meet the Rockies."
@@ -1523,7 +1525,7 @@
   state_name: Texas
   lat: 33.1507
   lon: -96.8236
-  description: Weekly family digests for Frisco. Progress in Motion.
+  description: Upcoming family events in Frisco. Progress in Motion.
   summary: >-
     Progress in Motion.
   slogan: "Progress in Motion."
@@ -1578,7 +1580,7 @@
   state_name: Texas
   lat: 33.0198
   lon: -96.6989
-  description: Weekly family digests for Plano. City of Excellence.
+  description: Upcoming family events in Plano. City of Excellence.
   summary: >-
     City of Excellence.
   slogan: "City of Excellence."
@@ -1637,7 +1639,7 @@
   state_name: Texas
   lat: 30.5083
   lon: -97.6789
-  description: Weekly family digests for Round Rock. Sports Capital of Texas.
+  description: Upcoming family events in Round Rock. Sports Capital of Texas.
   summary: >-
     Sports Capital of Texas.
   slogan: "Sports Capital of Texas."
