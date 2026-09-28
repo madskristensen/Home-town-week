@@ -4,7 +4,7 @@
 {%- endcomment -%}
 {%- assign img_stem = include.src | split: "/" | last | split: "." | first -%}
 {%- assign img_base = include.src | split: img_stem | first -%}
-{%- assign img_sizes = include.sizes | default: "(min-width: 42rem) 40rem, 100vw" -%}
+{%- assign img_sizes = include.sizes | default: "(min-width: 47rem) 44rem, calc(100vw - 3rem)" -%}
 <img
   src="{{ include.src | relative_url }}"
   srcset="{{ img_base | append: img_stem | append: '-800.webp' | relative_url }} 800w, {{ img_base | append: img_stem | append: '-1200.webp' | relative_url }} 1200w, {{ include.src | relative_url }} 1600w"
