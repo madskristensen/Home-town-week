@@ -1,13 +1,5 @@
 <footer class="site-footer">
   <div class="wrap">
-    <nav class="footer-nav" aria-label="Footer">
-      <a href="{{ '/' | relative_url }}">Hometown Week</a>
-      <a href="{{ '/about/' | relative_url }}">About</a>
-      <a href="{{ '/feed.xml' | relative_url }}">Feed</a>
-      {%- if site.repository -%}
-      <a href="https://github.com/{{ site.repository }}" rel="noopener">GitHub</a>
-      {%- endif -%}
-    </nav>
     <nav class="footer-cities" aria-label="Cities">
       {%- assign footer_states = site.data.cities | map: "state" | uniq -%}
       {%- for state in footer_states -%}
@@ -20,7 +12,17 @@
       {%- endfor -%}
       {%- endfor -%}
     </nav>
-    <p>Built by {{ site.author.name }} for families who want the short list of what's coming.</p>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="{{ '/feed.xml' | relative_url }}">Feed</a>
+      {%- capture city_request_subject -%}Request a city{%- endcapture -%}
+      {%- capture city_request_body -%}I would like Hometown Week to cover a city.
+
+City:
+State:
+{%- endcapture -%}
+      <a href="mailto:suggestions@hometownweek.com?subject={{ city_request_subject | strip | mail_escape }}&amp;body={{ city_request_body | strip | mail_escape }}">Request a city</a>
+    </nav>
     <p class="copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </div>
 </footer>
