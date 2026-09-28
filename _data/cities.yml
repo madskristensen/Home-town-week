@@ -154,6 +154,10 @@
       url: "https://bellinghampubliclibrary.libcal.com/calendar/BPL-Events"
       type: library
       notes: "City library storytimes and family programs. The county library list stays separate."
+    - name: "Cascadia Daily News The A-List"
+      url: "https://www.cascadiadaily.com/category/living/arts-and-entertainment/the-a-list/"
+      type: downtown
+      notes: "Editor-curated A-List and Cocoa's picks. Secondary sweep. Prefer family-friendly Whatcom listings."
     - name: "AllEvents Bellingham"
       url: "https://allevents.in/bellingham"
       type: allevents
@@ -314,6 +318,10 @@
       url: "https://ferndaledowntown.com/news-events/"
       type: downtown
       notes: "Downtown family and street events."
+    - name: "Lynden Tribune Community Calendar"
+      url: "https://www.lyndentribune.com/community/local_events/"
+      type: downtown
+      notes: "Editor-curated community calendar. Secondary sweep after the city. Prefer Ferndale-proper and family-friendly listings."
     - name: "AllEvents Ferndale, WA"
       url: "https://allevents.in/ferndale-wa"
       type: allevents
@@ -353,6 +361,10 @@
       url: "https://www.ghdwa.org/events"
       type: downtown
       notes: "Waterfront public events."
+    - name: "Gig Harbor Now Harbor Happenings"
+      url: "https://www.gigharbornow.org/category/news/arts-entertainment/"
+      type: downtown
+      notes: "Weekly Harbor Happenings column. Secondary sweep. Prefer Gig Harbor and Peninsula family-friendly listings."
     - name: "AllEvents Gig Harbor"
       url: "https://allevents.in/gig-harbor"
       type: allevents
@@ -1258,6 +1270,10 @@
       url: "https://farmersmarketlehi.com/"
       type: market
       notes: "Market at 1020 W Main by Veterans Park. Use the posted Saturday and night-market dates."
+    - name: "Daily Herald Utah Valley Activities"
+      url: "https://www.heraldextra.com/lifestyles/activities/"
+      type: downtown
+      notes: "Weekly Utah Valley activities roundup. Secondary sweep after the city, Thanksgiving Point, and market. Prefer Lehi and Thanksgiving Point area family listings."
     - name: "AllEvents Lehi"
       url: "https://allevents.in/lehi-us"
       type: allevents
@@ -1305,6 +1321,10 @@
       url: "https://orem.gov/city-center-festivals/"
       type: downtown
       notes: "Dated family festivals on the City Center stage."
+    - name: "Daily Herald Utah Valley Activities"
+      url: "https://www.heraldextra.com/lifestyles/activities/"
+      type: downtown
+      notes: "Weekly Utah Valley activities roundup. Secondary sweep after the city, SCERA, and market. Prefer Orem and nearby family listings."
     - name: "AllEvents Orem"
       url: "https://allevents.in/orem-us"
       type: allevents
@@ -1544,6 +1564,10 @@
       url: "https://mindstretchingfun.org/"
       type: venue
       notes: "Children's science museum at 8004 Dallas Pkwy."
+    - name: "Community Impact Frisco Events"
+      url: "https://communityimpact.com/frisco/events/"
+      type: downtown
+      notes: "Editor-curated community calendar. Secondary sweep. Prefer Frisco-proper and family-friendly listings."
     - name: "AllEvents Frisco, TX"
       url: "https://allevents.in/frisco"
       type: allevents
@@ -1599,6 +1623,10 @@
       url: "https://www.heritagefarmstead.org/events/"
       type: venue
       notes: "Family programs at 1900 W 15th St."
+    - name: "Community Impact Plano Events"
+      url: "https://communityimpact.com/plano/events/"
+      type: downtown
+      notes: "Editor-curated community calendar. Secondary sweep. Prefer Plano-proper and family-friendly listings."
     - name: "AllEvents Plano"
       url: "https://allevents.in/plano"
       type: allevents
@@ -1642,6 +1670,10 @@
       url: "https://www.roundrocktexas.gov/series/trailside-market/"
       type: market
       notes: "Saturday market at Memorial Park, June through October."
+    - name: "Community Impact Round Rock Events"
+      url: "https://communityimpact.com/round-rock/events/"
+      type: downtown
+      notes: "Editor-curated community calendar. Secondary sweep. Prefer Round Rock-proper and family-friendly listings."
     - name: "AllEvents Round Rock"
       url: "https://allevents.in/round-rock"
       type: allevents
