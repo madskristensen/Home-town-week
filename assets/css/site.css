@@ -1,26 +1,26 @@
-/* The one stylesheet. head.html inlines this file in a single style block. */
+/* The one stylesheet. head.html inlines this file in a single style block.
+   Cream paper is the page. Forest green is the accent. Gold is for dates and hairlines. */
 
-/* Cream paper is the only page color, in light and dark system settings.
-   Forest green is an accent: links, the wordmark, buttons, map states, and the city pin. */
 :root {
   color-scheme: light;
   --page: #f4efe6;
   --sheet: #fffdf9;
   --ink: #1c2b24;
-  --text: #2a3831;
-  --muted: #4d5c54;
+  --text: #24332c;
+  --muted: #3f5148;
   --forest: #1e4636;
   --forest-deep: #16352a;
-  --gold: #7a5c12;
+  --gold: #6b4e0e;
   --gold-bright: #c6a15a;
+  --gold-line: #a6843f;
   --link: #145c40;
-  --rule: #e3d6c4;
-  --focus: #7a5c12;
+  --rule: #e0d3c0;
+  --focus: #6b4e0e;
   --header-ink: #f7f1e6;
-  --shadow: 0 10px 30px rgba(28, 43, 36, 0.06);
-  --map-quiet: #e5d4be;
+  --shadow: 0 1px 2px rgba(28, 43, 36, 0.04), 0 10px 24px rgba(28, 43, 36, 0.045);
+  --map-quiet: #e4d3bd;
   --map-label: #f7f1e6;
-  --radius: 1rem;
+  --radius: 0.75rem;
   --measure: 40rem;
   --photo-filter: none;
   --serif: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
@@ -30,6 +30,8 @@
 @media (prefers-contrast: more) {
   :root {
     --photo-filter: none;
+    --muted: #24332c;
+    --gold: #5c420c;
   }
 }
 
@@ -39,7 +41,6 @@
   box-sizing: border-box;
 }
 
-/* Author display values must not override the hidden attribute. */
 [hidden] {
   display: none !important;
 }
@@ -52,13 +53,11 @@ html {
 body {
   margin: 0;
   min-height: 100dvh;
-  background:
-    radial-gradient(circle at top left, rgba(198, 161, 90, 0.16), transparent 28rem),
-    var(--page);
+  background: var(--page);
   color: var(--text);
   font-family: var(--sans);
   font-size: 1.0625rem;
-  line-height: 1.6;
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -68,21 +67,25 @@ h3 {
   color: var(--ink);
   font-family: var(--serif);
   font-weight: 600;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.028em;
   line-height: 1.15;
+}
+
+p {
+  overflow-wrap: break-word;
 }
 
 a {
   color: var(--link);
+  text-underline-offset: 0.14em;
 }
 
-a:hover,
-a:focus {
-  text-decoration-thickness: 2px;
+a:hover {
+  text-decoration-thickness: 1px;
 }
 
 :focus-visible {
-  outline: 3px solid var(--focus);
+  outline: 2px solid var(--focus);
   outline-offset: 3px;
 }
 
@@ -101,6 +104,7 @@ img {
   padding: 0.5rem 0.75rem;
   background: var(--sheet);
   color: var(--ink);
+  border-radius: 0.4rem;
 }
 
 .skip-link:focus {
@@ -108,41 +112,16 @@ img {
 }
 
 .wrap {
-  width: min(100% - 2rem, var(--measure));
+  width: min(100% - 2.5rem, var(--measure));
   margin-inline: auto;
 }
 
+/* Slim bar, then the page title. One gold hairline under the whole header. */
+
 .site-header {
-  padding: calc(0.95rem + env(safe-area-inset-top)) 0 0.95rem;
-  border-bottom: 3px solid var(--gold-bright);
-}
-
-.wordmark {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--forest);
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-}
-
-.wordmark::before {
-  content: "";
-  width: 0.7rem;
-  height: 0.7rem;
-  background: var(--gold-bright);
-  border-radius: 0.16rem;
-}
-
-/* Home uses the wordmark as its only heading, so it stays the small site title. */
-.site-header .header-bar > h1 {
-  margin: 0;
-  font: inherit;
-  letter-spacing: inherit;
-  color: inherit;
+  padding-top: env(safe-area-inset-top);
+  background: var(--page);
+  border-bottom: 1px solid var(--gold-line);
 }
 
 .header-bar {
@@ -150,83 +129,242 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.65rem 1rem;
+  gap: 0.1rem 1rem;
+  min-height: 3.25rem;
+  padding: 0.2rem 0;
+}
+
+.site-header .brand {
+  margin: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: 1;
+  color: inherit;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  color: var(--forest);
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.wordmark:hover,
+.wordmark:focus-visible {
+  text-decoration: none;
+  color: var(--forest-deep);
+}
+
+.brand-mark {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.28rem;
 }
 
 .header-nav {
   display: flex;
+  flex: 1 1 100%;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.15rem 0.75rem;
+  margin: 0 0 0.2rem;
+  padding: 0 0 0.35rem;
 }
 
 .header-nav a {
-  color: var(--forest);
+  color: var(--muted);
+  font-size: 0.8125rem;
   font-weight: 600;
+  line-height: 1.2;
   text-decoration: none;
+  padding: 0.35rem 0;
+}
+
+.header-nav a[aria-current="page"] {
+  color: var(--forest);
 }
 
 .header-nav a:hover,
-.header-nav a:focus {
+.header-nav a:focus-visible {
+  color: var(--link);
   text-decoration: underline;
 }
 
-.page {
-  padding: 1.5rem 0 2.5rem;
+@media (min-width: 42rem) {
+  .header-nav {
+    flex: 0 1 auto;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
 }
 
-.home {
-  padding: 1.35rem 0 2.6rem;
+.masthead {
+  padding: 0.85rem 0 1rem;
+}
+
+.city-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+
+.city-pin {
+  display: block;
+  flex: none;
+  width: 0.95rem;
+  height: 1.28rem;
+  margin-top: 0.42rem;
+  color: var(--forest);
+}
+
+.city-pin svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.city-pin-dot {
+  fill: var(--gold-bright);
+}
+
+.city-heading-text {
+  min-width: 0;
+}
+
+.city-name,
+.masthead .hub-name {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(2.05rem, 6.2vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: -0.032em;
+  line-height: 1.08;
+}
+
+.city-name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.city-name a:hover,
+.city-name a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.08em;
+}
+
+.city-kicker {
+  margin: 0.28rem 0 0;
+  max-width: 34rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.975rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+.masthead .crumbs ol {
+  margin: 0.55rem 0 0;
+}
+
+.page,
+.home,
+.city-home,
+.year-page,
+.issue,
+.state-hub {
+  padding-top: 1.15rem;
+  padding-bottom: 2.75rem;
 }
 
 .home-kicker {
   margin: 0;
-  color: var(--gold);
-  font-size: 1rem;
-  font-weight: 600;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+  text-transform: uppercase;
 }
 
 .home-lead {
-  margin: 0.75rem 0 0;
-  max-width: 36rem;
-  font-size: 1.15rem;
-  line-height: 1.45;
+  margin: 0.55rem 0 0;
+  max-width: 34rem;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1.28rem, 3.2vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: -0.022em;
+  line-height: 1.32;
+}
+
+.home-hero {
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid var(--rule);
 }
 
 .this-week,
 .finder h2,
 .finder h3,
-.how h2 {
-  scroll-margin-top: 0.85rem;
+.how h2,
+.cities h2,
+.prose h2 {
+  scroll-margin-top: 1rem;
 }
 
 .this-week {
-  margin-top: 1.5rem;
-  padding: 1.05rem 1.05rem 1.15rem;
+  margin-top: 1.25rem;
+  padding: 1rem 1.05rem 1.1rem;
   background: var(--sheet);
-  border-top: 3px solid var(--gold-bright);
+  border: 1px solid var(--rule);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
-.this-week h2,
-.finder h2 {
+.this-week:not(.has-result) {
   margin: 0;
-  font-size: clamp(1.55rem, 4.5vw, 1.9rem);
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.this-week h2,
+.finder h2,
+.how h2,
+.cities h2,
+.prose h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.2;
 }
 
 .near-card {
   display: block;
-  margin-top: 0.85rem;
-  padding: 0.85rem 0.9rem 0.95rem;
-  background: rgba(198, 161, 90, 0.14);
-  border-radius: 0.85rem;
+  margin-top: 0.8rem;
+  padding: 0.9rem 0.95rem 1rem;
+  background: var(--page);
+  border: 1px solid var(--rule);
+  border-radius: 0.65rem;
   color: inherit;
   text-decoration: none;
 }
 
 .near-card:hover,
 .near-card:focus-visible {
-  background: rgba(198, 161, 90, 0.24);
+  border-color: var(--forest);
   text-decoration: none;
 }
 
@@ -239,30 +377,32 @@ img {
 }
 
 .near-kicker {
-  color: var(--gold);
-  font-size: 0.92rem;
+  color: var(--muted);
+  font-size: 0.75rem;
   font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .near-card .near-city {
-  margin-top: 0.12rem;
+  margin-top: 0.15rem;
   color: var(--ink);
   font-family: var(--serif);
-  font-size: clamp(1.85rem, 6vw, 2.35rem);
+  font-size: clamp(1.7rem, 5vw, 2.1rem);
   font-weight: 600;
   letter-spacing: -0.03em;
-  line-height: 1.05;
+  line-height: 1.08;
 }
 
 .near-lead {
-  margin: 0.7rem 0 0;
+  margin: 0.15rem 0 0;
   color: var(--muted);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
 }
 
 .near-list {
   list-style: none;
-  margin: 0.55rem 0 0;
+  margin: 0.65rem 0 0;
   padding: 0;
   display: grid;
   gap: 0.45rem;
@@ -272,18 +412,19 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.08rem;
+  gap: 0.05rem;
   min-height: 2.75rem;
-  padding: 0.65rem 0.85rem;
-  background: rgba(198, 161, 90, 0.14);
-  border-radius: 0.85rem;
+  padding: 0.6rem 0.8rem;
+  background: var(--page);
+  border: 1px solid var(--rule);
+  border-radius: 0.65rem;
   color: inherit;
   text-decoration: none;
 }
 
 .near-list a:hover,
 .near-list a:focus-visible {
-  background: rgba(198, 161, 90, 0.24);
+  border-color: var(--forest);
   text-decoration: none;
 }
 
@@ -291,7 +432,7 @@ img {
   margin: 0;
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 1.35rem;
+  font-size: 1.28rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.15;
@@ -302,29 +443,7 @@ img {
 }
 
 .near-list a:hover .near-city,
-.near-list a:focus-visible .near-city {
-  text-decoration: underline;
-  text-underline-offset: 0.12em;
-}
-
-.near-where {
-  margin-top: 0.35rem;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.near-summary {
-  margin-top: 0.45rem;
-  font-size: 0.98rem;
-  line-height: 1.45;
-}
-
-.near-go {
-  margin-top: 0.65rem;
-  color: var(--link);
-  font-weight: 700;
-}
-
+.near-list a:focus-visible .near-city,
 .near-card:hover .near-city,
 .near-card:focus-visible .near-city,
 .near-card:hover .near-go,
@@ -333,12 +452,22 @@ img {
   text-underline-offset: 0.12em;
 }
 
-.this-week:not(.has-result) {
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
+.near-where {
+  margin-top: 0.2rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.near-summary {
+  margin-top: 0.4rem;
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.near-go {
+  margin-top: 0.55rem;
+  color: var(--link);
+  font-weight: 700;
 }
 
 .city-field {
@@ -346,13 +475,13 @@ img {
 }
 
 .city-field:has(.locate:not([hidden])) input {
-  padding-right: 3.6rem;
+  padding-right: 3.4rem;
 }
 
 .locate {
   position: absolute;
   top: 50%;
-  right: 0.28rem;
+  right: 0.2rem;
   z-index: 1;
   display: grid;
   place-items: center;
@@ -361,7 +490,7 @@ img {
   margin: 0;
   padding: 0;
   border: 0;
-  border-radius: 0.65rem;
+  border-radius: 0.55rem;
   background: transparent;
   color: var(--forest);
   transform: translateY(-50%);
@@ -370,16 +499,13 @@ img {
 
 .locate svg {
   display: block;
-  width: 1.35rem;
-  height: 1.35rem;
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
-.locate:hover {
-  background: rgba(198, 161, 90, 0.28);
-}
-
+.locate:hover,
 .locate:focus-visible {
-  background: rgba(198, 161, 90, 0.28);
+  background: rgba(30, 70, 54, 0.08);
 }
 
 .locate:disabled {
@@ -391,26 +517,30 @@ img {
 .noscript-note,
 .near-message,
 .city-empty {
-  margin: 0.55rem 0 0;
+  margin: 0.5rem 0 0;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
 }
 
 .finder {
-  margin-top: 1.85rem;
+  margin-top: 1.6rem;
 }
 
 .city-search label {
   display: block;
   margin: 0.7rem 0 0.4rem;
+  color: var(--ink);
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
 .city-search input {
   width: 100%;
-  padding: 0.72rem 0.85rem;
+  min-height: 2.85rem;
+  padding: 0.65rem 0.85rem;
   border: 1px solid var(--rule);
-  border-radius: 0.75rem;
+  border-radius: 0.65rem;
   background: var(--sheet);
   color: var(--ink);
   font: inherit;
@@ -427,7 +557,6 @@ img {
 .city-search input[type="search"]::-webkit-search-cancel-button,
 .city-search input[type="search"]::-webkit-search-results-button,
 .city-search input[type="search"]::-webkit-search-results-decoration {
-  -webkit-appearance: none;
   appearance: none;
   display: none;
 }
@@ -435,10 +564,10 @@ img {
 .city-matches {
   list-style: none;
   margin: 0.4rem 0 0;
-  padding: 0.25rem;
+  padding: 0.3rem;
   background: var(--sheet);
   border: 1px solid var(--rule);
-  border-radius: 0.75rem;
+  border-radius: 0.65rem;
   box-shadow: var(--shadow);
 }
 
@@ -448,22 +577,22 @@ img {
   justify-content: space-between;
   gap: 0.75rem;
   min-height: 2.75rem;
-  padding: 0.55rem 0.65rem;
-  border-radius: 0.5rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 0.45rem;
   color: inherit;
   text-decoration: none;
 }
 
 .city-matches a:hover,
 .city-matches a:focus-visible {
-  background: rgba(198, 161, 90, 0.16);
+  background: rgba(30, 70, 54, 0.06);
   text-decoration: none;
 }
 
 .match-name {
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
@@ -471,25 +600,25 @@ img {
 .match-state {
   flex: none;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
 }
 
 .finder h3 {
-  margin: 1.4rem 0 0;
-  font-size: 1.28rem;
+  margin: 1.45rem 0 0;
+  font-size: 1.2rem;
 }
 
 .state-lead {
-  margin: 0.35rem 0 0;
+  margin: 0.3rem 0 0;
   color: var(--muted);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
 }
 
 .state-map {
   margin-top: 0.75rem;
-  padding: 0.35rem 0.2rem 0.7rem;
+  padding: 0.45rem 0.25rem 0.7rem;
   background: var(--sheet);
-  border-top: 3px solid var(--gold-bright);
+  border: 1px solid var(--rule);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -528,7 +657,7 @@ img {
 .us-code {
   fill: var(--map-label);
   font-family: var(--sans);
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   letter-spacing: 0.04em;
   pointer-events: none;
@@ -549,23 +678,24 @@ img {
 .state-key {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
-  margin: 0.2rem 0.45rem 0;
+  gap: 0.4rem;
+  margin: 0.15rem 0.4rem 0;
   padding-top: 0.65rem;
   border-top: 1px solid var(--rule);
 }
 
 .state-key a {
-  flex: 1 1 8.75rem;
+  flex: 1 1 8.5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 0.02rem;
+  gap: 0.05rem;
   min-height: 2.75rem;
-  padding: 0.4rem 0.75rem;
-  border-radius: 0.85rem;
-  background: rgba(198, 161, 90, 0.16);
+  padding: 0.4rem 0.7rem;
+  border: 1px solid transparent;
+  border-radius: 0.55rem;
+  background: transparent;
   color: inherit;
   text-decoration: none;
   touch-action: manipulation;
@@ -574,7 +704,7 @@ img {
 .state-name {
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -582,13 +712,15 @@ img {
 
 .state-count {
   color: var(--gold);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
 .state-key a:hover,
 .state-key a:focus-visible {
-  background: rgba(198, 161, 90, 0.3);
+  background: rgba(30, 70, 54, 0.05);
+  border-color: var(--rule);
   text-decoration: none;
 }
 
@@ -612,13 +744,11 @@ img {
 }
 
 .how {
-  margin-top: 2.4rem;
-  padding-top: 0.2rem;
+  margin-top: 2rem;
 }
 
 .how h2 {
-  margin: 0 0 0.85rem;
-  font-size: 1.4rem;
+  margin-bottom: 0.7rem;
 }
 
 .how ol {
@@ -626,63 +756,60 @@ img {
   margin: 0;
   padding: 0;
   counter-reset: beat;
+  background: var(--sheet);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .how li {
-  margin: 0 0 0.7rem;
-  padding: 0.85rem 1rem 0.95rem;
-  background: var(--sheet);
-  border-radius: 0.85rem;
-  box-shadow: var(--shadow);
+  margin: 0;
+  padding: 0.85rem 1.05rem 0.95rem;
+  border-top: 1px solid var(--rule);
   counter-increment: beat;
 }
 
-.how li:last-child {
-  margin-bottom: 0;
+.how li:first-child {
+  border-top: 0;
 }
 
 .how h3 {
   margin: 0;
-  font-size: 1.12rem;
+  font-size: 1.08rem;
 }
 
 .how h3::before {
   content: counter(beat) ". ";
   color: var(--gold);
+  font-variant-numeric: tabular-nums;
 }
 
 .how p {
-  margin: 0.28rem 0 0;
+  margin: 0.22rem 0 0;
+  color: var(--text);
   font-size: 0.98rem;
-}
-
-@media (min-width: 40rem) {
-  .dir-cities {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1.1rem;
-  }
 }
 
 .cities {
   display: grid;
-  gap: 1.35rem;
-  margin-top: 1.8rem;
+  gap: 1rem;
+  margin-top: 1.7rem;
 }
 
 .cities h2 {
-  margin: 0;
-  font-size: 1.15rem;
+  margin: 0 0 0.1rem;
 }
 
 .cities-intro {
-  margin: -0.55rem 0 0.15rem;
+  margin: 0;
   font-weight: 600;
 }
 
 .city-card {
   overflow: hidden;
   background: var(--sheet);
+  border: 1px solid var(--rule);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -696,12 +823,13 @@ img {
 }
 
 .city-card-body {
-  padding: 1.05rem 1.15rem 1.25rem;
+  padding: 0.95rem 1.05rem 1.1rem;
 }
 
 .city-card h3 {
   margin: 0;
-  font-size: 1.7rem;
+  font-size: 1.45rem;
+  line-height: 1.15;
 }
 
 .city-card h3 a {
@@ -710,13 +838,15 @@ img {
 }
 
 .city-card h3 a:hover,
-.city-card h3 a:focus {
+.city-card h3 a:focus-visible {
   text-decoration: underline;
+  text-underline-offset: 0.08em;
 }
 
 .city-card-when {
-  margin: 0.35rem 0 0.45rem;
+  margin: 0.3rem 0 0.4rem;
   color: var(--gold);
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
@@ -726,33 +856,37 @@ img {
 }
 
 .city-card-when a:hover,
-.city-card-when a:focus {
+.city-card-when a:focus-visible {
   text-decoration: underline;
 }
 
 .city-card-hook {
-  margin: 0.15rem 0 0.55rem;
+  margin: 0.35rem 0 0;
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 1.15rem;
-  line-height: 1.35;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
 }
 
 .photo-credit {
+  margin-top: 0.7rem;
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
+  line-height: 1.4;
 }
 
 .photo-credit a {
-  margin-left: 0.35rem;
+  margin-left: 0.3rem;
 }
 
 .city-card p {
-  margin: 0.4rem 0 0;
+  margin: 0.45rem 0 0;
 }
 
 .card-secondary {
-  margin: 0.75rem 0 0;
+  margin: 0.7rem 0 0;
   font-weight: 600;
 }
 
@@ -761,9 +895,20 @@ img {
 }
 
 .cta a,
+.cta button,
+.share-button,
+.install-go,
+.install-dismiss {
+  touch-action: manipulation;
+}
+
+.cta a,
 .cta button {
-  display: inline-block;
-  padding: 0.72rem 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.55rem 1.15rem;
   border: 0;
   background: var(--forest);
   color: var(--header-ink);
@@ -776,10 +921,11 @@ img {
 }
 
 .cta a:hover,
-.cta a:focus,
+.cta a:focus-visible,
 .cta button:hover,
-.cta button:focus {
+.cta button:focus-visible {
   background: var(--forest-deep);
+  text-decoration: none;
 }
 
 .cta button:disabled {
@@ -790,92 +936,99 @@ img {
 @media (max-width: 36rem) {
   .cta a,
   .cta button {
-    display: block;
     width: 100%;
-    text-align: center;
   }
 }
 
 .prose h1,
-.wrap > h1 {
-  margin: 0.4rem 0 0.8rem;
-  font-size: clamp(2rem, 7vw, 2.7rem);
+.page.wrap > h1,
+.wrap.page > h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 6vw, 2.5rem);
 }
 
 .prose p,
 .prose ul,
 .prose ol {
-  margin: 0.85rem 0;
+  margin: 0.8rem 0;
 }
 
 .prose a {
-  text-underline-offset: 0.15em;
+  font-weight: 600;
+}
+
+.state-hub .dek {
+  margin: 0;
+}
+
+.state-hub .dek p:first-child {
+  margin-top: 0;
+}
+
+.state-hub .dek p:last-child {
+  margin-bottom: 0;
 }
 
 .site-footer {
-  margin-top: 1rem;
-  padding: 1.4rem 0 calc(1.6rem + env(safe-area-inset-bottom));
+  margin-top: 0.25rem;
+  padding: 1.15rem 0 calc(1.35rem + env(safe-area-inset-bottom));
   border-top: 1px solid var(--rule);
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem 1rem;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.65rem;
 }
 
 .footer-nav a {
-  color: var(--ink);
+  color: var(--forest);
   font-weight: 600;
   text-decoration: none;
 }
 
 .footer-nav a:hover,
-.footer-nav a:focus {
+.footer-nav a:focus-visible {
   text-decoration: underline;
 }
 
 .footer-cities {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem 0.9rem;
+  gap: 0.28rem 0.75rem;
   align-items: baseline;
   margin: 0 0 0.85rem;
+  line-height: 1.45;
 }
 
 .footer-cities a {
-  color: var(--ink);
-  font-weight: 600;
+  color: var(--text);
+  font-size: 0.875rem;
+  font-weight: 500;
   text-decoration: none;
 }
 
 .footer-cities a:hover,
-.footer-cities a:focus {
+.footer-cities a:focus-visible {
+  color: var(--link);
   text-decoration: underline;
 }
 
 .footer-cities a.footer-state {
-  color: var(--gold);
+  color: var(--forest);
+  font-weight: 700;
 }
 
 .site-footer p {
-  margin: 0.25rem 0;
+  margin: 0.2rem 0;
 }
 
 .copyright {
-  font-size: 0.85rem;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    transition: none !important;
-  }
+  color: var(--muted);
+  font-size: 0.8rem;
 }
 
 ::selection {
@@ -883,132 +1036,78 @@ img {
   color: #1c2b24;
 }
 
-/* City, year, issue, and state-hub rules. Inlined on every page with the rest of the sheet.
-   The header sits on the same cream as the page. The gold hairline is the only rule under it. */
-
-.site-header--city .header-bar {
-  padding-bottom: 0.15rem;
-}
-
-.city-masthead {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  margin-top: 0.85rem;
-  padding-bottom: 0.45rem;
-}
-
-.city-mark {
-  display: block;
-  width: 4.15rem;
-  height: auto;
-  flex: none;
-  padding: 0.34rem;
-  background: var(--forest);
-  border: 1px solid var(--gold-bright);
-  border-radius: 0.75rem;
-}
-
-.city-masthead-text {
-  min-width: 0;
-}
-
-.city-name {
-  margin: 0;
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: clamp(2.15rem, 7vw, 3rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 0.95;
-}
-
-.city-name a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.city-kicker {
-  margin: 0.45rem 0 0;
-  color: var(--gold);
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-@media (min-width: 36rem) {
-  .city-mark {
-    width: 5rem;
-    padding: 0.42rem;
-    border-radius: 0.9rem;
-  }
-}
-
-.city-home,
-.year-page,
-.issue,
-.state-hub {
-  padding-top: 1.25rem;
-  padding-bottom: 2.4rem;
-}
-
-.city-home h1,
-.year-page h1,
-.issue h1,
-.state-hub h1 {
-  margin: 0.2rem 0 1rem;
-  font-size: clamp(1.85rem, 5.4vw, 2.55rem);
-}
-
-.issue-range {
-  margin: 0 0 0.3rem;
-  color: var(--gold);
-  font-size: 0.98rem;
-  font-weight: 600;
-}
-
 .crumbs ol {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.2rem 0;
-  margin: 0 0 1rem;
+  align-items: baseline;
+  gap: 0;
+  margin: 0 0 0.85rem;
   padding: 0;
   list-style: none;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.8125rem;
+  line-height: 1.4;
 }
 
 .crumbs li + li::before {
   content: "/";
-  margin: 0 0.4rem;
+  margin: 0 0.38rem;
   color: var(--muted);
 }
 
 .crumbs a {
-  color: var(--link);
+  color: var(--muted);
+  font-weight: 500;
   text-decoration: none;
 }
 
 .crumbs a:hover,
-.crumbs a:focus {
+.crumbs a:focus-visible {
+  color: var(--link);
   text-decoration: underline;
 }
 
+.crumbs [aria-current="page"] {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.city-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 0.85rem;
+}
+
 .hero {
-  margin: 0 0 1.1rem;
+  margin: 0 0 1.15rem;
 }
 
 .hero img,
 .event-photo img {
   width: 100%;
-  border-radius: 0.85rem;
+  border-radius: var(--radius);
 }
 
+.hero figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.45rem 0.85rem;
+  margin-top: 0.55rem;
+}
+
+.hero-credit,
 .hero figcaption,
 .event-photo figcaption {
-  margin-top: 0.45rem;
   color: var(--muted);
-  font-size: 0.84rem;
+  font-size: 0.8125rem;
   line-height: 1.4;
+}
+
+.hero-credit {
+  margin: 0;
+  flex: 1 1 12rem;
 }
 
 .hero figcaption .source::before,
@@ -1017,65 +1116,68 @@ img {
   margin: 0 0.35rem;
 }
 
+.hero figcaption .issue-share,
+.city-actions .issue-share {
+  margin: 0 0 0 auto;
+}
+
 .hook {
-  margin: 0.2rem 0 0;
+  margin: 0.1rem 0 0;
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 1.28rem;
+  font-size: 1.18rem;
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1.4;
 }
 
 .dek {
-  margin-top: 0;
+  margin: 0 0 0.95rem;
+  color: var(--text);
   font-size: 1.05rem;
+  line-height: 1.5;
 }
 
 .city-note {
-  margin: 1.4rem 0 0;
+  margin: 1.25rem 0 0;
   color: var(--muted);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
 }
 
 .year-link {
-  margin: 1.15rem 0 0;
+  margin: 1.1rem 0 0;
   font-weight: 600;
 }
 
 .week-band {
-  margin-top: 2rem;
+  margin-top: 1.75rem;
 }
 
 .week-band h2 {
-  margin: 0 0 0.45rem;
-  font-size: 1.45rem;
-}
-
-.prose h2 {
-  margin: 2rem 0 0.45rem;
-  font-size: 1.45rem;
+  margin: 0 0 0.4rem;
+  font-size: 1.35rem;
 }
 
 .city-home .prose {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-top: 1.35rem;
+  gap: 0.8rem;
+  margin-top: 1.55rem;
 }
 
-.city-home .prose h2 {
-  margin: 0.15rem 0 0;
-}
-
+.city-home .prose h2,
 .city-home .prose .list-updated {
   margin: 0;
 }
 
+.city-home .prose h2 {
+  margin-top: 0.2rem;
+}
+
 .featured-title {
-  margin: 0.2rem 0 0;
+  margin: 0.15rem 0 0;
   font-family: var(--serif);
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.25;
@@ -1087,39 +1189,40 @@ img {
 }
 
 .featured-title a:hover,
-.featured-title a:focus {
+.featured-title a:focus-visible {
   text-decoration: underline;
 }
 
 .issue-list {
-  margin: 0.4rem 0 0;
+  margin: 0.35rem 0 0;
   padding: 0;
   list-style: none;
 }
 
 .issue-list li {
-  padding: 0.85rem 0;
+  padding: 0.8rem 0;
   border-top: 1px solid var(--rule);
 }
 
 .issue-list a {
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 1.22rem;
+  font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   text-decoration: none;
 }
 
 .issue-list a:hover,
-.issue-list a:focus {
+.issue-list a:focus-visible {
   text-decoration: underline;
 }
 
 .issue-list .meta,
-.week-nav .meta {
+.week-nav .meta,
+.issue-range {
   display: block;
-  margin-top: 0.15rem;
+  margin-top: 0.12rem;
   color: var(--gold);
   font-family: var(--sans);
   font-size: 0.92rem;
@@ -1127,46 +1230,51 @@ img {
   letter-spacing: 0;
 }
 
+.issue-range {
+  margin: 0 0 0.25rem;
+}
+
 .prose h3 {
-  margin: 1.7rem 0 0.2rem;
-  font-size: 1.28rem;
+  margin: 0;
+  font-size: 1.22rem;
+  line-height: 1.25;
 }
 
 .prose .event-when {
   display: inline-block;
   max-width: 100%;
-  margin: 0.15rem 0 0.35rem;
-  padding-bottom: 0.12rem;
+  margin: 0.28rem 0 0.15rem;
+  padding-bottom: 0.08rem;
   border-bottom: 2px solid var(--gold-bright);
   color: var(--gold);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   font-weight: 600;
   line-height: 1.35;
 }
 
 .prose .event-place {
-  margin: 0 0 0.55rem;
+  margin: 0.15rem 0 0.15rem;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 500;
+  line-height: 1.4;
 }
 
-/* Event cards sit on the cream page. Order inside stays title, gold time, place, blurb, link. */
 .event-card {
   margin: 0;
-  padding: 1rem 1.05rem 1.1rem;
+  padding: 1rem 1.05rem 1.05rem;
   background: var(--sheet);
   color: var(--text);
   border: 1px solid var(--rule);
-  border-radius: 0.9rem;
-  box-shadow: 0 1px 2px rgba(28, 43, 36, 0.04), 0 8px 20px rgba(28, 43, 36, 0.05);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   overflow-wrap: break-word;
 }
 
 .city-home .event-card h3 {
   margin: 0;
   color: var(--ink);
-  font-size: 1.34rem;
+  font-size: 1.26rem;
   line-height: 1.22;
 }
 
@@ -1179,20 +1287,19 @@ img {
 }
 
 .city-home .event-card > p:not(.event-when):not(.event-place) {
-  margin: 0.7rem 0;
+  margin: 0.6rem 0;
 }
 
 .city-home .event-card .event-photo {
-  margin: 0.7rem 0 0.85rem;
+  margin: 0.7rem 0 0.15rem;
 }
 
-/* Calendar action sits on the gold date line, beside the time. */
 .prose .event-cals {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.15rem 0.45rem;
-  margin-left: 0.4rem;
+  gap: 0.1rem 0.25rem;
+  margin-left: 0.3rem;
   vertical-align: middle;
 }
 
@@ -1200,11 +1307,11 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.28rem;
-  min-width: 1.6rem;
-  min-height: 1.6rem;
-  padding: 0.15rem 0.22rem;
-  border-radius: 0.25rem;
+  gap: 0.25rem;
+  min-width: 2rem;
+  min-height: 2rem;
+  padding: 0.2rem 0.28rem;
+  border-radius: 0.35rem;
   color: var(--link);
   font-size: 0.95rem;
   font-weight: 700;
@@ -1215,14 +1322,14 @@ img {
 
 .prose a.event-cal:hover,
 .prose a.event-cal:focus-visible {
-  background: color-mix(in srgb, var(--gold-bright) 38%, transparent);
+  background: rgba(30, 70, 54, 0.08);
   text-decoration: none;
 }
 
 .prose .cal-icon {
   display: block;
-  width: 1.2em;
-  height: 1.2em;
+  width: 1.15em;
+  height: 1.15em;
   flex: none;
 }
 
@@ -1232,7 +1339,10 @@ img {
 
 .suggest-event {
   margin: 1.35rem 0 0;
-  font-size: 1.02rem;
+  padding-top: 0.95rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.98rem;
 }
 
 .suggest-event a {
@@ -1240,15 +1350,19 @@ img {
 }
 
 .event-photo {
-  margin: 0.75rem 0 1rem;
+  margin: 0.7rem 0 0.9rem;
+}
+
+.event-photo figcaption {
+  margin-top: 0.4rem;
 }
 
 .week-nav {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-top: 2.2rem;
-  padding-top: 1rem;
+  gap: 0.85rem;
+  margin-top: 1.75rem;
+  padding-top: 0.9rem;
   border-top: 1px solid var(--rule);
 }
 
@@ -1259,7 +1373,7 @@ img {
 }
 
 .week-nav a:hover,
-.week-nav a:focus {
+.week-nav a:focus-visible {
   text-decoration: underline;
 }
 
@@ -1274,30 +1388,35 @@ img {
     margin-left: auto;
     text-align: right;
   }
+
+  .dir-cities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.1rem;
+  }
 }
 
-/* One share control on issue pages. Same sheet as the rest of the site. */
-
 .issue h1 {
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.4rem;
 }
 
 .issue-share {
-  margin: 0 0 1.15rem;
+  margin: 0 0 1rem;
 }
 
 .share-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
-  min-height: 2.25rem;
-  padding: 0.28rem 0.75rem 0.28rem 0.58rem;
+  min-height: 2.75rem;
+  padding: 0.4rem 0.95rem 0.4rem 0.75rem;
   border: 1px solid var(--rule);
   border-radius: 999px;
   background: var(--sheet);
   color: var(--forest);
   font: inherit;
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1;
   cursor: pointer;
@@ -1305,21 +1424,21 @@ img {
 
 .share-button:hover,
 .share-button:focus-visible {
-  border-color: var(--gold-bright);
-  background: var(--page);
+  border-color: var(--forest);
+  background: var(--sheet);
 }
 
 .share-icon {
   display: block;
-  width: 1.05rem;
-  height: 1.05rem;
+  width: 1rem;
+  height: 1rem;
   flex: none;
 }
 
 .share-status:not(.visually-hidden) {
   margin: 0.35rem 0 0;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
 }
 
 .share-copy-buffer {
@@ -1328,28 +1447,27 @@ img {
   top: 0;
 }
 
-/* Install hint sits in the footer so it stays out of the city finder. */
-
 .install-hint {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 0.55rem 0.85rem;
-  margin: 0 0 1rem;
-  padding: 0.75rem 0.85rem;
-  background: var(--sheet);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
+  margin: 0 0 0.95rem;
+  padding: 0 0 0.9rem;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  border-radius: 0;
   color: var(--text);
-  box-shadow: var(--shadow);
+  box-shadow: none;
 }
 
 .install-hint p {
   margin: 0;
   flex: 1 1 14rem;
-  color: var(--ink);
-  font-size: 0.95rem;
+  color: var(--text);
+  font-size: 0.92rem;
 }
 
 .install-hint-actions {
@@ -1363,8 +1481,8 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.25rem;
-  padding: 0.28rem 0.8rem;
+  min-height: 2.75rem;
+  padding: 0.4rem 0.9rem;
   border-radius: 999px;
   font: inherit;
   font-size: 0.9rem;
@@ -1386,19 +1504,28 @@ img {
 
 .install-dismiss {
   border: 1px solid var(--rule);
-  background: var(--sheet);
+  background: transparent;
   color: var(--forest);
 }
 
 .install-dismiss:hover,
 .install-dismiss:focus-visible {
-  border-color: var(--gold-bright);
-  background: var(--page);
+  border-color: var(--forest);
+  background: transparent;
 }
 
 .prose .list-updated {
-  margin: 0 0 0.85rem;
+  margin: 0 0 0.35rem;
   color: var(--gold);
-  font-size: 0.92rem;
+  font-size: 0.875rem;
   font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
 }

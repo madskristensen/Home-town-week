@@ -3,11 +3,9 @@ layout: default
 ---
 {%- include city-context.html -%}
 <article class="city-home wrap"{%- if page.last_modified_at %} data-updated="{{ page.last_modified_at | date_to_xmlschema }}"{% endif %}>
-  {%- include breadcrumbs.html -%}
   {%- if city.tagline -%}
   <p class="dek">{{ city.tagline }}</p>
   {%- endif -%}
-  {%- include issue-share.html -%}
   {%- if page.image -%}
   <figure class="hero">
     {%- include responsive-img.html
@@ -15,13 +13,20 @@ layout: default
          alt=page.image_alt
          priority="high"
          sizes="(min-width: 42rem) 40rem, 100vw" -%}
-    {%- if page.image_credit or page.image_source_url -%}
     <figcaption>
-      {%- if page.image_credit -%}<span class="credit">{{ page.image_credit }}</span>{%- endif -%}
-      {%- if page.image_source_url -%}<a class="source" href="{{ page.image_source_url }}" rel="noopener">Source</a>{%- endif -%}
+      {%- if page.image_credit or page.image_source_url -%}
+      <p class="hero-credit">
+        {%- if page.image_credit -%}<span class="credit">{{ page.image_credit }}</span>{%- endif -%}
+        {%- if page.image_source_url -%}<a class="source" href="{{ page.image_source_url }}" rel="noopener">Source</a>{%- endif -%}
+      </p>
+      {%- endif -%}
+      {%- include issue-share.html -%}
     </figcaption>
-    {%- endif -%}
   </figure>
+  {%- else -%}
+  <div class="city-actions">
+    {%- include issue-share.html -%}
+  </div>
   {%- endif -%}
   {%- if page.hook -%}
   <p class="hook">{{ page.hook }}</p>
