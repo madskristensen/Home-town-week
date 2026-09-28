@@ -2,7 +2,7 @@
 layout: default
 ---
 {%- include city-context.html -%}
-<article class="city-home wrap">
+<article class="city-home wrap"{%- if page.last_modified_at %} data-updated="{{ page.last_modified_at | date_to_xmlschema }}"{% endif %}>
   {%- include breadcrumbs.html -%}
   <h1>{{ city.name }}</h1>
   {%- if city.tagline -%}
@@ -31,6 +31,7 @@ layout: default
   {%- if event_copy != "" -%}
   <div class="prose">
     <h2>Upcoming</h2>
+    <p id="list-updated" class="list-updated" role="status" hidden></p>
     {{ content }}
   </div>
   {%- else -%}

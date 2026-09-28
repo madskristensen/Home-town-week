@@ -2,6 +2,10 @@
 <meta charset="utf-8">
 <meta name="color-scheme" content="light dark">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+<meta name="apple-mobile-web-app-status-bar-style" content="{% if page.layout == 'city' %}black{% else %}default{% endif %}">
 {%- comment -%}
   WebKit paints a frame before an external stylesheet applies, and it will
   not paint until every render-blocking sheet in the head has loaded.
@@ -14,7 +18,8 @@
 <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="48x48" href="{{ '/assets/images/icon-48.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/images/icon-192.png' | relative_url }}">
-<link rel="icon" type="image/png" sizes="512x512" href="{{ '/assets/images/logo.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="512x512" href="{{ '/assets/images/icon-512.png' | relative_url }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+<link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
 <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
 {%- include seo.html -%}

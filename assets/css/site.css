@@ -1392,3 +1392,94 @@ html:has(.site-header--city) body {
   left: -9999px;
   top: 0;
 }
+
+/* Install hint sits in the footer so it stays out of the city finder. */
+
+.install-hint {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.55rem 0.85rem;
+  margin: 0 0 1rem;
+  padding: 0.75rem 0.85rem;
+  background: var(--sheet);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.install-hint p {
+  margin: 0;
+  flex: 1 1 14rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.install-hint-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.install-go,
+.install-dismiss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.25rem;
+  padding: 0.28rem 0.8rem;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.install-go {
+  border: 0;
+  background: var(--forest);
+  color: var(--header-ink);
+}
+
+.install-go:hover,
+.install-go:focus-visible {
+  background: var(--forest-deep);
+}
+
+.install-dismiss {
+  border: 1px solid var(--rule);
+  background: var(--sheet);
+  color: var(--forest);
+}
+
+.install-dismiss:hover,
+.install-dismiss:focus-visible {
+  border-color: var(--gold-bright);
+  background: var(--page);
+}
+
+.prose .list-updated {
+  margin: 0 0 0.85rem;
+  color: var(--gold);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  .install-go {
+    background: #f0d48a;
+    color: #16352a;
+  }
+
+  .install-go:hover,
+  .install-go:focus-visible {
+    background: #f7e3b0;
+  }
+
+  .install-dismiss {
+    color: var(--ink);
+  }
+}

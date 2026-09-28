@@ -1,0 +1,141 @@
+<script data-sw="{{ '/sw.js' | relative_url }}">
+(function () {
+  var DISMISS_KEY = "hw-install-dismissed";
+
+  function runningInstalled() {
+    try {
+      if (window.matchMedia("(display-mode: standalone)").matches) return true;
+      if (window.matchMedia("(display-mode: minimal-ui)").matches) return true;
+      if (window.matchMedia("(display-mode: fullscreen)").matches) return true;
+      if (window.matchMedia("(display-mode: window-controls-overlay)").matches) return true;
+    } catch (err) {}
+    return window.navigator.standalone === true;
+  }
+
+  function storageGet(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function storageSet(key, value) {
+    try {
+      localStorage.setItem(key, value);
+    } catch (err) {}
+  }
+
+  function registerServiceWorker() {
+    if (!("serviceWorker" in navigator)) return;
+    var node = document.querySelector("script[data-sw]");
+    var url = (node && node.getAttribute("data-sw")) || "/sw.js";
+    var hadController = !!navigator.serviceWorker.controller;
+
+    navigator.serviceWorker.register(url, { scope: "/" }).then(function () {
+      if (hadController) return;
+      var warmed = false;
+      function warm() {
+        if (warmed) return;
+        warmed = true;
+        fetch(location.href, { headers: { Accept: "text/html" } }).catch(function () {});
+      }
+      if (navigator.serviceWorker.controller) warm();
+      navigator.serviceWorker.addEventListener("controllerchange", warm);
+    }).catch(function () {});
+  }
+
+  if (document.readyState === "complete") registerServiceWorker();
+  else window.addEventListener("load", registerServiceWorker);
+
+  var hint = document.getElementById("install-hint");
+  var copy = document.getElementById("install-hint-copy");
+  var go = document.getElementById("install-hint-go");
+  var dismissBtn = document.getElementById("install-hint-dismiss");
+  var deferredPrompt = null;
+
+  function hideHint() {
+    if (hint) hint.hidden = true;
+  }
+
+  function showHint(message, withInstall) {
+    if (!hint || !copy || runningInstalled()) return;
+    if (storageGet(DISMISS_KEY) === "1") return;
+    copy.textContent = message;
+    if (go) go.hidden = !withInstall;
+    hint.hidden = false;
+  }
+
+  if (hint && dismissBtn && !runningInstalled()) {
+    dismissBtn.addEventListener("click", function () {
+      storageSet(DISMISS_KEY, "1");
+      hideHint();
+    });
+  }
+
+  if (go) {
+    go.addEventListener("click", function () {
+      if (!deferredPrompt || typeof deferredPrompt.prompt !== "function") return;
+      var promptEvent = deferredPrompt;
+      deferredPrompt = null;
+      var pending;
+      try {
+        pending = promptEvent.prompt();
+      } catch (err) {
+        return;
+      }
+      Promise.resolve(pending).then(function () {
+        return promptEvent.userChoice;
+      }).then(function (choice) {
+        if (choice && choice.outcome === "accepted") hideHint();
+      }).catch(function () {});
+    });
+  }
+
+  window.addEventListener("beforeinstallprompt", function (event) {
+    if (runningInstalled() || storageGet(DISMISS_KEY) === "1") return;
+    event.preventDefault();
+    deferredPrompt = event;
+    showHint("Add Hometown Week to your home screen.", true);
+  });
+
+  window.addEventListener("appinstalled", function () {
+    deferredPrompt = null;
+    hideHint();
+  });
+
+  if (!runningInstalled() && storageGet(DISMISS_KEY) !== "1") {
+    var ua = navigator.userAgent || "";
+    var iOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    var iOSOther = /CriOS|FxiOS|EdgiOS|OPiOS|DuckDuckGo/.test(ua);
+    if (iOS && /Safari/.test(ua) && !iOSOther) {
+      showHint("Add Hometown Week to your Home Screen. Tap Share, then Add to Home Screen.", false);
+    }
+  }
+
+  var article = document.querySelector("article[data-updated]");
+  var note = document.getElementById("list-updated");
+  if (article && note) {
+    var stamp = article.getAttribute("data-updated") || "";
+    if (stamp) {
+      var seenKey = "hw-seen:" + location.pathname;
+      var previous = storageGet(seenKey);
+      if (previous && previous !== stamp) {
+        var when = new Date(stamp);
+        var label = "";
+        if (!isNaN(when.getTime())) {
+          label = when.toLocaleDateString("en-US", {
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+            timeZone: "America/Los_Angeles"
+          });
+        }
+        note.textContent = label ? "List updated " + label + "." : "List updated.";
+        note.hidden = false;
+      }
+      storageSet(seenKey, stamp);
+    }
+  }
+})();
+</script>

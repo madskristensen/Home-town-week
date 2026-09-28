@@ -52,7 +52,12 @@
 <meta name="description" content="{{ seo_description | escape }}">
 <meta name="author" content="{{ site.author.name | escape }}">
 <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+{%- if page.layout == "city" -%}
 <meta name="theme-color" content="#1E4636">
+{%- else -%}
+<meta name="theme-color" content="#f4efe6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12201a" media="(prefers-color-scheme: dark)">
+{%- endif -%}
 {%- if page.robots %}
 <meta name="robots" content="{{ page.robots }}">
 {%- endif %}
