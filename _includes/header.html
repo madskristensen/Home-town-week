@@ -1,7 +1,9 @@
 <header class="site-header{% if page.city %} site-header--city{% endif %}">
   <div class="wrap header-bar">
     {%- if page.url == "/" -%}
-    <a class="wordmark" href="{{ '/' | relative_url }}" aria-current="page">Hometown Week</a>
+    <h1>
+      <a class="wordmark" href="{{ '/' | relative_url }}" aria-current="page">Hometown Week</a>
+    </h1>
     {%- else -%}
     <a class="wordmark" href="{{ '/' | relative_url }}">Hometown Week</a>
     {%- endif -%}
