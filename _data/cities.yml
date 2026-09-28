@@ -1701,6 +1701,10 @@
       url: "https://www.carlsbadca.gov/residents/kids/events"
       type: parks
       notes: "City special events, including Alga Norte. Prefer this page when a news calendar and the city page disagree."
+    - name: "Carlsbad CivicRec"
+      url: "https://secure.rec1.com/CA/carlsbad-ca/catalog"
+      type: parks
+      notes: "Parks and recreation registration catalog. Use a dated special-event page when this catalog is only classes."
     - name: "State Street Farmers' Market"
       url: "https://www.carlsbad-village.com/do/state-street-farmers-market-5"
       type: market
@@ -1709,14 +1713,26 @@
       url: "https://www.carlsbad-village.com/"
       type: downtown
       notes: "Village events, including Halloween in the Village."
+    - name: "Visit Carlsbad"
+      url: "https://visitcarlsbad.com/events/"
+      type: downtown
+      notes: "Visitor events page. It did not return a list without JavaScript."
     - name: "New Village Arts"
       url: "https://newvillagearts.org/"
       type: theater
       notes: "Community theater at 2787 State Street. Use a posted performance time, not only the season span."
     - name: "Carlsbad City Library"
-      url: "https://library.carlsbadca.gov/"
+      url: "https://carlsbadca.libcal.com/"
       type: library
-      notes: "One library source. Dove Lane, Georgina Cole, and the Learning Center."
+      notes: "One library source. LibCal for Dove Lane, Georgina Cole, and the Learning Center."
+    - name: "The Coast News arts"
+      url: "https://thecoastnews.com/category/arts-entertainment/"
+      type: downtown
+      notes: "Staff arts articles for North County. Skip a SceneThink or CitySpark events widget."
+    - name: "North County Pipeline"
+      url: "https://ncpipeline.substack.com/"
+      type: downtown
+      notes: "North County newsletter. Use a reported Carlsbad item."
     - name: "AllEvents Carlsbad"
       url: "https://allevents.in/carlsbad"
       type: allevents
@@ -1737,18 +1753,18 @@
       url: "https://www.folsom.ca.us/"
       type: city_hall
       notes: "Official city site. Bots are often blocked. The about page uses Distinctive by Nature."
-    - name: "Folsom Parks and the Zoo Sanctuary"
-      url: "https://www.folsom.ca.us/"
+    - name: "Folsom WebTrac"
+      url: "https://webtrac.folsom.ca.us/"
       type: parks
-      notes: "Zoo and park events at Folsom City Lions Park, 403 Stafford Street."
+      notes: "Parks and recreation registration. Zoo and park events are at Folsom City Lions Park, 403 Stafford Street. Do not use the city homepage as the calendar."
     - name: "Historic Folsom"
       url: "https://folsom.biz/"
       type: downtown
       notes: "Sutter Street market and historic-district listings. Prefer the event page's clock over a calendar-widget time zone."
     - name: "Sutter Street Farmers Market"
-      url: "https://folsom.biz/events/sutter-street-farmers-market/2026-10-03"
+      url: "https://folsom.biz/events/sutter-street-farmers-market"
       type: market
-      notes: "Saturday market at Historic Folsom Plaza, 915 Sutter Street."
+      notes: "Series page, not one Saturday. Market is at Historic Folsom Plaza, 915 Sutter Street, Saturdays 8 a.m. to 1 p.m."
     - name: "Harris Center for the Arts"
       url: "https://www.harriscenter.net/"
       type: theater
@@ -1757,6 +1773,14 @@
       url: "https://www.heartoffolsom.com/events"
       type: venue
       notes: "Folsom Central and Folsom Faire shopping-center events. The page often skips a street number."
+    - name: "Palladio"
+      url: "https://gopalladio.com/events/"
+      type: venue
+      notes: "Piazza events at 350 Palladio Parkway. Guest Services is 410 Palladio Parkway. Keep each listing's own number. Skip the restaurant patio music."
+    - name: "Style Magazine calendar"
+      url: "https://www.stylemg.com/calendar"
+      type: downtown
+      notes: "Placer and Sacramento regional magazine calendar. Filter to Folsom. Skip a SceneThink or CitySpark widget."
     - name: "Folsom Historic District"
       url: "https://historicfolsom.org/"
       type: downtown
@@ -1789,6 +1813,14 @@
       url: "https://cityofirvine.gov/great-park"
       type: parks
       notes: "Festival grounds at 8000 Great Park Boulevard."
+    - name: "Your Irvine"
+      url: "https://yourirvine.org/"
+      type: parks
+      notes: "City recreation registration catalog. Use a dated event page when the catalog is only classes."
+    - name: "Great Park Live"
+      url: "https://www.greatparklive.com/events/"
+      type: venue
+      notes: "Concert and festival calendar at Great Park. Skip a show that is not a family event."
     - name: "Irvine Certified Farmers Market"
       url: "https://cityofirvine.gov/great-park/farmers-market"
       type: market
@@ -1802,17 +1834,21 @@
       type: theater
       notes: "Public performances in Irvine. Use a family or all-ages show, and say if the listing is a general concert."
     - name: "Pretend City Children's Museum"
-      url: "https://www.pretendcity.org/events/"
+      url: "https://www.pretendcity.org/event"
       type: venue
       notes: "Kids museum at 29 Hubble. Toddler Town and Baby Steps charge their own fee. Other programs say they are included in admission."
+    - name: "Destination Irvine"
+      url: "https://www.destinationirvine.com/events/"
+      type: downtown
+      notes: "Visitor events page. Use a printed clock. Do not invent a date for a seasonal attraction that has none."
     - name: "Irvine Standard calendar"
       url: "https://www.irvinestandard.com/calendar/"
       type: downtown
       notes: "Editor calendar for the Irvine Standard. Spectrum and Great Park listings. Not a CitySpark embed."
     - name: "Irvine Public Library"
-      url: "https://www.cityofirvine.gov/irvine-public-library/find-events"
+      url: "https://irvinepubliclibrary.libcal.com/"
       type: library
-      notes: "One library source. Heritage Park, University Park, and Katie Wheeler. The fall newsletter is the dated list."
+      notes: "One library source. LibCal for Heritage Park, University Park, and Katie Wheeler. The fall newsletter is the dated list."
     - name: "AllEvents Irvine"
       url: "https://allevents.in/irvine"
       type: allevents
@@ -1833,26 +1869,30 @@
       url: "https://www.cityofpleasantonca.gov/"
       type: city_hall
       notes: "Official city site. Bots are often blocked."
-    - name: "Pleasanton Community Services"
-      url: "https://www.cityofpleasantonca.gov/"
+    - name: "Pleasanton CivicRec"
+      url: "https://secure.rec1.com/CA/city-of-pleasanton-ca/catalog"
       type: parks
-      notes: "Parks and recreation programs. The Firehouse box office also sells tickets at the library counter."
+      notes: "Library and Recreation registration catalog. Not the city homepage. The Firehouse box office also sells tickets at the library counter."
     - name: "Pleasanton Farmers' Market"
       url: "https://www.pcfma.org/index.php/market/pleasanton-farmers-market"
       type: market
       notes: "Pacific Coast Farmers' Market Association. Saturdays, 9 a.m. to 1 p.m., at 46 W Angela Street, with the Downtown Association."
     - name: "Pleasanton Downtown Association"
-      url: "https://www.pleasantondowntown.net/"
+      url: "https://www.pleasantondowntown.net/events"
       type: downtown
       notes: "Main Street events. Palooza does not print a clock. The market address stays the PCFMA address, 46 W Angela Street."
     - name: "Museum on Main"
-      url: "https://www.museumonmain.org/ghost-walk"
+      url: "https://museumonmain.org/events/"
       type: venue
       notes: "Downtown museum at 603 Main Street. Ghost Walk is a ticketed family tour."
+    - name: "Pleasanton Weekly calendar"
+      url: "https://www.pleasantonweekly.com/calendar/"
+      type: downtown
+      notes: "The /calendar/ page is a CitySpark embed. Do not crawl that widget. A staff article is fine."
     - name: "Pleasanton cultural series"
       url: "https://www.firehousearts.org/programs/cultural-celebration/"
       type: venue
-      notes: "Library and Recreation celebrations. The Pleasanton Weekly reported the series. Its /calendar/ page is a CitySpark embed, so do not crawl that widget."
+      notes: "Library and Recreation celebrations. The Pleasanton Weekly reported the series in a staff article."
     - name: "Firehouse Arts Center"
       url: "https://www.firehousearts.org/"
       type: theater
@@ -1893,14 +1933,26 @@
       url: "https://getplacergrown.com/places/maidu-park-market/"
       type: market
       notes: "PlacerGROWN listing. Sundays, 9 a.m. to 1 p.m., at 1550 Maidu Drive."
-    - name: "Downtown Roseville"
-      url: "https://www.roseville.ca.gov/"
+    - name: "GoDowntown Roseville"
+      url: "https://www.godowntownroseville.com/events/"
       type: downtown
-      notes: "Vernon Street and Downtown Library programs. City Hall is 311 Vernon Street. The Press Tribune calendar pages did not return event listings."
-    - name: "Roseville cultural arts"
-      url: "https://www.roseville.ca.gov/"
+      notes: "Vernon Street events. City Hall is 311 Vernon Street. If a listing's address line disagrees with its own note, say so."
+    - name: "Roseville Theatre Arts Academy"
+      url: "https://www.rosevilletheatreartsacademy.com/events"
       type: theater
-      notes: "City cultural programs. A show at a private playhouse needs that theater's own calendar."
+      notes: "Family shows at 241 Vernon Street. Use the performance list on the show page."
+    - name: "Fountains at Roseville"
+      url: "https://www.fountainsatroseville.com/events"
+      type: venue
+      notes: "Shopping-center events at 1013 Galleria Boulevard, including Tot Time."
+    - name: "Visit Placer"
+      url: "https://www.visitplacer.com/events/"
+      type: downtown
+      notes: "County visitor calendar. Filter to Roseville. Skip Auburn, Lincoln, and Tahoe listings."
+    - name: "Style Magazine calendar"
+      url: "https://www.stylemg.com/calendar"
+      type: downtown
+      notes: "Placer and Sacramento regional magazine calendar. Filter to Roseville. Skip a SceneThink or CitySpark widget."
     - name: "AllEvents Roseville"
       url: "https://allevents.in/roseville"
       type: allevents
@@ -1928,6 +1980,14 @@
       url: "https://www.sanramon.ca.gov/our_city/departments_and_divisions/parks_community_services/forest_home_farms_historic_park/events"
       type: parks
       notes: "Saturday Fun on the Farm. The park is 19953 San Ramon Valley Boulevard."
+    - name: "San Ramon CivicRec"
+      url: "https://secure.rec1.com/CA/san-ramon-ca/catalog"
+      type: parks
+      notes: "Parks and recreation registration catalog. Use a dated event page when the catalog is only classes."
+    - name: "San Ramon Performing Arts"
+      url: "https://tickets.sanramon.ca.gov/"
+      type: theater
+      notes: "Box office for Dougherty Valley Performing Arts Center, 10550 Albion Road, and the Front Row Theater. Use a posted show time."
     - name: "San Ramon Farmers Market"
       url: "https://citycenterbishopranch.com/events/san-ramon-farmers-market-8/"
       type: market

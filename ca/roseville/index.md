@@ -78,6 +78,22 @@ Drop in. Kids of all ages. Prompts or a free build. Downtown is the children's p
 
 [Youth programs](https://www.roseville.ca.gov/prl/library/events_classes_programs/youth_programs.php)
 
+### Food Truck Mania
+<p class="event-when">Thu Oct 8 · 5:00 p.m.</p>
+<p class="event-place">Vernon Street Town Square, 311 Vernon St</p>
+
+Food trucks, live music, and a kids zone, with SactoMoFo. The page prints a start of 5:00 p.m. PDT and an end of 11:00 p.m. labeled PST. Oct. 8 is still Pacific Daylight Time, so this page keeps the start and leaves the end off. The same series is listed for Nov. 12.
+
+[Oct. 8 listing](https://www.godowntownroseville.com/2026/10/8/401615/food-truck-mania-12/)
+
+### Halloween Towne Night Market
+<p class="event-when">Sat Oct 10 · 4:00–9:00 p.m.</p>
+<p class="event-place">Vernon Street Town Square, 311 Vernon St</p>
+
+Vendors, food trucks, and costumes. The page says tickets are required and does not print a price.
+
+[Night market](https://www.godowntownroseville.com/2026/10/10/609957/halloween-towne-night-market-3/)
+
 ### Maidu Park Farmers' Market
 <p class="event-when">Sun Oct 11 · 9:00 a.m.–1:00 p.m.</p>
 <p class="event-place">Maidu Regional Park, 1550 Maidu Dr</p>
@@ -96,13 +112,43 @@ Boo Boxes are a paid take-home kit, $29 a child and $25 for a sibling, for picku
 
 [City page](https://www.roseville.ca.gov/programs_events/new_page.php)
 
+### James and the Giant Peach
+<p class="event-when">Fri Oct 16 · 7:30 p.m.</p>
+<p class="event-place">Roseville Theatre Arts Academy, 241 Vernon St</p>
+
+{% include event-photo.html
+   src="/assets/images/roseville/fiddyment-road.webp"
+   alt="A wide Roseville street with a sidewalk, trees, and a golf course beyond the road."
+   credit="Photo: UncleVinny, CC BY 3.0"
+   source="https://commons.wikimedia.org/wiki/File:Roseville_CA,_Fiddyment_Rd_at_golf_course_-_panoramio.jpg" %}
+
+A family musical, from Roald Dahl, with a score by Pasek and Paul. The academy lists six public performances and does not print an end time or a ticket price. Sunday, Oct. 25 is ASL interpreted. GoDowntown also stamps Oct. 4 and Oct. 11 at 2:00 p.m. The performance list on the academy page, which those GoDowntown listings copy, does not include Oct. 4 or Oct. 11. This page keeps the six times the academy prints. The photo is Fiddyment Road, near a golf course. It is not the theater on Vernon Street.
+
+[Academy page](https://www.rosevilletheatreartsacademy.com/events/mainstage-james-and-the-giant-peach-jkg44)
+
+### James and the Giant Peach
+<p class="event-when">Sat Oct 17 · 7:30 p.m.</p>
+<p class="event-place">Roseville Theatre Arts Academy, 241 Vernon St</p>
+
+Same family musical. No end time printed.
+
+[Academy page](https://www.rosevilletheatreartsacademy.com/events/mainstage-james-and-the-giant-peach-jkg44)
+
 ### Maidu Park Farmers' Market
 <p class="event-when">Sun Oct 18 · 9:00 a.m.–1:00 p.m.</p>
 <p class="event-place">Maidu Regional Park, 1550 Maidu Dr</p>
 
-Same Sunday market. The Floating Pumpkin Patch is the same day, at Mike Shellito Indoor Pool. Tot Time is two days later.
+Same Sunday market. Falling Leaf is the same morning. The organizers say it moved to Maidu Park. The Floating Pumpkin Patch is the same day, at Mike Shellito Indoor Pool. Tot Time is two days later.
 
 [PlacerGROWN](https://getplacergrown.com/places/maidu-park-market/)
+
+### Falling Leaf Food and Crafts Festival
+<p class="event-when">Sun Oct 18 · 9:00 a.m.–2:00 p.m.</p>
+<p class="event-place">Maidu Park</p>
+
+Free entry. Family activities, pumpkin painting, a costume contest, a kids zone, music, food trucks, and artisans. A note dated Sep. 14 says the festival moved to Oct. 18 at Maidu Park. The same page's address line still says Vernon Street Town Square, 311 Vernon St. It does not print a Maidu street number. The farmers market that morning is at 1550 Maidu Drive.
+
+[GoDowntown listing](https://www.godowntownroseville.com/2026/10/18/636675/falling-leaf-food-crafts-festival-2/)
 
 ### Floating Pumpkin Patch
 <p class="event-when">Sun Oct 18 · 9:00–10:00 a.m., 10:00 a.m.–12:00 p.m., and 1:00–3:00 p.m.</p>
@@ -111,6 +157,14 @@ Same Sunday market. The Floating Pumpkin Patch is the same day, at Mike Shellito
 $17 a person, and the ticket includes a pumpkin. Children under 2 are free with a paying adult. Everyone registers, including people who are not swimming. The 9:00 a.m. hour is sensory-friendly, capped at 75, and that ticket also covers the 10:00 a.m. session. A second session is 1:00–3:00 p.m. Costumes are encouraged. No refunds. The city page does not print a street for the pool. The Maidu market is the same morning, at 1550 Maidu Drive.
 
 [City page](https://www.roseville.ca.gov/programs_events/floating_pumpkin_patch.php)
+
+### James and the Giant Peach
+<p class="event-when">Sun Oct 18 · 2:00 p.m.</p>
+<p class="event-place">Roseville Theatre Arts Academy, 241 Vernon St</p>
+
+Same family musical. The Floating Pumpkin Patch is still going at 2:00 p.m.
+
+[Academy page](https://www.rosevilletheatreartsacademy.com/events/mainstage-james-and-the-giant-peach-jkg44)
 
 ### Tot Time
 <p class="event-when">Tue Oct 20 · 10:00–10:30 a.m.</p>
@@ -128,13 +182,37 @@ Comedy, storytelling, and magic for National Earthworm Day. LEGO Club is the sam
 
 [Youth programs](https://www.roseville.ca.gov/prl/library/events_classes_programs/youth_programs.php)
 
+### James and the Giant Peach
+<p class="event-when">Fri Oct 23 · 7:30 p.m.</p>
+<p class="event-place">Roseville Theatre Arts Academy, 241 Vernon St</p>
+
+Same family musical. No end time printed.
+
+[Academy page](https://www.rosevilletheatreartsacademy.com/events/mainstage-james-and-the-giant-peach-jkg44)
+
+### James and the Giant Peach
+<p class="event-when">Sat Oct 24 · 7:30 p.m.</p>
+<p class="event-place">Roseville Theatre Arts Academy, 241 Vernon St</p>
+
+Same family musical. No end time printed.
+
+[Academy page](https://www.rosevilletheatreartsacademy.com/events/mainstage-james-and-the-giant-peach-jkg44)
+
 ### Maidu Park Farmers' Market
 <p class="event-when">Sun Oct 25 · 9:00 a.m.–1:00 p.m.</p>
 <p class="event-place">Maidu Regional Park, 1550 Maidu Dr</p>
 
-Same Sunday market. Costume storytimes start three days later.
+Same Sunday market. James and the Giant Peach has a 2:00 p.m. show the same day, and that performance is ASL interpreted. Costume storytimes start three days later.
 
 [PlacerGROWN](https://getplacergrown.com/places/maidu-park-market/)
+
+### James and the Giant Peach
+<p class="event-when">Sun Oct 25 · 2:00 p.m.</p>
+<p class="event-place">Roseville Theatre Arts Academy, 241 Vernon St</p>
+
+Same family musical. This performance is ASL interpreted. No end time printed.
+
+[Academy page](https://www.rosevilletheatreartsacademy.com/events/mainstage-james-and-the-giant-peach-jkg44)
 
 ### Storytime Spooktacular
 <p class="event-when">Wed Oct 28 · 9:30 a.m. and 10:30 a.m.</p>
@@ -156,9 +234,25 @@ Same last-Wednesday program as Sep. 30. The morning costume storytime that day i
 <p class="event-when">Thu Oct 29 · 9:30 a.m. and 10:30 a.m.</p>
 <p class="event-place">Maidu Library, 1530 Maidu Dr</p>
 
-Same costume storytime, at Maidu. Two start times, no end time printed.
+Same costume storytime, at Maidu. Two start times, no end time printed. Costumes and Candy at the Fountains, and Family Fun Night downtown, are both that afternoon.
 
 [Youth programs](https://www.roseville.ca.gov/prl/library/events_classes_programs/youth_programs.php)
+
+### Costumes and Candy
+<p class="event-when">Thu Oct 29 · 4:00–6:00 p.m.</p>
+<p class="event-place">Fountains at Roseville, 1013 Galleria Blvd</p>
+
+Costumed characters hand out candy to kids in costume. Self-guided. The Fountains page does not print a fee. Weather permitting. Family Fun Night downtown starts at the same hour.
+
+[Fountains](https://www.fountainsatroseville.com/event-details/costumes-candy-2026)
+
+### Family Fun Night
+<p class="event-when">Thu Oct 29 · 4:00–8:00 p.m.</p>
+<p class="event-place">Vernon Street Town Square, 311 Vernon St</p>
+
+Trick-or-treating at downtown shops, a costume contest, live music, food trucks, and vendors. The page says the Family Fun Night website will be updated with this year's details. It does not print a fee. Costumes and Candy at the Fountains is 4:00–6:00 p.m. the same afternoon.
+
+[GoDowntown listing](https://www.godowntownroseville.com/2026/10/29/609959/family-fun-night-6/)
 
 ### Storytime Spooktacular
 <p class="event-when">Fri Oct 30 · 9:30 a.m. and 10:30 a.m.</p>
@@ -175,3 +269,11 @@ Same costume storytime, downtown. Friday library hours start at 10:00 a.m., so t
 A dinosaur magic show, fossil dig, crafts, and a photo with a T-rex. A parent needs to come. The library also keeps dinosaur storytimes in the branches through November. This one is at the fitness center, not in a library room.
 
 [Youth programs](https://www.roseville.ca.gov/prl/library/events_classes_programs/youth_programs.php)
+
+### Food Truck Mania
+<p class="event-when">Thu Nov 12 · 5:00 p.m.</p>
+<p class="event-place">Vernon Street Town Square, 311 Vernon St</p>
+
+Same downtown food-truck night, with a kids zone. The page prints 5:00 p.m. and labels that start PDT, then an end of 11:00 p.m. labeled PST. Nov. 12 is Pacific Standard Time. This page keeps 5:00 p.m. and leaves the end off.
+
+[Nov. 12 listing](https://www.godowntownroseville.com/2026/11/12/401616/food-truck-mania-12/)

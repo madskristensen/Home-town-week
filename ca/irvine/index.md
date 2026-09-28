@@ -8,7 +8,7 @@ image: /assets/images/irvine/great-park-balloon.webp
 image_alt: The orange Great Park Balloon on its lawn, with the carousel and visitors below.
 image_credit: 'Photo: Ganeshk, CC BY-SA 2.5'
 image_source_url: https://commons.wikimedia.org/wiki/File:OC_Great_Park_Balloon_Ride_070714.jpg
-hook: Monday morning is Toddler Town at Pretend City. Saturday storytime is at Heritage Park. Oct. 10 is Global Village's 25th year at Great Park.
+hook: Monday morning is Toddler Town at Pretend City. Saturday afternoon is Mehregan at Great Park Live. Oct. 10 is Global Village's 25th year at Great Park.
 ---
 
 ### Toddler Town
@@ -27,6 +27,14 @@ All ages. The fall newsletter puts Heritage Park storytime on the first and thir
 
 [Fall newsletter](https://cityofirvine.gov/sites/default/files/legacy-documents/2026-ipl-quarterly-newsletter-fall.pdf)
 
+### Mehregan Festival
+<p class="event-when">Sat Oct 3 · 2:00 p.m.</p>
+<p class="event-place">Great Park Live, 8000 Great Park Blvd</p>
+
+NIPOC calls it the Persian Festival of Love and Kindness. All ages. Live Persian music and a traditional feast. NIPOC prints 2:00 p.m. and does not print an end time or a ticket price. Great Park Live lists Oct. 3–4 and does not print a clock. The street is the city's Great Park address. Heritage Park storytime is that morning.
+
+[NIPOC](https://www.nipoc.org/) · [Great Park Live](https://www.greatparklive.com/events/)
+
 ### Certified Farmers Market
 <p class="event-when">Sun Oct 4 · 10:00 a.m.–2:00 p.m.</p>
 <p class="event-place">Stonegate Elementary, 100 Honors</p>
@@ -39,9 +47,17 @@ The city moved this market off Great Park on Nov. 10, 2024. It now runs Sundays,
 <p class="event-when">Sun Oct 4 · 11:00 a.m. and 2:30 p.m.</p>
 <p class="event-place">Pretend City Children's Museum, 29 Hubble</p>
 
-Storytime from La Enchilada Completa, plus a guacamole demonstration and tasting. Included in museum admission. The page prints two times and does not print an end time. The farmers market is the same morning, at Stonegate.
+Storytime from La Enchilada Completa, plus a guacamole demonstration and tasting. Included in museum admission. The page prints two times and does not print an end time. The farmers market is the same morning, at Stonegate. Mehregan at Great Park Live also lists 2:00 p.m.
 
 [Pretend City](https://www.pretendcity.org/events/meet-the-author-food-tasting-with-glenda-galvan-garcia/)
+
+### Mehregan Festival
+<p class="event-when">Sun Oct 4 · 2:00 p.m.</p>
+<p class="event-place">Great Park Live, 8000 Great Park Blvd</p>
+
+Same festival. NIPOC prints 2:00 p.m. and does not print an end. A Pretend City author visit also lists 2:30 p.m. the same day.
+
+[NIPOC](https://www.nipoc.org/) · [Great Park Live](https://www.greatparklive.com/events/)
 
 ### Toddler Town
 <p class="event-when">Mon Oct 5 · 9:00–10:30 a.m.</p>
@@ -362,3 +378,11 @@ All ages. Free. Crafts, games, and music. It starts with the farmers market and 
 Flower Songs Music at 11:00 a.m., sugar-skull decorating from noon to 2:00 p.m., and folklorico at 2:30 p.m. Included in museum admission. The library celebration is the same morning, at Heritage Park.
 
 [Pretend City](https://www.pretendcity.org/events/dia-de-los-muertos-in-the-city/)
+
+### Illuminate Irvine
+<p class="event-when">Sat Dec 5 · 3:00–7:00 p.m.</p>
+<p class="event-place">Palm Court Arts Complex, 8000 Great Park Blvd</p>
+
+Tree lighting, live music, crafts, and photo stops. Destination Irvine says the light display then continues daily from dusk to 9:00 p.m. It does not print a last night. Great Park Live's near-term list did not include this date.
+
+[Destination Irvine](https://www.destinationirvine.com/events/)

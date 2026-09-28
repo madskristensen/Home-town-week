@@ -161,6 +161,14 @@ Free. How the farm used pumpkins and gourds, a winter squash recipe, and a craft
 
 [Farm events](https://www.sanramon.ca.gov/our_city/departments_and_divisions/parks_community_services/forest_home_farms_historic_park/events)
 
+### Lady K and the Kings of Swing
+<p class="event-when">Sun Nov 15 · 2:00 p.m.</p>
+<p class="event-place">Front Row Theater, 17011 Bollinger Canyon Rd</p>
+
+An afternoon of big band jazz, with vocalist Carla Helmbrecht. The box office page does not print a ticket price or an end time. It is a concert, not a kids show.
+
+[San Ramon Performing Arts](https://tickets.sanramon.ca.gov/eventperformances.asp?evt=219)
+
 ### Holiday on the Farm
 <p class="event-when">Sat Dec 12 · 11:00 a.m.–2:00 p.m.</p>
 <p class="event-place">Forest Home Farms, 19953 San Ramon Valley Blvd</p>

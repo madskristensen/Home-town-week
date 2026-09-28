@@ -8,7 +8,7 @@ image: /assets/images/carlsbad/south-carlsbad-beach.webp
 image_alt: South Carlsbad State Beach, with bluffs above a sandy shore and people on the sand.
 image_credit: 'Photo: Sam Trenholme, CC BY-SA 4.0'
 image_source_url: https://commons.wikimedia.org/wiki/File:SouthCarlsbadStateBeach2019.jpg
-hook: Sunday is the Super Hero Obstacle Race at Alga Norte. Wednesday afternoon is the State Street market. Halloween morning is Día de los Muertos at Leo Carrillo, then the Village.
+hook: Sunday is the Super Hero Obstacle Race at Alga Norte. Wednesday afternoon is the State Street market. Oct. 16 is the first night of As You Like It at New Village Arts.
 ---
 
 ### State Street Farmers' Market
@@ -42,6 +42,14 @@ Same Wednesday market.
 Same Wednesday market.
 
 [Oct. 14 listing](https://www.carlsbad-village.com/do/state-street-farmers-market-5)
+
+### As You Like It
+<p class="event-when">Fri Oct 16–Sun Nov 29</p>
+<p class="event-place">New Village Arts, 2787 State St</p>
+
+A musical adaptation of Shakespeare's comedy, with music by Shaina Taub, on the Ray Charles Stage. The season page dates the run Oct. 16 through Nov. 29. The show page does not print each performance time or a ticket price. This page does not invent a show clock. Pumpkin Plunge is the next evening, at Alga Norte.
+
+[Show page](https://newvillagearts.org/as-you-like-it/) · [Season page](https://newvillagearts.org/season25/)
 
 ### Pumpkin Plunge
 <p class="event-when">Sat Oct 17 · 5:00–8:00 p.m.</p>

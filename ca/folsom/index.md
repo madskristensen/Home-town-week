@@ -8,16 +8,38 @@ image: /assets/images/folsom/powerhouse.webp
 image_alt: The stone Folsom Powerhouse beside the American River, with a penstock and a footbridge.
 image_credit: 'Photo: Sydchrismom, CC BY-SA 4.0'
 image_source_url: https://commons.wikimedia.org/wiki/File:Folsom_Powerhouse_Folsom_California.jpg
-hook: Saturday is the Sutter Street market, then a free foam party. Wednesday is a public Cinderella matinee. The soap box derby takes Sutter Street the next weekend.
+hook: Wednesday morning is the Palladio market. Saturday is the Sutter Street market, then a free foam party. The soap box derby takes Sutter Street the next weekend.
 ---
+
+### Living Smart Farmers Market
+<p class="event-when">Wed Sep 30 · 9:00 a.m.–1:00 p.m.</p>
+<p class="event-place">Palladio, in front of Kirkland's and Whole Foods</p>
+
+Free. Produce and local vendors. Palladio's events page prints this Wednesday and says the market is every Wednesday, 9:00 a.m. to 1:00 p.m. The calendar that was fetched stopped at Oct. 6, so later Wednesdays are not listed here. The page does not print a street number for this lot.
+
+[Palladio events](https://gopalladio.com/events/)
 
 ### Sutter Street Farmers Market
 <p class="event-when">Sat Oct 3 · 8:00 a.m.–1:00 p.m.</p>
 <p class="event-place">Historic Folsom Plaza, 915 Sutter St</p>
 
-Produce, flowers, and music. The listing repeats Saturdays. A free foam party starts at 1:00 p.m., when this market ends. American Landscapes is the same day at 5:00 p.m., at the Harris Center, not on Sutter Street.
+{% include event-photo.html
+   src="/assets/images/folsom/historic-folsom-train.webp"
+   alt="A four-car train at Historic Folsom station."
+   credit="Photo: Michael Hicks, CC BY 2.0"
+   source="https://commons.wikimedia.org/wiki/File:Train_at_Historic_Folsom_station,_October_2013.jpg" %}
+
+Produce, flowers, and music. The listing repeats Saturdays. A free foam party starts at 1:00 p.m., when this market ends. American Landscapes is the same day at 5:00 p.m., at the Harris Center, not on Sutter Street. Palladio's Saturday market is the same hours, in a different parking lot. The photo is a train at Historic Folsom station, not the market stalls.
 
 [Oct. 3 listing](https://folsom.biz/events/sutter-street-farmers-market/2026-10-03)
+
+### Living Smart Farmers Market
+<p class="event-when">Sat Oct 3 · 8:00 a.m.–1:00 p.m.</p>
+<p class="event-place">Palladio parking lot next to Nordstrom Rack</p>
+
+Free. Palladio Parking 2. The page says every Saturday, 8:00 a.m. to 1:00 p.m., June through October. The calendar that was fetched printed Oct. 3 and stopped at Oct. 6, so later Saturdays are not listed here. The Sutter Street market is the same hours, at 915 Sutter Street.
+
+[Palladio events](https://gopalladio.com/events/)
 
 ### Folsom Foam and Bubble Party
 <p class="event-when">Sat Oct 3 · 1:00–3:00 p.m.</p>
@@ -39,7 +61,7 @@ The Pops Chorale and Orchestra. Choir, small groups, and instruments, built arou
 <p class="event-when">Tue Oct 6 · 10:00–11:00 a.m.</p>
 <p class="event-place">Palladio Piazza, 410 Palladio Pkwy</p>
 
-Ages 6 and under. Free. A parent stays. Storytime and activities on the grass. The listing says the season runs May through October, and it also prints November dates. This page keeps the October Tuesdays: Oct. 6 and Oct. 20.
+Ages 6 and under. Free. A parent stays. Storytime and activities on the grass. The listing says the season runs May through October, and it also prints November dates. This page keeps the October Tuesdays: Oct. 6 and Oct. 20. This Folsom Times listing prints 410 Palladio Parkway. Palladio's own events index puts Tot Tuesday at 350 Palladio Parkway. This page keeps the number on the listing it links.
 
 [Oct. 6 listing](https://folsom.biz/events/palladio-s-tot-tuesday-s-an-hour-of-storytime-activities/2026-10-06)
 
