@@ -342,14 +342,12 @@ img {
 .this-week,
 .finder h2,
 .finder h3,
-.how h2,
 .cities h2,
 .prose h2 {
   scroll-margin-top: 1rem;
 }
 
 .finder h2,
-.how h2,
 .cities h2,
 .prose h2,
 .this-week h2 {
@@ -371,27 +369,37 @@ img {
 }
 
 .city-field {
-  position: relative;
+  display: flex;
+  align-items: stretch;
+  background: var(--sheet);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
 }
 
-.city-field:has(.locate:not([hidden])) input {
-  padding-right: 3.2rem;
+.city-field:focus-within {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
 }
 
 .city-search input {
+  flex: 1 1 auto;
   width: 100%;
-  min-height: 3.1rem;
-  padding: 0.55rem 0 0.6rem;
+  min-width: 0;
+  min-height: 3rem;
+  margin: 0;
+  padding: 0.6rem 0.8rem;
   border: 0;
-  border-bottom: 2px solid var(--ink);
   border-radius: 0;
   background: transparent;
   color: var(--ink);
   font: inherit;
-  font-family: var(--serif);
-  font-size: 1.35rem;
-  letter-spacing: -0.02em;
+  font-size: 1.0625rem;
   appearance: none;
+}
+
+.city-search input:focus,
+.city-search input:focus-visible {
+  outline: none;
 }
 
 .city-search input::placeholder {
@@ -408,21 +416,18 @@ img {
 }
 
 .locate {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  z-index: 1;
   display: grid;
   place-items: center;
-  width: 2.75rem;
-  height: 2.75rem;
+  flex: none;
+  width: 3rem;
+  min-height: 3rem;
   margin: 0;
   padding: 0;
   border: 0;
+  border-left: 1px solid var(--rule);
   border-radius: 0;
   background: transparent;
   color: var(--forest);
-  transform: translateY(-50%);
   cursor: pointer;
 }
 
@@ -509,7 +514,14 @@ img {
 }
 
 .this-week.has-result h2 {
-  margin: 0 0 0.35rem;
+  margin: 0;
+  color: var(--forest);
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.3;
+  text-transform: uppercase;
 }
 
 .near-lead {
@@ -520,11 +532,11 @@ img {
 
 .near-card {
   display: block;
-  margin: 0.35rem 0 0;
+  margin: 0.65rem 0 0;
   padding: 0.85rem 0 0.15rem;
   background: transparent;
   border: 0;
-  border-top: 1px solid var(--rule);
+  border-top: 2px solid var(--ink);
   border-radius: 0;
   color: inherit;
   text-decoration: none;
@@ -585,9 +597,9 @@ img {
 
 .near-list {
   list-style: none;
-  margin: 0.45rem 0 0;
+  margin: 0.65rem 0 0;
   padding: 0;
-  border-top: 1px solid var(--rule);
+  border-top: 2px solid var(--ink);
 }
 
 .near-list a {
@@ -612,7 +624,8 @@ img {
 
 .near-list .near-city {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
 .near-list .near-where {
@@ -764,55 +777,6 @@ img {
   clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
-}
-
-.how {
-  margin-top: 2.25rem;
-  padding-top: 0.15rem;
-}
-
-.how h2 {
-  margin-bottom: 0.15rem;
-}
-
-.how ol {
-  list-style: none;
-  margin: 0.35rem 0 0;
-  padding: 0;
-  counter-reset: beat;
-  background: transparent;
-  border: 0;
-  border-top: 1px solid var(--ink);
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.how li {
-  margin: 0;
-  padding: 0.85rem 0;
-  border-top: 1px solid var(--rule);
-  counter-increment: beat;
-}
-
-.how li:first-child {
-  border-top: 0;
-}
-
-.how h3 {
-  margin: 0;
-  font-size: 1.15rem;
-}
-
-.how h3::before {
-  content: counter(beat) "  ";
-  color: var(--gold);
-  font-variant-numeric: tabular-nums;
-}
-
-.how p {
-  margin: 0.15rem 0 0;
-  color: var(--text);
-  font-size: 0.98rem;
 }
 
 .cities {

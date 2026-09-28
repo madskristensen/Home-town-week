@@ -8,7 +8,7 @@ layout: default
     <form class="city-search" id="city-search" role="search" action="#states">
       <label for="city-query">Search cities</label>
       <div class="city-field">
-        <input id="city-query" type="search" placeholder="Redmond, Bend, Irvine" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="search" aria-autocomplete="list" aria-expanded="false" aria-controls="city-matches" aria-describedby="city-hint">
+        <input id="city-query" type="search" placeholder="Redmond, Bend, Irvine" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="search" aria-autocomplete="list" aria-expanded="false" aria-controls="city-matches">
         <button type="button" id="near-button" class="locate" aria-label="Use my location" aria-describedby="near-note">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <circle cx="12" cy="12" r="3.15" fill="none" stroke="currentColor" stroke-width="1.8"/>
@@ -19,7 +19,6 @@ layout: default
       </div>
       <p id="city-empty" class="city-empty" hidden></p>
       <ul id="city-matches" class="city-matches" hidden></ul>
-      <p id="city-hint" class="near-note">Type a city or a state. Each result opens that city's upcoming events.</p>
       <p id="near-note" class="near-note">Your browser asks first. We use the spot only to find cities near you, and we do not save it.</p>
       <p id="city-status" class="visually-hidden" aria-live="polite"></p>
     </form>
@@ -69,24 +68,6 @@ layout: default
         {%- endfor -%}
       </nav>
     </div>
-  </section>
-
-  <section class="how" aria-labelledby="how-title">
-    <h2 id="how-title">How it works</h2>
-    <ol>
-      <li>
-        <h3>Find your city</h3>
-        <p>Search, use your location, or pick a state.</p>
-      </li>
-      <li>
-        <h3>See what's coming</h3>
-        <p>A chronological list of family events, as far ahead as we have them.</p>
-      </li>
-      <li>
-        <h3>Check back</h3>
-        <p>Past events come off the list. New ones go on.</p>
-      </li>
-    </ol>
   </section>
 </article>
 {%- include home-finder.html -%}
