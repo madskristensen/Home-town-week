@@ -912,6 +912,7 @@ img {
 .cta button,
 .share-button,
 .install-go,
+.install-share,
 .install-dismiss {
   touch-action: manipulation;
 }
@@ -1489,70 +1490,140 @@ img {
   top: 0;
 }
 
-.install-hint {
+.install-card {
+  position: fixed;
+  z-index: 6;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0.75rem calc(0.75rem + env(safe-area-inset-bottom));
+  pointer-events: none;
+}
+
+.install-card-sheet {
+  pointer-events: auto;
+  max-width: 26rem;
+  margin: 0 auto;
+  padding: 0.9rem 0.95rem 0.7rem;
+  background: var(--page);
+  color: var(--text);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: none;
+}
+
+.install-card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.install-card-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: none;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+.install-card-name,
+.install-card-benefit,
+.install-steps {
+  margin: 0;
+}
+
+.install-card-name {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.install-card-benefit {
+  margin-top: 0.15rem;
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.35;
+}
+
+.install-steps {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.55rem 0.85rem;
-  margin: 0 0 0.85rem;
-  padding: 0 0 0.85rem;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid var(--rule);
-  border-radius: 0;
-  box-shadow: none;
-  color: var(--text);
-}
-
-.install-hint p {
-  margin: 0;
-  flex: 1 1 14rem;
-  color: var(--text);
+  gap: 0.28rem 0.4rem;
+  margin-top: 0.4rem;
+  color: var(--ink);
   font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
-.install-hint-actions {
+.install-glyph {
+  display: block;
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: none;
+}
+
+.install-then {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.install-card-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: 0.85rem;
 }
 
 .install-go,
+.install-share,
 .install-dismiss {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.5rem;
-  padding: 0.35rem 0.75rem;
+  gap: 0.45rem;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.4rem 0.85rem;
   border-radius: var(--radius);
   font: inherit;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.2;
   cursor: pointer;
 }
 
-.install-go {
+.install-go,
+.install-share {
   border: 0;
   background: var(--forest);
   color: var(--header-ink);
 }
 
 .install-go:hover,
-.install-go:focus-visible {
+.install-go:focus-visible,
+.install-share:hover,
+.install-share:focus-visible {
   background: var(--forest-deep);
 }
 
 .install-dismiss {
-  border: 1px solid var(--rule);
+  min-height: 2.5rem;
+  border: 0;
   background: transparent;
   color: var(--forest);
 }
 
 .install-dismiss:hover,
 .install-dismiss:focus-visible {
-  border-color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
 }
 
 .prose .list-updated {
