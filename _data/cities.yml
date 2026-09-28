@@ -2,8 +2,8 @@
 # the order the footer and the home page should show them. Each state hub
 # reads only its own cities, in this order. lat and lon are the city center
 # in decimal degrees, for the home page nearby-city lookup. Coming-soon
-# names live in coming_soon.yml until a city page exists. City names stay out
-# of the site header. See README for the page files each city needs.
+# names live in coming_soon.yml until a city page exists. The site header
+# is only the mark and Hometown Week. See README for the page files each city needs.
 #
 # tagline: a short place line under the city-home heading. Name the place
 # (geography, character, or region), not a list of venues. It is not the
