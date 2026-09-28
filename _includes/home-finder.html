@@ -149,7 +149,7 @@
     var link = el("a", "near-card");
     var where = whereLine(place, miles);
     link.href = place.href;
-    link.appendChild(el("span", "near-kicker", mode === "closest" ? "Closest city" : "Near you"));
+    if (mode === "closest") link.appendChild(el("span", "near-kicker", "Closest city"));
     link.appendChild(el("span", "near-city", place.name));
     if (where) link.appendChild(el("span", "near-where", where));
     if (mode === "closest" && Math.round(miles) > 10) {
