@@ -1,11 +1,11 @@
 {%- include page-context.html -%}
 <meta charset="utf-8">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
-<meta name="apple-mobile-web-app-status-bar-style" content="{% if page.layout == 'city' %}black{% else %}default{% endif %}">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 {%- comment -%}
   WebKit paints a frame before an external stylesheet applies, and it will
   not paint until every render-blocking sheet in the head has loaded.

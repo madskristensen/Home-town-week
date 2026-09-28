@@ -21,9 +21,15 @@
     <div class="city-masthead">
       {%- include city-mark.html -%}
       <div class="city-masthead-text">
+        {%- if page.layout == "city" -%}
+        <h1 class="city-name">
+          <a href="{{ city_url | relative_url }}" aria-current="page">{{ city.name }}</a>
+        </h1>
+        {%- else -%}
         <p class="city-name">
-          <a href="{{ city_url | relative_url }}"{% if page.layout == "city" %} aria-current="page"{% endif %}>{{ city.name }}</a>
+          <a href="{{ city_url | relative_url }}">{{ city.name }}</a>
         </p>
+        {%- endif -%}
         <p class="city-kicker">{%- if city.slogan -%}{{ city.slogan }}{%- else -%}Upcoming family events{%- endif -%}</p>
       </div>
     </div>

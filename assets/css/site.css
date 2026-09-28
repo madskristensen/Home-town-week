@@ -1,5 +1,7 @@
 /* The one stylesheet. head.html inlines this file in a single style block. */
 
+/* Cream paper is the only page color, in light and dark system settings.
+   Forest green is an accent: links, the wordmark, buttons, map states, and the city pin. */
 :root {
   color-scheme: light;
   --page: #f4efe6;
@@ -15,7 +17,6 @@
   --rule: #e3d6c4;
   --focus: #7a5c12;
   --header-ink: #f7f1e6;
-  --header-kicker: #f0d48a;
   --shadow: 0 10px 30px rgba(28, 43, 36, 0.06);
   --map-quiet: #e5d4be;
   --map-label: #f7f1e6;
@@ -24,30 +25,6 @@
   --photo-filter: none;
   --serif: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --page: #12201a;
-    --sheet: #1a2c24;
-    --ink: #f6f0e6;
-    --text: #e7dccb;
-    --muted: #cbbda8;
-    --forest: #d7e6dc;
-    --forest-deep: #0e241c;
-    --gold: #e4c57a;
-    --gold-bright: #e2c17a;
-    --link: #f0d48a;
-    --rule: #31463c;
-    --focus: #e4c57a;
-    --header-ink: #f7f1e6;
-    --header-kicker: #f0d48a;
-    --shadow: none;
-    --map-quiet: #2a4036;
-    --map-label: #12201a;
-    --photo-filter: brightness(0.86) contrast(1.02);
-  }
 }
 
 @media (prefers-contrast: more) {
@@ -890,25 +867,6 @@ img {
   font-size: 0.85rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .cta a,
-  .cta button {
-    background: #f0d48a;
-    color: #16352a;
-  }
-
-  .cta a:hover,
-  .cta a:focus,
-  .cta button:hover,
-  .cta button:focus {
-    background: #f7e3b0;
-  }
-
-  .wordmark {
-    color: var(--ink);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -923,43 +881,8 @@ img {
   color: #1c2b24;
 }
 
-/* City, year, issue, and state-hub rules. Inlined on every page with the rest of the sheet. */
-
-/* City pages keep this light paper look in both color schemes.
-   The header stays deep green. Home and state hubs follow the system theme. */
-html:has(.site-header--city) {
-  color-scheme: light;
-  --page: #f4efe6;
-  --sheet: #fffdf9;
-  --ink: #1c2b24;
-  --text: #2a3831;
-  --muted: #4d5c54;
-  --forest: #1e4636;
-  --forest-deep: #16352a;
-  --gold: #7a5c12;
-  --gold-bright: #c6a15a;
-  --link: #145c40;
-  --rule: #e3d6c4;
-  --focus: #7a5c12;
-  --shadow: 0 8px 22px rgba(28, 43, 36, 0.06);
-  --photo-filter: none;
-  background: var(--page);
-}
-
-html:has(.site-header--city) body {
-  background: var(--page);
-  color: var(--text);
-}
-
-.site-header--city {
-  background: #1e4636;
-  border-bottom: 3px solid var(--gold-bright);
-  color: var(--header-ink);
-}
-
-.site-header--city .wordmark {
-  color: var(--header-ink);
-}
+/* City, year, issue, and state-hub rules. Inlined on every page with the rest of the sheet.
+   The header sits on the same cream as the page. The gold hairline is the only rule under it. */
 
 .site-header--city .header-bar {
   padding-bottom: 0.15rem;
@@ -975,9 +898,13 @@ html:has(.site-header--city) body {
 
 .city-mark {
   display: block;
-  width: 3.65rem;
+  width: 4.15rem;
   height: auto;
   flex: none;
+  padding: 0.34rem;
+  background: var(--forest);
+  border: 1px solid var(--gold-bright);
+  border-radius: 0.75rem;
 }
 
 .city-masthead-text {
@@ -986,7 +913,7 @@ html:has(.site-header--city) body {
 
 .city-name {
   margin: 0;
-  color: var(--header-ink);
+  color: var(--ink);
   font-family: var(--serif);
   font-size: clamp(2.15rem, 7vw, 3rem);
   font-weight: 600;
@@ -1001,14 +928,16 @@ html:has(.site-header--city) body {
 
 .city-kicker {
   margin: 0.45rem 0 0;
-  color: var(--header-kicker);
+  color: var(--gold);
   font-size: 1rem;
   font-weight: 500;
 }
 
 @media (min-width: 36rem) {
   .city-mark {
-    width: 4.45rem;
+    width: 5rem;
+    padding: 0.42rem;
+    border-radius: 0.9rem;
   }
 }
 
@@ -1470,35 +1399,4 @@ html:has(.site-header--city) body {
   color: var(--gold);
   font-size: 0.92rem;
   font-weight: 600;
-}
-
-/* City pages stay on cream, so the install controls keep the light-theme greens. */
-html:has(.site-header--city) .install-go {
-  background: var(--forest);
-  color: var(--header-ink);
-}
-
-html:has(.site-header--city) .install-go:hover,
-html:has(.site-header--city) .install-go:focus-visible {
-  background: var(--forest-deep);
-}
-
-html:has(.site-header--city) .install-dismiss {
-  color: var(--forest);
-}
-
-@media (prefers-color-scheme: dark) {
-  .install-go {
-    background: #f0d48a;
-    color: #16352a;
-  }
-
-  .install-go:hover,
-  .install-go:focus-visible {
-    background: #f7e3b0;
-  }
-
-  .install-dismiss {
-    color: var(--ink);
-  }
 }
