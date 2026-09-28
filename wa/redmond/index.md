@@ -296,16 +296,3 @@ Free practice test for grades 9–12, then a look at which question types cost t
 Hours stay 9:00 a.m.–2:00 p.m. through the last day, Oct 31. The calendar lists the Preston Lee Trio from 11:00 a.m. to 1:00 p.m. on Oct 24. Oct 31, outside this week, is the annual pet parade in that same 11-to-1 window.
 
 [Calendar](http://redmondsaturdaymarket.org/Calendar.cshtml)
-
-### Woodblock
-<p class="event-when">Daily · 3:00–5:00 p.m.</p>
-<p class="event-place">Downtown</p>
-
-[Woodblock happy hour](https://www.woodblockredmond.com/happy-hour)
-
-### Tavolàta
-<p class="event-when">Daily · 4:00–6:00 p.m.</p>
-<p class="event-place">Downtown</p>
-
-Late happy hour 9:00–10:00 p.m.  
-[Tavolàta](https://ethanstowellrestaurants.com/restaurants/tavolata-redmond)
