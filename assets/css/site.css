@@ -1456,9 +1456,7 @@ img {
 }
 
 .install-card-name,
-.install-card-benefit,
-.install-inapp,
-.install-steps {
+.install-card-benefit {
   margin: 0;
 }
 
@@ -1477,42 +1475,6 @@ img {
   font-family: var(--serif);
   font-size: 1.02rem;
   line-height: 1.35;
-}
-
-.install-guide {
-  margin-top: 0.7rem;
-}
-
-.install-inapp {
-  margin-bottom: 0.35rem;
-  color: var(--forest);
-  font-family: var(--serif);
-  font-size: 1.02rem;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  line-height: 1.35;
-}
-
-.install-steps {
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1.02rem;
-  font-weight: 500;
-  letter-spacing: -0.015em;
-  line-height: 1.4;
-}
-
-.install-share-cue {
-  white-space: nowrap;
-}
-
-.install-glyph {
-  display: inline-block;
-  width: 1.05em;
-  height: 1.05em;
-  margin: 0 0.12em;
-  vertical-align: -0.18em;
-  color: var(--forest);
 }
 
 .install-card-actions {
