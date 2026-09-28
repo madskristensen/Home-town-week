@@ -536,6 +536,10 @@
       url: "https://www.lyndenfarmersmarket.com/"
       type: market
       notes: "Saturday market at Centennial Park."
+    - name: "Lynden Tribune Community Calendar"
+      url: "https://www.lyndentribune.com/community/local_events/"
+      type: downtown
+      notes: "Editor-curated community calendar. Secondary sweep after the city and chamber. Prefer Lynden-proper and family-friendly listings."
     - name: "AllEvents Lynden"
       url: "https://allevents.in/lynden"
       type: allevents
