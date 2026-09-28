@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="install-card-actions">
-      <button type="button" class="install-go" id="install-hint-go" hidden>Install Hometown Week</button>
+      <button type="button" class="install-go" id="install-hint-go" hidden>Install as app</button>
       <button type="button" class="install-dismiss" id="install-hint-dismiss">Not now</button>
     </div>
   </div>
@@ -113,9 +113,28 @@
       return readyToAsk && !runningInstalled() && storageGet(DISMISS_KEY) !== "1";
     }
 
+    function installButtonLabel() {
+      var ua = navigator.userAgent || "";
+      var platform = navigator.platform || "";
+      var mobile = false;
+      try {
+        if (navigator.userAgentData) {
+          if (navigator.userAgentData.platform) platform = navigator.userAgentData.platform;
+          mobile = navigator.userAgentData.mobile === true;
+        }
+      } catch (err) {}
+      if (/Android/i.test(ua) || /Android/i.test(platform) || mobile) return "Add to Home screen";
+      // Windows Chrome and Edge install a windowed app from this prompt.
+      // Pin to taskbar is a later option, not the install itself.
+      return "Install as app";
+    }
+
     function showInstall() {
       if (!canAsk()) return;
-      if (go) go.hidden = false;
+      if (go) {
+        go.textContent = installButtonLabel();
+        go.hidden = false;
+      }
       hint.hidden = false;
       placeCard();
     }
