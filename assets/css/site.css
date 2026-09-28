@@ -17,6 +17,8 @@
   --header-ink: #f7f1e6;
   --header-kicker: #f0d48a;
   --shadow: 0 10px 30px rgba(28, 43, 36, 0.06);
+  --map-quiet: #e5d4be;
+  --map-label: #f7f1e6;
   --radius: 1rem;
   --measure: 40rem;
   --photo-filter: none;
@@ -42,6 +44,8 @@
     --header-ink: #f7f1e6;
     --header-kicker: #f0d48a;
     --shadow: none;
+    --map-quiet: #2a4036;
+    --map-label: #12201a;
     --photo-filter: brightness(0.86) contrast(1.02);
   }
 }
@@ -261,7 +265,7 @@ img {
   font-weight: 700;
 }
 
-.near-city {
+.near-card .near-city {
   margin-top: 0.12rem;
   color: var(--ink);
   font-family: var(--serif);
@@ -269,6 +273,59 @@ img {
   font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1.05;
+}
+
+.near-lead {
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.near-list {
+  list-style: none;
+  margin: 0.55rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.near-list a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.08rem;
+  min-height: 2.75rem;
+  padding: 0.65rem 0.85rem;
+  background: rgba(198, 161, 90, 0.14);
+  border-radius: 0.85rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.near-list a:hover,
+.near-list a:focus-visible {
+  background: rgba(198, 161, 90, 0.24);
+  text-decoration: none;
+}
+
+.near-list .near-city {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.near-list .near-where {
+  margin: 0;
+}
+
+.near-list a:hover .near-city,
+.near-list a:focus-visible .near-city {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
 }
 
 .near-where {
@@ -443,49 +500,123 @@ img {
   font-size: 1.28rem;
 }
 
-.state-browse {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.6rem;
-  margin-top: 0.7rem;
+.state-lead {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.98rem;
 }
 
-.state-browse a {
+.state-map {
+  margin-top: 0.75rem;
+  padding: 0.35rem 0.2rem 0.7rem;
+  background: var(--sheet);
+  border-top: 3px solid var(--gold-bright);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.us-map {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.us-map .us-quiet {
+  fill: var(--map-quiet);
+  stroke: var(--sheet);
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+}
+
+.us-map a {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.us-map a path {
+  fill: var(--forest);
+  stroke: var(--gold-bright);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.us-map a:hover path,
+.us-map a:focus-visible path,
+.us-map a:active path {
+  fill: var(--gold-bright);
+}
+
+.us-code {
+  fill: var(--map-label);
+  font-family: var(--sans);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
+.us-map a:hover .us-code,
+.us-map a:focus-visible .us-code,
+.us-map a:active .us-code {
+  fill: var(--forest-deep);
+}
+
+@media (max-width: 42rem) {
+  .us-code {
+    display: none;
+  }
+}
+
+.state-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.2rem 0.45rem 0;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--rule);
+}
+
+.state-key a {
+  flex: 1 1 8.75rem;
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
-  padding: 0.75rem 0.9rem;
-  background: var(--sheet);
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.02rem;
+  min-height: 2.75rem;
+  padding: 0.4rem 0.75rem;
   border-radius: 0.85rem;
-  box-shadow: var(--shadow);
+  background: rgba(198, 161, 90, 0.16);
   color: inherit;
   text-decoration: none;
+  touch-action: manipulation;
 }
 
 .state-name {
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 1.2rem;
+  font-size: 1.08rem;
   font-weight: 600;
   letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .state-count {
   color: var(--gold);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 700;
 }
 
-.state-browse a:hover .state-name,
-.state-browse a:focus-visible .state-name {
-  text-decoration: underline;
-  text-underline-offset: 0.12em;
+.state-key a:hover,
+.state-key a:focus-visible {
+  background: rgba(198, 161, 90, 0.3);
+  text-decoration: none;
 }
 
-@media (min-width: 36rem) {
-  .state-browse {
-    grid-template-columns: 1fr 1fr;
-  }
+.state-key a:hover .state-name,
+.state-key a:focus-visible .state-name {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
 }
 
 .visually-hidden {

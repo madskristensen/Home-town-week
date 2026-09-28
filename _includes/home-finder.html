@@ -19,7 +19,8 @@
 </script>
 <script>
 (function () {
-  var NEAR_MILES = 80;
+  var CLOSE_MILES = 10;
+  var FALLBACK_MILES = 80;
   var MAX_MATCHES = 8;
 
   function loadPlaces() {
@@ -65,16 +66,6 @@
     return 2 * radius * Math.asin(Math.min(1, Math.sqrt(h)));
   }
 
-  function nearest(lat, lon, places) {
-    var best = null;
-    var i;
-    for (i = 0; i < places.length; i++) {
-      var miles = haversine(lat, lon, places[i].lat, places[i].lon);
-      if (!best || miles < best.miles) best = { place: places[i], miles: miles };
-    }
-    return best;
-  }
-
   function milesLabel(miles) {
     if (miles < 0.5) return "Less than a mile away";
     var n = Math.round(miles);
@@ -98,7 +89,7 @@
   var button = document.getElementById("near-button");
   var note = document.getElementById("near-note");
   var weekTitle = document.getElementById("this-week-title");
-  var card = document.getElementById("near-card");
+  var results = document.getElementById("near-results");
   var message = document.getElementById("near-message");
   var form = document.getElementById("city-search");
   var input = document.getElementById("city-query");
@@ -107,17 +98,25 @@
   var status = document.getElementById("city-status");
   var pending = false;
 
-  function revealWeek() {
-    if (weekTitle) weekTitle.hidden = false;
+  function revealWeek(title) {
+    if (weekTitle) {
+      weekTitle.hidden = false;
+      if (title) weekTitle.textContent = title;
+    }
     if (section) section.classList.add("has-result");
   }
 
+  function hideMessage() {
+    if (!message) return;
+    message.hidden = true;
+    message.textContent = "";
+  }
+
   function showMessage(text) {
-    revealWeek();
-    if (card) {
-      card.hidden = true;
-      card.removeAttribute("href");
-      card.textContent = "";
+    revealWeek("This week");
+    if (results) {
+      results.hidden = true;
+      results.textContent = "";
     }
     if (message) {
       message.hidden = false;
@@ -125,25 +124,73 @@
     }
   }
 
-  function showCard(place, miles) {
-    if (!card) return;
-    revealWeek();
-    if (message) {
-      message.hidden = true;
-      message.textContent = "";
-    }
-    var where = place.state;
+  function whereLine(place, miles) {
     var away = milesLabel(miles);
-    if (where && away) where += ", " + away;
-    else where = where || away;
-    card.textContent = "";
-    card.href = place.href;
-    card.appendChild(el("span", "near-kicker", "Near you"));
-    card.appendChild(el("span", "near-city", place.name));
-    if (where) card.appendChild(el("span", "near-where", where));
-    if (place.summary) card.appendChild(el("span", "near-summary", place.summary));
-    card.appendChild(el("span", "near-go", "Open this week's digest"));
-    card.hidden = false;
+    if (place.state && away) return place.state + ", " + away;
+    return place.state || away;
+  }
+
+  function rankedPlaces(lat, lon) {
+    var hits = [];
+    var i;
+    for (i = 0; i < places.length; i++) {
+      hits.push({
+        place: places[i],
+        miles: haversine(lat, lon, places[i].lat, places[i].lon)
+      });
+    }
+    hits.sort(function (a, b) {
+      if (a.miles !== b.miles) return a.miles - b.miles;
+      if (a.place.name < b.place.name) return -1;
+      if (a.place.name > b.place.name) return 1;
+      return 0;
+    });
+    return hits;
+  }
+
+  function showOne(place, miles, mode) {
+    if (!results) return;
+    revealWeek("This week");
+    hideMessage();
+    var link = el("a", "near-card");
+    var where = whereLine(place, miles);
+    link.href = place.href;
+    link.appendChild(el("span", "near-kicker", mode === "closest" ? "Closest city" : "Near you"));
+    link.appendChild(el("span", "near-city", place.name));
+    if (where) link.appendChild(el("span", "near-where", where));
+    if (mode === "closest" && Math.round(miles) > 10) {
+      link.appendChild(el("span", "near-summary", "No covered city is within 10 miles."));
+    } else if (place.summary) {
+      link.appendChild(el("span", "near-summary", place.summary));
+    }
+    link.appendChild(el("span", "near-go", "Open this week's digest"));
+    results.textContent = "";
+    results.appendChild(link);
+    results.hidden = false;
+  }
+
+  function showMany(hits) {
+    if (!results) return;
+    revealWeek("Near you");
+    hideMessage();
+    var lead = el("p", "near-lead", "Within about 10 miles, nearest first.");
+    var list = el("ul", "near-list");
+    var i;
+    for (i = 0; i < hits.length; i++) {
+      var place = hits[i].place;
+      var item = document.createElement("li");
+      var link = document.createElement("a");
+      var where = whereLine(place, hits[i].miles);
+      link.href = place.href;
+      link.appendChild(el("span", "near-city", place.name));
+      if (where) link.appendChild(el("span", "near-where", where));
+      item.appendChild(link);
+      list.appendChild(item);
+    }
+    results.textContent = "";
+    results.appendChild(lead);
+    results.appendChild(list);
+    results.hidden = false;
   }
 
   function setLocatePending(isPending) {
@@ -165,7 +212,7 @@
 
   function locate() {
     if (!places.length) {
-      showMessage("Search for your city, or browse by state.");
+      showMessage("Search for your city, or pick a state.");
       return;
     }
     if (!window.isSecureContext || !navigator.geolocation) return;
@@ -173,20 +220,34 @@
     setLocatePending(true);
     navigator.geolocation.getCurrentPosition(function (pos) {
       finishLookup();
-      var found = nearest(pos.coords.latitude, pos.coords.longitude, places);
-      if (!found || found.miles > NEAR_MILES) {
-        showMessage("No city we cover is close enough to call nearby. Search for one, or browse by state.");
+      var ranked = rankedPlaces(pos.coords.latitude, pos.coords.longitude);
+      var close = [];
+      var i;
+      for (i = 0; i < ranked.length; i++) {
+        if (ranked[i].miles <= CLOSE_MILES) close.push(ranked[i]);
+        else break;
+      }
+      if (close.length > 1) {
+        showMany(close);
         return;
       }
-      showCard(found.place, found.miles);
+      if (close.length === 1) {
+        showOne(close[0].place, close[0].miles, "near");
+        return;
+      }
+      if (ranked.length && ranked[0].miles <= FALLBACK_MILES) {
+        showOne(ranked[0].place, ranked[0].miles, "closest");
+        return;
+      }
+      showMessage("No city we cover is close enough to call nearby. Search for one, or pick a state.");
     }, function (err) {
       finishLookup();
       if (err && err.code === 1) {
-        showMessage("Location stays off until the browser allows it. Search for your city, or browse by state.");
+        showMessage("Location stays off until the browser allows it. Search for your city, or pick a state.");
       } else if (err && err.code === 3) {
         showMessage("That took too long. Try again, or search for your city.");
       } else {
-        showMessage("We could not read a location just now. Search for your city, or browse by state.");
+        showMessage("We could not read a location just now. Search for your city, or pick a state.");
       }
     }, {
       enableHighAccuracy: false,
@@ -198,10 +259,10 @@
   if (button && note) {
     if (!navigator.geolocation) {
       button.hidden = true;
-      note.textContent = "This browser cannot share a location. Search for your city, or browse by state.";
+      note.textContent = "This browser cannot share a location. Search for your city, or pick a state.";
     } else if (!window.isSecureContext) {
       button.hidden = true;
-      note.textContent = "Use your location is available on the secure site. Search for your city, or browse by state.";
+      note.textContent = "Use your location is available on the secure site. Search for your city, or pick a state.";
     } else {
       button.addEventListener("click", locate);
       if (navigator.permissions && navigator.permissions.query) {
