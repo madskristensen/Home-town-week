@@ -1053,6 +1053,11 @@ img {
   border-top: 1px solid var(--rule);
 }
 
+.site-footer--home .footer-nav {
+  padding-top: 0;
+  border-top: 0;
+}
+
 .footer-nav a {
   color: var(--forest);
   font-weight: 600;
@@ -1430,12 +1435,6 @@ img {
   .week-nav .next {
     margin-left: auto;
     text-align: right;
-  }
-
-  .dir-cities {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1.1rem;
   }
 }
 
