@@ -21,6 +21,14 @@
 # stay on the list. Do not crawl Stay Happening, news blogs, a wrong-city
 # AllEvents page, or a library calendar alone.
 #
+# format and feed_url are optional. format is the machine kind: ical, rss,
+# libcal, bibliocommons, allevents, or html. type stays the role label
+# (city_hall, parks, and the rest). feed_url is the machine feed when it
+# was found apart from the browse page. url stays that browse page. The
+# crawl action fetches feed_url, or url when feed_url is absent, and only
+# for ical, rss, libcal, bibliocommons, and allevents. A site-wide blog
+# feed is not marked as rss here.
+#
 # Cadence: Monday is the primary content fill from this list. Update the
 # city page upcoming list and {city}_events.yml. Thursday is the midweek
 # content fill, a visible update before the weekend. Neither edits sources,
@@ -43,6 +51,8 @@
     - name: "City of Bainbridge Island calendar"
       url: "https://www.bainbridgewa.gov/m/calendar"
       type: city_hall
+      format: ical
+      feed_url: "https://www.bainbridgewa.gov/common/modules/iCalendar/iCalendar.aspx?catID=48&feed=calendar"
       notes: "City meetings and community events. Prefer parks, harbor, and family programs."
     - name: "Bainbridge Island Farmers Market"
       url: "https://www.bainbridgeislandfarmersmarket.com/"
@@ -55,10 +65,13 @@
     - name: "Bainbridge Performing Arts"
       url: "https://www.bainbridgeperformingarts.org/"
       type: theater
+      format: rss
+      feed_url: "https://www.bainbridgeperformingarts.org/events?format=rss"
       notes: "Family and youth shows on the island."
     - name: "Kitsap Regional Library events"
       url: "https://krl.bibliocommons.com/v2/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to the Bainbridge branch."
     - name: "Bainbridge Island Metro Parks special events"
       url: "https://www.biparks.org/recreation/special-events"
@@ -67,6 +80,7 @@
     - name: "AllEvents Bainbridge Island"
       url: "https://allevents.in/bainbridge-island"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. Confirm the listing is on Bainbridge Island, WA."
 - id: bellevue
   name: Bellevue
@@ -82,6 +96,8 @@
     - name: "City of Bellevue calendar"
       url: "https://bellevuewa.gov/calendar"
       type: city_hall
+      format: rss
+      feed_url: "https://bellevuewa.gov/calendar/events.xml"
       notes: "City special events. Skip routine council unless it is parks, schools, or teens."
     - name: "Bellevue Parks"
       url: "https://bellevuewa.gov/city-government/departments/parks"
@@ -106,6 +122,7 @@
     - name: "King County Library System events"
       url: "https://kcls.bibliocommons.com/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to Bellevue branches."
     - name: "Bellevue Downtown Association"
       url: "https://www.bellevuedowntown.com/events"
@@ -118,6 +135,7 @@
     - name: "AllEvents Bellevue"
       url: "https://allevents.in/bellevue"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Bellevue, WA."
 - id: bellingham
   name: Bellingham
@@ -149,6 +167,8 @@
     - name: "Whatcom County Library System events"
       url: "https://www.wcls.org/events"
       type: library
+      format: libcal
+      feed_url: "https://wcls.libcal.com/calendar/events/?cid=5625&t=d&d=0000-00-00&cal=5625&inc=0"
       notes: "One library source. Filter to Bellingham and nearby branches families use."
     - name: "Bellingham Farmers Market"
       url: "https://www.bellinghamfarmers.org/"
@@ -157,6 +177,7 @@
     - name: "Bellingham Public Library calendar"
       url: "https://bellinghampubliclibrary.libcal.com/calendar/BPL-Events"
       type: library
+      format: libcal
       notes: "City library storytimes and family programs. The county library list stays separate."
     - name: "Cascadia Daily News The A-List"
       url: "https://www.cascadiadaily.com/category/living/arts-and-entertainment/the-a-list/"
@@ -165,6 +186,7 @@
     - name: "AllEvents Bellingham"
       url: "https://allevents.in/bellingham"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Bellingham, WA."
 - id: bothell
   name: Bothell
@@ -180,6 +202,8 @@
     - name: "City of Bothell calendar"
       url: "https://www.bothellwa.gov/m/calendar"
       type: city_hall
+      format: ical
+      feed_url: "https://www.bothellwa.gov/common/modules/iCalendar/iCalendar.aspx?catID=23&feed=calendar"
       notes: "City and parks events at City Hall Plaza and city parks."
     - name: "Anderson School"
       url: "https://www.mcmenamins.com/anderson-school"
@@ -188,6 +212,7 @@
     - name: "King County Library System events"
       url: "https://kcls.bibliocommons.com/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to the Bothell branch."
     - name: "The Attic Theatre"
       url: "https://theattictheatre.org/"
@@ -200,6 +225,7 @@
     - name: "AllEvents Bothell"
       url: "https://allevents.in/bothell"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Bothell, WA."
 - id: edmonds
   name: Edmonds
@@ -235,6 +261,7 @@
     - name: "Sno-Isle Libraries events"
       url: "https://sno-isle.bibliocommons.com/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to Edmonds."
     - name: "Edmonds Parks and Recreation events"
       url: "https://www.edmondswa.gov/government/departments/parks_and_recreation/events"
@@ -247,6 +274,7 @@
     - name: "AllEvents Edmonds"
       url: "https://allevents.in/edmonds"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Edmonds, WA."
 - id: everett
   name: Everett
@@ -262,6 +290,8 @@
     - name: "City of Everett calendar"
       url: "https://www.everettwa.gov/calendar.aspx"
       type: city_hall
+      format: ical
+      feed_url: "https://www.everettwa.gov/common/modules/iCalendar/iCalendar.aspx?catID=32&feed=calendar"
       notes: "City and parks events."
     - name: "Everett Farmers Market"
       url: "https://everettfarmersmarket.com/"
@@ -282,6 +312,7 @@
     - name: "Sno-Isle Libraries events"
       url: "https://sno-isle.bibliocommons.com/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to Everett."
     - name: "Village Theatre, Everett"
       url: "https://villagetheatre.org/mainstage/plan-your-visit/everett/"
@@ -290,6 +321,7 @@
     - name: "AllEvents Everett"
       url: "https://allevents.in/everett"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Everett, WA."
 - id: ferndale
   name: Ferndale
@@ -305,10 +337,14 @@
     - name: "City of Ferndale calendar"
       url: "https://cityofferndale.org/calendar.aspx"
       type: city_hall
+      format: ical
+      feed_url: "https://cityofferndale.org/common/modules/iCalendar/iCalendar.aspx?catID=45&feed=calendar"
       notes: "City events, Pioneer Park, and town weekends."
     - name: "Whatcom County Library System events"
       url: "https://www.wcls.org/events"
       type: library
+      format: libcal
+      feed_url: "https://wcls.libcal.com/calendar/events/?cid=5625&t=d&d=0000-00-00&cal=5625&inc=0"
       notes: "One library source. Filter to the Ferndale branch."
     - name: "Mount Baker Theatre"
       url: "https://www.mountbakertheatre.com/"
@@ -325,10 +361,13 @@
     - name: "Lynden Tribune Community Calendar"
       url: "https://www.lyndentribune.com/community/local_events/"
       type: downtown
+      format: rss
+      feed_url: "http://www.lyndentribune.com/search/?f=rss&t=article&c=community/local_events&l=50&s=start_time&sd=desc"
       notes: "Editor-curated community calendar. Secondary sweep after the city. Prefer Ferndale-proper and family-friendly listings."
     - name: "AllEvents Ferndale, WA"
       url: "https://allevents.in/ferndale-wa"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. Use ferndale-wa. allevents.in/ferndale is Ferndale, Michigan."
 - id: gig-harbor
   name: Gig Harbor
@@ -344,6 +383,8 @@
     - name: "City of Gig Harbor calendar"
       url: "https://gigharborwa.gov/calendar.aspx"
       type: city_hall
+      format: ical
+      feed_url: "https://gigharborwa.gov/common/modules/iCalendar/iCalendar.aspx?catID=14&feed=calendar"
       notes: "City and waterfront events."
     - name: "Waterfront Farmers Market"
       url: "https://www.waterfrontfarmersmarket.org/"
@@ -372,6 +413,7 @@
     - name: "AllEvents Gig Harbor"
       url: "https://allevents.in/gig-harbor"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Gig Harbor, WA."
 - id: issaquah
   name: Issaquah
@@ -387,6 +429,8 @@
     - name: "City of Issaquah calendar"
       url: "https://www.issaquahwa.gov/m/calendar"
       type: city_hall
+      format: ical
+      feed_url: "https://www.issaquahwa.gov/common/modules/iCalendar/iCalendar.aspx?catID=35&feed=calendar"
       notes: "City parks, hatchery-adjacent events, and civic programs."
     - name: "Downtown Issaquah events"
       url: "https://downtownissaquah.com/events/"
@@ -403,6 +447,7 @@
     - name: "King County Library System events"
       url: "https://kcls.bibliocommons.com/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to Issaquah."
     - name: "Issaquah Farmers Market"
       url: "https://www.issaquahwa.gov/778/Farmers-Market"
@@ -411,6 +456,7 @@
     - name: "AllEvents Issaquah"
       url: "https://allevents.in/issaquah"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Issaquah, WA."
 - id: kenmore
   name: Kenmore
@@ -434,6 +480,7 @@
     - name: "King County Library System events"
       url: "https://kcls.bibliocommons.com/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to Kenmore."
     - name: "Seattle's Performers"
       url: "https://seattlesperformers.com/"
@@ -450,6 +497,7 @@
     - name: "AllEvents Kenmore"
       url: "https://allevents.in/kenmore"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Kenmore, WA."
 - id: kirkland
   name: Kirkland
@@ -477,6 +525,7 @@
     - name: "King County Library System events"
       url: "https://kcls.bibliocommons.com/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to Kirkland."
     - name: "Kirkland Wednesday Market"
       url: "https://kirklanddowntown.org/events/kirkland-market/"
@@ -489,6 +538,7 @@
     - name: "AllEvents Kirkland"
       url: "https://allevents.in/kirkland"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Kirkland, WA."
 - id: lacey
   name: Lacey
@@ -520,6 +570,7 @@
     - name: "AllEvents Lacey"
       url: "https://allevents.in/lacey"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Lacey, WA."
 - id: lynden
   name: Lynden
@@ -535,6 +586,8 @@
     - name: "City of Lynden calendar"
       url: "https://www.lyndenwa.org/calendar.aspx"
       type: city_hall
+      format: ical
+      feed_url: "https://www.lyndenwa.org/common/modules/iCalendar/iCalendar.aspx?catID=24&feed=calendar"
       notes: "City and Front Street events."
     - name: "Lynden Chamber of Commerce"
       url: "https://www.lynden.org/"
@@ -547,6 +600,8 @@
     - name: "Whatcom County Library System events"
       url: "https://www.wcls.org/events"
       type: library
+      format: libcal
+      feed_url: "https://wcls.libcal.com/calendar/events/?cid=5625&t=d&d=0000-00-00&cal=5625&inc=0"
       notes: "One library source. Filter to Lynden."
     - name: "Lynden Farmers Market"
       url: "https://www.lyndenfarmersmarket.com/"
@@ -555,10 +610,13 @@
     - name: "Lynden Tribune Community Calendar"
       url: "https://www.lyndentribune.com/community/local_events/"
       type: downtown
+      format: rss
+      feed_url: "http://www.lyndentribune.com/search/?f=rss&t=article&c=community/local_events&l=50&s=start_time&sd=desc"
       notes: "Editor-curated community calendar. Secondary sweep after the city and chamber. Prefer Lynden-proper and family-friendly listings."
     - name: "AllEvents Lynden"
       url: "https://allevents.in/lynden"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Lynden, WA."
 - id: lynnwood
   name: Lynnwood
@@ -578,6 +636,7 @@
     - name: "Sno-Isle Libraries events"
       url: "https://sno-isle.bibliocommons.com/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to Lynnwood."
     - name: "Edmonds Driftwood Players"
       url: "https://edmondsdriftwoodplayers.org/"
@@ -598,6 +657,7 @@
     - name: "AllEvents Lynnwood"
       url: "https://allevents.in/lynnwood"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Lynnwood, WA."
 - id: maple-valley
   name: Maple Valley
@@ -621,6 +681,7 @@
     - name: "King County Library System events"
       url: "https://kcls.bibliocommons.com/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to Maple Valley."
     - name: "Maple Valley Creative Arts Council"
       url: "https://mvcac.clubexpress.com/"
@@ -633,6 +694,7 @@
     - name: "AllEvents Maple Valley"
       url: "https://allevents.in/maple-valley"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Maple Valley, WA."
 - id: mercer-island
   name: Mercer Island
@@ -648,6 +710,8 @@
     - name: "City of Mercer Island calendar"
       url: "https://www.mercerisland.gov/calendar"
       type: city_hall
+      format: ical
+      feed_url: "https://www.mercerisland.gov/calendar/ical/%2A/calendar.ics"
       notes: "City parks, Luther Burbank, and community events."
     - name: "Mercer Island Farmers Market"
       url: "https://www.mifarmersmarket.org/"
@@ -656,6 +720,7 @@
     - name: "King County Library System events"
       url: "https://kcls.bibliocommons.com/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to Mercer Island."
     - name: "Youth Theatre Northwest"
       url: "https://youththeatre.org/"
@@ -668,6 +733,7 @@
     - name: "AllEvents Mercer Island"
       url: "https://allevents.in/mercer-island"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Mercer Island, WA."
 - id: mill-creek
   name: Mill Creek
@@ -691,6 +757,7 @@
     - name: "Sno-Isle Libraries events"
       url: "https://sno-isle.bibliocommons.com/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to Mill Creek."
     - name: "The Attic Theatre"
       url: "https://theattictheatre.org/"
@@ -726,6 +793,7 @@
     - name: "Kitsap Regional Library events"
       url: "https://krl.bibliocommons.com/v2/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to Poulsbo."
     - name: "Jewel Box Theatre"
       url: "https://www.jewelboxpoulsbo.org/"
@@ -738,6 +806,7 @@
     - name: "AllEvents Poulsbo"
       url: "https://allevents.in/poulsbo"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Poulsbo, WA."
 - id: puyallup
   name: Puyallup
@@ -753,6 +822,8 @@
     - name: "City of Puyallup calendar"
       url: "https://www.puyallupwa.gov/calendar.aspx"
       type: city_hall
+      format: ical
+      feed_url: "https://www.puyallupwa.gov/common/modules/iCalendar/iCalendar.aspx?catID=41&feed=calendar"
       notes: "City events. Prefer Pioneer Park and family programs over routine meetings."
     - name: "Puyallup Farmers' Market"
       url: "https://puyallupfarmersmarket.com/"
@@ -761,6 +832,7 @@
     - name: "Puyallup Public Library calendar"
       url: "https://puyalluplibrary.libcal.com/"
       type: library
+      format: libcal
       notes: "One library source."
     - name: "Northwest Theatre Lab"
       url: "https://www.nwtheatrelab.com/"
@@ -781,6 +853,7 @@
     - name: "AllEvents Puyallup"
       url: "https://allevents.in/puyallup"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Puyallup, WA."
 - id: redmond
   name: Redmond
@@ -796,6 +869,8 @@
     - name: "City of Redmond calendar"
       url: "https://www.redmond.gov/Calendar.aspx"
       type: city_hall
+      format: ical
+      feed_url: "https://www.redmond.gov/common/modules/iCalendar/iCalendar.aspx?catID=22&feed=calendar"
       notes: "City parks, Marymoor-adjacent city events, and family programs."
     - name: "Redmond Community"
       url: "https://www.redmond.gov/101/Community"
@@ -808,6 +883,7 @@
     - name: "King County Library System events"
       url: "https://kcls.bibliocommons.com/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to Redmond."
     - name: "SecondStory Repertory"
       url: "https://www.secondstoryrep.org/"
@@ -820,6 +896,7 @@
     - name: "AllEvents Redmond"
       url: "https://allevents.in/redmond"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Redmond, WA, not Redmond, Oregon."
 - id: renton
   name: Renton
@@ -855,6 +932,7 @@
     - name: "AllEvents Renton"
       url: "https://allevents.in/renton"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Renton, WA."
 - id: sammamish
   name: Sammamish
@@ -874,6 +952,7 @@
     - name: "King County Library System events"
       url: "https://kcls.bibliocommons.com/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to Sammamish."
     - name: "Spotlight Repertory NW"
       url: "https://www.spotlightrepnw.org/"
@@ -890,6 +969,7 @@
     - name: "AllEvents Sammamish"
       url: "https://allevents.in/sammamish"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Sammamish, WA."
 - id: woodinville
   name: Woodinville
@@ -905,6 +985,8 @@
     - name: "City of Woodinville calendar"
       url: "https://www.woodinville.gov/calendar.aspx"
       type: city_hall
+      format: ical
+      feed_url: "https://www.woodinville.gov/common/modules/iCalendar/iCalendar.aspx?catID=14&feed=calendar"
       notes: "City and Festival Street events."
     - name: "21 Acres"
       url: "https://21acres.org/events/"
@@ -917,6 +999,7 @@
     - name: "King County Library System events"
       url: "https://kcls.bibliocommons.com/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to Woodinville."
     - name: "Woodinville Repertory Theatre"
       url: "https://www.woodinvillerep.org/"
@@ -929,6 +1012,7 @@
     - name: "AllEvents Woodinville"
       url: "https://allevents.in/woodinville"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Woodinville, WA."
 - id: beaverton
   name: Beaverton
@@ -952,6 +1036,8 @@
     - name: "Beaverton City Library calendar"
       url: "https://www.beavertonlibrary.org/m/calendar"
       type: library
+      format: ical
+      feed_url: "https://www.beavertonlibrary.org/common/modules/iCalendar/iCalendar.aspx?catID=31&feed=calendar"
       notes: "One library source. Storytimes, youth programs, and family fairs."
     - name: "Beaverton Farmers Market events"
       url: "https://www.beavertonfarmersmarket.com/event-calendar"
@@ -968,6 +1054,7 @@
     - name: "AllEvents Beaverton"
       url: "https://allevents.in/beaverton"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Beaverton, OR."
 - id: bend
   name: Bend
@@ -1023,6 +1110,7 @@
     - name: "AllEvents Bend"
       url: "https://allevents.in/bend-us"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. Use bend-us. allevents.in/bend redirects to the generic events page."
 - id: hillsboro
   name: Hillsboro
@@ -1054,6 +1142,7 @@
     - name: "Washington County Cooperative Library events"
       url: "https://wccls.bibliocommons.com/v2/events"
       type: library
+      format: bibliocommons
       notes: "One library source. Filter to Brookwood and Hillsboro branches."
     - name: "Hillsboro event calendar"
       url: "https://www.hillsboro-oregon.gov/our-city/event-calendar"
@@ -1066,6 +1155,7 @@
     - name: "AllEvents Hillsboro"
       url: "https://allevents.in/hillsboro"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Hillsboro, OR."
 - id: lake-oswego
   name: Lake Oswego
@@ -1105,6 +1195,7 @@
     - name: "AllEvents Lake Oswego"
       url: "https://allevents.in/lake-oswego"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Lake Oswego, OR."
 - id: coeur-dalene
   name: Coeur d'Alene
@@ -1132,6 +1223,7 @@
     - name: "Community Library Network calendar"
       url: "https://communitylibrary.libcal.com/"
       type: library
+      format: libcal
       notes: "County libraries families near Coeur d'Alene use. Keep it secondary to the city library."
     - name: "Lake City Playhouse"
       url: "https://www.lakecityplayhouse.org/"
@@ -1152,6 +1244,7 @@
     - name: "AllEvents Coeur d'Alene"
       url: "https://allevents.in/coeur-d-alene"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Coeur d'Alene, ID."
 - id: eagle
   name: Eagle
@@ -1171,6 +1264,8 @@
     - name: "City of Eagle calendar"
       url: "https://cityofeagle.org/calendar.aspx"
       type: city_hall
+      format: ical
+      feed_url: "https://cityofeagle.org/common/modules/iCalendar/iCalendar.aspx?catID=14&feed=calendar"
       notes: "Heritage Park, Harvest Fest, and city events."
     - name: "Eagle Saturday Market"
       url: "https://cityofeagle.org/170/Eagle-Saturday-Market"
@@ -1191,6 +1286,7 @@
     - name: "AllEvents Eagle, ID"
       url: "https://allevents.in/eagle-id"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. Use eagle-id. allevents.in/eagle redirects to the generic events page."
 - id: meridian
   name: Meridian
@@ -1234,6 +1330,7 @@
     - name: "AllEvents Meridian, ID"
       url: "https://allevents.in/meridian-id"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. Use meridian-id. allevents.in/meridian is Meridian, Mississippi."
 - id: lehi
   name: Lehi
@@ -1257,6 +1354,7 @@
     - name: "Lehi City Library calendar"
       url: "https://lehicity.libcal.com/calendar"
       type: library
+      format: libcal
       notes: "One library source."
     - name: "Lehi Arts Council"
       url: "https://lehiarts.org/"
@@ -1285,6 +1383,7 @@
     - name: "AllEvents Lehi"
       url: "https://allevents.in/lehi-us"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. Use lehi-us. allevents.in/lehi redirects to the generic events page."
 - id: orem
   name: Orem
@@ -1336,6 +1435,7 @@
     - name: "AllEvents Orem"
       url: "https://allevents.in/orem-us"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. Use orem-us. allevents.in/orem redirects to the generic events page."
 - id: south-jordan
   name: South Jordan
@@ -1351,6 +1451,8 @@
     - name: "South Jordan calendar"
       url: "https://www.sjc.utah.gov/calendar.aspx"
       type: city_hall
+      format: ical
+      feed_url: "https://www.sjc.utah.gov/common/modules/iCalendar/iCalendar.aspx?catID=30&feed=calendar"
       notes: "City events and meetings. Prefer parks and family programs."
     - name: "South Jordan facilities"
       url: "https://www.sjc.utah.gov/Facilities"
@@ -1383,6 +1485,7 @@
     - name: "AllEvents South Jordan"
       url: "https://allevents.in/south-jordan"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is South Jordan, UT."
 - id: castle-rock
   name: Castle Rock
@@ -1402,6 +1505,8 @@
     - name: "Town of Castle Rock calendar"
       url: "https://www.crgov.com/calendar.aspx"
       type: city_hall
+      format: ical
+      feed_url: "https://www.crgov.com/common/modules/iCalendar/iCalendar.aspx?catID=18&feed=calendar"
       notes: "Town events. Prefer parks and downtown over routine meetings."
     - name: "Festival Park Farmers Market"
       url: "https://www.crgov.com/3178/Festival-Park-Farmers-Market"
@@ -1426,6 +1531,7 @@
     - name: "AllEvents Castle Rock, CO"
       url: "https://allevents.in/castle-rock-co"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. Use castle-rock-co. allevents.in/castle-rock redirects to the generic events page."
 - id: centennial
   name: Centennial
@@ -1473,6 +1579,7 @@
     - name: "AllEvents Centennial, CO"
       url: "https://allevents.in/centennial-co"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. Use centennial-co. allevents.in/centennial is Centennial, Wyoming."
 - id: fort-collins
   name: Fort Collins
@@ -1524,6 +1631,7 @@
     - name: "AllEvents Fort Collins"
       url: "https://allevents.in/fort-collins"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Fort Collins, CO."
 - id: frisco
   name: Frisco
@@ -1543,6 +1651,8 @@
     - name: "City of Frisco calendar"
       url: "https://www.friscotexas.gov/calendar.aspx"
       type: city_hall
+      format: ical
+      feed_url: "https://www.friscotexas.gov/common/modules/iCalendar/iCalendar.aspx?catID=85&feed=calendar"
       notes: "City special events and parks programming."
     - name: "Visit Frisco"
       url: "https://www.visitfrisco.com/"
@@ -1551,6 +1661,7 @@
     - name: "Frisco Public Library events"
       url: "https://friscolibrary.bibliocommons.com/events/search/index"
       type: library
+      format: bibliocommons
       notes: "One library source."
     - name: "Theatre Frisco"
       url: "https://www.theatrefrisco.com/2026-season"
@@ -1579,6 +1690,7 @@
     - name: "AllEvents Frisco, TX"
       url: "https://allevents.in/frisco"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Frisco, TX, not Frisco, Colorado."
 - id: plano
   name: Plano
@@ -1638,6 +1750,7 @@
     - name: "AllEvents Plano"
       url: "https://allevents.in/plano"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Plano, TX."
 - id: round-rock
   name: Round Rock
@@ -1665,6 +1778,7 @@
     - name: "Round Rock Public Library calendar"
       url: "https://roundrocktexas.libcal.com/"
       type: library
+      format: libcal
       notes: "One library source."
     - name: "City of Round Rock events"
       url: "https://www.roundrocktexas.gov/events/"
@@ -1685,6 +1799,7 @@
     - name: "AllEvents Round Rock"
       url: "https://allevents.in/round-rock"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. This page is Round Rock, TX."
 - id: carlsbad
   name: Carlsbad
@@ -1729,6 +1844,7 @@
     - name: "Carlsbad City Library"
       url: "https://carlsbadca.libcal.com/"
       type: library
+      format: libcal
       notes: "One library source. LibCal for Dove Lane, Georgina Cole, and the Learning Center."
     - name: "The Coast News arts"
       url: "https://thecoastnews.com/category/arts-entertainment/"
@@ -1741,6 +1857,7 @@
     - name: "AllEvents Carlsbad"
       url: "https://allevents.in/carlsbad"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. Confirm Carlsbad, California."
 - id: folsom
   name: Folsom
@@ -1789,6 +1906,8 @@
     - name: "Folsom Historic District"
       url: "https://historicfolsom.org/"
       type: downtown
+      format: ical
+      feed_url: "https://historicfolsom.org/events/?ical=1"
       notes: "Sutter Street races and historic-district listings. If the page skips a start time, leave the clock out."
     - name: "Folsom Public Library"
       url: "https://www.library.folsom.ca.us/"
@@ -1797,6 +1916,7 @@
     - name: "AllEvents Folsom"
       url: "https://allevents.in/folsom"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. Confirm Folsom, California."
 - id: irvine
   name: Irvine
@@ -1853,10 +1973,12 @@
     - name: "Irvine Public Library"
       url: "https://irvinepubliclibrary.libcal.com/"
       type: library
+      format: libcal
       notes: "One library source. LibCal for Heritage Park, University Park, and Katie Wheeler. The fall newsletter is the dated list."
     - name: "AllEvents Irvine"
       url: "https://allevents.in/irvine"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. Confirm Irvine, California."
 - id: pleasanton
   name: Pleasanton
@@ -1909,6 +2031,7 @@
     - name: "AllEvents Pleasanton"
       url: "https://allevents.in/pleasanton"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. Confirm Pleasanton, California."
 - id: roseville
   name: Roseville
@@ -1953,6 +2076,8 @@
     - name: "Visit Placer"
       url: "https://www.visitplacer.com/events/"
       type: downtown
+      format: rss
+      feed_url: "https://www.visitplacer.com/events/feed/"
       notes: "County visitor calendar. Filter to Roseville. Skip Auburn, Lincoln, and Tahoe listings."
     - name: "Style Magazine calendar"
       url: "https://www.stylemg.com/calendar"
@@ -1961,6 +2086,7 @@
     - name: "AllEvents Roseville"
       url: "https://allevents.in/roseville"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. Confirm Roseville, California, not Roseville, Minnesota."
 - id: san-ramon
   name: San Ramon
@@ -2000,6 +2126,8 @@
     - name: "City Center Bishop Ranch"
       url: "https://citycenterbishopranch.com/events/"
       type: downtown
+      format: rss
+      feed_url: "https://citycenterbishopranch.com/events/feed/"
       notes: "Public square events. The add-to-calendar widget can stamp Mountain time. Use the clock printed on the event page."
     - name: "Contra Costa County Library"
       url: "https://ccclib.org/"
@@ -2016,4 +2144,5 @@
     - name: "AllEvents San Ramon"
       url: "https://allevents.in/san-ramon-ca"
       type: allevents
+      format: allevents
       notes: "Secondary sweep. Use san-ramon-ca. allevents.in/san-ramon redirects to the generic events page."
