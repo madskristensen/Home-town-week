@@ -1137,6 +1137,10 @@ html:has(.site-header--city) body {
   margin: 0.15rem 0 0;
 }
 
+.city-home .prose .list-updated {
+  margin: 0;
+}
+
 .featured-title {
   margin: 0.2rem 0 0;
   font-family: var(--serif);
@@ -1466,6 +1470,21 @@ html:has(.site-header--city) body {
   color: var(--gold);
   font-size: 0.92rem;
   font-weight: 600;
+}
+
+/* City pages stay on cream, so the install controls keep the light-theme greens. */
+html:has(.site-header--city) .install-go {
+  background: var(--forest);
+  color: var(--header-ink);
+}
+
+html:has(.site-header--city) .install-go:hover,
+html:has(.site-header--city) .install-go:focus-visible {
+  background: var(--forest-deep);
+}
+
+html:has(.site-header--city) .install-dismiss {
+  color: var(--forest);
 }
 
 @media (prefers-color-scheme: dark) {
