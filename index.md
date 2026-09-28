@@ -1,5 +1,5 @@
 ---
 layout: home
 title: Hometown Week
-description: Upcoming family events for the city you live in. Spend less time searching. Spend more time showing up.
+description: See what's going on in your city, so you never miss the fun.
 ---
