@@ -478,18 +478,24 @@ module HometownWeek
         index = cursors[key]
         cursors[key] = index + 1
         links = bucket && bucket[index]
-        next part if links.nil? || links.empty?
-
-        snippet = calendar_actions(links)
-        if part.sub!(%r{(<p class="event-when"[^>]*>)(.*?)(</p>)}m) {
-          "#{Regexp.last_match(1)}#{Regexp.last_match(2)}#{snippet}#{Regexp.last_match(3)}"
-        }
-          part
-        else
-          part.sub(%r{</h3>}) { "#{Regexp.last_match(0)}\n<p class=\"event-when\">#{snippet}</p>" }
+        if links && !links.empty?
+          snippet = calendar_actions(links)
+          unless part.sub!(%r{(<p class="event-when"[^>]*>)(.*?)(</p>)}m) {
+            "#{Regexp.last_match(1)}#{Regexp.last_match(2)}#{snippet}#{Regexp.last_match(3)}"
+          }
+            part.sub!(%r{</h3>}) { "#{Regexp.last_match(0)}\n<p class=\"event-when\">#{snippet}</p>" }
+          end
         end
+        wrap_event_card(part)
       end
       prelude + rendered.join
+    end
+
+    # One card per event heading. The calendar icon is already on the date line.
+    def wrap_event_card(part)
+      body = part.sub(/\s+\z/, "")
+      trail = part[body.length..] || ""
+      %(<article class="event-card">\n#{body}\n</article>#{trail})
     end
 
     def root_path(site, path)

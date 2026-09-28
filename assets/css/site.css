@@ -925,6 +925,32 @@ img {
 
 /* City, year, issue, and state-hub rules. Inlined on every page with the rest of the sheet. */
 
+/* City pages keep this light paper look in both color schemes.
+   The header stays deep green. Home and state hubs follow the system theme. */
+html:has(.site-header--city) {
+  color-scheme: light;
+  --page: #f4efe6;
+  --sheet: #fffdf9;
+  --ink: #1c2b24;
+  --text: #2a3831;
+  --muted: #4d5c54;
+  --forest: #1e4636;
+  --forest-deep: #16352a;
+  --gold: #7a5c12;
+  --gold-bright: #c6a15a;
+  --link: #145c40;
+  --rule: #e3d6c4;
+  --focus: #7a5c12;
+  --shadow: 0 8px 22px rgba(28, 43, 36, 0.06);
+  --photo-filter: none;
+  background: var(--page);
+}
+
+html:has(.site-header--city) body {
+  background: var(--page);
+  color: var(--text);
+}
+
 .site-header--city {
   background: #1e4636;
   border-bottom: 3px solid var(--gold-bright);
@@ -1100,6 +1126,17 @@ img {
   font-size: 1.45rem;
 }
 
+.city-home .prose {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.35rem;
+}
+
+.city-home .prose h2 {
+  margin: 0.15rem 0 0;
+}
+
 .featured-title {
   margin: 0.2rem 0 0;
   font-family: var(--serif);
@@ -1177,6 +1214,41 @@ img {
   color: var(--muted);
   font-size: 0.95rem;
   font-weight: 500;
+}
+
+/* Event cards sit on the cream page. Order inside stays title, gold time, place, blurb, link. */
+.event-card {
+  margin: 0;
+  padding: 1rem 1.05rem 1.1rem;
+  background: var(--sheet);
+  color: var(--text);
+  border: 1px solid var(--rule);
+  border-radius: 0.9rem;
+  box-shadow: 0 1px 2px rgba(28, 43, 36, 0.04), 0 8px 20px rgba(28, 43, 36, 0.05);
+  overflow-wrap: break-word;
+}
+
+.city-home .event-card h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.34rem;
+  line-height: 1.22;
+}
+
+.city-home .event-card > :first-child {
+  margin-top: 0;
+}
+
+.city-home .event-card > :last-child {
+  margin-bottom: 0;
+}
+
+.city-home .event-card > p:not(.event-when):not(.event-place) {
+  margin: 0.7rem 0;
+}
+
+.city-home .event-card .event-photo {
+  margin: 0.7rem 0 0.85rem;
 }
 
 /* Calendar action sits on the gold date line, beside the time. */
