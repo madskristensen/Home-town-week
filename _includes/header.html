@@ -26,12 +26,7 @@
   {%- elsif page.city and city -%}
   <div class="wrap masthead">
     <div class="city-heading">
-      <span class="city-pin" aria-hidden="true">
-        <svg viewBox="0 0 24 32" width="16" height="22" focusable="false">
-          <path fill="currentColor" d="M12 31.2c.35 0 8-9.1 8-15.6C20 8.15 16.4 4.6 12 4.6S4 8.15 4 15.6c0 6.5 7.65 15.6 8 15.6z"/>
-          <circle cx="12" cy="15.15" r="3.05" class="city-pin-dot"/>
-        </svg>
-      </span>
+      {%- include city-mark.html -%}
       <div class="city-heading-text">
         {%- if page.layout == "city" -%}
         <h1 class="city-name">
