@@ -9,7 +9,7 @@
 # (geography, character, or region), not a list of venues. It is not the
 # masthead kicker.
 # slogan: the city's official slogan, and only when the city has one.
-# The masthead kicker prints slogan, or "Upcoming family events" when
+# The masthead kicker prints slogan, or "Weekly family digest" when
 # slogan is absent. Do not put a place line in slogan.
 #
 # sources: lives on each city entry here, not in a separate file. Each item

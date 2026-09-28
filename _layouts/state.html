@@ -3,8 +3,6 @@ layout: default
 ---
 {%- assign state_cities = site.data.cities | where: "state", page.state -%}
 <article class="state-hub wrap">
-  {%- include breadcrumbs.html -%}
-  <h1>{{ page.title }}</h1>
   <div class="dek prose">
     {{ content }}
   </div>
