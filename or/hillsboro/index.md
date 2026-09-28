@@ -4,6 +4,10 @@ title: Hillsboro
 city: hillsboro
 state: or
 description: Upcoming family events in Hillsboro. Washington County's seat, in the Tualatin Valley.
+image: /assets/images/hillsboro/civic-center.webp
+image_alt: Hillsboro Civic Center, a glass building beside the downtown plaza.
+image_credit: 'Photo: Steve Morgan, CC BY-SA 4.0'
+image_source_url: https://commons.wikimedia.org/wiki/File:Hillsboro_Civic_Center%27s_Plaza_Building_from_west_(2017).jpg
 hook: No Tanasbourne this week. Saturday is the downtown market, and Sunday is Orenco Station.
 ---
 

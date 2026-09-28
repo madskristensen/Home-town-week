@@ -4,6 +4,10 @@ title: Castle Rock
 city: castle-rock
 state: co
 description: Upcoming family events in Castle Rock. A Front Range town south of Denver.
+image: /assets/images/castle-rock/butte.webp
+image_alt: The Castle Rock butte, the rock the town is named for, above houses and trees.
+image_credit: 'Photo: Jeff Albright, CC BY-SA 3.0'
+image_source_url: https://commons.wikimedia.org/wiki/File:Castle_Rock_butte_in_Castle_Rock_Colorado.JPG
 hook: Sunday is the Festival Park market. Friday starts downtown restaurant week. Saturday is Bark for Books at the library.
 ---
 

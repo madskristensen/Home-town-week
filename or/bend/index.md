@@ -4,6 +4,10 @@ title: Bend
 city: bend
 state: or
 description: Upcoming family events in Bend. A high-desert city on the Deschutes River.
+image: /assets/images/bend/deschutes-river.webp
+image_alt: The Deschutes River in Bend, with the Old Mill smokestacks and a bridge over the water.
+image_credit: 'Photo: Everwest, CC BY 4.0'
+image_source_url: https://commons.wikimedia.org/wiki/File:2026_09_18_Deschutes_River_Bend,_Oregon.jpg
 hook: Northwest Crossing's Saturday market ended Sep. 26. This weekend downtown is the Fall Festival, with a kids' theater set Saturday and Sunday morning. Wednesday is still the farmers market.
 ---
 

@@ -4,6 +4,10 @@ title: Meridian
 city: meridian
 state: id
 description: Upcoming family events in Meridian. Built for business, designed for living.
+image: /assets/images/meridian/idaho-building.webp
+image_alt: The Idaho Building in downtown Meridian, a brick storefront with a striped awning.
+image_credit: 'Photo: Tamanoeconomico, CC BY-SA 4.0'
+image_source_url: https://commons.wikimedia.org/wiki/File:Idaho_Building_(Meridian,_Idaho).jpg
 hook: Monday night is the market at Storey Park. Saturday morning is the Main Street Market, and Saturday stays open downtown for Oktoberfest.
 ---
 

@@ -4,12 +4,22 @@ title: Beaverton
 city: beaverton
 state: or
 description: Upcoming family events in Beaverton. A westside city in the Tualatin Valley.
+image: /assets/images/beaverton/library.webp
+image_alt: Beaverton City Library, with the library sign and a covered entrance.
+image_credit: 'Photo: M.O. Stevens, CC BY 3.0'
+image_source_url: https://commons.wikimedia.org/wiki/File:Beaverton_Oregon_library.JPG
 hook: Monday is Spanish storytime, then Japanese. Tuesday night is Fiesta on First. Saturday the market has Richie Bean, and Tiny Tales is at the library before that.
 ---
 
 ### Spanish Storytime / Hora de cuentos en español
 <p class="event-when">Mon Sep 28 · 10:15 a.m.</p>
 <p class="event-place">Main storytime room</p>
+
+{% include event-photo.html
+   src="/assets/images/beaverton/library.webp"
+   alt="Beaverton City Library, with the library sign and a covered entrance."
+   credit="Photo: M.O. Stevens, CC BY 3.0"
+   source="https://commons.wikimedia.org/wiki/File:Beaverton_Oregon_library.JPG" %}
 
 Ages 0–6. Mondays from Sep. 14 through Dec. 7, except Sep. 7.
 

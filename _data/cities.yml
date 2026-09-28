@@ -1015,6 +1015,10 @@
       url: "https://www.downtownbend.org/"
       type: downtown
       notes: "First Fridays and downtown street events."
+    - name: "Bend Nest calendar"
+      url: "https://www.bendsource.com/category/bend-nest-content/nestcalendar/"
+      type: downtown
+      notes: "Seasonal family calendar from Bend Nest, the Source Weekly's parenting magazine. Staff-written, including the Fall 2026 list. Secondary sweep after the city, parks, and the market. Confirm hours on the organizer page. The Source EventSearch is an open submission list. Do not use it."
     - name: "AllEvents Bend"
       url: "https://allevents.in/bend-us"
       type: allevents

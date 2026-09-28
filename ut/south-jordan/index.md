@@ -4,6 +4,10 @@ title: South Jordan
 city: south-jordan
 state: ut
 description: Upcoming family events in South Jordan. A southwest city in the Salt Lake Valley.
+image: /assets/images/south-jordan/oquirrh-lake.webp
+image_alt: Sunrise at Oquirrh Lake in South Jordan, with houses along the shore and the Wasatch Mountains across the water.
+image_credit: 'Photo: Brett Neilson, CC BY 2.0'
+image_source_url: https://commons.wikimedia.org/wiki/File:Oquirrh_Lake_at_sunrise.jpg
 hook: Tuesday is a Princess and the Frog puppet show. Monday is open play for ages 1 to 5. Wednesday is still preschool storytime.
 ---
 

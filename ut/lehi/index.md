@@ -4,6 +4,10 @@ title: Lehi
 city: lehi
 state: ut
 description: Upcoming family events in Lehi. A Utah Valley city at Point of the Mountain.
+image: /assets/images/lehi/roller-mills.webp
+image_alt: Lehi Roller Mills, with the Turkey sign on the grain elevator beside the railroad tracks.
+image_credit: 'Photo: brewbooks, CC BY-SA 2.0'
+image_source_url: https://commons.wikimedia.org/wiki/File:Lehi_Roller_Mills_-_Flickr_-_brewbooks.jpg
 hook: Cornbelly's is open all week at Thanksgiving Point. Wednesday and Thursday are library storytime, and Friday is music and movement.
 ---
 

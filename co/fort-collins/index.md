@@ -4,6 +4,10 @@ title: Fort Collins
 city: fort-collins
 state: co
 description: Upcoming family events in Fort Collins. A college town where the plains meet the Rockies.
+image: /assets/images/fort-collins/historic-district.webp
+image_alt: Old Town Fort Collins, a brick street with storefronts and a clock tower.
+image_credit: 'Photo: Wusel007, CC BY-SA 3.0'
+image_source_url: https://commons.wikimedia.org/wiki/File:Fort_Collins_Historic_District.JPG
 hook: Friday and Saturday, Pastries and Pirouettes is at the Lincoln Center at 7:30 p.m. Tuesday's ages 4+ storytime at Council Tree is back. Friday night is also the Old Town art walk.
 ---
 

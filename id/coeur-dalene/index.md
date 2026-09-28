@@ -4,6 +4,10 @@ title: Coeur d'Alene
 city: coeur-dalene
 state: id
 description: Upcoming family events in Coeur d'Alene. The Lake City.
+image: /assets/images/coeur-dalene/city-park-beach.webp
+image_alt: The beach at City Park in Coeur d'Alene, with the lake and evergreens along the shore.
+image_credit: 'Photo: Ken Lund, CC BY-SA 2.0'
+image_source_url: https://commons.wikimedia.org/wiki/File:City_Park_and_Beach,_Coeur_d%27Alene,_Idaho_(50082775548).jpg
 hook: Finding Neverland continues at Lake City Playhouse. Saturday's show is 7:30 p.m., not a matinee. Wednesday is sensory storytime, and registration is required.
 ---
 

@@ -4,12 +4,22 @@ title: Orem
 city: orem
 state: ut
 description: Upcoming family events in Orem. Family City USA.
+image: /assets/images/orem/scera.webp
+image_alt: The SCERA Center for the Arts in Orem, with the SCERA name across the front of the building.
+image_credit: 'Photo: An Errant Knight, CC BY-SA 4.0'
+image_source_url: https://commons.wikimedia.org/wiki/File:SCERA_theater.JPG
 hook: Noises Off continues Monday, Thursday, Friday, and Saturday at 7:30 p.m. Storytime is Tuesday, Wednesday, and Thursday at 10:30 a.m.
 ---
 
 ### Noises Off
 <p class="event-when">Mon Sep 28, Thu Oct 1, Fri Oct 2, and Sat Oct 3 · 7:30 p.m.</p>
 <p class="event-place">SCERA Center for the Arts, 745 S State Street</p>
+
+{% include event-photo.html
+   src="/assets/images/orem/scera.webp"
+   alt="The SCERA Center for the Arts in Orem, with the SCERA name across the front of the building."
+   credit="Photo: An Errant Knight, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:SCERA_theater.JPG" %}
 
 Same run as last week: Mondays, Thursdays, Fridays, and Saturdays at 7:30 p.m. through Oct. 10. Adults $16. Ages 3–11 and seniors 65+ are $12. A farce for families who can sit through a full play.
 
