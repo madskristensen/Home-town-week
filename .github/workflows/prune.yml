@@ -1,0 +1,66 @@
+name: Prune past events
+
+on:
+  schedule:
+    # 08:20 UTC is 1:20am during Pacific Daylight Time and 12:20am during
+    # Pacific Standard Time, so the America/Los_Angeles date has already rolled.
+    - cron: "20 8 * * *"
+  workflow_dispatch:
+
+# A push made with this token does not start another workflow. After a
+# commit, this job starts Deploy to GitHub Pages with workflow_dispatch,
+# which the token is allowed to do. The site rebuilds only when a file changed.
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: prune-past-events
+  cancel-in-progress: false
+
+jobs:
+  prune:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Install PyYAML
+        run: python3 -m pip install pyyaml
+
+      - name: Delete events that ended before today
+        run: python3 script/prune-past-events.py
+
+      - name: Commit and push when files changed
+        id: commit
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No past events to remove."
+            exit 0
+          fi
+          unexpected=0
+          while IFS= read -r path; do
+            case "$path" in
+              _data/*_events.yml|*/*/index.md) ;;
+              *)
+                echo "Refusing to commit unexpected path: $path"
+                unexpected=1
+                ;;
+            esac
+          done < <(git diff --name-only)
+          if [ "$unexpected" -ne 0 ]; then
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -u
+          git commit -m "Remove events that ended before today."
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Rebuild the site
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main

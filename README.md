@@ -31,11 +31,13 @@ Open `http://127.0.0.1:4000/`. `_config.yml` sets `url` to `https://hometownweek
 
 Pushes to `main` run `.github/workflows/pages.yml`, which builds the site and deploys it with GitHub Actions. The workflow passes the Pages base path through, and that path is empty on the custom domain.
 
+`.github/workflows/prune.yml` runs daily, after midnight Pacific. It deletes events whose last day is before today in America/Los_Angeles from each city page and from `_data/{city}_events.yml`. If nothing expired, it does not commit. If it removed something, it pushes that commit and starts the Pages deploy. The HTML is static. The browser does not hide old events.
+
 ## Update cadence
 
 `sources:` lives only on each city in `_data/cities.yml`. Do not add a separate sources file.
 
-Monday is the primary content fill. Read the lists already in `cities.yml` and update each city's upcoming list from those URLs. Add events in chronological order on `{state}/{city}/index.md`, and add the same events to `_data/{city}_events.yml` so the calendar icon and the event list in the page schema stay in step. Delete events that have already ended. Do not create week pages. Monday does not add or remove sources.
+Monday is the primary content fill. Read the lists already in `cities.yml` and update each city's upcoming list from those URLs. Add events in chronological order on `{state}/{city}/index.md`, and add the same events to `_data/{city}_events.yml` so the calendar icon and the event list in the page schema stay in step. Do not add an event that has already ended. Do not create week pages. Monday does not add or remove sources. The daily prune removes expired events, so Monday does not have to hunt for them.
 
 Thursday is the midweek content fill, a visible update before the weekend. Read the same lists and refresh event copy that is still ahead. Thursday does not add or remove sources, and it does not create week pages.
 

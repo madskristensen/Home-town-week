@@ -21,12 +21,13 @@
 # AllEvents page, or a library calendar alone.
 #
 # Cadence: Monday is the primary content fill from this list. Update the
-# city page upcoming list and {city}_events.yml, and delete events that
-# have ended. Thursday is the midweek content fill, a visible update before
-# the weekend. Neither edits sources, and neither creates week pages. The
-# first Friday of the month maintains this list only (find a new URL or
-# drop a stale one) and does not rewrite event copy. A seed run may do
-# both once. After that, keep the split.
+# city page upcoming list and {city}_events.yml. Thursday is the midweek
+# content fill, a visible update before the weekend. Neither edits sources,
+# and neither creates week pages. Do not add an event that has already
+# ended. A daily action deletes events whose last day is before today in
+# America/Los_Angeles. The first Friday of the month maintains this list
+# only (find a new URL or drop a stale one) and does not rewrite event
+# copy. A seed run may do both once. After that, keep the split.
 - id: bainbridge-island
   name: Bainbridge Island
   state: wa
