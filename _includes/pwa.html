@@ -5,29 +5,15 @@
       <div class="install-card-text">
         <p id="install-card-name" class="install-card-name">Hometown Week</p>
         <p id="install-hint-copy" class="install-card-benefit">Open your city in one tap.</p>
-        <p id="install-steps" class="install-steps" hidden>
-          <span>Share</span>
-          <svg class="install-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 15.2V3.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-            <path d="M7.8 7.5 12 3.4l4.2 4.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M7.2 10.2H6.1A1.8 1.8 0 0 0 4.3 12v7.1A1.8 1.8 0 0 0 6.1 20.9h11.8a1.8 1.8 0 0 0 1.8-1.8V12a1.8 1.8 0 0 0-1.8-1.8h-1.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span class="install-then" aria-hidden="true">→</span>
-          <span class="visually-hidden">then</span>
-          <span>Add to Home Screen</span>
-        </p>
       </div>
+    </div>
+    <div id="install-guide" class="install-guide" hidden>
+      <p id="install-inapp" class="install-inapp" hidden>Open this page in Safari first.</p>
+      <p id="install-steps" class="install-steps"><span class="install-share-cue">Tap Share <svg class="install-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 15.2V3.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M7.8 7.5 12 3.4l4.2 4.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 10.2H6.1A1.8 1.8 0 0 0 4.3 12v7.1A1.8 1.8 0 0 0 6.1 20.9h11.8a1.8 1.8 0 0 0 1.8-1.8V12a1.8 1.8 0 0 0-1.8-1.8h-1.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span id="install-where">at the bottom of Safari, then Add to Home Screen.</span></p>
     </div>
     <div class="install-card-actions">
       <button type="button" class="install-go" id="install-hint-go" hidden>Install Hometown Week</button>
-      <button type="button" class="install-share" id="install-hint-share" hidden>
-        <svg class="install-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M12 15.2V3.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-          <path d="M7.8 7.5 12 3.4l4.2 4.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M7.2 10.2H6.1A1.8 1.8 0 0 0 4.3 12v7.1A1.8 1.8 0 0 0 6.1 20.9h11.8a1.8 1.8 0 0 0 1.8-1.8V12a1.8 1.8 0 0 0-1.8-1.8h-1.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        Share
-      </button>
+      <button type="button" class="install-go" id="install-hint-ack" hidden>Got it</button>
       <button type="button" class="install-dismiss" id="install-hint-dismiss">Not now</button>
     </div>
   </div>
@@ -85,9 +71,11 @@
   else window.addEventListener("load", registerServiceWorker);
 
   var hint = document.getElementById("install-hint");
-  var steps = document.getElementById("install-steps");
+  var guide = document.getElementById("install-guide");
+  var inapp = document.getElementById("install-inapp");
+  var where = document.getElementById("install-where");
   var go = document.getElementById("install-hint-go");
-  var shareBtn = document.getElementById("install-hint-share");
+  var ack = document.getElementById("install-hint-ack");
   var dismissBtn = document.getElementById("install-hint-dismiss");
   var deferredPrompt = null;
 
@@ -106,6 +94,24 @@
     var ua = navigator.userAgent || "";
     if (/iPad|iPhone|iPod/.test(ua)) return true;
     return navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+  }
+
+  function isIPad() {
+    var ua = navigator.userAgent || "";
+    if (/iPad/.test(ua)) return true;
+    return navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+  }
+
+  // "safari" can use the toolbar Share control. "browser" is another iOS
+  // browser. "inapp" is a webview. Add to Home Screen is not in the sheet
+  // navigator.share opens, so none of these call it.
+  function iosInstallSurface() {
+    var ua = navigator.userAgent || "";
+    if (/CriOS|FxiOS|EdgiOS|OPiOS|OPT\/|DuckDuckGo|YaBrowser|SamsungBrowser/i.test(ua)) return "browser";
+    if (/Instagram|FBAN|FBAV|FB_IAB|FBIOS|Messenger|Twitter|LinkedInApp|TikTok|musical_ly|Bytedance|Snapchat|Pinterest|MicroMessenger|\bLine\/|KAKAOTALK|GSA\/|WhatsApp|Telegram|\bSlack\b|Discord|Reddit|Barcelona/i.test(ua)) return "inapp";
+    if (typeof navigator.standalone === "undefined") return "inapp";
+    if (!/Safari\//.test(ua) || !/Version\/[\d.]+/.test(ua)) return "inapp";
+    return "safari";
   }
 
   function placeCard() {
@@ -129,8 +135,8 @@
 
   function showInstall() {
     if (!canAsk()) return;
-    if (steps) steps.hidden = true;
-    if (shareBtn) shareBtn.hidden = true;
+    if (guide) guide.hidden = true;
+    if (ack) ack.hidden = true;
     if (go) go.hidden = false;
     hint.hidden = false;
     placeCard();
@@ -138,18 +144,40 @@
 
   function showIOS() {
     if (!canAsk()) return;
+    var surface = iosInstallSurface();
     if (go) go.hidden = true;
-    if (steps) steps.hidden = false;
-    if (shareBtn) shareBtn.hidden = typeof navigator.share !== "function";
+    if (where) {
+      where.textContent = isIPad()
+        ? "in the Safari toolbar, then Add to Home Screen."
+        : "at the bottom of Safari, then Add to Home Screen.";
+    }
+    if (inapp) {
+      if (surface === "safari") {
+        inapp.hidden = true;
+      } else {
+        inapp.hidden = false;
+        inapp.textContent = surface === "inapp"
+          ? "Use this app's menu to open the page in Safari."
+          : "Open this page in Safari first.";
+      }
+    }
+    if (guide) guide.hidden = false;
+    if (ack) ack.hidden = false;
     hint.hidden = false;
     placeCard();
   }
 
+  function dismissInstall() {
+    storageSet(DISMISS_KEY, "1");
+    hideHint();
+  }
+
   if (hint && dismissBtn && !runningInstalled()) {
-    dismissBtn.addEventListener("click", function () {
-      storageSet(DISMISS_KEY, "1");
-      hideHint();
-    });
+    dismissBtn.addEventListener("click", dismissInstall);
+  }
+
+  if (ack) {
+    ack.addEventListener("click", dismissInstall);
   }
 
   if (go) {
@@ -171,22 +199,6 @@
       }).catch(function () {
         hideHint();
       });
-    });
-  }
-
-  if (shareBtn) {
-    shareBtn.addEventListener("click", function () {
-      if (typeof navigator.share !== "function") return;
-      var pending;
-      try {
-        pending = navigator.share({
-          title: "Hometown Week",
-          url: location.href
-        });
-      } catch (err) {
-        return;
-      }
-      Promise.resolve(pending).catch(function () {});
     });
   }
 
