@@ -174,7 +174,7 @@
       var place = hits[i].place;
       var item = document.createElement("li");
       var link = document.createElement("a");
-      var where = whereLine(place, hits[i].miles);
+      var where = milesLabel(hits[i].miles);
       link.href = place.href;
       link.appendChild(el("span", "near-city", place.name));
       if (where) link.appendChild(el("span", "near-where", where));
