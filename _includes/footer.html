@@ -12,11 +12,15 @@
       {%- for state in footer_states -%}
       {%- assign state_cities = site.data.cities | where: "state", state -%}
       {%- capture footer_state_url -%}/{{ state }}/{%- endcapture -%}
-      <a class="footer-state" href="{{ footer_state_url | strip | relative_url }}">{{ state_cities.first.state_name }}</a>
-      {%- for city in state_cities -%}
-      {%- capture footer_city_url -%}/{{ city.state }}/{{ city.id }}/{%- endcapture -%}
-      <a href="{{ footer_city_url | strip | relative_url }}">{{ city.name }}</a>
-      {%- endfor -%}
+      <div class="footer-group">
+        <a class="footer-state" href="{{ footer_state_url | strip | relative_url }}">{{ state_cities.first.state_name }}</a>
+        <div class="footer-group-cities">
+          {%- for city in state_cities -%}
+          {%- capture footer_city_url -%}/{{ city.state }}/{{ city.id }}/{%- endcapture -%}
+          <a href="{{ footer_city_url | strip | relative_url }}">{{ city.name }}</a>
+          {%- endfor -%}
+        </div>
+      </div>
       {%- endfor -%}
     </nav>
     <nav class="footer-nav" aria-label="Footer">

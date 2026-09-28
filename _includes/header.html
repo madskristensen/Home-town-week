@@ -1,20 +1,20 @@
 {%- include city-context.html -%}
-<header class="site-header{% if page.city %} site-header--city{% elsif page.layout == "state" %} site-header--state{% endif %}">
-  <div class="wrap header-bar">
-    {%- if page.url == "/" -%}
+<header class="site-header{% if page.url == "/" %} site-header--home{% elsif page.city %} site-header--city{% elsif page.layout == "state" %} site-header--state{% endif %}">
+  {%- if page.url == "/" -%}
+  <div class="wrap home-mast">
     <h1 class="brand">
-      <a class="wordmark" href="{{ '/' | relative_url }}" aria-current="page">
-        <img class="brand-mark" src="{{ '/assets/images/favicon.svg' | relative_url }}" alt="" width="22" height="22">
-        <span>Hometown Week</span>
-      </a>
+      <a class="wordmark" href="{{ '/' | relative_url }}" aria-current="page">Hometown Week</a>
     </h1>
-    {%- else -%}
+    <p class="mast-kicker">Family events, city by city</p>
+    <p class="home-lead">Parks, the library, kids shows, and market mornings, listed as far ahead as we have them.</p>
+  </div>
+  {%- else -%}
+  <div class="wrap header-bar">
     <a class="wordmark" href="{{ '/' | relative_url }}">
-      <img class="brand-mark" src="{{ '/assets/images/favicon.svg' | relative_url }}" alt="" width="22" height="22">
+      <img class="brand-mark" src="{{ '/assets/images/favicon.svg' | relative_url }}" alt="" width="18" height="18">
       <span>Hometown Week</span>
     </a>
-    {%- endif -%}
-    {%- unless page.city or page.url == "/" -%}
+    {%- unless page.city -%}
     <nav class="header-nav" aria-label="States">
       {%- assign header_states = site.data.cities | map: "state" | uniq -%}
       {%- for state in header_states -%}
@@ -29,7 +29,7 @@
   <div class="wrap masthead">
     <div class="city-heading">
       <span class="city-pin" aria-hidden="true">
-        <svg viewBox="0 0 24 32" width="18" height="24" focusable="false">
+        <svg viewBox="0 0 24 32" width="16" height="22" focusable="false">
           <path fill="currentColor" d="M12 31.2c.35 0 8-9.1 8-15.6C20 8.15 16.4 4.6 12 4.6S4 8.15 4 15.6c0 6.5 7.65 15.6 8 15.6z"/>
           <circle cx="12" cy="15.15" r="3.05" class="city-pin-dot"/>
         </svg>
@@ -54,5 +54,6 @@
     <h1 class="hub-name">{{ page.title }}</h1>
     {%- include breadcrumbs.html -%}
   </div>
+  {%- endif -%}
   {%- endif -%}
 </header>

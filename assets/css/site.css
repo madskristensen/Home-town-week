@@ -1,11 +1,11 @@
-/* The one stylesheet. head.html inlines this file in a single style block.
-   Cream paper is the page. Forest green is the accent. Gold is for dates and hairlines. */
+/* The one stylesheet. head.html inlines this file.
+   A local paper: cream sheet, ink headlines, forest for links, gold for dates. */
 
 :root {
   color-scheme: light;
   --page: #f4efe6;
   --sheet: #fffdf9;
-  --ink: #1c2b24;
+  --ink: #1a2822;
   --text: #24332c;
   --muted: #3f5148;
   --forest: #1e4636;
@@ -14,14 +14,13 @@
   --gold-bright: #c6a15a;
   --gold-line: #a6843f;
   --link: #145c40;
-  --rule: #e0d3c0;
+  --rule: #d9ccb8;
   --focus: #6b4e0e;
   --header-ink: #f7f1e6;
-  --shadow: 0 1px 1px rgba(28, 43, 36, 0.04);
+  --shadow: none;
   --map-quiet: #e4d3bd;
   --map-label: #f7f1e6;
-  --radius: 0.5rem;
-  --radius-row: 0.25rem;
+  --radius: 2px;
   --measure: 40rem;
   --photo-filter: none;
   --serif: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
@@ -30,9 +29,9 @@
 
 @media (prefers-contrast: more) {
   :root {
-    --photo-filter: none;
     --muted: #24332c;
     --gold: #5c420c;
+    --rule: #8d7d68;
   }
 }
 
@@ -68,8 +67,8 @@ h3 {
   color: var(--ink);
   font-family: var(--serif);
   font-weight: 600;
-  letter-spacing: -0.028em;
-  line-height: 1.15;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
 }
 
 p {
@@ -79,10 +78,6 @@ p {
 a {
   color: var(--link);
   text-underline-offset: 0.14em;
-}
-
-a:hover {
-  text-decoration-thickness: 1px;
 }
 
 :focus-visible {
@@ -102,10 +97,9 @@ img {
   left: 0.75rem;
   top: -4rem;
   z-index: 5;
-  padding: 0.5rem 0.75rem;
+  padding: 0.45rem 0.7rem;
   background: var(--sheet);
   color: var(--ink);
-  border-radius: 0.4rem;
 }
 
 .skip-link:focus {
@@ -117,22 +111,19 @@ img {
   margin-inline: auto;
 }
 
-/* Slim bar, then the page title. One gold hairline under the whole header. */
+/* Nameplate on home. A return link everywhere else. */
 
 .site-header {
   padding-top: env(safe-area-inset-top);
   background: var(--page);
-  border-bottom: 1px solid var(--gold-line);
 }
 
-.header-bar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.1rem 1rem;
-  min-height: 3.25rem;
-  padding: 0.2rem 0;
+.site-header--home {
+  border-bottom: 0;
+}
+
+.home-mast {
+  padding: 1.15rem 0 0;
 }
 
 .site-header .brand {
@@ -143,14 +134,65 @@ img {
   color: inherit;
 }
 
+.site-header--home .wordmark {
+  display: inline;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(2.7rem, 11vw, 3.75rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+  text-decoration: none;
+}
+
+.site-header--home .wordmark:hover,
+.site-header--home .wordmark:focus-visible {
+  color: var(--forest);
+  text-decoration: none;
+}
+
+.mast-kicker {
+  margin: 0.7rem 0 0;
+  color: var(--forest);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.home-lead {
+  margin: 0.85rem 0 0;
+  padding-top: 0.8rem;
+  border-top: 2px solid var(--ink);
+  max-width: 36rem;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 3.4vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.32;
+}
+
+.header-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.15rem 1rem;
+  min-height: 3rem;
+  padding: 0.15rem 0;
+  border-bottom: 1px solid var(--gold-line);
+}
+
 .wordmark {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.45rem;
   min-height: 2.75rem;
   color: var(--forest);
   font-family: var(--serif);
-  font-size: 1.02rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1;
@@ -159,15 +201,15 @@ img {
 
 .wordmark:hover,
 .wordmark:focus-visible {
-  text-decoration: none;
   color: var(--forest-deep);
+  text-decoration: none;
 }
 
 .brand-mark {
   display: block;
-  width: 1.25rem;
-  height: 1.25rem;
-  border-radius: 0.28rem;
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 2px;
 }
 
 .header-nav {
@@ -175,23 +217,24 @@ img {
   flex: 1 1 100%;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
-  gap: 0.15rem 0.75rem;
-  margin: 0 0 0.2rem;
+  gap: 0.15rem 0.8rem;
+  margin: 0 0 0.15rem;
   padding: 0 0 0.35rem;
 }
 
 .header-nav a {
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: 0.78rem;
   font-weight: 600;
+  letter-spacing: 0.01em;
   line-height: 1.2;
   text-decoration: none;
-  padding: 0.35rem 0;
+  padding: 0.3rem 0;
 }
 
 .header-nav a[aria-current="page"] {
   color: var(--forest);
+  box-shadow: inset 0 -1px 0 var(--forest);
 }
 
 .header-nav a:hover,
@@ -203,7 +246,6 @@ img {
 @media (min-width: 42rem) {
   .header-nav {
     flex: 0 1 auto;
-    flex-wrap: nowrap;
     justify-content: flex-end;
     margin: 0;
     padding: 0;
@@ -211,21 +253,21 @@ img {
 }
 
 .masthead {
-  padding: 0.85rem 0 1rem;
+  padding: 1.05rem 0 1.05rem;
 }
 
 .city-heading {
   display: flex;
   align-items: flex-start;
-  gap: 0.45rem;
+  gap: 0.4rem;
 }
 
 .city-pin {
   display: block;
   flex: none;
-  width: 0.95rem;
-  height: 1.28rem;
-  margin-top: 0.42rem;
+  width: 0.85rem;
+  height: 1.15rem;
+  margin-top: 0.48rem;
   color: var(--forest);
 }
 
@@ -248,10 +290,10 @@ img {
   margin: 0;
   color: var(--ink);
   font-family: var(--serif);
-  font-size: clamp(2.05rem, 6.2vw, 2.6rem);
+  font-size: clamp(2.55rem, 10vw, 3.4rem);
   font-weight: 600;
-  letter-spacing: -0.032em;
-  line-height: 1.08;
+  letter-spacing: -0.04em;
+  line-height: 0.96;
 }
 
 .city-name a {
@@ -262,22 +304,25 @@ img {
 .city-name a:hover,
 .city-name a:focus-visible {
   text-decoration: underline;
-  text-underline-offset: 0.08em;
+  text-underline-offset: 0.06em;
 }
 
 .city-kicker {
-  margin: 0.28rem 0 0;
+  margin: 0.4rem 0 0;
   max-width: 34rem;
   color: var(--muted);
-  font-family: var(--sans);
-  font-size: 0.975rem;
+  font-size: 1rem;
   font-weight: 500;
-  letter-spacing: 0;
   line-height: 1.4;
 }
 
+.site-header--city,
+.site-header--state {
+  border-bottom: 2px solid var(--ink);
+}
+
 .masthead .crumbs ol {
-  margin: 0.55rem 0 0;
+  margin: 0.7rem 0 0;
 }
 
 .page,
@@ -286,34 +331,12 @@ img {
 .year-page,
 .issue,
 .state-hub {
-  padding-top: 1.15rem;
+  padding-top: 1.35rem;
   padding-bottom: 2.75rem;
 }
 
-.home-kicker {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1.3;
-  text-transform: uppercase;
-}
-
-.home-lead {
-  margin: 0.55rem 0 0;
-  max-width: 34rem;
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: clamp(1.28rem, 3.2vw, 1.5rem);
-  font-weight: 500;
-  letter-spacing: -0.022em;
-  line-height: 1.32;
-}
-
-.home-hero {
-  padding-bottom: 1.15rem;
-  border-bottom: 1px solid var(--rule);
+.home {
+  padding-top: 1.5rem;
 }
 
 .this-week,
@@ -325,150 +348,26 @@ img {
   scroll-margin-top: 1rem;
 }
 
-.this-week {
-  margin-top: 1.25rem;
-  padding: 1rem 1.05rem 1.1rem;
-  background: var(--sheet);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.this-week:not(.has-result) {
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-}
-
-.this-week h2,
 .finder h2,
 .how h2,
 .cities h2,
-.prose h2 {
+.prose h2,
+.this-week h2 {
   margin: 0;
-  font-size: 1.35rem;
-  line-height: 1.2;
-}
-
-.near-card {
-  display: block;
-  margin-top: 0.8rem;
-  padding: 0.9rem 0.95rem 1rem;
-  background: var(--page);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius-row);
-  color: inherit;
-  text-decoration: none;
-}
-
-.near-card:hover,
-.near-card:focus-visible {
-  border-color: var(--forest);
-  text-decoration: none;
-}
-
-.near-kicker,
-.near-city,
-.near-where,
-.near-summary,
-.near-go {
-  display: block;
-}
-
-.near-kicker {
-  color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.near-card .near-city {
-  margin-top: 0.15rem;
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: clamp(1.7rem, 5vw, 2.1rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.08;
-}
-
-.near-lead {
-  margin: 0.15rem 0 0;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.near-list {
-  list-style: none;
-  margin: 0.65rem 0 0;
-  padding: 0;
-  display: grid;
-  gap: 0.45rem;
-}
-
-.near-list a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.05rem;
-  min-height: 2.75rem;
-  padding: 0.6rem 0.8rem;
-  background: var(--page);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius-row);
-  color: inherit;
-  text-decoration: none;
-}
-
-.near-list a:hover,
-.near-list a:focus-visible {
-  border-color: var(--forest);
-  text-decoration: none;
-}
-
-.near-list .near-city {
-  margin: 0;
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1.28rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-size: 1.45rem;
   line-height: 1.15;
 }
 
-.near-list .near-where {
+.finder {
   margin: 0;
 }
 
-.near-list a:hover .near-city,
-.near-list a:focus-visible .near-city,
-.near-card:hover .near-city,
-.near-card:focus-visible .near-city,
-.near-card:hover .near-go,
-.near-card:focus-visible .near-go {
-  text-decoration: underline;
-  text-underline-offset: 0.12em;
-}
-
-.near-where {
-  margin-top: 0.2rem;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.near-summary {
-  margin-top: 0.4rem;
-  font-size: 0.98rem;
-  line-height: 1.45;
-}
-
-.near-go {
-  margin-top: 0.55rem;
-  color: var(--link);
-  font-weight: 700;
+.city-search label {
+  display: block;
+  margin: 0.55rem 0 0.35rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .city-field {
@@ -476,76 +375,22 @@ img {
 }
 
 .city-field:has(.locate:not([hidden])) input {
-  padding-right: 3.4rem;
-}
-
-.locate {
-  position: absolute;
-  top: 50%;
-  right: 0.2rem;
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  width: 2.75rem;
-  height: 2.75rem;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: var(--radius-row);
-  background: transparent;
-  color: var(--forest);
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.locate svg {
-  display: block;
-  width: 1.3rem;
-  height: 1.3rem;
-}
-
-.locate:hover,
-.locate:focus-visible {
-  background: rgba(30, 70, 54, 0.08);
-}
-
-.locate:disabled {
-  color: var(--gold);
-  cursor: progress;
-}
-
-.near-note,
-.noscript-note,
-.near-message,
-.city-empty {
-  margin: 0.5rem 0 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.45;
-}
-
-.finder {
-  margin-top: 1.6rem;
-}
-
-.city-search label {
-  display: block;
-  margin: 0.7rem 0 0.4rem;
-  color: var(--ink);
-  font-size: 0.95rem;
-  font-weight: 600;
+  padding-right: 3.2rem;
 }
 
 .city-search input {
   width: 100%;
-  min-height: 2.85rem;
-  padding: 0.65rem 0.85rem;
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  background: var(--sheet);
+  min-height: 3.1rem;
+  padding: 0.55rem 0 0.6rem;
+  border: 0;
+  border-bottom: 2px solid var(--ink);
+  border-radius: 0;
+  background: transparent;
   color: var(--ink);
   font: inherit;
-  font-size: 1.0625rem;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
   appearance: none;
 }
 
@@ -562,14 +407,59 @@ img {
   display: none;
 }
 
+.locate {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--forest);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.locate svg {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.locate:hover,
+.locate:focus-visible {
+  background: rgba(30, 70, 54, 0.08);
+}
+
+.locate:disabled {
+  color: var(--gold);
+  cursor: progress;
+}
+
+.near-note,
+.noscript-note,
+.near-message,
+.city-empty {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
 .city-matches {
   list-style: none;
-  margin: 0.4rem 0 0;
-  padding: 0.3rem;
+  margin: 0.35rem 0 0;
+  padding: 0.15rem 0;
   background: var(--sheet);
   border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .city-matches a {
@@ -578,8 +468,8 @@ img {
   justify-content: space-between;
   gap: 0.75rem;
   min-height: 2.75rem;
-  padding: 0.55rem 0.7rem;
-  border-radius: var(--radius-row);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0;
   color: inherit;
   text-decoration: none;
 }
@@ -593,7 +483,7 @@ img {
 .match-name {
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 1.12rem;
+  font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
@@ -601,12 +491,147 @@ img {
 .match-state {
   flex: none;
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
+}
+
+.this-week {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.this-week.has-result {
+  margin-top: 1.6rem;
+  padding-top: 0.15rem;
+}
+
+.this-week.has-result h2 {
+  margin: 0 0 0.35rem;
+}
+
+.near-lead {
+  margin: 0 0 0.15rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.near-card {
+  display: block;
+  margin: 0.35rem 0 0;
+  padding: 0.85rem 0 0.15rem;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--rule);
+  border-radius: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.near-card:hover,
+.near-card:focus-visible {
+  text-decoration: none;
+}
+
+.near-kicker,
+.near-city,
+.near-where,
+.near-summary,
+.near-go {
+  display: block;
+}
+
+.near-kicker {
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.near-card .near-city,
+.near-list .near-city {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.near-card .near-city {
+  margin-top: 0.15rem;
+  font-size: clamp(1.85rem, 6vw, 2.25rem);
+}
+
+.near-where {
+  margin-top: 0.2rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.near-summary {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.near-go {
+  margin-top: 0.55rem;
+  color: var(--link);
+  font-weight: 700;
+}
+
+.near-list {
+  list-style: none;
+  margin: 0.45rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.near-list a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.05rem;
+  min-height: 3.25rem;
+  padding: 0.7rem 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  border-radius: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.near-list a:hover,
+.near-list a:focus-visible {
+  text-decoration: none;
+}
+
+.near-list .near-city {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.near-list .near-where {
+  margin: 0;
+}
+
+.near-list a:hover .near-city,
+.near-list a:focus-visible .near-city,
+.near-card:hover .near-city,
+.near-card:focus-visible .near-city,
+.near-card:hover .near-go,
+.near-card:focus-visible .near-go {
+  text-decoration: underline;
+  text-underline-offset: 0.1em;
 }
 
 .finder h3 {
-  margin: 1.45rem 0 0;
-  font-size: 1.2rem;
+  margin: 2rem 0 0;
+  font-size: 1.45rem;
 }
 
 .state-lead {
@@ -616,12 +641,12 @@ img {
 }
 
 .state-map {
-  margin-top: 0.75rem;
-  padding: 0.45rem 0.25rem 0.7rem;
-  background: var(--sheet);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  margin-top: 0.7rem;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .us-map {
@@ -632,7 +657,7 @@ img {
 
 .us-map .us-quiet {
   fill: var(--map-quiet);
-  stroke: var(--sheet);
+  stroke: var(--page);
   stroke-width: 1.4;
   stroke-linejoin: round;
 }
@@ -645,14 +670,14 @@ img {
 .us-map a path {
   fill: var(--forest);
   stroke: var(--gold-bright);
-  stroke-width: 2;
+  stroke-width: 1.6;
   stroke-linejoin: round;
 }
 
 .us-map a:hover path,
 .us-map a:focus-visible path,
 .us-map a:active path {
-  fill: var(--gold-bright);
+  fill: var(--gold-line);
 }
 
 .us-code {
@@ -667,7 +692,7 @@ img {
 .us-map a:hover .us-code,
 .us-map a:focus-visible .us-code,
 .us-map a:active .us-code {
-  fill: var(--forest-deep);
+  fill: var(--ink);
 }
 
 @media (max-width: 42rem) {
@@ -678,24 +703,23 @@ img {
 
 .state-key {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 0.15rem 0.4rem 0;
-  padding-top: 0.65rem;
-  border-top: 1px solid var(--rule);
+  flex-direction: column;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--ink);
 }
 
 .state-key a {
-  flex: 1 1 8.5rem;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 0.05rem;
-  min-height: 2.75rem;
-  padding: 0.4rem 0.7rem;
-  border: 1px solid transparent;
-  border-radius: var(--radius-row);
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 2.85rem;
+  padding: 0.55rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  border-radius: 0;
   background: transparent;
   color: inherit;
   text-decoration: none;
@@ -705,7 +729,7 @@ img {
 .state-name {
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -713,22 +737,20 @@ img {
 
 .state-count {
   color: var(--gold);
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
 }
 
 .state-key a:hover,
 .state-key a:focus-visible {
-  background: rgba(30, 70, 54, 0.05);
-  border-color: var(--rule);
   text-decoration: none;
 }
 
 .state-key a:hover .state-name,
 .state-key a:focus-visible .state-name {
   text-decoration: underline;
-  text-underline-offset: 0.12em;
+  text-underline-offset: 0.1em;
 }
 
 .visually-hidden {
@@ -745,28 +767,29 @@ img {
 }
 
 .how {
-  margin-top: 2rem;
+  margin-top: 2.25rem;
+  padding-top: 0.15rem;
 }
 
 .how h2 {
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.15rem;
 }
 
 .how ol {
   list-style: none;
-  margin: 0;
+  margin: 0.35rem 0 0;
   padding: 0;
   counter-reset: beat;
-  background: var(--sheet);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--ink);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .how li {
   margin: 0;
-  padding: 0.85rem 1.05rem 0.95rem;
+  padding: 0.85rem 0;
   border-top: 1px solid var(--rule);
   counter-increment: beat;
 }
@@ -777,29 +800,31 @@ img {
 
 .how h3 {
   margin: 0;
-  font-size: 1.08rem;
+  font-size: 1.15rem;
 }
 
 .how h3::before {
-  content: counter(beat) ". ";
+  content: counter(beat) "  ";
   color: var(--gold);
   font-variant-numeric: tabular-nums;
 }
 
 .how p {
-  margin: 0.22rem 0 0;
+  margin: 0.15rem 0 0;
   color: var(--text);
   font-size: 0.98rem;
 }
 
 .cities {
   display: grid;
-  gap: 1rem;
-  margin-top: 1.7rem;
+  gap: 2rem;
+  margin-top: 1.85rem;
 }
 
 .cities h2 {
-  margin: 0 0 0.1rem;
+  margin: 0;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--ink);
 }
 
 .cities-intro {
@@ -808,11 +833,13 @@ img {
 }
 
 .city-card {
-  overflow: hidden;
-  background: var(--sheet);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  border-radius: 0;
+  box-shadow: none;
+  padding-bottom: 1.75rem;
 }
 
 .city-card-photo {
@@ -821,16 +848,17 @@ img {
 
 .city-card-photo img {
   width: 100%;
+  border-radius: var(--radius);
 }
 
 .city-card-body {
-  padding: 0.95rem 1.05rem 1.1rem;
+  padding: 0.8rem 0 0;
 }
 
 .city-card h3 {
   margin: 0;
-  font-size: 1.45rem;
-  line-height: 1.15;
+  font-size: clamp(1.65rem, 5vw, 2rem);
+  line-height: 1.1;
 }
 
 .city-card h3 a {
@@ -841,11 +869,11 @@ img {
 .city-card h3 a:hover,
 .city-card h3 a:focus-visible {
   text-decoration: underline;
-  text-underline-offset: 0.08em;
+  text-underline-offset: 0.06em;
 }
 
 .city-card-when {
-  margin: 0.3rem 0 0.4rem;
+  margin: 0.3rem 0 0.35rem;
   color: var(--gold);
   font-size: 0.95rem;
   font-weight: 600;
@@ -856,25 +884,20 @@ img {
   text-decoration: none;
 }
 
-.city-card-when a:hover,
-.city-card-when a:focus-visible {
-  text-decoration: underline;
-}
-
 .city-card-hook {
-  margin: 0.35rem 0 0;
+  margin: 0.4rem 0 0;
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 500;
   letter-spacing: -0.015em;
   line-height: 1.4;
 }
 
 .photo-credit {
-  margin-top: 0.7rem;
+  margin-top: 0.65rem;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   line-height: 1.4;
 }
 
@@ -883,7 +906,7 @@ img {
 }
 
 .city-card p {
-  margin: 0.45rem 0 0;
+  margin: 0.4rem 0 0;
 }
 
 .card-secondary {
@@ -909,11 +932,11 @@ img {
   align-items: center;
   justify-content: center;
   min-height: 2.75rem;
-  padding: 0.55rem 1.15rem;
+  padding: 0.5rem 1rem;
   border: 0;
   background: var(--forest);
   color: var(--header-ink);
-  border-radius: 999px;
+  border-radius: var(--radius);
   font: inherit;
   font-weight: 600;
   text-align: center;
@@ -934,18 +957,12 @@ img {
   opacity: 0.72;
 }
 
-@media (max-width: 36rem) {
-  .cta a,
-  .cta button {
-    width: 100%;
-  }
-}
-
 .prose h1,
-.page.wrap > h1,
-.wrap.page > h1 {
-  margin: 0 0 0.75rem;
-  font-size: clamp(2rem, 6vw, 2.5rem);
+.page h1 {
+  margin: 0 0 0.85rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 2px solid var(--ink);
+  font-size: clamp(2.2rem, 8vw, 2.85rem);
 }
 
 .prose p,
@@ -960,6 +977,10 @@ img {
 
 .state-hub .dek {
   margin: 0;
+  font-family: var(--serif);
+  font-size: 1.22rem;
+  line-height: 1.4;
+  color: var(--ink);
 }
 
 .state-hub .dek p:first-child {
@@ -972,39 +993,52 @@ img {
 
 .site-footer {
   margin-top: 0.25rem;
-  padding: 1.15rem 0 calc(1.35rem + env(safe-area-inset-bottom));
-  border-top: 1px solid var(--rule);
+  padding: 0 0 calc(1.4rem + env(safe-area-inset-bottom));
+  border-top: 2px solid var(--ink);
   color: var(--muted);
   font-size: 0.9rem;
 }
 
-.footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 1rem;
-  margin-bottom: 0.65rem;
-}
-
-.footer-nav a {
-  color: var(--forest);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.footer-nav a:hover,
-.footer-nav a:focus-visible {
-  text-decoration: underline;
+.site-footer .wrap {
+  padding-top: 1rem;
 }
 
 .footer-cities {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.28rem 0.75rem;
-  align-items: baseline;
-  margin: 0 0 0.85rem;
-  line-height: 1.45;
+  flex-direction: column;
+  margin: 0 0 1rem;
 }
 
+.footer-group {
+  display: grid;
+  grid-template-columns: 7.25rem 1fr;
+  gap: 0.25rem 0.85rem;
+  align-items: baseline;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.footer-group:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.footer-state {
+  color: var(--forest);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.footer-group-cities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.7rem;
+}
+
+.footer-group-cities a,
 .footer-cities a {
   color: var(--text);
   font-size: 0.875rem;
@@ -1013,23 +1047,42 @@ img {
 }
 
 .footer-cities a:hover,
-.footer-cities a:focus-visible {
+.footer-cities a:focus-visible,
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
   color: var(--link);
   text-decoration: underline;
 }
 
-.footer-cities a.footer-state {
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin: 0.2rem 0 0.45rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--rule);
+}
+
+.footer-nav a {
   color: var(--forest);
-  font-weight: 700;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .site-footer p {
-  margin: 0.2rem 0;
+  margin: 0.15rem 0;
 }
 
 .copyright {
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 32rem) {
+  .footer-group {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
 }
 
 ::selection {
@@ -1041,22 +1094,22 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0;
-  margin: 0 0 0.85rem;
+  margin: 0 0 0.75rem;
   padding: 0;
   list-style: none;
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: 0.78rem;
   line-height: 1.4;
 }
 
 .crumbs li + li::before {
   content: "/";
-  margin: 0 0.38rem;
+  margin: 0 0.35rem;
   color: var(--muted);
 }
 
-.crumbs a {
+.crumbs a,
+.crumbs [aria-current="page"] {
   color: var(--muted);
   font-weight: 500;
   text-decoration: none;
@@ -1068,11 +1121,6 @@ img {
   text-decoration: underline;
 }
 
-.crumbs [aria-current="page"] {
-  color: var(--muted);
-  font-weight: 500;
-}
-
 .city-actions {
   display: flex;
   justify-content: flex-end;
@@ -1080,13 +1128,13 @@ img {
 }
 
 .hero {
-  margin: 0 0 1.15rem;
+  margin: 0 0 1rem;
 }
 
 .hero img,
 .event-photo img {
   width: 100%;
-  border-radius: 0.375rem;
+  border-radius: var(--radius);
 }
 
 .hero figcaption {
@@ -1094,15 +1142,15 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.45rem 0.85rem;
-  margin-top: 0.55rem;
+  gap: 0.4rem 0.85rem;
+  margin-top: 0.45rem;
 }
 
 .hero-credit,
 .hero figcaption,
 .event-photo figcaption {
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   line-height: 1.4;
 }
 
@@ -1123,31 +1171,34 @@ img {
 }
 
 .hook {
-  margin: 0.1rem 0 0;
+  margin: 0.35rem 0 0;
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 1.18rem;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
   font-weight: 500;
   letter-spacing: -0.02em;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .dek {
-  margin: 0 0 0.95rem;
+  margin: 0 0 0.9rem;
   color: var(--text);
   font-size: 1.05rem;
   line-height: 1.5;
 }
 
-.city-note {
-  margin: 1.25rem 0 0;
-  color: var(--muted);
-  font-size: 0.95rem;
+.city-note,
+.year-link {
+  margin: 1.15rem 0 0;
 }
 
 .year-link {
-  margin: 1.1rem 0 0;
   font-weight: 600;
+}
+
+.city-note {
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .week-band {
@@ -1156,23 +1207,24 @@ img {
 
 .week-band h2 {
   margin: 0 0 0.4rem;
-  font-size: 1.35rem;
+  font-size: 1.45rem;
 }
 
 .city-home .prose {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  margin-top: 1.55rem;
-}
-
-.city-home .prose h2,
-.city-home .prose .list-updated {
-  margin: 0;
+  gap: 0.85rem;
+  margin-top: 1.7rem;
 }
 
 .city-home .prose h2 {
-  margin-top: 0.2rem;
+  margin: 0;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--ink);
+}
+
+.city-home .prose .list-updated {
+  margin: 0;
 }
 
 .featured-title {
@@ -1201,7 +1253,7 @@ img {
 }
 
 .issue-list li {
-  padding: 0.8rem 0;
+  padding: 0.75rem 0;
   border-top: 1px solid var(--rule);
 }
 
@@ -1223,10 +1275,10 @@ img {
 .week-nav .meta,
 .issue-range {
   display: block;
-  margin-top: 0.12rem;
+  margin-top: 0.1rem;
   color: var(--gold);
   font-family: var(--sans);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0;
 }
@@ -1237,15 +1289,15 @@ img {
 
 .prose h3 {
   margin: 0;
-  font-size: 1.22rem;
-  line-height: 1.25;
+  font-size: 1.28rem;
+  line-height: 1.22;
 }
 
 .prose .event-when {
   display: inline-block;
   max-width: 100%;
-  margin: 0.28rem 0 0.15rem;
-  padding-bottom: 0.08rem;
+  margin: 0.3rem 0 0.1rem;
+  padding-bottom: 0.06rem;
   border-bottom: 2px solid var(--gold-bright);
   color: var(--gold);
   font-size: 0.95rem;
@@ -1254,7 +1306,7 @@ img {
 }
 
 .prose .event-place {
-  margin: 0.15rem 0 0.15rem;
+  margin: 0.2rem 0 0.1rem;
   color: var(--muted);
   font-size: 0.92rem;
   font-weight: 500;
@@ -1263,20 +1315,21 @@ img {
 
 .event-card {
   margin: 0;
-  padding: 1rem 1.05rem 1.05rem;
-  background: var(--sheet);
+  padding: 0.95rem 0 1rem;
+  background: transparent;
   color: var(--text);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  border-radius: 0;
+  box-shadow: none;
   overflow-wrap: break-word;
 }
 
 .city-home .event-card h3 {
   margin: 0;
   color: var(--ink);
-  font-size: 1.26rem;
-  line-height: 1.22;
+  font-size: 1.32rem;
+  line-height: 1.2;
 }
 
 .city-home .event-card > :first-child {
@@ -1288,18 +1341,18 @@ img {
 }
 
 .city-home .event-card > p:not(.event-when):not(.event-place) {
-  margin: 0.6rem 0;
+  margin: 0.55rem 0;
 }
 
 .city-home .event-card .event-photo {
-  margin: 0.7rem 0 0.15rem;
+  margin: 0.65rem 0 0.1rem;
 }
 
 .prose .event-cals {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.1rem 0.25rem;
+  gap: 0.1rem 0.2rem;
   margin-left: 0.3rem;
   vertical-align: middle;
 }
@@ -1311,8 +1364,8 @@ img {
   gap: 0.25rem;
   min-width: 2rem;
   min-height: 2rem;
-  padding: 0.2rem 0.28rem;
-  border-radius: 0.35rem;
+  padding: 0.15rem 0.25rem;
+  border-radius: 2px;
   color: var(--link);
   font-size: 0.95rem;
   font-weight: 700;
@@ -1339,9 +1392,8 @@ img {
 }
 
 .suggest-event {
-  margin: 1.35rem 0 0;
+  margin: 0.35rem 0 0;
   padding-top: 0.95rem;
-  border-top: 1px solid var(--rule);
   color: var(--muted);
   font-size: 0.98rem;
 }
@@ -1351,11 +1403,11 @@ img {
 }
 
 .event-photo {
-  margin: 0.7rem 0 0.9rem;
+  margin: 0.65rem 0 0.85rem;
 }
 
 .event-photo figcaption {
-  margin-top: 0.4rem;
+  margin-top: 0.35rem;
 }
 
 .week-nav {
@@ -1402,7 +1454,7 @@ img {
 }
 
 .issue-share {
-  margin: 0 0 1rem;
+  margin: 0;
 }
 
 .share-button {
@@ -1410,14 +1462,14 @@ img {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  min-height: 2.75rem;
-  padding: 0.4rem 0.95rem 0.4rem 0.75rem;
-  border: 1px solid var(--rule);
-  border-radius: 999px;
-  background: var(--sheet);
+  min-height: 2.5rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--forest);
+  border-radius: var(--radius);
+  background: transparent;
   color: var(--forest);
   font: inherit;
-  font-size: 0.9375rem;
+  font-size: 0.9rem;
   font-weight: 600;
   line-height: 1;
   cursor: pointer;
@@ -1425,14 +1477,14 @@ img {
 
 .share-button:hover,
 .share-button:focus-visible {
-  border-color: var(--forest);
-  background: var(--sheet);
+  background: var(--forest);
+  color: var(--header-ink);
 }
 
 .share-icon {
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: 0.95rem;
+  height: 0.95rem;
   flex: none;
 }
 
@@ -1454,14 +1506,14 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 0.55rem 0.85rem;
-  margin: 0 0 0.95rem;
-  padding: 0 0 0.9rem;
+  margin: 0 0 0.85rem;
+  padding: 0 0 0.85rem;
   background: transparent;
   border: 0;
   border-bottom: 1px solid var(--rule);
   border-radius: 0;
-  color: var(--text);
   box-shadow: none;
+  color: var(--text);
 }
 
 .install-hint p {
@@ -1482,9 +1534,9 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.75rem;
-  padding: 0.4rem 0.9rem;
-  border-radius: 999px;
+  min-height: 2.5rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius);
   font: inherit;
   font-size: 0.9rem;
   font-weight: 600;
@@ -1512,13 +1564,12 @@ img {
 .install-dismiss:hover,
 .install-dismiss:focus-visible {
   border-color: var(--forest);
-  background: transparent;
 }
 
 .prose .list-updated {
-  margin: 0 0 0.35rem;
+  margin: 0;
   color: var(--gold);
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 600;
 }
 

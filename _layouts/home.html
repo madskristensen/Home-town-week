@@ -3,19 +3,6 @@ layout: default
 ---
 {%- assign live_states = site.data.cities | map: "state" | uniq -%}
 <article class="home wrap">
-  <header class="home-hero">
-    <p class="home-kicker">Family events, city by city</p>
-    <p class="home-lead">Parks, the library, kids shows, and market mornings, listed as far ahead as we have them.</p>
-  </header>
-
-  <section class="this-week" id="this-week" aria-labelledby="this-week-title">
-    <h2 id="this-week-title" hidden>Near you</h2>
-    <div id="near-live" aria-live="polite">
-      <div id="near-results" hidden></div>
-      <p id="near-message" class="near-message" hidden></p>
-    </div>
-  </section>
-
   <section class="finder" aria-labelledby="finder-title">
     <h2 id="finder-title">Find your city</h2>
     <form class="city-search" id="city-search" role="search" action="#states">
@@ -39,6 +26,14 @@ layout: default
     <noscript>
       <p class="noscript-note">Location and city search need JavaScript. The state map and the city list in the footer work without it.</p>
     </noscript>
+
+    <section class="this-week" id="this-week" aria-labelledby="this-week-title">
+      <h2 id="this-week-title" hidden>Near you</h2>
+      <div id="near-live" aria-live="polite">
+        <div id="near-results" hidden></div>
+        <p id="near-message" class="near-message" hidden></p>
+      </div>
+    </section>
 
     <h3 id="states">Pick a state</h3>
     <p class="state-lead">Highlighted states list upcoming family events.</p>
