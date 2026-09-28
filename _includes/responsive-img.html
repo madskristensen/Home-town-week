@@ -1,9 +1,14 @@
 {%- comment -%}
   WebP srcset at 800, 1200, and the 1600 original.
   src: root-relative path such as /assets/images/redmond/photo.webp
+  Variants stay in the source file's directory. Split on the full
+  filename, not the stem: a stem that also appears in a parent folder
+  (lake-oswego/lake.webp, gig-harbor/harbor.webp) would otherwise drop
+  that folder.
 {%- endcomment -%}
-{%- assign img_stem = include.src | split: "/" | last | split: "." | first -%}
-{%- assign img_base = include.src | split: img_stem | first -%}
+{%- assign img_file = include.src | split: "/" | last -%}
+{%- assign img_stem = img_file | split: "." | first -%}
+{%- assign img_base = include.src | split: img_file | first -%}
 {%- assign img_sizes = include.sizes | default: "(min-width: 47rem) 44rem, calc(100vw - 3rem)" -%}
 <img
   src="{{ include.src | relative_url }}"
