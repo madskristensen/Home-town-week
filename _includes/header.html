@@ -1,11 +1,7 @@
-<header class="site-header{% unless page.url == "/" %} site-header--compact{% endunless %}">
+<header class="site-header site-header--compact">
   <div class="wrap home-mast">
     <div class="mast-title-row">
-      {%- if page.url == "/" -%}
-      <h1 class="brand"><a href="{{ '/' | relative_url }}" aria-current="page">Eastside Family Calendar</a></h1>
-      {%- else -%}
-      <p class="brand"><a href="{{ '/' | relative_url }}">Eastside Family Calendar</a></p>
-      {%- endif -%}
+      <p class="brand"><a href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>Eastside Family Calendar</a></p>
       <details class="cities-menu">
         <summary>Cities</summary>
         <nav class="cities-panel" aria-label="Cities">
@@ -16,10 +12,6 @@
         </nav>
       </details>
     </div>
-    {%- if page.url == "/" -%}
-    <p class="mast-kicker">Family events on the Eastside</p>
-    <p class="home-lead">Upcoming family events in Eastside cities, so you never miss the fun.</p>
-    {%- endif -%}
   </div>
 </header>
 <script type="module">
