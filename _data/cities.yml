@@ -1,7 +1,8 @@
 # Eastside cities, alphabetical. lat and lon are the city center in
 # decimal degrees. nearby.yml uses them when choosing neighbors. The
-# home page does not read them. Newcastle is not listed yet. Do not
-# add a city page until it has real events.
+# home page does not read them. Newcastle and Fall City are not listed.
+# Fall City events that passed a source check are folded into Snoqualmie.
+# Do not add a city page until it has real events.
 # The site header is the mark, Eastside Family Calendar, and a Cities menu.
 #
 # tagline: a short place line under the city-home heading. Name the place
@@ -132,6 +133,87 @@
       type: allevents
       format: allevents
       notes: "Secondary sweep. This page is Bothell, WA."
+- id: carnation
+  name: Carnation
+  state: wa
+  state_name: Washington
+  lat: 47.6476
+  lon: -121.9140
+  description: Upcoming family events in Carnation on the Eastside.
+  summary: >-
+    A farm town on the Snoqualmie River.
+  tagline: "A farm town on the Snoqualmie River."
+  sources:
+    - name: "City of Carnation events"
+      url: "https://www.carnationwa.gov/carnation-fun-calendar/"
+      type: city_hall
+      format: html
+      notes: "City fun calendar and posted community events, including partner festivals."
+    - name: "King County Library System events"
+      url: "https://kcls.bibliocommons.com/events"
+      type: library
+      format: bibliocommons
+      notes: "One library source. Filter to the Carnation branch, 4804 Tolt Avenue."
+    - name: "Remlinger Farms"
+      url: "https://remlingerfarms.com/fall-harvest-festival/"
+      type: venue
+      notes: "Fall Harvest Festival weekends through Nov 1. Do not count each weekend as a new festival."
+    - name: "Oxbow Farm and Conservation Center"
+      url: "https://www.oxbow.org/visit/events/oxtober/"
+      type: venue
+      notes: "Native plant festival and Oxtober, on Carnation-Duvall Road."
+    - name: "Carnation Farms"
+      url: "https://events.carnationfarms.org/events/"
+      type: venue
+      notes: "Harvest Market and other public days. Skip wine and cocktail nights."
+    - name: "AllEvents Carnation"
+      url: "https://allevents.in/carnation"
+      type: allevents
+      format: allevents
+      notes: "Secondary sweep. This page is Carnation, WA."
+- id: duvall
+  name: Duvall
+  state: wa
+  state_name: Washington
+  lat: 47.7423
+  lon: -121.9857
+  description: Upcoming family events in Duvall on the Eastside.
+  summary: >-
+    A river town at the north end of the Snoqualmie Valley.
+  tagline: "A river town at the north end of the Snoqualmie Valley."
+  sources:
+    - name: "City of Duvall calendar"
+      url: "https://www.duvallwa.gov/calendar.aspx"
+      type: city_hall
+      format: rss
+      feed_url: "https://www.duvallwa.gov/RSSFeed.aspx?ModID=58&CID=All-0"
+      notes: "Mostly field reservations and meetings. Use it for a dated public event, not a practice slot."
+    - name: "King County Library System events"
+      url: "https://kcls.bibliocommons.com/events"
+      type: library
+      format: bibliocommons
+      notes: "One library source. Filter to the Duvall branch, 15508 Main Street NE."
+    - name: "Duvall Farmers Market"
+      url: "https://duvallfarmersmarket.org/"
+      type: market
+      notes: "Thursdays at Taylor Landing, May through mid-October."
+    - name: "Muddy Boots Pumpkins"
+      url: "https://muddybootspumpkins.com/"
+      type: venue
+      notes: "Pumpkin patch and corn maze on W Snoqualmie River Road, through Oct 31."
+    - name: "Novelty Hill Farm"
+      url: "https://noveltyhillfarm.com/pumpkin-patch-%26-fall-fun"
+      type: venue
+      notes: "Pumpkin patch and corn maze on NE 124th Street. Opens Oct 2."
+    - name: "Northwest Art Center"
+      url: "https://northwestartcenter.org/events/community-events/"
+      type: venue
+      notes: "Free community art days in Duvall. Confirm the date on the center or the Valley Record."
+    - name: "AllEvents Duvall"
+      url: "https://allevents.in/duvall"
+      type: allevents
+      format: allevents
+      notes: "Secondary sweep. This page is Duvall, WA."
 - id: issaquah
   name: Issaquah
   state: wa
@@ -333,6 +415,53 @@
       type: allevents
       format: allevents
       notes: "Secondary sweep. This page is Mercer Island, WA."
+- id: north-bend
+  name: North Bend
+  state: wa
+  state_name: Washington
+  lat: 47.4957
+  lon: -121.7868
+  description: Upcoming family events in North Bend on the Eastside.
+  summary: >-
+    A mountain town at the foot of Mount Si.
+  tagline: "A mountain town at the foot of Mount Si."
+  sources:
+    - name: "City of North Bend calendar"
+      url: "https://www.northbendwa.gov/calendar.aspx"
+      type: city_hall
+      format: rss
+      feed_url: "https://www.northbendwa.gov/RSSFeed.aspx?ModID=58&CID=All-0"
+      notes: "City calendar. Skip council meetings. The late Blues Walk is a ticketed music crawl, not a kids event."
+    - name: "Si View Metropolitan Park District"
+      url: "https://www.siviewpark.org/family-fun.phtml"
+      type: parks
+      notes: "Community center and park events, including Spooktacular and the hoedown."
+    - name: "King County Library System events"
+      url: "https://kcls.bibliocommons.com/events"
+      type: library
+      format: bibliocommons
+      notes: "One library source. Filter to the North Bend branch, 115 E 4th Street."
+    - name: "North Bend Downtown Foundation"
+      url: "https://www.northbenddowntown.org/all-events"
+      type: downtown
+      notes: "Trick-or-Treat Street and other downtown days. Skip the pub crawl."
+    - name: "North Bend Theatre"
+      url: "https://tix.northbendtheatre.com/"
+      type: theater
+      notes: "Family films and shows at 125 Bendigo Blvd N."
+    - name: "Northwest Railway Museum"
+      url: "https://trainmuseum.org/upcoming-events/halloween/"
+      type: venue
+      notes: "Halloween Train departs the North Bend Depot. The wine train is 21 and over."
+    - name: "Living Snoqualmie"
+      url: "https://livingsnoqualmie.com/arbor-day-planting-and-oaktoberfest-set-for-october-17-in-north-bend/"
+      type: downtown
+      notes: "Local paper. The Sep 25, 2026 story on Oaktoberfest says the information came from the city."
+    - name: "AllEvents North Bend"
+      url: "https://allevents.in/north-bend"
+      type: allevents
+      format: allevents
+      notes: "Secondary sweep. This page is North Bend, WA."
 - id: redmond
   name: Redmond
   state: wa
@@ -449,6 +578,46 @@
       type: allevents
       format: allevents
       notes: "Secondary sweep. This page is Sammamish, WA."
+- id: snoqualmie
+  name: Snoqualmie
+  state: wa
+  state_name: Washington
+  lat: 47.5287
+  lon: -121.8254
+  description: Upcoming family events in Snoqualmie on the Eastside.
+  summary: >-
+    A river town at Snoqualmie Falls.
+  tagline: "A river town at Snoqualmie Falls."
+  sources:
+    - name: "City of Snoqualmie calendar"
+      url: "https://www.snoqualmiewa.gov/Calendar.aspx"
+      type: city_hall
+      format: rss
+      feed_url: "https://www.snoqualmiewa.gov/RSSFeed.aspx?ModID=58&CID=All-0"
+      notes: "City events, including the mayor's ice cream hour, Green Snoqualmie Day, and Spooktacular. Skip council and quorum notices."
+    - name: "King County Library System, Snoqualmie"
+      url: "https://kcls.bibliocommons.com/events"
+      type: library
+      format: bibliocommons
+      notes: "Filter to the Snoqualmie branch, 7824 Center Boulevard SE."
+    - name: "Northwest Railway Museum"
+      url: "https://trainmuseum.org/upcoming-events/halloween/"
+      type: venue
+      notes: "Halloween Train from the Snoqualmie Depot. The wine train is 21 and over."
+    - name: "Fall City Farms"
+      url: "https://fallcityfarms.com/pumpkin-patch/"
+      type: venue
+      notes: "Fall City has no city page. The weekend pumpkin patch is listed with Snoqualmie."
+    - name: "King County Library System, Fall City"
+      url: "https://kcls.bibliocommons.com/events"
+      type: library
+      format: bibliocommons
+      notes: "Fall City is unincorporated. Filter to 33415 SE 42nd Place and keep those events on this page."
+    - name: "AllEvents Snoqualmie"
+      url: "https://allevents.in/snoqualmie"
+      type: allevents
+      format: allevents
+      notes: "Secondary sweep. This page is Snoqualmie, WA."
 - id: woodinville
   name: Woodinville
   state: wa

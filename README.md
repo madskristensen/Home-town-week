@@ -4,7 +4,7 @@ Upcoming family events for cities on Washington's Eastside. This is a Jekyll sit
 
 The home page leads with a map of the Eastside, from Lake Washington to the Cascade foothills, and a list of the same cities. Each city on the map is a link. The list shows how many upcoming events that city has. The footer does not repeat every city. The site header is the same slim bar on every page: the mark, Eastside Family Calendar, and a Cities menu. That menu lists cities. It does not lay the names across the bar.
 
-Newcastle is an Eastside city that does not have a page yet. Do not invent a page for it. Names without a page can sit in `_data/coming_soon.yml` and do not link anywhere.
+Newcastle is an Eastside city that does not have a page yet. Do not invent a page for it. Fall City is not a separate page; its farm and library listings are on Snoqualmie. Names without a page can sit in `_data/coming_soon.yml` and do not link anywhere.
 
 ## URLs
 

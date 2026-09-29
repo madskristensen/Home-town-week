@@ -523,6 +523,14 @@ img {
   stroke-linejoin: round;
 }
 
+.eastside-svg .river {
+  fill: none;
+  stroke: #8eabb8;
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .eastside-svg .island {
   fill: var(--page);
   stroke: #8eabb8;

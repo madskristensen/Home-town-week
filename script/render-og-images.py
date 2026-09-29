@@ -186,14 +186,18 @@ def main():
     expected = {
         "bellevue",
         "bothell",
+        "carnation",
+        "duvall",
         "issaquah",
         "kenmore",
         "kirkland",
         "maple-valley",
         "mercer-island",
+        "north-bend",
         "redmond",
         "renton",
         "sammamish",
+        "snoqualmie",
         "woodinville",
     }
     found = {city["id"] for city in cities}
