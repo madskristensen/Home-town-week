@@ -1,0 +1,17 @@
+---
+permalink: /llms.txt
+sitemap: false
+---
+# {{ site.title }}
+
+> Family events on Washington's Eastside, updated daily. Events link to the original sources.
+
+## Cities
+
+{%- for city in site.data.cities %}
+- [{{ city.name }}]({{ site.url }}{{ site.baseurl }}/{{ city.id }}/): {{ city.description | strip }}
+{%- endfor %}
+
+## Sitemap
+
+- [Sitemap]({{ site.url }}{{ site.baseurl }}/sitemap.xml): Every public page on this site.

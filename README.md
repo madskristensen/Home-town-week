@@ -14,6 +14,9 @@ Newcastle is an Eastside city that does not have a page yet. Do not invent a pag
 | City | `/{city}/`, for example `/redmond/` |
 | About | `/about/` |
 | Feed | `/feed.xml` |
+| LLM guide | `/llms.txt` |
+
+`llms.txt` is written at build time from `_data/cities.yml`. It lists each city page and the sitemap. It does not include upcoming-event counts. Do not maintain it by hand.
 
 City URLs have no state segment and no year or week segment. Old addresses are not redirected.
 
