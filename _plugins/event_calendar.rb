@@ -187,12 +187,16 @@ module EastsideCalendar
       true
     end
 
-    # Date buckets for a city page. Today and tomorrow win over the weekend.
-    # This weekend is the Saturday and Sunday of the current Pacific week
-    # (Monday through Sunday). A date with no usable day stays in Later.
+    # Date buckets for a city page. Today and tomorrow win over the week
+    # and the weekend. This week is every day after tomorrow and before
+    # the coming Saturday, so Thursday and Friday are not filed under
+    # Later while Saturday is still "This weekend". This weekend is the
+    # Saturday and Sunday of the current Pacific week (Monday through
+    # Sunday). A date with no usable day stays in Later.
     BUCKETS = [
       [:today, "Today"],
       [:tomorrow, "Tomorrow"],
+      [:week, "This week"],
       [:weekend, "This weekend"],
       [:later, "Later"]
     ].freeze
@@ -248,9 +252,16 @@ module EastsideCalendar
       days_to_sunday = (7 - today.wday) % 7
       sunday = today + days_to_sunday
       saturday = sunday - 1
+      return :week if date > today + 1 && date < saturday
       return :weekend if date == saturday || date == sunday
 
       :later
+    end
+
+    def bucket_rank(key)
+      name = key.to_s
+      idx = BUCKETS.index { |bucket, _label| bucket.to_s == name }
+      idx || BUCKETS.length
     end
 
     def group_events(inner, today)
@@ -504,7 +515,10 @@ module EastsideCalendar
     CALENDAR_ICON = '<svg class="cal-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.75" y="2.75" width="12.5" height="11.5" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.4"></rect><path d="M1.75 6.4h12.5M5 1.35v2.5M11 1.35v2.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg>'.freeze
 
     def calendar_label(link, count)
-      count > 1 ? "Add to calendar, #{link[:when_label]}" : "Add to calendar"
+      name = link[:name].to_s.strip
+      name = "this event" if name.empty?
+      label = "Add #{name} to calendar"
+      count > 1 ? "#{label}, #{link[:when_label]}" : label
     end
 
     def calendar_anchor(link, count)
@@ -621,6 +635,155 @@ module EastsideCalendar
     def http_url?(value)
       value.to_s.match?(%r{\Ahttps?://\S+\z})
     end
+
+    # GitHub-flavored heading ids, matching kramdown-parser-gfm. Digits
+    # stay, "&" drops out without collapsing the spaces around it, and a
+    # repeated heading gets -1, -2.
+    def kramdown_id(text, used)
+      gen = text.to_s.downcase.gsub(/[^\p{Word}\- \t]/, "").tr(" \t", "-")
+      gen = "section" if gen.empty?
+      count = used.fetch(gen, -1) + 1
+      used[gen] = count
+      count.positive? ? "#{gen}-#{count}" : gen
+    end
+
+    def offset_hours_for_local(date, hour, min)
+      year = date.year
+      start_day = nth_weekday(year, 3, 0, 2)
+      end_day = nth_weekday(year, 11, 0, 1)
+      local = DateTime.new(date.year, date.month, date.day, hour, min, 0)
+      dst_start = DateTime.new(year, 3, start_day, 2, 0, 0)
+      dst_end = DateTime.new(year, 11, end_day, 2, 0, 0)
+      local >= dst_start && local < dst_end ? -7 : -8
+    end
+
+    def format_offset_time(parsed)
+      return nil unless parsed && parsed[:date]
+
+      date = parsed[:date]
+      hour, min, sec = parsed[:time] || [0, 0, 0]
+      offset = offset_hours_for_local(date, hour, min)
+      sign = offset.negative? ? "-" : "+"
+      format(
+        "%04d-%02d-%02dT%02d:%02d:%02d%s%02d:00",
+        date.year, date.month, date.day, hour, min, sec, sign, offset.abs
+      )
+    end
+
+    # A timed end is used as written. A date-only end covers through that
+    # day. An all-day start with no end covers that same day.
+    def schema_end(start_parsed, end_parsed)
+      return nil unless start_parsed && start_parsed[:date]
+
+      if end_parsed && end_parsed[:date]
+        if end_parsed[:time]
+          return nil if start_parsed[:time] && sort_key(end_parsed) <= sort_key(start_parsed)
+
+          return end_parsed
+        end
+        return nil if end_parsed[:date] < start_parsed[:date]
+        return { date: end_parsed[:date], time: [23, 59, 59] }
+      end
+      return { date: start_parsed[:date], time: [23, 59, 59] } unless start_parsed[:time]
+
+      nil
+    end
+
+    def place_parts(place, city_name)
+      text = place.to_s.gsub(/\s+/, " ").strip
+      return ["", ""] if text.empty?
+
+      street = text.split(/\s*,\s*/).find { |part| part.match?(/\A\d{1,6}(?!st|nd|rd|th)\b/i) }
+      street = street.to_s
+      street = street.sub(/\s+\b(?:WA|Washington)\b.*\z/i, "")
+      street = street.sub(/\s+\d{5}(?:-\d{4})?\z/, "")
+      unless city_name.to_s.empty?
+        street = street.sub(/\s+#{Regexp.escape(city_name)}\z/i, "")
+      end
+      street = street.strip
+      [text, street]
+    end
+
+    def first_http_link(body)
+      body.to_s[/\]\((https?:\/\/[^)\s]+)\)/, 1]
+    end
+
+    def city_name_for(site, page)
+      id = page.data["city"].to_s
+      row = Array(site.data["cities"]).find { |item| item.is_a?(Hash) && item["id"].to_s == id }
+      name = row && row["name"].to_s.strip
+      return name unless name.nil? || name.empty?
+
+      page.data["title"].to_s.strip
+    end
+
+    def shorten_phrase(text, room)
+      return "" if room <= 0
+      return text if text.length <= room
+
+      cut = text[0, room].rstrip
+      spot = cut.rindex(" ")
+      spot && spot >= 12 ? cut[0, spot].rstrip : cut
+    end
+
+    # About 120 to 155 characters. The named event is the first upcoming card.
+    def city_meta_description(city_name, event_name, soon)
+      city = city_name.to_s.strip
+      event = event_name.to_s.gsub(/[—–]/, " ").gsub(/\s+/, " ").strip
+      when_phrase = soon ? "this week" : "coming up"
+      tail = " Parks, markets, library story times, and other plans for families. Updated daily."
+      short_tail = " Parks, markets, and library plans. Updated daily."
+      if event.empty?
+        text = "Family events in #{city} #{when_phrase} on Washington's Eastside.#{tail}"
+        text = "Family events in #{city} #{when_phrase} on Washington's Eastside.#{short_tail}" if text.length > 155
+        return text.gsub(/\s+/, " ").strip
+      end
+
+      lead = "Family events in #{city} #{when_phrase}, like "
+      suffix = ".#{tail}"
+      room = 155 - lead.length - suffix.length
+      if room < event.length
+        suffix = ".#{short_tail}"
+        room = 155 - lead.length - suffix.length
+      end
+      event = shorten_phrase(event, room) if event.length > room
+      "#{lead}#{event}#{suffix}".gsub(/\s+/, " ").strip
+    end
+
+    def visible_event(heading, picks, today, city_name, city_url, used_ids)
+      anchor = kramdown_id(heading[:text], used_ids)
+      card_date = heading_date(heading, picks, today)
+      chosen = picks.find { |event| card_date && event[:start] && event[:start][:date] == card_date }
+      chosen ||= picks.min_by { |event| sort_key(event[:start]) }
+      start_parsed = if chosen && chosen[:start] && (card_date.nil? || chosen[:start][:date] == card_date)
+                       chosen[:start]
+                     elsif card_date
+                       { date: card_date, time: nil }
+                     end
+      finish = schema_end(start_parsed, chosen && chosen[:end])
+      place_html = heading[:body][/<p class="event-place">(.*?)<\/p>/m, 1]
+      place = visible_text(place_html)
+      place = chosen[:place].to_s if place.empty? && chosen
+      place_name, street = place_parts(place, city_name)
+      place_name = city_name if place_name.empty?
+      blurb = plain_blurb(heading[:body])
+      blurb = "#{heading[:text]} in #{city_name}." if blurb.empty?
+      same = chosen && chosen[:same_as].to_s
+      same = first_http_link(heading[:body]) unless http_url?(same)
+      {
+        "name" => heading[:text],
+        "url" => "#{city_url}##{anchor}",
+        "description" => blurb,
+        "startDate" => format_offset_time(start_parsed).to_s,
+        "endDate" => format_offset_time(finish).to_s,
+        "place" => place_name,
+        "street" => street.to_s,
+        "locality" => city_name,
+        "sameAs" => http_url?(same) ? same : "",
+        "date" => card_date ? iso_date(card_date) : "",
+        "bucket" => bucket_key(card_date, today).to_s
+      }
+    end
   end
 
   class CalendarFile
@@ -702,7 +865,10 @@ module EastsideCalendar
       groups = Hash.new { |hash, key| hash[key] = [] }
       dates = Hash.new { |hash, key| hash[key] = [] }
       used = {}
+      used_ids = {}
+      visible = []
       linked = 0
+      city_name = EventCalendar.city_name_for(site, page)
 
       city_path = page.url.to_s
       city_url = EventCalendar.absolute_url(site, city_path)
@@ -724,11 +890,32 @@ module EastsideCalendar
           href = EventCalendar.root_path(site, "/#{dir}/#{filename}")
           site.static_files << CalendarFile.new(dir, filename, EventCalendar.build_ics(record, city_url, dtstamp))
           linked += 1
-          { href: href, when_label: record[:when_label] }
+          { href: href, when_label: record[:when_label], name: heading[:text] }
         end
         groups[heading[:key]] << links
         date = EventCalendar.heading_date(heading, picks, today)
         dates[heading[:key]] << (date ? EventCalendar.iso_date(date) : nil)
+        visible << EventCalendar.visible_event(heading, picks, today, city_name, city_url, used_ids)
+      end
+
+      ordered = visible.each_with_index.sort_by { |rec, index| [EventCalendar.bucket_rank(rec["bucket"]), index] }
+                       .map(&:first)
+      ordered.each { |rec| rec.delete("bucket") }
+      page.data["visible_events"] = ordered
+      today_iso = EventCalendar.iso_date(today)
+      top = ordered.find { |rec| rec["date"].to_s.empty? || rec["date"] >= today_iso } || ordered.first
+      soon = false
+      if top && !top["date"].to_s.empty?
+        begin
+          soon = Date.iso8601(top["date"]) <= today + 6
+        rescue Date::Error, ArgumentError
+          soon = false
+        end
+      end
+      description = EventCalendar.city_meta_description(city_name, top && top["name"], soon)
+      page.data["description"] = description
+      if description.length < 120 || description.length > 155
+        Jekyll.logger.warn("Calendar:", "#{city_name} description is #{description.length} characters")
       end
 
       matched = assigned.values.sum(&:size)

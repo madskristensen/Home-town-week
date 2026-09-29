@@ -144,6 +144,14 @@ picture {
   line-height: 0.96;
 }
 
+.home-mast .list-updated {
+  margin: 0.55rem 0 0;
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
 .mast-kicker {
   margin: 0.7rem 0 0;
   color: var(--forest);
@@ -430,6 +438,14 @@ picture {
   aspect-ratio: 16 / 10;
   object-fit: cover;
   border-radius: var(--radius);
+}
+
+.weekend-pick figure {
+  margin: 0;
+}
+
+.weekend-pick figcaption {
+  margin: 0.35rem 0 0;
 }
 
 .weekend-town {
@@ -848,7 +864,8 @@ picture {
 
 .hero-credit,
 .hero figcaption,
-.event-photo figcaption {
+.event-photo figcaption,
+.weekend-pick figcaption {
   color: var(--muted);
   font-size: 0.75rem;
   line-height: 1.4;

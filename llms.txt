@@ -12,6 +12,11 @@ sitemap: false
 - [{{ city.name }}]({{ site.url }}{{ site.baseurl }}/{{ city.id }}/): {{ city.description | strip }}
 {%- endfor %}
 
+## About
+
+- [About]({{ site.url }}{{ site.baseurl }}/about/): How we pick and check events.
+- Blurbs are original and link to sources.
+
 ## Sitemap
 
 - [Sitemap]({{ site.url }}{{ site.baseurl }}/sitemap.xml): Every public page on this site.

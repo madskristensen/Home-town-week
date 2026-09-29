@@ -13,20 +13,6 @@
     return window.navigator.standalone === true;
   }
 
-  function storageGet(key) {
-    try {
-      return localStorage.getItem(key);
-    } catch (err) {
-      return null;
-    }
-  }
-
-  function storageSet(key, value) {
-    try {
-      localStorage.setItem(key, value);
-    } catch (err) {}
-  }
-
   function registerServiceWorker() {
     if (!("serviceWorker" in navigator)) return;
     var node = document.querySelector("script[data-sw]");
@@ -91,7 +77,10 @@
     var daysToSunday = (7 - today.getUTCDay()) % 7;
     var sunday = addDays(today, daysToSunday);
     var saturday = addDays(sunday, -1);
-    if (iso === isoFromDate(saturday) || iso === isoFromDate(sunday)) return "This weekend";
+    var tomorrowIso = isoFromDate(addDays(today, 1));
+    var saturdayIso = isoFromDate(saturday);
+    if (iso > tomorrowIso && iso < saturdayIso) return "This week";
+    if (iso === saturdayIso || iso === isoFromDate(sunday)) return "This weekend";
     return "Later";
   }
 
@@ -112,8 +101,8 @@
     var headings = prose.querySelectorAll("h2.event-bucket");
     var i;
     for (i = 0; i < headings.length; i++) headings[i].parentNode.removeChild(headings[i]);
-    var names = ["Today", "Tomorrow", "This weekend", "Later"];
-    var groups = { Today: [], Tomorrow: [], "This weekend": [], Later: [] };
+    var names = ["Today", "Tomorrow", "This week", "This weekend", "Later"];
+    var groups = { Today: [], Tomorrow: [], "This week": [], "This weekend": [], Later: [] };
     for (i = 0; i < cards.length; i++) {
       groups[bucketLabel(cards[i].getAttribute("data-date"), today)].push(cards[i]);
     }
@@ -207,30 +196,6 @@
     });
   }
 
-  var article = document.querySelector("article[data-updated]");
-  var note = document.getElementById("list-updated");
-  if (article && note) {
-    var stamp = article.getAttribute("data-updated") || "";
-    if (stamp) {
-      var seenKey = "hw-seen:" + location.pathname;
-      var previous = storageGet(seenKey);
-      if (previous && previous !== stamp) {
-        var when = new Date(stamp);
-        var label = "";
-        if (!isNaN(when.getTime())) {
-          label = when.toLocaleDateString("en-US", {
-            month: "long",
-            day: "numeric",
-            year: "numeric",
-            timeZone: "America/Los_Angeles"
-          });
-        }
-        note.textContent = label ? "List updated " + label + "." : "List updated.";
-        note.hidden = false;
-      }
-      storageSet(seenKey, stamp);
-    }
-  }
   });
 })();
 </script>

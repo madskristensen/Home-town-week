@@ -226,10 +226,15 @@
       {%- assign photo_credit = city_page.image_credit -%}
       {%- assign photo_alt = city_page.image_alt -%}
     {%- endif -%}
-    {%- if photo_credit.size > 0 -%}
-      {%- assign photo_label = photo_credit -%}
-    {%- else -%}
-      {%- assign photo_label = photo_alt -%}
+    {%- assign photo_alt_text = photo_alt | strip -%}
+    {%- assign alt_prefix = photo_alt_text | slice: 0, 6 -%}
+    {%- if photo_alt_text.size == 0 or alt_prefix == "Photo:" -%}
+      {%- if photo == city_page.image and city_page.image_alt.size > 0 -%}
+        {%- assign photo_alt_text = city_page.image_alt -%}
+      {%- else -%}
+        {%- capture photo_alt_text -%}{{ event.name }} in {{ city.name }}{%- endcapture -%}
+        {%- assign photo_alt_text = photo_alt_text | strip -%}
+      {%- endif -%}
     {%- endif -%}
     {%- assign blurb = "" -%}
     {%- if chunk contains "<p>" -%}
@@ -269,13 +274,17 @@
           {%- assign pick_priority = "high" -%}
           {%- assign lcp_assigned = true -%}
         {%- endif -%}
+        <figure class="weekend-photo">
         {%- include responsive-img.html
              src=photo
-             alt=photo_label
-             title=photo_credit
+             alt=photo_alt_text
              loading=pick_loading
              priority=pick_priority
              sizes="(min-width: 42rem) calc((min(44rem, 100vw - 3rem) - 1.25rem) / 2), calc(100vw - 3rem)" -%}
+        {%- if photo_credit.size > 0 -%}
+        <figcaption><span class="credit">{{ photo_credit }}</span></figcaption>
+        {%- endif -%}
+        </figure>
         {%- endif -%}
         <span class="weekend-town">{{ city.name }}</span>
         <span class="weekend-when">{{ when_label }}</span>

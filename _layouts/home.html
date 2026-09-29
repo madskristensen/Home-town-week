@@ -12,9 +12,12 @@ layout: default
       <nav class="city-key" aria-label="Eastside cities">
         {%- for city in site.data.cities -%}
         {%- capture city_href -%}/{{ city.id }}/{%- endcapture -%}
-        {%- assign events_key = city.id | append: "_events" -%}
-        {%- assign city_events = site.data[events_key] -%}
-        {%- assign event_count = city_events | size -%}
+        {%- assign event_count = 0 -%}
+        {%- for candidate in site.pages -%}
+          {%- if candidate.layout == "city" and candidate.city == city.id -%}
+            {%- assign event_count = candidate.visible_events | size -%}
+          {%- endif -%}
+        {%- endfor -%}
         <a href="{{ city_href | strip | relative_url }}">
           <span class="city-key-name">{{ city.name }}</span>
           <span class="city-key-count">{%- if event_count == 1 -%}1 upcoming{%- elsif event_count > 1 -%}{{ event_count }} upcoming{%- else -%}None yet{%- endif -%}</span>

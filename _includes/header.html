@@ -20,6 +20,7 @@
   {%- if page.url == "/" -%}
   <div class="wrap home-mast">
     <h1 class="brand">Eastside Family Calendar</h1>
+    <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
     <p class="mast-kicker">Family events on the Eastside</p>
     <p class="home-lead">Upcoming family events in Eastside cities, so you never miss the fun.</p>
   </div>

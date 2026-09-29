@@ -50,8 +50,6 @@
 {%- if page.layout == "city" and city -%}
 {%- capture seo_title -%}Family events in {{ city.name }} | {{ site.title }}{%- endcapture -%}
 {%- assign seo_title = seo_title | strip -%}
-{%- capture seo_description -%}Upcoming family events in {{ city.name }} on the Eastside.{%- endcapture -%}
-{%- assign seo_description = seo_description | strip -%}
 {%- endif -%}
 {%- assign canonical_url = page.url | absolute_url -%}
 {%- assign seo_image = seo_image_path | absolute_url -%}
@@ -111,34 +109,47 @@
   "isPartOf": {
     "@id": {{ site_id | jsonify }}
   },
-  {%- assign events_key = page.city | append: "_events" -%}
-  {%- assign city_events = site.data[events_key] | where_exp: "event", "event.start" -%}
+  {%- assign visible_events = page.visible_events -%}
+  {%- assign visible_count = visible_events | size -%}
   "mainEntity": {
     "@type": "ItemList",
     "name": {{ "Upcoming events in " | append: city.name | jsonify }},
     "itemListOrder": "https://schema.org/ItemListOrderAscending",
-    "numberOfItems": {{ city_events.size }},
+    "numberOfItems": {{ visible_count }},
     "itemListElement": [
-      {%- for event in city_events -%}
+      {%- for event in visible_events -%}
       {
         "@type": "ListItem",
         "position": {{ forloop.index }},
         "item": {
           "@type": "Event",
           "name": {{ event.name | jsonify }},
-          "url": {{ canonical_url | jsonify }},
-          "startDate": {{ event.start | jsonify }}
-          {%- if event.end -%},
-          "endDate": {{ event.end | jsonify }}
-          {%- endif -%}
-          {%- if event.place -%},
+          "url": {{ event.url | jsonify }},
+          "description": {{ event.description | jsonify }},
+          "startDate": {{ event.startDate | jsonify }}
+          {%- assign event_end = event.endDate | append: "" -%}
+          {%- if event_end.size > 0 -%},
+          "endDate": {{ event.endDate | jsonify }}
+          {%- endif -%},
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "location": {
             "@type": "Place",
-            "name": {{ event.place | jsonify }}
+            "name": {{ event.place | jsonify }},
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": {{ event.locality | jsonify }},
+              "addressRegion": "WA",
+              "addressCountry": "US"
+              {%- assign event_street = event.street | append: "" -%}
+              {%- if event_street.size > 0 -%},
+              "streetAddress": {{ event.street | jsonify }}
+              {%- endif -%}
+            }
           }
-          {%- endif -%}
-          {%- if event.same_as -%},
-          "sameAs": {{ event.same_as | jsonify }}
+          {%- assign event_same = event.sameAs | append: "" -%}
+          {%- if event_same.size > 0 -%},
+          "sameAs": {{ event.sameAs | jsonify }}
           {%- endif -%}
         }
       }{% unless forloop.last %},{% endunless %}
