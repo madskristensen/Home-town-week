@@ -652,51 +652,10 @@ img {
   font-weight: 600;
 }
 
-.cta {
-  margin-top: 1rem;
-}
-
-.cta a,
-.cta button,
 .share-button,
 .install-go,
 .install-dismiss {
   touch-action: manipulation;
-}
-
-.cta a,
-.cta button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.75rem;
-  padding: 0.5rem 1rem;
-  border: 0;
-  background: var(--forest);
-  color: var(--header-ink);
-  border-radius: var(--radius);
-  font: inherit;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.cta a:hover,
-.cta a:focus-visible,
-.cta button:hover,
-.cta button:focus-visible {
-  background: var(--forest-deep);
-  text-decoration: none;
-}
-
-.cta button:disabled {
-  cursor: progress;
-  opacity: 0.72;
-}
-
-.last-city {
-  margin: 0.9rem 0 0;
 }
 
 .also-close {
