@@ -17,11 +17,14 @@
 #
 # sources: lives on each city entry here, not in a separate file. Each item
 # is a name, url, type, and notes. Types: city_hall, parks, allevents,
-# theater, market, library, downtown, venue. Prefer the city hall calendar,
-# AllEvents for this city and state, and a local theater (kids shows, family
-# concerts, community playhouses). Parks, markets, downtown, and the library
-# stay on the list. Do not crawl Stay Happening, news blogs, a wrong-city
-# AllEvents page, or a library calendar alone.
+# theater, market, library, downtown, venue, museum, nature, farm, school,
+# sports, and news. Prefer the city hall calendar, AllEvents for this city
+# and state, and a local theater (kids shows, family concerts, community
+# playhouses). Parks, markets, downtown, and the library stay on the list.
+# A library branch gets its own row when the city has more than one.
+# Do not crawl Stay Happening, a wrong-city AllEvents page, or a library
+# calendar alone. A news site belongs here only when it carries dated
+# family listings, and Facebook or Eventbrite only when no official page exists.
 #
 # format and feed_url are optional notes for the editor. format is the
 # machine kind: ical, rss, libcal, bibliocommons, allevents, or html.
@@ -75,11 +78,52 @@
       url: "https://bellevuebotanical.org/"
       type: venue
       notes: "Garden events and seasonal family days."
-    - name: "King County Library System events"
-      url: "https://kcls.bibliocommons.com/events"
+    - name: "Bellevue Library"
+      url: "https://kcls.org/locations/bellevue/"
       type: library
-      format: bibliocommons
-      notes: "One library source. Filter to Bellevue branches."
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1492"
+      notes: "Downtown branch, 1111 110th Ave NE. Skip adult book groups and makerspace reservations."
+    - name: "Lake Hills Library"
+      url: "https://kcls.org/locations/lake-hills/"
+      type: library
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1522"
+      notes: "Story times at 15590 Lake Hills Blvd. Skip adult conversation practice."
+    - name: "Newport Way Library"
+      url: "https://kcls.org/locations/newport-way/"
+      type: library
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1529"
+      notes: "Baby story time and bilingual play at 14250 SE Newport Way."
+    - name: "Old Bellevue Merchants Association"
+      url: "https://www.visitoldbellevue.com/events"
+      type: downtown
+      notes: "Main Street family days, including Little Monsters on Main Street. Skip wine walks."
+    - name: "Lewis Creek Park Visitor Center"
+      url: "https://bellevuewa.gov/city-government/departments/parks/nature-and-environment/visitor-centers-environmental-programs/lewis-creek-park-visitor-center"
+      type: nature
+      notes: "Ranger story times for young children at 5808 Lakemont Blvd SE. Dated sessions are in the fall activity guide."
+    - name: "Mercer Slough Environmental Education Center"
+      url: "https://bellevuewa.gov/city-government/departments/parks/nature-and-environment/visitor-centers-environmental-programs/mercer-slough-environmental-education-center"
+      type: nature
+      notes: "Story and Stroll walks for ages 2 to 5 at 1625 118th Ave SE. Skip school-only field trips."
+    - name: "Bellevue Parks fall activity guide"
+      url: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+      type: parks
+      format: html
+      feed_url: "https://bellevuewa.gov/sites/default/files/media/pdf_document/2026/pcs-26-80486-activity-book-fall-web.pdf"
+      notes: "September through December booklet. Farm workshops, ranger walks, and community-center festivals. Skip sports leagues and fitness classes."
+    - name: "Crossroads Bellevue"
+      url: "https://crossroadsbellevue.com/events/"
+      type: venue
+      notes: "Mall events. The Tuesday farmers market page runs through September 29."
+    - name: "Bellevue Family YMCA"
+      url: "https://www.seattleymca.org/locations/bellevue-family-ymca"
+      type: sports
+      format: html
+      feed_url: "https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities"
+      notes: "14230 Bel-Red Rd. Fall family festival dates are on the association festivals page."
     - name: "Bellevue Downtown Association"
       url: "https://www.bellevuedowntown.com/events"
       type: downtown
@@ -114,11 +158,22 @@
       url: "https://www.mcmenamins.com/anderson-school"
       type: venue
       notes: "Public concerts and family-friendly events on the campus."
-    - name: "King County Library System events"
-      url: "https://kcls.bibliocommons.com/events"
+    - name: "Bothell Library"
+      url: "https://kcls.org/locations/bothell/"
       type: library
-      format: bibliocommons
-      notes: "One library source. Filter to the Bothell branch."
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1493"
+      notes: "KCLS branch at 18215 98th Ave NE. There is no Sno-Isle branch in Bothell."
+    - name: "Bothell Historical Museum"
+      url: "https://www.bothellhistoricalmuseum.org/"
+      type: museum
+      notes: "Hannan House at the Park at Bothell Landing, 9919 NE 180th St. Free Sundays 1:00 to 4:00 p.m., April through October."
+    - name: "Northshore YMCA"
+      url: "https://www.seattleymca.org/locations/northshore-ymca"
+      type: sports
+      format: html
+      feed_url: "https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities"
+      notes: "11811 NE 195th St. The fall family festival is on the association festivals page."
     - name: "The Attic Theatre"
       url: "https://theattictheatre.org/"
       type: theater
@@ -148,11 +203,22 @@
       type: city_hall
       format: html
       notes: "City fun calendar and posted community events, including partner festivals."
-    - name: "King County Library System events"
-      url: "https://kcls.bibliocommons.com/events"
+    - name: "Carnation Library"
+      url: "https://kcls.org/locations/carnation/"
       type: library
-      format: bibliocommons
-      notes: "One library source. Filter to the Carnation branch, 4804 Tolt Avenue."
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1496"
+      notes: "KCLS branch at 4804 Tolt Avenue."
+    - name: "Tolt Historical Society"
+      url: "https://tolthistoricalsociety.org/"
+      type: museum
+      notes: "Hjertoos House, 31523 NE 40th St, open Saturdays 11:00 a.m. to 3:00 p.m., April through October. No charge."
+    - name: "Living Snoqualmie"
+      url: "https://livingsnoqualmie.com/events/"
+      type: news
+      format: ical
+      feed_url: "https://livingsnoqualmie.com/events/list/?ical=1"
+      notes: "Valley-wide calendar. Keep Carnation addresses. Skip wine, cocktail, and dinner-ticket nights. The feed's morning start time for Dramafest is wrong; the event page says 7:00 p.m."
     - name: "Remlinger Farms"
       url: "https://remlingerfarms.com/fall-harvest-festival/"
       type: venue
@@ -187,11 +253,18 @@
       format: rss
       feed_url: "https://www.duvallwa.gov/RSSFeed.aspx?ModID=58&CID=All-0"
       notes: "Mostly field reservations and meetings. Use it for a dated public event, not a practice slot."
-    - name: "King County Library System events"
-      url: "https://kcls.bibliocommons.com/events"
+    - name: "Duvall Library"
+      url: "https://kcls.org/locations/duvall/"
       type: library
-      format: bibliocommons
-      notes: "One library source. Filter to the Duvall branch, 15508 Main Street NE."
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1503"
+      notes: "KCLS branch at 15508 Main Street NE."
+    - name: "Living Snoqualmie"
+      url: "https://livingsnoqualmie.com/events/"
+      type: news
+      format: ical
+      feed_url: "https://livingsnoqualmie.com/events/list/?ical=1"
+      notes: "Valley-wide calendar. Keep Duvall addresses. The flood forum is a preparedness meeting, not a kids event."
     - name: "Duvall Farmers Market"
       url: "https://duvallfarmersmarket.org/"
       type: market
@@ -229,7 +302,7 @@
       type: city_hall
       format: ical
       feed_url: "https://www.issaquahwa.gov/common/modules/iCalendar/iCalendar.aspx?catID=35&feed=calendar"
-      notes: "City parks, hatchery-adjacent events, and civic programs."
+      notes: "City parks and civic programs. This iCal is thin. The HTML list and RSSFeed.aspx?ModID=58&CID=All-0 carry more of the month."
     - name: "Downtown Issaquah events"
       url: "https://downtownissaquah.com/events/"
       type: downtown
@@ -242,11 +315,26 @@
       url: "https://www.salmondays.org/"
       type: venue
       notes: "Festival weekend when it falls in the digest window."
-    - name: "King County Library System events"
-      url: "https://kcls.bibliocommons.com/events"
+    - name: "Issaquah Library"
+      url: "https://kcls.org/locations/issaquah/"
       type: library
-      format: bibliocommons
-      notes: "One library source. Filter to Issaquah."
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1513"
+      notes: "KCLS branch at 10 W Sunset Way. There is no Issaquah Highlands branch."
+    - name: "Friends of the Issaquah Salmon Hatchery"
+      url: "https://www.issaquahfish.org/"
+      type: nature
+      notes: "Hatchery at 125 W Sunset Way, open daily dawn to dusk during the salmon run. The old /events/ path is a 404."
+    - name: "Greater Issaquah Chamber of Commerce"
+      url: "https://www.issaquahchamber.com/"
+      type: downtown
+      notes: "Host of Salmon Days. The chamber /events path is a 404; festival hours stay on salmondays.org."
+    - name: "Issaquah Highlands events"
+      url: "https://issaquahhighlands.com/events/"
+      type: venue
+      format: ical
+      feed_url: "https://issaquahhighlands.com/events/?ical=1"
+      notes: "Tribe calendar for Blakely Hall and the Highlands. Skip co-working, HOA meetings, and 18+ nights. The iCal is shorter than the JSON feed."
     - name: "Issaquah Farmers Market"
       url: "https://www.issaquahwa.gov/778/Farmers-Market"
       type: market
@@ -268,18 +356,19 @@
   tagline: "A lakeside city at the north end of Lake Washington."
   sources:
     - name: "City of Kenmore"
-      url: "https://www.kenmorewa.gov/"
+      url: "https://www.kenmorewa.gov/our-city/special-events"
       type: city_hall
-      notes: "Official city site for parks and civic events. Bots are often blocked."
+      notes: "Special events list. The site often returns 403 to scripts. Dia de los Muertos is on the 2026 headline for November 1, and a details line still says 2025."
     - name: "Saint Edward State Park"
       url: "https://parks.wa.gov/find-parks/state-parks/saint-edward-state-park"
       type: parks
       notes: "State park programs families in Kenmore actually use."
-    - name: "King County Library System events"
-      url: "https://kcls.bibliocommons.com/events"
+    - name: "Kenmore Library"
+      url: "https://kcls.org/locations/kenmore/"
       type: library
-      format: bibliocommons
-      notes: "One library source. Filter to Kenmore."
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1519"
+      notes: "KCLS branch at 6531 NE 181st St. Closed Sundays."
     - name: "Seattle's Performers"
       url: "https://seattlesperformers.com/"
       type: theater
@@ -291,7 +380,9 @@
     - name: "Find Kenmore events"
       url: "https://findkenmore.org/events/"
       type: downtown
-      notes: "Public family and community events in Kenmore."
+      format: ical
+      feed_url: "https://findkenmore.org/events/list/?ical=1"
+      notes: "Public listings when the city site is blocked. Skip chamber workshops and church karaoke."
     - name: "AllEvents Kenmore"
       url: "https://allevents.in/kenmore"
       type: allevents
@@ -319,12 +410,29 @@
     - name: "Kirkland Arts Center"
       url: "https://kirklandartscenter.org/"
       type: venue
-      notes: "Classes, exhibits, and family workshops."
-    - name: "King County Library System events"
-      url: "https://kcls.bibliocommons.com/events"
+      format: json
+      feed_url: "https://kirklandartscenter.org/wp-json/tribe/events/v1/events"
+      notes: "Classes, exhibits, and family workshops. Tribe JSON was empty for this six-week window."
+    - name: "Kirkland Library"
+      url: "https://kcls.org/locations/kirkland/"
       type: library
-      format: bibliocommons
-      notes: "One library source. Filter to Kirkland."
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1518"
+      notes: "Downtown branch at 308 Kirkland Ave."
+    - name: "Kingsgate Library"
+      url: "https://kcls.org/locations/kingsgate/"
+      type: library
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1517"
+      notes: "North Kirkland branch at 12315 NE 143rd St. Story times, reading dogs, and after-school hangout."
+    - name: "Kirkland Heritage Society"
+      url: "https://kirklandheritage.org/programs-3/"
+      type: museum
+      notes: "Public history programs on the last Wednesday of February, March, April, May, September, and October, 7:00 to 9:00 p.m. at Heritage Hall, 203 Market St. The page does not name an October 2026 topic."
+    - name: "Studio East"
+      url: "https://studio-east.org/"
+      type: theater
+      notes: "Children's theatre at 10718 NE 68th St. The next posted studio day is November 11, just outside a six-week window."
     - name: "Kirkland Wednesday Market"
       url: "https://kirklanddowntown.org/events/kirkland-market/"
       type: market
@@ -332,7 +440,9 @@
     - name: "Kirkland Downtown Association"
       url: "https://kirklanddowntown.org/events/"
       type: downtown
-      notes: "Downtown public events."
+      format: json
+      feed_url: "https://kirklanddowntown.org/wp-json/tribe/events/v1/events"
+      notes: "Downtown public events. Tribe JSON. In late September the feed's near window was the Wednesday market."
     - name: "AllEvents Kirkland"
       url: "https://allevents.in/kirkland"
       type: allevents
@@ -349,19 +459,29 @@
     A foothill city in southeast King County.
   tagline: "A foothill city in southeast King County."
   sources:
-    - name: "City of Maple Valley"
-      url: "https://www.maplevalleywa.gov/"
+    - name: "City of Maple Valley calendar"
+      url: "https://www.maplevalleywa.gov/calendar.php"
       type: city_hall
-      notes: "City site for parks, Lake Wilderness, and civic events."
+      format: html
+      notes: "Revize calendar. Asking for ical still returns HTML. The CivicPlus-style RSS returned 403."
     - name: "Maple Valley Farmers Market"
       url: "https://www.maplevalleyfarmersmarket.com/"
       type: market
       notes: "Saturday market dates."
-    - name: "King County Library System events"
-      url: "https://kcls.bibliocommons.com/events"
+    - name: "Maple Valley Library"
+      url: "https://kcls.org/locations/maple-valley/"
       type: library
-      format: bibliocommons
-      notes: "One library source. Filter to Maple Valley."
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1527"
+      notes: "KCLS branch at 21844 SE 248th St."
+    - name: "Lake Wilderness Arboretum"
+      url: "https://www.lakewildernessarboretum.org/events/"
+      type: nature
+      notes: "Story Walk and the Children's Forest. The events index often lists no dates; confirm a read-along on the library or the city's parks page."
+    - name: "Maple Valley Historical Society"
+      url: "https://www.maplevalleyhistorical.com/upcoming-events"
+      type: museum
+      notes: "Museums at 22024 SE 248th St, open the first and third Saturday, 10:00 a.m. to 2:00 p.m."
     - name: "Maple Valley Creative Arts Council"
       url: "https://mvcac.clubexpress.com/"
       type: theater
@@ -396,11 +516,16 @@
       url: "https://www.mifarmersmarket.org/"
       type: market
       notes: "Sunday market dates."
-    - name: "King County Library System events"
-      url: "https://kcls.bibliocommons.com/events"
+    - name: "Mercer Island Library"
+      url: "https://kcls.org/locations/mercer-island/"
       type: library
-      format: bibliocommons
-      notes: "One library source. Filter to Mercer Island."
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1525"
+      notes: "KCLS branch at 4400 88th Ave SE."
+    - name: "Stroum Jewish Community Center"
+      url: "https://sjcc.org/events/"
+      type: venue
+      notes: "Public family programs at 3801 E Mercer Way. The events index sometimes rate-limits. Confirm the date on the event page."
     - name: "Youth Theatre Northwest"
       url: "https://youththeatre.org/"
       type: theater
@@ -408,7 +533,7 @@
     - name: "Mercer Island Parks special events"
       url: "https://www.mercerisland.gov/parksrec/page/city-special-events"
       type: parks
-      notes: "Parks family events such as movie night and holiday parties."
+      notes: "Parks family events. Town Center trick-or-treat is Friday, October 30, 2026, 4:00 to 6:00 p.m."
     - name: "AllEvents Mercer Island"
       url: "https://allevents.in/mercer-island"
       type: allevents
@@ -428,18 +553,37 @@
     - name: "City of North Bend calendar"
       url: "https://www.northbendwa.gov/calendar.aspx"
       type: city_hall
-      format: rss
-      feed_url: "https://www.northbendwa.gov/RSSFeed.aspx?ModID=58&CID=All-0"
-      notes: "City calendar. Skip council meetings. The late Blues Walk is a ticketed music crawl, not a kids event."
+      format: ical
+      feed_url: "https://www.northbendwa.gov/common/modules/iCalendar/iCalendar.aspx?catID=21&feed=calendar"
+      notes: "Community Events category. Oaktoberfest, Spooktacular, and Trick-or-Treat Street are here. The all-category RSS is mostly meetings. Skip Blues Walk and What's Brewing."
     - name: "Si View Metropolitan Park District"
       url: "https://www.siviewpark.org/family-fun.phtml"
       type: parks
       notes: "Community center and park events, including Spooktacular and the hoedown."
-    - name: "King County Library System events"
-      url: "https://kcls.bibliocommons.com/events"
+    - name: "North Bend Library"
+      url: "https://kcls.org/locations/north-bend/"
       type: library
-      format: bibliocommons
-      notes: "One library source. Filter to the North Bend branch, 115 E 4th Street."
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1528"
+      notes: "KCLS branch at 115 E 4th Street."
+    - name: "Snoqualmie Valley Museum"
+      url: "https://snoqualmievalleymuseum.org/"
+      type: museum
+      notes: "320 Bendigo Blvd S. Open Thursday through Tuesday. A separate program is sometimes at Encompass in Snoqualmie."
+    - name: "Discover North Bend"
+      url: "https://discovernorthbend.com/"
+      type: downtown
+      notes: "Visitors bureau. Repeats Trick-or-Treat Street and points at the downtown foundation."
+    - name: "North Bend Art and Industry"
+      url: "https://www.northbendartandindustry.org/all/p/novel-engineering"
+      type: venue
+      notes: "Center for Creativity, 1533 Bendigo Blvd N. Novel Engineering is a free Tuesday class for grades 3 to 5."
+    - name: "Living Snoqualmie"
+      url: "https://livingsnoqualmie.com/events/"
+      type: news
+      format: ical
+      feed_url: "https://livingsnoqualmie.com/events/list/?ical=1"
+      notes: "Valley paper. Book launches and school shows. Prefer the organizer page when the feed clock disagrees."
     - name: "North Bend Downtown Foundation"
       url: "https://www.northbenddowntown.org/all-events"
       type: downtown
@@ -449,13 +593,13 @@
       type: theater
       notes: "Family films and shows at 125 Bendigo Blvd N."
     - name: "Northwest Railway Museum"
-      url: "https://trainmuseum.org/upcoming-events/halloween/"
+      url: "https://trainmuseum.org/upcoming-events/"
       type: venue
-      notes: "Halloween Train departs the North Bend Depot. The wine train is 21 and over."
-    - name: "Living Snoqualmie"
+      notes: "Halloween Train from the North Bend Depot, plus regular weekend excursions through October. The wine train is 21 and over. Free Wednesday Train Shed admission is at the Snoqualmie campus."
+    - name: "Living Snoqualmie Oaktoberfest story"
       url: "https://livingsnoqualmie.com/arbor-day-planting-and-oaktoberfest-set-for-october-17-in-north-bend/"
-      type: downtown
-      notes: "Local paper. The Sep 25, 2026 story on Oaktoberfest says the information came from the city."
+      type: news
+      notes: "Sep 25, 2026 story. It says the Oaktoberfest plan came from the city."
     - name: "AllEvents North Bend"
       url: "https://allevents.in/north-bend"
       type: allevents
@@ -486,11 +630,24 @@
       url: "http://www.redmondsaturdaymarket.org/"
       type: market
       notes: "Saturday market season. HTTPS certificate fails; use the HTTP site."
-    - name: "King County Library System events"
-      url: "https://kcls.bibliocommons.com/events"
+    - name: "Redmond Library"
+      url: "https://kcls.org/locations/redmond/"
       type: library
-      format: bibliocommons
-      notes: "One library source. Filter to Redmond."
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1533"
+      notes: "KCLS branch at 15990 NE 85th St."
+    - name: "Red Barn Farm"
+      url: "https://redbarnfarm.com/"
+      type: farm
+      notes: "Fall festival weekends at 5703 208th Ave NE. Confirm the last Sunday on the homepage."
+    - name: "Redmond Town Center"
+      url: "https://redmondtowncenter.com/events"
+      type: venue
+      notes: "Saturday Exotics car show and other mall gatherings. Experience Redmond's Tribe JSON often returns 403."
+    - name: "OneRedmond"
+      url: "https://engage.oneredmond.org/howl-o-ween"
+      type: downtown
+      notes: "Howl-O-Ween pup parade and other community days OneRedmond posts."
     - name: "SecondStory Repertory"
       url: "https://www.secondstoryrep.org/"
       type: theater
@@ -523,10 +680,28 @@
       url: "https://rentonfarmersmarket.com/"
       type: market
       notes: "Tuesday market dates."
-    - name: "King County Library System"
-      url: "https://kcls.org/"
+    - name: "Renton Library"
+      url: "https://kcls.org/locations/renton/"
       type: library
-      notes: "One library source. Filter to Renton."
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1556"
+      notes: "Downtown branch, 100 Mill Ave S."
+    - name: "Renton Highlands Library"
+      url: "https://kcls.org/locations/renton-highlands/"
+      type: library
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1557"
+      notes: "2801 NE 10th St. Story times and family programs."
+    - name: "Fairwood Library"
+      url: "https://kcls.org/locations/fairwood/"
+      type: library
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1508"
+      notes: "17009 140th Ave SE, in the Fairwood part of Renton."
+    - name: "Renton Downtown Partnership"
+      url: "https://www.rentondowntown.com/events"
+      type: downtown
+      notes: "Olde Fashioned Halloween Party and other downtown family days. The city site often returns 403."
     - name: "Renton Civic Theatre"
       url: "https://www.rentoncivictheatre.org/"
       type: theater
@@ -555,11 +730,22 @@
       url: "https://www.sammamish.us/"
       type: city_hall
       notes: "City site for Beaver Lake, Pine Lake, the Commons, and civic events."
-    - name: "King County Library System events"
-      url: "https://kcls.bibliocommons.com/events"
+    - name: "Sammamish Library"
+      url: "https://kcls.org/locations/sammamish/"
       type: library
-      format: bibliocommons
-      notes: "One library source. Filter to Sammamish."
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1534"
+      notes: "KCLS branch. STEM Saturdays and youth clubs."
+    - name: "Sammamish Community YMCA"
+      url: "https://www.seattleymca.org/locations/sammamish-community-ymca"
+      type: sports
+      format: html
+      feed_url: "https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities"
+      notes: "831 228th Ave SE. Fall festival hours are on the association festivals page."
+    - name: "Sammamish volunteer plantings"
+      url: "https://www.sammamish.us/news/events/volunteer-opportunities/"
+      type: parks
+      notes: "Beaver Lake, Sammamish Landing, Ebright Creek, and Evans Creek. A planting at Confluence Park is in Issaquah and does not belong here."
     - name: "Spotlight Repertory NW"
       url: "https://www.spotlightrepnw.org/"
       type: theater
@@ -567,7 +753,7 @@
     - name: "Sammamish community events"
       url: "https://www.sammamish.us/news/events/"
       type: city_hall
-      notes: "Arts, youth, and parks programs."
+      notes: "Month views are ?my=10-2026 and ?my=11-2026. Each event has its own ICS at /umbraco/api/GenerateIcsApi/GetEventIcs?id=. There is no citywide feed. Skip council and hearings."
     - name: "Sammamish Farmers Market"
       url: "https://www.sammamishfarmersmarket.org/"
       type: market
@@ -594,24 +780,54 @@
       format: rss
       feed_url: "https://www.snoqualmiewa.gov/RSSFeed.aspx?ModID=58&CID=All-0"
       notes: "City events, including the mayor's ice cream hour, Green Snoqualmie Day, and Spooktacular. Skip council and quorum notices."
-    - name: "King County Library System, Snoqualmie"
-      url: "https://kcls.bibliocommons.com/events"
+    - name: "Snoqualmie Library"
+      url: "https://kcls.org/locations/snoqualmie/"
       type: library
-      format: bibliocommons
-      notes: "Filter to the Snoqualmie branch, 7824 Center Boulevard SE."
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1537"
+      notes: "KCLS branch at 7824 Center Boulevard SE."
+    - name: "Snoqualmie special events"
+      url: "https://www.snoqualmiewa.gov/Calendar.aspx"
+      type: city_hall
+      format: ical
+      feed_url: "https://www.snoqualmiewa.gov/common/modules/iCalendar/iCalendar.aspx?catID=14&feed=calendar"
+      notes: "Special Events category. Spooktacular and the YMCA trunk-or-treat are here. The all-category RSS stops before October 24."
+    - name: "Green Snoqualmie"
+      url: "https://www.snoqualmiewa.gov/Calendar.aspx"
+      type: parks
+      format: ical
+      feed_url: "https://www.snoqualmiewa.gov/common/modules/iCalendar/iCalendar.aspx?catID=64&feed=calendar"
+      notes: "Green Snoqualmie Day and other stewardship dates."
+    - name: "Snoqualmie Valley YMCA"
+      url: "https://www.seattleymca.org/locations/snoqualmie-valley-ymca"
+      type: sports
+      format: html
+      feed_url: "https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities"
+      notes: "35018 SE Ridge St. The October 24 trunk-or-treat is also a stop on the city's Spooktacular."
+    - name: "Mount Si Drama Club"
+      url: "https://mshsdrama.weebly.com/"
+      type: school
+      notes: "Public Dramafest at the Mount Si High School Performing Arts Center, 8651 Meadowbrook Way SE."
+    - name: "Living Snoqualmie"
+      url: "https://livingsnoqualmie.com/events/"
+      type: news
+      format: ical
+      feed_url: "https://livingsnoqualmie.com/events/list/?ical=1"
+      notes: "Best valley-wide feed. Skip Upstage the Rage (the ticket includes drinks) and 21+ nights."
     - name: "Northwest Railway Museum"
-      url: "https://trainmuseum.org/upcoming-events/halloween/"
+      url: "https://trainmuseum.org/upcoming-events/"
       type: venue
-      notes: "Halloween Train from the Snoqualmie Depot. The wine train is 21 and over."
+      notes: "Halloween Train from the Snoqualmie Depot, weekend excursions through October, and free Wednesday admission at the Train Shed on Stone Quarry Road through December 16. The wine train is 21 and over."
     - name: "Fall City Farms"
       url: "https://fallcityfarms.com/pumpkin-patch/"
       type: venue
       notes: "Fall City has no city page. The weekend pumpkin patch is listed with Snoqualmie."
-    - name: "King County Library System, Fall City"
-      url: "https://kcls.bibliocommons.com/events"
+    - name: "Fall City Library"
+      url: "https://kcls.org/locations/fall-city/"
       type: library
-      format: bibliocommons
-      notes: "Fall City is unincorporated. Filter to 33415 SE 42nd Place and keep those events on this page."
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1506"
+      notes: "Fall City is unincorporated. Branch at 33415 SE 42nd Place. Keep those events on this page."
     - name: "AllEvents Snoqualmie"
       url: "https://allevents.in/snoqualmie"
       type: allevents
@@ -642,11 +858,16 @@
       url: "https://woodinvillechamber.org/"
       type: downtown
       notes: "Community calendar and downtown listings."
-    - name: "King County Library System events"
-      url: "https://kcls.bibliocommons.com/events"
+    - name: "Woodinville Library"
+      url: "https://kcls.org/locations/woodinville/"
       type: library
-      format: bibliocommons
-      notes: "One library source. Filter to Woodinville."
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1548"
+      notes: "KCLS branch at 17105 Avondale Road NE. Closed Sundays."
+    - name: "Woodinville Heritage Society"
+      url: "https://woodinvilleheritage.org/events-programs/"
+      type: museum
+      notes: "Museum at 14121 NE 171st St, free on the first Sunday, 1:00 to 4:00 p.m., September through May. Public history talks are listed here."
     - name: "Woodinville Repertory Theatre"
       url: "https://www.woodinvillerep.org/"
       type: theater
