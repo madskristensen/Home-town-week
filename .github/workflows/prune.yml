@@ -2,9 +2,9 @@ name: Prune past events
 
 on:
   schedule:
-    # 08:20 UTC is 1:20am during Pacific Daylight Time and 12:20am during
+    # 11:15 UTC is 4:15am during Pacific Daylight Time and 3:15am during
     # Pacific Standard Time, so the America/Los_Angeles date has already rolled.
-    - cron: "20 8 * * *"
+    - cron: "15 11 * * *"
   workflow_dispatch:
 
 # A push made with this token does not start another workflow. This job

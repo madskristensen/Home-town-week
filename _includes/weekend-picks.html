@@ -9,6 +9,10 @@
   council-style meetings rank last and are used only when little else is
   left. One event per city until four picks exist. A sponsored pick can
   be pinned ahead of this list later. It is not built yet.
+
+  _data/weekend_picks.yml overrides this when it lists events that are
+  still ahead. Each item is a city id and the event name. Past entries
+  are skipped. If none remain, the automatic picks are used.
 {%- endcomment -%}
 {%- assign now_unix = site.time | date: "%s" | plus: 0 -%}
 {%- assign weekday = site.time | date: "%u" | plus: 0 -%}
@@ -27,6 +31,48 @@
 {%- assign sunday = friday_unix | plus: sunday_shift | date: "%Y-%m-%d" -%}
 {%- assign week_shift = 6 | times: 86400 -%}
 {%- assign week_end = now_unix | plus: week_shift | date: "%Y-%m-%d" -%}
+{%- assign curated = site.data.weekend_picks -%}
+{%- assign curated_count = curated | size -%}
+{%- assign picked = "" -%}
+{%- assign pick_count = 0 -%}
+{%- assign weekend_ready = false -%}
+{%- if curated_count > 0 -%}
+{%- for pick in curated -%}
+{%- if pick_count >= 4 -%}{% break %}{%- endif -%}
+{%- assign cid = pick.city | append: "" | strip -%}
+{%- assign want = pick.name | append: "" | strip -%}
+{%- if cid.size == 0 or want.size == 0 -%}{% continue %}{%- endif -%}
+{%- assign events_key = cid | append: "_events" -%}
+{%- assign events = site.data[events_key] -%}
+{%- assign found_line = "" -%}
+{%- for event in events -%}
+{%- assign event_name = event.name | append: "" | strip -%}
+{%- if event_name != want -%}{% continue %}{%- endif -%}
+{%- assign start_s = event.start | append: "" -%}
+{%- assign day = start_s | slice: 0, 10 -%}
+{%- if day.size != 10 -%}{% continue %}{%- endif -%}
+{%- assign end_s = event.end | append: "" -%}
+{%- assign end_day = end_s | slice: 0, 10 -%}
+{%- if end_day.size != 10 -%}{% assign end_day = day %}{%- endif -%}
+{%- if end_day < today -%}{% continue %}{%- endif -%}
+{%- assign idx = forloop.index0 -%}
+{%- if idx < 10 -%}{% assign idx = idx | prepend: "00" %}
+{%- elsif idx < 100 -%}{% assign idx = idx | prepend: "0" %}{%- endif -%}
+{%- assign weekend_flag = "0" -%}
+{%- if day <= sunday and end_day >= friday -%}{% assign weekend_flag = "1" %}{%- endif -%}
+{%- if weekend_flag == "1" -%}{% assign weekend_ready = true %}{%- endif -%}
+{%- capture found_line -%}500|{{ day }}|{{ cid }}|{{ idx }}|{{ weekend_flag }}{%- endcapture -%}
+{%- break -%}
+{%- endfor -%}
+{%- assign found_line = found_line | strip -%}
+{%- if found_line.size > 0 -%}
+{%- assign picked = picked | append: found_line | append: "~" -%}
+{%- assign pick_count = pick_count | plus: 1 -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+{%- if pick_count == 0 -%}
+{%- assign weekend_ready = false -%}
 {%- capture pool -%}
 {%- for city in site.data.cities -%}
 {%- assign events_key = city.id | append: "_events" -%}
@@ -74,11 +120,6 @@
   {%- assign bits = line | split: "|" -%}
   {%- if bits[4] == "1" -%}{% assign weekend_ready = true %}{% break %}{%- endif -%}
 {%- endfor -%}
-{%- if weekend_ready -%}
-  {%- assign picks_title = "This weekend on the Eastside" -%}
-{%- else -%}
-  {%- assign picks_title = "Coming up on the Eastside" -%}
-{%- endif -%}
 {%- assign picked = "" -%}
 {%- assign seen = "|" -%}
 {%- assign pick_count = 0 -%}
@@ -104,6 +145,12 @@
     {%- assign pick_count = pick_count | plus: 1 -%}
   {%- endfor -%}
 {%- endfor -%}
+{%- endif -%}
+{%- if weekend_ready -%}
+  {%- assign picks_title = "This weekend on the Eastside" -%}
+{%- else -%}
+  {%- assign picks_title = "Coming up on the Eastside" -%}
+{%- endif -%}
 {%- assign pick_lines = picked | split: "~" -%}
 {%- if pick_count > 0 -%}
 <section class="weekend-picks" aria-labelledby="weekend-picks-title">

@@ -1,0 +1,11 @@
+# Optional home-page picks. Leave this file as comments to keep the
+# automatic weekend selection. To override it, list events that match
+# `name` in `_data/{city}_events.yml`. The build uses the list, in this
+# order, up to four, when at least one named event is still ahead.
+# Entries that have already ended are skipped. If every entry has ended,
+# or none of the names match, the automatic picks are used.
+#
+# - city: bellevue
+#   name: Kelsey Creek Farm Fair
+# - city: issaquah
+#   name: Salmon Days Festival
