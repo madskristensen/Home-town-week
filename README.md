@@ -13,13 +13,13 @@ Newcastle is an Eastside city that does not have a page yet. Do not invent a pag
 | Home | `/` |
 | City | `/{city}/`, for example `/redmond/` |
 | About | `/about/` |
-| Seasonal hub | One path per hub in `_data/seasonal_hubs.yml`, for example `/halloween/`, `/fall/`, and `/christmas/` |
+| Seasonal hub | One path per hub in `_data/seasonal_hubs.yml`, for example `/fall/` and `/christmas/` |
 | Feed | `/feed.xml` |
 | LLM guide | `/llms.txt` |
 
 `llms.txt` is written at build time from `_data/cities.yml` and `_data/seasonal_hubs.yml`. It lists each city page, the about page, each seasonal hub, and the sitemap. It says the blurbs are original and link to sources. It does not include upcoming-event counts. Do not maintain it by hand.
 
-Seasonal hubs are generated from `_data/seasonal_hubs.yml`. Each hub stays up all year. A section appears only when it has something to list. The home page does not get a separate seasonal note. One banner under the masthead links to the hub that is in season and has enough upcoming events. See [Seasonal cross-check](#seasonal-cross-check). `/halloween/` is the Halloween hub. There is no `/holiday-lights/` page. Neighborhood light displays that were already promoted in public go in `_data/holiday_lights.yml`, with a neighborhood in `area` and a public `same_as`. Do not put a house number there. A row without `same_as` is skipped.
+Seasonal hubs are generated from `_data/seasonal_hubs.yml`. Each hub stays up all year. A section appears only when it has something to list. The home page does not get a separate seasonal note. One banner under the masthead links to the hub that is in season and has enough upcoming events. See [Seasonal cross-check](#seasonal-cross-check). There is no `/halloween/` page. Halloween is the `/fall/#halloween` section. There is no `/holiday-lights/` page. Neighborhood light displays that were already promoted in public go in `_data/holiday_lights.yml`, with a neighborhood in `area` and a public `same_as`. Do not put a house number there. A row without `same_as` is skipped.
 
 City URLs have no state segment and no year or week segment. Old addresses are not redirected.
 
@@ -72,7 +72,6 @@ The full tag vocabulary, with the season stored on each hub:
 
 | Hub | Path | Season | Tags |
 | --- | --- | --- | --- |
-| Halloween | `/halloween/` | Sep 15 through Oct 31 | `halloween`, `pumpkin-patch`, `trunk-or-treat`, `harvest` |
 | Fall and Halloween | `/fall/` | Sep 1 through Oct 31 | `pumpkin-patch`, `corn-maze`, `u-pick`, `harvest`, `halloween`, `trunk-or-treat` |
 | Christmas | `/christmas/` | Nov 10 through Dec 31 | `tree-lighting`, `holiday-lights`, `santa`, `holiday-market`, `holiday-show`, `parade` |
 | Easter | `/easter/` | Mar 15 through Apr 25 | `egg-hunt`, `easter` |
@@ -83,7 +82,7 @@ The full tag vocabulary, with the season stored on each hub:
 | Winter break and snow days | `/winter/` | Dec 15 through Jan 5 | `winter-break`, `snow-day` |
 | Rainy day plans | `/rainy-day/` | Oct 1 through May 31 | `rainy-day` |
 
-`/halloween/` lists pumpkin patches, trick-or-treat events, trunk-or-treats, and harvest festivals from every city, grouped by town. It matches the tags above, and also an event name that contains `pumpkin patch`, `trick-or-treat`, `trick or treat`, `trunk-or-treat`, `trunk or treat`, `harvest festival`, or `harvest fest`. From Sep 15 through Oct 31 it is listed before Fall, and both seasons end Oct 31, so the banner links there when Halloween has enough upcoming events. Fall sections are Pumpkin patches and corn mazes, Apple and u-pick farms, Harvest festivals, and Halloween and trick-or-treat. The Halloween section anchor on the fall page is `/fall/#halloween`. Christmas sections are Tree lightings, Holiday lights, Santa visits and photos, Holiday markets and bazaars, Nutcracker and holiday shows, and Parades and festivals. Holiday lights on the Christmas page also include publicly promoted neighborhood displays from `_data/holiday_lights.yml`. There is no `/salmon/` page. Salmon events stay on their city pages. A new season is a new hub in `_data/seasonal_hubs.yml`, including its theme colors and inline SVG. Set `group: town` with `tags` and `keywords` for a town list, or `sections` for named groups. That does not need a code change. The sitemap includes each hub. The page `ItemList` is the same events, in the same order, as the headings on the page.
+`/fall/` is the fall hub, in season Sep 1 through Oct 31. Its sections are Pumpkin patches and corn mazes, Apple and u-pick farms, Harvest festivals, and Halloween and trick-or-treat. The Halloween section anchor is `/fall/#halloween`. There is no `/halloween/` page and no redirect. A section also includes an event whose name contains `pumpkin patch`, `harvest festival`, `harvest fest`, `trick-or-treat`, `trick or treat`, `trunk-or-treat`, or `trunk or treat` when the tags were missed. While fall qualifies, the banner says "Fall fun for kids" and links to `/fall/`. Christmas sections are Tree lightings, Holiday lights, Santa visits and photos, Holiday markets and bazaars, Nutcracker and holiday shows, and Parades and festivals. Holiday lights on the Christmas page also include publicly promoted neighborhood displays from `_data/holiday_lights.yml`. There is no `/salmon/` page. Salmon events stay on their city pages. A new season is a new hub in `_data/seasonal_hubs.yml`, including its theme colors and inline SVG. Set `group: town` with `tags` and `keywords` for a town list, or `sections` for named groups. That does not need a code change. The sitemap includes each hub. The page `ItemList` is the same events, in the same order, as the headings on the page.
 
 Photos are one source file each, under `assets/images/{city}/`. Put that path on the city hero or in the event photo include. Do not resize it, and do not commit width variants. The Pages workflow runs `script/render-image-variants.py` before Jekyll. It writes AVIF, WebP, and JPEG at 400, 800, 1200, and 1600 pixels wide, never wider than the source, plus `_data/image_variants.yml`. Actions caches those outputs, keyed on a hash of the source files, so an unchanged photo is not encoded again. `_includes/responsive-img.html` prints a `picture` from the manifest: AVIF, then WebP, then JPEG. If the manifest or a width is missing, the tag is the original file and the build still succeeds. The map is SVG and is left as is.
 

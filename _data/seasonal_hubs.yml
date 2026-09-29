@@ -14,44 +14,11 @@ banner:
   min_events: 6
   min_towns: 3
 hubs:
-  - id: halloween
-    path: /halloween/
-    title: Halloween events for kids on the Eastside
-    banner_title: Halloween for kids
-    hook: Pumpkin patches, trick-or-treat, and harvest festivals.
-    link_label: See events
-    footer: false
-    description: Halloween events for kids on the Eastside. Pumpkin patches, trick-or-treat, trunk-or-treats, and harvest festivals from Sep 15 through Oct 31.
-    llms: Pumpkin patches, trick-or-treat events, trunk-or-treats, and harvest festivals for kids, grouped by town.
-    in_season_intro: Pumpkin patches, trick-or-treat events, trunk-or-treats, and harvest festivals for kids, listed by town through Oct 31.
-    off_season_intro: The season runs Sep 15 through Oct 31. This page stays up all year.
-    off_season_listed: The season runs Sep 15 through Oct 31. This page stays up all year, and dates already set are listed below.
-    empty: Nothing is listed yet. City pages are where each event is written up, and this page gathers the Halloween ones.
-    group: town
-    tags: [halloween, pumpkin-patch, trunk-or-treat, harvest]
-    keywords:
-      - pumpkin patch
-      - trick-or-treat
-      - trick or treat
-      - trunk-or-treat
-      - trunk or treat
-      - harvest festival
-      - harvest fest
-    season:
-      start: "09-15"
-      end: "10-31"
-    theme:
-      background: "#f4e6cf"
-      ink: "#1a2822"
-      muted: "#3f5148"
-      link: "#145c40"
-      svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#8a5a22" d="M8.2 11.2c0-2.2 1.5-3.6 3.8-3.6s3.8 1.4 3.8 3.6c0 3.3-1.6 6.2-3.8 6.2s-3.8-2.9-3.8-6.2z"/><path fill="#6b4e0e" d="M11.2 8.2h1.6v8.6h-1.6z"/><path fill="#1e4636" d="M12 4.6c.3 1 .2 1.8-.2 2.4 1.2-.2 2-.8 2.2-1.8-.8-.5-1.5-.7-2-.6z"/><path fill="#1e4636" d="M15.6 6.4c.9.7.8 1.6 0 2.2-.8-.5-1.3-1.1-1.4-1.8.4-.3.9-.4 1.4-.4z"/></svg>'
-
   - id: fall
     path: /fall/
     title: Fall and Halloween fun for kids on the Eastside
-    banner_title: Fall and Halloween
-    hook: Pumpkin patches, harvest festivals, and Halloween.
+    banner_title: Fall fun for kids
+    hook: Pumpkin patches, corn mazes, harvest festivals and Halloween.
     link_label: See events
     footer: true
     footer_label: Fall
@@ -68,15 +35,18 @@ hubs:
       - id: patches
         title: Pumpkin patches and corn mazes
         tags: [pumpkin-patch, corn-maze]
+        keywords: [pumpkin patch]
       - id: u-pick
         title: Apple and u-pick farms
         tags: [u-pick]
       - id: harvest
         title: Harvest festivals
         tags: [harvest]
+        keywords: [harvest festival, harvest fest]
       - id: halloween
         title: Halloween and trick-or-treat
         tags: [halloween, trunk-or-treat]
+        keywords: [trick-or-treat, trick or treat, trunk-or-treat, trunk or treat]
     theme:
       background: "#f4e6cf"
       ink: "#1a2822"
