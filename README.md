@@ -40,7 +40,7 @@ When DNS is ready, change these together:
 3. The contents of `CNAME` to `eastsidecalendar.com`
 4. The IndexNow sitemap URL in `.github/workflows/pages.yml`
 
-Suggestion and request links still use `suggestions@hometownweek.com`. The visible mail text uses the Eastside Family Calendar name. Leave the mailbox addresses on `@hometownweek.com` until those inboxes move.
+Suggestion and request links use `suggestions@eastsidecalendar.com`. The site host stays hometownweek.com until the domain flip above.
 
 ## Local build
 
