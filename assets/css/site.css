@@ -367,15 +367,23 @@ picture {
   line-height: 0.96;
 }
 
-.city-name a {
+.city-name a,
+.page h1 a,
+.prose h1 a {
   color: inherit;
+  font-weight: inherit;
   text-decoration: none;
 }
 
 .city-name a:hover,
-.city-name a:focus-visible {
+.city-name a:focus-visible,
+.page h1 a:hover,
+.page h1 a:focus-visible,
+.prose h1 a:hover,
+.prose h1 a:focus-visible {
   text-decoration: underline;
-  text-underline-offset: 0.06em;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.08em;
 }
 
 .city-subtitle {
@@ -394,10 +402,6 @@ picture {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.4;
-}
-
-.city-page-head .crumbs ol {
-  margin: 0.7rem 0 0;
 }
 
 @media (max-width: 42rem) {
@@ -873,37 +877,6 @@ picture {
 ::selection {
   background: #ead7a4;
   color: #1c2b24;
-}
-
-.crumbs ol {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  margin: 0 0 0.75rem;
-  padding: 0;
-  list-style: none;
-  color: var(--muted);
-  font-size: 0.78rem;
-  line-height: 1.4;
-}
-
-.crumbs li + li::before {
-  content: "/";
-  margin: 0 0.35rem;
-  color: var(--muted);
-}
-
-.crumbs a,
-.crumbs [aria-current="page"] {
-  color: var(--muted);
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.crumbs a:hover,
-.crumbs a:focus-visible {
-  color: var(--link);
-  text-decoration: underline;
 }
 
 .hero {
