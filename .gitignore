@@ -8,6 +8,8 @@ __pycache__/
 *.pyc
 
 # Widths written by the Pages workflow. One source image stays in git.
+# Home share card, drawn from the Eastside map during the Pages build.
+assets/images/og-home.png
 .image-cache/
 _data/image_variants.yml
 assets/images/**/*-400.avif

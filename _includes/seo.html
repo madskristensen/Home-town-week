@@ -9,11 +9,18 @@
   {%- assign map_og = "/assets/images/og/" | append: city.state | append: "/" | append: city.id | append: ".png" -%}
 {%- endif -%}
 {%- comment -%}
-  Share cards should feel like the place. A city page uses its hero photo
-  when it has one. Otherwise the card is the 1200x630 map and pin. Social
-  apps do not render the header SVG. Home uses the site card.
+  Share cards should feel like the place. The home page uses the Eastside
+  map card the Pages build writes. A city page uses its hero photo when
+  it has one, and otherwise the 1200x630 map and pin. Social apps do not
+  render the header SVG.
 {%- endcomment -%}
-{%- if page.layout == "city" and page.image -%}
+{%- if page.layout == "home" -%}
+  {%- assign seo_image_path = site.image -%}
+  {%- assign seo_image_alt = site.image_alt -%}
+  {%- assign seo_image_width = 1200 -%}
+  {%- assign seo_image_height = 630 -%}
+  {%- assign seo_image_mime = "image/png" -%}
+{%- elsif page.layout == "city" and page.image -%}
   {%- assign seo_image_path = page.image -%}
   {%- assign seo_image_alt = page.image_alt -%}
   {%- assign seo_image_width = 1600 -%}

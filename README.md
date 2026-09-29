@@ -61,6 +61,8 @@ The home block is chosen when the site builds. By default it picks up to four st
 
 Photos are one source file each, under `assets/images/{city}/`. Put that path on the city hero or in the event photo include. Do not resize it, and do not commit width variants. The Pages workflow runs `script/render-image-variants.py` before Jekyll. It writes AVIF, WebP, and JPEG at 400, 800, 1200, and 1600 pixels wide, never wider than the source, plus `_data/image_variants.yml`. Actions caches those outputs, keyed on a hash of the source files, so an unchanged photo is not encoded again. `_includes/responsive-img.html` prints a `picture` from the manifest: AVIF, then WebP, then JPEG. If the manifest or a width is missing, the tag is the original file and the build still succeeds. The map is SVG and is left as is.
 
+The home page share image is a 1200 by 630 PNG of that same Eastside map, with the site name and a short line under it. The Pages workflow runs `script/render-home-og.py` before Jekyll and writes `assets/images/og-home.png`. That file is not committed. City pages do not use it. A city share image is the hero photo, or the card from `script/render-og-images.py` when the page has no hero.
+
 The first Friday of the month is source maintenance only: find a new calendar or drop a stale URL. That Friday does not rewrite event copy.
 
 A first seed of a city can write the list and fill the upcoming events in the same pass. After that, keep the split. Family events first. If a page does not print a clock, leave the clock out. Do not keep a past event as an archive.

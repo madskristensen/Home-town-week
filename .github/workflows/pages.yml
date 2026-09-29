@@ -58,6 +58,15 @@ jobs:
             python3 script/render-image-variants.py
           fi
 
+      - name: Render the home share image
+        run: |
+          # One 1200x630 card from the Eastside map. A map edit on this
+          # push updates the image. The PNG is not committed.
+          sudo apt-get update
+          sudo apt-get install -y librsvg2-bin fonts-liberation
+          python3 -m pip install --quiet Pillow
+          python3 script/render-home-og.py
+
       - name: Build with Jekyll
         env:
           JEKYLL_ENV: production
