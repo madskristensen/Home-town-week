@@ -271,7 +271,7 @@ def main():
     removed_pages = 0
     removed_rows = 0
     touched = []
-    for path in sorted(root.glob("*/*/index.md")):
+    for path in sorted(root.glob("*/index.md")):
         count = prune_markdown(path, today, args.dry_run)
         if count:
             removed_pages += count

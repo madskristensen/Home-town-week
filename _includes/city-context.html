@@ -1,9 +1,5 @@
-{%- if page.state -%}
-{%- capture state_hub_url -%}/{{ page.state }}/{%- endcapture -%}
-{%- assign state_hub_url = state_hub_url | strip -%}
-{%- endif -%}
 {%- if page.city and page.state -%}
 {%- assign city = site.data.cities | where: "id", page.city | where: "state", page.state | first -%}
-{%- capture city_url -%}/{{ page.state }}/{{ page.city }}/{%- endcapture -%}
+{%- capture city_url -%}/{{ page.city }}/{%- endcapture -%}
 {%- assign city_url = city_url | strip -%}
 {%- endif -%}

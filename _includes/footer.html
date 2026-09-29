@@ -4,10 +4,9 @@
       <a href="{{ '/about/' | relative_url }}">About</a>
       <a href="{{ '/feed.xml' | relative_url }}">Feed</a>
       {%- capture city_request_subject -%}Request a city{%- endcapture -%}
-      {%- capture city_request_body -%}I would like Hometown Week to cover a city.
+      {%- capture city_request_body -%}I would like Eastside Family Calendar to cover a city.
 
 City:
-State:
 {%- endcapture -%}
       <a href="mailto:suggestions@hometownweek.com?subject={{ city_request_subject | strip | mail_escape }}&amp;body={{ city_request_body | strip | mail_escape }}">Request a city</a>
     </nav>

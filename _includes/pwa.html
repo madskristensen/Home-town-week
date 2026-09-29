@@ -1,15 +1,14 @@
 <script data-sw="{{ '/sw.js' | relative_url }}">
 (function () {
   // localStorage keys:
-  // hw-last-state  state slug of the last city page, such as wa
-  // hw-last-city   city slug of that page, such as redmond
+  // hw-last-city   city slug of the last city page, such as redmond
   // hw-city-visits city-page loads in this browser
   // hw-shared      "1" after the Share control is used
   // hw-install-dismissed  epoch ms; Not now hides the card until then
+  // hw-last-state is an older key. New visits do not write it.
   var DISMISS_KEY = "hw-install-dismissed";
   var CITY_VISITS_KEY = "hw-city-visits";
   var SHARED_KEY = "hw-shared";
-  var LAST_STATE_KEY = "hw-last-state";
   var LAST_CITY_KEY = "hw-last-city";
   var DISMISS_MS = 14 * 24 * 60 * 60 * 1000;
 
@@ -62,10 +61,8 @@
   function saveLastCity() {
     var article = document.querySelector("article.city-home");
     if (!article) return;
-    var state = article.getAttribute("data-state") || "";
     var city = article.getAttribute("data-city") || "";
-    if (!/^[a-z0-9-]+$/.test(state) || !/^[a-z0-9-]+$/.test(city)) return;
-    storageSet(LAST_STATE_KEY, state);
+    if (!/^[a-z0-9-]+$/.test(city)) return;
     storageSet(LAST_CITY_KEY, city);
   }
 

@@ -33,15 +33,12 @@ SERIF = "/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf"
 SANS = "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"
 SANS_BOLD = "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"
 
-# One map from each state on the front-page card, in footer order.
+# A few Eastside cities on the front-page card.
 HOME_MARKS = [
+    ("wa", "bellevue", "Bellevue"),
+    ("wa", "kirkland", "Kirkland"),
     ("wa", "redmond", "Redmond"),
-    ("or", "bend", "Bend"),
-    ("id", "coeur-dalene", "Coeur d'Alene"),
-    ("ut", "lehi", "Lehi"),
-    ("co", "fort-collins", "Fort Collins"),
-    ("tx", "plano", "Plano"),
-    ("ca", "irvine", "Irvine"),
+    ("wa", "issaquah", "Issaquah"),
 ]
 
 
@@ -118,42 +115,39 @@ def city_card(city):
   <rect x="56" y="56" width="476" height="518" rx="40" fill="{FOREST}"/>
   <rect x="56" y="56" width="476" height="518" rx="40" fill="none" stroke="{GOLD}" stroke-width="3"/>
   {nested_map(city["state"], city["id"], 92, 96, 404, 438)}
-  <text x="{text_x}" y="{kicker_y}" fill="{GOLD_INK}" font-family="Liberation Sans" font-weight="700" font-size="22" letter-spacing="2.4">HOMETOWN WEEK</text>
+  <text x="{text_x}" y="{kicker_y}" fill="{GOLD_INK}" font-family="Liberation Sans" font-weight="700" font-size="18" letter-spacing="1.1">EASTSIDE FAMILY CALENDAR</text>
   <text x="{text_x}" y="{name_y}" fill="{FOREST}" font-family="Liberation Serif" font-weight="700" font-size="{size}">{xml_escape(name)}</text>
-  <text x="{text_x}" y="{line_y}" fill="{MUTED}" font-family="Liberation Sans" font-size="30">Weekly family digest</text>
+  <text x="{text_x}" y="{line_y}" fill="{MUTED}" font-family="Liberation Sans" font-size="30">Family events</text>
 </svg>
 '''
 
 
 def home_card():
-    # Four marks on the first row, three centered beneath them.
-    tile = 144
-    gap_x = 16
-    gap_y = 12
-    label_h = 24
-    cols = 4
+    # Two rows of two Eastside city marks on the right.
+    tile = 168
+    gap_x = 18
+    gap_y = 14
+    label_h = 26
+    cols = 2
     grid_w = cols * tile + (cols - 1) * gap_x
     origin_x = W - 56 - grid_w
-    origin_y = 148
-    rows = [HOME_MARKS[:4], HOME_MARKS[4:]]
+    origin_y = 128
+    rows = [HOME_MARKS[:2], HOME_MARKS[2:]]
     tiles = []
-    index = 0
     for row, marks in enumerate(rows):
-        row_w = len(marks) * tile + (len(marks) - 1) * gap_x
-        row_x = origin_x + (grid_w - row_w) / 2
         for col, (state, city_id, label) in enumerate(marks):
-            x = row_x + col * (tile + gap_x)
+            x = origin_x + col * (tile + gap_x)
             y = origin_y + row * (tile + label_h + gap_y)
-            inset = 16
+            inset = 18
             tiles.append(
                 f'<rect x="{x}" y="{y}" width="{tile}" height="{tile}" rx="28" fill="{FOREST}"/>'
             )
             tiles.append(
                 nested_map(state, city_id, x + inset, y + inset, tile - inset * 2, tile - inset * 2, stroke="3.4")
             )
-            label_size = 16 if text_width(label, SANS, 16) < tile - 4 else 14
+            label_size = 18 if text_width(label, SANS, 18) < tile - 4 else 15
             tiles.append(
-                f'<text x="{x + tile / 2}" y="{y + tile + 22}" text-anchor="middle" '
+                f'<text x="{x + tile / 2}" y="{y + tile + 24}" text-anchor="middle" '
                 f'fill="{MUTED}" font-family="Liberation Sans" font-size="{label_size}">{xml_escape(label)}</text>'
             )
     marks = "\n  ".join(tiles)
@@ -161,11 +155,12 @@ def home_card():
   <rect width="{W}" height="{H}" fill="{PAPER}"/>
   <circle cx="120" cy="0" r="280" fill="{GOLD}" opacity="0.18"/>
   <circle cx="40" cy="630" r="180" fill="{FOREST}" opacity="0.05"/>
-  <text x="64" y="196" fill="{GOLD_INK}" font-family="Liberation Sans" font-weight="700" font-size="22" letter-spacing="2.6">WEEKLY FAMILY DIGESTS</text>
-  <text x="64" y="292" fill="{FOREST}" font-family="Liberation Serif" font-weight="700" font-size="84">Hometown</text>
-  <text x="64" y="384" fill="{FOREST}" font-family="Liberation Serif" font-weight="700" font-size="84">Week</text>
+  <text x="64" y="150" fill="{GOLD_INK}" font-family="Liberation Sans" font-weight="700" font-size="22" letter-spacing="2.2">FAMILY EVENTS</text>
+  <text x="64" y="236" fill="{FOREST}" font-family="Liberation Serif" font-weight="700" font-size="64">Eastside</text>
+  <text x="64" y="310" fill="{FOREST}" font-family="Liberation Serif" font-weight="700" font-size="64">Family</text>
+  <text x="64" y="384" fill="{FOREST}" font-family="Liberation Serif" font-weight="700" font-size="64">Calendar</text>
   <rect x="68" y="414" width="112" height="6" rx="3" fill="{GOLD}"/>
-  <text x="64" y="478" fill="{MUTED}" font-family="Liberation Sans" font-size="28">The week in your city, for families.</text>
+  <text x="64" y="478" fill="{MUTED}" font-family="Liberation Sans" font-size="26">Upcoming events on the Eastside.</text>
   {marks}
 </svg>
 '''
@@ -188,8 +183,22 @@ def rasterize(svg, dest):
 
 def main():
     cities = load_cities()
-    if len(cities) < 30:
-        raise SystemExit(f"expected the city list, found {len(cities)}")
+    expected = {
+        "bellevue",
+        "bothell",
+        "issaquah",
+        "kenmore",
+        "kirkland",
+        "maple-valley",
+        "mercer-island",
+        "redmond",
+        "renton",
+        "sammamish",
+        "woodinville",
+    }
+    found = {city["id"] for city in cities}
+    if found != expected:
+        raise SystemExit(f"expected the Eastside city list, found {sorted(found)}")
     for city in cities:
         svg_path = MAP_DIR / city["state"] / f"{city['id']}.svg"
         if not svg_path.exists():

@@ -1,7 +1,7 @@
-# Nearby cities that already have a page, nearest first, up to four.
+# Nearby Eastside cities that already have a page, nearest first, up to four.
 # Distances use the city-center coordinates in cities.yml. No geolocation.
-# Eastside Washington is filled in. A city with no entry, or none that
-# resolve to a real page, does not show an Also close row.
+# A city with no entry, or none that resolve to a real page, does not show
+# an Also close row. Keys stay under wa because each city still records state.
 wa:
   bellevue:
     - mercer-island

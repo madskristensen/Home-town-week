@@ -2,7 +2,7 @@
 [
 {%- assign index_emitted = false -%}
 {%- for city in site.data.cities -%}
-  {%- capture index_href -%}/{{ city.state }}/{{ city.id }}/{%- endcapture -%}
+  {%- capture index_href -%}/{{ city.id }}/{%- endcapture -%}
   {%- if index_emitted -%},{%- endif -%}
   {"state":{{ city.state | jsonify }},"id":{{ city.id | jsonify }},"name":{{ city.name | jsonify }},"href":{{ index_href | strip | relative_url | jsonify }}}
   {%- assign index_emitted = true -%}
@@ -14,7 +14,7 @@
 {%- assign emitted = false -%}
 {%- for city in site.data.cities -%}
   {%- if city.lat and city.lon -%}
-    {%- capture place_href -%}/{{ city.state }}/{{ city.id }}/{%- endcapture -%}
+    {%- capture place_href -%}/{{ city.id }}/{%- endcapture -%}
     {%- if emitted -%},{%- endif -%}
     {"name":{{ city.name | jsonify }},"state":{{ city.state_name | jsonify }},"code":{{ city.state | jsonify }},"summary":{{ city.tagline | default: city.summary | jsonify }},"lat":{{ city.lat }},"lon":{{ city.lon }},"href":{{ place_href | strip | relative_url | jsonify }}}
     {%- assign emitted = true -%}
@@ -90,10 +90,10 @@
   }
 
   var places = loadPlaces();
-  var section = document.getElementById("this-week");
+  var section = document.getElementById("near-you");
   var button = document.getElementById("near-button");
   var note = document.getElementById("near-note");
-  var weekTitle = document.getElementById("this-week-title");
+  var weekTitle = document.getElementById("near-you-title");
   var results = document.getElementById("near-results");
   var message = document.getElementById("near-message");
   var form = document.getElementById("city-search");
@@ -130,9 +130,7 @@
   }
 
   function whereLine(place, miles) {
-    var away = milesLabel(miles);
-    if (place.state && away) return place.state + ", " + away;
-    return place.state || away;
+    return milesLabel(miles);
   }
 
   function rankedPlaces(lat, lon) {
@@ -217,7 +215,7 @@
 
   function locate() {
     if (!places.length) {
-      showMessage("Search for your city, or pick a state.");
+      showMessage("Search for your city, or pick one from the list.");
       return;
     }
     if (!window.isSecureContext || !navigator.geolocation) return;
@@ -244,15 +242,15 @@
         showOne(ranked[0].place, ranked[0].miles, "closest");
         return;
       }
-      showMessage("No city we cover is close enough to call nearby. Search for one, or pick a state.");
+      showMessage("No Eastside city we cover is close enough to call nearby. Search for one, or pick one from the list.");
     }, function (err) {
       finishLookup();
       if (err && err.code === 1) {
-        showMessage("Location stays off until the browser allows it. Search for your city, or pick a state.");
+        showMessage("Location stays off until the browser allows it. Search for your city, or pick one from the list.");
       } else if (err && err.code === 3) {
         showMessage("That took too long. Try again, or search for your city.");
       } else {
-        showMessage("We could not read a location just now. Search for your city, or pick a state.");
+        showMessage("We could not read a location just now. Search for your city, or pick one from the list.");
       }
     }, {
       enableHighAccuracy: false,
@@ -264,10 +262,10 @@
   if (button && note) {
     if (!navigator.geolocation) {
       button.hidden = true;
-      note.textContent = "This browser cannot share a location. Search for your city, or pick a state.";
+      note.textContent = "This browser cannot share a location. Search for your city, or pick one from the list.";
     } else if (!window.isSecureContext) {
       button.hidden = true;
-      note.textContent = "Use your location is available on the secure site. Search for your city, or pick a state.";
+      note.textContent = "Use your location is available on the secure site. Search for your city, or pick one from the list.";
     } else {
       button.addEventListener("click", locate);
       if (navigator.permissions && navigator.permissions.query) {
@@ -341,7 +339,6 @@
       var link = document.createElement("a");
       link.href = place.href;
       link.appendChild(el("span", "match-name", place.name));
-      if (place.state) link.appendChild(el("span", "match-state", place.state));
       item.appendChild(link);
       matches.appendChild(item);
     }
@@ -382,8 +379,9 @@
         else links[current - 1].focus();
       }
     });
-    // hw-last-state and hw-last-city are saved on a city page.
-    // Show Open {City} only when both match a real city. Never redirect.
+    // hw-last-city is the city slug saved on a city page.
+    // Older browsers may also have hw-last-state. That value is ignored.
+    // Show Open {City} only when the slug matches a real city. Never redirect.
     function loadIndex() {
       var node = document.getElementById("city-index");
       if (!node) return [];
@@ -412,20 +410,20 @@
       var finder = document.querySelector(".finder");
       var search = document.getElementById("city-search");
       if (!finder || !search) return;
-      var state = "";
       var city = "";
       try {
-        state = localStorage.getItem("hw-last-state") || "";
         city = localStorage.getItem("hw-last-city") || "";
       } catch (err) {
         return;
       }
-      if (!/^[a-z0-9-]+$/.test(state) || !/^[a-z0-9-]+$/.test(city)) return;
+      // Older saved values sometimes look like "wa/redmond".
+      if (city.indexOf("/") !== -1) city = city.split("/").pop();
+      if (!/^[a-z0-9-]+$/.test(city)) return;
       var index = loadIndex();
       var match = null;
       var i;
       for (i = 0; i < index.length; i++) {
-        if (index[i].state === state && index[i].id === city) {
+        if (index[i].id === city) {
           match = index[i];
           break;
         }

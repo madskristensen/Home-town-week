@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting</title>
+  <link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">
+  <script>location.replace({{ page.redirect_to | relative_url | jsonify }});</script>
+</head>
+<body>
+  <p><a href="{{ page.redirect_to | relative_url }}">Continue</a></p>
+</body>
+</html>

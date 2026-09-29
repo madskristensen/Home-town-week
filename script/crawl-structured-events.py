@@ -13,7 +13,7 @@ is before today in America/Los_Angeles are not added. The daily prune
 script still removes expired rows from the city pages.
 
     python3 script/crawl-structured-events.py --dry-run
-    python3 script/crawl-structured-events.py --city bainbridge-island
+    python3 script/crawl-structured-events.py --city redmond
     python3 script/crawl-structured-events.py --self-test
 """
 
@@ -34,7 +34,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 ZONE = ZoneInfo("America/Los_Angeles")
-USER_AGENT = "HometownWeek/1.0 (+https://hometownweek.com; structured-feed-crawl)"
+USER_AGENT = "EastsideFamilyCalendar/1.0 (+https://hometownweek.com; structured-feed-crawl)"
 STRUCTURED = {"ical", "rss", "libcal", "bibliocommons", "allevents"}
 HORIZON_DAYS = 45
 MAX_PER_SOURCE = 30

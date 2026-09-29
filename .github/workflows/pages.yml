@@ -40,7 +40,9 @@ jobs:
           JEKYLL_ENV: production
         run: |
           # Custom domain hometownweek.com: empty baseurl. Do not fall back
-          # to /Home-town-week or apex CSS/images break.
+          # to /Home-town-week or apex CSS/images break. When DNS for
+          # eastsidecalendar.com is ready, also update the IndexNow sitemap
+          # URL below. Leave CNAME and this host alone until then.
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 
       - name: Add IndexNow verification key

@@ -1,5 +1,10 @@
-# Later, when hometownweek.com should be the canonical host:
+# Optional overlay. The live site already uses hometownweek.com in _config.yml.
+# When DNS for eastsidecalendar.com is ready:
+#   1. Set url in _config.yml to https://eastsidecalendar.com
+#   2. Set url below to the same host
+#   3. Replace the CNAME file with eastsidecalendar.com
+#   4. Point IndexNow in .github/workflows/pages.yml at the new sitemap URL
+# A build can pass both files:
 #   bundle exec jekyll build --config _config.yml,_config.domain.yml
-# Also stop excluding CNAME in _config.yml so the domain file is published.
 url: https://hometownweek.com
 baseurl: ""

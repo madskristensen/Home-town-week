@@ -464,7 +464,7 @@ module HometownWeek
       lines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
-        "PRODID:-//Hometown Week//hometownweek.com//EN",
+        "PRODID:-//Eastside Family Calendar//hometownweek.com//EN",
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
         "X-WR-TIMEZONE:#{ZONE}"
@@ -492,7 +492,7 @@ module HometownWeek
         parts << "Details: #{event[:same_as]}"
       end
       parts << "End time was not listed." if event[:start][:time] && !event[:end]
-      parts << "Hometown Week: #{issue_url}"
+      parts << "Eastside Family Calendar: #{issue_url}"
       parts.join("\n\n")
     end
 

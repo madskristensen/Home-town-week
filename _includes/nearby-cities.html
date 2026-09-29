@@ -16,7 +16,7 @@
 {%- assign near_page = site.pages | where: "layout", "city" | where: "city", nid | where: "state", page.state | first -%}
 {%- if near and near_page -%}
 {%- assign nearby_shown = nearby_shown | plus: 1 -%}
-{%- capture near_href -%}/{{ page.state }}/{{ near.id }}/{%- endcapture -%}
+{%- capture near_href -%}/{{ near.id }}/{%- endcapture -%}
 <li><a href="{{ near_href | strip | relative_url }}">{{ near.name }}</a></li>
 {%- endif -%}
 {%- endfor -%}

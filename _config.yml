@@ -1,15 +1,18 @@
-title: Hometown Week
-tagline: Family events, city by city
+title: Eastside Family Calendar
+tagline: Family events on the Eastside
 description: >-
-  See what's going on in your city, so you never miss the fun.
-# Custom domain is live.
+  Upcoming family events in Eastside cities, so you never miss the fun.
+# Canonical host. Still hometownweek.com until DNS for eastsidecalendar.com
+# is ready. To flip the host, see the domain note in README: change url here,
+# the same url in _config.domain.yml, the CNAME file, and the IndexNow sitemap
+# URL in .github/workflows/pages.yml.
 url: https://hometownweek.com
 baseurl: ""
 lang: en-US
 timezone: America/Los_Angeles
 logo: /assets/images/logo.png
 image: /assets/images/og-image.png
-image_alt: Hometown Week. Upcoming family events, with a map pin for each city.
+image_alt: Eastside Family Calendar. Upcoming family events on the Eastside.
 repository: madskristensen/Home-town-week
 
 author:
@@ -22,7 +25,7 @@ twitter:
   card: summary_large_image
 
 social:
-  name: Hometown Week
+  name: Eastside Family Calendar
   links:
     - https://github.com/madskristensen/Home-town-week
 

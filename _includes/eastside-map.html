@@ -1,0 +1,76 @@
+{%- comment -%}
+  Hand-drawn Eastside, Lake Washington to the Cascade foothills.
+  City positions use the same centers as cities.yml. Each city is a link.
+{%- endcomment -%}
+<svg class="eastside-svg" viewBox="0 0 560 740" role="group" aria-labelledby="eastside-map-title">
+  <title id="eastside-map-title">Map of Eastside cities</title>
+  <g class="map-geo" aria-hidden="true" focusable="false">
+    <path class="foothills" d="M470 36 C430 110 468 190 438 280 C478 360 430 450 458 540 C424 620 470 680 500 720 L560 720 L560 36 Z"/>
+    <path class="water" d="M232 157 L212 189 L209 240 L205 304 L220 368 L232 432 L240 483 L259 511 L287 502 L294 444 L283 380 L275 329 L271 278 L263 240 L244 195 Z"/>
+    <path class="island" d="M250 365 L237 387 L244 416 L263 421 L276 403 L275 374 Z"/>
+    <path class="water" d="M341 294 L330 329 L341 387 L365 425 L376 434 L388 393 L384 329 L361 291 Z"/>
+    <path class="road" d="M283 99 L287 176 L291 253 L287 329 L302 393 L283 483 L267 547"/>
+    <path class="road" d="M197 304 L275 310 L330 278 L361 265"/>
+    <path class="road" d="M197 368 L252 374 L291 387 L361 412 L415 438"/>
+    <text class="water-label" x="188" y="300">Lake Washington</text>
+    <text class="water-label" x="332" y="372">Lake Sammamish</text>
+    <text class="road-label" x="306" y="214">405</text>
+    <text class="road-label" x="292" y="302">520</text>
+    <text class="road-label" x="318" y="404">90</text>
+  </g>
+  <a href="{{ '/kenmore/' | relative_url }}">
+    <circle class="city-hit" cx="240.5" cy="153.7" r="18"/>
+    <circle class="city-pin" cx="240.5" cy="153.7" r="6.5"/>
+    <text class="city-label" x="226" y="158" text-anchor="end">Kenmore</text>
+  </a>
+  <a href="{{ '/bothell/' | relative_url }}">
+    <circle class="city-hit" cx="270.7" cy="150.1" r="18"/>
+    <circle class="city-pin" cx="270.7" cy="150.1" r="6.5"/>
+    <text class="city-label" x="270.7" y="134" text-anchor="middle">Bothell</text>
+  </a>
+  <a href="{{ '/woodinville/' | relative_url }}">
+    <circle class="city-hit" cx="303.4" cy="157.6" r="18"/>
+    <circle class="city-pin" cx="303.4" cy="157.6" r="6.5"/>
+    <text class="city-label" x="316" y="162">Woodinville</text>
+  </a>
+  <a href="{{ '/kirkland/' | relative_url }}">
+    <circle class="city-hit" cx="268.1" cy="250.6" r="18"/>
+    <circle class="city-pin" cx="268.1" cy="250.6" r="6.5"/>
+    <text class="city-label" x="252" y="254" text-anchor="end">Kirkland</text>
+  </a>
+  <a href="{{ '/redmond/' | relative_url }}">
+    <circle class="city-hit" cx="336.1" cy="260.2" r="18"/>
+    <circle class="city-pin" cx="336.1" cy="260.2" r="6.5"/>
+    <text class="city-label" x="350" y="256">Redmond</text>
+  </a>
+  <a href="{{ '/bellevue/' | relative_url }}">
+    <circle class="city-hit" cx="273.7" cy="341.9" r="18"/>
+    <circle class="city-pin" cx="273.7" cy="341.9" r="6.5"/>
+    <text class="city-label" x="286" y="362">Bellevue</text>
+  </a>
+  <a href="{{ '/sammamish/' | relative_url }}">
+    <circle class="city-hit" cx="403.2" cy="334" r="18"/>
+    <circle class="city-pin" cx="403.2" cy="334" r="6.5"/>
+    <text class="city-label" x="416" y="330">Sammamish</text>
+  </a>
+  <a href="{{ '/mercer-island/' | relative_url }}">
+    <circle class="city-hit" cx="257.6" cy="392.3" r="18"/>
+    <circle class="city-pin" cx="257.6" cy="392.3" r="6.5"/>
+    <text class="city-label" x="230" y="410" text-anchor="end">Mercer Island</text>
+  </a>
+  <a href="{{ '/renton/' | relative_url }}">
+    <circle class="city-hit" cx="261.5" cy="504.5" r="18"/>
+    <circle class="city-pin" cx="261.5" cy="504.5" r="6.5"/>
+    <text class="city-label" x="246" y="524" text-anchor="end">Renton</text>
+  </a>
+  <a href="{{ '/issaquah/' | relative_url }}">
+    <circle class="city-hit" cx="405.5" cy="444.2" r="18"/>
+    <circle class="city-pin" cx="405.5" cy="444.2" r="6.5"/>
+    <text class="city-label" x="418" y="448">Issaquah</text>
+  </a>
+  <a href="{{ '/maple-valley/' | relative_url }}">
+    <circle class="city-hit" cx="395.5" cy="620" r="18"/>
+    <circle class="city-pin" cx="395.5" cy="620" r="6.5"/>
+    <text class="city-label" x="408" y="624">Maple Valley</text>
+  </a>
+</svg>

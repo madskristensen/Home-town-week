@@ -1,5 +1,5 @@
-/* Hometown Week. Cache the shell and pages opened while online. No push. */
-var CACHE = "hometown-week-v1";
+/* Eastside Family Calendar. Cache the shell and pages opened while online. No push. */
+var CACHE = "eastside-calendar-v1";
 var SHELL = [
   "/",
   "/manifest.webmanifest",
@@ -55,12 +55,12 @@ function offlineDocument() {
   var html = "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\">" +
     "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">" +
     "<meta name=\"theme-color\" content=\"#f4efe6\">" +
-    "<title>Offline. Hometown Week</title></head>" +
+    "<title>Offline. Eastside Family Calendar</title></head>" +
     "<body style=\"margin:0;background:#f4efe6;color:#2a3831;font-family:system-ui,-apple-system,Segoe UI,sans-serif\">" +
     "<main style=\"max-width:36rem;margin:0 auto;padding:2.2rem 1rem\">" +
     "<h1 style=\"margin:0 0 0.6rem;color:#1c2b24;font-weight:600\">You are offline</h1>" +
     "<p style=\"margin:0 0 0.8rem;line-height:1.5\">This page is not saved on this device yet. Open it once while you are online, then you can come back to it later.</p>" +
-    "<p style=\"margin:0\"><a href=\"/\" style=\"color:#145c40\">Go to Hometown Week</a></p>" +
+    "<p style=\"margin:0\"><a href=\"/\" style=\"color:#145c40\">Go to Eastside Family Calendar</a></p>" +
     "</main></body></html>";
   return new Response(html, {
     status: 200,

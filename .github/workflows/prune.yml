@@ -42,7 +42,7 @@ jobs:
           unexpected=0
           while IFS= read -r path; do
             case "$path" in
-              _data/*_events.yml|*/*/index.md) ;;
+              _data/*_events.yml|*/index.md) ;;
               *)
                 echo "Refusing to commit unexpected path: $path"
                 unexpected=1

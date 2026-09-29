@@ -1,8 +1,8 @@
 {
   "id": "/",
-  "name": "Hometown Week",
-  "short_name": "Hometown Week",
-  "description": "See what's going on in your city, so you never miss the fun.",
+  "name": "Eastside Family Calendar",
+  "short_name": "Eastside Calendar",
+  "description": "Upcoming family events on Washington's Eastside.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

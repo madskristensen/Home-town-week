@@ -1,30 +1,46 @@
-# Hometown Week
+# Eastside Family Calendar
 
-Upcoming family events for the city you live in. This is a Jekyll site for [hometownweek.com](https://hometownweek.com/).
+Upcoming family events for cities on Washington's Eastside. This is a Jekyll site. It is still published at [hometownweek.com](https://hometownweek.com/). The next host will be eastsidecalendar.com. Do not change the domain until DNS for that host is ready. See [Domain](#domain).
 
-Washington, Oregon, Idaho, Utah, Colorado, Texas, and California each have a state hub. A city name on a state hub, and a result in Find your city, open that city's page. The home page leads with a location lookup, a city search, and a map of the states that already have events. Choosing a highlighted state opens that state's hub. Each state hub lists only its own cities. The footer does not repeat every city. The site header is the same slim bar on every page: the mark, Hometown Week, and a States menu. That menu lists states. It does not lay the names across the bar, and it does not list cities. Names without a page stay in `_data/coming_soon.yml` and do not link anywhere. State outlines live in `_data/us_map.json` (regenerate with `python3 script/build-us-map.py`). A state is highlighted only when `_data/cities.yml` includes one of its cities.
+The home page leads with a location lookup, a city search, and a map of the Eastside from Lake Washington to the Cascade foothills. Each city on the map is a link, and the list beside it is the same set of cities. The footer does not repeat every city. The site header is the same slim bar on every page: the mark, Eastside Family Calendar, and a Cities menu. That menu lists cities. It does not lay the names across the bar.
 
-Weeks are not pages. A later Monday email may use a week, and that email is out of scope here.
+Newcastle is an Eastside city that does not have a page yet. Do not invent a page for it. Names without a page can sit in `_data/coming_soon.yml` and do not link anywhere.
 
 ## URLs
 
 | Page | Path |
 | --- | --- |
 | Home | `/` |
-| State hub | `/{state}/`, for example `/wa/`, `/or/`, `/id/`, `/ut/`, `/co/`, `/tx/`, `/ca/` |
-| City | `/{state}/{city}/`, for example `/wa/redmond/` or `/or/bend/` |
+| City | `/{city}/`, for example `/redmond/` |
 | About | `/about/` |
 | Feed | `/feed.xml` |
+| Old state hub | `/wa/` redirects to `/` |
+| Old city path | `/wa/{city}/` redirects to `/{city}/` for each city that still has a page |
 
-The city page is the digest: a short teaser, then upcoming family events. There is no year index, no week issue, and no `/latest/` redirect. Old week addresses are not redirected.
+There is no state segment in a city URL. Old `/wa/{city}/` addresses for the cities that remain are static redirect pages. Removed cities and the other state hubs are gone. Their pages stay in git history.
+
+The city page lists upcoming family events. There is no year index, no week issue, and no `/latest/` redirect.
 
 Events stay in the city page in the order they are written. The build groups each `###` event into Today, Tomorrow, This weekend, or Later from the first month and day on its gold date line (`<p class="event-when">`). A line with no month and day, and no matching dated row in `{city}_events.yml`, goes in Later. Empty groups are left out. Today and tomorrow take priority over the weekend. This weekend is the Saturday and Sunday of the current Pacific week. The groups are in the HTML, so they still show with JavaScript off. If the Pacific date has moved past the build date, the browser moves the same cards into the current groups.
 
-A city page stores two `localStorage` keys: `hw-last-state` (the state slug, such as `wa`) and `hw-last-city` (the city slug, such as `redmond`). The home page reads them and, only when both match a city in `_data/cities.yml`, adds a link that says `Open {City}` and points at `/{state}/{city}/`. It does not redirect. With JavaScript off, or with a missing or unknown slug, the home page is unchanged.
+A city page stores one `localStorage` key: `hw-last-city` (the city slug, such as `redmond`). The home page reads it and, only when it matches a city in `_data/cities.yml`, adds a link that says `Open {City}` and points at `/{city}/`. It does not redirect. An older browser may still have `hw-last-state`, or a slug from a city that was removed. Those values are ignored. A stored value shaped like `wa/redmond` is read as `redmond`. With JavaScript off, or with a missing or unknown slug, the home page is unchanged.
 
 The install card sits in the city page under the teaser, in normal flow. It is not a fixed bar. It stays hidden until this browser has opened a city page twice, or until Share is used, and the browser fires `beforeinstallprompt`. Not now stores `hw-install-dismissed` as the epoch milliseconds when the card may return, 14 days out. `hw-city-visits` counts city-page loads. `hw-shared` is `1` after Share. The card is omitted on iOS and when the site is already installed. The service worker still registers on every page.
 
-`_data/nearby.yml` lists up to four nearby city ids per city. The Also close row links only to ids that have a page. Eastside Washington is filled in. Other cities omit the row until they are added there.
+`_data/nearby.yml` lists up to four nearby city ids per city, under `wa`. The Also close row links only to ids that have a page.
+
+## Domain
+
+`CNAME` is `hometownweek.com`. Leave it there until DNS for eastsidecalendar.com is ready. `_config.yml` sets `url` to `https://hometownweek.com` and `baseurl` to an empty string. Keep the baseurl empty. A `/Home-town-week` baseurl breaks CSS and images on the apex domain.
+
+When DNS is ready, change these together:
+
+1. `url` in `_config.yml` to `https://eastsidecalendar.com`
+2. `url` in `_config.domain.yml` to the same host
+3. The contents of `CNAME` to `eastsidecalendar.com`
+4. The IndexNow sitemap URL in `.github/workflows/pages.yml`
+
+Suggestion and request links still use `suggestions@hometownweek.com`. The visible mail text uses the Eastside Family Calendar name. Leave the mailbox addresses on `@hometownweek.com` until those inboxes move.
 
 ## Local build
 
@@ -33,13 +49,13 @@ bundle install
 bundle exec jekyll serve
 ```
 
-Open `http://127.0.0.1:4000/`. `_config.yml` sets `url` to `https://hometownweek.com` and `baseurl` to an empty string. Keep it that way. A `/Home-town-week` baseurl breaks CSS and images on the apex domain.
+Open `http://127.0.0.1:4000/`.
 
 ## GitHub Pages
 
 Pushes to `main` run `.github/workflows/pages.yml`, which builds the site and deploys it with GitHub Actions. The workflow passes the Pages base path through, and that path is empty on the custom domain.
 
-`.github/workflows/prune.yml` runs daily, after midnight Pacific. It deletes events whose last day is before today in America/Los_Angeles from each city page and from `_data/{city}_events.yml`. If nothing expired, it does not commit. If it removed something, it pushes that commit and starts the Pages deploy. The HTML is static. The browser does not hide old events.
+`.github/workflows/prune.yml` runs daily, after midnight Pacific. It deletes events whose last day is before today in America/Los_Angeles from each city page (`{city}/index.md`) and from `_data/{city}_events.yml`. If nothing expired, it does not commit. If it removed something, it pushes that commit and starts the Pages deploy. The HTML is static. The browser does not hide old events.
 
 `.github/workflows/crawl-feeds.yml` runs Monday and Thursday morning Pacific, and when someone starts it by hand. It reads sources whose `format` is `ical`, `rss`, `libcal`, `bibliocommons`, or `allevents`, fetches `feed_url` when that field is set, and otherwise fetches `url`. New upcoming rows are merged into `_data/{city}_events.yml` (`name`, `start`, `end`, `place`, `same_as`). City page prose is left alone. The same past-event prune runs after the merge. If no file changed, it does not commit. iCal and RSS are parsed directly, including weekly and monthly repeats on an iCal feed. LibCal, BiblioCommons, and AllEvents use a short adapter and can miss events. A source that fails is printed in the job log with its URL and error. Other sources still finish. A site-wide blog feed is not given a `format`, so this job does not crawl it. Rows that do not match a heading on the city page still land in the page schema. They do not get an add-to-calendar icon until the page lists them.
 
@@ -47,7 +63,7 @@ Pushes to `main` run `.github/workflows/pages.yml`, which builds the site and de
 
 `sources:` lives only on each city in `_data/cities.yml`. Do not add a separate sources file.
 
-Monday is the primary content fill. Read the lists already in `cities.yml` and update each city's upcoming list from those URLs. Add events in chronological order on `{state}/{city}/index.md`, and add the same events to `_data/{city}_events.yml` so the calendar icon and the event list in the page schema stay in step. Do not add an event that has already ended. Do not create week pages. Monday does not add or remove sources. The daily prune removes expired events, so Monday does not have to hunt for them.
+Monday is the primary content fill. Read the lists already in `cities.yml` and update each city's upcoming list from those URLs. Add events in chronological order on `{city}/index.md`, and add the same events to `_data/{city}_events.yml` so the calendar icon and the event list in the page schema stay in step. Do not add an event that has already ended. Do not create week pages. Monday does not add or remove sources. The daily prune removes expired events, so Monday does not have to hunt for them.
 
 Thursday is the midweek content fill, a visible update before the weekend. Read the same lists and refresh event copy that is still ahead. Thursday does not add or remove sources, and it does not create week pages.
 
@@ -57,11 +73,12 @@ A first seed of a city can write the list and fill the upcoming events in the sa
 
 ## Adding a city
 
-1. Add the city to `_data/cities.yml`, alphabetical within its state, with `lat` and `lon` for the city center in decimal degrees. The home page uses those coordinates to list cities within about 10 miles, then the nearest page if none are that close. It does not call a geocoding service. Add a `sources:` list on that same city entry (name, url, type, notes). Do not put the list in a separate file. Types include city_hall, parks, allevents, theater, market, library, downtown, and venue. Cover city hall, AllEvents for that city and state, a local theater, plus parks, market, downtown, and the library as one source among several. Monday and Thursday fill the city page from it. The first Friday of the month keeps this list current. When a source is already a machine feed, set `format` to `ical`, `rss`, `libcal`, `bibliocommons`, or `allevents`. If the feed URL is not the browse page, put it in `feed_url` and leave `url` as the page a person would open.
-2. Add `{state}/{city}/index.md`, using the Redmond page as the pattern. Front matter holds the teaser (`hook`) and an optional hero image. The body is the upcoming events, earliest first. Each event is a `###` title, then a gold date line (`<p class="event-when">`), a place line (`<p class="event-place">`), a short blurb, and a link. The date line needs a month and day (`Mon Sep 28`) so the build can place the event in Today, Tomorrow, This weekend, or Later. Add that city to `_data/nearby.yml` only when you know two to four neighbors that already have pages.
-3. Add `_data/{city}_events.yml` as one chronological list (`name`, `start`, `end`, `place`, `same_as`). Dated rows become add-to-calendar files and the `ItemList` on the city page. Delete a row when the event has ended.
-4. Put a state outline with a city pin at `assets/images/cities/{state}/{city}.svg`. Run `python3 script/render-og-images.py` so `assets/images/og/{state}/{city}.png` matches that mark. Share previews use the city hero when the page has one, and that map card when it does not. Put photos in `assets/images/{city}/` at 800, 1200, and 1600 widths.
+1. Add the city to `_data/cities.yml`, alphabetical, with `lat` and `lon` for the city center in decimal degrees. The home page uses those coordinates to list cities within about 10 miles, then the nearest page if none are that close. It does not call a geocoding service. Add a `sources:` list on that same city entry (name, url, type, notes). Do not put the list in a separate file. Types include city_hall, parks, allevents, theater, market, library, downtown, and venue. Cover city hall, AllEvents for that city and state, a local theater, plus parks, market, downtown, and the library as one source among several. Monday and Thursday fill the city page from it. The first Friday of the month keeps this list current. When a source is already a machine feed, set `format` to `ical`, `rss`, `libcal`, `bibliocommons`, or `allevents`. If the feed URL is not the browse page, put it in `feed_url` and leave `url` as the page a person would open. Set `logo` only when an official city logo is allowed. Leave it unset otherwise. The header shows that image only when `logo` is set.
+2. Add `{city}/index.md`, using the Redmond page as the pattern. Front matter holds the teaser (`hook`) and an optional hero image. The body is the upcoming events, earliest first. Each event is a `###` title, then a gold date line (`<p class="event-when">`), a place line (`<p class="event-place">`), a short blurb, and a link. The date line needs a month and day (`Mon Sep 28`) so the build can place the event in Today, Tomorrow, This weekend, or Later. Add that city to `_data/nearby.yml` only when you know two to four neighbors that already have pages. Add a redirect page at `wa/{city}/index.html` so the old `/wa/{city}/` address still resolves.
+3. Add the city to the home map in `_includes/eastside-map.html`. Mark it with a link whose text is the city name.
+4. Add `_data/{city}_events.yml` as one chronological list (`name`, `start`, `end`, `place`, `same_as`). Dated rows become add-to-calendar files and the `ItemList` on the city page. Delete a row when the event has ended.
+5. Put a state outline with a city pin at `assets/images/cities/wa/{city}.svg` if a share card should use that mark. Run `python3 script/render-og-images.py` so `assets/images/og/wa/{city}.png` matches. Share previews use the city hero when the page has one, and that map card when it does not. Put photos in `assets/images/{city}/` at 800, 1200, and 1600 widths.
 
-`_data/cities.yml` stays in list order: states in block order, cities alphabetical inside each state. The home page uses that order for the state names under the map and for its search index. It does not print every city. A state hub prints only its own cities. The footer does not print them. When a coming-soon city gets a page, add it here (with `lat` and `lon`) and remove it from `_data/coming_soon.yml`. Do not publish an empty page just to make the name clickable. The site header is the same slim bar on every page: the mark, Hometown Week, and a States menu. That menu lists states. It does not lay the names across the bar, and it does not list cities. States also stay on the home map and under Pick a state. Home uses Hometown Week as the only title, the large nameplate under that bar. On a city page the same bar sits above the city name, the only heading, with the official slogan or "Weekly family digest" under it and a small state outline beside the name.
+`_data/cities.yml` stays in alphabetical order. The home page and the Cities menu use that order. The home page also draws those cities on the map. The footer does not print them. When a city without a page gets one, add it here (with `lat` and `lon`) and remove it from `_data/coming_soon.yml`. Do not publish an empty page just to make the name clickable. The site header is the same slim bar on every page: the mark, Eastside Family Calendar, and a Cities menu. Home uses Eastside Family Calendar as the large nameplate under that bar. On a city page the same bar sits above the city name, the only heading, with the official slogan under it when `slogan` is set. There is no state outline in the city header.
 
-Every page inlines `assets/css/site.css` from the head. There is no separate city stylesheet and no render-blocking CSS link. Type is system fonts only. State hubs still use the city cards.
+Every page inlines `assets/css/site.css` from the head. There is no separate city stylesheet and no render-blocking CSS link. Type is system fonts only.

@@ -1,5 +1,5 @@
 # Names without a city page yet. They are not in _data/cities.yml, so the
-# state hubs and the home page do not list them. The footer does not list cities.
-# Do not link a city until its page lists real upcoming events.
-# When a city launches, add it to _data/cities.yml with lat and lon, then delete it here.
+# home page and the Cities menu do not list them. Do not link a city until
+# its page lists real upcoming events.
+# Newcastle is an Eastside city and does not have a page yet.
 []

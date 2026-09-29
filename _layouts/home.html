@@ -1,14 +1,13 @@
 ---
 layout: default
 ---
-{%- assign live_states = site.data.cities | map: "state" | uniq -%}
 <article class="home wrap">
   <section class="finder" aria-labelledby="finder-title">
     <h2 id="finder-title">Find your city</h2>
-    <form class="city-search" id="city-search" role="search" action="#states">
+    <form class="city-search" id="city-search" role="search" action="#cities">
       <label for="city-query">Search cities</label>
       <div class="city-field">
-        <input id="city-query" type="search" placeholder="Redmond, Bend, Irvine" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="search" aria-autocomplete="list" aria-expanded="false" aria-controls="city-matches">
+        <input id="city-query" type="search" placeholder="Bellevue, Redmond, Kirkland" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="search" aria-autocomplete="list" aria-expanded="false" aria-controls="city-matches">
         <button type="button" id="near-button" class="locate" aria-label="Use my location" aria-describedby="near-note">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <circle cx="12" cy="12" r="3.15" fill="none" stroke="currentColor" stroke-width="1.8"/>
@@ -19,51 +18,32 @@ layout: default
       </div>
       <p id="city-empty" class="city-empty" hidden></p>
       <ul id="city-matches" class="city-matches" hidden></ul>
-      <p id="near-note" class="near-note">Your browser asks first. We use the spot only to find cities near you, and we do not save it.</p>
+      <p id="near-note" class="near-note">Your browser asks first. We use the spot only to find Eastside cities near you, and we do not save it.</p>
       <p id="city-status" class="visually-hidden" aria-live="polite"></p>
     </form>
     <noscript>
-      <p class="noscript-note">Location and city search need JavaScript. The state map and the state list work without it.</p>
+      <p class="noscript-note">Location and city search need JavaScript. The map and the city list work without it.</p>
     </noscript>
 
-    <section class="this-week" id="this-week" aria-labelledby="this-week-title">
-      <h2 id="this-week-title" hidden>Near you</h2>
+    <section class="near-you" id="near-you" aria-labelledby="near-you-title">
+      <h2 id="near-you-title" hidden>Near you</h2>
       <div id="near-live" aria-live="polite">
         <div id="near-results" hidden></div>
         <p id="near-message" class="near-message" hidden></p>
       </div>
     </section>
 
-    <h3 id="states">Pick a state</h3>
-    <p class="state-lead">Highlighted states list upcoming family events.</p>
-    <div class="state-map">
-      <svg class="us-map" viewBox="{{ site.data.us_map.view_box }}" aria-hidden="true" focusable="false">
-        <g class="us-quiet">
-          {%- for state in site.data.us_map.states -%}
-          {%- unless live_states contains state.code -%}
-          <path fill-rule="evenodd" d="{{ state.d }}"/>
-          {%- endunless -%}
-          {%- endfor -%}
-        </g>
-        {%- for state in site.data.us_map.states -%}
-        {%- if live_states contains state.code -%}
-        {%- assign state_cities = site.data.cities | where: "state", state.code -%}
-        {%- capture state_hub -%}/{{ state.code }}/{%- endcapture -%}
-        <a href="{{ state_hub | strip | relative_url }}" tabindex="-1">
-          <title>{{ state_cities.first.state_name }}</title>
-          <path fill-rule="evenodd" d="{{ state.d }}"/>
-          <text class="us-code" x="{{ state.lx }}" y="{{ state.ly }}" text-anchor="middle" dominant-baseline="central">{{ state.code | upcase }}</text>
-        </a>
-        {%- endif -%}
-        {%- endfor -%}
-      </svg>
-      <nav class="state-key" aria-label="States with upcoming events">
-        {%- for state in live_states -%}
-        {%- assign state_cities = site.data.cities | where: "state", state -%}
-        {%- capture state_hub -%}/{{ state }}/{%- endcapture -%}
-        <a href="{{ state_hub | strip | relative_url }}">
-          <span class="state-name">{{ state_cities.first.state_name }}</span>
-          <span class="state-count">{%- if state_cities.size == 1 -%}1 city{%- else -%}{{ state_cities.size }} cities{%- endif -%}</span>
+    <h3 id="cities">Cities</h3>
+    <p class="city-lead">Choose a city on the map or in the list.</p>
+    <div class="eastside-board">
+      <div class="eastside-map">
+        {%- include eastside-map.html -%}
+      </div>
+      <nav class="city-key" aria-label="Eastside cities">
+        {%- for city in site.data.cities -%}
+        {%- capture city_href -%}/{{ city.id }}/{%- endcapture -%}
+        <a href="{{ city_href | strip | relative_url }}">
+          <span class="city-key-name">{{ city.name }}</span>
         </a>
         {%- endfor -%}
       </nav>
