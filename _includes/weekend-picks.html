@@ -156,6 +156,7 @@
 {%- if pick_count > 0 -%}
 <section class="weekend-picks" aria-labelledby="weekend-picks-title">
   <h2 id="weekend-picks-title">{{ picks_title }}</h2>
+  <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   <ul class="weekend-grid">
     {%- for line in pick_lines -%}
     {%- assign line = line | strip -%}
@@ -300,4 +301,6 @@
     {%- endfor -%}
   </ul>
 </section>
+{%- else -%}
+<p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
 {%- endif -%}

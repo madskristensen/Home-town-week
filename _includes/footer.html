@@ -2,6 +2,11 @@
   <div class="wrap">
     <nav class="footer-nav" aria-label="Footer">
       <a href="{{ '/about/' | relative_url }}">About</a>
+      {%- for hub in site.data.seasonal_hubs -%}
+      {%- if hub.footer -%}
+      <a href="{{ hub.path | relative_url }}">{{ hub.footer_label }}</a>
+      {%- endif -%}
+      {%- endfor -%}
       <a href="{{ '/feed.xml' | relative_url }}">Feed</a>
       {%- capture city_request_subject -%}Request a city{%- endcapture -%}
       {%- capture city_request_body -%}I would like Eastside Family Calendar to cover a city.

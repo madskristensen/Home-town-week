@@ -11,11 +11,13 @@
   place: "Taylor Landing, 16201 Main Street NE"
   same_as: "https://duvallfarmersmarket.org/"
 - name: "Muddy Boots Pumpkins"
+  tags: [pumpkin-patch, corn-maze]
   start: "2026-10-01"
   end: "2026-10-31"
   place: "Muddy Boots Pumpkins, 15505 W Snoqualmie River Road NE"
   same_as: "https://muddybootspumpkins.com/"
 - name: "Novelty Hill Farm pumpkin patch"
+  tags: [pumpkin-patch, corn-maze]
   start: "2026-10-02"
   end: "2026-10-31"
   place: "Novelty Hill Farm, 26617 NE 124th Street"

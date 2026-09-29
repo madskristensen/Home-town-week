@@ -40,6 +40,7 @@
   place: "Redmond Library, 15990 NE 85th St"
   same_as: "https://kcls.bibliocommons.com/v2/events/6ab463b60c7bf418f4e3c6b9"
 - name: "Red Barn Farm Fall Festival"
+  tags: [harvest]
   start: "2026-10-03"
   end: "2026-10-04"
   place: "5703 208th Ave NE"
@@ -70,6 +71,7 @@
   place: "Big Block Brewery, 14950 NE 95th St"
   same_as: "https://allevents.in/redmond/oktoberfest/200030554602215"
 - name: "Family Halloween Tray Workshop"
+  tags: [halloween]
   start: "2026-10-03T14:00:00-07:00"
   end: "2026-10-03T16:00:00-07:00"
   place: "Redmond Senior & Community Center, 8703 160th Ave NE"
@@ -92,6 +94,7 @@
   place: "Marymoor Park"
   same_as: "https://donate.melanoma.org/site/TR?fr_id=2256&pg=entry"
 - name: "Paws & Pumpkins"
+  tags: [halloween]
   start: "2026-10-04T14:00:00-07:00"
   place: "Big Block Brewing, Redmond"
   same_as: "https://allevents.in/redmond"
@@ -160,11 +163,13 @@
   place: "9900 Willows Rd NE"
   same_as: "http://redmondsaturdaymarket.org/Calendar.cshtml"
 - name: "Trick or Treat at Redmond Community Center at Marymoor Village"
+  tags: [halloween]
   start: "2026-10-24T16:30:00-07:00"
   end: "2026-10-24T19:30:00-07:00"
   place: "Redmond Community Center at Marymoor Village - 6505 176th Ave NE Redmond WA 98052"
   same_as: "https://www.redmond.gov/calendar.aspx?EID=3539"
 - name: "Haunted House at Redmond Community Center at Marymoor Village"
+  tags: [halloween]
   start: "2026-10-24T17:00:00-07:00"
   end: "2026-10-24T21:00:00-07:00"
   place: "Redmond Community Center at Marymoor Village - 6505 176th Ave NE Redmond WA 98052"
@@ -175,6 +180,7 @@
   place: "Redmond Senior & Community Center, 8703 160th Ave NE"
   same_as: "https://www.redmond.gov/calendar.aspx?EID=3560"
 - name: "Trunk or Treat"
+  tags: [trunk-or-treat]
   start: "2026-10-30T17:00:00-07:00"
   end: "2026-10-30T19:30:00-07:00"
   place: "City Hall - 15670 NE 85th St Redmond WA 98052"

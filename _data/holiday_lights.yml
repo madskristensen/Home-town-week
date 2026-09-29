@@ -1,0 +1,15 @@
+# Neighborhood holiday light displays that were publicly promoted.
+# Privacy: do not list a private home's street number. A display belongs
+# here only when the resident, a neighborhood group, or a city page has
+# already published it. Put the neighborhood in area, not a house number.
+# same_as is that public page and is required. A row without it is skipped,
+# and a house number in area or place is not printed.
+# Official displays stay on the city event list with the tag holiday-lights.
+#
+# - city: redmond
+#   name: "Education Hill lights"
+#   area: "Education Hill"
+#   same_as: "https://example.com/the-public-page"
+#   start: "2026-12-01"
+#   end: "2026-12-26"
+[]

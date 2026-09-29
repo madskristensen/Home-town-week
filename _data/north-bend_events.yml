@@ -20,6 +20,7 @@
   place: "North Bend Theatre, 125 Bendigo Blvd N"
   same_as: "https://tix.northbendtheatre.com/event/shaun-the-sheep-the-beast-of-mossy-bottom-thursday-oct-8th-6pm"
 - name: "Halloween Train"
+  tags: [halloween]
   start: "2026-10-10"
   end: "2026-11-01"
   place: "North Bend Depot, 205 E McClellan Street"
@@ -30,6 +31,7 @@
   place: "Meadowbrook Farm Interpretive Center"
   same_as: "https://livingsnoqualmie.com/arbor-day-planting-and-oaktoberfest-set-for-october-17-in-north-bend/"
 - name: "Great Si View Spooktacular"
+  tags: [halloween]
   start: "2026-10-24T12:00:00-07:00"
   end: "2026-10-24T14:45:00-07:00"
   place: "Si View Community Center, 400 SE Orchard Drive"
@@ -40,6 +42,7 @@
   place: "North Bend Library, 115 E 4th Street"
   same_as: "https://kcls.bibliocommons.com/v2/events/6955b919491b809c6f104708"
 - name: "Trick-or-Treat Street"
+  tags: [halloween]
   start: "2026-10-24T15:00:00-07:00"
   end: "2026-10-24T17:00:00-07:00"
   place: "Downtown North Bend"

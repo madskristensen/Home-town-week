@@ -63,6 +63,7 @@
   place: "Crossroads Mall Concourse , 15600 NE 8th St."
   same_as: "https://bellevuewa.gov/events/mini-city-hall-puget-sound-energy-resource-fair"
 - name: "Kelsey Creek Farm Fair"
+  tags: [harvest]
   start: "2026-10-03T11:00:00-07:00"
   end: "2026-10-03T16:00:00-07:00"
   place: "Kelsey Creek Farm, 410 130th Pl SE"
@@ -192,6 +193,7 @@
   place: "KidsQuest Children's Museum, 1116 108th Ave NE"
   same_as: "https://www.bellevuedowntown.com/do/spooktacular"
 - name: "Trick or Treat at the Library"
+  tags: [halloween]
   start: "2026-10-31T11:00:00-07:00"
   end: "2026-10-31T18:00:00-07:00"
   place: "Bellevue, 3rd Floor Children's Desk"

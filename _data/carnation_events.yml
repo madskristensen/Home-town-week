@@ -6,6 +6,7 @@
   place: "Carnation Library, 4804 Tolt Avenue"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a721dc988e9bf2800356eac"
 - name: "Fall Harvest Festival at Remlinger Farms"
+  tags: [harvest]
   start: "2026-10-02"
   end: "2026-11-01"
   place: "Remlinger Farms, 32610 NE 32nd Street"
@@ -41,11 +42,13 @@
   place: "Carnation Farms, 8901 NE Carnation Farm Road"
   same_as: "https://livingsnoqualmie.com/event/carnation-farms-habitat-restoration-day-with-stewardship-partners/"
 - name: "Oxtober"
+  tags: [harvest]
   start: "2026-10-17"
   end: "2026-10-25"
   place: "Oxbow Farm and Conservation Center, 10819 Carnation-Duvall Road NE"
   same_as: "https://www.oxbow.org/visit/events/oxtober/"
 - name: "Harvest Market"
+  tags: [harvest]
   start: "2026-10-17T10:00:00-07:00"
   end: "2026-10-17T15:00:00-07:00"
   place: "Carnation Farms, 28901 NE Carnation Farm Road"

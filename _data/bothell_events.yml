@@ -58,6 +58,7 @@
   place: "East Norway Hill Park - 11920 NE 155th St Bothell WA 98011"
   same_as: "https://www.bothellwa.gov/calendar.aspx?EID=2753"
 - name: "Halloween in the Park Market"
+  tags: [halloween]
   start: "2026-10-10T11:00:00-07:00"
   end: "2026-10-10T16:00:00-07:00"
   place: "Bothell Landing Park, 9919 NE 180th St"
@@ -105,6 +106,7 @@
   place: "Kenmore City Hall - 18120 68th Ave NE Kenmore WA 98028"
   same_as: "https://www.bothellwa.gov/calendar.aspx?EID=2752"
 - name: "Trick-or-Treat on Main Street"
+  tags: [halloween]
   start: "2026-10-30T17:00:00-07:00"
   end: "2026-10-30T19:00:00-07:00"
   place: "Main Street in Downtown Bothell - Bothell WA 98011"

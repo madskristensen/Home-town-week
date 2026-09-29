@@ -2,7 +2,7 @@
 
 Upcoming family events for cities on Washington's Eastside. This is a Jekyll site. It is published at [eastsidecalendar.com](https://eastsidecalendar.com/). See [Domain](#domain).
 
-The home page leads with a map of the Eastside, from Lake Washington to the Cascade foothills, and a list of the same cities. Each city on the map is a link. The list shows how many upcoming events that city has. The footer does not repeat every city. City pages and the other pages use a slim bar: the mark, Eastside Family Calendar, and a Cities menu. The home page does not show that bar. Its nameplate is the page heading. The menu lists cities. It does not lay the names across the bar.
+The home page leads with a map of the Eastside, from Lake Washington to the Cascade foothills, and a list of the same cities. Each city on the map is a link. The list shows how many upcoming events that city has. The footer does not repeat every city. Every page uses the same masthead: the site name, which links home, a Cities menu, a short kicker, and the lead line. The Cities menu is the dropdown. It does not lay the names across the bar. On a city page the city name is the heading below that masthead, with Share on the same line and the breadcrumb under the name. A seasonal banner, when one qualifies, sits directly under the masthead.
 
 Newcastle is an Eastside city that does not have a page yet. Do not invent a page for it. Fall City is not a separate page; its farm and library listings are on Snoqualmie. Names without a page can sit in `_data/coming_soon.yml` and do not link anywhere.
 
@@ -13,10 +13,13 @@ Newcastle is an Eastside city that does not have a page yet. Do not invent a pag
 | Home | `/` |
 | City | `/{city}/`, for example `/redmond/` |
 | About | `/about/` |
+| Seasonal hub | One path per hub in `_data/seasonal_hubs.yml`, for example `/fall/`, `/salmon/`, and `/christmas/` |
 | Feed | `/feed.xml` |
 | LLM guide | `/llms.txt` |
 
-`llms.txt` is written at build time from `_data/cities.yml`. It lists each city page, the about page, and the sitemap. It says the blurbs are original and link to sources. It does not include upcoming-event counts. Do not maintain it by hand.
+`llms.txt` is written at build time from `_data/cities.yml` and `_data/seasonal_hubs.yml`. It lists each city page, the about page, each seasonal hub, and the sitemap. It says the blurbs are original and link to sources. It does not include upcoming-event counts. Do not maintain it by hand.
+
+Seasonal hubs are generated from `_data/seasonal_hubs.yml`. Each hub stays up all year. A section appears only when it has something to list. The home page does not get a separate seasonal note. One banner under the masthead links to the hub that is in season and has enough upcoming events. See [Seasonal cross-check](#seasonal-cross-check). There is no `/halloween/` page and no `/holiday-lights/` page. Neighborhood light displays that were already promoted in public go in `_data/holiday_lights.yml`, with a neighborhood in `area` and a public `same_as`. Do not put a house number there. A row without `same_as` is skipped.
 
 City URLs have no state segment and no year or week segment. Old addresses are not redirected.
 
@@ -59,6 +62,29 @@ The home block is chosen when the site builds. By default it picks up to four st
 
 `sources:` lives only on each city in `_data/cities.yml`. Do not add a separate sources file. The editor uses that list when refreshing a city page. Add events in chronological order on `{city}/index.md`, and add the same events to `_data/{city}_events.yml` so the calendar icon and the event list in the page schema stay in step. Do not add an event that has already ended. Do not create week pages. The daily prune removes expired events.
 
+### Seasonal cross-check
+
+Every daily content update checks each new or updated event against all seasonal hub tags and adds the matching tags on that row in `_data/{city}_events.yml`. Tag only what the event is. A Salmon Days parade is `salmon`, not `parade`. A Diwali listing is `diwali`, not `holiday-market`.
+
+When a hub newly crosses the banner threshold, note it in the run summary. The threshold is at least 6 upcoming events from at least 3 different towns. Upcoming means the event's last day is today or later in America/Los_Angeles. The banner is chosen when the site builds. The daily rebuild checks it again. If several hubs qualify, the one whose season ends soonest is shown. If none qualify, there is no banner. At most one banner is shown.
+
+The full tag vocabulary, with the season stored on each hub:
+
+| Hub | Path | Season | Tags |
+| --- | --- | --- | --- |
+| Fall and Halloween | `/fall/` | Sep 1 through Oct 31 | `pumpkin-patch`, `corn-maze`, `u-pick`, `harvest`, `halloween`, `trunk-or-treat` |
+| Salmon season | `/salmon/` | Sep 1 through Nov 30 | `salmon` |
+| Christmas | `/christmas/` | Nov 10 through Dec 31 | `tree-lighting`, `holiday-lights`, `santa`, `holiday-market`, `holiday-show`, `parade` |
+| Easter | `/easter/` | Mar 15 through Apr 25 | `egg-hunt`, `easter` |
+| Fourth of July | `/fourth/` | Jun 28 through Jul 5 | `fourth`, `fireworks` |
+| Lunar New Year | `/lunar-new-year/` | Jan 21 through Feb 20 | `lunar-new-year` |
+| Diwali | `/diwali/` | Oct 15 through Nov 15 | `diwali` |
+| Dia de los Muertos | `/dia-de-los-muertos/` | Oct 28 through Nov 2 | `dia-de-los-muertos` |
+| Winter break and snow days | `/winter/` | Dec 15 through Jan 5 | `winter-break`, `snow-day` |
+| Rainy day plans | `/rainy-day/` | Oct 1 through May 31 | `rainy-day` |
+
+Fall sections are Pumpkin patches and corn mazes, Apple and u-pick farms, Harvest festivals, and Halloween and trick-or-treat. The Halloween section anchor is `/fall/#halloween`. Christmas sections are Tree lightings, Holiday lights, Santa visits and photos, Holiday markets and bazaars, Nutcracker and holiday shows, and Parades and festivals. Holiday lights on the Christmas page also include publicly promoted neighborhood displays from `_data/holiday_lights.yml`. Salmon stays on its own page. A new season is a new hub in `_data/seasonal_hubs.yml`, including its theme colors and inline SVG. That does not need a code change.
+
 Photos are one source file each, under `assets/images/{city}/`. Put that path on the city hero or in the event photo include. Do not resize it, and do not commit width variants. The Pages workflow runs `script/render-image-variants.py` before Jekyll. It writes AVIF, WebP, and JPEG at 400, 800, 1200, and 1600 pixels wide, never wider than the source, plus `_data/image_variants.yml`. Actions caches those outputs, keyed on a hash of the source files, so an unchanged photo is not encoded again. `_includes/responsive-img.html` prints a `picture` from the manifest: AVIF, then WebP, then JPEG. If the manifest or a width is missing, the tag is the original file and the build still succeeds. The map is SVG and is left as is.
 
 The home page share image is a 1200 by 630 PNG of that same Eastside map, with the site name and a short line under it. The Pages workflow runs `script/render-home-og.py` before Jekyll and writes `assets/images/og-home.png`. That file is not committed. City pages do not use it. A city share image is the hero photo, or the card from `script/render-og-images.py` when the page has no hero.
@@ -75,6 +101,6 @@ A first seed of a city can write the list and fill the upcoming events in the sa
 4. Add `_data/{city}_events.yml` as one chronological list (`name`, `start`, `end`, `place`, `same_as`) of the same events that appear on the city page. Dated rows that match a card become add-to-calendar files. The `ItemList` is those cards. Do not paste civic meetings, board sessions, or out-of-area listings into the file. Delete a row when the event has ended.
 5. Put a state outline with a city pin at `assets/images/cities/wa/{city}.svg` if a share card should use that mark. Run `python3 script/render-og-images.py` so `assets/images/og/wa/{city}.png` matches. Share previews use the city hero when the page has one, and that map card when it does not. Put one source photo in `assets/images/{city}/` and point the hero `image` at it. The Pages build makes the other widths and formats.
 
-`_data/cities.yml` stays in alphabetical order. The home page and the Cities menu use that order. The home page also draws those cities on the map. The footer does not print them. When a city without a page gets one, add it here (with `lat` and `lon`) and remove it from `_data/coming_soon.yml`. Do not publish an empty page just to make the name clickable. City pages use the slim bar: the mark, Eastside Family Calendar, and a Cities menu. The home page does not. Its heading is the nameplate. On a city page that bar sits above the city name, the only heading, with the official slogan under it when `slogan` is set. There is no state outline in the city header.
+`_data/cities.yml` stays in alphabetical order. The home page and the Cities menu use that order. The home page also draws those cities on the map. The footer does not print them. When a city without a page gets one, add it here (with `lat` and `lon`) and remove it from `_data/coming_soon.yml`. Do not publish an empty page just to make the name clickable. Every page uses the home masthead, and the Cities menu sits in it. On a city page the city name is the only heading below that masthead, with Share on the same line and the slogan under the name when `slogan` is set. There is no separate city top bar.
 
 Every page inlines `assets/css/site.css` from the head. There is no separate city stylesheet and no render-blocking CSS link. Type is system fonts only.

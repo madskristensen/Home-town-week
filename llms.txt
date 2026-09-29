@@ -17,6 +17,12 @@ sitemap: false
 - [About]({{ site.url }}{{ site.baseurl }}/about/): How we pick and check events.
 - Blurbs are original and link to sources.
 
+## Seasons
+
+{%- for hub in site.data.seasonal_hubs %}
+- [{{ hub.title }}]({{ site.url }}{{ site.baseurl }}{{ hub.path }}): {{ hub.llms }} In season {{ hub.season_label }}. The page stays up all year.
+{%- endfor %}
+
 ## Sitemap
 
 - [Sitemap]({{ site.url }}{{ site.baseurl }}/sitemap.xml): Every public page on this site.

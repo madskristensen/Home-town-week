@@ -3,6 +3,23 @@ layout: default
 ---
 {%- include city-context.html -%}
 <article class="city-home wrap" data-state="{{ page.state }}" data-city="{{ page.city }}"{%- if page.last_modified_at %} data-updated="{{ page.last_modified_at | date_to_xmlschema }}"{% endif %}>
+  <div class="city-page-head">
+    <div class="city-heading">
+      {%- if city.logo -%}
+      <img class="city-logo" src="{{ city.logo | relative_url }}" alt="" width="72" height="72">
+      {%- endif -%}
+      <div class="city-heading-text">
+        <div class="city-name-row">
+          <h1 class="city-name">{{ city.name }}</h1>
+          {%- include issue-share.html -%}
+        </div>
+        {%- if city.slogan -%}
+        <p class="city-kicker">{{ city.slogan }}</p>
+        {%- endif -%}
+      </div>
+    </div>
+    {%- include breadcrumbs.html -%}
+  </div>
   {%- if city.tagline -%}
   <p class="dek">{{ city.tagline }}</p>
   {%- endif -%}
@@ -31,10 +48,11 @@ layout: default
   {%- if event_copy != "" -%}
   <div class="prose" data-today="{{ site.time | date: '%Y-%m-%d' }}">
     <h2>Upcoming</h2>
-    <p id="list-updated" class="list-updated" role="status">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
+    <p id="list-updated" class="list-updated">Events updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
     {{ content }}
   </div>
   {%- else -%}
+  <p id="list-updated" class="list-updated">Events updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   <p>No upcoming events are listed yet.</p>
   {%- endif -%}
   {%- include suggest-event.html -%}

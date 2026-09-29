@@ -133,6 +133,22 @@ picture {
   padding: 0.85rem 0 0;
 }
 
+.mast-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.mast-title-row .brand {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.mast-title-row .cities-menu {
+  margin-top: 0.2rem;
+}
+
 .home-mast .brand {
   margin: 0;
   max-width: 9.2em;
@@ -144,12 +160,15 @@ picture {
   line-height: 0.96;
 }
 
-.home-mast .list-updated {
-  margin: 0.55rem 0 0;
-  color: var(--gold);
-  font-size: 0.85rem;
-  font-weight: 600;
-  line-height: 1.3;
+.home-mast .brand a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-mast .brand a:hover,
+.home-mast .brand a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.06em;
 }
 
 .mast-kicker {
@@ -173,45 +192,6 @@ picture {
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1.32;
-}
-
-.header-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  min-height: 3rem;
-  padding: 0.15rem 0;
-  border-bottom: 1px solid var(--gold-line);
-}
-
-.wordmark {
-  display: inline-flex;
-  flex: 1 1 auto;
-  align-items: center;
-  gap: 0.45rem;
-  min-height: 2.75rem;
-  min-width: 0;
-  color: var(--forest);
-  font-family: var(--serif);
-  font-size: 0.98rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  text-decoration: none;
-}
-
-.wordmark:hover,
-.wordmark:focus-visible {
-  color: var(--forest-deep);
-  text-decoration: none;
-}
-
-.brand-mark {
-  display: block;
-  width: 1.05rem;
-  height: 1.05rem;
-  border-radius: 2px;
 }
 
 .cities-menu {
@@ -298,8 +278,8 @@ picture {
   text-decoration: none;
 }
 
-.masthead {
-  padding: 1.05rem 0 1.05rem;
+.city-page-head {
+  margin: 0 0 0.15rem;
 }
 
 .city-heading {
@@ -373,12 +353,32 @@ picture {
   line-height: 1.4;
 }
 
-.site-header--city {
-  border-bottom: 2px solid var(--ink);
+.city-page-head .crumbs ol {
+  margin: 0.7rem 0 0;
 }
 
-.masthead .crumbs ol {
-  margin: 0.7rem 0 0;
+@media (max-width: 42rem) {
+  .home-mast {
+    padding-top: 0.45rem;
+  }
+
+  .home-mast .brand {
+    font-size: clamp(1.8rem, 7.4vw, 2.3rem);
+  }
+
+  .mast-kicker {
+    margin-top: 0.4rem;
+  }
+
+  .home-lead {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    font-size: 1.18rem;
+  }
+
+  .cities-menu summary {
+    min-height: 2.25rem;
+  }
 }
 
 .page,
@@ -416,6 +416,15 @@ picture {
   margin: 0;
   font-size: 1.45rem;
   line-height: 1.15;
+}
+
+.weekend-picks .list-updated,
+.list-updated {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.35;
 }
 
 .weekend-grid {
@@ -1030,6 +1039,102 @@ picture {
   font-weight: 700;
 }
 
+.season-banner {
+  height: 2.75rem;
+  overflow: hidden;
+  background: var(--season-bg);
+  color: var(--season-ink);
+}
+
+.season-banner-link {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  height: 2.75rem;
+  color: inherit;
+  font-size: 0.92rem;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.season-banner-link:hover,
+.season-banner-link:focus-visible {
+  text-decoration: none;
+}
+
+.season-banner-link:focus-visible {
+  outline-offset: -2px;
+}
+
+.season-banner-motif,
+.season-banner-motif svg {
+  display: block;
+  width: 1.35rem;
+  height: 1.35rem;
+  flex: none;
+}
+
+.season-banner-title,
+.season-banner-cta {
+  flex: none;
+}
+
+.season-banner-title {
+  font-weight: 700;
+}
+
+.season-banner-hook {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--season-muted);
+  text-overflow: ellipsis;
+}
+
+.season-banner-cta {
+  color: var(--season-link);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.hub-event {
+  margin: 0 0 1.1rem;
+}
+
+.hub-event h3 {
+  margin: 0;
+}
+
+.hub-event .event-when {
+  margin-top: 0.2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .season-banner,
+  .season-banner * {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .season-banner {
+    background: #fff;
+    color: #1a2822;
+    box-shadow: inset 0 -2px 0 #1a2822;
+  }
+
+  .season-banner-hook {
+    color: #24332c;
+  }
+
+  .season-banner-cta {
+    color: #145c40;
+  }
+}
+
 .event-photo {
   margin: 0.65rem 0 0.85rem;
 }
@@ -1110,11 +1215,12 @@ picture {
   top: 0;
 }
 
-.prose .list-updated {
-  margin: 0;
-  color: var(--gold);
-  font-size: 0.85rem;
-  font-weight: 600;
+.prose p.list-updated {
+  margin: 0.15rem 0 0.85rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.35;
 }
 
 .saved-note {

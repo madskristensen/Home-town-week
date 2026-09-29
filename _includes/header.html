@@ -1,56 +1,24 @@
-{%- include city-context.html -%}
-<header class="site-header{% if page.url == "/" %} site-header--home{% elsif page.city %} site-header--city{% endif %}">
-  {%- unless page.url == "/" -%}
-  <div class="wrap header-bar">
-    <a class="wordmark" href="{{ '/' | relative_url }}">
-      <img class="brand-mark" src="{{ '/assets/images/favicon.svg' | relative_url }}" alt="" width="18" height="18">
-      <span>Eastside Family Calendar</span>
-    </a>
-    <details class="cities-menu">
-      <summary>Cities</summary>
-      <nav class="cities-panel" aria-label="Cities">
-        {%- for menu_city in site.data.cities -%}
-        {%- capture menu_city_url -%}/{{ menu_city.id }}/{%- endcapture -%}
-        <a href="{{ menu_city_url | strip | relative_url }}"{% if page.city == menu_city.id %} aria-current="page" class="is-here"{% endif %}>{{ menu_city.name }}</a>
-        {%- endfor -%}
-      </nav>
-    </details>
-  </div>
-  {%- endunless -%}
-  {%- if page.url == "/" -%}
+<header class="site-header">
   <div class="wrap home-mast">
-    <h1 class="brand">Eastside Family Calendar</h1>
-    <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
+    <div class="mast-title-row">
+      {%- if page.url == "/" -%}
+      <h1 class="brand"><a href="{{ '/' | relative_url }}" aria-current="page">Eastside Family Calendar</a></h1>
+      {%- else -%}
+      <p class="brand"><a href="{{ '/' | relative_url }}">Eastside Family Calendar</a></p>
+      {%- endif -%}
+      <details class="cities-menu">
+        <summary>Cities</summary>
+        <nav class="cities-panel" aria-label="Cities">
+          {%- for menu_city in site.data.cities -%}
+          {%- capture menu_city_url -%}/{{ menu_city.id }}/{%- endcapture -%}
+          <a href="{{ menu_city_url | strip | relative_url }}"{% if page.city == menu_city.id %} aria-current="page" class="is-here"{% endif %}>{{ menu_city.name }}</a>
+          {%- endfor -%}
+        </nav>
+      </details>
+    </div>
     <p class="mast-kicker">Family events on the Eastside</p>
     <p class="home-lead">Upcoming family events in Eastside cities, so you never miss the fun.</p>
   </div>
-  {%- elsif page.city and city -%}
-  <div class="wrap masthead">
-    <div class="city-heading">
-      {%- if city.logo -%}
-      <img class="city-logo" src="{{ city.logo | relative_url }}" alt="" width="72" height="72">
-      {%- endif -%}
-      <div class="city-heading-text">
-        {%- if page.layout == "city" -%}
-        <div class="city-name-row">
-          <h1 class="city-name">
-            <a href="{{ city_url | relative_url }}" aria-current="page">{{ city.name }}</a>
-          </h1>
-          {%- include issue-share.html -%}
-        </div>
-        {%- else -%}
-        <p class="city-name">
-          <a href="{{ city_url | relative_url }}">{{ city.name }}</a>
-        </p>
-        {%- endif -%}
-        {%- if city.slogan -%}
-        <p class="city-kicker">{{ city.slogan }}</p>
-        {%- endif -%}
-      </div>
-    </div>
-    {%- include breadcrumbs.html -%}
-  </div>
-  {%- endif -%}
 </header>
 <script type="module">
 (function () {

@@ -34,6 +34,7 @@
   place: "Fairwood Library, 17009 140th Avenue SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a95fee169166f088b9651cd"
 - name: "Salmon Stories and Science"
+  tags: [salmon]
   start: "2026-10-08T10:30:00-07:00"
   end: "2026-10-08T11:30:00-07:00"
   place: "Renton Library, 100 Mill Avenue S"
