@@ -1,0 +1,33 @@
+{%- comment -%}
+  Also close: 2 to 4 cities from _data/nearby.yml that already have a page.
+  No row when none of the ids resolve.
+{%- endcomment -%}
+{%- assign nearby_state = site.data.nearby[page.state] -%}
+{%- assign nearby_ids = nil -%}
+{%- if nearby_state -%}
+{%- assign nearby_ids = nearby_state[page.city] -%}
+{%- endif -%}
+{%- assign nearby_shown = 0 -%}
+{%- capture nearby_items -%}
+{%- if nearby_ids -%}
+{%- for nid in nearby_ids -%}
+{%- if nearby_shown >= 4 -%}{% break %}{%- endif -%}
+{%- assign near = site.data.cities | where: "id", nid | where: "state", page.state | first -%}
+{%- assign near_page = site.pages | where: "layout", "city" | where: "city", nid | where: "state", page.state | first -%}
+{%- if near and near_page -%}
+{%- assign nearby_shown = nearby_shown | plus: 1 -%}
+{%- capture near_href -%}/{{ page.state }}/{{ near.id }}/{%- endcapture -%}
+<li><a href="{{ near_href | strip | relative_url }}">{{ near.name }}</a></li>
+{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+{%- endcapture -%}
+{%- assign nearby_items = nearby_items | strip -%}
+{%- if nearby_items != "" -%}
+<nav class="also-close" aria-label="Also close">
+  <h2>Also close</h2>
+  <ul>
+    {{ nearby_items }}
+  </ul>
+</nav>
+{%- endif -%}

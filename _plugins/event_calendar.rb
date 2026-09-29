@@ -187,6 +187,96 @@ module HometownWeek
       true
     end
 
+    # Date buckets for a city page. Today and tomorrow win over the weekend.
+    # This weekend is the Saturday and Sunday of the current Pacific week
+    # (Monday through Sunday). A date with no usable day stays in Later.
+    BUCKETS = [
+      [:today, "Today"],
+      [:tomorrow, "Tomorrow"],
+      [:weekend, "This weekend"],
+      [:later, "Later"]
+    ].freeze
+
+    def pacific_today(time)
+      utc = time.getutc
+      utc_dt = DateTime.new(utc.year, utc.month, utc.day, utc.hour, utc.min, utc.sec, 0)
+      offset = pacific_offset_hours(utc_dt)
+      local = utc + (offset * 60 * 60)
+      Date.new(local.year, local.month, local.day)
+    end
+
+    def iso_date(date)
+      return nil unless date
+
+      format("%04d-%02d-%02d", date.year, date.month, date.day)
+    end
+
+    # The gold date line is the date readers see. The year is the build
+    # year in America/Los_Angeles, or the next year when that month and
+    # day are more than 45 days behind (January listings written in December).
+    def parse_when_text(text, today)
+      return nil unless today
+
+      match = text.to_s.match(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2})\b/i)
+      return nil unless match
+
+      month = MONTHS.index { |name| name.casecmp(match[1]).zero? }
+      return nil unless month
+
+      date = Date.new(today.year, month + 1, match[2].to_i)
+      date = Date.new(today.year + 1, date.month, date.day) if date < today - 45
+      date
+    rescue Date::Error, ArgumentError
+      nil
+    end
+
+    def heading_date(heading, picks, today)
+      parsed = parse_when_text(heading[:when_text], today)
+      yaml_date = picks.filter_map { |event| event[:start] && event[:start][:date] }.min
+      if parsed && yaml_date && parsed.month == yaml_date.month && parsed.day == yaml_date.day
+        return yaml_date
+      end
+
+      parsed || yaml_date
+    end
+
+    def bucket_key(date, today)
+      return :later unless date && today
+      return :today if date == today
+      return :tomorrow if date == today + 1
+
+      days_to_sunday = (7 - today.wday) % 7
+      sunday = today + days_to_sunday
+      saturday = sunday - 1
+      return :weekend if date == saturday || date == sunday
+
+      :later
+    end
+
+    def group_events(inner, today)
+      return inner unless today
+
+      parts = inner.split(/(?=<article class="event-card")/)
+      prelude = parts.shift.to_s
+      buckets = Hash.new { |hash, key| hash[key] = [] }
+      parts.each do |part|
+        iso = part[/\bdata-date="(\d{4}-\d{2}-\d{2})"/, 1]
+        date = iso ? Date.iso8601(iso) : nil
+        buckets[bucket_key(date, today)] << part
+      rescue Date::Error, ArgumentError
+        buckets[:later] << part
+      end
+      grouped = +prelude
+      BUCKETS.each do |key, label|
+        cards = buckets[key]
+        next if cards.nil? || cards.empty?
+
+        grouped << %(<h2 class="event-bucket">#{label}</h2>\n)
+        grouped << cards.join
+      end
+      grouped
+    end
+
     def month_day_mentioned?(text, parsed)
       return false unless parsed && parsed[:date]
 
@@ -430,19 +520,33 @@ module HometownWeek
       %(<span class="event-cals">#{anchors.join}</span>)
     end
 
-    def inject!(html, groups)
-      return html unless html.is_a?(String) && groups
+    def inject!(html, groups, dates, today)
+      return html unless html.is_a?(String)
 
-      open_tag = '<div class="prose">'
-      open_at = html.index(open_tag)
-      return html unless open_at
+      match = html.match(/<div class="prose"[^>]*>/)
+      return html unless match
 
-      content_at = open_at + open_tag.length
+      content_at = match.end(0)
       close_at = matching_div_end(html, content_at)
       return html unless close_at
 
-      inner = inject_inner(html[content_at...close_at], groups)
-      html[0, open_at] + open_tag + inner + html[close_at..]
+      inner = inject_inner(html[content_at...close_at], groups, dates)
+      inner = group_events(inner, today)
+      opener = stamp_today(html[match.begin(0)...content_at], today)
+      html[0, match.begin(0)] + opener + inner + html[close_at..]
+    end
+
+    # The prose attribute and the buckets share one Pacific day.
+    # Liquid's date filter can print the UTC day instead.
+    def stamp_today(opener, today)
+      return opener unless today
+
+      iso = iso_date(today)
+      if opener.include?("data-today=")
+        opener.sub(/data-today="[^"]*"/, %(data-today="#{iso}"))
+      else
+        opener.sub(/\A<div\b/, %(<div data-today="#{iso}"))
+      end
     end
 
     def matching_div_end(html, from)
@@ -465,7 +569,9 @@ module HometownWeek
       nil
     end
 
-    def inject_inner(inner, groups)
+    def inject_inner(inner, groups, dates)
+      groups ||= {}
+      dates ||= {}
       cursors = Hash.new(0)
       parts = inner.split(/(?=<h3\b)/)
       prelude = parts.shift.to_s
@@ -486,16 +592,19 @@ module HometownWeek
             part.sub!(%r{</h3>}) { "#{Regexp.last_match(0)}\n<p class=\"event-when\">#{snippet}</p>" }
           end
         end
-        wrap_event_card(part)
+        iso = dates[key] && dates[key][index]
+        iso = nil if iso.to_s.empty?
+        wrap_event_card(part, iso)
       end
       prelude + rendered.join
     end
 
     # One card per event heading. The calendar icon is already on the date line.
-    def wrap_event_card(part)
+    def wrap_event_card(part, iso = nil)
       body = part.sub(/\s+\z/, "")
       trail = part[body.length..] || ""
-      %(<article class="event-card">\n#{body}\n</article>#{trail})
+      date_attr = iso ? %( data-date="#{iso}") : ""
+      %(<article class="event-card"#{date_attr}>\n#{body}\n</article>#{trail})
     end
 
     def root_path(site, path)
@@ -560,11 +669,12 @@ module HometownWeek
       unmatched = 0
       undated = 0
       dtstamp = EventCalendar.stamp_utc(site.time)
+      today = EventCalendar.pacific_today(site.time)
 
       site.pages.each do |page|
         next unless page.data["layout"] == "city"
 
-        result = build_city(site, page, dtstamp)
+        result = build_city(site, page, dtstamp, today)
         linked += result[:linked]
         unmatched += result[:unmatched]
         undated += result[:undated]
@@ -576,7 +686,7 @@ module HometownWeek
       )
     end
 
-    def build_city(site, page, dtstamp)
+    def build_city(site, page, dtstamp, today)
       events, undated = load_events(site, page)
       headings = EventCalendar.markdown_headings(page.content)
       heading_rows = headings.map do |heading|
@@ -590,6 +700,7 @@ module HometownWeek
       end
       assigned = EventCalendar.assign_events(heading_rows, events)
       groups = Hash.new { |hash, key| hash[key] = [] }
+      dates = Hash.new { |hash, key| hash[key] = [] }
       used = {}
       linked = 0
 
@@ -616,10 +727,13 @@ module HometownWeek
           { href: href, when_label: record[:when_label] }
         end
         groups[heading[:key]] << links
+        date = EventCalendar.heading_date(heading, picks, today)
+        dates[heading[:key]] << (date ? EventCalendar.iso_date(date) : nil)
       end
 
       matched = assigned.values.sum(&:size)
       page.data["calendar_groups"] = groups
+      page.data["event_dates"] = dates
       { linked: linked, unmatched: events.size - matched, undated: undated }
     end
 
@@ -667,10 +781,13 @@ end
 Jekyll::Hooks.register :pages, :post_render do |page|
   next unless page.data["layout"] == "city"
 
-  groups = page.data["calendar_groups"]
-  next if groups.nil? || groups.empty?
-
-  page.output = HometownWeek::EventCalendar.inject!(page.output, groups)
+  today = HometownWeek::EventCalendar.pacific_today(page.site.time)
+  page.output = HometownWeek::EventCalendar.inject!(
+    page.output,
+    page.data["calendar_groups"],
+    page.data["event_dates"],
+    today
+  )
 end
 
 module HometownWeek

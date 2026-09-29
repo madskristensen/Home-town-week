@@ -1,23 +1,17 @@
-<aside id="install-hint" class="install-card" hidden>
-  <div class="install-card-sheet" role="region" aria-labelledby="install-card-name">
-    <div class="install-card-head">
-      <img class="install-card-icon" src="{{ '/assets/images/apple-touch-icon.png' | relative_url }}" alt="" width="48" height="48">
-      <div class="install-card-text">
-        <p id="install-card-name" class="install-card-name">Hometown Week</p>
-        <p id="install-hint-copy" class="install-card-benefit">Open your city in one tap.</p>
-      </div>
-    </div>
-    <div class="install-card-actions">
-      <button type="button" class="install-go" id="install-hint-go" hidden>Install as app</button>
-      <button type="button" class="install-dismiss" id="install-hint-dismiss">Not now</button>
-    </div>
-  </div>
-</aside>
 <script data-sw="{{ '/sw.js' | relative_url }}">
 (function () {
+  // localStorage keys:
+  // hw-last-state  state slug of the last city page, such as wa
+  // hw-last-city   city slug of that page, such as redmond
+  // hw-city-visits city-page loads in this browser
+  // hw-shared      "1" after the Share control is used
+  // hw-install-dismissed  epoch ms; Not now hides the card until then
   var DISMISS_KEY = "hw-install-dismissed";
-  var VISIT_KEY = "hw-visits";
-  var CITY_KEY = "hw-seen-city";
+  var CITY_VISITS_KEY = "hw-city-visits";
+  var SHARED_KEY = "hw-shared";
+  var LAST_STATE_KEY = "hw-last-state";
+  var LAST_CITY_KEY = "hw-last-city";
+  var DISMISS_MS = 14 * 24 * 60 * 60 * 1000;
 
   function runningInstalled() {
     try {
@@ -65,12 +59,131 @@
   if (document.readyState === "complete") registerServiceWorker();
   else window.addEventListener("load", registerServiceWorker);
 
+  function saveLastCity() {
+    var article = document.querySelector("article.city-home");
+    if (!article) return;
+    var state = article.getAttribute("data-state") || "";
+    var city = article.getAttribute("data-city") || "";
+    if (!/^[a-z0-9-]+$/.test(state) || !/^[a-z0-9-]+$/.test(city)) return;
+    storageSet(LAST_STATE_KEY, state);
+    storageSet(LAST_CITY_KEY, city);
+  }
+
+  saveLastCity();
+
+  function pacificDay() {
+    try {
+      var parts = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/Los_Angeles",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      }).formatToParts(new Date());
+      var year = "";
+      var month = "";
+      var day = "";
+      var i;
+      for (i = 0; i < parts.length; i++) {
+        if (parts[i].type === "year") year = parts[i].value;
+        if (parts[i].type === "month") month = parts[i].value;
+        if (parts[i].type === "day") day = parts[i].value;
+      }
+      if (!year || !month || !day) return "";
+      return year + "-" + month + "-" + day;
+    } catch (err) {
+      return "";
+    }
+  }
+
+  function parseISO(iso) {
+    var match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || "");
+    if (!match) return null;
+    return new Date(Date.UTC(+match[1], +match[2] - 1, +match[3]));
+  }
+
+  function isoFromDate(date) {
+    var year = date.getUTCFullYear();
+    var month = date.getUTCMonth() + 1;
+    var day = date.getUTCDate();
+    var monthText = month < 10 ? "0" + month : String(month);
+    var dayText = day < 10 ? "0" + day : String(day);
+    return year + "-" + monthText + "-" + dayText;
+  }
+
+  function addDays(date, count) {
+    return new Date(date.getTime() + count * 86400000);
+  }
+
+  function bucketLabel(iso, todayIso) {
+    var today = parseISO(todayIso);
+    if (!parseISO(iso) || !today) return "Later";
+    if (iso === todayIso) return "Today";
+    if (iso === isoFromDate(addDays(today, 1))) return "Tomorrow";
+    var daysToSunday = (7 - today.getUTCDay()) % 7;
+    var sunday = addDays(today, daysToSunday);
+    var saturday = addDays(sunday, -1);
+    if (iso === isoFromDate(saturday) || iso === isoFromDate(sunday)) return "This weekend";
+    return "Later";
+  }
+
+  function insertAfter(node, next) {
+    if (node.nextSibling) node.parentNode.insertBefore(next, node.nextSibling);
+    else node.parentNode.appendChild(next);
+  }
+
+  // Rebuild groups only when the Pacific day has moved past the build day.
+  function regroupEvents() {
+    var prose = document.querySelector("article.city-home .prose");
+    if (!prose) return;
+    var built = prose.getAttribute("data-today") || "";
+    var today = pacificDay();
+    if (!built || !today || built === today) return;
+    var cards = Array.prototype.slice.call(prose.querySelectorAll("article.event-card"));
+    if (!cards.length) return;
+    var headings = prose.querySelectorAll("h2.event-bucket");
+    var i;
+    for (i = 0; i < headings.length; i++) headings[i].parentNode.removeChild(headings[i]);
+    var names = ["Today", "Tomorrow", "This weekend", "Later"];
+    var groups = { Today: [], Tomorrow: [], "This weekend": [], Later: [] };
+    for (i = 0; i < cards.length; i++) {
+      groups[bucketLabel(cards[i].getAttribute("data-date"), today)].push(cards[i]);
+    }
+    var anchor = document.getElementById("list-updated");
+    if (!anchor || anchor.parentNode !== prose) anchor = prose.querySelector("h2");
+    if (!anchor) return;
+    var cursor = anchor;
+    for (i = 0; i < names.length; i++) {
+      var list = groups[names[i]];
+      if (!list || !list.length) continue;
+      var heading = document.createElement("h2");
+      heading.className = "event-bucket";
+      heading.textContent = names[i];
+      insertAfter(cursor, heading);
+      cursor = heading;
+      var j;
+      for (j = 0; j < list.length; j++) {
+        insertAfter(cursor, list[j]);
+        cursor = list[j];
+      }
+    }
+  }
+
+  regroupEvents();
+
   var hint = document.getElementById("install-hint");
 
   function isIOS() {
     var ua = navigator.userAgent || "";
     if (/iPad|iPhone|iPod/.test(ua)) return true;
     return navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+  }
+
+  function dismissed() {
+    var raw = storageGet(DISMISS_KEY);
+    if (!raw) return false;
+    var until = parseInt(raw, 10);
+    if (!isFinite(until)) return false;
+    return Date.now() < until;
   }
 
   if (isIOS()) {
@@ -83,34 +196,23 @@
     var dismissBtn = document.getElementById("install-hint-dismiss");
     var deferredPrompt = null;
 
-    function engaged() {
-      var visits = parseInt(storageGet(VISIT_KEY) || "0", 10);
+    function noteCityVisit() {
+      if (!document.querySelector("article.city-home")) return false;
+      var visits = parseInt(storageGet(CITY_VISITS_KEY) || "0", 10);
       if (!isFinite(visits) || visits < 0) visits = 0;
       visits += 1;
-      storageSet(VISIT_KEY, String(Math.min(visits, 99)));
-      if (document.querySelector("article.city-home")) storageSet(CITY_KEY, "1");
-      return visits >= 2 || storageGet(CITY_KEY) === "1";
+      storageSet(CITY_VISITS_KEY, String(Math.min(visits, 99)));
+      return visits >= 2;
     }
 
-    var readyToAsk = engaged();
-
-    function placeCard() {
-      if (!hint || hint.hidden) {
-        document.body.classList.remove("has-install-card");
-        document.body.style.paddingBottom = "";
-        return;
-      }
-      document.body.classList.add("has-install-card");
-      document.body.style.paddingBottom = hint.offsetHeight + "px";
-    }
+    var readyToAsk = noteCityVisit() || storageGet(SHARED_KEY) === "1";
 
     function hideHint() {
       if (hint) hint.hidden = true;
-      placeCard();
     }
 
     function canAsk() {
-      return readyToAsk && !runningInstalled() && storageGet(DISMISS_KEY) !== "1";
+      return readyToAsk && !runningInstalled() && !dismissed();
     }
 
     function installButtonLabel() {
@@ -130,18 +232,23 @@
     }
 
     function showInstall() {
-      if (!canAsk()) return;
+      if (!canAsk() || !deferredPrompt) return;
       if (go) {
         go.textContent = installButtonLabel();
         go.hidden = false;
       }
       hint.hidden = false;
-      placeCard();
     }
+
+    document.addEventListener("hw-share", function () {
+      storageSet(SHARED_KEY, "1");
+      readyToAsk = true;
+      showInstall();
+    });
 
     if (dismissBtn && !runningInstalled()) {
       dismissBtn.addEventListener("click", function () {
-        storageSet(DISMISS_KEY, "1");
+        storageSet(DISMISS_KEY, String(Date.now() + DISMISS_MS));
         hideHint();
       });
     }
@@ -169,7 +276,7 @@
     }
 
     window.addEventListener("beforeinstallprompt", function (event) {
-      if (runningInstalled() || storageGet(DISMISS_KEY) === "1") return;
+      if (runningInstalled() || dismissed()) return;
       event.preventDefault();
       deferredPrompt = event;
       showInstall();
@@ -179,8 +286,6 @@
       deferredPrompt = null;
       hideHint();
     });
-
-    window.addEventListener("resize", placeCard);
   }
 
   var article = document.querySelector("article[data-updated]");

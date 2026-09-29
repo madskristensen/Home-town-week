@@ -16,7 +16,15 @@ Weeks are not pages. A later Monday email may use a week, and that email is out 
 | About | `/about/` |
 | Feed | `/feed.xml` |
 
-The city page is the digest: a short teaser, then upcoming family events in chronological order. There is no year index, no week issue, and no `/latest/` redirect. Old week addresses are not redirected.
+The city page is the digest: a short teaser, then upcoming family events. There is no year index, no week issue, and no `/latest/` redirect. Old week addresses are not redirected.
+
+Events stay in the city page in the order they are written. The build groups each `###` event into Today, Tomorrow, This weekend, or Later from the first month and day on its gold date line (`<p class="event-when">`). A line with no month and day, and no matching dated row in `{city}_events.yml`, goes in Later. Empty groups are left out. Today and tomorrow take priority over the weekend. This weekend is the Saturday and Sunday of the current Pacific week. The groups are in the HTML, so they still show with JavaScript off. If the Pacific date has moved past the build date, the browser moves the same cards into the current groups.
+
+A city page stores two `localStorage` keys: `hw-last-state` (the state slug, such as `wa`) and `hw-last-city` (the city slug, such as `redmond`). The home page reads them and, only when both match a city in `_data/cities.yml`, adds a link that says `Open {City}` and points at `/{state}/{city}/`. It does not redirect. With JavaScript off, or with a missing or unknown slug, the home page is unchanged.
+
+The install card sits in the city page under the teaser, in normal flow. It is not a fixed bar. It stays hidden until this browser has opened a city page twice, or until Share is used, and the browser fires `beforeinstallprompt`. Not now stores `hw-install-dismissed` as the epoch milliseconds when the card may return, 14 days out. `hw-city-visits` counts city-page loads. `hw-shared` is `1` after Share. The card is omitted on iOS and when the site is already installed. The service worker still registers on every page.
+
+`_data/nearby.yml` lists up to four nearby city ids per city. The Also close row links only to ids that have a page. Eastside Washington is filled in. Other cities omit the row until they are added there.
 
 ## Local build
 
@@ -50,7 +58,7 @@ A first seed of a city can write the list and fill the upcoming events in the sa
 ## Adding a city
 
 1. Add the city to `_data/cities.yml`, alphabetical within its state, with `lat` and `lon` for the city center in decimal degrees. The home page uses those coordinates to list cities within about 10 miles, then the nearest page if none are that close. It does not call a geocoding service. Add a `sources:` list on that same city entry (name, url, type, notes). Do not put the list in a separate file. Types include city_hall, parks, allevents, theater, market, library, downtown, and venue. Cover city hall, AllEvents for that city and state, a local theater, plus parks, market, downtown, and the library as one source among several. Monday and Thursday fill the city page from it. The first Friday of the month keeps this list current. When a source is already a machine feed, set `format` to `ical`, `rss`, `libcal`, `bibliocommons`, or `allevents`. If the feed URL is not the browse page, put it in `feed_url` and leave `url` as the page a person would open.
-2. Add `{state}/{city}/index.md`, using the Redmond page as the pattern. Front matter holds the teaser (`hook`) and an optional hero image. The body is the upcoming events, earliest first. Each event is a `###` title, then a gold date line (`<p class="event-when">`), a place line (`<p class="event-place">`), a short blurb, and a link.
+2. Add `{state}/{city}/index.md`, using the Redmond page as the pattern. Front matter holds the teaser (`hook`) and an optional hero image. The body is the upcoming events, earliest first. Each event is a `###` title, then a gold date line (`<p class="event-when">`), a place line (`<p class="event-place">`), a short blurb, and a link. The date line needs a month and day (`Mon Sep 28`) so the build can place the event in Today, Tomorrow, This weekend, or Later. Add that city to `_data/nearby.yml` only when you know two to four neighbors that already have pages.
 3. Add `_data/{city}_events.yml` as one chronological list (`name`, `start`, `end`, `place`, `same_as`). Dated rows become add-to-calendar files and the `ItemList` on the city page. Delete a row when the event has ended.
 4. Put a state outline with a city pin at `assets/images/cities/{state}/{city}.svg`. Run `python3 script/render-og-images.py` so `assets/images/og/{state}/{city}.png` matches that mark. Share previews use the city hero when the page has one, and that map card when it does not. Put photos in `assets/images/{city}/` at 800, 1200, and 1600 widths.
 
