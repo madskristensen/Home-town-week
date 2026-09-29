@@ -39,10 +39,9 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: |
-          # Custom domain hometownweek.com: empty baseurl. Do not fall back
-          # to /Home-town-week or apex CSS/images break. When DNS for
-          # eastsidecalendar.com is ready, also update the IndexNow sitemap
-          # URL below. Leave CNAME and this host alone until then.
+          # Custom domain eastsidecalendar.com: empty baseurl. Do not fall back
+          # to /Home-town-week or apex CSS/images break. Actions publishing
+          # ignores the CNAME file. The host is the repository Pages setting.
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 
       - name: Add IndexNow verification key
@@ -86,7 +85,7 @@ jobs:
         if: env.INDEXNOW_KEY != ''
         uses: bojieyang/indexnow-action@v3
         with:
-          sitemap-location: "https://hometownweek.com/sitemap.xml"
+          sitemap-location: "https://eastsidecalendar.com/sitemap.xml"
           key: ${{ env.INDEXNOW_KEY }}
           endpoint: "api.indexnow.org"
           failure-strategy: "error"

@@ -1,6 +1,6 @@
 # Eastside Family Calendar
 
-Upcoming family events for cities on Washington's Eastside. This is a Jekyll site. It is still published at [hometownweek.com](https://hometownweek.com/). The next host will be eastsidecalendar.com. Do not change the domain until DNS for that host is ready. See [Domain](#domain).
+Upcoming family events for cities on Washington's Eastside. This is a Jekyll site. It is published at [eastsidecalendar.com](https://eastsidecalendar.com/). See [Domain](#domain).
 
 The home page leads with a map of the Eastside, from Lake Washington to the Cascade foothills, and a list of the same cities. Each city on the map is a link. The list shows how many upcoming events that city has. The footer does not repeat every city. The site header is the same slim bar on every page: the mark, Eastside Family Calendar, and a Cities menu. That menu lists cities. It does not lay the names across the bar.
 
@@ -31,16 +31,11 @@ The install card sits in the city page under the teaser, in normal flow. It is n
 
 ## Domain
 
-`CNAME` is `hometownweek.com`. Leave it there until DNS for eastsidecalendar.com is ready. `_config.yml` sets `url` to `https://hometownweek.com` and `baseurl` to an empty string. Keep the baseurl empty. A `/Home-town-week` baseurl breaks CSS and images on the apex domain.
+The site is published with a custom GitHub Actions workflow. GitHub ignores the `CNAME` file for that kind of publish. The live host is the custom domain in the repository Pages settings, which is eastsidecalendar.com. `_config.yml` sets `url` to `https://eastsidecalendar.com` and `baseurl` to an empty string. Keep the baseurl empty. A `/Home-town-week` baseurl breaks CSS and images on the apex domain.
 
-When DNS is ready, change these together:
+IndexNow reads `https://eastsidecalendar.com/sitemap.xml`. That file has to be real sitemap XML. hometownweek.com currently returns GitHub's "site not found" page, so IndexNow must not request a sitemap there.
 
-1. `url` in `_config.yml` to `https://eastsidecalendar.com`
-2. `url` in `_config.domain.yml` to the same host
-3. The contents of `CNAME` to `eastsidecalendar.com`
-4. The IndexNow sitemap URL in `.github/workflows/pages.yml`
-
-Suggestion and request links use `suggestions@eastsidecalendar.com`. The site host stays hometownweek.com until the domain flip above.
+Suggestion and request links use `suggestions@eastsidecalendar.com`.
 
 ## Local build
 

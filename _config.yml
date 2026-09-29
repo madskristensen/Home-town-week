@@ -2,11 +2,10 @@ title: Eastside Family Calendar
 tagline: Family events on the Eastside
 description: >-
   Upcoming family events in Eastside cities, so you never miss the fun.
-# Canonical host. Still hometownweek.com until DNS for eastsidecalendar.com
-# is ready. To flip the host, see the domain note in README: change url here,
-# the same url in _config.domain.yml, the CNAME file, and the IndexNow sitemap
-# URL in .github/workflows/pages.yml.
-url: https://hometownweek.com
+# Canonical host. GitHub Pages is published with Actions, so the custom
+# domain is the repository Pages setting, not the CNAME file. That setting
+# is eastsidecalendar.com. IndexNow must request the sitemap on this host.
+url: https://eastsidecalendar.com
 baseurl: ""
 lang: en-US
 timezone: America/Los_Angeles
@@ -17,7 +16,7 @@ repository: madskristensen/Home-town-week
 
 author:
   name: Mads Kristensen
-  url: https://hometownweek.com/about/
+  url: https://eastsidecalendar.com/about/
   twitter: madskristensen
 
 twitter:
