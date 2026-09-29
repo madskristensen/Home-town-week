@@ -1,13 +1,5 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
-- name: "Stay Active & Independent for Life (SAIL) Fitness Class"
-  start: "2026-09-28T10:00:00-07:00"
-  end: "2026-09-28T11:00:00-07:00"
-  same_as: "https://www.mercerisland.gov/yfs/page/stay-active-independent-life-sail-fitness-class-1"
-- name: "PARENT LAB: Using Play and Art to Strengthen the Parent/Child Connection"
-  start: "2026-09-28T18:00:00-07:00"
-  end: "2026-09-28T19:30:00-07:00"
-  same_as: "https://www.mercerisland.gov/yfs/page/parent-lab-using-play-and-art-strengthen-parentchild-connection"
 - name: "Senior Social Seminar - Food, Mood & Function"
   start: "2026-09-29T10:00:00-07:00"
   end: "2026-09-29T11:00:00-07:00"

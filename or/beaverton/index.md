@@ -11,28 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:Beaverton_Oregon_libra
 hook: Monday morning is Spanish storytime, then Japanese. Tuesday night is Fiesta on First. Saturday the market has Richie Bean, and the library author chat is Tyler Jones.
 ---
 
-### Spanish Storytime / Hora de cuentos en español
-<p class="event-when">Mon Sep 28 · 10:15–11:00 a.m.</p>
-<p class="event-place">Main storytime room, 12375 SW 5th Street</p>
-
-{% include event-photo.html
-   src="/assets/images/beaverton/library.webp"
-   alt="Beaverton City Library, with the library sign and a covered entrance."
-   credit="Photo: M.O. Stevens, CC BY 3.0"
-   source="https://commons.wikimedia.org/wiki/File:Beaverton_Oregon_library.JPG" %}
-
-Ages 0–6. Stories, rhymes, and songs, and the listing says it is free. Mondays from Sep. 14 through Dec. 7, except Sep. 7.
-
-[Storytimes](https://www.beavertonlibrary.org/381/Storytimes)
-
-### Japanese Storytime
-<p class="event-when">Mon Sep 28 · 11:15–11:45 a.m.</p>
-<p class="event-place">Main storytime room, 12375 SW 5th Street</p>
-
-Ages 6 and under with family. The select Mondays include Sep. 28 and Oct. 12. Oct. 12 also has Ukrainian storytime at 6:00–6:30 p.m.
-
-[Storytimes](https://www.beavertonlibrary.org/381/Storytimes)
-
 ### Fiesta on First
 <p class="event-when">Tue Sep 29 · 6:00–8:00 p.m.</p>
 <p class="event-place">1st Street Dining Commons, SW Washington Ave and SW 1st St</p>

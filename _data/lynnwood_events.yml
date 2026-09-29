@@ -1,15 +1,5 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
-- name: "Little Science Lab with Imagine Children's Museum"
-  start: "2026-09-28T14:00:00-07:00"
-  end: "2026-09-28T14:30:00-07:00"
-  place: "Lynnwood Library, 19200 44th Ave W"
-  same_as: "https://sno-isle.bibliocommons.com/v2/events/6aa44962101eb7003f2f5761"
-- name: "Little Science Lab with Imagine Children's Museum"
-  start: "2026-09-28T15:00:00-07:00"
-  end: "2026-09-28T15:30:00-07:00"
-  place: "Lynnwood Library, 19200 44th Ave W"
-  same_as: "https://sno-isle.bibliocommons.com/v2/events/6aa44962101eb7003f2f5762"
 - name: "Baby Storytime with Ella"
   start: "2026-09-29T10:30:00-07:00"
   end: "2026-09-29T11:00:00-07:00"

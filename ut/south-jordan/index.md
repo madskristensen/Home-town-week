@@ -11,30 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:Oquirrh_Lake_at_sunris
 hook: Saturday morning is the farmers market on Towne Center Drive. Thursday, Oct 15, is the Glow Show, and Joseph is still on stage in Sandy.
 ---
 
-### Toddler Time
-<p class="event-when">Mon Sep 28 · 10:15–10:45 a.m.</p>
-<p class="event-place">South Jordan Meeting Room, 10673 S Redwood Rd</p>
-
-Ages about 1 1/2 to 3, with a parent or caregiver. Finger plays, songs, and stories. Playtime for Littles follows at 11:00 a.m.
-
-[Toddler Time](https://slcls.libnet.info/event/16788996)
-
-### Playtime for Littles
-<p class="event-when">Mon Sep 28 · 11:00 a.m.–12:00 p.m.</p>
-<p class="event-place">South Jordan Meeting Room, 10673 S Redwood Rd</p>
-
-Drop-in play with toys. Best for ages 1–5. Phone 801-943-4636.
-
-[Playtime for Littles](https://slcls.libnet.info/event/16789007)
-
-### LEGO Club
-<p class="event-when">Mon Sep 28 · 4:00–5:00 p.m.</p>
-<p class="event-place">South Jordan Meeting Room, 10673 S Redwood Rd</p>
-
-Ages 6–9. Build with the library's bricks.
-
-[LEGO Club](https://slcls.libnet.info/event/16752452)
-
 ### Princess and the Frog puppet show
 <p class="event-when">Tue Sep 29 · 10:15–10:45 a.m. and 11:00–11:30 a.m.</p>
 <p class="event-place">South Jordan Meeting Room, 10673 S Redwood Rd</p>

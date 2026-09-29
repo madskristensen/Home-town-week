@@ -11,22 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:2026_09_18_Deschutes_R
 hook: Monday evening is family storytime at the library. Northwest Crossing's Saturday market ended Sep. 26. This weekend downtown is the Fall Festival, with a kids' theater set Saturday and Sunday morning. Wednesday is still the farmers market.
 ---
 
-### Kids' Silent Book Club
-<p class="event-when">Mon Sep 28 · 3:00–4:00 p.m.</p>
-<p class="event-place">Central Library, 61956 Santorini St</p>
-
-Love reading? Come hang and read. Family storytime is later the same day.
-
-[Kids' Silent Book Club](https://dpl.libnet.info/event/17227575)
-
-### Family Story Time
-<p class="event-when">Mon Sep 28 · 5:30–5:55 p.m.</p>
-<p class="event-place">Central Library, 61956 Santorini St</p>
-
-Books, songs, and rhymes. Ages 0–5. About 25 minutes.
-
-[Family Story Time](https://dpl.libnet.info/event/16777453)
-
 ### Bend Farmers Market
 <p class="event-when">Wed Sep 30 · 11:00 a.m.–3:00 p.m.</p>
 <p class="event-place">Brooks Alley, downtown Bend</p>

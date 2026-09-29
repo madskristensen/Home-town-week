@@ -11,14 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:SCERA_theater.JPG
 hook: Saturday night is the last Noises Off. Wednesday evening is the farmers market, and Monday is E.T. at the library.
 ---
 
-### Puppets and PJs Storytime
-<p class="event-when">Mon Sep 28 · 6:00–6:30 p.m.</p>
-<p class="event-place">Storytelling Wing, Orem Public Library, 58 N State St</p>
-
-Ages 0–7. Puppet skits, songs, and stories before bedtime. The next date on this listing is Oct. 26.
-
-[Puppets and PJs](https://orem.librarycalendar.com/event/puppets-pjs-storytime-16923)
-
 ### Noises Off
 <p class="event-when">Mon Sep 28, Thu Oct 1, Fri Oct 2, and Sat Oct 3 · 7:30 p.m.</p>
 <p class="event-place">SCERA Center for the Arts, 745 South State St</p>

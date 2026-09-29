@@ -11,14 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:Kelsey_Creek_Farm_04.j
 hook: Monday is toddler storytime. Wednesday is engineering at KidsQuest and LEGO at the library. Thursday is the last farmers market, Friday is a sunset market and clay at the museum, and Saturday is the Kelsey Creek Farm Fair.
 ---
 
-### Toddler Story Time
-<p class="event-when">Mon Sep 28 · 10:15 a.m., repeated at 11:15 a.m.</p>
-<p class="event-place">Bellevue Library, third-floor programming room, 1111 110th Ave NE</p>
-
-Stories, music, movement, and rhymes for ages 1 and 2 with an adult. A short play time follows. No registration. Space is limited. Pick one session. King County Library System lists this on the Bellevue branch calendar.
-
-[Bellevue Library](https://kcls.org/locations/bellevue/)
-
 ### Diabolo Dance Theatre
 <p class="event-when">Tue Sep 29 · Time not posted</p>
 <p class="event-place">Meydenbauer Center, 11100 NE 6th St</p>

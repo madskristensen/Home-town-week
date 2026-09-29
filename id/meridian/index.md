@@ -11,14 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:Idaho_Building_(Meridi
 hook: Monday night is the market at Storey Park. Saturday is Oktoberfest downtown, and the Main Street Market is the same morning.
 ---
 
-### Preschool Storytime
-<p class="event-when">Mon Sep 28 · 10:00–10:30 a.m. and 11:00–11:30 a.m.</p>
-<p class="event-place">Pinnacle Library, 1375 E Phenomenal St</p>
-
-Pre-K, ages 0–5.
-
-[Library events](https://www.mld.org/events/upcoming)
-
 ### Baby Time
 <p class="event-when">Mon Sep 28, Thu Oct 1, and Mon Oct 5 · 10:00–11:00 a.m.</p>
 <p class="event-place">Orchard Park Library, 1268 W Orchard Park Dr</p>
@@ -26,14 +18,6 @@ Pre-K, ages 0–5.
 Pre-K. These three mornings are the ones on the first page of the upcoming list.
 
 [Library events](https://www.mld.org/events/upcoming)
-
-### Meridian Monday Night Market
-<p class="event-when">Mon Sep 28 · 4:00–9:00 p.m.</p>
-<p class="event-place">Storey Park, 205 E Franklin Rd</p>
-
-The chamber page says every Monday, June 1 through Oct. 5, at this hour. Produce, makers, food trucks, and live entertainment.
-
-[This Monday](https://business.meridianchamber.org/events/details/meridian-monday-night-market-09-28-2026-16635)
 
 ### Music and Movement
 <p class="event-when">Tue Sep 29 · 10:00–11:00 a.m.</p>

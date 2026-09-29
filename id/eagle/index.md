@@ -11,14 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:City_of_Eagle_(1).jpg
 hook: Monday evening is a meet-the-cast gathering for The Fantasticks. Saturday, Oct 10, is Harvest Fest, with pumpkins in Heritage Park.
 ---
 
-### The Fantasticks community gathering
-<p class="event-when">Mon Sep 28 · 7:00 p.m.</p>
-<p class="event-place">Eagle Performing Arts Center, 1125 E State St</p>
-
-Eagle Theatre Company lists a community gathering to meet the director, actors, and crew of The Fantasticks. Public performances are Nov. 6–8, Nov. 14–15, and Nov. 21–22, with Friday and Saturday curtains at 7:30 p.m. and Sunday matinees at 2:00 p.m. Those dates are after this span.
-
-[Theatre events](https://eagletc.org/events)
-
 ### Friends of the Eagle Library Book Sale
 <p class="event-when">Fri Oct 9 · 11:00 a.m.–3:00 p.m. · Sat Oct 10 · 11:00 a.m.–3:00 p.m.</p>
 <p class="event-place">Community Hall</p>

@@ -11,19 +11,6 @@ image_source_url: https://www.redmond.gov/ImageRepository/Document?documentID=40
 hook: Ice cream and archaeology Monday, toddler stories and drop-in play Thursday, teen sessions through the week, then flapjacks, a farm festival, and a Marymoor 5K on the weekend.
 ---
 
-### Archaeology and Ice Cream
-<p class="event-when">Mon Sep 28 · 6:30–8:00 p.m.</p>
-<p class="event-place">Redmond City Hall, 15670 NE 85th St</p>
-
-{% include event-photo.html
-   src="/assets/images/redmond/archaeology-dig.webp"
-   alt="An archaeology dig with string grids over an excavation, and a large block of earth left in the center."
-   credit="Photo: City of Redmond"
-   source="https://www.redmond.gov/ImageRepository/Document?documentID=12607" %}
-
-Family-friendly evening with the Snoqualmie Indian Tribe and the City on local history, archaeology, and cultural resource care. Ice cream included.  
-[City calendar](https://www.redmond.gov/Calendar.aspx?EID=3550)
-
 ### Meet and Green
 <p class="event-when">Tue Sep 29 · 3:00–4:30 p.m.</p>
 <p class="event-place">Redmond Library, 15990 NE 85th St</p>

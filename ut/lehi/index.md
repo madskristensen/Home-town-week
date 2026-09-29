@@ -19,14 +19,6 @@ The Lehi calendar page says the season is Sep. 21 through Oct. 31. Open the date
 
 [Lehi calendar](https://cornbellys.com/pages/calendar)
 
-### Kiddie Kraft
-<p class="event-when">Mon Sep 28 · 10:00–11:30 a.m.</p>
-<p class="event-place">Programming Space, Lehi City Library, 131 N 100 E</p>
-
-A craft with supplies provided. Families and children. Park in the lot south of the building.
-
-[Kiddie Kraft](https://lehicity.libcal.com/event/17427449)
-
 ### Storytime
 <p class="event-when">Wed Sep 30 and Thu Oct 1 · 9:30–10:00 a.m., 10:15–10:45 a.m., and 11:00–11:30 a.m.</p>
 <p class="event-place">Programming Space, Lehi City Library, 131 N 100 E</p>

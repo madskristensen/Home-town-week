@@ -11,14 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:Autum_day_in_Hovander_
 hook: Monday morning is toddler storytime. Tuesday evening is the witches dance at Pioneer Pavilion. Sunday is the Bellingham Symphony, in Bellingham, with Shoestring Circus.
 ---
 
-### Toddler Storytime
-<p class="event-when">Mon Sep 28 · 9:30–10:00 a.m.</p>
-<p class="event-place">Ferndale Library, large meeting room</p>
-
-Ages 1–3, about 20 minutes. Concept books, simple stories, and movement. The same listing says an identical program at 10:30 a.m. Come to one.
-
-[Toddler Storytime](https://wcls.libcal.com/event/16945225)
-
 ### Witches Dance
 <p class="event-when">Tue Sep 29 · 6:30–7:30 p.m.</p>
 <p class="event-place">Pioneer Pavilion Community Center, 2007 Cherry St</p>

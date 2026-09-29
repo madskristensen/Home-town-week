@@ -1,10 +1,5 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
-- name: "Play and Learn"
-  start: "2026-09-28T10:30:00-07:00"
-  end: "2026-09-28T12:00:00-07:00"
-  place: "Lively Center, 1918 Seattle Hill Rd, Mill Creek"
-  same_as: "https://millcreekwa.gov/sites/default/files/2026-08/fall-2026-play-learn-calendar.pdf"
 - name: "Toddler Storytime with Heather"
   start: "2026-09-29T09:30:00-07:00"
   end: "2026-09-29T10:00:00-07:00"

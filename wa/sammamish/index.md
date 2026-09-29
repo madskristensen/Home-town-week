@@ -11,20 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:2025-10-21,_Pine_Lake_
 hook: Monday morning is Mandarin story time. Saturday afternoon is a codebreaking workshop, and Thursday evening is a sewing hour for kids and adults at Beaver Lake Lodge.
 ---
 
-### Mandarin Story Time
-<p class="event-when">Mon Sep 28 · 11:30 a.m.–12:00 p.m.</p>
-<p class="event-place">Sammamish Library, 825 228th Ave SE</p>
-
-{% include event-photo.html
-   src="/assets/images/sammamish/library.webp"
-   alt="Sammamish Library at Sammamish Commons."
-   credit="Photo: SuddenFrost, CC0"
-   source="https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Sammamish_Library.jpg" %}
-
-Stories, music, movement, and rhymes in Mandarin. The listing is for toddlers and preschoolers. Registration is not required. Monday hours start at 10:00 a.m.
-
-[Mandarin Story Time](https://kcls.bibliocommons.com/events/694222c97ed7c62f00aad823)
-
 ### Reading Buddies
 <p class="event-when">Wed Sep 30 · 4:00–6:00 p.m.</p>
 <p class="event-place">Sammamish Library, 825 228th Ave SE</p>

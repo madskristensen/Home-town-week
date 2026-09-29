@@ -1,10 +1,5 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
-- name: "Toddler Story Time"
-  start: "2026-09-28T10:30:00-07:00"
-  end: "2026-09-28T11:00:00-07:00"
-  place: "Renton Library, 100 Mill Avenue S"
-  same_as: "https://kcls.bibliocommons.com/v2/events/6a90b2edbe148200298a96d2"
 - name: "Renton Farmers Market"
   start: "2026-09-29T15:00:00-07:00"
   end: "2026-09-29T19:00:00-07:00"

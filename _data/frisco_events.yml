@@ -1,18 +1,5 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
-- name: "Threshing Day by Rebecca Yarros Midnight Release Party-BN Frisco"
-  start: "2026-09-28"
-  same_as: "https://allevents.in/frisco/threshing-day-by-rebecca-yarros-midnight-release-party-bn-frisco/100001994507846660"
-- name: "Tot's Town & Kid's Club Closed"
-  start: "2026-09-28"
-  end: "2026-09-28"
-  place: "Frisco Library, Tot's Town and Kid's Club"
-  same_as: "https://friscolibrary.bibliocommons.com/events/6aa452af129d8e0031f17c06"
-- name: "ESL Language Lab"
-  start: "2026-09-28T18:00:00-07:00"
-  end: "2026-09-28T20:00:00-07:00"
-  place: "Frisco Library, Community Event Room B"
-  same_as: "https://friscolibrary.bibliocommons.com/events/6936f4a04be11d3d00d702bd"
 - name: "Tot's Town & Kid's Club Closed"
   start: "2026-09-29"
   end: "2026-09-29"

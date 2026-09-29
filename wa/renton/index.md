@@ -11,14 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:Renton_Downtown_2015-0
 hook: Tuesday is the last farmers market of 2026, with a kids' craft at the library the same afternoon. Friday, Noises Off opens at Renton Civic Theatre for ages 10 and up.
 ---
 
-### Toddler Story Time
-<p class="event-when">Mon Sep 28 · 10:30–11:00 a.m.</p>
-<p class="event-place">Renton Library, 100 Mill Avenue S</p>
-
-The downtown branch lists this Monday morning session for toddlers.
-
-[Toddler Story Time](https://kcls.bibliocommons.com/v2/events/6a90b2edbe148200298a96d2)
-
 ### Renton Farmers Market
 <p class="event-when">Tue Sep 29 · 3:00–7:00 p.m.</p>
 <p class="event-place">Piazza Park, 233 Burnett Ave S</p>

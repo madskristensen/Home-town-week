@@ -11,22 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:Bothell_Landing_04.jpg
 hook: Thursday morning is music and movement. Saturday is the Friends book sale and an all-ages history tour at Anderson School, and Sunday kids can read to a therapy dog.
 ---
 
-### Toddler Story Time
-<p class="event-when">Mon Sep 28 · 10:00–10:30 a.m.</p>
-<p class="event-place">Bothell Library, 18215 98th Ave NE</p>
-
-Stories, music, movement, and rhymes for 18 months to age 3 with an adult. Registration is not required. Doors close when the room is full, or 10 minutes after the start. Monday hours start at 10:00 a.m., so this session is at the open.
-
-[Toddler Story Time](https://kcls.bibliocommons.com/events/6a80c21d3b6c71003e5919de)
-
-### Baby Story Time
-<p class="event-when">Mon Sep 28 · 11:00–11:30 a.m.</p>
-<p class="event-place">Bothell Library, 18215 98th Ave NE</p>
-
-Nursery rhymes, songs, and stories for pre-walking babies, newborn to 18 months, with an adult. Registration is not required. Doors close when the room is full, or 10 minutes after the start.
-
-[Baby Story Time](https://kcls.bibliocommons.com/events/6a80c2312dac6e00371f548f)
-
 ### Oktoberfest Specials
 <p class="event-when">Mon Sep 28–Sat Oct 3 · Time not posted</p>
 <p class="event-place">Anderson School, 18607 Bothell Way NE</p>

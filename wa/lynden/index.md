@@ -11,22 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:Lynden,_Washington_-_l
 hook: Friday morning is preschool storytime, and Friday afternoon is a bats program for grades K to 5. Saturday and Sunday, the Lions train and toy show fills the fairgrounds.
 ---
 
-### LEGO Club
-<p class="event-when">Mon Sep 28 · 3:30–4:30 p.m.</p>
-<p class="event-place">Lynden Library, large meeting room</p>
-
-Drop-in for ages 4 and up. The library provides the bricks. A teen craft hour starts in the small meeting room at 4:00 p.m. the same afternoon.
-
-[LEGO Club](https://wcls.libcal.com/event/16475793)
-
-### Teen Craft Hour
-<p class="event-when">Mon Sep 28 · 4:00–5:00 p.m.</p>
-<p class="event-place">Lynden Library, small meeting room</p>
-
-For teens in grades 6 through 12. Bring a project, or use library supplies such as paper stars, yarn, crochet hooks, colored pencils, and paper. Snacks are part of the hour. It overlaps the end of LEGO Club, in a different room.
-
-[Teen Craft Hour](https://wcls.libcal.com/event/17063737)
-
 ### Preschool Storytime
 <p class="event-when">Fri Oct 2 · 10:30–11:00 a.m.</p>
 <p class="event-place">Lynden Library, large meeting room</p>

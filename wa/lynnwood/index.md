@@ -11,14 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:Lynnwood_Library_-_Sno
 hook: Monday afternoon is a science lab for preschoolers at the library. Saturday is a Hispanic Heritage celebration with folkloric dance and kids' activities, and the next Saturday is a costume giveaway with Lynnwood police.
 ---
 
-### Little Science Lab with Imagine Children's Museum
-<p class="event-when">Mon Sep 28 · 2:00–2:30 p.m. and 3:00–3:30 p.m.</p>
-<p class="event-place">Lynnwood Library, 19200 44th Ave W</p>
-
-Two short sessions the same afternoon. This is a hands-on program for preschoolers and their adults, built around curiosity about the natural world and early science and math skills.
-
-[2:00 session](https://sno-isle.bibliocommons.com/v2/events/6aa44962101eb7003f2f5761) · [3:00 session](https://sno-isle.bibliocommons.com/v2/events/6aa44962101eb7003f2f5762)
-
 ### Evening Family Storytime with Adrianna
 <p class="event-when">Tue Sep 29 · 6:30–7:00 p.m.</p>
 <p class="event-place">Lynnwood Library, 19200 44th Ave W</p>

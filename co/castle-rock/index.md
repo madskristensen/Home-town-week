@@ -11,14 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:Castle_Rock_butte_in_C
 hook: Monday evening is storytime at the library. Friday starts downtown restaurant week. Sunday is the Festival Park market, and Oct. 11 is the last Sunday of that run. Saturday, Oct. 17, is Spooktacular at Philip S. Miller Park.
 ---
 
-### Storytime
-<p class="event-when">Mon Sep 28 · 6:30–7:00 p.m.</p>
-<p class="event-place">Kids Corner, Castle Rock Library, 100 S Wilcox St</p>
-
-All ages, with ages 0–5 listed as the group. Allergen-free, like the other storytimes. Phone: 303-791-7323.
-
-[Monday storytime](https://go.dcl.org/event/14287140)
-
 ### Restaurant Week
 <p class="event-when">Fri Oct 2 through Sun Oct 11 · Time not posted</p>
 <p class="event-place">Downtown Castle Rock</p>

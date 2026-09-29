@@ -1,10 +1,5 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
-- name: "Music and Movement in Mandarin"
-  start: "2026-09-28T10:30:00-07:00"
-  end: "2026-09-28T11:00:00-07:00"
-  place: "Lake Oswego Public Library, 706 Fourth Street"
-  same_as: "https://www.ci.oswego.or.us/kids/music-and-movement-mandarin-4"
 - name: "Indoor Playground"
   start: "2026-09-29T09:00:00-07:00"
   end: "2026-09-29T13:00:00-07:00"

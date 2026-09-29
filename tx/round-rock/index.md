@@ -11,14 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:Round_Rock_Public_Libr
 hook: Friday the pumpkin festival opens at Old Settlers Park. Saturday morning is Trailside Market at Memorial Park, then storytime. Clue keeps running at Penfold, rated PG-13. Saturday, Oct. 17, is the Hairy Man Festival.
 ---
 
-### Family Storytime
-<p class="event-when">Mon Sep 28 · 6:30–7:00 p.m.</p>
-<p class="event-place">Youth Program Space, 2nd floor, Round Rock Public Library, 200 E Liberty Ave</p>
-
-Books, songs, and rhymes. Best for 18 months to 6 years. Other ages are welcome. ASL interpreting is offered at the Monday evening session.
-
-[Monday storytime](https://roundrocktexas.libcal.com/event/17124392)
-
 ### Clue
 <p class="event-when">Thu Oct 1, Fri Oct 2, Sat Oct 3, and Sun Oct 4 · Time not posted</p>
 <p class="event-place">Penfold Theatre, 2120 N Mays St, Suite 290</p>

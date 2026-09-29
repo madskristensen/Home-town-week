@@ -1,9 +1,5 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
-- name: "Toddler Story Time"
-  start: "2026-09-28T10:15:00-07:00"
-  place: "Bellevue Library, 1111 110th Ave NE"
-  same_as: "https://kcls.org/locations/bellevue/"
 - name: "Diabolo Dance Theatre"
   start: "2026-09-29"
   place: "Meydenbauer Center, 11100 NE 6th St"

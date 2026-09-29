@@ -11,14 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:Mill_Creek_Town_Center
 hook: Monday morning is Play and Learn for little kids. Friday afternoon is LEGO, Saturday morning is kids' yoga, and Thursday Oct 8 adds a math party at City Hall North.
 ---
 
-### Play and Learn
-<p class="event-when">Mon Sep 28 · 10:30 a.m.–12:00 p.m.</p>
-<p class="event-place">Lively Center, 1918 Seattle Hill Rd, Mill Creek</p>
-
-Free drop-in for children from birth through age 5 with a parent or caregiver. No reservation. The fall calendar puts this Monday at the Lively Center: child-led play at 10:30, cleanup at 11:40, circle time at 11:50, and goodbye at noon. Parking opens at 10:30. Do not arrive early or block the road.
-
-[Fall Play and Learn calendar](https://millcreekwa.gov/sites/default/files/2026-08/fall-2026-play-learn-calendar.pdf) · [Recreation programs](https://millcreekwa.gov/topics/recreation-programs-and-classes)
-
 ### Family Storytime with Mitra
 <p class="event-when">Wed Sep 30 · 6:30–7:45 p.m.</p>
 <p class="event-place">Mill Creek Library, 15429 Bothell Everett Hwy</p>

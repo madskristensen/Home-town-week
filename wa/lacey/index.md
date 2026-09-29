@@ -11,22 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:2023-05-29,_Long_Lake_
 hook: Monday afternoon is a teen theatre class in Olympia and board games at the library. Saturday is Children's Day at Huntamer Park. The weekend of Oct 16, Olympia Family Theater opens a new show in Olympia.
 ---
 
-### Characterization Skills: Witches of the Stage
-<p class="event-when">Mon Sep 28 · 4:15–6:15 p.m.</p>
-<p class="event-place">Olympia Family Theater, 612 4th Ave E, Olympia</p>
-
-This class is in Olympia, not Lacey. Ages 13–18. Mondays from Sep 21 through Nov 16, with no class on Oct 12. A price is not posted on the theater homepage. Board game night at the Lacey Library starts at 4:30 p.m. the same day, so the two overlap.
-
-[Olympia Family Theater](https://olyft.org/)
-
-### All-Ages Board Game Night
-<p class="event-when">Mon Sep 28 · 4:30–5:30 p.m.</p>
-<p class="event-place">Lacey Library, 500 College Street SE</p>
-
-The branch calendar lists an all-ages board game night. It overlaps the start of the teen class in Olympia. Pick one.
-
-[Lacey Library](https://trl.org/locations/lacey)
-
 ### Baby Storytime
 <p class="event-when">Tue Sep 29 · 10:30–11:30 a.m.</p>
 <p class="event-place">Lacey Library, 500 College Street SE</p>

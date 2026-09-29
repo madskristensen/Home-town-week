@@ -11,14 +11,6 @@ image_source_url: https://commons.wikimedia.org/wiki/File:OC_Great_Park_Balloon_
 hook: Monday morning is Toddler Town at Pretend City. Saturday is Mehregan at Great Park Live. Oct. 10 is Global Village's 25th year.
 ---
 
-### Toddler Town
-<p class="event-when">Mon Sep 28 · 9:00–10:30 a.m.</p>
-<p class="event-place">Pretend City Children's Museum, 29 Hubble</p>
-
-Ages 19 months to 3, with a caregiver. No older siblings. $12 a person, including members. Registration is required. The museum also lists this Monday hour on Oct. 5 and Oct. 12. This page keeps one listing.
-
-[Sep. 28 listing](https://www.pretendcity.org/events/toddler-town-3/2026-09-28/)
-
 ### Mehregan Festival
 <p class="event-when">Sat Oct 3</p>
 <p class="event-place">Great Park Live</p>
