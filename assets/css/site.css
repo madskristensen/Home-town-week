@@ -935,6 +935,52 @@ img {
   opacity: 0.72;
 }
 
+.last-city {
+  margin: 0.9rem 0 0;
+}
+
+.also-close {
+  margin: 1.35rem 0 0;
+  padding-top: 0.95rem;
+  border-top: 1px solid var(--rule);
+}
+
+.also-close h2 {
+  margin: 0 0 0.45rem;
+  color: var(--forest);
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.also-close ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.also-close a {
+  color: var(--forest);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.also-close a:hover,
+.also-close a:focus-visible {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.city-home .prose h2.event-bucket {
+  margin-top: 0.9rem;
+}
+
 .prose h1,
 .page h1 {
   margin: 0 0 0.85rem;
@@ -1419,19 +1465,12 @@ img {
 }
 
 .install-card {
-  position: fixed;
-  z-index: 6;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0.75rem 0.75rem calc(0.75rem + env(safe-area-inset-bottom));
-  pointer-events: none;
+  margin: 1.2rem 0 0.15rem;
 }
 
 .install-card-sheet {
-  pointer-events: auto;
-  max-width: 26rem;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   padding: 0.9rem 0.95rem 0.7rem;
   background: var(--page);
   color: var(--text);

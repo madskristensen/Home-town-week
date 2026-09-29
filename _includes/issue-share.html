@@ -84,6 +84,9 @@
   }
 
   button.addEventListener("click", function () {
+    try {
+      document.dispatchEvent(new CustomEvent("hw-share"));
+    } catch (err) {}
     var payload = { title: title, text: text, url: url };
     if (typeof navigator.share === "function") {
       var allowed = true;

@@ -1,3 +1,14 @@
+<script type="application/json" id="city-index">
+[
+{%- assign index_emitted = false -%}
+{%- for city in site.data.cities -%}
+  {%- capture index_href -%}/{{ city.state }}/{{ city.id }}/{%- endcapture -%}
+  {%- if index_emitted -%},{%- endif -%}
+  {"state":{{ city.state | jsonify }},"id":{{ city.id | jsonify }},"name":{{ city.name | jsonify }},"href":{{ index_href | strip | relative_url | jsonify }}}
+  {%- assign index_emitted = true -%}
+{%- endfor -%}
+]
+</script>
 <script type="application/json" id="city-places">
 [
 {%- assign emitted = false -%}
@@ -371,6 +382,66 @@
         else links[current - 1].focus();
       }
     });
+    // hw-last-state and hw-last-city are saved on a city page.
+    // Show Open {City} only when both match a real city. Never redirect.
+    function loadIndex() {
+      var node = document.getElementById("city-index");
+      if (!node) return [];
+      var data;
+      try {
+        data = JSON.parse(node.textContent);
+      } catch (err) {
+        return [];
+      }
+      if (!data || !data.length) return [];
+      var out = [];
+      var i;
+      for (i = 0; i < data.length; i++) {
+        var item = data[i];
+        if (!item) continue;
+        if (typeof item.state !== "string" || !/^[a-z0-9-]+$/.test(item.state)) continue;
+        if (typeof item.id !== "string" || !/^[a-z0-9-]+$/.test(item.id)) continue;
+        if (typeof item.name !== "string" || !item.name) continue;
+        if (typeof item.href !== "string" || item.href.charAt(0) !== "/" || item.href.indexOf("//") !== -1) continue;
+        out.push(item);
+      }
+      return out;
+    }
+
+    function showLastCity() {
+      var finder = document.querySelector(".finder");
+      var search = document.getElementById("city-search");
+      if (!finder || !search) return;
+      var state = "";
+      var city = "";
+      try {
+        state = localStorage.getItem("hw-last-state") || "";
+        city = localStorage.getItem("hw-last-city") || "";
+      } catch (err) {
+        return;
+      }
+      if (!/^[a-z0-9-]+$/.test(state) || !/^[a-z0-9-]+$/.test(city)) return;
+      var index = loadIndex();
+      var match = null;
+      var i;
+      for (i = 0; i < index.length; i++) {
+        if (index[i].state === state && index[i].id === city) {
+          match = index[i];
+          break;
+        }
+      }
+      if (!match) return;
+      var row = document.createElement("p");
+      row.className = "cta last-city";
+      var link = document.createElement("a");
+      link.href = match.href;
+      link.textContent = "Open " + match.name;
+      row.appendChild(link);
+      finder.insertBefore(row, search);
+    }
+
+    showLastCity();
+
     matches.addEventListener("mousedown", function (event) {
       event.preventDefault();
     });

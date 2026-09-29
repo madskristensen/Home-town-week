@@ -40,11 +40,19 @@
   {%- assign seo_image_mime = "image/png" -%}
 {%- endif -%}
 {%- assign seo_title = page.title | default: site.title -%}
+{%- if page.layout == "city" and city -%}
+{%- capture seo_title -%}Family events in {{ city.name }} this week | {{ site.title }}{%- endcapture -%}
+{%- assign seo_title = seo_title | strip -%}
+{%- capture seo_description -%}Upcoming family events in {{ city.name }} this week.{%- endcapture -%}
+{%- assign seo_description = seo_description | strip -%}
+{%- endif -%}
 {%- assign canonical_url = page.url | absolute_url -%}
 {%- assign seo_image = seo_image_path | absolute_url -%}
 {%- assign org_id = "/" | absolute_url | append: "#organization" -%}
 {%- assign site_id = "/" | absolute_url | append: "#website" -%}
-{%- if seo_title == site.title -%}
+{%- if page.layout == "city" and city -%}
+<title>{{ seo_title | escape }}</title>
+{%- elsif seo_title == site.title -%}
 <title>{{ site.title }} | {{ site.tagline }}</title>
 {%- else -%}
 <title>{{ seo_title | escape }} | {{ site.title }}</title>

@@ -1,0 +1,58 @@
+# Nearby cities that already have a page, nearest first, up to four.
+# Distances use the city-center coordinates in cities.yml. No geolocation.
+# Eastside Washington is filled in. A city with no entry, or none that
+# resolve to a real page, does not show an Also close row.
+wa:
+  bellevue:
+    - mercer-island
+    - kirkland
+    - redmond
+    - sammamish
+  bothell:
+    - kenmore
+    - woodinville
+    - kirkland
+    - redmond
+  issaquah:
+    - sammamish
+    - renton
+    - mercer-island
+    - maple-valley
+  kenmore:
+    - bothell
+    - woodinville
+    - kirkland
+    - redmond
+  kirkland:
+    - redmond
+    - bellevue
+    - bothell
+    - kenmore
+  maple-valley:
+    - issaquah
+    - renton
+  mercer-island:
+    - bellevue
+    - renton
+    - kirkland
+    - redmond
+  redmond:
+    - kirkland
+    - sammamish
+    - bellevue
+    - woodinville
+  renton:
+    - mercer-island
+    - bellevue
+    - issaquah
+    - maple-valley
+  sammamish:
+    - redmond
+    - issaquah
+    - bellevue
+    - kirkland
+  woodinville:
+    - bothell
+    - kenmore
+    - kirkland
+    - redmond
