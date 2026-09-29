@@ -238,7 +238,7 @@ img {
   transform: translateY(0.12rem) rotate(225deg);
 }
 
-.cities-panel {
+.cities-menu .cities-panel {
   position: absolute;
   top: calc(100% + 0.2rem);
   right: 0;
@@ -253,7 +253,7 @@ img {
   border-radius: var(--radius);
 }
 
-.cities-panel a {
+.cities-menu .cities-panel a {
   display: flex;
   align-items: center;
   min-height: 2.75rem;
@@ -267,14 +267,14 @@ img {
   text-decoration: none;
 }
 
-.cities-panel a.is-here,
-.cities-panel a[aria-current="page"] {
+.cities-menu .cities-panel a.is-here,
+.cities-menu .cities-panel a[aria-current="page"] {
   box-shadow: inset 2px 0 0 var(--gold-line);
   color: var(--forest);
 }
 
-.cities-panel a:hover,
-.cities-panel a:focus-visible {
+.cities-menu .cities-panel a:hover,
+.cities-menu .cities-panel a:focus-visible {
   background: rgba(30, 70, 54, 0.06);
   text-decoration: none;
 }
@@ -355,13 +355,13 @@ img {
   padding-top: 1.5rem;
 }
 
-.cities-panel h2,
+.home-cities h2,
 .cities h2,
 .prose h2 {
   scroll-margin-top: 1rem;
 }
 
-.cities-panel h2,
+.home-cities h2,
 .cities h2,
 .prose h2 {
   margin: 0;
@@ -369,7 +369,7 @@ img {
   line-height: 1.15;
 }
 
-.cities-panel {
+.home-cities {
   margin: 0;
 }
 
