@@ -4,10 +4,6 @@ title: Woodinville
 city: woodinville
 state: wa
 description: Upcoming family events in Woodinville on the Eastside.
-image: /assets/images/woodinville/cottage-lake.webp
-image_alt: A playground and a covered picnic shelter beside Cottage Lake at Cottage Lake Park in Woodinville.
-image_credit: 'Photo: Steven Pavlov, CC BY-SA 4.0'
-image_source_url: https://commons.wikimedia.org/wiki/File:2025-03-05,_Cottage_Lake_Park_(Woodinville,_Washington),_071019.jpg
 hook: Saturday is a whipped-soap workshop at the library. The Game's Afoot opens at the repertory theatre. Storytime is Thursday and Friday next week.
 ---
 

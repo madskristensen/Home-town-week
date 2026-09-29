@@ -39,7 +39,7 @@ layout: default
       {%- assign event_source = event.image_source | append: "" -%}
       {%- assign event_calendar = event.calendar | append: "" -%}
       {%- capture city_href -%}/{{ event.city_id }}/{%- endcapture -%}
-      <article class="hub-card">
+      <article class="hub-card" data-image-kind="{{ event.image_kind }}">
         {%- if event_image.size > 0 -%}
         {%- if forloop.parentloop.first and forloop.index < 3 -%}
           {%- assign card_loading = "eager" -%}
@@ -65,6 +65,8 @@ layout: default
           </figcaption>
           {%- endif -%}
         </figure>
+        {%- else -%}
+        <figure class="event-photo hub-motif" aria-hidden="true">{% card_motif %}</figure>
         {%- endif -%}
         <h3>
           {%- if event_same.size > 0 -%}

@@ -23,19 +23,22 @@ layout: default
   {%- if city.tagline -%}
   <p class="dek">{{ city.tagline }}</p>
   {%- endif -%}
-  {%- if page.image -%}
+  {%- assign hero_image = city.hero.image | append: "" -%}
+  {%- if hero_image.size > 0 -%}
   <figure class="hero">
     {%- include responsive-img.html
-         src=page.image
-         alt=page.image_alt
+         src=city.hero.image
+         alt=city.hero.alt
          loading="eager"
          priority="high"
          sizes="(min-width: 47rem) 44rem, calc(100vw - 3rem)" -%}
-    {%- if page.image_credit or page.image_source_url -%}
+    {%- assign hero_credit = city.hero.credit | append: "" -%}
+    {%- assign hero_source = city.hero.source | append: "" -%}
+    {%- if hero_credit.size > 0 or hero_source.size > 0 -%}
     <figcaption>
       <p class="hero-credit">
-        {%- if page.image_credit -%}<span class="credit">{{ page.image_credit }}</span>{%- endif -%}
-        {%- if page.image_source_url -%}<a class="source" href="{{ page.image_source_url }}" rel="noopener">Source</a>{%- endif -%}
+        {%- if hero_credit.size > 0 -%}<span class="credit">{{ city.hero.credit }}</span>{%- endif -%}
+        {%- if hero_source.size > 0 -%}<a class="source" href="{{ city.hero.source }}" rel="noopener">Source</a>{%- endif -%}
       </p>
     </figcaption>
     {%- endif -%}

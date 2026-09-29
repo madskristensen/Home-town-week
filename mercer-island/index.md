@@ -4,10 +4,6 @@ title: Mercer Island
 city: mercer-island
 state: wa
 description: Upcoming family events in Mercer Island on the Eastside.
-image: /assets/images/mercer-island/luther-burbank.webp
-image_alt: Floating docks at Luther Burbank Park on Mercer Island, with Lake Washington beyond.
-image_credit: 'Photo: Joe Mabel, CC BY-SA 3.0'
-image_source_url: https://commons.wikimedia.org/wiki/File:Mercer_Island,_WA_-_Luther_Burbank_Park_floating_docks.jpg
 hook: Tuesday evening is an axolotl art workshop at the library. Sunday is the farmers market, with family storytime the same morning. The market's last Sunday is Oct 11.
 ---
 

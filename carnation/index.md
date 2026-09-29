@@ -4,10 +4,6 @@ title: Carnation
 city: carnation
 state: wa
 description: Upcoming family events in Carnation on the Eastside.
-image: /assets/images/carnation/tolt-avenue.webp
-image_alt: Tolt Avenue in downtown Carnation, looking along the storefronts.
-image_credit: 'Photo: Chris Light, CC BY-SA 4.0'
-image_source_url: https://commons.wikimedia.org/wiki/File:Tolt_Ave_1150.jpg
 hook: Friday opens Remlinger's harvest weekends. Saturday is a plant festival at Oxbow, and Oct 17 is both Oxtober and the Carnation Farms market.
 ---
 

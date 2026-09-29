@@ -4,10 +4,6 @@ title: Bellevue
 city: bellevue
 state: wa
 description: Upcoming family events in Bellevue on the Eastside.
-image: /assets/images/bellevue/kelsey-creek.webp
-image_alt: Barn and pasture at Kelsey Creek Farm in Bellevue.
-image_credit: 'Photo: Joe Mabel, CC BY-SA 3.0'
-image_source_url: https://commons.wikimedia.org/wiki/File:Kelsey_Creek_Farm_04.jpg
 hook: Tuesday is the last Crossroads market. Friday, October 9 is a free pumpkin afternoon at The Meadow, and Halloween week brings the farm animals, the Bellevue Y, KidsQuest, and Little Monsters on Main Street.
 ---
 

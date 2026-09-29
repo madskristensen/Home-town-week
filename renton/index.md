@@ -4,10 +4,6 @@ title: Renton
 city: renton
 state: wa
 description: Upcoming family events in Renton on the Eastside.
-image: /assets/images/renton/downtown.webp
-image_alt: Downtown Renton, with storefronts along the street.
-image_credit: 'Photo: Chris Light, CC BY-SA 4.0'
-image_source_url: https://commons.wikimedia.org/wiki/File:Renton_Downtown_2015-06_722.jpg
 hook: Tuesday is the last farmers market of 2026, with a kids' craft at the library the same afternoon. Friday, Noises Off opens at Renton Civic Theatre for ages 10 and up.
 ---
 

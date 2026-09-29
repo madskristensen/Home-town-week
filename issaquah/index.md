@@ -4,10 +4,6 @@ title: Issaquah
 city: issaquah
 state: wa
 description: Upcoming family events in Issaquah on the Eastside.
-image: /assets/images/issaquah/salmon-hatchery.webp
-image_alt: The Issaquah Salmon Hatchery, a long building with a gray roof beside a creek, with yellow trees in front.
-image_credit: 'Photo: Chris Light, CC BY-SA 4.0'
-image_source_url: https://commons.wikimedia.org/wiki/File:Hatchery_6921.jpg
 hook: Saturday and Sunday are Salmon Days downtown. The hatchery is the stop to make, and Sunday afternoon is a free family dance at Pickering Barn. Tuesday evening is storytime.
 ---
 

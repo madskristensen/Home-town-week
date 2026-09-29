@@ -1244,6 +1244,31 @@ picture {
   object-fit: cover;
 }
 
+.hub-motif,
+.weekend-motif {
+  display: grid;
+  place-items: center;
+  background: #f7f1e6;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+.hub-card .hub-motif {
+  aspect-ratio: 16 / 9;
+  margin: 0 0 0.55rem;
+}
+
+.weekend-motif {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+.hub-motif svg,
+.weekend-motif svg {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
 .hub-card h3 {
   margin: 0;
   color: var(--ink);

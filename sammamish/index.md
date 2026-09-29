@@ -4,10 +4,6 @@ title: Sammamish
 city: sammamish
 state: wa
 description: Upcoming family events in Sammamish on the Eastside.
-image: /assets/images/sammamish/pine-lake.webp
-image_alt: Trees and shoreline at Pine Lake Park in Sammamish.
-image_credit: 'Photo: Steven Pavlov, CC BY-SA 4.0'
-image_source_url: https://commons.wikimedia.org/wiki/File:2025-10-21,_Pine_Lake_Park_(Sammamish,_Washington),_081014.jpg
 hook: Monday morning is Mandarin story time. Saturday afternoon is a codebreaking workshop, and Thursday evening is a sewing hour for kids and adults at Beaver Lake Lodge.
 ---
 

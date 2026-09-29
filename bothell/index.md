@@ -4,10 +4,6 @@ title: Bothell
 city: bothell
 state: wa
 description: Upcoming family events in Bothell on the Eastside.
-image: /assets/images/bothell/bothell-landing.webp
-image_alt: The Park at Bothell Landing, with trees along the Sammamish River.
-image_credit: 'Photo: Joe Mabel, CC BY-SA 4.0'
-image_source_url: https://commons.wikimedia.org/wiki/File:Bothell_Landing_04.jpg
 hook: Thursday morning is music and movement. Saturday is the Friends book sale and an all-ages history tour at Anderson School, and Sunday kids can read to a therapy dog.
 ---
 

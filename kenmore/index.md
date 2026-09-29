@@ -4,10 +4,6 @@ title: Kenmore
 city: kenmore
 state: wa
 description: Upcoming family events in Kenmore on the Eastside.
-image: /assets/images/kenmore/log-boom.webp
-image_alt: The pier at Log Boom Park in Kenmore, looking back toward the shore of Lake Washington.
-image_credit: 'Photo: Joe Mabel, CC BY-SA 4.0'
-image_source_url: https://commons.wikimedia.org/wiki/File:Kenmore,_WA_-_Log_Boom_Park,_seen_from_the_Pier_01.jpg
 hook: Tuesday evening is drop-in homework help. Friday night is family karaoke, Saturday is ASL story time, and November 1 is Dia de los Muertos at the Hangar.
 ---
 

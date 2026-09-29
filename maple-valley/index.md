@@ -4,10 +4,6 @@ title: Maple Valley
 city: maple-valley
 state: wa
 description: Upcoming family events in Maple Valley on the Eastside.
-image: /assets/images/maple-valley/lake-wilderness.webp
-image_alt: A path through the Lake Wilderness Arboretum in Maple Valley.
-image_credit: 'Photo: Roc0ast3r, CC0'
-image_source_url: https://commons.wikimedia.org/wiki/File:Lake_Wilderness_Arboretum_in_Maple_Valley,_WA_(2024)_-_12.jpg
 hook: Wednesday night is pajama story time. Saturday is the farmers market and the youth short play festival, and Sat Oct 17 is the Zombie Dash at Lake Wilderness.
 ---
 

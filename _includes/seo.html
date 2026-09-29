@@ -14,15 +14,16 @@
   it has one, and otherwise the 1200x630 map and pin. Social apps do not
   render the header SVG.
 {%- endcomment -%}
+{%- assign hero_image = city.hero.image | append: "" -%}
 {%- if page.layout == "home" -%}
   {%- assign seo_image_path = site.image -%}
   {%- assign seo_image_alt = site.image_alt -%}
   {%- assign seo_image_width = 1200 -%}
   {%- assign seo_image_height = 630 -%}
   {%- assign seo_image_mime = "image/png" -%}
-{%- elsif page.layout == "city" and page.image -%}
-  {%- assign seo_image_path = page.image -%}
-  {%- assign seo_image_alt = page.image_alt -%}
+{%- elsif page.layout == "city" and hero_image.size > 0 -%}
+  {%- assign seo_image_path = city.hero.image -%}
+  {%- assign seo_image_alt = city.hero.alt -%}
   {%- assign seo_image_width = 1600 -%}
   {%- assign seo_image_height = 900 -%}
   {%- assign seo_image_mime = "image/webp" -%}

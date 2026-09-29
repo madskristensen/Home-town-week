@@ -1,0 +1,144 @@
+# Themed pictures for event cards that have no photo of their own and no
+# photo of that venue. Wikimedia Commons, CC0, CC BY, CC BY-SA, or public
+# domain. No identifiable children or teens.
+#
+# The first group whose key is on the event tags, or is in the event name
+# or place, supplies the pictures. A picture is used once on a page. The
+# next card of that type takes the next picture. When the list runs out,
+# the card is text with the seasonal motif.
+groups:
+  - keys: [haunted]
+    images:
+      - image: /assets/images/themes/haunted-house-night.webp
+        alt: A moonlit painting of a house with a pale figure in the doorway.
+        credit: "Painting: Edward Poynter, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:Of_a_Haunted_House_in_Mexico_-_Edward_Poynter.png
+      - image: /assets/images/themes/haunted-house-snow.webp
+        alt: A snowy painting of a turreted house among bare trees.
+        credit: "Painting: Georg Emil Libert, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:Georg_Emil_Libert,_Snow_scene_-_the_Haunted_House,_1848,_Victoria_and_Albert_Museum_01.jpg
+      - image: /assets/images/themes/jack-o-lantern-night.webp
+        alt: A carved jack-o-lantern glowing at night.
+        credit: "Photo: Alabama Extension, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Jack-O-Lantern_at_night.jpg
+  - keys: [corn-maze, corn maze]
+    images:
+      - image: /assets/images/themes/corn-maze-path.webp
+        alt: A path between tall corn stalks in a corn maze.
+        credit: "Photo: Hugho226, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Inside_a_corn_maze_near_Christchurch,_New_Zealand.JPG
+      - image: /assets/images/themes/corn-maze-overhead.webp
+        alt: An overhead view of a corn maze cut into a field.
+        credit: "Photo: Michael Barera, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:2024_The_Elegant_Farmer_Autumn_Harvest_Fest_03_(Corn_Maze).jpg
+      - image: /assets/images/themes/corn-maze-rows.webp
+        alt: Rows of corn in a maze, seen from above.
+        credit: "Photo: Michael Barera, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:2024_The_Elegant_Farmer_Autumn_Harvest_Fest_04_(Corn_Maze).jpg
+  - keys: [pumpkin-patch, pumpkin]
+    images:
+      - image: /assets/images/themes/pumpkin-field.webp
+        alt: Rows of orange pumpkins in a field.
+        credit: "Photo: Rodney Campbell, CC BY 2.0"
+        license: CC BY 2.0
+        source: https://commons.wikimedia.org/wiki/File:Pumpkin_Field.jpg
+      - image: /assets/images/themes/pumpkin-carved.webp
+        alt: Three carved jack-o-lanterns sitting in grass.
+        credit: "Photo: Petr Kratochvil, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:Jack-o-lantern_pumpkins.jpg
+      - image: /assets/images/themes/pumpkin-painting.webp
+        alt: A painting of pumpkins in a field.
+        credit: "Painting: Arthur Parton, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:Pumpkins_in_a_Field-Arthur_Parton.jpg
+  - keys: [trunk-or-treat, trunk or treat, trick-or-treat, trick or treat]
+    images:
+      - image: /assets/images/themes/jack-o-lantern-night.webp
+        alt: A carved jack-o-lantern glowing at night.
+        credit: "Photo: Alabama Extension, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Jack-O-Lantern_at_night.jpg
+      - image: /assets/images/themes/pumpkin-carved.webp
+        alt: Three carved jack-o-lanterns sitting in grass.
+        credit: "Photo: Petr Kratochvil, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:Jack-o-lantern_pumpkins.jpg
+  - keys: [halloween]
+    images:
+      - image: /assets/images/themes/jack-o-lantern-night.webp
+        alt: A carved jack-o-lantern glowing at night.
+        credit: "Photo: Alabama Extension, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Jack-O-Lantern_at_night.jpg
+      - image: /assets/images/themes/pumpkin-carved.webp
+        alt: Three carved jack-o-lanterns sitting in grass.
+        credit: "Photo: Petr Kratochvil, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:Jack-o-lantern_pumpkins.jpg
+      - image: /assets/images/themes/pumpkin-painting.webp
+        alt: A painting of pumpkins in a field.
+        credit: "Painting: Arthur Parton, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:Pumpkins_in_a_Field-Arthur_Parton.jpg
+  - keys: [u-pick, apple]
+    images:
+      - image: /assets/images/themes/apple-orchard.webp
+        alt: Rows of apple trees in an orchard, with hills beyond.
+        credit: "Photo: Gerda Arendt, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Apple_orchard_overlooking_Idstein.jpg
+      - image: /assets/images/themes/apple-harvest.webp
+        alt: Wooden crates of red apples in an orchard.
+        credit: "Photo: Marc-Lautenbacher, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Apple_harvest_boxes_of_apple_orchard_on_%C3%8Ele_d%E2%80%99Orl%C3%A9ans_in_Canada.jpg
+  - keys: [harvest, harvest festival, harvest fest]
+    images:
+      - image: /assets/images/themes/apple-harvest.webp
+        alt: Wooden crates of red apples in an orchard.
+        credit: "Photo: Marc-Lautenbacher, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Apple_harvest_boxes_of_apple_orchard_on_%C3%8Ele_d%E2%80%99Orl%C3%A9ans_in_Canada.jpg
+      - image: /assets/images/themes/pumpkin-field.webp
+        alt: Rows of orange pumpkins in a field.
+        credit: "Photo: Rodney Campbell, CC BY 2.0"
+        license: CC BY 2.0
+        source: https://commons.wikimedia.org/wiki/File:Pumpkin_Field.jpg
+      - image: /assets/images/themes/apple-orchard.webp
+        alt: Rows of apple trees in an orchard, with hills beyond.
+        credit: "Photo: Gerda Arendt, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Apple_orchard_overlooking_Idstein.jpg
+  - keys: [santa]
+    images:
+      - image: /assets/images/themes/santa-window.webp
+        alt: A wooden Santa figure standing in a window.
+        credit: "Photo: JoachimKohler-HB, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Weihnachtsmann_oder_Wichtel_in_einem_Fenster_in_Zuoz(2017).jpg
+  - keys: [tree-lighting, tree lighting, holiday-lights]
+    images:
+      - image: /assets/images/themes/tree-lights.webp
+        alt: White lights on a Christmas tree at night.
+        credit: "Photo: photos-public-domain.com, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:White_Christmas_Tree_Lights_at_Night.jpg
+      - image: /assets/images/themes/tree-bokeh.webp
+        alt: Out-of-focus colored lights on a Christmas tree.
+        credit: "Photo: Thomas M Bishop, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Christmas_Lights_and_Bokeh.jpg
+  - keys: [story-time, storytime, story time]
+    images:
+      - image: /assets/images/themes/books.webp
+        alt: A stack of hardcover books on a wooden table.
+        credit: "Photo: Evan Bench, CC BY 2.0"
+        license: CC BY 2.0
+        source: https://commons.wikimedia.org/wiki/File:Books_in_a_stack_(a_stack_of_books)_-_Flickr_-_austinevan.jpg

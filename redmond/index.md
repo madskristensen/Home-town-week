@@ -4,10 +4,6 @@ title: Redmond
 city: redmond
 state: wa
 description: Upcoming family events in Redmond on the Eastside.
-image: /assets/images/redmond/teen-lounge.webp
-image_alt: Teens in the Teen Lounge at Redmond Community Center at Marymoor Village, with a neon sign that reads Teen Lounge.
-image_credit: 'Photo: City of Redmond'
-image_source_url: https://www.redmond.gov/ImageRepository/Document?documentID=40376
 hook: Saturday is flapjacks, the farm, and a youth cross-country meet. October 17 is the Farrel-McWhirter harvest festival and a pup parade at Redmond Town Center.
 ---
 
@@ -134,12 +130,6 @@ Pancake breakfast 9:30–10:30 a.m., then snacks, games, and crafts. Wear flanne
 ### Red Barn Farm Fall Festival
 <p class="event-when">Sat Oct 3 and Sun Oct 4 · 10:00 a.m.–4:00 p.m.</p>
 <p class="event-place">5703 208th Ave NE</p>
-
-{% include event-photo.html
-   src="/assets/images/redmond/red-barn-festival.webp"
-   alt="A child in a red plaid shirt crouches beside a small goat in a pen, with a red barn and fall trees behind them."
-   credit="Photo: Red Barn Farm."
-   source="https://redbarnfarm.com/our-fall-harvest-festival-returns/" %}
 
 8th annual fall festival. Petting zoo, train, and crafts. Tickets are booked through the farm.  
 [Red Barn Farm](https://redbarnfarm.com/) · [2026 posts](https://redbarnfarm.com/2026/)

@@ -4,10 +4,6 @@ title: North Bend
 city: north-bend
 state: wa
 description: Upcoming family events in North Bend on the Eastside.
-image: /assets/images/north-bend/mount-si.webp
-image_alt: Mount Si and Little Si seen from Southeast North Bend Way in North Bend.
-image_credit: 'Photo: Steven Pavlov, CC BY-SA 4.0'
-image_source_url: https://commons.wikimedia.org/wiki/File:2022-07-19,_Mount_Si_from_SE_N_Bend_Way,_North_Bend,_Washington.jpg
 hook: Thursday night is a Shaun the Sheep film. Oct 17 is Oaktoberfest at Meadowbrook, and Oct 24 stacks a park party, chess, and downtown trick-or-treat.
 ---
 

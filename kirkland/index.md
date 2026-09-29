@@ -4,10 +4,6 @@ title: Kirkland
 city: kirkland
 state: wa
 description: Upcoming family events in Kirkland on the Eastside.
-image: /assets/images/kirkland/juanita-beach.webp
-image_alt: Juanita Beach Park on Lake Washington, with a sandy beach, lawn, and the Seattle skyline across the water.
-image_credit: 'Photo: City of Kirkland'
-image_source_url: https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park/Juanita-Beach-Park
 hook: The Wednesday market closes the season. Saturday is a free harvest festival at Juanita Beach, with family math at Kingsgate that morning, and Swan Lake lights up the Performance Center that night and Sunday.
 ---
 

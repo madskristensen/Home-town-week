@@ -4,10 +4,6 @@ title: Snoqualmie
 city: snoqualmie
 state: wa
 description: Upcoming family events in Snoqualmie on the Eastside.
-image: /assets/images/snoqualmie/depot.webp
-image_alt: The historic Snoqualmie Depot, home of the Northwest Railway Museum.
-image_credit: 'Photo: Joe Mabel, CC BY-SA 3.0'
-image_source_url: https://commons.wikimedia.org/wiki/File:Snoqualmie_Depot_01.jpg
 hook: Saturday is a community planting. Wednesdays are free at the Train Shed, Mount Si Dramafest is October 9 and 10, and Oct 24 is the city's free Spooktacular.
 ---
 

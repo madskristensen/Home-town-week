@@ -4,10 +4,6 @@ title: Duvall
 city: duvall
 state: wa
 description: Upcoming family events in Duvall on the Eastside.
-image: /assets/images/duvall/state-bank.webp
-image_alt: The 1912 Duvall State Bank building on Main Street in Duvall.
-image_credit: 'Photo: Publichall, CC BY-SA 4.0'
-image_source_url: https://commons.wikimedia.org/wiki/File:Duvall_State_Bank_Building_-_Duvall,_Washington.jpg
 hook: Thursday is the farmers market and family story time. Friday opens Novelty Hill's patch, and Oct 17 is a free art day on Main Street.
 ---
 

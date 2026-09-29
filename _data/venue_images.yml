@@ -1,0 +1,149 @@
+# A licensed photo of one specific place. Used when an event has no photo
+# of its own and its name or place contains a key. Once per page. Not a
+# city hero, and not a generic community center. A community-center event
+# takes a theme picture (a haunted house, a jack-o-lantern) instead.
+venues:
+  - keys: ["kelsey creek"]
+    image: /assets/images/bellevue/kelsey-creek.webp
+    alt: Barn and pasture at Kelsey Creek Farm in Bellevue.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Kelsey_Creek_Farm_04.jpg
+  - keys: ["kidsquest"]
+    image: /assets/images/bellevue/kidsquest.webp
+    alt: Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance.
+    credit: "Photo: Julian Fong, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:KidsQuest_Children%27s_Museum_2.jpg
+  - keys: ["botanical garden"]
+    image: /assets/images/bellevue/botanical-garden.webp
+    alt: The entrance sign and plantings at Bellevue Botanical Garden.
+    credit: "Photo: Heptazane, public domain"
+    license: Public domain
+    source: https://commons.wikimedia.org/wiki/File:Bellevue_Botanical_Garden_Entrance.jpg
+  - keys: ["crossroads"]
+    image: /assets/images/bellevue/crossroads.webp
+    alt: West entrance of Crossroads Bellevue, with the mall sign and a row of flags.
+    credit: "Photo: Mark Yasuda, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:2018_Crossroads_Bellevue_west_entrance.jpg
+  - keys: ["old main street"]
+    image: /assets/images/bellevue/old-main-street.webp
+    alt: Old Main Street in Bellevue, with shops and a clock along the sidewalk.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Bellevue,_Washington_-_old_Main_Street_01.jpg
+  - keys: ["hannan house", "bothell historical museum"]
+    image: /assets/images/bothell/hannan-house.webp
+    alt: Hannan House, the 1893 building that houses the Bothell Historical Museum at Bothell Landing.
+    credit: "Photo: Joe Mabel, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Hannan_House_-_Bothell_Landing_01.jpg
+  - keys: ["bothell landing"]
+    image: /assets/images/bothell/landing-shore.webp
+    alt: Shore and trees at the Park at Bothell Landing.
+    credit: "Photo: Joe Mabel, CC BY 4.0"
+    license: CC BY 4.0
+    source: https://commons.wikimedia.org/wiki/File:Bothell_Landing_03.jpg
+  - keys: ["issaquah library"]
+    image: /assets/images/issaquah/issaquah-library.webp
+    alt: Issaquah Library, a low building with a broad glass front and a covered walkway.
+    credit: "Photo: King County Library System."
+    license: King County Library System
+    source: https://kcls.org/locations/issaquah/
+  - keys: ["salmon hatchery"]
+    image: /assets/images/issaquah/salmon-hatchery.webp
+    alt: The Issaquah Salmon Hatchery, a long building with a gray roof beside a creek, with yellow trees in front.
+    credit: "Photo: Chris Light, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Hatchery_6921.jpg
+  - keys: ["front street trolley", "issaquah valley trolley"]
+    image: /assets/images/issaquah/front-street-trolley.webp
+    alt: A yellow and green Issaquah Valley Trolley streetcar crossing Front Street, with downtown buildings behind it.
+    credit: "Photo: Steve Morgan, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Issaquah_Valley_Trolley_car_519_crossing_Front_St_in_2014.jpg
+  - keys: ["kirkland library"]
+    image: /assets/images/kirkland/kirkland-library.webp
+    alt: Kirkland Library, a modern building with a glass and wood front and a covered entry.
+    credit: "Photo: King County Library System."
+    license: King County Library System
+    source: https://kcls.org/locations/kirkland/
+  - keys: ["marina park"]
+    image: /assets/images/kirkland/marina-fall.webp
+    alt: Marina Park in fall, with yellow and orange trees along the shore of Lake Washington and the Seattle skyline across the water.
+    credit: "Photo: City of Kirkland"
+    license: City of Kirkland
+    source: https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/PCS-Photo-Galleries/Marina-Park-Photo-Gallery
+  - keys: ["lake wilderness"]
+    image: /assets/images/maple-valley/lake-wilderness.webp
+    alt: A path through the Lake Wilderness Arboretum in Maple Valley.
+    credit: "Photo: Roc0ast3r, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Lake_Wilderness_Arboretum_in_Maple_Valley,_WA_(2024)_-_12.jpg
+  - keys: ["mercer island library"]
+    image: /assets/images/mercer-island/library.webp
+    alt: Mercer Island Library, a King County Library System branch.
+    credit: "Photo: SuddenFrost, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Mercer_Island_Library.jpg
+  - keys: ["redmond library"]
+    image: /assets/images/redmond/redmond-library.webp
+    alt: Redmond Library, a modern building with a glass front and a covered walkway.
+    credit: "Photo: King County Library System."
+    license: King County Library System
+    source: https://kcls.org/locations/redmond/
+  - keys: ["hartman park"]
+    image: /assets/images/redmond/hartman-park.webp
+    alt: A ballfield and backstop at Hartman Park in Redmond.
+    credit: "Photo: HominyGrits007, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Hartman_Park_Ballfield.jpg
+  - keys: ["farrel-mcwhirter", "farrel mcwhirter"]
+    image: /assets/images/redmond/farrel-mcwhirter.webp
+    alt: The entrance sign at Farrel-McWhirter Park in Redmond.
+    credit: "Photo: HominyGrits007, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Farrel-McWhirter_Park_Entrance.jpg
+  - keys: ["redmond town center"]
+    image: /assets/images/redmond/town-center.webp
+    alt: The main plaza at Redmond Town Center, with a fountain and outdoor shops.
+    credit: "Photo: SounderBruce, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Redmond_Town_Center_main_plaza,_Jan._2025.jpg
+  - keys: ["downtown renton"]
+    image: /assets/images/renton/downtown.webp
+    alt: Downtown Renton, with storefronts along the street.
+    credit: "Photo: Chris Light, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Renton_Downtown_2015-06_722.jpg
+  - keys: ["cedar river", "renton public library", "renton library"]
+    image: /assets/images/renton/cedar-river.webp
+    alt: The Cedar River, seen from the Renton public library.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Looking_downstream_on_Cedar_River_from_Renton,_WA_public_library.jpg
+  - keys: ["beaver lake"]
+    image: /assets/images/sammamish/beaver-lake.webp
+    alt: The lodge at Beaver Lake Park in Sammamish.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:2022-06-13,_Lodge_at_Beaver_Lake,_Sammamish,_Washington.jpg
+  - keys: ["sammamish commons"]
+    image: /assets/images/sammamish/commons.webp
+    alt: Sammamish City Hall and the plaza at Sammamish Commons at night.
+    credit: "Photo: Johnmoffatt2000, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Sammamish_City_Hall2.jpg
+  - keys: ["train shed"]
+    image: /assets/images/snoqualmie/train-shed.webp
+    alt: Historic rail cars inside the Train Shed Exhibit Hall at the Northwest Railway Museum in Snoqualmie.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:2025-05-24,_Train_Shed_Exhibit_Hall,_Northwest_Railway_Museum_(Snoqualmie,_Washington),_142029.jpg
+  - keys: ["snoqualmie depot", "north bend depot", "northwest railway", "halloween train"]
+    image: /assets/images/snoqualmie/depot.webp
+    alt: The historic Snoqualmie Depot, home of the Northwest Railway Museum.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Snoqualmie_Depot_01.jpg

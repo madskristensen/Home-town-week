@@ -153,6 +153,7 @@
 {%- endif -%}
 {%- assign pick_lines = picked | split: "~" -%}
 {%- assign lcp_assigned = false -%}
+{%- assign used_photos = "|" -%}
 {%- if pick_count > 0 -%}
 <section class="weekend-picks" aria-labelledby="weekend-picks-title">
   <h2 id="weekend-picks-title">{{ picks_title }}</h2>
@@ -203,39 +204,28 @@
     {%- endif -%}
     {%- assign photo = "" -%}
     {%- assign photo_credit = "" -%}
-    {%- assign photo_alt = "" -%}
-    {%- if chunk contains 'data-photo="' -%}
-      {%- assign photo_parts = chunk | split: 'data-photo="' -%}
-      {%- assign photo = photo_parts[1] | split: '"' | first -%}
-    {%- elsif chunk contains 'src="' -%}
-      {%- assign photo_parts = chunk | split: 'src="' -%}
-      {%- assign photo = photo_parts[1] | split: '"' | first -%}
+    {%- assign photo_source = "" -%}
+    {%- assign photo_alt_text = "" -%}
+    {%- assign city_options = site.data.card_photo_options[cid] -%}
+    {%- if city_options -%}
+      {%- assign options = city_options[event.name] -%}
+      {%- for option in options -%}
+        {%- assign option_src = option.src | append: "" -%}
+        {%- if option_src.size == 0 -%}{% continue %}{%- endif -%}
+        {%- capture marker -%}|{{ option_src }}|{%- endcapture -%}
+        {%- assign marker = marker | strip -%}
+        {%- if used_photos contains marker -%}{% continue %}{%- endif -%}
+        {%- assign photo = option_src -%}
+        {%- assign photo_credit = option.credit -%}
+        {%- assign photo_source = option.source -%}
+        {%- assign photo_alt_text = option.alt -%}
+        {%- assign used_photos = used_photos | append: option_src | append: "|" -%}
+        {%- break -%}
+      {%- endfor -%}
     {%- endif -%}
-    {%- if chunk contains 'credit="' -%}
-      {%- assign credit_parts = chunk | split: 'credit="' -%}
-      {%- assign photo_credit = credit_parts[1] | split: '"' | first -%}
-    {%- elsif chunk contains 'class="credit">' -%}
-      {%- assign credit_parts = chunk | split: 'class="credit">' -%}
-      {%- assign photo_credit = credit_parts[1] | split: "</span>" | first | strip_html | strip -%}
-    {%- endif -%}
-    {%- if chunk contains 'alt="' -%}
-      {%- assign alt_parts = chunk | split: 'alt="' -%}
-      {%- assign photo_alt = alt_parts[1] | split: '"' | first -%}
-    {%- endif -%}
-    {%- if photo.size == 0 and city_page.image -%}
-      {%- assign photo = city_page.image -%}
-      {%- assign photo_credit = city_page.image_credit -%}
-      {%- assign photo_alt = city_page.image_alt -%}
-    {%- endif -%}
-    {%- assign photo_alt_text = photo_alt | strip -%}
-    {%- assign alt_prefix = photo_alt_text | slice: 0, 6 -%}
-    {%- if photo_alt_text.size == 0 or alt_prefix == "Photo:" -%}
-      {%- if photo == city_page.image and city_page.image_alt.size > 0 -%}
-        {%- assign photo_alt_text = city_page.image_alt -%}
-      {%- else -%}
-        {%- capture photo_alt_text -%}{{ event.name }} in {{ city.name }}{%- endcapture -%}
-        {%- assign photo_alt_text = photo_alt_text | strip -%}
-      {%- endif -%}
+    {%- if photo_alt_text.size == 0 and photo.size > 0 -%}
+      {%- capture photo_alt_text -%}{{ event.name }} in {{ city.name }}{%- endcapture -%}
+      {%- assign photo_alt_text = photo_alt_text | strip -%}
     {%- endif -%}
     {%- assign blurb = "" -%}
     {%- if chunk contains "<p>" -%}
@@ -286,6 +276,8 @@
         <figcaption><span class="credit">{{ photo_credit }}</span></figcaption>
         {%- endif -%}
         </figure>
+        {%- else -%}
+        <figure class="weekend-motif" aria-hidden="true">{% card_motif %}</figure>
         {%- endif -%}
         <span class="weekend-town">{{ city.name }}</span>
         <span class="weekend-when">{{ when_label }}</span>

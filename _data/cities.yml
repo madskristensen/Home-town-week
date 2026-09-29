@@ -15,6 +15,12 @@
 # /assets/images/bellevue/logo.svg. Leave it unset unless usage is
 # permitted. The city header shows the image only when logo is set.
 #
+# hero: the one town photo. It is the visible hero under the city name
+# and the og:image and twitter:image. image, alt, credit, license, and
+# source. A wide landmark or scenic view of the town. Not a venue
+# interior, not identifiable kids or teens, and not a photo that also
+# appears on an event card.
+#
 # sources: lives on each city entry here, not in a separate file. Each item
 # is a name, url, type, and notes. Types: city_hall, parks, allevents,
 # theater, market, library, downtown, venue, museum, nature, farm, school,
@@ -48,6 +54,12 @@
   lat: 47.6101
   lon: -122.2015
   description: Upcoming family events in Bellevue on the Eastside.
+  hero:
+    image: /assets/images/bellevue/downtown-park.webp
+    alt: Aerial view of Bellevue Downtown Park, with lawns, paths, and the downtown skyline.
+    credit: "Photo: Spicypepper999, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Bellevue_Downtown_Park_aerial,_April_2023.png
   summary: >-
     A city in a park.
   slogan: "A city in a park."
@@ -144,6 +156,12 @@
   lat: 47.7601
   lon: -122.2054
   description: Upcoming family events in Bothell on the Eastside.
+  hero:
+    image: /assets/images/bothell/bothell-landing.webp
+    alt: The Park at Bothell Landing, with trees along the Sammamish River.
+    credit: "Photo: Joe Mabel, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Bothell_Landing_04.jpg
   summary: >-
     Welcome to Bothell for a day, or a lifetime.
   slogan: "Welcome to Bothell for a day, or a lifetime."
@@ -194,6 +212,12 @@
   lat: 47.6476
   lon: -121.9140
   description: Upcoming family events in Carnation on the Eastside.
+  hero:
+    image: /assets/images/carnation/tolt-avenue.webp
+    alt: Tolt Avenue in downtown Carnation, looking along the storefronts.
+    credit: "Photo: Chris Light, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Tolt_Ave_1150.jpg
   summary: >-
     A farm town on the Snoqualmie River.
   tagline: "A farm town on the Snoqualmie River."
@@ -243,6 +267,12 @@
   lat: 47.7423
   lon: -121.9857
   description: Upcoming family events in Duvall on the Eastside.
+  hero:
+    image: /assets/images/duvall/state-bank.webp
+    alt: The 1912 Duvall State Bank building on Main Street in Duvall.
+    credit: "Photo: Publichall, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Duvall_State_Bank_Building_-_Duvall,_Washington.jpg
   summary: >-
     A river town at the north end of the Snoqualmie Valley.
   tagline: "A river town at the north end of the Snoqualmie Valley."
@@ -293,6 +323,12 @@
   lat: 47.5301
   lon: -122.0326
   description: Upcoming family events in Issaquah on the Eastside.
+  hero:
+    image: /assets/images/issaquah/front-street.webp
+    alt: Front Street in downtown Issaquah, with brick storefronts and hanging flower baskets.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Issaquah_-_Front_Street_01.jpg
   summary: >-
     A foothill city at the south end of Lake Sammamish.
   tagline: "A foothill city at the south end of Lake Sammamish."
@@ -351,6 +387,12 @@
   lat: 47.7573
   lon: -122.244
   description: Upcoming family events in Kenmore on the Eastside.
+  hero:
+    image: /assets/images/kenmore/log-boom.webp
+    alt: The pier at Log Boom Park in Kenmore, looking back toward the shore of Lake Washington.
+    credit: "Photo: Joe Mabel, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Kenmore,_WA_-_Log_Boom_Park,_seen_from_the_Pier_01.jpg
   summary: >-
     A lakeside city at the north end of Lake Washington.
   tagline: "A lakeside city at the north end of Lake Washington."
@@ -395,6 +437,12 @@
   lat: 47.6815
   lon: -122.2087
   description: Upcoming family events in Kirkland on the Eastside.
+  hero:
+    image: /assets/images/kirkland/juanita-beach.webp
+    alt: Juanita Beach Park on Lake Washington, with a sandy beach, lawn, and the Seattle skyline across the water.
+    credit: "Photo: City of Kirkland"
+    license: City of Kirkland
+    source: https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park/Juanita-Beach-Park
   summary: >-
     A waterfront city on Lake Washington.
   tagline: "A waterfront city on Lake Washington."
@@ -455,6 +503,12 @@
   lat: 47.3926
   lon: -122.0454
   description: Upcoming family events in Maple Valley on the Eastside.
+  hero:
+    image: /assets/images/maple-valley/lake-wilderness-shore.webp
+    alt: The shore of Lake Wilderness in Maple Valley, with trees along the water.
+    credit: "Photo: Roc0ast3r, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Lake_Wilderness_Arboretum_in_Maple_Valley,_WA_(2024)_-_25.jpg
   summary: >-
     A foothill city in southeast King County.
   tagline: "A foothill city in southeast King County."
@@ -502,6 +556,12 @@
   lat: 47.5707
   lon: -122.2221
   description: Upcoming family events in Mercer Island on the Eastside.
+  hero:
+    image: /assets/images/mercer-island/luther-burbank.webp
+    alt: Floating docks at Luther Burbank Park on Mercer Island, with Lake Washington beyond.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Mercer_Island,_WA_-_Luther_Burbank_Park_floating_docks.jpg
   summary: >-
     An island city in Lake Washington.
   tagline: "An island city in Lake Washington."
@@ -546,6 +606,12 @@
   lat: 47.4957
   lon: -121.7868
   description: Upcoming family events in North Bend on the Eastside.
+  hero:
+    image: /assets/images/north-bend/mount-si.webp
+    alt: Mount Si and Little Si seen from Southeast North Bend Way in North Bend.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:2022-07-19,_Mount_Si_from_SE_N_Bend_Way,_North_Bend,_Washington.jpg
   summary: >-
     A mountain town at the foot of Mount Si.
   tagline: "A mountain town at the foot of Mount Si."
@@ -612,6 +678,12 @@
   lat: 47.674
   lon: -122.1215
   description: Upcoming family events in Redmond on the Eastside.
+  hero:
+    image: /assets/images/redmond/marymoor-park.webp
+    alt: A trail through open grass and trees at Marymoor Park in Redmond.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:2025-10-22,_Marymoor_Park_(Redmond,_Washington),_084454.jpg
   summary: >-
     Bicycle Capital of the Northwest.
   slogan: "Bicycle Capital of the Northwest."
@@ -668,6 +740,12 @@
   lat: 47.4829
   lon: -122.2171
   description: Upcoming family events in Renton on the Eastside.
+  hero:
+    image: /assets/images/renton/gene-coulon.webp
+    alt: The swimming beach and lawn at Gene Coulon Memorial Beach Park in Renton, with Lake Washington beyond.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:2009-05-09,_Gene_Coulon_Memorial_Beach_Park_(Renton,_Washington),_181857.jpg
   summary: >-
     Where the Cedar River meets Lake Washington.
   tagline: "Where the Cedar River meets Lake Washington."
@@ -722,6 +800,12 @@
   lat: 47.6163
   lon: -122.0356
   description: Upcoming family events in Sammamish on the Eastside.
+  hero:
+    image: /assets/images/sammamish/pine-lake.webp
+    alt: Trees and shoreline at Pine Lake Park in Sammamish.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:2025-10-21,_Pine_Lake_Park_(Sammamish,_Washington),_081014.jpg
   summary: >-
     A plateau city east of Lake Sammamish.
   tagline: "A plateau city east of Lake Sammamish."
@@ -770,6 +854,12 @@
   lat: 47.5287
   lon: -121.8254
   description: Upcoming family events in Snoqualmie on the Eastside.
+  hero:
+    image: /assets/images/snoqualmie/falls.webp
+    alt: Snoqualmie Falls, with the river dropping through a rocky gorge.
+    credit: "Photo: Kurt Kaiser, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Snoqualmie_Falls_2.jpg
   summary: >-
     A river town at Snoqualmie Falls.
   tagline: "A river town at Snoqualmie Falls."
@@ -840,6 +930,12 @@
   lat: 47.7543
   lon: -122.1635
   description: Upcoming family events in Woodinville on the Eastside.
+  hero:
+    image: /assets/images/woodinville/cottage-lake.webp
+    alt: A playground and a covered picnic shelter beside Cottage Lake at Cottage Lake Park in Woodinville.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:2025-03-05,_Cottage_Lake_Park_(Woodinville,_Washington),_071019.jpg
   summary: >-
     Wine country in the Sammamish Valley.
   tagline: "Wine country in the Sammamish Valley."

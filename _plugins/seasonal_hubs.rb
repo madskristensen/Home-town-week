@@ -375,7 +375,9 @@ module EastsideCalendar
     def event_row(event, city_id, city_name, site_url)
       start_s = event["start"].to_s
       finish_s = event["end"].to_s
-      row_dates(event["name"], city_name, city_id, event["place"], event["same_as"], start_s, finish_s, site_url)
+      row = row_dates(event["name"], city_name, city_id, event["place"], event["same_as"], start_s, finish_s, site_url)
+      row["tags"] = Array(event["tags"]).map(&:to_s)
+      row
     end
 
     def display_row(row, names, site_url)
@@ -488,42 +490,182 @@ module EastsideCalendar
       CGI.escapeHTML(text.to_s)
     end
 
-    def attach_cards!(hub, site)
-      pages = city_pages(site)
-      catalog = card_catalog(pages)
-      gaps = []
+    # Own photo, then that venue, then a themed picture, then no photo.
+    # A venue or theme file is used once on a page. The city hero is not
+    # in this chain.
+    def attach_cards!(hub, site, pages, catalog, venues, groups)
+      used = {}
+      chosen = {}
+      audit = { "own" => [], "venue" => [], "theme" => [], "motif" => [] }
       Array(hub["sections"]).each do |section|
         Array(section["events"]).each do |event|
-          card = find_card(catalog, event)
           page = pages[event["city_id"].to_s]
-          photo = licensed_photo(card && card[:photo])
-          fallback = false
-          if photo.nil?
-            photo = licensed_photo(hero_photo(page))
-            fallback = !photo.nil?
-          end
-          if photo
-            alt = photo["alt"].to_s.strip
-            alt = "#{event["name"]} in #{event["city"]}" if alt.empty? || alt.start_with?("Photo:")
-            event["image"] = photo["src"]
-            event["image_alt"] = alt
-            event["image_credit"] = photo["credit"].to_s
-            event["image_source"] = photo["source"].to_s
-            event["image_fallback"] = fallback
-          end
+          key = "#{event["city_id"]}|#{event["name"]}"
+          card = find_card(catalog, event)
           blurb = card ? card[:blurb].to_s : ""
           blurb = "#{event["name"]} in #{event["city"]}." if blurb.empty?
           event["blurb"] = blurb
           event["description"] = blurb
           event["calendar"] = calendar_href(page, event)
           event["calendar"] = write_calendar(site, event) if event["calendar"].empty?
-          gaps << "#{event["name"]} (#{event["city"]})" if fallback
+
+          if chosen.key?(key)
+            prev = chosen[key]
+            # The same event in a second section may repeat its own photo.
+            # A venue or theme file stays once on the page.
+            apply_photo!(event, prev && prev["kind"] == "own" ? prev : nil)
+            next
+          end
+
+          photo = pick_photo(photo_candidates(event, card, venues, groups), used)
+          chosen[key] = photo
+          apply_photo!(event, photo)
+          kind = photo ? photo["kind"] : "motif"
+          label = "#{event["name"]} (#{event["city"]})"
+          label = "#{label} [#{File.basename(photo["src"])}]" if photo
+          audit[kind] << label
         end
       end
-      hub["photo_gaps"] = gaps
-      return if gaps.empty?
+      parts = audit.map { |kind, names| "#{kind} #{names.size}" }
+      Jekyll.logger.info("Hub photos:", "#{hub["path"]} #{parts.join(", ")}")
+      audit.each do |kind, names|
+        next if names.empty?
 
-      Jekyll.logger.info("Hub photos:", "#{hub["path"]} still using a city hero: #{gaps.join("; ")}")
+        Jekyll.logger.info("Hub photos:", "  #{kind}: #{names.join("; ")}")
+      end
+    end
+
+    def index_card_photos!(site, pages, catalog, venues, groups)
+      options = {}
+      Array(site.data["cities"]).each do |city|
+        next unless city.is_a?(Hash)
+
+        city_id = city["id"].to_s
+        next if city_id.empty?
+
+        bucket = {}
+        Array(site.data["#{city_id}_events"]).each do |event|
+          next unless event.is_a?(Hash)
+
+          name = event["name"].to_s
+          next if name.empty?
+
+          row = event.merge("city_id" => city_id, "city" => city["name"].to_s)
+          card = find_card(catalog, row)
+          bucket[name] = photo_candidates(row, card, venues, groups).map { |photo| public_photo(photo) }
+        end
+        options[city_id] = bucket
+      end
+      site.data["card_photo_options"] = options
+    end
+
+    def photo_candidates(event, card, venues, groups)
+      list = []
+      own = usable_own(card && card[:photo])
+      list << own if own
+      matching_venues(event, venues).each do |entry|
+        photo = listed_photo(entry, "venue")
+        list << photo if photo
+      end
+      theme = matching_theme(event, groups)
+      Array(theme && theme["images"]).each do |entry|
+        photo = listed_photo(entry, "theme")
+        list << photo if photo
+      end
+      list.uniq { |photo| photo["src"] }
+    end
+
+    def pick_photo(candidates, used)
+      candidates.each do |photo|
+        next if photo["kind"] != "own" && used[photo["src"]]
+
+        used[photo["src"]] = true if photo["kind"] != "own"
+        return photo
+      end
+      nil
+    end
+
+    def apply_photo!(event, photo)
+      if photo
+        alt = photo["alt"].to_s.strip
+        alt = "#{event["name"]} in #{event["city"]}" if alt.empty? || alt.start_with?("Photo:")
+        event["image"] = photo["src"]
+        event["image_alt"] = alt
+        event["image_credit"] = photo["credit"].to_s
+        event["image_source"] = photo["source"].to_s
+        event["image_kind"] = photo["kind"]
+      else
+        event.delete("image")
+        event["image_kind"] = "motif"
+      end
+    end
+
+    def public_photo(photo)
+      {
+        "src" => photo["src"],
+        "alt" => photo["alt"],
+        "credit" => photo["credit"],
+        "source" => photo["source"],
+        "kind" => photo["kind"]
+      }
+    end
+
+    def usable_own(photo)
+      licensed = licensed_photo(photo)
+      return nil unless licensed
+      return nil if people_photo?(licensed)
+
+      licensed.merge("kind" => "own")
+    end
+
+    def listed_photo(entry, kind)
+      return nil unless entry.is_a?(Hash)
+
+      photo = licensed_photo(
+        "src" => entry["image"],
+        "alt" => entry["alt"],
+        "credit" => entry["credit"],
+        "source" => entry["source"]
+      )
+      return nil unless photo
+      return nil if people_photo?(photo)
+
+      photo.merge("kind" => kind)
+    end
+
+    def matching_venues(event, venues)
+      hay = "#{event["name"]} #{event["place"]}".downcase
+      Array(venues).select do |venue|
+        keys_hit?(venue, hay, [])
+      end
+    end
+
+    # A word in the name or place wins over a tag, so a pumpkin patch
+    # that is also tagged as a maze still shows pumpkins.
+    def matching_theme(event, groups)
+      tags = Array(event["tags"]).map { |tag| tag.to_s.downcase }
+      hay = "#{event["name"]} #{event["place"]}".downcase
+      named = Array(groups).find { |group| keys_hit?(group, hay, []) }
+      return named if named
+
+      Array(groups).find { |group| keys_hit?(group, "", tags) }
+    end
+
+    def keys_hit?(entry, hay, tags)
+      Array(entry["keys"]).any? do |key|
+        text = key.to_s.downcase.strip
+        next false if text.empty?
+
+        tags.include?(text) || (!hay.empty? && hay.include?(text))
+      end
+    end
+
+    def people_photo?(photo)
+      src = photo["src"].to_s
+      return true if src.include?("teen-lounge") || src.include?("red-barn-festival")
+
+      alt = photo["alt"].to_s.gsub(/children's museum/i, "")
+      alt.match?(/\b(child|children|teen|teens|toddler|baby)\b/i)
     end
 
     def city_pages(site)
@@ -566,17 +708,6 @@ module EastsideCalendar
         best_score = score
       end
       best_score >= 90 ? best : nil
-    end
-
-    def hero_photo(page)
-      return nil unless page
-
-      {
-        "src" => page.data["image"].to_s,
-        "alt" => page.data["image_alt"].to_s,
-        "credit" => page.data["image_credit"].to_s,
-        "source" => page.data["image_source_url"].to_s
-      }
     end
 
     def licensed_photo(photo)
@@ -707,10 +838,16 @@ module EastsideCalendar
       prepared = Array(config["hubs"]).filter_map do |hub|
         SeasonalHubs.prepare_hub(hub, site.data["cities"], site.data, lights, today, site_url)
       end
-      prepared.each { |hub| SeasonalHubs.attach_cards!(hub, site) }
+      pages = SeasonalHubs.city_pages(site)
+      catalog = SeasonalHubs.card_catalog(pages)
+      venues = site.data.dig("venue_images", "venues")
+      groups = site.data.dig("theme_images", "groups")
+      SeasonalHubs.index_card_photos!(site, pages, catalog, venues, groups)
+      prepared.each { |hub| SeasonalHubs.attach_cards!(hub, site, pages, catalog, venues, groups) }
 
       rule = SeasonalHubs.banner_rule(config)
       chosen = SeasonalHubs.banner_choice(prepared, rule, today)
+      site.data["card_motif_svg"] = chosen ? chosen.dig("theme", "svg").to_s : ""
       if chosen && !chosen.dig("theme", "svg").to_s.empty?
         site.data["seasonal_banner"] = {
           "path" => chosen["path"],
@@ -765,6 +902,21 @@ module EastsideCalendar
       banner["html"].to_s
     end
   end
+
+  class CardMotifTag < Liquid::Tag
+    def render(context)
+      site = context.registers[:site]
+      page = context.registers[:page]
+      hub_id = page.respond_to?(:[]) ? page["hub_id"].to_s : ""
+      if !hub_id.empty?
+        svg = site.data.dig("hub_pages", hub_id, "theme", "svg").to_s
+        return svg unless svg.empty?
+      end
+
+      site.data["card_motif_svg"].to_s
+    end
+  end
 end
 
 Liquid::Template.register_tag("seasonal_banner", EastsideCalendar::SeasonalBannerTag)
+Liquid::Template.register_tag("card_motif", EastsideCalendar::CardMotifTag)
