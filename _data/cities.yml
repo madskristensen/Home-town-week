@@ -157,11 +157,11 @@
   lon: -122.2054
   description: Upcoming family events in Bothell on the Eastside.
   hero:
-    image: /assets/images/bothell/bothell-landing.webp
-    alt: The Park at Bothell Landing, with trees along the Sammamish River.
+    image: /assets/images/bothell/sammamish-river.webp
+    alt: The Sammamish River just above the Bothell Landing bridge, with trees along the banks.
     credit: "Photo: Joe Mabel, CC BY-SA 4.0"
     license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:Bothell_Landing_04.jpg
+    source: https://commons.wikimedia.org/wiki/File:Sammamish_River_just_above_Bothell_Landing_bridge_01.jpg
   summary: >-
     Welcome to Bothell for a day, or a lifetime.
   slogan: "Welcome to Bothell for a day, or a lifetime."
@@ -213,11 +213,11 @@
   lon: -121.9140
   description: Upcoming family events in Carnation on the Eastside.
   hero:
-    image: /assets/images/carnation/tolt-avenue.webp
-    alt: Tolt Avenue in downtown Carnation, looking along the storefronts.
-    credit: "Photo: Chris Light, CC BY-SA 4.0"
+    image: /assets/images/carnation/tolt-bridge.webp
+    alt: The pedestrian suspension bridge over the Snoqualmie River at Tolt-MacDonald Park in Carnation.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
     license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:Tolt_Ave_1150.jpg
+    source: https://commons.wikimedia.org/wiki/File:2023-05-10,_Tolt-MacDonald_Park_footbridge,_24.jpg
   summary: >-
     A farm town on the Snoqualmie River.
   tagline: "A farm town on the Snoqualmie River."
@@ -268,11 +268,11 @@
   lon: -121.9857
   description: Upcoming family events in Duvall on the Eastside.
   hero:
-    image: /assets/images/duvall/state-bank.webp
-    alt: The 1912 Duvall State Bank building on Main Street in Duvall.
-    credit: "Photo: Publichall, CC BY-SA 4.0"
-    license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:Duvall_State_Bank_Building_-_Duvall,_Washington.jpg
+    image: /assets/images/duvall/cherry-valley-farms.webp
+    alt: Cherry Valley Farms in Duvall, a white farmhouse and a red barn in green fields.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Duvall,_WA_-_Cherry_Valley_Farms_pano.jpg
   summary: >-
     A river town at the north end of the Snoqualmie Valley.
   tagline: "A river town at the north end of the Snoqualmie Valley."
@@ -324,11 +324,11 @@
   lon: -122.0326
   description: Upcoming family events in Issaquah on the Eastside.
   hero:
-    image: /assets/images/issaquah/front-street.webp
-    alt: Front Street in downtown Issaquah, with brick storefronts and hanging flower baskets.
-    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
-    license: CC BY-SA 3.0
-    source: https://commons.wikimedia.org/wiki/File:Issaquah_-_Front_Street_01.jpg
+    image: /assets/images/issaquah/front-street-alps.webp
+    alt: Front Street in Issaquah, with brick storefronts and the mountains behind the town.
+    credit: "Photo: Chris Light, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Front_Street_9246.jpg
   summary: >-
     A foothill city at the south end of Lake Sammamish.
   tagline: "A foothill city at the south end of Lake Sammamish."
@@ -504,11 +504,11 @@
   lon: -122.0454
   description: Upcoming family events in Maple Valley on the Eastside.
   hero:
-    image: /assets/images/maple-valley/lake-wilderness-shore.webp
-    alt: The shore of Lake Wilderness in Maple Valley, with trees along the water.
-    credit: "Photo: Roc0ast3r, CC0"
-    license: CC0
-    source: https://commons.wikimedia.org/wiki/File:Lake_Wilderness_Arboretum_in_Maple_Valley,_WA_(2024)_-_25.jpg
+    image: /assets/images/maple-valley/lake-wilderness-water.webp
+    alt: Lake Wilderness in Maple Valley, with trees along the shore and the water in the foreground.
+    credit: "Photo: Yordanpopovbg, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Lake_Wilderness_in_Maple_Valley.jpg
   summary: >-
     A foothill city in southeast King County.
   tagline: "A foothill city in southeast King County."
@@ -679,11 +679,11 @@
   lon: -122.1215
   description: Upcoming family events in Redmond on the Eastside.
   hero:
-    image: /assets/images/redmond/marymoor-park.webp
-    alt: A trail through open grass and trees at Marymoor Park in Redmond.
+    image: /assets/images/redmond/marymoor-windmill.webp
+    alt: The windmill at Marymoor Park in Redmond, with a wide lawn and blue sky.
     credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
     license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:2025-10-22,_Marymoor_Park_(Redmond,_Washington),_084454.jpg
+    source: https://commons.wikimedia.org/wiki/File:2025-10-22_Marymoor_Windmill_IMG_6518.jpg
   summary: >-
     Bicycle Capital of the Northwest.
   slogan: "Bicycle Capital of the Northwest."
@@ -801,11 +801,11 @@
   lon: -122.0356
   description: Upcoming family events in Sammamish on the Eastside.
   hero:
-    image: /assets/images/sammamish/pine-lake.webp
-    alt: Trees and shoreline at Pine Lake Park in Sammamish.
-    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
-    license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:2025-10-21,_Pine_Lake_Park_(Sammamish,_Washington),_081014.jpg
+    image: /assets/images/sammamish/lake-sammamish.webp
+    alt: Aerial view of Lake Sammamish from the north end, looking south over the water and the hills.
+    credit: "Photo: Jelson25, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Aerial_Lake_Sammamish_November_2011.jpg
   summary: >-
     A plateau city east of Lake Sammamish.
   tagline: "A plateau city east of Lake Sammamish."
@@ -931,11 +931,11 @@
   lon: -122.1635
   description: Upcoming family events in Woodinville on the Eastside.
   hero:
-    image: /assets/images/woodinville/cottage-lake.webp
-    alt: A playground and a covered picnic shelter beside Cottage Lake at Cottage Lake Park in Woodinville.
-    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    image: /assets/images/woodinville/chateau-ste-michelle.webp
+    alt: The chateau at Chateau Ste. Michelle in Woodinville, with lawn, a fountain, and blue sky.
+    credit: "Photo: Another Believer, CC BY-SA 4.0"
     license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:2025-03-05,_Cottage_Lake_Park_(Woodinville,_Washington),_071019.jpg
+    source: https://commons.wikimedia.org/wiki/File:Chateau_Ste._Michelle_(2022)_-_03.jpg
   summary: >-
     Wine country in the Sammamish Valley.
   tagline: "Wine country in the Sammamish Valley."
