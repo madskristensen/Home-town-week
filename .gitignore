@@ -12,6 +12,7 @@ __pycache__/
 assets/images/og-home.png
 .image-cache/
 _data/image_variants.yml
+_data/build.yml
 assets/images/**/*-400.avif
 assets/images/**/*-400.webp
 assets/images/**/*-400.jpg

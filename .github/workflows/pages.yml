@@ -74,6 +74,9 @@ jobs:
           # Custom domain eastsidecalendar.com: empty baseurl. Do not fall back
           # to /Home-town-week or apex CSS/images break. Actions publishing
           # ignores the CNAME file. The host is the repository Pages setting.
+          # The service worker cache name is this commit, so the new worker
+          # replaces the previous caches on activate.
+          printf 'sha: "%s"\n' "$GITHUB_SHA" > _data/build.yml
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 
       - name: Add IndexNow verification key

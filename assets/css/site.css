@@ -1100,6 +1100,18 @@ picture {
   font-weight: 600;
 }
 
+.saved-note {
+  margin: 0;
+  padding: 0.45rem 1rem;
+  background: var(--sheet);
+  color: var(--gold);
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

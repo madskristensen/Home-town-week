@@ -31,7 +31,7 @@
     if (!("serviceWorker" in navigator)) return;
     var node = document.querySelector("script[data-sw]");
     var url = (node && node.getAttribute("data-sw")) || "/sw.js";
-    navigator.serviceWorker.register(url, { scope: "/" }).catch(function () {});
+    navigator.serviceWorker.register(url, { scope: "/", updateViaCache: "none" }).catch(function () {});
   }
 
   window.addEventListener("load", registerServiceWorker);
