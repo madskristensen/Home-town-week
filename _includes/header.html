@@ -1,7 +1,8 @@
 {%- include city-context.html -%}
 <header class="site-header{% if page.url == "/" %} site-header--home{% elsif page.city %} site-header--city{% endif %}">
+  {%- unless page.url == "/" -%}
   <div class="wrap header-bar">
-    <a class="wordmark" href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>
+    <a class="wordmark" href="{{ '/' | relative_url }}">
       <img class="brand-mark" src="{{ '/assets/images/favicon.svg' | relative_url }}" alt="" width="18" height="18">
       <span>Eastside Family Calendar</span>
     </a>
@@ -15,6 +16,7 @@
       </nav>
     </details>
   </div>
+  {%- endunless -%}
   {%- if page.url == "/" -%}
   <div class="wrap home-mast">
     <h1 class="brand">Eastside Family Calendar</h1>

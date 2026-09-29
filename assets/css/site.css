@@ -111,7 +111,7 @@ img {
   margin-inline: auto;
 }
 
-/* The same slim bar on every page. Home keeps its nameplate under that bar. */
+/* Slim bar on every page except home, where the masthead is the only header. */
 
 .site-header {
   padding-top: env(safe-area-inset-top);
@@ -119,7 +119,7 @@ img {
 }
 
 .home-mast {
-  padding: 1.15rem 0 0;
+  padding: 0.85rem 0 0;
 }
 
 .home-mast .brand {
