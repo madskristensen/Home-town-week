@@ -154,6 +154,9 @@ module EastsideCalendar
         light_section = Array(hub["sections"]).find { |section| Array(section["tags"]).map(&:to_s).include?("holiday-lights") }
         if light_section
           Array(lights).each do |row|
+            # A row with lat is a map pin. It stays off the event list.
+            next if row.is_a?(Hash) && row["lat"]
+
             item = display_row(row, names, site_url)
             next unless item && upcoming_row?(item, today)
 
@@ -304,6 +307,7 @@ module EastsideCalendar
       label = season_label(start_s, end_s)
       in_season = in_season?(today, start_s, end_s)
       suggest = hub["suggest"].is_a?(Hash) ? hub["suggest"] : {}
+      displays = light_displays(hub, lights, cities)
       {
         "id" => id,
         "path" => path,
@@ -322,10 +326,13 @@ module EastsideCalendar
         "empty" => presence(hub["empty"], "Nothing is listed yet. City pages are where each event is written up, and this page gathers them."),
         "suggest_lead" => suggest["lead"].to_s.strip,
         "suggest_link" => presence(suggest["link"], "Tell us"),
-        "suggest_subject" => suggest["subject"].to_s.strip,
+        "suggest_subject" => suggest["subject"].to_s.lstrip,
         "suggest_body" => suggest["body"].to_s.strip,
         "sections" => sections,
         "visible_events" => sections.flat_map { |section| section["events"] },
+        "lights_map" => !hub["lights"].to_s.strip.empty?,
+        "light_displays" => displays,
+        "light_towns" => light_towns(displays),
         "theme" => {
           "background" => hex_color(theme["background"], "#f4efe6"),
           "ink" => hex_color(theme["ink"], "#1a2822"),
@@ -483,6 +490,130 @@ module EastsideCalendar
 
       Date.iso8601(str[0, 10])
     rescue Date::Error, ArgumentError
+      nil
+    end
+
+    # Fitted to the 15 city pins in eastside-map.html.
+    # svg_x = PIN_LON_X * lng + PIN_LAT_X * lat + PIN_OFF_X
+    # The viewBox is 104 90 624 568. Pins are clamped inside that box.
+    PIN_LON_X = 787.439813629
+    PIN_LAT_X = 12.708172536
+    PIN_OFF_X = 95894.8780921
+    PIN_LON_Y = 2.899073733
+    PIN_LAT_Y = -1273.47806447
+    PIN_OFF_Y = 61326.5488106
+    PIN_VIEW_X = 104.0
+    PIN_VIEW_Y = 90.0
+    PIN_VIEW_W = 624.0
+    PIN_VIEW_H = 568.0
+    PIN_INSET = 28.0
+    LIGHT_TYPES = {
+      "home" => "Home",
+      "neighborhood" => "Neighborhood",
+      "park" => "Park",
+      "drive-through" => "Drive-through",
+      "walk-through" => "Walk-through"
+    }.freeze
+
+    def light_displays(hub, lights, cities)
+      return [] if hub["lights"].to_s.strip.empty?
+
+      names = city_names(cities)
+      Array(lights).filter_map { |row| light_row(row, names) }
+        .sort_by { |item| [item["city"].to_s, item["name"].to_s] }
+    end
+
+    def light_towns(displays)
+      seen = {}
+      Array(displays).filter_map do |item|
+        city_id = item["city_id"].to_s
+        next if city_id.empty? || seen[city_id]
+
+        seen[city_id] = true
+        { "id" => city_id, "name" => item["city"].to_s }
+      end
+    end
+
+    def light_row(row, names)
+      return nil unless row.is_a?(Hash)
+
+      city_id = row["city"].to_s.strip
+      city_name = names[city_id].to_s
+      return nil if city_name.empty?
+
+      name = row["name"].to_s.strip
+      return nil if name.empty?
+
+      type = row["type"].to_s.strip
+      return nil unless LIGHT_TYPES.key?(type)
+
+      address = row["address"].to_s.gsub(/\s+/, " ").strip
+      return nil if address.empty?
+
+      lat = float_or_nil(row["lat"])
+      lng = float_or_nil(row["lng"] || row["lon"])
+      return nil unless lat && lng
+      return nil unless lat.between?(47.30, 47.85) && lng.between?(-122.40, -121.70)
+
+      description = row["description"].to_s.gsub(/\s+/, " ").strip
+      return nil if description.empty?
+
+      source = row["source"].to_s.strip
+      return nil unless source.match?(%r{\Ahttps?://\S+\z})
+
+      left, top = project_pin(lat, lng)
+      slug = light_slug(row["id"], name)
+      query = "#{address}, #{city_name}, WA"
+      {
+        "id" => slug,
+        "name" => name,
+        "type" => type,
+        "type_label" => LIGHT_TYPES[type],
+        "city" => city_name,
+        "city_id" => city_id,
+        "address" => address,
+        "lat" => format("%.6f", lat),
+        "lng" => format("%.6f", lng),
+        "map_left" => format("%.2f", left),
+        "map_top" => format("%.2f", top),
+        "description" => description,
+        "nights" => row["nights"].to_s.gsub(/\s+/, " ").strip,
+        "hours" => row["hours"].to_s.gsub(/\s+/, " ").strip,
+        "source" => source,
+        "free" => row["free"] == true,
+        "last_verified" => row["last_verified"].to_s.strip,
+        "directions" => "https://www.google.com/maps/dir/?api=1&destination=#{CGI.escape(query)}"
+      }
+    end
+
+    def light_slug(id, name)
+      raw = id.to_s.strip
+      raw = name.to_s if raw.empty?
+      slug = raw.downcase.gsub(/[^a-z0-9]+/, "-").gsub(/\A-|-\z/, "")
+      slug.empty? ? "display" : slug
+    end
+
+    def project_pin(lat, lng)
+      x = PIN_LON_X * lng + PIN_LAT_X * lat + PIN_OFF_X
+      y = PIN_LON_Y * lng + PIN_LAT_Y * lat + PIN_OFF_Y
+      min_x = PIN_VIEW_X + PIN_INSET
+      max_x = PIN_VIEW_X + PIN_VIEW_W - PIN_INSET
+      min_y = PIN_VIEW_Y + PIN_INSET
+      max_y = PIN_VIEW_Y + PIN_VIEW_H - PIN_INSET
+      x = min_x if x < min_x
+      x = max_x if x > max_x
+      y = min_y if y < min_y
+      y = max_y if y > max_y
+      left = (x - PIN_VIEW_X) / PIN_VIEW_W * 100.0
+      top = (y - PIN_VIEW_Y) / PIN_VIEW_H * 100.0
+      [left, top]
+    end
+
+    def float_or_nil(value)
+      return nil if value.nil? || value.to_s.strip.empty?
+
+      Float(value)
+    rescue ArgumentError, TypeError
       nil
     end
 

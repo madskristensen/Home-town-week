@@ -1,15 +1,217 @@
-# Neighborhood holiday light displays that were publicly promoted.
-# Privacy: do not list a private home's street number. A display belongs
-# here only when the resident, a neighborhood group, or a city page has
-# already published it. Put the neighborhood in area, not a house number.
-# same_as is that public page and is required. A row without it is skipped,
-# and a house number in area or place is not printed.
-# Official displays stay on the city event list with the tag holiday-lights.
+# Christmas light displays for the map on /christmas/#lights.
+# This list stays up all year. The page puts the map first from Nov 10
+# through Dec 31, and after the event list the rest of the year.
+# A row here is not an event. Do not copy it into a city page.
 #
-# - city: redmond
-#   name: "Education Hill lights"
-#   area: "Education Hill"
-#   same_as: "https://example.com/the-public-page"
-#   start: "2026-12-01"
-#   end: "2026-12-26"
-[]
+# Required: id, name, type, city, address, lat, lng, description,
+# source, free, last_verified. nights and hours when they are known.
+# type is home, neighborhood, park, drive-through, or walk-through.
+# city is a city id from _data/cities.yml.
+# address is a street address, a street, or cross-streets.
+# A public venue can use its published street address. A home can use a
+# house number only when the owner published it, or a news page already
+# names it as the place to visit. Otherwise use the street or the
+# cross-streets. Do not take a house number from a photo or a
+# real-estate listing.
+# description is original. source is the public page.
+# free is true or false.
+# last_verified is the day the source was checked, YYYY-MM-DD.
+# When the source is a past season and the next one is not announced,
+# start nights with "Last seen 2025" (use the season year).
+# A row with lat is drawn on the map and is left out of the
+# Holiday lights event section. Do not add same_as here.
+- id: garden-dlights
+  name: "Garden d'Lights"
+  type: walk-through
+  city: bellevue
+  address: "12001 Main St"
+  lat: 47.606642
+  lng: -122.177483
+  description: "A walk through Bellevue Botanical Garden after dark, with lights shaped into plants, animals, and waterfalls."
+  nights: "Nov 28, 2026 to Jan 3, 2027"
+  hours: "Tickets go on sale October 15. Nightly hours for 2026 are still to come."
+  source: "https://bellevuebotanical.org/garden-dlights/"
+  free: false
+  last_verified: "2026-09-29"
+- id: snowflake-lane
+  name: "Snowflake Lane"
+  type: walk-through
+  city: bellevue
+  address: "Bellevue Way NE between NE 4th St and NE 8th St"
+  lat: 47.616214
+  lng: -122.202296
+  description: "A free parade of lit floats, drummers, and falling snow on Bellevue Way. Watch from the sidewalk between Bellevue Square and Lincoln Square."
+  nights: "Nov 27 to Dec 24"
+  hours: "7 p.m."
+  source: "https://bellevuecollection.com/snowflakelane/"
+  free: true
+  last_verified: "2026-09-29"
+- id: evergreen-lights
+  name: "Evergreen Christmas Lights"
+  type: walk-through
+  city: bothell
+  address: "3429 240th St SE"
+  lat: 47.780876
+  lng: -122.187007
+  description: "A free walk at Evergreen Church, with light tunnels, a show set to music, a train, and a snow play area."
+  nights: "Last seen 2025, Dec 1 to 24."
+  hours: "6 to 9 p.m."
+  source: "https://evergreenchristmaslights.com/"
+  free: true
+  last_verified: "2026-09-29"
+- id: keeners-christmas
+  name: "Keener's Christmas Lights"
+  type: drive-through
+  city: bothell
+  address: "16504 112th Pl NE"
+  lat: 47.748037
+  lng: -122.191595
+  description: "A drive-through home display on a looping driveway. Donations are encouraged, and visitors stay in the car."
+  nights: "Last seen 2025, Dec 1 to 31."
+  hours: "6 to 10 p.m., weather permitting"
+  source: "https://www.parentmap.com/things-to-do/best-holiday-light-displays-seattle/"
+  free: true
+  last_verified: "2026-09-29"
+- id: lights-at-the-landing
+  name: "Lights at the Landing"
+  type: park
+  city: bothell
+  address: "9919 NE 180th St"
+  lat: 47.758344
+  lng: -122.207661
+  description: "A free light installation through the Park at Bothell Landing, set up for an evening stroll."
+  nights: "Last seen 2025, Dec 1 to Jan 5."
+  hours: "Lit through the day and evening"
+  source: "https://www.bothellwa.gov/Calendar.aspx?EID=2366"
+  free: true
+  last_verified: "2026-09-29"
+- id: nutcracker-lane
+  name: "Nutcracker Lane"
+  type: neighborhood
+  city: issaquah
+  address: "190th Ave SE at SE 44th Way"
+  lat: 47.563800
+  lng: -122.086050
+  description: "A cul-de-sac where the houses put out painted nutcracker figures and lights, in the manner of a candy cane lane."
+  nights: "Usually every night in December. 2026 dates are still to come."
+  hours: ""
+  source: "https://www.greaterseattleonthecheap.com/best-christmas-lights-seattle/"
+  free: true
+  last_verified: "2026-09-29"
+- id: google-lights
+  name: "Google Lights"
+  type: park
+  city: kirkland
+  address: "Feriton Spur Park, 509 6th St S"
+  lat: 47.670540
+  lng: -122.197945
+  description: "Lights along the Eastrail at Feriton Spur Park, with a community lighting night to open the season."
+  nights: "Last seen 2025, Dec 5 to Jan 9."
+  hours: ""
+  source: "https://www.parentmap.com/things-to-do/best-holiday-light-displays-seattle/"
+  free: true
+  last_verified: "2026-09-29"
+- id: kingsgate-kringle
+  name: "Kingsgate Kringle House"
+  type: home
+  city: kirkland
+  address: "12244 NE 140th St"
+  lat: 47.726042
+  lng: -122.175998
+  description: "A home light show in Kingsgate, set to music you can hear from the car, raising money for Northwest Harvest. Pull over and keep driveways clear."
+  nights: "Last seen 2025, nightly through New Year's weekend."
+  hours: "4:30 p.m. to midnight"
+  source: "https://linktr.ee/kingsgatekringle"
+  free: true
+  last_verified: "2026-09-29"
+- id: maple-valley-lights
+  name: "Maple Valley Lights"
+  type: home
+  city: maple-valley
+  address: "22629 SE 263rd Pl"
+  lat: 47.365035
+  lng: -122.040757
+  description: "A home display with a soundtrack on 101.9 FM. The family collects food for the Maple Valley Food Bank."
+  nights: "Thanksgiving through New Year's Eve. 2026 dates are still to come."
+  hours: "4:30 to 11 p.m."
+  source: "https://www.greaterseattleonthecheap.com/best-christmas-lights-seattle/"
+  free: true
+  last_verified: "2026-09-29"
+- id: redmond-lights
+  name: "Redmond Lights"
+  type: park
+  city: redmond
+  address: "Downtown Park, 16101 Redmond Way"
+  lat: 47.674288
+  lng: -122.124774
+  description: "A free run of light art in Downtown Park, opening with music, crafts, and a family promenade."
+  nights: "Dec 5, 2026 to Jan 4, 2027"
+  hours: "Kickoff Dec 5, 4 to 8 p.m."
+  source: "https://www.redmond.gov/1139/Redmond-Lights"
+  free: true
+  last_verified: "2026-09-29"
+- id: clam-lights
+  name: "Clam Lights"
+  type: park
+  city: renton
+  address: "1201 Lake Washington Blvd N"
+  lat: 47.506975
+  lng: -122.202523
+  description: "Trees and shrubs lit along the walk at Gene Coulon Memorial Beach Park. Opening night adds Santa and the Christmas ships."
+  nights: "Last seen 2025. Opening night Dec 5, then Dec 6 to Jan 4."
+  hours: "5 to 9 p.m. after opening night"
+  source: "https://www.parentmap.com/things-to-do/best-holiday-light-displays-seattle/"
+  free: true
+  last_verified: "2026-09-29"
+- id: miracle-on-134th
+  name: "Miracle on 134th Street"
+  type: home
+  city: renton
+  address: "134th Street, East Renton Highlands"
+  lat: 47.482179
+  lng: -122.104948
+  description: "A free walk along light paths in a front yard on 134th Street in the East Renton Highlands. The family welcomes kids and dogs."
+  nights: "Opens again the day after Thanksgiving 2026."
+  hours: ""
+  source: "https://miracleon134th.st/"
+  free: true
+  last_verified: "2026-09-29"
+- id: timberline
+  name: "Timberline lights"
+  type: neighborhood
+  city: sammamish
+  address: "NE 42nd St and 204th Ave NE"
+  lat: 47.647715
+  lng: -122.070658
+  description: "A Sammamish cul-de-sac where several homes decorate trees, decks, and yards for a slow drive."
+  nights: "A December neighborhood drive. 2026 dates are still to come."
+  hours: ""
+  source: "https://www.greaterseattleonthecheap.com/best-christmas-lights-seattle/"
+  free: true
+  last_verified: "2026-09-29"
+- id: snoqualmie-winter-lights
+  name: "Snoqualmie Winter Lights"
+  type: walk-through
+  city: snoqualmie
+  address: "Centennial Trail from Salish Lodge to historic downtown"
+  lat: 47.528463
+  lng: -121.825584
+  description: "A free walk of lit trains and trees from Salish Lodge along the Centennial Trail into historic downtown, with the tree at the Railroad Park gazebo."
+  nights: "Thanksgiving through New Year's. Tree lighting Dec 5, 2026."
+  hours: "Nightly"
+  source: "https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights"
+  free: true
+  last_verified: "2026-09-29"
+- id: brilliant-blvd
+  name: "Brilliant Blvd"
+  type: neighborhood
+  city: snoqualmie
+  address: "Snoqualmie Parkway, Snoqualmie Ridge"
+  lat: 47.526144
+  lng: -121.878715
+  description: "A row of lit trees along Snoqualmie Parkway in Snoqualmie Ridge, the drive the city pairs with the downtown walk."
+  nights: "Thanksgiving through New Year's."
+  hours: "Nightly"
+  source: "https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights"
+  free: true
+  last_verified: "2026-09-29"

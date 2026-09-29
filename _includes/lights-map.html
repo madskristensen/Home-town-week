@@ -1,0 +1,186 @@
+{%- assign light_rows = hub.light_displays -%}
+{%- assign light_count = light_rows | size -%}
+{%- assign lights_subject = hub.suggest_subject | append: "" -%}
+{%- if lights_subject.size == 0 -%}
+  {%- assign lights_subject = "Christmas lights: " -%}
+{%- endif -%}
+{%- assign lights_body = hub.suggest_body | append: "" -%}
+{%- if lights_body.size == 0 -%}
+  {%- capture lights_body -%}Address or street:
+Town:
+What makes it great:
+Dates and hours:
+Is this your own house? Yes or no{%- endcapture -%}
+{%- endif -%}
+{%- assign lights_lead = hub.suggest_lead | append: "" -%}
+{%- if lights_lead.size == 0 -%}
+  {%- assign lights_lead = "Know a great display?" -%}
+{%- endif -%}
+{%- assign lights_link = hub.suggest_link | append: "" -%}
+{%- if lights_link.size == 0 -%}
+  {%- assign lights_link = "Send it in" -%}
+{%- endif -%}
+<section class="lights-map-section{% if hub.in_season %} is-prominent{% endif %}" id="lights" aria-labelledby="lights-title">
+  <h2 id="lights-title">Christmas lights map</h2>
+  {%- if hub.in_season -%}
+  <p class="lights-lead">Displays you can visit across the Eastside, listed through Dec 31.</p>
+  {%- else -%}
+  <p class="lights-lead">This map stays up all year. From Nov 10 through Dec 31 it is the first section on the page.</p>
+  {%- endif -%}
+  {%- if light_count > 0 -%}
+  <div class="lights-filters" role="group" aria-label="Filter displays by town">
+    <button type="button" data-town="" aria-pressed="true">All <span class="lights-count">{{ light_count }}</span></button>
+    {%- for town in hub.light_towns -%}
+    <button type="button" data-town="{{ town.id }}" aria-pressed="false">{{ town.name }}</button>
+    {%- endfor -%}
+  </div>
+  <div class="lights-board">
+    <div class="lights-frame">
+      {%- include eastside-map.html title="Eastside map with Christmas light displays" title_id="lights-map-title" -%}
+      <div class="lights-pins">
+        {%- for light in light_rows -%}
+        <button type="button" class="light-pin" id="pin-{{ light.id }}" style="left: {{ light.map_left }}%; top: {{ light.map_top }}%;" data-town="{{ light.city_id }}" data-light="{{ light.id }}" aria-controls="light-{{ light.id }}" aria-pressed="false" aria-label="{{ light.name }}, {{ light.city }}"></button>
+        {%- endfor -%}
+      </div>
+    </div>
+    <ul class="lights-list">
+      {%- for light in light_rows -%}
+      {%- assign light_nights = light.nights | append: "" -%}
+      {%- assign light_hours = light.hours | append: "" -%}
+      {%- capture city_href -%}/{{ light.city_id }}/{%- endcapture -%}
+      <li class="light-item" id="light-{{ light.id }}" data-town="{{ light.city_id }}" data-light="{{ light.id }}" tabindex="-1">
+        <h3>{{ light.name }}</h3>
+        <p class="light-meta"><a href="{{ city_href | strip | relative_url }}">{{ light.city }}</a>, {{ light.type_label }}</p>
+        <p class="light-address">{{ light.address }}</p>
+        <p class="light-desc">{{ light.description }}</p>
+        {%- if light_nights.size > 0 -%}
+        <p class="light-when">{{ light.nights }}</p>
+        {%- endif -%}
+        {%- if light_hours.size > 0 -%}
+        <p class="light-when">{{ light.hours }}</p>
+        {%- endif -%}
+        <p class="light-cost">{% if light.free %}Free{% else %}Tickets{% endif %}</p>
+        <p class="light-actions">
+          <a href="{{ light.directions }}" rel="noopener">Directions</a>
+          <a href="{{ light.source }}" rel="noopener">Source</a>
+          <button type="button" class="light-show" data-light="{{ light.id }}">Show on map</button>
+        </p>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  {%- else -%}
+  <p>No displays are listed yet.</p>
+  {%- endif -%}
+  <p class="suggest-event">{{ lights_lead }} <a href="mailto:suggestions@eastsidecalendar.com?subject={{ lights_subject | mail_escape }}&amp;body={{ lights_body | strip | mail_escape }}">{{ lights_link }}</a>.</p>
+  <p class="lights-note">We only list displays that are publicly promoted or sent in by the owner.</p>
+</section>
+{%- if light_count > 0 -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Christmas lights on the Eastside",
+  "url": {{ site.url | append: site.baseurl | append: "/christmas/#lights" | jsonify }},
+  "numberOfItems": {{ light_count }},
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "itemListElement": [
+    {%- for light in light_rows -%}
+    {%- capture light_anchor -%}{{ site.url }}{{ site.baseurl }}/christmas/#light-{{ light.id }}{%- endcapture -%}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "item": {
+        "@type": "Place",
+        "name": {{ light.name | jsonify }},
+        "description": {{ light.description | jsonify }},
+        "url": {{ light_anchor | jsonify }},
+        "isAccessibleForFree": {% if light.free %}true{% else %}false{% endif %},
+        "sameAs": {{ light.source | jsonify }},
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": {{ light.lat }},
+          "longitude": {{ light.lng }}
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": {{ light.address | jsonify }},
+          "addressLocality": {{ light.city | jsonify }},
+          "addressRegion": "WA",
+          "addressCountry": "US"
+        }
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+</script>
+<script>
+(function () {
+  var root = document.getElementById("lights");
+  if (!root) return;
+  var townButtons = root.querySelectorAll(".lights-filters button");
+  var pins = root.querySelectorAll(".light-pin");
+  var items = root.querySelectorAll(".light-item");
+
+  function showTown(town) {
+    townButtons.forEach(function (button) {
+      button.setAttribute("aria-pressed", (button.getAttribute("data-town") || "") === town ? "true" : "false");
+    });
+    pins.forEach(function (pin) {
+      pin.hidden = town !== "" && pin.getAttribute("data-town") !== town;
+    });
+    items.forEach(function (item) {
+      item.hidden = town !== "" && item.getAttribute("data-town") !== town;
+    });
+  }
+
+  function select(id, scrollTarget) {
+    pins.forEach(function (pin) {
+      var on = pin.getAttribute("data-light") === id;
+      pin.setAttribute("aria-pressed", on ? "true" : "false");
+      pin.classList.toggle("is-on", on);
+    });
+    var chosen = null;
+    items.forEach(function (item) {
+      var on = item.getAttribute("data-light") === id;
+      item.classList.toggle("is-on", on);
+      if (on) chosen = item;
+    });
+    if (scrollTarget === "list" && chosen) {
+      chosen.scrollIntoView({ block: "nearest" });
+      chosen.focus({ preventScroll: true });
+    }
+    if (scrollTarget === "pin") {
+      var pin = document.getElementById("pin-" + id);
+      if (pin) {
+        pin.scrollIntoView({ block: "nearest" });
+        pin.focus({ preventScroll: true });
+      }
+    }
+  }
+
+  townButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      showTown(button.getAttribute("data-town") || "");
+    });
+  });
+  pins.forEach(function (pin) {
+    pin.addEventListener("click", function () {
+      var id = pin.getAttribute("data-light");
+      var item = document.getElementById("light-" + id);
+      if (item && item.hidden) showTown("");
+      select(id, "list");
+    });
+  });
+  root.querySelectorAll(".light-show").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var id = button.getAttribute("data-light");
+      var pin = document.getElementById("pin-" + id);
+      if (pin && pin.hidden) showTown("");
+      select(id, "pin");
+    });
+  });
+})();
+</script>
+{%- endif -%}

@@ -79,14 +79,14 @@ hubs:
     lights: holiday_lights
     suggest:
       lead: Know a great display?
-      link: Tell us
-      subject: A holiday lights display
+      link: Send it in
+      subject: "Christmas lights: "
       body: |-
-        I would like to suggest a holiday lights display for Eastside Family Calendar.
-
-        City:
-        Neighborhood:
-        Link to the public page where it is promoted:
+        Address or street:
+        Town:
+        What makes it great:
+        Dates and hours:
+        Is this your own house? Yes or no
     season:
       start: "11-10"
       end: "12-31"
