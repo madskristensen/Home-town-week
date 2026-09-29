@@ -298,7 +298,30 @@ img {
 }
 
 .city-heading-text {
+  flex: 1;
   min-width: 0;
+}
+
+.city-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.city-name-row .city-name {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.city-name-row .issue-share {
+  flex: none;
+}
+
+.city-name-row .share-button {
+  min-height: 2.15rem;
+  padding: 0.28rem 0.65rem;
+  font-size: 0.85rem;
 }
 
 .city-name,
@@ -823,12 +846,6 @@ img {
   text-decoration: underline;
 }
 
-.city-actions {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 0 0.85rem;
-}
-
 .hero {
   margin: 0 0 1rem;
 }
@@ -840,11 +857,6 @@ img {
 }
 
 .hero figcaption {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.4rem 0.85rem;
   margin-top: 0.45rem;
 }
 
@@ -858,18 +870,12 @@ img {
 
 .hero-credit {
   margin: 0;
-  flex: 1 1 12rem;
 }
 
 .hero figcaption .source::before,
 .event-photo figcaption .source::before {
   content: "·";
   margin: 0 0.35rem;
-}
-
-.hero figcaption .issue-share,
-.city-actions .issue-share {
-  margin: 0 0 0 auto;
 }
 
 .hook {
@@ -1182,6 +1188,31 @@ img {
   width: 0.95rem;
   height: 0.95rem;
   flex: none;
+}
+
+@media (max-width: 36rem) {
+  .city-name-row .share-button {
+    width: 2.15rem;
+    padding: 0;
+  }
+
+  .city-name-row .share-button:not(.is-copied) [data-label] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .city-name-row .share-button.is-copied {
+    width: auto;
+    padding: 0.28rem 0.65rem;
+  }
 }
 
 .share-status:not(.visually-hidden) {
