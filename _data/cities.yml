@@ -1,6 +1,7 @@
 # Eastside cities, alphabetical. lat and lon are the city center in
-# decimal degrees, for the home page nearby-city lookup. Newcastle is
-# not listed yet. Do not add a city page until it has real events.
+# decimal degrees. nearby.yml uses them when choosing neighbors. The
+# home page does not read them. Newcastle is not listed yet. Do not
+# add a city page until it has real events.
 # The site header is the mark, Eastside Family Calendar, and a Cities menu.
 #
 # tagline: a short place line under the city-home heading. Name the place

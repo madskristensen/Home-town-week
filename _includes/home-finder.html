@@ -4,455 +4,49 @@
 {%- for city in site.data.cities -%}
   {%- capture index_href -%}/{{ city.id }}/{%- endcapture -%}
   {%- if index_emitted -%},{%- endif -%}
-  {"state":{{ city.state | jsonify }},"id":{{ city.id | jsonify }},"name":{{ city.name | jsonify }},"href":{{ index_href | strip | relative_url | jsonify }}}
+  {"id":{{ city.id | jsonify }},"name":{{ city.name | jsonify }},"href":{{ index_href | strip | relative_url | jsonify }}}
   {%- assign index_emitted = true -%}
-{%- endfor -%}
-]
-</script>
-<script type="application/json" id="city-places">
-[
-{%- assign emitted = false -%}
-{%- for city in site.data.cities -%}
-  {%- if city.lat and city.lon -%}
-    {%- capture place_href -%}/{{ city.id }}/{%- endcapture -%}
-    {%- if emitted -%},{%- endif -%}
-    {"name":{{ city.name | jsonify }},"state":{{ city.state_name | jsonify }},"code":{{ city.state | jsonify }},"summary":{{ city.tagline | default: city.summary | jsonify }},"lat":{{ city.lat }},"lon":{{ city.lon }},"href":{{ place_href | strip | relative_url | jsonify }}}
-    {%- assign emitted = true -%}
-  {%- endif -%}
 {%- endfor -%}
 ]
 </script>
 <script>
 (function () {
-  var CLOSE_MILES = 10;
-  var FALLBACK_MILES = 80;
-  var MAX_MATCHES = 8;
-
-  function loadPlaces() {
-    var node = document.getElementById("city-places");
-    if (!node) return [];
-    var data;
-    try {
-      data = JSON.parse(node.textContent);
-    } catch (err) {
-      return [];
-    }
-    if (!data || !data.length) return [];
-    var out = [];
-    var i;
-    for (i = 0; i < data.length; i++) {
-      var item = data[i];
-      if (!item || typeof item.name !== "string" || typeof item.href !== "string") continue;
-      if (item.href.charAt(0) !== "/" || item.href.indexOf("//") !== -1) continue;
-      var lat = Number(item.lat);
-      var lon = Number(item.lon);
-      if (!isFinite(lat) || !isFinite(lon)) continue;
-      out.push({
-        name: item.name,
-        state: item.state || "",
-        code: item.code || "",
-        summary: item.summary || "",
-        lat: lat,
-        lon: lon,
-        href: item.href
-      });
-    }
-    return out;
+  // hw-last-city is the city slug saved on a city page.
+  // Older browsers may also have hw-last-state. That value is ignored.
+  // Show Open {City} only when the slug matches a real city. Never redirect.
+  var slot = document.getElementById("last-city");
+  var node = document.getElementById("city-index");
+  if (!slot || !node) return;
+  var city = "";
+  try {
+    city = localStorage.getItem("hw-last-city") || "";
+  } catch (err) {
+    return;
   }
-
-  function haversine(lat1, lon1, lat2, lon2) {
-    var radius = 3958.8;
-    var p1 = lat1 * Math.PI / 180;
-    var p2 = lat2 * Math.PI / 180;
-    var dLat = (lat2 - lat1) * Math.PI / 180;
-    var dLon = (lon2 - lon1) * Math.PI / 180;
-    var h = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.cos(p1) * Math.cos(p2) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
-    return 2 * radius * Math.asin(Math.min(1, Math.sqrt(h)));
+  if (city.indexOf("/") !== -1) city = city.split("/").pop();
+  if (!/^[a-z0-9-]+$/.test(city)) return;
+  var index;
+  try {
+    index = JSON.parse(node.textContent);
+  } catch (err) {
+    return;
   }
-
-  function milesLabel(miles) {
-    if (miles < 0.5) return "Less than a mile away";
-    var n = Math.round(miles);
-    if (n < 1) n = 1;
-    return "About " + n + (n === 1 ? " mile away" : " miles away");
+  if (!index || !index.length) return;
+  var match = null;
+  var i;
+  for (i = 0; i < index.length; i++) {
+    var item = index[i];
+    if (!item) continue;
+    if (typeof item.id !== "string" || !/^[a-z0-9-]+$/.test(item.id)) continue;
+    if (typeof item.name !== "string" || !item.name) continue;
+    if (typeof item.href !== "string" || item.href.charAt(0) !== "/" || item.href.indexOf("//") !== -1) continue;
+    if (item.id === city) match = item;
   }
-
-  function el(tag, className, text) {
-    var node = document.createElement(tag);
-    if (className) node.className = className;
-    if (text) node.textContent = text;
-    return node;
-  }
-
-  function norm(value) {
-    return String(value || "").toLowerCase().replace(/['\u2019]/g, "").replace(/[^a-z0-9]+/g, " ").replace(/\s+/g, " ").trim();
-  }
-
-  var places = loadPlaces();
-  var section = document.getElementById("near-you");
-  var button = document.getElementById("near-button");
-  var note = document.getElementById("near-note");
-  var weekTitle = document.getElementById("near-you-title");
-  var results = document.getElementById("near-results");
-  var message = document.getElementById("near-message");
-  var form = document.getElementById("city-search");
-  var input = document.getElementById("city-query");
-  var matches = document.getElementById("city-matches");
-  var empty = document.getElementById("city-empty");
-  var status = document.getElementById("city-status");
-  var pending = false;
-
-  function revealWeek(title) {
-    if (weekTitle) {
-      weekTitle.hidden = false;
-      if (title) weekTitle.textContent = title;
-    }
-    if (section) section.classList.add("has-result");
-  }
-
-  function hideMessage() {
-    if (!message) return;
-    message.hidden = true;
-    message.textContent = "";
-  }
-
-  function showMessage(text) {
-    revealWeek("Near you");
-    if (results) {
-      results.hidden = true;
-      results.textContent = "";
-    }
-    if (message) {
-      message.hidden = false;
-      message.textContent = text;
-    }
-  }
-
-  function whereLine(place, miles) {
-    return milesLabel(miles);
-  }
-
-  function rankedPlaces(lat, lon) {
-    var hits = [];
-    var i;
-    for (i = 0; i < places.length; i++) {
-      hits.push({
-        place: places[i],
-        miles: haversine(lat, lon, places[i].lat, places[i].lon)
-      });
-    }
-    hits.sort(function (a, b) {
-      if (a.miles !== b.miles) return a.miles - b.miles;
-      if (a.place.name < b.place.name) return -1;
-      if (a.place.name > b.place.name) return 1;
-      return 0;
-    });
-    return hits;
-  }
-
-  function showOne(place, miles, mode) {
-    if (!results) return;
-    revealWeek("Near you");
-    hideMessage();
-    var link = el("a", "near-card");
-    var where = whereLine(place, miles);
-    link.href = place.href;
-    if (mode === "closest") link.appendChild(el("span", "near-kicker", "Closest city"));
-    link.appendChild(el("span", "near-city", place.name));
-    if (where) link.appendChild(el("span", "near-where", where));
-    if (mode === "closest" && Math.round(miles) > 10) {
-      link.appendChild(el("span", "near-summary", "No covered city is within 10 miles."));
-    } else if (place.summary) {
-      link.appendChild(el("span", "near-summary", place.summary));
-    }
-    link.appendChild(el("span", "near-go", "See upcoming events"));
-    results.textContent = "";
-    results.appendChild(link);
-    results.hidden = false;
-  }
-
-  function showMany(hits) {
-    if (!results) return;
-    revealWeek("Near you");
-    hideMessage();
-    var lead = el("p", "near-lead", "Within about 10 miles, nearest first.");
-    var list = el("ul", "near-list");
-    var i;
-    for (i = 0; i < hits.length; i++) {
-      var place = hits[i].place;
-      var item = document.createElement("li");
-      var link = document.createElement("a");
-      var where = milesLabel(hits[i].miles);
-      link.href = place.href;
-      link.appendChild(el("span", "near-city", place.name));
-      if (where) link.appendChild(el("span", "near-where", where));
-      item.appendChild(link);
-      list.appendChild(item);
-    }
-    results.textContent = "";
-    results.appendChild(lead);
-    results.appendChild(list);
-    results.hidden = false;
-  }
-
-  function setLocatePending(isPending) {
-    pending = isPending;
-    if (section) {
-      if (isPending) section.setAttribute("aria-busy", "true");
-      else section.removeAttribute("aria-busy");
-    }
-    if (!button) return;
-    button.disabled = isPending;
-    if (isPending) button.setAttribute("aria-busy", "true");
-    else button.removeAttribute("aria-busy");
-    button.setAttribute("aria-label", isPending ? "Looking nearby" : "Use my location");
-  }
-
-  function finishLookup() {
-    setLocatePending(false);
-  }
-
-  function locate() {
-    if (!places.length) {
-      showMessage("Search for your city, or pick one from the list.");
-      return;
-    }
-    if (!window.isSecureContext || !navigator.geolocation) return;
-    if (pending) return;
-    setLocatePending(true);
-    navigator.geolocation.getCurrentPosition(function (pos) {
-      finishLookup();
-      var ranked = rankedPlaces(pos.coords.latitude, pos.coords.longitude);
-      var close = [];
-      var i;
-      for (i = 0; i < ranked.length; i++) {
-        if (ranked[i].miles <= CLOSE_MILES) close.push(ranked[i]);
-        else break;
-      }
-      if (close.length > 1) {
-        showMany(close);
-        return;
-      }
-      if (close.length === 1) {
-        showOne(close[0].place, close[0].miles, "near");
-        return;
-      }
-      if (ranked.length && ranked[0].miles <= FALLBACK_MILES) {
-        showOne(ranked[0].place, ranked[0].miles, "closest");
-        return;
-      }
-      showMessage("No Eastside city we cover is close enough to call nearby. Search for one, or pick one from the list.");
-    }, function (err) {
-      finishLookup();
-      if (err && err.code === 1) {
-        showMessage("Location stays off until the browser allows it. Search for your city, or pick one from the list.");
-      } else if (err && err.code === 3) {
-        showMessage("That took too long. Try again, or search for your city.");
-      } else {
-        showMessage("We could not read a location just now. Search for your city, or pick one from the list.");
-      }
-    }, {
-      enableHighAccuracy: false,
-      timeout: 12000,
-      maximumAge: 300000
-    });
-  }
-
-  if (button && note) {
-    if (!navigator.geolocation) {
-      button.hidden = true;
-      note.textContent = "This browser cannot share a location. Search for your city, or pick one from the list.";
-    } else if (!window.isSecureContext) {
-      button.hidden = true;
-      note.textContent = "Use your location is available on the secure site. Search for your city, or pick one from the list.";
-    } else {
-      button.addEventListener("click", locate);
-      if (navigator.permissions && navigator.permissions.query) {
-        navigator.permissions.query({ name: "geolocation" }).then(function (result) {
-          if (result && result.state === "granted") locate();
-        }).catch(function () {});
-      }
-    }
-  }
-
-  function rank(place, query) {
-    var name = norm(place.name);
-    var state = norm(place.state);
-    var code = norm(place.code);
-    if (name.indexOf(query) === 0) return 1;
-    var words = name.split(" ");
-    var i;
-    for (i = 0; i < words.length; i++) {
-      if (words[i].indexOf(query) === 0) return 2;
-    }
-    if (query.length >= 3 && name.indexOf(query) !== -1) return 3;
-    if (code === query || state.indexOf(query) === 0) return 4;
-    if (query.length >= 3 && state.indexOf(query) !== -1) return 5;
-    return 0;
-  }
-
-  function closeMatches() {
-    if (!matches || !input) return;
-    matches.hidden = true;
-    matches.textContent = "";
-    input.setAttribute("aria-expanded", "false");
-  }
-
-  function renderMatches() {
-    if (!input || !matches || !status) return;
-    var query = norm(input.value);
-    if (!query) {
-      closeMatches();
-      if (empty) empty.hidden = true;
-      status.textContent = "";
-      return;
-    }
-    var hits = [];
-    var i;
-    for (i = 0; i < places.length; i++) {
-      var score = rank(places[i], query);
-      if (score) hits.push({ place: places[i], rank: score });
-    }
-    hits.sort(function (a, b) {
-      if (a.rank !== b.rank) return a.rank - b.rank;
-      if (a.place.name < b.place.name) return -1;
-      if (a.place.name > b.place.name) return 1;
-      return 0;
-    });
-    matches.textContent = "";
-    if (!hits.length) {
-      matches.hidden = true;
-      input.setAttribute("aria-expanded", "false");
-      if (empty) {
-        empty.hidden = false;
-        empty.textContent = "No city by that name yet.";
-      }
-      status.textContent = "No city by that name yet.";
-      return;
-    }
-    if (empty) empty.hidden = true;
-    var shown = hits.slice(0, MAX_MATCHES);
-    for (i = 0; i < shown.length; i++) {
-      var place = shown[i].place;
-      var item = document.createElement("li");
-      var link = document.createElement("a");
-      link.href = place.href;
-      link.appendChild(el("span", "match-name", place.name));
-      item.appendChild(link);
-      matches.appendChild(item);
-    }
-    matches.hidden = false;
-    input.setAttribute("aria-expanded", "true");
-    if (hits.length === 1) status.textContent = "1 city.";
-    else if (hits.length > shown.length) status.textContent = "Showing " + shown.length + " of " + hits.length + " cities.";
-    else status.textContent = hits.length + " cities.";
-  }
-
-  if (form && input && matches) {
-    input.addEventListener("input", renderMatches);
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      var first = matches.querySelector("a");
-      if (first && !matches.hidden) window.location.href = first.href;
-    });
-    form.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        closeMatches();
-        if (empty) empty.hidden = true;
-        input.focus();
-        return;
-      }
-      var links = matches.querySelectorAll("a");
-      if (!links.length || matches.hidden) return;
-      var current = -1;
-      var i;
-      for (i = 0; i < links.length; i++) {
-        if (links[i] === document.activeElement) current = i;
-      }
-      if (event.key === "ArrowDown") {
-        event.preventDefault();
-        (links[current + 1] || links[0]).focus();
-      } else if (event.key === "ArrowUp") {
-        event.preventDefault();
-        if (current <= 0) input.focus();
-        else links[current - 1].focus();
-      }
-    });
-    // hw-last-city is the city slug saved on a city page.
-    // Older browsers may also have hw-last-state. That value is ignored.
-    // Show Open {City} only when the slug matches a real city. Never redirect.
-    function loadIndex() {
-      var node = document.getElementById("city-index");
-      if (!node) return [];
-      var data;
-      try {
-        data = JSON.parse(node.textContent);
-      } catch (err) {
-        return [];
-      }
-      if (!data || !data.length) return [];
-      var out = [];
-      var i;
-      for (i = 0; i < data.length; i++) {
-        var item = data[i];
-        if (!item) continue;
-        if (typeof item.state !== "string" || !/^[a-z0-9-]+$/.test(item.state)) continue;
-        if (typeof item.id !== "string" || !/^[a-z0-9-]+$/.test(item.id)) continue;
-        if (typeof item.name !== "string" || !item.name) continue;
-        if (typeof item.href !== "string" || item.href.charAt(0) !== "/" || item.href.indexOf("//") !== -1) continue;
-        out.push(item);
-      }
-      return out;
-    }
-
-    function showLastCity() {
-      var finder = document.querySelector(".finder");
-      var search = document.getElementById("city-search");
-      if (!finder || !search) return;
-      var city = "";
-      try {
-        city = localStorage.getItem("hw-last-city") || "";
-      } catch (err) {
-        return;
-      }
-      // Older saved values sometimes look like "wa/redmond".
-      if (city.indexOf("/") !== -1) city = city.split("/").pop();
-      if (!/^[a-z0-9-]+$/.test(city)) return;
-      var index = loadIndex();
-      var match = null;
-      var i;
-      for (i = 0; i < index.length; i++) {
-        if (index[i].id === city) {
-          match = index[i];
-          break;
-        }
-      }
-      if (!match) return;
-      var row = document.createElement("p");
-      row.className = "cta last-city";
-      var link = document.createElement("a");
-      link.href = match.href;
-      link.textContent = "Open " + match.name;
-      row.appendChild(link);
-      finder.insertBefore(row, search);
-    }
-
-    showLastCity();
-
-    matches.addEventListener("mousedown", function (event) {
-      event.preventDefault();
-    });
-    var blurTimer;
-    input.addEventListener("blur", function () {
-      blurTimer = setTimeout(function () {
-        if (!matches.contains(document.activeElement)) closeMatches();
-      }, 200);
-    });
-    input.addEventListener("focus", function () {
-      clearTimeout(blurTimer);
-      if (norm(input.value)) renderMatches();
-    });
-  }
+  if (!match) return;
+  var link = document.createElement("a");
+  link.href = match.href;
+  link.textContent = "Open " + match.name;
+  slot.appendChild(link);
+  slot.hidden = false;
 })();
 </script>

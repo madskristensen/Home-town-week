@@ -2,38 +2,9 @@
 layout: default
 ---
 <article class="home wrap">
-  <section class="finder" aria-labelledby="finder-title">
-    <h2 id="finder-title">Find your city</h2>
-    <form class="city-search" id="city-search" role="search" action="#cities">
-      <label for="city-query">Search cities</label>
-      <div class="city-field">
-        <input id="city-query" type="search" placeholder="Bellevue, Redmond, Kirkland" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="search" aria-autocomplete="list" aria-expanded="false" aria-controls="city-matches">
-        <button type="button" id="near-button" class="locate" aria-label="Use my location" aria-describedby="near-note">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <circle cx="12" cy="12" r="3.15" fill="none" stroke="currentColor" stroke-width="1.8"/>
-            <circle cx="12" cy="12" r="1.15" fill="currentColor"/>
-            <path d="M12 2.4v3M12 18.6v3M2.4 12h3M18.6 12h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
-      <p id="city-empty" class="city-empty" hidden></p>
-      <ul id="city-matches" class="city-matches" hidden></ul>
-      <p id="near-note" class="near-note">Your browser asks first. We use the spot only to find Eastside cities near you, and we do not save it.</p>
-      <p id="city-status" class="visually-hidden" aria-live="polite"></p>
-    </form>
-    <noscript>
-      <p class="noscript-note">Location and city search need JavaScript. The map and the city list work without it.</p>
-    </noscript>
-
-    <section class="near-you" id="near-you" aria-labelledby="near-you-title">
-      <h2 id="near-you-title" hidden>Near you</h2>
-      <div id="near-live" aria-live="polite">
-        <div id="near-results" hidden></div>
-        <p id="near-message" class="near-message" hidden></p>
-      </div>
-    </section>
-
-    <h3 id="cities">Cities</h3>
+  <p class="cta last-city" id="last-city" hidden></p>
+  <section class="cities-panel" aria-labelledby="cities">
+    <h2 id="cities">Cities</h2>
     <p class="city-lead">Choose a city on the map or in the list.</p>
     <div class="eastside-board">
       <div class="eastside-map">
@@ -42,8 +13,12 @@ layout: default
       <nav class="city-key" aria-label="Eastside cities">
         {%- for city in site.data.cities -%}
         {%- capture city_href -%}/{{ city.id }}/{%- endcapture -%}
+        {%- assign events_key = city.id | append: "_events" -%}
+        {%- assign city_events = site.data[events_key] -%}
+        {%- assign event_count = city_events | size -%}
         <a href="{{ city_href | strip | relative_url }}">
           <span class="city-key-name">{{ city.name }}</span>
+          <span class="city-key-count">{%- if event_count == 1 -%}1 upcoming{%- elsif event_count > 1 -%}{{ event_count }} upcoming{%- else -%}None yet{%- endif -%}</span>
         </a>
         {%- endfor -%}
       </nav>
