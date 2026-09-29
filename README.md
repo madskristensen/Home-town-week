@@ -82,7 +82,42 @@ The full tag vocabulary, with the season stored on each hub:
 | Winter break and snow days | `/winter/` | Dec 15 through Jan 5 | `winter-break`, `snow-day` |
 | Rainy day plans | `/rainy-day/` | Oct 1 through May 31 | `rainy-day` |
 
-`/fall/` is the fall hub, in season Sep 1 through Oct 31. Its sections are Pumpkin patches and corn mazes, Apple and u-pick farms, Harvest festivals, and Halloween and trick-or-treat. The Halloween section anchor is `/fall/#halloween`. There is no `/halloween/` page and no redirect. A section also includes an event whose name contains `pumpkin patch`, `harvest festival`, `harvest fest`, `trick-or-treat`, `trick or treat`, `trunk-or-treat`, or `trunk or treat` when the tags were missed. While fall qualifies, the banner says "Fall fun for kids" and links to `/fall/`. Christmas sections are Tree lightings, Holiday lights, Santa visits and photos, Holiday markets and bazaars, Nutcracker and holiday shows, and Parades and festivals. Holiday lights on the Christmas page also include publicly promoted neighborhood displays from `_data/holiday_lights.yml`. There is no `/salmon/` page. Salmon events stay on their city pages. A new season is a new hub in `_data/seasonal_hubs.yml`, including its theme colors and inline SVG. Set `group: town` with `tags` and `keywords` for a town list, or `sections` for named groups. That does not need a code change. The sitemap includes each hub. The page `ItemList` is the same events, in the same order, as the headings on the page.
+`/fall/` is the fall hub, in season Sep 1 through Oct 31. Its sections are Pumpkin patches and corn mazes, Apple and u-pick farms, Harvest festivals, and Halloween and trick-or-treat. The Halloween section anchor is `/fall/#halloween`. There is no `/halloween/` page and no redirect. A section also includes an event whose name contains `pumpkin patch`, `harvest festival`, `harvest fest`, `trick-or-treat`, `trick or treat`, `trunk-or-treat`, or `trunk or treat` when the tags were missed. While fall qualifies, the banner says "Fall fun for kids" and links to `/fall/`. Christmas sections are Tree lightings, Holiday lights, Santa visits and photos, Holiday markets and bazaars, Nutcracker and holiday shows, and Parades and festivals. Holiday lights on the Christmas page also include publicly promoted neighborhood displays from `_data/holiday_lights.yml`. There is no `/salmon/` page. Salmon events stay on their city pages. A new season is a new hub in `_data/seasonal_hubs.yml`, including its theme colors and inline SVG. Set `group: town` with `tags` and `keywords` for a town list, or `sections` for named groups. That does not need a code change. The sitemap includes each hub. The page `ItemList` is the same events, in the same order, as the cards on the page. A hub page starts with a row of links to the sections that have events, each with its count. Empty sections are left off the page. Each section is a larger heading, a one-line intro, and one thin rule, then a grid of cards: two columns on a wide screen and one on a narrow screen. A card uses the event's licensed photo when the city page has one, and the city hero otherwise. The credit sits on the photo. The title links to the event, without an underline until hover or focus. The date stays gold. A date-only run of a week or more shows "Through {Mon D}". The place, the town, a one-line blurb, and the calendar icon follow. Images below the first row load lazy, with width and height set.
+
+These hub events still use the city hero and need their own licensed photo:
+
+- Fall City Farms pumpkin patch (Snoqualmie)
+- Muddy Boots Pumpkins (Duvall)
+- Novelty Hill Farm pumpkin patch (Duvall)
+- Fall in Bellevue Celebration (Bellevue)
+- Fall Harvest Festival at Remlinger Farms (Carnation)
+- Harvest Festival (Kirkland)
+- Sammamish Valley Harvest Fest (Woodinville)
+- Harvest Market (Carnation)
+- Oxtober (Carnation)
+- Bellevue Family YMCA Fall Festival (Bellevue)
+- Northshore Y Fall Family Festival (Bothell)
+- Sammamish YMCA Fall Family Festival (Sammamish)
+- Family Halloween Tray Workshop (Redmond)
+- Paws & Pumpkins (Redmond)
+- Halloween Train (North Bend)
+- Halloween Train (Snoqualmie)
+- Zombie Dash (Maple Valley)
+- Great Si View Spooktacular (North Bend)
+- Haunted House at Redmond Community Center at Marymoor Village (Redmond)
+- Spooktacular Halloween (Snoqualmie)
+- Trick or Treat at Redmond Community Center at Marymoor Village (Redmond)
+- Trick-or-Treat Street (North Bend)
+- Trick or Tree Arbor Day Event (Woodinville)
+- Town Center Trick or Treat (Mercer Island)
+- Trick-or-Treat on Main Street (Bothell)
+- Trunk or Treat (Redmond)
+- The Great Pumpkin Hunt! (Woodinville)
+- Trick or Treat at the Library (Bellevue)
+- Diwali (Hindu, Sikh) (Issaquah)
+- Dia de los Muertos (Kenmore)
+- Dia de los Muertos (Mexican) (Issaquah)
+- Day of the Dead (Redmond)
 
 Photos are one source file each, under `assets/images/{city}/`. Put that path on the city hero or in the event photo include. Do not resize it, and do not commit width variants. The Pages workflow runs `script/render-image-variants.py` before Jekyll. It writes AVIF, WebP, and JPEG at 400, 800, 1200, and 1600 pixels wide, never wider than the source, plus `_data/image_variants.yml`. Actions caches those outputs, keyed on a hash of the source files, so an unchanged photo is not encoded again. `_includes/responsive-img.html` prints a `picture` from the manifest: AVIF, then WebP, then JPEG. If the manifest or a width is missing, the tag is the original file and the build still succeeds. The map is SVG and is left as is.
 

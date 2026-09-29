@@ -34,17 +34,25 @@ hubs:
     sections:
       - id: patches
         title: Pumpkin patches and corn mazes
+        toc: Pumpkin patches and corn mazes
+        intro: Pumpkin patches and corn mazes open across the Eastside.
         tags: [pumpkin-patch, corn-maze]
         keywords: [pumpkin patch]
       - id: u-pick
         title: Apple and u-pick farms
+        toc: U-pick
+        intro: Apple and other u-pick farms.
         tags: [u-pick]
       - id: harvest
         title: Harvest festivals
+        toc: Harvest festivals
+        intro: Farm fairs and harvest festivals.
         tags: [harvest]
         keywords: [harvest festival, harvest fest]
       - id: halloween
         title: Halloween and trick-or-treat
+        toc: Halloween
+        intro: Trick-or-treat, trunk-or-treat, and Halloween parties.
         tags: [halloween, trunk-or-treat]
         keywords: [trick-or-treat, trick or treat, trunk-or-treat, trunk or treat]
     theme:
@@ -85,21 +93,27 @@ hubs:
     sections:
       - id: tree-lighting
         title: Tree lightings
+        intro: Town tree lightings.
         tags: [tree-lighting]
       - id: holiday-lights
         title: Holiday lights
+        intro: Neighborhood and civic light displays.
         tags: [holiday-lights]
       - id: santa
         title: Santa visits and photos
+        intro: Santa visits and photo times.
         tags: [santa]
       - id: holiday-market
         title: Holiday markets and bazaars
+        intro: Holiday markets and bazaars.
         tags: [holiday-market]
       - id: holiday-show
         title: Nutcracker and holiday shows
+        intro: Nutcracker and other holiday shows.
         tags: [holiday-show]
       - id: parade
         title: Parades and festivals
+        intro: Parades and holiday festivals.
         tags: [parade]
     theme:
       background: "#e7f0e8"
@@ -123,6 +137,7 @@ hubs:
     sections:
       - id: easter
         title: Egg hunts and Easter events
+        intro: Egg hunts and Easter gatherings.
         tags: [egg-hunt, easter]
     theme:
       background: "#f7f3e6"
@@ -146,6 +161,7 @@ hubs:
     sections:
       - id: fourth
         title: Parades, fireworks, and picnics
+        intro: Parades, fireworks, and park picnics.
         tags: [fourth, fireworks]
     theme:
       background: "#f6edd9"
@@ -169,6 +185,7 @@ hubs:
     sections:
       - id: lunar-new-year
         title: Lunar New Year events
+        intro: Lion dances, lanterns, and family fairs.
         tags: [lunar-new-year]
     theme:
       background: "#f8f0e2"
@@ -192,6 +209,7 @@ hubs:
     sections:
       - id: diwali
         title: Diwali lights and festivals
+        intro: Lights, dances, and family festivals.
         tags: [diwali]
     theme:
       background: "#f8ecd9"
@@ -215,6 +233,7 @@ hubs:
     sections:
       - id: dia-de-los-muertos
         title: Altars and family gatherings
+        intro: Altars, marigolds, and family gatherings.
         tags: [dia-de-los-muertos]
     theme:
       background: "#f8efd8"
@@ -238,6 +257,7 @@ hubs:
     sections:
       - id: winter
         title: Winter break and snow days
+        intro: Break camps, snow play, and indoor plans.
         tags: [winter-break, snow-day]
     theme:
       background: "#e8eeec"
@@ -261,6 +281,7 @@ hubs:
     sections:
       - id: rainy-day
         title: Indoor plans
+        intro: Museums, libraries, and indoor play.
         tags: [rainy-day]
     theme:
       background: "#e7eeeb"

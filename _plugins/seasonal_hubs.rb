@@ -172,7 +172,7 @@ module EastsideCalendar
         items = grouped[section["id"]].sort_by { |item| [item["sort"], item["name"].to_s] }
         next if items.empty?
 
-        { "id" => section["id"].to_s, "title" => section["title"].to_s, "events" => items }
+        section_payload(section, items)
       end
     end
 
@@ -208,7 +208,13 @@ module EastsideCalendar
         next if items.empty?
 
         items.sort_by! { |item| [item["sort"], item["name"].to_s] }
-        sections << { "id" => city_id, "title" => city_name, "events" => items }
+        sections << {
+          "id" => city_id,
+          "title" => city_name,
+          "toc" => city_name,
+          "intro" => "Family events in #{city_name}.",
+          "events" => items
+        }
       end
       sections
     end
@@ -413,6 +419,8 @@ module EastsideCalendar
         "when" => when_text(start_s, finish_s),
         "same_as" => same_clean,
         "sort" => start_on ? start_on.iso8601 : "9999-99-99",
+        "start_raw" => start_s.to_s,
+        "end_raw" => finish_s.to_s,
         "end_on" => finish_on ? finish_on.iso8601 : "",
         "url" => href,
         "description" => "#{clean_name} in #{city_name}.",
@@ -435,15 +443,36 @@ module EastsideCalendar
 
       parsed = EventCalendar.parse_when(start_s)
       finish = EventCalendar.parse_when(finish_s)
+      finish_on = date_only(finish_s)
+      if ongoing_span?(parsed, start_on, finish_on)
+        return "Through #{EventCalendar.month_day(finish_on)}"
+      end
       return EventCalendar.when_label(parsed, finish) if parsed
 
-      label = start_on.strftime("%b %-d")
-      finish_on = date_only(finish_s)
+      label = EventCalendar.month_day(start_on)
       if finish_on && finish_on > start_on
-        "#{label} to #{finish_on.strftime("%b %-d")}"
+        "#{label} to #{EventCalendar.month_day(finish_on)}"
       else
         label
       end
+    end
+
+    # A date-only run of a week or more, such as a pumpkin patch.
+    def ongoing_span?(parsed, start_on, finish_on)
+      return false unless parsed && parsed[:time].nil? && start_on && finish_on
+
+      (finish_on - start_on).to_i >= 7
+    end
+
+    def section_payload(section, items)
+      title = section["title"].to_s
+      {
+        "id" => section["id"].to_s,
+        "title" => title,
+        "toc" => presence(section["toc"], title),
+        "intro" => section["intro"].to_s.strip,
+        "events" => items
+      }
     end
 
     def date_only(value)
@@ -458,10 +487,216 @@ module EastsideCalendar
     def esc(text)
       CGI.escapeHTML(text.to_s)
     end
+
+    def attach_cards!(hub, site)
+      pages = city_pages(site)
+      catalog = card_catalog(pages)
+      gaps = []
+      Array(hub["sections"]).each do |section|
+        Array(section["events"]).each do |event|
+          card = find_card(catalog, event)
+          page = pages[event["city_id"].to_s]
+          photo = licensed_photo(card && card[:photo])
+          fallback = false
+          if photo.nil?
+            photo = licensed_photo(hero_photo(page))
+            fallback = !photo.nil?
+          end
+          if photo
+            alt = photo["alt"].to_s.strip
+            alt = "#{event["name"]} in #{event["city"]}" if alt.empty? || alt.start_with?("Photo:")
+            event["image"] = photo["src"]
+            event["image_alt"] = alt
+            event["image_credit"] = photo["credit"].to_s
+            event["image_source"] = photo["source"].to_s
+            event["image_fallback"] = fallback
+          end
+          blurb = card ? card[:blurb].to_s : ""
+          blurb = "#{event["name"]} in #{event["city"]}." if blurb.empty?
+          event["blurb"] = blurb
+          event["description"] = blurb
+          event["calendar"] = calendar_href(page, event)
+          event["calendar"] = write_calendar(site, event) if event["calendar"].empty?
+          gaps << "#{event["name"]} (#{event["city"]})" if fallback
+        end
+      end
+      hub["photo_gaps"] = gaps
+      return if gaps.empty?
+
+      Jekyll.logger.info("Hub photos:", "#{hub["path"]} still using a city hero: #{gaps.join("; ")}")
+    end
+
+    def city_pages(site)
+      pages = {}
+      site.pages.each do |page|
+        next unless page.data["layout"] == "city"
+
+        pages[page.data["city"].to_s] = page
+      end
+      pages
+    end
+
+    def card_catalog(pages)
+      catalog = Hash.new { |hash, key| hash[key] = [] }
+      pages.each do |city_id, page|
+        EventCalendar.markdown_headings(page.content).each do |heading|
+          catalog[city_id] << {
+            key: EventCalendar.normalize(heading[:text]),
+            blurb: one_line_blurb(heading[:body]),
+            photo: parse_photo_include(heading[:body])
+          }
+        end
+      end
+      catalog
+    end
+
+    def find_card(catalog, event)
+      cards = catalog[event["city_id"].to_s] || []
+      key = EventCalendar.normalize(event["name"])
+      exact = cards.find { |card| card[:key] == key }
+      return exact if exact
+
+      best = nil
+      best_score = 0
+      cards.each do |card|
+        score = EventCalendar.match_score(key, card[:key])
+        next unless score > best_score
+
+        best = card
+        best_score = score
+      end
+      best_score >= 90 ? best : nil
+    end
+
+    def hero_photo(page)
+      return nil unless page
+
+      {
+        "src" => page.data["image"].to_s,
+        "alt" => page.data["image_alt"].to_s,
+        "credit" => page.data["image_credit"].to_s,
+        "source" => page.data["image_source_url"].to_s
+      }
+    end
+
+    def licensed_photo(photo)
+      return nil unless photo.is_a?(Hash)
+
+      src = photo["src"].to_s.strip
+      credit = photo["credit"].to_s.strip
+      source = photo["source"].to_s.strip
+      return nil if src.empty?
+      return nil if credit.empty? && source.empty?
+      return nil unless src.start_with?("/")
+
+      photo.merge("src" => src, "credit" => credit, "source" => source)
+    end
+
+    def parse_photo_include(body)
+      match = body.to_s.match(/\{%\s*include\s+event-photo\.html\s+(.*?)\s*%\}/m)
+      return nil unless match
+
+      args = match[1]
+      {
+        "src" => liquid_arg(args, "src"),
+        "alt" => liquid_arg(args, "alt"),
+        "credit" => liquid_arg(args, "credit"),
+        "source" => liquid_arg(args, "source")
+      }
+    end
+
+    def liquid_arg(args, name)
+      if (match = args.match(/#{Regexp.escape(name)}\s*=\s*"([^"]*)"/m))
+        match[1]
+      elsif (match = args.match(/#{Regexp.escape(name)}\s*=\s*'([^']*)'/m))
+        match[1]
+      else
+        ""
+      end
+    end
+
+    def one_line_blurb(body)
+      text = body.to_s.gsub(/\r\n?/, "\n")
+      text = text.gsub(/\{%.*?%\}/m, " ")
+      text = text.gsub(%r{<p class="event-(?:when|place)">.*?</p>}mi, " ")
+      text = text.gsub(/<[^>]+>/, " ")
+      text = text.gsub(/\[[^\]]+\]\([^)]+\)/, " ")
+      text = text.gsub(/[*_]+/, "")
+      text = text.gsub(/\s+/, " ").strip
+      return "" if text.empty?
+
+      sentences = text.split(/(?<=[.!?])\s+/).map(&:strip).reject(&:empty?)
+      sentence = sentences.find { |line| !meta_sentence?(line) } || sentences.first.to_s
+      return sentence if sentence.length <= 150
+
+      cut = sentence[0, 148]
+      spot = cut.rindex(" ")
+      trimmed = spot && spot > 40 ? cut[0, spot] : cut
+      "#{trimmed.rstrip.sub(/[,:;]\z/, "")}..."
+    end
+
+    def meta_sentence?(sentence)
+      text = sentence.to_s.downcase
+      text.include?("city page") || text.include?("listed here") || text.include?("this calendar")
+    end
+
+    def calendar_href(page, event)
+      return "" unless page
+
+      groups = page.data["calendar_groups"]
+      return "" unless groups.is_a?(Hash)
+
+      start_parsed = EventCalendar.parse_when(event["start_raw"])
+      return "" unless start_parsed
+
+      want = EventCalendar.file_slug(event["name"], start_parsed)
+      groups.each_value do |bucket|
+        Array(bucket).flatten.each do |link|
+          return link[:href].to_s if link[:href].to_s.include?(want)
+        end
+      end
+      ""
+    end
+
+    def write_calendar(site, event)
+      start_parsed = EventCalendar.parse_when(event["start_raw"])
+      return "" unless start_parsed
+
+      city_id = event["city_id"].to_s
+      return "" if city_id.empty?
+
+      slug = EventCalendar.file_slug(event["name"], start_parsed)
+      dir = "#{city_id}/calendar"
+      filename = "#{slug}.ics"
+      href = EventCalendar.root_path(site, "/#{dir}/#{filename}")
+      already = site.static_files.any? { |file| file.respond_to?(:relative_path) && file.relative_path == "#{dir}/#{filename}" }
+      return href if already
+
+      city_url = EventCalendar.absolute_url(site, "/#{city_id}/")
+      same = event["same_as"].to_s
+      page_url = EventCalendar.http_url?(same) ? same : city_url
+      record = {
+        name: event["name"],
+        start: start_parsed,
+        end: EventCalendar.parse_when(event["end_raw"]),
+        place: event["place"].to_s,
+        same_as: same,
+        uid: "#{city_id}-#{slug}@eastsidecalendar.com",
+        url: page_url,
+        description: EventCalendar.description_for(
+          { same_as: same, start: start_parsed, end: EventCalendar.parse_when(event["end_raw"]) },
+          event["blurb"].to_s,
+          city_url
+        )
+      }
+      site.static_files << CalendarFile.new(dir, filename, EventCalendar.build_ics(record, city_url, EventCalendar.stamp_utc(site.time)))
+      href
+    end
   end
 
   class SeasonalHubsGenerator < Jekyll::Generator
-    priority :low
+    # After the city calendar files exist, so hub cards can link to them.
+    priority :lowest
 
     def generate(site)
       raw = site.data["seasonal_hubs"]
@@ -472,6 +707,7 @@ module EastsideCalendar
       prepared = Array(config["hubs"]).filter_map do |hub|
         SeasonalHubs.prepare_hub(hub, site.data["cities"], site.data, lights, today, site_url)
       end
+      prepared.each { |hub| SeasonalHubs.attach_cards!(hub, site) }
 
       rule = SeasonalHubs.banner_rule(config)
       chosen = SeasonalHubs.banner_choice(prepared, rule, today)
