@@ -117,6 +117,12 @@ A haunted walk, a bounce house, and carnival games. The Y describes these branch
 <p class="event-when">Thu Oct 29 · 4:00–7:00 p.m.</p>
 <p class="event-place">Sammamish Commons, upper plaza</p>
 
+{% include event-photo.html
+   src="/assets/images/sammamish/commons.webp"
+   alt="Sammamish City Hall and the plaza at Sammamish Commons at night."
+   credit="Photo: Johnmoffatt2000, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Sammamish_City_Hall2.jpg" %}
+
 A free city party. There is a scavenger hunt with a prize, an animal encounter, and trick-or-treat at city booths and trunks, with allergy-friendly candy at every other stop. The library hosts a craft inside. Food vendors include The Cheese Pit. Costumes are welcome. The Y festival the Saturday before is a separate address on 228th.
 
 [Pumpkins on the Plaza](https://www.sammamish.us/news/events/events/pumpkins-on-the-plaza/2026-pumpkins-on-the-plaza/)

@@ -22,6 +22,12 @@ hook: Tuesday is the last Crossroads market. Friday, October 9 is a free pumpkin
 <p class="event-when">Tue Sep 29 · 12:00–6:00 p.m.</p>
 <p class="event-place">Crossroads Bellevue</p>
 
+{% include event-photo.html
+   src="/assets/images/bellevue/crossroads.webp"
+   alt="West entrance of Crossroads Bellevue, with the mall sign and a row of flags."
+   credit="Photo: Mark Yasuda, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:2018_Crossroads_Bellevue_west_entrance.jpg" %}
+
 The last Tuesday of the posted season. The market page says it runs every Tuesday from June 2 through September 29, noon to 6:00 p.m. It does not print a street address, and it does not list an October date.
 
 [Farmers market](https://crossroadsbellevue.com/FarmersMarket)
@@ -29,6 +35,12 @@ The last Tuesday of the posted season. The market page says it runs every Tuesda
 ### Engineering Hour
 <p class="event-when">Wed Sep 30 · 11:00 a.m.–12:00 p.m.</p>
 <p class="event-place">KidsQuest Children's Museum, 1116 108th Ave NE</p>
+
+{% include event-photo.html
+   src="/assets/images/bellevue/kidsquest.webp"
+   alt="Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance."
+   credit="Photo: Julian Fong, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:KidsQuest_Children%27s_Museum_2.jpg" %}
 
 Towers, bridges, and building, geared to children 5 and older. Free with admission or membership. The free-programming page lists this as a Wednesday hour, 11:00 a.m.–12:00 p.m.
 
@@ -220,6 +232,12 @@ Trunk-or-treat, a robotics station, and a pumpkin pool. The Y describes these br
 <p class="event-when">Sat Oct 31 · 9:00 a.m.–4:00 p.m.</p>
 <p class="event-place">KidsQuest Children's Museum, 1116 108th Ave NE</p>
 
+{% include event-photo.html
+   src="/assets/images/bellevue/kidsquest.webp"
+   alt="Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance."
+   credit="Photo: Julian Fong, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:KidsQuest_Children%27s_Museum_2.jpg" %}
+
 The museum's Halloween day, this year set as a Haunted Hoedown. Costumes are encouraged. General admission is $16.75 for adults and children. Members are free. It opens at 9:00 a.m., so it is the morning half of Halloween if you also want Main Street.
 
 [Spooktacular](https://www.bellevuedowntown.com/do/spooktacular)
@@ -227,6 +245,12 @@ The museum's Halloween day, this year set as a Haunted Hoedown. Costumes are enc
 ### Little Monsters on Main Street
 <p class="event-when">Sat Oct 31 · 1:00–3:00 p.m.</p>
 <p class="event-place">Main Street, Old Bellevue</p>
+
+{% include event-photo.html
+   src="/assets/images/bellevue/old-main-street.webp"
+   alt="Old Main Street in Bellevue, with shops and a clock along the sidewalk."
+   credit="Photo: Joe Mabel, CC BY-SA 3.0"
+   source="https://commons.wikimedia.org/wiki/File:Bellevue,_Washington_-_old_Main_Street_01.jpg" %}
 
 A free costume afternoon from the Old Bellevue Merchants Association. Businesses, restaurants, and residential communities along Main Street hand out candy. The page does not give one street number. KidsQuest is the same day and ends at 4:00 p.m., so a family can do the museum in the morning and Main Street after lunch.
 

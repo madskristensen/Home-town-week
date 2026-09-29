@@ -55,6 +55,12 @@ A morning of planting in the city's climate-adaptation demonstration forest. It 
 <p class="event-when">Wed Oct 7 · 11:00 a.m.–4:00 p.m.</p>
 <p class="event-place">Train Shed Exhibit Hall, Stone Quarry Road, Snoqualmie</p>
 
+{% include event-photo.html
+   src="/assets/images/snoqualmie/train-shed.webp"
+   alt="Historic rail cars inside the Train Shed Exhibit Hall at the Northwest Railway Museum in Snoqualmie."
+   credit="Photo: Steven Pavlov, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:2025-05-24,_Train_Shed_Exhibit_Hall,_Northwest_Railway_Museum_(Snoqualmie,_Washington),_142029.jpg" %}
+
 The museum waives Train Shed admission every Wednesday through December 16. The Railway History Campus, where the shed sits, is open 11:00 a.m. to 4:00 p.m. that day. Later Wednesdays in this stretch are October 14, 21, and 28, and November 4. The Snoqualmie Depot itself is a separate stop and keeps its usual hours. Halloween Train tickets are a different purchase.
 
 [Upcoming events](https://trainmuseum.org/upcoming-events/)

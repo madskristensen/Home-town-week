@@ -48,10 +48,10 @@ A public history and art tour. All ages. Tickets are $20.31 a person, and kids a
 <p class="event-place">Park at Bothell Landing, 9919 NE 180th St</p>
 
 {% include event-photo.html
-   src="/assets/images/bothell/bothell-landing.webp"
-   alt="The Park at Bothell Landing, with trees along the Sammamish River."
+   src="/assets/images/bothell/hannan-house.webp"
+   alt="Hannan House, the 1893 building that houses the Bothell Historical Museum at Bothell Landing."
    credit="Photo: Joe Mabel, CC BY-SA 4.0"
-   source="https://commons.wikimedia.org/wiki/File:Bothell_Landing_04.jpg" %}
+   source="https://commons.wikimedia.org/wiki/File:Hannan_House_-_Bothell_Landing_01.jpg" %}
 
 The museum in the park is open Sundays from April through October, 1:00 to 4:00 p.m. Admission is free. Later Sundays in this stretch are October 11, 18, and 25. The Halloween market is at the same park on Saturday, October 10.
 

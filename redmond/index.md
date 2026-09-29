@@ -108,6 +108,12 @@ Weekly exotic/rare car gathering (weather dependent). Free to watch.
 <p class="event-when">Sat Oct 3 · 9:00 a.m.–12:00 p.m.</p>
 <p class="event-place">Hartman Park, 17300 NE 104th St</p>
 
+{% include event-photo.html
+   src="/assets/images/redmond/hartman-park.webp"
+   alt="A ballfield and backstop at Hartman Park in Redmond."
+   credit="Photo: HominyGrits007, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Hartman_Park_Ballfield.jpg" %}
+
 The city calendar lists the club meet at Hartman Park for this window. It does not describe ages or whether spectators need a ticket. The Exotics show at Redmond Town Center is the same morning and ends at 11:00 a.m.
 
 [City calendar](https://www.redmond.gov/calendar.aspx?EID=3556)
@@ -275,6 +281,12 @@ Free to walk. The address is 9900 Willows Rd NE.
 <p class="event-when">Sat Oct 17 · 10:00 a.m.–3:00 p.m.</p>
 <p class="event-place">Farrel-McWhirter Park, 19545 Redmond Road</p>
 
+{% include event-photo.html
+   src="/assets/images/redmond/farrel-mcwhirter.webp"
+   alt="The entrance sign at Farrel-McWhirter Park in Redmond."
+   credit="Photo: HominyGrits007, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Farrel-McWhirter_Park_Entrance.jpg" %}
+
 Ages 2 and up. The city lists an all-access pass that covers pressed apple cider, tractor wagon rides, butter making with a biscuit, a forest scavenger hunt, farm animals, music, photo spots, and a spooky potion station. Children 12 and under also get a pony ride and a pumpkin. The morning session is 10:00 a.m.–12:00 p.m. and the afternoon session is 1:00–3:00 p.m. The calendar page does not print a price. The Saturday market is the same morning, at 9900 Willows Rd NE, and the two are not a short walk apart.
 
 [Harvest Festival](https://www.redmond.gov/calendar.aspx?EID=3559)
@@ -282,6 +294,12 @@ Ages 2 and up. The city lists an all-access pass that covers pressed apple cider
 ### Redmond Howl-O-Ween Pup Parade
 <p class="event-when">Sat Oct 17 · 12:00–4:00 p.m.</p>
 <p class="event-place">Check-in at The Archer Hotel Redmond, then Redmond Town Center</p>
+
+{% include event-photo.html
+   src="/assets/images/redmond/town-center.webp"
+   alt="The main plaza at Redmond Town Center, with a fountain and outdoor shops."
+   credit="Photo: SounderBruce, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Redmond_Town_Center_main_plaza,_Jan._2025.jpg" %}
 
 OneRedmond's second pup parade. Check-in is at noon at The Archer Hotel, with snacks. The parade through Redmond Town Center is at 1:00 p.m., with prizes for best dog costume, best duo, and best in show. From 2:00 to 4:00 p.m. the party moves to Hilton Garden Inn Seattle Redmond, with snacks for people and dogs and adoptable pups from Motley Zoo. The page says registration is coming soon, and that entry is free for overnight guests at participating Redmond hotels. The harvest festival at Farrel-McWhirter runs until 3:00 p.m., so the parade and the farm overlap.
 
