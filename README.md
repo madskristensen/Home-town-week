@@ -23,7 +23,7 @@ The city page lists upcoming family events. There is no year index, no week issu
 
 Events stay in the city page in the order they are written. The build groups each `###` event into Today, Tomorrow, This weekend, or Later from the first month and day on its gold date line (`<p class="event-when">`). A line with no month and day, and no matching dated row in `{city}_events.yml`, goes in Later. Empty groups are left out. Today and tomorrow take priority over the weekend. This weekend is the Saturday and Sunday of the current Pacific week. The groups are in the HTML, so they still show with JavaScript off. If the Pacific date has moved past the build date, the browser moves the same cards into the current groups.
 
-The install card sits in the city page under the teaser, in normal flow. It is not a fixed bar. It stays hidden until this browser has opened a city page twice, or until Share is used, and the browser fires `beforeinstallprompt`. Not now stores `hw-install-dismissed` as the epoch milliseconds when the card may return, 14 days out. `hw-city-visits` counts city-page loads. `hw-shared` is `1` after Share. The card is omitted on iOS and when the site is already installed. The service worker still registers on every page.
+The footer can show a small link, Add to Home screen or Pin to taskbar, only after the browser fires `beforeinstallprompt`. It stays hidden on iOS and when the site is already open in its own window. There is no install card and no saved dismiss or visit count. The service worker still registers on every page.
 
 `_data/nearby.yml` lists up to four nearby city ids per city, under `wa`. The Also close row links only to ids that have a page.
 

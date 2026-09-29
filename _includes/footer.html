@@ -9,6 +9,7 @@
 City:
 {%- endcapture -%}
       <a href="mailto:suggestions@eastsidecalendar.com?subject={{ city_request_subject | strip | mail_escape }}&amp;body={{ city_request_body | strip | mail_escape }}">Request a city</a>
+      <button type="button" id="install-link" class="footer-install" hidden>Add to Home screen</button>
     </nav>
     <p class="copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </div>

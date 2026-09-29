@@ -31,7 +31,6 @@ layout: default
   {%- if page.hook -%}
   <p class="hook">{{ page.hook }}</p>
   {%- endif -%}
-  {%- include install-card.html -%}
   {%- assign event_copy = content | strip -%}
   {%- if event_copy != "" -%}
   <div class="prose" data-today="{{ site.time | date: '%Y-%m-%d' }}">

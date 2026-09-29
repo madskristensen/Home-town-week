@@ -1,14 +1,7 @@
 <script data-sw="{{ '/sw.js' | relative_url }}">
 (function () {
-  // localStorage keys:
-  // hw-city-visits city-page loads in this browser
-  // hw-shared      "1" after the Share control is used
-  // hw-install-dismissed  epoch ms; Not now hides the card until then
-  // hw-last-city and hw-last-state are older keys. New visits do not write them.
-  var DISMISS_KEY = "hw-install-dismissed";
-  var CITY_VISITS_KEY = "hw-city-visits";
-  var SHARED_KEY = "hw-shared";
-  var DISMISS_MS = 14 * 24 * 60 * 60 * 1000;
+  // Older keys are not written: hw-last-city, hw-last-state, hw-city-visits,
+  // hw-shared, and hw-install-dismissed.
 
   function runningInstalled() {
     try {
@@ -155,7 +148,7 @@
 
   regroupEvents();
 
-  var hint = document.getElementById("install-hint");
+  var installLink = document.getElementById("install-link");
 
   function isIOS() {
     var ua = navigator.userAgent || "";
@@ -163,113 +156,63 @@
     return navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
   }
 
-  function dismissed() {
-    var raw = storageGet(DISMISS_KEY);
-    if (!raw) return false;
-    var until = parseInt(raw, 10);
-    if (!isFinite(until)) return false;
-    return Date.now() < until;
+  function hideInstallLink() {
+    if (installLink) installLink.hidden = true;
   }
 
-  if (isIOS()) {
-    if (hint && hint.parentNode) hint.parentNode.removeChild(hint);
+  function installLinkLabel() {
+    var ua = navigator.userAgent || "";
+    var platform = navigator.platform || "";
+    var mobile = false;
+    try {
+      if (navigator.userAgentData) {
+        if (navigator.userAgentData.platform) platform = navigator.userAgentData.platform;
+        mobile = navigator.userAgentData.mobile === true;
+      }
+    } catch (err) {}
+    if (/Android/i.test(ua) || /Android/i.test(platform) || mobile) return "Add to Home screen";
+    return "Pin to taskbar";
+  }
+
+  if (isIOS() || runningInstalled()) {
+    hideInstallLink();
     window.addEventListener("beforeinstallprompt", function (event) {
       event.preventDefault();
     });
-  } else if (hint) {
-    var go = document.getElementById("install-hint-go");
-    var dismissBtn = document.getElementById("install-hint-dismiss");
+  } else if (installLink) {
     var deferredPrompt = null;
 
-    function noteCityVisit() {
-      if (!document.querySelector("article.city-home")) return false;
-      var visits = parseInt(storageGet(CITY_VISITS_KEY) || "0", 10);
-      if (!isFinite(visits) || visits < 0) visits = 0;
-      visits += 1;
-      storageSet(CITY_VISITS_KEY, String(Math.min(visits, 99)));
-      return visits >= 2;
-    }
-
-    var readyToAsk = noteCityVisit() || storageGet(SHARED_KEY) === "1";
-
-    function hideHint() {
-      if (hint) hint.hidden = true;
-    }
-
-    function canAsk() {
-      return readyToAsk && !runningInstalled() && !dismissed();
-    }
-
-    function installButtonLabel() {
-      var ua = navigator.userAgent || "";
-      var platform = navigator.platform || "";
-      var mobile = false;
+    installLink.addEventListener("click", function () {
+      if (!deferredPrompt || typeof deferredPrompt.prompt !== "function") return;
+      var promptEvent = deferredPrompt;
+      deferredPrompt = null;
+      var pending;
       try {
-        if (navigator.userAgentData) {
-          if (navigator.userAgentData.platform) platform = navigator.userAgentData.platform;
-          mobile = navigator.userAgentData.mobile === true;
-        }
-      } catch (err) {}
-      if (/Android/i.test(ua) || /Android/i.test(platform) || mobile) return "Add to Home screen";
-      // Windows Chrome and Edge install a windowed app from this prompt.
-      // Pin to taskbar is a later option, not the install itself.
-      return "Install as app";
-    }
-
-    function showInstall() {
-      if (!canAsk() || !deferredPrompt) return;
-      if (go) {
-        go.textContent = installButtonLabel();
-        go.hidden = false;
+        pending = promptEvent.prompt();
+      } catch (err) {
+        hideInstallLink();
+        return;
       }
-      hint.hidden = false;
-    }
-
-    document.addEventListener("hw-share", function () {
-      storageSet(SHARED_KEY, "1");
-      readyToAsk = true;
-      showInstall();
+      Promise.resolve(pending).then(function () {
+        return promptEvent.userChoice;
+      }).then(function () {
+        hideInstallLink();
+      }).catch(function () {
+        hideInstallLink();
+      });
     });
 
-    if (dismissBtn && !runningInstalled()) {
-      dismissBtn.addEventListener("click", function () {
-        storageSet(DISMISS_KEY, String(Date.now() + DISMISS_MS));
-        hideHint();
-      });
-    }
-
-    if (go) {
-      go.addEventListener("click", function () {
-        if (!deferredPrompt || typeof deferredPrompt.prompt !== "function") return;
-        var promptEvent = deferredPrompt;
-        deferredPrompt = null;
-        var pending;
-        try {
-          pending = promptEvent.prompt();
-        } catch (err) {
-          hideHint();
-          return;
-        }
-        Promise.resolve(pending).then(function () {
-          return promptEvent.userChoice;
-        }).then(function () {
-          hideHint();
-        }).catch(function () {
-          hideHint();
-        });
-      });
-    }
-
     window.addEventListener("beforeinstallprompt", function (event) {
-      if (runningInstalled() || dismissed()) return;
+      if (runningInstalled()) return;
       event.preventDefault();
       deferredPrompt = event;
-      showInstall();
+      installLink.textContent = installLinkLabel();
+      installLink.hidden = false;
     });
 
     window.addEventListener("appinstalled", function () {
       deferredPrompt = null;
-      hideHint();
+      hideInstallLink();
     });
   }
 

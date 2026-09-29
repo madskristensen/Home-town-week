@@ -653,8 +653,7 @@ img {
 }
 
 .share-button,
-.install-go,
-.install-dismiss {
+.footer-install {
   touch-action: manipulation;
 }
 
@@ -747,7 +746,9 @@ img {
 }
 
 .footer-nav a:hover,
-.footer-nav a:focus-visible {
+.footer-nav a:focus-visible,
+.footer-install:hover,
+.footer-install:focus-visible {
   color: var(--link);
   text-decoration: underline;
 }
@@ -759,10 +760,22 @@ img {
   margin: 0.2rem 0 0.45rem;
 }
 
-.footer-nav a {
+.footer-nav a,
+.footer-install {
   color: var(--forest);
   font-weight: 600;
   text-decoration: none;
+}
+
+.footer-install {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-weight: 600;
+  line-height: inherit;
+  cursor: pointer;
 }
 
 .site-footer p {
@@ -1181,106 +1194,6 @@ img {
   position: fixed;
   left: -9999px;
   top: 0;
-}
-
-.install-card {
-  margin: 1.2rem 0 0.15rem;
-}
-
-.install-card-sheet {
-  max-width: none;
-  margin: 0;
-  padding: 0.9rem 0.95rem 0.7rem;
-  background: var(--page);
-  color: var(--text);
-  border: 1px solid var(--ink);
-  border-radius: var(--radius);
-  box-shadow: none;
-}
-
-.install-card-head {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-}
-
-.install-card-icon {
-  width: 2.75rem;
-  height: 2.75rem;
-  flex: none;
-  object-fit: cover;
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-}
-
-.install-card-name,
-.install-card-benefit {
-  margin: 0;
-}
-
-.install-card-name {
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1.15rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-}
-
-.install-card-benefit {
-  margin-top: 0.15rem;
-  color: var(--text);
-  font-family: var(--serif);
-  font-size: 1.02rem;
-  line-height: 1.35;
-}
-
-.install-card-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  margin-top: 0.85rem;
-}
-
-.install-go,
-.install-dismiss {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.45rem;
-  width: 100%;
-  min-height: 2.75rem;
-  padding: 0.4rem 0.85rem;
-  border-radius: var(--radius);
-  font: inherit;
-  font-size: 0.95rem;
-  font-weight: 600;
-  line-height: 1.2;
-  cursor: pointer;
-}
-
-.install-go {
-  border: 0;
-  background: var(--forest);
-  color: var(--header-ink);
-}
-
-.install-go:hover,
-.install-go:focus-visible {
-  background: var(--forest-deep);
-}
-
-.install-dismiss {
-  min-height: 2.5rem;
-  border: 0;
-  background: transparent;
-  color: var(--forest);
-}
-
-.install-dismiss:hover,
-.install-dismiss:focus-visible {
-  text-decoration: underline;
-  text-underline-offset: 0.14em;
 }
 
 .prose .list-updated {
