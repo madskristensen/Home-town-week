@@ -2,7 +2,7 @@
 
 Upcoming family events for cities on Washington's Eastside. This is a Jekyll site. It is published at [eastsidecalendar.com](https://eastsidecalendar.com/). See [Domain](#domain).
 
-The home page leads with a map of the Eastside, from Lake Washington to the Cascade foothills, and a list of the same cities. Each city on the map is a link. The list shows how many upcoming events that city has. The footer does not repeat every city. Every page uses the same compact wordmark bar: the site name on one line, linked home, with the Cities menu on that same row, a thin bottom border, and no kicker. The page heading below it is the large display title. On the home page that heading is "Things to do with kids on the Eastside", followed by "Upcoming family events in Eastside cities, so you never miss the fun." That intro line is on the home page only. A seasonal banner, when one qualifies, sits directly under the header.
+The home page leads with a map of the Eastside, from Lake Washington to the Cascade foothills, and a list of the same cities. Each city on the map is a link. The list shows how many upcoming events that city has. The footer does not repeat every city. Every page uses the same compact wordmark bar: the site name on one line, linked home, with the Cities menu on that same row, a thin bottom border, and no kicker. The page heading below it is the large display title. On the home page that heading is "Things to do with kids on the Eastside", followed by "Upcoming family events in Eastside cities, so you never miss the fun." That intro line is on the home page only. A seasonal banner, when one qualifies, sits under the header with a small gap so it reads as its own band.
 
 Newcastle is an Eastside city that does not have a page yet. Do not invent a page for it. Fall City is not a separate page; its farm and library listings are on Snoqualmie. Names without a page can sit in `_data/coming_soon.yml` and do not link anywhere.
 
@@ -13,7 +13,7 @@ Newcastle is an Eastside city that does not have a page yet. Do not invent a pag
 | Home | `/` |
 | City | `/{city}/`, for example `/redmond/` |
 | About | `/about/` |
-| Seasonal hub | One path per hub in `_data/seasonal_hubs.yml`, for example `/halloween/`, `/fall/`, `/salmon/`, and `/christmas/` |
+| Seasonal hub | One path per hub in `_data/seasonal_hubs.yml`, for example `/halloween/`, `/fall/`, and `/christmas/` |
 | Feed | `/feed.xml` |
 | LLM guide | `/llms.txt` |
 
@@ -56,7 +56,7 @@ Pushes to `main` run `.github/workflows/pages.yml`, which builds the site and de
 
 ## Content
 
-An editor writes the event blurbs, the city lists, and any curated weekend picks. GitHub Actions does not crawl calendars and does not rewrite that copy. The only workflows are `pages.yml` (build, deploy, IndexNow) and `prune.yml` (daily prune and rebuild).
+An editor writes the event blurbs, the city lists, and any curated weekend picks. A blurb tells a parent what the event is, who it suits, and any cost or registration detail. Leave out cross-references to other listings, other events, or other sources, and leave out verification notes about what a page does or does not say. GitHub Actions does not crawl calendars and does not rewrite that copy. The only workflows are `pages.yml` (build, deploy, IndexNow) and `prune.yml` (daily prune and rebuild).
 
 The home block is chosen when the site builds. By default it picks up to four standout events, one city each, for the coming Friday through Sunday. The heading is "This weekend on the Eastside". When that weekend has no standout, the heading is "Coming up on the Eastside" and the window is the next seven days. `_data/weekend_picks.yml` can replace the automatic choice. It is a list of `city` and `name`, and `name` must match `_data/{city}_events.yml`. When at least one listed event is still ahead, those are the picks, in that order, up to four. Entries that have already ended are skipped. If the file is missing, empty, or every entry has ended, the automatic picks are used.
 
@@ -64,7 +64,7 @@ The home block is chosen when the site builds. By default it picks up to four st
 
 ### Seasonal cross-check
 
-Every daily content update checks each new or updated event against all seasonal hub tags and adds the matching tags on that row in `_data/{city}_events.yml`. Tag only what the event is. A Salmon Days parade is `salmon`, not `parade`. A Diwali listing is `diwali`, not `holiday-market`. A hub can also name keywords. The build includes an event whose name contains one of those phrases even when the tags were missed, and the next daily run should still add the tag.
+Every daily content update checks each new or updated event against all seasonal hub tags and adds the matching tags on that row in `_data/{city}_events.yml`. Tag only what the event is. A Salmon Days parade stays on its city page. Do not tag it `parade`. A Diwali listing is `diwali`, not `holiday-market`. A hub can also name keywords. The build includes an event whose name contains one of those phrases even when the tags were missed, and the next daily run should still add the tag.
 
 When a hub newly crosses the banner threshold, note it in the run summary. The threshold is at least 6 upcoming events from at least 3 different towns. Upcoming means the event's last day is today or later in America/Los_Angeles. The banner is chosen when the site builds. The daily rebuild checks it again. If several hubs qualify, the one whose season ends soonest is shown. If none qualify, there is no banner. At most one banner is shown.
 
@@ -74,7 +74,6 @@ The full tag vocabulary, with the season stored on each hub:
 | --- | --- | --- | --- |
 | Halloween | `/halloween/` | Sep 15 through Oct 31 | `halloween`, `pumpkin-patch`, `trunk-or-treat`, `harvest` |
 | Fall and Halloween | `/fall/` | Sep 1 through Oct 31 | `pumpkin-patch`, `corn-maze`, `u-pick`, `harvest`, `halloween`, `trunk-or-treat` |
-| Salmon season | `/salmon/` | Sep 1 through Nov 30 | `salmon` |
 | Christmas | `/christmas/` | Nov 10 through Dec 31 | `tree-lighting`, `holiday-lights`, `santa`, `holiday-market`, `holiday-show`, `parade` |
 | Easter | `/easter/` | Mar 15 through Apr 25 | `egg-hunt`, `easter` |
 | Fourth of July | `/fourth/` | Jun 28 through Jul 5 | `fourth`, `fireworks` |
@@ -84,7 +83,7 @@ The full tag vocabulary, with the season stored on each hub:
 | Winter break and snow days | `/winter/` | Dec 15 through Jan 5 | `winter-break`, `snow-day` |
 | Rainy day plans | `/rainy-day/` | Oct 1 through May 31 | `rainy-day` |
 
-`/halloween/` lists pumpkin patches, trick-or-treat events, trunk-or-treats, and harvest festivals from every city, grouped by town. It matches the tags above, and also an event name that contains `pumpkin patch`, `trick-or-treat`, `trick or treat`, `trunk-or-treat`, `trunk or treat`, `harvest festival`, or `harvest fest`. From Sep 15 through Oct 31 it is listed before Fall, and both seasons end Oct 31, so the banner links there when Halloween has enough upcoming events. Fall sections are Pumpkin patches and corn mazes, Apple and u-pick farms, Harvest festivals, and Halloween and trick-or-treat. The Halloween section anchor on the fall page is `/fall/#halloween`. Christmas sections are Tree lightings, Holiday lights, Santa visits and photos, Holiday markets and bazaars, Nutcracker and holiday shows, and Parades and festivals. Holiday lights on the Christmas page also include publicly promoted neighborhood displays from `_data/holiday_lights.yml`. Salmon stays on its own page. A new season is a new hub in `_data/seasonal_hubs.yml`, including its theme colors and inline SVG. Set `group: town` with `tags` and `keywords` for a town list, or `sections` for named groups. That does not need a code change. The sitemap includes each hub. The page `ItemList` is the same events, in the same order, as the headings on the page.
+`/halloween/` lists pumpkin patches, trick-or-treat events, trunk-or-treats, and harvest festivals from every city, grouped by town. It matches the tags above, and also an event name that contains `pumpkin patch`, `trick-or-treat`, `trick or treat`, `trunk-or-treat`, `trunk or treat`, `harvest festival`, or `harvest fest`. From Sep 15 through Oct 31 it is listed before Fall, and both seasons end Oct 31, so the banner links there when Halloween has enough upcoming events. Fall sections are Pumpkin patches and corn mazes, Apple and u-pick farms, Harvest festivals, and Halloween and trick-or-treat. The Halloween section anchor on the fall page is `/fall/#halloween`. Christmas sections are Tree lightings, Holiday lights, Santa visits and photos, Holiday markets and bazaars, Nutcracker and holiday shows, and Parades and festivals. Holiday lights on the Christmas page also include publicly promoted neighborhood displays from `_data/holiday_lights.yml`. There is no `/salmon/` page. Salmon events stay on their city pages. A new season is a new hub in `_data/seasonal_hubs.yml`, including its theme colors and inline SVG. Set `group: town` with `tags` and `keywords` for a town list, or `sections` for named groups. That does not need a code change. The sitemap includes each hub. The page `ItemList` is the same events, in the same order, as the headings on the page.
 
 Photos are one source file each, under `assets/images/{city}/`. Put that path on the city hero or in the event photo include. Do not resize it, and do not commit width variants. The Pages workflow runs `script/render-image-variants.py` before Jekyll. It writes AVIF, WebP, and JPEG at 400, 800, 1200, and 1600 pixels wide, never wider than the source, plus `_data/image_variants.yml`. Actions caches those outputs, keyed on a hash of the source files, so an unchanged photo is not encoded again. `_includes/responsive-img.html` prints a `picture` from the manifest: AVIF, then WebP, then JPEG. If the manifest or a width is missing, the tag is the original file and the build still succeeds. The map is SVG and is left as is.
 

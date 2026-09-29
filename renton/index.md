@@ -37,7 +37,7 @@ The downtown library craft starts at 3:30, half an hour after the stalls open.
    credit="Photo: Joe Mabel, CC BY-SA 3.0"
    source="https://commons.wikimedia.org/wiki/File:Looking_downstream_on_Cedar_River_from_Renton,_WA_public_library.jpg" %}
 
-Drop-in in the Children's Library for ages 5 and older. Supplies are there for a seasonal craft. It overlaps the last market of the year.
+Drop-in in the Children's Library for ages 5 and older. Supplies are there for a seasonal craft.
 
 [Tuesday Crafternoon](https://kcls.bibliocommons.com/v2/events/6a95fe6169166f088b965153)
 
@@ -45,15 +45,15 @@ Drop-in in the Children's Library for ages 5 and older. Supplies are there for a
 <p class="event-when">Tue Sep 29 · 4:30–5:30 p.m.</p>
 <p class="event-place">Renton Highlands Library, 2801 NE 10th Street</p>
 
-Grades 3 to 5. Students rehearse and perform a script based on a story, across nine sessions. This date is one of those sessions, at the Highlands branch, not downtown. Registration is required. It overlaps the market the same way the downtown craft does.
+Grades 3 to 5. Students rehearse and perform a script based on a story, across nine sessions. This date is one of those sessions, at the Highlands branch. Registration is required.
 
 [Reader's Theater](https://kcls.bibliocommons.com/v2/events/6a6ce9f2f4e5db3d00c5a360)
 
 ### Noises Off
-<p class="event-when">Fri Oct 2–Sun Oct 18 · Time not posted</p>
+<p class="event-when">Fri Oct 2–Sun Oct 18</p>
 <p class="event-place">Renton Civic Theatre, 507 S Third St</p>
 
-Michael Frayn's backstage farce. Opening night is Fri Oct 2, a pay-what-you-can night is Mon Oct 12, and closing night is Sun Oct 18. The show page does not print a clock. It does print a rating: recommended for ages 10 and up. The humor includes innuendo, fast-paced chaos, and adult misunderstandings. No explicit content. The comedy is aimed at older kids, teens, and adults who can follow the farce.
+Michael Frayn's backstage farce. Opening night is Fri Oct 2, a pay-what-you-can night is Mon Oct 12, and closing night is Sun Oct 18. Recommended for ages 10 and up. The humor includes innuendo, fast-paced chaos, and adult misunderstandings. No explicit content. The comedy is aimed at older kids, teens, and adults who can follow the farce.
 
 [Noises Off](https://www.rentoncivictheatre.org/shows/noises-off)
 
@@ -61,7 +61,7 @@ Michael Frayn's backstage farce. Opening night is Fri Oct 2, a pay-what-you-can 
 <p class="event-when">Sat Oct 3 · 1:00–3:00 p.m.</p>
 <p class="event-place">Renton Highlands Library, 2801 NE 10th Street</p>
 
-An introduction to ballet and jazz for young dancers, with age-appropriate movement. The listing is filed under kids ages 6 to 8.
+An introduction to ballet and jazz for young dancers, with age-appropriate movement. For kids ages 6 to 8.
 
 [Ballet and jazz](https://kcls.bibliocommons.com/v2/events/6ab31be0da318a10e6360eb8)
 
@@ -85,7 +85,7 @@ The Environmental Science Center reads a story and leads a hands-on salmon activ
 <p class="event-when">Sun Oct 11 · 1:00–2:00 p.m.</p>
 <p class="event-place">Fairwood Library, 17009 140th Avenue SE</p>
 
-Pencil sketching with local instructor Ely Corum. All ages and skill levels. Supplies are provided. Registration is required. The branch calendar shows two listings at this same hour.
+Pencil sketching with local instructor Ely Corum. All ages and skill levels. Supplies are provided. Registration is required.
 
 [Drawing Pumpkins](https://kcls.bibliocommons.com/v2/events/6a9600084cb69d003e24c6be)
 
@@ -107,6 +107,6 @@ School-age kids read aloud to a certified therapy dog. Reading with Rover works 
    credit="Photo: Chris Light, CC BY-SA 4.0"
    source="https://commons.wikimedia.org/wiki/File:Renton_Downtown_2015-06_722.jpg" %}
 
-The Renton Downtown Partnership's family afternoon. Start with trick-or-treating at downtown businesses, then go to Legacy Square for zombie makeup, photos, games, and prizes. Costume contest categories include pets, kids, teens, and adults. At 3:00 p.m. the crowd learns the Thriller dance and joins the worldwide simultaneous performance. The page does not print a ticket price.
+The Renton Downtown Partnership's family afternoon. Start with trick-or-treating at downtown businesses, then go to Legacy Square for zombie makeup, photos, games, and prizes. Costume contest categories include pets, kids, teens, and adults. At 3:00 p.m. the crowd learns the Thriller dance and joins the worldwide simultaneous performance.
 
 [Olde Fashioned Halloween Party](https://www.rentondowntown.com/events/halloween)

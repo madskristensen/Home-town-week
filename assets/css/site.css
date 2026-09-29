@@ -178,7 +178,9 @@ picture {
 
 .site-header--compact .mast-title-row {
   align-items: center;
-  height: 2.75rem;
+  box-sizing: border-box;
+  height: auto;
+  padding: 1.375rem 0;
   border-bottom: 1px solid var(--rule);
 }
 
@@ -191,7 +193,7 @@ picture {
   overflow: hidden;
   color: var(--forest);
   font-family: var(--sans);
-  font-size: 1.2rem;
+  font-size: 1.45rem;
   font-weight: 700;
   font-variant: small-caps;
   letter-spacing: 0.06em;
@@ -201,7 +203,8 @@ picture {
 }
 
 .site-header--compact .cities-menu summary {
-  min-height: 2.75rem;
+  align-self: stretch;
+  min-height: 0;
 }
 
 .home-title {
@@ -406,9 +409,13 @@ picture {
     font-size: clamp(1.8rem, 7.4vw, 2.3rem);
   }
 
+  .site-header--compact .mast-title-row {
+    padding: 0.875rem 0;
+  }
+
   .site-header--compact .home-mast .brand {
-    font-size: 1.1rem;
-    letter-spacing: 0.04em;
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
   }
 
   .home-lead {
@@ -455,6 +462,8 @@ picture {
 
 .weekend-picks h2 {
   margin: 0;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
   font-size: 1.45rem;
   line-height: 1.15;
 }
@@ -471,7 +480,7 @@ picture {
 .weekend-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.35rem 1.25rem;
+  gap: 2rem 1.25rem;
   margin: 0.85rem 0 0;
   padding: 0;
   list-style: none;
@@ -491,11 +500,9 @@ picture {
 }
 
 .weekend-pick figure {
+  position: relative;
   margin: 0;
-}
-
-.weekend-pick figcaption {
-  margin: 0.35rem 0 0;
+  border-radius: var(--radius);
 }
 
 .weekend-town {
@@ -513,8 +520,6 @@ picture {
   display: inline-block;
   max-width: 100%;
   margin-top: 0.28rem;
-  padding-bottom: 0.05rem;
-  border-bottom: 2px solid var(--gold-bright);
   color: var(--gold);
   font-size: 0.92rem;
   font-weight: 600;
@@ -786,8 +791,11 @@ picture {
   text-decoration: underline;
 }
 
-.city-home .prose h2.event-bucket {
+.city-home .prose h2.event-bucket,
+.hub-section > h2 {
   margin-top: 0.9rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
 }
 
 .prose h1,
@@ -899,7 +907,9 @@ picture {
 }
 
 .hero {
+  position: relative;
   margin: 0 0 1rem;
+  border-radius: var(--radius);
 }
 
 .hero img,
@@ -908,21 +918,31 @@ picture {
   border-radius: var(--radius);
 }
 
-.hero figcaption {
-  margin-top: 0.45rem;
-}
-
-.hero-credit,
+/* Credit sits on the photo. 0.85 white over black is about #d9d9d9.
+   Ink on that strip is 10.8:1. The source link is 5.6:1. */
 .hero figcaption,
 .event-photo figcaption,
 .weekend-pick figcaption {
-  color: var(--muted);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 0.28rem 0.6rem;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--ink);
   font-size: 0.75rem;
   line-height: 1.4;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
 }
 
 .hero-credit {
   margin: 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .hero figcaption .source::before,
@@ -957,8 +977,6 @@ picture {
 
 .city-home .prose h2 {
   margin: 0;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--ink);
 }
 
 .city-home .prose .list-updated {
@@ -975,8 +993,6 @@ picture {
   display: inline-block;
   max-width: 100%;
   margin: 0.3rem 0 0.1rem;
-  padding-bottom: 0.06rem;
-  border-bottom: 2px solid var(--gold-bright);
   color: var(--gold);
   font-size: 0.95rem;
   font-weight: 600;
@@ -993,14 +1009,17 @@ picture {
 
 .event-card {
   margin: 0;
-  padding: 0.95rem 0 1rem;
+  padding: 0;
   background: transparent;
   color: var(--text);
   border: 0;
-  border-bottom: 1px solid var(--rule);
   border-radius: 0;
   box-shadow: none;
   overflow-wrap: break-word;
+}
+
+.city-home .event-card + .event-card {
+  margin-top: 1.15rem;
 }
 
 .city-home .event-card h3 {
@@ -1082,6 +1101,7 @@ picture {
 
 .season-banner {
   height: 2.75rem;
+  margin: 0.875rem 0;
   overflow: hidden;
   background: var(--season-bg);
   color: var(--season-ink);
@@ -1141,7 +1161,11 @@ picture {
 }
 
 .hub-event {
-  margin: 0 0 1.1rem;
+  margin: 0 0 2rem;
+}
+
+.hub-section .hub-event:last-child {
+  margin-bottom: 0.35rem;
 }
 
 .hub-event h3 {
@@ -1174,14 +1198,19 @@ picture {
   .season-banner-cta {
     color: #145c40;
   }
+
+  .hero figcaption,
+  .event-photo figcaption,
+  .weekend-pick figcaption {
+    background: #fff;
+    color: var(--ink);
+  }
 }
 
 .event-photo {
+  position: relative;
   margin: 0.65rem 0 0.85rem;
-}
-
-.event-photo figcaption {
-  margin-top: 0.35rem;
+  border-radius: var(--radius);
 }
 
 .issue-share {

@@ -15,7 +15,7 @@ hook: Thursday is the farmers market and family story time. Friday opens Novelty
 <p class="event-when">Thu Oct 1 · 10:30–11:30 a.m.</p>
 <p class="event-place">Duvall Library, 15508 Main Street NE</p>
 
-Stories, music, and movement for all ages with an adult, then a short play time. No registration. The same hour is also on Thu Oct 8, Thu Oct 15, Thu Oct 22, and Thu Oct 29. The farmers market is later that afternoon.
+Stories, music, and movement for all ages with an adult, then a short play time. No registration. The same hour is also on Thu Oct 8, Thu Oct 15, Thu Oct 22, and Thu Oct 29.
 
 [Family Story Time](https://kcls.bibliocommons.com/v2/events/6a847411b20478002993aafd)
 
@@ -23,7 +23,7 @@ Stories, music, and movement for all ages with an adult, then a short play time.
 <p class="event-when">Thu Oct 1 · 3:00–7:00 p.m.</p>
 <p class="event-place">Taylor Landing, 16201 Main Street NE</p>
 
-Produce, handmade goods, and a playground under the trees by the river. The market says it runs every Thursday from May through mid-October, so later Thursdays in that stretch keep the same hours. The city calendar's ballfield holds are reservations, not this market.
+Produce, handmade goods, and a playground under the trees by the river. It runs every Thursday from May through mid-October, so later Thursdays in that stretch keep the same hours.
 
 [Farmers market](https://duvallfarmersmarket.org/)
 
@@ -71,7 +71,7 @@ Craft supplies for ages 6 and older. Make something to take home or try a materi
 <p class="event-when">Thu Oct 15 · 4:30–5:30 p.m.</p>
 <p class="event-place">Duvall Library, 15508 Main Street NE</p>
 
-Open building for all ages. The bricks are the library's. Stay for the hour or a few minutes. No registration. Family story time that morning is a separate listing.
+Open building for all ages. The bricks are the library's. Stay for the hour or a few minutes. No registration.
 
 [LEGO Block Party](https://kcls.bibliocommons.com/v2/events/6a8dfc9b29a7dd0d674697b3)
 

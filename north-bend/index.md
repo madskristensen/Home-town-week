@@ -23,7 +23,7 @@ Librarian Jenifer reads, sings, and moves with children in pajamas. Bring a stuf
 <p class="event-when">Sat Oct 3 · 9:00 a.m.</p>
 <p class="event-place">Several North Bend sites, including the Mt. Si Senior Center</p>
 
-The city's community calendar lists this volunteer morning and names the Mt. Si Senior Center among the North Bend stops. It does not print an end time. LEGO Builders at the library is the same afternoon, 3:00 to 4:30 p.m., so the volunteer block is the morning half.
+A volunteer morning with North Bend stops that include the Mt. Si Senior Center.
 
 [Community events calendar](https://www.northbendwa.gov/common/modules/iCalendar/iCalendar.aspx?catID=21&feed=calendar)
 
@@ -55,7 +55,7 @@ The Northwest Railway Museum boards this fall ride at the North Bend Depot, behi
 <p class="event-when">Sat Oct 17 · 9:00 a.m.–1:00 p.m.</p>
 <p class="event-place">Meadowbrook Farm Interpretive Center</p>
 
-Oaktoberfest is free and independently organized, not a city festival. It includes children's activities, native plant sales, and booths about local trees. A tree tour starts at 1:00 p.m. At 10:00 a.m. Mayor Miller opens a separate Arbor Day planting on the same grounds. An Eagle Scout candidate leads the planting at 10:30. Children under 13 need an adult. Living Snoqualmie reported the plan on Sep 25 and said the information came from the city.
+Oaktoberfest is free and independently organized, not a city festival. It includes children's activities, native plant sales, and booths about local trees. A tree tour starts at 1:00 p.m. Children under 13 need an adult.
 
 [Valley Record](https://livingsnoqualmie.com/arbor-day-planting-and-oaktoberfest-set-for-october-17-in-north-bend/)
 
@@ -63,7 +63,7 @@ Oaktoberfest is free and independently organized, not a city festival. It includ
 <p class="event-when">Sat Oct 24 · 1:00–3:00 p.m.</p>
 <p class="event-place">North Bend Library, 115 E 4th Street</p>
 
-Casual chess with teacher Lance. All levels. Boards are provided, and the Friends of the library bring snacks. The Si View party and downtown trick-or-treat are the same afternoon, at other addresses.
+Casual chess with teacher Lance. All levels. Boards are provided, and the Friends of the library bring snacks.
 
 [Chess Club](https://kcls.bibliocommons.com/v2/events/6955b919491b809c6f104708)
 

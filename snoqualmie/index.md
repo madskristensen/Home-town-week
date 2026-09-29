@@ -61,7 +61,7 @@ A morning of planting in the city's climate-adaptation demonstration forest. It 
    credit="Photo: Steven Pavlov, CC BY-SA 4.0"
    source="https://commons.wikimedia.org/wiki/File:2025-05-24,_Train_Shed_Exhibit_Hall,_Northwest_Railway_Museum_(Snoqualmie,_Washington),_142029.jpg" %}
 
-The museum waives Train Shed admission every Wednesday through December 16. The Railway History Campus, where the shed sits, is open 11:00 a.m. to 4:00 p.m. that day. Later Wednesdays in this stretch are October 14, 21, and 28, and November 4. The Snoqualmie Depot itself is a separate stop and keeps its usual hours. Halloween Train tickets are a different purchase.
+The museum waives Train Shed admission every Wednesday through December 16. The Railway History Campus, where the shed sits, is open 11:00 a.m. to 4:00 p.m. that day. Later Wednesdays in this stretch are October 14, 21, and 28, and November 4.
 
 [Upcoming events](https://trainmuseum.org/upcoming-events/)
 
@@ -69,7 +69,7 @@ The museum waives Train Shed admission every Wednesday through December 16. The 
 <p class="event-when">Fri Oct 9 and Sat Oct 10 · 7:00 p.m.</p>
 <p class="event-place">Mount Si High School Performing Arts Center, 8651 Meadowbrook Way SE</p>
 
-Student one-act plays. General admission is $10, at the door or on the drama club site. The audience votes, and awards follow the Saturday show. The Living Snoqualmie calendar widget lists a 7:00 a.m. start. The event page says 7:00 p.m. Use 7:00 p.m. The page does not print an end time.
+Student one-act plays. General admission is $10, at the door or on the drama club site. The audience votes, and awards follow the Saturday show. The show starts at 7:00 p.m.
 
 [Dramafest](https://livingsnoqualmie.com/event/mt-si-high-school-dramafest-26/)
 
@@ -85,7 +85,7 @@ An open build for all ages. Bricks and other construction toys are on the tables
 <p class="event-when">Sat Oct 10 and Sun Oct 11, then weekends Oct 17–18, Oct 24–25, and Oct 31–Nov 1</p>
 <p class="event-place">Snoqualmie Depot, 38625 SE King Street</p>
 
-The Northwest Railway Museum runs a family ride from the Snoqualmie Depot, with another boarding point in North Bend. Coaches are dressed for fall. At the stop by the Train Shed there is cider pressing, apple coring, crafts, and music. Costumes are welcome if you can manage the steps. Tickets are required for ages 2 and up. Departures from Snoqualmie start at 11:00 a.m. and run every two hours. The museum's wine train is a separate, 21-and-over trip.
+The Northwest Railway Museum runs a family ride from the Snoqualmie Depot, with another boarding point in North Bend. Coaches are dressed for fall. At the stop by the Train Shed there is cider pressing, apple coring, crafts, and music. Costumes are welcome if you can manage the steps. Tickets are required for ages 2 and up. Departures from Snoqualmie start at 11:00 a.m. and run every two hours.
 
 [Halloween Train](https://trainmuseum.org/upcoming-events/halloween/)
 
@@ -117,7 +117,7 @@ Two clue trails, one for children and one for teens and adults. Finish the map a
 <p class="event-when">Wed Oct 28 · 5:00–6:00 p.m.</p>
 <p class="event-place">Fall City Library, 33415 SE 42nd Place</p>
 
-Urban farmer Lisa Taylor leads a music-and-movement hour about the slimy workers in an organic garden: slugs, snails, and red worms. It is at the Fall City branch, listed here because Fall City has no separate page.
+Urban farmer Lisa Taylor leads a music-and-movement hour about the slimy workers in an organic garden: slugs, snails, and red worms. It is at the Fall City branch.
 
 [Garden Super Heroes](https://kcls.bibliocommons.com/v2/events/6ab1c146ab7a8e0037c37bb4)
 

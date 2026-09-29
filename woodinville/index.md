@@ -8,21 +8,21 @@ image: /assets/images/woodinville/cottage-lake.webp
 image_alt: A playground and a covered picnic shelter beside Cottage Lake at Cottage Lake Park in Woodinville.
 image_credit: 'Photo: Steven Pavlov, CC BY-SA 4.0'
 image_source_url: https://commons.wikimedia.org/wiki/File:2025-03-05,_Cottage_Lake_Park_(Woodinville,_Washington),_071019.jpg
-hook: Saturday is a whipped-soap workshop at the library. The Game's Afoot opens at the repertory theatre, and that page does not state a rating. Storytime is Thursday and Friday next week. The farmers market does not come back in October.
+hook: Saturday is a whipped-soap workshop at the library. The Game's Afoot opens at the repertory theatre. Storytime is Thursday and Friday next week.
 ---
 
 ### The Game's Afoot
 <p class="event-when">Oct 2 through Oct 25 · Time not posted</p>
 <p class="event-place">Woodinville Repertory Theatre, 14300 NE 145th St, Suite 100</p>
 
-Ken Ludwig's mystery-comedy, directed by Rael Esteves. Broadway star William Gillette, famous for playing Sherlock Holmes, hosts a weekend that turns into a murder hunt after a guest is stabbed. The theatre page does not state a rating. A killing is part of the plot. Treat it as a mystery for older kids and adults. The show page does not print performance times or a ticket price.  
+Ken Ludwig's mystery-comedy, directed by Rael Esteves. Broadway star William Gillette, famous for playing Sherlock Holmes, hosts a weekend that turns into a murder hunt after a guest is stabbed. A killing is part of the plot. Treat it as a mystery for older kids and adults.  
 [The Game's Afoot](https://www.woodinvillerep.org/the-games-afoot/)
 
 ### Whipped Butter Soap Workshop
 <p class="event-when">Sat Oct 3 · 1:00–3:00 p.m.</p>
 <p class="event-place">Woodinville Library, 17105 Avondale Road NE</p>
 
-Lonnie Craft & Co. leads a baking-inspired workshop. You leave with whipped butter soap that looks like frosting, and you are asked to bring your own mug, cup, or small bowl to use as the container. The listing is filed for adults. It does not state a children's age, and the description does not add a registration line.
+Lonnie Craft & Co. leads a baking-inspired workshop. You leave with whipped butter soap that looks like frosting, and you are asked to bring your own mug, cup, or small bowl to use as the container. For adults.
 
 Saturday hours are 11:00 a.m.–6:00 p.m.
 
@@ -32,7 +32,7 @@ Saturday hours are 11:00 a.m.–6:00 p.m.
 <p class="event-when">Sun Oct 4 · 1:00–4:00 p.m.</p>
 <p class="event-place">14121 NE 171st St</p>
 
-The heritage society opens the museum on the first Sunday of the month, 1:00 to 4:00 p.m., from September through May. Admission is free. October 4 is that Sunday. A history talk, Cows and Carnations, is a separate afternoon on October 17 at a different address.
+The heritage society opens the museum on the first Sunday of the month, 1:00 to 4:00 p.m., from September through May. Admission is free. October 4 is that Sunday.
 
 [Events and programs](https://woodinvilleheritage.org/events-programs/)
 
@@ -40,7 +40,7 @@ The heritage society opens the museum on the first Sunday of the month, 1:00 to 
 <p class="event-when">Tue Oct 6 · 12:30–2:00 p.m.</p>
 <p class="event-place">Woodinville Library</p>
 
-Friends of the Woodinville Library sponsor a paper-flower craft. Supplies are provided. Please register for the craft. The same listing adds a Friends general meeting from 2:00 to 3:00 p.m. That meeting does not require registration. The event's end field stops at 2:00 p.m., which is the craft. The meeting is the extra hour in the description.
+Friends of the Woodinville Library sponsor a paper-flower craft. Supplies are provided. Please register for the craft. A Friends general meeting follows from 2:00 to 3:00 p.m. and does not require registration.
 
 [Paper Flower Craft](https://kcls.bibliocommons.com/events/6a85e38469166f088b934c79)
 
@@ -72,9 +72,7 @@ Stories, music, movement, and rhymes. Stay to play after. All ages with an adult
 <p class="event-when">Sat Oct 10 · 10:00 a.m.–3:00 p.m.</p>
 <p class="event-place">21 Acres, 13701 NE 171st St</p>
 
-Free, and posted as family-friendly. The Farm Market patio has artisan and farmer vendors, live music, food, apple pressing, and pumpkins, including a guess-the-weight for the giant ones. 21 Acres and the Sammamish Valley Grange are the hosts. A guided tour of the Grange Heritage Garden is part of the invitation. Parking on site is limited. The page asks you to carpool, bike, take the bus, or park in the neighborhood and walk.
-
-The same morning, 10:00 a.m.–12:30 p.m., is a Farm Stewardship volunteer work party. It overlaps the first half of Harvest Fest. The events list also has that work party on Sat Oct 3 and Sat Oct 17, same hours.
+Free and family-friendly. The Farm Market patio has artisan and farmer vendors, live music, food, apple pressing, and pumpkins, including a guess-the-weight for the giant ones. 21 Acres and the Sammamish Valley Grange are the hosts. A guided tour of the Grange Heritage Garden is part of the day. Parking on site is limited. Carpool, bike, take the bus, or park in the neighborhood and walk.
 
 [Harvest Fest](https://21acres.org/event/sammamish-valley-harvest-fest/)
 
@@ -103,6 +101,6 @@ Stories, music, movement, and rhymes. Stay to play after. All ages with an adult
 <p class="event-when">Sat Oct 17 · 11:00 a.m.–12:30 p.m.</p>
 <p class="event-place">Hollywood Schoolhouse at Maryhill Winery</p>
 
-A free talk from the Woodinville Heritage Society on the Stimson family and Hollywood Farm, the agricultural estate Frederick Stimson built in the Sammamish Valley. The listing does not print a street number. It is a history program, not a wine tasting. The museum's open Sunday was October 4, at the DeYoung House, not at this venue.
+A free talk from the Woodinville Heritage Society on the Stimson family and Hollywood Farm, the agricultural estate Frederick Stimson built in the Sammamish Valley. It is a history program, not a wine tasting.
 
 [Cows and Carnations](https://woodinvilleheritage.org/events-programs/)

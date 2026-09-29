@@ -15,7 +15,7 @@ hook: Wednesday night is pajama story time. Saturday is the farmers market and t
 <p class="event-when">Tue Sep 29 · 5:00–7:00 p.m.</p>
 <p class="event-place">Maple Valley Library, 21844 SE 248th Street</p>
 
-Drop-in homework help for grades K–12. The branch calendar also lists this drop-in on Wed Sep 30, Tue Oct 6, and Wed Oct 7, same hours.
+Drop-in homework help for grades K–12. Also Wed Sep 30, Tue Oct 6, and Wed Oct 7, same hours.
 
 [Tutors](https://kcls.bibliocommons.com/events/6a7a362488e9bf280036f381)
 
@@ -31,7 +31,7 @@ The Maple Valley Creative Arts Council opens its fall members' art show. Member 
 <p class="event-when">Wed Sep 30 · 7:00–7:30 p.m.</p>
 <p class="event-place">Maple Valley Library, 21844 SE 248th Street</p>
 
-Librarian Sharon reads for newborns through age 7, with an adult. Bring a stuffed animal or a blanket. Registration is not required. The same hour is also on the calendar for Wed Oct 7. The art reception that evening is at the Creative Arts Center, not the library.
+Librarian Sharon reads for newborns through age 7, with an adult. Bring a stuffed animal or a blanket. Registration is not required. The same hour is also on Wed Oct 7.
 
 [Pajama Story Time](https://kcls.bibliocommons.com/events/6a5a99914523092f0030cce6)
 
@@ -39,7 +39,7 @@ Librarian Sharon reads for newborns through age 7, with an adult. Bring a stuffe
 <p class="event-when">Thu Oct 1 · 10:30–11:00 a.m.</p>
 <p class="event-place">Maple Valley Library, 21844 SE 248th Street</p>
 
-Stories, music, movement, and rhymes for ages 3–6. Younger and older siblings are welcome. Stay for play after. Registration is not required. The same hour is also on the calendar for Thu Oct 8.
+Stories, music, movement, and rhymes for ages 3–6. Younger and older siblings are welcome. Stay for play after. Registration is not required. The same hour is also on Thu Oct 8.
 
 [Family Story Time](https://kcls.bibliocommons.com/events/6a5a998f0e562e28009a98ef)
 
@@ -47,7 +47,7 @@ Stories, music, movement, and rhymes for ages 3–6. Younger and older siblings 
 <p class="event-when">Sat Oct 3 · 9:00 a.m.–2:00 p.m.</p>
 <p class="event-place">Legacy Site, 25719 Maple Valley Black Diamond Road SE</p>
 
-Saturdays from May 2 through Oct 31, 9:00 a.m.–2:00 p.m. Dogs on a leash are welcome. The youth short play festival is the same afternoon, at a different address.
+Saturdays from May 2 through Oct 31, 9:00 a.m.–2:00 p.m. Dogs on a leash are welcome.
 
 [Maple Valley Farmers Market](https://www.maplevalleyfarmersmarket.com/)
 
@@ -63,7 +63,7 @@ One performance of short plays by local youth playwrights, with local actors. Do
 <p class="event-when">Mon Oct 5 · 10:30–11:15 a.m.</p>
 <p class="event-place">Maple Valley Library, 21844 SE 248th Street</p>
 
-A story and a craft for ages 3 to 5 with an adult. Registration is required. Count only the children who will do the craft. The event page says the location is Maple Valley. The description says the hour is sponsored by the Friends of the Kent Libraries. Confirm the branch when you register.
+A story and a craft for ages 3 to 5 with an adult. Registration is required. Count only the children who will do the craft.
 
 [Crafts for 3s, 4s and 5s](https://kcls.bibliocommons.com/events/6a80de593b6c71003e591fce)
 
@@ -79,7 +79,7 @@ A writing hour for middle and high school. Play writing games, and share work if
 <p class="event-when">Thu Oct 8 · 7:00 p.m.</p>
 <p class="event-place">Maple Valley Creative Arts Center, 23220 Maple Valley Highway SE, Suite 15</p>
 
-The Creative Arts Council program page lists this as the second Thursday of the month, Oct 8 at 7:00 p.m. All ages, on stage or in the audience. The page does not print an end time.
+The second Thursday of the month, Oct 8 at 7:00 p.m. All ages, on stage or in the audience.
 
 [JC's Improv Night](https://mvcac.clubexpress.com/content.aspx?page_id=22&club_id=181069&module_id=711716)
 
@@ -87,7 +87,7 @@ The Creative Arts Council program page lists this as the second Thursday of the 
 <p class="event-when">Sat Oct 10 · 9:00 a.m.–2:00 p.m.</p>
 <p class="event-place">Legacy Site, 25719 Maple Valley Black Diamond Road SE</p>
 
-The same Saturday hours. The season page runs through Oct 31, so Oct 17, Oct 24, and Oct 31 are still on the calendar.
+The same Saturday hours through Oct 31, including Oct 17, Oct 24, and Oct 31.
 
 [Maple Valley Farmers Market](https://www.maplevalleyfarmersmarket.com/)
 
@@ -117,6 +117,6 @@ A mile-long family fun run through the park, with playful obstacles and zombie a
    credit="Photo: Roc0ast3r, CC0"
    source="https://commons.wikimedia.org/wiki/File:Lake_Wilderness_Arboretum_in_Maple_Valley,_WA_(2024)_-_12.jpg" %}
 
-Librarian Sharon reads the Story Walk book outdoors, then families can stay and play in the Children's Forest. Meet at the arboretum information booth at 10:25 a.m. Dress for the weather. The library cancels for high winds, snow, or poor air quality. Registration is not required. The farmers market is open the same morning at the Legacy Site, and the Zombie Dash waves start earlier at Lake Wilderness Park.
+Librarian Sharon reads the Story Walk book outdoors, then families can stay and play in the Children's Forest. Meet at the arboretum information booth at 10:25 a.m. Dress for the weather. The library cancels for high winds, snow, or poor air quality. Registration is not required.
 
 [Story Walk](https://kcls.bibliocommons.com/events/69557907111b9da65ca9d7fa)

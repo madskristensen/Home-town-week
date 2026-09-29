@@ -15,7 +15,7 @@ hook: Monday morning is Mandarin story time. Saturday afternoon is a codebreakin
 <p class="event-when">Wed Sep 30 · 4:00–6:00 p.m.</p>
 <p class="event-place">Sammamish Library, 825 228th Ave SE</p>
 
-Volunteers pair students by reading level and practice reading out loud, using ebooks on an iPad. The listing focuses on grades K–8, and on English language learners in grades K–12. Registration is not required. Tech Help is the same hours, in a different room if the branch is running both.
+Volunteers pair students by reading level and practice reading out loud, using ebooks on an iPad. For grades K–8, and for English language learners in grades K–12. Registration is not required.
 
 [Reading Buddies](https://kcls.bibliocommons.com/events/6aa0645e2f780f1bf01c79ac)
 
@@ -123,6 +123,6 @@ A haunted walk, a bounce house, and carnival games. The Y describes these branch
    credit="Photo: Johnmoffatt2000, CC BY-SA 4.0"
    source="https://commons.wikimedia.org/wiki/File:Sammamish_City_Hall2.jpg" %}
 
-A free city party. There is a scavenger hunt with a prize, an animal encounter, and trick-or-treat at city booths and trunks, with allergy-friendly candy at every other stop. The library hosts a craft inside. Food vendors include The Cheese Pit. Costumes are welcome. The Y festival the Saturday before is a separate address on 228th.
+A free city party. There is a scavenger hunt with a prize, an animal encounter, and trick-or-treat at city booths and trunks, with allergy-friendly candy at every other stop. The library hosts a craft inside. Food vendors include The Cheese Pit. Costumes are welcome.
 
 [Pumpkins on the Plaza](https://www.sammamish.us/news/events/events/pumpkins-on-the-plaza/2026-pumpkins-on-the-plaza/)

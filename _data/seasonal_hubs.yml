@@ -84,34 +84,6 @@ hubs:
       link: "#145c40"
       svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#8a5a22" d="M8.2 11.2c0-2.2 1.5-3.6 3.8-3.6s3.8 1.4 3.8 3.6c0 3.3-1.6 6.2-3.8 6.2s-3.8-2.9-3.8-6.2z"/><path fill="#6b4e0e" d="M11.2 8.2h1.6v8.6h-1.6z"/><path fill="#1e4636" d="M12 4.6c.3 1 .2 1.8-.2 2.4 1.2-.2 2-.8 2.2-1.8-.8-.5-1.5-.7-2-.6z"/><path fill="#1e4636" d="M15.6 6.4c.9.7.8 1.6 0 2.2-.8-.5-1.3-1.1-1.4-1.8.4-.3.9-.4 1.4-.4z"/></svg>'
 
-  - id: salmon
-    path: /salmon/
-    title: Salmon season for kids on the Eastside
-    banner_title: Salmon season
-    hook: Festivals, parades, and salmon watching.
-    link_label: See events
-    footer: true
-    footer_label: Salmon
-    description: Salmon season for kids on the Eastside. Festivals, parades, and creek watching from Sep 1 through Nov 30.
-    llms: Salmon festivals, parades, and creek watching for kids. Separate from the fall page.
-    in_season_intro: Salmon festivals, parades, and creek watching across the Eastside, listed through Nov 30.
-    off_season_intro: The season runs Sep 1 through Nov 30. This page stays up all year.
-    off_season_listed: The season runs Sep 1 through Nov 30. This page stays up all year, and dates already set are listed below.
-    empty: Nothing is listed yet. City pages are where each event is written up, and this page gathers the salmon ones.
-    season:
-      start: "09-01"
-      end: "11-30"
-    sections:
-      - id: salmon
-        title: Salmon watching and festivals
-        tags: [salmon]
-    theme:
-      background: "#f6e7e1"
-      ink: "#1a2822"
-      muted: "#3f5148"
-      link: "#145c40"
-      svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#8d4a3c" d="M2.8 12.2c3.2-2.6 7-3.4 11-2.4 1.8.4 3.2-.2 4.8-1.8-.8 1.8-.6 3.4.6 5.2-1.8-1.2-3.4-1.4-5.2-1-4 .8-7.6.2-11.2 0z"/><circle fill="#1a2822" cx="7" cy="11.3" r="0.7"/></svg>'
-
   - id: christmas
     path: /christmas/
     title: Christmas events for kids on the Eastside

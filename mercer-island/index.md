@@ -37,7 +37,7 @@ A documentary screening and a Q&A with filmmaker Francine Strickwerda. For high 
 <p class="event-when">Thu Oct 1 · 10:30–11:00 a.m.</p>
 <p class="event-place">Mercer Island Library, 4400 88th Ave SE</p>
 
-Stories, music, movement, and rhymes for early literacy. A family program, and people who want to learn Chinese are welcome. KCLS lists the title in Chinese and English.
+Stories, music, movement, and rhymes for early literacy. A family program, in Chinese and English, and people who want to learn Chinese are welcome.
 
 [Mandarin Story Time](https://kcls.bibliocommons.com/v2/events/6a6ba3514523092f0033b54d)
 
@@ -45,7 +45,7 @@ Stories, music, movement, and rhymes for early literacy. A family program, and p
 <p class="event-when">Sun Oct 4 · 10:00 a.m.–2:00 p.m.</p>
 <p class="event-place">7700 SE 32nd St</p>
 
-The city says the 2026 season is May 31 through Oct 11, every Sunday, 10:00 a.m.–2:00 p.m. This is not the last one. Next Sunday is the closer. Family storytime at the library is 11:15 a.m. the same morning, so the first hour of the market comes first.
+The 2026 season is May 31 through Oct 11, every Sunday, 10:00 a.m.–2:00 p.m. This is not the last one. Next Sunday is the closer.
 
 [City page](https://www.mercerisland.gov/community/page/mercer-island-farmers-market-0) · [Market site](https://www.mifarmersmarket.org/)
 
@@ -53,7 +53,7 @@ The city says the 2026 season is May 31 through Oct 11, every Sunday, 10:00 a.m.
 <p class="event-when">Sun Oct 4 · 11:15 a.m.–12:00 p.m.</p>
 <p class="event-place">Mercer Island Library, 4400 88th Ave SE</p>
 
-Stories, music, movement, and rhymes, then play time. Recommended for ages 0 to 5 with an adult. The market is still open until 2:00, so you can go back to the stalls after.
+Stories, music, movement, and rhymes, then play time. Recommended for ages 0 to 5 with an adult.
 
 [Family Story Time](https://kcls.bibliocommons.com/v2/events/6a7e21c1be14820029872dad)
 
@@ -69,7 +69,7 @@ An open building hour. The library supplies the materials and science toys. Ages
 <p class="event-when">Sun Oct 11 · 10:00 a.m.–2:00 p.m.</p>
 <p class="event-place">7700 SE 32nd St</p>
 
-The last Sunday. The city and the market site both end the season on Oct 11. It does not return on Oct 18. Same hours, 10:00 a.m.–2:00 p.m.
+The last Sunday. The season ends Oct 11. Same hours, 10:00 a.m.–2:00 p.m.
 
 [City page](https://www.mercerisland.gov/community/page/mercer-island-farmers-market-0)
 
@@ -77,7 +77,7 @@ The last Sunday. The city and the market site both end the season on Oct 11. It 
 <p class="event-when">Sun Oct 11 · 11:15 a.m.–12:00 p.m.</p>
 <p class="event-place">Mercer Island Library, 4400 88th Ave SE</p>
 
-The same Sunday hour as Oct 4: stories and play time for ages 0 to 5 with an adult. It sits inside the last market morning.
+Stories and play time for ages 0 to 5 with an adult.
 
 [Family Story Time](https://kcls.bibliocommons.com/v2/events/6a7e21c1be14820029872dae)
 

@@ -4,8 +4,10 @@
        alt=include.alt
        loading="lazy"
        sizes="(min-width: 47rem) 44rem, calc(100vw - 3rem)" -%}
+  {%- if include.credit or include.source -%}
   <figcaption>
     {%- if include.credit -%}<span class="credit">{{ include.credit }}</span>{%- endif -%}
     {%- if include.source -%}<a class="source" href="{{ include.source }}" rel="noopener">Source</a>{%- endif -%}
   </figcaption>
+  {%- endif -%}
 </figure>

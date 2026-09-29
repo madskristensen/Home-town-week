@@ -45,7 +45,7 @@ Same shape as Tuesday night: stories, music, and play time after, for newborns t
 <p class="event-when">Sat Oct 3 · all day</p>
 <p class="event-place">Starts at Issaquah Library, 10 W Sunset Way</p>
 
-A self-led walk through Watercress, by Andrea Wang, illustrated by Jason Chin. The story starts at the library and continues through historic downtown. The Downtown Issaquah Association lists the stroll from Sep 5 through Oct 3, so the pages are up on the first morning of Salmon Days. Free. Sponsored by the association and Friends of the Issaquah Library.
+A self-led walk through Watercress, by Andrea Wang, illustrated by Jason Chin. The story starts at the library and continues through historic downtown. The stroll runs from Sep 5 through Oct 3. Free. Sponsored by the association and Friends of the Issaquah Library.
 
 [KCLS event](https://kcls.bibliocommons.com/v2/events/6a80b39d2dac6e00371f4f85) · [Downtown events](https://downtownissaquah.com/events/)
 
@@ -67,7 +67,7 @@ The chamber lists a 10:00 a.m. start. The 2026 theme is "Stars, Stripes & Salmon
    credit="Photo: Chris Light, CC BY-SA 4.0"
    source="https://commons.wikimedia.org/wiki/File:Hatchery_6921.jpg" %}
 
-The 57th festival, hosted by the Greater Issaquah Chamber. The festival information page lists hours as 10:00 a.m.–6:00 p.m. both days. The star stop is the Issaquah Salmon Hatchery at 125 W Sunset Way. A bike valet sits at Rainier Blvd N and NW Dogwood St, staffed with Cascade Bicycle Club. The city's Pickering Barn farmers market page does not list an October Saturday. The downtown fall market starts the following week.
+The 57th festival, hosted by the Greater Issaquah Chamber. Hours are 10:00 a.m.–6:00 p.m. both days. The star stop is the Issaquah Salmon Hatchery at 125 W Sunset Way. A bike valet sits at Rainier Blvd N and NW Dogwood St, staffed with Cascade Bicycle Club.
 
 [Salmon Days](https://www.salmondays.org/sd-2026-festival-information) · [City calendar](https://www.issaquahwa.gov/m/calendar/event/detail/14734)
 
@@ -113,7 +113,7 @@ The next downtown stroll, after Watercress comes down. Apple Pie Picnic, by Alic
    credit="Photo: Visit Issaquah."
    source="https://www.visitissaquahwa.com/event/issaquah-farmers-market/2026-09-26/" %}
 
-Downtown Issaquah Association's fall market, with Ayala Farms. Visit Issaquah lists Saturdays from Oct 10 through Dec 5, 9:00 a.m.–2:00 p.m., and live music 11:00 a.m.–1:00 p.m. The series page lists this Saturday, then Oct 24. Oct 17 is the apple festival on top of the market.
+Downtown Issaquah Association's fall market, with Ayala Farms. Saturdays from Oct 10 through Dec 5, 9:00 a.m.–2:00 p.m., with live music 11:00 a.m.–1:00 p.m. This Saturday, then Oct 24.
 
 [Oct 10 listing](https://www.visitissaquahwa.com/event/fall-farm-fresh-market-2/2026-10-10/)
 
@@ -127,7 +127,7 @@ Downtown Issaquah Association's fall market, with Ayala Farms. Visit Issaquah li
    credit="Photo: Steve Morgan, CC BY-SA 4.0"
    source="https://commons.wikimedia.org/wiki/File:Issaquah_Valley_Trolley_car_519_crossing_Front_St_in_2014.jpg" %}
 
-The 11th annual harvest day, from the Downtown Issaquah Association. Visit Issaquah lists the Farm Fresh Market, the Historically Hip Artisan Market, an apple cider press, scarecrow building, art, photo spots, and live music, 9:00 a.m.–2:00 p.m. at the Historic Shell Station. This is the same morning as the regular fall market. You do not need a second trip for produce. The captioned Ragtime matinee is 2:00 p.m., when the market ends.
+The 11th annual harvest day, from the Downtown Issaquah Association. Farm Fresh Market, the Historically Hip Artisan Market, an apple cider press, scarecrow building, art, photo spots, and live music, 9:00 a.m.–2:00 p.m. at the Historic Shell Station.
 
 [Issaquah Goes Apples](https://www.visitissaquahwa.com/event/issaquah-goes-apples/)
 
@@ -143,6 +143,6 @@ Village Theatre lists a captioned performance at 2:00 p.m. The Issaquah run ends
 <p class="event-when">Sat Oct 24 · 9:00 a.m.–2:00 p.m.</p>
 <p class="event-place">Historic Shell Station, 232 Front St N</p>
 
-The next Saturday after the apple festival. Visit Issaquah's series page still lists it, 9:00 a.m.–2:00 p.m., and the season continues through Dec 5. Live music on the Oct 10 listing is 11:00 a.m.–1:00 p.m.
+9:00 a.m.–2:00 p.m., and the season continues through Dec 5. Live music is 11:00 a.m.–1:00 p.m.
 
 [Fall market series](https://www.visitissaquahwa.com/series/fall-farm-fresh-market-3/)

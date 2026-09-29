@@ -23,7 +23,7 @@ A Tolt Art Studio instructor leads an oil-pastel session for ages 10 to 17. Brin
 <p class="event-when">Fri Oct 2 through Sun Nov 1 · Fri–Sun 10:00 a.m.–6:00 p.m.</p>
 <p class="event-place">Remlinger Farms, 32610 NE 32nd Street</p>
 
-One festival, open Friday through Sunday after the opening weekend. Gates close at 6:00 p.m. The grounds include rides, a pumpkin village, a corn maze included with admission, and u-pick pumpkins. The farm is closed Monday through Thursday. School field-trip Thursdays are a separate booking, not this public weekend.
+One festival, open Friday through Sunday after the opening weekend. Gates close at 6:00 p.m. The grounds include rides, a pumpkin village, a corn maze included with admission, and u-pick pumpkins. The farm is closed Monday through Thursday.
 
 [Fall Harvest Festival](https://remlingerfarms.com/fall-harvest-festival/)
 
@@ -31,7 +31,7 @@ One festival, open Friday through Sunday after the opening weekend. Gates close 
 <p class="event-when">Fri Oct 2 · 10:15–11:00 a.m.</p>
 <p class="event-place">Carnation Library, 4804 Tolt Avenue</p>
 
-Stories, music, and movement for all ages with an adult. Play time is 10:45 to 11:00. The same hour is also on Fri Oct 9, Fri Oct 16, Fri Oct 23, and Fri Oct 30. Remlinger's festival opens that afternoon, at the farm.
+Stories, music, and movement for all ages with an adult. Play time is 10:45 to 11:00. The same hour is also on Fri Oct 9, Fri Oct 16, Fri Oct 23, and Fri Oct 30.
 
 [Family Story Time](https://kcls.bibliocommons.com/v2/events/6a721ddec7e02e3d006dc715)
 
@@ -39,7 +39,7 @@ Stories, music, and movement for all ages with an adult. Play time is 10:45 to 1
 <p class="event-when">Sat Oct 3 · 10:00 a.m.–4:00 p.m.</p>
 <p class="event-place">Oxbow Farm and Conservation Center, 10819 Carnation-Duvall Road NE</p>
 
-Oxbow's fall plant day, also posted on the city events page. Shop native trees, flowers, and shrubs from the nursery, and ask the staff about planting them. The Snoqualmie Valley Record lists the same hours. Oxtober, later in the month, is a separate weekend festival at this address.
+Oxbow's fall plant day. Shop native trees, flowers, and shrubs from the nursery, and ask the staff about planting them.
 
 [City listing](https://www.carnationwa.gov/event/fall-native-plant-festival/)
 
@@ -47,7 +47,7 @@ Oxbow's fall plant day, also posted on the city events page. Shop native trees, 
 <p class="event-when">Sat Oct 3 · 11:00 a.m.–3:00 p.m.</p>
 <p class="event-place">31523 NE 40th St</p>
 
-The Tolt Historical Society opens the house on Saturdays from April through October. There is no charge. Later Saturdays in this stretch are October 10, 17, 24, and 31. It is just off the road to MacDonald Park. Oxbow's plant festival is the same Saturday morning, at a different address on Carnation-Duvall Road.
+The Tolt Historical Society opens the house on Saturdays from April through October. There is no charge. Later Saturdays in this stretch are October 10, 17, 24, and 31. It is just off the road to MacDonald Park.
 
 [Tolt Historical Society](https://tolthistoricalsociety.org/)
 
@@ -71,7 +71,7 @@ Drop-in drawing for ages 9 and older, with donuts. Use a book tutorial or draw o
 <p class="event-when">Sat Oct 10 · 10:00 a.m.–2:00 p.m.</p>
 <p class="event-place">Carnation Farms, 8901 NE Carnation Farm Road</p>
 
-A free planting day with Stewardship Partners along the Snoqualmie River. Volunteers put in native trees and shrubs for salmon habitat. Coffee and a pizza lunch are listed. Wear long pants, a long-sleeve shirt, and boots you can get muddy, and bring rain gear if you have it. Gloves and tools are provided. Hjertoos House is also open that Saturday, 11:00 a.m. to 3:00 p.m., in town.
+A free planting day with Stewardship Partners along the Snoqualmie River. Volunteers put in native trees and shrubs for salmon habitat. Coffee and a pizza lunch are listed. Wear long pants, a long-sleeve shirt, and boots you can get muddy, and bring rain gear if you have it. Gloves and tools are provided.
 
 [Habitat Restoration Day](https://livingsnoqualmie.com/event/carnation-farms-habitat-restoration-day-with-stewardship-partners/)
 
@@ -79,7 +79,7 @@ A free planting day with Stewardship Partners along the Snoqualmie River. Volunt
 <p class="event-when">Sat Oct 17 and Sun Oct 18, then Sat Oct 24 and Sun Oct 25 · 10:00 a.m.–4:00 p.m.</p>
 <p class="event-place">Oxbow Farm and Conservation Center, 10819 Carnation-Duvall Road NE</p>
 
-Oxbow's fall festival: pumpkins, a kids' farm tour, outdoor play, and music. Admission is $6 in advance and $7 at the door. Ages 0 to 3 are free. A ticket covers parking, activities, and tours. Pumpkins, food, and a few workshops cost extra. Food trucks stay until about 3:30 p.m. This is not the Oct 3 plant sale.
+Oxbow's fall festival: pumpkins, a kids' farm tour, outdoor play, and music. Admission is $6 in advance and $7 at the door. Ages 0 to 3 are free. A ticket covers parking, activities, and tours. Pumpkins, food, and a few workshops cost extra. Food trucks stay until about 3:30 p.m.
 
 [Oxtober](https://www.oxbow.org/visit/events/oxtober/)
 
@@ -87,7 +87,7 @@ Oxbow's fall festival: pumpkins, a kids' farm tour, outdoor play, and music. Adm
 <p class="event-when">Sat Oct 17 · 10:00 a.m.–3:00 p.m.</p>
 <p class="event-place">Carnation Farms, 28901 NE Carnation Farm Road</p>
 
-The farm's market in the historic Hippodrome. Hot food from the culinary team, a history walk with the archivist, a fall photo spot, and artisan vendors. The farm calls it a day for the whole family and asks visitors to leave pets at home. The same Saturday is Oxtober, at a different address.
+The farm's market in the historic Hippodrome. Hot food from the culinary team, a history walk with the archivist, a fall photo spot, and artisan vendors. The farm calls it a day for the whole family and asks visitors to leave pets at home.
 
 [Harvest Market](https://events.carnationfarms.org/event/2026-harvest-market/)
 
