@@ -14,6 +14,10 @@ image: /assets/images/og-home.png
 image_alt: Eastside Family Calendar map of 15 Eastside towns. Family events, updated daily.
 repository: madskristensen/Home-town-week
 
+# Optional Google Search Console token. Leave this empty until Search
+# Console gives you a value. An empty value does not print a meta tag.
+google_site_verification: ""
+
 author:
   name: Mads Kristensen
   url: https://eastsidecalendar.com/about/

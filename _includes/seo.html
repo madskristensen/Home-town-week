@@ -48,21 +48,25 @@
 {%- endif -%}
 {%- assign seo_title = page.title | default: site.title -%}
 {%- if page.layout == "city" and city -%}
-{%- capture seo_title -%}Family events in {{ city.name }} | {{ site.title }}{%- endcapture -%}
-{%- assign seo_title = seo_title | strip -%}
+{%- capture head_title -%}Things to do with kids in {{ city.name }} | {{ site.title }}{%- endcapture -%}
+{%- elsif page.layout == "home" -%}
+{%- capture head_title -%}Things to do with kids on the Eastside | {{ site.title }}{%- endcapture -%}
+{%- elsif seo_title == site.title -%}
+{%- capture head_title -%}{{ site.title }} | {{ site.tagline }}{%- endcapture -%}
+{%- else -%}
+{%- capture head_title -%}{{ seo_title }} | {{ site.title }}{%- endcapture -%}
 {%- endif -%}
+{%- assign head_title = head_title | strip -%}
 {%- assign canonical_url = page.url | absolute_url -%}
 {%- assign seo_image = seo_image_path | absolute_url -%}
 {%- assign org_id = "/" | absolute_url | append: "#organization" -%}
 {%- assign site_id = "/" | absolute_url | append: "#website" -%}
-{%- if page.layout == "city" and city -%}
-<title>{{ seo_title | escape }}</title>
-{%- elsif seo_title == site.title -%}
-<title>{{ site.title }} | {{ site.tagline }}</title>
-{%- else -%}
-<title>{{ seo_title | escape }} | {{ site.title }}</title>
-{%- endif %}
+<title>{{ head_title | escape }}</title>
 <meta name="description" content="{{ seo_description | escape }}">
+{%- assign google_verify = site.google_site_verification | append: "" -%}
+{%- if google_verify.size > 0 %}
+<meta name="google-site-verification" content="{{ google_verify | escape }}">
+{%- endif %}
 <meta name="author" content="{{ site.author.name | escape }}">
 <meta name="generator" content="Jekyll v{{ jekyll.version }}">
 <meta name="theme-color" content="#f4efe6">
@@ -75,7 +79,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="{{ site.title | escape }}">
 <meta property="og:url" content="{{ canonical_url }}">
-<meta property="og:title" content="{{ seo_title | escape }}">
+<meta property="og:title" content="{{ head_title | escape }}">
 <meta property="og:description" content="{{ seo_description | escape }}">
 <meta property="og:image" content="{{ seo_image }}">
 <meta property="og:image:width" content="{{ seo_image_width }}">
@@ -89,7 +93,7 @@
 {%- if site.twitter.username %}
 <meta name="twitter:site" content="@{{ site.twitter.username | remove: '@' }}">
 {%- endif %}
-<meta name="twitter:title" content="{{ seo_title | escape }}">
+<meta name="twitter:title" content="{{ head_title | escape }}">
 <meta name="twitter:description" content="{{ seo_description | escape }}">
 <meta name="twitter:image" content="{{ seo_image }}">
 {%- if seo_image_alt %}
@@ -102,18 +106,23 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  {%- if page.layout == "city" %}
+  {%- if page.layout == "city" or page.layout == "seasonal" %}
   "@type": "CollectionPage",
-  "name": {{ seo_title | jsonify }},
+  "name": {{ head_title | jsonify }},
   "url": {{ canonical_url | jsonify }},
   "isPartOf": {
     "@id": {{ site_id | jsonify }}
   },
   {%- assign visible_events = page.visible_events -%}
   {%- assign visible_count = visible_events | size -%}
+  {%- if page.layout == "city" and city -%}
+  {%- capture list_name -%}Upcoming events in {{ city.name }}{%- endcapture -%}
+  {%- else -%}
+  {%- assign list_name = page.title -%}
+  {%- endif -%}
   "mainEntity": {
     "@type": "ItemList",
-    "name": {{ "Upcoming events in " | append: city.name | jsonify }},
+    "name": {{ list_name | strip | jsonify }},
     "itemListOrder": "https://schema.org/ItemListOrderAscending",
     "numberOfItems": {{ visible_count }},
     "itemListElement": [
@@ -158,7 +167,7 @@
   },
   {%- else %}
   "@type": "WebPage",
-  "name": {{ seo_title | jsonify }},
+  "name": {{ head_title | jsonify }},
   "url": {{ canonical_url | jsonify }},
   "isPartOf": {
     "@id": {{ site_id | jsonify }}

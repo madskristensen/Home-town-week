@@ -1,5 +1,5 @@
 ---
 layout: home
 title: Eastside Family Calendar
-description: Upcoming family events on Washington's Eastside.
+description: Upcoming family events and things to do with kids on Washington's Eastside, near Seattle.
 ---

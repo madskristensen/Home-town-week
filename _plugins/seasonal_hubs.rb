@@ -121,7 +121,9 @@ module EastsideCalendar
       text.match?(HEX) ? text : fallback
     end
 
-    def sections_for(hub, cities, data, lights, today)
+    def sections_for(hub, cities, data, lights, today, site_url)
+      return town_sections(hub, cities, data, today, site_url) if hub["group"].to_s == "town"
+
       names = city_names(cities)
       grouped = Hash.new { |hash, key| hash[key] = [] }
       seen = Hash.new { |hash, key| hash[key] = {} }
@@ -131,13 +133,12 @@ module EastsideCalendar
           next unless event.is_a?(Hash)
 
           tags = Array(event["tags"]).map(&:to_s)
+          name = event["name"].to_s.downcase
           Array(hub["sections"]).each do |section|
             next unless section.is_a?(Hash)
+            next unless section_match?(tags, name, section)
 
-            section_tags = Array(section["tags"]).map(&:to_s)
-            next if (tags & section_tags).empty?
-
-            row = event_row(event, city_id, names[city_id])
+            row = event_row(event, city_id, names[city_id], site_url)
             next unless upcoming_row?(row, today)
 
             key = "#{row["city_id"]}|#{row["name"]}|#{row["sort"]}"
@@ -153,7 +154,7 @@ module EastsideCalendar
         light_section = Array(hub["sections"]).find { |section| Array(section["tags"]).map(&:to_s).include?("holiday-lights") }
         if light_section
           Array(lights).each do |row|
-            item = display_row(row, names)
+            item = display_row(row, names, site_url)
             next unless item && upcoming_row?(item, today)
 
             key = "#{item["city_id"]}|#{item["name"]}|#{item["sort"]}"
@@ -173,6 +174,62 @@ module EastsideCalendar
 
         { "id" => section["id"].to_s, "title" => section["title"].to_s, "events" => items }
       end
+    end
+
+    # group: town lists one section per city. An event matches when it has
+    # one of the hub tags or its name contains one of the hub keywords.
+    def town_sections(hub, cities, data, today, site_url)
+      names = city_names(cities)
+      tags = Array(hub["tags"]).map(&:to_s)
+      keywords = phrases(hub["keywords"])
+      sections = []
+      Array(cities).each do |city|
+        next unless city.is_a?(Hash)
+
+        city_id = city["id"].to_s
+        city_name = names[city_id].to_s
+        next if city_id.empty? || city_name.empty?
+
+        seen = {}
+        items = []
+        Array(data["#{city_id}_events"]).each do |event|
+          next unless event.is_a?(Hash)
+          next unless town_match?(event, tags, keywords)
+
+          row = event_row(event, city_id, city_name, site_url)
+          next unless upcoming_row?(row, today)
+
+          key = "#{row["name"]}|#{row["sort"]}"
+          next if seen[key]
+
+          seen[key] = true
+          items << row
+        end
+        next if items.empty?
+
+        items.sort_by! { |item| [item["sort"], item["name"].to_s] }
+        sections << { "id" => city_id, "title" => city_name, "events" => items }
+      end
+      sections
+    end
+
+    def section_match?(tags, name, section)
+      section_tags = Array(section["tags"]).map(&:to_s)
+      return true unless (tags & section_tags).empty?
+
+      phrases(section["keywords"]).any? { |phrase| name.include?(phrase) }
+    end
+
+    def town_match?(event, tags, keywords)
+      event_tags = Array(event["tags"]).map(&:to_s)
+      return true unless (event_tags & tags).empty?
+
+      name = event["name"].to_s.downcase
+      keywords.any? { |phrase| name.include?(phrase) }
+    end
+
+    def phrases(value)
+      Array(value).map { |phrase| phrase.to_s.downcase.strip }.reject(&:empty?)
     end
 
     def banner_choice(hubs, rule, today)
@@ -224,7 +281,7 @@ module EastsideCalendar
       HTML
     end
 
-    def prepare_hub(hub, cities, data, lights, today)
+    def prepare_hub(hub, cities, data, lights, today, site_url)
       return nil unless hub.is_a?(Hash)
 
       id = hub["id"].to_s.strip
@@ -237,7 +294,7 @@ module EastsideCalendar
 
       theme = hub["theme"].is_a?(Hash) ? hub["theme"] : {}
       svg = safe_svg(theme["svg"])
-      sections = sections_for(hub, cities, data, lights, today)
+      sections = sections_for(hub, cities, data, lights, today, site_url)
       label = season_label(start_s, end_s)
       in_season = in_season?(today, start_s, end_s)
       suggest = hub["suggest"].is_a?(Hash) ? hub["suggest"] : {}
@@ -262,6 +319,7 @@ module EastsideCalendar
         "suggest_subject" => suggest["subject"].to_s.strip,
         "suggest_body" => suggest["body"].to_s.strip,
         "sections" => sections,
+        "visible_events" => sections.flat_map { |section| section["events"] },
         "theme" => {
           "background" => hex_color(theme["background"], "#f4efe6"),
           "ink" => hex_color(theme["ink"], "#1a2822"),
@@ -308,13 +366,13 @@ module EastsideCalendar
       names
     end
 
-    def event_row(event, city_id, city_name)
+    def event_row(event, city_id, city_name, site_url)
       start_s = event["start"].to_s
       finish_s = event["end"].to_s
-      row_dates(event["name"], city_name, city_id, event["place"], event["same_as"], start_s, finish_s)
+      row_dates(event["name"], city_name, city_id, event["place"], event["same_as"], start_s, finish_s, site_url)
     end
 
-    def display_row(row, names)
+    def display_row(row, names, site_url)
       return nil unless row.is_a?(Hash)
 
       same = row["same_as"].to_s.strip
@@ -329,22 +387,40 @@ module EastsideCalendar
 
       start_s = row["start"].to_s
       finish_s = row["end"].to_s
-      built = row_dates(name, city_name, city_id, public_area(row["area"] || row["place"]), same, start_s, finish_s)
-      built
+      row_dates(name, city_name, city_id, public_area(row["area"] || row["place"]), same, start_s, finish_s, site_url)
     end
 
-    def row_dates(name, city_name, city_id, place, same, start_s, finish_s)
+    def row_dates(name, city_name, city_id, place, same, start_s, finish_s, site_url)
       start_on = date_only(start_s)
       finish_on = date_only(finish_s) || start_on
+      clean_name = name.to_s.strip
+      place_name, street = EventCalendar.place_parts(place.to_s, city_name)
+      place_name = city_name if place_name.empty?
+      same_clean = same.to_s.strip
+      href = if same_clean.match?(%r{\Ahttps?://\S+\z})
+               same_clean
+             else
+               "#{site_url.to_s.sub(%r{/+\z}, "")}/#{city_id}/"
+             end
+      start_parsed = EventCalendar.parse_when(start_s)
+      finish_parsed = EventCalendar.parse_when(finish_s)
+      schema_finish = EventCalendar.schema_end(start_parsed, finish_parsed)
       {
-        "name" => name.to_s.strip,
+        "name" => clean_name,
         "city" => city_name,
         "city_id" => city_id,
-        "place" => place.to_s.strip,
+        "place" => place_name,
         "when" => when_text(start_s, finish_s),
-        "same_as" => same.to_s.strip,
+        "same_as" => same_clean,
         "sort" => start_on ? start_on.iso8601 : "9999-99-99",
-        "end_on" => finish_on ? finish_on.iso8601 : ""
+        "end_on" => finish_on ? finish_on.iso8601 : "",
+        "url" => href,
+        "description" => "#{clean_name} in #{city_name}.",
+        "startDate" => EventCalendar.format_offset_time(start_parsed).to_s,
+        "endDate" => EventCalendar.format_offset_time(schema_finish).to_s,
+        "street" => street.to_s,
+        "locality" => city_name,
+        "sameAs" => ""
       }
     end
 
@@ -392,8 +468,9 @@ module EastsideCalendar
       config = raw.is_a?(Hash) ? raw : {}
       today = EventCalendar.pacific_today(site.time)
       lights = site.data["holiday_lights"]
+      site_url = site.config["url"].to_s
       prepared = Array(config["hubs"]).filter_map do |hub|
-        SeasonalHubs.prepare_hub(hub, site.data["cities"], site.data, lights, today)
+        SeasonalHubs.prepare_hub(hub, site.data["cities"], site.data, lights, today, site_url)
       end
 
       rule = SeasonalHubs.banner_rule(config)
@@ -432,6 +509,7 @@ module EastsideCalendar
       page.data["description"] = hub["description"]
       page.data["permalink"] = hub["path"]
       page.data["hub_id"] = hub["id"]
+      page.data["visible_events"] = hub["visible_events"]
       page.data["last_modified_at"] = site.time
       page.content = ""
       page

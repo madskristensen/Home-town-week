@@ -1,6 +1,10 @@
 # Seasonal hubs. A new season is a new entry. The banner, page, and
-# theme come from this file. There is no /halloween/ page and no
-# /holiday-lights/ page.
+# theme come from this file. There is no /holiday-lights/ page.
+#
+# group: town makes one section per city. The hub matches an event when
+# the row has one of `tags`, or when the event name contains one of
+# `keywords`. A hub with `sections` groups by those sections instead.
+# Either way, a new season is only a new entry here.
 #
 # Banner: one hub at a time, and only when it is in season and has at
 # least min_events upcoming events from at least min_towns towns.
@@ -10,6 +14,39 @@ banner:
   min_events: 6
   min_towns: 3
 hubs:
+  - id: halloween
+    path: /halloween/
+    title: Halloween events for kids on the Eastside
+    banner_title: Halloween for kids
+    hook: Pumpkin patches, trick-or-treat, and harvest festivals.
+    link_label: See events
+    footer: false
+    description: Halloween events for kids on the Eastside. Pumpkin patches, trick-or-treat, trunk-or-treats, and harvest festivals from Sep 15 through Oct 31.
+    llms: Pumpkin patches, trick-or-treat events, trunk-or-treats, and harvest festivals for kids, grouped by town.
+    in_season_intro: Pumpkin patches, trick-or-treat events, trunk-or-treats, and harvest festivals for kids, listed by town through Oct 31.
+    off_season_intro: The season runs Sep 15 through Oct 31. This page stays up all year.
+    off_season_listed: The season runs Sep 15 through Oct 31. This page stays up all year, and dates already set are listed below.
+    empty: Nothing is listed yet. City pages are where each event is written up, and this page gathers the Halloween ones.
+    group: town
+    tags: [halloween, pumpkin-patch, trunk-or-treat, harvest]
+    keywords:
+      - pumpkin patch
+      - trick-or-treat
+      - trick or treat
+      - trunk-or-treat
+      - trunk or treat
+      - harvest festival
+      - harvest fest
+    season:
+      start: "09-15"
+      end: "10-31"
+    theme:
+      background: "#f4e6cf"
+      ink: "#1a2822"
+      muted: "#3f5148"
+      link: "#145c40"
+      svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#8a5a22" d="M8.2 11.2c0-2.2 1.5-3.6 3.8-3.6s3.8 1.4 3.8 3.6c0 3.3-1.6 6.2-3.8 6.2s-3.8-2.9-3.8-6.2z"/><path fill="#6b4e0e" d="M11.2 8.2h1.6v8.6h-1.6z"/><path fill="#1e4636" d="M12 4.6c.3 1 .2 1.8-.2 2.4 1.2-.2 2-.8 2.2-1.8-.8-.5-1.5-.7-2-.6z"/><path fill="#1e4636" d="M15.6 6.4c.9.7.8 1.6 0 2.2-.8-.5-1.3-1.1-1.4-1.8.4-.3.9-.4 1.4-.4z"/></svg>'
+
   - id: fall
     path: /fall/
     title: Fall and Halloween fun for kids on the Eastside
