@@ -99,6 +99,10 @@ img {
   filter: var(--photo-filter);
 }
 
+picture {
+  display: block;
+}
+
 .skip-link {
   position: absolute;
   left: 0.75rem;
@@ -331,8 +335,7 @@ img {
   font-size: 0.85rem;
 }
 
-.city-name,
-.masthead .hub-name {
+.city-name {
   margin: 0;
   color: var(--ink);
   font-family: var(--serif);
@@ -362,8 +365,7 @@ img {
   line-height: 1.4;
 }
 
-.site-header--city,
-.site-header--state {
+.site-header--city {
   border-bottom: 2px solid var(--ink);
 }
 
@@ -373,10 +375,7 @@ img {
 
 .page,
 .home,
-.city-home,
-.year-page,
-.issue,
-.state-hub {
+.city-home {
   padding-top: 1.35rem;
   padding-bottom: 2.75rem;
 }
@@ -386,13 +385,11 @@ img {
 }
 
 .home-cities h2,
-.cities h2,
 .prose h2 {
   scroll-margin-top: 1rem;
 }
 
 .home-cities h2,
-.cities h2,
 .prose h2 {
   margin: 0;
   font-size: 1.45rem;
@@ -680,105 +677,6 @@ img {
   border: 0;
 }
 
-.cities {
-  display: grid;
-  gap: 2rem;
-  margin-top: 1.85rem;
-}
-
-.cities h2 {
-  margin: 0;
-  padding-bottom: 0.45rem;
-  border-bottom: 1px solid var(--ink);
-}
-
-.cities-intro {
-  margin: 0;
-  font-weight: 600;
-}
-
-.city-card {
-  overflow: visible;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid var(--rule);
-  border-radius: 0;
-  box-shadow: none;
-  padding-bottom: 1.75rem;
-}
-
-.city-card-photo {
-  display: block;
-}
-
-.city-card-photo img {
-  width: 100%;
-  border-radius: var(--radius);
-}
-
-.city-card-body {
-  padding: 0.8rem 0 0;
-}
-
-.city-card h3 {
-  margin: 0;
-  font-size: clamp(1.65rem, 5vw, 2rem);
-  line-height: 1.1;
-}
-
-.city-card h3 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.city-card h3 a:hover,
-.city-card h3 a:focus-visible {
-  text-decoration: underline;
-  text-underline-offset: 0.06em;
-}
-
-.city-card-when {
-  margin: 0.3rem 0 0.35rem;
-  color: var(--gold);
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-.city-card-when a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.city-card-hook {
-  margin: 0.4rem 0 0;
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1.08rem;
-  font-weight: 500;
-  letter-spacing: -0.015em;
-  line-height: 1.4;
-}
-
-.photo-credit {
-  margin-top: 0.65rem;
-  color: var(--muted);
-  font-size: 0.75rem;
-  line-height: 1.4;
-}
-
-.photo-credit a {
-  margin-left: 0.3rem;
-}
-
-.city-card p {
-  margin: 0.4rem 0 0;
-}
-
-.card-secondary {
-  margin: 0.7rem 0 0;
-  font-weight: 600;
-}
-
 .share-button,
 .footer-install {
   touch-action: manipulation;
@@ -842,22 +740,6 @@ img {
 
 .prose a {
   font-weight: 600;
-}
-
-.state-hub .dek {
-  margin: 0;
-  font-family: var(--serif);
-  font-size: 1.22rem;
-  line-height: 1.4;
-  color: var(--ink);
-}
-
-.state-hub .dek p:first-child {
-  margin-top: 0;
-}
-
-.state-hub .dek p:last-child {
-  margin-bottom: 0;
 }
 
 .site-footer {
@@ -999,29 +881,6 @@ img {
   line-height: 1.5;
 }
 
-.city-note,
-.year-link {
-  margin: 1.15rem 0 0;
-}
-
-.year-link {
-  font-weight: 600;
-}
-
-.city-note {
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.week-band {
-  margin-top: 1.75rem;
-}
-
-.week-band h2 {
-  margin: 0 0 0.4rem;
-  font-size: 1.45rem;
-}
-
 .city-home .prose {
   display: flex;
   flex-direction: column;
@@ -1037,66 +896,6 @@ img {
 
 .city-home .prose .list-updated {
   margin: 0;
-}
-
-.featured-title {
-  margin: 0.15rem 0 0;
-  font-family: var(--serif);
-  font-size: 1.35rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.25;
-}
-
-.featured-title a {
-  color: var(--ink);
-  text-decoration: none;
-}
-
-.featured-title a:hover,
-.featured-title a:focus-visible {
-  text-decoration: underline;
-}
-
-.issue-list {
-  margin: 0.35rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.issue-list li {
-  padding: 0.75rem 0;
-  border-top: 1px solid var(--rule);
-}
-
-.issue-list a {
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1.15rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-}
-
-.issue-list a:hover,
-.issue-list a:focus-visible {
-  text-decoration: underline;
-}
-
-.issue-list .meta,
-.week-nav .meta,
-.issue-range {
-  display: block;
-  margin-top: 0.1rem;
-  color: var(--gold);
-  font-family: var(--sans);
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0;
-}
-
-.issue-range {
-  margin: 0 0 0.25rem;
 }
 
 .prose h3 {
@@ -1220,43 +1019,6 @@ img {
 
 .event-photo figcaption {
   margin-top: 0.35rem;
-}
-
-.week-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  margin-top: 1.75rem;
-  padding-top: 0.9rem;
-  border-top: 1px solid var(--rule);
-}
-
-.week-nav a {
-  color: var(--ink);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.week-nav a:hover,
-.week-nav a:focus-visible {
-  text-decoration: underline;
-}
-
-@media (min-width: 40rem) {
-  .week-nav {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1.5rem;
-  }
-
-  .week-nav .next {
-    margin-left: auto;
-    text-align: right;
-  }
-}
-
-.issue h1 {
-  margin-bottom: 0.4rem;
 }
 
 .issue-share {

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module HometownWeek
+module EastsideCalendar
   # Read a same-origin stylesheet so it can be inlined in <head>.
   # A tag (not a {{ }} filter) writes the file straight into the output.
   # Liquid filters are easy to HTML-escape later, and escaped quotes or
@@ -34,4 +34,4 @@ module HometownWeek
   end
 end
 
-Liquid::Template.register_tag("inline_css", HometownWeek::InlineCssTag)
+Liquid::Template.register_tag("inline_css", EastsideCalendar::InlineCssTag)

@@ -4,7 +4,7 @@ require "cgi"
 require "date"
 require "fileutils"
 
-module HometownWeek
+module EastsideCalendar
   # Dated events in {city}_events.yml become static .ics files.
   # Undated events are skipped. Clocks stay in America/Los_Angeles.
   # The city page puts an add-to-calendar icon on the gold date line.
@@ -464,7 +464,7 @@ module HometownWeek
       lines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
-        "PRODID:-//Eastside Family Calendar//hometownweek.com//EN",
+        "PRODID:-//Eastside Family Calendar//eastsidecalendar.com//EN",
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
         "X-WR-TIMEZONE:#{ZONE}"
@@ -716,7 +716,7 @@ module HometownWeek
           blurb = EventCalendar.plain_blurb(heading[:body])
           page_url = event[:same_as] && EventCalendar.http_url?(event[:same_as]) ? event[:same_as] : city_url
           record = event.merge(
-            uid: "#{page.data['city']}-#{slug}@hometownweek.com",
+            uid: "#{page.data['city']}-#{slug}@eastsidecalendar.com",
             url: page_url,
             description: EventCalendar.description_for(event, blurb, city_url),
             when_label: EventCalendar.when_label(event[:start], event[:end])
@@ -781,8 +781,8 @@ end
 Jekyll::Hooks.register :pages, :post_render do |page|
   next unless page.data["layout"] == "city"
 
-  today = HometownWeek::EventCalendar.pacific_today(page.site.time)
-  page.output = HometownWeek::EventCalendar.inject!(
+  today = EastsideCalendar::EventCalendar.pacific_today(page.site.time)
+  page.output = EastsideCalendar::EventCalendar.inject!(
     page.output,
     page.data["calendar_groups"],
     page.data["event_dates"],
@@ -790,7 +790,7 @@ Jekyll::Hooks.register :pages, :post_render do |page|
   )
 end
 
-module HometownWeek
+module EastsideCalendar
   module MailEscape
     def mail_escape(input)
       input.to_s.each_byte.map do |byte|
@@ -807,4 +807,4 @@ module HometownWeek
   end
 end
 
-Liquid::Template.register_filter(HometownWeek::MailEscape)
+Liquid::Template.register_filter(EastsideCalendar::MailEscape)

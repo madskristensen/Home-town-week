@@ -152,6 +152,7 @@
   {%- assign picks_title = "Coming up on the Eastside" -%}
 {%- endif -%}
 {%- assign pick_lines = picked | split: "~" -%}
+{%- assign lcp_assigned = false -%}
 {%- if pick_count > 0 -%}
 <section class="weekend-picks" aria-labelledby="weekend-picks-title">
   <h2 id="weekend-picks-title">{{ picks_title }}</h2>
@@ -202,7 +203,10 @@
     {%- assign photo = "" -%}
     {%- assign photo_credit = "" -%}
     {%- assign photo_alt = "" -%}
-    {%- if chunk contains 'src="' -%}
+    {%- if chunk contains 'data-photo="' -%}
+      {%- assign photo_parts = chunk | split: 'data-photo="' -%}
+      {%- assign photo = photo_parts[1] | split: '"' | first -%}
+    {%- elsif chunk contains 'src="' -%}
       {%- assign photo_parts = chunk | split: 'src="' -%}
       {%- assign photo = photo_parts[1] | split: '"' | first -%}
     {%- endif -%}
@@ -257,7 +261,21 @@
     <li>
       <a class="weekend-pick" href="{{ event_href | relative_url }}"{% if external %} rel="noopener"{% endif %}>
         {%- if photo.size > 0 -%}
-        <img src="{{ photo | relative_url }}" alt="{{ photo_label | escape }}"{% if photo_credit.size > 0 %} title="{{ photo_credit | escape }}"{% endif %} width="800" height="500" loading="lazy" decoding="async">
+        {%- if lcp_assigned -%}
+          {%- assign pick_loading = "lazy" -%}
+          {%- assign pick_priority = "" -%}
+        {%- else -%}
+          {%- assign pick_loading = "eager" -%}
+          {%- assign pick_priority = "high" -%}
+          {%- assign lcp_assigned = true -%}
+        {%- endif -%}
+        {%- include responsive-img.html
+             src=photo
+             alt=photo_label
+             title=photo_credit
+             loading=pick_loading
+             priority=pick_priority
+             sizes="(min-width: 42rem) calc((min(44rem, 100vw - 3rem) - 1.25rem) / 2), calc(100vw - 3rem)" -%}
         {%- endif -%}
         <span class="weekend-town">{{ city.name }}</span>
         <span class="weekend-when">{{ when_label }}</span>

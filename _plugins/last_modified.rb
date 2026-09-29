@@ -4,7 +4,7 @@ require "open3"
 require "pathname"
 require "time"
 
-module HometownWeek
+module EastsideCalendar
   # Sitemap lastmod is when the page changed. jekyll-sitemap prints
   # last_modified_at for pages only when it is set.
   class LastModified < Jekyll::Generator

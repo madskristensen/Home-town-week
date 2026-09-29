@@ -23,13 +23,12 @@
 # stay on the list. Do not crawl Stay Happening, news blogs, a wrong-city
 # AllEvents page, or a library calendar alone.
 #
-# format and feed_url are optional. format is the machine kind: ical, rss,
-# libcal, bibliocommons, allevents, or html. type stays the role label
-# (city_hall, parks, and the rest). feed_url is the machine feed when it
-# was found apart from the browse page. url stays that browse page. The
-# crawl action fetches feed_url, or url when feed_url is absent, and only
-# for ical, rss, libcal, bibliocommons, and allevents. A site-wide blog
-# feed is not marked as rss here.
+# format and feed_url are optional notes for the editor. format is the
+# machine kind: ical, rss, libcal, bibliocommons, allevents, or html.
+# type stays the role label (city_hall, parks, and the rest). feed_url
+# is the machine feed when it was found apart from the browse page.
+# url stays that browse page. Actions does not fetch these. A site-wide
+# blog feed is not marked as rss here.
 #
 # Cadence: Monday is the primary content fill from this list. Update the
 # city page upcoming list and {city}_events.yml. Thursday is the midweek

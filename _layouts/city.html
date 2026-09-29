@@ -11,6 +11,7 @@ layout: default
     {%- include responsive-img.html
          src=page.image
          alt=page.image_alt
+         loading="eager"
          priority="high"
          sizes="(min-width: 47rem) 44rem, calc(100vw - 3rem)" -%}
     {%- if page.image_credit or page.image_source_url -%}

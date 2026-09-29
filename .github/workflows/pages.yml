@@ -35,6 +35,29 @@ jobs:
         id: pages
         uses: actions/configure-pages@v6
 
+      - name: Fingerprint source images
+        id: images
+        run: echo "hash=$(python3 script/render-image-variants.py --fingerprint)" >> "$GITHUB_OUTPUT"
+
+      - name: Restore image variant cache
+        uses: actions/cache@v4
+        with:
+          path: .image-cache
+          key: image-variants-v1-${{ steps.images.outputs.hash }}
+          restore-keys: |
+            image-variants-v1-
+
+      - name: Generate image variants
+        run: |
+          # Encode only on a cache miss. A failed width is omitted from the
+          # manifest and the page keeps the original file. The build continues.
+          if python3 script/render-image-variants.py --check-cache; then
+            python3 script/render-image-variants.py --from-cache
+          else
+            python3 -m pip install --quiet Pillow pillow-avif-plugin
+            python3 script/render-image-variants.py
+          fi
+
       - name: Build with Jekyll
         env:
           JEKYLL_ENV: production

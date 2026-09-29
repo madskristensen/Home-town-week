@@ -1,4 +1,4 @@
-<script data-sw="{{ '/sw.js' | relative_url }}">
+<script type="module" data-sw="{{ '/sw.js' | relative_url }}">
 (function () {
   // Older keys are not written: hw-last-city, hw-last-state, hw-city-visits,
   // hw-shared, and hw-install-dismissed.
@@ -31,24 +31,15 @@
     if (!("serviceWorker" in navigator)) return;
     var node = document.querySelector("script[data-sw]");
     var url = (node && node.getAttribute("data-sw")) || "/sw.js";
-    var hadController = !!navigator.serviceWorker.controller;
-
-    navigator.serviceWorker.register(url, { scope: "/" }).then(function () {
-      if (hadController) return;
-      var warmed = false;
-      function warm() {
-        if (warmed) return;
-        warmed = true;
-        fetch(location.href, { headers: { Accept: "text/html" } }).catch(function () {});
-      }
-      if (navigator.serviceWorker.controller) warm();
-      navigator.serviceWorker.addEventListener("controllerchange", warm);
-    }).catch(function () {});
+    navigator.serviceWorker.register(url, { scope: "/" }).catch(function () {});
   }
 
-  if (document.readyState === "complete") registerServiceWorker();
-  else window.addEventListener("load", registerServiceWorker);
+  window.addEventListener("load", registerServiceWorker);
 
+  // Run after the browser's own layout. A parser script here forced a
+  // reflow of the map, and refetching this page after the worker claimed
+  // added an empty follow-up request for the same document.
+  requestAnimationFrame(function () {
   function pacificDay() {
     try {
       var parts = new Intl.DateTimeFormat("en-US", {
@@ -240,5 +231,6 @@
       storageSet(seenKey, stamp);
     }
   }
+  });
 })();
 </script>

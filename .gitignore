@@ -4,3 +4,21 @@ _site/
 .jekyll-metadata
 .bundle/
 vendor/
+__pycache__/
+*.pyc
+
+# Widths written by the Pages workflow. One source image stays in git.
+.image-cache/
+_data/image_variants.yml
+assets/images/**/*-400.avif
+assets/images/**/*-400.webp
+assets/images/**/*-400.jpg
+assets/images/**/*-800.avif
+assets/images/**/*-800.webp
+assets/images/**/*-800.jpg
+assets/images/**/*-1200.avif
+assets/images/**/*-1200.webp
+assets/images/**/*-1200.jpg
+assets/images/**/*-1600.avif
+assets/images/**/*-1600.webp
+assets/images/**/*-1600.jpg
