@@ -1,15 +1,34 @@
-# Neighborhood holiday light displays that were publicly promoted.
-# Privacy: do not list a private home's street number. A display belongs
-# here only when the resident, a neighborhood group, or a city page has
-# already published it. Put the neighborhood in area, not a house number.
-# same_as is that public page and is required. A row without it is skipped,
-# and a house number in area or place is not printed.
-# Official displays stay on the city event list with the tag holiday-lights.
+# Neighborhood holiday light displays that were already promoted in public.
+# A homeowner's own page, a local news feature, or a city listing qualifies.
+# A private tip does not. The daily content update and the weekly source
+# pass fill this file from mid-November. Leave it empty until a row is verified.
+#
+# Required:
+#   name, city (a city id that has a page), same_as (the public http page)
+# Also set:
+#   area or cross_streets (neighborhood or cross streets, not a house number)
+#   start and end (so a past display drops off)
+#   hours (when to go, if the public page gives them)
+#   note (what makes it special, in our own words)
+# Optional:
+#   image, image_alt, image_credit, image_source
+#     A photo is shown only when it lives under /assets/ and has a credit
+#     or a source. Use a photo the owner or the publisher licensed for reuse.
+#   owner_published: true
+#     Set this only when the owner publishes the street address themselves.
+#     Then address may be the exact address from that page. Otherwise an
+#     address is not printed, and a house number in area or note is dropped.
+#
+# Official displays (city tree lightings, Snowflake Lane, Garden d'Lights)
+# stay on the city event list with tag tree-lighting or holiday-lights.
+# They do not go in this file.
 #
 # - city: redmond
 #   name: "Education Hill lights"
 #   area: "Education Hill"
-#   same_as: "https://example.com/the-public-page"
 #   start: "2026-12-01"
 #   end: "2026-12-26"
+#   hours: "Nightly, 5 to 10 p.m."
+#   note: "A block of synchronized lights the resident posted on their own page."
+#   same_as: "https://example.com/the-public-page"
 []

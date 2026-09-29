@@ -146,3 +146,11 @@ Village Theatre lists a captioned performance at 2:00 p.m. The Issaquah run ends
 The next Saturday after the apple festival. Visit Issaquah's series page still lists it, 9:00 a.m.–2:00 p.m., and the season continues through Dec 5. Live music on the Oct 10 listing is 11:00 a.m.–1:00 p.m.
 
 [Fall market series](https://www.visitissaquahwa.com/series/fall-farm-fresh-market-3/)
+
+### Holiday Tree Lighting
+<p class="event-when">Thu Nov 19 · 5:00–6:30 p.m.</p>
+<p class="event-place">Village Green Park, 2550 NE Park Drive</p>
+
+Highlands Council lists a tree lighting on November 19, 5:00 to 6:30 p.m., at Village Green Park. The page says the mayor flips the switch at 5:30 p.m., with hot chocolate, cider, cookies, and a visit with Santa. It does not print the year next to the date. This is the upcoming date on that calendar.
+
+[Holiday Tree Lighting](https://issaquahhighlands.com/event/holiday-tree-lighting-4/)

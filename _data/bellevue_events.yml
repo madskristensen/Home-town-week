@@ -208,3 +208,21 @@
   end: "2026-10-31T15:00:00-07:00"
   place: "Main Street, Old Bellevue"
   same_as: "https://www.visitoldbellevue.com/events/little-monsters-on-main-street-2026"
+- name: "Snowflake Lane"
+  tags: [holiday-lights]
+  start: "2026-11-27T19:00:00-08:00"
+  end: "2026-12-24T19:30:00-08:00"
+  place: "Bellevue Way, between NE 4th and NE 8th"
+  same_as: "https://www.visitbellevue.com/events/annual-events/snowflake-lane/"
+- name: "Garden d'Lights"
+  tags: [holiday-lights]
+  start: "2026-11-28"
+  end: "2027-01-03"
+  place: "Bellevue Botanical Garden, 12001 Main St"
+  same_as: "https://bellevuebotanical.org/garden-dlights/"
+- name: "Holiday Barn Lighting"
+  tags: [holiday-lights]
+  start: "2026-12-05T17:00:00-08:00"
+  end: "2026-12-05T18:30:00-08:00"
+  place: "Kelsey Creek Farm, 410 130th Pl SE"
+  same_as: "https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/holiday-barn-lighting"

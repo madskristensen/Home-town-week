@@ -347,3 +347,11 @@ All ages. Come in costume for a photo booth, face painting, crafts, pumpkin deco
 All ages. The city describes Día de los Muertos as a joyful visit with loved ones who have died, with crafts, music, food, and a short look at the tradition. The same building hosted Spooky Spectacular the week before.
 
 [Day of the Dead](https://www.redmond.gov/calendar.aspx?EID=3561)
+
+### Redmond Lights
+<p class="event-when">Sat Dec 5 to Mon Jan 4 · Kick-off 4:00–8:00 p.m.</p>
+<p class="event-place">Downtown Park</p>
+
+The city lists a kick-off at Downtown Park on Saturday, December 5, 2026, 4:00 to 8:00 p.m., with illuminated art, a luminary trail, and live performances. The same page dates a visit from that Saturday through Monday, January 4, 2027. It does not post hours for the nights after the kick-off.
+
+[Redmond Lights](https://www.redmond.gov/1139/Redmond-Lights)

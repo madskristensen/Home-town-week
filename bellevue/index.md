@@ -255,3 +255,27 @@ The museum's Halloween day, this year set as a Haunted Hoedown. Costumes are enc
 A free costume afternoon from the Old Bellevue Merchants Association. Businesses, restaurants, and residential communities along Main Street hand out candy. The page does not give one street number. KidsQuest is the same day and ends at 4:00 p.m., so a family can do the museum in the morning and Main Street after lunch.
 
 [Little Monsters on Main Street](https://www.visitoldbellevue.com/events/little-monsters-on-main-street-2026)
+
+### Snowflake Lane
+<p class="event-when">Fri Nov 27 to Thu Dec 24 · 7:00 p.m. nightly</p>
+<p class="event-place">Bellevue Way, between NE 4th and NE 8th</p>
+
+A free parade each night, with falling snow, floats, and live drummers. Visit Bellevue lists November 27 through December 24, 2026, at 7:00 p.m. It runs along Bellevue Way between NE 4th and NE 8th. No tickets.
+
+[Snowflake Lane](https://www.visitbellevue.com/events/annual-events/snowflake-lane/)
+
+### Garden d'Lights
+<p class="event-when">Sat Nov 28 to Sun Jan 3 · Hours on the ticket</p>
+<p class="event-place">Bellevue Botanical Garden, 12001 Main St</p>
+
+The botanical garden's holiday light display. The garden's 2026 event line says Saturday, November 28 through Sunday, January 3. A banner on the same page says Nov 28 through Dec 31. Tickets go on sale October 15. Check the garden page for the night you want before you go.
+
+[Garden d'Lights](https://bellevuebotanical.org/garden-dlights/)
+
+### Holiday Barn Lighting
+<p class="event-when">Sat Dec 5 · 5:00–6:30 p.m.</p>
+<p class="event-place">Kelsey Creek Farm, 410 130th Pl SE</p>
+
+The city turns on the barn lights. Carols, a visit from Santa, and a countdown. Parking, admission, and many of the activities are free. The city lists Saturday, December 5, 2026, 5:00 to 6:30 p.m.
+
+[Holiday Barn Lighting](https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/holiday-barn-lighting)

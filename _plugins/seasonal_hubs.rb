@@ -150,19 +150,17 @@ module EastsideCalendar
         end
       end
 
-      if hub["lights"].to_s != ""
-        light_section = Array(hub["sections"]).find { |section| Array(section["tags"]).map(&:to_s).include?("holiday-lights") }
-        if light_section
-          Array(lights).each do |row|
-            item = display_row(row, names, site_url)
-            next unless item && upcoming_row?(item, today)
+      light_section = lights_section(hub)
+      if light_section
+        Array(lights).each do |row|
+          item = display_row(row, names, site_url)
+          next unless item && upcoming_row?(item, today)
 
-            key = "#{item["city_id"]}|#{item["name"]}|#{item["sort"]}"
-            next if seen[light_section["id"]][key]
+          key = "#{item["city_id"]}|#{item["name"]}|#{item["sort"]}"
+          next if seen[light_section["id"]][key]
 
-            seen[light_section["id"]][key] = true
-            grouped[light_section["id"]] << item
-          end
+          seen[light_section["id"]][key] = true
+          grouped[light_section["id"]] << item
         end
       end
 
@@ -211,6 +209,18 @@ module EastsideCalendar
         sections << { "id" => city_id, "title" => city_name, "events" => items }
       end
       sections
+    end
+
+    # A section with from: holiday_lights is the neighborhood list.
+    # Otherwise a hub that sets lights: still drops those rows into the
+    # section tagged holiday-lights.
+    def lights_section(hub)
+      sections = Array(hub["sections"]).select { |section| section.is_a?(Hash) }
+      named = sections.find { |section| section["from"].to_s == "holiday_lights" }
+      return named if named
+      return nil if hub["lights"].to_s == ""
+
+      sections.find { |section| Array(section["tags"]).map(&:to_s).include?("holiday-lights") }
     end
 
     def section_match?(tags, name, section)
@@ -387,7 +397,58 @@ module EastsideCalendar
 
       start_s = row["start"].to_s
       finish_s = row["end"].to_s
-      row_dates(name, city_name, city_id, public_area(row["area"] || row["place"]), same, start_s, finish_s, site_url)
+      published = owner_published?(row)
+      place = if published
+                row["address"].to_s.gsub(/\s+/, " ").strip
+              else
+                ""
+              end
+      place = public_area(row["area"].to_s.empty? ? (row["cross_streets"] || row["place"]) : row["area"]) if place.empty?
+      built = row_dates(name, city_name, city_id, place, same, start_s, finish_s, site_url)
+      hours = row["hours"].to_s.gsub(/\s+/, " ").strip
+      note = public_note(row["note"], published)
+      built["hours"] = hours
+      built["note"] = note
+      built["description"] = note.empty? ? built["description"] : "#{name} in #{city_name}. #{note}"
+      image = licensed_image(row)
+      built["image"] = image["src"]
+      built["image_alt"] = image["alt"]
+      built["image_credit"] = image["credit"]
+      built["image_source"] = image["source"]
+      built
+    end
+
+    def owner_published?(row)
+      value = row["owner_published"]
+      value == true || %w[true yes].include?(value.to_s.strip.downcase)
+    end
+
+    # A house number in a note is dropped unless the owner published it.
+    # Hours like "5 to 10" are not treated as an address.
+    def public_note(value, published)
+      text = value.to_s.gsub(/\s+/, " ").strip
+      return "" if text.empty?
+      return "" if !published && house_address?(text)
+
+      text
+    end
+
+    def house_address?(text)
+      text.match?(/\b\d{1,6}\s+\d/) ||
+        text.match?(/\b\d{1,6}\s+\S+\s+(?:st|street|ave|avenue|rd|road|ln|lane|dr|drive|way|blvd|boulevard|ct|court|pl|place)\b/i)
+    end
+
+    def licensed_image(row)
+      path = row["image"].to_s.strip
+      credit = row["image_credit"].to_s.strip
+      source = row["image_source"].to_s.strip
+      empty = { "src" => "", "alt" => "", "credit" => "", "source" => "" }
+      return empty unless path.start_with?("/assets/")
+      return empty if credit.empty? && source.empty?
+
+      alt = row["image_alt"].to_s.strip
+      alt = row["name"].to_s.strip if alt.empty?
+      { "src" => path, "alt" => alt, "credit" => credit, "source" => source }
     end
 
     def row_dates(name, city_name, city_id, place, same, start_s, finish_s, site_url)

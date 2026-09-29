@@ -1,5 +1,5 @@
 # Seasonal hubs. A new season is a new entry. The banner, page, and
-# theme come from this file. There is no /holiday-lights/ page.
+# theme come from this file.
 #
 # group: town makes one section per city. The hub matches an event when
 # the row has one of `tags`, or when the event name contains one of
@@ -165,6 +165,48 @@ hubs:
       muted: "#3f5148"
       link: "#145c40"
       svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#1e4636" d="M12 3.2 17.8 18H6.2z"/><path fill="#6b4e0e" d="M11 17.6h2V21h-2z"/><circle fill="#c6a15a" cx="12" cy="9" r="1"/><circle fill="#c6a15a" cx="10.2" cy="13" r="1"/><circle fill="#c6a15a" cx="13.8" cy="13.4" r="1"/></svg>'
+
+  - id: holiday-lights
+    path: /holiday-lights/
+    title: Holiday lights and tree lightings on the Eastside
+    banner_title: Holiday lights
+    hook: Tree lightings and neighborhood displays.
+    link_label: See events
+    footer: false
+    description: Holiday lights and tree lightings on the Eastside. Official displays and publicly promoted neighborhood lights, from Nov 10 through Jan 5.
+    llms: Official tree lightings and light displays, plus neighborhood displays that were already promoted in public.
+    in_season_intro: City tree lightings, public light displays, and neighborhood lights that were already promoted in public, listed through Jan 5.
+    off_season_intro: The season runs Nov 10 through Jan 5. This page stays up all year.
+    off_season_listed: The season runs Nov 10 through Jan 5. This page stays up all year, and dates already set are listed below.
+    empty: Nothing is listed yet. Official lightings are written up on the city pages, and neighborhood displays go in the lights list once a public page promotes them.
+    lights: holiday_lights
+    suggest:
+      lead: Know a great display?
+      link: Tell us
+      subject: A holiday lights display
+      body: |-
+        I would like to suggest a holiday lights display for Eastside Family Calendar.
+
+        City:
+        Neighborhood or cross streets:
+        Link to the public page where it is promoted:
+        What makes it special:
+    season:
+      start: "11-10"
+      end: "01-05"
+    sections:
+      - id: official
+        title: Official lightings and displays
+        tags: [tree-lighting, holiday-lights]
+      - id: neighborhood
+        title: Neighborhood light displays
+        from: holiday_lights
+    theme:
+      background: "#e7eef2"
+      ink: "#1a2822"
+      muted: "#3f5148"
+      link: "#145c40"
+      svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#1e4636" d="M12 2.8 16.2 14H7.8z"/><path fill="#6b4e0e" d="M11.2 13.6h1.6V18h-1.6z"/><circle fill="#c6a15a" cx="6.2" cy="8" r="1.1"/><circle fill="#c6a15a" cx="17.8" cy="8" r="1.1"/><circle fill="#c6a15a" cx="5" cy="12.2" r="1.1"/><circle fill="#c6a15a" cx="19" cy="12.2" r="1.1"/><path fill="#6b4e0e" d="M6.2 8.8 5 11.2M17.8 8.8 19 11.2" stroke="#6b4e0e" stroke-width="0.6"/></svg>'
 
   - id: easter
     path: /easter/

@@ -128,3 +128,19 @@ Urban farmer Lisa Taylor leads a music-and-movement hour about the slimy workers
 A Halloween round of stories, music, and movement for young children with an adult. Costumes are fine. Play time and bubbles come after the stories. No registration.
 
 [Halloween Story Time](https://kcls.bibliocommons.com/v2/events/6ab1c1ccab7a8e0037c37c20)
+
+### Snoqualmie Winter Lights
+<p class="event-when">Thu Nov 26 to Fri Jan 1 · Time not posted</p>
+<p class="event-place">Salish Lodge to historic downtown, and Snoqualmie Ridge</p>
+
+The city says the lights run Thanksgiving to New Years. The walk starts at the Salish Lodge, follows the Centennial Trail into historic downtown, and continues up Snoqualmie Parkway on the Ridge. The page does not post a nightly start time.
+
+[Snoqualmie Winter Lights](https://snoqualmiewa.gov/927/Snoqualmie-Winter-Lights)
+
+### Snoqualmie tree lighting
+<p class="event-when">Sat Dec 5 · Time not posted</p>
+<p class="event-place">Historic downtown Snoqualmie</p>
+
+The city page says to save Saturday, December 5, 2026 for the tree lighting. It does not post a start time or a street address.
+
+[Tree lighting](https://snoqualmiewa.gov/927/Snoqualmie-Winter-Lights)

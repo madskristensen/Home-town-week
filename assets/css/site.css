@@ -1120,6 +1120,26 @@ picture {
   margin-top: 0.2rem;
 }
 
+.hub-note {
+  margin: 0.35rem 0 0;
+  color: var(--ink);
+}
+
+.hub-photo {
+  margin: 0.55rem 0 0;
+}
+
+.hub-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+.hub-photo figcaption {
+  margin-top: 0.35rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .season-banner,
   .season-banner * {
