@@ -1,0 +1,229 @@
+{%- comment -%}
+  Standout family events for the home page. Chosen at build time from
+  _data/{city}_events.yml, so the daily Pages rebuild rolls the window
+  forward. Upcoming Friday through Sunday when any standout falls there.
+  Otherwise the next 7 days, under a different heading.
+
+  Score is deterministic: festivals and fairs first, then parades, farms,
+  markets, dance, and similar titles. Storytime, library hours, and
+  council-style meetings rank last and are used only when little else is
+  left. One event per city until four picks exist. A sponsored pick can
+  be pinned ahead of this list later. It is not built yet.
+{%- endcomment -%}
+{%- assign now_unix = site.time | date: "%s" | plus: 0 -%}
+{%- assign weekday = site.time | date: "%u" | plus: 0 -%}
+{%- assign today = site.time | date: "%Y-%m-%d" -%}
+{%- if weekday >= 5 -%}
+  {%- assign days_since_friday = weekday | minus: 5 -%}
+  {%- assign friday_shift = days_since_friday | times: 86400 -%}
+  {%- assign friday_unix = now_unix | minus: friday_shift -%}
+{%- else -%}
+  {%- assign days_until_friday = 5 | minus: weekday -%}
+  {%- assign friday_shift = days_until_friday | times: 86400 -%}
+  {%- assign friday_unix = now_unix | plus: friday_shift -%}
+{%- endif -%}
+{%- assign friday = friday_unix | date: "%Y-%m-%d" -%}
+{%- assign sunday_shift = 2 | times: 86400 -%}
+{%- assign sunday = friday_unix | plus: sunday_shift | date: "%Y-%m-%d" -%}
+{%- assign week_shift = 6 | times: 86400 -%}
+{%- assign week_end = now_unix | plus: week_shift | date: "%Y-%m-%d" -%}
+{%- capture pool -%}
+{%- for city in site.data.cities -%}
+{%- assign events_key = city.id | append: "_events" -%}
+{%- assign events = site.data[events_key] -%}
+{%- for event in events -%}
+{%- assign start_s = event.start | append: "" -%}
+{%- assign day = start_s | slice: 0, 10 -%}
+{%- if day == blank or day.size != 10 -%}{% continue %}{%- endif -%}
+{%- assign end_s = event.end | append: "" -%}
+{%- assign end_day = end_s | slice: 0, 10 -%}
+{%- if end_day == blank or end_day.size != 10 -%}{% assign end_day = day %}{%- endif -%}
+{%- if end_day < today or day > week_end -%}{% continue %}{%- endif -%}
+{%- assign name_down = event.name | downcase -%}
+{%- assign place_down = event.place | downcase -%}
+{%- assign name_check = name_down | replace: "farmers", "" -%}
+{%- assign score = 0 -%}
+{%- if name_down contains "festival" -%}{% assign score = score | plus: 40 %}{%- endif -%}
+{%- if name_down contains "fair" -%}{% assign score = score | plus: 40 %}{%- endif -%}
+{%- if name_down contains "parade" -%}{% assign score = score | plus: 30 %}{%- endif -%}
+{%- if name_check contains "farm" -%}{% assign score = score | plus: 30 %}{%- endif -%}
+{%- if name_down contains "market" -%}{% assign score = score | plus: 20 %}{%- endif -%}
+{%- if name_down contains "dance" or name_down contains "ballet" -%}{% assign score = score | plus: 20 %}{%- endif -%}
+{%- if name_down contains "theatre" or name_down contains "theater" or name_down contains "concert" -%}{% assign score = score | plus: 20 %}{%- endif -%}
+{%- if name_down contains "halloween" or name_down contains "pumpkin" -%}{% assign score = score | plus: 20 %}{%- endif -%}
+{%- if name_down contains "museum" or name_down contains "music" or name_down contains "garden" or name_down contains "exhibit" -%}{% assign score = score | plus: 10 %}{%- endif -%}
+{%- if name_down contains "storytime" or name_down contains "story time" or name_down contains "library hours" -%}{% assign score = score | minus: 50 %}{%- endif -%}
+{%- if name_down contains "council" or name_down contains "commission" or name_down contains "hearing" or name_down contains " meeting" -%}{% assign score = score | minus: 40 %}{%- endif -%}
+{%- if name_down contains "ales" or name_down contains "brewery" or name_down contains "oktoberfest" or name_down contains "beer" -%}{% assign score = score | minus: 25 %}{%- endif -%}
+{%- if place_down contains "library" -%}{% assign score = score | minus: 10 %}{%- endif -%}
+{%- assign rank = 500 | minus: score -%}
+{%- assign idx = forloop.index0 -%}
+{%- if idx < 10 -%}{% assign idx = idx | prepend: "00" %}
+{%- elsif idx < 100 -%}{% assign idx = idx | prepend: "0" %}{%- endif -%}
+{%- assign weekend_flag = "0" -%}
+{%- if day <= sunday and end_day >= friday and end_day >= today and score > 0 -%}{% assign weekend_flag = "1" %}{%- endif -%}
+{{ rank }}|{{ day }}|{{ city.id }}|{{ idx }}|{{ weekend_flag }}~
+{%- endfor -%}
+{%- endfor -%}
+{%- endcapture -%}
+{%- assign ranked = pool | split: "~" | sort -%}
+{%- assign weekend_ready = false -%}
+{%- for line in ranked -%}
+  {%- assign line = line | strip -%}
+  {%- if line.size == 0 -%}{% continue %}{%- endif -%}
+  {%- assign bits = line | split: "|" -%}
+  {%- if bits[4] == "1" -%}{% assign weekend_ready = true %}{% break %}{%- endif -%}
+{%- endfor -%}
+{%- if weekend_ready -%}
+  {%- assign picks_title = "This weekend on the Eastside" -%}
+{%- else -%}
+  {%- assign picks_title = "Coming up on the Eastside" -%}
+{%- endif -%}
+{%- assign picked = "" -%}
+{%- assign seen = "|" -%}
+{%- assign pick_count = 0 -%}
+{%- for pass in (1..2) -%}
+  {%- if pick_count >= 4 -%}{% break %}{%- endif -%}
+  {%- if pass == 2 and pick_count >= 3 -%}{% break %}{%- endif -%}
+  {%- for line in ranked -%}
+    {%- if pick_count >= 4 -%}{% break %}{%- endif -%}
+    {%- if pass == 2 and pick_count >= 3 -%}{% break %}{%- endif -%}
+    {%- assign line = line | strip -%}
+    {%- if line.size == 0 -%}{% continue %}{%- endif -%}
+    {%- assign bits = line | split: "|" -%}
+    {%- assign flag = bits[4] -%}
+    {%- assign rank = bits[0] | plus: 0 -%}
+    {%- if weekend_ready and flag != "1" -%}{% continue %}{%- endif -%}
+    {%- if pass == 1 and rank >= 500 -%}{% continue %}{%- endif -%}
+    {%- if picked contains line -%}{% continue %}{%- endif -%}
+    {%- assign cid = bits[2] -%}
+    {%- assign marker = "|" | append: cid | append: "|" -%}
+    {%- if pass == 1 and seen contains marker -%}{% continue %}{%- endif -%}
+    {%- assign seen = seen | append: cid | append: "|" -%}
+    {%- assign picked = picked | append: line | append: "~" -%}
+    {%- assign pick_count = pick_count | plus: 1 -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- assign pick_lines = picked | split: "~" -%}
+{%- if pick_count > 0 -%}
+<section class="weekend-picks" aria-labelledby="weekend-picks-title">
+  <h2 id="weekend-picks-title">{{ picks_title }}</h2>
+  <ul class="weekend-grid">
+    {%- for line in pick_lines -%}
+    {%- assign line = line | strip -%}
+    {%- if line.size == 0 -%}{% continue %}{%- endif -%}
+    {%- assign bits = line | split: "|" -%}
+    {%- assign event_day = bits[1] -%}
+    {%- assign cid = bits[2] -%}
+    {%- assign wanted = bits[3] | plus: 0 -%}
+    {%- assign city = site.data.cities | where: "id", cid | first -%}
+    {%- assign events_key = cid | append: "_events" -%}
+    {%- assign events = site.data[events_key] -%}
+    {%- assign event = events[wanted] -%}
+    {%- assign city_page = nil -%}
+    {%- for candidate in site.pages -%}
+      {%- if candidate.city == cid and candidate.layout == "city" -%}
+        {%- assign city_page = candidate -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- assign chunk = "" -%}
+    {%- if city_page -%}
+      {%- assign needle = "### " | append: event.name -%}
+      {%- if city_page.content contains needle -%}
+        {%- assign head_parts = city_page.content | split: needle -%}
+        {%- assign chunk = head_parts[1] | split: "### " | first -%}
+      {%- else -%}
+        {%- assign needle = event.name | append: "</h3>" -%}
+        {%- if city_page.content contains needle -%}
+          {%- assign head_parts = city_page.content | split: needle -%}
+          {%- assign chunk = head_parts[1] | split: "<h3" | first -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endif -%}
+    {%- assign when_label = "" -%}
+    {%- if chunk contains 'class="event-when">' -%}
+      {%- assign when_label = chunk | split: 'class="event-when">' | last | split: "</p>" | first | split: "<span" | first | strip -%}
+    {%- endif -%}
+    {%- if when_label.size == 0 -%}
+      {%- assign when_label = event_day | date: "%a %b %-d" -%}
+    {%- endif -%}
+    {%- assign place_label = event.place -%}
+    {%- if chunk contains 'class="event-place">' -%}
+      {%- assign place_label = chunk | split: 'class="event-place">' | last | split: "</p>" | first | strip_html | strip -%}
+    {%- endif -%}
+    {%- assign photo = "" -%}
+    {%- assign photo_credit = "" -%}
+    {%- assign photo_alt = "" -%}
+    {%- if chunk contains 'src="' -%}
+      {%- assign photo_parts = chunk | split: 'src="' -%}
+      {%- assign photo = photo_parts[1] | split: '"' | first -%}
+    {%- endif -%}
+    {%- if chunk contains 'credit="' -%}
+      {%- assign credit_parts = chunk | split: 'credit="' -%}
+      {%- assign photo_credit = credit_parts[1] | split: '"' | first -%}
+    {%- elsif chunk contains 'class="credit">' -%}
+      {%- assign credit_parts = chunk | split: 'class="credit">' -%}
+      {%- assign photo_credit = credit_parts[1] | split: "</span>" | first | strip_html | strip -%}
+    {%- endif -%}
+    {%- if chunk contains 'alt="' -%}
+      {%- assign alt_parts = chunk | split: 'alt="' -%}
+      {%- assign photo_alt = alt_parts[1] | split: '"' | first -%}
+    {%- endif -%}
+    {%- if photo.size == 0 and city_page.image -%}
+      {%- assign photo = city_page.image -%}
+      {%- assign photo_credit = city_page.image_credit -%}
+      {%- assign photo_alt = city_page.image_alt -%}
+    {%- endif -%}
+    {%- if photo_credit.size > 0 -%}
+      {%- assign photo_label = photo_credit -%}
+    {%- else -%}
+      {%- assign photo_label = photo_alt -%}
+    {%- endif -%}
+    {%- assign blurb = "" -%}
+    {%- if chunk contains "<p>" -%}
+      {%- assign paras = chunk | split: "<p>" -%}
+      {%- if paras.size > 1 -%}
+        {%- assign blurb = paras[1] | split: "</p>" | first | strip_html | strip -%}
+      {%- endif -%}
+    {%- endif -%}
+    {%- if blurb.size == 0 -%}
+      {%- assign chunk_lines = chunk | newline_to_br | split: "<br />" -%}
+      {%- for cline in chunk_lines -%}
+        {%- assign cline = cline | strip -%}
+        {%- if cline.size == 0 -%}{% continue %}{%- endif -%}
+        {%- assign first = cline | slice: 0, 1 -%}
+        {%- if first == "<" or first == "{" or first == "[" or first == "-" or first == "#" or first == "%" -%}{% continue %}{%- endif -%}
+        {%- assign blurb = cline | split: " [" | first | strip -%}
+        {%- break -%}
+      {%- endfor -%}
+    {%- endif -%}
+    {%- assign blurb = blurb | strip_html | truncate: 170 -%}
+    {%- assign slug = event.name | slugify -%}
+    {%- capture event_href -%}/{{ cid }}/#{{ slug }}{%- endcapture -%}
+    {%- assign event_href = event_href | strip -%}
+    {%- assign external = false -%}
+    {%- if chunk.size == 0 and event.same_as contains "http" -%}
+      {%- assign event_href = event.same_as -%}
+      {%- assign external = true -%}
+    {%- endif -%}
+    <li>
+      <a class="weekend-pick" href="{{ event_href | relative_url }}"{% if external %} rel="noopener"{% endif %}>
+        {%- if photo.size > 0 -%}
+        <img src="{{ photo | relative_url }}" alt="{{ photo_label | escape }}"{% if photo_credit.size > 0 %} title="{{ photo_credit | escape }}"{% endif %} width="800" height="500" loading="lazy" decoding="async">
+        {%- endif -%}
+        <span class="weekend-town">{{ city.name }}</span>
+        <span class="weekend-when">{{ when_label }}</span>
+        <span class="weekend-name">{{ event.name }}</span>
+        {%- if place_label.size > 0 -%}
+        <span class="weekend-place">{{ place_label }}</span>
+        {%- endif -%}
+        {%- if blurb.size > 0 -%}
+        <span class="weekend-blurb">{{ blurb }}</span>
+        {%- endif -%}
+      </a>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+{%- endif -%}

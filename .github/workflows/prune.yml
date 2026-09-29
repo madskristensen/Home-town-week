@@ -7,9 +7,10 @@ on:
     - cron: "20 8 * * *"
   workflow_dispatch:
 
-# A push made with this token does not start another workflow. After a
-# commit, this job starts Deploy to GitHub Pages with workflow_dispatch,
-# which the token is allowed to do. The site rebuilds only when a file changed.
+# A push made with this token does not start another workflow. This job
+# always starts Deploy to GitHub Pages with workflow_dispatch, which the
+# token is allowed to do. The home page weekend block is chosen at build
+# time, so the site rebuilds even when no event file changed.
 permissions:
   contents: write
   actions: write
@@ -60,7 +61,6 @@ jobs:
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Rebuild the site
-        if: steps.commit.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run pages.yml --ref main
