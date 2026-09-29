@@ -8,7 +8,7 @@ image: /assets/images/snoqualmie/depot.webp
 image_alt: The historic Snoqualmie Depot, home of the Northwest Railway Museum.
 image_credit: 'Photo: Joe Mabel, CC BY-SA 3.0'
 image_source_url: https://commons.wikimedia.org/wiki/File:Snoqualmie_Depot_01.jpg
-hook: Saturday is a community planting. The next Saturday starts Halloween Train weekends, and Oct 24 is the city's free Spooktacular.
+hook: Saturday is a community planting. Wednesdays are free at the Train Shed, Mount Si Dramafest is October 9 and 10, and Oct 24 is the city's free Spooktacular.
 ---
 
 ### Ice Cream and Cookies with Mayor Mayhew
@@ -50,6 +50,22 @@ Stories, music, and movement for young children with an adult. A short playtime 
 A morning of planting in the city's climate-adaptation demonstration forest. It is a work party, not a festival: neighbors plant trees and hear how the new grove is meant to handle a hotter, drier season. The city points people to the site across from the high school.
 
 [Green Snoqualmie Day](https://www.snoqualmiewa.gov/Calendar.aspx?EID=3408)
+
+### Free Wednesday at the Train Shed
+<p class="event-when">Wed Oct 7 · 11:00 a.m.–4:00 p.m.</p>
+<p class="event-place">Train Shed Exhibit Hall, Stone Quarry Road, Snoqualmie</p>
+
+The museum waives Train Shed admission every Wednesday through December 16. The Railway History Campus, where the shed sits, is open 11:00 a.m. to 4:00 p.m. that day. Later Wednesdays in this stretch are October 14, 21, and 28, and November 4. The Snoqualmie Depot itself is a separate stop and keeps its usual hours. Halloween Train tickets are a different purchase.
+
+[Upcoming events](https://trainmuseum.org/upcoming-events/)
+
+### Mount Si Dramafest
+<p class="event-when">Fri Oct 9 and Sat Oct 10 · 7:00 p.m.</p>
+<p class="event-place">Mount Si High School Performing Arts Center, 8651 Meadowbrook Way SE</p>
+
+Student one-act plays. General admission is $10, at the door or on the drama club site. The audience votes, and awards follow the Saturday show. The Living Snoqualmie calendar widget lists a 7:00 a.m. start. The event page says 7:00 p.m. Use 7:00 p.m. The page does not print an end time.
+
+[Dramafest](https://livingsnoqualmie.com/event/mt-si-high-school-dramafest-26/)
 
 ### LEGO Builders
 <p class="event-when">Sat Oct 10 · 3:00–4:30 p.m.</p>

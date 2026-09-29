@@ -89,4 +89,12 @@ Paint a mini pumpkin. Materials are provided while they last. Friends of the Mer
 
 [Pumpkin Painting](https://kcls.bibliocommons.com/v2/events/6a63e186d23de82955c8fba5)
 
-Youth Theatre Northwest's events calendar did not list a public performance in this span. Parks special events lists the next family date as Town Center trick-or-treat on Fri Oct 30, which is past this window.
+Youth Theatre Northwest's events calendar did not list a public performance in this span.
+
+### Town Center Trick or Treat
+<p class="event-when">Fri Oct 30 · 4:00–6:00 p.m.</p>
+<p class="event-place">Town Center, Mercer Island</p>
+
+A free stroll through Town Center in costume. Businesses with the two little ghost posters in the window are the ones handing out treats. The city says the business list keeps growing up to the day, so check the page again that week.
+
+[Town Center Trick or Treat](https://www.mercerisland.gov/parksrec/page/town-center-trick-or-treat-2026)

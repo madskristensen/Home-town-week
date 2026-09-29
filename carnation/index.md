@@ -43,6 +43,14 @@ Oxbow's fall plant day, also posted on the city events page. Shop native trees, 
 
 [City listing](https://www.carnationwa.gov/event/fall-native-plant-festival/)
 
+### Hjertoos House
+<p class="event-when">Sat Oct 3 · 11:00 a.m.–3:00 p.m.</p>
+<p class="event-place">31523 NE 40th St</p>
+
+The Tolt Historical Society opens the house on Saturdays from April through October. There is no charge. Later Saturdays in this stretch are October 10, 17, 24, and 31. It is just off the road to MacDonald Park. Oxbow's plant festival is the same Saturday morning, at a different address on Carnation-Duvall Road.
+
+[Tolt Historical Society](https://tolthistoricalsociety.org/)
+
 ### KidsQuest: Creative Circuits
 <p class="event-when">Tue Oct 6 · 4:15–5:15 p.m.</p>
 <p class="event-place">Carnation Library, 4804 Tolt Avenue</p>
@@ -58,6 +66,14 @@ KidsQuest brings circuit cubes for ages 9 and older. The blocks snap into small 
 Drop-in drawing for ages 9 and older, with donuts. Use a book tutorial or draw on your own. Supplies are provided. The Carnation Friends of the Library sponsor it.
 
 [Drawing and Donuts](https://kcls.bibliocommons.com/v2/events/6ab1bdf8ca248a00291777f5)
+
+### Habitat Restoration Day
+<p class="event-when">Sat Oct 10 · 10:00 a.m.–2:00 p.m.</p>
+<p class="event-place">Carnation Farms, 8901 NE Carnation Farm Road</p>
+
+A free planting day with Stewardship Partners along the Snoqualmie River. Volunteers put in native trees and shrubs for salmon habitat. Coffee and a pizza lunch are listed. Wear long pants, a long-sleeve shirt, and boots you can get muddy, and bring rain gear if you have it. Gloves and tools are provided. Hjertoos House is also open that Saturday, 11:00 a.m. to 3:00 p.m., in town.
+
+[Habitat Restoration Day](https://livingsnoqualmie.com/event/carnation-farms-habitat-restoration-day-with-stewardship-partners/)
 
 ### Oxtober
 <p class="event-when">Sat Oct 17 and Sun Oct 18, then Sat Oct 24 and Sun Oct 25 · 10:00 a.m.–4:00 p.m.</p>

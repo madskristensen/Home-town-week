@@ -8,7 +8,7 @@ image: /assets/images/kenmore/log-boom.webp
 image_alt: The pier at Log Boom Park in Kenmore, looking back toward the shore of Lake Washington.
 image_credit: 'Photo: Joe Mabel, CC BY-SA 4.0'
 image_source_url: https://commons.wikimedia.org/wiki/File:Kenmore,_WA_-_Log_Boom_Park,_seen_from_the_Pier_01.jpg
-hook: Tuesday evening is drop-in homework help. Friday morning is music and movement, Friday night is family karaoke, and Saturday is ASL story time.
+hook: Tuesday evening is drop-in homework help. Friday night is family karaoke, Saturday is ASL story time, and November 1 is Dia de los Muertos at the Hangar.
 ---
 
 ### Tutors
@@ -42,3 +42,11 @@ IMAGINE hosts this on the second Friday. All ages. Sing, or stay and cheer. Find
 Teacher and storyteller Sam Sanders signs stories, movement, and rhymes for d/Deaf and hard-of-hearing children and their families. The listing says families may stay afterward for 30 minutes of play, so the play block is after 12:15, not inside the posted end time.
 
 [ASL Story Time](https://kcls.bibliocommons.com/events/6a76c37ce30fe4845967df1c)
+
+### Dia de los Muertos
+<p class="event-when">Sun Nov 1 · 11:00 a.m.–3:00 p.m.</p>
+<p class="event-place">The Hangar, Kenmore Town Square, 6728 NE 181st St</p>
+
+The city's headline calls this the third annual celebration, on Sunday, November 1, 2026, and says it is free, with an ofrenda, performances, crafts, and activities. A details line on the same page still says November 1, 2025. November 1, 2026 is a Sunday, which matches the headline. The 2025 date was a Saturday, so that line does not match its own weekday. Use the 2026 headline, and check the city page the week of the event in case the details line gets corrected.
+
+[Dia de los Muertos](https://www.kenmorewa.gov/our-city/special-events/dia-de-los-muertos)

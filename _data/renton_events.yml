@@ -54,3 +54,8 @@
 - name: "B.F.S Durgotsav Festival (Free Entry)"
   start: "2026-10-16"
   same_as: "https://allevents.in/renton/bfs-durgotsav-festival-free-entry/200030596061609"
+- name: "Olde Fashioned Halloween Party"
+  start: "2026-10-24T13:00:00-07:00"
+  end: "2026-10-24T16:00:00-07:00"
+  place: "Downtown Renton, then Legacy Square"
+  same_as: "https://www.rentondowntown.com/events/halloween"

@@ -28,6 +28,14 @@ Saturday hours are 11:00 a.m.–6:00 p.m.
 
 [Whipped Butter Soap Workshop](https://kcls.bibliocommons.com/events/6a85e0a457c264087ad23999)
 
+### Woodinville Heritage Museum
+<p class="event-when">Sun Oct 4 · 1:00–4:00 p.m.</p>
+<p class="event-place">14121 NE 171st St</p>
+
+The heritage society opens the museum on the first Sunday of the month, 1:00 to 4:00 p.m., from September through May. Admission is free. October 4 is that Sunday. A history talk, Cows and Carnations, is a separate afternoon on October 17 at a different address.
+
+[Events and programs](https://woodinvilleheritage.org/events-programs/)
+
 ### Paper Flower Craft
 <p class="event-when">Tue Oct 6 · 12:30–2:00 p.m.</p>
 <p class="event-place">Woodinville Library</p>
@@ -90,3 +98,11 @@ Rhymes, songs, and bounces for newborns to 24 months with a caregiver. Siblings 
 
 Stories, music, movement, and rhymes. Stay to play after. All ages with an adult.  
 [Family Story Time](https://kcls.bibliocommons.com/v2/events/6aa899dc4b3b06003083c925)
+
+### Cows and Carnations
+<p class="event-when">Sat Oct 17 · 11:00 a.m.–12:30 p.m.</p>
+<p class="event-place">Hollywood Schoolhouse at Maryhill Winery</p>
+
+A free talk from the Woodinville Heritage Society on the Stimson family and Hollywood Farm, the agricultural estate Frederick Stimson built in the Sammamish Valley. The listing does not print a street number. It is a history program, not a wine tasting. The museum's open Sunday was October 4, at the DeYoung House, not at this venue.
+
+[Cows and Carnations](https://woodinvilleheritage.org/events-programs/)

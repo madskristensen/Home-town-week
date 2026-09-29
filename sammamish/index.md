@@ -104,3 +104,19 @@ Free play from 6:00 to 7:00 p.m., then instruction from chess coaches. All level
 Gently used books, with proceeds to Sammamish Library programs. The listing is open to kids through adults.
 
 [Friday](https://kcls.bibliocommons.com/events/6a9a12d181e9d60947cd92bc) · [Saturday](https://kcls.bibliocommons.com/events/6a9a12d181e9d60947cd92bd) · [Sunday](https://kcls.bibliocommons.com/events/6a9a12d181e9d60947cd92be)
+
+### Sammamish YMCA Fall Family Festival
+<p class="event-when">Sat Oct 24 · 4:00–7:00 p.m.</p>
+<p class="event-place">Sammamish Community YMCA, 831 228th Ave SE</p>
+
+A haunted walk, a bounce house, and carnival games. The Y describes these branch festivals as free and open to the community, and it asks adults not to wear masks. Costumes should stay family-friendly.
+
+[Fall festivals](https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities)
+
+### Pumpkins on the Plaza
+<p class="event-when">Thu Oct 29 · 4:00–7:00 p.m.</p>
+<p class="event-place">Sammamish Commons, upper plaza</p>
+
+A free city party. There is a scavenger hunt with a prize, an animal encounter, and trick-or-treat at city booths and trunks, with allergy-friendly candy at every other stop. The library hosts a craft inside. Food vendors include The Cheese Pit. Costumes are welcome. The Y festival the Saturday before is a separate address on 228th.
+
+[Pumpkins on the Plaza](https://www.sammamish.us/news/events/events/pumpkins-on-the-plaza/2026-pumpkins-on-the-plaza/)

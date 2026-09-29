@@ -8,7 +8,7 @@ image: /assets/images/redmond/teen-lounge.webp
 image_alt: Teens in the Teen Lounge at Redmond Community Center at Marymoor Village, with a neon sign that reads Teen Lounge.
 image_credit: 'Photo: City of Redmond'
 image_source_url: https://www.redmond.gov/ImageRepository/Document?documentID=40376
-hook: Ice cream and archaeology Monday, toddler stories and drop-in play Thursday, teen sessions through the week, then flapjacks, a farm festival, and a Marymoor 5K on the weekend.
+hook: Saturday is flapjacks, the farm, and a youth cross-country meet. October 17 is the Farrel-McWhirter harvest festival and a pup parade at Redmond Town Center.
 ---
 
 ### Meet and Green
@@ -103,6 +103,14 @@ Season runs through Oct 31. The entertainment calendar names Elias Kauhane from 
 
 Weekly exotic/rare car gathering (weather dependent). Free to watch.  
 [Experience Redmond](https://experienceredmond.com/event/exotics-at-rtc/2026-10-03/)
+
+### Redmond Youth Cross Country Club Meet
+<p class="event-when">Sat Oct 3 · 9:00 a.m.–12:00 p.m.</p>
+<p class="event-place">Hartman Park, 17300 NE 104th St</p>
+
+The city calendar lists the club meet at Hartman Park for this window. It does not describe ages or whether spectators need a ticket. The Exotics show at Redmond Town Center is the same morning and ends at 11:00 a.m.
+
+[City calendar](https://www.redmond.gov/calendar.aspx?EID=3556)
 
 ### 2nd Annual Flapjacks & Flannel Breakfast
 <p class="event-when">Sat Oct 3 · 9:30 a.m.–12:00 p.m.</p>
@@ -263,6 +271,22 @@ Free to walk. The address is 9900 Willows Rd NE.
 
 [Calendar](http://redmondsaturdaymarket.org/Calendar.cshtml) · [Market](http://www.redmondsaturdaymarket.org/)
 
+### Harvest Festival
+<p class="event-when">Sat Oct 17 · 10:00 a.m.–3:00 p.m.</p>
+<p class="event-place">Farrel-McWhirter Park, 19545 Redmond Road</p>
+
+Ages 2 and up. The city lists an all-access pass that covers pressed apple cider, tractor wagon rides, butter making with a biscuit, a forest scavenger hunt, farm animals, music, photo spots, and a spooky potion station. Children 12 and under also get a pony ride and a pumpkin. The morning session is 10:00 a.m.–12:00 p.m. and the afternoon session is 1:00–3:00 p.m. The calendar page does not print a price. The Saturday market is the same morning, at 9900 Willows Rd NE, and the two are not a short walk apart.
+
+[Harvest Festival](https://www.redmond.gov/calendar.aspx?EID=3559)
+
+### Redmond Howl-O-Ween Pup Parade
+<p class="event-when">Sat Oct 17 · 12:00–4:00 p.m.</p>
+<p class="event-place">Check-in at The Archer Hotel Redmond, then Redmond Town Center</p>
+
+OneRedmond's second pup parade. Check-in is at noon at The Archer Hotel, with snacks. The parade through Redmond Town Center is at 1:00 p.m., with prizes for best dog costume, best duo, and best in show. From 2:00 to 4:00 p.m. the party moves to Hilton Garden Inn Seattle Redmond, with snacks for people and dogs and adoptable pups from Motley Zoo. The page says registration is coming soon, and that entry is free for overnight guests at participating Redmond hotels. The harvest festival at Farrel-McWhirter runs until 3:00 p.m., so the parade and the farm overlap.
+
+[Howl-O-Ween](https://engage.oneredmond.org/howl-o-ween)
+
 ### Digital SAT Practice Test and Score Review
 <p class="event-when">Sun Oct 18 · 2:00–5:30 p.m.</p>
 <p class="event-place">Redmond Library, 15990 NE 85th St</p>
@@ -283,3 +307,25 @@ Free practice test for grades 9–12, then a look at which question types cost t
 Hours stay 9:00 a.m.–2:00 p.m. through the last day, Oct 31. The calendar lists the Preston Lee Trio from 11:00 a.m. to 1:00 p.m. on Oct 24. Oct 31, outside this week, is the annual pet parade in that same 11-to-1 window.
 
 [Calendar](http://redmondsaturdaymarket.org/Calendar.cshtml)
+
+### Spooky Spectacular
+<p class="event-when">Mon Oct 26 · 6:00–7:30 p.m.</p>
+<p class="event-place">Redmond Senior & Community Center, 8703 160th Ave NE</p>
+
+{% include event-photo.html
+   src="/assets/images/redmond/senior-center.webp"
+   alt="People in the east entry of the Redmond Senior and Community Center, beside a bright geometric art wall."
+   credit="Photo: City of Redmond"
+   source="https://www.redmond.gov/ImageRepository/Document?documentID=24797" %}
+
+All ages. Come in costume for a photo booth, face painting, crafts, pumpkin decorating, and mini games. Bring your own pumpkin. The center supplies the decorating materials and says there is no carving. Hot dogs, veggie dogs, chips, candy, and drinks are part of the evening. The calendar links to Amilia and does not print a price.
+
+[Spooky Spectacular](https://www.redmond.gov/calendar.aspx?EID=3560)
+
+### Day of the Dead
+<p class="event-when">Mon Nov 2 · 5:00–7:00 p.m.</p>
+<p class="event-place">Redmond Senior & Community Center, 8703 160th Ave NE</p>
+
+All ages. The city describes Día de los Muertos as a joyful visit with loved ones who have died, with crafts, music, food, and a short look at the tradition. The same building hosted Spooky Spectacular the week before.
+
+[Day of the Dead](https://www.redmond.gov/calendar.aspx?EID=3561)

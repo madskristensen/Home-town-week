@@ -33,3 +33,8 @@
   end: "2026-10-10T12:15:00-07:00"
   place: "Kenmore Library, 6531 NE 181st Street"
   same_as: "https://kcls.bibliocommons.com/events/6a76c37ce30fe4845967df1c"
+- name: "Dia de los Muertos"
+  start: "2026-11-01T11:00:00-08:00"
+  end: "2026-11-01T15:00:00-08:00"
+  place: "The Hangar, Kenmore Town Square, 6728 NE 181st St"
+  same_as: "https://www.kenmorewa.gov/our-city/special-events/dia-de-los-muertos"

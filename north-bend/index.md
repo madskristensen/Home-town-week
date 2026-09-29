@@ -19,6 +19,14 @@ Librarian Jenifer reads, sings, and moves with children in pajamas. Bring a stuf
 
 [Pajama Story Time](https://kcls.bibliocommons.com/v2/events/6a80c0f3aafa6100295cdc3d)
 
+### Love Snoqualmie Valley Volunteer Day
+<p class="event-when">Sat Oct 3 · 9:00 a.m.</p>
+<p class="event-place">Several North Bend sites, including the Mt. Si Senior Center</p>
+
+The city's community calendar lists this volunteer morning and names the Mt. Si Senior Center among the North Bend stops. It does not print an end time. LEGO Builders at the library is the same afternoon, 3:00 to 4:30 p.m., so the volunteer block is the morning half.
+
+[Community events calendar](https://www.northbendwa.gov/common/modules/iCalendar/iCalendar.aspx?catID=21&feed=calendar)
+
 ### LEGO Builders
 <p class="event-when">Sat Oct 3 · 3:00–4:30 p.m.</p>
 <p class="event-place">North Bend Library, 115 E 4th Street</p>

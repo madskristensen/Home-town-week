@@ -43,6 +43,20 @@ A public history and art tour. All ages. Tickets are $20.31 a person, and kids a
 
 [Oct 3 tour](https://www.mcmenamins.com/events/278721-anderson-schools-history-art-tour)
 
+### Bothell Historical Museum
+<p class="event-when">Sun Oct 4 · 1:00–4:00 p.m.</p>
+<p class="event-place">Park at Bothell Landing, 9919 NE 180th St</p>
+
+{% include event-photo.html
+   src="/assets/images/bothell/bothell-landing.webp"
+   alt="The Park at Bothell Landing, with trees along the Sammamish River."
+   credit="Photo: Joe Mabel, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Bothell_Landing_04.jpg" %}
+
+The museum in the park is open Sundays from April through October, 1:00 to 4:00 p.m. Admission is free. Later Sundays in this stretch are October 11, 18, and 25. The Halloween market is at the same park on Saturday, October 10.
+
+[Bothell Historical Museum](https://www.bothellhistoricalmuseum.org/)
+
 ### Family Story Time
 <p class="event-when">Thu Oct 8 · 10:00–10:30 a.m. and 10:45–11:15 a.m.</p>
 <p class="event-place">Bothell Library, 18215 98th Ave NE</p>
@@ -88,3 +102,11 @@ School-age kids read aloud to a certified therapy dog. Registration is not requi
 A collaborative storytelling game for middle school grades 6–8, funded by a City of Bothell Creative Arts Grant. The listing does not say registration is required.
 
 [Glorydays](https://kcls.bibliocommons.com/events/6a5538311006a63d00221d2a)
+
+### Northshore Y Fall Family Festival
+<p class="event-when">Sat Oct 24 · 5:30–8:00 p.m.</p>
+<p class="event-place">Northshore YMCA, 11811 NE 195th St</p>
+
+Carnival games, trunk-or-treat from decorated cars, and a bounce house. The Y describes these branch festivals as free and open to the community, and it asks adults not to wear masks. Costumes should stay family-friendly.
+
+[Fall festivals](https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities)

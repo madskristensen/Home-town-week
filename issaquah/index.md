@@ -25,6 +25,14 @@ Stories, music, movement, and rhymes for newborns to 5 years, with an adult. Up 
 
 [Snuggle Up Story Time](https://kcls.bibliocommons.com/v2/events/6a7104e288e9bf2800354857)
 
+### Chess Club
+<p class="event-when">Wed Sep 30 · 6:00–9:00 p.m.</p>
+<p class="event-place">Blakely Hall, Issaquah Highlands</p>
+
+All ages and experience levels. The Highlands calendar says you do not need to bring a board. It asks first-time players to fill out a short form so the hosts know who is coming. This is the Wednesday before Salmon Days, in the Highlands, not downtown.
+
+[Chess Club](https://issaquahhighlands.com/event/chess-club-4-11/2026-09-30/)
+
 ### Rise & Shine Story Time
 <p class="event-when">Thu Oct 1 · 10:30–11:00 a.m.</p>
 <p class="event-place">Issaquah Library, 10 W Sunset Way</p>

@@ -96,3 +96,17 @@ Pencil sketching with local instructor Ely Corum. All ages and skill levels. Sup
 School-age kids read aloud to a certified therapy dog. Reading with Rover works with schools and libraries in the greater Seattle area.
 
 [Reading with Rover](https://kcls.bibliocommons.com/v2/events/6aa89b32ca248a002915dafe)
+
+### Olde Fashioned Halloween Party
+<p class="event-when">Sat Oct 24 · 1:00–4:00 p.m.</p>
+<p class="event-place">Downtown Renton, then Legacy Square</p>
+
+{% include event-photo.html
+   src="/assets/images/renton/downtown.webp"
+   alt="Downtown Renton, with storefronts along the street."
+   credit="Photo: Chris Light, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Renton_Downtown_2015-06_722.jpg" %}
+
+The Renton Downtown Partnership's family afternoon. Start with trick-or-treating at downtown businesses, then go to Legacy Square for zombie makeup, photos, games, and prizes. Costume contest categories include pets, kids, teens, and adults. At 3:00 p.m. the crowd learns the Thriller dance and joins the worldwide simultaneous performance. The page does not print a ticket price.
+
+[Olde Fashioned Halloween Party](https://www.rentondowntown.com/events/halloween)
