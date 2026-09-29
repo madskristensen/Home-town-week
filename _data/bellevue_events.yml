@@ -102,6 +102,7 @@
   place: "Bellevue Botanical Garden, 12001 Main St"
   same_as: "https://bellevuebotanical.org/kids-in-the-garden/"
 - name: "Fall in Bellevue Celebration"
+  tags: [pumpkin-patch]
   start: "2026-10-09T13:00:00-07:00"
   end: "2026-10-09T16:00:00-07:00"
   place: "The Meadow, downtown Bellevue"
@@ -168,11 +169,13 @@
   place: "1790 Richards Rd, Bellevue, WA 98005"
   same_as: "https://bellevuewa.gov/events/tree-giveaway"
 - name: "Trick or Treat with the Farm Animals"
+  tags: [halloween]
   start: "2026-10-24T13:00:00-07:00"
   end: "2026-10-24T15:00:00-07:00"
   place: "Kelsey Creek Farm, 410 130th Pl SE"
   same_as: "https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/trick-treat-farm-animals"
 - name: "Bellevue Family YMCA Fall Festival"
+  tags: [harvest, trunk-or-treat]
   start: "2026-10-24T18:00:00-07:00"
   end: "2026-10-24T20:00:00-07:00"
   place: "Bellevue Family YMCA, 14230 Bel-Red Rd"
@@ -188,6 +191,7 @@
   place: "Bellevue Public Library, 1111 110th Avenue NE (Room 1)"
   same_as: "https://bellevuewa.gov/events/ways-peace-art-listening-part-2"
 - name: "KidsQuest Halloween Spooktacular"
+  tags: [halloween]
   start: "2026-10-31T09:00:00-07:00"
   end: "2026-10-31T16:00:00-07:00"
   place: "KidsQuest Children's Museum, 1116 108th Ave NE"
@@ -199,6 +203,7 @@
   place: "Bellevue, 3rd Floor Children's Desk"
   same_as: "https://kcls.bibliocommons.com/events/6aa8a30a4b3b06003083cceb"
 - name: "Little Monsters on Main Street"
+  tags: [halloween]
   start: "2026-10-31T13:00:00-07:00"
   end: "2026-10-31T15:00:00-07:00"
   place: "Main Street, Old Bellevue"

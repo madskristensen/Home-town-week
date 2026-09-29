@@ -91,6 +91,7 @@
   place: "Zulus Board Game Cafe - 10234 Main Street Bothell WA 98011"
   same_as: "https://www.bothellwa.gov/calendar.aspx?EID=2745"
 - name: "Northshore Y Fall Family Festival"
+  tags: [harvest, trunk-or-treat]
   start: "2026-10-24T17:30:00-07:00"
   end: "2026-10-24T20:00:00-07:00"
   place: "Northshore YMCA, 11811 NE 195th St"

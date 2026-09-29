@@ -80,11 +80,13 @@
   end: "2026-10-24T19:00:00-07:00"
   same_as: "https://allevents.in/sammamish/sammamish-karwa-chauth-and-diwali-bazaar/200030475241817"
 - name: "Sammamish YMCA Fall Family Festival"
+  tags: [harvest, halloween]
   start: "2026-10-24T16:00:00-07:00"
   end: "2026-10-24T19:00:00-07:00"
   place: "Sammamish Community YMCA, 831 228th Ave SE"
   same_as: "https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities"
 - name: "Pumpkins on the Plaza"
+  tags: [halloween, trunk-or-treat]
   start: "2026-10-29T16:00:00-07:00"
   end: "2026-10-29T19:00:00-07:00"
   place: "Sammamish Commons, upper plaza"

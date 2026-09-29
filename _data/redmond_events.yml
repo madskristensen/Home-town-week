@@ -140,11 +140,13 @@
   place: "9900 Willows Rd NE"
   same_as: "http://redmondsaturdaymarket.org/Calendar.cshtml"
 - name: "Harvest Festival"
+  tags: [harvest]
   start: "2026-10-17T10:00:00-07:00"
   end: "2026-10-17T15:00:00-07:00"
   place: "Farrel-McWhirter Park, 19545 Redmond Road"
   same_as: "https://www.redmond.gov/calendar.aspx?EID=3559"
 - name: "Redmond Howl-O-Ween Pup Parade"
+  tags: [halloween]
   start: "2026-10-17T12:00:00-07:00"
   end: "2026-10-17T16:00:00-07:00"
   place: "The Archer Hotel Redmond and Redmond Town Center"
@@ -175,6 +177,7 @@
   place: "Redmond Community Center at Marymoor Village - 6505 176th Ave NE Redmond WA 98052"
   same_as: "https://www.redmond.gov/calendar.aspx?EID=3540"
 - name: "Spooky Spectacular"
+  tags: [halloween]
   start: "2026-10-26T18:00:00-07:00"
   end: "2026-10-26T19:30:00-07:00"
   place: "Redmond Senior & Community Center, 8703 160th Ave NE"
@@ -191,6 +194,7 @@
   place: "Smith Woods - 176th Avenue NE and NE 124th Street Redmond WA 98052"
   same_as: "https://www.redmond.gov/calendar.aspx?EID=3542"
 - name: "Day of the Dead"
+  tags: [dia-de-los-muertos]
   start: "2026-11-02T17:00:00-08:00"
   end: "2026-11-02T19:00:00-08:00"
   place: "Redmond Senior & Community Center, 8703 160th Ave NE"
