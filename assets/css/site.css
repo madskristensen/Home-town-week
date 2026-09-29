@@ -171,6 +171,39 @@ picture {
   text-underline-offset: 0.06em;
 }
 
+/* City and hub pages use a one-line wordmark. Home keeps the display masthead. */
+.site-header--compact .home-mast {
+  padding: 0;
+}
+
+.site-header--compact .mast-title-row {
+  align-items: center;
+  height: 2.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-header--compact .mast-title-row .cities-menu {
+  margin-top: 0;
+}
+
+.site-header--compact .home-mast .brand {
+  max-width: none;
+  overflow: hidden;
+  color: var(--forest);
+  font-family: var(--sans);
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.site-header--compact .cities-menu summary {
+  min-height: 2.75rem;
+}
+
 .mast-kicker {
   margin: 0.7rem 0 0;
   color: var(--forest);
@@ -373,6 +406,11 @@ picture {
 
   .home-mast .brand {
     font-size: clamp(1.8rem, 7.4vw, 2.3rem);
+  }
+
+  .site-header--compact .home-mast .brand {
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
   }
 
   .mast-kicker {

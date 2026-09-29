@@ -1,4 +1,4 @@
-<header class="site-header">
+<header class="site-header{% unless page.url == "/" %} site-header--compact{% endunless %}">
   <div class="wrap home-mast">
     <div class="mast-title-row">
       {%- if page.url == "/" -%}
@@ -16,8 +16,10 @@
         </nav>
       </details>
     </div>
+    {%- if page.url == "/" -%}
     <p class="mast-kicker">Family events on the Eastside</p>
     <p class="home-lead">Upcoming family events in Eastside cities, so you never miss the fun.</p>
+    {%- endif -%}
   </div>
 </header>
 <script type="module">
