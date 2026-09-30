@@ -215,6 +215,12 @@
   end: "2026-12-24"
   place: "Bellevue Way, between NE 4th St and NE 8th St"
   same_as: "https://bellevuecollection.com/snowflakelane/"
+- name: "Garden d'Lights"
+  tags: [holiday-lights]
+  start: "2026-11-28"
+  end: "2027-01-03"
+  place: "Bellevue Botanical Garden, 12001 Main St"
+  same_as: "https://bellevuebotanical.org/garden-dlights/"
 - name: "Holiday Barn Lighting"
   tags: [holiday-lights, santa]
   start: "2026-12-05T17:00:00-08:00"

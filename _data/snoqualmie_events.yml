@@ -77,6 +77,18 @@
   place: "Snoqualmie Library, 7824 Center Boulevard SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6ab1c1ccab7a8e0037c37c20"
 
+- name: "Snoqualmie Winter Lights"
+  tags: [holiday-lights]
+  start: "2026-11-26"
+  end: "2027-01-01"
+  place: "Centennial Trail, from Salish Lodge to historic downtown"
+  same_as: "https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights"
+- name: "Brilliant Blvd"
+  tags: [holiday-lights]
+  start: "2026-11-26"
+  end: "2027-01-01"
+  place: "Snoqualmie Parkway, Snoqualmie Ridge"
+  same_as: "https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights"
 - name: "Yuletide Express Santa Train"
   tags: [santa]
   start: "2026-12-04"

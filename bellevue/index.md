@@ -254,6 +254,20 @@ A free nightly parade on Bellevue Way for all ages, starting at 7:00 p.m. Floats
 
 [Snowflake Lane](https://bellevuecollection.com/snowflakelane/)
 
+### Garden d'Lights
+<p class="event-when">Sat Nov 28 through Sun Jan 3</p>
+<p class="event-place">Bellevue Botanical Garden, 12001 Main St</p>
+
+{% include event-photo.html
+   src="/assets/images/lights/garden-dlights.webp"
+   alt="Light sculptures along a path at Bellevue Botanical Garden."
+   credit="Photo: Steven Pavlov, CC BY 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Garden_d%E2%80%99Lights_2008_at_the_Bellevue_Botanical_Garden,_img011.jpg" %}
+
+Garden d'Lights is a ticketed after-dark walk through Bellevue Botanical Garden, with lights shaped into plants, animals, and waterfalls. Tickets go on sale October 15. Nightly hours for 2026 are still to come.
+
+[Garden d'Lights](https://bellevuebotanical.org/garden-dlights/)
+
 ### Holiday Barn Lighting
 <p class="event-when">Sat Dec 5 · 5:00–6:30 p.m.</p>
 <p class="event-place">Kelsey Creek Farm, 410 130th Pl SE</p>

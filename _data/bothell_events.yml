@@ -117,3 +117,9 @@
   end: "2026-11-07T16:00:00-08:00"
   place: "Bothell Library - 18215 98th Ave NE Bothell WA 98011"
   same_as: "https://www.bothellwa.gov/calendar.aspx?EID=2746"
+- name: "Evergreen Christmas Lights"
+  tags: [holiday-lights]
+  start: "2026-12-01"
+  end: "2026-12-24"
+  place: "Evergreen Church, 3429 240th St SE"
+  same_as: "https://evergreenchristmaslights.com/"

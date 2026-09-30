@@ -97,16 +97,6 @@ module EastsideCalendar
       "#{MONTHS[month - 1]} #{day}"
     end
 
-    # A neighborhood label is fine. A street number is not.
-    def public_area(value)
-      text = value.to_s.gsub(/\s+/, " ").strip
-      return "" if text.empty?
-      return "" if text.match?(/\A\d/)
-      return "" if text.match?(/\b\d{1,6}\s+\S/)
-
-      text
-    end
-
     def safe_svg(value)
       svg = value.to_s.strip
       return "" if svg.empty?
@@ -121,7 +111,7 @@ module EastsideCalendar
       text.match?(HEX) ? text : fallback
     end
 
-    def sections_for(hub, cities, data, lights, today, site_url)
+    def sections_for(hub, cities, data, today, site_url)
       return town_sections(hub, cities, data, today, site_url) if hub["group"].to_s == "town"
 
       names = city_names(cities)
@@ -146,25 +136,6 @@ module EastsideCalendar
 
             seen[section["id"]][key] = true
             grouped[section["id"]] << row
-          end
-        end
-      end
-
-      if hub["lights"].to_s != ""
-        light_section = Array(hub["sections"]).find { |section| Array(section["tags"]).map(&:to_s).include?("holiday-lights") }
-        if light_section
-          Array(lights).each do |row|
-            # Displays in this file are the Christmas lights section, not events.
-            next if row.is_a?(Hash) && LIGHT_TYPES.key?(row["type"].to_s.strip)
-
-            item = display_row(row, names, site_url)
-            next unless item && upcoming_row?(item, today)
-
-            key = "#{item["city_id"]}|#{item["name"]}|#{item["sort"]}"
-            next if seen[light_section["id"]][key]
-
-            seen[light_section["id"]][key] = true
-            grouped[light_section["id"]] << item
           end
         end
       end
@@ -290,7 +261,7 @@ module EastsideCalendar
       HTML
     end
 
-    def prepare_hub(hub, cities, data, lights, today, site_url)
+    def prepare_hub(hub, cities, data, today, site_url)
       return nil unless hub.is_a?(Hash)
 
       id = hub["id"].to_s.strip
@@ -303,11 +274,10 @@ module EastsideCalendar
 
       theme = hub["theme"].is_a?(Hash) ? hub["theme"] : {}
       svg = safe_svg(theme["svg"])
-      sections = sections_for(hub, cities, data, lights, today, site_url)
+      sections = sections_for(hub, cities, data, today, site_url)
       label = season_label(start_s, end_s)
       in_season = in_season?(today, start_s, end_s)
       suggest = hub["suggest"].is_a?(Hash) ? hub["suggest"] : {}
-      displays = light_displays(hub, lights, cities)
       {
         "id" => id,
         "path" => path,
@@ -330,9 +300,6 @@ module EastsideCalendar
         "suggest_body" => suggest["body"].to_s.strip,
         "sections" => sections,
         "visible_events" => sections.flat_map { |section| section["events"] },
-        "lights_map" => !hub["lights"].to_s.strip.empty?,
-        "light_displays" => displays,
-        "light_towns" => light_towns(displays),
         "theme" => {
           "background" => hex_color(theme["background"], "#f4efe6"),
           "ink" => hex_color(theme["ink"], "#1a2822"),
@@ -385,24 +352,6 @@ module EastsideCalendar
       row = row_dates(event["name"], city_name, city_id, event["place"], event["same_as"], start_s, finish_s, site_url)
       row["tags"] = Array(event["tags"]).map(&:to_s)
       row
-    end
-
-    def display_row(row, names, site_url)
-      return nil unless row.is_a?(Hash)
-
-      same = row["same_as"].to_s.strip
-      return nil unless same.match?(%r{\Ahttps?://\S+\z})
-
-      city_id = row["city"].to_s.strip
-      city_name = names[city_id].to_s
-      return nil if city_name.empty?
-
-      name = row["name"].to_s.strip
-      return nil if name.empty?
-
-      start_s = row["start"].to_s
-      finish_s = row["end"].to_s
-      row_dates(name, city_name, city_id, public_area(row["area"] || row["place"]), same, start_s, finish_s, site_url)
     end
 
     def row_dates(name, city_name, city_id, place, same, start_s, finish_s, site_url)
@@ -491,131 +440,6 @@ module EastsideCalendar
       Date.iso8601(str[0, 10])
     rescue Date::Error, ArgumentError
       nil
-    end
-
-    LIGHT_TYPES = {
-      "park" => "Park",
-      "house" => "House",
-      "street" => "Street"
-    }.freeze
-
-    def light_displays(hub, lights, cities)
-      return [] if hub["lights"].to_s.strip.empty?
-
-      names = city_names(cities)
-      rows = Array(lights).filter_map { |row| light_row(row, names) }
-      rows.sort_by! { |item| [item["city"].to_s, item["name"].to_s] }
-      counts = Hash.new(0)
-      rows.each do |item|
-        counts[item["city_id"]] += 1
-        item["number"] = counts[item["city_id"]]
-      end
-      own = rows.count { |item| item["image_kind"] == "own" }
-      theme = rows.count { |item| item["image_kind"] == "theme" }
-      Jekyll.logger.info("Christmas lights photos:", "own #{own}, theme #{theme}, none #{rows.size - own - theme}")
-      rows
-    end
-
-    def light_towns(displays)
-      seen = {}
-      towns = Array(displays).filter_map do |item|
-        city_id = item["city_id"].to_s
-        next if city_id.empty? || seen[city_id]
-
-        seen[city_id] = true
-        rows = displays.select { |row| row["city_id"].to_s == city_id }
-        {
-          "id" => city_id,
-          "name" => item["city"].to_s,
-          "count" => rows.size
-        }
-      end
-      return [] if towns.empty?
-
-      # The town with the most displays is open. A tie uses the first
-      # town in alphabetical order, which is the order of this list.
-      max = towns.map { |town| town["count"] }.max
-      chosen = towns.find { |town| town["count"] == max }
-      chosen["default"] = true if chosen
-      towns
-    end
-
-    def light_row(row, names)
-      return nil unless row.is_a?(Hash)
-
-      city_id = row["city"].to_s.strip
-      city_name = names[city_id].to_s
-      return nil if city_name.empty?
-
-      name = row["name"].to_s.strip
-      return nil if name.empty?
-
-      type = row["type"].to_s.strip
-      return nil unless LIGHT_TYPES.key?(type)
-
-      address = row["address"].to_s.gsub(/\s+/, " ").strip
-      return nil if address.empty?
-
-      description = row["description"].to_s.gsub(/\s+/, " ").strip
-      return nil if description.empty?
-
-      source = row["source"].to_s.strip
-      return nil unless source.match?(%r{\Ahttps?://\S+\z})
-
-      slug = light_slug(row["id"], name)
-      item = {
-        "id" => slug,
-        "name" => name,
-        "type" => type,
-        "type_label" => LIGHT_TYPES[type],
-        "city" => city_name,
-        "city_id" => city_id,
-        "address" => address,
-        "description" => description,
-        "nights" => row["nights"].to_s.gsub(/\s+/, " ").strip,
-        "hours" => row["hours"].to_s.gsub(/\s+/, " ").strip,
-        "source" => source,
-        "free" => row["free"] == true,
-        "last_verified" => row["last_verified"].to_s.strip
-      }
-      apply_light_photo!(item, row["photo"], name)
-      item
-    end
-
-    def apply_light_photo!(item, photo, name)
-      return unless photo.is_a?(Hash)
-
-      image = photo["image"].to_s.strip
-      credit = photo["credit"].to_s.strip
-      source = photo["credit_url"].to_s.strip
-      source = photo["source"].to_s.strip if source.empty?
-      return unless image.start_with?("/assets/images/")
-      return if credit.empty? || !source.match?(%r{\Ahttps://})
-
-      kind = photo["kind"].to_s.strip
-      kind = "theme" unless %w[own theme].include?(kind)
-      alt = photo["alt"].to_s.strip
-      # A submitted photo of recognizable kids is left off the page.
-      return if light_photo_blocked?(alt, image)
-      item["image"] = image
-      item["image_alt"] = alt.empty? ? name : alt
-      item["image_credit"] = credit
-      item["image_source"] = source
-      item["image_kind"] = kind
-    end
-
-    def light_photo_blocked?(alt, image)
-      return true if image.include?("teen-lounge")
-
-      text = alt.to_s.gsub(/children's museum/i, "")
-      text.match?(/\b(child|children|kid|kids|teen|teens|toddler|baby)\b/i)
-    end
-
-    def light_slug(id, name)
-      raw = id.to_s.strip
-      raw = name.to_s if raw.empty?
-      slug = raw.downcase.gsub(/[^a-z0-9]+/, "-").gsub(/\A-|\-\z/, "")
-      slug.empty? ? "display" : slug
     end
 
     def esc(text)
@@ -978,10 +802,9 @@ module EastsideCalendar
       raw = site.data["seasonal_hubs"]
       config = raw.is_a?(Hash) ? raw : {}
       today = EventCalendar.pacific_today(site.time)
-      lights = site.data["holiday_lights"]
       site_url = site.config["url"].to_s
       prepared = Array(config["hubs"]).filter_map do |hub|
-        SeasonalHubs.prepare_hub(hub, site.data["cities"], site.data, lights, today, site_url)
+        SeasonalHubs.prepare_hub(hub, site.data["cities"], site.data, today, site_url)
       end
       pages = SeasonalHubs.city_pages(site)
       catalog = SeasonalHubs.card_catalog(pages)

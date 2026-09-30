@@ -125,6 +125,34 @@ A Halloween round of stories, music, and movement for young children with an adu
 
 [Halloween Story Time](https://kcls.bibliocommons.com/v2/events/6ab1c1ccab7a8e0037c37c20)
 
+### Snoqualmie Winter Lights
+<p class="event-when">Thu Nov 26 through Fri Jan 1</p>
+<p class="event-place">Centennial Trail, from Salish Lodge to historic downtown</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/lights-civic-square.webp"
+   alt="A civic square decorated with Christmas lights."
+   credit="Photo: Thomas Nugent, CC BY-SA 2.0"
+   source="https://commons.wikimedia.org/wiki/File:George_Square_Christmas_lights_-_geograph.org.uk_-_3806944.jpg" %}
+
+A free nightly walk of lit trains and trees from Salish Lodge along the Centennial Trail into historic downtown. The city runs it from Thanksgiving through New Year's.
+
+[Snoqualmie Winter Lights](https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights)
+
+### Brilliant Blvd
+<p class="event-when">Thu Nov 26 through Fri Jan 1</p>
+<p class="event-place">Snoqualmie Parkway, Snoqualmie Ridge</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/lights-street-trees.webp"
+   alt="Trees lit along a city street at night."
+   credit="Photo: Ltwikipe, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Navidad-rusia.jpg" %}
+
+Lit trees along Snoqualmie Parkway in Snoqualmie Ridge. The city pairs this drive with the downtown light walk, and it runs from Thanksgiving through New Year's.
+
+[Snoqualmie Winter Lights](https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights)
+
 ### Yuletide Express Santa Train
 <p class="event-when">Fri Dec 4 through Fri Dec 18</p>
 <p class="event-place">Snoqualmie Depot, 38625 SE King St</p>

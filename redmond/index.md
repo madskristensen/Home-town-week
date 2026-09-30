@@ -339,6 +339,12 @@ All ages. A joyful visit with loved ones who have died, with crafts, music, food
 <p class="event-when">Sat Dec 5 · 4:00–8:00 p.m.</p>
 <p class="event-place">Downtown Park, 16101 Redmond Way</p>
 
+{% include event-photo.html
+   src="/assets/images/themes/lights-park-square.webp"
+   alt="Trees covered in white lights in a city park."
+   credit="Photo: MusikAnimal, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Zuccotti_Park_with_christmas_lights.JPG" %}
+
 A Redmond Lights kickoff for families at Downtown Park, with free crafts, light art, music, and snowfall. The night also has a luminary trail, a family lights promenade, and a kids light fashion show. Light art in the park continues through Jan 4.
 
 [Redmond Lights](https://www.redmond.gov/1139/Redmond-Lights)

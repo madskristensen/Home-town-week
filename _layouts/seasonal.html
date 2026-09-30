@@ -6,36 +6,21 @@ layout: default
   <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
   <p class="hub-intro">{{ hub.intro }}</p>
   <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
-  {%- unless hub.lights_map -%}
   {%- assign suggest_lead = hub.suggest_lead | append: "" -%}
   {%- if suggest_lead.size > 0 -%}
   <p class="suggest-event">{{ hub.suggest_lead }} <a href="mailto:suggestions@eastsidecalendar.com?subject={{ hub.suggest_subject | strip | mail_escape }}&amp;body={{ hub.suggest_body | strip | mail_escape }}">{{ hub.suggest_link }}</a>.</p>
   {%- endif -%}
-  {%- endunless -%}
-  {%- if hub.lights_map and hub.in_season -%}
-  {%- include lights-map.html -%}
-  {%- endif -%}
   {%- assign hub_sections = hub.sections -%}
   {%- assign section_count = hub_sections | size -%}
   {%- if section_count == 0 -%}
-  {%- unless hub.lights_map -%}
   <p>{{ hub.empty }}</p>
-  {%- endunless -%}
   {%- else -%}
   <nav class="hub-toc" aria-label="On this page">
     <ol>
-      {%- if hub.lights_map and hub.in_season -%}
-      <li><a href="#lights">Christmas lights <span class="hub-count">{{ hub.light_displays | size }}</span></a></li>
-      {%- endif -%}
       {%- for section in hub_sections -%}
       {%- assign section_count = section.events | size -%}
       <li><a href="#{{ section.id }}">{{ section.toc }} <span class="hub-count">{{ section_count }}</span></a></li>
       {%- endfor -%}
-      {%- unless hub.in_season -%}
-      {%- if hub.lights_map -%}
-      <li><a href="#lights">Christmas lights <span class="hub-count">{{ hub.light_displays | size }}</span></a></li>
-      {%- endif -%}
-      {%- endunless -%}
     </ol>
   </nav>
   {%- for section in hub_sections -%}
@@ -110,10 +95,5 @@ layout: default
     </div>
   </section>
   {%- endfor -%}
-  {%- endif -%}
-  {%- if hub.lights_map -%}
-  {%- unless hub.in_season -%}
-  {%- include lights-map.html -%}
-  {%- endunless -%}
   {%- endif -%}
 </article>

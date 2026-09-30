@@ -76,17 +76,6 @@ hubs:
     off_season_intro: The season runs Nov 10 through Dec 31.
     off_season_listed: The season runs Nov 10 through Dec 31. Dates already set are listed below.
     empty: Nothing is listed yet. City pages are where each event is written up, and this page gathers the Christmas ones.
-    lights: holiday_lights
-    suggest:
-      lead: Know a great display?
-      link: Send it in
-      subject: "Christmas lights: "
-      body: |-
-        Address or street:
-        Town:
-        What makes it great:
-        Dates and hours:
-        Photos: attach any you took (by sending, you're OK with us posting them with credit).
     season:
       start: "11-10"
       end: "12-31"
@@ -97,7 +86,7 @@ hubs:
         tags: [tree-lighting]
       - id: holiday-lights
         title: Holiday lights
-        intro: Neighborhood and civic light displays.
+        intro: Public light displays.
         tags: [holiday-lights]
       - id: santa
         title: Santa visits and photos

@@ -1,16 +1,17 @@
-# Christmas light displays for /christmas/#lights.
-# This list stays in the hub all year. From Nov 10 through Dec 31 the
-# section is first on the page. The rest of the year it follows the events.
-# A row here is not an event. Do not copy it into a city page.
+# Unused. Jekyll does not render this file.
+# Reserved for a future map of private homes and residential streets,
+# tracked in GitHub issue #26. Do not delete the file.
+# Do not add same_as. Do not copy a row onto a city page from here.
+# A public display becomes an event only when that season's dates are
+# published, and the write-up lives on the city page.
 #
 # Required: id, name, type, city, address, description, source, free,
 # last_verified. nights and hours when they are known. photo when a
 # licensed picture exists.
 # type is park, house, or street.
-# lat and lng are optional decimal degrees. The page does not show a map
-# and does not ask for a visitor's location.
-# photo is optional. Write image, credit, and credit_url. The card photo
-# uses the credit strip. Leave photo off when there is no licensed picture.
+# lat and lng are optional decimal degrees. Nothing on the site reads them.
+# photo is optional. Write image, credit, and credit_url.
+# Leave photo off when there is no licensed picture.
 # Do not use a photo of recognizable kids. photo.kind is own or theme.
 # Use CC0, CC BY, CC BY-SA, or public domain only.
 # city is a city id from _data/cities.yml.
@@ -25,7 +26,6 @@
 # last_verified is the day the source was checked, YYYY-MM-DD.
 # When the source is a past season and the next one is not announced,
 # start nights with "Last seen 2025" (use the season year).
-# Do not add same_as here. These rows stay out of the Holiday lights events.
 - id: garden-dlights
   name: "Garden d'Lights"
   type: park

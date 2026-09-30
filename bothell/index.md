@@ -106,3 +106,17 @@ A collaborative storytelling game for middle school grades 6–8, funded by a Ci
 Carnival games, trunk-or-treat from decorated cars, and a bounce house. The Y describes these branch festivals as free and open to the community, and it asks adults not to wear masks. Costumes should stay family-friendly.
 
 [Fall festivals](https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities)
+
+### Evergreen Christmas Lights
+<p class="event-when">Tue Dec 1 through Thu Dec 24 · 6:00–9:00 p.m.</p>
+<p class="event-place">Evergreen Church, 3429 240th St SE</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/lights-path.webp"
+   alt="A path lined with blue and white lights at night."
+   credit="Photo: Yoonahkim, CC BY-SA 3.0"
+   source="https://commons.wikimedia.org/wiki/File:Luminescent_lights.jpg" %}
+
+A free walk at Evergreen Church, nightly from 6:00 to 9:00 p.m., with light tunnels, a show set to music, a train, and a snow play area. The church lists it from December 1 through December 24.
+
+[Evergreen Christmas Lights](https://evergreenchristmaslights.com/)

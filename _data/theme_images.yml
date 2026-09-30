@@ -357,8 +357,9 @@ groups:
         credit: "Photo: Evan Bench, CC BY 2.0"
         license: CC BY 2.0
         source: https://commons.wikimedia.org/wiki/File:Books_in_a_stack_(a_stack_of_books)_-_Flickr_-_austinevan.jpg
-  # Christmas lights list only. This key is not an event name or tag,
-  # so hub cards do not pick these up. tree-lights.webp stays on holiday-lights.
+  # Not an event name or tag, so hub cards do not pick these up.
+  # The files stay with the unused holiday_lights.yml data.
+  # tree-lights.webp stays on holiday-lights.
   - keys: [display-lights-theme]
     images:
       - image: /assets/images/themes/lights-path.webp
