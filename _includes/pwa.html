@@ -160,6 +160,7 @@
     var active = Object.keys(groups).length > 0;
     var visible = 0;
     document.querySelectorAll(".event-card, .hub-card").forEach(function (card) {
+      if (card.classList.contains("decor-card")) return;
       var show = !active || matchingCard(card, groups);
       card.classList.toggle("is-filtered-out", !show);
       if (show) visible += 1;
@@ -173,15 +174,26 @@
       }
       heading.classList.toggle("is-filtered-out", active && !any);
     });
-    document.querySelectorAll(".hub-section").forEach(function (section) {
-      var cards = section.querySelectorAll(".hub-card");
+    document.querySelectorAll(".hub-grid").forEach(function (grid) {
+      var cards = grid.querySelectorAll(".hub-card:not(.decor-card)");
       if (!cards.length) return;
       var any = false;
       var i;
       for (i = 0; i < cards.length; i++) {
         if (!cards[i].classList.contains("is-filtered-out")) any = true;
       }
-      section.classList.toggle("is-filtered-out", active && !any);
+      grid.classList.toggle("is-filtered-out", active && !any);
+    });
+    document.querySelectorAll(".hub-section").forEach(function (section) {
+      var cards = section.querySelectorAll(".hub-card:not(.decor-card)");
+      if (!cards.length) return;
+      var any = false;
+      var i;
+      for (i = 0; i < cards.length; i++) {
+        if (!cards[i].classList.contains("is-filtered-out")) any = true;
+      }
+      var pinned = section.querySelector(".decorations");
+      section.classList.toggle("is-filtered-out", active && !any && !pinned);
     });
     document.querySelectorAll(".hub-toc li").forEach(function (item) {
       var link = item.querySelector("a");

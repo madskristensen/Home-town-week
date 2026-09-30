@@ -125,7 +125,8 @@
   text-underline-offset: 0.08em;
 }
 
-.hub-card .event-when {
+.hub-card .event-when,
+.decor-list .event-when {
   display: inline-block;
   max-width: 100%;
   margin: 0.25rem 0 0;
@@ -135,7 +136,8 @@
   line-height: 1.35;
 }
 
-.hub-card .event-place {
+.hub-card .event-place,
+.decor-list .event-place {
   margin: 0.15rem 0 0;
   color: var(--muted);
   font-size: 0.92rem;
@@ -144,7 +146,9 @@
 }
 
 .hub-card .event-place a.place-town,
-.hub-card .event-place span.place-town {
+.hub-card .event-place span.place-town,
+.decor-list .event-place a.place-town,
+.decor-list .event-place span.place-town {
   color: inherit;
   font-weight: 600;
   text-decoration: none;
@@ -155,9 +159,89 @@
 }
 
 .hub-card .event-place a.place-town:hover,
-.hub-card .event-place a.place-town:focus-visible {
+.hub-card .event-place a.place-town:focus-visible,
+.decor-list .event-place a.place-town:hover,
+.decor-list .event-place a.place-town:focus-visible {
   color: var(--link);
   text-decoration: underline;
+}
+
+.decorations {
+  margin-top: 1.75rem;
+}
+
+.decorations > h3 {
+  scroll-margin-top: 0.75rem;
+  margin: 0;
+  font-size: clamp(1.35rem, 3vw, 1.55rem);
+  line-height: 1.2;
+}
+
+.decor-group {
+  margin-top: 1.15rem;
+}
+
+.decor-group > h4 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.decor-kicker {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.12rem 0.45rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--sheet);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  vertical-align: 0.12em;
+}
+
+.decor-tips {
+  padding: 0.85rem 0.9rem 0.15rem;
+  border-radius: 2px;
+  background: var(--wash);
+}
+
+.decor-list {
+  margin: 0.45rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.decor-list > li {
+  margin: 0;
+  padding: 0.7rem 0 0.75rem;
+  border-top: 1px solid var(--rule);
+}
+
+.decor-list > li:last-child {
+  padding-bottom: 0.15rem;
+}
+
+.decor-name {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+}
+
+.decorations .suggest-event {
+  margin-top: 0.85rem;
 }
 
 .hub-blurb {
@@ -236,6 +320,19 @@
     background: var(--season-bg);
     border-color: var(--season-ink);
     color: var(--season-ink);
+  }
+}
+
+@media (prefers-contrast: more) {
+  .decor-tips {
+    background: var(--sheet);
+    outline: 1px solid var(--ink);
+  }
+
+  .decor-kicker {
+    background: var(--sheet);
+    border-color: var(--ink);
+    color: var(--ink);
   }
 }
 

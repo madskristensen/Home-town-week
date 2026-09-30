@@ -1239,6 +1239,7 @@ a.addr .addr-text {
 
 .event-card.is-filtered-out,
 .hub-card.is-filtered-out,
+.hub-grid.is-filtered-out,
 .hub-section.is-filtered-out,
 .prose h2.event-bucket.is-filtered-out,
 .hub-toc li.is-filtered-out {

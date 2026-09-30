@@ -1,0 +1,54 @@
+{%- comment -%}
+  Decorated houses and streets, inside the Halloween section.
+  A group is photo cards only when every entry has a licensed image.
+  Otherwise it is a compact text list. Rows are not hub-card items,
+  so the event filters do not hide them.
+{%- endcomment -%}
+<div class="decorations" id="halloween-decorations">
+  <h3>Halloween decorations</h3>
+  <p class="hub-section-intro">Streets are listed when the owner or a news story published them.</p>
+  {%- for group in site.data.halloween_decorations.groups -%}
+  {%- assign photo_group = true -%}
+  {%- assign entry_count = group.entries | size -%}
+  {%- if entry_count == 0 -%}
+  {%- assign photo_group = false -%}
+  {%- endif -%}
+  {%- for entry in group.entries -%}
+  {%- assign entry_image = entry.image | append: "" -%}
+  {%- if entry_image.size == 0 -%}
+  {%- assign photo_group = false -%}
+  {%- endif -%}
+  {%- endfor -%}
+  <div class="decor-group{% if group.tips %} decor-tips{% endif %}">
+    <h4>
+      {{- group.title -}}
+      {%- if group.tips -%} <span class="decor-kicker">Community tips</span>{%- endif -%}
+    </h4>
+    {%- assign group_intro = group.intro | append: "" -%}
+    {%- if group_intro.size > 0 -%}
+    <p class="hub-section-intro">{{ group.intro }}</p>
+    {%- endif -%}
+    {%- if photo_group -%}
+    <div class="hub-grid">
+      {%- for entry in group.entries -%}
+      {%- include halloween-decor-entry.html entry=entry photo=true -%}
+      {%- endfor -%}
+    </div>
+    {%- else -%}
+    <ul class="decor-list">
+      {%- for entry in group.entries -%}
+      <li>
+        {%- include halloween-decor-entry.html entry=entry -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+    {%- endif -%}
+  </div>
+  {%- endfor -%}
+  {%- capture decor_mail -%}House or street:
+
+Town:
+
+What to know:{%- endcapture -%}
+  <p class="suggest-event">Know a great decorated house or street? <a href="mailto:suggestions@eastsidecalendar.com?subject={{ 'Halloween decorations' | mail_escape }}&amp;body={{ decor_mail | strip | mail_escape }}">Tell us</a>.</p>
+</div>

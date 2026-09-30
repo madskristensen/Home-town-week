@@ -1,0 +1,23 @@
+<p class="decor-name">{{ include.entry.name }}</p>
+{%- assign entry_when = include.entry.when | append: "" -%}
+{%- if entry_when.size > 0 -%}
+<p class="event-when">{{ include.entry.when }}</p>
+{%- endif -%}
+<p class="event-place">
+  {%- assign entry_place = include.entry.place | append: "" -%}
+  {%- assign place_count = include.entry.places | size -%}
+  {%- if place_count > 0 -%}
+    {%- for spot in include.entry.places -%}
+      {%- unless forloop.first -%}{%- if forloop.last -%}, and {% else %}, {% endif -%}{%- endunless -%}
+      <a class="addr" href="{{ spot | map_search: include.entry.city }}"><span class="addr-text">{{ spot }}</span></a>
+    {%- endfor -%}
+  {%- elsif entry_place.size > 0 -%}
+  <a class="addr" href="{{ include.entry.place | map_search: include.entry.city }}"><span class="addr-text">{{ include.entry.place }}</span></a>
+  {%- endif -%}
+  {%- capture city_href -%}/{{ include.entry.city_id }}/{%- endcapture -%}
+  {%- if place_count > 0 or entry_place.size > 0 -%}, {% endif %}<a class="place-town" href="{{ city_href | strip | relative_url }}">{{ include.entry.city }}</a>
+</p>
+{%- assign entry_blurb = include.entry.blurb | append: "" -%}
+{%- if entry_blurb.size > 0 -%}
+<p class="hub-blurb">{{ include.entry.blurb }}{% if include.entry.source %} <a href="{{ include.entry.source }}" rel="noopener">{{ include.entry.source_name }}</a>{% endif %}.</p>
+{%- endif -%}

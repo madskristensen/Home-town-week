@@ -121,6 +121,9 @@ layout: default
       </article>
       {%- endfor -%}
     </div>
+    {%- if section.id == "halloween" -%}
+    {%- include halloween-decorations.html -%}
+    {%- endif -%}
   </section>
   {%- endfor -%}
   {%- endif -%}

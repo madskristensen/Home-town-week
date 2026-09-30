@@ -98,6 +98,12 @@ a:visited {
   display: none !important;
 }
 
+.decor-tips,
+.decor-kicker {
+  background: #fff !important;
+  color: #000 !important;
+}
+
 .standout-mark::after {
   content: "★";
 }
@@ -125,6 +131,7 @@ figure,
 .event-card,
 .hub-card,
 .playground-list li,
+.decor-list li,
 .hub-section {
   break-inside: avoid;
   page-break-inside: avoid;
@@ -147,6 +154,7 @@ figure,
 
 a.event-source::after,
 .hub-card h3 a[href^="http"]::after,
+.decor-list .hub-blurb a[href^="http"]::after,
 .home-source a[href^="http"]::after {
   content: " (" attr(href) ")";
   font-weight: 400;

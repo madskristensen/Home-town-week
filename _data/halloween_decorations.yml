@@ -1,0 +1,105 @@
+# Decorated houses and streets inside /fall/#halloween.
+# A street appears only when the owner published it or a news story names it.
+# image is a licensed photo of that place. Leave it off when there is none.
+# A group uses photo cards only when every entry has an image.
+groups:
+  - id: neighborhoods
+    title: Neighborhoods
+    entries:
+      - name: The Lakes
+        city: Mercer Island
+        city_id: mercer-island
+        place: The Lakes
+        blurb: A figure-8 neighborhood where the houses go all out. Visitor cars stay out, and the neighborhood runs a food drive.
+        source: https://www.axios.com/local/seattle/2024/10/17/best-trick-or-treat-neighborhoods
+        source_name: Axios Seattle
+      - name: Issaquah Highlands
+        city: Issaquah
+        city_id: issaquah
+        place: Issaquah Highlands
+        blurb: The HOA calls it a trick-or-treat destination. Residents' favorites are Dahlia Park, Manchester Court, and Park Drive.
+        source: https://issaquahhighlands.com/halloween-traditions-in-issaquah-highlands/
+        source_name: Issaquah Highlands
+      - name: Happiest Halloween
+        city: Snoqualmie
+        city_id: snoqualmie
+        place: Douglas St and Curtis Dr, Snoqualmie Ridge
+        blurb: Themed houses on this loop, kept fun rather than scary. Church on the Ridge has run it for more than 20 years.
+        source: https://livingsnoqualmie.com/a-fun-filled-tradition-returns-happiest-halloween-2024-in-snoqualmie-ridge/
+        source_name: Living Snoqualmie
+  - id: homes
+    title: Standout homes
+    entries:
+      - name: Zombie Barbies
+        city: Kirkland
+        city_id: kirkland
+        blurb: About 300 zombified Barbies in scenes, set out every fall since 2017.
+        source: https://www.425magazine.com/features/danielle-davis-kirkland-wa-zombie-barbie-interview/article_93fcc1dc-5366-4b88-be46-211fa5a372b3.html
+        source_name: 425 Magazine
+      - name: Issaquah skeleton house
+        city: Issaquah
+        city_id: issaquah
+        place: SE Bush St near 2nd Ave SE
+        when: Salmon Days through Halloween
+        blurb: Hundreds of skeletons, including an arch of about 200.
+        source: https://www.seattletimes.com/life/lifestyle/these-seattle-area-households-take-halloween-decor-to-the-next-level/
+        source_name: The Seattle Times
+      - name: BotHELL House of Horrors
+        city: Bothell
+        city_id: bothell
+        place: 19112 93rd Pl NE
+        when: Halloween night
+        blurb: A free family walk-through, open on Halloween night since 2009.
+        source: https://www.haunts.com/bothellhomehaunt
+        source_name: Haunts.com
+      - name: Swayne Spooks
+        city: Redmond
+        city_id: redmond
+        place: 13817 180th Ave NE
+        blurb: Colorful and not too scary, with full-size candy bars. The owner listed this house.
+        source: https://frightmaps.com/houses/washington/swayne-spooks
+        source_name: Frightmaps
+      - name: A Stranger Things Halloween
+        city: Kirkland
+        city_id: kirkland
+        place: 10306 NE 137th Pl
+        when: "Halloween night, 6 to 9 p.m."
+        blurb: A front-yard walk-through. The owner listed this house.
+        source: https://frightmaps.com/houses/washington/a-stranger-things-halloween
+        source_name: Frightmaps
+  - id: tips
+    title: Locals recommend
+    tips: true
+    intro: Neighbors named these. We have not checked them in person.
+    entries:
+      - name: Killarney Circle (Enatai)
+        city: Bellevue
+        city_id: bellevue
+        place: Killarney Circle
+        blurb: A car-free loop by the pool.
+        source: https://www.reddit.com/r/BellevueWA/comments/17kqexf/great_neighborhoods_for_trickortreating/
+        source_name: r/BellevueWA
+      - name: "Vuecrest, Tam O'Shanter, and Newport Shores"
+        city: Bellevue
+        city_id: bellevue
+        places:
+          - Vuecrest
+          - "Tam O'Shanter"
+          - Newport Shores
+        blurb: Trick-or-treat favorites named by neighbors.
+        source: https://www.reddit.com/r/eastside/comments/1oesa43/best_trick_or_treat_neighborhoods/
+        source_name: r/eastside
+      - name: "Taylor's Ridge"
+        city: Duvall
+        city_id: duvall
+        place: "Taylor's Ridge"
+        blurb: A big neighborhood decorating competition.
+        source: https://www.reddit.com/r/eastside/comments/1o7roju/neighborhoods_with_good_halloween_decorations/
+        source_name: r/eastside
+      - name: Willows Business Center
+        city: Redmond
+        city_id: redmond
+        place: Willows Business Center
+        blurb: About two blocks of decorations. In 2025 the theme was Beetlejuice.
+        source: https://www.reddit.com/r/eastside/comments/1o7roju/neighborhoods_with_good_halloween_decorations/
+        source_name: r/eastside
