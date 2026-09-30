@@ -243,3 +243,171 @@ venues:
     credit: "Photo: Fangusu, CC BY-SA 4.0"
     license: CC BY-SA 4.0
     source: https://commons.wikimedia.org/wiki/File:Barn_Owl_Jack_O_Lantern_Left_Side.jpg
+  - keys: ["bellevue library", "bellevue public library"]
+    image: /assets/images/bellevue/bellevue-library.webp
+    alt: Bellevue Library, a glass and brick building with a covered walkway and trees in front.
+    credit: "Photo: SuddenFrost, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Bellevue_Library.jpg
+  - keys: ["newport way library"]
+    image: /assets/images/bellevue/newport-way-library.webp
+    alt: Newport Way Library, a low building with a broad glass front and a covered entry.
+    credit: "Photo: SuddenFrost, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Newport_Way_Library.jpg
+  - keys: ["meydenbauer"]
+    image: /assets/images/bellevue/meydenbauer-center.webp
+    alt: Meydenbauer Center in downtown Bellevue, a curved glass building beside the street.
+    credit: "Photo: SuddenFrost, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Meydenbauer_Center.jpg
+  - keys: ["mercer slough"]
+    image: /assets/images/bellevue/mercer-slough.webp
+    alt: Mercer Slough Nature Park, with the downtown Bellevue skyline beyond the wetland trees.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Downtown_Bellevue,_WA_from_Mercer_Slough_Nature_Park.jpg
+  - keys: ["lake hills greenbelt", "phantom lake"]
+    image: /assets/images/bellevue/phantom-lake.webp
+    alt: Phantom Lake in the Lake Hills Greenbelt, with trees along the shore at sunset.
+    credit: "Photo: David Doan, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Indian_Summer_Sunset_on_Phantom_Lake_-_panoramio.jpg
+  - keys: ["bothell library"]
+    image: /assets/images/bothell/bothell-library.webp
+    alt: Bothell Library, a modern building with a glass and wood front and a tall entry.
+    credit: "Photo: SmartAn01, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Bothell_Library.jpg
+  - keys: ["anderson school"]
+    image: /assets/images/bothell/anderson-school.webp
+    alt: The brick Anderson School building in Bothell, with a columned entrance and a lawn in front.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Bothell,_WA_-_Anderson_School_01.jpg
+  - keys: ["carnation library"]
+    image: /assets/images/carnation/carnation-library.webp
+    alt: Carnation Library, a small building with a covered entry and a sign by the walk.
+    credit: "Photo: King County Library System."
+    license: King County Library System
+    source: https://kcls.org/locations/carnation/
+  - keys: ["remlinger"]
+    image: /assets/images/carnation/remlinger-farms.webp
+    alt: Remlinger Farms at sunset, with the farm grounds, rides, and the Snoqualmie Valley hills behind them.
+    credit: "Photo: Remlinger1, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Remlinger_Farms_at_Sunset.jpg
+  - keys: ["hjertoos"]
+    image: /assets/images/carnation/hjertoos-farm.webp
+    alt: The white farmhouse and red outbuildings at the Hjertoos farm in the Snoqualmie Valley.
+    credit: "Photo: Jon Roanhaus, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Hjertoos_Farm.jpg
+  - keys: ["duvall library"]
+    image: /assets/images/duvall/duvall-library.webp
+    alt: Duvall Library, a low building with a dark roof and a covered entry among the trees.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Duvall,_Washington_public_library_01.jpg
+  - keys: ["gaudette", "village theatre"]
+    image: /assets/images/issaquah/village-theatre.webp
+    alt: Village Theatre in Issaquah, a brick building with a tower and a marquee over the entrance.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Issaquah_-_Village_Theatre_04.jpg
+  - keys: ["pickering barn", "pickering farm"]
+    image: /assets/images/issaquah/pickering-barn.webp
+    alt: The timber interior of the historic dairy barn at Pickering Farm in Issaquah.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Issaquah,_WA_-_Pickering_Farm_inside_dairy_barn_01.jpg
+  - keys: ["kenmore library"]
+    image: /assets/images/kenmore/kenmore-library.webp
+    alt: Kenmore Library, a low building with a covered walkway and autumn trees in front.
+    credit: "Photo: King County Library System."
+    license: King County Library System
+    source: https://kcls.org/locations/kenmore/
+  - keys: ["kirkland performance center"]
+    image: /assets/images/kirkland/performance-center.webp
+    alt: Kirkland Performance Center, a brick building with a glass entry on a downtown corner.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Kirkland_Performance_Center_02.jpg
+  - keys: ["kingsgate library"]
+    image: /assets/images/kirkland/kingsgate-library.webp
+    alt: The entrance of Kingsgate Library, with the library sign beside the doors.
+    credit: "Photo: King County Library System."
+    license: King County Library System
+    source: https://kcls.org/locations/kingsgate/
+  - keys: ["juanita beach"]
+    image: /assets/images/kirkland/juanita-beach-park.webp
+    alt: Juanita Beach Park, with the sandy shore, the pier, and Lake Washington.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Juanita_Beach_from_across_the_bay.jpg
+  - keys: ["lake washington high school"]
+    image: /assets/images/kirkland/lake-washington-high-school.webp
+    alt: The main entry of Lake Washington High School, a brick and glass building with a covered walk.
+    credit: "Photo: Architectsea, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Lake_Washington_High_School_01.jpg
+  - keys: ["north bend library"]
+    image: /assets/images/north-bend/north-bend-library.webp
+    alt: The main entrance of North Bend Library, with glass doors under a deep roof.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:North_Bend,_WA_public_library_02.jpg
+  - keys: ["north bend theatre", "north bend theater"]
+    image: /assets/images/north-bend/north-bend-theatre.webp
+    alt: The North Bend Theatre, a historic brick movie house with a marquee on the main street.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:North_Bend,_WA_-_movie_theater.jpg
+  - keys: ["marymoor"]
+    image: /assets/images/redmond/marymoor-park.webp
+    alt: A trail through open grass and trees at Marymoor Park in Redmond.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:2025-10-22,_Marymoor_Park_(Redmond,_Washington),_084454.jpg
+  - keys: ["idylwood"]
+    image: /assets/images/redmond/idylwood-park.webp
+    alt: Idylwood Park on Lake Sammamish, with the beach, the dock, and the water.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:2023-06-20,_Idylwood_Park,_Redmond,_Washington,_020.jpg
+  - keys: ["fairwood library"]
+    image: /assets/images/renton/fairwood-library.webp
+    alt: Fairwood Library, a brick building with a library sign on the lawn.
+    credit: "Photo: WolverineOfTheCascades, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Fairwood_Library.jpg
+  - keys: ["renton highlands library", "highlands library"]
+    image: /assets/images/renton/renton-highlands-library.webp
+    alt: Renton Highlands Library, a modern building with a glass front and a covered entry.
+    credit: "Photo: SuddenFrost, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Renton_Highlands_Library.jpg
+  - keys: ["sammamish library"]
+    image: /assets/images/sammamish/sammamish-library.webp
+    alt: Sammamish Library, a modern building with a glass and wood front and a covered walkway.
+    credit: "Photo: SuddenFrost, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Sammamish_Library.jpg
+  - keys: ["snoqualmie library"]
+    image: /assets/images/snoqualmie/snoqualmie-library.webp
+    alt: Snoqualmie Library, a modern building with a glass front and a covered entry.
+    credit: "Photo: SuddenFrost, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Snoqualmie_Library.jpg
+  - keys: ["fall city library"]
+    image: /assets/images/snoqualmie/fall-city-library.webp
+    alt: Fall City Library, a small modern building with a deep roof and a glass entry.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Fall_City,_WA_-_library_01.jpg
+  - keys: ["woodinville library"]
+    image: /assets/images/woodinville/woodinville-library.webp
+    alt: Woodinville Library, a low building with a broad glass front and a covered walkway.
+    credit: "Photo: King County Library System."
+    license: King County Library System
+    source: https://kcls.org/locations/woodinville/

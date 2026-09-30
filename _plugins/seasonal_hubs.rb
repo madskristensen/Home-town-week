@@ -652,9 +652,10 @@ module EastsideCalendar
     end
 
     # Own photo, then that venue, then a themed picture, then a licensed
-    # seasonal pool picture. A venue or theme file is used once on a page.
-    # A pool file is used once, then the least-used pool picture may repeat
-    # so the card stays a real photo. A designed card is not used. The city
+    # seasonal pool picture. A venue photo is the place itself, so every
+    # event there can use it. A theme file is used once on a page. A pool
+    # file is used once, then the least-used pool picture may repeat so
+    # the card stays a real photo. A designed card is not used. The city
     # hero is not in this chain.
     def attach_cards!(hub, site, pages, catalog, venues, groups, pools, hubs = nil)
       used = {}
@@ -827,14 +828,16 @@ module EastsideCalendar
       nil
     end
 
-    # Venue and theme files are used once. When every candidate on the
-    # page is taken, the least-used seasonal pool picture is used again.
+    # A venue photo can repeat, because each card is that same place.
+    # A theme file is used once. When every candidate on the page is
+    # taken, the least-used seasonal pool picture is used again.
     def pick_photo(candidates, used, pool_uses = nil)
       pool_uses ||= Hash.new(0)
       candidates.each do |photo|
-        next if used[photo["src"]]
+        reusable = photo["kind"] == "venue" || photo["kind"] == "own"
+        next if !reusable && used[photo["src"]]
 
-        used[photo["src"]] = true
+        used[photo["src"]] = true unless reusable
         pool_uses[photo["src"]] += 1 if photo["kind"] == "pool"
         return photo
       end
@@ -984,11 +987,65 @@ module EastsideCalendar
       photo.merge("kind" => kind)
     end
 
+    # The longest key wins, so "renton highlands library" is that branch
+    # and not a shorter library name that also fits the text.
     def matching_venues(event, venues)
       hay = "#{event["name"]} #{event["place"]}".downcase
-      Array(venues).select do |venue|
-        keys_hit?(venue, hay, [])
+      ranked = Array(venues).filter_map do |venue|
+        hit = Array(venue["keys"]).map { |key| key.to_s.downcase.strip }.select do |key|
+          !key.empty? && hay.include?(key)
+        end.max_by(&:length)
+        hit ? [hit.length, venue] : nil
       end
+      return [] if ranked.empty?
+
+      best = ranked.map(&:first).max
+      ranked.select { |length, _venue| length == best }.map(&:last)
+    end
+
+    # City pages show the venue photo when the writeup has none of its own.
+    def with_venue_photos(markdown, venues)
+      text = markdown.to_s
+      return text if text.empty? || venues.nil?
+
+      parts = text.split(/(?=^### )/m)
+      parts.map { |part| venue_photo_section(part, venues) }.join
+    end
+
+    def venue_photo_section(part, venues)
+      return part if part.match?(/\{%\s*include\s+event-photo\.html\b/)
+
+      name = part[/\A###\s+(.+)\s*$/, 1].to_s
+      place = part[/<p class="event-place">(.*?)<\/p>/m, 1].to_s
+      place = place.gsub(/<[^>]+>/, " ")
+      return part if name.empty? && place.empty?
+
+      venue = matching_venues({ "name" => name, "place" => place }, venues).first
+      photo = listed_photo(venue, "venue") if venue
+      return part unless photo
+
+      include = venue_photo_include(photo)
+      if part.sub!(%r{(<p class="event-place">.*?</p>)}m) { "#{Regexp.last_match(1)}\n\n#{include}" }
+        part
+      elsif part.sub!(/\A(###[^\n]*\n)/) { "#{Regexp.last_match(1)}\n#{include}\n" }
+        part
+      else
+        part
+      end
+    end
+
+    def venue_photo_include(photo)
+      <<~LIQUID.chomp
+        {% include event-photo.html
+           src="#{quote_attr(photo["src"])}"
+           alt="#{quote_attr(photo["alt"])}"
+           credit="#{quote_attr(photo["credit"])}"
+           source="#{quote_attr(photo["source"])}" %}
+      LIQUID
+    end
+
+    def quote_attr(value)
+      value.to_s.gsub('"', "'")
     end
 
     # A specific event type in the name or place wins over a broad tag,
@@ -1443,3 +1500,10 @@ module EastsideCalendar
 end
 
 Liquid::Template.register_tag("seasonal_banner", EastsideCalendar::SeasonalBannerTag)
+
+Jekyll::Hooks.register :pages, :pre_render do |page|
+  next unless page.data["layout"] == "city"
+
+  venues = page.site.data.dig("venue_images", "venues")
+  page.content = EastsideCalendar::SeasonalHubs.with_venue_photos(page.content, venues)
+end
