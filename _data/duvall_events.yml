@@ -10,14 +10,12 @@
   place: "Duvall Library, 15508 Main Street NE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a847411b20478002993aafd"
 - name: "Duvall Farmers Market"
-  cost: "Free"
   setting: "Outdoor"
   start: "2026-10-01T15:00:00-07:00"
   end: "2026-10-01T19:00:00-07:00"
   place: "Taylor Landing, 16201 Main Street NE"
   same_as: "https://duvallfarmersmarket.org/"
 - name: "Muddy Boots Pumpkins"
-  setting: "Outdoor"
   tags: [pumpkin-patch, corn-maze]
   start: "2026-10-01"
   end: "2026-10-31"
@@ -71,7 +69,6 @@
   same_as: "https://www.valleyrecord.com/2026/09/25/snoqualmie-valley-community-calendar-sept-25-edition/"
 - name: "Teen Space"
   cost: "Free"
-  ages: "Teens"
   setting: "Indoor"
   tags: [free]
   start: "2026-10-28T17:30:00-07:00"

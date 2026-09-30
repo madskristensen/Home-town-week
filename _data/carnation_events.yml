@@ -2,7 +2,6 @@
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
 - name: "Jubilee Farm Harvest Festival"
-  setting: "Outdoor"
   tags: [harvest, pumpkin-patch]
   start: "2026-10-01"
   end: "2026-10-31"

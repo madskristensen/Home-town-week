@@ -52,7 +52,6 @@
   same_as: "https://kcls.bibliocommons.com/v2/events/6a95fee169166f088b9651cd"
 - name: "Toddler Story Time"
   cost: "Free"
-  ages: "Toddlers"
   setting: "Indoor"
   tags: [free, story-time]
   start: "2026-10-05T10:30:00-07:00"
@@ -115,15 +114,12 @@
   start: "2026-10-16"
   same_as: "https://allevents.in/renton/bfs-durgotsav-festival-free-entry/200030596061609"
 - name: "Olde Fashioned Halloween Party"
-  ages: "All ages"
-  setting: "Outdoor"
   tags: [halloween]
   start: "2026-10-24T13:00:00-07:00"
   end: "2026-10-24T16:00:00-07:00"
   place: "Downtown Renton, then Legacy Square"
   same_as: "https://www.rentondowntown.com/events/halloween"
 - name: "Scrooge!"
-  ages: "All ages"
   setting: "Indoor"
   tags: [holiday-show]
   start: "2026-12-04"
