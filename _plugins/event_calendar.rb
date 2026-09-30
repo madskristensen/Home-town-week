@@ -665,7 +665,7 @@ module EastsideCalendar
         iso = dates[key] && dates[key][index]
         iso = nil if iso.to_s.empty?
         info = labels[key] && labels[key][index]
-        part = link_event_place(part, city_name, visible_text(heading))
+        part = link_event_place(part, city_name)
         part = mark_source_links(part)
         wrap_event_card(part, iso, info)
       end
@@ -673,7 +673,8 @@ module EastsideCalendar
     end
 
     # The place line stays plain text in the markdown. The link opens a map.
-    def link_event_place(part, city_name, venue_name)
+    # The query is that line plus the town, not the event title.
+    def link_event_place(part, city_name)
       part.sub(%r{(<p class="event-place">)(.*?)(</p>)}m) do
         open_tag = Regexp.last_match(1)
         inner = Regexp.last_match(2)
@@ -683,7 +684,7 @@ module EastsideCalendar
         text = visible_text(inner)
         next Regexp.last_match(0) if text.empty?
 
-        href = CGI.escapeHTML(MapLinks.href(text, city_name, venue_name))
+        href = CGI.escapeHTML(MapLinks.href(text, city_name))
         %(#{open_tag}<a class="addr" href="#{href}">#{MapLinks.pin}<span class="addr-text">#{inner.strip}</span></a>#{close_tag})
       end
     end

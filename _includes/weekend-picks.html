@@ -294,7 +294,7 @@
           {%- include event-tags.html event=event -%}
         </a>
         {%- if place_label.size > 0 -%}
-        <a class="addr weekend-place" href="{{ place_label | map_search: city.name, event.name }}">{%- include addr-pin.html -%}<span class="addr-text">{{ place_label }}</span></a>
+        <a class="addr weekend-place" href="{{ place_label | map_search: city.name }}">{%- include addr-pin.html -%}<span class="addr-text">{{ place_label }}</span></a>
         {%- endif -%}
         {%- if blurb.size > 0 -%}
         <span class="weekend-blurb">{{ blurb }}</span>

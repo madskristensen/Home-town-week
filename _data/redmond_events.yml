@@ -95,7 +95,7 @@
   signup: true
   setting: "Indoor"
   start: "2026-10-03T14:00:00-07:00"
-  place: "Francis J. Gaudette Theatre, Issaquah"
+  place: "Francis J. Gaudette Theatre, 303 Front St N, Issaquah"
   same_as: "https://villagetheatre.org/mainstage/ragtime/"
 - name: "Basic Bicycle Maintenance for Youth"
   cost: "Free"
@@ -103,7 +103,7 @@
   signup: true
   start: "2026-10-03T15:00:00-07:00"
   end: "2026-10-03T17:30:00-07:00"
-  place: "Redmond Library"
+  place: "Redmond Library, 15990 NE 85th St"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a9478c437716d0d1ad74c8f"
 - name: "Swan Lake: Symphony of Lights"
   setting: "Indoor"

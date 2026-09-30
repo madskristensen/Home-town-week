@@ -44,7 +44,7 @@
   setting: "Indoor"
   start: "2026-10-07T11:00:00-07:00"
   end: "2026-10-07T16:00:00-07:00"
-  place: "Train Shed Exhibit Hall, Stone Quarry Road, Snoqualmie"
+  place: "Train Shed Exhibit Hall, 9320 Stone Quarry Road, Snoqualmie"
   same_as: "https://trainmuseum.org/upcoming-events/"
 - name: "After School Hangout"
   cost: "Free"

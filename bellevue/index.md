@@ -207,7 +207,7 @@ A ranger walk for ages 2 to 5 through the Mercer Slough wetlands, with a nature 
 
 ### Fall in Bellevue Celebration
 <p class="event-when">Fri Oct 9 · 1:00–4:00 p.m.</p>
-<p class="event-place">The Meadow, downtown Bellevue</p>
+<p class="event-place">The Meadow, 600 108th Ave NE</p>
 
 A free afternoon from the Bellevue Downtown Association. An urban pumpkin patch of 500 pumpkins, photo spots, and a pumpkin-decorating craft. Bellden Cafe is pouring complimentary hot cider and serving pumpkin-spiced scones and apple-cinnamon waffle sticks. The fall swings stay at The Meadow from September 19 through November 7.
 

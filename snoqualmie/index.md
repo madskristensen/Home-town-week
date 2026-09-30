@@ -55,7 +55,7 @@ A morning of planting in the city's climate-adaptation demonstration forest. It 
 
 ### Free Wednesday at the Train Shed
 <p class="event-when">Wed Oct 7 · 11:00 a.m.–4:00 p.m.</p>
-<p class="event-place">Train Shed Exhibit Hall, Stone Quarry Road, Snoqualmie</p>
+<p class="event-place">Train Shed Exhibit Hall, 9320 Stone Quarry Road, Snoqualmie</p>
 
 {% include event-photo.html
    src="/assets/images/snoqualmie/train-shed.webp"

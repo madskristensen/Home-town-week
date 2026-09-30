@@ -34,7 +34,7 @@ The heritage society opens the museum on the first Sunday of the month, 1:00 to 
 
 ### Paper Flower Craft
 <p class="event-when">Tue Oct 6 · 12:30–2:00 p.m.</p>
-<p class="event-place">Woodinville Library</p>
+<p class="event-place">Woodinville Library, 17105 Avondale Road NE</p>
 
 Friends of the Woodinville Library sponsor a paper-flower craft. Supplies are provided. Please register for the craft. A Friends general meeting follows from 2:00 to 3:00 p.m. and does not require registration.
 
@@ -42,7 +42,7 @@ Friends of the Woodinville Library sponsor a paper-flower craft. Supplies are pr
 
 ### Rainbow Youth Group
 <p class="event-when">Wed Oct 7 · 4:00–5:30 p.m.</p>
-<p class="event-place">Woodinville Library</p>
+<p class="event-place">Woodinville Library, 17105 Avondale Road NE</p>
 
 A social group with Lambert House volunteers for ages 11–22 who are LGBTQIA+ or who are questioning or exploring gender or sexual identity. The description mentions parent or guardian permission. Read that line on the event page before you go. Wednesday hours are noon–8:00 p.m.
 
@@ -50,7 +50,7 @@ A social group with Lambert House volunteers for ages 11–22 who are LGBTQIA+ o
 
 ### Baby and Toddler Story Time
 <p class="event-when">Thu Oct 8 · 10:30–11:30 a.m.</p>
-<p class="event-place">Woodinville Library</p>
+<p class="event-place">Woodinville Library, 17105 Avondale Road NE</p>
 
 Rhymes, songs, and bounces for newborns to 24 months with a caregiver. Siblings are welcome. Registration is not required. The library opens at 10:00 a.m. on Thursday, so this starts after the doors.
 
@@ -58,7 +58,7 @@ Rhymes, songs, and bounces for newborns to 24 months with a caregiver. Siblings 
 
 ### Family Story Time
 <p class="event-when">Fri Oct 9 · 11:00 a.m.–12:00 p.m.</p>
-<p class="event-place">Woodinville Library</p>
+<p class="event-place">Woodinville Library, 17105 Avondale Road NE</p>
 
 Stories, music, movement, and rhymes. Stay to play after. All ages with an adult.
 

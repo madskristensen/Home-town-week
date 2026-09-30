@@ -121,7 +121,7 @@
       </figure>
       {%- endif -%}
       <h3><span class="home-num">{{ light.number }}</span> {{ light.name }}</h3>
-      <p class="event-place"><a class="addr" href="{{ light.address | map_search: light.city, light.name }}">{%- include addr-pin.html -%}<span class="addr-text">{{ light.address }}</span></a></p>
+      <p class="event-place"><a class="addr" href="{{ light.address | map_search: light.city }}">{%- include addr-pin.html -%}<span class="addr-text">{{ light.address }}</span></a></p>
       {%- if light_nights.size > 0 -%}
       <p class="event-when">{{ light_nights }}</p>
       {%- endif -%}

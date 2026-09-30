@@ -130,7 +130,7 @@ Family craft. Ages 15 and up, and under 16 with a parent. $30 per project, mater
 
 ### Ragtime
 <p class="event-when">Sat Oct 3 · 2:00 and 7:30 p.m., Sun Oct 4 · 2:00 p.m.</p>
-<p class="event-place">Francis J. Gaudette Theatre, Issaquah</p>
+<p class="event-place">Francis J. Gaudette Theatre, 303 Front St N, Issaquah</p>
 
 {% include event-photo.html
    src="/assets/images/redmond/ragtime.webp"
@@ -143,7 +143,7 @@ Also Tue Sep 29 through Fri Oct 2 at 7:30 p.m., among other dates, through Oct 1
 
 ### Basic Bicycle Maintenance for Youth
 <p class="event-when">Sat Oct 3 · 3:00–5:30 p.m.</p>
-<p class="event-place">Redmond Library</p>
+<p class="event-place">Redmond Library, 15990 NE 85th St</p>
 
 Ages roughly 9–18. Bring a bike if you have one; limited to 10; registration required (Move Redmond partnership).  
 [KCLS event](https://kcls.bibliocommons.com/v2/events/6a9478c437716d0d1ad74c8f)
