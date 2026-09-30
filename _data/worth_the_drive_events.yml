@@ -14,6 +14,7 @@
   tags: [pumpkin-patch, corn-maze]
   blurb: "A Snohomish pumpkin patch and corn maze, open Wednesday through Sunday, 10 a.m.–6 p.m., through Nov 1."
 - name: "Bob's Corn and Pumpkin Farm"
+  cost: "$19.95 to $28.95"
   setting: "Outdoor"
   start: "2026-09-19"
   end: "2026-11-01"
@@ -24,6 +25,7 @@
   tags: [pumpkin-patch, corn-maze]
   blurb: "U-pick pumpkins and a corn maze, open daily through Nov 1. The night maze starts Oct 2."
 - name: "Thomasson Family Farm Pumpkin Patch"
+  cost: "$18.50 to $26"
   setting: "Outdoor"
   start: "2026-09-26"
   end: "2026-10-30"
@@ -64,6 +66,7 @@
   tags: [pumpkin-patch, corn-maze]
   blurb: "A Puyallup Valley harvest festival with a pumpkin patch, corn maze, and farm play, open 9 a.m.–6 p.m. every day in October. More than 50 kinds of pumpkins, gourds, and squash."
 - name: "Hometown Hoedown family hours"
+  signup: true
   cost: "$10"
   start: "2026-10-10T11:00:00-07:00"
   end: "2026-10-10T15:00:00-07:00"
@@ -74,6 +77,8 @@
   tags: [family-day]
   blurb: "Saturday family hours at Emerald Downs, 11 a.m.–3 p.m., with bounce houses, games, and other kid activities. Ages 15 and under are free. A limited free-admission hour runs 11 a.m.–noon if you reserve ahead, then family admission is $10. This is the daytime family block, not a race day."
 - name: "WildLanterns"
+  setting: "Outdoor"
+  signup: true
   start: "2026-11-13"
   end: "2027-01-17"
   place: "Woodland Park Zoo, 5500 Phinney Avenue N"
@@ -83,6 +88,7 @@
   tags: [holiday-lights]
   blurb: "An evening lantern walk at Woodland Park Zoo, 4–9 p.m., last entry 8:30 p.m., from Nov 13 through Jan 17. New lantern displays and a kids interactive zone. Closed Nov 16, 17, 18, 23, 26, and 30, Dec 7, 14, 24, and 25, and Jan 4, 5, 6, 11, 12, and 13. Timed tickets. The 21+ Night Owls evenings, Nov 20, Dec 18, and Jan 2, are adults only."
 - name: "Honeytree Farm Christmas trees"
+  setting: "Outdoor"
   start: "2026-11-27"
   end: "2026-12-24"
   place: "Honeytree Farm, 21606 SE Green Valley Road"
@@ -92,6 +98,7 @@
   tags: [tree-farm]
   blurb: "A choose-and-cut tree farm that opens the day after Thanksgiving, Nov 27, at 9 a.m. Weekends run 9 a.m. until dark, and weekdays from 10 a.m. They close when the trees are gone. Santa usually visits the first two weekends, and hot cocoa is free."
 - name: "Pfaff's Christmas Trees"
+  setting: "Outdoor"
   start: "2026-11-27"
   end: "2026-12-24"
   place: "Pfaff's Christmas Trees, 124th Avenue SE"
@@ -101,6 +108,8 @@
   tags: [tree-farm]
   blurb: "Choose-and-cut and precut firs on the Kent East Hill, two miles south of Kent-Kangley Road on 124th Avenue. Open the day after Thanksgiving through Christmas Eve. Weekends 9 a.m.–6:30 p.m., weekdays 10 a.m.–6:30 p.m."
 - name: "Zoolights"
+  setting: "Outdoor"
+  signup: true
   start: "2026-11-27"
   end: "2027-01-03"
   place: "Point Defiance Zoo and Aquarium, 5400 N Pearl Street"
