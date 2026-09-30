@@ -563,7 +563,6 @@ module EastsideCalendar
       return nil unless lat.between?(45.0, 49.5) && lng.between?(-125.0, -116.0)
 
       slug = light_slug(row["id"], name)
-      query = "#{address}, #{city_name}, WA"
       {
         "id" => slug,
         "name" => name,
@@ -577,8 +576,7 @@ module EastsideCalendar
         "hours" => row["hours"].to_s.gsub(/\s+/, " ").strip,
         "source" => source,
         "free" => row["free"] == true,
-        "last_verified" => row["last_verified"].to_s.strip,
-        "directions" => "https://www.google.com/maps/dir/?api=1&destination=#{CGI.escape(query)}"
+        "last_verified" => row["last_verified"].to_s.strip
       }
     end
 

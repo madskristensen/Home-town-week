@@ -255,38 +255,40 @@
       {%- assign external = true -%}
     {%- endif -%}
     <li>
-      <a class="weekend-pick" href="{{ event_href | relative_url }}"{% if external %} rel="noopener"{% endif %}>
-        {%- if photo.size > 0 -%}
-        {%- if lcp_assigned -%}
-          {%- assign pick_loading = "lazy" -%}
-          {%- assign pick_priority = "" -%}
-        {%- else -%}
-          {%- assign pick_loading = "eager" -%}
-          {%- assign pick_priority = "high" -%}
-          {%- assign lcp_assigned = true -%}
-        {%- endif -%}
-        <figure class="weekend-photo">
-        {%- include responsive-img.html
-             src=photo
-             alt=photo_alt_text
-             loading=pick_loading
-             priority=pick_priority
-             sizes="(min-width: 42rem) calc((min(44rem, 100vw - 3rem) - 1.25rem) / 2), calc(100vw - 3rem)" -%}
-        {%- if photo_credit.size > 0 -%}
-        <figcaption><span class="credit">{{ photo_credit }}</span></figcaption>
-        {%- endif -%}
-        </figure>
-        {%- endif -%}
-        <span class="weekend-town">{{ city.name }}</span>
-        <span class="weekend-when">{{ when_label }}</span>
-        <span class="weekend-name">{{ event.name }}</span>
+      <div class="weekend-pick">
+        <a class="weekend-card" href="{{ event_href | relative_url }}"{% if external %} rel="noopener"{% endif %}>
+          {%- if photo.size > 0 -%}
+          {%- if lcp_assigned -%}
+            {%- assign pick_loading = "lazy" -%}
+            {%- assign pick_priority = "" -%}
+          {%- else -%}
+            {%- assign pick_loading = "eager" -%}
+            {%- assign pick_priority = "high" -%}
+            {%- assign lcp_assigned = true -%}
+          {%- endif -%}
+          <figure class="weekend-photo">
+          {%- include responsive-img.html
+               src=photo
+               alt=photo_alt_text
+               loading=pick_loading
+               priority=pick_priority
+               sizes="(min-width: 42rem) calc((min(44rem, 100vw - 3rem) - 1.25rem) / 2), calc(100vw - 3rem)" -%}
+          {%- if photo_credit.size > 0 -%}
+          <figcaption><span class="credit">{{ photo_credit }}</span></figcaption>
+          {%- endif -%}
+          </figure>
+          {%- endif -%}
+          <span class="weekend-town">{{ city.name }}</span>
+          <span class="weekend-when">{{ when_label }}</span>
+          <span class="weekend-name">{{ event.name }}</span>
+        </a>
         {%- if place_label.size > 0 -%}
-        <span class="weekend-place">{{ place_label }}</span>
+        <a class="addr weekend-place" href="{{ place_label | map_search: city.name, event.name }}">{{ place_label }}</a>
         {%- endif -%}
         {%- if blurb.size > 0 -%}
         <span class="weekend-blurb">{{ blurb }}</span>
         {%- endif -%}
-      </a>
+      </div>
     </li>
     {%- endfor -%}
   </ul>

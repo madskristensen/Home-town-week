@@ -98,8 +98,8 @@ layout: default
         </p>
         {%- endif -%}
         <p class="event-place">
-          {%- if event_place.size > 0 -%}{{ event.place }}, {% endif -%}
-          <a href="{{ city_href | strip | relative_url }}">{{ event.city }}</a>
+          {%- if event_place.size > 0 -%}<a class="addr" href="{{ event.place | map_search: event.city, event.name }}">{{ event.place }}</a>, {% endif -%}
+          <a class="place-town" href="{{ city_href | strip | relative_url }}">{{ event.city }}</a>
         </p>
         {%- assign event_blurb = event.blurb | append: "" -%}
         {%- if event_blurb.size > 0 -%}

@@ -20,5 +20,20 @@
   <script type="module">
     if ("scrollRestoration" in history) history.scrollRestoration = "auto";
   </script>
+  <script type="module">
+    var ua = navigator.userAgent || "";
+    var apple = /iPad|iPhone|iPod/.test(ua) || /Macintosh|Mac OS X/.test(ua);
+    var android = /Android/.test(ua);
+    if (apple || android) {
+      var links = document.querySelectorAll("a.addr");
+      for (var i = 0; i < links.length; i++) {
+        var href = links[i].getAttribute("href") || "";
+        var at = href.indexOf("query=");
+        if (at < 0) continue;
+        var q = href.slice(at + 6);
+        links[i].setAttribute("href", apple ? "https://maps.apple.com/?q=" + q : "geo:0,0?q=" + q);
+      }
+    }
+  </script>
 </body>
 </html>

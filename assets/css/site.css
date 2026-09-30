@@ -492,10 +492,24 @@ picture {
 }
 
 .weekend-pick {
-  display: block;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   color: inherit;
+}
+
+.weekend-card {
+  display: block;
+  color: inherit;
   text-decoration: none;
+}
+
+.weekend-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
 .weekend-pick img {
@@ -543,8 +557,8 @@ picture {
   line-height: 1.2;
 }
 
-.weekend-pick:hover .weekend-name,
-.weekend-pick:focus-visible .weekend-name {
+.weekend-card:hover .weekend-name,
+.weekend-card:focus-visible .weekend-name {
   text-decoration: underline;
   text-underline-offset: 0.06em;
 }
@@ -1286,14 +1300,14 @@ picture {
   line-height: 1.4;
 }
 
-.hub-card .event-place a {
+.hub-card .event-place a.place-town {
   color: inherit;
   font-weight: 600;
   text-decoration: none;
 }
 
-.hub-card .event-place a:hover,
-.hub-card .event-place a:focus-visible {
+.hub-card .event-place a.place-town:hover,
+.hub-card .event-place a.place-town:focus-visible {
   color: var(--link);
   text-decoration: underline;
 }
@@ -1588,6 +1602,56 @@ picture {
   font-weight: 600;
   line-height: 1.4;
   text-align: center;
+}
+
+a.addr {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+a.addr:hover,
+a.addr:focus-visible {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
+}
+
+.prose .event-place a.addr,
+.hub-card .event-place a.addr,
+.lights-meta a.addr {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.prose .event-place a.addr:hover,
+.prose .event-place a.addr:focus-visible,
+.hub-card .event-place a.addr:hover,
+.hub-card .event-place a.addr:focus-visible,
+.lights-meta a.addr:hover,
+.lights-meta a.addr:focus-visible {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
+}
+
+.weekend-pick a.addr {
+  position: relative;
+  z-index: 1;
+  color: var(--muted);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.weekend-pick a.addr:hover,
+.weekend-pick a.addr:focus-visible {
+  color: var(--muted);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
 }
 
 @media (prefers-reduced-motion: reduce) {

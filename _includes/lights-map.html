@@ -35,7 +35,7 @@ Dates and hours:{%- endcapture -%}
     {%- assign light_hours = light.hours | append: "" -%}
     <li id="light-{{ light.id }}">
       <p class="lights-name">{{ light.name }}</p>
-      <p class="lights-meta">{{ light.type_label }} · {{ light.address }} · {% if light.free %}Free{% else %}Tickets required{% endif %}</p>
+      <p class="lights-meta">{{ light.type_label }} · <a class="addr" href="{{ light.address | map_search: light.city, light.name }}">{{ light.address }}</a> · {% if light.free %}Free{% else %}Tickets required{% endif %}</p>
       {%- if light_nights.size > 0 -%}
       <p class="event-when">{{ light_nights }}</p>
       {%- endif -%}
@@ -43,7 +43,7 @@ Dates and hours:{%- endcapture -%}
       <p class="lights-note">{{ light_hours }}</p>
       {%- endif -%}
       <p class="lights-blurb">{{ light.description }}</p>
-      <p class="light-links"><a href="{{ light.directions }}" rel="noopener">Directions</a> <a href="{{ light.source }}" rel="noopener">Source</a></p>
+      <p class="light-links"><a href="{{ light.source }}" rel="noopener">Source</a></p>
     </li>
     {%- endif -%}
     {%- endfor -%}

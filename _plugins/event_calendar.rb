@@ -546,7 +546,7 @@ module EastsideCalendar
       %(<span class="event-cals">#{anchors.join}</span>)
     end
 
-    def inject!(html, groups, dates, today)
+    def inject!(html, groups, dates, today, city_name = nil)
       return html unless html.is_a?(String)
 
       match = html.match(/<div class="prose"[^>]*>/)
@@ -556,7 +556,7 @@ module EastsideCalendar
       close_at = matching_div_end(html, content_at)
       return html unless close_at
 
-      inner = inject_inner(html[content_at...close_at], groups, dates)
+      inner = inject_inner(html[content_at...close_at], groups, dates, city_name)
       inner = group_events(inner, today)
       opener = stamp_today(html[match.begin(0)...content_at], today)
       html[0, match.begin(0)] + opener + inner + html[close_at..]
@@ -595,7 +595,7 @@ module EastsideCalendar
       nil
     end
 
-    def inject_inner(inner, groups, dates)
+    def inject_inner(inner, groups, dates, city_name = nil)
       groups ||= {}
       dates ||= {}
       cursors = Hash.new(0)
@@ -620,9 +620,26 @@ module EastsideCalendar
         end
         iso = dates[key] && dates[key][index]
         iso = nil if iso.to_s.empty?
+        part = link_event_place(part, city_name, visible_text(heading))
         wrap_event_card(part, iso)
       end
       prelude + rendered.join
+    end
+
+    # The place line stays plain text in the markdown. The link opens a map.
+    def link_event_place(part, city_name, venue_name)
+      part.sub(%r{(<p class="event-place">)(.*?)(</p>)}m) do
+        open_tag = Regexp.last_match(1)
+        inner = Regexp.last_match(2)
+        close_tag = Regexp.last_match(3)
+        next Regexp.last_match(0) if inner.include?("<a")
+
+        text = visible_text(inner)
+        next Regexp.last_match(0) if text.empty?
+
+        href = CGI.escapeHTML(MapLinks.href(text, city_name, venue_name))
+        %(#{open_tag}<a class="addr" href="#{href}">#{inner.strip}</a>#{close_tag})
+      end
     end
 
     # One card per event heading. The calendar icon is already on the date line.
@@ -985,7 +1002,8 @@ Jekyll::Hooks.register :pages, :post_render do |page|
     page.output,
     page.data["calendar_groups"],
     page.data["event_dates"],
-    today
+    today,
+    EastsideCalendar::EventCalendar.city_name_for(page.site, page)
   )
 end
 
