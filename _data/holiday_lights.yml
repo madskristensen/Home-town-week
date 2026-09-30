@@ -3,9 +3,11 @@
 # section is first on the page. The rest of the year it follows the events.
 # A row here is not an event. Do not copy it into a city page.
 #
-# Required: id, name, type, city, address, description, source, free,
-# last_verified. nights and hours when they are known.
+# Required: id, name, type, city, address, lat, lng, description, source,
+# free, last_verified. nights and hours when they are known.
 # type is park, house, or street.
+# lat and lng are decimal degrees. The town map pin uses them. The page
+# does not ask for a visitor's location.
 # city is a city id from _data/cities.yml.
 # address is a street address, a street, or cross-streets.
 # A public venue can use its published street address. A home can use a

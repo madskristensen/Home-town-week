@@ -505,6 +505,11 @@ module EastsideCalendar
       names = city_names(cities)
       rows = Array(lights).filter_map { |row| light_row(row, names) }
       rows.sort_by! { |item| [item["city"].to_s, item["name"].to_s] }
+      counts = Hash.new(0)
+      rows.each do |item|
+        counts[item["city_id"]] += 1
+        item["number"] = counts[item["city_id"]]
+      end
       rows
     end
 
@@ -515,8 +520,15 @@ module EastsideCalendar
         next if city_id.empty? || seen[city_id]
 
         seen[city_id] = true
-        count = displays.count { |row| row["city_id"].to_s == city_id }
-        { "id" => city_id, "name" => item["city"].to_s, "count" => count }
+        rows = displays.select { |row| row["city_id"].to_s == city_id }
+        pins = rows.map { |row| "#{row["number"]} #{row["name"]}" }
+        {
+          "id" => city_id,
+          "name" => item["city"].to_s,
+          "count" => rows.size,
+          "map" => "/assets/maps/lights/#{city_id}.svg",
+          "map_alt" => "Map of #{item["city"]} with Christmas light pins: #{pins.join(", ")}."
+        }
       end
     end
 
@@ -541,6 +553,14 @@ module EastsideCalendar
 
       source = row["source"].to_s.strip
       return nil unless source.match?(%r{\Ahttps?://\S+\z})
+
+      begin
+        lat = Float(row["lat"])
+        lng = Float(row["lng"])
+      rescue ArgumentError, TypeError
+        return nil
+      end
+      return nil unless lat.between?(45.0, 49.5) && lng.between?(-125.0, -116.0)
 
       slug = light_slug(row["id"], name)
       query = "#{address}, #{city_name}, WA"

@@ -86,17 +86,21 @@ The full tag vocabulary, with the season stored on each hub:
 
 ### Christmas lights
 
-The section is `/christmas/#lights`. It is separate from the chronological sections (Tree lightings, Holiday lights, and the rest). Displays live in `_data/holiday_lights.yml`. The file stays in the hub all year. From Nov 10 through Dec 31 the section is first on the page, and it is linked first in the on-page list. The rest of the year it follows the event sections. The page does not describe that move. Towns that have a display get a chip with a count, then a heading and cards in the same grid as the other hub sections.
+The section is `/christmas/#lights`. It is separate from the chronological sections (Tree lightings, Holiday lights, and the rest). Displays live in `_data/holiday_lights.yml`. The file stays in the hub all year. From Nov 10 through Dec 31 the section is first on the page, and it is linked first in the on-page list. The rest of the year it follows the event sections. The page does not describe that move. Towns that have a display get a chip with a count. Each town is a heading, then a static map of that town with numbered pins, then a numbered list of the same displays. Towns with nothing listed are left off. The list is not a card grid. Each item shows the number, name, type, address, dates and hours, cost, a short blurb, and Directions and Source links.
+
+`script/render-light-maps.py` draws the maps before Jekyll. Streets and water come from OpenStreetMap. Pins use `lat` and `lng`. The page credits "Map data OpenStreetMap contributors" and does not ask for a visitor's location. The Pages workflow runs the script. A failed fetch keeps the SVG already in `assets/maps/lights/`. Pin numbers follow town name, then display name, which is the same order as the list.
 
 Each row:
 
 | Field | What to write |
 | --- | --- |
-| `id` | A short slug, unique in the file. It becomes the card anchor. |
+| `id` | A short slug, unique in the file. It becomes the list anchor. |
 | `name` | The display name. |
 | `type` | `park`, `house`, or `street`. |
 | `city` | A city id from `_data/cities.yml`. |
 | `address` | A street address, a street, or cross-streets. Directions uses this with the town. |
+| `lat` | Latitude in decimal degrees. The pin uses this. |
+| `lng` | Longitude in decimal degrees. The pin uses this. |
 | `description` | One or two original sentences. |
 | `nights` | Which nights it runs, when known. |
 | `hours` | Clock times, when known. Leave it blank when the source has none. |

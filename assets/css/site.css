@@ -1465,24 +1465,105 @@ picture {
 }
 
 .lights-town {
-  margin: 1.35rem 0 0;
+  margin: 1.6rem 0 0;
   scroll-margin-top: 0.75rem;
   font-size: 1.45rem;
   line-height: 1.15;
 }
 
-.hub-card .light-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.2rem 1rem;
-  margin: 0.35rem 0 0;
+.lights-map {
+  margin: 0.7rem 0 0;
 }
 
-.hub-card .light-links a {
+.lights-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #efe6d4;
+}
+
+.lights-map figcaption {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.lights-map figcaption a {
   display: inline-flex;
   align-items: center;
-  min-height: 2.75rem;
+  min-height: 1.5rem;
+  color: inherit;
+}
+
+.lights-list {
+  margin: 0.35rem 0 0;
+  padding: 0 0 0 1.5rem;
+}
+
+.lights-list li {
+  padding: 0.7rem 0 0.15rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.lights-list li:last-child {
+  border-bottom: 0;
+}
+
+.lights-list li::marker {
+  color: var(--forest);
   font-weight: 700;
+}
+
+.lights-list p {
+  margin: 0.15rem 0 0;
+}
+
+.lights-name {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.lights-meta,
+.lights-note {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.lights-list .event-when {
+  margin-top: 0.12rem;
+  color: var(--gold);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.lights-blurb {
+  max-width: 40rem;
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.lights-list .light-links {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.lights-list .light-links a {
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
 }
 
 .lights-send {

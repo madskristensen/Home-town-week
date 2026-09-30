@@ -23,28 +23,31 @@ Dates and hours:{%- endcapture -%}
   </nav>
   {%- for town in hub.light_towns -%}
   <h3 class="lights-town" id="lights-{{ town.id }}">{{ town.name }}</h3>
-  <div class="hub-grid">
+  {%- assign town_map = site.data.light_maps[town.id] -%}
+  <figure class="lights-map">
+    <img src="{{ town.map | relative_url }}" width="{{ town_map.width | default: 800 }}" height="{{ town_map.height | default: 460 }}" alt="{{ town.map_alt }}" decoding="async"{% if forloop.first %} loading="eager"{% else %} loading="lazy"{% endif %}>
+    <figcaption>Map data <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap contributors</a></figcaption>
+  </figure>
+  <ol class="lights-list">
     {%- for light in light_rows -%}
     {%- if light.city_id == town.id -%}
     {%- assign light_nights = light.nights | append: "" -%}
     {%- assign light_hours = light.hours | append: "" -%}
-    <article class="hub-card" id="light-{{ light.id }}">
-      <h3>{{ light.name }}</h3>
-      <p class="event-place">{{ light.type_label }}</p>
-      <p class="event-place">{{ light.address }}</p>
-      {%- if light_nights.size > 0 or light_hours.size > 0 -%}
-      <p class="event-when">{{ light_nights }}{% if light_nights.size > 0 and light_hours.size > 0 %} {% endif %}{{ light_hours }}</p>
+    <li id="light-{{ light.id }}">
+      <p class="lights-name">{{ light.name }}</p>
+      <p class="lights-meta">{{ light.type_label }} · {{ light.address }} · {% if light.free %}Free{% else %}Tickets required{% endif %}</p>
+      {%- if light_nights.size > 0 -%}
+      <p class="event-when">{{ light_nights }}</p>
       {%- endif -%}
-      <p class="event-place">{% if light.free %}Free{% else %}Tickets{% endif %}</p>
-      <p class="hub-blurb">{{ light.description }}</p>
-      <p class="light-links">
-        <a href="{{ light.directions }}" rel="noopener">Directions</a>
-        <a href="{{ light.source }}" rel="noopener">Source</a>
-      </p>
-    </article>
+      {%- if light_hours.size > 0 -%}
+      <p class="lights-note">{{ light_hours }}</p>
+      {%- endif -%}
+      <p class="lights-blurb">{{ light.description }}</p>
+      <p class="light-links"><a href="{{ light.directions }}" rel="noopener">Directions</a> <a href="{{ light.source }}" rel="noopener">Source</a></p>
+    </li>
     {%- endif -%}
     {%- endfor -%}
-  </div>
+  </ol>
   {%- endfor -%}
   {%- else -%}
   <p>No displays are listed yet.</p>
