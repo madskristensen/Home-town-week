@@ -1,0 +1,152 @@
+/* Printed pages. Linked with media="print", so it is not part of the
+   screen render. Black on white, including when the screen is in dark mode.
+   Small event photos stay in the HTML and stay hidden here. */
+
+html {
+  color-scheme: light only;
+}
+
+html,
+body,
+main,
+article,
+.wrap,
+.page,
+.hub-page,
+.city-home,
+.guide-page,
+.prose,
+.hub-card,
+.event-card,
+.hub-section {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+body {
+  font-family: var(--sans);
+  font-size: 11pt;
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+a,
+.dek,
+.hook,
+.hub-intro,
+.guide-intro,
+.event-when,
+.event-place,
+.hub-blurb,
+.list-updated {
+  color: #000 !important;
+}
+
+a,
+a:visited {
+  color: #000 !important;
+  text-decoration: underline;
+}
+
+.print-mast {
+  display: block !important;
+  margin: 0 0 1rem;
+  padding: 0 0 0.45rem;
+  border-bottom: 1px solid #000;
+  background: #fff !important;
+  color: #000 !important;
+}
+
+.print-mast-title {
+  display: block;
+  margin: 0;
+  color: #000 !important;
+  font-family: var(--serif);
+  font-size: 16pt;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.print-mast-meta {
+  display: block;
+  margin: 0.2rem 0 0;
+  color: #000 !important;
+  font-family: var(--sans);
+  font-size: 9pt;
+  line-height: 1.35;
+}
+
+.site-header,
+.cities-menu,
+.site-footer,
+.event-filters,
+.playground-filters,
+.issue-share,
+.share-button,
+.season-banner,
+.home-map-section,
+.home-map-frame,
+.leaflet-control-container,
+.skip-link,
+.suggest-event,
+.hub-toc,
+.also-close,
+.city-weekend-link {
+  display: none !important;
+}
+
+img,
+picture,
+svg,
+video,
+canvas,
+figure,
+.event-photo,
+.hero,
+.city-logo {
+  display: none !important;
+}
+
+.hub-grid {
+  display: block !important;
+}
+
+.playground-list {
+  columns: 1 !important;
+}
+
+.event-card,
+.hub-card,
+.playground-list li,
+.hub-section {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.event-card,
+.hub-card {
+  margin: 0 0 0.75rem;
+  padding: 0 0 0.65rem;
+  border: 0;
+  border-bottom: 1px solid #000;
+  box-shadow: none !important;
+}
+
+.event-tags li {
+  border-color: #000;
+  color: #000 !important;
+  background: #fff !important;
+}
+
+a.event-source::after,
+.hub-card h3 a[href^="http"]::after,
+.home-source a[href^="http"]::after {
+  content: " (" attr(href) ")";
+  font-weight: 400;
+  font-size: 0.85em;
+  word-break: break-all;
+}

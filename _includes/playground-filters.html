@@ -1,0 +1,65 @@
+{%- comment -%}
+  Town chips always show. An amenity chip shows only when at least 10
+  playgrounds carry that OpenStreetMap tag. The list uses these checkboxes
+  before the map script runs.
+{%- endcomment -%}
+{%- assign amenity_min = 10 -%}
+{%- assign n_restrooms = 0 -%}
+{%- assign n_covered = 0 -%}
+{%- assign n_accessible = 0 -%}
+{%- assign n_toddler = 0 -%}
+{%- assign n_splash = 0 -%}
+{%- for city in site.data.playground_map.cities -%}
+{%- for park in city.parks -%}
+{%- if park.restrooms -%}{%- assign n_restrooms = n_restrooms | plus: 1 -%}{%- endif -%}
+{%- if park.covered -%}{%- assign n_covered = n_covered | plus: 1 -%}{%- endif -%}
+{%- if park.accessible -%}{%- assign n_accessible = n_accessible | plus: 1 -%}{%- endif -%}
+{%- if park.toddler -%}{%- assign n_toddler = n_toddler | plus: 1 -%}{%- endif -%}
+{%- if park.splash -%}{%- assign n_splash = n_splash | plus: 1 -%}{%- endif -%}
+{%- endfor -%}
+{%- endfor -%}
+<div class="event-filters playground-filters" role="group" aria-labelledby="playground-filter-label">
+  <span class="filter-label" id="playground-filter-label">Filter:</span>
+  {%- for city in site.data.playground_map.cities -%}
+  <label class="filter-chip">
+    <input type="checkbox" class="flt-town" data-city="{{ city.id }}">
+    <span class="filter-switch" aria-hidden="true"></span>
+    <span>{{ city.name }}</span>
+  </label>
+  {%- endfor -%}
+  {%- if n_restrooms >= amenity_min -%}
+  <label class="filter-chip">
+    <input type="checkbox" class="flt-amenity" data-amenity="restrooms">
+    <span class="filter-switch" aria-hidden="true"></span>
+    <span>Restrooms</span>
+  </label>
+  {%- endif -%}
+  {%- if n_covered >= amenity_min -%}
+  <label class="filter-chip">
+    <input type="checkbox" class="flt-amenity" data-amenity="covered">
+    <span class="filter-switch" aria-hidden="true"></span>
+    <span>Covered or shade</span>
+  </label>
+  {%- endif -%}
+  {%- if n_accessible >= amenity_min -%}
+  <label class="filter-chip">
+    <input type="checkbox" class="flt-amenity" data-amenity="accessible">
+    <span class="filter-switch" aria-hidden="true"></span>
+    <span>Accessible</span>
+  </label>
+  {%- endif -%}
+  {%- if n_toddler >= amenity_min -%}
+  <label class="filter-chip">
+    <input type="checkbox" class="flt-amenity" data-amenity="toddler">
+    <span class="filter-switch" aria-hidden="true"></span>
+    <span>Toddler area</span>
+  </label>
+  {%- endif -%}
+  {%- if n_splash >= amenity_min -%}
+  <label class="filter-chip">
+    <input type="checkbox" class="flt-amenity" data-amenity="splash">
+    <span class="filter-switch" aria-hidden="true"></span>
+    <span>Splash pad</span>
+  </label>
+  {%- endif -%}
+</div>

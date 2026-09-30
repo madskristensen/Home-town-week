@@ -5,7 +5,7 @@
   <h3 id="all-{{ city.id }}">{{ city.name }}</h3>
   <ul class="playground-list">
     {%- for park in city.parks -%}
-    <li id="{{ park.id }}">
+    <li id="{{ park.id }}" data-city="{{ city.id }}"{% if park.restrooms %} data-restrooms="1"{% endif %}{% if park.covered %} data-covered="1"{% endif %}{% if park.accessible %} data-accessible="1"{% endif %}{% if park.toddler %} data-toddler="1"{% endif %}{% if park.splash %} data-splash="1"{% endif %}>
       <a href="{{ park.page }}" rel="noopener">{{ park.name }}</a>
       {%- if park.address -%}
       <span class="playground-meta">{{ park.address }}</span>

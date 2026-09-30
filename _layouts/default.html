@@ -4,6 +4,11 @@
   {%- include head.html -%}
 </head>
 <body>
+  {%- assign print_title = page.title | default: site.title -%}
+  <p class="print-mast">
+    <span class="print-mast-title">{{ print_title | escape }}</span>
+    <span class="print-mast-meta"><span class="print-mast-date" data-print-date></span> eastsidecalendar.com</span>
+  </p>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   {%- include header.html -%}
   {%- seasonal_banner -%}
@@ -17,6 +22,19 @@
   </main>
   {%- include footer.html -%}
   {%- include pwa.html -%}
+  <script>
+    (function () {
+      var el = document.querySelector("[data-print-date]");
+      if (!el) return;
+      var text = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/Los_Angeles",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      }).format(new Date());
+      el.textContent = "Printed " + text + " ";
+    })();
+  </script>
   <script type="module">
     if ("scrollRestoration" in history) history.scrollRestoration = "auto";
   </script>

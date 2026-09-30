@@ -156,6 +156,10 @@
   display: none !important;
 }
 
+.print-mast {
+  display: none;
+}
+
 html {
   background: var(--page);
   text-size-adjust: 100%;

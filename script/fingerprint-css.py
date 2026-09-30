@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "_css"
 DEST = ROOT / "assets" / "css"
 DATA = ROOT / "_data" / "css.yml"
-NAMES = ("site", "home", "city", "seasonal", "lights", "guide")
+NAMES = ("site", "home", "city", "seasonal", "lights", "guide", "print")
 
 
 def main():

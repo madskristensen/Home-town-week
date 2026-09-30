@@ -1,3 +1,4 @@
+{%- include playground-filters.html -%}
 {%- assign play_count = 0 -%}
 {%- for city in site.data.playground_map.cities -%}
 {%- assign play_count = play_count | plus: city.parks.size -%}
@@ -24,6 +25,65 @@
   var clusterUrl = {{ "/assets/leaflet/leaflet.markercluster.js" | relative_url | jsonify }};
   var dataUrl = {{ "/data/playgrounds.json" | relative_url | jsonify }};
   var started = false;
+  var map = null;
+  var cluster = null;
+  var markers = [];
+
+  function selectedTowns() {
+    return Array.prototype.map.call(document.querySelectorAll(".playground-filters .flt-town:checked"), function (input) {
+      return input.getAttribute("data-city");
+    });
+  }
+
+  function selectedAmenities() {
+    return Array.prototype.map.call(document.querySelectorAll(".playground-filters .flt-amenity:checked"), function (input) {
+      return input.getAttribute("data-amenity");
+    });
+  }
+
+  function markerMatches(marker) {
+    var pin = marker.__pin;
+    var towns = selectedTowns();
+    if (towns.length && towns.indexOf(pin.cityId) === -1) return false;
+    var amenities = selectedAmenities();
+    for (var i = 0; i < amenities.length; i++) {
+      if (!pin[amenities[i]]) return false;
+    }
+    return true;
+  }
+
+  function updatePosterCount() {
+    var countEl = document.querySelector(".home-map-count");
+    if (!countEl) return;
+    var n = 0;
+    var items = document.querySelectorAll(".playground-list li");
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].getClientRects().length) n++;
+    }
+    countEl.textContent = n + (n === 1 ? " playground" : " playgrounds");
+  }
+
+  function applyMapFilters() {
+    if (!cluster || !map) return;
+    cluster.clearLayers();
+    var visible = [];
+    markers.forEach(function (marker) {
+      if (markerMatches(marker)) {
+        cluster.addLayer(marker);
+        visible.push(marker.getLatLng());
+      }
+    });
+    if (visible.length === 1) map.setView(visible[0], 15);
+    else if (visible.length > 1) map.fitBounds(visible, { padding: [28, 28], maxZoom: 14 });
+    window.setTimeout(function () { map.invalidateSize(); }, 50);
+  }
+
+  document.querySelectorAll(".playground-filters input").forEach(function (input) {
+    input.addEventListener("change", function () {
+      updatePosterCount();
+      applyMapFilters();
+    });
+  });
 
   function loadCss(href) {
     return new Promise(function (resolve, reject) {
@@ -61,11 +121,17 @@
           id: park.id,
           name: park.name,
           city: city.name,
+          cityId: city.id,
           lat: park.lat,
           lng: park.lng,
           address: park.address || "",
           page: park.page,
-          page_label: park.page_label || "Park page"
+          page_label: park.page_label || "Park page",
+          restrooms: !!park.restrooms,
+          covered: !!park.covered,
+          accessible: !!park.accessible,
+          toddler: !!park.toddler,
+          splash: !!park.splash
         });
       });
     });
@@ -73,12 +139,12 @@
   }
 
   function showMap(pins) {
-    var map = L.map(canvas, { scrollWheelZoom: false });
+    map = L.map(canvas, { scrollWheelZoom: false });
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ODbL'
     }).addTo(map);
-    var cluster = L.markerClusterGroup({
+    cluster = L.markerClusterGroup({
       showCoverageOnHover: false,
       maxClusterRadius: 42,
       spiderfyOnMaxZoom: true,
@@ -94,7 +160,7 @@
         });
       }
     });
-    var bounds = [];
+    markers = [];
     pins.forEach(function (pin) {
       var icon = L.divIcon({
         className: "home-pin",
@@ -110,13 +176,11 @@
       }
       html += "<p class=\"map-popup-link\"><a href=\"" + escapeHtml(pin.page) + "\" rel=\"noopener\">" + escapeHtml(pin.page_label) + "</a></p>";
       marker.bindPopup(html);
-      cluster.addLayer(marker);
-      bounds.push([pin.lat, pin.lng]);
+      marker.__pin = pin;
+      markers.push(marker);
     });
     map.addLayer(cluster);
-    if (bounds.length === 1) map.setView(bounds[0], 15);
-    else if (bounds.length > 1) map.fitBounds(bounds, { padding: [28, 28], maxZoom: 14 });
-    window.setTimeout(function () { map.invalidateSize(); }, 50);
+    applyMapFilters();
   }
 
   button.addEventListener("click", function () {

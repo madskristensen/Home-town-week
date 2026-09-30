@@ -16,7 +16,24 @@ layout: default
     <h2 id="guide-city-{{ group.id }}">{{ group.city }}</h2>
     <div class="hub-grid">
       {%- for entry in group.entries -%}
-      <article class="hub-card" id="{{ entry.id }}">
+      {%- assign card_restrooms = false -%}
+      {%- assign card_covered = false -%}
+      {%- assign card_accessible = false -%}
+      {%- assign card_toddler = false -%}
+      {%- assign card_splash = false -%}
+      {%- assign map_city = site.data.playground_map.cities | where: "id", group.id | first -%}
+      {%- if map_city -%}
+      {%- for park in map_city.parks -%}
+      {%- if park.page == entry.page or park.name == entry.name -%}
+      {%- if park.restrooms -%}{%- assign card_restrooms = true -%}{%- endif -%}
+      {%- if park.covered -%}{%- assign card_covered = true -%}{%- endif -%}
+      {%- if park.accessible -%}{%- assign card_accessible = true -%}{%- endif -%}
+      {%- if park.toddler -%}{%- assign card_toddler = true -%}{%- endif -%}
+      {%- if park.splash -%}{%- assign card_splash = true -%}{%- endif -%}
+      {%- endif -%}
+      {%- endfor -%}
+      {%- endif -%}
+      <article class="hub-card" id="{{ entry.id }}"{% if card_restrooms %} data-restrooms="1"{% endif %}{% if card_covered %} data-covered="1"{% endif %}{% if card_accessible %} data-accessible="1"{% endif %}{% if card_toddler %} data-toddler="1"{% endif %}{% if card_splash %} data-splash="1"{% endif %}>
         {%- include event-photo.html
              src=entry.image
              alt=entry.alt

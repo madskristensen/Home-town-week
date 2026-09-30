@@ -11,7 +11,12 @@
           "lng": -122.115541,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/Ardmore-Park",
           "page_label": "Park page",
-          "address": "16833 NE 30th Street"
+          "address": "16833 NE 30th Street",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": true,
+          "splash": false
         },
         {
           "id": "bellevue-bellevue-downtown-park",
@@ -20,7 +25,12 @@
           "lng": -122.20603,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/bellevue-downtown-park",
           "page_label": "Park page",
-          "address": "10201 Northeast 4th Street, Bellevue"
+          "address": "10201 Northeast 4th Street, Bellevue",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": true,
+          "splash": true
         },
         {
           "id": "bellevue-chandler-park",
@@ -28,7 +38,12 @@
           "lat": 47.553907,
           "lng": -122.117255,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/chandler-neighborhood-park/",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": true,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-cherry-crest-park",
@@ -37,7 +52,12 @@
           "lng": -122.170064,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/cherry-crest-park",
           "page_label": "Park page",
-          "address": "2532 127th Avenue Northeast, Bellevue"
+          "address": "2532 127th Avenue Northeast, Bellevue",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": true,
+          "splash": false
         },
         {
           "id": "bellevue-chism-beach-park",
@@ -46,7 +66,12 @@
           "lng": -122.210775,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/chism-beach-park",
           "page_label": "Park page",
-          "address": "1175 96th Avenue Southeast, Bellevue"
+          "address": "1175 96th Avenue Southeast, Bellevue",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-clyde-beach-park",
@@ -54,7 +79,12 @@
           "lat": 47.614542,
           "lng": -122.217533,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/clyde-beach-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-collingwood-mini-park",
@@ -62,7 +92,12 @@
           "lat": 47.563314,
           "lng": -122.12609,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/collingwood-mini-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-crossroads-park",
@@ -71,7 +106,12 @@
           "lng": -122.122868,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/crossroads-park",
           "page_label": "Park page",
-          "address": "16000 Northeast 10th Street"
+          "address": "16000 Northeast 10th Street",
+          "restrooms": true,
+          "covered": false,
+          "accessible": true,
+          "toddler": false,
+          "splash": true
         },
         {
           "id": "bellevue-enatai-beach-park",
@@ -79,7 +119,12 @@
           "lat": 47.58837,
           "lng": -122.197493,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/enatai-beach-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": true,
+          "splash": false
         },
         {
           "id": "bellevue-enatai-neighborhood-park-2",
@@ -87,7 +132,12 @@
           "lat": 47.579029,
           "lng": -122.196949,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/enatai-neighborhood-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-evergreen-park",
@@ -96,7 +146,12 @@
           "lng": -122.129255,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/evergreen-park",
           "page_label": "Park page",
-          "address": "15655 Lake Hills Boulevard, Bellevue"
+          "address": "15655 Lake Hills Boulevard, Bellevue",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-forest-glen-park",
@@ -104,7 +159,12 @@
           "lat": 47.545623,
           "lng": -122.147814,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/forest-glen-neighborhood-park/",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-forest-hill-neighborhood-park",
@@ -113,7 +173,12 @@
           "lng": -122.163542,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/forest-hill-neighborhood-park",
           "page_label": "Park page",
-          "address": "13236 Southeast 51st Place, Bellevue"
+          "address": "13236 Southeast 51st Place, Bellevue",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-goldsmith-neighborhood-park",
@@ -122,7 +187,12 @@
           "lng": -122.147491,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/goldsmith-neighborhood-park",
           "page_label": "Park page",
-          "address": "14475 Northeast 35th Street, Bellevue"
+          "address": "14475 Northeast 35th Street, Bellevue",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-hidden-valley-sports-park",
@@ -130,7 +200,12 @@
           "lat": 47.630207,
           "lng": -122.193842,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/hidden-valley-park/",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-highland-park",
@@ -138,7 +213,12 @@
           "lat": 47.626556,
           "lng": -122.151573,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/highland-park/",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-hillaire-park",
@@ -147,7 +227,12 @@
           "lng": -122.12906,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/hillaire-park",
           "page_label": "Park page",
-          "address": "15803 Northeast 6th Street, Bellevue"
+          "address": "15803 Northeast 6th Street, Bellevue",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-ivanhoe-park",
@@ -156,7 +241,12 @@
           "lng": -122.117771,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/ivanhoe-park",
           "page_label": "Park page",
-          "address": "16600 Northrup Way"
+          "address": "16600 Northrup Way",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-lake-hills-park",
@@ -165,7 +255,12 @@
           "lng": -122.122426,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/lake-hills-community-park",
           "page_label": "Park page",
-          "address": "1200 164th Avenue Southeast, Bellevue"
+          "address": "1200 164th Avenue Southeast, Bellevue",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-lakemont-community-park",
@@ -173,7 +268,12 @@
           "lat": 47.557273,
           "lng": -122.118021,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/lakemont-community-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-lattawood-park",
@@ -182,7 +282,12 @@
           "lng": -122.133869,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/lattawood-park",
           "page_label": "Park page",
-          "address": "4530 154th Place Southeast, Bellevue"
+          "address": "4530 154th Place Southeast, Bellevue",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-lewis-creek-park",
@@ -190,7 +295,12 @@
           "lat": 47.550147,
           "lng": -122.125471,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/lewis-creek-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-meadow-wood-park",
@@ -199,7 +309,12 @@
           "lng": -122.154828,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/meadow-wood-park",
           "page_label": "Park page",
-          "address": "13817 Southeast 60th Street, Bellevue"
+          "address": "13817 Southeast 60th Street, Bellevue",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-meydenbauer-beach-park",
@@ -208,7 +323,12 @@
           "lng": -122.211026,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/meydenbauer-beach-park/",
           "page_label": "Park page",
-          "address": "9899 Lake Washington Boulevard Northeast, Bellevue"
+          "address": "9899 Lake Washington Boulevard Northeast, Bellevue",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-newcastle-beach-park",
@@ -217,7 +337,12 @@
           "lng": -122.190643,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/newcastle-beach-park",
           "page_label": "Park page",
-          "address": "4400 Lake Washington Boulevard Southeast, Bellevue"
+          "address": "4400 Lake Washington Boulevard Southeast, Bellevue",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-newport-hills-community-park",
@@ -226,7 +351,12 @@
           "lng": -122.183086,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/newport-hills-park/",
           "page_label": "Park page",
-          "address": "6029 120th Avenue Southeast, Bellevue"
+          "address": "6029 120th Avenue Southeast, Bellevue",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-northtowne-neighborhood-park",
@@ -234,7 +364,12 @@
           "lat": 47.634852,
           "lng": -122.203139,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/northtowne-neighborhood-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-norwood-village-neighborhood-park",
@@ -242,7 +377,12 @@
           "lat": 47.590544,
           "lng": -122.173549,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/norwood-village-neighborhood-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-robinswood-park",
@@ -251,7 +391,12 @@
           "lng": -122.141357,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/robinswood-off-leash-dog-corral",
           "page_label": "Park page",
-          "address": "1907 150th Avenue Southeast, Bellevue"
+          "address": "1907 150th Avenue Southeast, Bellevue",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-saddleback-mini-park",
@@ -259,7 +404,12 @@
           "lat": 47.554105,
           "lng": -122.138353,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/saddleback-mini-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-silverleaf-park",
@@ -267,7 +417,12 @@
           "lat": 47.557897,
           "lng": -122.122732,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/silverleaf-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-sixth-street-park",
@@ -275,7 +430,12 @@
           "lat": 47.604402,
           "lng": -122.204842,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/sixth-street-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-skyridge-park",
@@ -283,7 +443,12 @@
           "lat": 47.593967,
           "lng": -122.159456,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/skyridge-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-sunset-park",
@@ -291,7 +456,12 @@
           "lat": 47.586643,
           "lng": -122.155779,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/sunset-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-sunset-ravine-neighborhood-park",
@@ -299,7 +469,12 @@
           "lat": 47.57599,
           "lng": -122.162594,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/sunset-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-surrey-downs",
@@ -308,7 +483,12 @@
           "lng": -122.192275,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/surrey-downs-park/",
           "page_label": "Park page",
-          "address": "11177 Southeast 4th Street, Bellevue"
+          "address": "11177 Southeast 4th Street, Bellevue",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-tam-oshanter-park",
@@ -317,7 +497,12 @@
           "lng": -122.103735,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/tam-o-shanter-park",
           "page_label": "Park page",
-          "address": "1655 173rd Avenue Northeast, Bellevue"
+          "address": "1655 173rd Avenue Northeast, Bellevue",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-viewpoint-park",
@@ -325,7 +510,12 @@
           "lat": 47.631587,
           "lng": -122.094055,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/viewpoint-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-wilburton-hill-community-park",
@@ -333,7 +523,12 @@
           "lat": 47.608338,
           "lng": -122.174276,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/wilburton-hill-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bellevue-zumdieck-park",
@@ -341,7 +536,12 @@
           "lat": 47.624268,
           "lng": -122.19504,
           "page": "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/zumdieck-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         }
       ]
     },
@@ -355,7 +555,12 @@
           "lat": 47.749944,
           "lng": -122.208508,
           "page": "http://www.ci.bothell.wa.us/1020/Blyth-Park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bothell-bothell-landing-park",
@@ -363,7 +568,12 @@
           "lat": 47.757998,
           "lng": -122.208758,
           "page": "https://www.bothellwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bothell-brickyard-road-park",
@@ -371,7 +581,12 @@
           "lat": 47.750178,
           "lng": -122.178927,
           "page": "http://www.ci.bothell.wa.us/1024/Brickyard-Road-Park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bothell-cedar-grove-park",
@@ -380,7 +595,12 @@
           "lng": -122.219518,
           "page": "https://www.bothellwa.gov/Facilities",
           "page_label": "City parks",
-          "address": "9th Avenue Southeast, Bothell"
+          "address": "9th Avenue Southeast, Bothell",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bothell-east-norway-hill-park",
@@ -388,7 +608,12 @@
           "lat": 47.740458,
           "lng": -122.177514,
           "page": "https://www.bothellwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bothell-miners-corner-park",
@@ -397,7 +622,12 @@
           "lng": -122.171845,
           "page": "https://www.bothellwa.gov/Facilities",
           "page_label": "City parks",
-          "address": "228th Street Southeast and 45th Avenue Southeast, Bothell"
+          "address": "228th Street Southeast and 45th Avenue Southeast, Bothell",
+          "restrooms": true,
+          "covered": false,
+          "accessible": true,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bothell-south-norway-hill-park",
@@ -405,7 +635,12 @@
           "lat": 47.73285,
           "lng": -122.178137,
           "page": "https://www.bothellwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bothell-stipek-park",
@@ -414,7 +649,12 @@
           "lng": -122.208508,
           "page": "https://www.bothellwa.gov/Facilities",
           "page_label": "City parks",
-          "address": "1804 242nd Street Southeast, Bothell"
+          "address": "1804 242nd Street Southeast, Bothell",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "bothell-william-penn-park",
@@ -422,7 +662,12 @@
           "lat": 47.772504,
           "lng": -122.205502,
           "page": "https://www.bothellwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         }
       ]
     },
@@ -437,7 +682,12 @@
           "lng": -121.890746,
           "page": "https://www.carnationwa.gov/rivers-edge-park/",
           "page_label": "Park page",
-          "address": "4295 336th Ave NE, Carnation"
+          "address": "4295 336th Ave NE, Carnation",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "carnation-valley-memorial-park",
@@ -446,7 +696,12 @@
           "lng": -121.912825,
           "page": "https://www.carnationwa.gov/",
           "page_label": "City parks",
-          "address": "3810 Stossel Avenue, Carnation"
+          "address": "3810 Stossel Avenue, Carnation",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         }
       ]
     },
@@ -460,7 +715,12 @@
           "lat": 47.743192,
           "lng": -121.968384,
           "page": "https://www.duvallwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "duvall-judd-park",
@@ -468,7 +728,12 @@
           "lat": 47.736421,
           "lng": -121.9708,
           "page": "https://www.duvallwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "duvall-taylor-park",
@@ -477,7 +742,12 @@
           "lng": -121.984144,
           "page": "https://www.duvallwa.gov/parks/taylorparkdescrp.html",
           "page_label": "Park page",
-          "address": "26605 Northeast Park Street, Duvall"
+          "address": "26605 Northeast Park Street, Duvall",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "duvall-taylors-landing-park",
@@ -485,7 +755,12 @@
           "lat": 47.743696,
           "lng": -121.984926,
           "page": "https://www.duvallwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "duvall-two-moons-south",
@@ -494,7 +769,12 @@
           "lng": -121.976047,
           "page": "https://www.duvallwa.gov/Facilities/Facility/Details/Two-Moons-South-27",
           "page_label": "Park page",
-          "address": "27101 NE Walden Way, Duvall"
+          "address": "27101 NE Walden Way, Duvall",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         }
       ]
     },
@@ -508,7 +788,12 @@
           "lat": 47.548333,
           "lng": -122.009613,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-black-nugget-park",
@@ -516,7 +801,12 @@
           "lat": 47.549363,
           "lng": -121.999801,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-blackberry-park",
@@ -525,7 +815,12 @@
           "lng": -122.085726,
           "page": "https://www.issaquahwa.gov/Facilities",
           "page_label": "City parks",
-          "address": "4214 191st Avenue Southeast, Issaquah"
+          "address": "4214 191st Avenue Southeast, Issaquah",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-confluence-park",
@@ -534,7 +829,12 @@
           "lng": -122.038772,
           "page": "https://www.issaquahwa.gov/Facilities",
           "page_label": "City parks",
-          "address": "595 Rainier Boulevard North, Issaquah"
+          "address": "595 Rainier Boulevard North, Issaquah",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-daphne-park",
@@ -542,7 +842,12 @@
           "lat": 47.540875,
           "lng": -121.995337,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-firehouse-park",
@@ -550,7 +855,12 @@
           "lat": 47.54559,
           "lng": -122.013006,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-gibson-park",
@@ -558,7 +868,12 @@
           "lat": 47.528359,
           "lng": -122.039925,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-harrison-park",
@@ -566,7 +881,12 @@
           "lat": 47.547573,
           "lng": -121.987076,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-harvey-manning-park",
@@ -574,7 +894,12 @@
           "lat": 47.541597,
           "lng": -122.071914,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-high-street-linear-park",
@@ -582,7 +907,12 @@
           "lat": 47.540914,
           "lng": -122.023809,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-hillside-park",
@@ -590,7 +920,12 @@
           "lat": 47.527117,
           "lng": -122.051654,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-ingi-johnson-park",
@@ -598,7 +933,12 @@
           "lat": 47.525372,
           "lng": -122.034802,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": true,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-kirk-park",
@@ -606,7 +946,12 @@
           "lat": 47.553839,
           "lng": -121.996212,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-lakeside-park",
@@ -614,7 +959,12 @@
           "lat": 47.570445,
           "lng": -122.015254,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-logan-park",
@@ -622,7 +972,12 @@
           "lat": 47.550094,
           "lng": -121.994884,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-magnolia-park",
@@ -630,7 +985,12 @@
           "lat": 47.553364,
           "lng": -121.989144,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-meerwood-park",
@@ -639,7 +999,12 @@
           "lng": -122.084901,
           "page": "https://www.issaquahwa.gov/Facilities/Facility/Details/Meerwood-Park-29",
           "page_label": "Park page",
-          "address": "4703 192nd Avenue Southeast, Issaquah"
+          "address": "4703 192nd Avenue Southeast, Issaquah",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": true,
+          "splash": false
         },
         {
           "id": "issaquah-roosevelt-park",
@@ -647,7 +1012,12 @@
           "lat": 47.538452,
           "lng": -122.017374,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-salmon-run-nature-park",
@@ -655,7 +1025,12 @@
           "lat": 47.539748,
           "lng": -122.041753,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-sammamish-cove-park",
@@ -663,7 +1038,12 @@
           "lat": 47.555599,
           "lng": -122.070618,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-squak-valley-park",
@@ -671,7 +1051,12 @@
           "lat": 47.509841,
           "lng": -122.02399,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-summit-park",
@@ -679,7 +1064,12 @@
           "lat": 47.544883,
           "lng": -121.994065,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-tibbets-valley-park",
@@ -687,7 +1077,12 @@
           "lat": 47.539569,
           "lng": -122.058703,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-veterans-park",
@@ -695,7 +1090,12 @@
           "lat": 47.531081,
           "lng": -122.034566,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-vista-park",
@@ -703,7 +1103,12 @@
           "lat": 47.54671,
           "lng": -122.018741,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-west-highlands-park",
@@ -711,7 +1116,12 @@
           "lat": 47.540691,
           "lng": -122.024817,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "issaquah-wisteria-park",
@@ -719,7 +1129,12 @@
           "lat": 47.540827,
           "lng": -121.992642,
           "page": "https://www.issaquahwa.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         }
       ]
     },
@@ -734,7 +1149,12 @@
           "lng": -122.268755,
           "page": "https://www.kenmorewa.gov/Home/Components/FacilityDirectory/FacilityDirectory/4/103",
           "page_label": "Park page",
-          "address": "5601 Northeast 193rd Street, Kenmore"
+          "address": "5601 Northeast 193rd Street, Kenmore",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kenmore-log-boom-park-tracy-owen-station",
@@ -742,7 +1162,12 @@
           "lat": 47.757731,
           "lng": -122.264366,
           "page": "https://www.kenmorewa.gov/Home/Components/FacilityDirectory/FacilityDirectory/14/103",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kenmore-moorlands-park",
@@ -751,7 +1176,12 @@
           "lng": -122.230835,
           "page": "https://www.kenmorewa.gov/Home/Components/FacilityDirectory/FacilityDirectory/6/103",
           "page_label": "Park page",
-          "address": "15221 84th Avenue Northeast, Kenmore"
+          "address": "15221 84th Avenue Northeast, Kenmore",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kenmore-northshore-summit-park",
@@ -760,7 +1190,12 @@
           "lng": -122.260284,
           "page": "https://www.kenmorewa.gov/Home/Components/FacilityDirectory/FacilityDirectory/8/103",
           "page_label": "Park page",
-          "address": "6200 Northeast 193rd Street, Kenmore"
+          "address": "6200 Northeast 193rd Street, Kenmore",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kenmore-rhododendron-park",
@@ -768,7 +1203,12 @@
           "lat": 47.752316,
           "lng": -122.248447,
           "page": "https://www.kenmorewa.gov/Home/Components/FacilityDirectory/FacilityDirectory/10/103",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kenmore-wallace-swamp-creek-park",
@@ -776,7 +1216,12 @@
           "lat": 47.768354,
           "lng": -122.244917,
           "page": "https://www.kenmorewa.gov/Home/Components/FacilityDirectory/FacilityDirectory/16/103",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         }
       ]
     },
@@ -790,7 +1235,12 @@
           "lat": 47.717026,
           "lng": -122.166648,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park/132nd-Square-Park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-carillon-woods",
@@ -798,7 +1248,12 @@
           "lat": 47.656675,
           "lng": -122.197589,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-crestwoods-park",
@@ -806,7 +1261,12 @@
           "lat": 47.692238,
           "lng": -122.196922,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-edith-moulton-park",
@@ -814,7 +1274,12 @@
           "lat": 47.723862,
           "lng": -122.196124,
           "page": "https://www.kirklandwa.gov/depart/parks/Parks_and_Open_Spaces/Online_Parks_Guide/Parks_Pop-up_Main/Parks_and_Community_Services__Edith_Moulton.htm",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-everest-memorial-park",
@@ -822,7 +1287,12 @@
           "lat": 47.672214,
           "lng": -122.193001,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park/Everest-Park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-forbes-creek-park",
@@ -830,7 +1300,12 @@
           "lat": 47.69409,
           "lng": -122.18611,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-forbes-lake-park",
@@ -838,7 +1313,12 @@
           "lat": 47.687332,
           "lng": -122.175227,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-heritage-park",
@@ -847,7 +1327,12 @@
           "lng": -122.212613,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
           "page_label": "City parks",
-          "address": "111 Waverly Way, Kirkland"
+          "address": "111 Waverly Way, Kirkland",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-highlands-park",
@@ -856,7 +1341,12 @@
           "lng": -122.189518,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
           "page_label": "City parks",
-          "address": "11210 Northeast 102nd Street, Kirkland"
+          "address": "11210 Northeast 102nd Street, Kirkland",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-houghton-beach-park",
@@ -864,7 +1354,12 @@
           "lat": 47.660472,
           "lng": -122.206798,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-josten-park",
@@ -873,7 +1368,12 @@
           "lng": -122.191259,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
           "page_label": "City parks",
-          "address": "NE 129th St & 112th Pl NE"
+          "address": "NE 129th St & 112th Pl NE",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-juanita-beach-park",
@@ -881,7 +1381,12 @@
           "lat": 47.704464,
           "lng": -122.215726,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-mark-twain-park",
@@ -889,7 +1394,12 @@
           "lat": 47.696112,
           "lng": -122.165849,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-mcauliffe-park",
@@ -897,7 +1407,12 @@
           "lat": 47.704628,
           "lng": -122.197871,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-north-kirkland-community-center-park",
@@ -906,7 +1421,12 @@
           "lng": -122.203193,
           "page": "https://kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park/North-Kirkland-Community-Center-Park",
           "page_label": "Park page",
-          "address": "12402 103rd Avenue Northeast, Kirkland"
+          "address": "12402 103rd Avenue Northeast, Kirkland",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-o-o-denny-park",
@@ -914,7 +1434,12 @@
           "lat": 47.709473,
           "lng": -122.250556,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-peter-kirk-memorial-park",
@@ -922,7 +1447,12 @@
           "lat": 47.67736,
           "lng": -122.201397,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-phyllis-a-needy-neighborhood-park",
@@ -930,7 +1460,12 @@
           "lat": 47.65166,
           "lng": -122.195648,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": true,
+          "splash": false
         },
         {
           "id": "kirkland-rose-hill-meadows-park",
@@ -939,7 +1474,12 @@
           "lng": -122.175208,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
           "page_label": "City parks",
-          "address": "8212 124th Avenue Northeast, Kirkland"
+          "address": "8212 124th Avenue Northeast, Kirkland",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-saint-edward-state-park",
@@ -947,7 +1487,12 @@
           "lat": 47.731701,
           "lng": -122.256115,
           "page": "https://parks.wa.gov/find-parks/state-parks/saint-edward-state-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-south-rose-hill-park",
@@ -956,7 +1501,12 @@
           "lng": -122.169882,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
           "page_label": "City parks",
-          "address": "12730 Northeast 72nd Street, Kirkland"
+          "address": "12730 Northeast 72nd Street, Kirkland",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-spinney-homestead-park",
@@ -964,7 +1514,12 @@
           "lat": 47.689847,
           "lng": -122.183393,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-terrace-park",
@@ -973,7 +1528,12 @@
           "lng": -122.201255,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
           "page_label": "City parks",
-          "address": "10333 Northeast 67th Street, Kirkland"
+          "address": "10333 Northeast 67th Street, Kirkland",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-tot-lot-park",
@@ -982,7 +1542,12 @@
           "lng": -122.207361,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
           "page_label": "City parks",
-          "address": "111 9th Avenue"
+          "address": "111 9th Avenue",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-totem-lake-park",
@@ -990,7 +1555,12 @@
           "lat": 47.71182,
           "lng": -122.177497,
           "page": "https://kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park/Totem-Lake-Park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-van-aalst-park",
@@ -999,7 +1569,12 @@
           "lng": -122.201856,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
           "page_label": "City parks",
-          "address": "335 13th Avenue, Kirkland"
+          "address": "335 13th Avenue, Kirkland",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "kirkland-waverly-beach-park",
@@ -1007,7 +1582,12 @@
           "lat": 47.686893,
           "lng": -122.216839,
           "page": "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         }
       ]
     },
@@ -1021,7 +1601,12 @@
           "lat": 47.59145,
           "lng": -122.240783,
           "page": "https://www.mercerisland.gov/parksrec/page/aubrey-davis-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "mercer-island-deanes-childrens-park",
@@ -1030,7 +1615,12 @@
           "lng": -122.222267,
           "page": "https://www.mercergov.org/Page.asp?NavID=3099",
           "page_label": "Park page",
-          "address": "5500 Island Crest Way, Mercer Island"
+          "address": "5500 Island Crest Way, Mercer Island",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "mercer-island-first-hill-park",
@@ -1039,7 +1629,12 @@
           "lng": -122.24345,
           "page": "https://www.mercerisland.gov/parksrec/page/first-hill-park",
           "page_label": "Park page",
-          "address": "2975 72nd Avenue Southeast, Mercer Island"
+          "address": "2975 72nd Avenue Southeast, Mercer Island",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "mercer-island-groveland-beach-park",
@@ -1047,7 +1642,12 @@
           "lat": 47.551031,
           "lng": -122.233726,
           "page": "https://www.mercerisland.gov/parksrec/page/groveland-beach-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "mercer-island-homestead-park",
@@ -1056,7 +1656,12 @@
           "lng": -122.230765,
           "page": "https://www.mercerisland.gov/parksrec/page/homestead-park",
           "page_label": "Park page",
-          "address": "8100 Southeast 40th Street, Mercer Island"
+          "address": "8100 Southeast 40th Street, Mercer Island",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "mercer-island-luther-burbank-park",
@@ -1064,7 +1669,12 @@
           "lat": 47.590748,
           "lng": -122.226605,
           "page": "https://www.mercerisland.gov/parksrec/page/luther-burbank-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "mercer-island-mercerdale-park",
@@ -1072,7 +1682,12 @@
           "lat": 47.5805,
           "lng": -122.234283,
           "page": "https://www.mercerisland.gov/parksrec/page/mercerdale-park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": true,
+          "splash": false
         },
         {
           "id": "mercer-island-roanoke-park",
@@ -1081,7 +1696,12 @@
           "lng": -122.245921,
           "page": "https://www.mercerisland.gov/parksrec/page/roanoke-park",
           "page_label": "Park page",
-          "address": "1825 70th Avenue Southeast, Mercer Island"
+          "address": "1825 70th Avenue Southeast, Mercer Island",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "mercer-island-secret-park",
@@ -1090,7 +1710,12 @@
           "lng": -122.248468,
           "page": "https://www.mercerisland.gov/parksrec/page/secret-park",
           "page_label": "Park page",
-          "address": "2701 West Mercer Way, Mercer Island"
+          "address": "2701 West Mercer Way, Mercer Island",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         }
       ]
     },
@@ -1104,7 +1729,12 @@
           "lat": 47.496766,
           "lng": -121.774257,
           "page": "https://www.siviewpark.org/",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "north-bend-si-view-neighborhood-park",
@@ -1113,7 +1743,12 @@
           "lng": -121.783555,
           "page": "https://www.siviewpark.org/si-view-park.phtml",
           "page_label": "Park page",
-          "address": "400 Southeast Orchard Drive, North Bend"
+          "address": "400 Southeast Orchard Drive, North Bend",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "north-bend-torguson-park",
@@ -1121,7 +1756,12 @@
           "lat": 47.492131,
           "lng": -121.776083,
           "page": "https://www.siviewpark.org/",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         }
       ]
     },
@@ -1136,7 +1776,12 @@
           "lng": -122.114799,
           "page": "https://www.redmond.gov/facilities/facility/details/Anderson-Park-59",
           "page_label": "Park page",
-          "address": "7802 168th Avenue Northeast, Redmond"
+          "address": "7802 168th Avenue Northeast, Redmond",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "redmond-bridle-trails-valley-creek-park",
@@ -1144,7 +1789,12 @@
           "lat": 47.650852,
           "lng": -122.152675,
           "page": "https://www.redmond.gov/Facilities/FeatureOverview",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "redmond-cascade-view-park",
@@ -1153,7 +1803,12 @@
           "lng": -122.123666,
           "page": "https://www.redmond.gov/facilities/facility/details/Cascade-View-Park-35",
           "page_label": "Park page",
-          "address": "16202 Northeast 40th Street, Redmond"
+          "address": "16202 Northeast 40th Street, Redmond",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "redmond-farrel-mcwhirter-park",
@@ -1162,7 +1817,12 @@
           "lng": -122.080427,
           "page": "https://redmond.gov/Facilities/Facility/Details/FarrelMcWhirter-Park-61",
           "page_label": "Park page",
-          "address": "19545 Northeast Redmond Road, Redmond"
+          "address": "19545 Northeast Redmond Road, Redmond",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "redmond-grass-lawn-park",
@@ -1171,7 +1831,12 @@
           "lng": -122.144929,
           "page": "https://www.redmond.gov/Facilities/FeatureOverview",
           "page_label": "City parks",
-          "address": "7031 148th Avenue Northeast, Redmond"
+          "address": "7031 148th Avenue Northeast, Redmond",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": true
         },
         {
           "id": "redmond-idylwood-park",
@@ -1180,7 +1845,12 @@
           "lng": -122.102668,
           "page": "https://www.redmond.gov/Facilities/Facility/Details/Idylwood-Beach-Park-64",
           "page_label": "Park page",
-          "address": "3650 West Lake Sammamish Parkway Northeast, Redmond"
+          "address": "3650 West Lake Sammamish Parkway Northeast, Redmond",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "redmond-jonathan-hartman-park",
@@ -1189,7 +1859,12 @@
           "lng": -122.106523,
           "page": "https://www.redmond.gov/Facilities/Facility/Details/Hartman-Park-63",
           "page_label": "Park page",
-          "address": "17300 Northeast 104th Street, Redmond"
+          "address": "17300 Northeast 104th Street, Redmond",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "redmond-juel-community-park",
@@ -1198,7 +1873,12 @@
           "lng": -122.091267,
           "page": "https://www.redmond.gov/Facilities/FeatureOverview",
           "page_label": "City parks",
-          "address": "18815 Northeast 116th Street, Redmond"
+          "address": "18815 Northeast 116th Street, Redmond",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "redmond-meadow-park",
@@ -1207,7 +1887,12 @@
           "lng": -122.125693,
           "page": "https://www.redmond.gov/Facilities/Facility/Details/Meadow-Park-41",
           "page_label": "Park page",
-          "address": "10710 160th Avenue Northeast, Redmond"
+          "address": "10710 160th Avenue Northeast, Redmond",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "redmond-nike-neighborhood-park",
@@ -1216,7 +1901,12 @@
           "lng": -122.110057,
           "page": "https://www.redmond.gov/Facilities/Facility/Details/Nike-Park-42",
           "page_label": "Park page",
-          "address": "17207 Northeast 92nd Street, Redmond"
+          "address": "17207 Northeast 92nd Street, Redmond",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "redmond-perrigo-park",
@@ -1225,7 +1915,12 @@
           "lng": -122.081609,
           "page": "https://www.redmond.gov/Facilities/Facility/Details/Perrigo-Park-66",
           "page_label": "Park page",
-          "address": "9011 196th Avenue Northeast, Redmond"
+          "address": "9011 196th Avenue Northeast, Redmond",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "redmond-southeast-redmond-park",
@@ -1233,7 +1928,12 @@
           "lat": 47.66599,
           "lng": -122.084969,
           "page": "https://www.redmond.gov/Facilities/FeatureOverview",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "redmond-spiritbrook-park",
@@ -1242,7 +1942,12 @@
           "lng": -122.139012,
           "page": "https://www.redmond.gov/Facilities/Facility/Details/Spiritbrook-Park-51",
           "page_label": "Park page",
-          "address": "6500 151st Avenue Northeast, Redmond"
+          "address": "6500 151st Avenue Northeast, Redmond",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "redmond-sunset-gardens-park",
@@ -1251,7 +1956,12 @@
           "lng": -122.096472,
           "page": "https://www.redmond.gov/Facilities/Facility/Details/Sunset-Gardens-Park-52",
           "page_label": "Park page",
-          "address": "18304 Northeast 95th Street, Redmond"
+          "address": "18304 Northeast 95th Street, Redmond",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "redmond-westside-park",
@@ -1260,7 +1970,12 @@
           "lng": -122.131962,
           "page": "https://www.redmond.gov/facilities/facility/details/Westside-Park-57",
           "page_label": "Park page",
-          "address": "5810 156th Avenue Northeast, Redmond"
+          "address": "5810 156th Avenue Northeast, Redmond",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "redmond-willows-creek-neighborhood-park",
@@ -1269,7 +1984,12 @@
           "lng": -122.153493,
           "page": "https://www.redmond.gov/Facilities/Facility/Details/Willows-Creek-Park-58",
           "page_label": "Park page",
-          "address": "8915 142nd Avenue Northeast, Redmond"
+          "address": "8915 142nd Avenue Northeast, Redmond",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         }
       ]
     },
@@ -1283,7 +2003,12 @@
           "lat": 47.437828,
           "lng": -122.157573,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-alder-crossing-neighborhood-park",
@@ -1291,7 +2016,12 @@
           "lat": 47.488276,
           "lng": -122.152572,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-allen-park",
@@ -1299,7 +2029,12 @@
           "lat": 47.454478,
           "lng": -122.147673,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-boulevard-lane-park",
@@ -1308,7 +2043,12 @@
           "lng": -122.173922,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
           "page_label": "City parks",
-          "address": "12500 Southeast 188th Place, Renton"
+          "address": "12500 Southeast 188th Place, Renton",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-burnett-linear-park",
@@ -1316,7 +2056,12 @@
           "lat": 47.476081,
           "lng": -122.20805,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-cascade-park",
@@ -1324,7 +2069,12 @@
           "lat": 47.4573,
           "lng": -122.174581,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-earlington-park",
@@ -1332,7 +2082,12 @@
           "lat": 47.480372,
           "lng": -122.227683,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-fairwood-crest-park",
@@ -1340,7 +2095,12 @@
           "lat": 47.448891,
           "lng": -122.160258,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-gene-coulon-memorial-beach-park",
@@ -1348,7 +2108,12 @@
           "lat": 47.50979,
           "lng": -122.20444,
           "page": "https://www.rentonwa.gov/Activities-Events/Parks-and-Trails/Gene-Coulon-Memorial-Beach-Park",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-glencoe-park",
@@ -1356,7 +2121,12 @@
           "lat": 47.513224,
           "lng": -122.159585,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-heritage-park",
@@ -1364,7 +2134,12 @@
           "lat": 47.485919,
           "lng": -122.164811,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-highlands-neighborhood-park",
@@ -1373,7 +2148,12 @@
           "lng": -122.184622,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
           "page_label": "City parks",
-          "address": "720 Edmonds Avenue Northeast, Renton"
+          "address": "720 Edmonds Avenue Northeast, Renton",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-jones-park",
@@ -1382,7 +2162,12 @@
           "lng": -122.204805,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
           "page_label": "City parks",
-          "address": "98 Wells Avenue South, Renton"
+          "address": "98 Wells Avenue South, Renton",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-kennydale-beach-park",
@@ -1391,7 +2176,12 @@
           "lng": -122.207493,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
           "page_label": "City parks",
-          "address": "3501 Lake Washington Boulevard North, Renton"
+          "address": "3501 Lake Washington Boulevard North, Renton",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-kennydale-lions-park",
@@ -1399,7 +2189,12 @@
           "lat": 47.514173,
           "lng": -122.190307,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-kiwanis-park",
@@ -1407,7 +2202,12 @@
           "lat": 47.496792,
           "lng": -122.165487,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-liberty-park",
@@ -1416,7 +2216,12 @@
           "lng": -122.201081,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
           "page_label": "City parks",
-          "address": "200 Houser Way South, Renton"
+          "address": "200 Houser Way South, Renton",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-maplewood-park-1",
@@ -1424,7 +2229,12 @@
           "lat": 47.475624,
           "lng": -122.173293,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-maplewood-park-2",
@@ -1432,7 +2242,12 @@
           "lat": 47.478395,
           "lng": -122.146421,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-north-highlands-park",
@@ -1440,7 +2255,12 @@
           "lat": 47.507461,
           "lng": -122.18032,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-phillip-arnold-park",
@@ -1448,7 +2268,12 @@
           "lat": 47.472562,
           "lng": -122.195996,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": true,
+          "splash": false
         },
         {
           "id": "renton-rolling-hills-neighborhood-park",
@@ -1456,7 +2281,12 @@
           "lat": 47.462321,
           "lng": -122.191725,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-ron-regis-park",
@@ -1465,7 +2295,12 @@
           "lng": -122.146581,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
           "page_label": "City parks",
-          "address": "1501 Orcas Avenue Southeast, Renton"
+          "address": "1501 Orcas Avenue Southeast, Renton",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-shamrock-heights-neighborhood-park",
@@ -1473,7 +2308,12 @@
           "lat": 47.490325,
           "lng": -122.14428,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-thomas-teasdale-park",
@@ -1481,7 +2321,12 @@
           "lat": 47.457605,
           "lng": -122.210054,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-tiffany-park",
@@ -1490,7 +2335,12 @@
           "lng": -122.175855,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
           "page_label": "City parks",
-          "address": "1902 Lake Youngs Way Southeast, Renton"
+          "address": "1902 Lake Youngs Way Southeast, Renton",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "renton-windsor-hills-park",
@@ -1498,7 +2348,12 @@
           "lat": 47.489596,
           "lng": -122.186851,
           "page": "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Trails",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         }
       ]
     },
@@ -1512,7 +2367,12 @@
           "lat": 47.604246,
           "lng": -122.047295,
           "page": "https://www.sammamish.us/our-community/recreation/parks-trails/",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "sammamish-beaver-lake-park",
@@ -1520,7 +2380,12 @@
           "lat": 47.585615,
           "lng": -122.012624,
           "page": "https://www.sammamish.us/our-community/recreation/parks-trails/beaver-lake-park/",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "sammamish-big-rock-park-central",
@@ -1528,7 +2393,12 @@
           "lat": 47.545321,
           "lng": -122.001728,
           "page": "https://www.sammamish.us/our-community/recreation/parks-trails/big-rock-park-central/",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "sammamish-east-sammamish-park",
@@ -1536,7 +2406,12 @@
           "lat": 47.624987,
           "lng": -122.055281,
           "page": "https://www.sammamish.us/our-community/recreation/parks-trails/east-sammamish-park/",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "sammamish-ebright-creek-park",
@@ -1544,7 +2419,12 @@
           "lat": 47.598154,
           "lng": -122.060036,
           "page": "https://www.sammamish.us/our-community/recreation/parks-trails/ebright-creek-park/",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "sammamish-klahanie-park",
@@ -1552,7 +2432,12 @@
           "lat": 47.572454,
           "lng": -122.011121,
           "page": "https://www.sammamish.us/our-community/recreation/parks-trails/klahanie-park/",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "sammamish-northeast-sammamish-park",
@@ -1560,7 +2445,12 @@
           "lat": 47.642468,
           "lng": -122.056551,
           "page": "https://www.sammamish.us/our-community/recreation/parks-trails/northeast-sammamish-park/",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "sammamish-pine-lake-park",
@@ -1568,7 +2458,12 @@
           "lat": 47.587464,
           "lng": -122.03968,
           "page": "https://www.sammamish.us/our-community/recreation/parks-trails/pine-lake-park/",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "sammamish-sammamish-commons",
@@ -1576,7 +2471,12 @@
           "lat": 47.603181,
           "lng": -122.038449,
           "page": "https://www.sammamish.us/our-community/recreation/parks-trails/sammamish-commons/",
-          "page_label": "Park page"
+          "page_label": "Park page",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         }
       ]
     },
@@ -1590,7 +2490,12 @@
           "lat": 47.536444,
           "lng": -121.870994,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-borden-park",
@@ -1598,7 +2503,12 @@
           "lat": 47.53173,
           "lng": -121.87067,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-bybee-park",
@@ -1606,7 +2516,12 @@
           "lat": 47.523575,
           "lng": -121.876467,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-cascade-park",
@@ -1614,7 +2529,12 @@
           "lat": 47.54124,
           "lng": -121.870915,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-centennial-fields-park",
@@ -1623,7 +2543,12 @@
           "lng": -121.809691,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
           "page_label": "City parks",
-          "address": "39903 Southeast Park Street"
+          "address": "39903 Southeast Park Street",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-chanticleer-green-park",
@@ -1631,7 +2556,12 @@
           "lat": 47.537012,
           "lng": -121.868238,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-cottonwood-park",
@@ -1639,7 +2569,12 @@
           "lat": 47.534125,
           "lng": -121.879254,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-fisher-creek-park",
@@ -1647,7 +2582,12 @@
           "lat": 47.530449,
           "lng": -121.857977,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-hoff-park",
@@ -1655,7 +2595,12 @@
           "lat": 47.535914,
           "lng": -121.875874,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-ironwood-park",
@@ -1663,7 +2608,12 @@
           "lat": 47.530593,
           "lng": -121.85741,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-jeanne-hansen-park-community-park",
@@ -1672,7 +2622,12 @@
           "lng": -121.881987,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
           "page_label": "City parks",
-          "address": "34226 Southeast Jacobia Street, Snoqualmie"
+          "address": "34226 Southeast Jacobia Street, Snoqualmie",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-quigley-park",
@@ -1681,7 +2636,12 @@
           "lng": -121.895539,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
           "page_label": "City parks",
-          "address": "33512 Southeast Redmond-Fall City Road, Fall City"
+          "address": "33512 Southeast Redmond-Fall City Road, Fall City",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-raven-park",
@@ -1689,7 +2649,12 @@
           "lat": 47.533057,
           "lng": -121.880654,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-riverview-park",
@@ -1697,7 +2662,12 @@
           "lat": 47.526578,
           "lng": -121.820936,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-silent-creek-park",
@@ -1705,7 +2675,12 @@
           "lat": 47.535693,
           "lng": -121.880244,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-snoqualmie-community-park",
@@ -1714,7 +2689,12 @@
           "lng": -121.87308,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
           "page_label": "City parks",
-          "address": "35016 Southeast Ridge Street, Snoqualmie"
+          "address": "35016 Southeast Ridge Street, Snoqualmie",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": true
         },
         {
           "id": "snoqualmie-stellar-park",
@@ -1723,7 +2703,12 @@
           "lng": -121.880618,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
           "page_label": "City parks",
-          "address": "34506 Southeast Steller Way, Snoqualmie"
+          "address": "34506 Southeast Steller Way, Snoqualmie",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-swenson-park",
@@ -1732,7 +2717,12 @@
           "lng": -121.874702,
           "page": "https://www.snoqualmiewa.gov/Facilities/Facility/Details/Swenson-Park-13",
           "page_label": "Park page",
-          "address": "35007 Southeast Swenson Street, Snoqualmie"
+          "address": "35007 Southeast Swenson Street, Snoqualmie",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "snoqualmie-thompson-park",
@@ -1740,7 +2730,12 @@
           "lat": 47.536767,
           "lng": -121.876273,
           "page": "https://www.snoqualmiewa.gov/292/Parks",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         }
       ]
     },
@@ -1754,7 +2749,12 @@
           "lat": 47.756304,
           "lng": -122.085787,
           "page": "https://kingcounty.gov/en/dept/dnrp/nature-recreation/parks-recreation/king-county-parks",
-          "page_label": "King County parks"
+          "page_label": "King County parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "woodinville-kingsgate-5",
@@ -1762,7 +2762,12 @@
           "lat": 47.730322,
           "lng": -122.169833,
           "page": "https://www.woodinville.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "woodinville-rotary-park",
@@ -1770,7 +2775,12 @@
           "lat": 47.769558,
           "lng": -122.157998,
           "page": "https://www.woodinville.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "woodinville-wilmot-gateway-park",
@@ -1778,7 +2788,12 @@
           "lat": 47.753731,
           "lng": -122.166764,
           "page": "https://www.woodinville.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
         },
         {
           "id": "woodinville-woodinville-heights-park",
@@ -1786,7 +2801,12 @@
           "lat": 47.758807,
           "lng": -122.145193,
           "page": "https://www.woodinville.gov/Facilities",
-          "page_label": "City parks"
+          "page_label": "City parks",
+          "restrooms": false,
+          "covered": false,
+          "accessible": true,
+          "toddler": false,
+          "splash": false
         }
       ]
     }
