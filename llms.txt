@@ -32,7 +32,7 @@ sitemap: false
 ## Guides
 
 - [Guides]({{ site.url }}{{ site.baseurl }}/guides/): Evergreen family guides.
-- [Best playgrounds]({{ site.url }}{{ site.baseurl }}/guides/playgrounds/): Playgrounds on the Eastside.
+- [Best playgrounds]({{ site.url }}{{ site.baseurl }}/guides/playgrounds/): Eastside playgrounds grouped by city, with a click-to-load map. The list is on the page without the map.
 - [Library story times]({{ site.url }}{{ site.baseurl }}/guides/story-times/): King County Library story times in these cities.
 
 ## Sitemap

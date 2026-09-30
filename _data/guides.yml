@@ -1,25 +1,257 @@
 playgrounds:
-  entries:
-    - name: Grass Lawn Park
-      city: Redmond
-      address: "7031 148th Ave NE, Redmond, WA 98052"
-      text: "The play structure here is the one I pick when the kids want different things at once. There is room to climb, swings, and a splash pad in the warm months. Courts and fields sit on the same park, so an older kid can peel off while a little one stays on the structure."
-      image: /assets/images/guides/grass-lawn.jpg
-      alt: "Play structure and swings at Grass Lawn Park in Redmond, with trees behind the equipment."
-      width: 1920
-      height: 1081
-      credit: "Photo: HominyGrits007, CC BY-SA 4.0"
-      source: "https://commons.wikimedia.org/wiki/File:Grass_Lawn_Park_Playground.jpg"
-    - name: Willows Creek Park
-      city: Redmond
-      address: "8915 142nd Ave NE, Redmond, WA 98052"
-      text: "A small neighborhood park, easy to park and easy to leave. A paved path runs from the lot to the play structure, with grass around it and a half court beside the path. I use it when a big park would be more afternoon than we have."
-      image: /assets/images/guides/willows.jpg
-      alt: "Wooden play structure with a slide and climbing wall at Willows Creek Park in Redmond."
-      width: 1280
-      height: 721
-      credit: "Photo: HominyGrits007, CC BY-SA 4.0"
-      source: "https://commons.wikimedia.org/wiki/File:Willows_Creek_Park_Play_Structure.jpg"
+  groups:
+    - city: Bellevue
+      id: bellevue
+      entries:
+        - id: inspiration-playground
+          name: Inspiration Playground
+          lat: 47.613042
+          lng: -122.204870
+          address: "10201 NE 4th St, Bellevue, WA 98004"
+          page: "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/bellevue-downtown-park"
+          text: "This is the play space at Downtown Park, built so kids of all ages and abilities can use it. The tot lot is for ages 2 to 5 and the playground is for ages 5 to 12. It stays open year-round. Water typically sprays from the Friday of Memorial Day weekend through Labor Day, 10 a.m. to 8 p.m. There is a restroom, and two parking lots sit close by. The main lot is on 100th Avenue Northeast. The other is on Northeast First Street, next to the playground."
+          image: /assets/images/guides/inspiration.jpg
+          alt: "Play structure with slides and climbing nets at Inspiration Playground in Bellevue Downtown Park."
+          width: 1600
+          height: 1280
+          credit: "Photo: City of Bellevue"
+          source: "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/bellevue-downtown-park"
+        - id: crossroads-park
+          name: Crossroads Park
+          lat: 47.618202
+          lng: -122.122494
+          address: "999 164th Ave NE, Bellevue, WA 98008"
+          page: "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/crossroads-park"
+          text: "A tot lot for ages 2 to 5 and a playground for ages 5 to 12, plus the water spray playground. The spray typically runs from the Friday of Memorial Day weekend through Labor Day, 10 a.m. to 8 p.m., and the structures stay up the rest of the year. Restrooms and picnic shelters are in the park."
+          image: /assets/images/guides/crossroads.jpg
+          alt: "Play structure and slides at Crossroads Park in Bellevue."
+          width: 1600
+          height: 400
+          credit: "Photo: City of Bellevue"
+          source: "https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/crossroads-park"
+    - city: Carnation
+      id: carnation
+      entries:
+        - id: rivers-edge-park
+          name: River's Edge Park
+          lat: 47.646548
+          lng: -121.890746
+          address: "4295 336th Ave NE, Carnation, WA 98014"
+          page: "https://www.carnationwa.gov/rivers-edge-park/"
+          text: "A children's playground for ages 2 to 10, with a grassy area, chairs, a drinking fountain, and a covered picnic spot."
+          image: /assets/images/guides/rivers-edge.jpg
+          alt: "Play structure with a yellow roof at River's Edge Park in Carnation, with chairs and a picnic shelter nearby."
+          width: 2000
+          height: 1500
+          credit: "Photo: City of Carnation"
+          source: "https://www.carnationwa.gov/rivers-edge-park/"
+    - city: Duvall
+      id: duvall
+      entries:
+        - id: two-moons-south
+          name: Two Moons South
+          lat: 47.726495
+          lng: -121.976605
+          address: "27101 NE Walden Way, Duvall, WA 98019"
+          page: "https://www.duvallwa.gov/Facilities/Facility/Details/Two-Moons-South-27"
+          text: "Play structures, a zipline, and a natural grass play field. Picnic areas have seasonal cover. Restrooms are portable, and there are bike racks and trails."
+          image: /assets/images/guides/two-moons.jpg
+          alt: "Climbing wall and zipline at Two Moons South in Duvall."
+          width: 1080
+          height: 1350
+          credit: "Photo: City of Duvall"
+          source: "https://www.duvallwa.gov/Facilities/Facility/Details/Two-Moons-South-27"
+    - city: Issaquah
+      id: issaquah
+      entries:
+        - id: confluence-park
+          name: Confluence Park
+          lat: 47.535817
+          lng: -122.037636
+          address: "595 Rainier Blvd N, Issaquah, WA 98027"
+          page: "https://www.issaquahwa.gov/confluence"
+          text: "A playground by the creek, with a picnic shelter, picnic tables, restrooms, benches, and a drinking fountain."
+          image: /assets/images/guides/confluence.jpg
+          alt: "Wooden play structure with a roof at Confluence Park in Issaquah, with the creek behind it."
+          width: 2000
+          height: 1324
+          credit: "Photo: City of Issaquah"
+          source: "https://www.issaquahwa.gov/confluence"
+        - id: black-nugget-park
+          name: Black Nugget Park
+          lat: 47.550016
+          lng: -121.998868
+          address: "2055 24th Ave NE, Issaquah, WA 98029"
+          page: "https://www.issaquahwa.gov/Facilities/Facility/Details/Black-Nugget-Park-19"
+          text: "A 2.3-acre neighborhood park in the Issaquah Highlands, open dawn to dusk. Play equipment, picnic tables, a trail, and tennis and basketball courts."
+          image: /assets/images/guides/black-nugget.jpg
+          alt: "Play structure with a green roof at Black Nugget Park in Issaquah."
+          width: 2000
+          height: 1500
+          credit: "Photo: City of Issaquah"
+          source: "https://www.issaquahwa.gov/Facilities/Facility/Details/Black-Nugget-Park-19"
+    - city: Kirkland
+      id: kirkland
+      entries:
+        - id: juanita-beach-park
+          name: Juanita Beach Park
+          lat: 47.705325
+          lng: -122.216214
+          address: "9703 NE Juanita Dr, Kirkland, WA 98034"
+          page: "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park/Juanita-Beach-Park"
+          text: "An accessible playground installed in 2020, with restrooms in the bathhouse, picnic shelters, and two parking lots that hold up to 200 cars."
+          image: /assets/images/guides/juanita-beach.jpg
+          alt: "Play structure and swings at Juanita Beach Park in Kirkland, with the lake in the background."
+          width: 800
+          height: 600
+          credit: "Photo: City of Kirkland"
+          source: "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park/Juanita-Beach-Park"
+    - city: Mercer Island
+      id: mercer-island
+      entries:
+        - id: deanes-childrens-park
+          name: Deane's Children's Park
+          lat: 47.552187
+          lng: -122.222267
+          address: "5500 Island Crest Way, Mercer Island, WA 98040"
+          page: "https://www.mercerisland.gov/parksrec/page/deanes-childrens-park"
+          text: "An extensive playground built around Kenton's Dragon, a play sculpture by Kenton Pies. There is a picnic shelter, restrooms, and the Mercer Island Bike Skills Area."
+          image: /assets/images/guides/deanes.jpg
+          alt: "Kenton's Dragon play sculpture at Deane's Children's Park on Mercer Island."
+          width: 250
+          height: 167
+          credit: "Photo: City of Mercer Island"
+          source: "https://www.mercerisland.gov/parksrec/page/deanes-childrens-park"
+        - id: secret-park
+          name: Secret Park
+          lat: 47.587256
+          lng: -122.248064
+          address: "SE 27th Street and West Mercer Way, Mercer Island, WA 98040"
+          page: "https://www.mercerisland.gov/parksrec/page/secret-park"
+          text: "A small park with a playground, a picnic table, grass, and a trail."
+          image: /assets/images/guides/secret-park.jpg
+          alt: "Small play structure at Secret Park on Mercer Island, with grass and trees around it."
+          width: 400
+          height: 301
+          credit: "Photo: City of Mercer Island"
+          source: "https://www.mercerisland.gov/parksrec/page/secret-park"
+    - city: Redmond
+      id: redmond
+      entries:
+        - id: grass-lawn-park
+          name: Grass Lawn Park
+          lat: 47.668107
+          lng: -122.143262
+          address: "7031 148th Ave NE, Redmond, WA 98052"
+          page: "https://www.redmond.gov/facilities/facility/details/Grass-Lawn-Park-62"
+          text: "The playground and a splash pad share this park with courts and fields. The splash pad generally runs Memorial Day through Labor Day, 9 a.m. to 9 p.m. Restrooms, parking, a picnic shelter, and a pavilion are on site."
+          image: /assets/images/guides/grass-lawn.jpg
+          alt: "Play structure and swings at Grass Lawn Park in Redmond."
+          width: 692
+          height: 388
+          credit: "Photo: HominyGrits007, CC BY-SA 4.0"
+          source: "https://commons.wikimedia.org/wiki/File:Grass_Lawn_Park_Playground.jpg"
+        - id: perrigo-park
+          name: Perrigo Park
+          lat: 47.681734
+          lng: -122.079139
+          address: "9011 196th Avenue NE, Redmond, WA 98052"
+          page: "https://www.redmond.gov/facilities/facility/details/perrigo-park-66"
+          text: "Children's play areas, restrooms, and parking, with a picnic shelter, courts, and fields around them."
+          image: /assets/images/guides/perrigo.jpg
+          alt: "Empty play structure with green and orange panels at Perrigo Park in Redmond."
+          width: 960
+          height: 540
+          credit: "Photo: HominyGrits007, CC BY-SA 4.0"
+          source: "https://commons.wikimedia.org/wiki/File:20221230_PerrigoPark_RedmondWA.jpg"
+        - id: willows-creek-park
+          name: Willows Creek Park
+          lat: 47.682636
+          lng: -122.148502
+          address: "8915 142nd Ave NE, Redmond, WA 98052"
+          page: "https://www.redmond.gov/Facilities/FeatureOverview"
+          page_label: "City of Redmond facilities"
+          text: "A small neighborhood park, easy to park and easy to leave. A paved path runs from the lot to the play structure, with grass around it and a half court beside the path. I use it when a big park would be more afternoon than we have."
+          image: /assets/images/guides/willows.jpg
+          alt: "Wooden play structure with a slide and climbing wall at Willows Creek Park in Redmond."
+          width: 1280
+          height: 721
+          credit: "Photo: HominyGrits007, CC BY-SA 4.0"
+          source: "https://commons.wikimedia.org/wiki/File:Willows_Creek_Park_Play_Structure.jpg"
+    - city: Sammamish
+      id: sammamish
+      entries:
+        - id: pine-lake-park
+          name: Pine Lake Park
+          lat: 47.588212
+          lng: -122.035542
+          address: "2401 228th Ave SE, Sammamish, WA 98075"
+          page: "https://www.sammamish.us/our-community/recreation/parks-trails/pine-lake-park/"
+          text: "A 19-acre wooded park on Pine Lake. Play structures, a restroom, picnic shelters, trails, sports fields, and a beach. The parking lot gates open from 8 a.m. until 30 minutes after sunset."
+          image: /assets/images/guides/pine-lake.jpg
+          alt: "Play structure and swings at Pine Lake Park in Sammamish."
+          width: 2000
+          height: 1332
+          credit: "Photo: City of Sammamish"
+          source: "https://www.sammamish.us/our-community/recreation/parks-trails/pine-lake-park/"
+        - id: ebright-creek-park
+          name: Ebright Creek Park
+          lat: 47.597504
+          lng: -122.057075
+          address: "1317 212th Ave SE, Sammamish, WA 98075"
+          page: "https://www.sammamish.us/our-community/recreation/parks-trails/ebright-creek-park/"
+          text: "Two play areas in the middle of the park, with a restroom and a picnic shelter. A parking lot and a sports court sit up front, and boardwalks connect the sections."
+          image: /assets/images/guides/ebright-creek.jpg
+          alt: "Play structure with green roofs at Ebright Creek Park in Sammamish."
+          width: 1500
+          height: 887
+          credit: "Photo: City of Sammamish"
+          source: "https://www.sammamish.us/our-community/recreation/parks-trails/ebright-creek-park/"
+        - id: big-rock-park-north
+          name: Big Rock Park North
+          lat: 47.601819
+          lng: -122.048804
+          address: "21805 SE 8th Street, Sammamish, WA 98074"
+          page: "https://www.sammamish.us/our-community/recreation/parks-trails/big-rock-park/"
+          text: "A nature playground with a zipline, a hillside slide, a boulder climb, and a tunnel. Portable restrooms and trails are in the park. The parking lot gates open from 8 a.m. until 30 minutes after sunset."
+          image: /assets/images/guides/big-rock.jpg
+          alt: "Hillside slide at the nature playground in Big Rock Park North in Sammamish."
+          width: 1500
+          height: 999
+          credit: "Photo: City of Sammamish"
+          source: "https://www.sammamish.us/our-community/recreation/parks-trails/big-rock-park/"
+    - city: Snoqualmie
+      id: snoqualmie
+      entries:
+        - id: centennial-fields
+          name: Centennial Fields
+          lat: 47.523894
+          lng: -121.809269
+          address: "39903 SE Park Street, Snoqualmie, WA 98065"
+          page: "https://www.snoqualmiewa.gov/Facilities/Facility/Details/Centennial-Fields-67"
+          text: "An all-inclusive playground in a fully fenced space, with ramps a wheelchair can use and a padded surface. Play equipment and swings, restrooms, parking, and a picnic shelter."
+          image: /assets/images/guides/centennial-fields.jpg
+          alt: "Fenced play structure at the all-inclusive playground at Centennial Fields in Snoqualmie."
+          width: 1080
+          height: 1080
+          credit: "Photo: City of Snoqualmie"
+          source: "https://www.snoqualmiewa.gov/Facilities/Facility/Details/Centennial-Fields-67"
+    - city: Woodinville
+      id: woodinville
+      entries:
+        - id: wilmot-gateway-park
+          name: Wilmot Gateway Park
+          lat: 47.752847
+          lng: -122.165442
+          address: "17301 131st Avenue NE, Woodinville, WA 98072"
+          page: "https://www.woodinville.gov/facilities/facility/details/Wilmot-Gateway-Park-6"
+          text: "Woodinville's first community park, with a playground and an open play area beside the Sammamish River Trail. Restrooms and picnic tables. Parking off 131st Avenue NE is limited, with more across the street at the Woodinville Sports Fields."
+          image: /assets/images/guides/wilmot.jpg
+          alt: "Play structure and climbing dome at Wilmot Gateway Park in Woodinville."
+          width: 960
+          height: 723
+          credit: "Photo: Chiwauk, CC BY-SA 4.0"
+          source: "https://commons.wikimedia.org/wiki/File:Wilmot_Gateway_Park.jpg"
 "story-times":
   entries:
     - name: Bellevue Library

@@ -6,6 +6,23 @@
   line-height: 1.5;
 }
 
+.guide-page .home-map-section {
+  margin-top: 1.1rem;
+}
+
+.guide-page .hub-card {
+  scroll-margin-top: 1rem;
+}
+
+.guide-official {
+  margin: 0.45rem 0 0;
+  font-size: 0.92rem;
+}
+
+.guide-official a {
+  font-weight: 600;
+}
+
 .guide-index {
   display: grid;
   grid-template-columns: 1fr;

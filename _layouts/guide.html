@@ -5,6 +5,32 @@ layout: default
   <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
   <p class="guide-intro">{{ page.intro }}</p>
   {%- assign guide = site.data.guides[page.guide_id] -%}
+  {%- if guide.groups and guide.groups.size > 0 -%}
+  {%- include playground-map.html -%}
+  {%- for group in guide.groups -%}
+  <section class="hub-section" aria-labelledby="guide-city-{{ group.id }}">
+    <h2 id="guide-city-{{ group.id }}">{{ group.city }}</h2>
+    <div class="hub-grid">
+      {%- for entry in group.entries -%}
+      <article class="hub-card" id="{{ entry.id }}">
+        {%- include event-photo.html
+             src=entry.image
+             alt=entry.alt
+             width=entry.width
+             height=entry.height
+             credit=entry.credit
+             source=entry.source -%}
+        <h3>{{ entry.name }}</h3>
+        <p class="event-place"><a class="addr" href="{{ entry.address | map_search: group.city, entry.name }}">{%- include addr-pin.html -%}<span class="addr-text">{{ entry.address }}</span></a></p>
+        <p class="hub-blurb">{{ entry.text }}</p>
+        {%- assign page_label = entry.page_label | default: "Park page" -%}
+        <p class="guide-official"><a href="{{ entry.page }}" rel="noopener">{{ page_label }}</a></p>
+      </article>
+      {%- endfor -%}
+    </div>
+  </section>
+  {%- endfor -%}
+  {%- else -%}
   {%- assign guide_count = guide.entries | size -%}
   {%- if guide_count == 0 -%}
   {%- if page.guide_id == "story-times" -%}
@@ -31,5 +57,6 @@ layout: default
     </article>
     {%- endfor -%}
   </div>
+  {%- endif -%}
   {%- endif -%}
 </article>

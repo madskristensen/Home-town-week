@@ -1,0 +1,110 @@
+{%- assign play_count = 0 -%}
+{%- for group in guide.groups -%}
+{%- assign play_count = play_count | plus: group.entries.size -%}
+{%- endfor -%}
+<section class="home-map-section" aria-labelledby="playground-map-title">
+  <h2 id="playground-map-title" class="visually-hidden">Map</h2>
+  <div class="home-map-frame">
+    <div id="playground-map-canvas" class="home-map-canvas" hidden></div>
+    <div class="home-map-poster" id="playground-map-poster">
+      <p class="home-map-count">{{ play_count }} playground{% if play_count != 1 %}s{% endif %}</p>
+      <button type="button" id="playground-map-show">Show map</button>
+    </div>
+  </div>
+  <p class="home-map-note">Open a pin for the name, the city, and a link to that playground.</p>
+</section>
+<script type="application/json" id="playground-pins">[
+{%- assign pin_first = true -%}
+{%- for group in guide.groups -%}
+{%- for entry in group.entries -%}
+{%- unless pin_first %},{% endunless -%}
+{%- assign pin_first = false -%}
+{"id":{{ entry.id | jsonify }},"name":{{ entry.name | jsonify }},"city":{{ group.city | jsonify }},"lat":{{ entry.lat }},"lng":{{ entry.lng }}}
+{%- endfor -%}
+{%- endfor -%}
+]</script>
+<script>
+(function () {
+  var button = document.getElementById("playground-map-show");
+  var poster = document.getElementById("playground-map-poster");
+  var canvas = document.getElementById("playground-map-canvas");
+  var data = document.getElementById("playground-pins");
+  if (!button || !poster || !canvas || !data) return;
+  var cssUrl = {{ "/assets/leaflet/leaflet.css" | relative_url | jsonify }};
+  var jsUrl = {{ "/assets/leaflet/leaflet.js" | relative_url | jsonify }};
+  var started = false;
+
+  function loadCss(href) {
+    return new Promise(function (resolve, reject) {
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = href;
+      link.onload = function () { resolve(); };
+      link.onerror = function () { reject(); };
+      document.head.appendChild(link);
+    });
+  }
+
+  function loadJs(src) {
+    return new Promise(function (resolve, reject) {
+      var script = document.createElement("script");
+      script.src = src;
+      script.onload = function () { resolve(); };
+      script.onerror = function () { reject(); };
+      document.body.appendChild(script);
+    });
+  }
+
+  function escapeHtml(value) {
+    return String(value).replace(/[&<>"']/g, function (ch) {
+      return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" })[ch];
+    });
+  }
+
+  function showMap(pins) {
+    var map = L.map(canvas, { scrollWheelZoom: false });
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    var bounds = [];
+    pins.forEach(function (pin) {
+      var icon = L.divIcon({
+        className: "home-pin",
+        html: "",
+        iconSize: [22, 22],
+        iconAnchor: [11, 11]
+      });
+      var marker = L.marker([pin.lat, pin.lng], { icon: icon, title: pin.name, keyboard: true });
+      var html = "<p class=\"map-popup-name\">" + escapeHtml(pin.name) + "</p>"
+        + "<p class=\"map-popup-city\">" + escapeHtml(pin.city) + "</p>"
+        + "<p class=\"map-popup-link\"><a href=\"#" + escapeHtml(pin.id) + "\">See this playground</a></p>";
+      marker.bindPopup(html);
+      marker.addTo(map);
+      bounds.push([pin.lat, pin.lng]);
+    });
+    if (bounds.length === 1) map.setView(bounds[0], 15);
+    else if (bounds.length > 1) map.fitBounds(bounds, { padding: [28, 28], maxZoom: 14 });
+    window.setTimeout(function () { map.invalidateSize(); }, 50);
+  }
+
+  button.addEventListener("click", function () {
+    if (started) return;
+    started = true;
+    button.disabled = true;
+    button.textContent = "Loading map";
+    var pins = [];
+    try { pins = JSON.parse(data.textContent || "[]"); } catch (error) { pins = []; }
+    Promise.all([loadCss(cssUrl), loadJs(jsUrl)]).then(function () {
+      canvas.hidden = false;
+      poster.hidden = true;
+      showMap(pins);
+    }).catch(function () {
+      started = false;
+      button.disabled = false;
+      button.textContent = "Show map";
+      poster.insertAdjacentHTML("beforeend", "<p class=\"home-map-error\">The map did not load. The list below still has every playground.</p>");
+    });
+  });
+})();
+</script>
