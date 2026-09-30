@@ -55,6 +55,8 @@
   place: "Fall City Library, 33415 SE 42nd Place"
   same_as: "https://kcls.bibliocommons.com/events/6a90cee2aafa6100295fb1f0"
 - name: "Mount Si Dramafest"
+  cost: "$10"
+  setting: "Indoor"
   start: "2026-10-09T19:00:00-07:00"
   place: "Mount Si High School Performing Arts Center, 8651 Meadowbrook Way SE"
   same_as: "https://livingsnoqualmie.com/event/mt-si-high-school-dramafest-26/"
@@ -67,12 +69,16 @@
   place: "Snoqualmie Library, 7824 Center Boulevard SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa0a3736562d02296858c16"
 - name: "Halloween Train"
+  cost: "$16 to $32"
+  signup: true
   tags: [halloween]
   start: "2026-10-10"
   end: "2026-11-01"
   place: "Snoqualmie Depot, 38625 SE King Street"
   same_as: "https://trainmuseum.org/upcoming-events/halloween/"
 - name: "Mount Si Dramafest"
+  cost: "$10"
+  setting: "Indoor"
   start: "2026-10-10T19:00:00-07:00"
   place: "Mount Si High School Performing Arts Center, 8651 Meadowbrook Way SE"
   same_as: "https://livingsnoqualmie.com/event/mt-si-high-school-dramafest-26/"
@@ -122,18 +128,22 @@
   place: "Snoqualmie Library, 7824 Center Boulevard SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6ab1c1ccab7a8e0037c37c20"
 - name: "Snoqualmie Winter Lights"
+  setting: "Outdoor"
   tags: [holiday-lights]
   start: "2026-11-26"
   end: "2027-01-01"
   place: "Centennial Trail, from Salish Lodge to historic downtown"
   same_as: "https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights"
 - name: "Brilliant Blvd"
+  setting: "Outdoor"
   tags: [holiday-lights]
   start: "2026-11-26"
   end: "2027-01-01"
   place: "Snoqualmie Parkway, Snoqualmie Ridge"
   same_as: "https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights"
 - name: "Yuletide Express Santa Train"
+  cost: "$30"
+  signup: true
   tags: [santa]
   start: "2026-12-04"
   end: "2026-12-18"
