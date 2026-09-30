@@ -51,6 +51,7 @@
   start: "2026-10-03"
   same_as: "https://allevents.in/kirkland/mtl-open-powered-by-legend-pickleball-tournoi-de-double-mixte-1003/200030656936923"
 - name: "Harvest Festival"
+  setting: "Outdoor"
   cost: "Free"
   tags: [harvest]
   start: "2026-10-03T11:00:00-07:00"
