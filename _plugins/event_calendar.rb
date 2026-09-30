@@ -621,6 +621,7 @@ module EastsideCalendar
         iso = dates[key] && dates[key][index]
         iso = nil if iso.to_s.empty?
         part = link_event_place(part, city_name, visible_text(heading))
+        part = mark_source_links(part)
         wrap_event_card(part, iso)
       end
       prelude + rendered.join
@@ -639,6 +640,18 @@ module EastsideCalendar
 
         href = CGI.escapeHTML(MapLinks.href(text, city_name, venue_name))
         %(#{open_tag}<a class="addr" href="#{href}">#{MapLinks.pin}<span class="addr-text">#{inner.strip}</span></a>#{close_tag})
+      end
+    end
+
+    # The outbound link under a card ("Meydenbauer calendar") is meta text.
+    # A hard break before that link becomes its own line.
+    def mark_source_links(part)
+      part = part.gsub(%r{<br\s*/?>\s*(?=<a\b)}i, "</p>\n<p class=\"event-links\">")
+      part = part.gsub(%r{<p>(\s*(?:<a\b.*?<\/a>|·|&middot;|\s)+)</p>}m) do
+        %(<p class="event-links">#{Regexp.last_match(1)}</p>)
+      end
+      part.gsub(%r{<a(?![^>]*\bclass=")([^>]*)>}m) do
+        %(<a class="event-source"#{Regexp.last_match(1)}>)
       end
     end
 
