@@ -996,6 +996,12 @@ picture {
   font-size: clamp(2.2rem, 8vw, 2.85rem);
 }
 
+.hub-page > h1 {
+  margin-bottom: 1.4rem;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
 .prose p,
 .prose ul,
 .prose ol {
