@@ -1558,7 +1558,7 @@ picture {
 .lights-panel {
   display: none;
   flex: 1 0 100%;
-  min-height: 34rem;
+  min-height: 14rem;
 }
 
 .lights-town {
@@ -1617,9 +1617,23 @@ picture {
   text-underline-offset: 0.12em;
 }
 
-.lights-list .event-photo {
-  margin: 0 0 0.55rem;
-  aspect-ratio: 16 / 9;
+.lights-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 0.85rem;
+  align-items: flex-start;
+}
+
+.lights-copy {
+  flex: 1 1 14rem;
+  min-width: 0;
+}
+
+.lights-list .lights-thumb {
+  flex: 0 0 10rem;
+  width: 10rem;
+  margin: 0.15rem 0 0;
+  aspect-ratio: 4 / 3;
 }
 
 .lights-list .event-photo img {

@@ -9,7 +9,8 @@
   {%- capture lights_body -%}Address or street:
 Town:
 What makes it great:
-Dates and hours:{%- endcapture -%}
+Dates and hours:
+Photos: attach any you took (by sending, you're OK with us posting them with credit).{%- endcapture -%}
 {%- endif -%}
 <section class="hub-section" id="lights" aria-labelledby="lights-title">
   <h2 id="lights-title">Christmas lights</h2>
@@ -65,8 +66,9 @@ Dates and hours:{%- endcapture -%}
         {%- assign light_hours = light.hours | append: "" -%}
         {%- assign light_image = light.image | append: "" -%}
         <li id="light-{{ light.id }}">
+          <div class="lights-item">
           {%- if light_image.size > 0 -%}
-          <figure class="event-photo">
+          <figure class="event-photo lights-thumb">
             {%- if town.default and light.number == 1 -%}
               {%- assign light_loading = "eager" -%}
               {%- assign light_priority = "high" -%}
@@ -79,13 +81,14 @@ Dates and hours:{%- endcapture -%}
                  alt=light.image_alt
                  loading=light_loading
                  priority=light_priority
-                 sizes="(min-width: 42rem) 40rem, calc(100vw - 4.5rem)" -%}
+                 sizes="10rem" -%}
             <figcaption>
               <span class="credit">{{ light.image_credit }}</span>
               <a class="source" href="{{ light.image_source }}" rel="noopener">Source</a>
             </figcaption>
           </figure>
           {%- endif -%}
+          <div class="lights-copy">
           <p class="lights-name">{{ light.name }}</p>
           <p class="lights-meta">{{ light.type_label }} · <a class="addr" href="{{ light.address | map_search: light.city, light.name }}">{%- include addr-pin.html -%}<span class="addr-text">{{ light.address }}</span></a> · {% if light.free %}Free{% else %}Tickets required{% endif %}</p>
           {%- if light_nights.size > 0 -%}
@@ -96,6 +99,8 @@ Dates and hours:{%- endcapture -%}
           {%- endif -%}
           <p class="lights-blurb">{{ light.description }}</p>
           <p class="light-links"><a href="{{ light.source }}" rel="noopener">Source</a></p>
+          </div>
+          </div>
         </li>
         {%- endif -%}
         {%- endfor -%}
@@ -133,7 +138,7 @@ Dates and hours:{%- endcapture -%}
   {%- else -%}
   <p>No displays are listed yet.</p>
   {%- endif -%}
-  <p class="lights-send">Know a great display? <a href="mailto:suggestions@eastsidecalendar.com?subject={{ lights_subject | mail_escape }}&amp;body={{ lights_body | strip | mail_escape }}">Send it in</a>, anyone can.</p>
+  <p class="lights-send">Know a great display? <a href="mailto:suggestions@eastsidecalendar.com?subject={{ lights_subject | mail_escape }}&amp;body={{ lights_body | strip | mail_escape }}">Send it in</a>, anyone can. Photos welcome.</p>
 </section>
 {%- if light_count > 0 -%}
 <script type="application/ld+json">

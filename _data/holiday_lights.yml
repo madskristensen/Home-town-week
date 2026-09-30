@@ -9,9 +9,10 @@
 # type is park, house, or street.
 # lat and lng are optional decimal degrees. The page does not show a map
 # and does not ask for a visitor's location.
-# photo.kind is own (this display) or theme (a licensed lights picture).
-# photo.credit is the strip under the picture. Use CC0, CC BY, CC BY-SA,
-# or public domain only.
+# photo is optional. Write image, credit, and credit_url. The thumbnail
+# uses the credit strip. Leave photo off when there is no licensed picture.
+# Do not use a photo of recognizable kids. photo.kind is own or theme.
+# Use CC0, CC BY, CC BY-SA, or public domain only.
 # city is a city id from _data/cities.yml.
 # address is a street address, a street, or cross-streets.
 # A public venue can use its published street address. A home can use a
@@ -40,7 +41,7 @@
     alt: "Light sculptures along a path at Bellevue Botanical Garden."
     credit: "Photo: Steven Pavlov, CC BY 4.0"
     license: CC BY 4.0
-    source: "https://commons.wikimedia.org/wiki/File:Garden_d%E2%80%99Lights_2008_at_the_Bellevue_Botanical_Garden,_img011.jpg"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Garden_d%E2%80%99Lights_2008_at_the_Bellevue_Botanical_Garden,_img011.jpg"
     kind: own
   source: "https://bellevuebotanical.org/garden-dlights/"
   free: false
@@ -60,7 +61,7 @@
     alt: "Arches of Christmas lights over a street at night."
     credit: "Photo: Kurt Kaiser, CC0"
     license: CC0
-    source: "https://commons.wikimedia.org/wiki/File:Festival_of_Lights_in_Austin,_TX_2.jpg"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Festival_of_Lights_in_Austin,_TX_2.jpg"
     kind: theme
   source: "https://bellevuecollection.com/snowflakelane/"
   free: true
@@ -80,7 +81,7 @@
     alt: "A path lined with blue and white lights at night."
     credit: "Photo: Yoonahkim, CC BY-SA 3.0"
     license: CC BY-SA 3.0
-    source: "https://commons.wikimedia.org/wiki/File:Luminescent_lights.jpg"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Luminescent_lights.jpg"
     kind: theme
   source: "https://evergreenchristmaslights.com/"
   free: true
@@ -100,7 +101,7 @@
     alt: "A house outlined in multicolored Christmas lights."
     credit: "Photo: Joe Parks, CC BY 2.0"
     license: CC BY 2.0
-    source: "https://commons.wikimedia.org/wiki/File:Christmas_in_Paradise_-_Flickr_-_Joe_Parks.jpg"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Christmas_in_Paradise_-_Flickr_-_Joe_Parks.jpg"
     kind: theme
   source: "https://www.parentmap.com/things-to-do/best-holiday-light-displays-seattle/"
   free: true
@@ -120,7 +121,7 @@
     alt: "Trees wrapped in white lights in a park at night."
     credit: "Photo: Jiří Sedláček, CC BY-SA 4.0"
     license: CC BY-SA 4.0
-    source: "https://commons.wikimedia.org/wiki/File:Overview_of_Christmas_lights_in_back_part_of_park_in_2024_at_Hr%C3%A1dek_street_in_T%C5%99eb%C3%AD%C4%8D,_T%C5%99eb%C3%AD%C4%8D_District.jpg"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Overview_of_Christmas_lights_in_back_part_of_park_in_2024_at_Hr%C3%A1dek_street_in_T%C5%99eb%C3%AD%C4%8D,_T%C5%99eb%C3%AD%C4%8D_District.jpg"
     kind: theme
   source: "https://www.bothellwa.gov/Calendar.aspx?EID=2366"
   free: true
@@ -140,7 +141,7 @@
     alt: "Christmas lights along a small-town street."
     credit: "Photo: mattbuck, CC BY-SA 3.0"
     license: CC BY-SA 3.0
-    source: "https://commons.wikimedia.org/wiki/File:Beeston_MMB_70.jpg"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Beeston_MMB_70.jpg"
     kind: theme
   source: "https://www.greaterseattleonthecheap.com/best-christmas-lights-seattle/"
   free: true
@@ -160,7 +161,7 @@
     alt: "Cold white lights on a tree at night."
     credit: "Photo: waferboard, CC BY 2.0"
     license: CC BY 2.0
-    source: "https://commons.wikimedia.org/wiki/File:Cold_White_Christmas_lights_(8322726666).jpg"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Cold_White_Christmas_lights_(8322726666).jpg"
     kind: theme
   source: "https://www.parentmap.com/things-to-do/best-holiday-light-displays-seattle/"
   free: true
@@ -180,7 +181,7 @@
     alt: "Reindeer and a tree lit in a front yard."
     credit: "Photo: Elliekb, CC BY-SA 4.0"
     license: CC BY-SA 4.0
-    source: "https://commons.wikimedia.org/wiki/File:Reindeerlights.jpg"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Reindeerlights.jpg"
     kind: theme
   source: "https://linktr.ee/kingsgatekringle"
   free: true
@@ -200,7 +201,7 @@
     alt: "A house window framed with warm Christmas lights."
     credit: "Photo: mattbuck, CC BY-SA 4.0"
     license: CC BY-SA 4.0
-    source: "https://commons.wikimedia.org/wiki/File:Wraxall_2013_MMB_A1_Christmas.jpg"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Wraxall_2013_MMB_A1_Christmas.jpg"
     kind: theme
   source: "https://www.greaterseattleonthecheap.com/best-christmas-lights-seattle/"
   free: true
@@ -220,7 +221,7 @@
     alt: "Trees covered in white lights in a city park."
     credit: "Photo: MusikAnimal, CC BY-SA 4.0"
     license: CC BY-SA 4.0
-    source: "https://commons.wikimedia.org/wiki/File:Zuccotti_Park_with_christmas_lights.JPG"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Zuccotti_Park_with_christmas_lights.JPG"
     kind: theme
   source: "https://www.redmond.gov/1139/Redmond-Lights"
   free: true
@@ -240,7 +241,7 @@
     alt: "White lights on a Christmas tree at night."
     credit: "Photo: photos-public-domain.com, CC0"
     license: CC0
-    source: "https://commons.wikimedia.org/wiki/File:White_Christmas_Tree_Lights_at_Night.jpg"
+    credit_url: "https://commons.wikimedia.org/wiki/File:White_Christmas_Tree_Lights_at_Night.jpg"
     kind: theme
   source: "https://www.parentmap.com/things-to-do/best-holiday-light-displays-seattle/"
   free: true
@@ -260,7 +261,7 @@
     alt: "Bushes wrapped in white lights in front of a house."
     credit: "Photo: mattbuck, CC BY-SA 3.0"
     license: CC BY-SA 3.0
-    source: "https://commons.wikimedia.org/wiki/File:Wraxall_2012_MMB_70.jpg"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Wraxall_2012_MMB_70.jpg"
     kind: theme
   source: "https://miracleon134th.st/"
   free: true
@@ -280,7 +281,7 @@
     alt: "A building covered in blue and white Christmas lights."
     credit: "Photo: Yoonahkim, CC BY-SA 3.0"
     license: CC BY-SA 3.0
-    source: "https://commons.wikimedia.org/wiki/File:Merry_Hotel.jpg"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Merry_Hotel.jpg"
     kind: theme
   source: "https://www.greaterseattleonthecheap.com/best-christmas-lights-seattle/"
   free: true
@@ -300,7 +301,7 @@
     alt: "A civic square decorated with Christmas lights."
     credit: "Photo: Thomas Nugent, CC BY-SA 2.0"
     license: CC BY-SA 2.0
-    source: "https://commons.wikimedia.org/wiki/File:George_Square_Christmas_lights_-_geograph.org.uk_-_3806944.jpg"
+    credit_url: "https://commons.wikimedia.org/wiki/File:George_Square_Christmas_lights_-_geograph.org.uk_-_3806944.jpg"
     kind: theme
   source: "https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights"
   free: true
@@ -320,7 +321,7 @@
     alt: "Trees lit along a city street at night."
     credit: "Photo: Ltwikipe, CC BY-SA 4.0"
     license: CC BY-SA 4.0
-    source: "https://commons.wikimedia.org/wiki/File:Navidad-rusia.jpg"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Navidad-rusia.jpg"
     kind: theme
   source: "https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights"
   free: true

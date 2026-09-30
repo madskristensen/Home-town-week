@@ -587,18 +587,28 @@ module EastsideCalendar
 
       image = photo["image"].to_s.strip
       credit = photo["credit"].to_s.strip
-      source = photo["source"].to_s.strip
+      source = photo["credit_url"].to_s.strip
+      source = photo["source"].to_s.strip if source.empty?
       return unless image.start_with?("/assets/images/")
       return if credit.empty? || !source.match?(%r{\Ahttps://})
 
       kind = photo["kind"].to_s.strip
       kind = "theme" unless %w[own theme].include?(kind)
       alt = photo["alt"].to_s.strip
+      # A submitted photo of recognizable kids is left off the page.
+      return if light_photo_blocked?(alt, image)
       item["image"] = image
       item["image_alt"] = alt.empty? ? name : alt
       item["image_credit"] = credit
       item["image_source"] = source
       item["image_kind"] = kind
+    end
+
+    def light_photo_blocked?(alt, image)
+      return true if image.include?("teen-lounge")
+
+      text = alt.to_s.gsub(/children's museum/i, "")
+      text.match?(/\b(child|children|kid|kids|teen|teens|toddler|baby)\b/i)
     end
 
     def light_slug(id, name)
