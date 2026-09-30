@@ -3,13 +3,17 @@
     <div class="mast-title-row">
       <p class="brand"><a href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>Eastside Family Calendar</a></p>
       <details class="cities-menu">
-        <summary>Cities</summary>
-        <nav class="cities-panel" aria-label="Cities">
-          {%- for menu_city in site.data.cities -%}
-          {%- capture menu_city_url -%}/{{ menu_city.id }}/{%- endcapture -%}
-          <a href="{{ menu_city_url | strip | relative_url }}"{% if page.city == menu_city.id %} aria-current="page" class="is-here"{% endif %}>{{ menu_city.name }}</a>
-          {%- endfor -%}
-        </nav>
+        <summary aria-controls="cities-panel">Cities</summary>
+        <div class="cities-panel">
+          <nav id="cities-panel" aria-label="Cities">
+            <ul>
+              {%- for menu_city in site.data.cities -%}
+              {%- capture menu_city_url -%}/{{ menu_city.id }}/{%- endcapture -%}
+              <li><a href="{{ menu_city_url | strip | relative_url }}"{% if page.city == menu_city.id %} aria-current="page" class="is-here"{% endif %}>{{ menu_city.name }}</a></li>
+              {%- endfor -%}
+            </ul>
+          </nav>
+        </div>
       </details>
     </div>
   </div>
@@ -18,15 +22,30 @@
 (function () {
   var menu = document.querySelector(".cities-menu");
   if (!menu) return;
+  var nav = menu.querySelector(".cities-panel nav");
+  var summary = menu.querySelector("summary");
+
+  function hint() {
+    if (!nav) return;
+    var more = nav.scrollHeight > nav.clientHeight + 1 &&
+      nav.scrollTop + nav.clientHeight < nav.scrollHeight - 2;
+    nav.classList.toggle("has-more", more);
+  }
+
   document.addEventListener("click", function (event) {
     if (!menu.open || menu.contains(event.target)) return;
     menu.open = false;
   });
   document.addEventListener("keydown", function (event) {
     if (event.key !== "Escape" || !menu.open) return;
+    event.preventDefault();
     menu.open = false;
-    var summary = menu.querySelector("summary");
     if (summary) summary.focus();
   });
+  menu.addEventListener("toggle", function () {
+    requestAnimationFrame(hint);
+  });
+  window.addEventListener("resize", hint);
+  if (nav) nav.addEventListener("scroll", hint, { passive: true });
 })();
 </script>

@@ -40,6 +40,8 @@
   --pin-bg: #1e4636;
   --pin-ink: #f7f1e6;
   --pin-ring: #f7f1e6;
+  --menu-border: #8a7864;
+  --menu-shadow: 0 0.55rem 1.6rem rgba(42, 32, 22, 0.18);
   --radius: 2px;
   --measure: 44rem;
   --photo-filter: none;
@@ -52,6 +54,8 @@
     --muted: #24332c;
     --gold: #5c420c;
     --rule: #8d7d68;
+    --menu-border: #4e4336;
+    --menu-shadow: 0 0.45rem 1.2rem rgba(28, 22, 16, 0.28);
   }
 }
 
@@ -94,6 +98,8 @@
     --pin-bg: #1f5c40;
     --pin-ink: #f6efe4;
     --pin-ring: #f6efe4;
+    --menu-border: #c3b0d4;
+    --menu-shadow: 0 0.7rem 1.8rem rgba(6, 4, 10, 0.55);
   }
 }
 
@@ -113,6 +119,8 @@
     --focus: #f6d48a;
     --credit-bg: #1a1522;
     --credit-shadow: none;
+    --menu-border: #eadcf6;
+    --menu-shadow: 0 0.55rem 1.4rem rgba(0, 0, 0, 0.62);
   }
 }
 
@@ -188,7 +196,7 @@ picture {
   position: absolute;
   left: 0.75rem;
   top: -4rem;
-  z-index: 5;
+  z-index: 40;
   padding: 0.45rem 0.7rem;
   background: var(--sheet);
   color: var(--ink);
@@ -206,6 +214,8 @@ picture {
 /* Compact wordmark on every page. The page H1 sits below it. */
 
 .site-header {
+  position: relative;
+  z-index: 20;
   padding-top: env(safe-area-inset-top);
   background: var(--page);
 }
@@ -310,8 +320,7 @@ picture {
 }
 
 .cities-menu {
-  position: relative;
-  z-index: 4;
+  position: static;
   flex: none;
   margin: 0;
 }
@@ -323,6 +332,7 @@ picture {
   min-height: 2.75rem;
   padding: 0 0.15rem;
   color: var(--forest);
+  font-family: var(--sans);
   font-size: 0.84rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -352,45 +362,126 @@ picture {
   transform: translateY(0.12rem) rotate(225deg);
 }
 
+/* Card anchored to the Cities button. The list scrolls only when the
+   viewport is shorter than fourteen names, and then a bottom fade marks
+   that more cities follow. */
 .cities-menu .cities-panel {
   position: absolute;
-  top: calc(100% + 0.2rem);
-  right: 0;
-  z-index: 4;
-  min-width: 11.5rem;
-  max-height: min(70vh, 22rem);
+  top: calc(100% + 0.45rem);
+  right: calc((100% - min(100% - 3rem, var(--measure))) / 2);
+  z-index: 5;
+  width: min(22.5rem, calc(100vw - 3rem));
   margin: 0;
-  padding: 0.2rem 0;
-  overflow: auto;
+  padding: 0.5rem;
   background: var(--sheet);
-  border: 1px solid var(--ink);
-  border-radius: var(--radius);
+  border: 1px solid var(--menu-border);
+  border-radius: 0.8rem;
+  box-shadow: var(--menu-shadow);
+}
+
+.cities-menu .cities-panel::before {
+  content: "";
+  position: absolute;
+  top: -0.38rem;
+  right: 1.48rem;
+  width: 0.72rem;
+  height: 0.72rem;
+  background: var(--sheet);
+  border-top: 1px solid var(--menu-border);
+  border-left: 1px solid var(--menu-border);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.cities-menu .cities-panel nav {
+  max-height: calc(100dvh - 6.25rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border-radius: 0.45rem;
+}
+
+.cities-menu .cities-panel nav.has-more {
+  -webkit-mask-image: linear-gradient(#000 0, #000 calc(100% - 1.6rem), transparent);
+  mask-image: linear-gradient(#000 0, #000 calc(100% - 1.6rem), transparent);
+}
+
+.cities-menu .cities-panel ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cities-menu .cities-panel li {
+  display: flex;
+  min-width: 0;
 }
 
 .cities-menu .cities-panel a {
   display: flex;
+  flex: 1;
   align-items: center;
+  justify-content: center;
   min-height: 2.75rem;
-  padding: 0.35rem 0.9rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
   color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1.05rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  letter-spacing: 0;
+  line-height: 1.15;
+  text-align: center;
   text-decoration: none;
-}
-
-.cities-menu .cities-panel a.is-here,
-.cities-menu .cities-panel a[aria-current="page"] {
-  box-shadow: inset 2px 0 0 var(--gold-line);
-  color: var(--forest);
+  white-space: nowrap;
 }
 
 .cities-menu .cities-panel a:hover,
 .cities-menu .cities-panel a:focus-visible {
   background: var(--wash);
+  color: var(--ink);
   text-decoration: none;
+}
+
+.cities-menu .cities-panel a:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+}
+
+.cities-menu .cities-panel a:active {
+  background: color-mix(in srgb, var(--forest) 16%, var(--sheet));
+  color: var(--ink);
+}
+
+.cities-menu .cities-panel a.is-here,
+.cities-menu .cities-panel a[aria-current="page"] {
+  background: var(--forest);
+  color: var(--on-accent);
+}
+
+.cities-menu .cities-panel a.is-here:hover,
+.cities-menu .cities-panel a.is-here:focus-visible,
+.cities-menu .cities-panel a[aria-current="page"]:hover,
+.cities-menu .cities-panel a[aria-current="page"]:focus-visible,
+.cities-menu .cities-panel a.is-here:active,
+.cities-menu .cities-panel a[aria-current="page"]:active {
+  background: var(--btn-bg-hover);
+  color: var(--on-accent);
+}
+
+@media (max-width: 41.99rem) {
+  .cities-menu .cities-panel {
+    left: 0.75rem;
+    right: 0.75rem;
+    width: auto;
+  }
+
+  .cities-menu .cities-panel::before {
+    right: 2.22rem;
+  }
 }
 
 .city-page-head {
