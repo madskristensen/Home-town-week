@@ -573,13 +573,13 @@ module EastsideCalendar
       CGI.escapeHTML(text.to_s)
     end
 
-    # Own photo, then that venue, then a themed picture, then no photo.
-    # A venue or theme file is used once on a page. The city hero is not
-    # in this chain.
+    # Own photo, then that venue, then a themed picture, then a text card
+    # with no image. A venue or theme file is used once on a page. The
+    # city hero is not in this chain.
     def attach_cards!(hub, site, pages, catalog, venues, groups)
       used = {}
       chosen = {}
-      audit = { "own" => [], "venue" => [], "theme" => [], "motif" => [] }
+      audit = { "own" => [], "venue" => [], "theme" => [], "none" => [] }
       Array(hub["sections"]).each do |section|
         Array(section["events"]).each do |event|
           page = pages[event["city_id"].to_s]
@@ -596,17 +596,16 @@ module EastsideCalendar
             prev = chosen[key]
             # The same event in a second section may repeat its own photo.
             # A venue or theme file stays once on the page.
-            apply_photo!(event, prev && prev["kind"] == "own" ? prev : nil)
+            photo = prev && prev["kind"] == "own" ? prev : nil
+            apply_photo!(event, photo)
+            record_photo!(audit, event, photo)
             next
           end
 
           photo = pick_photo(photo_candidates(event, card, venues, groups), used)
           chosen[key] = photo
           apply_photo!(event, photo)
-          kind = photo ? photo["kind"] : "motif"
-          label = "#{event["name"]} (#{event["city"]})"
-          label = "#{label} [#{File.basename(photo["src"])}]" if photo
-          audit[kind] << label
+          record_photo!(audit, event, photo)
         end
       end
       parts = audit.map { |kind, names| "#{kind} #{names.size}" }
@@ -679,8 +678,15 @@ module EastsideCalendar
         event["image_kind"] = photo["kind"]
       else
         event.delete("image")
-        event["image_kind"] = "motif"
+        event["image_kind"] = "none"
       end
+    end
+
+    def record_photo!(audit, event, photo)
+      kind = photo ? photo["kind"] : "none"
+      label = "#{event["name"]} (#{event["city"]})"
+      label = "#{label} [#{File.basename(photo["src"])}]" if photo
+      audit[kind] << label
     end
 
     def public_photo(photo)
@@ -723,11 +729,18 @@ module EastsideCalendar
       end
     end
 
-    # A word in the name or place wins over a tag, so a pumpkin patch
-    # that is also tagged as a maze still shows pumpkins.
+    # A specific event type in the name or place wins over a broad tag,
+    # so a pumpkin patch that is also tagged as a maze still shows
+    # pumpkins. A trunk-or-treat tag wins over a title that only says
+    # "fall festival".
     def matching_theme(event, groups)
       tags = Array(event["tags"]).map { |tag| tag.to_s.downcase }
       hay = "#{event["name"]} #{event["place"]}".downcase
+      if tags.include?("trunk-or-treat") || hay.include?("trunk-or-treat") || hay.include?("trunk or treat")
+        trunk = Array(groups).find { |group| keys_hit?(group, "trunk or treat", []) }
+        return trunk if trunk
+      end
+
       named = Array(groups).find { |group| keys_hit?(group, hay, []) }
       return named if named
 
@@ -930,7 +943,6 @@ module EastsideCalendar
 
       rule = SeasonalHubs.banner_rule(config)
       chosen = SeasonalHubs.banner_choice(prepared, rule, today)
-      site.data["card_motif_svg"] = chosen ? chosen.dig("theme", "svg").to_s : ""
       if chosen && !chosen.dig("theme", "svg").to_s.empty?
         site.data["seasonal_banner"] = {
           "path" => chosen["path"],
@@ -986,20 +998,6 @@ module EastsideCalendar
     end
   end
 
-  class CardMotifTag < Liquid::Tag
-    def render(context)
-      site = context.registers[:site]
-      page = context.registers[:page]
-      hub_id = page.respond_to?(:[]) ? page["hub_id"].to_s : ""
-      if !hub_id.empty?
-        svg = site.data.dig("hub_pages", hub_id, "theme", "svg").to_s
-        return svg unless svg.empty?
-      end
-
-      site.data["card_motif_svg"].to_s
-    end
-  end
 end
 
 Liquid::Template.register_tag("seasonal_banner", EastsideCalendar::SeasonalBannerTag)
-Liquid::Template.register_tag("card_motif", EastsideCalendar::CardMotifTag)

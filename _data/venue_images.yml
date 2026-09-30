@@ -27,12 +27,24 @@ venues:
     credit: "Photo: Mark Yasuda, CC BY-SA 4.0"
     license: CC BY-SA 4.0
     source: https://commons.wikimedia.org/wiki/File:2018_Crossroads_Bellevue_west_entrance.jpg
+  - keys: ["the meadow"]
+    image: /assets/images/bellevue/downtown-park-meadow.webp
+    alt: The circular lawn at Bellevue Downtown Park, with the downtown skyline beyond the water.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Bellevue_WA_-Downtown_Park_05A.jpg
   - keys: ["old main street"]
     image: /assets/images/bellevue/old-main-street.webp
     alt: Old Main Street in Bellevue, with shops and a clock along the sidewalk.
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     license: CC BY-SA 3.0
     source: https://commons.wikimedia.org/wiki/File:Bellevue,_Washington_-_old_Main_Street_01.jpg
+  - keys: ["downtown bothell"]
+    image: /assets/images/bothell/main-street.webp
+    alt: Pedestrian Main Street in Bothell, with brick buildings and a blue sky.
+    credit: "Photo: Joe Mabel, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Main_Street,_Bothell,_WA_01.jpg
   - keys: ["hannan house", "bothell historical museum"]
     image: /assets/images/bothell/hannan-house.webp
     alt: Hannan House, the 1893 building that houses the Bothell Historical Museum at Bothell Landing.

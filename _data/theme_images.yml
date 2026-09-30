@@ -2,10 +2,12 @@
 # photo of that venue. Wikimedia Commons, CC0, CC BY, CC BY-SA, or public
 # domain. No identifiable children or teens.
 #
-# The first group whose key is on the event tags, or is in the event name
-# or place, supplies the pictures. A picture is used once on a page. The
-# next card of that type takes the next picture. When the list runs out,
-# the card is text with the seasonal motif.
+# The first group whose key is in the event name or place supplies the
+# pictures. A trunk-or-treat tag wins before that, so a fall festival
+# that is a trunk-or-treat still shows cars. If the name does not match,
+# the first group whose key is on the tags is used. A picture is used
+# once on a page. The next card of that type takes the next picture.
+# When the list runs out, the card is text only, with no image area.
 groups:
   - keys: [haunted]
     images:
@@ -19,11 +21,169 @@ groups:
         credit: "Painting: Georg Emil Libert, public domain"
         license: Public domain
         source: https://commons.wikimedia.org/wiki/File:Georg_Emil_Libert,_Snow_scene_-_the_Haunted_House,_1848,_Victoria_and_Albert_Museum_01.jpg
-      - image: /assets/images/themes/jack-o-lantern-night.webp
-        alt: A carved jack-o-lantern glowing at night.
-        credit: "Photo: Alabama Extension, CC0"
+  - keys: [halloween train]
+    images:
+      - image: /assets/images/themes/halloween-train.webp
+        alt: A black steam locomotive decorated for Halloween, with a ghost painted on the front.
+        credit: "Photo: The Greater Southwestern Exploration Company, CC BY 2.0"
+        license: CC BY 2.0
+        source: https://commons.wikimedia.org/wiki/File:Spokane,_Portland_and_Seattle_No._539_decorated_for_Halloween_2014.jpg
+      - image: /assets/images/themes/halloween-train-autumn.webp
+        alt: A steam train in a green valley with autumn trees.
+        credit: "Photo: Hefin Owen, CC BY-SA 2.0"
+        license: CC BY-SA 2.0
+        source: https://commons.wikimedia.org/wiki/File:Steam_train_in_autumn._(29777055440).jpg
+      - image: /assets/images/themes/halloween-train-steam.webp
+        alt: A green steam locomotive on a railway line.
+        credit: "Photo: The Basingstoker, CC BY-SA 2.0"
+        license: CC BY-SA 2.0
+        source: https://commons.wikimedia.org/wiki/File:Spa_Valley_Railway_Autumn_Steam_and_Diesel_Gala_02.jpg
+  - keys: [pumpkin hunt]
+    images:
+      - image: /assets/images/themes/pumpkin-hunt-grass.webp
+        alt: Large pumpkins sitting in the grass, with cliffs behind them.
+        credit: "Photo: Frank Scholten, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:Many_large_pumpkins_on_the_grass,_with_cliffs_in_the_background,_NINO_F_Scholten_photographic_print_02_1502.tiff
+      - image: /assets/images/themes/pumpkin-hunt-woods.webp
+        alt: Pumpkins set out among trees.
+        credit: "Photo: Clarisse Meyer, CC0"
         license: CC0
-        source: https://commons.wikimedia.org/wiki/File:Jack-O-Lantern_at_night.jpg
+        source: https://commons.wikimedia.org/wiki/File:Pumpkins_Irvine_Regional_Park_(Unsplash).jpg
+      - image: /assets/images/themes/pumpkin-hunt-pile.webp
+        alt: A pile of orange pumpkins.
+        credit: "Photo: Vlad K., CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Orange_Halloween_pumpkins_(Unsplash).jpg
+  - keys: [pup parade, howl-o-ween, howl o ween, "paws & pumpkins", paws and pumpkins, dog costume]
+    images:
+      - image: /assets/images/themes/dog-costume-pumpkin.webp
+        alt: A small dog in a pumpkin costume.
+        credit: "Photo: Petful, CC BY 2.0"
+        license: CC BY 2.0
+        source: https://commons.wikimedia.org/wiki/File:Pixie_dog_halloween_costume_(8106428902).jpg
+      - image: /assets/images/themes/dog-costume-shark.webp
+        alt: A dog wearing a shark costume.
+        credit: "Photo: Petful, CC BY 2.0"
+        license: CC BY 2.0
+        source: https://commons.wikimedia.org/wiki/File:Shark_dog_costume_(8106433217).jpg
+      - image: /assets/images/themes/dog-costume-hotdog.webp
+        alt: A dog in a hot-dog costume.
+        credit: "Photo: Petful, CC BY 2.0"
+        license: CC BY 2.0
+        source: https://commons.wikimedia.org/wiki/File:Hotdog_dog_costume_(8106428599).jpg
+  - keys: [tray workshop, pumpkin painting, pumpkin decorating, paper mache, drawing pumpkins, spooky clay, monster makers, sensory dough]
+    images:
+      - image: /assets/images/themes/halloween-craft-minis.webp
+        alt: Mini pumpkins, paint, and craft supplies on a table.
+        credit: "Photo: Walimog4, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Halloween_Crafting_with_Mini_Pumpkins.jpg
+      - image: /assets/images/themes/halloween-craft-carved.webp
+        alt: A pumpkin carved into a flower shape.
+        credit: "Photo: PROPOLI87, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Zucca_da_decoro_intagliata_a_forma_di_fiore.jpg
+      - image: /assets/images/themes/halloween-craft-face.webp
+        alt: A carved pumpkin face sitting on a wooden table.
+        credit: "Photo: Jackins, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:Pumpkin_craft_for_Halloween.JPG
+  - keys: [trick or treat at the library, halloween story time]
+    images:
+      - image: /assets/images/themes/library-halloween-nook.webp
+        alt: A library reading nook dressed for Halloween, with paper bats, a spiderweb, and a black cat.
+        credit: "Photo: Mutney, CC BY 4.0"
+        license: CC BY 4.0
+        source: https://commons.wikimedia.org/wiki/File:Halloween_tent,_childrens_section,_St_Ives_Library,_Cornwall_-_November_2025.jpg
+      - image: /assets/images/themes/library-halloween-books.webp
+        alt: A library book display with pumpkins and paper ghosts.
+        credit: "Photo: Texas State Library and Archives Commission, CC BY 2.0"
+        license: CC BY 2.0
+        source: https://commons.wikimedia.org/wiki/File:Halloween_Book_Display_@_HPL_(38721987272).jpg
+  - keys: [trunk-or-treat, trunk or treat]
+    images:
+      - image: /assets/images/themes/trunk-or-treat-car.webp
+        alt: A skeleton decoration strapped to the spare tire of a car.
+        credit: "Photo: Phillip Pessar, CC BY 4.0"
+        license: CC BY 4.0
+        source: https://commons.wikimedia.org/wiki/File:Halloween_Skeleton_on_spare_tire,_Miami_Florida_2025.jpg
+      - image: /assets/images/themes/trunk-or-treat-car-card.webp
+        alt: A vintage postcard of a jack-o-lantern driving a car.
+        credit: "Postcard: International Art Publishing Company, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:%22You_Auto_Have_a_Happy_Hallowe%27en.%22_(Jack-O-Lantern_driving_a_car).jpg
+  - keys: [trick-or-treat street, trick or treat street, on main street, little monsters, town center trick, trick-or-treat, trick or treat]
+    images:
+      - image: /assets/images/themes/trick-or-treat-porch.webp
+        alt: A glowing jack-o-lantern on a front porch at night.
+        credit: "Photo: Patrick Henry, CC BY 2.0"
+        license: CC BY 2.0
+        source: https://commons.wikimedia.org/wiki/File:Pumpkin_on_the_Porch_(52467890182).jpg
+      - image: /assets/images/themes/trick-or-treat-porch-night.webp
+        alt: Pumpkins and a lantern on a porch at night.
+        credit: "Photo: lukeharold, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:New_Orleans_October_2024_-_Pumpkin_porch.jpg
+      - image: /assets/images/themes/trick-or-treat-street.webp
+        alt: Pumpkins lined up along a sidewalk on a city street.
+        credit: "Photo: Infrogmation, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Hostile_(mostly)_pumpkins,_Dumaine_Street,_New_Orleans_2025.jpg
+  - keys: [harvest market, park market]
+    images:
+      - image: /assets/images/themes/harvest-market-boxes.webp
+        alt: Cardboard boxes of orange pumpkins at a farmers market.
+        credit: "Photo: Barbara Brannon, CC BY 2.0"
+        license: CC BY 2.0
+        source: https://commons.wikimedia.org/wiki/File:Boxed_pumpkins_at_farmers_market_2015.jpg
+      - image: /assets/images/themes/harvest-market-stall.webp
+        alt: Pumpkins stacked for sale at an outdoor market.
+        credit: "Photo: WineCountryInn, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:Pumpkins_Farmer%27s_Market_Montreal_Canada.JPG
+      - image: /assets/images/themes/harvest-market-bags.webp
+        alt: Bags of mini pumpkins at a market stall.
+        credit: "Photo: Barbara Brannon, CC BY 2.0"
+        license: CC BY 2.0
+        source: https://commons.wikimedia.org/wiki/File:Bagged_mini_pumpkins_at_farmers_market_2015.jpg
+  - keys: [harvest festival, harvest fest, fall festival, family festival, farm fair, oxtober]
+    images:
+      - image: /assets/images/themes/fall-festival-scarecrow.webp
+        alt: A scarecrow standing in a farm field.
+        credit: "Photo: Mohsen H. Rahimi, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Scarecrow_in_farm.jpg
+      - image: /assets/images/themes/fall-festival-field.webp
+        alt: A scarecrow in a grassy field with trees behind it.
+        credit: "Photo: Benoit Brummer, CC BY 4.0"
+        license: CC BY 4.0
+        source: https://commons.wikimedia.org/wiki/File:Scarecrow_in_a_chicken_field_(DSCF5735).jpg
+      - image: /assets/images/themes/fall-festival-wreath.webp
+        alt: A harvest wreath of wheat, flowers, and produce on a stand.
+        credit: "Photo: Irena Kontny, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Do%C5%BCynki_w_Kobi%C3%B3rze_10_IX_2023_18.jpg
+      - image: /assets/images/themes/fall-festival-pumpkins.webp
+        alt: Rows of orange pumpkins in a green field.
+        credit: "Photo: USDA, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:Pumpkins_grow_at_Cornucopia_Farms_in_Scottsburg,_Indiana_on_August_12,_2021_(20210812-NRCS-CSW-010).jpg
+      - image: /assets/images/themes/fall-festival-hay.webp
+        alt: A haystack in a mown field.
+        credit: "Photo: Maks Akinin, CC BY 3.0"
+        license: CC BY 3.0
+        source: https://commons.wikimedia.org/wiki/File:Haystack_(129401611).jpeg
+      - image: /assets/images/themes/pumpkin-hunt-woods.webp
+        alt: Pumpkins set out among trees.
+        credit: "Photo: Clarisse Meyer, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Pumpkins_Irvine_Regional_Park_(Unsplash).jpg
+      - image: /assets/images/themes/pumpkin-hunt-pile.webp
+        alt: A pile of orange pumpkins.
+        credit: "Photo: Vlad K., CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Orange_Halloween_pumpkins_(Unsplash).jpg
   - keys: [corn-maze, corn maze]
     images:
       - image: /assets/images/themes/corn-maze-path.webp
@@ -58,35 +218,6 @@ groups:
         credit: "Painting: Arthur Parton, public domain"
         license: Public domain
         source: https://commons.wikimedia.org/wiki/File:Pumpkins_in_a_Field-Arthur_Parton.jpg
-  - keys: [trunk-or-treat, trunk or treat, trick-or-treat, trick or treat]
-    images:
-      - image: /assets/images/themes/jack-o-lantern-night.webp
-        alt: A carved jack-o-lantern glowing at night.
-        credit: "Photo: Alabama Extension, CC0"
-        license: CC0
-        source: https://commons.wikimedia.org/wiki/File:Jack-O-Lantern_at_night.jpg
-      - image: /assets/images/themes/pumpkin-carved.webp
-        alt: Three carved jack-o-lanterns sitting in grass.
-        credit: "Photo: Petr Kratochvil, public domain"
-        license: Public domain
-        source: https://commons.wikimedia.org/wiki/File:Jack-o-lantern_pumpkins.jpg
-  - keys: [halloween]
-    images:
-      - image: /assets/images/themes/jack-o-lantern-night.webp
-        alt: A carved jack-o-lantern glowing at night.
-        credit: "Photo: Alabama Extension, CC0"
-        license: CC0
-        source: https://commons.wikimedia.org/wiki/File:Jack-O-Lantern_at_night.jpg
-      - image: /assets/images/themes/pumpkin-carved.webp
-        alt: Three carved jack-o-lanterns sitting in grass.
-        credit: "Photo: Petr Kratochvil, public domain"
-        license: Public domain
-        source: https://commons.wikimedia.org/wiki/File:Jack-o-lantern_pumpkins.jpg
-      - image: /assets/images/themes/pumpkin-painting.webp
-        alt: A painting of pumpkins in a field.
-        credit: "Painting: Arthur Parton, public domain"
-        license: Public domain
-        source: https://commons.wikimedia.org/wiki/File:Pumpkins_in_a_Field-Arthur_Parton.jpg
   - keys: [u-pick, apple]
     images:
       - image: /assets/images/themes/apple-orchard.webp
@@ -99,23 +230,50 @@ groups:
         credit: "Photo: Marc-Lautenbacher, CC BY-SA 4.0"
         license: CC BY-SA 4.0
         source: https://commons.wikimedia.org/wiki/File:Apple_harvest_boxes_of_apple_orchard_on_%C3%8Ele_d%E2%80%99Orl%C3%A9ans_in_Canada.jpg
-  - keys: [harvest, harvest festival, harvest fest]
+  - keys: [harvest]
     images:
-      - image: /assets/images/themes/apple-harvest.webp
-        alt: Wooden crates of red apples in an orchard.
-        credit: "Photo: Marc-Lautenbacher, CC BY-SA 4.0"
-        license: CC BY-SA 4.0
-        source: https://commons.wikimedia.org/wiki/File:Apple_harvest_boxes_of_apple_orchard_on_%C3%8Ele_d%E2%80%99Orl%C3%A9ans_in_Canada.jpg
-      - image: /assets/images/themes/pumpkin-field.webp
-        alt: Rows of orange pumpkins in a field.
-        credit: "Photo: Rodney Campbell, CC BY 2.0"
-        license: CC BY 2.0
-        source: https://commons.wikimedia.org/wiki/File:Pumpkin_Field.jpg
-      - image: /assets/images/themes/apple-orchard.webp
-        alt: Rows of apple trees in an orchard, with hills beyond.
-        credit: "Photo: Gerda Arendt, CC0"
+      - image: /assets/images/themes/fall-festival-scarecrow.webp
+        alt: A scarecrow standing in a farm field.
+        credit: "Photo: Mohsen H. Rahimi, CC0"
         license: CC0
-        source: https://commons.wikimedia.org/wiki/File:Apple_orchard_overlooking_Idstein.jpg
+        source: https://commons.wikimedia.org/wiki/File:Scarecrow_in_farm.jpg
+      - image: /assets/images/themes/fall-festival-field.webp
+        alt: A scarecrow in a grassy field with trees behind it.
+        credit: "Photo: Benoit Brummer, CC BY 4.0"
+        license: CC BY 4.0
+        source: https://commons.wikimedia.org/wiki/File:Scarecrow_in_a_chicken_field_(DSCF5735).jpg
+      - image: /assets/images/themes/fall-festival-wreath.webp
+        alt: A harvest wreath of wheat, flowers, and produce on a stand.
+        credit: "Photo: Irena Kontny, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Do%C5%BCynki_w_Kobi%C3%B3rze_10_IX_2023_18.jpg
+      - image: /assets/images/themes/fall-festival-pumpkins.webp
+        alt: Rows of orange pumpkins in a green field.
+        credit: "Photo: USDA, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:Pumpkins_grow_at_Cornucopia_Farms_in_Scottsburg,_Indiana_on_August_12,_2021_(20210812-NRCS-CSW-010).jpg
+      - image: /assets/images/themes/fall-festival-hay.webp
+        alt: A haystack in a mown field.
+        credit: "Photo: Maks Akinin, CC BY 3.0"
+        license: CC BY 3.0
+        source: https://commons.wikimedia.org/wiki/File:Haystack_(129401611).jpeg
+  - keys: [halloween]
+    images:
+      - image: /assets/images/themes/jack-o-lantern-night.webp
+        alt: A carved jack-o-lantern glowing at night.
+        credit: "Photo: Alabama Extension, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Jack-O-Lantern_at_night.jpg
+      - image: /assets/images/themes/halloween-graveyard.webp
+        alt: A jack-o-lantern in a small graveyard display.
+        credit: "Photo: Carly Lesser and Art Drauglis, CC BY-SA 2.0"
+        license: CC BY-SA 2.0
+        source: https://commons.wikimedia.org/wiki/File:Cucurbita_pepo_Halloween_pumpkin_-_Jack_o%27_lantern_graveyard.jpg
+      - image: /assets/images/themes/halloween-house.webp
+        alt: A house covered in Halloween decorations, with bats and pumpkins.
+        credit: "Photo: Mtaylor848, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Halloween_decorations_on_a_house_on_Bridle_Way,_Wetherby_(22nd_October_2020).jpg
   - keys: [santa]
     images:
       - image: /assets/images/themes/santa-window.webp
