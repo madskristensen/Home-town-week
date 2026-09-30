@@ -120,7 +120,7 @@
         {%- endif -%}
       </figure>
       {%- endif -%}
-      <h3><span class="home-num">{{ light.number }}</span> {{ light.name }}</h3>
+      <h3><span class="home-num">{{ light.number }}</span> {{ light.name }}{% assign light_trust = light.trust_label | append: "" %}{% if light_trust.size > 0 %} <span class="decor-kicker">{{ light.trust_label }}</span>{% endif %}</h3>
       <p class="event-place"><a class="addr" href="{{ light.address | map_search: light.city }}"><span class="addr-text">{{ light.address }}</span></a></p>
       {%- if light_nights.size > 0 -%}
       <p class="event-when">{{ light_nights }}</p>
@@ -129,7 +129,7 @@
       <p class="home-hours">{{ light_hours }}</p>
       {%- endif -%}
       <p class="hub-blurb">{{ light.description }}</p>
-      <p class="home-source"><a href="{{ light.source }}" rel="noopener">Source</a></p>
+      <p class="home-source"><a href="{{ light.source }}" rel="noopener">{% assign light_source_label = light.source_label | append: "" %}{% if light_source_label.size > 0 %}{{ light.source_label }}{% else %}Source{% endif %}</a>{% assign light_also = light.also_source | append: "" %}{% if light_also.size > 0 %} · <a href="{{ light.also_source }}" rel="noopener">{% assign light_also_label = light.also_source_label | append: "" %}{% if light_also_label.size > 0 %}{{ light.also_source_label }}{% else %}Source{% endif %}</a>{% endif %}</p>
     </article>
     {%- endfor -%}
   </div>

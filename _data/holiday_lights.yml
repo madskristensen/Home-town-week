@@ -28,6 +28,8 @@
 # last_verified is the day the source was checked, YYYY-MM-DD.
 # When the source is a past season and the next one is not announced,
 # start nights with "Last seen 2025" (use the season year).
+# trust is owner or tip. Leave it off for a news or city source.
+# owner shows "Listed by owner". tip shows "Community tip".
 - id: garden-dlights
   name: "Garden d'Lights"
   type: park
@@ -135,7 +137,7 @@
   address: "190th Ave SE at SE 44th Way"
   lat: 47.563800
   lng: -122.086050
-  description: "A cul-de-sac where the houses put out painted nutcracker figures and lights, in the manner of a candy cane lane."
+  description: "A cul-de-sac where the houses put out painted nutcracker figures and lights, in the manner of a candy cane lane. Houses on SE 35th Place decorate alongside it."
   nights: "Usually every night in December."
   hours: ""
   source: "https://www.greaterseattleonthecheap.com/best-christmas-lights-seattle/"
@@ -169,15 +171,18 @@
   address: "12244 NE 140th St"
   lat: 47.726042
   lng: -122.175998
-  description: "A home light show in Kingsgate, set to music you can hear from the car, raising money for Northwest Harvest. Pull over and keep driveways clear."
-  nights: "Last seen 2025, nightly through New Year's weekend."
+  description: "A home light show in Kingsgate, set to music on 103.1 FM. Visitors can pick the next song on the jukebox. 2026 donations go to Seattle Children's uncompensated care fund. Pull over and keep driveways clear."
+  nights: "Dec 1 to Dec 31, 2026"
   hours: "4:30 p.m. to midnight"
   photo:
     image: /assets/images/lights/kingsgate.webp
     alt: "A two-story house outlined in white Christmas lights."
     credit: "Photo: Kingsgate Kringle House"
     credit_url: "https://www.facebook.com/kingsgatekringle/"
-  source: "https://linktr.ee/kingsgatekringle"
+  source: "https://www.bigredbulb.com/display/kingsgate-kringle-house/"
+  source_label: "Big Red Bulb"
+  also_source: "https://linktr.ee/kingsgatekringle"
+  also_source_label: "Linktree"
   free: true
   last_verified: "2026-09-30"
 - id: redmond-lights
@@ -338,5 +343,450 @@
   nights: ""
   hours: ""
   source: "https://maps.app.goo.gl/ZpQGKsgSab4g7MuWA"
+  free: true
+  last_verified: "2026-09-30"
+- id: light-up-north-bend
+  name: "Light Up North Bend"
+  type: street
+  map: true
+  city: north-bend
+  address: "Throughout North Bend"
+  lat: 47.495776
+  lng: -121.784889
+  description: "A city lighting contest, in its 6th year in 2025, with a tour map of homes and storefronts. The 2024 tour ran Dec 16 to 25."
+  nights: "Last seen 2025, through Dec 25."
+  hours: "The 2024 tour ran 4 to 9 p.m."
+  source: "https://livingsnoqualmie.com/light-up-north-bend-holiday-lighting-contest-winners-announced/"
+  source_label: "Living Snoqualmie"
+  also_source: "https://www.discovernorthbend.com/Calendar.aspx?EID=1383"
+  also_source_label: "Discover North Bend"
+  free: true
+  last_verified: "2026-09-30"
+- id: harmon-heights-family-lights
+  name: "Harmon Heights Family Lights"
+  type: house
+  map: true
+  city: north-bend
+  address: "13008 409th Ave SE"
+  lat: 47.483038
+  lng: -121.794529
+  description: "The Tran home, the 2025 best use of music winner. A 40-minute lights, laser, and projection show on 91.1 FM, with a show every 45 minutes from 5:00. Driveway parking."
+  nights: "Last seen 2025."
+  hours: "5 to 10:30 p.m."
+  source: "https://holidaylightmap.com/listing/harmon-heights-family-lights/"
+  source_label: "Holiday Light Map"
+  also_source: "https://livingsnoqualmie.com/light-up-north-bend-holiday-lighting-contest-winners-announced/"
+  also_source_label: "Living Snoqualmie"
+  free: true
+  last_verified: "2026-09-30"
+- id: north-bend-best-theme
+  name: "Best theme, Light Up North Bend"
+  type: house
+  map: true
+  city: north-bend
+  address: "1336 SE 16th St"
+  lat: 47.477458
+  lng: -121.765992
+  description: "The 2025 best theme winner in the city's lighting contest."
+  nights: "Last seen 2025."
+  hours: ""
+  source: "https://livingsnoqualmie.com/light-up-north-bend-holiday-lighting-contest-winners-announced/"
+  free: true
+  last_verified: "2026-09-30"
+- id: north-bend-griswold
+  name: "Griswold lights, Light Up North Bend"
+  type: house
+  map: true
+  city: north-bend
+  address: "1000 Mountain View Blvd SE"
+  lat: 47.483959
+  lng: -121.780162
+  description: "The 2025 Griswold winner, the contest prize for the most lights."
+  nights: "Last seen 2025."
+  hours: ""
+  source: "https://livingsnoqualmie.com/light-up-north-bend-holiday-lighting-contest-winners-announced/"
+  free: true
+  last_verified: "2026-09-30"
+- id: cedar-village-lights
+  name: "Cedar Village"
+  type: street
+  map: true
+  city: north-bend
+  address: "Cedar Village"
+  lat: 47.471603
+  lng: -121.751437
+  description: "The 2025 most densely lit neighborhood in the city's contest. Judges also noted Cedar Landing."
+  nights: "Last seen 2025."
+  hours: ""
+  source: "https://livingsnoqualmie.com/light-up-north-bend-holiday-lighting-contest-winners-announced/"
+  free: true
+  last_verified: "2026-09-30"
+- id: mangum-family-lights
+  name: "Mangum family lights"
+  type: house
+  map: true
+  city: sammamish
+  address: "414 218th Ave NE"
+  lat: 47.613549
+  lng: -122.049138
+  description: "The 2025 Sammamish Independent winner in Inglewood, with about 10,000 lights, a husky sled team, and a gravel walk-through path. The lights stay up a few weeks past New Year's."
+  nights: "Last seen 2025, through a few weeks past New Year's."
+  hours: ""
+  source: "https://sammamishindependent.com/2025/12/mangums-make-holiday-lights-a-bonding-tradition/"
+  free: true
+  last_verified: "2026-09-30"
+- id: klahanie-wilson-lights
+  name: "Klahanie cul-de-sac lights"
+  type: street
+  map: true
+  city: sammamish
+  address: "Klahanie"
+  lat: 47.571473
+  lng: -122.005822
+  description: "A 2024 contest winner in a Klahanie cul-de-sac, the Wilson family, with about 12,000 white lights. The street was not published."
+  nights: "Last seen 2024."
+  hours: ""
+  source: "https://sammamishindependent.com/2024/12/sammamish-family-honors-neighbor-with-bright-holiday-display/"
+  free: true
+  last_verified: "2026-09-30"
+- id: west-highlands-park-lights
+  name: "West Highlands Park"
+  type: street
+  map: true
+  city: issaquah
+  address: "West Highlands Park, Issaquah Highlands"
+  lat: 47.539668
+  lng: -122.026979
+  description: "The Issaquah Highlands HOA's 2024 Most Festive Neighborhood, from the Light Up the Lanes contest."
+  nights: "Last seen 2024."
+  hours: ""
+  source: "https://issaquahhighlands.com/most-festive-neighborhood-winner-west-highlands-park/"
+  free: true
+  last_verified: "2026-09-30"
+- id: taylors-ridge-lights
+  name: "Taylor's Ridge"
+  type: street
+  map: true
+  city: duvall
+  address: "Taylor's Ridge"
+  lat: 47.740869
+  lng: -121.966803
+  description: "A neighborhood that goes all out on the lights. Eastside Runners Club starts a holiday lights run here from Judd Park."
+  nights: "Last seen 2024."
+  hours: ""
+  source: "https://www.eastsiderunners.com/event-5983748"
+  free: true
+  last_verified: "2026-09-30"
+- id: illuminate-mi
+  name: "Illuminate MI"
+  type: park
+  map: true
+  city: mercer-island
+  address: "Mercerdale Park, 27th Ave SE, and 78th Ave SE"
+  lat: 47.580856
+  lng: -122.234918
+  description: "Town Center lights at the Mercerdale Park pergola and giant sequoia, the median on 27th Ave SE, and trees along 78th Ave SE."
+  nights: ""
+  hours: ""
+  source: "https://letstalk.mercergov.org/illuminate-mi"
+  free: true
+  last_verified: "2026-09-30"
+- id: kelsey-creek-barn-lights
+  name: "Kelsey Creek Farm Holiday Barn Lighting"
+  type: park
+  map: true
+  city: bellevue
+  address: "410 130th Pl SE"
+  lat: 47.604018
+  lng: -122.163778
+  description: "The city turns the barn lights on for the holiday season at a free family night, with carols and Santa. The lighted barns stay up after the party."
+  nights: "Dec 5, 2026"
+  hours: "5 to 6:30 p.m."
+  source: "https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/holiday-barn-lighting"
+  free: true
+  last_verified: "2026-09-30"
+- id: reve-lights
+  name: "Reve"
+  type: house
+  map: true
+  trust: owner
+  city: kirkland
+  address: "4605 108th Ave NE"
+  lat: 47.651628
+  lng: -122.196587
+  description: "About 2,100 lights set to music on 95.3 FM. Donations go to St. Jude."
+  nights: "Nov 22 to Dec 31"
+  hours: "Musical show 7 to 10 p.m. Other lights 6 to 7 p.m. and 10 to 11 p.m. Hours may change. Check before you go."
+  source: "https://bestxmaslights.com/display/4605-108th-ave-ne-kirkland-wa-98033/"
+  free: true
+  last_verified: "2026-09-30"
+- id: joneses-caroling-lanterns
+  name: "The Joneses' Caroling Christmas Lanterns"
+  type: house
+  map: true
+  trust: owner
+  city: kirkland
+  address: "14143 129th Ave NE"
+  lat: 47.728113
+  lng: -122.168897
+  description: "About 16,000 lights and paper lanterns, set to music on 91.9 FM."
+  nights: "Through Jan 7"
+  hours: "4:30 to 10 p.m. Hours may change. Check before you go."
+  source: "https://bestxmaslights.com/display/14143-129th-ave-ne-kirkland-wa-98034/"
+  free: true
+  last_verified: "2026-09-30"
+- id: border-collie-christmas
+  name: "A Border Collie Christmas"
+  type: house
+  map: true
+  trust: owner
+  city: kirkland
+  address: "14124 121st Ave NE"
+  lat: 47.727974
+  lng: -122.178219
+  description: "A corner lot of lighted snowmen, penguins, reindeer, and a border collie. Walk by or drive by."
+  nights: ""
+  hours: "Hours may change. Check before you go."
+  source: "https://bestxmaslights.com/display/14124-121st-ave-ne-kirkland-wa-98034/"
+  free: true
+  last_verified: "2026-09-30"
+- id: lights-on-64th
+  name: "Lights on 64th"
+  type: house
+  map: true
+  trust: owner
+  city: redmond
+  address: "19117 NE 64th Way"
+  lat: 47.663642
+  lng: -122.082251
+  description: "Lights that dance to music on 103.1 FM. Donations go to NW Share."
+  nights: ""
+  hours: "Hours may change. Check before you go."
+  source: "https://bestxmaslights.com/display/19117-ne-64th-way-redmond-wa-98052/"
+  free: true
+  last_verified: "2026-09-30"
+- id: aj-sams-light-extravaganza
+  name: "AJ & Sam's Light Extravaganza"
+  type: house
+  map: true
+  trust: owner
+  city: redmond
+  address: "11138 159th Ave NE"
+  lat: 47.700708
+  lng: -122.127098
+  description: "More than 100,000 LEDs, with nature scenes and props. Inflatables are across the street at 11135 159th Ave NE."
+  nights: ""
+  hours: "Hours may change. Check before you go."
+  source: "https://bestxmaslights.com/display/11138-159th-ave-ne-redmond-wa-98052/"
+  free: true
+  last_verified: "2026-09-30"
+- id: lights-9619
+  name: "9619 Lights"
+  type: house
+  map: true
+  trust: owner
+  city: redmond
+  address: "9619 164th Ave NE"
+  lat: 47.686673
+  lng: -122.121373
+  description: "A megatree, arches, and lights on the trees and fence, on 89.1 FM."
+  nights: ""
+  hours: "Hours may change. Check before you go."
+  source: "https://bestxmaslights.com/display/9619-164th-ave-ne-redmond-wa-98052/"
+  free: true
+  last_verified: "2026-09-30"
+- id: december-lights
+  name: "December Lights"
+  type: house
+  map: true
+  trust: owner
+  city: redmond
+  address: "22343 NE 101st Pl"
+  lat: 47.688440
+  lng: -122.043628
+  description: "Holiday movie clips with FM music, alongside the lights."
+  nights: ""
+  hours: "6 to 10 p.m. Hours may change. Check before you go."
+  source: "https://bestxmaslights.com/display/22343-ne-101st-pl-redmond-wa-98053/"
+  free: true
+  last_verified: "2026-09-30"
+- id: depoule-christmas-show
+  name: "DePoule Christmas Show"
+  type: house
+  map: true
+  trust: owner
+  city: renton
+  address: "2100 Redmond Ave NE"
+  lat: 47.510417
+  lng: -122.168416
+  description: "About 10,000 lights sequenced to holiday songs on 100.3 FM."
+  nights: "Dec 1 to Jan 5"
+  hours: "6 to 9 p.m. Hours may change. Check before you go."
+  source: "https://bestxmaslights.com/display/2100-redmond-ave-ne-renton-wa-98056/"
+  free: true
+  last_verified: "2026-09-30"
+- id: langelo-christmas-lights
+  name: "Langelo Christmas Lights"
+  type: house
+  map: true
+  trust: owner
+  city: renton
+  address: "18631 139th Pl SE"
+  lat: 47.435252
+  lng: -122.156700
+  description: "Lights set to music on 101.1 FM."
+  nights: "December"
+  hours: "6 to 9 p.m. Hours may change. Check before you go."
+  source: "https://bestxmaslights.com/display/18631-139th-pl-se-renton-wa-98058/"
+  free: true
+  last_verified: "2026-09-30"
+- id: woodinville-wildlife
+  name: "Woodinville Wildlife"
+  type: house
+  map: true
+  trust: owner
+  city: woodinville
+  address: "17610 168th Pl NE"
+  lat: 47.754971
+  lng: -122.114732
+  description: "About 35,000 lights set to music on 101.9 FM, with carolers."
+  nights: ""
+  hours: "Hours may change. Check before you go."
+  source: "https://bestxmaslights.com/display/17610-168th-pl-ne-woodinville-wa-98072/"
+  free: true
+  last_verified: "2026-09-30"
+- id: penners-place
+  name: "Penner's Place"
+  type: house
+  map: true
+  trust: owner
+  city: woodinville
+  address: "16215 194th Ave NE"
+  lat: 47.745665
+  lng: -122.078288
+  description: "Blow molds and lights."
+  nights: ""
+  hours: "4:30 to 9 p.m. Hours may change. Check before you go."
+  source: "https://bestxmaslights.com/display/16215-194th-ave-ne-woodinville-wa-98077/"
+  free: true
+  last_verified: "2026-09-30"
+- id: stark-family-christmas
+  name: "Stark Family Christmas"
+  type: house
+  map: true
+  trust: owner
+  city: kenmore
+  address: "7605 NE 167th St"
+  lat: 47.749511
+  lng: -122.238802
+  description: "A mix of homemade and store-bought decorations."
+  nights: ""
+  hours: "About 4:30 to 10 p.m. Hours may change. Check before you go."
+  source: "https://bestxmaslights.com/display/7605-ne-167th-st-kenmore-wa-98028/"
+  free: true
+  last_verified: "2026-09-30"
+- id: sammys-musical-light-show
+  name: "Sammy's Musical Light Show"
+  type: house
+  map: true
+  trust: owner
+  city: sammamish
+  address: "22460 NE 9th Dr"
+  lat: 47.619218
+  lng: -122.039981
+  description: "A music light show on 91.5 FM, or from a button on site."
+  nights: ""
+  hours: "5 to 9 p.m. Hours may change. Check before you go."
+  source: "https://bestxmaslights.com/display/22460-ne-9th-dr-sammamish-wa-98074/"
+  free: true
+  last_verified: "2026-09-30"
+- id: mccreery-lights
+  name: "McCreery Lights"
+  type: house
+  map: true
+  trust: owner
+  city: bellevue
+  address: "905 178th Ave NE"
+  lat: 47.618435
+  lng: -122.104199
+  description: "Megatrees and animated lights on 103.1 FM."
+  nights: ""
+  hours: "4:30 to 9 p.m. Hours may change. Check before you go."
+  source: "https://bestxmaslights.com/display/905-178th-ave-ne-bellevue-wa-98008/"
+  free: true
+  last_verified: "2026-09-30"
+- id: gunnerson-lights
+  name: "Gunnerson Lights"
+  type: house
+  map: true
+  trust: owner
+  city: bellevue
+  address: "1804 175th Pl NE"
+  lat: 47.626335
+  lng: -122.105898
+  description: "Animated yard displays, including skiing penguins."
+  nights: ""
+  hours: "Hours may change. Check before you go."
+  source: "https://bestxmaslights.com/display/1804-175th-pl-ne-bellevue-wa-98008/"
+  free: true
+  last_verified: "2026-09-30"
+- id: the-hedges-lights
+  name: "The Hedges"
+  type: street
+  map: true
+  trust: tip
+  city: woodinville
+  address: "The Hedges"
+  lat: 47.714260
+  lng: -122.062060
+  description: "Neighbors point to one standout house in this neighborhood. The street was not published."
+  nights: ""
+  hours: ""
+  source: "https://www.reddit.com/r/eastside/comments/1pociiv/"
+  free: true
+  last_verified: "2026-09-30"
+- id: enatai-lights
+  name: "Enatai"
+  type: street
+  map: true
+  trust: tip
+  city: bellevue
+  address: "SE 20th St to SE 23rd St, near Enatai Elementary"
+  lat: 47.589072
+  lng: -122.198217
+  description: "Neighbors point to the lights around SE 20th to SE 23rd, near Enatai Elementary."
+  nights: ""
+  hours: ""
+  source: "https://www.reddit.com/r/BellevueWA/comments/1p93xjb/"
+  free: true
+  last_verified: "2026-09-30"
+- id: newport-shores-lights
+  name: "Newport Shores"
+  type: street
+  map: true
+  trust: tip
+  city: bellevue
+  address: "Newport Shores"
+  lat: 47.570655
+  lng: -122.192345
+  description: "A neighborhood where yards put out holiday light award signs."
+  nights: ""
+  hours: ""
+  source: "https://www.reddit.com/r/BellevueWA/comments/1phk0cz/"
+  free: true
+  last_verified: "2026-09-30"
+- id: windsor-greens-lights
+  name: "Windsor Greens"
+  type: street
+  map: true
+  trust: tip
+  city: sammamish
+  address: "Windsor Greens"
+  lat: 47.603944
+  lng: -122.006510
+  description: "A neighborhood neighbors recommend for holiday lights."
+  nights: ""
+  hours: ""
+  source: "https://www.reddit.com/r/eastside/comments/1hf7lia/"
   free: true
   last_verified: "2026-09-30"

@@ -92,6 +92,9 @@ module EastsideCalendar
       source = row["source"].to_s.strip
       return nil unless source.match?(%r{\Ahttps://\S+\z})
 
+      also_source = row["also_source"].to_s.strip
+      also_source = "" unless also_source.match?(%r{\Ahttps://\S+\z})
+
       {
         "id" => slug(row["id"], name),
         "number" => number,
@@ -103,9 +106,21 @@ module EastsideCalendar
         "nights" => row["nights"].to_s.gsub(/\s+/, " ").strip,
         "hours" => row["hours"].to_s.gsub(/\s+/, " ").strip,
         "source" => source,
+        "source_label" => row["source_label"].to_s.strip,
+        "also_source" => also_source,
+        "also_source_label" => row["also_source_label"].to_s.strip,
+        "trust_label" => trust_label(row["trust"]),
         "lat" => coordinate(row["lat"]),
         "lng" => coordinate(row["lng"])
       }
+    end
+
+    def trust_label(value)
+      case value.to_s.strip
+      when "owner" then "Listed by owner"
+      when "tip" then "Community tip"
+      else ""
+      end
     end
 
     def coordinate(value)
