@@ -1,7 +1,7 @@
 <header class="site-header site-header--compact">
   <div class="wrap home-mast">
     <div class="mast-title-row">
-      <p class="brand"><a href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>Eastside Family Calendar</a></p>
+      <p class="brand"><a href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}><svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" focusable="false"><rect x="2" y="4" width="28" height="26" rx="5" fill="#3f7d5f"/><rect x="4" y="12" width="24" height="16" rx="2.5" fill="#fffdf8"/><rect class="mark-bind" x="8" y="2" width="4" height="6" rx="2" fill="#243044"/><rect class="mark-bind" x="20" y="2" width="4" height="6" rx="2" fill="#243044"/><path d="M16 12.5 L22 19 H19.5 L24 25.5 H8 L12.5 19 H10 Z" fill="#3f7d5f"/><rect x="14" y="25.5" width="4" height="2.5" fill="#243044"/></svg><span class="brand-name">Eastside Family Calendar</span></a></p>
       <details class="cities-menu">
         <summary aria-controls="cities-panel">Cities</summary>
         <div class="cities-panel">
@@ -18,34 +18,3 @@
     </div>
   </div>
 </header>
-<script type="module">
-(function () {
-  var menu = document.querySelector(".cities-menu");
-  if (!menu) return;
-  var nav = menu.querySelector(".cities-panel nav");
-  var summary = menu.querySelector("summary");
-
-  function hint() {
-    if (!nav) return;
-    var more = nav.scrollHeight > nav.clientHeight + 1 &&
-      nav.scrollTop + nav.clientHeight < nav.scrollHeight - 2;
-    nav.classList.toggle("has-more", more);
-  }
-
-  document.addEventListener("click", function (event) {
-    if (!menu.open || menu.contains(event.target)) return;
-    menu.open = false;
-  });
-  document.addEventListener("keydown", function (event) {
-    if (event.key !== "Escape" || !menu.open) return;
-    event.preventDefault();
-    menu.open = false;
-    if (summary) summary.focus();
-  });
-  menu.addEventListener("toggle", function () {
-    requestAnimationFrame(hint);
-  });
-  window.addEventListener("resize", hint);
-  if (nav) nav.addEventListener("scroll", hint, { passive: true });
-})();
-</script>

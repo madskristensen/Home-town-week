@@ -267,8 +267,8 @@ picture {
   text-decoration: none;
 }
 
-.home-mast .brand a:hover,
-.home-mast .brand a:focus-visible {
+.home-mast .brand a:hover .brand-name,
+.home-mast .brand a:focus-visible .brand-name {
   text-decoration: underline;
   text-underline-offset: 0.06em;
 }
@@ -296,8 +296,37 @@ picture {
   font-variant: small-caps;
   letter-spacing: 0.06em;
   line-height: 1;
-  text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.site-header--compact .home-mast .brand a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.brand-mark {
+  display: block;
+  flex: none;
+  width: 0.85em;
+  height: 0.85em;
+}
+
+.brand-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* The binding rings are the same slate as the dark page, so the tips
+   that rise above the calendar disappear into the header. Paint them
+   with the text color there. The rest of the mark keeps the favicon colors. */
+@media (prefers-color-scheme: dark) {
+  .brand-mark .mark-bind {
+    fill: var(--text);
+  }
 }
 
 .site-header--compact .cities-menu summary {
@@ -388,9 +417,17 @@ picture {
   border-radius: 0.45rem;
 }
 
-.cities-menu .cities-panel nav.has-more {
-  -webkit-mask-image: linear-gradient(var(--mask) 0, var(--mask) calc(100% - 1.6rem), transparent);
-  mask-image: linear-gradient(var(--mask) 0, var(--mask) calc(100% - 1.6rem), transparent);
+.cities-menu summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (max-height: 27.5rem) {
+  .cities-menu .cities-panel nav {
+    -webkit-mask-image: linear-gradient(var(--mask) 0, var(--mask) calc(100% - 1.6rem), transparent);
+    mask-image: linear-gradient(var(--mask) 0, var(--mask) calc(100% - 1.6rem), transparent);
+  }
 }
 
 .cities-menu .cities-panel ul {
@@ -479,7 +516,11 @@ picture {
 
   .site-header--compact .home-mast .brand {
     font-size: 1.2rem;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.01em;
+  }
+
+  .site-header--compact .home-mast .brand a {
+    gap: 0.28em;
   }
 
 

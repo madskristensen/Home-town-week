@@ -32,9 +32,12 @@ def main():
         source = SRC / f"{name}.css"
         if not source.is_file():
             sys.exit(f"missing stylesheet {source}")
-        mini = rcssmin.cssmin(source.read_text(encoding="utf-8"))
+        raw = source.read_text(encoding="utf-8")
+        mini = rcssmin.cssmin(raw)
         if not mini.endswith("\n"):
             mini += "\n"
+        if mini.count("\n") != 1 or len(mini) > len(raw):
+            sys.exit(f"{name}.css was not minified before fingerprinting")
         digest = hashlib.sha256(mini.encode("utf-8")).hexdigest()[:10]
         filename = f"{name}.{digest}.css"
         (DEST / filename).write_text(mini, encoding="utf-8")
