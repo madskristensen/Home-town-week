@@ -129,7 +129,8 @@
   regroupEvents();
 
   // Chips are in the first HTML. A tap hides cards. Nothing moves on load.
-  // Within cost, ages, or setting, checked chips OR. Across groups they AND.
+  // Within ages or setting, checked chips OR. Across groups they AND.
+  // A price is text on the card, not a chip. Free is the cost chip.
   var filterBoxes = document.querySelectorAll(".event-filters input[data-group]");
   function selectedFilterGroups() {
     var groups = {};

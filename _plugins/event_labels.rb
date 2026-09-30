@@ -103,8 +103,9 @@ module EastsideCalendar
     end
 
     # One chip per label that appears on the page, in the same words as
-    # the card. Cost, ages, and setting are groups. Flags are their own
-    # groups. The page ORs chips inside a group and ANDs the groups.
+    # the card. A price stays on the card and is not a chip. Free is the
+    # paid-versus-free chip. Ages and setting are groups. Flags are their
+    # own groups. The page ORs chips inside a group and ANDs the groups.
     def filter_counts(events)
       counts = Hash.new(0)
       seen = []
@@ -112,6 +113,8 @@ module EastsideCalendar
         next unless event.is_a?(Hash)
 
         labels(event).each do |label|
+          next if price_label?(label)
+
           counts[label] += 1
           seen << label unless seen.include?(label)
         end
@@ -124,6 +127,10 @@ module EastsideCalendar
           "count" => counts[label]
         }
       end
+    end
+
+    def price_label?(label)
+      label.to_s.match?(/\$\s?\d/)
     end
 
     def chip_group(label)

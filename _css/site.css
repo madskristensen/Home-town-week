@@ -1109,7 +1109,7 @@ a.addr .addr-text {
 
 /* Card labels and the filter chips. The controls are in the first
    HTML, so they do not pop in after load. A tap hides cards with
-   .is-filtered-out. Age, setting, and cost chips OR inside the group.
+   .is-filtered-out. Age and setting chips OR inside the group.
    Groups AND with each other. */
 .event-tags {
   display: flex;
