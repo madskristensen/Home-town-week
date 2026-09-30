@@ -156,13 +156,16 @@ module EastsideCalendar
       photos = (lights + rest).filter_map { |entry| SeasonalHubs.listed_photo(entry, "pool") }
       theme = Array(hubs).find { |hub| hub["id"] == "christmas" }
       theme = theme.is_a?(Hash) ? (theme["theme"] || {}) : {}
+      dark = theme["dark"].is_a?(Hash) ? theme["dark"] : {}
       designed = SeasonalHubs.designed_card!(
         site,
         "christmas-lights-map",
         theme["background"],
         theme["ink"],
         theme["svg"],
-        "Christmas lights"
+        "Christmas lights",
+        dark["background"],
+        dark["ink"]
       )
       photos << designed if designed.is_a?(Hash)
       photos

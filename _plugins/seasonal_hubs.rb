@@ -242,11 +242,16 @@ module EastsideCalendar
     def banner_html(hub, baseurl)
       theme = hub["theme"] || {}
       href = "#{baseurl}#{hub["path"]}"
+      dark = theme["dark"].is_a?(Hash) ? theme["dark"] : {}
       style = [
-        "--season-bg:#{theme["background"]}",
-        "--season-ink:#{theme["ink"]}",
-        "--season-muted:#{theme["muted"]}",
-        "--season-link:#{theme["link"]}"
+        "--season-bg-light:#{theme["background"]}",
+        "--season-ink-light:#{theme["ink"]}",
+        "--season-muted-light:#{theme["muted"]}",
+        "--season-link-light:#{theme["link"]}",
+        "--season-bg-dark:#{dark["background"]}",
+        "--season-ink-dark:#{dark["ink"]}",
+        "--season-muted-dark:#{dark["muted"]}",
+        "--season-link-dark:#{dark["link"]}"
       ].join(";")
       <<~HTML.strip
         <nav class="season-banner" style="#{style}" aria-label="#{esc(hub["banner_title"])}">
@@ -274,6 +279,7 @@ module EastsideCalendar
       return nil unless month_day(start_s) && month_day(end_s)
 
       theme = hub["theme"].is_a?(Hash) ? hub["theme"] : {}
+      dark = theme["dark"].is_a?(Hash) ? theme["dark"] : {}
       svg = safe_svg(theme["svg"])
       sections = sections_for(hub, cities, data, today, site_url)
       label = season_label(start_s, end_s)
@@ -306,6 +312,12 @@ module EastsideCalendar
           "ink" => hex_color(theme["ink"], "#1a2822"),
           "muted" => hex_color(theme["muted"], "#3f5148"),
           "link" => hex_color(theme["link"], "#145c40"),
+          "dark" => {
+            "background" => hex_color(dark["background"], "#2a2433"),
+            "ink" => hex_color(dark["ink"], "#f6efe4"),
+            "muted" => hex_color(dark["muted"], "#d2c3ae"),
+            "link" => hex_color(dark["link"], "#8fd4b0")
+          },
           "svg" => svg
         }
       }
@@ -500,7 +512,8 @@ module EastsideCalendar
 
     def index_card_photos!(site, pages, catalog, venues, groups, hubs, pools)
       generic = designed_card!(
-        site, "family-event", "#f4efe6", "#1a2822", generic_motif, "Family event"
+        site, "family-event", "#f4efe6", "#1a2822", generic_motif, "Family event",
+        "#2a2433", "#f6efe4"
       )
       site.data["card_photo_fallback"] = public_photo(generic)
       designed_by_hub = {}
@@ -511,13 +524,16 @@ module EastsideCalendar
         next if hub_id.empty?
 
         theme = hub["theme"].is_a?(Hash) ? hub["theme"] : {}
+        dark = theme["dark"].is_a?(Hash) ? theme["dark"] : {}
         designed_by_hub[hub_id] = designed_card!(
           site,
           "#{hub_id}-card",
           hex_color(theme["background"], "#f4efe6"),
           hex_color(theme["ink"], "#1a2822"),
           theme["svg"],
-          presence(hub["banner_title"], hub["title"].to_s)
+          presence(hub["banner_title"], hub["title"].to_s),
+          dark["background"],
+          dark["ink"]
         )
       end
 
@@ -618,13 +634,16 @@ module EastsideCalendar
 
     def section_card!(site, hub, section)
       theme = hub["theme"] || {}
+      dark = theme["dark"].is_a?(Hash) ? theme["dark"] : {}
       designed_card!(
         site,
         "#{hub["id"]}-#{section["id"]}",
         theme["background"],
         theme["ink"],
         theme["svg"],
-        section["title"].to_s
+        section["title"].to_s,
+        dark["background"],
+        dark["ink"]
       )
     end
 
@@ -632,7 +651,7 @@ module EastsideCalendar
       @designed_cards ||= {}
     end
 
-    def designed_card!(site, key, background, ink, motif, label)
+    def designed_card!(site, key, background, ink, motif, label, dark_background = nil, dark_ink = nil)
       cached = designed_cards[key]
       return cached if cached
 
@@ -640,9 +659,11 @@ module EastsideCalendar
       label = "Family event" if label.empty?
       background = hex_color(background, "#f4efe6")
       ink = hex_color(ink, "#1a2822")
+      dark_background = hex_color(dark_background, "#2a2433")
+      dark_ink = hex_color(dark_ink, "#f6efe4")
       dir = "assets/images/hubs/designed"
       name = "#{key}.svg"
-      site.static_files << DesignedCardFile.new(dir, name, designed_svg(background, ink, motif, label))
+      site.static_files << DesignedCardFile.new(dir, name, designed_svg(background, ink, motif, label, dark_background, dark_ink))
       photo = {
         "src" => "/#{dir}/#{name}",
         "alt" => label,
@@ -653,7 +674,7 @@ module EastsideCalendar
       designed_cards[key] = photo
     end
 
-    def designed_svg(background, ink, motif, label)
+    def designed_svg(background, ink, motif, label, dark_background, dark_ink)
       size = if label.length > 36
                48
              elsif label.length > 24
@@ -674,9 +695,18 @@ module EastsideCalendar
       end
       <<~SVG
         <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
-          <rect width="1600" height="900" fill="#{background}"/>
-          #{motif_tag}
-          <text x="800" y="760" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="#{size}" fill="#{ink}">#{esc(label)}</text>
+          <style>
+            .card-bg { fill: #{background}; }
+            .card-ink { fill: #{ink}; }
+            @media (prefers-color-scheme: dark) {
+              .card-bg { fill: #{dark_background}; }
+              .card-ink { fill: #{dark_ink}; }
+              .card-motif { filter: brightness(1.45) saturate(1.12); }
+            }
+          </style>
+          <rect class="card-bg" width="1600" height="900"/>
+          <g class="card-motif">#{motif_tag}</g>
+          <text class="card-ink" x="800" y="760" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="#{size}">#{esc(label)}</text>
         </svg>
       SVG
     end
