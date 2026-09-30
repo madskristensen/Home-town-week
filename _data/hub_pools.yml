@@ -1,0 +1,318 @@
+# Seasonal stills used after an event's own photo, its venue photo, and
+# the themed pictures. One pool per hub. A file is used once on a page.
+# Wikimedia Commons, CC0, CC BY, CC BY-SA, or public domain. No
+# identifiable children or teens. Not the same files as the theme library.
+fall:
+  - image: /assets/images/hubs/fall/leaves-ground.webp
+    alt: Fallen maple leaves in red and orange on the ground.
+    credit: "Photo: Wilfredor, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Autumn_leaves_on_the_ground_in_Quebec_City.jpg
+  - image: /assets/images/hubs/fall/leaves-orange.webp
+    alt: A close view of orange maple leaves.
+    credit: "Photo: Ian Muttoo, CC BY-SA 2.0"
+    license: CC BY-SA 2.0
+    source: https://commons.wikimedia.org/wiki/File:Orange_maple_leaves_in_2007.jpg
+  - image: /assets/images/hubs/fall/leaves-maple.webp
+    alt: Maple leaves in red and yellow.
+    credit: "Photo: Maria Bystrova, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Maple_Leaves_(176761151).jpeg
+  - image: /assets/images/hubs/fall/pumpkin-still.webp
+    alt: A still-life painting of a pumpkin with grapes and pears.
+    credit: "Painting: Michelangelo Cerquozzi, public domain"
+    license: Public domain
+    source: https://commons.wikimedia.org/wiki/File:Michelangelo_Cerquozzi_-_Still_life_with_pumpkin,_grapes_and_pears.jpg
+  - image: /assets/images/hubs/fall/apples-basket.webp
+    alt: Red apples piled in a woven basket.
+    credit: "Photo: IGANZE, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Apples_in_the_basket.jpg
+  - image: /assets/images/hubs/fall/apples-bowl.webp
+    alt: Red apples in a silver bowl.
+    credit: "Photo: George E. Koronaios, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Red_apples_in_a_silver_bowl.jpg
+  - image: /assets/images/hubs/fall/orchard.webp
+    alt: Rows of apple trees in an orchard.
+    credit: "Photo: Gerda Arendt, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Apple_orchard_overlooking_Idstein.jpg
+  - image: /assets/images/hubs/fall/hay-bales.webp
+    alt: Round hay bales in a green field.
+    credit: "Photo: PookieFugglestein, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Hay_bales.JPG
+christmas:
+  - image: /assets/images/hubs/christmas/ornaments-red.webp
+    alt: Red and gold glass Christmas ornaments hanging close together.
+    credit: "Photo: Dietmar Rabich, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Weihnachtsbaumkugeln_--_2021_--_9190.jpg
+  - image: /assets/images/hubs/christmas/ornaments-gold.webp
+    alt: Glass Christmas ornaments in gold and red.
+    credit: "Photo: Dietmar Rabich, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Weihnachtsbaumkugeln_--_2023_--_9843.jpg
+  - image: /assets/images/hubs/christmas/wreath-door.webp
+    alt: A green Christmas wreath with red berries on a dark door.
+    credit: "Photo: Helenaver, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Christmas_wreath_on_front_door.jpg
+  - image: /assets/images/hubs/christmas/wreath-entry.webp
+    alt: A Christmas wreath of greenery and red ribbon on a white door.
+    credit: "Photo: Sneha G Gupta, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Christmas_wreath_at_front_door.jpg
+  - image: /assets/images/hubs/christmas/snow-trees.webp
+    alt: Snow-covered evergreen trees in a winter landscape.
+    credit: "Photo: Ryan Pohanic, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Snow_covered_tree_landscape_(Unsplash).jpg
+  - image: /assets/images/hubs/christmas/lights-bokeh.webp
+    alt: Out-of-focus Christmas lights glowing gold and white.
+    credit: "Photo: thr3 eyes, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Christmas_Lights_Bokeh_Effect_(Unsplash).jpg
+  - image: /assets/images/hubs/christmas/lights-color.webp
+    alt: Soft circles of red, green, and gold Christmas lights.
+    credit: "Photo: Thomas M Bishop, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Christmas_Lights_and_Bokeh.jpg
+  - image: /assets/images/hubs/christmas/gingerbread.webp
+    alt: A gingerbread house decorated with white icing and candy.
+    credit: "Photo: Orsotron, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Gingerbread_landscape.jpg
+easter:
+  - image: /assets/images/hubs/easter/eggs-czech.webp
+    alt: Painted Easter eggs in bright colors.
+    credit: "Photo: che, CC BY-SA 2.5"
+    license: CC BY-SA 2.5
+    source: https://commons.wikimedia.org/wiki/File:Czech_easter_eggs.jpg
+  - image: /assets/images/hubs/easter/eggs-czech-2.webp
+    alt: Painted Easter eggs with folk patterns.
+    credit: "Photo: che, CC BY-SA 2.5"
+    license: CC BY-SA 2.5
+    source: https://commons.wikimedia.org/wiki/File:Czech_easter_eggs_2.jpg
+  - image: /assets/images/hubs/easter/eggs-painted.webp
+    alt: White eggs painted with red and blue patterns.
+    credit: "Photo: Ikonact, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Bg-easter-eggs.jpg
+  - image: /assets/images/hubs/easter/eggs-quail.webp
+    alt: Small painted eggs arranged as an Easter decoration.
+    credit: "Photo: Naturpuur, CC BY 4.0"
+    license: CC BY 4.0
+    source: https://commons.wikimedia.org/wiki/File:Wachteleier_bemalt_als_Osterdekoration_(2023)_Österreich.jpg
+  - image: /assets/images/hubs/easter/eggs-croatia.webp
+    alt: Traditional painted Easter eggs.
+    credit: "Photo: Neoneo13, public domain"
+    license: Public domain
+    source: https://commons.wikimedia.org/wiki/File:Traditional_easter_eggs_in_Croatia.JPG
+  - image: /assets/images/hubs/easter/tulips.webp
+    alt: Pink and red tulips in bloom.
+    credit: "Photo: Marta Borowiecka, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Spring_Tulips_(153795123).jpeg
+  - image: /assets/images/hubs/easter/daffodils.webp
+    alt: A field of yellow daffodils.
+    credit: "Photo: Richard Humphrey, CC BY-SA 2.0"
+    license: CC BY-SA 2.0
+    source: https://commons.wikimedia.org/wiki/File:A_field_of_golden_daffodils_-_geograph.org.uk_-_2329665.jpg
+  - image: /assets/images/hubs/easter/blossom.webp
+    alt: Cherry blossom buds on a dark branch.
+    credit: "Photo: W.carter, public domain"
+    license: Public domain
+    source: https://commons.wikimedia.org/wiki/File:Cherry_blossom_buds_1.jpg
+fourth:
+  - image: /assets/images/hubs/fourth/fireworks-gold.webp
+    alt: Gold fireworks bursting in a night sky.
+    credit: "Photo: Vyacheslav Argenberg, CC BY 4.0"
+    license: CC BY 4.0
+    source: https://commons.wikimedia.org/wiki/File:Fireworks_in_night_sky,_Rostov-on-Don,_Russia.jpg
+  - image: /assets/images/hubs/fourth/fireworks-red.webp
+    alt: Red fireworks in a dark sky.
+    credit: "Photo: Vyacheslav Argenberg, CC BY 4.0"
+    license: CC BY 4.0
+    source: https://commons.wikimedia.org/wiki/File:Red_fireworks_in_night_sky,_Rostov-on-Don,_Russia.jpg
+  - image: /assets/images/hubs/fourth/fireworks-sky.webp
+    alt: White and gold fireworks against the night sky.
+    credit: "Photo: 些細な日常, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Fireworks-in-the-night-sky.jpg
+  - image: /assets/images/hubs/fourth/fireworks-color.webp
+    alt: Multicolored fireworks spreading across the sky.
+    credit: "Photo: Jalfyn Benging, CC BY 4.0"
+    license: CC BY 4.0
+    source: https://commons.wikimedia.org/wiki/File:Colourful_Fireworks_Expanding_Across_the_Night_Sky.jpg
+  - image: /assets/images/hubs/fourth/fireworks-burst.webp
+    alt: A bright burst of fireworks at night.
+    credit: "Photo: Jalfyn Benging, CC BY 4.0"
+    license: CC BY 4.0
+    source: https://commons.wikimedia.org/wiki/File:Fireworks_Expanding_Outward_in_the_Night_Sky.jpg
+  - image: /assets/images/hubs/fourth/fireworks-victory.webp
+    alt: Red fireworks blooming over a night sky.
+    credit: "Photo: Vyacheslav Argenberg, CC BY 4.0"
+    license: CC BY 4.0
+    source: https://commons.wikimedia.org/wiki/File:Red_fireworks_in_night_sky,_Victory_Day,_Rostov-on-Don,_Russia.jpg
+lunar-new-year:
+  - image: /assets/images/hubs/lunar-new-year/lanterns-temple.webp
+    alt: Colorful paper lanterns hanging in a temple courtyard.
+    credit: "Photo: Basile Morin, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Open_gate_leaning_to_a_courtyard_of_colorful_paper_lanterns_at_Bulguksa_temple_in_Gyeongju_South_Korea.jpg
+  - image: /assets/images/hubs/lunar-new-year/lanterns-laos.webp
+    alt: Star-shaped lanterns hanging on a building at dusk.
+    credit: "Photo: Basile Morin, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Colorful_star-shaped_lanterns_hanging_on_a_building_at_blue_hour_in_Luang_Prabang_Laos.jpg
+  - image: /assets/images/hubs/lunar-new-year/lanterns-manila.webp
+    alt: Paper lanterns hanging outdoors.
+    credit: "Photo: SwarmCheng, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Paper_lanterns_in_the_Philippines_08.jpg
+  - image: /assets/images/hubs/lunar-new-year/lion-head.webp
+    alt: A red and gold lion dance head.
+    credit: "Photo: PQ77wd, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Head_for_Lion_Dance_about_the_1st._Guangzhou_Chinese_New_Year_Parade.jpg
+  - image: /assets/images/hubs/lunar-new-year/mandarins.webp
+    alt: A painting of four mandarin oranges.
+    credit: "Painting: Édouard Manet, public domain"
+    license: Public domain
+    source: https://commons.wikimedia.org/wiki/File:Édouard_Manet_-_Four_Mandarin_Oranges.jpg
+  - image: /assets/images/hubs/lunar-new-year/citrus.webp
+    alt: Oranges and other citrus in a bowl.
+    credit: "Photo: rajucreddy, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Citrus_Harmony_By_Raju_C_Reddy.jpg
+diwali:
+  - image: /assets/images/hubs/diwali/diya-lamp.webp
+    alt: A lit clay oil lamp.
+    credit: "Photo: Ara Basu, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Diya_Lamp.jpg
+  - image: /assets/images/hubs/diwali/diyas-row.webp
+    alt: A row of lit clay oil lamps.
+    credit: "Photo: PilotChicago, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Diwali_diyas.jpg
+  - image: /assets/images/hubs/diwali/diya-crop.webp
+    alt: A close view of a glowing oil lamp.
+    credit: "Photo: Arne Hückelheim, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:DiwaliOilLampCrop.JPG
+  - image: /assets/images/hubs/diwali/diyas-cluster.webp
+    alt: Several clay lamps lit together.
+    credit: "Photo: Praful Kharade, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Diwali_Diyas.jpg
+  - image: /assets/images/hubs/diwali/diya-glow.webp
+    alt: Clay oil lamps with a warm flame.
+    credit: "Photo: Subharnab Majumdar, CC BY 2.0"
+    license: CC BY 2.0
+    source: https://commons.wikimedia.org/wiki/File:Diya_Diwali_India.jpg
+  - image: /assets/images/hubs/diwali/diya-tall.webp
+    alt: A tall lit oil lamp.
+    credit: "Photo: Prakhar Chaudhary, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Diwali_diya.jpg
+dia-de-los-muertos:
+  - image: /assets/images/hubs/dia-de-los-muertos/marigolds.webp
+    alt: Orange marigold flowers.
+    credit: "Photo: Jesselikesweather, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Orange_Marigold_Flowers.jpg
+  - image: /assets/images/hubs/dia-de-los-muertos/marigold-garden.webp
+    alt: A garden bed of orange marigolds.
+    credit: "Photo: George Chernilevsky, public domain"
+    license: Public domain
+    source: https://commons.wikimedia.org/wiki/File:French_marigold_garden_2009_G1.jpg
+  - image: /assets/images/hubs/dia-de-los-muertos/marigolds-yellow.webp
+    alt: Yellow marigold blooms.
+    credit: "Photo: Maina Tudu, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Yellow_Marigold_Flowers_ᱠᱩᱥᱵᱤ.jpg
+  - image: /assets/images/hubs/dia-de-los-muertos/sugar.webp
+    alt: Sugar skulls and candy for Dia de los Muertos.
+    credit: "Photo: Tomascastelazo, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Alfeniques_of_day_of_the_dead.jpg
+  - image: /assets/images/hubs/dia-de-los-muertos/papel.webp
+    alt: White papel picado banners hanging in a row.
+    credit: "Photo: Juan Carlos Fonseca Mata, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Papel_picado_blanco_1.jpg
+  - image: /assets/images/hubs/dia-de-los-muertos/papel-purple.webp
+    alt: Purple papel picado cut-paper banners.
+    credit: "Photo: Luciernaga3, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Papel_picado_morado.jpg
+  - image: /assets/images/hubs/dia-de-los-muertos/fruit.webp
+    alt: Fruit arranged for a Dia de los Muertos offering.
+    credit: "Photo: Karla Andrew, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Fruta_para_ofrenda.JPG
+winter:
+  - image: /assets/images/hubs/winter/snow-path.webp
+    alt: A snowy path through a winter forest.
+    credit: "Photo: Fagev869, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Snowy_Forest_Path_in_Winter.jpg
+  - image: /assets/images/hubs/winter/frozen-lake.webp
+    alt: A frozen lake with bare trees along the shore.
+    credit: "Photo: Iurie Nistor, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Frozen_lake_and_trees.jpg
+  - image: /assets/images/hubs/winter/frozen-michigan.webp
+    alt: Ice and snow on a frozen lake.
+    credit: "Photo: Russ Allison Loar, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Frozen_Michigan_Lake.jpg
+  - image: /assets/images/hubs/winter/frozen-tree.webp
+    alt: A lone tree at the edge of a frozen lake.
+    credit: "Photo: Michal Osmenda, CC BY-SA 2.0"
+    license: CC BY-SA 2.0
+    source: https://commons.wikimedia.org/wiki/File:Frozen_lake_with_tree_(2152177569).jpg
+  - image: /assets/images/hubs/winter/winter-lake.webp
+    alt: A quiet lake in winter, with snow on the banks.
+    credit: "Photo: Ingolfson, public domain"
+    license: Public domain
+    source: https://commons.wikimedia.org/wiki/File:Winter_Lake_Near_Graefenhausen_II.jpg
+  - image: /assets/images/hubs/winter/orchard-snow.webp
+    alt: Snow on the trees in an apple orchard.
+    credit: "Photo: Rajani Gairshail, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Winter_Silence_in_an_Apple_Orchard,_Himachal_Pradesh.jpg
+rainy-day:
+  - image: /assets/images/hubs/rainy-day/rain-pane.webp
+    alt: Raindrops on a window pane.
+    credit: "Photo: Theactivistuk, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Rain_on_a_window_pane.jpg
+  - image: /assets/images/hubs/rainy-day/rain-glass.webp
+    alt: Rain streaking down a window.
+    credit: "Photo: Ermell, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Rain_on_window_pane_P1320871.jpg
+  - image: /assets/images/hubs/rainy-day/rain-summer.webp
+    alt: Rain on a window, with a soft view beyond the glass.
+    credit: "Photo: Charos Pix, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Summer_rain_on_window_pane._-_Flickr_-_Charos_Pix.jpg
+  - image: /assets/images/hubs/rainy-day/puddle-tree.webp
+    alt: A tree reflected in a rain puddle.
+    credit: "Photo: W.carter, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Tree_reflection_in_a_puddle_in_Tuntorp.jpg
+  - image: /assets/images/hubs/rainy-day/puddles.webp
+    alt: Raindrops and small puddles on a window.
+    credit: "Photo: Tarasna0922, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Mini_puddles;_Drops_of_water_on_the_window_pane_after_heavy_rain.jpg
+  - image: /assets/images/hubs/rainy-day/wet-leaves.webp
+    alt: Wet fallen leaves after rain.
+    credit: "Photo: He Who Laughs Last, public domain"
+    license: Public domain
+    source: https://commons.wikimedia.org/wiki/File:Wet_Fallen_Autumn_Leaves.jpg

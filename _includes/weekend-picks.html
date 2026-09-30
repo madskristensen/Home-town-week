@@ -212,16 +212,26 @@
       {%- for option in options -%}
         {%- assign option_src = option.src | append: "" -%}
         {%- if option_src.size == 0 -%}{% continue %}{%- endif -%}
+        {%- assign option_kind = option.kind | append: "" -%}
         {%- capture marker -%}|{{ option_src }}|{%- endcapture -%}
         {%- assign marker = marker | strip -%}
-        {%- if used_photos contains marker -%}{% continue %}{%- endif -%}
+        {%- if option_kind != "designed" and used_photos contains marker -%}{% continue %}{%- endif -%}
         {%- assign photo = option_src -%}
         {%- assign photo_credit = option.credit -%}
         {%- assign photo_source = option.source -%}
         {%- assign photo_alt_text = option.alt -%}
-        {%- assign used_photos = used_photos | append: option_src | append: "|" -%}
+        {%- if option_kind != "designed" -%}
+          {%- assign used_photos = used_photos | append: option_src | append: "|" -%}
+        {%- endif -%}
         {%- break -%}
       {%- endfor -%}
+    {%- endif -%}
+    {%- if photo.size == 0 -%}
+      {%- assign fallback = site.data.card_photo_fallback -%}
+      {%- assign photo = fallback.src | append: "" -%}
+      {%- assign photo_credit = fallback.credit -%}
+      {%- assign photo_source = fallback.source -%}
+      {%- assign photo_alt_text = fallback.alt -%}
     {%- endif -%}
     {%- if photo_alt_text.size == 0 and photo.size > 0 -%}
       {%- capture photo_alt_text -%}{{ event.name }} in {{ city.name }}{%- endcapture -%}

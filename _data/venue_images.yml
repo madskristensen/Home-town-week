@@ -159,3 +159,9 @@ venues:
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     license: CC BY-SA 3.0
     source: https://commons.wikimedia.org/wiki/File:Snoqualmie_Depot_01.jpg
+  - keys: ["renton civic theatre", "renton civic theater"]
+    image: /assets/images/renton/civic-theatre.webp
+    alt: The front of Renton Civic Theatre, with the marquee over the entrance.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Renton,_WA_-_Renton_Civic_Theater.jpg

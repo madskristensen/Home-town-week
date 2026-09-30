@@ -7,7 +7,8 @@
 # that is a trunk-or-treat still shows cars. If the name does not match,
 # the first group whose key is on the tags is used. A picture is used
 # once on a page. The next card of that type takes the next picture.
-# When the list runs out, the card is text only, with no image area.
+# After that, the hub pool in _data/hub_pools.yml is used, then a
+# designed seasonal card. A grid card is not left without a picture.
 groups:
   - keys: [haunted]
     images:
@@ -274,6 +275,18 @@ groups:
         credit: "Photo: Mtaylor848, CC BY-SA 4.0"
         license: CC BY-SA 4.0
         source: https://commons.wikimedia.org/wiki/File:Halloween_decorations_on_a_house_on_Bridle_Way,_Wetherby_(22nd_October_2020).jpg
+  - keys: [scrooge, christmas carol, holiday-show, holiday show]
+    images:
+      - image: /assets/images/themes/red-curtain.webp
+        alt: A red stage curtain in a theater.
+        credit: "Photo: WikiTaro, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:Red_Curtain_Peking_Opera_backstage_2022-08-09.jpg
+      - image: /assets/images/themes/stage-curtain.webp
+        alt: A dark stage with a lit curtain.
+        credit: "Photo: tommybuddy, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Curtain-939464.jpg
   - keys: [nutcracker]
     images:
       - image: /assets/images/themes/nutcracker-soldier.webp
