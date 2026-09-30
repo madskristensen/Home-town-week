@@ -11,6 +11,7 @@ permalink: /about/
   <p>My wife and I always struggled to find fun local events and activities. We missed a lot of them simply because we didn't know they were happening.</p>
   <p>With the kids, we love getting out and experiencing things together. That's why I built Eastside Family Calendar.</p>
   <p>We're an Eastside family, and we made this for other families here. There's no company behind it, and no ads.</p>
+  <p>I also write about family life at <a href="https://afterpickup.com">After Pickup</a>.</p>
   <p>The calendar lists upcoming family events for Eastside cities near Seattle. Parks, markets, the library, and the plans worth making, as far ahead as we have them. Past events come off the list.</p>
   <p>Bellevue, Bothell, Carnation, Duvall, Issaquah, Kenmore, Kirkland, Mercer Island, North Bend, Redmond, Renton, Sammamish, Snoqualmie, and Woodinville each have a page. The home page map and the city list link to them.</p>
   <p>Newcastle is not on the calendar yet.</p>

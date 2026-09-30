@@ -1020,7 +1020,9 @@ picture {
 .footer-nav a:hover,
 .footer-nav a:focus-visible,
 .footer-install:hover,
-.footer-install:focus-visible {
+.footer-install:focus-visible,
+.footer-family a:hover,
+.footer-family a:focus-visible {
   color: var(--link);
   text-decoration: underline;
 }
@@ -1033,7 +1035,8 @@ picture {
 }
 
 .footer-nav a,
-.footer-install {
+.footer-install,
+.footer-family a {
   color: var(--forest);
   font-weight: 600;
   text-decoration: none;
