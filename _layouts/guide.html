@@ -7,6 +7,10 @@ layout: default
   {%- assign guide = site.data.guides[page.guide_id] -%}
   {%- if guide.groups and guide.groups.size > 0 -%}
   {%- include playground-map.html -%}
+  <section class="hub-section" aria-labelledby="standout-playgrounds">
+    <h2 id="standout-playgrounds">Standout playgrounds</h2>
+    <p class="guide-intro">A few play areas I have a photo for. Every public playground is in the list after these cards.</p>
+  </section>
   {%- for group in guide.groups -%}
   <section class="hub-section" aria-labelledby="guide-city-{{ group.id }}">
     <h2 id="guide-city-{{ group.id }}">{{ group.city }}</h2>
@@ -30,6 +34,7 @@ layout: default
     </div>
   </section>
   {%- endfor -%}
+  {%- include playground-directory.html -%}
   {%- else -%}
   {%- assign guide_count = guide.entries | size -%}
   {%- if guide_count == 0 -%}

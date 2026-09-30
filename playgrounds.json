@@ -1,0 +1,6 @@
+---
+permalink: /data/playgrounds.json
+sitemap: false
+layout: null
+---
+{{ site.data.playground_map | jsonify }}

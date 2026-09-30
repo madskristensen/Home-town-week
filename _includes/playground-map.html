@@ -1,6 +1,6 @@
 {%- assign play_count = 0 -%}
-{%- for group in guide.groups -%}
-{%- assign play_count = play_count | plus: group.entries.size -%}
+{%- for city in site.data.playground_map.cities -%}
+{%- assign play_count = play_count | plus: city.parks.size -%}
 {%- endfor -%}
 <section class="home-map-section" aria-labelledby="playground-map-title">
   <h2 id="playground-map-title" class="visually-hidden">Map</h2>
@@ -11,27 +11,18 @@
       <button type="button" id="playground-map-show">Show map</button>
     </div>
   </div>
-  <p class="home-map-note">Open a pin for the name, the city, and a link to that playground.</p>
+  <p class="home-map-note">Open a pin for the park, the city, the address, and the park page. Coordinates are from OpenStreetMap contributors, ODbL.</p>
 </section>
-<script type="application/json" id="playground-pins">[
-{%- assign pin_first = true -%}
-{%- for group in guide.groups -%}
-{%- for entry in group.entries -%}
-{%- unless pin_first %},{% endunless -%}
-{%- assign pin_first = false -%}
-{"id":{{ entry.id | jsonify }},"name":{{ entry.name | jsonify }},"city":{{ group.city | jsonify }},"lat":{{ entry.lat }},"lng":{{ entry.lng }}}
-{%- endfor -%}
-{%- endfor -%}
-]</script>
 <script>
 (function () {
   var button = document.getElementById("playground-map-show");
   var poster = document.getElementById("playground-map-poster");
   var canvas = document.getElementById("playground-map-canvas");
-  var data = document.getElementById("playground-pins");
-  if (!button || !poster || !canvas || !data) return;
+  if (!button || !poster || !canvas) return;
   var cssUrl = {{ "/assets/leaflet/leaflet.css" | relative_url | jsonify }};
   var jsUrl = {{ "/assets/leaflet/leaflet.js" | relative_url | jsonify }};
+  var clusterUrl = {{ "/assets/leaflet/leaflet.markercluster.js" | relative_url | jsonify }};
+  var dataUrl = {{ "/data/playgrounds.json" | relative_url | jsonify }};
   var started = false;
 
   function loadCss(href) {
@@ -61,12 +52,48 @@
     });
   }
 
+  function pinsFrom(data) {
+    var pins = [];
+    var cities = (data && data.cities) || [];
+    cities.forEach(function (city) {
+      (city.parks || []).forEach(function (park) {
+        pins.push({
+          id: park.id,
+          name: park.name,
+          city: city.name,
+          lat: park.lat,
+          lng: park.lng,
+          address: park.address || "",
+          page: park.page,
+          page_label: park.page_label || "Park page"
+        });
+      });
+    });
+    return pins;
+  }
+
   function showMap(pins) {
     var map = L.map(canvas, { scrollWheelZoom: false });
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ODbL'
     }).addTo(map);
+    var cluster = L.markerClusterGroup({
+      showCoverageOnHover: false,
+      maxClusterRadius: 42,
+      spiderfyOnMaxZoom: true,
+      disableClusteringAtZoom: 16,
+      chunkedLoading: true,
+      iconCreateFunction: function (group) {
+        var count = group.getChildCount();
+        return L.divIcon({
+          className: "home-cluster",
+          html: String(count),
+          iconSize: [36, 36],
+          iconAnchor: [18, 18]
+        });
+      }
+    });
     var bounds = [];
     pins.forEach(function (pin) {
       var icon = L.divIcon({
@@ -77,12 +104,16 @@
       });
       var marker = L.marker([pin.lat, pin.lng], { icon: icon, title: pin.name, keyboard: true });
       var html = "<p class=\"map-popup-name\">" + escapeHtml(pin.name) + "</p>"
-        + "<p class=\"map-popup-city\">" + escapeHtml(pin.city) + "</p>"
-        + "<p class=\"map-popup-link\"><a href=\"#" + escapeHtml(pin.id) + "\">See this playground</a></p>";
+        + "<p class=\"map-popup-city\">" + escapeHtml(pin.city) + "</p>";
+      if (pin.address) {
+        html += "<p class=\"map-popup-address\">" + escapeHtml(pin.address) + "</p>";
+      }
+      html += "<p class=\"map-popup-link\"><a href=\"" + escapeHtml(pin.page) + "\" rel=\"noopener\">" + escapeHtml(pin.page_label) + "</a></p>";
       marker.bindPopup(html);
-      marker.addTo(map);
+      cluster.addLayer(marker);
       bounds.push([pin.lat, pin.lng]);
     });
+    map.addLayer(cluster);
     if (bounds.length === 1) map.setView(bounds[0], 15);
     else if (bounds.length > 1) map.fitBounds(bounds, { padding: [28, 28], maxZoom: 14 });
     window.setTimeout(function () { map.invalidateSize(); }, 50);
@@ -93,9 +124,16 @@
     started = true;
     button.disabled = true;
     button.textContent = "Loading map";
-    var pins = [];
-    try { pins = JSON.parse(data.textContent || "[]"); } catch (error) { pins = []; }
-    Promise.all([loadCss(cssUrl), loadJs(jsUrl)]).then(function () {
+    Promise.all([
+      loadCss(cssUrl),
+      loadJs(jsUrl).then(function () { return loadJs(clusterUrl); }),
+      fetch(dataUrl).then(function (response) {
+        if (!response.ok) throw new Error("pins");
+        return response.json();
+      })
+    ]).then(function (results) {
+      var pins = pinsFrom(results[2]);
+      if (!pins.length) throw new Error("pins");
       canvas.hidden = false;
       poster.hidden = true;
       showMap(pins);

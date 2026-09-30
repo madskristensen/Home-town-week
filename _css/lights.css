@@ -242,12 +242,29 @@
 }
 
 .map-popup-city,
+.map-popup-address,
 .map-popup-link {
   margin: 0.2rem 0 0;
 }
 
-.map-popup-city {
+.map-popup-city,
+.map-popup-address {
   color: var(--muted);
+}
+
+.home-map-frame .leaflet-marker-icon.home-cluster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--pin-ring);
+  border-radius: 999px;
+  background: var(--pin-bg);
+  color: var(--pin-ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: var(--pin-shadow);
 }
 
 .map-popup-link a {

@@ -1,0 +1,17 @@
+<section class="playground-directory" aria-labelledby="every-playground">
+  <h2 id="every-playground">Every playground</h2>
+  <p class="guide-intro">Public park playgrounds, grouped by city. The name links to the park page when the city publishes one, and to the city parks directory when it does not.</p>
+  {%- for city in site.data.playground_map.cities -%}
+  <h3 id="all-{{ city.id }}">{{ city.name }}</h3>
+  <ul class="playground-list">
+    {%- for park in city.parks -%}
+    <li id="{{ park.id }}">
+      <a href="{{ park.page }}" rel="noopener">{{ park.name }}</a>
+      {%- if park.address -%}
+      <span class="playground-meta">{{ park.address }}</span>
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endfor -%}
+</section>

@@ -23,6 +23,48 @@
   font-weight: 600;
 }
 
+.playground-directory {
+  margin-top: 1.75rem;
+}
+
+.playground-directory h3 {
+  margin: 1.15rem 0 0.4rem;
+  font-size: 1.2rem;
+}
+
+.playground-list {
+  margin: 0 0 0.35rem;
+  padding: 0;
+  list-style: none;
+}
+
+.playground-list li {
+  margin: 0 0 0.45rem;
+  scroll-margin-top: 1rem;
+}
+
+.playground-list a {
+  font-weight: 600;
+}
+
+.playground-meta {
+  display: block;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+@media (min-width: 42rem) {
+  .playground-list {
+    columns: 2;
+    column-gap: 1.5rem;
+  }
+
+  .playground-list li {
+    break-inside: avoid;
+  }
+}
+
 .guide-index {
   display: grid;
   grid-template-columns: 1fr;
