@@ -2681,6 +2681,21 @@
           "address_source": "nominatim"
         },
         {
+          "id": "sammamish-big-rock-park-north",
+          "name": "Big Rock Park North",
+          "lat": 47.601819,
+          "lng": -122.048804,
+          "page": "https://www.sammamish.us/our-community/recreation/parks-trails/big-rock-park/",
+          "page_label": "Park page",
+          "address": "21805 SE 8th Street, Sammamish",
+          "address_source": "directory",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
+        },
+        {
           "id": "sammamish-east-sammamish-park",
           "name": "East Sammamish Park",
           "lat": 47.624987,

@@ -7,50 +7,6 @@ layout: default
   {%- assign guide = site.data.guides[page.guide_id] -%}
   {%- if guide.groups and guide.groups.size > 0 -%}
   {%- include playground-map.html -%}
-  <section class="hub-section" aria-labelledby="standout-playgrounds">
-    <h2 id="standout-playgrounds">Standout playgrounds</h2>
-    <p class="guide-intro">A few play areas I have a photo for. Every public playground is in the list after these cards.</p>
-  </section>
-  {%- for group in guide.groups -%}
-  <section class="hub-section" aria-labelledby="guide-city-{{ group.id }}">
-    <h2 id="guide-city-{{ group.id }}">{{ group.city }}</h2>
-    <div class="hub-grid">
-      {%- for entry in group.entries -%}
-      {%- assign card_restrooms = false -%}
-      {%- assign card_covered = false -%}
-      {%- assign card_accessible = false -%}
-      {%- assign card_toddler = false -%}
-      {%- assign card_splash = false -%}
-      {%- assign map_city = site.data.playground_map.cities | where: "id", group.id | first -%}
-      {%- if map_city -%}
-      {%- for park in map_city.parks -%}
-      {%- if park.page == entry.page or park.name == entry.name -%}
-      {%- if park.restrooms -%}{%- assign card_restrooms = true -%}{%- endif -%}
-      {%- if park.covered -%}{%- assign card_covered = true -%}{%- endif -%}
-      {%- if park.accessible -%}{%- assign card_accessible = true -%}{%- endif -%}
-      {%- if park.toddler -%}{%- assign card_toddler = true -%}{%- endif -%}
-      {%- if park.splash -%}{%- assign card_splash = true -%}{%- endif -%}
-      {%- endif -%}
-      {%- endfor -%}
-      {%- endif -%}
-      <article class="hub-card" id="{{ entry.id }}"{% if card_restrooms %} data-restrooms="1"{% endif %}{% if card_covered %} data-covered="1"{% endif %}{% if card_accessible %} data-accessible="1"{% endif %}{% if card_toddler %} data-toddler="1"{% endif %}{% if card_splash %} data-splash="1"{% endif %}>
-        {%- include event-photo.html
-             src=entry.image
-             alt=entry.alt
-             width=entry.width
-             height=entry.height
-             credit=entry.credit
-             source=entry.source -%}
-        <h3>{{ entry.name }}</h3>
-        <p class="event-place"><a class="addr" href="{{ entry.address | map_search: group.city, entry.name }}"><span class="addr-text">{{ entry.address }}</span></a></p>
-        <p class="hub-blurb">{{ entry.text }}</p>
-        {%- assign page_label = entry.page_label | default: "Park page" -%}
-        <p class="guide-official"><a href="{{ entry.page }}" rel="noopener">{{ page_label }}</a></p>
-      </article>
-      {%- endfor -%}
-    </div>
-  </section>
-  {%- endfor -%}
   {%- include playground-directory.html -%}
   {%- else -%}
   {%- assign guide_count = guide.entries | size -%}

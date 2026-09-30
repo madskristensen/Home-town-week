@@ -170,7 +170,8 @@
           covered: !!park.covered,
           accessible: !!park.accessible,
           toddler: !!park.toddler,
-          splash: !!park.splash
+          splash: !!park.splash,
+          standout: !!park.standout
         });
       });
     });
@@ -202,13 +203,17 @@
     markers = [];
     pins.forEach(function (pin) {
       var icon = L.divIcon({
-        className: "home-pin",
-        html: "",
+        className: pin.standout ? "home-pin home-pin-standout" : "home-pin",
+        html: pin.standout ? "<svg class=\"standout-star\" aria-hidden=\"true\" focusable=\"false\" width=\"12\" height=\"12\"><use href=\"#standout-star\"></use></svg>" : "",
         iconSize: [22, 22],
         iconAnchor: [11, 11]
       });
-      var marker = L.marker([pin.lat, pin.lng], { icon: icon, title: pin.name, keyboard: true });
-      var html = "<p class=\"map-popup-name\">" + escapeHtml(pin.name) + "</p>"
+      var marker = L.marker([pin.lat, pin.lng], { icon: icon, title: pin.standout ? pin.name + ", Standout playground" : pin.name, keyboard: true });
+      var name = escapeHtml(pin.name);
+      if (pin.standout) {
+        name += "<span class=\"standout-mark\"><svg class=\"standout-star\" aria-hidden=\"true\" focusable=\"false\" width=\"16\" height=\"16\"><use href=\"#standout-star\"></use></svg><span class=\"visually-hidden\"> Standout playground</span></span>";
+      }
+      var html = "<p class=\"map-popup-name\">" + name + "</p>"
         + "<p class=\"map-popup-city\">" + escapeHtml(pin.city) + "</p>";
       if (pin.address) {
         html += "<p class=\"map-popup-address\"><a class=\"addr\" href=\"" + escapeHtml(mapsHref(pin.address, pin.city, pin.name)) + "\">"

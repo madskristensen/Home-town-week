@@ -1,12 +1,17 @@
 <section class="playground-directory" aria-labelledby="every-playground">
   <h2 id="every-playground">Every playground</h2>
-  <p class="guide-intro">Public park playgrounds, grouped by city. The name links to the park page when the city publishes one, and to the city parks directory when it does not.</p>
+  <p class="guide-intro">Public park playgrounds, grouped by city. A star marks a standout, and those sit at the top of their city. The name links to the park page when the city publishes one, and to the city parks directory when it does not.</p>
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="standout-star" viewBox="0 0 16 16">
+      <path fill="currentColor" d="M8 1.15 9.62 4.44 13.25 4.97 10.62 7.53 11.24 11.15 8 9.45 4.76 11.15 5.38 7.53 2.75 4.97 6.38 4.44Z"/>
+    </symbol>
+  </svg>
   {%- for city in site.data.playground_map.cities -%}
   <h3 id="all-{{ city.id }}">{{ city.name }}</h3>
   <ul class="playground-list">
     {%- for park in city.parks -%}
     <li id="{{ park.id }}" data-city="{{ city.id }}"{% if park.restrooms %} data-restrooms="1"{% endif %}{% if park.covered %} data-covered="1"{% endif %}{% if park.accessible %} data-accessible="1"{% endif %}{% if park.toddler %} data-toddler="1"{% endif %}{% if park.splash %} data-splash="1"{% endif %}>
-      <a href="{{ park.page }}" rel="noopener">{{ park.name }}</a>
+      <a href="{{ park.page }}" rel="noopener">{{ park.name }}{%- if park.standout -%}<span class="standout-mark"><svg class="standout-star" aria-hidden="true" focusable="false" width="16" height="16"><use href="#standout-star"></use></svg><span class="visually-hidden"> Standout playground</span></span>{%- endif -%}</a>
       <span class="playground-meta"><a class="addr" href="{{ park.address | map_search: city.name, park.name }}"><span class="addr-text">{{ park.address }}</span></a></span>
     </li>
     {%- endfor -%}

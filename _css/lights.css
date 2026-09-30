@@ -177,6 +177,11 @@
   box-shadow: var(--pin-shadow);
 }
 
+.home-map-frame .leaflet-marker-icon.home-pin-standout .standout-star {
+  width: 12px;
+  height: 12px;
+}
+
 .home-num {
   display: inline-flex;
   align-items: center;

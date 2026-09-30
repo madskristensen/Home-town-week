@@ -17,22 +17,12 @@
 /* Town chips are OR. Amenity chips are AND. The list follows the
    checkboxes without waiting for the map. */
 .guide-page:has(.playground-filters .flt-town:checked) .playground-directory > h3,
-.guide-page:has(.playground-filters .flt-town:checked) .playground-directory > .playground-list,
-.guide-page:has(.playground-filters .flt-town:checked) section.hub-section[id^="guide-city-"] {
+.guide-page:has(.playground-filters .flt-town:checked) .playground-directory > .playground-list {
   display: none;
 }
 
 .guide-page .hub-card {
   scroll-margin-top: 1rem;
-}
-
-.guide-official {
-  margin: 0.45rem 0 0;
-  font-size: 0.92rem;
-}
-
-.guide-official a {
-  font-weight: 600;
 }
 
 .playground-directory {
@@ -57,6 +47,29 @@
 
 .playground-list > li > a[rel] {
   font-weight: 600;
+}
+
+.icon-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.standout-mark {
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  margin-left: 0.28em;
+  color: currentColor;
+  vertical-align: -0.05em;
+}
+
+.standout-star {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
 }
 
 .playground-list a.addr {
@@ -114,142 +127,118 @@
   }
 }
 .guide-page:has(.playground-filters .flt-town[data-city="bellevue"]:checked) #all-bellevue,
-.guide-page:has(.playground-filters .flt-town[data-city="bellevue"]:checked) #all-bellevue + .playground-list,
-.guide-page:has(.playground-filters .flt-town[data-city="bellevue"]:checked) #guide-city-bellevue {
+.guide-page:has(.playground-filters .flt-town[data-city="bellevue"]:checked) #all-bellevue + .playground-list {
   display: block;
 }
 
 .guide-page:has(.playground-filters .flt-town[data-city="bothell"]:checked) #all-bothell,
-.guide-page:has(.playground-filters .flt-town[data-city="bothell"]:checked) #all-bothell + .playground-list,
-.guide-page:has(.playground-filters .flt-town[data-city="bothell"]:checked) #guide-city-bothell {
+.guide-page:has(.playground-filters .flt-town[data-city="bothell"]:checked) #all-bothell + .playground-list {
   display: block;
 }
 
 .guide-page:has(.playground-filters .flt-town[data-city="carnation"]:checked) #all-carnation,
-.guide-page:has(.playground-filters .flt-town[data-city="carnation"]:checked) #all-carnation + .playground-list,
-.guide-page:has(.playground-filters .flt-town[data-city="carnation"]:checked) #guide-city-carnation {
+.guide-page:has(.playground-filters .flt-town[data-city="carnation"]:checked) #all-carnation + .playground-list {
   display: block;
 }
 
 .guide-page:has(.playground-filters .flt-town[data-city="duvall"]:checked) #all-duvall,
-.guide-page:has(.playground-filters .flt-town[data-city="duvall"]:checked) #all-duvall + .playground-list,
-.guide-page:has(.playground-filters .flt-town[data-city="duvall"]:checked) #guide-city-duvall {
+.guide-page:has(.playground-filters .flt-town[data-city="duvall"]:checked) #all-duvall + .playground-list {
   display: block;
 }
 
 .guide-page:has(.playground-filters .flt-town[data-city="issaquah"]:checked) #all-issaquah,
-.guide-page:has(.playground-filters .flt-town[data-city="issaquah"]:checked) #all-issaquah + .playground-list,
-.guide-page:has(.playground-filters .flt-town[data-city="issaquah"]:checked) #guide-city-issaquah {
+.guide-page:has(.playground-filters .flt-town[data-city="issaquah"]:checked) #all-issaquah + .playground-list {
   display: block;
 }
 
 .guide-page:has(.playground-filters .flt-town[data-city="kenmore"]:checked) #all-kenmore,
-.guide-page:has(.playground-filters .flt-town[data-city="kenmore"]:checked) #all-kenmore + .playground-list,
-.guide-page:has(.playground-filters .flt-town[data-city="kenmore"]:checked) #guide-city-kenmore {
+.guide-page:has(.playground-filters .flt-town[data-city="kenmore"]:checked) #all-kenmore + .playground-list {
   display: block;
 }
 
 .guide-page:has(.playground-filters .flt-town[data-city="kirkland"]:checked) #all-kirkland,
-.guide-page:has(.playground-filters .flt-town[data-city="kirkland"]:checked) #all-kirkland + .playground-list,
-.guide-page:has(.playground-filters .flt-town[data-city="kirkland"]:checked) #guide-city-kirkland {
+.guide-page:has(.playground-filters .flt-town[data-city="kirkland"]:checked) #all-kirkland + .playground-list {
   display: block;
 }
 
 .guide-page:has(.playground-filters .flt-town[data-city="mercer-island"]:checked) #all-mercer-island,
-.guide-page:has(.playground-filters .flt-town[data-city="mercer-island"]:checked) #all-mercer-island + .playground-list,
-.guide-page:has(.playground-filters .flt-town[data-city="mercer-island"]:checked) #guide-city-mercer-island {
+.guide-page:has(.playground-filters .flt-town[data-city="mercer-island"]:checked) #all-mercer-island + .playground-list {
   display: block;
 }
 
 .guide-page:has(.playground-filters .flt-town[data-city="north-bend"]:checked) #all-north-bend,
-.guide-page:has(.playground-filters .flt-town[data-city="north-bend"]:checked) #all-north-bend + .playground-list,
-.guide-page:has(.playground-filters .flt-town[data-city="north-bend"]:checked) #guide-city-north-bend {
+.guide-page:has(.playground-filters .flt-town[data-city="north-bend"]:checked) #all-north-bend + .playground-list {
   display: block;
 }
 
 .guide-page:has(.playground-filters .flt-town[data-city="redmond"]:checked) #all-redmond,
-.guide-page:has(.playground-filters .flt-town[data-city="redmond"]:checked) #all-redmond + .playground-list,
-.guide-page:has(.playground-filters .flt-town[data-city="redmond"]:checked) #guide-city-redmond {
+.guide-page:has(.playground-filters .flt-town[data-city="redmond"]:checked) #all-redmond + .playground-list {
   display: block;
 }
 
 .guide-page:has(.playground-filters .flt-town[data-city="renton"]:checked) #all-renton,
-.guide-page:has(.playground-filters .flt-town[data-city="renton"]:checked) #all-renton + .playground-list,
-.guide-page:has(.playground-filters .flt-town[data-city="renton"]:checked) #guide-city-renton {
+.guide-page:has(.playground-filters .flt-town[data-city="renton"]:checked) #all-renton + .playground-list {
   display: block;
 }
 
 .guide-page:has(.playground-filters .flt-town[data-city="sammamish"]:checked) #all-sammamish,
-.guide-page:has(.playground-filters .flt-town[data-city="sammamish"]:checked) #all-sammamish + .playground-list,
-.guide-page:has(.playground-filters .flt-town[data-city="sammamish"]:checked) #guide-city-sammamish {
+.guide-page:has(.playground-filters .flt-town[data-city="sammamish"]:checked) #all-sammamish + .playground-list {
   display: block;
 }
 
 .guide-page:has(.playground-filters .flt-town[data-city="snoqualmie"]:checked) #all-snoqualmie,
-.guide-page:has(.playground-filters .flt-town[data-city="snoqualmie"]:checked) #all-snoqualmie + .playground-list,
-.guide-page:has(.playground-filters .flt-town[data-city="snoqualmie"]:checked) #guide-city-snoqualmie {
+.guide-page:has(.playground-filters .flt-town[data-city="snoqualmie"]:checked) #all-snoqualmie + .playground-list {
   display: block;
 }
 
 .guide-page:has(.playground-filters .flt-town[data-city="woodinville"]:checked) #all-woodinville,
-.guide-page:has(.playground-filters .flt-town[data-city="woodinville"]:checked) #all-woodinville + .playground-list,
-.guide-page:has(.playground-filters .flt-town[data-city="woodinville"]:checked) #guide-city-woodinville {
+.guide-page:has(.playground-filters .flt-town[data-city="woodinville"]:checked) #all-woodinville + .playground-list {
   display: block;
 }
 
 
 
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="restrooms"]:checked) .playground-list li:not([data-restrooms]),
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="restrooms"]:checked) .hub-card:not([data-restrooms]) {
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="restrooms"]:checked) .playground-list li:not([data-restrooms]) {
   display: none;
 }
 
 .guide-page:has(.playground-filters .flt-amenity[data-amenity="restrooms"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-restrooms])),
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="restrooms"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-restrooms])) + .playground-list,
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="restrooms"]:checked) section.hub-section[id^="guide-city-"]:not(:has(.hub-card[data-restrooms])) {
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="restrooms"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-restrooms])) + .playground-list {
   display: none !important;
 }
 
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="covered"]:checked) .playground-list li:not([data-covered]),
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="covered"]:checked) .hub-card:not([data-covered]) {
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="covered"]:checked) .playground-list li:not([data-covered]) {
   display: none;
 }
 
 .guide-page:has(.playground-filters .flt-amenity[data-amenity="covered"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-covered])),
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="covered"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-covered])) + .playground-list,
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="covered"]:checked) section.hub-section[id^="guide-city-"]:not(:has(.hub-card[data-covered])) {
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="covered"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-covered])) + .playground-list {
   display: none !important;
 }
 
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="accessible"]:checked) .playground-list li:not([data-accessible]),
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="accessible"]:checked) .hub-card:not([data-accessible]) {
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="accessible"]:checked) .playground-list li:not([data-accessible]) {
   display: none;
 }
 
 .guide-page:has(.playground-filters .flt-amenity[data-amenity="accessible"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-accessible])),
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="accessible"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-accessible])) + .playground-list,
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="accessible"]:checked) section.hub-section[id^="guide-city-"]:not(:has(.hub-card[data-accessible])) {
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="accessible"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-accessible])) + .playground-list {
   display: none !important;
 }
 
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="toddler"]:checked) .playground-list li:not([data-toddler]),
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="toddler"]:checked) .hub-card:not([data-toddler]) {
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="toddler"]:checked) .playground-list li:not([data-toddler]) {
   display: none;
 }
 
 .guide-page:has(.playground-filters .flt-amenity[data-amenity="toddler"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-toddler])),
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="toddler"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-toddler])) + .playground-list,
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="toddler"]:checked) section.hub-section[id^="guide-city-"]:not(:has(.hub-card[data-toddler])) {
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="toddler"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-toddler])) + .playground-list {
   display: none !important;
 }
 
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="splash"]:checked) .playground-list li:not([data-splash]),
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="splash"]:checked) .hub-card:not([data-splash]) {
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="splash"]:checked) .playground-list li:not([data-splash]) {
   display: none;
 }
 
 .guide-page:has(.playground-filters .flt-amenity[data-amenity="splash"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-splash])),
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="splash"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-splash])) + .playground-list,
-.guide-page:has(.playground-filters .flt-amenity[data-amenity="splash"]:checked) section.hub-section[id^="guide-city-"]:not(:has(.hub-card[data-splash])) {
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="splash"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-splash])) + .playground-list {
   display: none !important;
 }
