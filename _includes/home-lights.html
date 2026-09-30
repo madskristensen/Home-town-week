@@ -106,11 +106,19 @@
     {%- assign light_source = light.image_source | append: "" -%}
     <article class="hub-card" id="light-{{ light.id }}" data-image-kind="{{ light.image_kind }}">
       {%- if light_image.size > 0 -%}
+      {%- if forloop.parentloop.first and forloop.first -%}
+        {%- assign card_loading = "eager" -%}
+        {%- assign card_priority = "high" -%}
+      {%- else -%}
+        {%- assign card_loading = "lazy" -%}
+        {%- assign card_priority = "" -%}
+      {%- endif -%}
       <figure class="event-photo">
         {%- include responsive-img.html
              src=light.image
              alt=light.image_alt
-             loading="lazy"
+             loading=card_loading
+             priority=card_priority
              sizes="(min-width: 42rem) 21rem, calc(100vw - 3rem)" -%}
         {%- if light_credit.size > 0 or light_source.size > 0 -%}
         <figcaption>
