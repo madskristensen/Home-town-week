@@ -106,7 +106,7 @@ layout: default
         </p>
         {%- endif -%}
         <p class="event-place">
-          {%- if event_place.size > 0 -%}<a class="addr" href="{{ event.place | map_search: event.city }}">{%- include addr-pin.html -%}<span class="addr-text">{{ event.place }}</span></a>, {% endif -%}
+          {%- if event_place.size > 0 -%}<a class="addr" href="{{ event.place | map_search: event.city }}"><span class="addr-text">{{ event.place }}</span></a>, {% endif -%}
           {%- assign event_drive = event.drive | append: "" -%}
           {%- if event_drive.size > 0 -%}
           <span class="place-town">{{ event.city }}</span><span class="drive-time">{{ event.drive }}</span>

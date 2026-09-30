@@ -11,13 +11,6 @@ module EastsideCalendar
       "https://www.google.com/maps/search/?api=1&query=#{encode(query_text(place, city, name))}"
     end
 
-    def pin
-      return @pin if @pin
-
-      path = File.expand_path("../_includes/addr-pin.html", __dir__)
-      @pin = File.read(path).gsub(/\s+/, " ").strip.freeze
-    end
-
     # Venue and street, then the town, then WA.
     # `name` is a venue that is not already written in the place line,
     # such as a park name next to a street. It is not an event title.

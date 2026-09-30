@@ -685,7 +685,7 @@ module EastsideCalendar
         next Regexp.last_match(0) if text.empty?
 
         href = CGI.escapeHTML(MapLinks.href(text, city_name))
-        %(#{open_tag}<a class="addr" href="#{href}">#{MapLinks.pin}<span class="addr-text">#{inner.strip}</span></a>#{close_tag})
+        %(#{open_tag}<a class="addr" href="#{href}"><span class="addr-text">#{inner.strip}</span></a>#{close_tag})
       end
     end
 

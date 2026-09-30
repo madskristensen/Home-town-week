@@ -42,7 +42,7 @@ layout: default
              credit=entry.credit
              source=entry.source -%}
         <h3>{{ entry.name }}</h3>
-        <p class="event-place"><a class="addr" href="{{ entry.address | map_search: group.city, entry.name }}">{%- include addr-pin.html -%}<span class="addr-text">{{ entry.address }}</span></a></p>
+        <p class="event-place"><a class="addr" href="{{ entry.address | map_search: group.city, entry.name }}"><span class="addr-text">{{ entry.address }}</span></a></p>
         <p class="hub-blurb">{{ entry.text }}</p>
         {%- assign page_label = entry.page_label | default: "Park page" -%}
         <p class="guide-official"><a href="{{ entry.page }}" rel="noopener">{{ page_label }}</a></p>
@@ -74,7 +74,7 @@ layout: default
            credit=entry.credit
            source=entry.source -%}
       <h2>{{ entry.name }}</h2>
-      <p><a class="addr" href="{{ entry.address | map_search: entry.city, entry.name }}">{%- include addr-pin.html -%}<span class="addr-text">{{ entry.address }}</span></a></p>
+      <p><a class="addr" href="{{ entry.address | map_search: entry.city, entry.name }}"><span class="addr-text">{{ entry.address }}</span></a></p>
       <p>{{ entry.text }}</p>
     </article>
     {%- endfor -%}

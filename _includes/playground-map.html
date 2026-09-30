@@ -212,7 +212,6 @@
         + "<p class=\"map-popup-city\">" + escapeHtml(pin.city) + "</p>";
       if (pin.address) {
         html += "<p class=\"map-popup-address\"><a class=\"addr\" href=\"" + escapeHtml(mapsHref(pin.address, pin.city, pin.name)) + "\">"
-          + "<svg class=\"addr-pin\" viewBox=\"0 0 16 16\" aria-hidden=\"true\" focusable=\"false\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M8 .9a4.6 4.6 0 0 0-4.6 4.6c0 3.5 4.6 9.2 4.6 9.2s4.6-5.7 4.6-9.2A4.6 4.6 0 0 0 8 .9Zm0 6.3a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4Z\"/></svg>"
           + "<span class=\"addr-text\">" + escapeHtml(pin.address) + "</span></a></p>";
       }
       html += "<p class=\"map-popup-link\"><a href=\"" + escapeHtml(pin.page) + "\" rel=\"noopener\">" + escapeHtml(pin.page_label) + "</a></p>";
