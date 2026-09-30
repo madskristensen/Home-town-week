@@ -61,3 +61,10 @@
   end: "2026-10-24T16:00:00-07:00"
   place: "Downtown Renton, then Legacy Square"
   same_as: "https://www.rentondowntown.com/events/halloween"
+
+- name: "Scrooge!"
+  tags: [holiday-show]
+  start: "2026-12-04"
+  end: "2026-12-20"
+  place: "Renton Civic Theatre, 507 S Third St"
+  same_as: "https://www.rentoncivictheatre.org/shows/scrooge"

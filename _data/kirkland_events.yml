@@ -153,3 +153,10 @@
   end: "2026-11-09T17:30:00-08:00"
   place: "Kirkland"
   same_as: "https://kcls.bibliocommons.com/events/6ab6ee0e86d845003118d292"
+
+- name: "The Nutcracker: Symphony of Lights"
+  tags: [holiday-show]
+  start: "2026-12-17"
+  end: "2026-12-19"
+  place: "Kirkland Performance Center, 350 Kirkland Ave"
+  same_as: "https://www.kpcenter.org/event/the-nutcracker-symphony-of-lights/"

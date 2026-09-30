@@ -116,3 +116,11 @@ A mile-long family fun run through the park, with playful obstacles and zombie a
 Librarian Sharon reads the Story Walk book outdoors, then families can stay and play in the Children's Forest. Meet at the arboretum information booth at 10:25 a.m. Dress for the weather. The library cancels for high winds, snow, or poor air quality. Registration is not required.
 
 [Story Walk](https://kcls.bibliocommons.com/events/69557907111b9da65ca9d7fa)
+
+### Gnometown Holidays Tree Lighting
+<p class="event-when">Thu Dec 3 · 6:00–8:00 p.m.</p>
+<p class="event-place">4 Corners</p>
+
+A family tree lighting at 4 Corners with Santa, live reindeer, a mini train, and a wagon ride. The ceremony and the mayor's welcome are at 6:15 p.m. The Maple Valley Youth Symphony plays, and there is a horse-drawn wagon, a mechanical snowboard, and vendors with treats, games, and crafts.
+
+[Gnometown Holidays](https://www.maplevalleywa.gov/government/departments/parks_and_recreation/special_events/maple_valley_hometown_holidays.php)

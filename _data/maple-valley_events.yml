@@ -65,3 +65,10 @@
   end: "2026-10-17T11:00:00-07:00"
   place: "Lake Wilderness Arboretum, information booth"
   same_as: "https://kcls.bibliocommons.com/events/69557907111b9da65ca9d7fa"
+
+- name: "Gnometown Holidays Tree Lighting"
+  tags: [tree-lighting, santa]
+  start: "2026-12-03T18:00:00-08:00"
+  end: "2026-12-03T20:00:00-08:00"
+  place: "4 Corners"
+  same_as: "https://www.maplevalleywa.gov/government/departments/parks_and_recreation/special_events/maple_valley_hometown_holidays.php"

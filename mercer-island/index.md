@@ -94,3 +94,19 @@ Youth Theatre Northwest's events calendar did not list a public performance in t
 A free stroll through Town Center in costume. Businesses with the two little ghost posters in the window are the ones handing out treats. The city says the business list keeps growing up to the day, so check the page again that week.
 
 [Town Center Trick or Treat](https://www.mercerisland.gov/parksrec/page/town-center-trick-or-treat-2026)
+
+### Holiday Tree Lighting
+<p class="event-when">Thu Dec 3</p>
+<p class="event-place">Mercerdale Park</p>
+
+A town tree lighting for families at Mercerdale Park.
+
+[City special events](https://www.mercerisland.gov/parksrec/page/city-special-events)
+
+### Holiday Makers Market
+<p class="event-when">Sat Dec 5 · 10:00 a.m.–3:00 p.m.</p>
+<p class="event-place">Mercer Island Community and Event Center, 8236 SE 24th St</p>
+
+A free makers market for families at the Community and Event Center, held with the Mercer Island Chamber of Commerce.
+
+[Holiday Market](https://www.mercerislandchamber.com/holiday-market)

@@ -238,3 +238,11 @@ An AC/DC tribute. Loud, and not a family matinee.
 Tina's Dance Studios' annual showcase, with dancers of all ages and levels.  
 [KPC tickets](https://www.kpcenter.org/get-tickets/)
 
+
+### The Nutcracker: Symphony of Lights
+<p class="event-when">Thu Dec 17 through Sat Dec 19 · 7:00 p.m.</p>
+<p class="event-place">Kirkland Performance Center, 350 Kirkland Ave</p>
+
+Grand Kyiv Ballet's Nutcracker for families at Kirkland Performance Center, $74 for adults and $64 for youth. All three nights start at 7:00 p.m.
+
+[The Nutcracker: Symphony of Lights](https://www.kpcenter.org/event/the-nutcracker-symphony-of-lights/)

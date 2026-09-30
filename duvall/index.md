@@ -78,3 +78,19 @@ Open building for all ages. The bricks are the library's. Stay for the hour or a
 The Valley Record's Sep 25 community calendar lists a free drop-in art day here, with supplies for all ages. Children 14 and under need an adult. The center's own community page confirms it hosts free art days in 2026 with support from 4Culture, and points registration to its events page.
 
 [Valley Record calendar](https://www.valleyrecord.com/2026/09/25/snoqualmie-valley-community-calendar-sept-25-edition/) · [Northwest Art Center](https://northwestartcenter.org/events/community-events/)
+
+### Novelty Hill Farm Christmas Tree Lighting
+<p class="event-when">Sat Nov 28 · 5:00–7:30 p.m.</p>
+<p class="event-place">Novelty Hill Farm, 26617 NE 124th Street</p>
+
+A ticketed family tree lighting at Novelty Hill Farm, with Santa, a holiday market, cider, and a sing-along. Santa leads the countdown. The evening also has hot cocoa, s'mores, and a bonfire, then songs with the Cedarcrest High School and Tolt Middle School choirs. The ticket link goes up closer to the night.
+
+[Christmas season](https://noveltyhillfarm.com/christmas-season)
+
+### Light Up Duvall Tree Lighting
+<p class="event-when">Fri Dec 4 · 5:00–8:00 p.m.</p>
+<p class="event-place">Depot Park, 26219 NE Burhen Way</p>
+
+A town tree lighting for families at Depot Park, with free Santa photos in the Depot Building. The city and the Duvall Chamber host it, with community craft booths.
+
+[Light Up Duvall](https://www.duvallwa.gov/528/Light-Up-Duvall---Tree-Lighting)

@@ -274,6 +274,52 @@ groups:
         credit: "Photo: Mtaylor848, CC BY-SA 4.0"
         license: CC BY-SA 4.0
         source: https://commons.wikimedia.org/wiki/File:Halloween_decorations_on_a_house_on_Bridle_Way,_Wetherby_(22nd_October_2020).jpg
+  - keys: [nutcracker]
+    images:
+      - image: /assets/images/themes/nutcracker-soldier.webp
+        alt: A wooden nutcracker soldier in a red coat and a tall black hat.
+        credit: "Photo: Silar, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:02023_Christmas_Nutcracker.jpg
+      - image: /assets/images/themes/nutcracker-trio.webp
+        alt: Three wooden nutcracker figures standing in a row.
+        credit: "Photo: Raul654, CC BY-SA 3.0"
+        license: CC BY-SA 3.0
+        source: https://commons.wikimedia.org/wiki/File:Nutcrackers.jpg
+      - image: /assets/images/themes/nutcracker-shelf.webp
+        alt: Wooden nutcracker figures lined up on a shelf.
+        credit: "Photo: Celcom, CC BY 3.0"
+        license: CC BY 3.0
+        source: https://commons.wikimedia.org/wiki/File:NutcrackerCollection.JPG
+  - keys: [santa train, yuletide express, north pole limited, christmas train]
+    images:
+      - image: /assets/images/themes/christmas-train-wreath.webp
+        alt: A small locomotive with a green wreath on the front.
+        credit: "Photo: CALChux, CC BY-SA 2.0"
+        license: CC BY-SA 2.0
+        source: https://commons.wikimedia.org/wiki/File:Ventura_County_Railway_No._2_Decked_Out_for_Christmas.jpg
+      - image: /assets/images/themes/christmas-train-trees.webp
+        alt: A green train car with Christmas trees tied along the side.
+        credit: "Photo: Leif Jørgensen, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Christmas_train_with_Christmas_trees_at_Rubjerg_Station_01.jpg
+  - keys: [holiday-market, holiday market, makers market, craft market, holiday bazaar]
+    images:
+      - image: /assets/images/themes/holiday-market-stalls.webp
+        alt: Wooden chalet stalls at a Christmas market, with red and green roofs.
+        credit: "Photo: David Dixon, CC BY-SA 2.0"
+        license: CC BY-SA 2.0
+        source: https://commons.wikimedia.org/wiki/File:Christmas_Market_Stalls_at_Piccadilly_-_geograph.org.uk_-_6331267.jpg
+      - image: /assets/images/themes/holiday-market-huts.webp
+        alt: A row of wooden huts with pointed roofs at a Christmas market.
+        credit: "Photo: DS Pugh, CC BY-SA 2.0"
+        license: CC BY-SA 2.0
+        source: https://commons.wikimedia.org/wiki/File:Christmas_market_stalls_-_geograph.org.uk_-_7939153.jpg
+      - image: /assets/images/themes/holiday-market-square.webp
+        alt: Wooden market stalls and a lit Christmas tree in a city square.
+        credit: "Photo: DS Pugh, CC BY-SA 2.0"
+        license: CC BY-SA 2.0
+        source: https://commons.wikimedia.org/wiki/File:Christmas_market_stalls_-_geograph.org.uk_-_7353759.jpg
   - keys: [santa]
     images:
       - image: /assets/images/themes/santa-window.webp
@@ -281,18 +327,29 @@ groups:
         credit: "Photo: JoachimKohler-HB, CC BY-SA 4.0"
         license: CC BY-SA 4.0
         source: https://commons.wikimedia.org/wiki/File:Weihnachtsmann_oder_Wichtel_in_einem_Fenster_in_Zuoz(2017).jpg
+      - image: /assets/images/themes/santa-statue.webp
+        alt: A seated Santa Claus statue in a red suit, outdoors by a fence.
+        credit: "Photo: Kenneth C. Zirkel, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Santa_Claus_Statue_Lake_George_NY.jpg
+      - image: /assets/images/themes/santa-reindeer.webp
+        alt: Statues of Santa Claus and a reindeer in the snow.
+        credit: "Photo: Artaxerxes, CC BY 4.0"
+        license: CC BY 4.0
+        source: https://commons.wikimedia.org/wiki/File:Santa_Claus_reindeer_statues_Swanzey_NH_January_2025.jpg
+  # tree-lights.webp is a Christmas lights thumbnail. Do not use it here.
   - keys: [tree-lighting, tree lighting, holiday-lights]
     images:
-      - image: /assets/images/themes/tree-lights.webp
-        alt: White lights on a Christmas tree at night.
-        credit: "Photo: photos-public-domain.com, CC0"
-        license: CC0
-        source: https://commons.wikimedia.org/wiki/File:White_Christmas_Tree_Lights_at_Night.jpg
       - image: /assets/images/themes/tree-bokeh.webp
         alt: Out-of-focus colored lights on a Christmas tree.
         credit: "Photo: Thomas M Bishop, CC BY-SA 4.0"
         license: CC BY-SA 4.0
         source: https://commons.wikimedia.org/wiki/File:Christmas_Lights_and_Bokeh.jpg
+      - image: /assets/images/themes/tree-glow.webp
+        alt: A Christmas tree covered in warm white lights at night.
+        credit: "Photo: epSos.de, CC BY 2.0"
+        license: CC BY 2.0
+        source: https://commons.wikimedia.org/wiki/File:Glowing_Christmas_Tree_Lights_in_the_Winter_Night.jpg
   - keys: [story-time, storytime, story time]
     images:
       - image: /assets/images/themes/books.webp

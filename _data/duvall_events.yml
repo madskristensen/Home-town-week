@@ -47,3 +47,16 @@
   end: "2026-10-17T14:00:00-07:00"
   place: "Northwest Art Center, 15705 Main Street NE, Suite F"
   same_as: "https://www.valleyrecord.com/2026/09/25/snoqualmie-valley-community-calendar-sept-25-edition/"
+
+- name: "Novelty Hill Farm Christmas Tree Lighting"
+  tags: [tree-lighting, santa, holiday-market]
+  start: "2026-11-28T17:00:00-08:00"
+  end: "2026-11-28T19:30:00-08:00"
+  place: "Novelty Hill Farm, 26617 NE 124th Street"
+  same_as: "https://noveltyhillfarm.com/christmas-season"
+- name: "Light Up Duvall Tree Lighting"
+  tags: [tree-lighting, santa, holiday-market]
+  start: "2026-12-04T17:00:00-08:00"
+  end: "2026-12-04T20:00:00-08:00"
+  place: "Depot Park, 26219 NE Burhen Way"
+  same_as: "https://www.duvallwa.gov/528/Light-Up-Duvall---Tree-Lighting"

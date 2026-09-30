@@ -142,3 +142,27 @@ Village Theatre lists a captioned performance at 2:00 p.m. The Issaquah run ends
 9:00 a.m.–2:00 p.m., and the season continues through Dec 5. Live music is 11:00 a.m.–1:00 p.m.
 
 [Fall market series](https://www.visitissaquahwa.com/series/fall-farm-fresh-market-3/)
+
+### Issaquah Highlands Holiday Tree Lighting
+<p class="event-when">Thu Nov 19 · 5:00–6:30 p.m.</p>
+<p class="event-place">Village Green Park, 2550 NE Park Drive</p>
+
+A family tree lighting at Village Green Park, with free cocoa, Santa photos, and carols. Apple cider and cookies are served. The tree lights at 5:30 p.m., when Mayor Mark Mullet flips the switch. Santa and Mrs. Claus are there for photos, and Issaquah police and Eastside Fire & Rescue visit.
+
+[Holiday Tree Lighting](https://issaquahhighlands.com/event/holiday-tree-lighting-4/)
+
+### Issaquah Reindeer Festival
+<p class="event-when">Fri Nov 27 through Wed Dec 30</p>
+<p class="event-place">Cougar Mountain Zoo, 19525 SE 54th St</p>
+
+A reindeer festival for families at Cougar Mountain Zoo, with admission at the gate and Santa photos for an extra donation. Santa is there Nov 27 through Dec 23, 10:30 a.m.–4:00 p.m. Festival hours those days are 10:30 a.m.–4:30 p.m., or dusk. Dec 26 through Dec 30 the holiday fun continues 10:30 a.m.–3:30 p.m. without Santa. Members do not need to buy ahead for Dec 20–23 and Dec 26–30.
+
+[Issaquah Reindeer Festival](https://www.cougarmountainzoo.org/issaquah-reindeer-festival-offseason/)
+
+### Issaquah Dance Theatre Nutcracker
+<p class="event-when">Sat Dec 5 to Sun Dec 6</p>
+<p class="event-place">Longman Performing Arts Center, Issaquah High School</p>
+
+Issaquah Dance Theatre's family Nutcracker needs a ticket, except children under 2 on a lap. Each day has a one-hour show at 11:00 a.m. for a young audience, plus full shows at 1:30 and 5:30 p.m. Sales are final, and an exchange costs $15.
+
+[The Nutcracker](https://www.issaquahdance.com/nutcracker)

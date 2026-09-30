@@ -245,3 +245,27 @@ The museum's Halloween day, this year set as a Haunted Hoedown. Costumes are enc
 A free costume afternoon from the Old Bellevue Merchants Association. Businesses, restaurants, and residential communities along Main Street hand out candy.
 
 [Little Monsters on Main Street](https://www.visitoldbellevue.com/events/little-monsters-on-main-street-2026)
+
+### Snowflake Lane
+<p class="event-when">Fri Nov 27 through Thu Dec 24 · 7:00 p.m.</p>
+<p class="event-place">Bellevue Way, between NE 4th St and NE 8th St</p>
+
+A free nightly parade on Bellevue Way for all ages, starting at 7:00 p.m. Floats, falling snow, music, toy drummers, and dancers run every night from Nov 27 through Dec 24. Parking in the Collection garages is free.
+
+[Snowflake Lane](https://bellevuecollection.com/snowflakelane/)
+
+### Holiday Barn Lighting
+<p class="event-when">Sat Dec 5 · 5:00–6:30 p.m.</p>
+<p class="event-place">Kelsey Creek Farm, 410 130th Pl SE</p>
+
+A family barn lighting at Kelsey Creek Farm with free admission, carols, Santa, and a countdown. Some activities are ticketed on site. Parking on the farm is limited, with more at International School, 445 128th Ave SE. Families can also meet the animals and watch them eat dinner inside the barn.
+
+[Holiday Barn Lighting](https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/holiday-barn-lighting)
+
+### The Nutcracker
+<p class="event-when">Fri Dec 11 through Wed Dec 23</p>
+<p class="event-place">Meydenbauer Theatre, 11100 NE 6th St</p>
+
+International Ballet Theatre's Nutcracker at Meydenbauer Theatre costs $45 for youth through 14 and $70 for ages 15 and up. Military and seniors 60 and older pay $55. Prices include fees. Every person needs a ticket, and babies in arms are not admitted. The program is 1 hour 50 minutes plus a 15-minute intermission. Friday Dec 11 and Friday Dec 18 are at 6:00 p.m. Saturday Dec 12, Saturday Dec 19, and Sunday Dec 20 have shows at 1:00 and 5:00 p.m. Sunday Dec 13 is 1:00 p.m. only. Monday Dec 21, Tuesday Dec 22, and Wednesday Dec 23 are at 1:00 p.m.
+
+[The Nutcracker](https://www.ibtbellevue.com/nutcracker-dec-2026)

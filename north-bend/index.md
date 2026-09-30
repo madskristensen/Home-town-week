@@ -86,3 +86,11 @@ The North Bend Downtown Foundation's free afternoon for costumes on the downtown
 A family dance at Si View with instructor Amanda Johnson. The parks page describes it as western-themed dancing that works for beginners and for people who already know a few steps. All ages.
 
 [Si View family events](https://www.siviewpark.org/family-fun.phtml)
+
+### North Pole Limited Santa Train
+<p class="event-when">Sat Nov 28 through Sun Dec 20</p>
+<p class="event-place">North Bend Depot, 205 E McClellan St</p>
+
+A Santa train for families from the North Bend Depot, $39 for ages 2 and up, and no ticket under 2. The trip is about two hours and includes the ride, the Train Shed, a visit with Santa in the Chapel Car, a small gift, cookies, and a hot drink. It runs Nov 28–29, Dec 5–7, Dec 12–13, and Dec 19–20. Buy tickets ahead. Trains run rain or shine, and the museum does not refund tickets unless the train does not run.
+
+[Santa Train](https://trainmuseum.org/upcoming-events/santa/)

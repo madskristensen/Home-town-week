@@ -76,3 +76,15 @@
   end: "2026-10-29T11:15:00-07:00"
   place: "Snoqualmie Library, 7824 Center Boulevard SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6ab1c1ccab7a8e0037c37c20"
+
+- name: "Yuletide Express Santa Train"
+  tags: [santa]
+  start: "2026-12-04"
+  end: "2026-12-18"
+  place: "Snoqualmie Depot, 38625 SE King St"
+  same_as: "https://trainmuseum.org/upcoming-events/santa/"
+- name: "Snoqualmie Tree Lighting"
+  tags: [tree-lighting]
+  start: "2026-12-05"
+  place: "Railroad Park gazebo"
+  same_as: "https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights"

@@ -106,3 +106,11 @@ School-age kids read aloud to a certified therapy dog. Reading with Rover works 
 The Renton Downtown Partnership's family afternoon. Start with trick-or-treating at downtown businesses, then go to Legacy Square for zombie makeup, photos, games, and prizes. Costume contest categories include pets, kids, teens, and adults. At 3:00 p.m. the crowd learns the Thriller dance and joins the worldwide simultaneous performance.
 
 [Olde Fashioned Halloween Party](https://www.rentondowntown.com/events/halloween)
+
+### Scrooge!
+<p class="event-when">Fri Dec 4 through Sun Dec 20</p>
+<p class="event-place">Renton Civic Theatre, 507 S Third St</p>
+
+A puppet musical of A Christmas Carol for families at Renton Civic Theatre. It opens Dec 4, has an industry night Dec 14, and closes Dec 20.
+
+[Scrooge!](https://www.rentoncivictheatre.org/shows/scrooge)

@@ -208,3 +208,22 @@
   end: "2026-10-31T15:00:00-07:00"
   place: "Main Street, Old Bellevue"
   same_as: "https://www.visitoldbellevue.com/events/little-monsters-on-main-street-2026"
+
+- name: "Snowflake Lane"
+  tags: [parade]
+  start: "2026-11-27"
+  end: "2026-12-24"
+  place: "Bellevue Way, between NE 4th St and NE 8th St"
+  same_as: "https://bellevuecollection.com/snowflakelane/"
+- name: "Holiday Barn Lighting"
+  tags: [holiday-lights, santa]
+  start: "2026-12-05T17:00:00-08:00"
+  end: "2026-12-05T18:30:00-08:00"
+  place: "Kelsey Creek Farm, 410 130th Pl SE"
+  same_as: "https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/holiday-barn-lighting"
+- name: "The Nutcracker"
+  tags: [holiday-show]
+  start: "2026-12-11"
+  end: "2026-12-23"
+  place: "Meydenbauer Theatre, 11100 NE 6th St"
+  same_as: "https://www.ibtbellevue.com/nutcracker-dec-2026"

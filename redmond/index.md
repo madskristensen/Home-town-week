@@ -334,3 +334,11 @@ All ages. Come in costume for a photo booth, face painting, crafts, pumpkin deco
 All ages. A joyful visit with loved ones who have died, with crafts, music, food, and a short look at the tradition.
 
 [Day of the Dead](https://www.redmond.gov/calendar.aspx?EID=3561)
+
+### Redmond Lights
+<p class="event-when">Sat Dec 5 · 4:00–8:00 p.m.</p>
+<p class="event-place">Downtown Park, 16101 Redmond Way</p>
+
+A Redmond Lights kickoff for families at Downtown Park, with free crafts, light art, music, and snowfall. The night also has a luminary trail, a family lights promenade, and a kids light fashion show. Light art in the park continues through Jan 4.
+
+[Redmond Lights](https://www.redmond.gov/1139/Redmond-Lights)

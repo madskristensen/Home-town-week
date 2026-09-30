@@ -46,3 +46,11 @@ Teacher and storyteller Sam Sanders signs stories, movement, and rhymes for d/De
 The third annual celebration, on Sunday, November 1. Free, with an ofrenda, performances, crafts, and activities.
 
 [Dia de los Muertos](https://www.kenmorewa.gov/our-city/special-events/dia-de-los-muertos)
+
+### Winterfest
+<p class="event-when">Sat Dec 5 · 11:00 a.m.–3:00 p.m.</p>
+<p class="event-place">Kenmore City Hall, 18120 68th Ave NE, and the Hangar, 6728 NE 181st St</p>
+
+A free city craft market for families at City Hall and the Hangar, with local makers and pop-up shops.
+
+[Winterfest](https://www.kenmorewa.gov/our-city/special-events/winterfest)

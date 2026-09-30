@@ -52,3 +52,10 @@
   end: "2026-11-06T20:30:00-08:00"
   place: "Si View Community Center, 400 SE Orchard Drive"
   same_as: "https://www.siviewpark.org/family-fun.phtml"
+
+- name: "North Pole Limited Santa Train"
+  tags: [santa]
+  start: "2026-11-28"
+  end: "2026-12-20"
+  place: "North Bend Depot, 205 E McClellan St"
+  same_as: "https://trainmuseum.org/upcoming-events/santa/"

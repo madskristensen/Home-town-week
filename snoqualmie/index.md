@@ -124,3 +124,19 @@ Urban farmer Lisa Taylor leads a music-and-movement hour about the slimy workers
 A Halloween round of stories, music, and movement for young children with an adult. Costumes are fine. Play time and bubbles come after the stories. No registration.
 
 [Halloween Story Time](https://kcls.bibliocommons.com/v2/events/6ab1c1ccab7a8e0037c37c20)
+
+### Yuletide Express Santa Train
+<p class="event-when">Fri Dec 4 through Fri Dec 18</p>
+<p class="event-place">Snoqualmie Depot, 38625 SE King St</p>
+
+A Santa train for families from the Snoqualmie Depot, $30 for ages 2 and up, and no ticket under 2. The round trip past Snoqualmie Falls is about 40 minutes. Santa visits each family on board, and riders get a small gift and a peppermint. It runs Friday, Dec 4, Dec 11, and Dec 18. Tickets are on sale now. Buy ahead. Trains run rain or shine, and the museum does not refund tickets unless the train does not run.
+
+[Santa Train](https://trainmuseum.org/upcoming-events/santa/)
+
+### Snoqualmie Tree Lighting
+<p class="event-when">Sat Dec 5</p>
+<p class="event-place">Railroad Park gazebo</p>
+
+A town tree lighting for families at the Railroad Park gazebo.
+
+[Snoqualmie Winter Lights](https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights)
