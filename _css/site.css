@@ -282,11 +282,13 @@ picture {
   align-items: center;
   box-sizing: border-box;
   height: auto;
-  padding: 1.375rem 0;
+  padding: 1.14rem 0;
   border-bottom: 1px solid var(--rule);
 }
 
 .site-header--compact .home-mast .brand {
+  display: flex;
+  align-items: center;
   max-width: none;
   overflow: hidden;
   color: var(--forest);
@@ -300,9 +302,9 @@ picture {
 }
 
 .site-header--compact .home-mast .brand a {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.35em;
+  gap: 0.5em;
   max-width: 100%;
   min-width: 0;
 }
@@ -310,8 +312,8 @@ picture {
 .brand-mark {
   display: block;
   flex: none;
-  width: 0.85em;
-  height: 0.85em;
+  width: 1.46em;
+  height: 1.46em;
 }
 
 .brand-name {
@@ -511,7 +513,7 @@ picture {
 
 @media (max-width: 42rem) {
   .site-header--compact .mast-title-row {
-    padding: 0.875rem 0;
+    padding: 0.823rem 0;
   }
 
   .site-header--compact .home-mast .brand {
@@ -520,7 +522,7 @@ picture {
   }
 
   .site-header--compact .home-mast .brand a {
-    gap: 0.28em;
+    gap: 0.38em;
   }
 
 
