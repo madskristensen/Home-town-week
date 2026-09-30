@@ -1,0 +1,40 @@
+/* Evergreen guides index and introductions. */
+.guide-page .guide-intro {
+  margin: 0.2rem 0 0;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.guide-index {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-index a {
+  display: block;
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.guide-index a:hover,
+.guide-index a:focus-visible {
+  text-decoration: underline;
+}
+
+.guide-index p {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (min-width: 42rem) {
+  .guide-index {
+    grid-template-columns: 1fr 1fr;
+  }
+}

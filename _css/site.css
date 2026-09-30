@@ -1,0 +1,1044 @@
+/* Shared styles for every page. Layout files add the home map,
+   city events, seasonal hubs, the Light Finder, and guides.
+   Light mode is a cream sheet, ink headlines, forest links, gold dates.
+   Dark mode is a friendly deep slate: lighter cards, warm off-white type,
+   and bright seasonal accents. Both modes use these custom properties.
+   Type is system fonts only. */
+
+:root {
+  color-scheme: light;
+  --page: #f4efe6;
+  --sheet: #fffdf9;
+  --ink: #1a2822;
+  --text: #24332c;
+  --muted: #3f5148;
+  --forest: #1e4636;
+  --forest-deep: #16352a;
+  --gold: #6b4e0e;
+  --gold-bright: #c6a15a;
+  --gold-line: #a6843f;
+  --link: #145c40;
+  --rule: #d9ccb8;
+  --focus: #6b4e0e;
+  --header-ink: #f7f1e6;
+  --on-accent: #f7f1e6;
+  --shadow: none;
+  --map-quiet: #e4d3bd;
+  --map-label: #f7f1e6;
+  --wash: rgba(30, 70, 54, 0.07);
+  --credit-bg: rgba(255, 255, 255, 0.3);
+  --credit-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+  --selection-bg: #ead7a4;
+  --selection-ink: #1c2b24;
+  --foothills: #d7e3d4;
+  --water: #c5d5de;
+  --water-edge: #8eabb8;
+  --map-facade: #e7f0e8;
+  --map-facade-edge: #c5d7c8;
+  --map-dot: #c5d7c8;
+  --btn-bg: #1e4636;
+  --btn-bg-hover: #16352a;
+  --btn-ink: #f7f1e6;
+  --pin-bg: #1e4636;
+  --pin-ink: #f7f1e6;
+  --pin-ring: #f7f1e6;
+  --menu-border: #8a7864;
+  --menu-shadow: 0 0.55rem 1.6rem rgba(42, 32, 22, 0.18);
+  --radius: 2px;
+  --measure: 44rem;
+  --photo-filter: none;
+  --serif: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --muted: #24332c;
+    --gold: #5c420c;
+    --rule: #8d7d68;
+    --menu-border: #4e4336;
+    --menu-shadow: 0 0.45rem 1.2rem rgba(28, 22, 16, 0.28);
+  }
+}
+
+/* Friendly evening. Deep slate page, lighter cards, warm off-white type,
+   sage links, and gold dates. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #243044;
+    --sheet: #3b516b;
+    --ink: #fff6ea;
+    --text: #f4ebdf;
+    --muted: #e6d3c0;
+    --forest: #9fe3c4;
+    --forest-deep: #d4f5e4;
+    --gold: #f2c878;
+    --gold-bright: #f8dba8;
+    --gold-line: #e8b15a;
+    --link: #9fe3c4;
+    --rule: #8ea3b8;
+    --focus: #f2c878;
+    --header-ink: #fff6ea;
+    --on-accent: #10241c;
+    --map-quiet: #31445c;
+    --map-label: #fff6ea;
+    --wash: rgba(159, 227, 196, 0.18);
+    --credit-bg: rgba(20, 32, 48, 0.3);
+    --credit-shadow: 0 0 2px rgba(20, 32, 48, 0.8);
+    --selection-bg: #5c4a28;
+    --selection-ink: #fff6ea;
+    --foothills: #355646;
+    --water: #345e78;
+    --water-edge: #9ec4d6;
+    --map-facade: #3e5672;
+    --map-facade-edge: #9eb8cc;
+    --map-dot: #9eb8cc;
+    --btn-bg: #8fd4b0;
+    --btn-bg-hover: #97dcb8;
+    --btn-ink: #10241c;
+    --pin-bg: #146b45;
+    --pin-ink: #fff6ea;
+    --pin-ring: #fff6ea;
+    --menu-border: #e8b15a;
+    --menu-shadow: 0 0.7rem 1.8rem rgba(12, 20, 32, 0.45);
+  }
+}
+
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  :root {
+    --page: #1b2838;
+    --sheet: #2c4158;
+    --ink: #fffaf3;
+    --text: #fffaf3;
+    --muted: #f3e6d6;
+    --forest: #c6f5dc;
+    --forest-deep: #e7fff3;
+    --gold: #f6d48a;
+    --gold-line: #f6d48a;
+    --link: #c6f5dc;
+    --rule: #d5e2ee;
+    --focus: #f6d48a;
+    --credit-bg: #1b2838;
+    --credit-shadow: none;
+    --menu-border: #f6d48a;
+    --menu-shadow: 0 0.55rem 1.4rem rgba(0, 0, 0, 0.55);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  background: var(--page);
+  text-size-adjust: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--page);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  flex: 1;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+}
+
+p {
+  overflow-wrap: break-word;
+}
+
+a {
+  color: var(--link);
+  text-underline-offset: 0.14em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  filter: var(--photo-filter);
+}
+
+picture {
+  display: block;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -4rem;
+  z-index: 40;
+  padding: 0.45rem 0.7rem;
+  background: var(--sheet);
+  color: var(--ink);
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+.wrap {
+  width: min(100% - 3rem, var(--measure));
+  margin-inline: auto;
+}
+
+/* Compact wordmark on every page. The page H1 sits below it. */
+
+.site-header {
+  position: relative;
+  z-index: 20;
+  padding-top: env(safe-area-inset-top);
+  background: var(--page);
+}
+
+.mast-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.mast-title-row .brand {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.mast-title-row .cities-menu {
+  margin-top: 0;
+}
+
+.home-mast .brand {
+  margin: 0;
+}
+
+.home-mast .brand a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-mast .brand a:hover,
+.home-mast .brand a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.06em;
+}
+
+/* One-line wordmark. The same bar on home, city, hub, and About. */
+.site-header--compact .home-mast {
+  padding: 0;
+}
+
+.site-header--compact .mast-title-row {
+  align-items: center;
+  box-sizing: border-box;
+  height: auto;
+  padding: 1.375rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-header--compact .home-mast .brand {
+  max-width: none;
+  overflow: hidden;
+  color: var(--forest);
+  font-family: var(--sans);
+  font-size: 1.45rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.site-header--compact .cities-menu summary {
+  align-self: stretch;
+  min-height: 0;
+}
+
+
+.cities-menu {
+  position: static;
+  flex: none;
+  margin: 0;
+}
+
+.cities-menu summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.75rem;
+  padding: 0 0.15rem;
+  color: var(--forest);
+  font-family: var(--sans);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  list-style: none;
+  cursor: pointer;
+}
+
+.cities-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.cities-menu summary::after {
+  content: "";
+  width: 0.38rem;
+  height: 0.38rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-0.12rem) rotate(45deg);
+}
+
+.cities-menu[open] summary {
+  color: var(--forest-deep);
+}
+
+.cities-menu[open] summary::after {
+  transform: translateY(0.12rem) rotate(225deg);
+}
+
+/* Card anchored to the Cities button. The list scrolls only when the
+   viewport is shorter than fourteen names, and then a bottom fade marks
+   that more cities follow. */
+.cities-menu .cities-panel {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: calc((100% - min(100% - 3rem, var(--measure))) / 2);
+  z-index: 5;
+  width: min(22.5rem, calc(100vw - 3rem));
+  margin: 0;
+  padding: 0.5rem;
+  background: var(--sheet);
+  border: 1px solid var(--menu-border);
+  border-radius: 0.8rem;
+  box-shadow: var(--menu-shadow);
+}
+
+.cities-menu .cities-panel::before {
+  content: "";
+  position: absolute;
+  top: -0.38rem;
+  right: 1.48rem;
+  width: 0.72rem;
+  height: 0.72rem;
+  background: var(--sheet);
+  border-top: 1px solid var(--menu-border);
+  border-left: 1px solid var(--menu-border);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.cities-menu .cities-panel nav {
+  max-height: calc(100dvh - 6.25rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border-radius: 0.45rem;
+}
+
+.cities-menu .cities-panel nav.has-more {
+  -webkit-mask-image: linear-gradient(#000 0, #000 calc(100% - 1.6rem), transparent);
+  mask-image: linear-gradient(#000 0, #000 calc(100% - 1.6rem), transparent);
+}
+
+.cities-menu .cities-panel ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cities-menu .cities-panel li {
+  display: flex;
+  min-width: 0;
+}
+
+.cities-menu .cities-panel a {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.15;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cities-menu .cities-panel a:hover,
+.cities-menu .cities-panel a:focus-visible {
+  background: var(--wash);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.cities-menu .cities-panel a:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+}
+
+.cities-menu .cities-panel a:active {
+  background: color-mix(in srgb, var(--forest) 16%, var(--sheet));
+  color: var(--ink);
+}
+
+.cities-menu .cities-panel a.is-here,
+.cities-menu .cities-panel a[aria-current="page"] {
+  background: var(--forest);
+  color: var(--on-accent);
+}
+
+.cities-menu .cities-panel a.is-here:hover,
+.cities-menu .cities-panel a.is-here:focus-visible,
+.cities-menu .cities-panel a[aria-current="page"]:hover,
+.cities-menu .cities-panel a[aria-current="page"]:focus-visible,
+.cities-menu .cities-panel a.is-here:active,
+.cities-menu .cities-panel a[aria-current="page"]:active {
+  background: var(--btn-bg-hover);
+  color: var(--on-accent);
+}
+
+@media (max-width: 41.99rem) {
+  .cities-menu .cities-panel {
+    left: 0.75rem;
+    right: 0.75rem;
+    width: auto;
+  }
+
+  .cities-menu .cities-panel::before {
+    right: 2.22rem;
+  }
+}
+
+
+@media (max-width: 42rem) {
+  .site-header--compact .mast-title-row {
+    padding: 0.875rem 0;
+  }
+
+  .site-header--compact .home-mast .brand {
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
+  }
+
+
+  .cities-menu summary {
+    min-height: 2.25rem;
+  }
+}
+
+.page,
+.home,
+.city-home {
+  padding-top: 1.35rem;
+  padding-bottom: 2.75rem;
+}
+
+
+.home-cities h2,
+.prose h2 {
+  margin: 0;
+  scroll-margin-top: 1rem;
+  font-size: 1.45rem;
+  line-height: 1.15;
+}
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.share-button,
+.footer-install,
+.footer-group a {
+  touch-action: manipulation;
+}
+
+
+.city-home .prose h2.event-bucket,
+.hub-section > h2 {
+  margin-top: 0.9rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.prose h1,
+.page h1 {
+  margin: 0 0 0.85rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 2px solid var(--ink);
+  font-size: clamp(2.2rem, 8vw, 2.85rem);
+}
+
+.city-name a,
+.page h1 a,
+.prose h1 a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.city-name a:hover,
+.city-name a:focus-visible,
+.page h1 a:hover,
+.page h1 a:focus-visible,
+.prose h1 a:hover,
+.prose h1 a:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.08em;
+}
+
+
+.prose p,
+.prose ul,
+.prose ol {
+  margin: 0.8rem 0;
+}
+
+.prose a {
+  font-weight: 600;
+}
+
+.site-footer {
+  margin-top: 1.75rem;
+  padding: 0 0 calc(1.85rem + env(safe-area-inset-bottom));
+  border-top: 2px solid var(--ink);
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.site-footer .wrap {
+  padding-top: 1.85rem;
+}
+
+.footer-groups {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.25rem;
+}
+
+.footer-heading {
+  margin: 0 0 0.65rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.footer-group ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-seasons li + li,
+.footer-site li + li {
+  margin-top: 0.15rem;
+}
+
+.footer-cities {
+  columns: 2;
+  column-gap: 1.15rem;
+}
+
+.footer-cities li {
+  break-inside: avoid;
+  margin-bottom: 0.15rem;
+}
+
+.footer-group a,
+.footer-install,
+.footer-family a {
+  color: var(--forest);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.footer-family a {
+  font-weight: 600;
+}
+
+.footer-group a,
+.footer-install,
+.footer-drive {
+  display: inline-flex;
+  align-items: center;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.footer-drive {
+  margin-top: 0.45rem;
+}
+
+.footer-group a:hover,
+.footer-group a:focus-visible,
+.footer-install:hover,
+.footer-install:focus-visible,
+.footer-family a:hover,
+.footer-family a:focus-visible {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.footer-install {
+  margin: 0.15rem 0 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.footer-note {
+  margin-top: 1.85rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+}
+
+.footer-family {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.family-line {
+  margin: 0.15rem 0 1.15rem;
+  color: var(--text);
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.copyright {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+@media (min-width: 42rem) {
+  .footer-groups {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.45fr) minmax(0, 0.95fr);
+    gap: 1.25rem 2rem;
+    align-items: start;
+  }
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-ink);
+}
+
+.hero {
+  position: relative;
+  margin: 0 0 1rem;
+  border-radius: var(--radius);
+}
+
+.hero img,
+.event-photo img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+/* One credit strip for every photo. 0.30 white, full width, rounded
+   with the picture. Type is 0.65rem, about 13% under the old 0.75rem.
+   The halo and blur stay so the ink still reads on the photo. */
+figure figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 0.28rem 0.6rem;
+  background: var(--credit-bg);
+  color: var(--ink);
+  font-size: 0.65rem;
+  line-height: 1.4;
+  text-shadow: var(--credit-shadow);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+figure figcaption a {
+  color: var(--ink);
+  font-size: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
+}
+
+.hero-credit {
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+figure figcaption .source::before {
+  content: "·";
+  margin: 0 0.35rem;
+}
+
+
+.suggest-event {
+  margin: 0.35rem 0 0;
+  padding-top: 0.95rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.suggest-event a {
+  font-weight: 700;
+}
+
+.season-banner {
+  --season-bg: var(--season-bg-light, #f4efe6);
+  --season-ink: var(--season-ink-light, #1a2822);
+  --season-muted: var(--season-muted-light, #3f5148);
+  --season-link: var(--season-link-light, #145c40);
+  height: 2.75rem;
+  margin: 0.875rem 0;
+  overflow: hidden;
+  background: var(--season-bg);
+  color: var(--season-ink);
+}
+
+.season-banner-link {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  height: 2.75rem;
+  color: inherit;
+  font-size: 0.92rem;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.season-banner-link:hover,
+.season-banner-link:focus-visible {
+  text-decoration: none;
+}
+
+.season-banner-link:focus-visible {
+  outline-offset: -2px;
+}
+
+.season-banner-motif,
+.season-banner-motif svg {
+  display: block;
+  width: 1.35rem;
+  height: 1.35rem;
+  flex: none;
+}
+
+.season-banner-title,
+.season-banner-cta {
+  flex: none;
+}
+
+.season-banner-title {
+  font-weight: 700;
+}
+
+.season-banner-hook {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--season-muted);
+  text-overflow: ellipsis;
+}
+
+.season-banner-cta {
+  color: var(--season-link);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .season-banner,
+  .season-banner * {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .season-banner {
+    background: var(--sheet);
+    color: var(--ink);
+    box-shadow: inset 0 -2px 0 var(--ink);
+  }
+
+  .season-banner-hook {
+    color: var(--text);
+  }
+
+  .season-banner-cta {
+    color: var(--link);
+  }
+
+  figure figcaption {
+    background: var(--sheet);
+    color: var(--ink);
+    text-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+.event-photo {
+  position: relative;
+  margin: 0.65rem 0 0.85rem;
+  border-radius: var(--radius);
+}
+
+
+.list-updated {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.prose p.list-updated {
+  margin: 0.15rem 0 0.85rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.saved-note {
+  margin: 0;
+  padding: 0.45rem 1rem;
+  background: var(--sheet);
+  color: var(--gold);
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+}
+
+a.addr {
+  color: var(--link);
+  font-size: inherit;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.addr-pin {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  margin: 0 0.28em 0 0;
+  vertical-align: -0.12em;
+}
+
+a.addr .addr-text {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
+}
+
+.prose .event-place a.addr,
+.hub-card .event-place a.addr {
+  color: var(--link);
+  font-size: inherit;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  .season-banner {
+    --season-bg: var(--season-bg-dark, var(--season-bg-light, #f4efe6));
+    --season-ink: var(--season-ink-dark, var(--season-ink-light, #f6efe4));
+    --season-muted: var(--season-muted-dark, var(--season-muted-light, #d2c3ae));
+    --season-link: var(--season-link-dark, var(--season-link-light, #8fd4b0));
+  }
+
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
+/* Card labels and the free/indoor filters. The controls are in the
+   first HTML, so they do not pop in after load. */
+.event-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.28rem;
+  margin: 0.4rem 0 0.15rem;
+  padding: 0;
+  list-style: none;
+}
+
+.prose .event-tags,
+.hub-card .event-tags,
+.weekend-card .event-tags {
+  margin: 0.4rem 0 0.1rem;
+}
+
+.event-tags li {
+  margin: 0;
+  padding: 0.05rem 0.42rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 650;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+}
+
+.event-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.15rem;
+  margin: 0.15rem 0 0.15rem;
+}
+
+.filter-chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  margin: 0;
+  padding: 0.1rem 0.75rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 650;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.filter-chip input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.filter-chip:has(input:checked) {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--btn-ink);
+}
+
+.filter-chip:has(input:focus-visible) {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.filter-empty {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.prose:has(.flt-free:checked) .event-card:not([data-free]),
+.hub-page:has(.flt-free:checked) .hub-card:not([data-free]) {
+  display: none;
+}
+
+.prose:has(.flt-indoor:checked) .event-card:not([data-indoor]),
+.hub-page:has(.flt-indoor:checked) .hub-card:not([data-indoor]) {
+  display: none;
+}
+
+.hub-page:has(.flt-free:checked):not(:has(.flt-indoor:checked)) .hub-section:not(:has(.hub-card[data-free])),
+.hub-page:not(:has(.flt-free:checked)):has(.flt-indoor:checked) .hub-section:not(:has(.hub-card[data-indoor])),
+.hub-page:has(.flt-free:checked):has(.flt-indoor:checked) .hub-section:not(:has(.hub-card[data-free][data-indoor])) {
+  display: none;
+}
+

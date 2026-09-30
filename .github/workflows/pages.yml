@@ -76,6 +76,9 @@ jobs:
           # CNAME in the published site must stay www.eastsidecalendar.com.
           # The service worker cache name is this commit, so the new worker
           # replaces the previous caches on activate.
+          # rcssmin fingerprints _css into assets/css/<name>.<hash>.css
+          # when Jekyll starts.
+          python3 -m pip install --quiet rcssmin
           printf 'sha: "%s"\n' "$GITHUB_SHA" > _data/build.yml
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 

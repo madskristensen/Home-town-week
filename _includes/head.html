@@ -2,19 +2,11 @@
 <meta charset="utf-8">
 <meta name="color-scheme" content="light dark">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+{%- include stylesheets.html -%}
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-{%- comment -%}
-  WebKit paints a frame before an external stylesheet applies, and it will
-  not paint until every render-blocking sheet in the head has loaded.
-  This style block is the whole author CSS. Do not add a blocking
-  <link rel="stylesheet">. Type is system fonts only.
-{%- endcomment -%}
-<style>
-{%- inline_css /assets/css/site.css -%}
-</style>
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="16x16 32x32 48x48">
 <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="48x48" href="{{ '/assets/images/icon-48.png' | relative_url }}">

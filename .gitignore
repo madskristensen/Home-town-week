@@ -13,6 +13,9 @@ assets/images/og-home.png
 .image-cache/
 _data/image_variants.yml
 _data/build.yml
+# Fingerprinted stylesheets written by script/fingerprint-css.py.
+/assets/css/*.css
+/_data/css.yml
 assets/images/**/*-400.avif
 assets/images/**/*-400.webp
 assets/images/**/*-400.jpg

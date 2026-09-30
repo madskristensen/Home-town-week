@@ -1,0 +1,252 @@
+/* Seasonal hubs, weekend, drop-off, and guide cards. */
+.hub-page > h1 {
+  margin-bottom: 1.4rem;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.hub-intro {
+  margin: 0.85rem 0 0;
+  max-width: 40rem;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.hub-page .list-updated {
+  margin-top: 0.35rem;
+}
+
+.hub-toc {
+  margin: 1rem 0 0;
+}
+
+.hub-toc ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hub-toc a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  min-height: 2.25rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--sheet);
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.hub-toc a:hover,
+.hub-toc a:focus-visible {
+  border-color: var(--forest);
+  text-decoration: none;
+}
+
+.hub-count {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.hub-section {
+  margin-top: 1.6rem;
+}
+
+.hub-section > h2 {
+  scroll-margin-top: 0.75rem;
+  font-size: clamp(1.7rem, 4vw, 2.05rem);
+  line-height: 1.15;
+}
+
+.hub-section-intro {
+  margin: 0.45rem 0 0;
+  max-width: 40rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  gap: 1.35rem;
+  margin-top: 0.9rem;
+}
+
+.hub-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.hub-card .event-photo {
+  margin: 0 0 0.55rem;
+  aspect-ratio: 16 / 9;
+}
+
+.hub-card .event-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hub-card h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.hub-card h3 a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.hub-card h3 a:hover,
+.hub-card h3 a:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.08em;
+}
+
+.hub-card .event-when {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0.25rem 0 0;
+  color: var(--gold);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.hub-card .event-place {
+  margin: 0.15rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.hub-card .event-place a.place-town,
+.hub-card .event-place span.place-town {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hub-card .event-place .drive-time::before {
+  content: " · ";
+}
+
+.hub-card .event-place a.place-town:hover,
+.hub-card .event-place a.place-town:focus-visible {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.hub-blurb {
+  margin: 0.35rem 0 0;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.hub-card .event-cals {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+}
+
+.hub-card a.event-cal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  min-height: 2rem;
+  padding: 0.15rem 0.25rem;
+  border-radius: 2px;
+  color: var(--link);
+  text-decoration: none;
+}
+
+.hub-card a.event-cal:hover,
+.hub-card a.event-cal:focus-visible {
+  background: var(--wash);
+  text-decoration: none;
+}
+
+.hub-card .cal-icon {
+  display: block;
+  width: 1.15em;
+  height: 1.15em;
+  flex: none;
+}
+
+@media (max-width: 41.99rem) {
+  .hub-grid {
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 42rem) {
+  .hub-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.35rem 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .hub-page {
+    --season-bg: var(--season-bg-dark, var(--season-bg-light, #f09a3a));
+    --season-ink: var(--season-ink-dark, var(--season-ink-light, #3a220c));
+    --season-muted: var(--season-muted-dark, var(--season-muted-light, #4a2a0c));
+    --season-link: var(--season-link-dark, var(--season-link-light, #083422));
+  }
+
+  .hub-toc a {
+    background: var(--season-bg);
+    border-color: transparent;
+    color: var(--season-ink);
+  }
+
+  .hub-toc .hub-count {
+    color: var(--season-muted);
+  }
+
+  .hub-toc a:hover,
+  .hub-toc a:focus-visible {
+    background: var(--season-bg);
+    border-color: var(--season-ink);
+    color: var(--season-ink);
+  }
+}
+
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  .hub-toc a,
+  .hub-toc a:hover,
+  .hub-toc a:focus-visible {
+    background: var(--sheet);
+    border-color: var(--ink);
+    color: var(--ink);
+  }
+
+  .hub-toc .hub-count {
+    color: var(--ink);
+  }
+}

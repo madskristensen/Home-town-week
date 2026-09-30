@@ -1,0 +1,333 @@
+/* City page: name, hero, event list, share, and nearby towns. */
+.city-page-head {
+  margin: 0 0 0.75rem;
+}
+
+.city-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.city-logo {
+  width: 4.25rem;
+  height: 4.25rem;
+  flex: none;
+  margin-top: 0.15rem;
+  object-fit: contain;
+}
+
+.city-heading-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.city-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.city-name-row .city-name {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.city-name-row .issue-share {
+  flex: none;
+}
+
+.city-name-row .share-button {
+  min-height: 2.15rem;
+  padding: 0.28rem 0.65rem;
+  font-size: 0.85rem;
+}
+
+.city-name {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(2.55rem, 10vw, 3.4rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 0.96;
+}
+
+.city-kicker {
+  margin: 0.45rem 0 0;
+  max-width: 40rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+.also-close {
+  margin: 1.35rem 0 0;
+  padding-top: 0.95rem;
+  border-top: 1px solid var(--rule);
+}
+
+.also-close h2 {
+  margin: 0 0 0.45rem;
+  color: var(--forest);
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.also-close ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.also-close a {
+  color: var(--forest);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.also-close a:hover,
+.also-close a:focus-visible {
+  color: var(--link);
+  text-decoration: underline;
+}
+.hook {
+  margin: 0.35rem 0 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+}
+
+.dek {
+  margin: 0 0 0.9rem;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.city-home .prose {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1.7rem;
+}
+
+.city-home .prose h2 {
+  margin: 0;
+}
+
+.city-home .prose .list-updated {
+  margin: 0;
+}
+
+.prose h3 {
+  margin: 0;
+  font-size: 1.28rem;
+  line-height: 1.22;
+}
+
+.prose .event-when {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0.3rem 0 0.1rem;
+  color: var(--gold);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.prose .event-place {
+  margin: 0.2rem 0 0.1rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.event-card {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--text);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow-wrap: break-word;
+}
+
+.city-home .event-card + .event-card {
+  margin-top: 1.15rem;
+}
+
+@media (max-width: 41.99rem) {
+  /* The column already has a 0.85rem gap, so this margin makes 2.5rem
+     between stacked event cards. */
+  .city-home .event-card + .event-card {
+    margin-top: 1.65rem;
+  }
+}
+
+.city-home .event-card h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.32rem;
+  line-height: 1.2;
+}
+
+.city-home .event-card > :first-child {
+  margin-top: 0;
+}
+
+.city-home .event-card > :last-child {
+  margin-bottom: 0;
+}
+
+.city-home .event-card > p:not(.event-when):not(.event-place) {
+  margin: 0.55rem 0;
+}
+
+.city-home .event-card > p.event-links {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.event-card a.event-source {
+  color: var(--link);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
+}
+
+.city-home .event-card .event-photo {
+  margin: 0.65rem 0 0.1rem;
+}
+
+.prose .event-cals {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.1rem 0.2rem;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+}
+
+.prose a.event-cal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  min-width: 2rem;
+  min-height: 2rem;
+  padding: 0.15rem 0.25rem;
+  border-radius: 2px;
+  color: var(--link);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.prose a.event-cal:hover,
+.prose a.event-cal:focus-visible {
+  background: var(--wash);
+  text-decoration: none;
+}
+
+.prose .cal-icon {
+  display: block;
+  width: 1.15em;
+  height: 1.15em;
+  flex: none;
+}
+
+.prose .event-cal-when {
+  line-height: 1.2;
+}
+.issue-share {
+  margin: 0;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 2.5rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--forest);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--forest);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.share-button:hover,
+.share-button:focus-visible {
+  background: var(--forest);
+  color: var(--on-accent);
+}
+
+.share-icon {
+  display: block;
+  width: 0.95rem;
+  height: 0.95rem;
+  flex: none;
+}
+
+@media (max-width: 36rem) {
+  .city-name-row .share-button {
+    width: 2.15rem;
+    padding: 0;
+  }
+
+  .city-name-row .share-button:not(.is-copied) [data-label] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .city-name-row .share-button.is-copied {
+    width: auto;
+    padding: 0.28rem 0.65rem;
+  }
+}
+
+.share-status:not(.visually-hidden) {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.share-copy-buffer {
+  position: fixed;
+  left: -9999px;
+  top: 0;
+}
