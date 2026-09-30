@@ -10,7 +10,11 @@ __pycache__/
 # Widths written by the Pages workflow. One source image stays in git.
 # Home share card, drawn from the Eastside map during the Pages build.
 assets/images/og-home.png
+assets/images/share/
+.share-cache/
+_data/share_manifest.yml
 .image-cache/
+node_modules
 _data/image_variants.yml
 _data/build.yml
 # Fingerprinted stylesheets written by script/fingerprint-css.py.

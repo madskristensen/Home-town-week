@@ -1,0 +1,94 @@
+# Share-card photos for pages that are not a city. The Pages build draws
+# a 1200x630 card from each photo. City cards come from cities.yml heroes.
+# CC0 and public domain omit the credit line. Other licenses keep it.
+- id: fall
+  path: /fall/
+  title: Fall fun on the Eastside
+  image: /assets/images/themes/pumpkin-field.webp
+  alt: Rows of orange pumpkins in a field.
+  credit: "Photo: Rodney Campbell, CC BY 2.0"
+  license: CC BY 2.0
+- id: christmas
+  path: /christmas/
+  title: Christmas on the Eastside
+  image: /assets/images/hubs/christmas/christmas-tree-lights.jpg
+  alt: A Christmas tree covered in blue and white lights at night.
+  credit: "Photo: Hullian111, CC BY-SA 4.0"
+  license: CC BY-SA 4.0
+- id: easter
+  path: /easter/
+  title: Easter on the Eastside
+  image: /assets/images/hubs/easter/daffodils.webp
+  alt: A field of yellow daffodils.
+  credit: "Photo: Richard Humphrey, CC BY-SA 2.0"
+  license: CC BY-SA 2.0
+- id: fourth
+  path: /fourth/
+  title: Fourth of July on the Eastside
+  image: /assets/images/hubs/fourth/fireworks-sky.webp
+  alt: White and gold fireworks against the night sky.
+  credit: "Photo: 些細な日常, CC BY-SA 4.0"
+  license: CC BY-SA 4.0
+- id: lunar-new-year
+  path: /lunar-new-year/
+  title: Lunar New Year on the Eastside
+  image: /assets/images/hubs/lunar-new-year/lanterns-temple.webp
+  alt: Colorful paper lanterns hanging in a temple courtyard.
+  credit: "Photo: Basile Morin, CC BY-SA 4.0"
+  license: CC BY-SA 4.0
+- id: diwali
+  path: /diwali/
+  title: Diwali on the Eastside
+  image: /assets/images/hubs/diwali/diyas-row.webp
+  alt: A row of lit clay oil lamps.
+  credit: "Photo: PilotChicago, CC BY-SA 4.0"
+  license: CC BY-SA 4.0
+- id: dia-de-los-muertos
+  path: /dia-de-los-muertos/
+  title: Dia de los Muertos on the Eastside
+  image: /assets/images/hubs/dia-de-los-muertos/marigold-garden.webp
+  alt: A garden bed of orange marigolds.
+  credit: "Photo: George Chernilevsky, public domain"
+  license: Public domain
+- id: winter
+  path: /winter/
+  title: Winter break on the Eastside
+  image: /assets/images/hubs/winter/snow-path.webp
+  alt: A snowy path through a winter forest.
+  credit: "Photo: Fagev869, CC0"
+  license: CC0
+- id: rainy-day
+  path: /rainy-day/
+  title: Rainy day plans on the Eastside
+  image: /assets/images/hubs/rainy-day/rain-pane.webp
+  alt: Raindrops on a window pane.
+  credit: "Photo: Theactivistuk, CC BY-SA 4.0"
+  license: CC BY-SA 4.0
+- id: worth-the-drive
+  path: /worth-the-drive/
+  title: Worth the drive
+  image: /assets/images/themes/corn-maze-aerial.jpg
+  alt: A corn maze in a green field, seen from a nearby hill.
+  credit: "Photo: Karsten Eggert, CC BY-SA 3.0"
+  license: CC BY-SA 3.0
+- id: this-weekend
+  path: /this-weekend/
+  title: This weekend on the Eastside
+  image: /assets/images/guides/pine-lake.jpg
+  alt: Play structure and swings at Pine Lake Park in Sammamish.
+  credit: "Photo: City of Sammamish"
+  license: City of Sammamish
+- id: playgrounds
+  path: /guides/playgrounds/
+  title: Playground map
+  image: /assets/images/guides/grass-lawn.jpg
+  alt: Play structure and swings at Grass Lawn Park in Redmond.
+  credit: "Photo: HominyGrits007, CC BY-SA 4.0"
+  license: CC BY-SA 4.0
+- id: christmas-lights
+  path: /christmas/lights/
+  title: Christmas lights map
+  image: /assets/images/hubs/christmas/lights-color.webp
+  alt: Soft circles of red, green, and gold Christmas lights.
+  credit: "Photo: Thomas M Bishop, CC BY-SA 4.0"
+  license: CC BY-SA 4.0

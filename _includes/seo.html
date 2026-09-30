@@ -15,7 +15,19 @@
   render the header SVG.
 {%- endcomment -%}
 {%- assign hero_image = city.hero.image | append: "" -%}
-{%- if page.layout == "home" -%}
+{%- assign share_card = nil -%}
+{%- for card in site.data.share_manifest -%}
+  {%- if card.path == page.url -%}
+    {%- assign share_card = card -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if share_card -%}
+  {%- assign seo_image_path = share_card.image -%}
+  {%- assign seo_image_alt = share_card.alt -%}
+  {%- assign seo_image_width = 1200 -%}
+  {%- assign seo_image_height = 630 -%}
+  {%- assign seo_image_mime = "image/jpeg" -%}
+{%- elsif page.layout == "home" -%}
   {%- assign seo_image_path = site.image -%}
   {%- assign seo_image_alt = site.image_alt -%}
   {%- assign seo_image_width = 1200 -%}

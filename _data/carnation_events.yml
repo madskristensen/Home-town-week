@@ -2,6 +2,7 @@
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
 - name: "Jubilee Farm Harvest Festival"
+  setting: "Outdoor"
   tags: [harvest, pumpkin-patch]
   start: "2026-10-01"
   end: "2026-10-31"
@@ -54,6 +55,7 @@
   place: "Carnation Library, 4804 Tolt Avenue"
   same_as: "https://kcls.bibliocommons.com/v2/events/6ab1bdf8ca248a00291777f5"
 - name: "Habitat Restoration Day"
+  setting: "Outdoor"
   start: "2026-10-10T10:00:00-07:00"
   end: "2026-10-10T14:00:00-07:00"
   place: "Carnation Farms, 8901 NE Carnation Farm Road"

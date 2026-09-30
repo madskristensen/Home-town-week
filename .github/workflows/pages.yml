@@ -67,6 +67,34 @@ jobs:
           python3 -m pip install --quiet Pillow
           python3 script/render-home-og.py
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Fingerprint share cards
+        id: share
+        run: echo "hash=$(node script/render-share-cards.mjs --fingerprint)" >> "$GITHUB_OUTPUT"
+
+      - name: Restore share card cache
+        uses: actions/cache@v4
+        with:
+          path: .share-cache
+          key: share-cards-v1-${{ steps.share.outputs.hash }}
+          restore-keys: |
+            share-cards-v1-
+
+      - name: Render share cards
+        run: |
+          # 1200x630 cards for cities, hubs, and the two maps. Unchanged
+          # photos are copied from the cache. The JPEGs are not committed.
+          if [ -f .share-cache/fingerprint ] && [ "$(tr -d '\n' < .share-cache/fingerprint)" = "${{ steps.share.outputs.hash }}" ]; then
+            node script/render-share-cards.mjs --from-cache
+          else
+            npm install --no-save --silent sharp@0.34.4 satori@0.18.3 @resvg/resvg-js@2.6.2
+            node script/render-share-cards.mjs
+          fi
+
       - name: Build with Jekyll
         env:
           JEKYLL_ENV: production
