@@ -661,6 +661,12 @@ picture {
   line-height: 1.4;
 }
 
+@media (max-width: 41.99rem) {
+  .weekend-grid {
+    gap: 2.5rem;
+  }
+}
+
 @media (min-width: 42rem) {
   .weekend-grid {
     grid-template-columns: 1fr 1fr;
@@ -1102,6 +1108,14 @@ figure figcaption .source::before {
   margin-top: 1.15rem;
 }
 
+@media (max-width: 41.99rem) {
+  /* The column already has a 0.85rem gap, so this margin makes 2.5rem
+     between stacked event cards. */
+  .city-home .event-card + .event-card {
+    margin-top: 1.65rem;
+  }
+}
+
 .city-home .event-card h3 {
   margin: 0;
   color: var(--ink);
@@ -1447,6 +1461,12 @@ figure figcaption .source::before {
   width: 1.15em;
   height: 1.15em;
   flex: none;
+}
+
+@media (max-width: 41.99rem) {
+  .hub-grid {
+    gap: 2.5rem;
+  }
 }
 
 @media (min-width: 42rem) {

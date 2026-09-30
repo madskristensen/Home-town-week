@@ -19,7 +19,7 @@ Mayor Mayhew is at the ice cream shop in historic downtown for an hour of ice cr
 <p class="event-when">Weekends through Sat Oct 31 · Fri–Sat 10:00 a.m.–6:00 p.m., Sun 10:00 a.m.–5:00 p.m.</p>
 <p class="event-place">Fall City Farms, 3636 Neal Road, Fall City</p>
 
-Fall City has no city page of its own, so the farm is listed here. The patch is open Friday through Sunday from Sep 26 through Oct 31. The farm serves hot mini doughnuts and cider, and visitors can see the animals and pick a pumpkin. Leave pets at home.
+A pumpkin patch for families, with animals to see and hot mini doughnuts and cider. Open Friday through Sunday from Sep 26 through Oct 31. Leave pets at home.
 
 [Pumpkin patch](https://fallcityfarms.com/pumpkin-patch/)
 

@@ -255,7 +255,7 @@
         {%- break -%}
       {%- endfor -%}
     {%- endif -%}
-    {%- assign blurb = blurb | strip_html | truncate: 170 -%}
+    {%- assign blurb = blurb | card_blurb -%}
     {%- assign slug = event.name | slugify -%}
     {%- capture event_href -%}/{{ cid }}/#{{ slug }}{%- endcapture -%}
     {%- assign event_href = event_href | strip -%}

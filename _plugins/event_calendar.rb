@@ -74,13 +74,56 @@ module EastsideCalendar
       text = text.gsub(/\{%.*?%\}/m, "\n")
       text = text.gsub(/\{\{.*?\}\}/m, "\n")
       text = text.gsub(%r{<p class="event-(?:when|place)">.*?</p>}mi, "\n")
-      text = text.gsub(/<[^>]+>/, " ")
-      text = text.gsub(/\[([^\]]+)\]\(([^)\s]+)\)/, '\1 (\2)')
+      text = drop_source_marks(text)
       text = text.gsub(/[*_]+/, "")
       text = text.gsub(/[ \t]+/, " ")
       text = text.gsub(/ *\n */, " ")
       text = text.gsub(/ {2,}/, " ").strip
-      cap_text(text, 900)
+      cap_text(visitor_sentences(text).join(" "), 900)
+    end
+
+    # One short blurb for a card. Drops source-link tails and notes about
+    # other pages. Keeps what the event is.
+    def card_blurb(input)
+      text = visitor_sentences(drop_source_marks(input)).join(" ")
+      return "" if text.empty?
+      return text if text.length <= 170
+
+      cut = text[0, 167]
+      spot = cut.rindex(" ")
+      trimmed = spot && spot > 40 ? cut[0, spot] : cut
+      "#{trimmed.rstrip.sub(/[,:;]\z/, "")}..."
+    end
+
+    def drop_source_marks(text)
+      raw = text.to_s
+      raw = raw.gsub(/<a\b[^>]*>.*?<\/a>/mi, " ")
+      raw = raw.gsub(/<br\s*\/?>/i, "\n")
+      raw = raw.gsub(/<[^>]+>/, " ")
+      raw = raw.gsub(/\[[^\]]+\]\([^)]+\)/, " ")
+      CGI.unescapeHTML(raw)
+    end
+
+    def visitor_sentences(text)
+      cleaned = text.to_s.gsub(/\s+/, " ").strip
+      return [] if cleaned.empty?
+
+      cleaned.split(/(?<=[.!?])\s+/).map(&:strip).reject(&:empty?).reject do |line|
+        meta_note?(line) || source_fragment?(line)
+      end
+    end
+
+    def meta_note?(sentence)
+      text = sentence.to_s.downcase
+      text.include?("city page") || text.include?("listed here") || text.include?("this calendar")
+    end
+
+    def source_fragment?(sentence)
+      text = sentence.to_s.strip
+      return true if text.empty? || text.match?(/\A[·\s]+\z/)
+      return false if text.match?(/[.!?]/)
+
+      text.match?(/·/) || (text.length < 90 && text.match?(/\bposts\z/i))
     end
 
     def cap_text(text, max)
@@ -1037,4 +1080,13 @@ module EastsideCalendar
   end
 end
 
+module EastsideCalendar
+  module CardBlurbFilter
+    def card_blurb(input)
+      EventCalendar.card_blurb(input)
+    end
+  end
+end
+
 Liquid::Template.register_filter(EastsideCalendar::MailEscape)
+Liquid::Template.register_filter(EastsideCalendar::CardBlurbFilter)

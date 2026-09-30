@@ -901,7 +901,7 @@ module EastsideCalendar
       return "" if text.empty?
 
       sentences = text.split(/(?<=[.!?])\s+/).map(&:strip).reject(&:empty?)
-      sentence = sentences.find { |line| !meta_sentence?(line) } || sentences.first.to_s
+      sentence = sentences.find { |line| !meta_sentence?(line) && !EventCalendar.source_fragment?(line) } || ""
       return sentence if sentence.length <= 150
 
       cut = sentence[0, 148]
