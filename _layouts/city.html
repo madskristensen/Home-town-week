@@ -57,8 +57,10 @@ layout: default
   </div>
   {%- else -%}
   <p id="list-updated" class="list-updated">Events updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
-  <p>No upcoming events are listed yet.</p>
+  {%- include empty-suggest.html topic=city.name name=city.name -%}
   {%- endif -%}
+  {%- if event_copy != "" -%}
   {%- include suggest-event.html -%}
+  {%- endif -%}
   {%- include nearby-cities.html -%}
 </article>

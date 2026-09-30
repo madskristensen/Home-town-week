@@ -4,8 +4,18 @@ layout: default
 <article class="page wrap prose guide-page">
   <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
   <p class="guide-intro">{{ page.intro }}</p>
+  {%- assign guide = site.data.guides[page.guide_id] -%}
+  {%- assign guide_count = guide.entries | size -%}
+  {%- if guide_count == 0 -%}
+  {%- if page.guide_id == "story-times" -%}
+  {%- include empty-suggest.html opening="No story times are listed yet." name="library story times" -%}
+  {%- elsif page.guide_id == "playgrounds" -%}
+  {%- include empty-suggest.html opening="No playgrounds are listed yet." name="playgrounds" -%}
+  {%- else -%}
+  {%- include empty-suggest.html topic=page.title name=page.title -%}
+  {%- endif -%}
+  {%- else -%}
   <div class="hub-grid">
-    {%- assign guide = site.data.guides[page.guide_id] -%}
     {%- for entry in guide.entries -%}
     <article class="hub-card">
       {%- include event-photo.html
@@ -21,4 +31,5 @@ layout: default
     </article>
     {%- endfor -%}
   </div>
+  {%- endif -%}
 </article>

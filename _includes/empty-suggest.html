@@ -1,0 +1,33 @@
+{%- assign empty_mode = include.mode | append: "" | strip -%}
+{%- assign empty_name = include.name | append: "" | strip -%}
+{%- assign empty_topic = include.topic | append: "" | strip -%}
+{%- assign empty_opening = include.opening | append: "" | strip -%}
+{%- capture empty_ask -%}Know of one? Or a school, library, church or neighborhood group with a family events calendar we should be checking? Tell us and we'll add it.{%- endcapture -%}
+{%- if empty_mode == "missing" -%}
+  {%- assign mail_subject = "Suggestion from the 404 page" -%}
+{%- elsif empty_name.size > 0 -%}
+  {%- capture mail_subject -%}Suggestion for {{ empty_name }}{%- endcapture -%}
+{%- else -%}
+  {%- capture mail_subject -%}Suggestion for {{ page.title | strip }}{%- endcapture -%}
+{%- endif -%}
+{%- capture mail_body -%}Event or calendar link:
+Town:
+Date:{%- endcapture -%}
+<div class="empty-suggest{% if empty_mode == "filter" %} filter-empty{% endif %}"{% if empty_mode == "filter" %} hidden{% endif %}>
+  {%- if empty_mode == "missing" -%}
+  <p>We couldn't find that page. Maybe it moved, or the event already happened.</p>
+  <nav class="empty-links" aria-label="Try these pages">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/this-weekend/' | relative_url }}">This weekend</a>
+    <a href="#cities-menu">Cities</a>
+  </nav>
+  <p>Looking for something we don't list? Tell us about an event or calendar we should be checking.</p>
+  {%- elsif empty_mode == "filter" -%}
+  <p>Nothing in this list matches. {{ empty_ask }}</p>
+  {%- elsif empty_opening.size > 0 -%}
+  <p>{{ empty_opening }} {{ empty_ask }}</p>
+  {%- else -%}
+  <p>No {{ empty_topic }} events are listed yet. {{ empty_ask }}</p>
+  {%- endif -%}
+  <a class="empty-suggest-btn" href="mailto:suggestions@eastsidecalendar.com?subject={{ mail_subject | strip | mail_escape }}&amp;body={{ mail_body | strip | mail_escape }}">Suggest an event or calendar</a>
+</div>

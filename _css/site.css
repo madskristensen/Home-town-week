@@ -851,6 +851,60 @@ figure figcaption .source::before {
   font-weight: 700;
 }
 
+.empty-suggest {
+  margin: 1rem 0 0.25rem;
+  max-width: 40rem;
+}
+
+.empty-suggest p,
+.prose .empty-suggest p {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.empty-suggest p + p,
+.prose .empty-suggest p + p {
+  margin-top: 0.85rem;
+}
+
+.empty-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.15rem;
+  margin: 0.85rem 0 0;
+}
+
+.empty-links a {
+  font-weight: 700;
+}
+
+.empty-suggest-btn,
+.prose a.empty-suggest-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  margin-top: 0.85rem;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius);
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.empty-suggest-btn:hover,
+.empty-suggest-btn:focus-visible,
+.prose a.empty-suggest-btn:hover,
+.prose a.empty-suggest-btn:focus-visible {
+  background: var(--btn-bg-hover);
+  color: var(--btn-ink);
+  text-decoration: none;
+}
+
 .season-banner {
   --season-bg: var(--season-bg-light, var(--bg));
   --season-ink: var(--season-ink-light, var(--text));
@@ -1161,9 +1215,7 @@ a.addr .addr-text {
 }
 
 .filter-empty {
-  margin: 0.4rem 0 0;
-  color: var(--muted);
-  font-size: 0.95rem;
+  margin-top: 0.85rem;
 }
 
 .prose:has(.flt-free:checked) .event-card:not([data-free]),

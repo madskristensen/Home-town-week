@@ -25,7 +25,13 @@ layout: default
   {%- assign hub_sections = hub.sections -%}
   {%- assign section_count = hub_sections | size -%}
   {%- if section_count == 0 -%}
-  <p>{{ hub.empty }}</p>
+  {%- if hub.id == "this-weekend" -%}
+  {%- include empty-suggest.html opening="No events are listed for this Friday, Saturday, or Sunday yet." name="this weekend" -%}
+  {%- elsif hub.id == "worth-the-drive" -%}
+  {%- include empty-suggest.html opening="No trips worth the drive are listed yet." name="worth the drive" -%}
+  {%- else -%}
+  {%- include empty-suggest.html topic=hub.footer_label name=hub.footer_label -%}
+  {%- endif -%}
   {%- else -%}
   {%- include event-filters.html -%}
   <nav class="hub-toc" aria-label="On this page">

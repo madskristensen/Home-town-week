@@ -27,5 +27,5 @@
   </label>
   {%- endif -%}
 </div>
-<p class="filter-empty" hidden>Nothing in this list matches.</p>
+{%- include empty-suggest.html mode="filter" name=page.title -%}
 {%- endif -%}
