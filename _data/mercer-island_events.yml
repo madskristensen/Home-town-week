@@ -23,6 +23,7 @@
   place: "Mercer Island Library, 4400 88th Ave SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a727c39cca66c2f00a841fd"
 - name: "Restoration Event | Island Crest Park"
+  cost: "Free"
   setting: "Outdoor"
   signup: true
   start: "2026-10-01T10:00:00-07:00"
@@ -47,6 +48,8 @@
   end: "2026-10-02T11:00:00-07:00"
   same_as: "https://www.mercerisland.gov/yfs/page/stay-active-independent-life-sail-fitness-class-1"
 - name: "Restoration Event | Gallagher Hill"
+  cost: "Free"
+  ages: "All ages"
   setting: "Outdoor"
   signup: true
   start: "2026-10-03T10:00:00-07:00"
@@ -73,6 +76,8 @@
   end: "2026-10-05T11:00:00-07:00"
   same_as: "https://www.mercerisland.gov/yfs/page/stay-active-independent-life-sail-fitness-class-1"
 - name: "Mindfulness Walk | Pioneer Park SE"
+  cost: "Free"
+  setting: "Outdoor"
   start: "2026-10-06T11:00:00-07:00"
   end: "2026-10-06T12:00:00-07:00"
   same_as: "https://www.npr.org/2023/08/22/1195337204/a-guide-to-forest-bathing"
@@ -100,6 +105,7 @@
   end: "2026-10-07T16:00:00-07:00"
   same_as: "https://www.mercerisland.gov/yfs/page/hopelink-mobile-food-market-1st-wednesday"
 - name: "Restoration Event | Native Plant Nursery"
+  cost: "Free"
   setting: "Outdoor"
   signup: true
   start: "2026-10-08T12:00:00-07:00"
@@ -160,6 +166,8 @@
   place: "Pioneer Park NW, Island Crest Way and SE 68th St"
   same_as: "https://www.mercerisland.gov/parksrec/page/nature-journaling-pioneer-park-1"
 - name: "Town Center Trick or Treat"
+  cost: "Free"
+  setting: "Outdoor"
   tags: [halloween]
   start: "2026-10-30T16:00:00-07:00"
   end: "2026-10-30T18:00:00-07:00"
