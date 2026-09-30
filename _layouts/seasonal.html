@@ -1,9 +1,20 @@
 ---
 layout: default
 ---
+{%- if page.home_lights -%}
+<article class="page wrap hub-page">
+  <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
+  <p class="hub-intro">{{ page.intro }}</p>
+  <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
+  {%- include home-lights.html -%}
+</article>
+{%- else -%}
 {%- assign hub = site.data.hub_pages[page.hub_id] -%}
 <article class="page wrap hub-page">
   <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
+  {%- if page.hub_id == "christmas" -%}
+  {%- include lights-feature.html -%}
+  {%- endif -%}
   <p class="hub-intro">{{ hub.intro }}</p>
   <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   {%- assign suggest_lead = hub.suggest_lead | append: "" -%}
@@ -97,3 +108,4 @@ layout: default
   {%- endfor -%}
   {%- endif -%}
 </article>
+{%- endif -%}

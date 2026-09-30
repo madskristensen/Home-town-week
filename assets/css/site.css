@@ -1538,6 +1538,247 @@ a.addr .addr-text {
   text-decoration: none;
 }
 
+.lights-feature {
+  margin: 0 0 1.15rem;
+  background: #e7f0e8;
+  border: 1px solid #c5d7c8;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.home .lights-feature {
+  margin-bottom: 1.75rem;
+}
+
+.lights-feature-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.lights-feature-photo {
+  margin: 0;
+  aspect-ratio: 16 / 9;
+}
+
+.lights-feature-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.lights-feature-copy {
+  padding: 0.9rem 1rem 1rem;
+}
+
+.lights-feature-kicker {
+  margin: 0;
+  color: #6b4e0e;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.lights-feature-title {
+  margin: 0.25rem 0 0;
+  color: #1a2822;
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 3vw, 1.85rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.lights-feature-line {
+  margin: 0.4rem 0 0;
+  max-width: 36rem;
+  color: #3f5148;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.lights-feature-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  margin-top: 0.85rem;
+  padding: 0.35rem 1rem;
+  background: #1e4636;
+  color: #f7f1e6;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.lights-feature-btn:hover,
+.lights-feature-btn:focus-visible {
+  background: #16352a;
+  color: #f7f1e6;
+  text-decoration: none;
+}
+
+.home-map-frame {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  margin-top: 0.35rem;
+  overflow: hidden;
+  border: 1px solid #c5d7c8;
+  border-radius: var(--radius);
+  background: #e7f0e8;
+}
+
+.home-map-canvas,
+.home-map-poster {
+  position: absolute;
+  inset: 0;
+}
+
+.home-map-canvas {
+  width: 100%;
+  height: 100%;
+  background: #e7f0e8;
+}
+
+.home-map-poster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: #e7f0e8;
+  background-image: radial-gradient(#c5d7c8 1.1px, transparent 1.1px);
+  background-size: 18px 18px;
+}
+
+.home-map-count {
+  margin: 0;
+  color: #1a2822;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.home-map-poster button {
+  min-height: 2.75rem;
+  padding: 0.35rem 1.1rem;
+  border: 0;
+  border-radius: var(--radius);
+  background: #1e4636;
+  color: #f7f1e6;
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.home-map-poster button:hover,
+.home-map-poster button:focus-visible {
+  background: #16352a;
+}
+
+.home-map-poster button:disabled {
+  cursor: progress;
+}
+
+.home-map-error {
+  margin: 0;
+  max-width: 18rem;
+  color: #6b4e0e;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.home-map-note {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.home-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #f7f1e6;
+  border-radius: 999px;
+  background: #1e4636;
+  color: #f7f1e6;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 1px 2px rgba(26, 40, 34, 0.35);
+}
+
+.home-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  margin-right: 0.35rem;
+  border-radius: 999px;
+  background: #1e4636;
+  color: #f7f1e6;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+  vertical-align: 0.12em;
+}
+
+.home-hours {
+  margin: 0.15rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.home-source {
+  margin: 0.4rem 0 0;
+  font-size: 0.85rem;
+}
+
+.home-source a {
+  font-weight: 600;
+}
+
+.leaflet-container {
+  font-family: var(--sans);
+}
+
+@media (min-width: 42rem) {
+  .lights-feature-layout {
+    grid-template-columns: 22rem minmax(0, 1fr);
+  }
+}
+
+@media (prefers-contrast: more) {
+  .lights-feature,
+  .home-map-frame,
+  .home-map-poster {
+    background: #fff;
+    background-image: none;
+    border-color: #1a2822;
+  }
+
+  .lights-feature-line,
+  .home-map-note {
+    color: #1a2822;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

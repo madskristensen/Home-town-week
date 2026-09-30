@@ -14,12 +14,13 @@ Newcastle is an Eastside city that does not have a page yet. Do not invent a pag
 | City | `/{city}/`, for example `/redmond/` |
 | About | `/about/` |
 | Seasonal hub | One path per hub in `_data/seasonal_hubs.yml`, for example `/fall/` and `/christmas/` |
+| Christmas lights map | `/christmas/lights/` |
 | Feed | `/feed.xml` |
 | LLM guide | `/llms.txt` |
 
 `llms.txt` is written at build time from `_data/cities.yml` and `_data/seasonal_hubs.yml`. It lists each city page, the about page, each seasonal hub, and the sitemap. It says the blurbs are original and link to sources. It does not include upcoming-event counts. Do not maintain it by hand.
 
-Seasonal hubs are generated from `_data/seasonal_hubs.yml`. Each hub stays up all year. A section appears only when it has something to list. The home page does not get a separate seasonal note. One banner under the masthead links to the hub that is in season and has enough upcoming events. See [Seasonal cross-check](#seasonal-cross-check). There is no `/halloween/` page. Halloween is the `/fall/#halloween` section. There is no `/holiday-lights/` page. Dated public light displays are events in the Holiday lights section of `/christmas/`. See [Holiday lights](#holiday-lights).
+Seasonal hubs are generated from `_data/seasonal_hubs.yml`. Each hub stays up all year. A section appears only when it has something to list. The home page does not get a separate seasonal note. One banner under the masthead links to the hub that is in season and has enough upcoming events. See [Seasonal cross-check](#seasonal-cross-check). There is no `/halloween/` page. Halloween is the `/fall/#halloween` section. There is no `/holiday-lights/` page. Dated public light displays are events in the Holiday lights section of `/christmas/`. Homes and neighborhood streets are on `/christmas/lights/`. See [Holiday lights](#holiday-lights) and [Christmas lights map](#christmas-lights-map).
 
 City URLs have no state segment and no year or week segment. Old addresses are not redirected.
 
@@ -86,9 +87,21 @@ The full tag vocabulary, with the season stored on each hub:
 
 ### Holiday lights
 
-A public light display with published dates for this season is an ordinary event. Write it on the city page, tag it `holiday-lights`, and it shows in the Holiday lights section of `/christmas/` with the other event cards. The place line is the map link. There is no `/christmas/#lights` section, no town tabs, and no separate lights page.
+A public light display with published dates for this season is an ordinary event. Write it on the city page, tag it `holiday-lights`, and it shows in the Holiday lights section of `/christmas/` with the other event cards. The place line is the map link. There is no `/christmas/#lights` section and no town tabs.
 
-`_data/holiday_lights.yml` is unused. The site does not render it. It is reserved for a future map of private homes and residential streets, tracked in GitHub issue #26. Do not delete the file. Do not add `same_as` on those rows, and do not copy a home or a residential street onto a city page. When a source describes a past season and the next one is not announced, leave the row in that file and do not invent dates for a city event.
+### Christmas lights map
+
+`/christmas/lights/` is the map of private homes and neighborhood streets. It uses the same seasonal layout, header, and card grid as the other hub pages. `/christmas/` leads with a feature card under the page heading, above the section chips, linking to the map. When the Christmas hub is the home page banner, that same card sits under the home page intro.
+
+Rows live in `_data/holiday_lights.yml`. A row with `map: true` is on the map. Public displays stay in the file without that flag and are not pinned. Do not add `same_as`, and do not copy a home onto a city page. When a source describes a past season and the next one is not announced, start `nights` with `Last seen 2025` (use that season's year). Do not invent the next season's dates.
+
+The map is a fixed-ratio placeholder until someone taps Show map. The tap loads self-hosted Leaflet and OpenStreetMap tiles. Nothing from those hosts is requested before the tap. Pins are numbered to match the list. The list is grouped by town. Each card has the name, the address as a map link, nights, hours, a short note, and a source link. Every card has a photo so the two-column rows line up.
+
+`photo` is `image`, `credit`, and `credit_url`. On this page only, a photo of that specific display may be used even when the license is unclear. Prefer a photo the display published, then a news or blog photo of that display. Always credit it and link the source. Do not use a photo where a kid can be recognized. Do not use a Google Maps user photo when another photo of the display exists. Map-page photos are removed promptly on request. This exception is only for `/christmas/lights/`. The rest of the site still requires CC0, CC BY, CC BY-SA, or public domain.
+
+When `photo` is missing, the build uses a licensed picture from the Christmas pool in `_data/hub_pools.yml` (lights pictures first), then a designed 16:9 card. A pool file is used once on the page. A designed card may repeat. A photo sent in later replaces that fallback: add `image`, `credit`, and `credit_url` on the row.
+
+Anyone can send in a home or a street. The page links a mailto to `suggestions@eastsidecalendar.com` with the subject `Christmas lights: ` and a body that asks for the name, the address or cross streets, the town, the nights and hours, and an optional photo. Photos are welcome and will be credited. The page says we do not post a photo where a kid can be recognized.
 
 Photos are one source file each, under `assets/images/{city}/`, `assets/images/themes/`, or `assets/images/hubs/{hub}/`. A city hero is set once, on that city in `_data/cities.yml` (`hero` with `image`, `alt`, `credit`, `license`, and `source`). It is the visible hero under the city name and the `og:image` and `twitter:image`. Choose a wide, bright landmark or scenic view of the town. Do not use a venue interior, identifiable kids or teens, or a photo that also appears on an event card. Themed event pictures live at `assets/images/themes/{theme}.webp`. `_data/theme_images.yml` maps tags and keywords to those files, with credit, license, and source. Wikimedia Commons, Openverse CC0 or CC BY, CC BY-SA, and other public-domain collections are fine. Do not resize a source file, and do not commit width variants. The Pages workflow runs `script/render-image-variants.py` before Jekyll. It writes AVIF, WebP, and JPEG at 400, 800, 1200, and 1600 pixels wide, never wider than the source, plus `_data/image_variants.yml`. Actions caches those outputs, keyed on a hash of the source files, so an unchanged photo is not encoded again. `_includes/responsive-img.html` prints a `picture` from the manifest: AVIF, then WebP, then JPEG. If the manifest or a width is missing, the tag is the original file and the build still succeeds. The map is SVG and is left as is.
 

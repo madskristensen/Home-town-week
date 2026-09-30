@@ -1,0 +1,188 @@
+{%- assign home_lights = site.data.home_lights -%}
+{%- assign home_count = home_lights.count | default: 0 -%}
+<section class="home-map-section" aria-labelledby="lights-map-title">
+  <h2 id="lights-map-title" class="visually-hidden">Map</h2>
+  <div class="home-map-frame">
+    <div id="home-map-canvas" class="home-map-canvas" hidden></div>
+    <div class="home-map-poster" id="home-map-poster">
+      <p class="home-map-count">{{ home_count }} homes and streets</p>
+      <button type="button" id="home-map-show">Show map</button>
+    </div>
+  </div>
+  <p class="home-map-note">Numbers on the map match the list.</p>
+</section>
+<script type="application/json" id="home-lights-pins">{{ home_lights.pins | jsonify }}</script>
+<script>
+(function () {
+  var button = document.getElementById("home-map-show");
+  var poster = document.getElementById("home-map-poster");
+  var canvas = document.getElementById("home-map-canvas");
+  var data = document.getElementById("home-lights-pins");
+  if (!button || !poster || !canvas || !data) return;
+  var cssUrl = {{ "/assets/leaflet/leaflet.css" | relative_url | jsonify }};
+  var jsUrl = {{ "/assets/leaflet/leaflet.js" | relative_url | jsonify }};
+  var started = false;
+
+  function loadCss(href) {
+    return new Promise(function (resolve, reject) {
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = href;
+      link.onload = function () { resolve(); };
+      link.onerror = function () { reject(); };
+      document.head.appendChild(link);
+    });
+  }
+
+  function loadJs(src) {
+    return new Promise(function (resolve, reject) {
+      var script = document.createElement("script");
+      script.src = src;
+      script.onload = function () { resolve(); };
+      script.onerror = function () { reject(); };
+      document.body.appendChild(script);
+    });
+  }
+
+  function showMap(pins) {
+    var map = L.map(canvas, { scrollWheelZoom: false });
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    var bounds = [];
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    pins.forEach(function (pin) {
+      var icon = L.divIcon({
+        className: "home-pin",
+        html: String(pin.n),
+        iconSize: [28, 28],
+        iconAnchor: [14, 14]
+      });
+      var marker = L.marker([pin.lat, pin.lng], { icon: icon, title: pin.name, keyboard: true });
+      marker.bindTooltip(pin.name, { direction: "top" });
+      marker.on("click", function () {
+        var card = document.getElementById("light-" + pin.id);
+        if (!card) return;
+        card.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+      });
+      marker.addTo(map);
+      bounds.push([pin.lat, pin.lng]);
+    });
+    if (bounds.length === 1) map.setView(bounds[0], 15);
+    else if (bounds.length > 1) map.fitBounds(bounds, { padding: [28, 28] });
+    window.setTimeout(function () { map.invalidateSize(); }, 50);
+  }
+
+  button.addEventListener("click", function () {
+    if (started) return;
+    started = true;
+    button.disabled = true;
+    button.textContent = "Loading map";
+    var pins = [];
+    try { pins = JSON.parse(data.textContent || "[]"); } catch (error) { pins = []; }
+    Promise.all([loadCss(cssUrl), loadJs(jsUrl)]).then(function () {
+      canvas.hidden = false;
+      poster.hidden = true;
+      showMap(pins);
+    }).catch(function () {
+      started = false;
+      button.disabled = false;
+      button.textContent = "Show map";
+      poster.insertAdjacentHTML("beforeend", "<p class=\"home-map-error\">The map did not load. The list below still has every stop.</p>");
+    });
+  });
+})();
+</script>
+{%- for town in home_lights.towns -%}
+<section class="hub-section" aria-labelledby="town-{{ town.id }}">
+  <h2 id="town-{{ town.id }}">{{ town.name }}</h2>
+  <div class="hub-grid">
+    {%- for light in town.lights -%}
+    {%- assign light_nights = light.nights | append: "" -%}
+    {%- assign light_hours = light.hours | append: "" -%}
+    {%- assign light_image = light.image | append: "" -%}
+    {%- assign light_credit = light.image_credit | append: "" -%}
+    {%- assign light_source = light.image_source | append: "" -%}
+    <article class="hub-card" id="light-{{ light.id }}" data-image-kind="{{ light.image_kind }}">
+      {%- if light_image.size > 0 -%}
+      <figure class="event-photo">
+        {%- include responsive-img.html
+             src=light.image
+             alt=light.image_alt
+             loading="lazy"
+             sizes="(min-width: 42rem) 21rem, calc(100vw - 3rem)" -%}
+        {%- if light_credit.size > 0 or light_source.size > 0 -%}
+        <figcaption>
+          {%- if light_credit.size > 0 -%}<span class="credit">{{ light.image_credit }}</span>{%- endif -%}
+          {%- if light_source.size > 0 -%}<a class="source" href="{{ light.image_source }}" rel="noopener">Source</a>{%- endif -%}
+        </figcaption>
+        {%- endif -%}
+      </figure>
+      {%- endif -%}
+      <h3><span class="home-num">{{ light.number }}</span> {{ light.name }}</h3>
+      <p class="event-place"><a class="addr" href="{{ light.address | map_search: light.city, light.name }}">{%- include addr-pin.html -%}<span class="addr-text">{{ light.address }}</span></a></p>
+      {%- if light_nights.size > 0 -%}
+      <p class="event-when">{{ light_nights }}</p>
+      {%- endif -%}
+      {%- if light_hours.size > 0 -%}
+      <p class="home-hours">{{ light_hours }}</p>
+      {%- endif -%}
+      <p class="hub-blurb">{{ light.description }}</p>
+      <p class="home-source"><a href="{{ light.source }}" rel="noopener">Source</a></p>
+    </article>
+    {%- endfor -%}
+  </div>
+</section>
+{%- endfor -%}
+{%- capture lights_subject -%}Christmas lights: {%- endcapture -%}
+{%- capture lights_body -%}Name:
+Address or cross streets:
+Town:
+Nights and hours:
+Photo: attach one if you have it. We will credit you. We do not post a photo where a kid can be recognized.{%- endcapture -%}
+<section class="hub-section" aria-labelledby="send-lights">
+  <h2 id="send-lights">Tell us about the lights</h2>
+  <p class="hub-section-intro">See a home or a street covered in lights? Tell us. Anyone can send one in. Photos are welcome and will be credited. We do not post a photo where a kid can be recognized.</p>
+  <p class="suggest-event"><a href="mailto:suggestions@eastsidecalendar.com?subject={{ lights_subject | strip | append: " " | mail_escape }}&amp;body={{ lights_body | strip | mail_escape }}">Send a display</a></p>
+  <p class="hub-section-intro">When you go, stay on the street, leave driveways clear, and keep it quiet for the neighbors.</p>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Christmas lights at Eastside homes",
+  "url": {{ "/christmas/lights/" | absolute_url | jsonify }},
+  "numberOfItems": {{ home_count }},
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "itemListElement": [
+    {%- for town in home_lights.towns -%}
+    {%- for light in town.lights -%}
+    {
+      "@type": "ListItem",
+      "position": {{ light.number }},
+      "item": {
+        "@type": "Place",
+        "name": {{ light.name | jsonify }},
+        "description": {{ light.description | jsonify }},
+        "url": {{ "/christmas/lights/#light-" | append: light.id | absolute_url | jsonify }},
+        "isAccessibleForFree": true,
+        "sameAs": {{ light.source | jsonify }}
+        {%- assign light_image = light.image | append: "" -%}
+        {%- if light_image.size > 0 -%},
+        "image": {{ light.image | absolute_url | jsonify }}
+        {%- endif -%},
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": {{ light.address | jsonify }},
+          "addressLocality": {{ light.city | jsonify }},
+          "addressRegion": "WA",
+          "addressCountry": "US"
+        }
+      }
+    }{% unless forloop.last and forloop.parentloop.last %},{% endunless %}
+    {%- endfor -%}
+    {%- endfor -%}
+  ]
+}
+</script>

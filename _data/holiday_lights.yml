@@ -1,19 +1,21 @@
-# Unused. Jekyll does not render this file.
-# Reserved for a future map of private homes and residential streets,
-# tracked in GitHub issue #26. Do not delete the file.
-# Do not add same_as. Do not copy a row onto a city page from here.
-# A public display becomes an event only when that season's dates are
-# published, and the write-up lives on the city page.
+# Private homes and neighborhood streets for /christmas/lights/.
+# map: true puts a row on that map. Rows without it stay here for
+# reference and are not shown. Public displays are events on the city
+# pages when that season's dates are published.
+# Do not add same_as. Do not copy a home onto a city page from here.
 #
 # Required: id, name, type, city, address, description, source, free,
-# last_verified. nights and hours when they are known. photo when a
-# licensed picture exists.
+# last_verified. nights and hours when they are known.
 # type is park, house, or street.
-# lat and lng are optional decimal degrees. Nothing on the site reads them.
+# lat and lng are decimal degrees. The lights map pins use them.
 # photo is optional. Write image, credit, and credit_url.
-# Leave photo off when there is no licensed picture.
-# Do not use a photo of recognizable kids. photo.kind is own or theme.
-# Use CC0, CC BY, CC BY-SA, or public domain only.
+# On this map only, a photo of that specific display may be used even
+# when the license is unclear. Credit it and link the source. Leave
+# photo off when no real photo exists. The build then uses a Christmas
+# pool picture, then a designed card. A later submission replaces that
+# fallback with image, credit, and credit_url.
+# Do not use a photo where a kid can be recognized. Do not use a Google
+# Maps user photo when another photo of the display exists.
 # city is a city id from _data/cities.yml.
 # address is a street address, a street, or cross-streets.
 # A public venue can use its published street address. A home can use a
@@ -89,23 +91,22 @@
 - id: keeners-christmas
   name: "Keener's Christmas Lights"
   type: house
+  map: true
   city: bothell
   address: "16504 112th Pl NE"
   lat: 47.748037
   lng: -122.191595
-  description: "A drive-through home display on a looping driveway. Donations are encouraged, and visitors stay in the car."
+  description: "A drive-through display on a looping driveway. Donations are welcome, including canned food, and visitors stay in the car."
   nights: "Last seen 2025, Dec 1 to 31."
   hours: "6 to 10 p.m., weather permitting"
   photo:
-    image: /assets/images/themes/lights-house-porch.webp
-    alt: "A house outlined in multicolored Christmas lights."
-    credit: "Photo: Joe Parks, CC BY 2.0"
-    license: CC BY 2.0
-    credit_url: "https://commons.wikimedia.org/wiki/File:Christmas_in_Paradise_-_Flickr_-_Joe_Parks.jpg"
-    kind: theme
+    image: /assets/images/lights/keeners.webp
+    alt: "A house covered in blue, red, and white Christmas lights at night."
+    credit: "Photo: Seattle Refined"
+    credit_url: "https://seattlerefined.com/holiday/keeners-christmas-bothell-seattle"
   source: "https://www.parentmap.com/things-to-do/best-holiday-light-displays-seattle/"
   free: true
-  last_verified: "2026-09-29"
+  last_verified: "2026-09-30"
 - id: lights-at-the-landing
   name: "Lights at the Landing"
   type: park
@@ -129,23 +130,17 @@
 - id: nutcracker-lane
   name: "Nutcracker Lane"
   type: street
+  map: true
   city: issaquah
   address: "190th Ave SE at SE 44th Way"
   lat: 47.563800
   lng: -122.086050
   description: "A cul-de-sac where the houses put out painted nutcracker figures and lights, in the manner of a candy cane lane."
-  nights: "Usually every night in December. 2026 dates are still to come."
+  nights: "Usually every night in December."
   hours: ""
-  photo:
-    image: /assets/images/themes/lights-street-town.webp
-    alt: "Christmas lights along a small-town street."
-    credit: "Photo: mattbuck, CC BY-SA 3.0"
-    license: CC BY-SA 3.0
-    credit_url: "https://commons.wikimedia.org/wiki/File:Beeston_MMB_70.jpg"
-    kind: theme
   source: "https://www.greaterseattleonthecheap.com/best-christmas-lights-seattle/"
   free: true
-  last_verified: "2026-09-29"
+  last_verified: "2026-09-30"
 - id: google-lights
   name: "Google Lights"
   type: park
@@ -169,6 +164,7 @@
 - id: kingsgate-kringle
   name: "Kingsgate Kringle House"
   type: house
+  map: true
   city: kirkland
   address: "12244 NE 140th St"
   lat: 47.726042
@@ -177,35 +173,32 @@
   nights: "Last seen 2025, nightly through New Year's weekend."
   hours: "4:30 p.m. to midnight"
   photo:
-    image: /assets/images/themes/lights-house-reindeer.webp
-    alt: "Reindeer and a tree lit in a front yard."
-    credit: "Photo: Elliekb, CC BY-SA 4.0"
-    license: CC BY-SA 4.0
-    credit_url: "https://commons.wikimedia.org/wiki/File:Reindeerlights.jpg"
-    kind: theme
+    image: /assets/images/lights/kingsgate.webp
+    alt: "A two-story house outlined in white Christmas lights."
+    credit: "Photo: Kingsgate Kringle House"
+    credit_url: "https://www.facebook.com/kingsgatekringle/"
   source: "https://linktr.ee/kingsgatekringle"
   free: true
-  last_verified: "2026-09-29"
+  last_verified: "2026-09-30"
 - id: maple-valley-lights
   name: "Maple Valley Lights"
   type: house
+  map: true
   city: maple-valley
   address: "22629 SE 263rd Pl"
   lat: 47.365035
   lng: -122.040757
   description: "A home display with a soundtrack on 101.9 FM. The family collects food for the Maple Valley Food Bank."
-  nights: "Thanksgiving through New Year's Eve. 2026 dates are still to come."
+  nights: "Thanksgiving through New Year's Eve."
   hours: "4:30 to 11 p.m."
   photo:
-    image: /assets/images/themes/lights-house-window.webp
-    alt: "A house window framed with warm Christmas lights."
-    credit: "Photo: mattbuck, CC BY-SA 4.0"
-    license: CC BY-SA 4.0
-    credit_url: "https://commons.wikimedia.org/wiki/File:Wraxall_2013_MMB_A1_Christmas.jpg"
-    kind: theme
+    image: /assets/images/lights/maple-valley.webp
+    alt: "A house with multicolored Christmas lights and a lit reindeer in the yard."
+    credit: "Photo: Maple Valley Christmas Lights"
+    credit_url: "https://www.youtube.com/watch?v=J5yfLjgqmv8"
   source: "https://www.greaterseattleonthecheap.com/best-christmas-lights-seattle/"
   free: true
-  last_verified: "2026-09-29"
+  last_verified: "2026-09-30"
 - id: redmond-lights
   name: "Redmond Lights"
   type: park
@@ -249,43 +242,36 @@
 - id: miracle-on-134th
   name: "Miracle on 134th Street"
   type: house
+  map: true
   city: renton
-  address: "134th Street, East Renton Highlands"
+  address: "17334 SE 134th St"
   lat: 47.482179
   lng: -122.104948
-  description: "A free walk along light paths in a front yard on 134th Street in the East Renton Highlands. The family welcomes kids and dogs."
-  nights: "Opens again the day after Thanksgiving 2026."
+  description: "A free walk along light paths in a front yard. Kids and dogs are welcome."
+  nights: "Opens the day after Thanksgiving 2026."
   hours: ""
   photo:
-    image: /assets/images/themes/lights-house-bushes.webp
-    alt: "Bushes wrapped in white lights in front of a house."
-    credit: "Photo: mattbuck, CC BY-SA 3.0"
-    license: CC BY-SA 3.0
-    credit_url: "https://commons.wikimedia.org/wiki/File:Wraxall_2012_MMB_70.jpg"
-    kind: theme
+    image: /assets/images/lights/miracle-134th.webp
+    alt: "Christmas light tunnels and a train in a front yard at night."
+    credit: "Photo: Miracle on 134th Street"
+    credit_url: "https://miracleon134th.st/"
   source: "https://miracleon134th.st/"
   free: true
-  last_verified: "2026-09-29"
+  last_verified: "2026-09-30"
 - id: timberline
   name: "Timberline lights"
   type: street
+  map: true
   city: sammamish
   address: "NE 42nd St and 204th Ave NE"
   lat: 47.647715
   lng: -122.070658
   description: "A Sammamish cul-de-sac where several homes decorate trees, decks, and yards for a slow drive."
-  nights: "A December neighborhood drive. 2026 dates are still to come."
+  nights: "A December neighborhood drive."
   hours: ""
-  photo:
-    image: /assets/images/themes/lights-building.webp
-    alt: "A building covered in blue and white Christmas lights."
-    credit: "Photo: Yoonahkim, CC BY-SA 3.0"
-    license: CC BY-SA 3.0
-    credit_url: "https://commons.wikimedia.org/wiki/File:Merry_Hotel.jpg"
-    kind: theme
   source: "https://www.greaterseattleonthecheap.com/best-christmas-lights-seattle/"
   free: true
-  last_verified: "2026-09-29"
+  last_verified: "2026-09-30"
 - id: snoqualmie-winter-lights
   name: "Snoqualmie Winter Lights"
   type: park
@@ -326,3 +312,50 @@
   source: "https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights"
   free: true
   last_verified: "2026-09-29"
+- id: redmond-home-lights
+  name: "Redmond home lights"
+  type: house
+  map: true
+  city: redmond
+  address: "6203 144th Ave NE"
+  lat: 47.6624652
+  lng: -122.1484621
+  description: "A home on 144th Ave NE with holiday lights."
+  nights: ""
+  hours: ""
+  source: "https://maps.app.goo.gl/ZpQGKsgSab4g7MuWA"
+  free: true
+  last_verified: "2026-09-30"
+- id: kornfeds-christmas
+  name: "Kornfed's Christmas Lights"
+  type: house
+  map: true
+  city: bothell
+  address: "10629 Sunrise Dr"
+  lat: 47.7601225
+  lng: -122.1975952
+  description: "A home display that collects food donations."
+  nights: ""
+  hours: ""
+  photo:
+    image: /assets/images/lights/kornfed.webp
+    alt: "A house wrapped in red, green, and white Christmas lights."
+    credit: "Photo: Kornfed's Christmas Lights"
+    credit_url: "https://www.youtube.com/watch?v=WMlYKSLyMY0"
+  source: "https://maps.app.goo.gl/ZpQGKsgSab4g7MuWA"
+  free: true
+  last_verified: "2026-09-30"
+- id: barshows-play-with-lights
+  name: "The Barshows: Play With Lights"
+  type: house
+  map: true
+  city: bothell
+  address: "10822 NE 193rd St"
+  lat: 47.7668964
+  lng: -122.1951836
+  description: "A home display in Bothell."
+  nights: ""
+  hours: ""
+  source: "https://maps.app.goo.gl/ZpQGKsgSab4g7MuWA"
+  free: true
+  last_verified: "2026-09-30"

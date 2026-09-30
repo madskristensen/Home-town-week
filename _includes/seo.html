@@ -107,7 +107,13 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  {%- if page.layout == "city" or page.layout == "seasonal" %}
+  {%- assign schema_collection = false -%}
+  {%- unless page.home_lights -%}
+  {%- if page.layout == "city" or page.layout == "seasonal" -%}
+  {%- assign schema_collection = true -%}
+  {%- endif -%}
+  {%- endunless -%}
+  {%- if schema_collection %}
   "@type": "CollectionPage",
   "name": {{ head_title | jsonify }},
   "url": {{ canonical_url | jsonify }},

@@ -1026,6 +1026,7 @@ module EastsideCalendar
       end
       site.data["hub_pages"] = pages
       site.data["seasonal_hubs"] = public_hubs
+      HomeLights.attach!(site, prepared)
     end
 
     def hub_page(site, hub)
