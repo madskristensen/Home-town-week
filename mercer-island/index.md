@@ -200,27 +200,3 @@ Chaos Theory's Old Timers improvise against the Youth Theatre Northwest staff.
 A satirical musical for grades 8 through 12. A long drought puts toilets under one company, and a hero starts a revolt. Fridays and Saturdays at 7:00 p.m., Sundays at 2:00 p.m., with an added 2:00 p.m. show on Saturday, March 28.
 
 [YTN auditions](https://youththeatre.org/auditions/)
-
-### Chaos Theory
-<p class="event-when">Fri Apr 23 and Sat Apr 24, 2027 · 7:00 p.m.</p>
-<p class="event-place">Youth Theatre Northwest, 4400 86th Ave SE</p>
-
-A second public improv weekend from the Rookies and the Old Timers.
-
-[YTN auditions](https://youththeatre.org/auditions/)
-
-### James and the Giant Peach Jr.
-<p class="event-when">Fri May 7 through Sun May 23, 2027</p>
-<p class="event-place">Youth Theatre Northwest, 4400 86th Ave SE</p>
-
-Youth Theatre Northwest's musical for grades 3 through 12. James and a crew of singing insects ride a giant peach across the ocean. Fridays at 7:00 p.m., Saturdays at 2:00 and 7:00 p.m., and Sundays at 2:00 p.m.
-
-[YTN auditions](https://youththeatre.org/auditions/)
-
-### Fakespeare
-<p class="event-when">Fri Jun 11, 2027 · 7:00 p.m.</p>
-<p class="event-place">Youth Theatre Northwest, 4400 86th Ave SE</p>
-
-Chaos Theory's Old Timers in a public Shakespeare send-up.
-
-[YTN auditions](https://youththeatre.org/auditions/)

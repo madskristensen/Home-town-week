@@ -522,11 +522,3 @@ International Ballet Theatre's Nutcracker at Meydenbauer Theatre costs $45 for y
 A free ranger walk for all ages on the shortest day of the year, with a warm drink. Register each child and adult.
 
 [Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
-
-### Seussical Jr.
-<p class="event-when">Fri May 21 through Sun May 23, 2027</p>
-<p class="event-place">Theatre33, 13243 NE 20th St</p>
-
-Theatre33's youth cast in the Dr. Seuss musical, directed by Ashlie Blaske. Horton, the Whos, and the Cat in the Hat share one adventure about sticking up for someone nobody else can hear.
-
-[Theatre33 season](https://www.theatre33wa.org/post/theatre-season-bellevue)
