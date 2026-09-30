@@ -1831,20 +1831,25 @@ a.addr .addr-text {
 .lights-feature-layout {
   display: grid;
   grid-template-columns: 1fr;
+  align-items: stretch;
 }
 
-.lights-feature-photo {
+.lights-feature-art {
+  position: relative;
+  align-self: stretch;
+  height: 100%;
+  min-height: 12rem;
   margin: 0;
-  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
 }
 
-.lights-feature-photo img {
+.lights-feature-art svg {
   position: absolute;
   inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
-  max-width: none;
-  object-fit: cover;
 }
 
 .lights-feature-copy {
@@ -2030,6 +2035,12 @@ a.addr .addr-text {
 @media (min-width: 42rem) {
   .lights-feature-layout {
     grid-template-columns: 22rem minmax(0, 1fr);
+  }
+
+  .lights-feature-art {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 100%;
   }
 }
 
