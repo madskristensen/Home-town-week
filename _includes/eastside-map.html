@@ -4,7 +4,7 @@
 {%- endcomment -%}
 {%- assign map_title = include.title | default: "Map of Eastside cities" -%}
 {%- assign map_title_id = include.title_id | default: "eastside-map-title" -%}
-<svg class="eastside-svg" viewBox="104 90 624 568" role="group" aria-labelledby="{{ map_title_id }}">
+<svg class="eastside-svg" viewBox="104 90 624 470" role="group" aria-labelledby="{{ map_title_id }}">
   <title id="{{ map_title_id }}">{{ map_title }}</title>
   <g class="map-geo" aria-hidden="true" focusable="false">
     <path class="foothills" d="M548 148 C572 210 555 280 590 350 C630 420 655 480 688 540 C708 600 690 650 706 668 L728 672 L728 140 C660 128 580 136 548 148 Z"/>
@@ -72,11 +72,6 @@
     <circle class="city-hit" cx="405.5" cy="444.2" r="18"/>
     <circle class="city-pin" cx="405.5" cy="444.2" r="6.5"/>
     <text class="city-label" x="418" y="448">Issaquah</text>
-  </a>
-  <a href="{{ '/maple-valley/' | relative_url }}">
-    <circle class="city-hit" cx="395.5" cy="620" r="18"/>
-    <circle class="city-pin" cx="395.5" cy="620" r="6.5"/>
-    <text class="city-label" x="408" y="624">Maple Valley</text>
   </a>
   <a href="{{ '/duvall/' | relative_url }}">
     <circle class="city-hit" cx="455" cy="178" r="18"/>

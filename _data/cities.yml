@@ -1,7 +1,9 @@
 # Eastside cities, alphabetical. lat and lon are the city center in
 # decimal degrees. nearby.yml uses them when choosing neighbors. The
 # home page does not read them. Newcastle and Fall City are not listed.
-# Fall City events that passed a source check are folded into Snoqualmie.
+# Maple Valley is not listed. Do not add it back. There is no
+# /maple-valley/ page and no redirect. Fall City events that passed a source check are folded
+# into Snoqualmie.
 # Do not add a city page until it has real events.
 # The site header is the mark, Eastside Family Calendar, and a Cities menu.
 #
@@ -496,59 +498,6 @@
       type: allevents
       format: allevents
       notes: "Secondary sweep. This page is Kirkland, WA."
-- id: maple-valley
-  name: Maple Valley
-  state: wa
-  state_name: Washington
-  lat: 47.3926
-  lon: -122.0454
-  description: Upcoming family events in Maple Valley on the Eastside.
-  hero:
-    image: /assets/images/maple-valley/lake-wilderness-water.webp
-    alt: Lake Wilderness in Maple Valley, with trees along the shore and the water in the foreground.
-    credit: "Photo: Yordanpopovbg, CC BY-SA 4.0"
-    license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:Lake_Wilderness_in_Maple_Valley.jpg
-  summary: >-
-    A foothill city in southeast King County.
-  tagline: "A foothill city in southeast King County."
-  sources:
-    - name: "City of Maple Valley calendar"
-      url: "https://www.maplevalleywa.gov/calendar.php"
-      type: city_hall
-      format: html
-      notes: "Revize calendar. Asking for ical still returns HTML. The CivicPlus-style RSS returned 403."
-    - name: "Maple Valley Farmers Market"
-      url: "https://www.maplevalleyfarmersmarket.com/"
-      type: market
-      notes: "Saturday market dates."
-    - name: "Maple Valley Library"
-      url: "https://kcls.org/locations/maple-valley/"
-      type: library
-      format: rss
-      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1527"
-      notes: "KCLS branch at 21844 SE 248th St."
-    - name: "Lake Wilderness Arboretum"
-      url: "https://www.lakewildernessarboretum.org/events/"
-      type: nature
-      notes: "Story Walk and the Children's Forest. The events index often lists no dates; confirm a read-along on the library or the city's parks page."
-    - name: "Maple Valley Historical Society"
-      url: "https://www.maplevalleyhistorical.com/upcoming-events"
-      type: museum
-      notes: "Museums at 22024 SE 248th St, open the first and third Saturday, 10:00 a.m. to 2:00 p.m."
-    - name: "Maple Valley Creative Arts Council"
-      url: "https://mvcac.clubexpress.com/"
-      type: theater
-      notes: "Local plays and the youth playwright festival. Check the posted dates."
-    - name: "Maple Valley Parks special events"
-      url: "https://www.maplevalleywa.gov/government/departments/parks_and_recreation/special_events/index.php"
-      type: parks
-      notes: "Kids festival, movies in the park, and holiday park events."
-    - name: "AllEvents Maple Valley"
-      url: "https://allevents.in/maple-valley"
-      type: allevents
-      format: allevents
-      notes: "Secondary sweep. This page is Maple Valley, WA."
 - id: mercer-island
   name: Mercer Island
   state: wa

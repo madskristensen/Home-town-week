@@ -137,7 +137,6 @@ def main():
         "issaquah",
         "kenmore",
         "kirkland",
-        "maple-valley",
         "mercer-island",
         "north-bend",
         "redmond",

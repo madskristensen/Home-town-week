@@ -180,25 +180,6 @@
   source: "https://linktr.ee/kingsgatekringle"
   free: true
   last_verified: "2026-09-30"
-- id: maple-valley-lights
-  name: "Maple Valley Lights"
-  type: house
-  map: true
-  city: maple-valley
-  address: "22629 SE 263rd Pl"
-  lat: 47.365035
-  lng: -122.040757
-  description: "A home display with a soundtrack on 101.9 FM. The family collects food for the Maple Valley Food Bank."
-  nights: "Thanksgiving through New Year's Eve."
-  hours: "4:30 to 11 p.m."
-  photo:
-    image: /assets/images/lights/maple-valley.webp
-    alt: "A house with multicolored Christmas lights and a lit reindeer in the yard."
-    credit: "Photo: Maple Valley Christmas Lights"
-    credit_url: "https://www.youtube.com/watch?v=J5yfLjgqmv8"
-  source: "https://www.greaterseattleonthecheap.com/best-christmas-lights-seattle/"
-  free: true
-  last_verified: "2026-09-30"
 - id: redmond-lights
   name: "Redmond Lights"
   type: park

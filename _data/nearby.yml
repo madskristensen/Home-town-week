@@ -17,7 +17,7 @@ wa:
     - sammamish
     - renton
     - mercer-island
-    - maple-valley
+    - bellevue
   kenmore:
     - bothell
     - woodinville
@@ -28,11 +28,6 @@ wa:
     - bellevue
     - bothell
     - kenmore
-  maple-valley:
-    - issaquah
-    - renton
-    - snoqualmie
-    - north-bend
   carnation:
     - sammamish
     - duvall
@@ -47,7 +42,7 @@ wa:
     - snoqualmie
     - issaquah
     - carnation
-    - maple-valley
+    - sammamish
   snoqualmie:
     - north-bend
     - carnation
@@ -67,7 +62,7 @@ wa:
     - mercer-island
     - bellevue
     - issaquah
-    - maple-valley
+    - sammamish
   sammamish:
     - redmond
     - issaquah

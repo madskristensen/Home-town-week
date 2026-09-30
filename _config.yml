@@ -11,7 +11,7 @@ lang: en-US
 timezone: America/Los_Angeles
 logo: /assets/images/logo.png
 image: /assets/images/og-home.png
-image_alt: Eastside Family Calendar map of 15 Eastside towns. Family events, updated daily.
+image_alt: Eastside Family Calendar map of 14 Eastside towns. Family events, updated daily.
 repository: madskristensen/Home-town-week
 
 # Optional Google Search Console token. Leave this empty until Search

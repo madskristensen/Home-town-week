@@ -61,7 +61,7 @@ LABEL_NUDGE = {
 
 TITLE = ["Eastside Family", "Calendar"]
 TITLE_SIZE = 58
-SUBTITLE = ["Family events in 15 Eastside towns,", "updated daily."]
+SUBTITLE = ["Family events in 14 Eastside towns,", "updated daily."]
 SUBTITLE_SIZE = 26
 
 

@@ -4,7 +4,7 @@ Upcoming family events for cities on Washington's Eastside. This is a Jekyll sit
 
 The home page leads with a map of the Eastside, from Lake Washington to the Cascade foothills, and a list of the same cities. Each city on the map is a link. The list shows how many upcoming events that city has. The footer does not repeat every city. Every page uses the same compact wordmark bar: the site name on one line, linked home, with the Cities menu on that same row, a thin bottom border, and no kicker. The page heading below it is the large display title. On the home page that heading is "Things to do with kids on the Eastside", followed by "Upcoming family events in Eastside cities, so you never miss the fun." That intro line is on the home page only. A seasonal banner, when one qualifies, sits under the header with a small gap so it reads as its own band.
 
-Newcastle is an Eastside city that does not have a page yet. Do not invent a page for it. Fall City is not a separate page; its farm and library listings are on Snoqualmie. Names without a page can sit in `_data/coming_soon.yml` and do not link anywhere.
+Newcastle is an Eastside city that does not have a page yet. Do not invent a page for it. Fall City is not a separate page; its farm and library listings are on Snoqualmie. Maple Valley is not on this calendar. Do not add it back to `_data/cities.yml`, the map, the hubs, or the lights map. There is no `/maple-valley/` page and no redirect. Names without a page can sit in `_data/coming_soon.yml` and do not link anywhere.
 
 ## URLs
 
@@ -22,7 +22,7 @@ Newcastle is an Eastside city that does not have a page yet. Do not invent a pag
 
 Seasonal hubs are generated from `_data/seasonal_hubs.yml`. Each hub stays up all year. A section appears only when it has something to list. The home page does not get a separate seasonal note. One banner under the masthead links to the hub that is in season and has enough upcoming events. See [Seasonal cross-check](#seasonal-cross-check). There is no `/halloween/` page. Halloween is the `/fall/#halloween` section. There is no `/holiday-lights/` page. Dated public light displays are events in the Holiday lights section of `/christmas/`. Homes and neighborhood streets are on `/christmas/lights/`. See [Holiday lights](#holiday-lights) and [Christmas lights map](#christmas-lights-map).
 
-City URLs have no state segment and no year or week segment. Old addresses are not redirected.
+City URLs have no state segment and no year or week segment. There is no `/maple-valley/` page and no redirect.
 
 The city page lists upcoming family events. There is no year index and no week issue.
 
@@ -93,7 +93,7 @@ A public light display with published dates for this season is an ordinary event
 
 `/christmas/lights/` is the map of private homes and neighborhood streets. It uses the same seasonal layout, header, and card grid as the other hub pages. `/christmas/` leads with a feature card under the page heading, above the section chips, linking to the map. When the Christmas hub is the home page banner, that same card sits under the home page intro.
 
-Rows live in `_data/holiday_lights.yml`. A row with `map: true` is on the map. Public displays stay in the file without that flag and are not pinned. Do not add `same_as`, and do not copy a home onto a city page. When a source describes a past season and the next one is not announced, start `nights` with `Last seen 2025` (use that season's year). Do not invent the next season's dates.
+Rows live in `_data/holiday_lights.yml`. A row with `map: true` is on the map when its city is in `_data/cities.yml`. Maple Valley Lights is not in the file. Do not add it back. Public displays stay in the file without that flag and are not pinned. Do not add `same_as`, and do not copy a home onto a city page. When a source describes a past season and the next one is not announced, start `nights` with `Last seen 2025` (use that season's year). Do not invent the next season's dates.
 
 The map is a fixed-ratio placeholder until someone taps Show map. The tap loads self-hosted Leaflet and OpenStreetMap tiles. Nothing from those hosts is requested before the tap. Pins are numbered to match the list. The list is grouped by town. Each card has the name, the address as a map link, nights, hours, a short note, and a source link. Every card has a photo so the two-column rows line up.
 

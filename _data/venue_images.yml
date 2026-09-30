@@ -87,12 +87,6 @@ venues:
     credit: "Photo: City of Kirkland"
     license: City of Kirkland
     source: https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/PCS-Photo-Galleries/Marina-Park-Photo-Gallery
-  - keys: ["lake wilderness"]
-    image: /assets/images/maple-valley/lake-wilderness.webp
-    alt: A path through the Lake Wilderness Arboretum in Maple Valley.
-    credit: "Photo: Roc0ast3r, CC0"
-    license: CC0
-    source: https://commons.wikimedia.org/wiki/File:Lake_Wilderness_Arboretum_in_Maple_Valley,_WA_(2024)_-_12.jpg
   - keys: ["mercer island library"]
     image: /assets/images/mercer-island/library.webp
     alt: Mercer Island Library, a King County Library System branch.
