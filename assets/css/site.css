@@ -1064,6 +1064,10 @@ picture {
   text-decoration: none;
 }
 
+.footer-family a {
+  font-weight: 600;
+}
+
 .footer-group a,
 .footer-install,
 .footer-drive {
