@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Guides
-description: Evergreen family guides for the Eastside. Playgrounds and library story times, with addresses and photos.
+description: Evergreen family guides for the Eastside. Playground map and library story times, with addresses and photos.
 permalink: /guides/
 ---
 
@@ -10,7 +10,7 @@ permalink: /guides/
   <p class="guide-intro">These pages stay up between the dated listings. I write them for the places we actually use, and I only keep a spot when I can point to the address.</p>
   <ul class="guide-index">
     <li>
-      <a href="{{ '/guides/playgrounds/' | relative_url }}">Best playgrounds on the Eastside</a>
+      <a href="{{ '/guides/playgrounds/' | relative_url }}">Playground map</a>
       <p>Play structures we go back to, with the address and a photo of the place.</p>
     </li>
     <li>

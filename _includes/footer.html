@@ -1,15 +1,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-groups">
-      <nav class="footer-group" aria-labelledby="footer-seasons">
-        <p id="footer-seasons" class="footer-heading">Seasons</p>
-        <ul class="footer-seasons">
-          {%- for season in site.data.footer_seasons -%}
-          <li><a href="{{ season.path | relative_url }}"{% if page.hub_id == season.id %} aria-current="page"{% endif %}>{{ season.label }}</a></li>
-          {%- endfor -%}
-        </ul>
-      </nav>
-      <nav class="footer-group" aria-labelledby="footer-cities">
+      <nav class="footer-group footer-group-cities" aria-labelledby="footer-cities">
         <p id="footer-cities" class="footer-heading">Cities</p>
         <ul class="footer-cities">
           {%- for city in site.data.cities -%}
@@ -18,13 +10,21 @@
           {%- endfor -%}
         </ul>
       </nav>
+      <nav class="footer-group" aria-labelledby="footer-seasons">
+        <p id="footer-seasons" class="footer-heading">Seasons</p>
+        <ul class="footer-seasons">
+          {%- for season in site.data.footer_seasons -%}
+          <li><a href="{{ season.path | relative_url }}"{% if page.hub_id == season.id %} aria-current="page"{% endif %}>{{ season.label }}</a></li>
+          {%- endfor -%}
+        </ul>
+      </nav>
       <nav class="footer-group" aria-labelledby="footer-explore">
         <p id="footer-explore" class="footer-heading">Explore</p>
         <ul class="footer-explore">
           <li><a href="{{ '/worth-the-drive/' | relative_url }}"{% if page.hub_id == "worth-the-drive" %} aria-current="page"{% endif %}>Worth the Drive</a></li>
           <li><a href="{{ '/this-weekend/' | relative_url }}"{% if page.hub_id == "this-weekend" %} aria-current="page"{% endif %}>This weekend</a></li>
-          <li><a href="{{ '/christmas/lights/' | relative_url }}"{% if page.url == "/christmas/lights/" %} aria-current="page"{% endif %}>Christmas Light Finder</a></li>
-          <li><a href="{{ '/guides/playgrounds/' | relative_url }}"{% if page.url == "/guides/playgrounds/" %} aria-current="page"{% endif %}>Playgrounds</a></li>
+          <li><a href="{{ '/christmas/lights/' | relative_url }}"{% if page.url == "/christmas/lights/" %} aria-current="page"{% endif %}>Christmas lights map</a></li>
+          <li><a href="{{ '/guides/playgrounds/' | relative_url }}"{% if page.url == "/guides/playgrounds/" %} aria-current="page"{% endif %}>Playground map</a></li>
           <li><a href="{{ '/guides/story-times/' | relative_url }}"{% if page.url == "/guides/story-times/" %} aria-current="page"{% endif %}>Story times</a></li>
         </ul>
       </nav>
