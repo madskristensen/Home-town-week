@@ -252,6 +252,17 @@
   color: var(--muted);
 }
 
+.home-map-frame .leaflet-container a.addr {
+  color: var(--link);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.home-map-frame .leaflet-container a.addr .addr-text {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
 .home-map-frame .leaflet-marker-icon.home-cluster {
   display: flex;
   align-items: center;

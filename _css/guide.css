@@ -55,8 +55,12 @@
   scroll-margin-top: 1rem;
 }
 
-.playground-list a {
+.playground-list > li > a[rel] {
   font-weight: 600;
+}
+
+.playground-list a.addr {
+  font-weight: 400;
 }
 
 .playground-meta {

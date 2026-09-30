@@ -106,6 +106,45 @@
     });
   }
 
+  function squash(value) {
+    return String(value || "").replace(/\s+/g, " ").trim();
+  }
+
+  function endsWithPhrase(text, phrase) {
+    if (!phrase) return false;
+    return new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\s*$", "i").test(text);
+  }
+
+  function queryText(place, city, name) {
+    place = squash(place);
+    city = squash(city);
+    name = squash(name);
+    var bits = [];
+    if (name && place.toLowerCase().indexOf(name.toLowerCase()) === -1) bits.push(name);
+    if (place) bits.push(place);
+    var text = bits.join(", ");
+    text = text.replace(/,?\s*\b(?:WA|Washington)\b(?:\s+\d{5}(?:-\d{4})?)?\s*$/i, "");
+    text = text.replace(/\s+\d{5}(?:-\d{4})?\s*$/, "");
+    text = text.replace(/[,\s]+$/, "");
+    if (city && !endsWithPhrase(text, city)) text = text ? text + ", " + city : city;
+    text = text.replace(/[,\s]+$/, "");
+    return text ? text + ", WA" : "WA";
+  }
+
+  function encodeQuery(text) {
+    return encodeURIComponent(text).replace(/[!'()*]/g, function (ch) {
+      return "%" + ch.charCodeAt(0).toString(16).toUpperCase();
+    });
+  }
+
+  function mapsHref(place, city, name) {
+    var query = encodeQuery(queryText(place, city, name));
+    var ua = navigator.userAgent || "";
+    if (/iPad|iPhone|iPod/.test(ua) || /Macintosh|Mac OS X/.test(ua)) return "https://maps.apple.com/?q=" + query;
+    if (/Android/.test(ua)) return "geo:0,0?q=" + query;
+    return "https://www.google.com/maps/search/?api=1&query=" + query;
+  }
+
   function escapeHtml(value) {
     return String(value).replace(/[&<>"']/g, function (ch) {
       return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" })[ch];
@@ -172,7 +211,9 @@
       var html = "<p class=\"map-popup-name\">" + escapeHtml(pin.name) + "</p>"
         + "<p class=\"map-popup-city\">" + escapeHtml(pin.city) + "</p>";
       if (pin.address) {
-        html += "<p class=\"map-popup-address\">" + escapeHtml(pin.address) + "</p>";
+        html += "<p class=\"map-popup-address\"><a class=\"addr\" href=\"" + escapeHtml(mapsHref(pin.address, pin.city, pin.name)) + "\">"
+          + "<svg class=\"addr-pin\" viewBox=\"0 0 16 16\" aria-hidden=\"true\" focusable=\"false\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M8 .9a4.6 4.6 0 0 0-4.6 4.6c0 3.5 4.6 9.2 4.6 9.2s4.6-5.7 4.6-9.2A4.6 4.6 0 0 0 8 .9Zm0 6.3a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4Z\"/></svg>"
+          + "<span class=\"addr-text\">" + escapeHtml(pin.address) + "</span></a></p>";
       }
       html += "<p class=\"map-popup-link\"><a href=\"" + escapeHtml(pin.page) + "\" rel=\"noopener\">" + escapeHtml(pin.page_label) + "</a></p>";
       marker.bindPopup(html);
