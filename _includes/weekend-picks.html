@@ -157,6 +157,7 @@
 {%- if pick_count > 0 -%}
 <section class="weekend-picks" aria-labelledby="weekend-picks-title">
   <h2 id="weekend-picks-title">{{ picks_title }}</h2>
+  <p class="weekend-all"><a href="{{ '/this-weekend/' | relative_url }}">Friday through Sunday in every city</a></p>
   <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   <ul class="weekend-grid">
     {%- for line in pick_lines -%}
@@ -291,6 +292,7 @@
           <span class="weekend-town">{{ city.name }}</span>
           <span class="weekend-when">{{ when_label }}</span>
           <span class="weekend-name">{{ event.name }}</span>
+          {%- include event-tags.html event=event -%}
         </a>
         {%- if place_label.size > 0 -%}
         <a class="addr weekend-place" href="{{ place_label | map_search: city.name, event.name }}">{%- include addr-pin.html -%}<span class="addr-text">{{ place_label }}</span></a>

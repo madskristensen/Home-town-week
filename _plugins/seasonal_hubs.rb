@@ -164,11 +164,9 @@ module EastsideCalendar
         Array(data["#{city_id}_events"]).each do |event|
           next unless event.is_a?(Hash)
 
-          tags = Array(event["tags"]).map(&:to_s)
-          name = event["name"].to_s.downcase
           Array(hub["sections"]).each do |section|
             next unless section.is_a?(Hash)
-            next unless section_match?(tags, name, section)
+            next unless section_match?(event, section)
 
             row = event_row(event, city_id, names[city_id], site_url)
             next unless upcoming_row?(row, today)
@@ -340,11 +338,24 @@ module EastsideCalendar
       sections
     end
 
-    def section_match?(tags, name, section)
+    def section_match?(event, section)
+      return false if rainy_section?(section) && EventLabels.camp?(event)
+
+      tags = Array(event["tags"]).map(&:to_s)
+      name = event["name"].to_s.downcase
+      wanted = section["match_setting"].to_s.strip
+      if !wanted.empty? && EventLabels.setting_label(event).casecmp(wanted).zero?
+        return true
+      end
+
       section_tags = Array(section["tags"]).map(&:to_s)
       return true unless (tags & section_tags).empty?
 
       phrases(section["keywords"]).any? { |phrase| name.include?(phrase) }
+    end
+
+    def rainy_section?(section)
+      section["id"].to_s == "rainy-day" || Array(section["tags"]).map(&:to_s).include?("rainy-day")
     end
 
     def town_match?(event, tags, keywords)
@@ -534,6 +545,12 @@ module EastsideCalendar
       finish_s = event["end"].to_s
       row = row_dates(event["name"], city_name, city_id, event["place"], event["same_as"], start_s, finish_s, site_url)
       row["tags"] = Array(event["tags"]).map(&:to_s)
+      %w[cost ages setting drop_off signup sensory].each do |key|
+        raw = event[key]
+        next if raw.nil? || raw == false || raw.to_s.strip.empty?
+
+        row[key] = raw
+      end
       blurb = event["blurb"].to_s.strip
       row["blurb"] = blurb unless blurb.empty?
       drive = event["drive"].to_s.strip
@@ -1143,6 +1160,162 @@ module EastsideCalendar
       site.static_files << CalendarFile.new(dir, filename, EventCalendar.build_ics(record, city_url, EventCalendar.stamp_utc(site.time)))
       href
     end
+
+    WEEKDAY = %w[Sunday Monday Tuesday Wednesday Thursday Friday Saturday].freeze
+
+    # Friday through Sunday of the current Pacific weekend. Monday through
+    # Thursday use the coming Friday. The daily rebuild moves the window.
+    def weekend_bounds(today)
+      wday = today.wday
+      friday = if wday >= 5
+                 today - (wday - 5)
+               elsif wday.zero?
+                 today - 2
+               else
+                 today + (5 - wday)
+               end
+      [friday, friday + 1, friday + 2]
+    end
+
+    def day_heading(day)
+      "#{WEEKDAY[day.wday]}, #{EventCalendar.month_day(day)}"
+    end
+
+    def overlaps_day?(row, day)
+      start_on = date_only(row["sort"])
+      finish = date_only(row["end_on"]) || start_on
+      return false unless start_on && finish
+
+      start_on <= day && finish >= day
+    end
+
+    def city_rows(cities, data, today, site_url)
+      names = city_names(cities)
+      rows = []
+      names.each do |city_id, city_name|
+        Array(data["#{city_id}_events"]).each do |event|
+          next unless event.is_a?(Hash)
+
+          row = event_row(event, city_id, city_name, site_url)
+          next unless upcoming_row?(row, today)
+
+          rows << row
+        end
+      end
+      rows
+    end
+
+    def prepare_weekend(cities, data, today, site_url)
+      friday, saturday, sunday = weekend_bounds(today)
+      days = [friday, saturday, sunday]
+      grouped = days.map { [] }
+      city_rows(cities, data, today, site_url).each do |row|
+        days.each_with_index do |day, index|
+          next unless overlaps_day?(row, day)
+
+          grouped[index] << row.dup
+        end
+      end
+      sections = []
+      days.each_with_index do |day, index|
+        items = grouped[index].sort_by { |item| [item["startDate"].to_s, item["city"].to_s, item["name"].to_s] }
+        next if items.empty?
+
+        ident = WEEKDAY[day.wday].downcase
+        sections << {
+          "id" => ident,
+          "title" => day_heading(day),
+          "toc" => WEEKDAY[day.wday],
+          "intro" => "",
+          "events" => items
+        }
+      end
+      span = "#{day_heading(friday)} through #{day_heading(sunday)}"
+      standing_page(
+        "this-weekend",
+        "/this-weekend/",
+        "This weekend on the Eastside",
+        "Friday through Sunday family events in 14 Eastside cities, grouped by day. Parks, libraries, markets, and shows, updated daily.",
+        "#{span}, across all 14 cities.",
+        "Nothing is listed for this Friday, Saturday, or Sunday yet.",
+        sections,
+        weekend_motif
+      )
+    end
+
+    def prepare_dropoff(cities, data, today, site_url)
+      items = city_rows(cities, data, today, site_url).select do |row|
+        EventLabels.flag(row, "drop_off") && !EventLabels.camp?(row)
+      end
+      items.sort_by! { |item| [item["sort"].to_s, item["startDate"].to_s, item["city"].to_s, item["name"].to_s] }
+      sections = []
+      unless items.empty?
+        sections << {
+          "id" => "drop-off",
+          "title" => "Upcoming drop-off nights",
+          "toc" => "Drop-off nights",
+          "intro" => "Dated sessions where the kids stay and you get the evening.",
+          "events" => items
+        }
+      end
+      standing_page(
+        "parents-night-out",
+        "/parents-night-out/",
+        "Parents' night out on the Eastside",
+        "Drop-off nights for Eastside parents. Dated kids' nights at gyms, community centers, and youth programs. Camps are not listed.",
+        "A few hours when the kids are looked after. These are dated drop-off sessions at gyms, community centers, and kids' programs. Day camps are not listed.",
+        "No drop-off nights are listed yet. City pages are where each session is written up.",
+        sections,
+        dropoff_motif
+      )
+    end
+
+    def standing_page(id, path, title, description, intro, empty, sections, motif)
+      {
+        "id" => id,
+        "path" => path,
+        "title" => title,
+        "description" => description,
+        "banner_title" => title,
+        "hook" => "",
+        "link_label" => "See events",
+        "llms" => description,
+        "season_label" => "",
+        "in_season" => false,
+        "ends_on" => nil,
+        "footer" => false,
+        "footer_label" => title,
+        "intro" => intro,
+        "empty" => empty,
+        "suggest_lead" => "",
+        "suggest_link" => "",
+        "suggest_subject" => "",
+        "suggest_body" => "",
+        "sections" => sections,
+        "visible_events" => sections.flat_map { |section| section["events"] },
+        "theme" => {
+          "background" => "#f4efe6",
+          "ink" => "#1a2822",
+          "muted" => "#3f5148",
+          "link" => "#145c40",
+          "dark" => {
+            "background" => "#2a2433",
+            "ink" => "#f6efe4",
+            "muted" => "#d2c3ae",
+            "link" => "#8fd4b0"
+          },
+          "svg" => motif
+        }
+      }
+    end
+
+    def weekend_motif
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="5" width="16" height="14" rx="1.5" fill="#1e4636"/><path d="M4 9h16" stroke="#c6a15a" stroke-width="1.4"/><path d="M8 3.5v3M16 3.5v3" stroke="#6b4e0e" stroke-width="1.4" stroke-linecap="round"/></svg>'
+    end
+
+    def dropoff_motif
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3" fill="#1e4636"/><path fill="#6b4e0e" d="M6.5 19.2c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5H6.5z"/></svg>'
+    end
   end
 
   # Written during generate. Jekyll does not copy a file that is not in
@@ -1206,6 +1379,10 @@ module EastsideCalendar
       prepared.each { |hub| SeasonalHubs.attach_cards!(hub, site, pages, catalog, venues, groups, pools) }
       drive = SeasonalHubs.prepare_drive(site.data["worth_the_drive_events"], today, site_url)
       SeasonalHubs.attach_cards!(drive, site, pages, catalog, venues, groups, pools)
+      weekend = SeasonalHubs.prepare_weekend(site.data["cities"], site.data, today, site_url)
+      dropoff = SeasonalHubs.prepare_dropoff(site.data["cities"], site.data, today, site_url)
+      SeasonalHubs.attach_cards!(weekend, site, pages, catalog, venues, groups, pools)
+      SeasonalHubs.attach_cards!(dropoff, site, pages, catalog, venues, groups, pools)
 
       rule = SeasonalHubs.banner_rule(config)
       chosen = SeasonalHubs.banner_choice(prepared, rule, today)
@@ -1234,6 +1411,10 @@ module EastsideCalendar
       end
       pages[drive["id"]] = drive
       site.pages << hub_page(site, drive)
+      [weekend, dropoff].each do |extra|
+        pages[extra["id"]] = extra
+        site.pages << hub_page(site, extra)
+      end
       site.data["hub_pages"] = pages
       site.data["seasonal_hubs"] = public_hubs
       site.data["footer_seasons"] = SeasonalHubs.footer_seasons(prepared)

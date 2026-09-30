@@ -191,6 +191,14 @@ Village Theatre lists a captioned performance at 2:00 p.m. The Issaquah run ends
 
 [Ragtime](https://villagetheatre.org/mainstage/ragtime/)
 
+### Monster Mash Parent Survival Night
+<p class="event-when">Sat Oct 17 · 5:30–8:30 p.m.</p>
+<p class="event-place">The Little Gym Issaquah, 82 Front St S</p>
+
+A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night. The gym lists it at $70, for ages 3 to 8.
+
+[Monster Mash Parent Survival Night](https://www.thelittlegym.com/washington-issaquah/events-more/)
+
 ### Reading with Rover
 <p class="event-when">Wed Oct 21 · 6:30–7:30 p.m.</p>
 <p class="event-place">Issaquah Library, 10 W Sunset Way</p>
@@ -236,6 +244,14 @@ A family tree lighting at Village Green Park, with free cocoa, Santa photos, and
 A reindeer festival for families at Cougar Mountain Zoo, with admission at the gate and Santa photos for an extra donation. Santa is there Nov 27 through Dec 23, 10:30 a.m.–4:00 p.m. Festival hours those days are 10:30 a.m.–4:30 p.m., or dusk. Dec 26 through Dec 30 the holiday fun continues 10:30 a.m.–3:30 p.m. without Santa. Members do not need to buy ahead for Dec 20–23 and Dec 26–30.
 
 [Issaquah Reindeer Festival](https://www.cougarmountainzoo.org/issaquah-reindeer-festival-offseason/)
+
+### Turkey Trot Parent Survival Night
+<p class="event-when">Sat Nov 28 · 5:30–8:30 p.m.</p>
+<p class="event-place">The Little Gym Issaquah, 82 Front St S</p>
+
+A drop-off evening at the gym. Kids run through games, then crafts and stories. The gym lists ages 3 to 10.
+
+[Turkey Trot Parent Survival Night](https://www.thelittlegym.com/washington-issaquah/events-more/)
 
 ### Caroling at the Depot
 <p class="event-when">Thu Dec 3 · 6:00–7:30 p.m.</p>

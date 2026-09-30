@@ -393,6 +393,14 @@ Come in costume and trick-or-treat with costumed farm animals. The afternoon als
 
 [Trick or Treat with the Farm Animals](https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/trick-treat-farm-animals)
 
+### Kids Night Out
+<p class="event-when">Sat Oct 24 · 5:00–8:30 p.m.</p>
+<p class="event-place">Samena Swim and Recreation Club, 15231 Lake Hills Blvd</p>
+
+Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten. Members pay $55 and non-members pay $65. Register ahead.
+
+[Kids Night Out](https://samena.com/events/)
+
 ### Bellevue Family YMCA Fall Festival
 <p class="event-when">Sat Oct 24 · 6:00–8:00 p.m.</p>
 <p class="event-place">Bellevue Family YMCA, 14230 Bel-Red Rd</p>
@@ -400,6 +408,14 @@ Come in costume and trick-or-treat with costumed farm animals. The afternoon als
 Trunk-or-treat, a robotics station, and a pumpkin pool. These branch festivals are free and open to the community, and adults are asked not to wear masks. Costumes should stay family-friendly.
 
 [Fall festivals](https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities)
+
+### Monster Mash Parent Survival Night
+<p class="event-when">Sat Oct 24 · 6:00–9:00 p.m.</p>
+<p class="event-place">The Little Gym Bellevue-Redmond, 1800 130th Ave NE</p>
+
+A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night. The gym lists it at $73, for ages 4 to 10.
+
+[Monster Mash Parent Survival Night](https://www.thelittlegym.com/washington-bellevue-redmond/events-more/)
 
 ### Sunset Stroll
 <p class="event-when">Fri Oct 30 · 6:00–7:00 p.m.</p>
@@ -460,6 +476,22 @@ A family pirate adventure from Bellevue Youth Theatre. Tickets are $15, seats ar
 A nature craft hour for ages 3 to 7, with a new topic each session and a craft to take home. It is free. Register each child and adult. The same hour is also on Sun Dec 6.
 
 [Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
+### Kids Night Out
+<p class="event-when">Sat Nov 21 · 5:00–8:30 p.m.</p>
+<p class="event-place">Samena Swim and Recreation Club, 15231 Lake Hills Blvd</p>
+
+Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten. Members pay $55 and non-members pay $65. Register ahead.
+
+[Kids Night Out](https://samena.com/events/)
+
+### Friendsgiving Parent Survival Night
+<p class="event-when">Sat Nov 21 · 6:00–9:00 p.m.</p>
+<p class="event-place">The Little Gym Bellevue-Redmond, 1800 130th Ave NE</p>
+
+A drop-off evening at the gym, set up like a kids' table that never sits still. $73. The gym lists ages 4 to 10.
+
+[Friendsgiving Parent Survival Night](https://www.thelittlegym.com/washington-bellevue-redmond/events-more/)
 
 ### Robin Hood
 <p class="event-when">Fri Nov 27 through Sun Dec 6</p>

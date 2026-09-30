@@ -128,6 +128,58 @@
 
   regroupEvents();
 
+  // Filters hide cards in CSS. This only tidies empty day headings and
+  // the hub contents list after a tap, so the first paint does not move.
+  var filterBoxes = document.querySelectorAll(".event-filters input");
+  function matchingCard(card, wantFree, wantIndoor) {
+    if (wantFree && !card.hasAttribute("data-free")) return false;
+    if (wantIndoor && !card.hasAttribute("data-indoor")) return false;
+    return true;
+  }
+  function applyFilters() {
+    var freeBox = document.querySelector(".flt-free");
+    var indoorBox = document.querySelector(".flt-indoor");
+    var wantFree = !!(freeBox && freeBox.checked);
+    var wantIndoor = !!(indoorBox && indoorBox.checked);
+    var active = wantFree || wantIndoor;
+    var visible = 0;
+    document.querySelectorAll("h2.event-bucket").forEach(function (heading) {
+      var any = false;
+      var node = heading.nextElementSibling;
+      while (node && !node.classList.contains("event-bucket") && !node.classList.contains("filter-empty") && !node.classList.contains("suggest-event")) {
+        if (node.classList.contains("event-card") && matchingCard(node, wantFree, wantIndoor)) {
+          any = true;
+          visible += 1;
+        }
+        node = node.nextElementSibling;
+      }
+      heading.hidden = active && !any;
+    });
+    document.querySelectorAll(".hub-card").forEach(function (card) {
+      if (matchingCard(card, wantFree, wantIndoor)) visible += 1;
+    });
+    document.querySelectorAll(".hub-toc li").forEach(function (item) {
+      var link = item.querySelector("a");
+      if (!link) return;
+      var id = (link.getAttribute("href") || "").replace(/^#/, "");
+      var section = id ? document.getElementById(id) : null;
+      if (!section) return;
+      var cards = section.querySelectorAll(".hub-card");
+      var any = false;
+      var i;
+      for (i = 0; i < cards.length; i++) {
+        if (matchingCard(cards[i], wantFree, wantIndoor)) any = true;
+      }
+      item.hidden = active && !any;
+    });
+    document.querySelectorAll(".filter-empty").forEach(function (note) {
+      note.hidden = !active || visible > 0;
+    });
+  }
+  for (var filterIndex = 0; filterIndex < filterBoxes.length; filterIndex++) {
+    filterBoxes[filterIndex].addEventListener("change", applyFilters);
+  }
+
   var installLink = document.getElementById("install-link");
 
   function isIOS() {

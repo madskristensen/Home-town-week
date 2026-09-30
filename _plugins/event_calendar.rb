@@ -589,7 +589,7 @@ module EastsideCalendar
       %(<span class="event-cals">#{anchors.join}</span>)
     end
 
-    def inject!(html, groups, dates, today, city_name = nil)
+    def inject!(html, groups, dates, today, city_name = nil, labels = nil)
       return html unless html.is_a?(String)
 
       match = html.match(/<div class="prose"[^>]*>/)
@@ -599,7 +599,7 @@ module EastsideCalendar
       close_at = matching_div_end(html, content_at)
       return html unless close_at
 
-      inner = inject_inner(html[content_at...close_at], groups, dates, city_name)
+      inner = inject_inner(html[content_at...close_at], groups, dates, city_name, labels)
       inner = group_events(inner, today)
       opener = stamp_today(html[match.begin(0)...content_at], today)
       html[0, match.begin(0)] + opener + inner + html[close_at..]
@@ -638,9 +638,10 @@ module EastsideCalendar
       nil
     end
 
-    def inject_inner(inner, groups, dates, city_name = nil)
+    def inject_inner(inner, groups, dates, city_name = nil, labels = nil)
       groups ||= {}
       dates ||= {}
+      labels ||= {}
       cursors = Hash.new(0)
       parts = inner.split(/(?=<h3\b)/)
       prelude = parts.shift.to_s
@@ -663,9 +664,10 @@ module EastsideCalendar
         end
         iso = dates[key] && dates[key][index]
         iso = nil if iso.to_s.empty?
+        info = labels[key] && labels[key][index]
         part = link_event_place(part, city_name, visible_text(heading))
         part = mark_source_links(part)
-        wrap_event_card(part, iso)
+        wrap_event_card(part, iso, info)
       end
       prelude + rendered.join
     end
@@ -699,11 +701,25 @@ module EastsideCalendar
     end
 
     # One card per event heading. The calendar icon is already on the date line.
-    def wrap_event_card(part, iso = nil)
+    def wrap_event_card(part, iso = nil, info = nil)
       body = part.sub(/\s+\z/, "")
       trail = part[body.length..] || ""
+      tags = EventLabels.html(info)
+      body = body.sub(%r{</h3>}) { "#{Regexp.last_match(0)}\n#{tags}" } unless tags.empty?
       date_attr = iso ? %( data-date="#{iso}") : ""
-      %(<article class="event-card"#{date_attr}>\n#{body}\n</article>#{trail})
+      extra = EventLabels.attrs(info)
+      extra = extra.empty? ? "" : " #{extra}"
+      %(<article class="event-card"#{date_attr}#{extra}>\n#{body}\n</article>#{trail})
+    end
+
+    # Labels for the card readers see. Recurring rows that share a heading
+    # use the row on that card's date.
+    def card_labels(picks, date)
+      return {} if picks.nil? || picks.empty?
+
+      chosen = picks.find { |event| date && event[:start] && event[:start][:date] == date }
+      chosen ||= picks.min_by { |event| sort_key(event[:start]) }
+      chosen[:labels] || {}
     end
 
     def root_path(site, path)
@@ -954,6 +970,7 @@ module EastsideCalendar
       assigned = EventCalendar.assign_events(heading_rows, events)
       groups = Hash.new { |hash, key| hash[key] = [] }
       dates = Hash.new { |hash, key| hash[key] = [] }
+      labels = Hash.new { |hash, key| hash[key] = [] }
       used = {}
       used_ids = {}
       visible = []
@@ -985,6 +1002,7 @@ module EastsideCalendar
         groups[heading[:key]] << links
         date = EventCalendar.heading_date(heading, picks, today)
         dates[heading[:key]] << (date ? EventCalendar.iso_date(date) : nil)
+        labels[heading[:key]] << EventCalendar.card_labels(picks, date)
         visible << EventCalendar.visible_event(heading, picks, today, city_name, city_url, used_ids)
       end
 
@@ -1011,6 +1029,7 @@ module EastsideCalendar
       matched = assigned.values.sum(&:size)
       page.data["calendar_groups"] = groups
       page.data["event_dates"] = dates
+      page.data["event_labels"] = labels
       { linked: linked, unmatched: events.size - matched, undated: undated }
     end
 
@@ -1036,7 +1055,17 @@ module EastsideCalendar
           start: start_parsed,
           end: EventCalendar.parse_when(item["end"]),
           place: item["place"].to_s.strip,
-          same_as: item["same_as"].to_s.strip
+          same_as: item["same_as"].to_s.strip,
+          labels: {
+            "name" => name,
+            "cost" => item["cost"],
+            "ages" => item["ages"],
+            "setting" => item["setting"],
+            "drop_off" => item["drop_off"],
+            "signup" => item["signup"],
+            "sensory" => item["sensory"],
+            "tags" => item["tags"]
+          }
         }
       end
       [events, undated]
@@ -1064,7 +1093,8 @@ Jekyll::Hooks.register :pages, :post_render do |page|
     page.data["calendar_groups"],
     page.data["event_dates"],
     today,
-    EastsideCalendar::EventCalendar.city_name_for(page.site, page)
+    EastsideCalendar::EventCalendar.city_name_for(page.site, page),
+    page.data["event_labels"]
   )
 end
 

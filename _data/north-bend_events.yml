@@ -1,6 +1,8 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
+# Optional labels, only when the source page says so: cost, ages, setting, drop_off, signup, sensory.
 - name: "Pajama Story Time"
+  setting: "Indoor"
   start: "2026-09-30T18:30:00-07:00"
   end: "2026-09-30T19:00:00-07:00"
   place: "North Bend Library, 115 E 4th Street"
@@ -10,6 +12,8 @@
   place: "Several North Bend sites, including the Mt. Si Senior Center"
   same_as: "https://www.northbendwa.gov/common/modules/iCalendar/iCalendar.aspx?catID=21&feed=calendar"
 - name: "LEGO Builders"
+  ages: "All ages"
+  setting: "Indoor"
   start: "2026-10-03T15:00:00-07:00"
   end: "2026-10-03T16:30:00-07:00"
   place: "North Bend Library, 115 E 4th Street"
@@ -37,6 +41,7 @@
   place: "Si View Community Center, 400 SE Orchard Drive"
   same_as: "https://www.siviewpark.org/family-fun.phtml"
 - name: "Chess Club"
+  setting: "Indoor"
   start: "2026-10-24T13:00:00-07:00"
   end: "2026-10-24T15:00:00-07:00"
   place: "North Bend Library, 115 E 4th Street"

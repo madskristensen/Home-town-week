@@ -51,6 +51,7 @@ layout: default
   <div class="prose" data-today="{{ site.time | date: '%Y-%m-%d' }}">
     <h2>Upcoming</h2>
     <p id="list-updated" class="list-updated">Events updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
+    {%- include event-filters.html -%}
     {{ content }}
   </div>
   {%- else -%}

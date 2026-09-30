@@ -18,6 +18,9 @@
           {%- endfor -%}
         </ul>
         <a class="footer-drive" href="{{ '/worth-the-drive/' | relative_url }}"{% if page.hub_id == "worth-the-drive" %} aria-current="page"{% endif %}>Worth the drive</a>
+        <a class="footer-drive" href="{{ '/this-weekend/' | relative_url }}"{% if page.hub_id == "this-weekend" %} aria-current="page"{% endif %}>This weekend</a>
+        <a class="footer-drive" href="{{ '/parents-night-out/' | relative_url }}"{% if page.hub_id == "parents-night-out" %} aria-current="page"{% endif %}>Parents' night out</a>
+        <a class="footer-drive" href="{{ '/guides/' | relative_url }}"{% if page.url == "/guides/" or page.url contains "/guides/" %} aria-current="page"{% endif %}>Guides</a>
       </nav>
       <nav class="footer-group" aria-labelledby="footer-site">
         <p id="footer-site" class="footer-heading">Site</p>

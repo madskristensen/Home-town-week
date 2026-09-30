@@ -1,5 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
+# Optional labels, only when the source page says so: cost, ages, setting, drop_off, signup, sensory.
 - name: "Teen Center Project Drop-in Session 1"
   start: "2026-09-30T14:30:00-07:00"
   end: "2026-09-30T16:30:00-07:00"
@@ -16,6 +17,8 @@
   place: "Redmond, Meeting Room 1"
   same_as: "https://kcls.bibliocommons.com/events/695c0705992fc18a86dbadf0"
 - name: "Toddler Story Time"
+  ages: "Toddlers"
+  setting: "Indoor"
   start: "2026-10-01T10:30:00-07:00"
   end: "2026-10-01T11:30:00-07:00"
   place: "Redmond Library, 15990 NE 85th St"
@@ -26,6 +29,7 @@
   place: "Redmond Community Center at Marymoor Village, 6505 176th Ave NE"
   same_as: "https://www.redmond.gov/2494/Teen-Center-Project"
 - name: "Lap Sit Baby Story Time"
+  setting: "Indoor"
   start: "2026-10-02T10:30:00-07:00"
   end: "2026-10-02T11:30:00-07:00"
   place: "Redmond Library, 15990 NE 85th St"
@@ -72,6 +76,8 @@
   place: "Francis J. Gaudette Theatre, Issaquah"
   same_as: "https://villagetheatre.org/mainstage/ragtime/"
 - name: "Basic Bicycle Maintenance for Youth"
+  setting: "Indoor"
+  signup: true
   start: "2026-10-03T15:00:00-07:00"
   end: "2026-10-03T17:30:00-07:00"
   place: "Redmond Library"
@@ -100,6 +106,8 @@
   place: "Redmond, Meeting Room 2"
   same_as: "https://kcls.bibliocommons.com/events/690cd27206078d3600768932"
 - name: "Study with Dogs"
+  ages: "Teens"
+  setting: "Indoor"
   start: "2026-10-07T15:30:00-07:00"
   end: "2026-10-07T16:30:00-07:00"
   place: "Redmond Library, 15990 NE 85th St"
@@ -143,6 +151,9 @@
   place: "The Archer Hotel Redmond and Redmond Town Center"
   same_as: "https://engage.oneredmond.org/howl-o-ween"
 - name: "Digital SAT Practice Test and Score Review"
+  ages: "Teens"
+  setting: "Indoor"
+  signup: true
   start: "2026-10-18T14:00:00-07:00"
   end: "2026-10-18T17:30:00-07:00"
   place: "Redmond Library, 15990 NE 85th St"

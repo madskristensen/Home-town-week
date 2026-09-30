@@ -2,6 +2,8 @@
   {%- include responsive-img.html
        src=include.src
        alt=include.alt
+       width=include.width
+       height=include.height
        loading="lazy"
        sizes="(min-width: 47rem) 44rem, calc(100vw - 3rem)" -%}
   {%- if include.credit or include.source -%}

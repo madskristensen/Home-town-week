@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<article class="page wrap prose guide-page">
+  <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
+  <p class="guide-intro">{{ page.intro }}</p>
+  <div class="hub-grid">
+    {%- assign guide = site.data.guides[page.guide_id] -%}
+    {%- for entry in guide.entries -%}
+    <article class="hub-card">
+      {%- include event-photo.html
+           src=entry.image
+           alt=entry.alt
+           width=entry.width
+           height=entry.height
+           credit=entry.credit
+           source=entry.source -%}
+      <h2>{{ entry.name }}</h2>
+      <p><a class="addr" href="{{ entry.address | map_search: entry.city, entry.name }}">{%- include addr-pin.html -%}<span class="addr-text">{{ entry.address }}</span></a></p>
+      <p>{{ entry.text }}</p>
+    </article>
+    {%- endfor -%}
+  </div>
+</article>

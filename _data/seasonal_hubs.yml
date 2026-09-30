@@ -319,6 +319,7 @@ hubs:
         title: Indoor plans
         intro: Museums, libraries, and indoor play.
         tags: [rainy-day]
+        match_setting: Indoor
     theme:
       background: "#e7eeeb"
       ink: "#1a2822"

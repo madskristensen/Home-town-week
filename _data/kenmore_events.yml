@@ -1,11 +1,14 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
+# Optional labels, only when the source page says so: cost, ages, setting, drop_off, signup, sensory.
 - name: "Music and Movement with Lana Van Boven"
+  ages: "All ages"
   start: "2026-10-02T10:00:00-07:00"
   end: "2026-10-02T10:30:00-07:00"
   place: "Kenmore Library, 6531 NE 181st Street"
   same_as: "https://kcls.bibliocommons.com/events/6a921c7a2dac6e0037228009"
 - name: "Music and Movement with Lana Van Boven"
+  ages: "All ages"
   start: "2026-10-02T10:45:00-07:00"
   end: "2026-10-02T11:15:00-07:00"
   place: "Kenmore Library, 6531 NE 181st Street"
@@ -24,11 +27,13 @@
   place: "Northlake Lutheran Church, 6620 NE 185th Street"
   same_as: "https://findkenmore.org/event/imagine-presents-family-friendly-karaoke-4/"
 - name: "ASL Story Time"
+  ages: "All ages"
   start: "2026-10-10T11:15:00-07:00"
   end: "2026-10-10T12:15:00-07:00"
   place: "Kenmore Library, 6531 NE 181st Street"
   same_as: "https://kcls.bibliocommons.com/events/6a76c37ce30fe4845967df1c"
 - name: "Family Story Time"
+  ages: "All ages"
   tags: [free, story-time]
   start: "2026-10-23T10:00:00-07:00"
   end: "2026-10-23T10:30:00-07:00"

@@ -1,6 +1,8 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
+# Optional labels, only when the source page says so: cost, ages, setting, drop_off, signup, sensory.
 - name: "Story Stroll: Watercress"
+  setting: "Outdoor"
   start: "2026-09-05"
   end: "2026-10-03"
   place: "Issaquah Library, 10 W Sunset Way"
@@ -16,6 +18,7 @@
   place: "Blakely Hall, Issaquah Highlands"
   same_as: "https://issaquahhighlands.com/event/chess-club-4-11/2026-09-30/"
 - name: "Rise & Shine Story Time"
+  setting: "Indoor"
   start: "2026-10-01T10:30:00-07:00"
   end: "2026-10-01T11:00:00-07:00"
   place: "Issaquah Library, 10 W Sunset Way"
@@ -51,6 +54,7 @@
   start: "2026-10-08"
   same_as: "https://allevents.in/issaquah/huge-kids-consignment-event-october-8-11-at-pickering-barn/200030128544936"
 - name: "Story Stroll: Apple Pie Picnic"
+  setting: "Outdoor"
   start: "2026-10-10"
   place: "Issaquah Library, 10 W Sunset Way"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa0a306442d35226f67899a"
@@ -72,6 +76,7 @@
   place: "Blakely Hall, Issaquah Highlands"
   same_as: "https://issaquahhighlands.com/event/teen-climate-workshop/"
 - name: "Story Stroll: Apple Pie Picnic"
+  setting: "Outdoor"
   start: "2026-10-17"
   place: "Issaquah Library, 10 W Sunset Way"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa0a306442d35226f67899b"
@@ -97,6 +102,16 @@
   start: "2026-10-17T14:00:00-07:00"
   place: "Francis J. Gaudette Theatre, 303 Front St N"
   same_as: "https://villagetheatre.org/mainstage/ragtime/"
+- name: "Monster Mash Parent Survival Night"
+  cost: "$70"
+  setting: "Indoor"
+  drop_off: true
+  signup: true
+  start: "2026-10-17T17:30:00-07:00"
+  end: "2026-10-17T20:30:00-07:00"
+  place: "The Little Gym Issaquah, 82 Front St S"
+  same_as: "https://www.thelittlegym.com/washington-issaquah/events-more/"
+  blurb: "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night. The gym lists it at $70, for ages 3 to 8."
 - name: "Reading with Rover"
   tags: [free]
   start: "2026-10-21T18:30:00-07:00"
@@ -143,6 +158,15 @@
   end: "2026-12-30"
   place: "Cougar Mountain Zoo, 19525 SE 54th St"
   same_as: "https://www.cougarmountainzoo.org/issaquah-reindeer-festival-offseason/"
+- name: "Turkey Trot Parent Survival Night"
+  setting: "Indoor"
+  drop_off: true
+  signup: true
+  start: "2026-11-28T17:30:00-08:00"
+  end: "2026-11-28T20:30:00-08:00"
+  place: "The Little Gym Issaquah, 82 Front St S"
+  same_as: "https://www.thelittlegym.com/washington-issaquah/events-more/"
+  blurb: "A drop-off evening at the gym. Kids run through games, then crafts and stories. The gym lists ages 3 to 10."
 - name: "Caroling at the Depot"
   tags: [santa]
   start: "2026-12-03T18:00:00-08:00"

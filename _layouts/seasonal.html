@@ -27,6 +27,7 @@ layout: default
   {%- if section_count == 0 -%}
   <p>{{ hub.empty }}</p>
   {%- else -%}
+  {%- include event-filters.html -%}
   <nav class="hub-toc" aria-label="On this page">
     <ol>
       {%- for section in hub_sections -%}
@@ -54,7 +55,11 @@ layout: default
       {%- assign event_source = event.image_source | append: "" -%}
       {%- assign event_calendar = event.calendar | append: "" -%}
       {%- capture city_href -%}/{{ event.city_id }}/{%- endcapture -%}
-      <article class="hub-card" data-image-kind="{{ event.image_kind }}">
+      {%- assign card_free = false -%}
+      {%- if event.cost == "Free" -%}{%- assign card_free = true -%}{%- endif -%}
+      {%- assign card_indoor = false -%}
+      {%- if event.setting == "Indoor" -%}{%- assign card_indoor = true -%}{%- endif -%}
+      <article class="hub-card" data-image-kind="{{ event.image_kind }}"{% if card_free %} data-free="1"{% endif %}{% if card_indoor %} data-indoor="1"{% endif %}>
         {%- if event_image.size > 0 -%}
         {%- if forloop.parentloop.first and forloop.index < 3 -%}
           {%- assign card_loading = "eager" -%}
@@ -88,6 +93,7 @@ layout: default
           <a href="{{ city_href | strip | relative_url }}">{{ event.name }}</a>
           {%- endif -%}
         </h3>
+        {%- include event-tags.html event=event -%}
         {%- assign event_when = event.when | append: "" -%}
         {%- if event_when.size > 0 or event_calendar.size > 0 -%}
         <p class="event-when">

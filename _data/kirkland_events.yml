@@ -1,5 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
+# Optional labels, only when the source page says so: cost, ages, setting, drop_off, signup, sensory.
 - name: "SOLD OUT: Judy Collins - Judy Blue Eyes Farewell Tour"
   start: "2026-09-30"
   same_as: "https://allevents.in/kirkland/sold-out-judy-collins-judy-blue-eyes-farewell-tour/200030356991832"
@@ -9,6 +10,8 @@
   place: "Marina Park, 25 Lakeshore Plaza"
   same_as: "https://kirklanddowntown.org/events/kirkland-market/"
 - name: "Beats Beyond Boundaries"
+  ages: "Kids"
+  setting: "Indoor"
   start: "2026-09-30T17:30:00-07:00"
   end: "2026-09-30T18:15:00-07:00"
   place: "Kirkland Library, 308 Kirkland Ave"
@@ -18,6 +21,8 @@
   place: "Kirkland Performance Center, 350 Kirkland Ave"
   same_as: "https://www.kpcenter.org/get-tickets/"
 - name: "Pajama Story Time"
+  ages: "Toddlers"
+  setting: "Indoor"
   start: "2026-09-30T19:00:00-07:00"
   end: "2026-09-30T19:30:00-07:00"
   place: "Kirkland Library, 308 Kirkland Ave"
@@ -26,6 +31,7 @@
   start: "2026-10-01"
   same_as: "https://allevents.in/kirkland/the-ultimate-doors-tribute-to-the-doors/200030356992740"
 - name: "Baby Story Time"
+  setting: "Indoor"
   start: "2026-10-01T10:30:00-07:00"
   end: "2026-10-01T11:00:00-07:00"
   place: "Kirkland Library, 308 Kirkland Ave"
@@ -44,11 +50,14 @@
   place: "Juanita Beach Park, 9703 NE Juanita Dr"
   same_as: "https://www.kirklandwa.gov/Whats-Happening/Community-Events/Parks-and-Community-Services/Kirklands-Harvest-Festival"
 - name: "SUMM Family Math Fun"
+  setting: "Indoor"
+  signup: true
   start: "2026-10-03T11:30:00-07:00"
   end: "2026-10-03T13:00:00-07:00"
   place: "Kingsgate Library, 12315 NE 143rd St"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a7f4c9b4027d701ebc45c62"
 - name: "Reading with Rover"
+  signup: true
   tags: [free]
   start: "2026-10-03T13:00:00-07:00"
   end: "2026-10-03T14:00:00-07:00"
@@ -91,6 +100,7 @@
   start: "2026-10-09"
   same_as: "https://allevents.in/kirkland/heart-by-heart-with-steve-fossen-and-michael-derosier-of-heart/200030477188454"
 - name: "Japanese Story Time"
+  ages: "All ages"
   tags: [free, story-time]
   start: "2026-10-09T10:30:00-07:00"
   end: "2026-10-09T11:00:00-07:00"
@@ -122,11 +132,14 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.org/locations/kirkland/"
 - name: "Pajama Story Time"
+  ages: "Toddlers"
+  setting: "Indoor"
   start: "2026-10-14T19:00:00-07:00"
   end: "2026-10-14T19:30:00-07:00"
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a7fab8f386764026a1707e5"
 - name: "Baby Story Time"
+  setting: "Indoor"
   start: "2026-10-15T10:30:00-07:00"
   end: "2026-10-15T11:00:00-07:00"
   place: "Kirkland Library, 308 Kirkland Ave"
@@ -160,6 +173,9 @@
   start: "2026-10-21"
   same_as: "https://allevents.in/kirkland/shoshana-bean-the-smoke-tour/200030448429228"
 - name: "Spooky Clay Creations"
+  ages: "Kids"
+  setting: "Indoor"
+  signup: true
   tags: [halloween]
   start: "2026-10-21T15:30:00-07:00"
   end: "2026-10-21T17:00:00-07:00"

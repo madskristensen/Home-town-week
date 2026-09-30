@@ -1,0 +1,32 @@
+{%- assign tag_event = include.event -%}
+{%- assign tag_cost = tag_event.cost | append: "" | strip -%}
+{%- assign tag_ages = tag_event.ages | append: "" | strip -%}
+{%- assign tag_setting = tag_event.setting | append: "" | strip -%}
+{%- assign tag_drop = tag_event.drop_off -%}
+{%- assign tag_signup = tag_event.signup -%}
+{%- assign tag_sensory = tag_event.sensory -%}
+{%- assign tag_show_cost = false -%}
+{%- if tag_cost == "Free" or tag_cost == "free" -%}
+  {%- assign tag_show_cost = true -%}
+  {%- assign tag_cost = "Free" -%}
+{%- elsif tag_cost contains "$" -%}
+  {%- assign tag_show_cost = true -%}
+{%- endif -%}
+{%- assign tag_show_ages = false -%}
+{%- if tag_ages == "Toddlers" or tag_ages == "Kids" or tag_ages == "Teens" or tag_ages == "All ages" -%}
+  {%- assign tag_show_ages = true -%}
+{%- endif -%}
+{%- assign tag_show_setting = false -%}
+{%- if tag_setting == "Indoor" or tag_setting == "Outdoor" -%}
+  {%- assign tag_show_setting = true -%}
+{%- endif -%}
+{%- if tag_show_cost or tag_show_ages or tag_show_setting or tag_drop == true or tag_signup == true or tag_sensory == true -%}
+<ul class="event-tags">
+  {%- if tag_show_cost -%}<li>{{ tag_cost }}</li>{%- endif -%}
+  {%- if tag_show_ages -%}<li>{{ tag_ages }}</li>{%- endif -%}
+  {%- if tag_show_setting -%}<li>{{ tag_setting }}</li>{%- endif -%}
+  {%- if tag_drop == true -%}<li>Drop-off</li>{%- endif -%}
+  {%- if tag_signup == true -%}<li>Sign-up needed</li>{%- endif -%}
+  {%- if tag_sensory == true -%}<li>Sensory-friendly</li>{%- endif -%}
+</ul>
+{%- endif -%}
