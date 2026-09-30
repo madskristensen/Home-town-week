@@ -24,6 +24,7 @@
   place: "Muddy Boots Pumpkins, 15505 W Snoqualmie River Road NE"
   same_as: "https://muddybootspumpkins.com/"
 - name: "Novelty Hill Farm pumpkin patch"
+  cost: "Free"
   setting: "Outdoor"
   tags: [pumpkin-patch, corn-maze]
   start: "2026-10-02"
@@ -60,6 +61,8 @@
   place: "Duvall Library, 15508 Main Street NE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a8dfc9b29a7dd0d674697b3"
 - name: "Free Community Art Day"
+  ages: "All ages"
+  signup: true
   cost: "Free"
   setting: "Indoor"
   start: "2026-10-17T11:00:00-07:00"
@@ -76,6 +79,7 @@
   place: "Duvall Library, 15508 Main Street NE"
   same_as: "https://kcls.bibliocommons.com/events/6a46e34086636e3d0052475b"
 - name: "Novelty Hill Farm Christmas Tree Lighting"
+  signup: true
   setting: "Outdoor"
   tags: [tree-lighting, santa, holiday-market]
   start: "2026-11-28T17:00:00-08:00"
