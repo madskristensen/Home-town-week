@@ -21,12 +21,15 @@
   place: "North Bend Library, 115 E 4th Street"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa0a1c66562d02296858b8d"
 - name: "Shaun the Sheep: The Beast of Mossy Bottom"
+  cost: "$8 to $10"
   setting: "Indoor"
   start: "2026-10-08T18:00:00-07:00"
   end: "2026-10-08T19:30:00-07:00"
   place: "North Bend Theatre, 125 Bendigo Blvd N"
   same_as: "https://tix.northbendtheatre.com/event/shaun-the-sheep-the-beast-of-mossy-bottom-thursday-oct-8th-6pm"
 - name: "Halloween Train"
+  cost: "$16 to $32"
+  signup: true
   tags: [halloween]
   start: "2026-10-10"
   end: "2026-11-01"
@@ -71,6 +74,8 @@
   same_as: "https://www.siviewpark.org/family-fun.phtml"
 
 - name: "North Pole Limited Santa Train"
+  cost: "$39"
+  signup: true
   tags: [santa]
   start: "2026-11-28"
   end: "2026-12-20"
