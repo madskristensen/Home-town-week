@@ -1,6 +1,6 @@
 # Eastside Family Calendar
 
-Upcoming family events for cities on Washington's Eastside. This is a Jekyll site. It is published at [eastsidecalendar.com](https://eastsidecalendar.com/). See [Domain](#domain).
+Upcoming family events for cities on Washington's Eastside. This is a Jekyll site. It is published at [www.eastsidecalendar.com](https://www.eastsidecalendar.com/). See [Domain](#domain).
 
 The home page leads with a map of the Eastside, from Lake Washington to the Cascade foothills, and a list of the same cities. Each city on the map is a link. The list shows how many upcoming events that city has. The footer lists every city under Explore. Every page uses the same compact wordmark bar: the site name on one line, linked home, with the Cities menu on that same row, a thin bottom border, and no kicker. The page heading below it is the large display title. On the home page that heading is "Things to do with kids on the Eastside", followed by "Upcoming family events in Eastside cities, so you never miss the fun." That intro line is on the home page only. A seasonal banner, when one qualifies, sits under the header with a small gap so it reads as its own band.
 
@@ -37,9 +37,9 @@ The footer is three groups: Seasons, Explore, and Site. Seasons lists every hub 
 
 ## Domain
 
-The site is published with a custom GitHub Actions workflow. GitHub ignores the `CNAME` file for that kind of publish. The live host is the custom domain in the repository Pages settings, which is eastsidecalendar.com. `_config.yml` sets `url` to `https://eastsidecalendar.com` and `baseurl` to an empty string. Keep the baseurl empty. A `/Home-town-week` baseurl breaks CSS and images on the apex domain.
+The site is published with a custom GitHub Actions workflow at https://www.eastsidecalendar.com. The naked domain redirects there. `CNAME` contains `www.eastsidecalendar.com` so a deploy keeps that Pages custom domain. `_config.yml` sets `url` to `https://www.eastsidecalendar.com` and `baseurl` to an empty string. Keep the baseurl empty. A `/Home-town-week` baseurl breaks CSS and images on the custom domain.
 
-IndexNow reads `https://eastsidecalendar.com/sitemap.xml`. That file has to be real sitemap XML. Do not point IndexNow at a retired host.
+IndexNow reads `https://www.eastsidecalendar.com/sitemap.xml`. The verification key file is written at the site root during the Pages build, so it is served at `https://www.eastsidecalendar.com/{key}.txt`. That sitemap has to be real sitemap XML. Do not point IndexNow at the naked host.
 
 Suggestion and request links use `suggestions@eastsidecalendar.com`.
 

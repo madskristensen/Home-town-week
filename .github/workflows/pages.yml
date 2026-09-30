@@ -71,9 +71,9 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: |
-          # Custom domain eastsidecalendar.com: empty baseurl. Do not fall back
-          # to /Home-town-week or apex CSS/images break. Actions publishing
-          # ignores the CNAME file. The host is the repository Pages setting.
+          # Custom domain www.eastsidecalendar.com: empty baseurl. Do not fall
+          # back to /Home-town-week or the custom-domain CSS and images break.
+          # CNAME in the published site must stay www.eastsidecalendar.com.
           # The service worker cache name is this commit, so the new worker
           # replaces the previous caches on activate.
           printf 'sha: "%s"\n' "$GITHUB_SHA" > _data/build.yml
@@ -87,6 +87,7 @@ jobs:
             echo "::notice::INDEXNOW_KEY is not configured. Skipping the IndexNow verification file."
             exit 0
           fi
+          # Key file at the site root: https://www.eastsidecalendar.com/{key}.txt
           printf '%s' "$INDEXNOW_KEY" > "_site/${INDEXNOW_KEY}.txt"
 
       - name: Upload artifact
@@ -120,7 +121,7 @@ jobs:
         if: env.INDEXNOW_KEY != ''
         uses: bojieyang/indexnow-action@v3
         with:
-          sitemap-location: "https://eastsidecalendar.com/sitemap.xml"
+          sitemap-location: "https://www.eastsidecalendar.com/sitemap.xml"
           key: ${{ env.INDEXNOW_KEY }}
           endpoint: "api.indexnow.org"
           failure-strategy: "error"
