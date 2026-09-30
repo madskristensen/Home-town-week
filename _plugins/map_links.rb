@@ -11,6 +11,13 @@ module EastsideCalendar
       "https://www.google.com/maps/search/?api=1&query=#{encode(query_text(place, city, name))}"
     end
 
+    def pin
+      return @pin if @pin
+
+      path = File.expand_path("../_includes/addr-pin.html", __dir__)
+      @pin = File.read(path).gsub(/\s+/, " ").strip.freeze
+    end
+
     # Venue name, then the place line, then the town, then WA.
     # A piece already written at the end of the line is not repeated.
     def query_text(place, city = nil, name = nil)

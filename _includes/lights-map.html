@@ -87,7 +87,7 @@ Dates and hours:{%- endcapture -%}
           </figure>
           {%- endif -%}
           <p class="lights-name">{{ light.name }}</p>
-          <p class="lights-meta">{{ light.type_label }} · <a class="addr" href="{{ light.address | map_search: light.city, light.name }}">{{ light.address }}</a> · {% if light.free %}Free{% else %}Tickets required{% endif %}</p>
+          <p class="lights-meta">{{ light.type_label }} · <a class="addr" href="{{ light.address | map_search: light.city, light.name }}">{%- include addr-pin.html -%}<span class="addr-text">{{ light.address }}</span></a> · {% if light.free %}Free{% else %}Tickets required{% endif %}</p>
           {%- if light_nights.size > 0 -%}
           <p class="event-when">{{ light_nights }}</p>
           {%- endif -%}
