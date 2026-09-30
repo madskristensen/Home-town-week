@@ -14,13 +14,16 @@ Newcastle is an Eastside city that does not have a page yet. Do not invent a pag
 | City | `/{city}/`, for example `/redmond/` |
 | About | `/about/` |
 | Seasonal hub | One path per hub in `_data/seasonal_hubs.yml`, for example `/fall/` and `/christmas/` |
+| Worth the drive | `/worth-the-drive/` |
 | Christmas lights map | `/christmas/lights/` |
 | Feed | `/feed.xml` |
 | LLM guide | `/llms.txt` |
 
-`llms.txt` is written at build time from `_data/cities.yml` and `_data/seasonal_hubs.yml`. It lists each city page, the about page, each seasonal hub, and the sitemap. It says the blurbs are original and link to sources. It does not include upcoming-event counts. Do not maintain it by hand.
+`llms.txt` is written at build time from `_data/cities.yml`, `_data/seasonal_hubs.yml`, and a line for `/worth-the-drive/`. It lists each city page, the about page, each seasonal hub, Worth the drive, and the sitemap. It says the blurbs are original and link to sources. It does not include upcoming-event counts. Do not maintain it by hand.
 
 Seasonal hubs are generated from `_data/seasonal_hubs.yml`. Each hub stays up all year. A section appears only when it has something to list. The home page does not get a separate seasonal note. One banner under the masthead links to the hub that is in season and has enough upcoming events. See [Seasonal cross-check](#seasonal-cross-check). There is no `/halloween/` page. Halloween is the `/fall/#halloween` section. There is no `/holiday-lights/` page. Dated public light displays are events in the Holiday lights section of `/christmas/`. Homes and neighborhood streets are on `/christmas/lights/`. See [Holiday lights](#holiday-lights) and [Christmas lights map](#christmas-lights-map).
+
+`/worth-the-drive/` is the same hub layout, for a short list of family venues outside the 14 cities, within about an hour of Bellevue. Rows live only in `_data/worth_the_drive_events.yml`, using the same fields as a city event plus `town`, `drive`, and `blurb`. `drive` is a rough trip from Bellevue, such as `about 40 min from Bellevue`. The card shows the town and that drive time as text. The town does not link to a city page. These rows stay off city pages and off the home weekend picks. Fall adds a Worth the drive section for pumpkin patches and corn mazes. Christmas adds one for tree farms and light shows. Any other hub can show that section, and only does when a row matches its tags. The daily prune removes expired rows from this file the same way it prunes `_data/*_events.yml`. The page is in the sitemap. The footer links to it. The header does not.
 
 City URLs have no state segment and no year or week segment. There is no `/maple-valley/` page and no redirect.
 
@@ -53,7 +56,7 @@ Open `http://127.0.0.1:4000/`.
 
 Pushes to `main` run `.github/workflows/pages.yml`, which builds the site and deploys it with GitHub Actions. The workflow passes the Pages base path through, and that path is empty on the custom domain.
 
-`.github/workflows/prune.yml` runs daily at 11:15 UTC, early morning Pacific. It deletes events whose last day is before today in America/Los_Angeles from each city page (`{city}/index.md`) and from `_data/{city}_events.yml`. If nothing expired, it does not commit. If it removed something, it pushes that commit. Either way it starts the Pages deploy, so the home page weekend block is chosen again from the current date. The HTML is static. The browser does not hide old events.
+`.github/workflows/prune.yml` runs daily at 11:15 UTC, early morning Pacific. It deletes events whose last day is before today in America/Los_Angeles from each city page (`{city}/index.md`) and from `_data/*_events.yml`, including `_data/worth_the_drive_events.yml`. If nothing expired, it does not commit. If it removed something, it pushes that commit. Either way it starts the Pages deploy, so the home page weekend block is chosen again from the current date. The HTML is static. The browser does not hide old events.
 
 ## Content
 

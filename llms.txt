@@ -22,6 +22,7 @@ sitemap: false
 {%- for hub in site.data.seasonal_hubs %}
 - [{{ hub.title }}]({{ site.url }}{{ site.baseurl }}{{ hub.path }}): {{ hub.llms }} In season {{ hub.season_label }}. The page stays up all year.
 {%- endfor %}
+- [Worth the drive]({{ site.url }}{{ site.baseurl }}/worth-the-drive/): Family outings a little outside the Eastside, with the town and a rough drive time from Bellevue. The page stays up all year.
 - [Christmas lights map]({{ site.url }}{{ site.baseurl }}/christmas/lights/): Homes and neighborhood streets with Christmas lights, on one map. Public displays stay on the Christmas page.
 
 ## Sitemap

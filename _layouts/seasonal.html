@@ -41,6 +41,9 @@ layout: default
     {%- if section_intro.size > 0 -%}
     <p class="hub-section-intro">{{ section.intro }}</p>
     {%- endif -%}
+    {%- if section.id == "worth-the-drive" -%}
+    <p class="hub-section-intro"><a href="{{ '/worth-the-drive/' | relative_url }}">See every trip worth the drive</a></p>
+    {%- endif -%}
     <div class="hub-grid">
       {%- for event in section.events -%}
       {%- assign event_same = event.same_as | append: "" -%}
@@ -95,7 +98,12 @@ layout: default
         {%- endif -%}
         <p class="event-place">
           {%- if event_place.size > 0 -%}<a class="addr" href="{{ event.place | map_search: event.city, event.name }}">{%- include addr-pin.html -%}<span class="addr-text">{{ event.place }}</span></a>, {% endif -%}
+          {%- assign event_drive = event.drive | append: "" -%}
+          {%- if event_drive.size > 0 -%}
+          <span class="place-town">{{ event.city }}</span><span class="drive-time">{{ event.drive }}</span>
+          {%- else -%}
           <a class="place-town" href="{{ city_href | strip | relative_url }}">{{ event.city }}</a>
+          {%- endif -%}
         </p>
         {%- assign event_blurb = event.blurb | append: "" -%}
         {%- if event_blurb.size > 0 -%}

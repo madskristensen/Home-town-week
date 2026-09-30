@@ -1512,10 +1512,15 @@ figure figcaption .source::before {
   line-height: 1.4;
 }
 
-.hub-card .event-place a.place-town {
+.hub-card .event-place a.place-town,
+.hub-card .event-place span.place-town {
   color: inherit;
   font-weight: 600;
   text-decoration: none;
+}
+
+.hub-card .event-place .drive-time::before {
+  content: " · ";
 }
 
 .hub-card .event-place a.place-town:hover,

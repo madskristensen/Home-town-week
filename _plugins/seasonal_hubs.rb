@@ -112,8 +112,49 @@ module EastsideCalendar
       text.match?(HEX) ? text : fallback
     end
 
+    # Tags that pull Worth the drive rows onto a hub. Fall and Christmas
+    # are named here. Any other hub uses its own section tags, and the
+    # section is omitted when nothing matches.
+    DRIVE_HUB_TAGS = {
+      "fall" => %w[pumpkin-patch corn-maze u-pick harvest],
+      "christmas" => %w[holiday-lights tree-farm]
+    }.freeze
+
+    DRIVE_PAGE_SECTIONS = [
+      {
+        "id" => "patches",
+        "title" => "Pumpkin patches and corn mazes",
+        "toc" => "Pumpkin patches and corn mazes",
+        "intro" => "Big patches and mazes a little outside the Eastside.",
+        "tags" => %w[pumpkin-patch corn-maze u-pick harvest]
+      },
+      {
+        "id" => "family-days",
+        "title" => "Family days",
+        "toc" => "Family days",
+        "intro" => "Kid activities and family hours, not a day at the betting windows.",
+        "tags" => %w[family-day]
+      },
+      {
+        "id" => "trees",
+        "title" => "Tree farms",
+        "toc" => "Tree farms",
+        "intro" => "Choose-and-cut farms worth the drive.",
+        "tags" => %w[tree-farm]
+      },
+      {
+        "id" => "lights",
+        "title" => "Light shows",
+        "toc" => "Light shows",
+        "intro" => "Big holiday light walks the kids will talk about on the way home.",
+        "tags" => %w[holiday-lights]
+      }
+    ].freeze
+
     def sections_for(hub, cities, data, today, site_url)
-      return town_sections(hub, cities, data, today, site_url) if hub["group"].to_s == "town"
+      if hub["group"].to_s == "town"
+        return append_drive_section(town_sections(hub, cities, data, today, site_url), hub, data, today, site_url)
+      end
 
       names = city_names(cities)
       grouped = Hash.new { |hash, key| hash[key] = [] }
@@ -141,7 +182,7 @@ module EastsideCalendar
         end
       end
 
-      Array(hub["sections"]).filter_map do |section|
+      sections = Array(hub["sections"]).filter_map do |section|
         next unless section.is_a?(Hash)
 
         items = grouped[section["id"]].sort_by { |item| [item["sort"], item["name"].to_s] }
@@ -149,6 +190,111 @@ module EastsideCalendar
 
         section_payload(section, items)
       end
+      append_drive_section(sections, hub, data, today, site_url)
+    end
+
+    def drive_match_tags(hub)
+      named = DRIVE_HUB_TAGS[hub["id"].to_s]
+      return named if named
+
+      Array(hub["sections"]).flat_map { |section| Array(section["tags"]).map(&:to_s) }.uniq
+    end
+
+    def drive_section_intro(hub)
+      case hub["id"].to_s
+      when "fall"
+        "Corn mazes and pumpkin patches a little outside the Eastside."
+      when "christmas"
+        "Tree farms and big light shows a little outside the Eastside."
+      else
+        "A little outside the Eastside, and worth the trip."
+      end
+    end
+
+    # One section at the bottom, from _data/worth_the_drive_events.yml.
+    # These rows are not city events, so they stay off city pages.
+    def append_drive_section(sections, hub, data, today, site_url)
+      tags = drive_match_tags(hub)
+      return sections if tags.empty?
+
+      items = drive_rows(data["worth_the_drive_events"], tags, today, site_url)
+      return sections if items.empty?
+
+      sections + [section_payload({
+        "id" => "worth-the-drive",
+        "title" => "Worth the drive",
+        "toc" => "Worth the drive",
+        "intro" => drive_section_intro(hub)
+      }, items)]
+    end
+
+    def drive_rows(events, tags, today, site_url)
+      want = Array(tags).map(&:to_s)
+      seen = {}
+      items = []
+      Array(events).each do |event|
+        next unless event.is_a?(Hash)
+
+        event_tags = Array(event["tags"]).map(&:to_s)
+        next if (event_tags & want).empty?
+
+        town = event["town"].to_s.strip
+        town = "Nearby" if town.empty?
+        row = event_row(event, "worth-the-drive", town, site_url)
+        next unless upcoming_row?(row, today)
+
+        key = "#{row["name"]}|#{row["sort"]}"
+        next if seen[key]
+
+        seen[key] = true
+        items << row
+      end
+      items.sort_by { |item| [item["sort"], item["name"].to_s] }
+    end
+
+    def prepare_drive(events, today, site_url)
+      sections = DRIVE_PAGE_SECTIONS.filter_map do |section|
+        items = drive_rows(events, section["tags"], today, site_url)
+        next if items.empty?
+
+        section_payload(section, items)
+      end
+      {
+        "id" => "worth-the-drive",
+        "path" => "/worth-the-drive/",
+        "title" => "Family outings worth the drive",
+        "description" => "Pumpkin patches, corn mazes, tree farms, and big light shows a little outside the Eastside. Each card shows the town and a rough drive time from Bellevue.",
+        "banner_title" => "Worth the drive",
+        "hook" => "A little outside the Eastside, and worth the trip.",
+        "link_label" => "See events",
+        "llms" => "Family outings a little outside the Eastside, with the town and a rough drive time from Bellevue.",
+        "season_label" => "",
+        "in_season" => false,
+        "ends_on" => nil,
+        "footer" => false,
+        "footer_label" => "Worth the drive",
+        "intro" => "These places sit a little outside the Eastside. We only list them when the trip is worth it: a big pumpkin patch, a corn maze, a tree farm, or a light show the kids will still be talking about on the way home. The time on each card is a rough drive from Bellevue, before traffic.",
+        "empty" => "Nothing is listed right now. We add a place only when the dates are set and the trip is worth it.",
+        "suggest_lead" => "",
+        "suggest_link" => "",
+        "suggest_subject" => "",
+        "suggest_body" => "",
+        "sections" => sections,
+        "visible_events" => sections.flat_map { |section| section["events"] },
+        "theme" => {
+          "background" => "#f4efe6",
+          "ink" => "#1a2822",
+          "muted" => "#3f5148",
+          "link" => "#145c40",
+          "dark" => {
+            "background" => "#2a2433",
+            "ink" => "#f6efe4",
+            "muted" => "#d2c3ae",
+            "link" => "#8fd4b0"
+          },
+          "svg" => safe_svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#8a5a22" d="M8.2 12.2c0-2.2 1.5-3.6 3.8-3.6s3.8 1.4 3.8 3.6c0 3.3-1.6 6.2-3.8 6.2s-3.8-2.9-3.8-6.2z"/><path fill="#6b4e0e" d="M11.2 9.2h1.6v8.4h-1.6z"/><path fill="#1e4636" d="M12 5.4c.3 1 .2 1.8-.2 2.4 1.2-.2 2-.8 2.2-1.8-.8-.5-1.5-.7-2-.6z"/></svg>')
+        }
+      }
     end
 
     # group: town lists one section per city. An event matches when it has
@@ -364,6 +510,10 @@ module EastsideCalendar
       finish_s = event["end"].to_s
       row = row_dates(event["name"], city_name, city_id, event["place"], event["same_as"], start_s, finish_s, site_url)
       row["tags"] = Array(event["tags"]).map(&:to_s)
+      blurb = event["blurb"].to_s.strip
+      row["blurb"] = blurb unless blurb.empty?
+      drive = event["drive"].to_s.strip
+      row["drive"] = drive unless drive.empty?
       row
     end
 
@@ -473,10 +623,13 @@ module EastsideCalendar
           page = pages[event["city_id"].to_s]
           key = "#{event["city_id"]}|#{event["name"]}"
           card = find_card(catalog, event)
-          blurb = card ? card[:blurb].to_s : ""
-          blurb = "#{event["name"]} in #{event["city"]}." if blurb.empty?
-          event["blurb"] = blurb
-          event["description"] = blurb
+          blurb = event["blurb"].to_s.strip
+          if blurb.empty?
+            blurb = card ? card[:blurb].to_s : ""
+            blurb = "#{event["name"]} in #{event["city"]}." if blurb.empty?
+            event["blurb"] = blurb
+          end
+          event["description"] = event["blurb"]
           event["calendar"] = calendar_href(page, event)
           event["calendar"] = write_calendar(site, event) if event["calendar"].empty?
 
@@ -1028,6 +1181,8 @@ module EastsideCalendar
       pools = site.data["hub_pools"]
       SeasonalHubs.index_card_photos!(site, pages, catalog, venues, groups, config["hubs"], pools)
       prepared.each { |hub| SeasonalHubs.attach_cards!(hub, site, pages, catalog, venues, groups, pools) }
+      drive = SeasonalHubs.prepare_drive(site.data["worth_the_drive_events"], today, site_url)
+      SeasonalHubs.attach_cards!(drive, site, pages, catalog, venues, groups, pools)
 
       rule = SeasonalHubs.banner_rule(config)
       chosen = SeasonalHubs.banner_choice(prepared, rule, today)
@@ -1054,6 +1209,8 @@ module EastsideCalendar
         }
         site.pages << hub_page(site, hub)
       end
+      pages[drive["id"]] = drive
+      site.pages << hub_page(site, drive)
       site.data["hub_pages"] = pages
       site.data["seasonal_hubs"] = public_hubs
       HomeLights.attach!(site, prepared)
