@@ -1,23 +1,53 @@
 <footer class="site-footer">
   <div class="wrap">
-    <nav class="footer-nav" aria-label="Footer">
-      <a href="{{ '/about/' | relative_url }}">About</a>
-      {%- for hub in site.data.seasonal_hubs -%}
-      {%- if hub.footer -%}
-      <a href="{{ hub.path | relative_url }}">{{ hub.footer_label }}</a>
-      {%- endif -%}
-      {%- endfor -%}
-      <a href="{{ '/worth-the-drive/' | relative_url }}">Worth the drive</a>
-      <a href="{{ '/feed.xml' | relative_url }}">Feed</a>
-      {%- capture city_request_subject -%}Request a city{%- endcapture -%}
-      {%- capture city_request_body -%}I would like Eastside Family Calendar to cover a city.
+    <div class="footer-groups">
+      <nav class="footer-group" aria-labelledby="footer-seasons">
+        <p id="footer-seasons" class="footer-heading">Seasons</p>
+        <ul class="footer-seasons">
+          {%- for season in site.data.footer_seasons -%}
+          <li><a href="{{ season.path | relative_url }}"{% if page.hub_id == season.id %} aria-current="page"{% endif %}>{{ season.label }}</a></li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+      <nav class="footer-group" aria-labelledby="footer-explore">
+        <p id="footer-explore" class="footer-heading">Explore</p>
+        <ul class="footer-cities">
+          {%- for city in site.data.cities -%}
+          {%- capture city_url -%}/{{ city.id }}/{%- endcapture -%}
+          <li><a href="{{ city_url | strip | relative_url }}"{% if page.city == city.id %} aria-current="page"{% endif %}>{{ city.name }}</a></li>
+          {%- endfor -%}
+        </ul>
+        <a class="footer-drive" href="{{ '/worth-the-drive/' | relative_url }}"{% if page.hub_id == "worth-the-drive" %} aria-current="page"{% endif %}>Worth the drive</a>
+      </nav>
+      <nav class="footer-group" aria-labelledby="footer-site">
+        <p id="footer-site" class="footer-heading">Site</p>
+        <ul class="footer-site">
+          <li><a href="{{ '/about/' | relative_url }}"{% if page.url == "/about/" %} aria-current="page"{% endif %}>About</a></li>
+          {%- capture suggest_subject -%}Suggest an event{%- endcapture -%}
+          {%- capture suggest_body -%}I would like to suggest an event for Eastside Family Calendar.
+
+Event name:
+Date and time:
+Place:
+Link:
+Short blurb:
+Who it's for (kids, families):
+          {%- endcapture -%}
+          <li><a href="mailto:suggestions@eastsidecalendar.com?subject={{ suggest_subject | strip | mail_escape }}&amp;body={{ suggest_body | strip | mail_escape }}">Suggest an event</a></li>
+          {%- capture city_request_subject -%}Request a city{%- endcapture -%}
+          {%- capture city_request_body -%}I would like Eastside Family Calendar to cover a city.
 
 City:
-{%- endcapture -%}
-      <a href="mailto:suggestions@eastsidecalendar.com?subject={{ city_request_subject | strip | mail_escape }}&amp;body={{ city_request_body | strip | mail_escape }}">Request a city</a>
-      <button type="button" id="install-link" class="footer-install" hidden>Add to Home screen</button>
-    </nav>
-    <p class="footer-family">Made by an Eastside family, for Eastside families. <a href="https://afterpickup.com">From our family: After Pickup</a></p>
-    <p class="copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+          {%- endcapture -%}
+          <li><a href="mailto:suggestions@eastsidecalendar.com?subject={{ city_request_subject | strip | mail_escape }}&amp;body={{ city_request_body | strip | mail_escape }}">Request a city</a></li>
+          <li><a href="{{ '/feed.xml' | relative_url }}">Feed</a></li>
+        </ul>
+        <button type="button" id="install-link" class="footer-install" hidden>Add to Home screen</button>
+      </nav>
+    </div>
+    <div class="footer-note">
+      <p class="footer-family">Made by an Eastside family, for Eastside families. <a href="https://afterpickup.com">From our family: After Pickup</a></p>
+      <p class="copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+    </div>
   </div>
 </footer>

@@ -359,6 +359,29 @@ module EastsideCalendar
       Array(value).map { |phrase| phrase.to_s.downcase.strip }.reject(&:empty?)
     end
 
+    # Calendar order by season start. The in-season hub whose season ends
+    # soonest leads, and the rest follow in that same calendar order.
+    def footer_seasons(hubs)
+      calendar = Array(hubs).sort_by do |hub|
+        [month_day_ord(hub["season_start"]) || 9999, hub["path"].to_s]
+      end
+      lead = calendar.select { |hub| hub["in_season"] }.min_by do |hub|
+        [hub["ends_on"] || Date.new(9999, 12, 31), month_day_ord(hub["season_start"]) || 9999]
+      end
+      ordered = calendar
+      if lead
+        index = calendar.index(lead)
+        ordered = calendar.rotate(index) if index
+      end
+      ordered.map do |hub|
+        {
+          "id" => hub["id"],
+          "path" => hub["path"],
+          "label" => hub["footer_label"]
+        }
+      end
+    end
+
     def banner_choice(hubs, rule, today)
       qualifying = []
       hubs.each_with_index do |hub, index|
@@ -441,10 +464,11 @@ module EastsideCalendar
         "link_label" => presence(hub["link_label"], "See events"),
         "llms" => presence(hub["llms"], hub["hook"]),
         "season_label" => label,
+        "season_start" => start_s,
         "in_season" => in_season,
         "ends_on" => season_end_on(today, start_s, end_s),
         "footer" => hub["footer"] == true,
-        "footer_label" => presence(hub["footer_label"], title),
+        "footer_label" => presence(hub["footer_label"], presence(hub["banner_title"], title)),
         "intro" => intro_for(hub, label, in_season, sections),
         "empty" => presence(hub["empty"], "Nothing is listed yet. City pages are where each event is written up, and this page gathers them."),
         "suggest_lead" => suggest["lead"].to_s.strip,
@@ -1212,6 +1236,7 @@ module EastsideCalendar
       site.pages << hub_page(site, drive)
       site.data["hub_pages"] = pages
       site.data["seasonal_hubs"] = public_hubs
+      site.data["footer_seasons"] = SeasonalHubs.footer_seasons(prepared)
       HomeLights.attach!(site, prepared)
     end
 

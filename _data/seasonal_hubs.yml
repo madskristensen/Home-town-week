@@ -128,6 +128,7 @@ hubs:
     hook: Egg hunts, spring fairs, and family gatherings.
     link_label: See events
     footer: false
+    footer_label: Easter
     description: Easter for kids on the Eastside. Egg hunts, spring fairs, and family gatherings from Mar 15 through Apr 25.
     llms: Egg hunts, spring fairs, and family gatherings for kids.
     season:
@@ -157,6 +158,7 @@ hubs:
     hook: Parades, fireworks, and park picnics.
     link_label: See events
     footer: false
+    footer_label: Fourth of July
     description: Fourth of July for kids on the Eastside. Parades, fireworks, and park picnics from Jun 28 through Jul 5.
     llms: Parades, fireworks, and park picnics for kids around the Fourth of July.
     season:
@@ -186,6 +188,7 @@ hubs:
     hook: Lion dances, lanterns, and family fairs.
     link_label: See events
     footer: false
+    footer_label: Lunar New Year
     description: Lunar New Year for kids on the Eastside. Lion dances, lanterns, and family fairs from Jan 21 through Feb 20.
     llms: Lion dances, lanterns, and family fairs for Lunar New Year.
     season:
@@ -215,6 +218,7 @@ hubs:
     hook: Lights, dances, and family festivals.
     link_label: See events
     footer: false
+    footer_label: Diwali
     description: Diwali for kids on the Eastside. Lights, dances, and family festivals from Oct 15 through Nov 15.
     llms: Lights, dances, and family festivals for Diwali.
     season:
@@ -244,6 +248,7 @@ hubs:
     hook: Altars, marigolds, and family gatherings.
     link_label: See events
     footer: false
+    footer_label: Dia de los Muertos
     description: Dia de los Muertos for kids on the Eastside. Altars, marigolds, and family gatherings from Oct 28 through Nov 2.
     llms: Altars, marigolds, and family gatherings for Dia de los Muertos.
     season:
@@ -273,6 +278,7 @@ hubs:
     hook: Break camps, snow play, and indoor plans.
     link_label: See events
     footer: false
+    footer_label: Winter break
     description: Winter break and snow days for kids on the Eastside. Break camps, snow play, and indoor plans from Dec 15 through Jan 5.
     llms: Winter break camps, snow play, and indoor plans for kids.
     season:
@@ -302,6 +308,7 @@ hubs:
     hook: Museums, libraries, and indoor play.
     link_label: See events
     footer: false
+    footer_label: Rainy day
     description: Rainy day plans for kids on the Eastside. Museums, libraries, and indoor play from Oct 1 through May 31.
     llms: Museums, libraries, and indoor play for rainy days.
     season:
