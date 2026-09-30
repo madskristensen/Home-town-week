@@ -88,6 +88,8 @@
   place: "Woodinville Library, 17105 Avondale Road NE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa899dc4b3b06003083c925"
 - name: "Cows and Carnations"
+  cost: "Free"
+  setting: "Indoor"
   start: "2026-10-17T11:00:00-07:00"
   end: "2026-10-17T12:30:00-07:00"
   place: "Hollywood Schoolhouse at Maryhill Winery"
@@ -132,6 +134,7 @@
   place: "Brightwater Center, 22505 State Route 9 SE"
   same_as: "https://islandwood.org/events/2026-10-31/"
 - name: "The Great Pumpkin Hunt!"
+  setting: "Indoor"
   cost: "Free"
   tags: [halloween]
   start: "2026-10-31T16:00:00-07:00"
