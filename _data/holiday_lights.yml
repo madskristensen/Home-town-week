@@ -7,7 +7,7 @@
 # Required: id, name, type, city, address, description, source, free,
 # last_verified. nights and hours when they are known.
 # type is park, house, or street.
-# lat and lng are decimal degrees. The lights map pins use them.
+# lat and lng are decimal degrees. The Christmas Light Finder pins use them.
 # photo is optional. Write image, credit, and credit_url.
 # On this map only, a photo of that specific display may be used even
 # when the license is unclear. Credit it and link the source. Leave

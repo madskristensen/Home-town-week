@@ -4,7 +4,7 @@ Upcoming family events for cities on Washington's Eastside. This is a Jekyll sit
 
 The home page leads with a map of the Eastside, from Lake Washington to the Cascade foothills, and a list of the same cities. Each city on the map is a link. The list shows how many upcoming events that city has. The footer does not repeat every city. Every page uses the same compact wordmark bar: the site name on one line, linked home, with the Cities menu on that same row, a thin bottom border, and no kicker. The page heading below it is the large display title. On the home page that heading is "Things to do with kids on the Eastside", followed by "Upcoming family events in Eastside cities, so you never miss the fun." That intro line is on the home page only. A seasonal banner, when one qualifies, sits under the header with a small gap so it reads as its own band.
 
-Newcastle is an Eastside city that does not have a page yet. Do not invent a page for it. Fall City is not a separate page; its farm and library listings are on Snoqualmie. Maple Valley is not on this calendar. Do not add it back to `_data/cities.yml`, the map, the hubs, or the lights map. There is no `/maple-valley/` page and no redirect. Names without a page can sit in `_data/coming_soon.yml` and do not link anywhere.
+Newcastle is an Eastside city that does not have a page yet. Do not invent a page for it. Fall City is not a separate page; its farm and library listings are on Snoqualmie. Maple Valley is not on this calendar. Do not add it back to `_data/cities.yml`, the map, the hubs, or the Christmas Light Finder. There is no `/maple-valley/` page and no redirect. Names without a page can sit in `_data/coming_soon.yml` and do not link anywhere.
 
 ## URLs
 
@@ -15,13 +15,13 @@ Newcastle is an Eastside city that does not have a page yet. Do not invent a pag
 | About | `/about/` |
 | Seasonal hub | One path per hub in `_data/seasonal_hubs.yml`, for example `/fall/` and `/christmas/` |
 | Worth the drive | `/worth-the-drive/` |
-| Christmas lights map | `/christmas/lights/` |
+| Christmas Light Finder | `/christmas/lights/` |
 | Feed | `/feed.xml` |
 | LLM guide | `/llms.txt` |
 
 `llms.txt` is written at build time from `_data/cities.yml`, `_data/seasonal_hubs.yml`, and a line for `/worth-the-drive/`. It lists each city page, the about page, each seasonal hub, Worth the drive, and the sitemap. It says the blurbs are original and link to sources. It does not include upcoming-event counts. Do not maintain it by hand.
 
-Seasonal hubs are generated from `_data/seasonal_hubs.yml`. Each hub stays up all year. A section appears only when it has something to list. The home page does not get a separate seasonal note. One banner under the masthead links to the hub that is in season and has enough upcoming events. See [Seasonal cross-check](#seasonal-cross-check). There is no `/halloween/` page. Halloween is the `/fall/#halloween` section. There is no `/holiday-lights/` page. Dated public light displays are events in the Holiday lights section of `/christmas/`. Homes and neighborhood streets are on `/christmas/lights/`. See [Holiday lights](#holiday-lights) and [Christmas lights map](#christmas-lights-map).
+Seasonal hubs are generated from `_data/seasonal_hubs.yml`. Each hub stays up all year. A section appears only when it has something to list. The home page does not get a separate seasonal note. One banner under the masthead links to the hub that is in season and has enough upcoming events. See [Seasonal cross-check](#seasonal-cross-check). There is no `/halloween/` page. Halloween is the `/fall/#halloween` section. There is no `/holiday-lights/` page. Dated public light displays are events in the Holiday lights section of `/christmas/`. Homes and neighborhood streets are on `/christmas/lights/`. See [Holiday lights](#holiday-lights) and [Christmas Light Finder](#christmas-light-finder).
 
 `/worth-the-drive/` is the same hub layout, for a short list of family venues outside the 14 cities, within about an hour of Bellevue. Rows live only in `_data/worth_the_drive_events.yml`, using the same fields as a city event plus `town`, `drive`, and `blurb`. `drive` is a rough trip from Bellevue, such as `about 40 min from Bellevue`. The card shows the town and that drive time as text. The town does not link to a city page. These rows stay off city pages and off the home weekend picks. Fall adds a Worth the drive section for pumpkin patches and corn mazes. Christmas adds one for tree farms and light shows. Any other hub can show that section, and only does when a row matches its tags. The daily prune removes expired rows from this file the same way it prunes `_data/*_events.yml`. The page is in the sitemap. The footer links to it. The header does not.
 
@@ -92,9 +92,9 @@ The full tag vocabulary, with the season stored on each hub:
 
 A public light display with published dates for this season is an ordinary event. Write it on the city page, tag it `holiday-lights`, and it shows in the Holiday lights section of `/christmas/` with the other event cards. The place line is the map link. There is no `/christmas/#lights` section and no town tabs.
 
-### Christmas lights map
+### Christmas Light Finder
 
-`/christmas/lights/` is the map of private homes and neighborhood streets. It uses the same seasonal layout, header, and card grid as the other hub pages. `/christmas/` leads with a feature card under the page heading, above the section chips, linking to the map. When the Christmas hub is the home page banner, that same card sits under the home page intro.
+`/christmas/lights/` is the Christmas Light Finder, a map of private homes and neighborhood streets. The URL stays `/christmas/lights/`. It uses the same seasonal layout, header, and card grid as the other hub pages. `/christmas/` leads with a feature card under the page heading, above the section chips, linking to the finder. When the Christmas hub is the home page banner, that same card sits under the home page intro. The button says "Open the Christmas Light Finder".
 
 Rows live in `_data/holiday_lights.yml`. A row with `map: true` is on the map when its city is in `_data/cities.yml`. Maple Valley Lights is not in the file. Do not add it back. Public displays stay in the file without that flag and are not pinned. Do not add `same_as`, and do not copy a home onto a city page. When a source describes a past season and the next one is not announced, start `nights` with `Last seen 2025` (use that season's year). Do not invent the next season's dates.
 
