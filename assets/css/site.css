@@ -1486,7 +1486,11 @@ picture {
 }
 
 .lights-map-section {
-  margin-top: 1.6rem;
+  margin-top: 0.85rem;
+}
+
+.lights-map-section > h2 {
+  margin: 0.15rem 0 0.2rem;
 }
 
 .lights-map-section.is-prominent {
@@ -1511,7 +1515,7 @@ picture {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
-  margin: 0.85rem 0 0;
+  margin: 0.55rem 0 0;
 }
 
 .lights-filters button {
@@ -1551,7 +1555,7 @@ picture {
 .lights-board {
   display: grid;
   gap: 1rem;
-  margin-top: 0.85rem;
+  margin-top: 0.65rem;
 }
 
 .lights-frame {
@@ -1574,32 +1578,52 @@ picture {
   pointer-events: none;
 }
 
+.lights-frame .city-label {
+  paint-order: stroke fill;
+  stroke: #f4efe6;
+  stroke-width: 5px;
+  stroke-linejoin: round;
+}
+
 .light-pin {
   position: absolute;
   z-index: 1;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 2.75rem;
+  height: 2.75rem;
   margin: 0;
   padding: 0;
-  border: 2px solid var(--forest);
+  border: 0;
   border-radius: 50%;
-  background: #c6a15a;
+  background: transparent;
   transform: translate(-50%, -50%);
   pointer-events: auto;
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.light-pin:focus-visible {
-  outline: 3px solid var(--ink);
-  outline-offset: 3px;
+.light-pin::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 2px solid var(--forest);
+  border-radius: 50%;
+  background: #c6a15a;
+  transform: translate(-50%, -50%);
 }
 
-.light-pin.is-on,
-.light-pin[aria-pressed="true"] {
+.light-pin:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.light-pin.is-on::after,
+.light-pin[aria-pressed="true"]::after {
   background: var(--forest);
   border-color: var(--header-ink);
-  box-shadow: 0 0 0 3px var(--forest);
+  box-shadow: 0 0 0 2px var(--forest);
 }
 
 .lights-list {
@@ -1691,14 +1715,23 @@ picture {
 
 @media (min-width: 56rem) {
   .lights-map-section {
-    width: min(62rem, calc(100vw - 3rem));
-    margin-left: calc((100% - min(62rem, 100vw - 3rem)) / 2);
-    margin-right: calc((100% - min(62rem, 100vw - 3rem)) / 2);
+    width: min(60rem, calc(100vw - 3rem));
+    margin-left: calc((100% - min(60rem, 100vw - 3rem)) / 2);
+    margin-right: calc((100% - min(60rem, 100vw - 3rem)) / 2);
   }
 
   .lights-board {
-    grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.9fr);
+    grid-template-columns: auto minmax(16rem, 1fr);
     align-items: start;
+  }
+
+  .lights-frame {
+    width: max(14rem, min(25rem, calc((100dvh - 34rem) * 624 / 568)));
+  }
+
+  .lights-list {
+    max-height: max(12rem, min(calc(25rem * 568 / 624), calc(100dvh - 34rem)));
+    overflow: auto;
   }
 }
 

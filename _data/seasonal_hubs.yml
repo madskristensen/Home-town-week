@@ -25,8 +25,8 @@ hubs:
     description: Fall and Halloween fun for kids on the Eastside. Pumpkin patches, apple farms, harvest festivals, and trick-or-treat from Sep 1 through Oct 31.
     llms: Pumpkin patches, corn mazes, u-pick farms, harvest festivals, and Halloween plans for kids.
     in_season_intro: Pumpkin patches, u-pick farms, harvest festivals, and Halloween plans across the Eastside, listed through Oct 31.
-    off_season_intro: The season runs Sep 1 through Oct 31. This page stays up all year.
-    off_season_listed: The season runs Sep 1 through Oct 31. This page stays up all year, and dates already set are listed below.
+    off_season_intro: The season runs Sep 1 through Oct 31.
+    off_season_listed: The season runs Sep 1 through Oct 31. Dates already set are listed below.
     empty: Nothing is listed yet. City pages are where each event is written up, and this page gathers the fall ones.
     season:
       start: "09-01"
@@ -73,8 +73,8 @@ hubs:
     description: Christmas events for kids on the Eastside. Tree lightings, holiday lights, Santa visits, markets, shows, and parades, from Nov 10 through Dec 31.
     llms: Tree lightings, holiday lights, Santa visits, markets, shows, and parades for kids.
     in_season_intro: Tree lightings, lights, Santa, markets, shows, and parades across the Eastside, listed through Dec 31.
-    off_season_intro: The season runs Nov 10 through Dec 31. This page stays up all year.
-    off_season_listed: The season runs Nov 10 through Dec 31. This page stays up all year, and dates already set are listed below.
+    off_season_intro: The season runs Nov 10 through Dec 31.
+    off_season_listed: The season runs Nov 10 through Dec 31. Dates already set are listed below.
     empty: Nothing is listed yet. City pages are where each event is written up, and this page gathers the Christmas ones.
     lights: holiday_lights
     suggest:

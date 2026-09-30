@@ -22,11 +22,7 @@ Is this your own house? Yes or no{%- endcapture -%}
 {%- endif -%}
 <section class="lights-map-section{% if hub.in_season %} is-prominent{% endif %}" id="lights" aria-labelledby="lights-title">
   <h2 id="lights-title">Christmas lights map</h2>
-  {%- if hub.in_season -%}
-  <p class="lights-lead">Displays you can visit across the Eastside, listed through Dec 31.</p>
-  {%- else -%}
-  <p class="lights-lead">This map stays up all year. From Nov 10 through Dec 31 it is the first section on the page.</p>
-  {%- endif -%}
+  <p class="lights-lead">Tap a pin or pick a town to find lights near you.</p>
   {%- if light_count > 0 -%}
   <div class="lights-filters" role="group" aria-label="Filter displays by town">
     <button type="button" data-town="" aria-pressed="true">All <span class="lights-count">{{ light_count }}</span></button>

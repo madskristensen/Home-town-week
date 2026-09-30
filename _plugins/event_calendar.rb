@@ -426,7 +426,19 @@ module EastsideCalendar
     end
 
     def stamp_utc(time)
-      time.utc.strftime("%Y%m%dT%H%M%SZ")
+      # getutc returns a copy. Time#utc would rewrite site.time and make
+      # the Updated line use UTC.
+      time.getutc.strftime("%Y%m%dT%H%M%SZ")
+    end
+
+    # A Time whose calendar day is America/Los_Angeles, for the Updated line.
+    def pacific_time(time)
+      return nil if time.nil?
+
+      utc = time.getutc
+      utc_dt = DateTime.new(utc.year, utc.month, utc.day, utc.hour, utc.min, utc.sec, 0)
+      offset = pacific_offset_hours(utc_dt)
+      Time.new(utc.year, utc.month, utc.day, utc.hour, utc.min, utc.sec, "+00:00").getlocal(offset * 3600)
     end
 
     def format_dt(name, parsed)

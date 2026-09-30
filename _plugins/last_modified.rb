@@ -48,7 +48,7 @@ module EastsideCalendar
         end
 
         latest = times.compact.max
-        page.data["last_modified_at"] = latest if latest
+        page.data["last_modified_at"] = EventCalendar.pacific_time(latest) if latest
       end
     end
 

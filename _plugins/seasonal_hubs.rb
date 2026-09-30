@@ -355,12 +355,12 @@ module EastsideCalendar
         text = hub["off_season_intro"].to_s.strip
         return text unless text.empty?
 
-        "The season runs #{label}. This page stays up all year."
+        "The season runs #{label}."
       else
         text = hub["off_season_listed"].to_s.strip
         return text unless text.empty?
 
-        "The season runs #{label}. This page stays up all year, and dates already set are listed below."
+        "The season runs #{label}. Dates already set are listed below."
       end
     end
 
@@ -603,10 +603,8 @@ module EastsideCalendar
       [clamp_pin_x(x), clamp_pin_y(y)]
     end
 
-    # 24px targets need clear space on a narrow phone. The map is about
-    # 280px wide there, and the viewBox is 624 wide, so centers stay at
-    # least this many SVG units apart.
-    PIN_GAP = 78.0
+    # 44px hit targets on a phone-width map. The viewBox is 624 wide.
+    PIN_GAP = 84.0
 
     def separate_pins!(rows)
       16.times do
@@ -1072,7 +1070,7 @@ module EastsideCalendar
       page.data["permalink"] = hub["path"]
       page.data["hub_id"] = hub["id"]
       page.data["visible_events"] = hub["visible_events"]
-      page.data["last_modified_at"] = site.time
+      page.data["last_modified_at"] = EventCalendar.pacific_time(site.time)
       page.content = ""
       page
     end
