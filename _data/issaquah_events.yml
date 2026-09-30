@@ -9,6 +9,7 @@
   place: "Issaquah Library, 10 W Sunset Way"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a80b39d2dac6e00371f4f85"
 - name: "Ragtime"
+  signup: true
   setting: "Indoor"
   start: "2026-09-15"
   end: "2026-10-18"
@@ -42,6 +43,7 @@
   place: "Historic downtown Issaquah"
   same_as: "https://www.salmondays.org/sd-2026-festival-information"
 - name: "Feathers and Scales Gallery Open House"
+  setting: "Indoor"
   cost: "Free"
   tags: [free]
   start: "2026-10-04T12:00:00-07:00"
@@ -85,6 +87,7 @@
   place: "Issaquah Library, 10 W Sunset Way"
   same_as: "https://kcls.bibliocommons.com/events/6aa9dac5ca248a0029161b31"
 - name: "Teen Climate Workshop"
+  setting: "Indoor"
   cost: "Free"
   ages: "Teens"
   tags: [free]
@@ -112,6 +115,7 @@
   place: "Blakely Hall, Issaquah Highlands"
   same_as: "https://issaquahhighlands.com/event/treats-tails-halloween-event-4/"
 - name: "Planting and Tree Care 101"
+  setting: "Outdoor"
   cost: "Free"
   tags: [free]
   start: "2026-10-17T13:00:00-07:00"
@@ -119,6 +123,7 @@
   place: "Confluence Park, 595 Rainier Blvd N, Issaquah"
   same_as: "https://www.sammamish.us/news/events/events/tree-giveaway/october-17-2026-planting-and-tree-care-101/"
 - name: "Ragtime, captioned"
+  signup: true
   setting: "Indoor"
   start: "2026-10-17T14:00:00-07:00"
   place: "Francis J. Gaudette Theatre, 303 Front St N"
@@ -147,6 +152,7 @@
   place: "Historic Shell Station, 232 Front St N"
   same_as: "https://www.visitissaquahwa.com/series/fall-farm-fresh-market-3/"
 - name: "Halloween at Cougar Mountain Zoo"
+  setting: "Outdoor"
   tags: [halloween]
   start: "2026-10-31"
   place: "Cougar Mountain Zoo, 19525 SE 54th St"
@@ -180,12 +186,14 @@
   place: "Village Green Park, 2550 NE Park Drive"
   same_as: "https://issaquahhighlands.com/event/holiday-tree-lighting-4/"
 - name: "Issaquah Reindeer Festival"
+  setting: "Outdoor"
   tags: [santa]
   start: "2026-11-27"
   end: "2026-12-30"
   place: "Cougar Mountain Zoo, 19525 SE 54th St"
   same_as: "https://www.cougarmountainzoo.org/issaquah-reindeer-festival-offseason/"
 - name: "Turkey Trot Parent Survival Night"
+  cost: "$70"
   setting: "Indoor"
   drop_off: true
   signup: true
