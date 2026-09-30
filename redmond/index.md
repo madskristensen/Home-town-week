@@ -7,26 +7,6 @@ description: Upcoming family events in Redmond on the Eastside.
 hook: Saturday is flapjacks, the farm, and a youth cross-country meet. October 17 is the Farrel-McWhirter harvest festival and a pup parade at Redmond Town Center.
 ---
 
-### Meet and Green
-<p class="event-when">Tue Sep 29 · 3:00–4:30 p.m.</p>
-<p class="event-place">Redmond Library, 15990 NE 85th St</p>
-
-{% include event-photo.html
-   src="/assets/images/redmond/redmond-library.webp"
-   alt="Redmond Library, a modern building with a glass front and a covered walkway."
-   credit="Photo: King County Library System."
-   source="https://kcls.org/locations/redmond/" %}
-
-Monthly sustainability drop-in.  
-[City calendar list](https://www.redmond.gov/Calendar.aspx?view=list&startDate=9/28/2026&enddate=10/4/2026)
-
-### Diabolo Dance Theatre
-<p class="event-when">Tue Sep 29 · Time not posted</p>
-<p class="event-place">Meydenbauer Center, 11100 NE 6th St, Bellevue</p>
-
-2026 Cultural Goodwill Mission from Taiwan. Diabolo (Chinese yo-yo) with contemporary dance and acrobatics. General admission is $35.  
-[Meydenbauer calendar](https://meydenbauer.com/theatre/attend-a-show/calendar-ticket-information/)
-
 ### Teen Center Project Drop-in Session 1
 <p class="event-when">Wed Sep 30 · 2:30–4:30 p.m.</p>
 <p class="event-place">Redmond High School Library</p>

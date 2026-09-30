@@ -1,10 +1,5 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
-- name: "Tutors"
-  start: "2026-09-29T18:00:00-07:00"
-  end: "2026-09-29T20:00:00-07:00"
-  place: "Kenmore Library, 6531 NE 181st Street"
-  same_as: "https://kcls.bibliocommons.com/events/6a76b24b3f18b57d52344d52"
 - name: "Music and Movement with Lana Van Boven"
   start: "2026-10-02T10:00:00-07:00"
   end: "2026-10-02T10:30:00-07:00"
@@ -33,13 +28,24 @@
   end: "2026-10-10T12:15:00-07:00"
   place: "Kenmore Library, 6531 NE 181st Street"
   same_as: "https://kcls.bibliocommons.com/events/6a76c37ce30fe4845967df1c"
+- name: "Family Story Time"
+  tags: [free, story-time]
+  start: "2026-10-23T10:00:00-07:00"
+  end: "2026-10-23T10:30:00-07:00"
+  place: "Kenmore Library, 6531 NE 181st Street"
+  same_as: "https://kcls.bibliocommons.com/events/6a81fe3aaafa6100295d009e"
+- name: "Builders Club"
+  tags: [free]
+  start: "2026-10-24T15:00:00-07:00"
+  end: "2026-10-24T17:00:00-07:00"
+  place: "Kenmore Library, 6531 NE 181st Street"
+  same_as: "https://kcls.bibliocommons.com/events/6a91f39f57c264087ad490db"
 - name: "Dia de los Muertos"
   tags: [dia-de-los-muertos]
   start: "2026-11-01T11:00:00-08:00"
   end: "2026-11-01T15:00:00-08:00"
   place: "The Hangar, Kenmore Town Square, 6728 NE 181st St"
   same_as: "https://www.kenmorewa.gov/our-city/special-events/dia-de-los-muertos"
-
 - name: "Winterfest"
   tags: [holiday-market]
   start: "2026-12-05T11:00:00-08:00"

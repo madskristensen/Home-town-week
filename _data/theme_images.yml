@@ -363,13 +363,104 @@ groups:
         credit: "Photo: epSos.de, CC BY 2.0"
         license: CC BY 2.0
         source: https://commons.wikimedia.org/wiki/File:Glowing_Christmas_Tree_Lights_in_the_Winter_Night.jpg
-  - keys: [story-time, storytime, story time]
+  - keys: [kaleidoscope, play and learn, play & learn]
+    images:
+      - image: /assets/images/themes/alphabet-blocks.webp
+        alt: A pile of wooden alphabet blocks.
+        credit: "Photo: Bobjgalindo, CC BY 4.0"
+        license: CC BY 4.0
+        source: https://commons.wikimedia.org/wiki/File:A_pile_of_alphabet_wooden_blocks.jpg
+  - keys: [lego, block party, builders club, builders]
+    images:
+      - image: /assets/images/themes/wooden-blocks.webp
+        alt: Two sets of plain wooden unit blocks.
+        credit: "Photo: Ragesoss, CC BY-SA 3.0"
+        license: CC BY-SA 3.0
+        source: https://commons.wikimedia.org/wiki/File:Two_sets_of_wooden_unit_blocks.jpeg
+  - keys: [board game, math club, math games, chess]
+    images:
+      - image: /assets/images/themes/chess-staunton.webp
+        alt: A Staunton chess set on a board, seen from the side.
+        credit: "Photo: Wilfredor, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Chess_game_Staunton_No._6_perfil_view_8.jpg
+      - image: /assets/images/themes/board-game-pieces.webp
+        alt: Small wooden and colored pieces from a board game.
+        credit: "Photo: Mshuang2, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Board_game_pieces.jpg
+  - keys: [feathers and scales, feathers & scales]
+    images:
+      - image: /assets/images/themes/feather-plate.webp
+        alt: A printed plate of grouse feathers from a nineteenth-century bird handbook.
+        credit: "Plate: William Robert Ogilvie-Grant, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:A_Hand-book_to_the_Game-Birds_-_Feathers_of_Scotch_Grouse.png
+  - keys: [climate workshop, climate]
+    images:
+      - image: /assets/images/themes/blue-marble.webp
+        alt: The Earth seen from Apollo 17, with Africa and Antarctica visible.
+        credit: "Photo: NASA, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg
+  - keys: [tree care, tree planting, arbor day, ebright]
+    images:
+      - image: /assets/images/themes/tree-sapling.webp
+        alt: A young tree sapling growing in a forest.
+        credit: "Photo: Ben Hemmings, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Tree_Sapling_in_British_Columbia,_Canada_2019.jpg
+  - keys: [plant id, nature journaling]
+    images:
+      - image: /assets/images/themes/autumn-forest.webp
+        alt: A trail through an autumn forest, with yellow and orange leaves.
+        credit: "Photo: Thomas, CC BY-SA 2.0"
+        license: CC BY-SA 2.0
+        source: https://commons.wikimedia.org/wiki/File:Autumn_forest_-_Darlington_Trail,_Middletown_-_PA.jpg
+      - image: /assets/images/themes/fallen-leaves.webp
+        alt: Fallen autumn leaves covering the ground in a forest.
+        credit: "Photo: Vronnhk, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Autumn_Forest_and_Fallen_Leaves.jpg
+  - keys: [yoga]
+    images:
+      - image: /assets/images/themes/yoga-mat.webp
+        alt: A rolled yoga mat and a water bottle on a living room floor.
+        credit: "Photo: Femivaco, CC BY 4.0"
+        license: CC BY 4.0
+        source: https://commons.wikimedia.org/wiki/File:Yoga_mat_and_water_bottle_in_a_living_room.jpg
+  - keys: [story-time, storytime, story time, aesop]
     images:
       - image: /assets/images/themes/books.webp
         alt: A stack of hardcover books on a wooden table.
         credit: "Photo: Evan Bench, CC BY 2.0"
         license: CC BY 2.0
         source: https://commons.wikimedia.org/wiki/File:Books_in_a_stack_(a_stack_of_books)_-_Flickr_-_austinevan.jpg
+      - image: /assets/images/themes/open-book.webp
+        alt: An open book lying flat.
+        credit: "Photo: Ben White, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Open_book_(Unsplash).jpg
+      - image: /assets/images/themes/stack-of-books.webp
+        alt: A stack of hardcover books tied with twine.
+        credit: "Photo: mycurrency.com, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Stack_of_Books_for_decor.jpg
+      - image: /assets/images/themes/bookcase.webp
+        alt: A wooden bookcase filled with books.
+        credit: "Photo: geosketch, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Bookcase_in_Olten.jpg
+      - image: /assets/images/themes/library-hall.webp
+        alt: A grand library hall with bookshelves, a painted ceiling, and statues.
+        credit: "Photo: Matl, CC BY-SA 3.0"
+        license: CC BY-SA 3.0
+        source: https://commons.wikimedia.org/wiki/File:Bookshelf_Prunksaal_OeNB_Vienna_AT_matl00786ch.jpg
+      - image: /assets/images/themes/still-life-books.webp
+        alt: A painting of a stack of old books on a table.
+        credit: "Painting: Jan Lievens, public domain"
+        license: Public domain
+        source: https://commons.wikimedia.org/wiki/File:Jan_Lievens_-_Still_Life_with_Books.jpg
   # Not an event name or tag, so hub cards do not pick these up.
   # The files stay with the unused holiday_lights.yml data.
   # tree-lights.webp stays on holiday-lights.

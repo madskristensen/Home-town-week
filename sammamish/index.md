@@ -101,6 +101,20 @@ Gently used books, with proceeds to Sammamish Library programs. The listing is o
 
 [Friday](https://kcls.bibliocommons.com/events/6a9a12d181e9d60947cd92bc) · [Saturday](https://kcls.bibliocommons.com/events/6a9a12d181e9d60947cd92bd) · [Sunday](https://kcls.bibliocommons.com/events/6a9a12d181e9d60947cd92be)
 
+### Tree Planting at Ebright Creek Park
+<p class="event-when">Wed Oct 21 · 4:00 p.m.</p>
+<p class="event-place">Ebright Creek Park</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/tree-sapling.webp"
+   alt="A young tree sapling growing in a forest."
+   credit="Photo: Ben Hemmings, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Tree_Sapling_in_British_Columbia,_Canada_2019.jpg" %}
+
+Plant native trees at a site started by Washington Native Plant Society stewards. Free. The city asks you to register on the event page. The posted time is 4:00 p.m.
+
+[Tree Planting at Ebright Creek Park](https://www.sammamish.us/news/events/events/volunteer-opportunities/10-21-tree-planting-at-ebright-creek-park/)
+
 ### Sammamish YMCA Fall Family Festival
 <p class="event-when">Sat Oct 24 · 4:00–7:00 p.m.</p>
 <p class="event-place">Sammamish Community YMCA, 831 228th Ave SE</p>

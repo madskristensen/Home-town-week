@@ -4,22 +4,8 @@ title: Issaquah
 city: issaquah
 state: wa
 description: Upcoming family events in Issaquah on the Eastside.
-hook: Saturday and Sunday are Salmon Days downtown. The hatchery is the stop to make, and Sunday afternoon is a free family dance at Pickering Barn. Tuesday evening is storytime.
+hook: Saturday and Sunday are Salmon Days downtown. The hatchery is the stop to make, and Sunday afternoon is a free family dance at Pickering Barn. Sunday noon is a free gallery open house in the Highlands.
 ---
-
-### Snuggle Up Story Time
-<p class="event-when">Tue Sep 29 · 6:30–7:00 p.m.</p>
-<p class="event-place">Issaquah Library, 10 W Sunset Way</p>
-
-{% include event-photo.html
-   src="/assets/images/issaquah/issaquah-library.webp"
-   alt="Issaquah Library, a low building with a broad glass front and a covered walkway."
-   credit="Photo: King County Library System."
-   source="https://kcls.org/locations/issaquah/" %}
-
-Stories, music, movement, and rhymes for newborns to 5 years, with an adult. Up to 30 minutes of play time follows. No registration. Space is limited. Miss Mack hosts.
-
-[Snuggle Up Story Time](https://kcls.bibliocommons.com/v2/events/6a7104e288e9bf2800354857)
 
 ### Chess Club
 <p class="event-when">Wed Sep 30 · 6:00–9:00 p.m.</p>
@@ -83,6 +69,20 @@ Audience note from the theatre: racist and offensive language, and moments of vi
 
 [Ragtime](https://villagetheatre.org/mainstage/ragtime/)
 
+### Feathers and Scales Gallery Open House
+<p class="event-when">Sun Oct 4 · 12:00–1:30 p.m.</p>
+<p class="event-place">Blakely Hall, Issaquah Highlands</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/feather-plate.webp"
+   alt="A printed plate of grouse feathers from a nineteenth-century bird handbook."
+   credit="Plate: William Robert Ogilvie-Grant, public domain"
+   source="https://commons.wikimedia.org/wiki/File:A_Hand-book_to_the_Game-Birds_-_Feathers_of_Scotch_Grouse.png" %}
+
+A free open house for the Feathers and Scales show. Live music from Michael Thompson, a chance to meet artist Anita Wong, and refreshments. All ages, including kids under 4.
+
+[Feathers and Scales](https://issaquahhighlands.com/event/feathers-scales-gallery-open-house/)
+
 ### Family Dance Party
 <p class="event-when">Sun Oct 4 · 3:00–6:00 p.m.</p>
 <p class="event-place">Pickering Barn, 1730 10th Ave NW</p>
@@ -113,6 +113,34 @@ Downtown Issaquah Association's fall market, with Ayala Farms. Saturdays from Oc
 
 [Oct 10 listing](https://www.visitissaquahwa.com/event/fall-farm-fresh-market-2/2026-10-10/)
 
+### Curiosity Collection Launch Party
+<p class="event-when">Sat Oct 10 · 3:00–4:00 p.m.</p>
+<p class="event-place">Issaquah Library, 10 W Sunset Way</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/open-book.webp"
+   alt="An open book lying flat."
+   credit="Photo: Ben White, CC0"
+   source="https://commons.wikimedia.org/wiki/File:Open_book_(Unsplash).jpg" %}
+
+Issaquah is the first KCLS branch with a Library of Things, and this party opens the Curiosity Collection. Household tools and specialty equipment will be available to check out. Free.
+
+[Curiosity Collection](https://kcls.bibliocommons.com/events/6aa9dac5ca248a0029161b31)
+
+### Teen Climate Workshop
+<p class="event-when">Sun Oct 11 · 4:00–5:30 p.m.</p>
+<p class="event-place">Blakely Hall, Issaquah Highlands</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/blue-marble.webp"
+   alt="The Earth seen from Apollo 17, with Africa and Antarctica visible."
+   credit="Photo: NASA, public domain"
+   source="https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg" %}
+
+A free workshop for teens using the En-ROADS climate simulator. No RSVP. The posted time is 4:00 to 5:00 p.m., and it may run until 5:30.
+
+[Teen Climate Workshop](https://issaquahhighlands.com/event/teen-climate-workshop/)
+
 ### Issaquah Goes Apples
 <p class="event-when">Sat Oct 17 · 9:00 a.m.–2:00 p.m.</p>
 <p class="event-place">Historic Shell Station, 232 Front St N</p>
@@ -127,6 +155,34 @@ The 11th annual harvest day, from the Downtown Issaquah Association. Farm Fresh 
 
 [Issaquah Goes Apples](https://www.visitissaquahwa.com/event/issaquah-goes-apples/)
 
+### Treats and Tails Halloween Event
+<p class="event-when">Sat Oct 17 · 12:00–2:00 p.m.</p>
+<p class="event-place">Blakely Hall, Issaquah Highlands</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/trick-or-treat-porch.webp"
+   alt="A glowing jack-o-lantern on a front porch at night."
+   credit="Photo: Patrick Henry, CC BY 2.0"
+   source="https://commons.wikimedia.org/wiki/File:Pumpkin_on_the_Porch_(52467890182).jpg" %}
+
+Trick-or-treat for kids ages 3 to 10 with an adult. Bring a bag. The standby line is free. An optional $5 VIP ticket per trick-or-treating child holds a reserved slot. Adults and babies who are not collecting treats, and pets, do not need a ticket. Pets use a separate patio entrance (green tent, east side). Lines form outside.
+
+[Treats and Tails](https://issaquahhighlands.com/event/treats-tails-halloween-event-4/)
+
+### Planting and Tree Care 101
+<p class="event-when">Sat Oct 17 · 1:00–2:30 p.m.</p>
+<p class="event-place">Confluence Park, 595 Rainier Blvd N, Issaquah</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/tree-sapling.webp"
+   alt="A young tree sapling growing in a forest."
+   credit="Photo: Ben Hemmings, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Tree_Sapling_in_British_Columbia,_Canada_2019.jpg" %}
+
+A free hands-on lesson in planting, mulching, watering, and pruning young trees. Sammamish city staff lead it through the Eastside Climate Partnership, and the work is at Confluence Park in Issaquah. Tools are provided.
+
+[Planting and Tree Care 101](https://www.sammamish.us/news/events/events/tree-giveaway/october-17-2026-planting-and-tree-care-101/)
+
 ### Ragtime, captioned
 <p class="event-when">Sat Oct 17 · 2:00 p.m.</p>
 <p class="event-place">Francis J. Gaudette Theatre, 303 Front St N</p>
@@ -134,6 +190,20 @@ The 11th annual harvest day, from the Downtown Issaquah Association. Farm Fresh 
 Village Theatre lists a captioned performance at 2:00 p.m. The Issaquah run ends the next day, Sunday, Oct 18. After that the production moves to Everett. Language and violence, about 2 hours 50 minutes with intermission. Not for young children.
 
 [Ragtime](https://villagetheatre.org/mainstage/ragtime/)
+
+### Reading with Rover
+<p class="event-when">Wed Oct 21 · 6:30–7:30 p.m.</p>
+<p class="event-place">Issaquah Library, 10 W Sunset Way</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/books.webp"
+   alt="A stack of hardcover books on a wooden table."
+   credit="Photo: Evan Bench, CC BY 2.0"
+   source="https://commons.wikimedia.org/wiki/File:Books_in_a_stack_(a_stack_of_books)_-_Flickr_-_austinevan.jpg" %}
+
+School-age kids read aloud to a certified therapy dog, with an adult. Free.
+
+[Reading with Rover](https://kcls.bibliocommons.com/events/697182f81e64afd01e55e554)
 
 ### Fall Farm Fresh Market
 <p class="event-when">Sat Oct 24 · 9:00 a.m.–2:00 p.m.</p>

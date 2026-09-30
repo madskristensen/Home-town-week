@@ -4,16 +4,8 @@ title: Kenmore
 city: kenmore
 state: wa
 description: Upcoming family events in Kenmore on the Eastside.
-hook: Tuesday evening is drop-in homework help. Friday night is family karaoke, Saturday is ASL story time, and November 1 is Dia de los Muertos at the Hangar.
+hook: Friday night is family karaoke, Saturday is ASL story time, and November 1 is Dia de los Muertos at the Hangar.
 ---
-
-### Tutors
-<p class="event-when">Tue Sep 29 · 6:00–8:00 p.m.</p>
-<p class="event-place">Kenmore Library, 6531 NE 181st Street</p>
-
-Volunteer tutors for homework, grades K–12. Students may drop in during the hours. Look for the tutor T-shirt. Also Tue Oct 6 and Tue Oct 13, same hours.
-
-[Tutors](https://kcls.bibliocommons.com/events/6a76b24b3f18b57d52344d52)
 
 ### Music and Movement with Lana Van Boven
 <p class="event-when">Fri Oct 2 · 10:00–10:30 a.m. and 10:45–11:15 a.m.</p>
@@ -38,6 +30,34 @@ IMAGINE hosts this on the second Friday. All ages. Sing, or stay and cheer. Free
 Teacher and storyteller Sam Sanders signs stories, movement, and rhymes for d/Deaf and hard-of-hearing children and their families. Families may stay afterward for 30 minutes of play.
 
 [ASL Story Time](https://kcls.bibliocommons.com/events/6a76c37ce30fe4845967df1c)
+
+### Family Story Time
+<p class="event-when">Fri Oct 23 · 10:00–10:30 a.m. and 10:45–11:15 a.m.</p>
+<p class="event-place">Kenmore Library, 6531 NE 181st Street</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/books.webp"
+   alt="A stack of hardcover books on a wooden table."
+   credit="Photo: Evan Bench, CC BY 2.0"
+   source="https://commons.wikimedia.org/wiki/File:Books_in_a_stack_(a_stack_of_books)_-_Flickr_-_austinevan.jpg" %}
+
+Stories, music, and movement for all ages with an adult. Pick one session. No registration. The same mornings are also on Fri Oct 30, and a morning session is also on Fri Nov 6.
+
+[Family Story Time](https://kcls.bibliocommons.com/events/6a81fe3aaafa6100295d009e)
+
+### Builders Club
+<p class="event-when">Sat Oct 24 · 3:00–5:00 p.m.</p>
+<p class="event-place">Kenmore Library, 6531 NE 181st Street</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/wooden-blocks.webp"
+   alt="Two sets of plain wooden unit blocks."
+   credit="Photo: Ragesoss, CC BY-SA 3.0"
+   source="https://commons.wikimedia.org/wiki/File:Two_sets_of_wooden_unit_blocks.jpeg" %}
+
+Open building with materials the library supplies. Ages 8 and older can come on their own. Ages 5 to 7 need an adult. No registration.
+
+[Builders Club](https://kcls.bibliocommons.com/events/6a91f39f57c264087ad490db)
 
 ### Dia de los Muertos
 <p class="event-when">Sun Nov 1 · 11:00 a.m.–3:00 p.m.</p>

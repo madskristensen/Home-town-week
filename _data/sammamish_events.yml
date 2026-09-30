@@ -75,6 +75,11 @@
   end: "2026-10-18T18:00:00-07:00"
   place: "Sammamish Library, 825 228th Ave SE"
   same_as: "https://kcls.bibliocommons.com/events/6a9a12d181e9d60947cd92be"
+- name: "Tree Planting at Ebright Creek Park"
+  tags: [free]
+  start: "2026-10-21T16:00:00-07:00"
+  place: "Ebright Creek Park"
+  same_as: "https://www.sammamish.us/news/events/events/volunteer-opportunities/10-21-tree-planting-at-ebright-creek-park/"
 - name: "Sammamish Karwa Chauth & Diwali Bazaar"
   start: "2026-10-24T12:00:00-07:00"
   end: "2026-10-24T19:00:00-07:00"

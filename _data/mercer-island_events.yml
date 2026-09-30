@@ -1,14 +1,5 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
-- name: "Senior Social Seminar - Food, Mood & Function"
-  start: "2026-09-29T10:00:00-07:00"
-  end: "2026-09-29T11:00:00-07:00"
-  same_as: "https://www.mercerisland.gov/parksrec/page/senior-social-seminar-food-mood-function"
-- name: "Ajolote Mixed Media Art Workshop"
-  start: "2026-09-29T17:30:00-07:00"
-  end: "2026-09-29T18:45:00-07:00"
-  place: "Mercer Island Library, 4400 88th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/v2/events/6a6ba35c4523092f0033b55c"
 - name: "Stay Active & Independent for Life (SAIL) Fitness Class"
   start: "2026-09-30T10:00:00-07:00"
   end: "2026-09-30T11:00:00-07:00"
@@ -101,6 +92,24 @@
   end: "2026-10-13T18:30:00-07:00"
   place: "Mercer Island Library, 4400 88th Ave SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a63e186d23de82955c8fba5"
+- name: "Plant ID Walk"
+  tags: [free]
+  start: "2026-10-15T13:00:00-07:00"
+  end: "2026-10-15T15:00:00-07:00"
+  place: "Pioneer Park, meet at Island Crest Way and SE 68th St"
+  same_as: "https://www.mercerisland.gov/parksrec/page/plant-id-walk-pioneer-park-3"
+- name: "Arbor Day at Homestead Park"
+  tags: [free]
+  start: "2026-10-24T10:00:00-07:00"
+  end: "2026-10-24T13:00:00-07:00"
+  place: "Homestead Park"
+  same_as: "https://www.mercerisland.gov/parksrec/page/arbor-day-homestead-park"
+- name: "Nature Journaling"
+  tags: [free]
+  start: "2026-10-27T10:00:00-07:00"
+  end: "2026-10-27T12:00:00-07:00"
+  place: "Pioneer Park NW, Island Crest Way and SE 68th St"
+  same_as: "https://www.mercerisland.gov/parksrec/page/nature-journaling-pioneer-park-1"
 - name: "Town Center Trick or Treat"
   tags: [halloween]
   start: "2026-10-30T16:00:00-07:00"
@@ -112,7 +121,6 @@
   end: "2026-11-10T11:00:00-08:00"
   place: "Mercer Island"
   same_as: "https://kcls.bibliocommons.com/events/6abacfc8e06996003a7fda92"
-
 - name: "Holiday Tree Lighting"
   tags: [tree-lighting]
   start: "2026-12-03"

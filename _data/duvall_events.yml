@@ -47,7 +47,12 @@
   end: "2026-10-17T14:00:00-07:00"
   place: "Northwest Art Center, 15705 Main Street NE, Suite F"
   same_as: "https://www.valleyrecord.com/2026/09/25/snoqualmie-valley-community-calendar-sept-25-edition/"
-
+- name: "Teen Space"
+  tags: [free]
+  start: "2026-10-28T17:30:00-07:00"
+  end: "2026-10-28T19:00:00-07:00"
+  place: "Duvall Library, 15508 Main Street NE"
+  same_as: "https://kcls.bibliocommons.com/events/6a46e34086636e3d0052475b"
 - name: "Novelty Hill Farm Christmas Tree Lighting"
   tags: [tree-lighting, santa, holiday-market]
   start: "2026-11-28T17:00:00-08:00"

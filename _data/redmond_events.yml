@@ -1,14 +1,5 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
-- name: "Diabolo Dance Theatre"
-  start: "2026-09-29"
-  place: "Meydenbauer Center, 11100 NE 6th St, Bellevue"
-  same_as: "https://meydenbauer.com/theatre/attend-a-show/calendar-ticket-information/"
-- name: "Meet and Green"
-  start: "2026-09-29T15:00:00-07:00"
-  end: "2026-09-29T16:30:00-07:00"
-  place: "Redmond Library, 15990 NE 85th St"
-  same_as: "https://www.redmond.gov/Calendar.aspx?view=list&startDate=9/28/2026&enddate=10/4/2026"
 - name: "Teen Center Project Drop-in Session 1"
   start: "2026-09-30T14:30:00-07:00"
   end: "2026-09-30T16:30:00-07:00"
@@ -204,7 +195,6 @@
   end: "2026-11-06T19:30:00-08:00"
   place: "Redmond Senior & Community Center - 8703 160th Ave NE Redmond WA 98052"
   same_as: "https://www.redmond.gov/calendar.aspx?EID=3543"
-
 - name: "Redmond Lights"
   tags: [holiday-lights]
   start: "2026-12-05T16:00:00-08:00"

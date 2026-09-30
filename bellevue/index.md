@@ -4,29 +4,8 @@ title: Bellevue
 city: bellevue
 state: wa
 description: Upcoming family events in Bellevue on the Eastside.
-hook: Tuesday is the last Crossroads market. Friday, October 9 is a free pumpkin afternoon at The Meadow, and Halloween week brings the farm animals, the Bellevue Y, KidsQuest, and Little Monsters on Main Street.
+hook: Saturday is the Kelsey Creek Farm Fair, with math games at the library that afternoon. Friday, October 9 is a free pumpkin afternoon at The Meadow, and Halloween week brings the farm animals, the Bellevue Y, KidsQuest, and Little Monsters on Main Street.
 ---
-
-### Diabolo Dance Theatre
-<p class="event-when">Tue Sep 29 · Time not posted</p>
-<p class="event-place">Meydenbauer Center, 11100 NE 6th St</p>
-
-2026 Cultural Goodwill Mission from Taiwan. Diabolo (Chinese yo-yo) with contemporary dance and acrobatics. General admission is $35.  
-[Meydenbauer calendar](https://meydenbauer.com/theatre/attend-a-show/calendar-ticket-information/)
-
-### Crossroads Farmers Market
-<p class="event-when">Tue Sep 29 · 12:00–6:00 p.m.</p>
-<p class="event-place">Crossroads Bellevue</p>
-
-{% include event-photo.html
-   src="/assets/images/bellevue/crossroads.webp"
-   alt="West entrance of Crossroads Bellevue, with the mall sign and a row of flags."
-   credit="Photo: Mark Yasuda, CC BY-SA 4.0"
-   source="https://commons.wikimedia.org/wiki/File:2018_Crossroads_Bellevue_west_entrance.jpg" %}
-
-The last Tuesday of the season. It runs every Tuesday from June 2 through September 29, noon to 6:00 p.m.
-
-[Farmers market](https://crossroadsbellevue.com/FarmersMarket)
 
 ### Engineering Hour
 <p class="event-when">Wed Sep 30 · 11:00 a.m.–12:00 p.m.</p>
@@ -49,7 +28,21 @@ Towers, bridges, and building, geared to children 5 and older. Free with admissi
 Open building. Stay the hour or stop in. The library supplies the bricks. All ages with an adult. No registration. Space is limited. Bellevue Friends of the Library sponsors it. The same hour is also on Wed Oct 14.  
 [LEGO Brick Builders](https://kcls.bibliocommons.com/v2/events/6a6cea0d4523092f0033ed7d)
 
-The Thursday farmers market is the last of the regular season. Thursday morning, before the stalls, is preschool storytime.
+The Thursday farmers market is the last of the regular season. Thursday morning, before the stalls, is preschool storytime. Newport Way has a bilingual play hour the same morning.
+
+### Bilingual Kaleidoscope Play and Learn
+<p class="event-when">Thu Oct 1 · 10:30 a.m.–12:00 p.m.</p>
+<p class="event-place">Newport Way Library, 14250 SE Newport Way</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/alphabet-blocks.webp"
+   alt="A pile of wooden alphabet blocks."
+   credit="Photo: Bobjgalindo, CC BY 4.0"
+   source="https://commons.wikimedia.org/wiki/File:A_pile_of_alphabet_wooden_blocks.jpg" %}
+
+A Mandarin and English play-and-learn hour for toddlers and preschoolers with a caregiver. The morning can include stories, music, games, or a craft, and staff have parenting and child-care resources on hand. No registration. The same hours are also on Thu Oct 8 and Thu Oct 15.
+
+[Kaleidoscope Play and Learn](https://kcls.bibliocommons.com/events/69d91c2766c3387a9d06651c)
 
 ### Preschool Story Time
 <p class="event-when">Thu Oct 1 · 10:30–11:15 a.m.</p>
@@ -58,6 +51,20 @@ The Thursday farmers market is the last of the regular season. Thursday morning,
 Stories, music, movement, and rhymes for ages 3 to 5 with an adult. A short play time follows. No registration. Thursday hours are 10:00 a.m.–6:00 p.m., so this ends well before the market opens at 3:00.
 
 [Preschool Story Time](https://kcls.bibliocommons.com/v2/events/6a8df1aa81e9d60947cc7d51)
+
+### Baby Story Time
+<p class="event-when">Thu Oct 1 · 11:30 a.m.–12:15 p.m.</p>
+<p class="event-place">Bellevue Library, 1111 110th Ave NE</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/open-book.webp"
+   alt="An open book lying flat."
+   credit="Photo: Ben White, CC0"
+   source="https://commons.wikimedia.org/wiki/File:Open_book_(Unsplash).jpg" %}
+
+Rhymes, songs, and stories for newborns to 12 months with an adult, then up to 15 minutes of play. No registration. Space is limited.
+
+[Baby Story Time](https://kcls.bibliocommons.com/events/6a95fe8869166f088b9651a7)
 
 ### Bellevue Farmers Market
 <p class="event-when">Thu Oct 1 · 3:00–7:00 p.m.</p>
@@ -73,6 +80,20 @@ Last day of the Thursday season, 3:00–7:00 p.m. The market has posted two late
 
 Free sunset market with Peace Peloton: local makers, food, and live performances. It includes a 21+ beer garden.  
 [City listing](https://bellevuewa.gov/events/gather-bellevue-sunset-market)
+
+### Korean Story Time
+<p class="event-when">Fri Oct 2 · 4:45–5:30 p.m.</p>
+<p class="event-place">Newport Way Library, 14250 SE Newport Way</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/books.webp"
+   alt="A stack of hardcover books on a wooden table."
+   credit="Photo: Evan Bench, CC BY 2.0"
+   source="https://commons.wikimedia.org/wiki/File:Books_in_a_stack_(a_stack_of_books)_-_Flickr_-_austinevan.jpg" %}
+
+Stories and songs in Korean, with time to explore Korean culture. The library lists it for preschoolers and early elementary kids. The same hour is also on Fri Oct 9 and Fri Oct 16.
+
+[Korean Story Time](https://kcls.bibliocommons.com/events/6aa9c030101eb7003f3063e6)
 
 ### Fired Up Fridays
 <p class="event-when">Fri Oct 2 · 5:00–7:00 p.m.</p>
@@ -98,6 +119,20 @@ On-site parking is limited to accessible spaces. Free shuttles run from Bannerwo
 Volunteers 15 and older can still email Stacy Stenslie at sstenslie@bellevuewa.gov. That is a work shift, not a kids' program.
 
 [Farm Fair](https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/kelsey-creek-farm-fair) · [City news](https://bellevuewa.gov/city-news/kelsey-farm-fair-26)
+
+### Math Club: Math Games
+<p class="event-when">Sat Oct 3 · 2:00–4:00 p.m.</p>
+<p class="event-place">Bellevue Library, 1111 110th Ave NE</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/chess-staunton.webp"
+   alt="A Staunton chess set on a board, seen from the side."
+   credit="Photo: Wilfredor, CC0"
+   source="https://commons.wikimedia.org/wiki/File:Chess_game_Staunton_No._6_perfil_view_8.jpg" %}
+
+Drop-in math games for elementary grades. Activities are grouped for kindergarten and first grade, grades 2 and 3, and grades 4 and 5, and a student can pick the level. This Saturday the games are Connect Four, checkers, and chess.
+
+[Math Club](https://kcls.bibliocommons.com/events/6a7fa3f72dac6e00371f2c03)
 
 ### Autumn Moon Night Market
 <p class="event-when">Sat Oct 3 · 2:00–7:00 p.m.</p>
@@ -165,6 +200,34 @@ Ages 3–5 with an adult. Why spiders spin webs, plus a story, art, a song, snac
 Open building. Stay the hour or stop in. The library supplies the bricks. All ages with an adult. No registration. Space is limited. Bellevue Friends of the Library sponsors it. Wednesday hours are 11:00 a.m.–8:00 p.m.
 
 [Spider Web Wonders](https://65203.blackbaudhosting.com/65203/Kids-in-the-Garden-7-2-Spider-Web-Wonders) · [LEGO Brick Builders](https://kcls.bibliocommons.com/v2/events/6a921fad2dac6e0037228089)
+
+### All Ages Inclusive Board Game Afternoon
+<p class="event-when">Wed Oct 14 · 3:30–5:30 p.m.</p>
+<p class="event-place">Newport Way Library, 14250 SE Newport Way</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/board-game-pieces.webp"
+   alt="Small wooden and colored pieces from a board game."
+   credit="Photo: Mshuang2, CC0"
+   source="https://commons.wikimedia.org/wiki/File:Board_game_pieces.jpg" %}
+
+Drop-in board games for all abilities. Use the library's games or bring one you like. Teen volunteers can teach a game or sit down and play. Newport Way Library Teen Volunteers sponsor it. No registration.
+
+[Board Game Afternoon](https://kcls.bibliocommons.com/events/6a7f806f3b6c71003e58e9a6)
+
+### LEGO Block Party
+<p class="event-when">Sat Oct 17 · 2:00–4:00 p.m.</p>
+<p class="event-place">Newport Way Library, 14250 SE Newport Way</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/wooden-blocks.webp"
+   alt="Two sets of plain wooden unit blocks."
+   credit="Photo: Ragesoss, CC BY-SA 3.0"
+   source="https://commons.wikimedia.org/wiki/File:Two_sets_of_wooden_unit_blocks.jpeg" %}
+
+Open building with the library's bricks. Stay for the whole session or stop in for a few minutes. Ages 4 and older. No registration. Space is limited.
+
+[LEGO Block Party](https://kcls.bibliocommons.com/events/6a91f39069166f088b95a921)
 
 ### Kids in the Garden: Owls
 <p class="event-when">Wed Oct 21 · 10:00–11:30 a.m.</p>

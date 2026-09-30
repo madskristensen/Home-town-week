@@ -7,14 +7,6 @@ description: Upcoming family events in Snoqualmie on the Eastside.
 hook: Saturday is a community planting. Wednesdays are free at the Train Shed, Mount Si Dramafest is October 9 and 10, and Oct 24 is the city's free Spooktacular.
 ---
 
-### Ice Cream and Cookies with Mayor Mayhew
-<p class="event-when">Tue Sep 29 · 4:00–5:00 p.m.</p>
-<p class="event-place">Snoqualmie Ice Cream, 8102 Railroad Ave</p>
-
-Mayor Mayhew is at the ice cream shop in historic downtown for an hour of ice cream and cookies. The city lists it as a meet-the-mayor stop, not a ticketed program.
-
-[City calendar](https://www.snoqualmiewa.gov/Calendar.aspx?EID=3414)
-
 ### Fall City Farms pumpkin patch
 <p class="event-when">Weekends through Sat Oct 31 · Fri–Sat 10:00 a.m.–6:00 p.m., Sun 10:00 a.m.–5:00 p.m.</p>
 <p class="event-place">Fall City Farms, 3636 Neal Road, Fall City</p>
@@ -30,6 +22,20 @@ A pumpkin patch for families, with animals to see and hot mini doughnuts and cid
 Bring a finished paper mache pumpkin to the front desk any day the branch is open in October. Judges pick winners in a few categories, and the library will say who won by Nov 7. Paper is available at the desk if you need it.
 
 [Pumpkin contest](https://kcls.bibliocommons.com/v2/events/6a921b7b3b6c71003e5c2515)
+
+### Toddler Story Time
+<p class="event-when">Thu Oct 1 · 10:15–10:45 a.m.</p>
+<p class="event-place">Snoqualmie Library, 7824 Center Boulevard SE</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/books.webp"
+   alt="A stack of hardcover books on a wooden table."
+   credit="Photo: Evan Bench, CC BY 2.0"
+   source="https://commons.wikimedia.org/wiki/File:Books_in_a_stack_(a_stack_of_books)_-_Flickr_-_austinevan.jpg" %}
+
+Stories and play, with bubbles, for newborns to 36 months with an adult. Older children are welcome. No registration. The same time is also on Thu Oct 8 and Thu Oct 15.
+
+[Toddler Story Time](https://kcls.bibliocommons.com/events/6a80c10baafa6100295cdc4b)
 
 ### Family Story Time
 <p class="event-when">Thu Oct 1 · 11:15–11:45 a.m.</p>
@@ -60,6 +66,20 @@ A morning of planting in the city's climate-adaptation demonstration forest. It 
 The museum waives Train Shed admission every Wednesday through December 16. The Railway History Campus, where the shed sits, is open 11:00 a.m. to 4:00 p.m. that day. Later Wednesdays in this stretch are October 14, 21, and 28, and November 4.
 
 [Upcoming events](https://trainmuseum.org/upcoming-events/)
+
+### After School Hangout
+<p class="event-when">Wed Oct 7 · 3:00–4:30 p.m.</p>
+<p class="event-place">Fall City Library, 33415 SE 42nd Place</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/board-game-pieces.webp"
+   alt="Small wooden and colored pieces from a board game."
+   credit="Photo: Mshuang2, CC0"
+   source="https://commons.wikimedia.org/wiki/File:Board_game_pieces.jpg" %}
+
+Crafts, tabletop games, a Nintendo Switch, and snacks for school-age kids through teens. No registration. Fall City Friends sponsor it. The same hours are also on Oct 14, Oct 21, and Oct 28.
+
+[After School Hangout](https://kcls.bibliocommons.com/events/6a90cee2aafa6100295fb1f0)
 
 ### Mount Si Dramafest
 <p class="event-when">Fri Oct 9 and Sat Oct 10 · 7:00 p.m.</p>
@@ -92,6 +112,20 @@ The Northwest Railway Museum runs a family ride from the Snoqualmie Depot, with 
 Another Fall City listing on this page. Ages 4 and older can build with the library's bricks and leave when they are done. No registration.
 
 [LEGO Block Party](https://kcls.bibliocommons.com/v2/events/6a90c89269166f088b956ef0)
+
+### Little Lab: Stories that Count
+<p class="event-when">Wed Oct 21 · 10:30–11:30 a.m.</p>
+<p class="event-place">Fall City Library, 33415 SE 42nd Place</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/open-book.webp"
+   alt="An open book lying flat."
+   credit="Photo: Ben White, CC0"
+   source="https://commons.wikimedia.org/wiki/File:Open_book_(Unsplash).jpg" %}
+
+A KidsQuest educator leads numbers and counting for ages 3 to 6 with an adult, with hands-on stations. No registration.
+
+[Little Lab](https://kcls.bibliocommons.com/events/6ab42bdba472a016061f3c59)
 
 ### Spooktacular Halloween
 <p class="event-when">Sat Oct 24 · 1:30–4:00 p.m.</p>

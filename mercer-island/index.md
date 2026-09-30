@@ -4,22 +4,8 @@ title: Mercer Island
 city: mercer-island
 state: wa
 description: Upcoming family events in Mercer Island on the Eastside.
-hook: Tuesday evening is an axolotl art workshop at the library. Sunday is the farmers market, with family storytime the same morning. The market's last Sunday is Oct 11.
+hook: Sunday is the farmers market, with family storytime the same morning. The market's last Sunday is Oct 11. Oct 15 is an all-ages plant walk at Pioneer Park.
 ---
-
-### Ajolote Mixed Media Art Workshop
-<p class="event-when">Tue Sep 29 · 5:30–6:45 p.m.</p>
-<p class="event-place">Mercer Island Library, 4400 88th Ave SE</p>
-
-{% include event-photo.html
-   src="/assets/images/mercer-island/library.webp"
-   alt="Mercer Island Library, a King County Library System branch."
-   credit="Photo: SuddenFrost, CC0"
-   source="https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Mercer_Island_Library.jpg" %}
-
-Learn about ajolotes, the salamanders of Lago Xochimilco, then make a mixed-media collage. Supplies are provided. Amaranta Sandys leads it. For kids and teens age 7 and up. Caregivers are welcome and do not need to register. Registration for kids is full. Walk-ins may be allowed if there is space. Friends of the Mercer Island Library sponsor it, for Latine Heritage Month.
-
-[Ajolote workshop](https://kcls.bibliocommons.com/v2/events/6a6ba35c4523092f0033b55c)
 
 ### Film Screening: Ultimate Citizens
 <p class="event-when">Wed Sep 30 · 6:00–7:30 p.m.</p>
@@ -85,7 +71,47 @@ Paint a mini pumpkin. Materials are provided while they last. Friends of the Mer
 
 [Pumpkin Painting](https://kcls.bibliocommons.com/v2/events/6a63e186d23de82955c8fba5)
 
-Youth Theatre Northwest's events calendar did not list a public performance in this span.
+### Plant ID Walk
+<p class="event-when">Thu Oct 15 · 1:00–3:00 p.m.</p>
+<p class="event-place">Pioneer Park, meet at Island Crest Way and SE 68th St</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/autumn-forest.webp"
+   alt="A trail through an autumn forest, with yellow and orange leaves."
+   credit="Photo: Thomas, CC BY-SA 2.0"
+   source="https://commons.wikimedia.org/wiki/File:Autumn_forest_-_Darlington_Trail,_Middletown_-_PA.jpg" %}
+
+A walk to learn common plants at Pioneer Park. All ages, and no experience is needed. Register ahead.
+
+[Plant ID Walk](https://www.mercerisland.gov/parksrec/page/plant-id-walk-pioneer-park-3)
+
+### Arbor Day at Homestead Park
+<p class="event-when">Sat Oct 24 · 10:00 a.m.–1:00 p.m.</p>
+<p class="event-place">Homestead Park</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/tree-sapling.webp"
+   alt="A young tree sapling growing in a forest."
+   credit="Photo: Ben Hemmings, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Tree_Sapling_in_British_Columbia,_Canada_2019.jpg" %}
+
+A work party for blackberry removal, planting, and mulch. Snacks, lunch, gloves, and tools are provided. Bring water and clothes that can get dirty. Register ahead.
+
+[Arbor Day](https://www.mercerisland.gov/parksrec/page/arbor-day-homestead-park)
+
+### Nature Journaling
+<p class="event-when">Tue Oct 27 · 10:00 a.m.–12:00 p.m.</p>
+<p class="event-place">Pioneer Park NW, Island Crest Way and SE 68th St</p>
+
+{% include event-photo.html
+   src="/assets/images/themes/fallen-leaves.webp"
+   alt="Fallen autumn leaves covering the ground in a forest."
+   credit="Photo: Vronnhk, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:Autumn_Forest_and_Fallen_Leaves.jpg" %}
+
+Draw and write outside at Pioneer Park. All ages, and no experience is needed. Bring a notebook and pens, pencils, watercolors, or crayons.
+
+[Nature Journaling](https://www.mercerisland.gov/parksrec/page/nature-journaling-pioneer-park-1)
 
 ### Town Center Trick or Treat
 <p class="event-when">Fri Oct 30 · 4:00–6:00 p.m.</p>
