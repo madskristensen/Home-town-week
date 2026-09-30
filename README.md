@@ -86,9 +86,13 @@ The full tag vocabulary, with the season stored on each hub:
 
 ### Christmas lights
 
-The section is `/christmas/#lights`. It is separate from the chronological sections (Tree lightings, Holiday lights, and the rest). Displays live in `_data/holiday_lights.yml`. The file stays in the hub all year. From Nov 10 through Dec 31 the section is first on the page, and it is linked first in the on-page list. The rest of the year it follows the event sections. The page does not describe that move. Towns that have a display get a chip with a count. Each town is a heading, then a static map of that town with numbered pins, then a numbered list of the same displays. Towns with nothing listed are left off. The list is not a card grid. Each item shows the number, name, type, address, dates and hours, cost, a short blurb, and a Source link. The address opens a map.
+The section is `/christmas/#lights`. It is separate from the chronological sections (Tree lightings, Holiday lights, and the rest). Displays live in `_data/holiday_lights.yml`. The file stays in the hub all year. From Nov 10 through Dec 31 the section is first on the page, and it is linked first in the on-page list. The rest of the year it follows the event sections. The page does not describe that move. There is no map and no separate lights page.
 
-`script/render-light-maps.py` draws the maps before Jekyll. Streets and water come from OpenStreetMap. Pins use `lat` and `lng`. The page credits "Map data OpenStreetMap contributors" and does not ask for a visitor's location. The Pages workflow runs the script. A failed fetch keeps the SVG already in `assets/maps/lights/`. Pin numbers follow town name, then display name, which is the same order as the list.
+Towns that have a display get a chip with a count. The chips are tabs. One town's numbered list shows at a time. The town with the most displays is open on load. A tie uses the first town in alphabetical order. `/christmas/#lights-bellevue` opens that town. `/christmas/#light-{id}` opens the town that holds that display. Every list is in the HTML, including the hidden ones, so the ItemList covers all of them. Hiding is CSS on radio buttons, so the tabs work with no JavaScript, and arrow keys move between towns. Towns with nothing listed are left off.
+
+The list is not a card grid. Each item shows a photo, the number, name, type, address, dates, hours, cost, a short blurb, and a Source link. The address opens a map, the same way a place line does. Dates and hours are on their own lines. Cost on the type line is `Free` or `Tickets required`. Source is a small underlined link.
+
+`photo.kind` is `own` when the picture is of that display, or `theme` when it is a licensed Christmas-lights picture because no picture of that display was available. Own photos live in `assets/images/lights/`. Theme photos live in `assets/images/themes/` and are also listed in `_data/theme_images.yml` under `display-lights-theme`, a key that does not match event cards. The same file is not used twice in this section. Credit and source use the same strip as event cards. A row with no licensed photo is text only, with no empty box. Do not use a photo of identifiable kids or teens. Licenses are CC0, CC BY, CC BY-SA, or public domain.
 
 Each row:
 
@@ -99,11 +103,12 @@ Each row:
 | `type` | `park`, `house`, or `street`. |
 | `city` | A city id from `_data/cities.yml`. |
 | `address` | A street address, a street, or cross-streets. The map query is the display name, this address, and the town. |
-| `lat` | Latitude in decimal degrees. The pin uses this. |
-| `lng` | Longitude in decimal degrees. The pin uses this. |
+| `lat` | Optional latitude. The page does not show it. |
+| `lng` | Optional longitude. The page does not show it. |
 | `description` | One or two original sentences. |
 | `nights` | Which nights it runs, when known. |
 | `hours` | Clock times, when known. Leave it blank when the source has none. |
+| `photo` | `image`, `alt`, `credit`, `license`, `source`, and `kind` (`own` or `theme`). Leave it off when no licensed photo exists. |
 | `source` | The public page, an `https` URL. |
 | `free` | `true` or `false`. |
 | `last_verified` | The day the source was checked, `YYYY-MM-DD`. |

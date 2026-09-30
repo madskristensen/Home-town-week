@@ -3,11 +3,15 @@
 # section is first on the page. The rest of the year it follows the events.
 # A row here is not an event. Do not copy it into a city page.
 #
-# Required: id, name, type, city, address, lat, lng, description, source,
-# free, last_verified. nights and hours when they are known.
+# Required: id, name, type, city, address, description, source, free,
+# last_verified. nights and hours when they are known. photo when a
+# licensed picture exists.
 # type is park, house, or street.
-# lat and lng are decimal degrees. The town map pin uses them. The page
-# does not ask for a visitor's location.
+# lat and lng are optional decimal degrees. The page does not show a map
+# and does not ask for a visitor's location.
+# photo.kind is own (this display) or theme (a licensed lights picture).
+# photo.credit is the strip under the picture. Use CC0, CC BY, CC BY-SA,
+# or public domain only.
 # city is a city id from _data/cities.yml.
 # address is a street address, a street, or cross-streets.
 # A public venue can use its published street address. A home can use a
@@ -31,6 +35,13 @@
   description: "A walk through Bellevue Botanical Garden after dark, with lights shaped into plants, animals, and waterfalls."
   nights: "Nov 28, 2026 to Jan 3, 2027"
   hours: "Tickets go on sale October 15. Nightly hours for 2026 are still to come."
+  photo:
+    image: /assets/images/lights/garden-dlights.webp
+    alt: "Light sculptures along a path at Bellevue Botanical Garden."
+    credit: "Photo: Steven Pavlov, CC BY 4.0"
+    license: CC BY 4.0
+    source: "https://commons.wikimedia.org/wiki/File:Garden_d%E2%80%99Lights_2008_at_the_Bellevue_Botanical_Garden,_img011.jpg"
+    kind: own
   source: "https://bellevuebotanical.org/garden-dlights/"
   free: false
   last_verified: "2026-09-29"
@@ -44,6 +55,13 @@
   description: "A free parade of lit floats, drummers, and falling snow on Bellevue Way. Watch from the sidewalk between Bellevue Square and Lincoln Square."
   nights: "Nov 27 to Dec 24"
   hours: "7 p.m."
+  photo:
+    image: /assets/images/themes/lights-street-arches.webp
+    alt: "Arches of Christmas lights over a street at night."
+    credit: "Photo: Kurt Kaiser, CC0"
+    license: CC0
+    source: "https://commons.wikimedia.org/wiki/File:Festival_of_Lights_in_Austin,_TX_2.jpg"
+    kind: theme
   source: "https://bellevuecollection.com/snowflakelane/"
   free: true
   last_verified: "2026-09-29"
@@ -57,6 +75,13 @@
   description: "A free walk at Evergreen Church, with light tunnels, a show set to music, a train, and a snow play area."
   nights: "Last seen 2025, Dec 1 to 24."
   hours: "6 to 9 p.m."
+  photo:
+    image: /assets/images/themes/lights-path.webp
+    alt: "A path lined with blue and white lights at night."
+    credit: "Photo: Yoonahkim, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: "https://commons.wikimedia.org/wiki/File:Luminescent_lights.jpg"
+    kind: theme
   source: "https://evergreenchristmaslights.com/"
   free: true
   last_verified: "2026-09-29"
@@ -70,6 +95,13 @@
   description: "A drive-through home display on a looping driveway. Donations are encouraged, and visitors stay in the car."
   nights: "Last seen 2025, Dec 1 to 31."
   hours: "6 to 10 p.m., weather permitting"
+  photo:
+    image: /assets/images/themes/lights-house-porch.webp
+    alt: "A house outlined in multicolored Christmas lights."
+    credit: "Photo: Joe Parks, CC BY 2.0"
+    license: CC BY 2.0
+    source: "https://commons.wikimedia.org/wiki/File:Christmas_in_Paradise_-_Flickr_-_Joe_Parks.jpg"
+    kind: theme
   source: "https://www.parentmap.com/things-to-do/best-holiday-light-displays-seattle/"
   free: true
   last_verified: "2026-09-29"
@@ -83,6 +115,13 @@
   description: "A free light installation through the Park at Bothell Landing, set up for an evening stroll."
   nights: "Last seen 2025, Dec 1 to Jan 5."
   hours: "Lit through the day and evening"
+  photo:
+    image: /assets/images/themes/lights-park-trees.webp
+    alt: "Trees wrapped in white lights in a park at night."
+    credit: "Photo: Jiří Sedláček, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: "https://commons.wikimedia.org/wiki/File:Overview_of_Christmas_lights_in_back_part_of_park_in_2024_at_Hr%C3%A1dek_street_in_T%C5%99eb%C3%AD%C4%8D,_T%C5%99eb%C3%AD%C4%8D_District.jpg"
+    kind: theme
   source: "https://www.bothellwa.gov/Calendar.aspx?EID=2366"
   free: true
   last_verified: "2026-09-29"
@@ -96,6 +135,13 @@
   description: "A cul-de-sac where the houses put out painted nutcracker figures and lights, in the manner of a candy cane lane."
   nights: "Usually every night in December. 2026 dates are still to come."
   hours: ""
+  photo:
+    image: /assets/images/themes/lights-street-town.webp
+    alt: "Christmas lights along a small-town street."
+    credit: "Photo: mattbuck, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: "https://commons.wikimedia.org/wiki/File:Beeston_MMB_70.jpg"
+    kind: theme
   source: "https://www.greaterseattleonthecheap.com/best-christmas-lights-seattle/"
   free: true
   last_verified: "2026-09-29"
@@ -109,6 +155,13 @@
   description: "Lights along the Eastrail at Feriton Spur Park, with a community lighting night to open the season."
   nights: "Last seen 2025, Dec 5 to Jan 9."
   hours: ""
+  photo:
+    image: /assets/images/themes/lights-cold.webp
+    alt: "Cold white lights on a tree at night."
+    credit: "Photo: waferboard, CC BY 2.0"
+    license: CC BY 2.0
+    source: "https://commons.wikimedia.org/wiki/File:Cold_White_Christmas_lights_(8322726666).jpg"
+    kind: theme
   source: "https://www.parentmap.com/things-to-do/best-holiday-light-displays-seattle/"
   free: true
   last_verified: "2026-09-29"
@@ -122,6 +175,13 @@
   description: "A home light show in Kingsgate, set to music you can hear from the car, raising money for Northwest Harvest. Pull over and keep driveways clear."
   nights: "Last seen 2025, nightly through New Year's weekend."
   hours: "4:30 p.m. to midnight"
+  photo:
+    image: /assets/images/themes/lights-house-reindeer.webp
+    alt: "Reindeer and a tree lit in a front yard."
+    credit: "Photo: Elliekb, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: "https://commons.wikimedia.org/wiki/File:Reindeerlights.jpg"
+    kind: theme
   source: "https://linktr.ee/kingsgatekringle"
   free: true
   last_verified: "2026-09-29"
@@ -135,6 +195,13 @@
   description: "A home display with a soundtrack on 101.9 FM. The family collects food for the Maple Valley Food Bank."
   nights: "Thanksgiving through New Year's Eve. 2026 dates are still to come."
   hours: "4:30 to 11 p.m."
+  photo:
+    image: /assets/images/themes/lights-house-window.webp
+    alt: "A house window framed with warm Christmas lights."
+    credit: "Photo: mattbuck, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: "https://commons.wikimedia.org/wiki/File:Wraxall_2013_MMB_A1_Christmas.jpg"
+    kind: theme
   source: "https://www.greaterseattleonthecheap.com/best-christmas-lights-seattle/"
   free: true
   last_verified: "2026-09-29"
@@ -148,6 +215,13 @@
   description: "A free run of light art in Downtown Park, opening with music, crafts, and a family promenade."
   nights: "Dec 5, 2026 to Jan 4, 2027"
   hours: "Kickoff Dec 5, 4 to 8 p.m."
+  photo:
+    image: /assets/images/themes/lights-park-square.webp
+    alt: "Trees covered in white lights in a city park."
+    credit: "Photo: MusikAnimal, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: "https://commons.wikimedia.org/wiki/File:Zuccotti_Park_with_christmas_lights.JPG"
+    kind: theme
   source: "https://www.redmond.gov/1139/Redmond-Lights"
   free: true
   last_verified: "2026-09-29"
@@ -161,6 +235,13 @@
   description: "Trees and shrubs lit along the walk at Gene Coulon Memorial Beach Park. Opening night adds Santa and the Christmas ships."
   nights: "Last seen 2025. Opening night Dec 5, then Dec 6 to Jan 4."
   hours: "5 to 9 p.m. after opening night"
+  photo:
+    image: /assets/images/themes/tree-lights.webp
+    alt: "White lights on a Christmas tree at night."
+    credit: "Photo: photos-public-domain.com, CC0"
+    license: CC0
+    source: "https://commons.wikimedia.org/wiki/File:White_Christmas_Tree_Lights_at_Night.jpg"
+    kind: theme
   source: "https://www.parentmap.com/things-to-do/best-holiday-light-displays-seattle/"
   free: true
   last_verified: "2026-09-29"
@@ -174,6 +255,13 @@
   description: "A free walk along light paths in a front yard on 134th Street in the East Renton Highlands. The family welcomes kids and dogs."
   nights: "Opens again the day after Thanksgiving 2026."
   hours: ""
+  photo:
+    image: /assets/images/themes/lights-house-bushes.webp
+    alt: "Bushes wrapped in white lights in front of a house."
+    credit: "Photo: mattbuck, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: "https://commons.wikimedia.org/wiki/File:Wraxall_2012_MMB_70.jpg"
+    kind: theme
   source: "https://miracleon134th.st/"
   free: true
   last_verified: "2026-09-29"
@@ -187,6 +275,13 @@
   description: "A Sammamish cul-de-sac where several homes decorate trees, decks, and yards for a slow drive."
   nights: "A December neighborhood drive. 2026 dates are still to come."
   hours: ""
+  photo:
+    image: /assets/images/themes/lights-building.webp
+    alt: "A building covered in blue and white Christmas lights."
+    credit: "Photo: Yoonahkim, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: "https://commons.wikimedia.org/wiki/File:Merry_Hotel.jpg"
+    kind: theme
   source: "https://www.greaterseattleonthecheap.com/best-christmas-lights-seattle/"
   free: true
   last_verified: "2026-09-29"
@@ -200,6 +295,13 @@
   description: "A free walk of lit trains and trees from Salish Lodge along the Centennial Trail into historic downtown, with the tree at the Railroad Park gazebo."
   nights: "Thanksgiving through New Year's. Tree lighting Dec 5, 2026."
   hours: "Nightly"
+  photo:
+    image: /assets/images/themes/lights-civic-square.webp
+    alt: "A civic square decorated with Christmas lights."
+    credit: "Photo: Thomas Nugent, CC BY-SA 2.0"
+    license: CC BY-SA 2.0
+    source: "https://commons.wikimedia.org/wiki/File:George_Square_Christmas_lights_-_geograph.org.uk_-_3806944.jpg"
+    kind: theme
   source: "https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights"
   free: true
   last_verified: "2026-09-29"
@@ -213,6 +315,13 @@
   description: "A row of lit trees along Snoqualmie Parkway in Snoqualmie Ridge, the drive the city pairs with the downtown walk."
   nights: "Thanksgiving through New Year's."
   hours: "Nightly"
+  photo:
+    image: /assets/images/themes/lights-street-trees.webp
+    alt: "Trees lit along a city street at night."
+    credit: "Photo: Ltwikipe, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: "https://commons.wikimedia.org/wiki/File:Navidad-rusia.jpg"
+    kind: theme
   source: "https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights"
   free: true
   last_verified: "2026-09-29"

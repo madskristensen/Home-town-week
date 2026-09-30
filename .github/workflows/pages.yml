@@ -67,13 +67,6 @@ jobs:
           python3 -m pip install --quiet Pillow
           python3 script/render-home-og.py
 
-      - name: Render Christmas light maps
-        run: |
-          # One static SVG per town. Streets and water are OpenStreetMap.
-          # A failed fetch keeps the map already in assets/maps/lights/.
-          python3 -m pip install --quiet PyYAML
-          python3 script/render-light-maps.py
-
       - name: Build with Jekyll
         env:
           JEKYLL_ENV: production

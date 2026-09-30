@@ -510,26 +510,34 @@ module EastsideCalendar
         counts[item["city_id"]] += 1
         item["number"] = counts[item["city_id"]]
       end
+      own = rows.count { |item| item["image_kind"] == "own" }
+      theme = rows.count { |item| item["image_kind"] == "theme" }
+      Jekyll.logger.info("Christmas lights photos:", "own #{own}, theme #{theme}, none #{rows.size - own - theme}")
       rows
     end
 
     def light_towns(displays)
       seen = {}
-      Array(displays).filter_map do |item|
+      towns = Array(displays).filter_map do |item|
         city_id = item["city_id"].to_s
         next if city_id.empty? || seen[city_id]
 
         seen[city_id] = true
         rows = displays.select { |row| row["city_id"].to_s == city_id }
-        pins = rows.map { |row| "#{row["number"]} #{row["name"]}" }
         {
           "id" => city_id,
           "name" => item["city"].to_s,
-          "count" => rows.size,
-          "map" => "/assets/maps/lights/#{city_id}.svg",
-          "map_alt" => "Map of #{item["city"]} with Christmas light pins: #{pins.join(", ")}."
+          "count" => rows.size
         }
       end
+      return [] if towns.empty?
+
+      # The town with the most displays is open. A tie uses the first
+      # town in alphabetical order, which is the order of this list.
+      max = towns.map { |town| town["count"] }.max
+      chosen = towns.find { |town| town["count"] == max }
+      chosen["default"] = true if chosen
+      towns
     end
 
     def light_row(row, names)
@@ -554,16 +562,8 @@ module EastsideCalendar
       source = row["source"].to_s.strip
       return nil unless source.match?(%r{\Ahttps?://\S+\z})
 
-      begin
-        lat = Float(row["lat"])
-        lng = Float(row["lng"])
-      rescue ArgumentError, TypeError
-        return nil
-      end
-      return nil unless lat.between?(45.0, 49.5) && lng.between?(-125.0, -116.0)
-
       slug = light_slug(row["id"], name)
-      {
+      item = {
         "id" => slug,
         "name" => name,
         "type" => type,
@@ -578,6 +578,27 @@ module EastsideCalendar
         "free" => row["free"] == true,
         "last_verified" => row["last_verified"].to_s.strip
       }
+      apply_light_photo!(item, row["photo"], name)
+      item
+    end
+
+    def apply_light_photo!(item, photo, name)
+      return unless photo.is_a?(Hash)
+
+      image = photo["image"].to_s.strip
+      credit = photo["credit"].to_s.strip
+      source = photo["source"].to_s.strip
+      return unless image.start_with?("/assets/images/")
+      return if credit.empty? || !source.match?(%r{\Ahttps://})
+
+      kind = photo["kind"].to_s.strip
+      kind = "theme" unless %w[own theme].include?(kind)
+      alt = photo["alt"].to_s.strip
+      item["image"] = image
+      item["image_alt"] = alt.empty? ? name : alt
+      item["image_credit"] = credit
+      item["image_source"] = source
+      item["image_kind"] = kind
     end
 
     def light_slug(id, name)

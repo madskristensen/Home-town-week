@@ -300,3 +300,72 @@ groups:
         credit: "Photo: Evan Bench, CC BY 2.0"
         license: CC BY 2.0
         source: https://commons.wikimedia.org/wiki/File:Books_in_a_stack_(a_stack_of_books)_-_Flickr_-_austinevan.jpg
+  # Christmas lights list only. This key is not an event name or tag,
+  # so hub cards do not pick these up. tree-lights.webp stays on holiday-lights.
+  - keys: [display-lights-theme]
+    images:
+      - image: /assets/images/themes/lights-path.webp
+        alt: A path lined with blue and white lights at night.
+        credit: "Photo: Yoonahkim, CC BY-SA 3.0"
+        license: CC BY-SA 3.0
+        source: https://commons.wikimedia.org/wiki/File:Luminescent_lights.jpg
+      - image: /assets/images/themes/lights-park-trees.webp
+        alt: Trees wrapped in white lights in a park at night.
+        credit: "Photo: Jiří Sedláček, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Overview_of_Christmas_lights_in_back_part_of_park_in_2024_at_Hr%C3%A1dek_street_in_T%C5%99eb%C3%AD%C4%8D,_T%C5%99eb%C3%AD%C4%8D_District.jpg
+      - image: /assets/images/themes/lights-cold.webp
+        alt: Cold white lights on a tree at night.
+        credit: "Photo: waferboard, CC BY 2.0"
+        license: CC BY 2.0
+        source: https://commons.wikimedia.org/wiki/File:Cold_White_Christmas_lights_(8322726666).jpg
+      - image: /assets/images/themes/lights-park-square.webp
+        alt: Trees covered in white lights in a city park.
+        credit: "Photo: MusikAnimal, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Zuccotti_Park_with_christmas_lights.JPG
+      - image: /assets/images/themes/lights-civic-square.webp
+        alt: A civic square decorated with Christmas lights.
+        credit: "Photo: Thomas Nugent, CC BY-SA 2.0"
+        license: CC BY-SA 2.0
+        source: https://commons.wikimedia.org/wiki/File:George_Square_Christmas_lights_-_geograph.org.uk_-_3806944.jpg
+      - image: /assets/images/themes/lights-house-porch.webp
+        alt: A house outlined in multicolored Christmas lights.
+        credit: "Photo: Joe Parks, CC BY 2.0"
+        license: CC BY 2.0
+        source: https://commons.wikimedia.org/wiki/File:Christmas_in_Paradise_-_Flickr_-_Joe_Parks.jpg
+      - image: /assets/images/themes/lights-house-reindeer.webp
+        alt: Reindeer and a tree lit in a front yard.
+        credit: "Photo: Elliekb, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Reindeerlights.jpg
+      - image: /assets/images/themes/lights-house-window.webp
+        alt: A house window framed with warm Christmas lights.
+        credit: "Photo: mattbuck, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Wraxall_2013_MMB_A1_Christmas.jpg
+      - image: /assets/images/themes/lights-house-bushes.webp
+        alt: Bushes wrapped in white lights in front of a house.
+        credit: "Photo: mattbuck, CC BY-SA 3.0"
+        license: CC BY-SA 3.0
+        source: https://commons.wikimedia.org/wiki/File:Wraxall_2012_MMB_70.jpg
+      - image: /assets/images/themes/lights-street-arches.webp
+        alt: Arches of Christmas lights over a street at night.
+        credit: "Photo: Kurt Kaiser, CC0"
+        license: CC0
+        source: https://commons.wikimedia.org/wiki/File:Festival_of_Lights_in_Austin,_TX_2.jpg
+      - image: /assets/images/themes/lights-street-town.webp
+        alt: Christmas lights along a small-town street.
+        credit: "Photo: mattbuck, CC BY-SA 3.0"
+        license: CC BY-SA 3.0
+        source: https://commons.wikimedia.org/wiki/File:Beeston_MMB_70.jpg
+      - image: /assets/images/themes/lights-building.webp
+        alt: A building covered in blue and white Christmas lights.
+        credit: "Photo: Yoonahkim, CC BY-SA 3.0"
+        license: CC BY-SA 3.0
+        source: https://commons.wikimedia.org/wiki/File:Merry_Hotel.jpg
+      - image: /assets/images/themes/lights-street-trees.webp
+        alt: Trees lit along a city street at night.
+        credit: "Photo: Ltwikipe, CC BY-SA 4.0"
+        license: CC BY-SA 4.0
+        source: https://commons.wikimedia.org/wiki/File:Navidad-rusia.jpg

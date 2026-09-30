@@ -1478,36 +1478,94 @@ picture {
   line-height: 1.35;
 }
 
+.lights-switcher {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: flex-start;
+  margin-top: 0.85rem;
+}
+
+.lights-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  flex: 1 0 100%;
+}
+
+.lights-radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.lights-radio:focus {
+  outline: none;
+}
+
+.lights-radio:focus-visible + .lights-tab {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.lights-tab {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  min-height: 2.25rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--sheet);
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+.lights-tab:hover {
+  border-color: var(--forest);
+}
+
+.lights-radio:checked + .lights-tab {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--header-ink);
+}
+
+.lights-radio:checked + .lights-tab .hub-count {
+  color: inherit;
+}
+
+.lights-switcher:has(:target) .lights-radio:checked + .lights-tab {
+  background: var(--sheet);
+  border-color: var(--rule);
+  color: var(--ink);
+}
+
+.lights-switcher:has(:target) .lights-radio:checked + .lights-tab .hub-count {
+  color: var(--muted);
+}
+
+.lights-panel {
+  display: none;
+  flex: 1 0 100%;
+  min-height: 34rem;
+}
+
 .lights-town {
-  margin: 1.6rem 0 0;
+  margin: 0.35rem 0 0;
   scroll-margin-top: 0.75rem;
   font-size: 1.45rem;
   line-height: 1.15;
-}
-
-.lights-map {
-  margin: 0.7rem 0 0;
-}
-
-.lights-map img {
-  display: block;
-  width: 100%;
-  height: auto;
-  background: #efe6d4;
-}
-
-.lights-map figcaption {
-  margin: 0.3rem 0 0;
-  color: var(--muted);
-  font-size: 0.78rem;
-  line-height: 1.35;
-}
-
-.lights-map figcaption a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 1.5rem;
-  color: inherit;
 }
 
 .lights-list {
@@ -1550,6 +1608,28 @@ picture {
   line-height: 1.4;
 }
 
+.lights-meta a {
+  color: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
+}
+
+.lights-list .event-photo {
+  margin: 0 0 0.55rem;
+  aspect-ratio: 16 / 9;
+}
+
+.lights-list .event-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .lights-list .event-when {
   margin-top: 0.12rem;
   color: var(--gold);
@@ -1573,6 +1653,10 @@ picture {
 }
 
 .lights-list .light-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.5rem;
+  margin-right: 0.65rem;
   font-size: 0.9rem;
   font-weight: 400;
   text-decoration: underline;
