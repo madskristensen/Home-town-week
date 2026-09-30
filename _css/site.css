@@ -2,48 +2,70 @@
    city events, seasonal hubs, the Light Finder, and guides.
    Light mode is a cream sheet, ink headlines, forest links, gold dates.
    Dark mode is a friendly deep slate: lighter cards, warm off-white type,
-   and bright seasonal accents. Both modes use these custom properties.
+   and bright seasonal accents. Every color below is the named palette
+   or a mix of it. Seasonal hubs override the accent on the banner.
    Type is system fonts only. */
 
 :root {
   color-scheme: light;
-  --page: #f4efe6;
-  --sheet: #fffdf9;
-  --ink: #1a2822;
-  --text: #24332c;
-  --muted: #3f5148;
-  --forest: #1e4636;
-  --forest-deep: #16352a;
+
+  /* Named palette. Light values. */
+  --bg: #f4efe6;
+  --surface: #fffdf9;
+  --surface-2: #e7f0e8;
+  --text: #1a2822;
+  --text-muted: #3f5148;
+  --accent: #1e4636;
+  --accent-contrast: #f7f1e6;
+  --border: #d9ccb8;
   --gold: #6b4e0e;
-  --gold-bright: #c6a15a;
-  --gold-line: #a6843f;
-  --link: #145c40;
-  --rule: #d9ccb8;
-  --focus: #6b4e0e;
-  --header-ink: #f7f1e6;
-  --on-accent: #f7f1e6;
+  --border-strong: #8a7864;
+
+  /* Eastside map. Lakes and foothills stay distinct from the UI. */
+  --map-land: #d7e3d4;
+  --map-water: #c5d5de;
+  --map-shore: #8eabb8;
+  --map-road: #a6843f;
+
+  --mask: #000;
+
+  /* Roles. These point at the palette, so the rest of the CSS has no hex. */
+  --page: var(--bg);
+  --sheet: var(--surface);
+  --ink: var(--text);
+  --muted: var(--text-muted);
+  --forest: var(--accent);
+  --forest-deep: color-mix(in srgb, var(--accent) 73%, black);
+  --gold-bright: var(--gold);
+  --gold-line: var(--map-road);
+  --link: var(--accent);
+  --rule: var(--border);
+  --focus: var(--gold);
+  --header-ink: var(--accent-contrast);
+  --on-accent: var(--accent-contrast);
   --shadow: none;
-  --map-quiet: #e4d3bd;
-  --map-label: #f7f1e6;
-  --wash: rgba(30, 70, 54, 0.07);
-  --credit-bg: rgba(255, 255, 255, 0.3);
-  --credit-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
-  --selection-bg: #ead7a4;
-  --selection-ink: #1c2b24;
-  --foothills: #d7e3d4;
-  --water: #c5d5de;
-  --water-edge: #8eabb8;
-  --map-facade: #e7f0e8;
-  --map-facade-edge: #c5d7c8;
-  --map-dot: #c5d7c8;
-  --btn-bg: #1e4636;
-  --btn-bg-hover: #16352a;
-  --btn-ink: #f7f1e6;
-  --pin-bg: #1e4636;
-  --pin-ink: #f7f1e6;
-  --pin-ring: #f7f1e6;
-  --menu-border: #8a7864;
-  --menu-shadow: 0 0.55rem 1.6rem rgba(42, 32, 22, 0.18);
+  --map-quiet: var(--border);
+  --map-label: var(--accent-contrast);
+  --wash: rgb(from var(--accent) r g b / 0.07);
+  --credit-bg: rgb(from var(--surface) r g b / 0.3);
+  --credit-shadow: 0 0 2px rgb(from var(--surface) r g b / 0.8);
+  --selection-bg: color-mix(in srgb, var(--gold) 32%, var(--surface));
+  --selection-ink: var(--text);
+  --foothills: var(--map-land);
+  --water: var(--map-water);
+  --water-edge: var(--map-shore);
+  --map-facade: var(--surface-2);
+  --map-facade-edge: color-mix(in srgb, var(--map-land) 62%, var(--map-shore));
+  --map-dot: var(--map-facade-edge);
+  --btn-bg: var(--accent);
+  --btn-bg-hover: color-mix(in srgb, var(--accent) 73%, black);
+  --btn-ink: var(--accent-contrast);
+  --pin-bg: var(--accent);
+  --pin-ink: var(--accent-contrast);
+  --pin-ring: var(--accent-contrast);
+  --pin-shadow: 0 1px 2px rgb(from var(--accent) r g b / 0.35);
+  --menu-border: var(--border-strong);
+  --menu-shadow: 0 0.55rem 1.6rem rgb(from var(--text) r g b / 0.18);
   --radius: 2px;
   --measure: 44rem;
   --photo-filter: none;
@@ -53,11 +75,11 @@
 
 @media (prefers-contrast: more) {
   :root {
-    --muted: #24332c;
+    --text-muted: var(--text);
     --gold: #5c420c;
-    --rule: #8d7d68;
-    --menu-border: #4e4336;
-    --menu-shadow: 0 0.45rem 1.2rem rgba(28, 22, 16, 0.28);
+    --border: #8d7d68;
+    --border-strong: #4e4336;
+    --menu-shadow: 0 0.45rem 1.2rem rgb(from var(--text) r g b / 0.28);
   }
 }
 
@@ -66,63 +88,61 @@
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --page: #243044;
-    --sheet: #3b516b;
-    --ink: #fff6ea;
-    --text: #f4ebdf;
-    --muted: #e6d3c0;
-    --forest: #9fe3c4;
-    --forest-deep: #d4f5e4;
+    --bg: #243044;
+    --surface: #3b516b;
+    --surface-2: #3e5672;
+    --text: #fff6ea;
+    --text-muted: #f6eee4;
+    --accent: #9fe3c4;
+    --accent-contrast: #10241c;
+    --border: #8ea3b8;
     --gold: #f2c878;
-    --gold-bright: #f8dba8;
-    --gold-line: #e8b15a;
-    --link: #9fe3c4;
-    --rule: #8ea3b8;
-    --focus: #f2c878;
-    --header-ink: #fff6ea;
-    --on-accent: #10241c;
-    --map-quiet: #31445c;
-    --map-label: #fff6ea;
-    --wash: rgba(159, 227, 196, 0.18);
-    --credit-bg: rgba(20, 32, 48, 0.3);
-    --credit-shadow: 0 0 2px rgba(20, 32, 48, 0.8);
-    --selection-bg: #5c4a28;
-    --selection-ink: #fff6ea;
-    --foothills: #355646;
-    --water: #345e78;
-    --water-edge: #9ec4d6;
-    --map-facade: #3e5672;
-    --map-facade-edge: #9eb8cc;
-    --map-dot: #9eb8cc;
-    --btn-bg: #8fd4b0;
-    --btn-bg-hover: #97dcb8;
-    --btn-ink: #10241c;
-    --pin-bg: #146b45;
-    --pin-ink: #fff6ea;
-    --pin-ring: #fff6ea;
-    --menu-border: #e8b15a;
-    --menu-shadow: 0 0.7rem 1.8rem rgba(12, 20, 32, 0.45);
+    --border-strong: #e8b15a;
+    --map-land: #355646;
+    --map-water: #345e78;
+    --map-shore: #9ec4d6;
+    --map-road: #e8b15a;
+    --pin: #146b45;
+
+    /* Christmas feature card. Red is too deep for the sage accent. */
+    --xmas-bg: #b71c1c;
+    --xmas-ink: #fff8f2;
+    --xmas-border: #ffd27a;
+    --xmas-btn: #d8ffe6;
+    --xmas-btn-hover: #b6f5d0;
+
+    --forest-deep: color-mix(in srgb, var(--accent) 55%, white);
+    --header-ink: var(--text);
+    --map-label: var(--text);
+    --wash: rgb(from var(--accent) r g b / 0.18);
+    --credit-bg: rgb(from var(--bg) r g b / 0.3);
+    --credit-shadow: 0 0 2px rgb(from var(--bg) r g b / 0.8);
+    --selection-bg: color-mix(in srgb, var(--gold) 38%, var(--bg));
+    --btn-bg-hover: color-mix(in srgb, var(--accent) 92%, white);
+    --pin-bg: var(--pin);
+    --pin-ink: var(--text);
+    --pin-ring: var(--text);
+    --pin-shadow: 0 1px 2px rgb(from var(--accent-contrast) r g b / 0.35);
+    --menu-border: var(--border-strong);
+    --menu-shadow: 0 0.7rem 1.8rem rgb(from var(--bg) r g b / 0.45);
   }
 }
 
 @media (prefers-color-scheme: dark) and (prefers-contrast: more) {
   :root {
-    --page: #1b2838;
-    --sheet: #2c4158;
-    --ink: #fffaf3;
+    --bg: #1b2838;
+    --surface: #2c4158;
     --text: #fffaf3;
-    --muted: #f3e6d6;
-    --forest: #c6f5dc;
-    --forest-deep: #e7fff3;
+    --text-muted: #fffaf3;
+    --accent: #c6f5dc;
     --gold: #f6d48a;
-    --gold-line: #f6d48a;
-    --link: #c6f5dc;
-    --rule: #d5e2ee;
-    --focus: #f6d48a;
-    --credit-bg: #1b2838;
+    --border: #d5e2ee;
+    --border-strong: #f6d48a;
+    --map-road: #f6d48a;
+    --forest-deep: color-mix(in srgb, var(--accent) 40%, white);
+    --credit-bg: var(--bg);
     --credit-shadow: none;
-    --menu-border: #f6d48a;
-    --menu-shadow: 0 0.55rem 1.4rem rgba(0, 0, 0, 0.55);
+    --menu-shadow: 0 0.55rem 1.4rem rgb(0 0 0 / 0.55);
   }
 }
 
@@ -369,8 +389,8 @@ picture {
 }
 
 .cities-menu .cities-panel nav.has-more {
-  -webkit-mask-image: linear-gradient(#000 0, #000 calc(100% - 1.6rem), transparent);
-  mask-image: linear-gradient(#000 0, #000 calc(100% - 1.6rem), transparent);
+  -webkit-mask-image: linear-gradient(var(--mask) 0, var(--mask) calc(100% - 1.6rem), transparent);
+  mask-image: linear-gradient(var(--mask) 0, var(--mask) calc(100% - 1.6rem), transparent);
 }
 
 .cities-menu .cities-panel ul {
@@ -756,10 +776,10 @@ figure figcaption .source::before {
 }
 
 .season-banner {
-  --season-bg: var(--season-bg-light, #f4efe6);
-  --season-ink: var(--season-ink-light, #1a2822);
-  --season-muted: var(--season-muted-light, #3f5148);
-  --season-link: var(--season-link-light, #145c40);
+  --season-bg: var(--season-bg-light, var(--bg));
+  --season-ink: var(--season-ink-light, var(--text));
+  --season-muted: var(--season-muted-light, var(--text-muted));
+  --season-link: var(--season-link-light, var(--accent));
   height: 2.75rem;
   margin: 0.875rem 0;
   overflow: hidden;
@@ -921,10 +941,10 @@ a.addr .addr-text {
 
 @media (prefers-color-scheme: dark) {
   .season-banner {
-    --season-bg: var(--season-bg-dark, var(--season-bg-light, #f4efe6));
-    --season-ink: var(--season-ink-dark, var(--season-ink-light, #f6efe4));
-    --season-muted: var(--season-muted-dark, var(--season-muted-light, #d2c3ae));
-    --season-link: var(--season-link-dark, var(--season-link-light, #8fd4b0));
+    --season-bg: var(--season-bg-dark, var(--season-bg-light, var(--bg)));
+    --season-ink: var(--season-ink-dark, var(--season-ink-light, var(--text)));
+    --season-muted: var(--season-ink);
+    --season-link: var(--season-ink);
   }
 
 

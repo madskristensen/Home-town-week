@@ -59,12 +59,12 @@ hubs:
       background: "#f4e6cf"
       ink: "#1a2822"
       muted: "#3f5148"
-      link: "#145c40"
+      link: "#1e4636"
       dark:
         background: "#f09a3a"
-        ink: "#3a220c"
-        muted: "#4a2a0c"
-        link: "#083422"
+        ink: "#311d0a"
+        muted: "#311d0a"
+        link: "#311d0a"
       svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#8a5a22" d="M8.2 11.2c0-2.2 1.5-3.6 3.8-3.6s3.8 1.4 3.8 3.6c0 3.3-1.6 6.2-3.8 6.2s-3.8-2.9-3.8-6.2z"/><path fill="#6b4e0e" d="M11.2 8.2h1.6v8.6h-1.6z"/><path fill="#1e4636" d="M12 4.6c.3 1 .2 1.8-.2 2.4 1.2-.2 2-.8 2.2-1.8-.8-.5-1.5-.7-2-.6z"/><path fill="#1e4636" d="M15.6 6.4c.9.7.8 1.6 0 2.2-.8-.5-1.3-1.1-1.4-1.8.4-.3.9-.4 1.4-.4z"/></svg>'
 
   - id: christmas
@@ -113,12 +113,12 @@ hubs:
       background: "#e7f0e8"
       ink: "#1a2822"
       muted: "#3f5148"
-      link: "#145c40"
+      link: "#1e4636"
       dark:
         background: "#b71c1c"
         ink: "#fff8f2"
-        muted: "#ffe4d8"
-        link: "#c8f5d4"
+        muted: "#fff8f2"
+        link: "#fff8f2"
       svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#1e4636" d="M12 3.2 17.8 18H6.2z"/><path fill="#6b4e0e" d="M11 17.6h2V21h-2z"/><circle fill="#c6a15a" cx="12" cy="9" r="1"/><circle fill="#c6a15a" cx="10.2" cy="13" r="1"/><circle fill="#c6a15a" cx="13.8" cy="13.4" r="1"/></svg>'
 
   - id: easter
@@ -143,12 +143,12 @@ hubs:
       background: "#f7f3e6"
       ink: "#1a2822"
       muted: "#3f5148"
-      link: "#145c40"
+      link: "#1e4636"
       dark:
         background: "#f3b6d4"
         ink: "#3a1430"
-        muted: "#5a2048"
-        link: "#6b1848"
+        muted: "#3a1430"
+        link: "#3a1430"
       svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><ellipse fill="#6b4e0e" cx="9.5" cy="13.2" rx="3.6" ry="5.2"/><circle fill="#1e4636" cx="16.2" cy="8" r="1.35"/><circle fill="#1e4636" cx="18.4" cy="9.7" r="1.35"/><circle fill="#1e4636" cx="16.2" cy="11.4" r="1.35"/><circle fill="#1e4636" cx="14" cy="9.7" r="1.35"/><circle fill="#c6a15a" cx="16.2" cy="9.7" r="0.7"/></svg>'
 
   - id: fourth
@@ -173,12 +173,12 @@ hubs:
       background: "#f6edd9"
       ink: "#1a2822"
       muted: "#3f5148"
-      link: "#145c40"
+      link: "#1e4636"
       dark:
         background: "#f2c14e"
         ink: "#1c2744"
-        muted: "#2c3c5c"
-        link: "#14305c"
+        muted: "#1c2744"
+        link: "#1c2744"
       svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="#6b4e0e" stroke-width="1.5" stroke-linecap="round"><path d="M12 3.2v3.6M12 17.2V21M3.2 12h3.6M17.2 12H21M6 6l2.6 2.6M15.4 15.4 18 18M18 6l-2.6 2.6M8.6 15.4 6 18"/></g><circle fill="#c6a15a" cx="12" cy="12" r="1.5"/></svg>'
 
   - id: lunar-new-year
@@ -203,12 +203,12 @@ hubs:
       background: "#f8f0e2"
       ink: "#1a2822"
       muted: "#3f5148"
-      link: "#145c40"
+      link: "#1e4636"
       dark:
         background: "#f6c453"
         ink: "#5c1020"
-        muted: "#6b1428"
-        link: "#4a0e1c"
+        muted: "#5c1020"
+        link: "#5c1020"
       svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#8a5a22" d="M8.5 7h7l1.2 2.2v8.2l-1.2 2.2h-7l-1.2-2.2V9.2z"/><path fill="#6b4e0e" d="M10.6 4.2h2.8V7h-2.8z"/><path fill="#c6a15a" d="M11 11h2v4.2h-2z"/></svg>'
 
   - id: diwali
@@ -233,12 +233,12 @@ hubs:
       background: "#f8ecd9"
       ink: "#1a2822"
       muted: "#3f5148"
-      link: "#145c40"
+      link: "#1e4636"
       dark:
         background: "#f0a020"
-        ink: "#3a2208"
-        muted: "#4a2c08"
-        link: "#7a2208"
+        ink: "#331c08"
+        muted: "#331c08"
+        link: "#331c08"
       svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#8a5a22" d="M4.5 14.2c1.4 3 4.2 4.6 7.5 4.6s6.1-1.6 7.5-4.6c-2.2.9-4.6 1.3-7.5 1.3s-5.3-.4-7.5-1.3z"/><path fill="#c6a15a" d="M12 13.2c.4-2.2 1.2-3.6 2.2-4.8-.2 1.8-.8 3-1.6 4-.6-.4-.8-.2-.6.8z"/><path fill="#6b4e0e" d="M11.2 8.4c.7-1.6 1.6-2.6 2.6-3.2-.1 1.5-.7 2.6-1.6 3.4-.5-.2-.8-.2-1-.2z"/></svg>'
 
   - id: dia-de-los-muertos
@@ -263,12 +263,12 @@ hubs:
       background: "#f8efd8"
       ink: "#1a2822"
       muted: "#3f5148"
-      link: "#145c40"
+      link: "#1e4636"
       dark:
         background: "#f2a322"
         ink: "#3a180c"
-        muted: "#5c2810"
-        link: "#7a1c3a"
+        muted: "#3a180c"
+        link: "#3a180c"
       svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="#8a6232"><circle cx="12" cy="5.6" r="2"/><circle cx="12" cy="18.4" r="2"/><circle cx="5.6" cy="12" r="2"/><circle cx="18.4" cy="12" r="2"/><circle cx="7.4" cy="7.4" r="2"/><circle cx="16.6" cy="7.4" r="2"/><circle cx="7.4" cy="16.6" r="2"/><circle cx="16.6" cy="16.6" r="2"/></g><circle fill="#6b4e0e" cx="12" cy="12" r="2.1"/></svg>'
 
   - id: winter
@@ -293,12 +293,12 @@ hubs:
       background: "#e8eeec"
       ink: "#1a2822"
       muted: "#3f5148"
-      link: "#145c40"
+      link: "#1e4636"
       dark:
         background: "#8ec4e6"
         ink: "#10283c"
-        muted: "#1c3c58"
-        link: "#0e3a28"
+        muted: "#10283c"
+        link: "#10283c"
       svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="#1e4636" stroke-width="1.5" stroke-linecap="round"><path d="M12 3.2v17.6M4.4 7.4l15.2 9.2M19.6 7.4 4.4 16.6"/></g></svg>'
 
   - id: rainy-day
@@ -324,10 +324,10 @@ hubs:
       background: "#e7eeeb"
       ink: "#1a2822"
       muted: "#3f5148"
-      link: "#145c40"
+      link: "#1e4636"
       dark:
         background: "#3ec6a8"
         ink: "#062820"
-        muted: "#0e4034"
-        link: "#083828"
+        muted: "#062820"
+        link: "#062820"
       svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#1e4636" d="M7.2 15.2a3.6 3.6 0 0 1-.5-7.2 4.6 4.6 0 0 1 8.8-1.1 3.2 3.2 0 0 1 .7 6.3H7.2z"/><path fill="#6b4e0e" d="M8.2 16.4c.5 1.3.5 2.2 0 3.2-.5-1-.5-1.9 0-3.2zm4 0c.5 1.3.5 2.2 0 3.2-.5-1-.5-1.9 0-3.2zm4 0c.5 1.3.5 2.2 0 3.2-.5-1-.5-1.9 0-3.2z"/></svg>'

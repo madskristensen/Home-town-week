@@ -213,10 +213,10 @@
 @media (prefers-color-scheme: dark) {
 
   .hub-page {
-    --season-bg: var(--season-bg-dark, var(--season-bg-light, #f09a3a));
-    --season-ink: var(--season-ink-dark, var(--season-ink-light, #3a220c));
-    --season-muted: var(--season-muted-dark, var(--season-muted-light, #4a2a0c));
-    --season-link: var(--season-link-dark, var(--season-link-light, #083422));
+    --season-bg: var(--season-bg-dark, var(--season-bg-light, var(--bg)));
+    --season-ink: var(--season-ink-dark, var(--season-ink-light, var(--text)));
+    --season-muted: var(--season-ink);
+    --season-link: var(--season-ink);
   }
 
   .hub-toc a {

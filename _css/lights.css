@@ -174,7 +174,7 @@
   font-size: 13px;
   font-weight: 700;
   line-height: 1;
-  box-shadow: 0 1px 2px rgba(26, 40, 34, 0.35);
+  box-shadow: var(--pin-shadow);
 }
 
 .home-num {
@@ -244,28 +244,28 @@
 
 @media (prefers-color-scheme: dark) {
   .lights-feature {
-    background: #b71c1c;
-    border-color: #ffd27a;
-    color: #fff8f2;
+    background: var(--xmas-bg);
+    border-color: var(--xmas-border);
+    color: var(--xmas-ink);
   }
 
   .lights-feature-title {
-    color: #fff8f2;
+    color: var(--xmas-ink);
   }
 
   .lights-feature-line {
-    color: #ffe4d8;
+    color: var(--xmas-ink);
   }
 
   .lights-feature-btn {
-    background: #d8ffe6;
-    color: #083422;
+    background: var(--xmas-btn);
+    color: var(--accent-contrast);
   }
 
   .lights-feature-btn:hover,
   .lights-feature-btn:focus-visible {
-    background: #b6f5d0;
-    color: #083422;
+    background: var(--xmas-btn-hover);
+    color: var(--accent-contrast);
   }
 
   .home-map-frame .leaflet-container {
@@ -290,7 +290,7 @@
   }
 
   .home-map-frame .leaflet-control-attribution {
-    background: rgba(36, 48, 68, 0.88);
+    background: rgb(from var(--bg) r g b / 0.88);
     color: var(--muted);
   }
 
