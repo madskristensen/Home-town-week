@@ -563,7 +563,8 @@ picture {
 
 .share-button,
 .footer-install,
-.footer-group a {
+.footer-group a,
+.footer-meta a {
   touch-action: manipulation;
 }
 
@@ -649,7 +650,7 @@ picture {
 }
 
 .footer-seasons li + li,
-.footer-site li + li {
+.footer-explore li + li {
   margin-top: 0.15rem;
 }
 
@@ -664,14 +665,14 @@ picture {
 }
 
 .footer-group a,
-.footer-install,
-.footer-family a {
+.footer-meta a,
+.footer-install {
   color: var(--forest);
   font-weight: 400;
   text-decoration: none;
 }
 
-.footer-family a {
+.footer-meta a {
   font-weight: 600;
 }
 
@@ -685,28 +686,18 @@ picture {
   line-height: 1.45;
 }
 
-.footer-more {
-  margin: 0.75rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.footer-more li + li {
-  margin-top: 0.15rem;
-}
-
 .footer-group a:hover,
 .footer-group a:focus-visible,
+.footer-meta a:hover,
+.footer-meta a:focus-visible,
 .footer-install:hover,
-.footer-install:focus-visible,
-.footer-family a:hover,
-.footer-family a:focus-visible {
+.footer-install:focus-visible {
   color: var(--link);
   text-decoration: underline;
 }
 
 .footer-install {
-  margin: 0.15rem 0 0;
+  margin: 0;
   padding: 0;
   border: 0;
   background: none;
@@ -720,12 +711,49 @@ picture {
   border-top: 1px solid var(--rule);
 }
 
+.footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 0.2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.footer-meta li {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+.footer-meta li:not(:last-child)::after {
+  content: "·";
+  margin: 0 0.5rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.footer-meta li:has(.footer-install[hidden]) {
+  display: none;
+}
+
+.footer-meta a,
+.footer-install {
+  min-height: 1.5rem;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .footer-family {
   margin: 0;
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: inherit;
   font-weight: 400;
-  line-height: 1.55;
+  line-height: inherit;
 }
 
 .family-line {
@@ -745,8 +773,8 @@ picture {
 
 @media (min-width: 42rem) {
   .footer-groups {
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.45fr) minmax(0, 0.95fr);
-    gap: 1.25rem 2rem;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.35fr) minmax(0, 1.15fr);
+    gap: 1.25rem 1.75rem;
     align-items: start;
   }
 }
