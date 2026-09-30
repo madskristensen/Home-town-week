@@ -56,6 +56,7 @@
   place: "1717 Bellevue Way NE"
   same_as: "https://bellevuefarmersmarket.org/"
 - name: "Tiny Trailblazers"
+  cost: "Free"
   start: "2026-10-02T10:00:00-07:00"
   end: "2026-10-02T10:45:00-07:00"
   place: "Lake Hills Greenbelt Ranger Station, 15416 SE 16th St"
@@ -86,6 +87,7 @@
   start: "2026-10-03"
   same_as: "https://allevents.in/bellevue/autumn-moon-night-market-bellevue/200030718608719"
 - name: "Bellevue Demonstration Garden Workshop"
+  setting: "Outdoor"
   start: "2026-10-03T10:00:00-07:00"
   end: "2026-10-03T11:30:00-07:00"
   place: "Bellevue Demonstration Garden, 15500 SE 16th Street"
@@ -104,6 +106,8 @@
   place: "Studio33, 13259 NE 20th St"
   same_as: "https://theatre33.ludus.com/"
 - name: "Kelsey Creek Farm Fair"
+  cost: "Free"
+  setting: "Outdoor"
   tags: [harvest]
   start: "2026-10-03T11:00:00-07:00"
   end: "2026-10-03T16:00:00-07:00"
@@ -176,12 +180,14 @@
   place: "Bellevue Botanical Garden, 12001 Main St"
   same_as: "https://bellevuebotanical.org/kids-in-the-garden/"
 - name: "Story and Stroll"
+  cost: "Free"
   setting: "Outdoor"
   start: "2026-10-09T10:30:00-07:00"
   end: "2026-10-09T11:30:00-07:00"
   place: "Mercer Slough Environmental Education Center, 1625 118th Ave SE"
   same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
 - name: "Fall in Bellevue Celebration"
+  cost: "Free"
   setting: "Outdoor"
   tags: [pumpkin-patch]
   start: "2026-10-09T13:00:00-07:00"
@@ -197,6 +203,7 @@
   place: "Crossroads Community Center, 16000 NE 10th St"
   same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
 - name: "Night Hike at Mercer Slough"
+  cost: "Free"
   setting: "Outdoor"
   start: "2026-10-09T19:00:00-07:00"
   end: "2026-10-09T20:30:00-07:00"
@@ -206,6 +213,7 @@
   start: "2026-10-10T09:00:00-07:00"
   same_as: "https://allevents.in/bellevue/bps-lied-activity-center-fall-craft-fair-2026/200029823855314"
 - name: "Dawn of the Deer"
+  cost: "Free"
   start: "2026-10-10T10:00:00-07:00"
   end: "2026-10-10T11:00:00-07:00"
   place: "Lake Hills Greenbelt Ranger Station, 15416 SE 16th St"
@@ -218,11 +226,13 @@
   place: "Lewis Creek Park Visitor Center, 5808 Lakemont Blvd SE"
   same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
 - name: "Fungi Forest"
+  cost: "Free"
   start: "2026-10-10T14:00:00-07:00"
   end: "2026-10-10T15:00:00-07:00"
   place: "Mercer Slough Environmental Education Center, 1625 118th Ave SE"
   same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
 - name: "Lake Hills Greenbelt Ranger Walk"
+  cost: "Free"
   setting: "Outdoor"
   start: "2026-10-10T14:00:00-07:00"
   end: "2026-12-26T15:00:00-08:00"
@@ -334,6 +344,7 @@
   place: "Bellevue Library, 1111 110th Ave NE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa1ea1a129d8e0031f0fb66"
 - name: "Tree Giveaway"
+  signup: true
   cost: "Free"
   start: "2026-10-24"
   place: "1790 Richards Rd, Bellevue, WA 98005"
@@ -355,6 +366,8 @@
   place: "South Bellevue Community Center, 14509 SE Newport Way"
   same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
 - name: "Trick or Treat with the Farm Animals"
+  cost: "$30 to $36"
+  signup: true
   setting: "Outdoor"
   tags: [halloween]
   start: "2026-10-24T13:00:00-07:00"
@@ -403,12 +416,16 @@
   place: "Bellevue Public Library, 1111 110th Avenue NE (Room 1)"
   same_as: "https://bellevuewa.gov/events/ways-peace-art-listening-part-2"
 - name: "Sunset Stroll"
+  cost: "Free"
   setting: "Outdoor"
   start: "2026-10-30T18:00:00-07:00"
   end: "2026-10-30T19:00:00-07:00"
   place: "Larsen Lake Blueberry Farm, 14812 SE 8th St"
   same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
 - name: "Sleepy Hollow"
+  cost: "$15"
+  signup: true
+  sensory: true
   setting: "Indoor"
   tags: [halloween]
   start: "2026-10-30T19:00:00-07:00"
@@ -431,6 +448,7 @@
   place: "Bellevue, 3rd Floor Children's Desk"
   same_as: "https://kcls.bibliocommons.com/events/6aa8a30a4b3b06003083cceb"
 - name: "Little Monsters on Main Street"
+  cost: "Free"
   setting: "Outdoor"
   tags: [halloween]
   start: "2026-10-31T13:00:00-07:00"
@@ -438,6 +456,9 @@
   place: "Main Street, Old Bellevue"
   same_as: "https://www.visitoldbellevue.com/events/little-monsters-on-main-street-2026"
 - name: "Horizon Line"
+  cost: "$15"
+  signup: true
+  sensory: true
   setting: "Indoor"
   start: "2026-11-13T19:00:00-08:00"
   end: "2026-11-22T14:00:00-08:00"
@@ -470,6 +491,10 @@
   same_as: "https://www.thelittlegym.com/washington-bellevue-redmond/events-more/"
   blurb: "A drop-off evening at the gym, set up like a kids' table that never sits still. $73. The gym lists ages 4 to 10."
 - name: "Robin Hood"
+  cost: "$15"
+  ages: "All ages"
+  signup: true
+  sensory: true
   setting: "Indoor"
   start: "2026-11-27T19:00:00-08:00"
   end: "2026-12-06T14:00:00-08:00"
@@ -490,18 +515,23 @@
   place: "Bellevue Botanical Garden, 12001 Main St"
   same_as: "https://bellevuebotanical.org/garden-dlights/"
 - name: "Holiday Barn Lighting"
+  cost: "Free"
   tags: [holiday-lights, santa]
   start: "2026-12-05T17:00:00-08:00"
   end: "2026-12-05T18:30:00-08:00"
   place: "Kelsey Creek Farm, 410 130th Pl SE"
   same_as: "https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/holiday-barn-lighting"
 - name: "Annie JR."
+  cost: "$15"
+  signup: true
+  sensory: true
   setting: "Indoor"
   start: "2026-12-11T19:00:00-08:00"
   end: "2026-12-20T14:00:00-08:00"
   place: "Bellevue Youth Theatre, 16051 NE 10th St"
   same_as: "https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre/bellevue-youth-theatre-productions"
 - name: "The Nutcracker"
+  cost: "$45 to $70"
   setting: "Indoor"
   signup: true
   tags: [holiday-show]
