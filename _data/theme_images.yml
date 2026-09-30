@@ -114,6 +114,16 @@ groups:
         credit: "Postcard: International Art Publishing Company, public domain"
         license: Public domain
         source: https://commons.wikimedia.org/wiki/File:%22You_Auto_Have_a_Happy_Hallowe%27en.%22_(Jack-O-Lantern_driving_a_car).jpg
+      - image: /assets/images/themes/jack-o-lantern-day.jpg
+        alt: A carved jack-o-lantern sitting on a wooden deck.
+        credit: "Photo: ami harikoshi, CC BY 2.0"
+        license: CC BY 2.0
+        source: https://commons.wikimedia.org/wiki/File:Jack-o%27-lantern_20091031.jpg
+      - image: /assets/images/themes/toy-car-pumpkin.jpg
+        alt: A small toy car parked among miniature pumpkins.
+        credit: "Photo: dsgetch, CC BY 2.0"
+        license: CC BY 2.0
+        source: https://commons.wikimedia.org/wiki/File:Toy_Car_Pumpkin_Landscape.jpg
   - keys: [trick-or-treat street, trick or treat street, on main street, little monsters, town center trick, trick-or-treat, trick or treat]
     images:
       - image: /assets/images/themes/trick-or-treat-porch.webp
@@ -304,6 +314,11 @@ groups:
         credit: "Photo: Celcom, CC BY 3.0"
         license: CC BY 3.0
         source: https://commons.wikimedia.org/wiki/File:NutcrackerCollection.JPG
+      - image: /assets/images/themes/nutcracker-soldiers.jpg
+        alt: A row of painted nutcracker soldiers.
+        credit: "Photo: Strigo, CC BY-SA 3.0"
+        license: CC BY-SA 3.0
+        source: https://commons.wikimedia.org/wiki/File:Nutcrackers_soldiers_Berlin_2006.jpg
   - keys: [santa train, yuletide express, north pole limited, christmas train]
     images:
       - image: /assets/images/themes/christmas-train-wreath.webp

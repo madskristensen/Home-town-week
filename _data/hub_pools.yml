@@ -84,6 +84,11 @@ christmas:
     credit: "Photo: Orsotron, CC BY-SA 3.0"
     license: CC BY-SA 3.0
     source: https://commons.wikimedia.org/wiki/File:Gingerbread_landscape.jpg
+  - image: /assets/images/hubs/christmas/christmas-tree-lights.jpg
+    alt: A Christmas tree covered in blue and white lights at night.
+    credit: "Photo: Hullian111, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Kirk_Ella_%27Golden_Mile%27_Christmas_Lights_2023,_West_Ella_Christmas_Tree.jpg
 easter:
   - image: /assets/images/hubs/easter/eggs-czech.webp
     alt: Painted Easter eggs in bright colors.

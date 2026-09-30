@@ -159,3 +159,87 @@ venues:
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     license: CC BY-SA 3.0
     source: https://commons.wikimedia.org/wiki/File:Renton,_WA_-_Renton_Civic_Theater.jpg
+  - keys: ["bob's corn", "bobs corn"]
+    image: /assets/images/themes/pumpkin-patch-arkansas.jpg
+    alt: Orange pumpkins sitting in a grassy field.
+    credit: "Photo: Rberchie, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Pumpkin_Patch_in_Arkansas11_52_58_931000.jpeg
+  - keys: ["craven farm"]
+    image: /assets/images/themes/corn-maze-edmonton.jpg
+    alt: A dirt path between tall corn stalks.
+    credit: "Photo: Mack Male, CC BY-SA 2.0"
+    license: CC BY-SA 2.0
+    source: https://commons.wikimedia.org/wiki/File:Edmonton_Corn_Maze_2009_(3873682310).jpg
+  - keys: ["thomasson"]
+    image: /assets/images/themes/pumpkin-row.jpg
+    alt: A row of orange pumpkins lined up on the grass.
+    credit: "Photo: Chris McBrien, CC BY-SA 2.0"
+    license: CC BY-SA 2.0
+    source: https://commons.wikimedia.org/wiki/File:Row_of_Pumpkins_(4008750012).jpg
+  - keys: ["spooner farms"]
+    image: /assets/images/themes/pumpkin-stone-steps.jpg
+    alt: Pumpkins and gourds arranged on stone steps.
+    credit: "Photo: Willthacheerleader18, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Pumpkins_in_Roaring_Gap,_NC_(2).jpg
+  - keys: ["stocker farms"]
+    image: /assets/images/themes/corn-maze-aerial.jpg
+    alt: A corn maze in a green field, seen from a nearby hill.
+    credit: "Photo: Karsten Eggert, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Maislabyrinth_in_Delingsdorf.jpg
+  - keys: ["emerald downs"]
+    image: /assets/images/worth-the-drive/emerald-downs.jpg
+    alt: The grandstand and track at Emerald Downs in Auburn.
+    credit: "Photo: brewbooks, CC BY-SA 2.0"
+    license: CC BY-SA 2.0
+    source: https://commons.wikimedia.org/wiki/File:Emerald_Downs_Racetrack.jpg
+  - keys: ["honeytree"]
+    image: /assets/images/themes/tree-farm-netherraw.jpg
+    alt: Rows of young evergreens on a Christmas tree farm, with hills behind them.
+    credit: "Photo: Oliver Dixon, CC BY-SA 2.0"
+    license: CC BY-SA 2.0
+    source: https://commons.wikimedia.org/wiki/File:Christmas_tree_plantation_at_Netherraw_Farm_-_geograph.org.uk_-_4217219.jpg
+  - keys: ["pfaff"]
+    image: /assets/images/themes/tree-farm-balfour.jpg
+    alt: Neat rows of small evergreens in a Christmas tree field.
+    credit: "Photo: Oliver Dixon, CC BY-SA 2.0"
+    license: CC BY-SA 2.0
+    source: https://commons.wikimedia.org/wiki/File:Christmas_tree_plantation_at_Balfour_Farm_-_geograph.org.uk_-_3600450.jpg
+  - keys: ["woodland park zoo"]
+    image: /assets/images/worth-the-drive/woodland-park-zoo.jpg
+    alt: A pond and autumn trees at Woodland Park Zoo.
+    credit: "Photo: Bernie Ongewe, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Woodland_Park_Zoo_2.jpg
+  - keys: ["point defiance"]
+    image: /assets/images/worth-the-drive/point-defiance-wolf.jpg
+    alt: A red wolf standing in the grass at Point Defiance Zoo.
+    credit: "Photo: USFWS/Southeast, CC BY-SA 2.0"
+    license: CC BY-SA 2.0
+    source: https://commons.wikimedia.org/wiki/File:Red_wolf_at_Point_Defiance_Zoo_and_Aquarium.jpg
+  - keys: ["halloween at cougar mountain zoo"]
+    image: /assets/images/worth-the-drive/cougar-mountain-zoo.jpg
+    alt: A tiger resting in an enclosure at Cougar Mountain Zoo.
+    credit: "Photo: Ronincmc, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Cougar_mountain_zoo_0236.JPG
+  - keys: ["holiday magic"]
+    image: /assets/images/themes/holiday-lights-walkway.jpg
+    alt: A walkway covered in blue and white Christmas lights.
+    credit: "Photo: Michael Rivera, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Christmas_lights_3_2021,_Wild_Adventures.jpg
+  - keys: ["snowflake lane"]
+    image: /assets/images/themes/park-christmas-lights.jpg
+    alt: Trees wrapped in white lights in a park at night.
+    credit: "Photo: Mjrmtg, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Fulwood_Park_2024_Christmas_lights_display_3.jpg
+  - keys: ["spooky soils"]
+    image: /assets/images/themes/barn-owl-lantern.jpg
+    alt: A jack-o-lantern carved in the shape of a barn owl.
+    credit: "Photo: Fangusu, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Barn_Owl_Jack_O_Lantern_Left_Side.jpg
