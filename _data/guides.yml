@@ -65,7 +65,7 @@ playgrounds:
     - name: Kirkland Library
       city: Kirkland
       address: "308 Kirkland Ave, Kirkland, WA 98033"
-      text: "The downtown Kirkland branch. Story time is stories, rhymes, and a little dancing. Pajama sessions show up on the calendar too. An adult stays."
+      text: "The downtown Kirkland branch. Story time is stories, rhymes, and a little dancing. Some evenings are pajama story time. An adult stays."
       image: /assets/images/guides/kirkland-library.jpg
       alt: "Kirkland Library entrance, with the library name over the glass doors."
       width: 1920
@@ -95,7 +95,7 @@ playgrounds:
     - name: Renton Library
       city: Renton
       address: "100 Mill Ave S, Renton, WA 98057"
-      text: "The library over the Cedar River. Story time here includes English and other languages on the calendar. Songs, a story, and a grown-up in the room."
+      text: "The library over the Cedar River. Story time includes Spanish, plus toddler and baby sessions. Songs, a story, and a grown-up in the room."
       image: /assets/images/guides/renton-library.jpg
       alt: "Renton Library, a modern building spanning the Cedar River."
       width: 1920
@@ -105,7 +105,7 @@ playgrounds:
     - name: Renton Highlands Library
       city: Renton
       address: "2801 NE 10th St, Renton, WA 98056"
-      text: "The Highlands branch. Story time on this calendar has included signed stories. The shape is the same: a short program, then a little play, with a caregiver."
+      text: "The Highlands branch. Story time here includes Vietnamese. The shape is the same: a short program, then a little play, with a caregiver."
       image: /assets/images/guides/renton-highlands-library.jpg
       alt: "Renton Highlands Library, a single-story building with a covered entry."
       width: 1920
@@ -115,7 +115,7 @@ playgrounds:
     - name: Fairwood Library
       city: Renton
       address: "17009 140th Ave SE, Renton, WA 98058"
-      text: "The Fairwood branch in south Renton. Story time is on the branch calendar as stories and songs for little kids with an adult."
+      text: "The Fairwood branch in south Renton. Story time includes an ASL session. A grown-up stays with the child."
       image: /assets/images/guides/fairwood-library.jpg
       alt: "Fairwood Library sign and building along the street in Renton."
       width: 1280

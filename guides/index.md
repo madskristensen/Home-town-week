@@ -15,7 +15,7 @@ permalink: /guides/
     </li>
     <li>
       <a href="{{ '/guides/story-times/' | relative_url }}">Library story times</a>
-      <p>King County Library branches in these cities where story time is on the calendar.</p>
+      <p>King County Library branches in these cities that hold story time.</p>
     </li>
   </ul>
 </article>
