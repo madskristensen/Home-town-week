@@ -19,7 +19,7 @@ module EastsideCalendar
         name = File.basename(path).downcase
         if [".css", ".js", ".webmanifest"].include?(ext)
           pages << path unless path == "/sw.js"
-        elsif path.start_with?("/assets/images/") && shell_icon?(name)
+        elsif name == "favicon.ico" || (path.start_with?("/assets/images/") && shell_icon?(name))
           images << path
         end
       end
