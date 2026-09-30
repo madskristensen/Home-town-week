@@ -59,16 +59,15 @@ Photos: attach any you took (by sending, you're OK with us posting them with cre
     {%- for town in hub.light_towns -%}
     <div class="lights-panel" id="panel-{{ town.id }}" role="tabpanel" aria-labelledby="lights-{{ town.id }}" data-town="{{ town.id }}">
       <h3 class="lights-town">{{ town.name }}</h3>
-      <ol class="lights-list">
+      <div class="lights-grid">
         {%- for light in light_rows -%}
         {%- if light.city_id == town.id -%}
         {%- assign light_nights = light.nights | append: "" -%}
         {%- assign light_hours = light.hours | append: "" -%}
         {%- assign light_image = light.image | append: "" -%}
-        <li id="light-{{ light.id }}">
-          <div class="lights-item">
+        <article class="lights-card" id="light-{{ light.id }}">
           {%- if light_image.size > 0 -%}
-          <figure class="event-photo lights-thumb">
+          <figure class="event-photo">
             {%- if town.default and light.number == 1 -%}
               {%- assign light_loading = "eager" -%}
               {%- assign light_priority = "high" -%}
@@ -81,14 +80,13 @@ Photos: attach any you took (by sending, you're OK with us posting them with cre
                  alt=light.image_alt
                  loading=light_loading
                  priority=light_priority
-                 sizes="10rem" -%}
+                 sizes="(min-width: 42rem) 21rem, calc(100vw - 3rem)" -%}
             <figcaption>
               <span class="credit">{{ light.image_credit }}</span>
               <a class="source" href="{{ light.image_source }}" rel="noopener">Source</a>
             </figcaption>
           </figure>
           {%- endif -%}
-          <div class="lights-copy">
           <p class="lights-name">{{ light.name }}</p>
           <p class="lights-meta">{{ light.type_label }} · <a class="addr" href="{{ light.address | map_search: light.city, light.name }}">{%- include addr-pin.html -%}<span class="addr-text">{{ light.address }}</span></a> · {% if light.free %}Free{% else %}Tickets required{% endif %}</p>
           {%- if light_nights.size > 0 -%}
@@ -99,12 +97,10 @@ Photos: attach any you took (by sending, you're OK with us posting them with cre
           {%- endif -%}
           <p class="lights-blurb">{{ light.description }}</p>
           <p class="light-links"><a href="{{ light.source }}" rel="noopener">Source</a></p>
-          </div>
-          </div>
-        </li>
+        </article>
         {%- endif -%}
         {%- endfor -%}
-      </ol>
+      </div>
     </div>
     {%- endfor -%}
     <script>

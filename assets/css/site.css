@@ -1575,7 +1575,7 @@ picture {
 .lights-panel {
   display: none;
   flex: 1 0 100%;
-  min-height: 14rem;
+  min-height: 24rem;
 }
 
 .lights-town {
@@ -1585,26 +1585,23 @@ picture {
   line-height: 1.15;
 }
 
-.lights-list {
-  margin: 0.35rem 0 0;
-  padding: 0 0 0 1.5rem;
+.lights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  gap: 1.35rem;
+  margin-top: 0.9rem;
 }
 
-.lights-list li {
-  padding: 0.7rem 0 0.15rem;
-  border-bottom: 1px solid var(--rule);
+.lights-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+  margin: 0;
 }
 
-.lights-list li:last-child {
-  border-bottom: 0;
-}
-
-.lights-list li::marker {
-  color: var(--forest);
-  font-weight: 700;
-}
-
-.lights-list p {
+.lights-card p {
   margin: 0.15rem 0 0;
 }
 
@@ -1634,26 +1631,12 @@ picture {
   text-underline-offset: 0.12em;
 }
 
-.lights-item {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem 0.85rem;
-  align-items: flex-start;
+.lights-card .event-photo {
+  margin: 0 0 0.55rem;
+  aspect-ratio: 16 / 9;
 }
 
-.lights-copy {
-  flex: 1 1 14rem;
-  min-width: 0;
-}
-
-.lights-list .lights-thumb {
-  flex: 0 0 10rem;
-  width: 10rem;
-  margin: 0.15rem 0 0;
-  aspect-ratio: 4 / 3;
-}
-
-.lights-list .event-photo img {
+.lights-card .event-photo img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1661,7 +1644,25 @@ picture {
   object-fit: cover;
 }
 
-.lights-list .event-when {
+.lights-card .event-photo figcaption {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.lights-card .event-photo figcaption .credit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.lights-card .event-photo figcaption .source {
+  flex: none;
+}
+
+.lights-card .event-when {
   margin-top: 0.12rem;
   color: var(--gold);
   font-size: 0.95rem;
@@ -1676,14 +1677,15 @@ picture {
   line-height: 1.4;
 }
 
-.lights-list .light-links {
-  margin-top: 0.2rem;
+.lights-card .light-links {
+  margin-top: auto;
+  padding-top: 0.2rem;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.4;
 }
 
-.lights-list .light-links a {
+.lights-card .light-links a {
   display: inline-flex;
   align-items: center;
   min-height: 1.5rem;
@@ -1693,6 +1695,13 @@ picture {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.12em;
+}
+
+@media (min-width: 42rem) {
+  .lights-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.35rem 1rem;
+  }
 }
 
 .lights-send {

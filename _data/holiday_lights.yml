@@ -9,7 +9,7 @@
 # type is park, house, or street.
 # lat and lng are optional decimal degrees. The page does not show a map
 # and does not ask for a visitor's location.
-# photo is optional. Write image, credit, and credit_url. The thumbnail
+# photo is optional. Write image, credit, and credit_url. The card photo
 # uses the credit strip. Leave photo off when there is no licensed picture.
 # Do not use a photo of recognizable kids. photo.kind is own or theme.
 # Use CC0, CC BY, CC BY-SA, or public domain only.
