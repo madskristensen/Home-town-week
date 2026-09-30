@@ -49,7 +49,7 @@
 {%- endif -%}
 {%- assign seo_title = page.title | default: site.title -%}
 {%- if page.layout == "city" and city -%}
-{%- capture head_title -%}Things to do with kids in {{ city.name }} | {{ site.title }}{%- endcapture -%}
+{%- capture head_title -%}Family events and things to do with kids in {{ city.name }} | {{ site.title }}{%- endcapture -%}
 {%- elsif page.layout == "home" -%}
 {%- capture head_title -%}Things to do with kids on the Eastside | {{ site.title }}{%- endcapture -%}
 {%- elsif seo_title == site.title -%}

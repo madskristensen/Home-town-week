@@ -394,7 +394,7 @@ picture {
 }
 
 .city-page-head {
-  margin: 0 0 0.15rem;
+  margin: 0 0 0.75rem;
 }
 
 .city-heading {
@@ -467,22 +467,13 @@ picture {
   text-underline-offset: 0.08em;
 }
 
-.city-subtitle {
+.city-kicker {
   margin: 0.45rem 0 0;
   max-width: 40rem;
   color: var(--muted);
   font-size: 1.05rem;
   font-weight: 500;
   line-height: 1.35;
-}
-
-.city-kicker {
-  margin: 0.4rem 0 0;
-  max-width: 40rem;
-  color: var(--muted);
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.4;
 }
 
 @media (max-width: 42rem) {

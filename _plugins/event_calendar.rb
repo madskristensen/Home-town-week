@@ -812,27 +812,32 @@ module EastsideCalendar
     end
 
     # About 120 to 155 characters. The named event is the first upcoming card.
+    # The lead sentence is the phrase that used to show under the city name.
     def city_meta_description(city_name, event_name, soon)
       city = city_name.to_s.strip
       event = event_name.to_s.gsub(/[—–]/, " ").gsub(/\s+/, " ").strip
       when_phrase = soon ? "this week" : "coming up"
+      phrase = "Family events and things to do with kids in #{city}"
       tail = " Parks, markets, library story times, and other plans for families. Updated daily."
       short_tail = " Parks, markets, and library plans. Updated daily."
-      if event.empty?
-        text = "Family events in #{city} #{when_phrase} on Washington's Eastside.#{tail}"
-        text = "Family events in #{city} #{when_phrase} on Washington's Eastside.#{short_tail}" if text.length > 155
-        return text.gsub(/\s+/, " ").strip
+      unless event.empty?
+        lead = "#{phrase} #{when_phrase}, like "
+        suffix = ".#{tail}"
+        room = 155 - lead.length - suffix.length
+        if room < 12
+          suffix = ".#{short_tail}"
+          room = 155 - lead.length - suffix.length
+        end
+        if room >= 12
+          event = shorten_phrase(event, room) if event.length > room
+          text = "#{lead}#{event}#{suffix}".gsub(/\s+/, " ").strip
+          return text if text.length >= 120 && text.length <= 155
+        end
       end
 
-      lead = "Family events in #{city} #{when_phrase}, like "
-      suffix = ".#{tail}"
-      room = 155 - lead.length - suffix.length
-      if room < event.length
-        suffix = ".#{short_tail}"
-        room = 155 - lead.length - suffix.length
-      end
-      event = shorten_phrase(event, room) if event.length > room
-      "#{lead}#{event}#{suffix}".gsub(/\s+/, " ").strip
+      text = "#{phrase}.#{tail}"
+      text = "#{phrase}.#{short_tail}" if text.length > 155
+      text.gsub(/\s+/, " ").strip
     end
 
     def visible_event(heading, picks, today, city_name, city_url, used_ids)

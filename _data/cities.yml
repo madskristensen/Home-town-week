@@ -11,8 +11,10 @@
 # (geography, character, or region), not a list of venues. It is not the
 # masthead kicker.
 # slogan: the city's official slogan, and only when the city has one.
-# The masthead kicker prints slogan when it is set, and nothing when it
-# is absent. Do not put a place line in slogan.
+# It prints directly under the city name when it is set, and nothing
+# when it is absent. Do not put a place line in slogan. The sentence
+# "Family events and things to do with kids in {City}" is the title,
+# description, and structured data, not visible page text.
 # logo: optional path to an official city logo, for example
 # /assets/images/bellevue/logo.svg. Leave it unset unless usage is
 # permitted. The city header shows the image only when logo is set.
