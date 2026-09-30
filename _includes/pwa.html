@@ -128,38 +128,59 @@
 
   regroupEvents();
 
-  // Filters hide cards in CSS. This only tidies empty day headings and
-  // the hub contents list after a tap, so the first paint does not move.
-  var filterBoxes = document.querySelectorAll(".event-filters input");
-  function matchingCard(card, wantFree, wantIndoor, wantDrop) {
-    if (wantFree && !card.hasAttribute("data-free")) return false;
-    if (wantIndoor && !card.hasAttribute("data-indoor")) return false;
-    if (wantDrop && !card.hasAttribute("data-dropoff")) return false;
+  // Chips are in the first HTML. A tap hides cards. Nothing moves on load.
+  // Within cost, ages, or setting, checked chips OR. Across groups they AND.
+  var filterBoxes = document.querySelectorAll(".event-filters input[data-group]");
+  function selectedFilterGroups() {
+    var groups = {};
+    var i;
+    for (i = 0; i < filterBoxes.length; i++) {
+      var box = filterBoxes[i];
+      if (!box.checked) continue;
+      var group = box.getAttribute("data-group");
+      if (!group) continue;
+      if (!groups[group]) groups[group] = [];
+      groups[group].push(box.value);
+    }
+    return groups;
+  }
+  function matchingCard(card, groups) {
+    var names = Object.keys(groups);
+    var i;
+    for (i = 0; i < names.length; i++) {
+      var group = names[i];
+      var value = card.getAttribute("data-" + group) || "";
+      if (groups[group].indexOf(value) === -1) return false;
+    }
     return true;
   }
   function applyFilters() {
-    var freeBox = document.querySelector(".flt-free");
-    var indoorBox = document.querySelector(".flt-indoor");
-    var dropBox = document.querySelector(".flt-dropoff");
-    var wantFree = !!(freeBox && freeBox.checked);
-    var wantIndoor = !!(indoorBox && indoorBox.checked);
-    var wantDrop = !!(dropBox && dropBox.checked);
-    var active = wantFree || wantIndoor || wantDrop;
+    var groups = selectedFilterGroups();
+    var active = Object.keys(groups).length > 0;
     var visible = 0;
+    document.querySelectorAll(".event-card, .hub-card").forEach(function (card) {
+      var show = !active || matchingCard(card, groups);
+      card.classList.toggle("is-filtered-out", !show);
+      if (show) visible += 1;
+    });
     document.querySelectorAll("h2.event-bucket").forEach(function (heading) {
       var any = false;
       var node = heading.nextElementSibling;
       while (node && !node.classList.contains("event-bucket") && !node.classList.contains("filter-empty") && !node.classList.contains("suggest-event")) {
-        if (node.classList.contains("event-card") && matchingCard(node, wantFree, wantIndoor, wantDrop)) {
-          any = true;
-          visible += 1;
-        }
+        if (node.classList.contains("event-card") && !node.classList.contains("is-filtered-out")) any = true;
         node = node.nextElementSibling;
       }
-      heading.hidden = active && !any;
+      heading.classList.toggle("is-filtered-out", active && !any);
     });
-    document.querySelectorAll(".hub-card").forEach(function (card) {
-      if (matchingCard(card, wantFree, wantIndoor, wantDrop)) visible += 1;
+    document.querySelectorAll(".hub-section").forEach(function (section) {
+      var cards = section.querySelectorAll(".hub-card");
+      if (!cards.length) return;
+      var any = false;
+      var i;
+      for (i = 0; i < cards.length; i++) {
+        if (!cards[i].classList.contains("is-filtered-out")) any = true;
+      }
+      section.classList.toggle("is-filtered-out", active && !any);
     });
     document.querySelectorAll(".hub-toc li").forEach(function (item) {
       var link = item.querySelector("a");
@@ -171,9 +192,9 @@
       var any = false;
       var i;
       for (i = 0; i < cards.length; i++) {
-        if (matchingCard(cards[i], wantFree, wantIndoor, wantDrop)) any = true;
+        if (!cards[i].classList.contains("is-filtered-out")) any = true;
       }
-      item.hidden = active && !any;
+      item.classList.toggle("is-filtered-out", active && cards.length > 0 && !any);
     });
     document.querySelectorAll(".filter-empty").forEach(function (note) {
       note.hidden = !active || visible > 0;

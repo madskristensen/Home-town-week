@@ -1102,8 +1102,10 @@ a.addr .addr-text {
   }
 }
 
-/* Card labels and the free/indoor filters. The controls are in the
-   first HTML, so they do not pop in after load. */
+/* Card labels and the filter chips. The controls are in the first
+   HTML, so they do not pop in after load. A tap hides cards with
+   .is-filtered-out. Age, setting, and cost chips OR inside the group.
+   Groups AND with each other. */
 .event-tags {
   display: flex;
   flex-wrap: wrap;
@@ -1230,22 +1232,11 @@ a.addr .addr-text {
   margin-top: 0.85rem;
 }
 
-.prose:has(.flt-free:checked) .event-card:not([data-free]),
-.hub-page:has(.flt-free:checked) .hub-card:not([data-free]),
-.prose:has(.flt-indoor:checked) .event-card:not([data-indoor]),
-.hub-page:has(.flt-indoor:checked) .hub-card:not([data-indoor]),
-.prose:has(.flt-dropoff:checked) .event-card:not([data-dropoff]),
-.hub-page:has(.flt-dropoff:checked) .hub-card:not([data-dropoff]) {
-  display: none;
-}
-
-.hub-page:has(.flt-free:checked):not(:has(.flt-indoor:checked)):not(:has(.flt-dropoff:checked)) .hub-section:not(:has(.hub-card[data-free])),
-.hub-page:not(:has(.flt-free:checked)):has(.flt-indoor:checked):not(:has(.flt-dropoff:checked)) .hub-section:not(:has(.hub-card[data-indoor])),
-.hub-page:not(:has(.flt-free:checked)):not(:has(.flt-indoor:checked)):has(.flt-dropoff:checked) .hub-section:not(:has(.hub-card[data-dropoff])),
-.hub-page:has(.flt-free:checked):has(.flt-indoor:checked):not(:has(.flt-dropoff:checked)) .hub-section:not(:has(.hub-card[data-free][data-indoor])),
-.hub-page:has(.flt-free:checked):not(:has(.flt-indoor:checked)):has(.flt-dropoff:checked) .hub-section:not(:has(.hub-card[data-free][data-dropoff])),
-.hub-page:not(:has(.flt-free:checked)):has(.flt-indoor:checked):has(.flt-dropoff:checked) .hub-section:not(:has(.hub-card[data-indoor][data-dropoff])),
-.hub-page:has(.flt-free:checked):has(.flt-indoor:checked):has(.flt-dropoff:checked) .hub-section:not(:has(.hub-card[data-free][data-indoor][data-dropoff])) {
+.event-card.is-filtered-out,
+.hub-card.is-filtered-out,
+.hub-section.is-filtered-out,
+.prose h2.event-bucket.is-filtered-out,
+.hub-toc li.is-filtered-out {
   display: none;
 }
 

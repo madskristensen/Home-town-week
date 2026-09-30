@@ -94,8 +94,7 @@ a:visited {
 .skip-link,
 .suggest-event,
 .hub-toc,
-.also-close,
-.city-weekend-link {
+.also-close {
   display: none !important;
 }
 

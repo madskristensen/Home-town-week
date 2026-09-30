@@ -1,31 +1,15 @@
-{%- assign filter_counts = page.filter_counts -%}
-{%- assign free_n = filter_counts.free | plus: 0 -%}
-{%- assign indoor_n = filter_counts.indoor | plus: 0 -%}
-{%- assign drop_n = filter_counts.dropoff | plus: 0 -%}
-{%- if free_n >= 3 or indoor_n >= 3 or drop_n >= 3 -%}
+{%- assign filter_chips = page.filter_counts -%}
+{%- assign filter_n = filter_chips | size -%}
+{%- if filter_n > 0 -%}
 <div class="event-filters" role="group" aria-labelledby="event-filter-label">
   <span class="filter-label" id="event-filter-label">Filter:</span>
-  {%- if free_n >= 3 -%}
+  {%- for chip in filter_chips -%}
   <label class="filter-chip">
-    <input type="checkbox" class="flt-free">
+    <input type="checkbox" data-group="{{ chip.group }}" value="{{ chip.value | escape }}">
     <span class="filter-switch" aria-hidden="true"></span>
-    <span>Free only</span>
+    <span>{{ chip.label | escape }}</span>
   </label>
-  {%- endif -%}
-  {%- if indoor_n >= 3 -%}
-  <label class="filter-chip">
-    <input type="checkbox" class="flt-indoor">
-    <span class="filter-switch" aria-hidden="true"></span>
-    <span>Indoor</span>
-  </label>
-  {%- endif -%}
-  {%- if drop_n >= 3 -%}
-  <label class="filter-chip">
-    <input type="checkbox" class="flt-dropoff">
-    <span class="filter-switch" aria-hidden="true"></span>
-    <span>Drop-off</span>
-  </label>
-  {%- endif -%}
+  {%- endfor -%}
 </div>
 {%- include empty-suggest.html mode="filter" name=page.title -%}
 {%- endif -%}

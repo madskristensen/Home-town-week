@@ -66,7 +66,7 @@ module EastsideCalendar
       list << ages unless ages.empty?
       setting = setting_label(event)
       list << setting unless setting.empty?
-      list << "Drop-off" if flag(event, "drop_off")
+      list << "Drop-off" if flag(event, "drop_off") && !camp?(event)
       list << "Sign-up needed" if flag(event, "signup")
       list << "Sensory-friendly" if flag(event, "sensory")
       list
@@ -90,24 +90,66 @@ module EastsideCalendar
 
     def attrs(event)
       bits = []
-      bits << 'data-free="1"' if free?(event)
-      bits << 'data-indoor="1"' if indoor?(event)
+      cost = cost_label(event)
+      bits << %(data-cost="#{CGI.escapeHTML(cost)}") unless cost.empty?
+      ages = ages_label(event)
+      bits << %(data-ages="#{CGI.escapeHTML(ages)}") unless ages.empty?
+      setting = setting_label(event)
+      bits << %(data-setting="#{CGI.escapeHTML(setting)}") unless setting.empty?
       bits << 'data-dropoff="1"' if flag(event, "drop_off") && !camp?(event)
+      bits << 'data-signup="1"' if flag(event, "signup")
+      bits << 'data-sensory="1"' if flag(event, "sensory")
       bits.join(" ")
     end
 
-    # How many cards on a page match each filter. A chip is shown only
-    # when this is at least 3, so a filter never comes back empty.
+    # One chip per label that appears on the page, in the same words as
+    # the card. Cost, ages, and setting are groups. Flags are their own
+    # groups. The page ORs chips inside a group and ANDs the groups.
     def filter_counts(events)
-      free = indoor = drop = 0
+      counts = Hash.new(0)
+      seen = []
       Array(events).each do |event|
         next unless event.is_a?(Hash)
 
-        free += 1 if free?(event)
-        indoor += 1 if indoor?(event)
-        drop += 1 if flag(event, "drop_off") && !camp?(event)
+        labels(event).each do |label|
+          counts[label] += 1
+          seen << label unless seen.include?(label)
+        end
       end
-      { "free" => free, "indoor" => indoor, "dropoff" => drop }
+      seen.sort_by { |label| [chip_rank(label), seen.index(label)] }.map do |label|
+        {
+          "label" => label,
+          "group" => chip_group(label),
+          "value" => chip_value(label),
+          "count" => counts[label]
+        }
+      end
+    end
+
+    def chip_group(label)
+      return "ages" if AGES.any? { |item| item.casecmp(label).zero? }
+      return "setting" if SETTINGS.any? { |item| item.casecmp(label).zero? }
+      return "dropoff" if label == "Drop-off"
+      return "signup" if label == "Sign-up needed"
+      return "sensory" if label == "Sensory-friendly"
+
+      "cost"
+    end
+
+    def chip_value(label)
+      %w[dropoff signup sensory].include?(chip_group(label)) ? "1" : label
+    end
+
+    def chip_rank(label)
+      case chip_group(label)
+      when "cost" then label == "Free" ? [0, 0] : [0, 1]
+      when "ages" then [1, AGES.index { |item| item.casecmp(label).zero? } || 0]
+      when "setting" then [2, SETTINGS.index { |item| item.casecmp(label).zero? } || 0]
+      when "dropoff" then [3, 0]
+      when "signup" then [4, 0]
+      when "sensory" then [5, 0]
+      else [9, 0]
+      end
     end
 
     # Day camps and overnight camps stay off the rainy-day and drop-off pages.
