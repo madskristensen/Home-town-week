@@ -1,11 +1,31 @@
-<div class="event-filters">
+{%- assign filter_counts = page.filter_counts -%}
+{%- assign free_n = filter_counts.free | plus: 0 -%}
+{%- assign indoor_n = filter_counts.indoor | plus: 0 -%}
+{%- assign drop_n = filter_counts.dropoff | plus: 0 -%}
+{%- if free_n >= 3 or indoor_n >= 3 or drop_n >= 3 -%}
+<div class="event-filters" role="group" aria-labelledby="event-filter-label">
+  <span class="filter-label" id="event-filter-label">Filter:</span>
+  {%- if free_n >= 3 -%}
   <label class="filter-chip">
-    <input type="checkbox" class="flt-free" id="flt-free">
+    <input type="checkbox" class="flt-free">
+    <span class="filter-switch" aria-hidden="true"></span>
     <span>Free only</span>
   </label>
+  {%- endif -%}
+  {%- if indoor_n >= 3 -%}
   <label class="filter-chip">
-    <input type="checkbox" class="flt-indoor" id="flt-indoor">
+    <input type="checkbox" class="flt-indoor">
+    <span class="filter-switch" aria-hidden="true"></span>
     <span>Indoor</span>
   </label>
+  {%- endif -%}
+  {%- if drop_n >= 3 -%}
+  <label class="filter-chip">
+    <input type="checkbox" class="flt-dropoff">
+    <span class="filter-switch" aria-hidden="true"></span>
+    <span>Drop-off</span>
+  </label>
+  {%- endif -%}
 </div>
 <p class="filter-empty" hidden>Nothing in this list matches.</p>
+{%- endif -%}

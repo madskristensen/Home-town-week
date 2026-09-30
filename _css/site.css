@@ -633,8 +633,7 @@ picture {
 }
 
 .footer-group a,
-.footer-install,
-.footer-drive {
+.footer-install {
   display: inline-flex;
   align-items: center;
   min-width: 1.5rem;
@@ -643,8 +642,14 @@ picture {
   line-height: 1.45;
 }
 
-.footer-drive {
-  margin-top: 0.45rem;
+.footer-more {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-more li + li {
+  margin-top: 0.15rem;
 }
 
 .footer-group a:hover,
@@ -994,27 +999,62 @@ a.addr .addr-text {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.4rem;
-  min-height: 2.15rem;
-  margin: 0.15rem 0 0.15rem;
+  gap: 0.45rem 0.55rem;
+  margin: 0;
+}
+
+.hub-page .event-filters {
+  margin: 0.85rem 0 1.35rem;
+}
+
+.filter-label {
+  margin: 0 0.1rem 0 0;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .filter-chip {
   position: relative;
   display: inline-flex;
   align-items: center;
+  gap: 0.4rem;
   min-height: 2rem;
   margin: 0;
-  padding: 0.1rem 0.75rem;
+  padding: 0.12rem 0.7rem 0.12rem 0.45rem;
   border: 1px solid var(--rule);
-  border-radius: 999px;
-  background: transparent;
+  border-radius: 0.45rem;
+  background: var(--sheet);
   color: var(--ink);
   font-family: var(--sans);
   font-size: 0.82rem;
   font-weight: 650;
   line-height: 1.2;
   cursor: pointer;
+}
+
+.filter-switch {
+  position: relative;
+  flex: 0 0 auto;
+  width: 1.65rem;
+  height: 0.95rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ink) 28%, var(--sheet));
+}
+
+.filter-switch::after {
+  content: "";
+  position: absolute;
+  top: 0.12rem;
+  left: 0.12rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--bg);
 }
 
 .filter-chip input {
@@ -1035,6 +1075,15 @@ a.addr .addr-text {
   color: var(--btn-ink);
 }
 
+.filter-chip:has(input:checked) .filter-switch {
+  background: color-mix(in srgb, var(--btn-ink) 40%, transparent);
+}
+
+.filter-chip:has(input:checked) .filter-switch::after {
+  left: 0.82rem;
+  background: var(--btn-ink);
+}
+
 .filter-chip:has(input:focus-visible) {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
@@ -1047,18 +1096,21 @@ a.addr .addr-text {
 }
 
 .prose:has(.flt-free:checked) .event-card:not([data-free]),
-.hub-page:has(.flt-free:checked) .hub-card:not([data-free]) {
-  display: none;
-}
-
+.hub-page:has(.flt-free:checked) .hub-card:not([data-free]),
 .prose:has(.flt-indoor:checked) .event-card:not([data-indoor]),
-.hub-page:has(.flt-indoor:checked) .hub-card:not([data-indoor]) {
+.hub-page:has(.flt-indoor:checked) .hub-card:not([data-indoor]),
+.prose:has(.flt-dropoff:checked) .event-card:not([data-dropoff]),
+.hub-page:has(.flt-dropoff:checked) .hub-card:not([data-dropoff]) {
   display: none;
 }
 
-.hub-page:has(.flt-free:checked):not(:has(.flt-indoor:checked)) .hub-section:not(:has(.hub-card[data-free])),
-.hub-page:not(:has(.flt-free:checked)):has(.flt-indoor:checked) .hub-section:not(:has(.hub-card[data-indoor])),
-.hub-page:has(.flt-free:checked):has(.flt-indoor:checked) .hub-section:not(:has(.hub-card[data-free][data-indoor])) {
+.hub-page:has(.flt-free:checked):not(:has(.flt-indoor:checked)):not(:has(.flt-dropoff:checked)) .hub-section:not(:has(.hub-card[data-free])),
+.hub-page:not(:has(.flt-free:checked)):has(.flt-indoor:checked):not(:has(.flt-dropoff:checked)) .hub-section:not(:has(.hub-card[data-indoor])),
+.hub-page:not(:has(.flt-free:checked)):not(:has(.flt-indoor:checked)):has(.flt-dropoff:checked) .hub-section:not(:has(.hub-card[data-dropoff])),
+.hub-page:has(.flt-free:checked):has(.flt-indoor:checked):not(:has(.flt-dropoff:checked)) .hub-section:not(:has(.hub-card[data-free][data-indoor])),
+.hub-page:has(.flt-free:checked):not(:has(.flt-indoor:checked)):has(.flt-dropoff:checked) .hub-section:not(:has(.hub-card[data-free][data-dropoff])),
+.hub-page:not(:has(.flt-free:checked)):has(.flt-indoor:checked):has(.flt-dropoff:checked) .hub-section:not(:has(.hub-card[data-indoor][data-dropoff])),
+.hub-page:has(.flt-free:checked):has(.flt-indoor:checked):has(.flt-dropoff:checked) .hub-section:not(:has(.hub-card[data-free][data-indoor][data-dropoff])) {
   display: none;
 }
 

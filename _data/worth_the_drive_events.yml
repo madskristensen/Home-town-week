@@ -1,6 +1,6 @@
 # Family outings outside the 14 cities, within about an hour of Bellevue.
 # Same fields as a city event, plus town, drive, and blurb.
-# Optional labels, only when the source page says so: cost, ages, setting, drop_off, signup, sensory.
+# Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
 # drive is a rough trip from Bellevue before traffic. Keep this list short.
 # These rows stay off city pages and off the home weekend picks.
 - name: "Craven Farm Fall Festival"

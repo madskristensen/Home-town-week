@@ -103,16 +103,24 @@
   line-height: 1.35;
 }
 
-.weekend-all {
-  margin: 0.2rem 0 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.4;
+.weekend-picks h2 a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
 }
 
-.weekend-all a {
-  color: var(--muted);
-  font-weight: 600;
+.weekend-picks h2 a:hover,
+.weekend-picks h2 a:focus-visible {
+  text-decoration: underline;
+}
+
+.weekend-more {
+  margin: 1.15rem 0 0;
+  font-size: 1rem;
+}
+
+.weekend-more a {
+  font-weight: 650;
 }
 
 .weekend-name {

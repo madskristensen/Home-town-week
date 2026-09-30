@@ -29,10 +29,6 @@ sitemap: false
 
 - [This weekend]({{ site.url }}{{ site.baseurl }}/this-weekend/): Friday through Sunday family events in all 14 cities, grouped by day. Rebuilt daily.
 
-## Drop-off
-
-- [Parents' night out]({{ site.url }}{{ site.baseurl }}/parents-night-out/): Dated drop-off sessions. Camps are not listed.
-
 ## Guides
 
 - [Guides]({{ site.url }}{{ site.baseurl }}/guides/): Evergreen family guides.

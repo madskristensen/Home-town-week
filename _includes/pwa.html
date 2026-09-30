@@ -131,23 +131,26 @@
   // Filters hide cards in CSS. This only tidies empty day headings and
   // the hub contents list after a tap, so the first paint does not move.
   var filterBoxes = document.querySelectorAll(".event-filters input");
-  function matchingCard(card, wantFree, wantIndoor) {
+  function matchingCard(card, wantFree, wantIndoor, wantDrop) {
     if (wantFree && !card.hasAttribute("data-free")) return false;
     if (wantIndoor && !card.hasAttribute("data-indoor")) return false;
+    if (wantDrop && !card.hasAttribute("data-dropoff")) return false;
     return true;
   }
   function applyFilters() {
     var freeBox = document.querySelector(".flt-free");
     var indoorBox = document.querySelector(".flt-indoor");
+    var dropBox = document.querySelector(".flt-dropoff");
     var wantFree = !!(freeBox && freeBox.checked);
     var wantIndoor = !!(indoorBox && indoorBox.checked);
-    var active = wantFree || wantIndoor;
+    var wantDrop = !!(dropBox && dropBox.checked);
+    var active = wantFree || wantIndoor || wantDrop;
     var visible = 0;
     document.querySelectorAll("h2.event-bucket").forEach(function (heading) {
       var any = false;
       var node = heading.nextElementSibling;
       while (node && !node.classList.contains("event-bucket") && !node.classList.contains("filter-empty") && !node.classList.contains("suggest-event")) {
-        if (node.classList.contains("event-card") && matchingCard(node, wantFree, wantIndoor)) {
+        if (node.classList.contains("event-card") && matchingCard(node, wantFree, wantIndoor, wantDrop)) {
           any = true;
           visible += 1;
         }
@@ -156,7 +159,7 @@
       heading.hidden = active && !any;
     });
     document.querySelectorAll(".hub-card").forEach(function (card) {
-      if (matchingCard(card, wantFree, wantIndoor)) visible += 1;
+      if (matchingCard(card, wantFree, wantIndoor, wantDrop)) visible += 1;
     });
     document.querySelectorAll(".hub-toc li").forEach(function (item) {
       var link = item.querySelector("a");
@@ -168,7 +171,7 @@
       var any = false;
       var i;
       for (i = 0; i < cards.length; i++) {
-        if (matchingCard(cards[i], wantFree, wantIndoor)) any = true;
+        if (matchingCard(cards[i], wantFree, wantIndoor, wantDrop)) any = true;
       }
       item.hidden = active && !any;
     });

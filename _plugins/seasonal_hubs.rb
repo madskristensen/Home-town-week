@@ -1236,37 +1236,10 @@ module EastsideCalendar
         "/this-weekend/",
         "This weekend on the Eastside",
         "Friday through Sunday family events in 14 Eastside cities, grouped by day. Parks, libraries, markets, and shows, updated daily.",
-        "#{span}, across all 14 cities.",
+        "Friday through Sunday in every city.",
         "Nothing is listed for this Friday, Saturday, or Sunday yet.",
         sections,
         weekend_motif
-      )
-    end
-
-    def prepare_dropoff(cities, data, today, site_url)
-      items = city_rows(cities, data, today, site_url).select do |row|
-        EventLabels.flag(row, "drop_off") && !EventLabels.camp?(row)
-      end
-      items.sort_by! { |item| [item["sort"].to_s, item["startDate"].to_s, item["city"].to_s, item["name"].to_s] }
-      sections = []
-      unless items.empty?
-        sections << {
-          "id" => "drop-off",
-          "title" => "Upcoming drop-off nights",
-          "toc" => "Drop-off nights",
-          "intro" => "Dated sessions where the kids stay and you get the evening.",
-          "events" => items
-        }
-      end
-      standing_page(
-        "parents-night-out",
-        "/parents-night-out/",
-        "Parents' night out on the Eastside",
-        "Drop-off nights for Eastside parents. Dated kids' nights at gyms, community centers, and youth programs. Camps are not listed.",
-        "A few hours when the kids are looked after. These are dated drop-off sessions at gyms, community centers, and kids' programs. Day camps are not listed.",
-        "No drop-off nights are listed yet. City pages are where each session is written up.",
-        sections,
-        dropoff_motif
       )
     end
 
@@ -1313,9 +1286,6 @@ module EastsideCalendar
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="5" width="16" height="14" rx="1.5" fill="#1e4636"/><path d="M4 9h16" stroke="#c6a15a" stroke-width="1.4"/><path d="M8 3.5v3M16 3.5v3" stroke="#6b4e0e" stroke-width="1.4" stroke-linecap="round"/></svg>'
     end
 
-    def dropoff_motif
-      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3" fill="#1e4636"/><path fill="#6b4e0e" d="M6.5 19.2c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5H6.5z"/></svg>'
-    end
   end
 
   # Written during generate. Jekyll does not copy a file that is not in
@@ -1380,9 +1350,7 @@ module EastsideCalendar
       drive = SeasonalHubs.prepare_drive(site.data["worth_the_drive_events"], today, site_url)
       SeasonalHubs.attach_cards!(drive, site, pages, catalog, venues, groups, pools)
       weekend = SeasonalHubs.prepare_weekend(site.data["cities"], site.data, today, site_url)
-      dropoff = SeasonalHubs.prepare_dropoff(site.data["cities"], site.data, today, site_url)
       SeasonalHubs.attach_cards!(weekend, site, pages, catalog, venues, groups, pools)
-      SeasonalHubs.attach_cards!(dropoff, site, pages, catalog, venues, groups, pools)
 
       rule = SeasonalHubs.banner_rule(config)
       chosen = SeasonalHubs.banner_choice(prepared, rule, today)
@@ -1411,7 +1379,7 @@ module EastsideCalendar
       end
       pages[drive["id"]] = drive
       site.pages << hub_page(site, drive)
-      [weekend, dropoff].each do |extra|
+      [weekend].each do |extra|
         pages[extra["id"]] = extra
         site.pages << hub_page(site, extra)
       end
@@ -1429,6 +1397,7 @@ module EastsideCalendar
       page.data["permalink"] = hub["path"]
       page.data["hub_id"] = hub["id"]
       page.data["visible_events"] = hub["visible_events"]
+      page.data["filter_counts"] = EventLabels.filter_counts(hub["visible_events"])
       page.data["last_modified_at"] = EventCalendar.pacific_time(site.time)
       page.content = ""
       page

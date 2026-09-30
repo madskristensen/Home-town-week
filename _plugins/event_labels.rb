@@ -92,7 +92,22 @@ module EastsideCalendar
       bits = []
       bits << 'data-free="1"' if free?(event)
       bits << 'data-indoor="1"' if indoor?(event)
+      bits << 'data-dropoff="1"' if flag(event, "drop_off") && !camp?(event)
       bits.join(" ")
+    end
+
+    # How many cards on a page match each filter. A chip is shown only
+    # when this is at least 3, so a filter never comes back empty.
+    def filter_counts(events)
+      free = indoor = drop = 0
+      Array(events).each do |event|
+        next unless event.is_a?(Hash)
+
+        free += 1 if free?(event)
+        indoor += 1 if indoor?(event)
+        drop += 1 if flag(event, "drop_off") && !camp?(event)
+      end
+      { "free" => free, "indoor" => indoor, "dropoff" => drop }
     end
 
     # Day camps and overnight camps stay off the rainy-day and drop-off pages.

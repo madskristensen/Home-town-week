@@ -1,13 +1,17 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
-# Optional labels, only when the source page says so: cost, ages, setting, drop_off, signup, sensory.
+# Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
 - name: "Music and Movement with Lana Van Boven"
+  cost: "Free"
+  setting: "Indoor"
   ages: "All ages"
   start: "2026-10-02T10:00:00-07:00"
   end: "2026-10-02T10:30:00-07:00"
   place: "Kenmore Library, 6531 NE 181st Street"
   same_as: "https://kcls.bibliocommons.com/events/6a921c7a2dac6e0037228009"
 - name: "Music and Movement with Lana Van Boven"
+  cost: "Free"
+  setting: "Indoor"
   ages: "All ages"
   start: "2026-10-02T10:45:00-07:00"
   end: "2026-10-02T11:15:00-07:00"
@@ -27,12 +31,16 @@
   place: "Northlake Lutheran Church, 6620 NE 185th Street"
   same_as: "https://findkenmore.org/event/imagine-presents-family-friendly-karaoke-4/"
 - name: "ASL Story Time"
+  cost: "Free"
+  setting: "Indoor"
   ages: "All ages"
   start: "2026-10-10T11:15:00-07:00"
   end: "2026-10-10T12:15:00-07:00"
   place: "Kenmore Library, 6531 NE 181st Street"
   same_as: "https://kcls.bibliocommons.com/events/6a76c37ce30fe4845967df1c"
 - name: "Family Story Time"
+  cost: "Free"
+  setting: "Indoor"
   ages: "All ages"
   tags: [free, story-time]
   start: "2026-10-23T10:00:00-07:00"
@@ -40,6 +48,8 @@
   place: "Kenmore Library, 6531 NE 181st Street"
   same_as: "https://kcls.bibliocommons.com/events/6a81fe3aaafa6100295d009e"
 - name: "Builders Club"
+  cost: "Free"
+  setting: "Indoor"
   tags: [free]
   start: "2026-10-24T15:00:00-07:00"
   end: "2026-10-24T17:00:00-07:00"
@@ -52,6 +62,7 @@
   place: "The Hangar, Kenmore Town Square, 6728 NE 181st St"
   same_as: "https://www.kenmorewa.gov/our-city/special-events/dia-de-los-muertos"
 - name: "Alice in Wonderland"
+  setting: "Indoor"
   start: "2026-11-06T19:00:00-08:00"
   end: "2026-11-14T19:00:00-08:00"
   place: "Inglemoor High School Little Theatre, 15500 Simonds Road NE"

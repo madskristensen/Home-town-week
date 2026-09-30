@@ -1030,6 +1030,7 @@ module EastsideCalendar
       page.data["calendar_groups"] = groups
       page.data["event_dates"] = dates
       page.data["event_labels"] = labels
+      page.data["filter_counts"] = EventLabels.filter_counts(labels.values.flatten)
       { linked: linked, unmatched: events.size - matched, undated: undated }
     end
 

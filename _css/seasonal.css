@@ -7,8 +7,10 @@
 .hub-intro {
   margin: 0.85rem 0 0;
   max-width: 40rem;
+  color: var(--text);
   font-size: 1.05rem;
   line-height: 1.45;
+  text-decoration: none;
 }
 
 .hub-page .list-updated {
@@ -16,7 +18,7 @@
 }
 
 .hub-toc {
-  margin: 1rem 0 0;
+  margin: 0.15rem 0 0;
 }
 
 .hub-toc ol {

@@ -59,7 +59,9 @@ layout: default
       {%- if event.cost == "Free" -%}{%- assign card_free = true -%}{%- endif -%}
       {%- assign card_indoor = false -%}
       {%- if event.setting == "Indoor" -%}{%- assign card_indoor = true -%}{%- endif -%}
-      <article class="hub-card" data-image-kind="{{ event.image_kind }}"{% if card_free %} data-free="1"{% endif %}{% if card_indoor %} data-indoor="1"{% endif %}>
+      {%- assign card_drop = false -%}
+      {%- if event.drop_off == true -%}{%- assign card_drop = true -%}{%- endif -%}
+      <article class="hub-card" data-image-kind="{{ event.image_kind }}"{% if card_free %} data-free="1"{% endif %}{% if card_indoor %} data-indoor="1"{% endif %}{% if card_drop %} data-dropoff="1"{% endif %}>
         {%- if event_image.size > 0 -%}
         {%- if forloop.parentloop.first and forloop.index < 3 -%}
           {%- assign card_loading = "eager" -%}
