@@ -103,9 +103,13 @@ module EastsideCalendar
     end
 
     # One chip per label that appears on the page, in the same words as
-    # the card. A price stays on the card and is not a chip. Free is the
-    # paid-versus-free chip. Ages and setting are groups. Flags are their
-    # own groups. The page ORs chips inside a group and ANDs the groups.
+    # the card. A price and All ages stay on the card and are not chips.
+    # Kids and Teens get a chip only at the old threshold of 3, so a thin
+    # age group stays text the way All ages does. Toddlers stays a chip
+    # whenever a card has it. Free is the paid-versus-free chip. The page
+    # ORs chips inside a group and ANDs the groups.
+    CHIP_MIN = 3
+
     def filter_counts(events)
       counts = Hash.new(0)
       seen = []
@@ -113,20 +117,28 @@ module EastsideCalendar
         next unless event.is_a?(Hash)
 
         labels(event).each do |label|
-          next if price_label?(label)
-
           counts[label] += 1
           seen << label unless seen.include?(label)
         end
       end
-      seen.sort_by { |label| [chip_rank(label), seen.index(label)] }.map do |label|
+      seen.filter_map do |label|
+        next unless chip?(label, counts[label])
+
         {
           "label" => label,
           "group" => chip_group(label),
           "value" => chip_value(label),
           "count" => counts[label]
         }
-      end
+      end.sort_by { |chip| [chip_rank(chip["label"]), seen.index(chip["label"])] }
+    end
+
+    def chip?(label, count)
+      return false if price_label?(label)
+      return false if label.to_s.casecmp("All ages").zero?
+      return count >= CHIP_MIN if label.to_s.casecmp("Kids").zero? || label.to_s.casecmp("Teens").zero?
+
+      count >= 1
     end
 
     def price_label?(label)
