@@ -907,12 +907,10 @@ picture {
   border-radius: var(--radius);
 }
 
-/* Credit sits on the photo. 0.58 white over black is about #949494.
-   Ink on that worst case is 5.0:1. A light halo and a slight blur
-   keep the same dark text readable on a typical photo. */
-.hero figcaption,
-.event-photo figcaption,
-.weekend-pick figcaption {
+/* One credit strip for every photo. 0.30 white, full width, rounded
+   with the picture. Type is 0.65rem, about 13% under the old 0.75rem.
+   The halo and blur stay so the ink still reads on the photo. */
+figure figcaption {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -920,9 +918,9 @@ picture {
   z-index: 1;
   margin: 0;
   padding: 0.28rem 0.6rem;
-  background: rgba(255, 255, 255, 0.58);
+  background: rgba(255, 255, 255, 0.3);
   color: var(--ink);
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   line-height: 1.4;
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(4px);
@@ -931,10 +929,9 @@ picture {
   border-bottom-left-radius: inherit;
 }
 
-.hero figcaption a,
-.event-photo figcaption a,
-.weekend-pick figcaption a {
+figure figcaption a {
   color: var(--ink);
+  font-size: inherit;
   font-weight: 600;
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -948,8 +945,7 @@ picture {
   line-height: inherit;
 }
 
-.hero figcaption .source::before,
-.event-photo figcaption .source::before {
+figure figcaption .source::before {
   content: "·";
   margin: 0 0.35rem;
 }
@@ -1398,9 +1394,7 @@ picture {
     color: #145c40;
   }
 
-  .hero figcaption,
-  .event-photo figcaption,
-  .weekend-pick figcaption {
+  figure figcaption {
     background: #fff;
     color: var(--ink);
     text-shadow: none;
