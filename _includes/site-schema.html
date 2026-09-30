@@ -26,8 +26,12 @@
         "url": {{ site.logo | absolute_url | jsonify }},
         "width": 512,
         "height": 512
-      },
-      "sameAs": {{ site.social.links | jsonify }}
+      }
+      {%- assign social_links = site.social.links -%}
+      {%- assign social_count = social_links | size -%}
+      {%- if social_count > 0 -%},
+      "sameAs": {{ social_links | jsonify }}
+      {%- endif %}
     },
     {
       "@type": "Person",
@@ -36,7 +40,6 @@
       "url": {{ "/about/" | absolute_url | jsonify }}
       {%- if site.author.twitter -%},
       "sameAs": [
-        {{ "https://github.com/madskristensen" | jsonify }},
         {{ "https://twitter.com/" | append: site.author.twitter | jsonify }}
       ]
       {%- endif %}
