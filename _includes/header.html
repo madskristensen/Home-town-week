@@ -18,34 +18,3 @@
     </div>
   </div>
 </header>
-<script type="module">
-(function () {
-  var menu = document.querySelector(".cities-menu");
-  if (!menu) return;
-  var nav = menu.querySelector(".cities-panel nav");
-  var summary = menu.querySelector("summary");
-
-  function hint() {
-    if (!nav) return;
-    var more = nav.scrollHeight > nav.clientHeight + 1 &&
-      nav.scrollTop + nav.clientHeight < nav.scrollHeight - 2;
-    nav.classList.toggle("has-more", more);
-  }
-
-  document.addEventListener("click", function (event) {
-    if (!menu.open || menu.contains(event.target)) return;
-    menu.open = false;
-  });
-  document.addEventListener("keydown", function (event) {
-    if (event.key !== "Escape" || !menu.open) return;
-    event.preventDefault();
-    menu.open = false;
-    if (summary) summary.focus();
-  });
-  menu.addEventListener("toggle", function () {
-    requestAnimationFrame(hint);
-  });
-  window.addEventListener("resize", hint);
-  if (nav) nav.addEventListener("scroll", hint, { passive: true });
-})();
-</script>
