@@ -92,6 +92,7 @@
   place: "Redmond Senior & Community Center, 8703 160th Ave NE"
   same_as: "https://www.eventbrite.com/e/family-halloween-tray-workshop-tickets-2000365873175"
 - name: "Ragtime"
+  signup: true
   setting: "Indoor"
   start: "2026-10-03T14:00:00-07:00"
   place: "Francis J. Gaudette Theatre, Issaquah"
@@ -179,6 +180,7 @@
   place: "9900 Willows Rd NE"
   same_as: "http://redmondsaturdaymarket.org/Calendar.cshtml"
 - name: "Harvest Festival"
+  setting: "Outdoor"
   cost: "Free"
   tags: [harvest]
   start: "2026-10-17T10:00:00-07:00"
@@ -186,6 +188,7 @@
   place: "Farrel-McWhirter Park, 19545 Redmond Road"
   same_as: "https://www.redmond.gov/calendar.aspx?EID=3559"
 - name: "Redmond Howl-O-Ween Pup Parade"
+  signup: true
   setting: "Outdoor"
   tags: [halloween]
   start: "2026-10-17T12:00:00-07:00"
@@ -242,6 +245,7 @@
   place: "City Hall - 15670 NE 85th St Redmond WA 98052"
   same_as: "https://www.redmond.gov/calendar.aspx?EID=3541"
 - name: "Green Redmond Day"
+  cost: "Free"
   setting: "Outdoor"
   start: "2026-10-31T09:00:00-07:00"
   end: "2026-10-31T12:00:00-07:00"
