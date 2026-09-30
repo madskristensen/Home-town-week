@@ -36,7 +36,7 @@ Is this your own house? Yes or no{%- endcapture -%}
   </div>
   <div class="lights-board">
     <div class="lights-frame">
-      {%- include eastside-map.html title="Eastside map with Christmas light displays" title_id="lights-map-title" -%}
+      {%- include eastside-map.html title="Eastside map with Christmas light displays" title_id="lights-map-title" static=true -%}
       <div class="lights-pins">
         {%- for light in light_rows -%}
         <button type="button" class="light-pin" id="pin-{{ light.id }}" style="left: {{ light.map_left }}%; top: {{ light.map_top }}%;" data-town="{{ light.city_id }}" data-light="{{ light.id }}" aria-controls="light-{{ light.id }}" aria-pressed="false" aria-label="{{ light.name }}, {{ light.city }}"></button>

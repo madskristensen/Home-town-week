@@ -519,8 +519,10 @@ module EastsideCalendar
       return [] if hub["lights"].to_s.strip.empty?
 
       names = city_names(cities)
-      Array(lights).filter_map { |row| light_row(row, names) }
-        .sort_by { |item| [item["city"].to_s, item["name"].to_s] }
+      rows = Array(lights).filter_map { |row| light_row(row, names) }
+      rows.sort_by! { |item| [item["city"].to_s, item["name"].to_s] }
+      separate_pins!(rows)
+      rows
     end
 
     def light_towns(displays)
@@ -561,11 +563,13 @@ module EastsideCalendar
       source = row["source"].to_s.strip
       return nil unless source.match?(%r{\Ahttps?://\S+\z})
 
-      left, top = project_pin(lat, lng)
+      svg_x, svg_y = project_pin(lat, lng)
       slug = light_slug(row["id"], name)
       query = "#{address}, #{city_name}, WA"
       {
         "id" => slug,
+        "svg_x" => svg_x,
+        "svg_y" => svg_y,
         "name" => name,
         "type" => type,
         "type_label" => LIGHT_TYPES[type],
@@ -574,8 +578,8 @@ module EastsideCalendar
         "address" => address,
         "lat" => format("%.6f", lat),
         "lng" => format("%.6f", lng),
-        "map_left" => format("%.2f", left),
-        "map_top" => format("%.2f", top),
+        "map_left" => format("%.2f", pin_left(svg_x)),
+        "map_top" => format("%.2f", pin_top(svg_y)),
         "description" => description,
         "nights" => row["nights"].to_s.gsub(/\s+/, " ").strip,
         "hours" => row["hours"].to_s.gsub(/\s+/, " ").strip,
@@ -596,17 +600,71 @@ module EastsideCalendar
     def project_pin(lat, lng)
       x = PIN_LON_X * lng + PIN_LAT_X * lat + PIN_OFF_X
       y = PIN_LON_Y * lng + PIN_LAT_Y * lat + PIN_OFF_Y
-      min_x = PIN_VIEW_X + PIN_INSET
-      max_x = PIN_VIEW_X + PIN_VIEW_W - PIN_INSET
-      min_y = PIN_VIEW_Y + PIN_INSET
-      max_y = PIN_VIEW_Y + PIN_VIEW_H - PIN_INSET
-      x = min_x if x < min_x
-      x = max_x if x > max_x
-      y = min_y if y < min_y
-      y = max_y if y > max_y
-      left = (x - PIN_VIEW_X) / PIN_VIEW_W * 100.0
-      top = (y - PIN_VIEW_Y) / PIN_VIEW_H * 100.0
-      [left, top]
+      [clamp_pin_x(x), clamp_pin_y(y)]
+    end
+
+    # 24px targets need clear space on a narrow phone. The map is about
+    # 280px wide there, and the viewBox is 624 wide, so centers stay at
+    # least this many SVG units apart.
+    PIN_GAP = 78.0
+
+    def separate_pins!(rows)
+      16.times do
+        moved = false
+        rows.combination(2) do |first, second|
+          dx = second["svg_x"] - first["svg_x"]
+          dy = second["svg_y"] - first["svg_y"]
+          dist = Math.hypot(dx, dy)
+          next if dist >= PIN_GAP
+
+          if dist < 0.01
+            dx = 1.0
+            dy = 0.2
+            dist = Math.hypot(dx, dy)
+          end
+          push = (PIN_GAP - dist) / 2.0
+          ux = dx / dist
+          uy = dy / dist
+          first["svg_x"] = clamp_pin_x(first["svg_x"] - ux * push)
+          first["svg_y"] = clamp_pin_y(first["svg_y"] - uy * push)
+          second["svg_x"] = clamp_pin_x(second["svg_x"] + ux * push)
+          second["svg_y"] = clamp_pin_y(second["svg_y"] + uy * push)
+          moved = true
+        end
+        break unless moved
+      end
+      rows.each do |row|
+        row["map_left"] = format("%.2f", pin_left(row["svg_x"]))
+        row["map_top"] = format("%.2f", pin_top(row["svg_y"]))
+        row.delete("svg_x")
+        row.delete("svg_y")
+      end
+    end
+
+    def clamp_pin_x(value)
+      min = PIN_VIEW_X + PIN_INSET
+      max = PIN_VIEW_X + PIN_VIEW_W - PIN_INSET
+      return min if value < min
+      return max if value > max
+
+      value
+    end
+
+    def clamp_pin_y(value)
+      min = PIN_VIEW_Y + PIN_INSET
+      max = PIN_VIEW_Y + PIN_VIEW_H - PIN_INSET
+      return min if value < min
+      return max if value > max
+
+      value
+    end
+
+    def pin_left(x)
+      (x - PIN_VIEW_X) / PIN_VIEW_W * 100.0
+    end
+
+    def pin_top(y)
+      (y - PIN_VIEW_Y) / PIN_VIEW_H * 100.0
     end
 
     def float_or_nil(value)
