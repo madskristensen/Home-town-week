@@ -1,7 +1,7 @@
 /* The one stylesheet. head.html inlines this file.
    Light mode is a cream sheet, ink headlines, forest links, gold dates.
-   Dark mode is a warm plum evening: lifted cards, cream type, brighter
-   accents. Both modes use these custom properties. */
+   Dark mode is a friendly deep slate: lighter cards, warm off-white type,
+   and bright seasonal accents. Both modes use these custom properties. */
 
 :root {
   color-scheme: light;
@@ -59,68 +59,68 @@
   }
 }
 
-/* Cozy evening. Plum-slate page, cream type, sage and gold accents.
-   Not pure black, and not pure white. */
+/* Friendly evening. Deep slate page, lighter cards, warm off-white type,
+   sage links, and gold dates. */
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --page: #241e2c;
-    --sheet: #332a3c;
-    --ink: #f6efe4;
-    --text: #efe4d4;
-    --muted: #d2c3ae;
-    --forest: #8fd4b0;
-    --forest-deep: #c4edd8;
-    --gold: #e7c27a;
-    --gold-bright: #f3d7a2;
-    --gold-line: #e0bc74;
-    --link: #8fd4b0;
-    --rule: #7d6e8c;
-    --focus: #e7c27a;
-    --header-ink: #f6efe4;
-    --on-accent: #14241c;
-    --map-quiet: #3a3346;
-    --map-label: #f6efe4;
-    --wash: rgba(143, 212, 176, 0.16);
-    --credit-bg: rgba(18, 14, 22, 0.3);
-    --credit-shadow: 0 0 2px rgba(18, 14, 22, 0.8);
-    --selection-bg: #5c4a2c;
-    --selection-ink: #f6efe4;
-    --foothills: #314238;
-    --water: #314858;
-    --water-edge: #8eafc0;
-    --map-facade: #24362e;
-    --map-facade-edge: #4d6d60;
-    --map-dot: #6d9080;
-    --btn-bg: #7dcea8;
+    --page: #243044;
+    --sheet: #3b516b;
+    --ink: #fff6ea;
+    --text: #f4ebdf;
+    --muted: #e6d3c0;
+    --forest: #9fe3c4;
+    --forest-deep: #d4f5e4;
+    --gold: #f2c878;
+    --gold-bright: #f8dba8;
+    --gold-line: #e8b15a;
+    --link: #9fe3c4;
+    --rule: #8ea3b8;
+    --focus: #f2c878;
+    --header-ink: #fff6ea;
+    --on-accent: #10241c;
+    --map-quiet: #31445c;
+    --map-label: #fff6ea;
+    --wash: rgba(159, 227, 196, 0.18);
+    --credit-bg: rgba(20, 32, 48, 0.3);
+    --credit-shadow: 0 0 2px rgba(20, 32, 48, 0.8);
+    --selection-bg: #5c4a28;
+    --selection-ink: #fff6ea;
+    --foothills: #355646;
+    --water: #345e78;
+    --water-edge: #9ec4d6;
+    --map-facade: #3e5672;
+    --map-facade-edge: #9eb8cc;
+    --map-dot: #9eb8cc;
+    --btn-bg: #8fd4b0;
     --btn-bg-hover: #97dcb8;
-    --btn-ink: #14241c;
-    --pin-bg: #1f5c40;
-    --pin-ink: #f6efe4;
-    --pin-ring: #f6efe4;
-    --menu-border: #c3b0d4;
-    --menu-shadow: 0 0.7rem 1.8rem rgba(6, 4, 10, 0.55);
+    --btn-ink: #10241c;
+    --pin-bg: #146b45;
+    --pin-ink: #fff6ea;
+    --pin-ring: #fff6ea;
+    --menu-border: #e8b15a;
+    --menu-shadow: 0 0.7rem 1.8rem rgba(12, 20, 32, 0.45);
   }
 }
 
 @media (prefers-color-scheme: dark) and (prefers-contrast: more) {
   :root {
-    --page: #1a1522;
-    --sheet: #2c2436;
-    --ink: #fff8ee;
-    --text: #fff8ee;
-    --muted: #f0e4d2;
-    --forest: #b6efd0;
-    --forest-deep: #d5f6e6;
+    --page: #1b2838;
+    --sheet: #2c4158;
+    --ink: #fffaf3;
+    --text: #fffaf3;
+    --muted: #f3e6d6;
+    --forest: #c6f5dc;
+    --forest-deep: #e7fff3;
     --gold: #f6d48a;
     --gold-line: #f6d48a;
-    --link: #b6efd0;
-    --rule: #cbb8dc;
+    --link: #c6f5dc;
+    --rule: #d5e2ee;
     --focus: #f6d48a;
-    --credit-bg: #1a1522;
+    --credit-bg: #1b2838;
     --credit-shadow: none;
-    --menu-border: #eadcf6;
-    --menu-shadow: 0 0.55rem 1.4rem rgba(0, 0, 0, 0.62);
+    --menu-border: #f6d48a;
+    --menu-shadow: 0 0.55rem 1.4rem rgba(0, 0, 0, 0.55);
   }
 }
 
@@ -1998,8 +1998,57 @@ a.addr .addr-text {
     --season-link: var(--season-link-dark, var(--season-link-light, #8fd4b0));
   }
 
-  .season-banner-motif {
-    filter: brightness(1.5) saturate(1.15);
+  .hub-page {
+    --season-bg: var(--season-bg-dark, var(--season-bg-light, #f09a3a));
+    --season-ink: var(--season-ink-dark, var(--season-ink-light, #3a220c));
+    --season-muted: var(--season-muted-dark, var(--season-muted-light, #4a2a0c));
+    --season-link: var(--season-link-dark, var(--season-link-light, #083422));
+  }
+
+  .hub-toc a {
+    background: var(--season-bg);
+    border-color: transparent;
+    color: var(--season-ink);
+  }
+
+  .hub-toc .hub-count {
+    color: var(--season-muted);
+  }
+
+  .hub-toc a:hover,
+  .hub-toc a:focus-visible {
+    background: var(--season-bg);
+    border-color: var(--season-ink);
+    color: var(--season-ink);
+  }
+
+  .lights-feature {
+    background: #b71c1c;
+    border-color: #ffd27a;
+    color: #fff8f2;
+  }
+
+  .lights-feature-kicker {
+    color: #d8ffe6;
+  }
+
+  .lights-feature-title {
+    color: #fff8f2;
+  }
+
+  .lights-feature-line {
+    color: #ffe4d8;
+  }
+
+  .lights-feature-btn {
+    background: #d8ffe6;
+    color: #083422;
+  }
+
+  .lights-feature-btn:hover,
+  .lights-feature-btn:focus-visible {
+    background: #b6f5d0;
+    color: #083422;
   }
 
   .home-map-frame .leaflet-container {
@@ -2008,7 +2057,7 @@ a.addr .addr-text {
   }
 
   .home-map-frame .leaflet-tile-pane {
-    filter: sepia(0.28) saturate(0.72) brightness(0.62) contrast(1.05);
+    filter: sepia(0.15) saturate(0.85) brightness(0.85) contrast(1.02);
   }
 
   .home-map-frame .leaflet-bar a {
@@ -2024,7 +2073,7 @@ a.addr .addr-text {
   }
 
   .home-map-frame .leaflet-control-attribution {
-    background: rgba(36, 30, 44, 0.88);
+    background: rgba(36, 48, 68, 0.88);
     color: var(--muted);
   }
 
@@ -2038,6 +2087,42 @@ a.addr .addr-text {
     border-color: var(--rule);
   }
 
+}
+
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  .lights-feature {
+    background: var(--sheet);
+    border-color: var(--ink);
+    color: var(--ink);
+  }
+
+  .lights-feature-kicker {
+    color: var(--gold);
+  }
+
+  .lights-feature-title,
+  .lights-feature-line {
+    color: var(--ink);
+  }
+
+  .lights-feature-btn,
+  .lights-feature-btn:hover,
+  .lights-feature-btn:focus-visible {
+    background: var(--forest);
+    color: var(--on-accent);
+  }
+
+  .hub-toc a,
+  .hub-toc a:hover,
+  .hub-toc a:focus-visible {
+    background: var(--sheet);
+    border-color: var(--ink);
+    color: var(--ink);
+  }
+
+  .hub-toc .hub-count {
+    color: var(--ink);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -10,7 +10,8 @@ layout: default
 </article>
 {%- else -%}
 {%- assign hub = site.data.hub_pages[page.hub_id] -%}
-<article class="page wrap hub-page">
+{%- assign theme = hub.theme -%}
+<article class="page wrap hub-page" style="--season-bg-light: {{ theme.background }}; --season-ink-light: {{ theme.ink }}; --season-muted-light: {{ theme.muted }}; --season-link-light: {{ theme.link }}; --season-bg-dark: {{ theme.dark.background }}; --season-ink-dark: {{ theme.dark.ink }}; --season-muted-dark: {{ theme.dark.muted }}; --season-link-dark: {{ theme.dark.link }}">
   <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
   {%- if page.hub_id == "christmas" -%}
   {%- include lights-feature.html -%}

@@ -854,7 +854,6 @@ module EastsideCalendar
             @media (prefers-color-scheme: dark) {
               .card-bg { fill: #{dark_background}; }
               .card-ink { fill: #{dark_ink}; }
-              .card-motif { filter: brightness(1.45) saturate(1.12); }
             }
           </style>
           <rect class="card-bg" width="1600" height="900"/>
