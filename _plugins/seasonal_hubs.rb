@@ -548,6 +548,7 @@ module EastsideCalendar
       %w[cost ages setting drop_off signup sensory].each do |key|
         raw = event[key]
         next if raw.nil? || raw == false || raw.to_s.strip.empty?
+        next if key == "drop_off" && EventLabels.camp?(event)
 
         row[key] = raw
       end
@@ -650,16 +651,19 @@ module EastsideCalendar
       CGI.escapeHTML(text.to_s)
     end
 
-    # Own photo, then that venue, then a themed picture, then the hub's
-    # seasonal pool, then a designed 16:9 card. A venue, theme, or pool
-    # file is used once on a page. The city hero is not in this chain.
-    def attach_cards!(hub, site, pages, catalog, venues, groups, pools)
+    # Own photo, then that venue, then a themed picture, then a licensed
+    # seasonal pool picture. A venue or theme file is used once on a page.
+    # A pool file is used once, then the least-used pool picture may repeat
+    # so the card stays a real photo. A designed card is not used. The city
+    # hero is not in this chain.
+    def attach_cards!(hub, site, pages, catalog, venues, groups, pools, hubs = nil)
       used = {}
+      pool_uses = Hash.new(0)
       chosen = {}
-      audit = { "own" => [], "venue" => [], "theme" => [], "pool" => [], "designed" => [], "none" => [] }
-      pool = pool_entries(pools, hub["id"])
+      audit = { "own" => [], "venue" => [], "theme" => [], "pool" => [], "none" => [] }
+      page_pool = pool_entries(pools, hub["id"])
+      today = EventCalendar.pacific_today(site.time)
       Array(hub["sections"]).each do |section|
-        designed = section_card!(site, hub, section)
         Array(section["events"]).each do |event|
           page = pages[event["city_id"].to_s]
           key = "#{event["city_id"]}|#{event["name"]}"
@@ -674,22 +678,22 @@ module EastsideCalendar
           event["calendar"] = calendar_href(page, event)
           event["calendar"] = write_calendar(site, event) if event["calendar"].empty?
 
+          entries = pool_list_for(event, page_pool, pools, hubs, today)
           if chosen.key?(key)
             prev = chosen[key]
             # The same event in a second section may repeat its own photo.
-            # A venue, theme, or pool file stays once on the page, so the
-            # second listing takes the next pool picture or a designed card.
+            # A venue or theme file stays once on the page.
             photo = if prev && prev["kind"] == "own"
                       prev
                     else
-                      pick_photo(pool_candidates(pool, designed), used)
+                      pick_photo(photo_candidates(event, card, venues, groups, entries), used, pool_uses)
                     end
             apply_photo!(event, photo)
             record_photo!(audit, event, photo)
             next
           end
 
-          photo = pick_photo(photo_candidates(event, card, venues, groups, pool, designed), used)
+          photo = pick_photo(photo_candidates(event, card, venues, groups, entries), used, pool_uses)
           chosen[key] = photo
           apply_photo!(event, photo)
           record_photo!(audit, event, photo)
@@ -705,31 +709,13 @@ module EastsideCalendar
     end
 
     def index_card_photos!(site, pages, catalog, venues, groups, hubs, pools)
-      generic = designed_card!(
-        site, "family-event", "#f4efe6", "#1a2822", generic_motif, "Family event",
-        "#2a2433", "#f6efe4"
-      )
-      site.data["card_photo_fallback"] = public_photo(generic)
-      designed_by_hub = {}
-      Array(hubs).each do |hub|
-        next unless hub.is_a?(Hash)
-
-        hub_id = hub["id"].to_s
-        next if hub_id.empty?
-
-        theme = hub["theme"].is_a?(Hash) ? hub["theme"] : {}
-        dark = theme["dark"].is_a?(Hash) ? theme["dark"] : {}
-        designed_by_hub[hub_id] = designed_card!(
-          site,
-          "#{hub_id}-card",
-          hex_color(theme["background"], "#f4efe6"),
-          hex_color(theme["ink"], "#1a2822"),
-          theme["svg"],
-          presence(hub["banner_title"], hub["title"].to_s),
-          dark["background"],
-          dark["ink"]
-        )
+      today = EventCalendar.pacific_today(site.time)
+      fallback = nil
+      seasonal_default_entries(pools, hubs, today).each do |entry|
+        fallback = listed_photo(entry, "pool")
+        break if fallback
       end
+      site.data["card_photo_fallback"] = fallback ? public_photo(fallback) : nil
 
       options = {}
       Array(site.data["cities"]).each do |city|
@@ -747,17 +733,15 @@ module EastsideCalendar
 
           row = event.merge("city_id" => city_id, "city" => city["name"].to_s)
           card = find_card(catalog, row)
-          hub_id = matching_hub_id(row, hubs)
-          pool = pool_entries(pools, hub_id)
-          designed = designed_by_hub[hub_id] || generic
-          bucket[name] = photo_candidates(row, card, venues, groups, pool, designed).map { |photo| public_photo(photo) }
+          entries = pool_list_for(row, [], pools, hubs, today)
+          bucket[name] = photo_candidates(row, card, venues, groups, entries).map { |photo| public_photo(photo) }
         end
         options[city_id] = bucket
       end
       site.data["card_photo_options"] = options
     end
 
-    def photo_candidates(event, card, venues, groups, pool = nil, designed = nil)
+    def photo_candidates(event, card, venues, groups, pool = nil)
       list = []
       own = usable_own(card && card[:photo])
       list << own if own
@@ -770,18 +754,49 @@ module EastsideCalendar
         photo = listed_photo(entry, "theme")
         list << photo if photo
       end
-      list.concat(pool_candidates(pool, designed))
-      list.uniq { |photo| photo["src"] }
-    end
-
-    def pool_candidates(pool, designed)
-      list = []
       Array(pool).each do |entry|
         photo = listed_photo(entry, "pool")
         list << photo if photo
       end
-      list << designed if designed.is_a?(Hash) && !designed["src"].to_s.empty?
+      list.uniq { |photo| photo["src"] }
+    end
+
+    # The event's own season, then this page's pool. An event with neither
+    # uses the pools of hubs that are in season, so a fall weekend stays
+    # with fall pictures instead of another holiday.
+    def pool_list_for(event, page_pool, pools, hubs, today)
+      list = []
+      seen = {}
+      push = lambda do |entries|
+        Array(entries).each do |entry|
+          next unless entry.is_a?(Hash)
+
+          src = entry["image"].to_s
+          src = entry["src"].to_s if src.empty?
+          next if src.empty? || seen[src]
+
+          seen[src] = true
+          list << entry
+        end
+      end
+      push.call(pool_entries(pools, matching_hub_id(event, hubs)))
+      push.call(page_pool)
+      push.call(seasonal_default_entries(pools, hubs, today)) if list.empty?
       list
+    end
+
+    def seasonal_default_entries(pools, hubs, today)
+      return [] unless today
+
+      Array(hubs).flat_map do |hub|
+        next [] unless hub.is_a?(Hash)
+
+        start_s = hub.dig("season", "start").to_s
+        end_s = hub.dig("season", "end").to_s
+        next [] unless in_season?(today, start_s, end_s)
+
+        pool_entries(pools, hub["id"])
+      end
     end
 
     def pool_entries(pools, hub_id)
@@ -812,20 +827,26 @@ module EastsideCalendar
       nil
     end
 
-    # A designed card may repeat. Every other file, including an event's
-    # own photo, is used once on the page. The same event listed in a
-    # second section reuses its own photo before this method runs.
-    def pick_photo(candidates, used)
+    # Venue and theme files are used once. When every candidate on the
+    # page is taken, the least-used seasonal pool picture is used again.
+    def pick_photo(candidates, used, pool_uses = nil)
+      pool_uses ||= Hash.new(0)
       candidates.each do |photo|
-        repeatable = photo["kind"] == "designed"
-        next if !repeatable && used[photo["src"]]
+        next if used[photo["src"]]
 
-        used[photo["src"]] = true unless repeatable
+        used[photo["src"]] = true
+        pool_uses[photo["src"]] += 1 if photo["kind"] == "pool"
         return photo
       end
-      nil
+      pools = candidates.select { |photo| photo["kind"] == "pool" && !photo["src"].to_s.empty? }
+      return nil if pools.empty?
+
+      photo = pools.min_by { |item| [pool_uses[item["src"]].to_i, item["src"].to_s] }
+      pool_uses[photo["src"]] += 1
+      photo
     end
 
+    # Kept for the SVG helper. Event cards do not call this.
     def section_card!(site, hub, section)
       theme = hub["theme"] || {}
       dark = theme["dark"].is_a?(Hash) ? theme["dark"] : {}
@@ -1345,12 +1366,13 @@ module EastsideCalendar
       venues = site.data.dig("venue_images", "venues")
       groups = site.data.dig("theme_images", "groups")
       pools = site.data["hub_pools"]
-      SeasonalHubs.index_card_photos!(site, pages, catalog, venues, groups, config["hubs"], pools)
-      prepared.each { |hub| SeasonalHubs.attach_cards!(hub, site, pages, catalog, venues, groups, pools) }
+      raw_hubs = config["hubs"]
+      SeasonalHubs.index_card_photos!(site, pages, catalog, venues, groups, raw_hubs, pools)
+      prepared.each { |hub| SeasonalHubs.attach_cards!(hub, site, pages, catalog, venues, groups, pools, raw_hubs) }
       drive = SeasonalHubs.prepare_drive(site.data["worth_the_drive_events"], today, site_url)
-      SeasonalHubs.attach_cards!(drive, site, pages, catalog, venues, groups, pools)
+      SeasonalHubs.attach_cards!(drive, site, pages, catalog, venues, groups, pools, raw_hubs)
       weekend = SeasonalHubs.prepare_weekend(site.data["cities"], site.data, today, site_url)
-      SeasonalHubs.attach_cards!(weekend, site, pages, catalog, venues, groups, pools)
+      SeasonalHubs.attach_cards!(weekend, site, pages, catalog, venues, groups, pools, raw_hubs)
 
       rule = SeasonalHubs.banner_rule(config)
       chosen = SeasonalHubs.banner_choice(prepared, rule, today)

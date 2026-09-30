@@ -215,14 +215,12 @@
         {%- assign option_kind = option.kind | append: "" -%}
         {%- capture marker -%}|{{ option_src }}|{%- endcapture -%}
         {%- assign marker = marker | strip -%}
-        {%- if option_kind != "designed" and used_photos contains marker -%}{% continue %}{%- endif -%}
+        {%- if option_kind == "designed" or used_photos contains marker -%}{% continue %}{%- endif -%}
         {%- assign photo = option_src -%}
         {%- assign photo_credit = option.credit -%}
         {%- assign photo_source = option.source -%}
         {%- assign photo_alt_text = option.alt -%}
-        {%- if option_kind != "designed" -%}
-          {%- assign used_photos = used_photos | append: option_src | append: "|" -%}
-        {%- endif -%}
+        {%- assign used_photos = used_photos | append: option_src | append: "|" -%}
         {%- break -%}
       {%- endfor -%}
     {%- endif -%}

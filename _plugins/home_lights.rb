@@ -150,36 +150,32 @@ module EastsideCalendar
       text.match?(/\b(child|children|kid|kids|teen|teens|toddler|baby)\b/i)
     end
 
-    def fallback_photos(site, hubs)
+    def fallback_photos(site, _hubs)
       pool = Array(site.data.dig("hub_pools", "christmas"))
       lights, rest = pool.partition { |entry| entry.is_a?(Hash) && entry["image"].to_s.include?("/lights-") }
-      photos = (lights + rest).filter_map { |entry| SeasonalHubs.listed_photo(entry, "pool") }
-      theme = Array(hubs).find { |hub| hub["id"] == "christmas" }
-      theme = theme.is_a?(Hash) ? (theme["theme"] || {}) : {}
-      dark = theme["dark"].is_a?(Hash) ? theme["dark"] : {}
-      designed = SeasonalHubs.designed_card!(
-        site,
-        "christmas-lights-map",
-        theme["background"],
-        theme["ink"],
-        theme["svg"],
-        "Christmas lights",
-        dark["background"],
-        dark["ink"]
-      )
-      photos << designed if designed.is_a?(Hash)
-      photos
+      (lights + rest).filter_map { |entry| SeasonalHubs.listed_photo(entry, "pool") }
     end
 
     def next_fallback(photos, used)
       photos.each do |photo|
-        repeatable = photo["kind"] == "designed"
-        next if !repeatable && used[photo["src"]]
+        next if used[photo["src"]]
 
-        used[photo["src"]] = true unless repeatable
+        used[photo["src"]] = 1
         return photo
       end
-      nil
+      return nil if photos.empty?
+
+      photo = photos.min_by { |item| [photo_use_count(used, item["src"]), item["src"].to_s] }
+      used[photo["src"]] = photo_use_count(used, photo["src"]) + 1
+      photo
+    end
+
+    def photo_use_count(used, src)
+      value = used[src]
+      return 1 if value == true
+      return 0 if value.nil?
+
+      value.to_i
     end
 
     def apply_photo!(item, photo)

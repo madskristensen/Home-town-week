@@ -12,7 +12,7 @@
 # On this map only, a photo of that specific display may be used even
 # when the license is unclear. Credit it and link the source. Leave
 # photo off when no real photo exists. The build then uses a Christmas
-# pool picture, then a designed card. A later submission replaces that
+# pool picture, and repeats one if the pool runs out. A later submission replaces that
 # fallback with image, credit, and credit_url.
 # Do not use a photo where a kid can be recognized. Do not use a Google
 # Maps user photo when another photo of the display exists.

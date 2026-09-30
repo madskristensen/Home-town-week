@@ -7,8 +7,9 @@
 # that is a trunk-or-treat still shows cars. If the name does not match,
 # the first group whose key is on the tags is used. A picture is used
 # once on a page. The next card of that type takes the next picture.
-# After that, the hub pool in _data/hub_pools.yml is used, then a
-# designed seasonal card. A grid card is not left without a picture.
+# After that, the hub pool in _data/hub_pools.yml is used. A pool
+# picture may repeat once every unique file on the page is taken.
+# A grid card is not left without a picture, and it is not a designed card.
 groups:
   - keys: [haunted]
     images:
@@ -141,7 +142,7 @@ groups:
         credit: "Photo: Infrogmation, CC BY-SA 4.0"
         license: CC BY-SA 4.0
         source: https://commons.wikimedia.org/wiki/File:Hostile_(mostly)_pumpkins,_Dumaine_Street,_New_Orleans_2025.jpg
-  - keys: [harvest market, park market]
+  - keys: [harvest market, park market, farmers market, saturday market, night market]
     images:
       - image: /assets/images/themes/harvest-market-boxes.webp
         alt: Cardboard boxes of orange pumpkins at a farmers market.
@@ -444,7 +445,7 @@ groups:
         credit: "Photo: Femivaco, CC BY 4.0"
         license: CC BY 4.0
         source: https://commons.wikimedia.org/wiki/File:Yoga_mat_and_water_bottle_in_a_living_room.jpg
-  - keys: [story-time, storytime, story time, aesop]
+  - keys: [story-time, storytime, story time, story stroll, reading with rover, book sale, aesop]
     images:
       - image: /assets/images/themes/books.webp
         alt: A stack of hardcover books on a wooden table.
