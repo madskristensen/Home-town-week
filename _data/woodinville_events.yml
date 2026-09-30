@@ -89,6 +89,12 @@
   end: "2026-10-30T12:00:00-07:00"
   place: "Woodinville"
   same_as: "https://kcls.bibliocommons.com/events/6aa8a0884b3b06003083cbc6"
+- name: "Spooky Soils"
+  tags: [halloween]
+  start: "2026-10-31T10:00:00-07:00"
+  end: "2026-10-31T12:00:00-07:00"
+  place: "Brightwater Center, 22505 State Route 9 SE"
+  same_as: "https://islandwood.org/events/2026-10-31/"
 - name: "The Great Pumpkin Hunt!"
   tags: [halloween]
   start: "2026-10-31T16:00:00-07:00"

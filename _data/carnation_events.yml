@@ -1,5 +1,11 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
+- name: "Jubilee Farm Harvest Festival"
+  tags: [harvest, pumpkin-patch]
+  start: "2026-10-01"
+  end: "2026-10-31"
+  place: "Jubilee Farm, 229 W Snoqualmie River Rd NE"
+  same_as: "https://www.jubileefarm.org/contact-us"
 - name: "Fall Harvest Festival at Remlinger Farms"
   tags: [harvest]
   start: "2026-10-02"

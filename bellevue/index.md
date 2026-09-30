@@ -4,7 +4,7 @@ title: Bellevue
 city: bellevue
 state: wa
 description: Upcoming family events in Bellevue on the Eastside.
-hook: Saturday is the Kelsey Creek Farm Fair, with math games at the library that afternoon. Friday, October 9 is a free pumpkin afternoon at The Meadow, and Halloween week brings the farm animals, the Bellevue Y, KidsQuest, and Little Monsters on Main Street.
+hook: Saturday is the Kelsey Creek Farm Fair, with math games at the library that afternoon. Friday, October 9 is a free pumpkin afternoon at The Meadow, and Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
 ---
 
 ### Engineering Hour
@@ -74,6 +74,14 @@ Last day of the Thursday season, 3:00–7:00 p.m. The market has posted two late
 
 [Bellevue Farmers Market](https://bellevuefarmersmarket.org/)
 
+### Tiny Trailblazers
+<p class="event-when">Fri Oct 2 · 10:00–10:45 a.m.</p>
+<p class="event-place">Lake Hills Greenbelt Ranger Station, 15416 SE 16th St</p>
+
+A short ranger program for ages 2 to 5. Each session has a nature theme, time on the trail, and a craft to take home. It is free, and every child and adult needs a registration. Come rain or shine in shoes that can handle a trail. The same hour is also on Fri Nov 6 and Fri Dec 4.
+
+[Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
 ### GATHER Bellevue Sunset Market
 <p class="event-when">Fri Oct 2 · 4:00–10:00 p.m.</p>
 <p class="event-place">10620 NE 8th St</p>
@@ -141,6 +149,14 @@ Drop-in math games for elementary grades. Activities are grouped for kindergarte
 Free and all ages. Local food and vendors, with a Mak Fai lion dance at 5:00 p.m. The market is steps from the 120th/Spring District light rail station.  
 [Night market](https://bellevuewa.gov/events/autumn-moon-night-market)
 
+### Superhero Salmon
+<p class="event-when">Sun Oct 4 · 2:30–3:30 p.m.</p>
+<p class="event-place">Lewis Creek Park Visitor Center, 5808 Lakemont Blvd SE</p>
+
+A ranger walk for ages 5 to 10 about how salmon travel from a stream to the ocean and back. It is free. Register each child and adult. The same hour is also on Sat Oct 24.
+
+[Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
 ### Toddler Story Time
 <p class="event-when">Mon Oct 5 · 10:15–11:00 a.m., repeated at 11:15 a.m.</p>
 <p class="event-place">Bellevue Library, third-floor programming room, 1111 110th Ave NE</p>
@@ -165,6 +181,14 @@ A single session is $25 per child for non-members and $17.50 for garden-society 
 
 [Kids in the Garden](https://bellevuebotanical.org/kids-in-the-garden/) · [Oct 7 registration](https://65203.blackbaudhosting.com/65203/Kids-in-the-Garden-7-1--Pumpkins--Seeds)
 
+### Story and Stroll
+<p class="event-when">Fri Oct 9 · 10:30–11:30 a.m.</p>
+<p class="event-place">Mercer Slough Environmental Education Center, 1625 118th Ave SE</p>
+
+A ranger walk for ages 2 to 5 through the Mercer Slough wetlands, with a nature story along the way. It is free. Register each child and adult. Later Fridays at the same hour are Oct 16, Nov 13, Nov 20, Dec 11, and Dec 18.
+
+[Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
 ### Fall in Bellevue Celebration
 <p class="event-when">Fri Oct 9 · 1:00–4:00 p.m.</p>
 <p class="event-place">The Meadow, downtown Bellevue</p>
@@ -172,6 +196,54 @@ A single session is $25 per child for non-members and $17.50 for garden-society 
 A free afternoon from the Bellevue Downtown Association. An urban pumpkin patch of 500 pumpkins, photo spots, and a pumpkin-decorating craft. Bellden Cafe is pouring complimentary hot cider and serving pumpkin-spiced scones and apple-cinnamon waffle sticks. The fall swings stay at The Meadow from September 19 through November 7.
 
 [Fall in Bellevue](https://www.bellevuedowntown.com/do/fall-in-bellevue-celebration-2026)
+
+### Sugar skull workshop
+<p class="event-when">Fri Oct 9 · 3:00–5:00 p.m.</p>
+<p class="event-place">Crossroads Community Center, 16000 NE 10th St</p>
+
+A free workshop for all ages. Families mold sugar skulls and hear what the designs mean in Dia de los Muertos traditions. Register ahead.
+
+[Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
+### Night Hike at Mercer Slough
+<p class="event-when">Fri Oct 9 · 7:00–8:30 p.m.</p>
+<p class="event-place">Mercer Slough Environmental Education Center, 1625 118th Ave SE</p>
+
+A ranger walk after dark through the wetlands, for all ages and aimed at ages 5 and up. It is free. Register each person, including adults. Later evenings are Fri Nov 13 and Fri Dec 11, both 6:30–8:00 p.m.
+
+[Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
+### Dawn of the Deer
+<p class="event-when">Sat Oct 10 · 10:00–11:00 a.m.</p>
+<p class="event-place">Lake Hills Greenbelt Ranger Station, 15416 SE 16th St</p>
+
+Ages 4 to 13. A ranger program on where deer feed in Bellevue parks, plus a deer craft to take home. It is free. Register each child and adult. The same hour is also on Sat Oct 24.
+
+[Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
+### Ranger-led hike at Lewis Creek
+<p class="event-when">Sat Oct 10 · 10:30–11:30 a.m.</p>
+<p class="event-place">Lewis Creek Park Visitor Center, 5808 Lakemont Blvd SE</p>
+
+An easy ranger hike, under 1.5 miles, through three habitats at Lewis Creek. All ages. It is free. Wear shoes for a trail and clothes for the weather. The same hour is also on Sat Nov 7 and Sat Dec 5.
+
+[Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
+### Fungi Forest
+<p class="event-when">Sat Oct 10 · 2:00–3:00 p.m.</p>
+<p class="event-place">Mercer Slough Environmental Education Center, 1625 118th Ave SE</p>
+
+A guided walk for ages 5 to 10 about mushrooms and the other fungi in the forest. It is free. Register each child and adult.
+
+[Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
+### Lake Hills Greenbelt Ranger Walk
+<p class="event-when">Sat Oct 10 · 2:00–3:00 p.m.</p>
+<p class="event-place">Lake Hills Greenbelt Ranger Station, 15416 SE 16th St</p>
+
+A free one-mile ranger hike for all ages on the mostly level gravel trails. The fall guide lists it Saturdays at 2:00 p.m. through Dec 26. Oct 3 is not on that list. Register ahead. Bring binoculars if you have them.
+
+[Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
 
 ### Toddler Story Time
 <p class="event-when">Mon Oct 12 · 10:15–11:00 a.m., repeated at 11:15 a.m.</p>
@@ -214,6 +286,14 @@ Open building. Stay the hour or stop in. The library supplies the bricks. All ag
 Drop-in board games for all abilities. Use the library's games or bring one you like. Teen volunteers can teach a game or sit down and play. Newport Way Library Teen Volunteers sponsor it. No registration.
 
 [Board Game Afternoon](https://kcls.bibliocommons.com/events/6a7f806f3b6c71003e58e9a6)
+
+### Aztec dance workshop
+<p class="event-when">Wed Oct 14 · 5:00–7:30 p.m.</p>
+<p class="event-place">Crossroads Community Center, 16000 NE 10th St</p>
+
+A free afternoon for all ages with Nahui Ollin Tezcatlipocatl. The visit covers Aztec dance, music, and regalia, and how those traditions connect to Dia de los Muertos. Register ahead.
+
+[Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
 
 ### LEGO Block Party
 <p class="event-when">Sat Oct 17 · 2:00–4:00 p.m.</p>
@@ -259,6 +339,22 @@ For adults. It is the parent workshop, not a children's class.
 
 No farmers market this week. The library's Monday toddler storytime was on the calendar for Oct 5 and Oct 12. It was not on the pages used for Oct 19. Check the branch list before you count on it.
 
+### Eastside Dia de los Muertos
+<p class="event-when">Sat Oct 24 · 9:00 a.m.–8:00 p.m.</p>
+<p class="event-place">Crossroads Community Center, 16000 NE 10th St</p>
+
+A free community celebration with the city, Youth Eastside Services, and Cafesito Mexican Bakery. The day has live music, cultural performances, crafts, and community altars. Food vendors are there, so meals are separate from the free admission. All ages.
+
+[Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
+### Halloween on the Hill
+<p class="event-when">Sat Oct 24 · 12:00–3:00 p.m.</p>
+<p class="event-place">South Bellevue Community Center, 14509 SE Newport Way</p>
+
+A family carnival at South Bellevue Community Center, with inflatables, games, face painting, a climbing wall, and a play area for ages 3 and younger. Presale wristbands are $10. Wristbands the day of the event are $12. Adults 18 and older, and children 3 and younger, do not need one. The Great Pumpkin Race is the same day, with check-in at 9:45 a.m. and race times at 10:00 a.m. and noon. A racer kit is $25, and you bring your own pumpkin. Free demos are Sat Oct 17, 10:30–11:00 a.m., and Wed Oct 21, 6:30–7:00 p.m. A free build workshop is Fri Oct 23, 5:00–6:30 p.m.
+
+[Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
 ### Trick or Treat with the Farm Animals
 <p class="event-when">Sat Oct 24 · 1:00–3:00 p.m.</p>
 <p class="event-place">Kelsey Creek Farm, 410 130th Pl SE</p>
@@ -280,6 +376,22 @@ Come in costume and trick-or-treat with costumed farm animals. The afternoon als
 Trunk-or-treat, a robotics station, and a pumpkin pool. These branch festivals are free and open to the community, and adults are asked not to wear masks. Costumes should stay family-friendly.
 
 [Fall festivals](https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities)
+
+### Sunset Stroll
+<p class="event-when">Fri Oct 30 · 6:00–7:00 p.m.</p>
+<p class="event-place">Larsen Lake Blueberry Farm, 14812 SE 8th St</p>
+
+A ranger walk around Larsen Lake at sunset, for all ages, about the animals that come out then. Bring a flashlight. Children need an adult with them. It is free. Register ahead.
+
+[Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
+### Sleepy Hollow
+<p class="event-when">Fri Oct 30 through Sun Nov 8</p>
+<p class="event-place">Bellevue Youth Theatre, 16051 NE 10th St</p>
+
+Bellevue Youth Theatre's family ghost story, with music and dancing. Tickets are $15. Seats are reserved, and there are no refunds or transfers. The sensory-friendly performance, with brighter house lights and lower sound, is Sat Oct 31 at 2:00 p.m. Other shows are Fri Oct 30 at 7:00 p.m., Sun Nov 1 at 2:00 p.m., Fri Nov 6 at 7:00 p.m., Sat Nov 7 at 2:00 and 7:00 p.m., and Sun Nov 8 at 2:00 p.m. Groups of 10 or more for one show time should call the box office at 425-452-7155.
+
+[Performances](https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre/bellevue-youth-theatre-productions)
 
 ### KidsQuest Halloween Spooktacular
 <p class="event-when">Sat Oct 31 · 9:00 a.m.–4:00 p.m.</p>
@@ -308,6 +420,30 @@ The museum's Halloween day, this year set as a Haunted Hoedown. Costumes are enc
 A free costume afternoon from the Old Bellevue Merchants Association. Businesses, restaurants, and residential communities along Main Street hand out candy.
 
 [Little Monsters on Main Street](https://www.visitoldbellevue.com/events/little-monsters-on-main-street-2026)
+
+### Horizon Line
+<p class="event-when">Fri Nov 13 through Sun Nov 22</p>
+<p class="event-place">Bellevue Youth Theatre, 16051 NE 10th St</p>
+
+A family pirate adventure from Bellevue Youth Theatre. Tickets are $15, seats are reserved, and sales are final. The sensory-friendly show is Sat Nov 14 at 6:00 p.m. Other shows are Fri Nov 13 at 7:00 p.m., Sun Nov 15 at 2:00 p.m., Fri Nov 20 at 7:00 p.m., Sat Nov 21 at 2:00 and 7:00 p.m., and Sun Nov 22 at 2:00 p.m.
+
+[Performances](https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre/bellevue-youth-theatre-productions)
+
+### Creature Crafts
+<p class="event-when">Sat Nov 21 · 10:30–11:30 a.m.</p>
+<p class="event-place">Lewis Creek Park Visitor Center, 5808 Lakemont Blvd SE</p>
+
+A nature craft hour for ages 3 to 7, with a new topic each session and a craft to take home. It is free. Register each child and adult. The same hour is also on Sun Dec 6.
+
+[Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
+### Robin Hood
+<p class="event-when">Fri Nov 27 through Sun Dec 6</p>
+<p class="event-place">Bellevue Youth Theatre, 16051 NE 10th St</p>
+
+Bellevue Youth Theatre's Robin Hood, for audiences of all ages. Tickets are $15, seats are reserved, and sales are final. The sensory-friendly show is Sat Nov 28 at 5:00 p.m. Other shows are Fri Nov 27 at 7:00 p.m., Sun Nov 29 at 2:00 p.m., Fri Dec 4 at 7:00 p.m., Sat Dec 5 at 2:00 and 7:00 p.m., and Sun Dec 6 at 2:00 p.m.
+
+[Performances](https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre/bellevue-youth-theatre-productions)
 
 ### Snowflake Lane
 <p class="event-when">Fri Nov 27 through Thu Dec 24 · 7:00 p.m.</p>
@@ -339,6 +475,14 @@ A family barn lighting at Kelsey Creek Farm with free admission, carols, Santa, 
 
 [Holiday Barn Lighting](https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/holiday-barn-lighting)
 
+### Annie JR.
+<p class="event-when">Fri Dec 11 through Sun Dec 20</p>
+<p class="event-place">Bellevue Youth Theatre, 16051 NE 10th St</p>
+
+A junior version of Annie for families, from Bellevue Youth Theatre. Tickets are $15, seats are reserved, and sales are final. The sensory-friendly show is Sat Dec 12 at 5:00 p.m. Other shows are Fri Dec 11 at 7:00 p.m., Sun Dec 13 at 2:00 p.m., Fri Dec 18 at 7:00 p.m., Sat Dec 19 at 2:00 and 7:00 p.m., and Sun Dec 20 at 2:00 p.m.
+
+[Performances](https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre/bellevue-youth-theatre-productions)
+
 ### The Nutcracker
 <p class="event-when">Fri Dec 11 through Wed Dec 23</p>
 <p class="event-place">Meydenbauer Theatre, 11100 NE 6th St</p>
@@ -346,3 +490,11 @@ A family barn lighting at Kelsey Creek Farm with free admission, carols, Santa, 
 International Ballet Theatre's Nutcracker at Meydenbauer Theatre costs $45 for youth through 14 and $70 for ages 15 and up. Military and seniors 60 and older pay $55. Prices include fees. Every person needs a ticket, and babies in arms are not admitted. The program is 1 hour 50 minutes plus a 15-minute intermission. Friday Dec 11 and Friday Dec 18 are at 6:00 p.m. Saturday Dec 12, Saturday Dec 19, and Sunday Dec 20 have shows at 1:00 and 5:00 p.m. Sunday Dec 13 is 1:00 p.m. only. Monday Dec 21, Tuesday Dec 22, and Wednesday Dec 23 are at 1:00 p.m.
 
 [The Nutcracker](https://www.ibtbellevue.com/nutcracker-dec-2026)
+
+### Solstice Stroll
+<p class="event-when">Sun Dec 20 · 10:30–11:30 a.m.</p>
+<p class="event-place">Lewis Creek Park Visitor Center, 5808 Lakemont Blvd SE</p>
+
+A free ranger walk for all ages on the shortest day of the year, with a warm drink. Register each child and adult.
+
+[Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)

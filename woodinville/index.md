@@ -128,3 +128,11 @@ Ages 6 to 12, and caregivers are welcome. This session uses the fable The Tortoi
 A hands-on science session for ages 8 to 12. Materials are provided. No registration. Friends of the Woodinville Library sponsor it.
 
 [Full STEAM Ahead](https://kcls.bibliocommons.com/events/6aa8a2884b3b06003083cc86)
+
+### Spooky Soils
+<p class="event-when">Sat Oct 31 · 10:00 a.m.–12:00 p.m.</p>
+<p class="event-place">Brightwater Center, 22505 State Route 9 SE</p>
+
+A Halloween family morning from IslandWood and King County. The plan is crafts and hands-on looks at how leaves, pumpkins, and soil break down. It is at Brightwater Center.
+
+[Spooky Soils](https://islandwood.org/events/2026-10-31/)

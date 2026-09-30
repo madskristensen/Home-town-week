@@ -213,6 +213,14 @@ School-age kids read aloud to a certified therapy dog, with an adult. Free.
 
 [Fall market series](https://www.visitissaquahwa.com/series/fall-farm-fresh-market-3/)
 
+### Halloween at Cougar Mountain Zoo
+<p class="event-when">Sat Oct 31 · Time not posted</p>
+<p class="event-place">Cougar Mountain Zoo, 19525 SE 54th St</p>
+
+Howl-O-ween at the zoo.
+
+[Zoo events](https://www.cougarmountainzoo.org/events-at-the-zoo/)
+
 ### Issaquah Highlands Holiday Tree Lighting
 <p class="event-when">Thu Nov 19 · 5:00–6:30 p.m.</p>
 <p class="event-place">Village Green Park, 2550 NE Park Drive</p>
@@ -228,6 +236,22 @@ A family tree lighting at Village Green Park, with free cocoa, Santa photos, and
 A reindeer festival for families at Cougar Mountain Zoo, with admission at the gate and Santa photos for an extra donation. Santa is there Nov 27 through Dec 23, 10:30 a.m.–4:00 p.m. Festival hours those days are 10:30 a.m.–4:30 p.m., or dusk. Dec 26 through Dec 30 the holiday fun continues 10:30 a.m.–3:30 p.m. without Santa. Members do not need to buy ahead for Dec 20–23 and Dec 26–30.
 
 [Issaquah Reindeer Festival](https://www.cougarmountainzoo.org/issaquah-reindeer-festival-offseason/)
+
+### Caroling at the Depot
+<p class="event-when">Thu Dec 3 · 6:00–7:30 p.m.</p>
+<p class="event-place">Issaquah Depot Museum, 78 1st Ave NE</p>
+
+A downtown sing-along of holiday songs, with hot chocolate and candy canes. Santa and Mrs. Claus are there for photos. Bring an instrument if you want, or just sing. All ages.
+
+[Caroling at the Depot](https://downtownissaquah.com/events/caroling-at-the-depot-2026/)
+
+### KIDSTAGE Footloose
+<p class="event-when">Fri Dec 4 through Sun Dec 20</p>
+<p class="event-place">Hunt Family Theatre, 120 Front St N</p>
+
+Village Theatre KIDSTAGE's public production of Footloose, performed by students in grade 9 through age 20. Fridays and Saturdays are at 7:30 p.m. Sundays are at 2:00 p.m. The theatre stages it for teen actors and audiences. Expect mild language, a scene of underage drinking, some sexual content, and themes of grief and domestic violence. Tickets go on sale soon.
+
+[KIDSTAGE Footloose](https://villagetheatre.org/two-great-kidstage-shows-coming-december-2026/)
 
 ### Issaquah Dance Theatre Nutcracker
 <p class="event-when">Sat Dec 5 to Sun Dec 6</p>

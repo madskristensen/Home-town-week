@@ -4,8 +4,16 @@ title: Carnation
 city: carnation
 state: wa
 description: Upcoming family events in Carnation on the Eastside.
-hook: Friday opens Remlinger's harvest weekends. Saturday is a plant festival at Oxbow, and Oct 17 is both Oxtober and the Carnation Farms market.
+hook: Friday opens Remlinger's harvest weekends. Saturday is a plant festival at Oxbow and Jubilee's first October harvest weekend, and Oct 17 is both Oxtober and the Carnation Farms market.
 ---
+
+### Jubilee Farm Harvest Festival
+<p class="event-when">Thu Oct 1 through Sat Oct 31</p>
+<p class="event-place">Jubilee Farm, 229 W Snoqualmie River Rd NE</p>
+
+Jubilee's October harvest festival. Saturdays and Sundays run 10:00 a.m.–5:00 p.m. The weekday u-pick pumpkin patch is Monday through Friday, noon–5:00 p.m.
+
+[Jubilee Farm](https://www.jubileefarm.org/contact-us)
 
 ### Fall Harvest Festival at Remlinger Farms
 <p class="event-when">Fri Oct 2 through Sun Nov 1 · Fri–Sun 10:00 a.m.–6:00 p.m.</p>

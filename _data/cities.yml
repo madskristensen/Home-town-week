@@ -124,6 +124,10 @@
       url: "https://bellevuewa.gov/city-government/departments/parks/nature-and-environment/visitor-centers-environmental-programs/mercer-slough-environmental-education-center"
       type: nature
       notes: "Story and Stroll walks for ages 2 to 5 at 1625 118th Ave SE. Skip school-only field trips."
+    - name: "Lake Hills Greenbelt Ranger Station"
+      url: "https://bellevuewa.gov/city-government/departments/parks/nature-and-environment/visitor-centers-environmental-programs/lake-hills-greenbelt-visitor-center"
+      type: nature
+      notes: "15416 SE 16th St. Tiny Trailblazers, themed ranger programs, and Saturday ranger walks are in the fall activity guide. Skip adult master-gardener workshops."
     - name: "Bellevue Parks fall activity guide"
       url: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
       type: parks
@@ -147,7 +151,7 @@
     - name: "Bellevue Youth Theatre"
       url: "https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre/bellevue-youth-theatre-productions"
       type: theater
-      notes: "City youth theatre productions."
+      notes: "City youth theatre at 16051 NE 10th St. Fall public shows are Sleepy Hollow, Horizon Line, Robin Hood, and Annie JR. The productions page lists tickets at $15."
     - name: "AllEvents Bellevue"
       url: "https://allevents.in/bellevue"
       type: allevents
@@ -251,6 +255,10 @@
       url: "https://remlingerfarms.com/fall-harvest-festival/"
       type: venue
       notes: "Fall Harvest Festival weekends through Nov 1. Do not count each weekend as a new festival."
+    - name: "Jubilee Farm"
+      url: "https://www.jubileefarm.org/contact-us"
+      type: farm
+      notes: "229 W Snoqualmie River Rd NE. October hours are on the contact page: weekend harvest festival and weekday u-pick."
     - name: "Oxbow Farm and Conservation Center"
       url: "https://www.oxbow.org/visit/events/oxtober/"
       type: venue
@@ -351,6 +359,22 @@
       url: "https://villagetheatre.org/"
       type: theater
       notes: "Mainstage and family shows in Issaquah."
+    - name: "Village Theatre KIDSTAGE"
+      url: "https://villagetheatre.org/two-great-kidstage-shows-coming-december-2026/"
+      type: theater
+      notes: "Student shows at the Hunt Family Theatre, 120 Front St N. Footloose is Dec 4 through Dec 20. Skip classes and camps."
+    - name: "Cougar Mountain Zoo"
+      url: "https://www.cougarmountainzoo.org/events-at-the-zoo/"
+      type: venue
+      notes: "19525 SE 54th St. Howl-O-ween is Oct 31. Holiday hours are on the reindeer festival page."
+    - name: "Issaquah History Museums"
+      url: "https://www.issaquahhistorymuseums.com/ihm-events"
+      type: museum
+      notes: "Depot at 78 1st Ave NE. Keep trolley rides and caboose storytimes. Skip open mic and literary nights."
+    - name: "Issaquah Dance Theatre"
+      url: "https://www.issaquahdance.com/nutcracker"
+      type: theater
+      notes: "Family Nutcracker at Issaquah High School, Longman Performing Arts Center."
     - name: "Salmon Days"
       url: "https://www.salmondays.org/"
       type: venue
@@ -613,6 +637,10 @@
       url: "https://trainmuseum.org/upcoming-events/"
       type: venue
       notes: "Halloween Train from the North Bend Depot, plus regular weekend excursions through October. The wine train is 21 and over. Free Wednesday Train Shed admission is at the Snoqualmie campus."
+    - name: "Cedar River Watershed Education Center"
+      url: "https://www.seattle.gov/utilities/protecting-our-environment/our-water-sources/cedar-river-watershed/education-center"
+      type: nature
+      notes: "17905 Cedar Falls Road SE. Free exhibits. Thursday and Friday noon to 5:00 p.m., Saturday and Sunday 10:00 a.m. to 5:00 p.m. No separate dated public program list this month. Skip school field trips."
     - name: "Living Snoqualmie Oaktoberfest story"
       url: "https://livingsnoqualmie.com/arbor-day-planting-and-oaktoberfest-set-for-october-17-in-north-bend/"
       type: news
@@ -663,6 +691,10 @@
       url: "https://redbarnfarm.com/"
       type: farm
       notes: "Fall festival weekends at 5703 208th Ave NE. Confirm the last Sunday on the homepage."
+    - name: "Farrel-McWhirter Park"
+      url: "https://www.redmond.gov/288/Farrel-McWhirter-Park"
+      type: farm
+      notes: "19545 Redmond Road. The barnyard is free daily, 9:00 a.m. to 4:00 p.m. Dated family programs are on the city calendar."
     - name: "Redmond Town Center"
       url: "https://redmondtowncenter.com/events"
       type: venue
@@ -901,6 +933,10 @@
       url: "https://21acres.org/events/"
       type: venue
       notes: "Farm events and family programs."
+    - name: "Brightwater Center"
+      url: "https://islandwood.org/brightwater-education-center/"
+      type: nature
+      notes: "IslandWood and King County programs at 22505 State Route 9 SE. Spooky Soils is the posted family day."
     - name: "Woodinville Chamber"
       url: "https://woodinvillechamber.org/"
       type: downtown
