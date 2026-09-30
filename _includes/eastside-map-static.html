@@ -1,6 +1,7 @@
 {%- comment -%}
   Hand-drawn Eastside, Lake Washington east through the Snoqualmie Valley.
-  The viewBox hugs the lakes, roads, and city labels. Each city is a link.
+  Same drawing as eastside-map.html, with city names as labels only.
+  Keep the two files in step when a city moves. Light pins sit on top.
 {%- endcomment -%}
 {%- assign map_title = include.title | default: "Map of Eastside cities" -%}
 {%- assign map_title_id = include.title_id | default: "eastside-map-title" -%}
@@ -23,79 +24,64 @@
     <text class="road-label" x="318" y="404">90</text>
     <text class="water-label" x="508" y="396">Snoqualmie River</text>
   </g>
-  <a href="{{ '/kenmore/' | relative_url }}">
-    <circle class="city-hit" cx="240.5" cy="153.7" r="18"/>
+  <g>
     <circle class="city-pin" cx="240.5" cy="153.7" r="6.5"/>
     <text class="city-label" x="226" y="158" text-anchor="end">Kenmore</text>
-  </a>
-  <a href="{{ '/bothell/' | relative_url }}">
-    <circle class="city-hit" cx="270.7" cy="150.1" r="18"/>
+  </g>
+  <g>
     <circle class="city-pin" cx="270.7" cy="150.1" r="6.5"/>
     <text class="city-label" x="270.7" y="134" text-anchor="middle">Bothell</text>
-  </a>
-  <a href="{{ '/woodinville/' | relative_url }}">
-    <circle class="city-hit" cx="303.4" cy="157.6" r="18"/>
+  </g>
+  <g>
     <circle class="city-pin" cx="303.4" cy="157.6" r="6.5"/>
     <text class="city-label" x="316" y="162">Woodinville</text>
-  </a>
-  <a href="{{ '/kirkland/' | relative_url }}">
-    <circle class="city-hit" cx="268.1" cy="250.6" r="18"/>
+  </g>
+  <g>
     <circle class="city-pin" cx="268.1" cy="250.6" r="6.5"/>
     <text class="city-label" x="252" y="254" text-anchor="end">Kirkland</text>
-  </a>
-  <a href="{{ '/redmond/' | relative_url }}">
-    <circle class="city-hit" cx="336.1" cy="260.2" r="18"/>
+  </g>
+  <g>
     <circle class="city-pin" cx="336.1" cy="260.2" r="6.5"/>
     <text class="city-label" x="350" y="256">Redmond</text>
-  </a>
-  <a href="{{ '/bellevue/' | relative_url }}">
-    <circle class="city-hit" cx="273.7" cy="341.9" r="18"/>
+  </g>
+  <g>
     <circle class="city-pin" cx="273.7" cy="341.9" r="6.5"/>
     <text class="city-label" x="286" y="362">Bellevue</text>
-  </a>
-  <a href="{{ '/sammamish/' | relative_url }}">
-    <circle class="city-hit" cx="403.2" cy="334" r="18"/>
+  </g>
+  <g>
     <circle class="city-pin" cx="403.2" cy="334" r="6.5"/>
     <text class="city-label" x="416" y="330">Sammamish</text>
-  </a>
-  <a href="{{ '/mercer-island/' | relative_url }}">
-    <circle class="city-hit" cx="257.6" cy="392.3" r="18"/>
+  </g>
+  <g>
     <circle class="city-pin" cx="257.6" cy="392.3" r="6.5"/>
     <text class="city-label" x="230" y="410" text-anchor="end">Mercer Island</text>
-  </a>
-  <a href="{{ '/renton/' | relative_url }}">
-    <circle class="city-hit" cx="261.5" cy="504.5" r="18"/>
+  </g>
+  <g>
     <circle class="city-pin" cx="261.5" cy="504.5" r="6.5"/>
     <text class="city-label" x="246" y="524" text-anchor="end">Renton</text>
-  </a>
-  <a href="{{ '/issaquah/' | relative_url }}">
-    <circle class="city-hit" cx="405.5" cy="444.2" r="18"/>
+  </g>
+  <g>
     <circle class="city-pin" cx="405.5" cy="444.2" r="6.5"/>
     <text class="city-label" x="418" y="448">Issaquah</text>
-  </a>
-  <a href="{{ '/maple-valley/' | relative_url }}">
-    <circle class="city-hit" cx="395.5" cy="620" r="18"/>
+  </g>
+  <g>
     <circle class="city-pin" cx="395.5" cy="620" r="6.5"/>
     <text class="city-label" x="408" y="624">Maple Valley</text>
-  </a>
-  <a href="{{ '/duvall/' | relative_url }}">
-    <circle class="city-hit" cx="455" cy="178" r="18"/>
+  </g>
+  <g>
     <circle class="city-pin" cx="455" cy="178" r="6.5"/>
     <text class="city-label" x="468" y="183">Duvall</text>
-  </a>
-  <a href="{{ '/carnation/' | relative_url }}">
-    <circle class="city-hit" cx="498" cy="294" r="18"/>
+  </g>
+  <g>
     <circle class="city-pin" cx="498" cy="294" r="6.5"/>
     <text class="city-label" x="484" y="298" text-anchor="end">Carnation</text>
-  </a>
-  <a href="{{ '/snoqualmie/' | relative_url }}">
-    <circle class="city-hit" cx="567" cy="446" r="18"/>
+  </g>
+  <g>
     <circle class="city-pin" cx="567" cy="446" r="6.5"/>
     <text class="city-label" x="567" y="428" text-anchor="middle">Snoqualmie</text>
-  </a>
-  <a href="{{ '/north-bend/' | relative_url }}">
-    <circle class="city-hit" cx="597" cy="488" r="18"/>
+  </g>
+  <g>
     <circle class="city-pin" cx="597" cy="488" r="6.5"/>
     <text class="city-label" x="597" y="512" text-anchor="middle">North Bend</text>
-  </a>
+  </g>
 </svg>
