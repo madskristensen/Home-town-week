@@ -25,7 +25,7 @@ layout: default
   <nav class="hub-toc" aria-label="On this page">
     <ol>
       {%- if hub.lights_map and hub.in_season -%}
-      <li><a href="#lights">Lights map <span class="hub-count">{{ hub.light_displays | size }}</span></a></li>
+      <li><a href="#lights">Christmas lights <span class="hub-count">{{ hub.light_displays | size }}</span></a></li>
       {%- endif -%}
       {%- for section in hub_sections -%}
       {%- assign section_count = section.events | size -%}
@@ -33,7 +33,7 @@ layout: default
       {%- endfor -%}
       {%- unless hub.in_season -%}
       {%- if hub.lights_map -%}
-      <li><a href="#lights">Lights map <span class="hub-count">{{ hub.light_displays | size }}</span></a></li>
+      <li><a href="#lights">Christmas lights <span class="hub-count">{{ hub.light_displays | size }}</span></a></li>
       {%- endif -%}
       {%- endunless -%}
     </ol>

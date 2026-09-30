@@ -154,8 +154,8 @@ module EastsideCalendar
         light_section = Array(hub["sections"]).find { |section| Array(section["tags"]).map(&:to_s).include?("holiday-lights") }
         if light_section
           Array(lights).each do |row|
-            # A row with lat is a map pin. It stays off the event list.
-            next if row.is_a?(Hash) && row["lat"]
+            # Displays in this file are the Christmas lights section, not events.
+            next if row.is_a?(Hash) && LIGHT_TYPES.key?(row["type"].to_s.strip)
 
             item = display_row(row, names, site_url)
             next unless item && upcoming_row?(item, today)
@@ -493,26 +493,10 @@ module EastsideCalendar
       nil
     end
 
-    # Fitted to the 15 city pins in eastside-map.html.
-    # svg_x = PIN_LON_X * lng + PIN_LAT_X * lat + PIN_OFF_X
-    # The viewBox is 104 90 624 568. Pins are clamped inside that box.
-    PIN_LON_X = 787.439813629
-    PIN_LAT_X = 12.708172536
-    PIN_OFF_X = 95894.8780921
-    PIN_LON_Y = 2.899073733
-    PIN_LAT_Y = -1273.47806447
-    PIN_OFF_Y = 61326.5488106
-    PIN_VIEW_X = 104.0
-    PIN_VIEW_Y = 90.0
-    PIN_VIEW_W = 624.0
-    PIN_VIEW_H = 568.0
-    PIN_INSET = 28.0
     LIGHT_TYPES = {
-      "home" => "Home",
-      "neighborhood" => "Neighborhood",
       "park" => "Park",
-      "drive-through" => "Drive-through",
-      "walk-through" => "Walk-through"
+      "house" => "House",
+      "street" => "Street"
     }.freeze
 
     def light_displays(hub, lights, cities)
@@ -521,7 +505,6 @@ module EastsideCalendar
       names = city_names(cities)
       rows = Array(lights).filter_map { |row| light_row(row, names) }
       rows.sort_by! { |item| [item["city"].to_s, item["name"].to_s] }
-      separate_pins!(rows)
       rows
     end
 
@@ -532,7 +515,8 @@ module EastsideCalendar
         next if city_id.empty? || seen[city_id]
 
         seen[city_id] = true
-        { "id" => city_id, "name" => item["city"].to_s }
+        count = displays.count { |row| row["city_id"].to_s == city_id }
+        { "id" => city_id, "name" => item["city"].to_s, "count" => count }
       end
     end
 
@@ -552,34 +536,22 @@ module EastsideCalendar
       address = row["address"].to_s.gsub(/\s+/, " ").strip
       return nil if address.empty?
 
-      lat = float_or_nil(row["lat"])
-      lng = float_or_nil(row["lng"] || row["lon"])
-      return nil unless lat && lng
-      return nil unless lat.between?(47.30, 47.85) && lng.between?(-122.40, -121.70)
-
       description = row["description"].to_s.gsub(/\s+/, " ").strip
       return nil if description.empty?
 
       source = row["source"].to_s.strip
       return nil unless source.match?(%r{\Ahttps?://\S+\z})
 
-      svg_x, svg_y = project_pin(lat, lng)
       slug = light_slug(row["id"], name)
       query = "#{address}, #{city_name}, WA"
       {
         "id" => slug,
-        "svg_x" => svg_x,
-        "svg_y" => svg_y,
         "name" => name,
         "type" => type,
         "type_label" => LIGHT_TYPES[type],
         "city" => city_name,
         "city_id" => city_id,
         "address" => address,
-        "lat" => format("%.6f", lat),
-        "lng" => format("%.6f", lng),
-        "map_left" => format("%.2f", pin_left(svg_x)),
-        "map_top" => format("%.2f", pin_top(svg_y)),
         "description" => description,
         "nights" => row["nights"].to_s.gsub(/\s+/, " ").strip,
         "hours" => row["hours"].to_s.gsub(/\s+/, " ").strip,
@@ -593,84 +565,8 @@ module EastsideCalendar
     def light_slug(id, name)
       raw = id.to_s.strip
       raw = name.to_s if raw.empty?
-      slug = raw.downcase.gsub(/[^a-z0-9]+/, "-").gsub(/\A-|-\z/, "")
+      slug = raw.downcase.gsub(/[^a-z0-9]+/, "-").gsub(/\A-|\-\z/, "")
       slug.empty? ? "display" : slug
-    end
-
-    def project_pin(lat, lng)
-      x = PIN_LON_X * lng + PIN_LAT_X * lat + PIN_OFF_X
-      y = PIN_LON_Y * lng + PIN_LAT_Y * lat + PIN_OFF_Y
-      [clamp_pin_x(x), clamp_pin_y(y)]
-    end
-
-    # 44px hit targets on a phone-width map. The viewBox is 624 wide.
-    PIN_GAP = 84.0
-
-    def separate_pins!(rows)
-      16.times do
-        moved = false
-        rows.combination(2) do |first, second|
-          dx = second["svg_x"] - first["svg_x"]
-          dy = second["svg_y"] - first["svg_y"]
-          dist = Math.hypot(dx, dy)
-          next if dist >= PIN_GAP
-
-          if dist < 0.01
-            dx = 1.0
-            dy = 0.2
-            dist = Math.hypot(dx, dy)
-          end
-          push = (PIN_GAP - dist) / 2.0
-          ux = dx / dist
-          uy = dy / dist
-          first["svg_x"] = clamp_pin_x(first["svg_x"] - ux * push)
-          first["svg_y"] = clamp_pin_y(first["svg_y"] - uy * push)
-          second["svg_x"] = clamp_pin_x(second["svg_x"] + ux * push)
-          second["svg_y"] = clamp_pin_y(second["svg_y"] + uy * push)
-          moved = true
-        end
-        break unless moved
-      end
-      rows.each do |row|
-        row["map_left"] = format("%.2f", pin_left(row["svg_x"]))
-        row["map_top"] = format("%.2f", pin_top(row["svg_y"]))
-        row.delete("svg_x")
-        row.delete("svg_y")
-      end
-    end
-
-    def clamp_pin_x(value)
-      min = PIN_VIEW_X + PIN_INSET
-      max = PIN_VIEW_X + PIN_VIEW_W - PIN_INSET
-      return min if value < min
-      return max if value > max
-
-      value
-    end
-
-    def clamp_pin_y(value)
-      min = PIN_VIEW_Y + PIN_INSET
-      max = PIN_VIEW_Y + PIN_VIEW_H - PIN_INSET
-      return min if value < min
-      return max if value > max
-
-      value
-    end
-
-    def pin_left(x)
-      (x - PIN_VIEW_X) / PIN_VIEW_W * 100.0
-    end
-
-    def pin_top(y)
-      (y - PIN_VIEW_Y) / PIN_VIEW_H * 100.0
-    end
-
-    def float_or_nil(value)
-      return nil if value.nil? || value.to_s.strip.empty?
-
-      Float(value)
-    rescue ArgumentError, TypeError
-      nil
     end
 
     def esc(text)

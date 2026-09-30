@@ -1,11 +1,11 @@
-# Christmas light displays for the map on /christmas/#lights.
-# This list stays up all year. The page puts the map first from Nov 10
-# through Dec 31, and after the event list the rest of the year.
+# Christmas light displays for /christmas/#lights.
+# This list stays in the hub all year. From Nov 10 through Dec 31 the
+# section is first on the page. The rest of the year it follows the events.
 # A row here is not an event. Do not copy it into a city page.
 #
-# Required: id, name, type, city, address, lat, lng, description,
-# source, free, last_verified. nights and hours when they are known.
-# type is home, neighborhood, park, drive-through, or walk-through.
+# Required: id, name, type, city, address, description, source, free,
+# last_verified. nights and hours when they are known.
+# type is park, house, or street.
 # city is a city id from _data/cities.yml.
 # address is a street address, a street, or cross-streets.
 # A public venue can use its published street address. A home can use a
@@ -18,11 +18,10 @@
 # last_verified is the day the source was checked, YYYY-MM-DD.
 # When the source is a past season and the next one is not announced,
 # start nights with "Last seen 2025" (use the season year).
-# A row with lat is drawn on the map and is left out of the
-# Holiday lights event section. Do not add same_as here.
+# Do not add same_as here. These rows stay out of the Holiday lights events.
 - id: garden-dlights
   name: "Garden d'Lights"
-  type: walk-through
+  type: park
   city: bellevue
   address: "12001 Main St"
   lat: 47.606642
@@ -35,7 +34,7 @@
   last_verified: "2026-09-29"
 - id: snowflake-lane
   name: "Snowflake Lane"
-  type: walk-through
+  type: street
   city: bellevue
   address: "Bellevue Way NE between NE 4th St and NE 8th St"
   lat: 47.616214
@@ -48,7 +47,7 @@
   last_verified: "2026-09-29"
 - id: evergreen-lights
   name: "Evergreen Christmas Lights"
-  type: walk-through
+  type: park
   city: bothell
   address: "3429 240th St SE"
   lat: 47.780876
@@ -61,7 +60,7 @@
   last_verified: "2026-09-29"
 - id: keeners-christmas
   name: "Keener's Christmas Lights"
-  type: drive-through
+  type: house
   city: bothell
   address: "16504 112th Pl NE"
   lat: 47.748037
@@ -87,7 +86,7 @@
   last_verified: "2026-09-29"
 - id: nutcracker-lane
   name: "Nutcracker Lane"
-  type: neighborhood
+  type: street
   city: issaquah
   address: "190th Ave SE at SE 44th Way"
   lat: 47.563800
@@ -113,7 +112,7 @@
   last_verified: "2026-09-29"
 - id: kingsgate-kringle
   name: "Kingsgate Kringle House"
-  type: home
+  type: house
   city: kirkland
   address: "12244 NE 140th St"
   lat: 47.726042
@@ -126,7 +125,7 @@
   last_verified: "2026-09-29"
 - id: maple-valley-lights
   name: "Maple Valley Lights"
-  type: home
+  type: house
   city: maple-valley
   address: "22629 SE 263rd Pl"
   lat: 47.365035
@@ -165,7 +164,7 @@
   last_verified: "2026-09-29"
 - id: miracle-on-134th
   name: "Miracle on 134th Street"
-  type: home
+  type: house
   city: renton
   address: "134th Street, East Renton Highlands"
   lat: 47.482179
@@ -178,7 +177,7 @@
   last_verified: "2026-09-29"
 - id: timberline
   name: "Timberline lights"
-  type: neighborhood
+  type: street
   city: sammamish
   address: "NE 42nd St and 204th Ave NE"
   lat: 47.647715
@@ -191,7 +190,7 @@
   last_verified: "2026-09-29"
 - id: snoqualmie-winter-lights
   name: "Snoqualmie Winter Lights"
-  type: walk-through
+  type: park
   city: snoqualmie
   address: "Centennial Trail from Salish Lodge to historic downtown"
   lat: 47.528463
@@ -204,7 +203,7 @@
   last_verified: "2026-09-29"
 - id: brilliant-blvd
   name: "Brilliant Blvd"
-  type: neighborhood
+  type: street
   city: snoqualmie
   address: "Snoqualmie Parkway, Snoqualmie Ridge"
   lat: 47.526144
