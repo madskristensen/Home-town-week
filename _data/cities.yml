@@ -152,6 +152,10 @@
       url: "https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre/bellevue-youth-theatre-productions"
       type: theater
       notes: "City youth theatre at 16051 NE 10th St. Fall public shows are Sleepy Hollow, Horizon Line, Robin Hood, and Annie JR. The productions page lists tickets at $15."
+    - name: "Theatre33"
+      url: "https://www.theatre33wa.org/our-productions"
+      type: theater
+      notes: "Multilingual theatre at 13243 NE 20th St. Little-kid shows are at Studio33, 13259 NE 20th St. Keep Little Red Hen, Under the Mushroom, Alice's Magical Adventure, and Seussical Jr. Skip adult plays such as A Picasso, Vassa, and 4.48 Psychosis."
     - name: "AllEvents Bellevue"
       url: "https://allevents.in/bellevue"
       type: allevents
@@ -453,6 +457,10 @@
       format: ical
       feed_url: "https://findkenmore.org/events/list/?ical=1"
       notes: "Public listings when the city site is blocked. Skip chamber workshops and church karaoke."
+    - name: "Inglemoor Theatre Company"
+      url: "https://www.inglemoortheatreboosters.com/services-1"
+      type: school
+      notes: "Public shows at Inglemoor High School Little Theatre, 15500 Simonds Road NE. Fall 2026 is Alice in Wonderland. Winter and spring titles are not posted yet. The spring musical is at Northshore Performing Arts Center in Bothell."
     - name: "AllEvents Kenmore"
       url: "https://allevents.in/kenmore"
       type: allevents
@@ -506,9 +514,17 @@
       type: museum
       notes: "Public history programs on the last Wednesday of February, March, April, May, September, and October, 7:00 to 9:00 p.m. at Heritage Hall, 203 Market St. The page does not name an October 2026 topic."
     - name: "Studio East"
-      url: "https://studio-east.org/"
+      url: "https://studio-east.org/auditions/"
       type: theater
-      notes: "Children's theatre at 10718 NE 68th St. The next posted studio day is November 11, just outside a six-week window."
+      notes: "Youth theatre at 10718 NE 68th St. Public shows are Young Frankenstein, A Christmas Story, Romeo and Juliet, James and the Giant Peach, Hamlet, The Little Mermaid, Guys and Dolls Jr., Finding Nemo KIDS, and Footloose. Skip Studio Days and other camps."
+    - name: "StoryBook Theater"
+      url: "https://studio-east.org/storybook-theater"
+      type: theater
+      notes: "Studio East's touring troupe for young audiences. Me...Jane played Kirkland in May 2026. The dates still posted are at Point Defiance Zoo and are already over. Skip school-assembly bookings."
+    - name: "Lake Washington High School Theatre"
+      url: "https://www.lwhstheatre.com/"
+      type: school
+      notes: "Public shows at the Performing Arts Center, 12033 NE 80th St. Boy Gets Girl, Solo Night, Almost, Maine, Miscast Cabaret, and Hadestown Teen Edition. Gezellig is listed as June 2027 with no performance dates yet."
     - name: "Kirkland Wednesday Market"
       url: "https://kirklanddowntown.org/events/kirkland-market/"
       type: market
@@ -564,7 +580,7 @@
     - name: "Youth Theatre Northwest"
       url: "https://youththeatre.org/"
       type: theater
-      notes: "Youth theater at 4400 86th Ave SE, Mercer Island. Prefer public performances over class-only dates."
+      notes: "Youth theater at 4400 86th Ave SE. Public shows include The Queen in the Cave, It's a Wonderful Life, Nutcracker and the Mouse King, MacBeth, Urinetown, James and the Giant Peach Jr., and Chaos Theory performances. Skip weekday school shows, rehearsals, and camps."
     - name: "Mercer Island Parks special events"
       url: "https://www.mercerisland.gov/parksrec/page/city-special-events"
       type: parks
@@ -706,7 +722,7 @@
     - name: "SecondStory Repertory"
       url: "https://www.secondstoryrep.org/"
       type: theater
-      notes: "Redmond Town Center, 7325 166th Ave NE. Prefer the Theater for Young Audiences series over adult plays."
+      notes: "Redmond Town Center, 7325 166th Ave NE. No Theater for Young Audiences dates are posted. Skip the adult mainstage and 18+ improv."
     - name: "Experience Redmond events"
       url: "https://experienceredmond.com/redmond-events/"
       type: downtown

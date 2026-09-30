@@ -4,7 +4,7 @@ title: Kenmore
 city: kenmore
 state: wa
 description: Upcoming family events in Kenmore on the Eastside.
-hook: Friday night is family karaoke, Saturday is ASL story time, and November 1 is Dia de los Muertos at the Hangar.
+hook: Friday night is family karaoke, Saturday is ASL story time, and November 1 is Dia de los Muertos at the Hangar. Inglemoor's Alice in Wonderland opens November 6.
 ---
 
 ### Music and Movement with Lana Van Boven
@@ -66,6 +66,14 @@ Open building with materials the library supplies. Ages 8 and older can come on 
 The third annual celebration, on Sunday, November 1. Free, with an ofrenda, performances, crafts, and activities.
 
 [Dia de los Muertos](https://www.kenmorewa.gov/our-city/special-events/dia-de-los-muertos)
+
+### Alice in Wonderland
+<p class="event-when">Fri Nov 6 through Sat Nov 14</p>
+<p class="event-place">Inglemoor High School Little Theatre, 15500 Simonds Road NE</p>
+
+Inglemoor High School's fall play, in the Little Theatre on the south side of the school. Shows at 7:00 p.m. on Nov 6, 7, 13, and 14, a 2:00 p.m. matinee on Nov 14, and an understudy show at 7:00 p.m. on Nov 12.
+
+[Inglemoor Theatre](https://www.inglemoortheatreboosters.com/services-1)
 
 ### Winterfest
 <p class="event-when">Sat Dec 5 · 11:00 a.m.–3:00 p.m.</p>

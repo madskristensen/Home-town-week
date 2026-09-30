@@ -4,7 +4,7 @@ title: Bellevue
 city: bellevue
 state: wa
 description: Upcoming family events in Bellevue on the Eastside.
-hook: Saturday is the Kelsey Creek Farm Fair, with math games at the library that afternoon. Friday, October 9 is a free pumpkin afternoon at The Meadow, and Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
+hook: Saturday is the Kelsey Creek Farm Fair, with math games at the library that afternoon and a Russian fairy tale for little kids at Studio33. Friday, October 9 is a free pumpkin afternoon at The Meadow, and Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
 ---
 
 ### Engineering Hour
@@ -110,6 +110,14 @@ Stories and songs in Korean, with time to explore Korean culture. The library li
 Clay studio, all ages. Free with admission or membership. Glaze and firing is an extra $10.50.  
 [Free programming](https://www.kidsquestmuseum.org/programs/free-programming/)
 
+### Under the Mushroom
+<p class="event-when">Sat Oct 3 through Sun Oct 11</p>
+<p class="event-place">Studio33, 13259 NE 20th St</p>
+
+A short Russian-language fairy tale from Theatre33 for little children, with older siblings and parents welcome. Games and a craft follow the story. Showtimes are Saturday, Oct 3 at 11:00 a.m. and 5:00 p.m., Saturday, Oct 10 at 11:00 a.m. and 5:00 p.m., and Sunday, Oct 11 at 11:00 a.m. Those performances are sold out.
+
+[Theatre33 tickets](https://theatre33.ludus.com/)
+
 ### Kelsey Creek Farm Fair
 <p class="event-when">Sat Oct 3 · 11:00 a.m.–4:00 p.m.</p>
 <p class="event-place">Kelsey Creek Farm, 410 130th Pl SE</p>
@@ -148,6 +156,14 @@ Drop-in math games for elementary grades. Activities are grouped for kindergarte
 
 Free and all ages. Local food and vendors, with a Mak Fai lion dance at 5:00 p.m. The market is steps from the 120th/Spring District light rail station.  
 [Night market](https://bellevuewa.gov/events/autumn-moon-night-market)
+
+### Little Red Hen
+<p class="event-when">Sun Oct 4 · 11:00–11:45 a.m.</p>
+<p class="event-place">Studio33, 13259 NE 20th St</p>
+
+Theatre33's first Little Play of the season, for ages 2 to 5. About 15 minutes of soft hand puppets, then play and a craft. It is sold out.
+
+[Theatre33 tickets](https://theatre33.ludus.com/)
 
 ### Superhero Salmon
 <p class="event-when">Sun Oct 4 · 2:30–3:30 p.m.</p>
@@ -294,6 +310,14 @@ Drop-in board games for all abilities. Use the library's games or bring one you 
 A free afternoon for all ages with Nahui Ollin Tezcatlipocatl. The visit covers Aztec dance, music, and regalia, and how those traditions connect to Dia de los Muertos. Register ahead.
 
 [Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
+### Alice's Magical Adventure
+<p class="event-when">Sat Oct 17 through Sun Oct 18</p>
+<p class="event-place">Meydenbauer Center, 11100 NE 6th St</p>
+
+Theatre33's Russian-language family play, about an hour, for ages 5 and older. Alice walks into a world of riddles and odd characters. Saturday is 1:00 p.m. and 5:00 p.m. Sunday is 1:00 p.m. and 4:00 p.m. 4Culture supports free and reduced admission.
+
+[Theatre33 tickets](https://theatre33.ludus.com/)
 
 ### LEGO Block Party
 <p class="event-when">Sat Oct 17 · 2:00–4:00 p.m.</p>
@@ -498,3 +522,11 @@ International Ballet Theatre's Nutcracker at Meydenbauer Theatre costs $45 for y
 A free ranger walk for all ages on the shortest day of the year, with a warm drink. Register each child and adult.
 
 [Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
+### Seussical Jr.
+<p class="event-when">Fri May 21 through Sun May 23, 2027</p>
+<p class="event-place">Theatre33, 13243 NE 20th St</p>
+
+Theatre33's youth cast in the Dr. Seuss musical, directed by Ashlie Blaske. Horton, the Whos, and the Cat in the Hat share one adventure about sticking up for someone nobody else can hear.
+
+[Theatre33 season](https://www.theatre33wa.org/post/theatre-season-bellevue)

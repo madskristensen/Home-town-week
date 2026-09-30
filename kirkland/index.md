@@ -4,7 +4,7 @@ title: Kirkland
 city: kirkland
 state: wa
 description: Upcoming family events in Kirkland on the Eastside.
-hook: The Wednesday market closes the season. Saturday is a free harvest festival at Juanita Beach, with family math at Kingsgate that morning, and Swan Lake lights up the Performance Center that night and Sunday.
+hook: The Wednesday market closes the season. Saturday is a free harvest festival at Juanita Beach, with family math at Kingsgate that morning, and Swan Lake lights up the Performance Center that night and Sunday. Studio East opens Young Frankenstein on October 30.
 ---
 
 ### Kirkland Wednesday Market
@@ -231,6 +231,14 @@ Newborns to 12 months with an adult. No registration. First come, first seated. 
 
 Stories, music, and movement in Mandarin. The listing welcomes families with young children and people who want to learn Chinese. No registration. Friends of the Kirkland Library sponsors it.
 
+### Boy Gets Girl
+<p class="event-when">Fri Oct 16 through Sat Oct 24</p>
+<p class="event-place">Lake Washington High School Performing Arts Center, 12033 NE 80th St</p>
+
+Lake Washington High School's fall play. A magazine writer is stalked after a blind date, and the story turns into a thriller. For teens and adults.
+
+[LWHS Theatre](https://www.lwhstheatre.com/)
+
 ### Learning about Dyslexia
 <p class="event-when">Sat Oct 17 · 11:30 a.m.–1:00 p.m.</p>
 <p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
@@ -294,6 +302,29 @@ An AC/DC tribute. Loud, and not a family matinee.
 Tina's Dance Studios' annual showcase, with dancers of all ages and levels.  
 [KPC tickets](https://www.kpcenter.org/get-tickets/)
 
+### Young Frankenstein
+<p class="event-when">Fri Oct 30 through Sun Nov 8</p>
+<p class="event-place">Studio East, 10718 NE 68th St</p>
+
+Studio East's youth cast, ages 9 to 20, in Mel Brooks' musical comedy. The company recommends it for teens and adults. Expect mature jokes, sexual innuendo, mild profanity, brief stage violence, and spooky stage effects. Friday, Oct 30 at 7:00 p.m. is a pay-what-you-will preview. Other shows are Sat Oct 31 at 7:00 p.m., Sun Nov 1 at 2:00 p.m., Thu Nov 5 at 7:00 p.m., Fri Nov 6 at 7:00 p.m., Sat Nov 7 at 2:00 and 7:00 p.m., and Sun Nov 8 at 2:00 p.m. Tickets go on sale October 5.
+
+[Studio East](https://studio-east.org/auditions/)
+
+### A Christmas Story
+<p class="event-when">Fri Dec 11 through Sun Dec 20</p>
+<p class="event-place">Studio East, 10718 NE 68th St</p>
+
+Studio East's musical for a cast in grades 3 through 12. Ralphie wants a Red Ryder BB gun, and the holiday obstacles include bunny pajamas, a department-store Santa, and a frozen flagpole. The run may be extended.
+
+[Studio East](https://studio-east.org/auditions/)
+
+### Solo Night
+<p class="event-when">Fri Dec 11</p>
+<p class="event-place">Lake Washington High School Performing Arts Center, 12033 NE 80th St</p>
+
+Lake Washington High School students perform solos for a live audience.
+
+[LWHS Theatre](https://www.lwhstheatre.com/)
 
 ### The Nutcracker: Symphony of Lights
 <p class="event-when">Thu Dec 17 through Sat Dec 19 · 7:00 p.m.</p>
@@ -302,3 +333,83 @@ Tina's Dance Studios' annual showcase, with dancers of all ages and levels.
 Grand Kyiv Ballet's Nutcracker for families at Kirkland Performance Center, $74 for adults and $64 for youth. All three nights start at 7:00 p.m.
 
 [The Nutcracker: Symphony of Lights](https://www.kpcenter.org/event/the-nutcracker-symphony-of-lights/)
+
+### Almost, Maine
+<p class="event-when">Fri Jan 8 through Sat Jan 16, 2027</p>
+<p class="event-place">Lake Washington High School Performing Arts Center, 12033 NE 80th St</p>
+
+Student-directed stories from Lake Washington High School, set during one winter night under the northern lights. Love, loss, and a bit of magic.
+
+[LWHS Theatre](https://www.lwhstheatre.com/)
+
+### Romeo and Juliet
+<p class="event-when">Fri Jan 22 through Sun Jan 31, 2027</p>
+<p class="event-place">Studio East, 10718 NE 68th St</p>
+
+Studio East's production of Shakespeare's tragedy. Two young people from feuding families fall in love, with wit, sword fights, and a hard ending.
+
+[Studio East](https://studio-east.org/auditions/)
+
+### Miscast Cabaret
+<p class="event-when">Fri Feb 19, 2027</p>
+<p class="event-place">Lake Washington High School Performing Arts Center, 12033 NE 80th St</p>
+
+Lake Washington High School students sing roles they would not usually be cast in, including gender-bending and mismatched parts, as a musical-theatre showcase.
+
+[LWHS Theatre](https://www.lwhstheatre.com/)
+
+### James and the Giant Peach
+<p class="event-when">Fri Mar 19 through Sun Mar 28, 2027</p>
+<p class="event-place">Studio East, 10718 NE 68th St</p>
+
+Studio East's family musical for a cast in grades 1 through 8. James and a crew of oversized insects ride a magic peach across the ocean.
+
+[Studio East](https://studio-east.org/auditions/)
+
+### Hamlet
+<p class="event-when">Fri Apr 23 through Sun Apr 25, 2027</p>
+<p class="event-place">Studio East, 10718 NE 68th St</p>
+
+Studio East's production for a cast in grades 5 through 12. A teenage prince plans revenge after his father's ghost names the new king as the murderer. The ending is tragic.
+
+[Studio East](https://studio-east.org/auditions/)
+
+### Hadestown, Teen Edition
+<p class="event-when">Fri Apr 30 through Sat May 8, 2027</p>
+<p class="event-place">Lake Washington High School Performing Arts Center, 12033 NE 80th St</p>
+
+Lake Washington High School's teen edition of Anaïs Mitchell's folk opera. Orpheus and Eurydice, and Hades and Persephone, in a Depression-era retelling. Tickets go on sale in April 2027.
+
+[LWHS Theatre](https://www.lwhstheatre.com/)
+
+### The Little Mermaid
+<p class="event-when">Fri May 14 through Sun May 23, 2027</p>
+<p class="event-place">Studio East, 10718 NE 68th St</p>
+
+Studio East's Disney musical for a cast in grades 3 through 12. Ariel trades her voice for a chance to walk on land, and her friends try to undo the bargain. The run may be extended.
+
+[Studio East](https://studio-east.org/auditions/)
+
+### Guys and Dolls Jr.
+<p class="event-when">Fri Jun 11 through Sun Jun 13, 2027</p>
+<p class="event-place">Studio East, 10718 NE 68th St</p>
+
+A Friday class at Studio East, ages 9 to 19, performs the junior version of Guys and Dolls. Everyone who registers is cast. Gamblers, a nightclub singer, and a missionary sort themselves out. The company stages it for audiences of any age.
+
+[Studio East](https://studio-east.org/auditions/)
+
+### Finding Nemo KIDS
+<p class="event-when">Fri Jul 16 through Sun Jul 18, 2027</p>
+<p class="event-place">Studio East, 10718 NE 68th St</p>
+
+A 30-minute musical from Studio East's Second Stage, for a cast ages 6 to 13, led by student directors with professional mentors. Marlin crosses the ocean to find Nemo.
+
+[Studio East](https://studio-east.org/auditions/)
+
+### Footloose
+<p class="event-when">Fri Jul 30 through Sun Aug 8, 2027</p>
+<p class="event-place">Studio East, 10718 NE 68th St</p>
+
+Studio East's musical for a cast from grade 8 through age 19. A new student pushes a small town to lift its ban on dancing. The story includes a father grieving a son and a young man whose father left.
+
+[Studio East](https://studio-east.org/auditions/)

@@ -4,7 +4,7 @@ title: Mercer Island
 city: mercer-island
 state: wa
 description: Upcoming family events in Mercer Island on the Eastside.
-hook: Sunday is the farmers market, with family storytime the same morning. The market's last Sunday is Oct 11. Oct 15 is an all-ages plant walk at Pioneer Park.
+hook: Sunday is the farmers market, with family storytime the same morning. The market's last Sunday is Oct 11. Oct 15 is an all-ages plant walk at Pioneer Park, and Youth Theatre Northwest opens The Queen in the Cave on November 6.
 ---
 
 ### Film Screening: Ultimate Citizens
@@ -99,6 +99,14 @@ A work party for blackberry removal, planting, and mulch. Snacks, lunch, gloves,
 
 [Arbor Day](https://www.mercerisland.gov/parksrec/page/arbor-day-homestead-park)
 
+### Night of 1000 Scares
+<p class="event-when">Sat Oct 25 · 7:00 p.m.</p>
+<p class="event-place">Youth Theatre Northwest, 4400 86th Ave SE</p>
+
+Chaos Theory's Old Timers, grades 9 through 12, in a public improv night at Youth Theatre Northwest.
+
+[YTN auditions](https://youththeatre.org/auditions/)
+
 ### Nature Journaling
 <p class="event-when">Tue Oct 27 · 10:00 a.m.–12:00 p.m.</p>
 <p class="event-place">Pioneer Park NW, Island Crest Way and SE 68th St</p>
@@ -121,6 +129,14 @@ A free stroll through Town Center in costume. Businesses with the two little gho
 
 [Town Center Trick or Treat](https://www.mercerisland.gov/parksrec/page/town-center-trick-or-treat-2026)
 
+### The Queen in the Cave
+<p class="event-when">Fri Nov 6 through Sun Nov 15</p>
+<p class="event-place">Youth Theatre Northwest, 4400 86th Ave SE</p>
+
+A world-premiere play from Júlia Sardà's picture book, performed by Youth Theatre Northwest. Three sisters go into the forest looking for a queen who lives in a cave. Fridays at 7:00 p.m., Saturdays at 2:00 and 7:00 p.m., and Sundays at 2:00 p.m.
+
+[YTN auditions](https://youththeatre.org/auditions/)
+
 ### Holiday Tree Lighting
 <p class="event-when">Thu Dec 3</p>
 <p class="event-place">Mercerdale Park</p>
@@ -129,6 +145,14 @@ A town tree lighting for families at Mercerdale Park.
 
 [City special events](https://www.mercerisland.gov/parksrec/page/city-special-events)
 
+### It's a Wonderful Life
+<p class="event-when">Fri Dec 4 through Sun Dec 6</p>
+<p class="event-place">Youth Theatre Northwest, 4400 86th Ave SE</p>
+
+A radio-play version of the holiday story, performed by Youth Theatre Northwest for grades 5 through 12. George Bailey meets the angel Clarence on Christmas Eve. Friday and Saturday at 7:00 p.m., Sunday at 4:00 p.m.
+
+[YTN auditions](https://youththeatre.org/auditions/)
+
 ### Holiday Makers Market
 <p class="event-when">Sat Dec 5 · 10:00 a.m.–3:00 p.m.</p>
 <p class="event-place">Mercer Island Community and Event Center, 8236 SE 24th St</p>
@@ -136,3 +160,67 @@ A town tree lighting for families at Mercerdale Park.
 A free makers market for families at the Community and Event Center, held with the Mercer Island Chamber of Commerce.
 
 [Holiday Market](https://www.mercerislandchamber.com/holiday-market)
+
+### The Nutcracker and the Mouse King
+<p class="event-when">Sat Dec 5 through Sun Dec 13 · Saturdays and Sundays at 2:00 p.m.</p>
+<p class="event-place">Youth Theatre Northwest, 4400 86th Ave SE</p>
+
+Youth Theatre Northwest's holiday play, with a cast in grades 1 through 8. Grown-up Clara tells her daughter Marie how she met the Nutcracker, from the party and the mouse battle through the lands of snow and sweets.
+
+[YTN auditions](https://youththeatre.org/auditions/)
+
+### Chaos Theory
+<p class="event-when">Fri Dec 11 and Sat Dec 12 · 7:00 p.m.</p>
+<p class="event-place">Youth Theatre Northwest, 4400 86th Ave SE</p>
+
+Public improv from Youth Theatre Northwest. Rookies are grades 7 through 9, and Old Timers are grades 9 through 12.
+
+[YTN auditions](https://youththeatre.org/auditions/)
+
+### MacBeth
+<p class="event-when">Fri Dec 18 and Sat Dec 19 · 7:00 p.m.</p>
+<p class="event-place">Youth Theatre Northwest, 4400 86th Ave SE</p>
+
+The performance-series cast, grades 5 through 12, in Shakespeare's Scottish play. Sword fights, ambition, and a bloody ending. Everyone in the series is cast.
+
+[Performance Series](https://youththeatre.org/classes-and-camps/school-year-6th-up/)
+
+### Staff vs Students
+<p class="event-when">Sat Jan 30, 2027 · 7:00 p.m.</p>
+<p class="event-place">Youth Theatre Northwest, 4400 86th Ave SE</p>
+
+Chaos Theory's Old Timers improvise against the Youth Theatre Northwest staff.
+
+[YTN auditions](https://youththeatre.org/auditions/)
+
+### Urinetown
+<p class="event-when">Fri Mar 12 through Sun Mar 28, 2027</p>
+<p class="event-place">Youth Theatre Northwest, 4400 86th Ave SE</p>
+
+A satirical musical for grades 8 through 12. A long drought puts toilets under one company, and a hero starts a revolt. Fridays and Saturdays at 7:00 p.m., Sundays at 2:00 p.m., with an added 2:00 p.m. show on Saturday, March 28.
+
+[YTN auditions](https://youththeatre.org/auditions/)
+
+### Chaos Theory
+<p class="event-when">Fri Apr 23 and Sat Apr 24, 2027 · 7:00 p.m.</p>
+<p class="event-place">Youth Theatre Northwest, 4400 86th Ave SE</p>
+
+A second public improv weekend from the Rookies and the Old Timers.
+
+[YTN auditions](https://youththeatre.org/auditions/)
+
+### James and the Giant Peach Jr.
+<p class="event-when">Fri May 7 through Sun May 23, 2027</p>
+<p class="event-place">Youth Theatre Northwest, 4400 86th Ave SE</p>
+
+Youth Theatre Northwest's musical for grades 3 through 12. James and a crew of singing insects ride a giant peach across the ocean. Fridays at 7:00 p.m., Saturdays at 2:00 and 7:00 p.m., and Sundays at 2:00 p.m.
+
+[YTN auditions](https://youththeatre.org/auditions/)
+
+### Fakespeare
+<p class="event-when">Fri Jun 11, 2027 · 7:00 p.m.</p>
+<p class="event-place">Youth Theatre Northwest, 4400 86th Ave SE</p>
+
+Chaos Theory's Old Timers in a public Shakespeare send-up.
+
+[YTN auditions](https://youththeatre.org/auditions/)
