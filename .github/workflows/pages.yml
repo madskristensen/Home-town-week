@@ -114,6 +114,7 @@ jobs:
           printf 'sha: "%s"\n' "$GITHUB_SHA" > _data/build.yml
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
           python3 script/minify-html.py
+          python3 script/check-components.py --rendered _site
 
       - name: Add IndexNow verification key
         env:

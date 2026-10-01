@@ -38,19 +38,33 @@ module EastsideCalendar
       raw == true || raw.to_s.strip.casecmp("true").zero?
     end
 
+    # Free is the only cost tag. A price stays plain text on the card.
     def cost_label(event)
       cost = text(event, "cost")
-      return "" if cost.empty?
       return "Free" if cost.casecmp("free").zero?
-      return cost if cost.match?(/\$\s?\d/)
 
       ""
     end
 
+    def price_text(event)
+      cost = text(event, "cost")
+      return "" if cost.empty? || cost.casecmp("free").zero?
+
+      cost
+    end
+
+    # Toddlers, Kids, and Teens are tags. All ages is plain text.
     def ages_label(event)
       ages = text(event, "ages")
-      found = AGES.find { |item| item.casecmp(ages).zero? }
+      found = %w[Toddlers Kids Teens].find { |item| item.casecmp(ages).zero? }
       found.to_s
+    end
+
+    def ages_text(event)
+      ages = text(event, "ages")
+      return "All ages" if ages.casecmp("all ages").zero?
+
+      ""
     end
 
     def setting_label(event)
@@ -143,11 +157,17 @@ module EastsideCalendar
     end
 
     def html(event)
+      bits = []
+      price = price_text(event)
+      bits << %(<span class="event-price">#{CGI.escapeHTML(price)}</span>) unless price.empty?
+      plain_ages = ages_text(event)
+      bits << %(<span class="event-ages">#{CGI.escapeHTML(plain_ages)}</span>) unless plain_ages.empty?
       list = labels(event)
-      return "" if list.empty?
-
-      items = list.map { |label| "<li>#{CGI.escapeHTML(label)}</li>" }
-      %(<ul class="event-tags">#{items.join}</ul>)
+      unless list.empty?
+        items = list.map { |label| "<li>#{CGI.escapeHTML(label)}</li>" }
+        bits << %(<ul class="event-tags">#{items.join}</ul>)
+      end
+      bits.join("\n")
     end
 
     def attrs(event)
@@ -165,7 +185,8 @@ module EastsideCalendar
     end
 
     # One chip per label that appears on the page, in the same words as
-    # the card. A price and All ages stay on the card and are not chips.
+    # the card. A price and All ages stay on the card as plain text.
+    # They are not tag pills and they are not chips.
     # Kids and Teens get a chip only at the old threshold of 3, so a thin
     # age group stays text the way All ages does. Toddlers stays a chip
     # whenever a card has it. Free is the paid-versus-free chip. The page
