@@ -50,13 +50,6 @@
   alt: A garden bed of orange marigolds.
   credit: "Photo: George Chernilevsky, public domain"
   license: Public domain
-- id: winter
-  path: /winter/
-  title: Winter break on the Eastside
-  image: /assets/images/hubs/winter/snow-path.webp
-  alt: A snowy path through a winter forest.
-  credit: "Photo: Fagev869, CC0"
-  license: CC0
 - id: rainy-day
   path: /rainy-day/
   title: Rainy day plans on the Eastside

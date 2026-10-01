@@ -315,37 +315,6 @@ dia-de-los-muertos:
     credit: "Photo: Karla Andrew, CC BY-SA 3.0"
     license: CC BY-SA 3.0
     source: https://commons.wikimedia.org/wiki/File:Fruta_para_ofrenda.JPG
-winter:
-  - image: /assets/images/hubs/winter/snow-path.webp
-    alt: A snowy path through a winter forest.
-    credit: "Photo: Fagev869, CC0"
-    license: CC0
-    source: https://commons.wikimedia.org/wiki/File:Snowy_Forest_Path_in_Winter.jpg
-  - image: /assets/images/hubs/winter/frozen-lake.webp
-    alt: A frozen lake with bare trees along the shore.
-    credit: "Photo: Iurie Nistor, CC0"
-    license: CC0
-    source: https://commons.wikimedia.org/wiki/File:Frozen_lake_and_trees.jpg
-  - image: /assets/images/hubs/winter/frozen-michigan.webp
-    alt: Ice and snow on a frozen lake.
-    credit: "Photo: Russ Allison Loar, CC BY-SA 4.0"
-    license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:Frozen_Michigan_Lake.jpg
-  - image: /assets/images/hubs/winter/frozen-tree.webp
-    alt: A lone tree at the edge of a frozen lake.
-    credit: "Photo: Michal Osmenda, CC BY-SA 2.0"
-    license: CC BY-SA 2.0
-    source: https://commons.wikimedia.org/wiki/File:Frozen_lake_with_tree_(2152177569).jpg
-  - image: /assets/images/hubs/winter/winter-lake.webp
-    alt: A quiet lake in winter, with snow on the banks.
-    credit: "Photo: Ingolfson, public domain"
-    license: Public domain
-    source: https://commons.wikimedia.org/wiki/File:Winter_Lake_Near_Graefenhausen_II.jpg
-  - image: /assets/images/hubs/winter/orchard-snow.webp
-    alt: Snow on the trees in an apple orchard.
-    credit: "Photo: Rajani Gairshail, CC BY-SA 4.0"
-    license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:Winter_Silence_in_an_Apple_Orchard,_Himachal_Pradesh.jpg
 rainy-day:
   - image: /assets/images/hubs/rainy-day/rain-pane.webp
     alt: Raindrops on a window pane.

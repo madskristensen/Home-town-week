@@ -322,36 +322,6 @@ hubs:
         link: "#3a180c"
       svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="#8a6232"><circle cx="12" cy="5.6" r="2"/><circle cx="12" cy="18.4" r="2"/><circle cx="5.6" cy="12" r="2"/><circle cx="18.4" cy="12" r="2"/><circle cx="7.4" cy="7.4" r="2"/><circle cx="16.6" cy="7.4" r="2"/><circle cx="7.4" cy="16.6" r="2"/><circle cx="16.6" cy="16.6" r="2"/></g><circle fill="#6b4e0e" cx="12" cy="12" r="2.1"/></svg>'
 
-  - id: winter
-    path: /winter/
-    title: Winter break and snow days for kids on the Eastside
-    banner_title: Winter break
-    hook: Break camps, snow play, and indoor plans.
-    link_label: See events
-    footer: false
-    footer_label: Winter break
-    description: Winter break and snow days for kids on the Eastside. Break camps, snow play, and indoor plans from Dec 15 through Jan 5.
-    llms: Winter break camps, snow play, and indoor plans for kids.
-    season:
-      start: "12-15"
-      end: "01-05"
-    sections:
-      - id: winter
-        title: Winter break and snow days
-        intro: Break camps, snow play, and indoor plans.
-        tags: [winter-break, snow-day]
-    theme:
-      background: "#e8eeec"
-      ink: "#1a2822"
-      muted: "#3f5148"
-      link: "#1e4636"
-      dark:
-        background: "#8ec4e6"
-        ink: "#10283c"
-        muted: "#10283c"
-        link: "#10283c"
-      svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="#1e4636" stroke-width="1.5" stroke-linecap="round"><path d="M12 3.2v17.6M4.4 7.4l15.2 9.2M19.6 7.4 4.4 16.6"/></g></svg>'
-
   - id: rainy-day
     path: /rainy-day/
     title: Rainy day plans for kids on the Eastside
