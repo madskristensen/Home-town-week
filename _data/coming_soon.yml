@@ -1,5 +1,5 @@
 # Names without a city page yet. They are not in _data/cities.yml, so the
-# home page and the Cities menu do not list them. Do not link a city until
+# home page and the header menu do not list them. Do not link a city until
 # its page lists real upcoming events.
 # Newcastle does not have a page. Its parks list has no dated fall events
 # beyond the library, so it stays off the calendar.

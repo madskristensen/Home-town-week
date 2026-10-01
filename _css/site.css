@@ -354,17 +354,17 @@ picture {
   transform: translateY(0.12rem) rotate(225deg);
 }
 
-/* Card anchored to the Cities button. The list scrolls only when the
-   viewport is shorter than fourteen names, and then a bottom fade marks
-   that more cities follow. */
+/* Card anchored to the Menu button. Rows stay short. The panel scrolls
+   only on a short viewport, and then a bottom fade marks that more follows. */
 .cities-menu .cities-panel {
   position: absolute;
   top: calc(100% + 0.45rem);
   right: calc((100% - min(100% - 3rem, var(--measure))) / 2);
   z-index: 5;
-  width: min(22.5rem, calc(100vw - 3rem));
+  width: min(36rem, calc(100vw - 3rem));
   margin: 0;
-  padding: 0.5rem;
+  padding: 0.3rem 0.25rem 0.2rem;
+  overflow: visible;
   background: var(--sheet);
   border: 1px solid var(--menu-border);
   border-radius: 0.8rem;
@@ -375,7 +375,7 @@ picture {
   content: "";
   position: absolute;
   top: -0.38rem;
-  right: 1.48rem;
+  right: 0;
   width: 0.72rem;
   height: 0.72rem;
   background: var(--sheet);
@@ -385,12 +385,28 @@ picture {
   pointer-events: none;
 }
 
-.cities-menu .cities-panel nav {
-  max-height: calc(100dvh - 6.25rem);
+.cities-menu .cities-scroll {
+  max-height: calc(100dvh - 5.2rem);
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
-  border-radius: 0.45rem;
+}
+
+.cities-menu .cities-panel nav + nav {
+  margin-top: 0.28rem;
+  padding-top: 0.28rem;
+  border-top: 1px solid var(--rule);
+}
+
+.cities-menu .menu-label {
+  margin: 0.15rem 0.45rem 0.05rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .cities-menu summary:focus-visible {
@@ -399,8 +415,8 @@ picture {
   border-radius: 2px;
 }
 
-@media (max-height: 27.5rem) {
-  .cities-menu .cities-panel nav {
+@media (max-height: 34rem) {
+  .cities-menu .cities-scroll {
     -webkit-mask-image: linear-gradient(var(--mask) 0, var(--mask) calc(100% - 1.6rem), transparent);
     mask-image: linear-gradient(var(--mask) 0, var(--mask) calc(100% - 1.6rem), transparent);
   }
@@ -409,7 +425,9 @@ picture {
 .cities-menu .cities-panel ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.35rem;
+  grid-auto-rows: minmax(2.35rem, auto);
+  align-content: start;
+  gap: 0;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -424,19 +442,26 @@ picture {
   display: flex;
   flex: 1;
   align-items: center;
-  justify-content: center;
-  min-height: 2.75rem;
-  padding: 0.35rem 0.55rem;
-  border-radius: 999px;
+  justify-content: flex-start;
+  min-height: 2.35rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.35rem;
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0;
   line-height: 1.15;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
+}
+
+.cities-menu .menu-cities a {
   white-space: nowrap;
+}
+
+.cities-menu .menu-explore a {
+  font-size: 0.84rem;
 }
 
 .cities-menu .cities-panel a:hover,
@@ -472,6 +497,12 @@ picture {
   color: var(--on-accent);
 }
 
+@media (min-width: 42rem) {
+  .cities-menu .cities-panel ul.menu-cities {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 41.99rem) {
   .cities-menu .cities-panel {
     left: 0.75rem;
@@ -480,7 +511,7 @@ picture {
   }
 
   .cities-menu .cities-panel::before {
-    right: 2.22rem;
+    right: 0.67rem;
   }
 }
 
