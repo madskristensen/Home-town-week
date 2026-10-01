@@ -8,12 +8,27 @@
 {%- assign map_path = "/fall/decorations/" -%}
 {%- assign map_title = "Halloween decorations map" -%}
 {%- assign map_noun = "houses and streets" -%}
+{%- capture lights_subject -%}Halloween decorations{%- endcapture -%}
+{%- capture lights_body -%}House or street:
+
+Town:
+
+What to know:{%- endcapture -%}
+{%- capture lights_mailto -%}mailto:suggestions@eastsidecalendar.com?subject={{ lights_subject | strip | mail_escape }}&body={{ lights_body | strip | mail_escape }}{%- endcapture -%}
 {%- else -%}
 {%- assign home_lights = site.data.home_lights -%}
 {%- assign map_path = "/christmas/lights/" -%}
 {%- assign map_title = "Christmas lights map" -%}
 {%- assign map_noun = "homes and streets" -%}
+{%- capture lights_subject -%}Christmas lights: {%- endcapture -%}
+{%- capture lights_body -%}Name:
+Address or cross streets:
+Town:
+Nights and hours:
+Photo: attach one if you have it. We will credit you. We do not post a photo where a kid can be recognized.{%- endcapture -%}
+{%- capture lights_mailto -%}mailto:suggestions@eastsidecalendar.com?subject={{ lights_subject | strip | append: " " | mail_escape }}&body={{ lights_body | strip | mail_escape }}{%- endcapture -%}
 {%- endif -%}
+{%- assign lights_mailto = lights_mailto | strip -%}
 {%- assign home_count = home_lights.count | default: 0 -%}
 {%- capture lights_count -%}{{ home_count }} {{ map_noun }}{%- endcapture -%}
 {%- include map-frame.html
@@ -24,6 +39,7 @@
      count_label=lights_count
      note="Numbers on the map match the list."
      loader="false" %}
+{%- include map-tip.html href=lights_mailto -%}
 <script type="application/json" id="home-lights-pins">{{ home_lights.pins | jsonify }}</script>
 {%- include map-loader.html -%}
 <script>
@@ -98,28 +114,16 @@
 </section>
 {%- endfor -%}
 {%- if page.map_id == "halloween" -%}
-{%- capture lights_subject -%}Halloween decorations{%- endcapture -%}
-{%- capture lights_body -%}House or street:
-
-Town:
-
-What to know:{%- endcapture -%}
 <section class="hub-section" aria-labelledby="send-lights">
   <h2 id="send-lights">Tell us about a decorated house</h2>
   <p class="hub-section-intro">Know a great decorated house or street? Tell us. Anyone can send one in.</p>
-  <p class="suggest-event"><a href="mailto:suggestions@eastsidecalendar.com?subject={{ lights_subject | strip | mail_escape }}&amp;body={{ lights_body | strip | mail_escape }}">Tell us</a></p>
+  <p class="suggest-event"><a href="{{ lights_mailto }}">Tell us</a></p>
 </section>
 {%- else -%}
-{%- capture lights_subject -%}Christmas lights: {%- endcapture -%}
-{%- capture lights_body -%}Name:
-Address or cross streets:
-Town:
-Nights and hours:
-Photo: attach one if you have it. We will credit you. We do not post a photo where a kid can be recognized.{%- endcapture -%}
 <section class="hub-section" aria-labelledby="send-lights">
   <h2 id="send-lights">Tell us about the lights</h2>
   <p class="hub-section-intro">See a home or a street covered in lights? Tell us. Anyone can send one in. Photos are welcome and will be credited. We do not post a photo where a kid can be recognized.</p>
-  <p class="suggest-event"><a href="mailto:suggestions@eastsidecalendar.com?subject={{ lights_subject | strip | append: " " | mail_escape }}&amp;body={{ lights_body | strip | mail_escape }}">Send a display</a></p>
+  <p class="suggest-event"><a href="{{ lights_mailto }}">Send a display</a></p>
   <p class="hub-section-intro">When you go, stay on the street, leave driveways clear, and keep it quiet for the neighbors.</p>
 </section>
 {%- endif -%}

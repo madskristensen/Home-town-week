@@ -16,6 +16,7 @@ Card and page markup lives in one include each. Pages, layouts, and the city cal
 | `_includes/playground-directory.html` | Playground list. The name line holds the star and the amenity badges. A legend under the heading uses the same badges. |
 | `_includes/lights-feature.html` | Seasonal promo for the lights or decorations map. |
 | `_includes/map-frame.html` | Map poster and canvas. Includes the shared loader unless `loader` is `false`. |
+| `_includes/map-tip.html` | One short muted line under the lights or decorations map. The link uses the same mailto as the longer tip at the bottom of that page. |
 | `_includes/map-loader.html` | `loadMapCss` and `loadMapJs`. |
 | `_includes/guide-header.html` | Playground page title and introduction. The heading links to `/playgrounds/`. |
 | `_includes/calendar-subscribe.html` | City page control for the subscription feed at `/calendar/{city}.ics`. |
@@ -35,6 +36,7 @@ A file fails when it contains one of these outside the include that owns it:
 - `class="empty-suggest` (the empty box and its button)
 - `class="lights-feature`
 - `class="map-frame"`
+- `class="map-tip"`
 - `class="filter-chip"`
 - `class="cal-subscribe"`
 - `class="event-share"`

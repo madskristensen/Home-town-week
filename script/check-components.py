@@ -31,6 +31,7 @@ RULES = (
     ('class="empty-suggest', "_includes/empty-suggest.html"),
     ('class="lights-feature', "_includes/lights-feature.html"),
     ('class="map-frame"', "_includes/map-frame.html"),
+    ('class="map-tip"', "_includes/map-tip.html"),
     ('class="filter-chip"', "_includes/filter-chip.html"),
     ('class="cal-subscribe"', "_includes/calendar-subscribe.html"),
     ('class="event-share"', "_includes/event-card.html"),
