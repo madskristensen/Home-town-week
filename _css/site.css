@@ -686,8 +686,7 @@ picture {
   font-weight: 600;
 }
 
-.footer-group a,
-.footer-install {
+.footer-group a {
   display: inline-flex;
   align-items: center;
   min-width: 1.5rem;
@@ -706,17 +705,6 @@ picture {
 .footer-install:focus-visible {
   color: var(--link);
   text-decoration: underline;
-}
-
-.footer-install {
-  appearance: none;
-  -webkit-appearance: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: none;
-  font-family: inherit;
-  cursor: pointer;
 }
 
 .footer-note {
@@ -746,6 +734,8 @@ picture {
   display: inline-flex;
   align-items: center;
   max-width: 100%;
+  color: var(--forest);
+  font-weight: 600;
 }
 
 .footer-meta li:not(:last-child)::after {
@@ -787,11 +777,40 @@ picture {
   }
 }
 
+/* Chrome centers a button label in the extra min-height.
+   flex-start keeps that label on the link baseline. */
 .footer-meta a,
 .footer-install {
+  display: inline-flex;
+  align-items: flex-start;
   min-height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--forest);
   font-size: inherit;
+  font-weight: 600;
   line-height: inherit;
+  vertical-align: baseline;
+  text-align: inherit;
+  text-decoration: none;
+  text-underline-offset: 0.14em;
+}
+
+.footer-install {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  line-height: inherit;
+  vertical-align: baseline;
+  text-align: inherit;
+  cursor: pointer;
 }
 
 .footer-family {
