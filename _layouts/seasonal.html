@@ -36,7 +36,8 @@ layout: default
   {%- endif -%}
   {%- else -%}
   {%- include event-filters.html -%}
-  <nav class="hub-toc" aria-label="On this page">
+  <nav class="hub-toc" aria-label="Jump to">
+    <span class="hub-toc-label" aria-hidden="true">Jump to:</span>
     <ol>
       {%- for section in hub_sections -%}
       {%- assign section_count = section.events | size -%}
