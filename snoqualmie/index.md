@@ -4,7 +4,7 @@ title: Snoqualmie
 city: snoqualmie
 state: wa
 description: Upcoming family events in Snoqualmie on the Eastside.
-hook: Saturday is a community planting. Wednesdays are free at the Train Shed, Mount Si Dramafest is October 9 and 10, and Oct 24 is the city's free Spooktacular.
+hook: Saturday is a community planting. Sunday afternoon is a free Go lesson at the library. Oct 24 is the city's free Spooktacular.
 ---
 
 ### Fall City Farms pumpkin patch
@@ -46,6 +46,14 @@ Stories, music, and movement for young children with an adult. A short playtime 
 A morning of planting in the city's climate-adaptation demonstration forest. It is a work party, not a festival: neighbors plant trees and hear how the new grove is meant to handle a hotter, drier season. The city points people to the site across from the high school.
 
 [Green Snoqualmie Day](https://www.snoqualmiewa.gov/Calendar.aspx?EID=3408)
+
+### Learn to Play Go
+<p class="event-when">Sun Oct 4 · 3:00–5:00 p.m.</p>
+<p class="event-place">Snoqualmie Library, 7824 Center Boulevard SE</p>
+
+Volunteers from the Seattle Go Center teach the board game, and people who already play can sit down for a free game. Tweens, teens, and adults. No registration. The same hours are also on Sun Oct 11.
+
+[Learn to Play Go](https://kcls.bibliocommons.com/events/6a95ff07b204780029970602)
 
 ### Free Wednesday at the Train Shed
 <p class="event-when">Wed Oct 7 · 11:00 a.m.–4:00 p.m.</p>
@@ -140,6 +148,14 @@ Urban farmer Lisa Taylor leads a music-and-movement hour about the slimy workers
 A Halloween round of stories, music, and movement for young children with an adult. Costumes are fine. Play time and bubbles come after the stories. No registration.
 
 [Halloween Story Time](https://kcls.bibliocommons.com/v2/events/6ab1c1ccab7a8e0037c37c20)
+
+### Paranormal Investigation: Behind the Hauntings
+<p class="event-when">Sat Oct 31 · 2:00–4:00 p.m.</p>
+<p class="event-place">Fall City Library, 33415 SE 42nd Place</p>
+
+North by Northwest Paranormal talks through ghosts, hauntings, and the tools investigators use, then lets families try the gear. All ages. Ages 15 and younger should come with an adult. No registration.
+
+[Paranormal Investigation](https://kcls.bibliocommons.com/events/6a8201542dac6e00371f7607)
 
 ### Snoqualmie Winter Lights
 <p class="event-when">Thu Nov 26 through Fri Jan 1</p>

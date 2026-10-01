@@ -7,14 +7,6 @@ description: Upcoming family events in Mercer Island on the Eastside.
 hook: Sunday is the farmers market, with family storytime the same morning. The market's last Sunday is Oct 11. Oct 15 is an all-ages plant walk at Pioneer Park, and Youth Theatre Northwest opens The Queen in the Cave on November 6.
 ---
 
-### Film Screening: Ultimate Citizens
-<p class="event-when">Wed Sep 30 · 6:00–7:30 p.m.</p>
-<p class="event-place">Mercer Island Library, 4400 88th Ave SE</p>
-
-A documentary screening and a Q&A with filmmaker Francine Strickwerda. For high schoolers and older. The film follows Jamshid Khajavi, an Iranian American mentor.
-
-[Ultimate Citizens](https://kcls.bibliocommons.com/v2/events/6a727c39cca66c2f00a841fd)
-
 ### Mandarin Story Time
 <p class="event-when">Thu Oct 1 · 10:30–11:00 a.m.</p>
 <p class="event-place">Mercer Island Library, 4400 88th Ave SE</p>

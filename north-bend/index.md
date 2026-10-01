@@ -4,24 +4,16 @@ title: North Bend
 city: north-bend
 state: wa
 description: Upcoming family events in North Bend on the Eastside.
-hook: Thursday night is a Shaun the Sheep film. Oct 17 is Oaktoberfest at Meadowbrook, and Oct 24 stacks a park party, chess, and downtown trick-or-treat.
+hook: Saturday morning is a free volunteer day around town, and Saturday afternoon is LEGO at the library. Thursday night is a Shaun the Sheep film. Oct 24 stacks a park party, chess, and downtown trick-or-treat.
 ---
 
-### Pajama Story Time
-<p class="event-when">Wed Sep 30 · 6:30–7:00 p.m.</p>
-<p class="event-place">North Bend Library, 115 E 4th Street</p>
-
-Librarian Jenifer reads, sings, and moves with children in pajamas. Bring a stuffed animal or a blanket. The same half hour is also on Wed Oct 7 and Wed Oct 14.
-
-[Pajama Story Time](https://kcls.bibliocommons.com/v2/events/6a80c0f3aafa6100295cdc3d)
-
 ### Love Snoqualmie Valley Volunteer Day
-<p class="event-when">Sat Oct 3 · 9:00 a.m.</p>
-<p class="event-place">Several North Bend sites, including the Mt. Si Senior Center</p>
+<p class="event-when">Sat Oct 3 · 9:00 a.m.–12:00 p.m.</p>
+<p class="event-place">Several North Bend sites, including the Mt. Si Senior Center, 411 Main Ave S</p>
 
-A volunteer morning with North Bend stops that include the Mt. Si Senior Center.
+A free morning of service projects for all ages, run by Love Snoqualmie Valley. North Bend stops include the Mt. Si Senior Center and the Snoqualmie Valley Food Bank at 122 E 3rd St.
 
-[Community events calendar](https://www.northbendwa.gov/common/modules/iCalendar/iCalendar.aspx?catID=21&feed=calendar)
+[Volunteer Day](https://www.northbendwa.gov/m/calendar/event/detail/4741)
 
 ### LEGO Builders
 <p class="event-when">Sat Oct 3 · 3:00–4:30 p.m.</p>
@@ -30,6 +22,14 @@ A volunteer morning with North Bend stops that include the Mt. Si Senior Center.
 Open building time. The library puts out bricks and other construction toys. Drop in for a few minutes or stay until 4:30. The Friends of the library sponsor it. No registration.
 
 [LEGO Builders](https://kcls.bibliocommons.com/v2/events/6aa0a1c66562d02296858b8d)
+
+### Pajama Story Time
+<p class="event-when">Wed Oct 7 · 6:30–7:00 p.m.</p>
+<p class="event-place">North Bend Library, 115 E 4th Street</p>
+
+Stories, music, and movement in pajamas for newborns through age 7 with an adult. Bring a stuffed animal or a blanket. No registration. The same half hour is also on Wed Oct 14.
+
+[Pajama Story Time](https://kcls.bibliocommons.com/events/6a80c0f3aafa6100295cdc3e)
 
 ### Shaun the Sheep: The Beast of Mossy Bottom
 <p class="event-when">Thu Oct 8 · 6:00 p.m.</p>

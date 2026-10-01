@@ -4,29 +4,8 @@ title: Bellevue
 city: bellevue
 state: wa
 description: Upcoming family events in Bellevue on the Eastside.
-hook: Saturday is the Kelsey Creek Farm Fair, with math games at the library that afternoon and a Russian fairy tale for little kids at Studio33. Friday, October 9 is a free pumpkin afternoon at The Meadow, and Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
+hook: Saturday is the Kelsey Creek Farm Fair, with math games at the library that afternoon and a Russian fairy tale for little kids at Studio33. Friday morning is story time at Lake Hills Library. Friday, October 9 is a free pumpkin afternoon at The Meadow, and Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
 ---
-
-### Engineering Hour
-<p class="event-when">Wed Sep 30 · 11:00 a.m.–12:00 p.m.</p>
-<p class="event-place">KidsQuest Children's Museum, 1116 108th Ave NE</p>
-
-{% include event-photo.html
-   src="/assets/images/bellevue/kidsquest.webp"
-   alt="Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance."
-   credit="Photo: Julian Fong, CC BY-SA 4.0"
-   source="https://commons.wikimedia.org/wiki/File:KidsQuest_Children%27s_Museum_2.jpg" %}
-
-Towers, bridges, and building, geared to children 5 and older. Free with admission or membership. The free-programming page lists this as a Wednesday hour, 11:00 a.m.–12:00 p.m.
-
-[Free programming](https://www.kidsquestmuseum.org/programs/free-programming/)
-
-### LEGO Brick Builders
-<p class="event-when">Wed Sep 30 · 1:30–2:30 p.m.</p>
-<p class="event-place">Bellevue Library, 1111 110th Ave NE</p>
-
-Open building. Stay the hour or stop in. The library supplies the bricks. All ages with an adult. No registration. Space is limited. Bellevue Friends of the Library sponsors it. The same hour is also on Wed Oct 14.  
-[LEGO Brick Builders](https://kcls.bibliocommons.com/v2/events/6a6cea0d4523092f0033ed7d)
 
 The Thursday farmers market is the last of the regular season. Thursday morning, before the stalls, is preschool storytime. Newport Way has a bilingual play hour the same morning.
 
@@ -69,6 +48,28 @@ Last day of the Thursday season, 3:00–7:00 p.m. The market has posted two late
 A short ranger program for ages 2 to 5. Each session has a nature theme, time on the trail, and a craft to take home. It is free, and every child and adult needs a registration. Come rain or shine in shoes that can handle a trail. The same hour is also on Fri Nov 6 and Fri Dec 4.
 
 [Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
+### Baby and Toddler Story Time
+<p class="event-when">Fri Oct 2 · 10:30–11:15 a.m.</p>
+<p class="event-place">Lake Hills Library, 15590 Lake Hills Blvd</p>
+
+{% include event-photo.html
+   src="/assets/images/bellevue/lake-hills-library.webp"
+   alt="Lake Hills Library in Bellevue, a low brick building with a glass entry and a landscaped front."
+   credit="Photo: SuddenFrost, CC0"
+   source="https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Lake_Hills_Library.jpg" %}
+
+Stories, songs, and a short play time for newborns to 24 months with an adult. No registration.
+
+[Baby and Toddler Story Time](https://kcls.bibliocommons.com/events/6a91f37869166f088b95a90a)
+
+### Family Story Time
+<p class="event-when">Fri Oct 2 · 10:45–11:45 a.m.</p>
+<p class="event-place">Newport Way Library, 14250 SE Newport Way</p>
+
+Stories, music, and movement for all ages with an adult, then a short play time. No registration. Space is limited.
+
+[Family Story Time](https://kcls.bibliocommons.com/events/6a85ddf057c264087ad23828)
 
 ### GATHER Bellevue Sunset Market
 <p class="event-when">Fri Oct 2 · 4:00–10:00 p.m.</p>
@@ -172,6 +173,14 @@ Ages 3–5 with a parent or caregiver. A story, an art project, a song, snack, a
 A single session is $25 per child for non-members and $17.50 for garden-society members. A second child in the same registration is less. The Oct 7 session is full. The garden itself is still a free walk if the class is closed.
 
 [Kids in the Garden](https://bellevuebotanical.org/kids-in-the-garden/) · [Oct 7 registration](https://65203.blackbaudhosting.com/65203/Kids-in-the-Garden-7-1--Pumpkins--Seeds)
+
+### Art Cart
+<p class="event-when">Wed Oct 7 · 3:00–5:00 p.m.</p>
+<p class="event-place">Newport Way Library, 14250 SE Newport Way</p>
+
+Craft supplies for ages 6 and older. Make your own project or try the week's suggested one. No registration. The Newport Way Library Association helps sponsor it. Space is limited.
+
+[Art Cart](https://kcls.bibliocommons.com/events/6a921fd3aafa6100295ff1dc)
 
 ### Story and Stroll
 <p class="event-when">Fri Oct 9 · 10:30–11:30 a.m.</p>
@@ -414,6 +423,14 @@ The museum's Halloween day, this year set as a Haunted Hoedown. Costumes are enc
 A free costume afternoon from the Old Bellevue Merchants Association. Businesses, restaurants, and residential communities along Main Street hand out candy.
 
 [Little Monsters on Main Street](https://www.visitoldbellevue.com/events/little-monsters-on-main-street-2026)
+
+### Sugar Skulls, Calaveritas de Azucar
+<p class="event-when">Thu Nov 12 · 4:00–5:15 p.m.</p>
+<p class="event-place">Lake Hills Library, 15590 Lake Hills Blvd</p>
+
+Decorate a pre-molded sugar skull and hear how families set altars for Dia de los Muertos. All ages, and children need an adult. Registration is requested. Crayons and coloring pages are there for younger siblings.
+
+[Sugar skulls](https://kcls.bibliocommons.com/events/6a926ad23b6c71003e5c2d42)
 
 ### Horizon Line
 <p class="event-when">Fri Nov 13 through Sun Nov 22</p>

@@ -91,6 +91,14 @@ A free talk from the Woodinville Heritage Society on the Stimson family and Holl
 
 [Cows and Carnations](https://woodinvilleheritage.org/events-programs/)
 
+### Beading: Make an Intention Bracelet
+<p class="event-when">Sat Oct 17 · 11:30 a.m.–12:30 p.m.</p>
+<p class="event-place">Woodinville Library, 17105 Avondale Road NE</p>
+
+Teens and adults design a beaded bracelet around a personal quality such as strength or kindness. Supplies are included. Please register. SilverKite Community Arts leads it.
+
+[Intention bracelet](https://kcls.bibliocommons.com/events/6a922c70aafa6100295ff351)
+
 ### Aesop and Art
 <p class="event-when">Wed Oct 21 · 4:30–5:30 p.m.</p>
 <p class="event-place">Woodinville Library, 17105 Avondale Road NE</p>

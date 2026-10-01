@@ -4,16 +4,8 @@ title: Sammamish
 city: sammamish
 state: wa
 description: Upcoming family events in Sammamish on the Eastside.
-hook: Monday morning is Mandarin story time. Saturday afternoon is a codebreaking workshop, and Thursday evening is a sewing hour for kids and adults at Beaver Lake Lodge.
+hook: Saturday afternoon is a codebreaking workshop at the library, and Saturday morning is a meadow work party. Thursday evening is a sewing hour for kids and adults at Beaver Lake Lodge.
 ---
-
-### Reading Buddies
-<p class="event-when">Wed Sep 30 · 4:00–6:00 p.m.</p>
-<p class="event-place">Sammamish Library, 825 228th Ave SE</p>
-
-Volunteers pair students by reading level and practice reading out loud, using ebooks on an iPad. For grades K–8, and for English language learners in grades K–12. Registration is not required.
-
-[Reading Buddies](https://kcls.bibliocommons.com/events/6aa0645e2f780f1bf01c79ac)
 
 ### Middle School and Tween Graphic Novel Club
 <p class="event-when">Thu Oct 1 · 4:00–5:00 p.m.</p>
@@ -54,6 +46,14 @@ The library marks this workshop as a date change, so use the event page if the r
 A social hour with Lambert House volunteers for youth ages 11 to 22 who identify as LGBTQIA+, or who are questioning. Parent or guardian permission is required for ages 12 and younger. Email kcgroups@lamberthouse.org before you go. Friends of the Sammamish Library sponsor it.
 
 [LGBTQ+ Youth Group](https://kcls.bibliocommons.com/events/69b0a317b48451fc3c08086e)
+
+### Reading Buddies
+<p class="event-when">Wed Oct 7 · 4:00–6:00 p.m.</p>
+<p class="event-place">Sammamish Library, 825 228th Ave SE</p>
+
+Students in grades K through 8, and English learners through grade 12, read aloud to a volunteer. Add your name for a 30-minute spot. Look for the green shirt. The same hours are also on Wed Oct 14.
+
+[Reading Buddies](https://kcls.bibliocommons.com/events/6aa0645e2f780f1bf01c79ad)
 
 ### Creative Connect: Sew a Pouch
 <p class="event-when">Thu Oct 8 · 6:30–8:00 p.m.</p>

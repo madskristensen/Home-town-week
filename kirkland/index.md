@@ -4,44 +4,8 @@ title: Kirkland
 city: kirkland
 state: wa
 description: Upcoming family events in Kirkland on the Eastside.
-hook: The Wednesday market closes the season. Saturday is a free harvest festival at Juanita Beach, with family math at Kingsgate that morning, and Swan Lake lights up the Performance Center that night and Sunday. Studio East opens Young Frankenstein on October 30.
+hook: Saturday is a free harvest festival at Juanita Beach, with family math at Kingsgate that morning, and Swan Lake lights up the Performance Center that night and Sunday. Studio East opens Young Frankenstein on October 30.
 ---
-
-### Kirkland Wednesday Market
-<p class="event-when">Wed Sep 30 · 3:00–7:00 p.m.</p>
-<p class="event-place">Marina Park, 25 Lakeshore Plaza</p>
-
-{% include event-photo.html
-   src="/assets/images/kirkland/marina-fall.webp"
-   alt="Marina Park in fall, with yellow and orange trees along the shore of Lake Washington and the Seattle skyline across the water."
-   credit="Photo: City of Kirkland"
-   source="https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/PCS-Photo-Galleries/Marina-Park-Photo-Gallery"
-   license="organizer" %}
-
-Last day of the 2026 season. Every Wednesday from June 3 through September 30, 3:00–7:00 p.m.  
-[Kirkland Wednesday Market](https://kirklanddowntown.org/events/kirkland-market/)
-
-
-### Beats Beyond Boundaries
-<p class="event-when">Wed Sep 30 · 5:30–6:15 p.m.</p>
-<p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
-
-{% include event-photo.html
-   src="/assets/images/kirkland/kirkland-library.webp"
-   alt="Kirkland Library, a modern building with a glass and wood front and a covered entry."
-   credit="Photo: King County Library System."
-   source="https://kcls.org/locations/kirkland/"
-   license="organizer" %}
-
-Music with therapist Elizabeth VanSant for neurodivergent kids and their families. Ages 6–10 with an adult. All abilities welcome. No registration. Sponsored by Friends of the Library, Kirkland.  
-[KCLS event](https://kcls.bibliocommons.com/v2/events/6940ba637ed7c62f00aaa719)
-
-### Pajama Story Time
-<p class="event-when">Wed Sep 30 · 7:00–7:30 p.m.</p>
-<p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
-
-Stories, music, and movement in pajamas. Bring a stuffed animal or borrow one. A short play time follows. No registration.  
-[KCLS event](https://kcls.bibliocommons.com/v2/events/6a7fab8f386764026a1707e3)
 
 ### Baby Story Time
 <p class="event-when">Thu Oct 1 · 10:30–11:00 a.m.</p>
@@ -98,7 +62,7 @@ Full-length ballet with light design and illuminated costumes. Better for older 
 
 Drop-in playdough and natural materials, for not-so-scary monsters. A relaxed room for sensory-seeking and neurodivergent kids and their adults. Friends of the Library, Kirkland, sponsors it. Monday hours are 10:00 a.m.–6:00 p.m.
 
-[Kirkland Library events](https://kcls.bibliocommons.com/v2/events?locations=1518)
+[Sensory Dough](https://kcls.bibliocommons.com/events/6aa0a2324cb69d003e26b5fc)
 
 ### Family Story Time
 <p class="event-when">Tue Oct 6 · 1:00–1:30 p.m. and 6:30–7:00 p.m.</p>
@@ -227,6 +191,21 @@ Polymer clay and clay tools. Creations go home, with instructions for hardening 
 
 [Spooky Clay](https://kcls.bibliocommons.com/v2/events/6aa89ebc3dd190003e71fe3f)
 
+### Ukrainian Story Time
+<p class="event-when">Fri Oct 23 · 10:30–11:00 a.m.</p>
+<p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
+
+Stories and simple songs in Ukrainian for children of any age with an adult. No registration.
+
+[Ukrainian Story Time](https://kcls.bibliocommons.com/events/6a63e1ecf494c55649eb13c9)
+
+### Pokemon Club
+<p class="event-when">Sat Oct 24 · 1:00–2:00 p.m.</p>
+<p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
+
+Play the Pokemon trading card game with a guided deck if you are new, or with the library's cards if you already know it. Best for ages 5 to 10. Drawing and small giveaways while supplies last. No registration. Space is limited.
+
+[Pokemon Club](https://kcls.bibliocommons.com/events/6abad22629c3d600332c3de1)
 
 ### Keep on Dancing
 <p class="event-when">Sun Oct 25 · 7:00 p.m.</p>

@@ -4,30 +4,8 @@ title: Renton
 city: renton
 state: wa
 description: Upcoming family events in Renton on the Eastside.
-hook: Wednesday is Spanish story time at the downtown library and at Family First. Friday, Noises Off opens at Renton Civic Theatre for ages 10 and up.
+hook: Saturday is Lucha Libro at the downtown library, with shows at noon and 5:00 p.m. Friday, Noises Off opens at Renton Civic Theatre for ages 10 and up.
 ---
-
-### Spanish Story Time at Family First
-<p class="event-when">Wed Sep 30 · 11:00 a.m.–12:00 p.m.</p>
-<p class="event-place">Family First Community Center, 16200 116th Avenue SE</p>
-
-{% include event-photo.html
-   src="/assets/images/themes/stack-of-books.webp"
-   alt="A stack of hardcover books tied with twine."
-   credit="Photo: mycurrency.com, CC BY-SA 4.0"
-   source="https://commons.wikimedia.org/wiki/File:Stack_of_Books_for_decor.jpg" %}
-
-Stories, music, and movement in Spanish for all ages with an adult, with play afterward. New visitors should arrive 15 minutes early for a one-time free form. The same hour is also on Wed Oct 7.
-
-[Spanish Story Time](https://kcls.bibliocommons.com/events/6a46e2d4c52cdc3600ee7832)
-
-### Spanish Story Time
-<p class="event-when">Wed Sep 30 · 12:30–1:00 p.m.</p>
-<p class="event-place">Renton Library, 100 Mill Avenue S</p>
-
-Stories, music, movement, and rhymes in Spanish for young children. No registration. The same half hour is also on Wed Oct 7.
-
-[Spanish Story Time](https://kcls.bibliocommons.com/events/6a7f68a7aafa6100295ca6dc)
 
 ### Noises Off
 <p class="event-when">Fri Oct 2–Sun Oct 18</p>
@@ -37,6 +15,22 @@ Michael Frayn's backstage farce. Opening night is Fri Oct 2, a pay-what-you-can 
 
 [Noises Off](https://www.rentoncivictheatre.org/shows/noises-off)
 
+### Toddler Story Time
+<p class="event-when">Fri Oct 2 · 11:00–11:30 a.m.</p>
+<p class="event-place">Renton Highlands Library, 2801 NE 10th Street</p>
+
+Stories, music, and movement for ages 1 to 3 with an adult. No registration. Space is limited.
+
+[Toddler Story Time](https://kcls.bibliocommons.com/events/6a6794c9cca66c2f00a6523c)
+
+### Baby Story Time
+<p class="event-when">Fri Oct 2 · 12:00–12:30 p.m.</p>
+<p class="event-place">Renton Highlands Library, 2801 NE 10th Street</p>
+
+Rhymes, songs, and stories for newborns to 18 months with an adult. Bring a mat or blanket. No registration.
+
+[Baby Story Time](https://kcls.bibliocommons.com/events/6a6794e40d65ac3600428926)
+
 ### Vietnamese Story Time
 <p class="event-when">Fri Oct 2 · 4:00–5:00 p.m.</p>
 <p class="event-place">Renton Highlands Library, 2801 NE 10th Street</p>
@@ -44,6 +38,14 @@ Michael Frayn's backstage farce. Opening night is Fri Oct 2, a pay-what-you-can 
 Stories, music, and movement in Vietnamese for all ages with an adult. The same hour is also on Fri Oct 9.
 
 [Vietnamese Story Time](https://kcls.bibliocommons.com/events/6a46e315c52cdc3600ee7850)
+
+### Lucha Libro
+<p class="event-when">Sat Oct 3 · noon, 2:00 p.m., and 5:00 p.m.</p>
+<p class="event-place">Renton Library, 100 Mill Avenue S</p>
+
+Wrestlers and books share the downtown library for a free all-ages Saturday. Lucha Libro shows are at noon and 5:00 p.m., Mariachi Monarca plays at 2:00 p.m., and the afternoon also has music, crafts, and coloring. No registration.
+
+[Lucha Libro](https://kcls.bibliocommons.com/events/6aa1e4e84b3b060030829c8b)
 
 ### Community Ballet and Jazz for Young Dancers
 <p class="event-when">Sat Oct 3 · 1:00–3:00 p.m.</p>
@@ -98,6 +100,22 @@ Chess for ages 6 and older, all levels, with high school mentors. Boards are pro
 Stories, music, and movement in Amharic and Tigrinya for all ages with a caregiver. New visitors should arrive 15 minutes early for a one-time free registration. The library lists Tuesdays from Oct 6 through Nov 17 at 6:00 p.m.
 
 [Amharic and Tigrigna Story Time](https://kcls.bibliocommons.com/events/6a76c2c174e3b8b75db87c82)
+
+### Spanish Story Time at Family First
+<p class="event-when">Wed Oct 7 · 11:00 a.m.–12:00 p.m.</p>
+<p class="event-place">Family First Community Center, 16200 116th Avenue SE</p>
+
+Stories, music, and movement in Spanish for all ages with an adult, then time to play. New visitors should arrive 15 minutes early for a one-time free form.
+
+[Spanish Story Time](https://kcls.bibliocommons.com/events/6a46e2d4c52cdc3600ee7833)
+
+### Spanish Story Time
+<p class="event-when">Wed Oct 7 · 12:30–1:00 p.m.</p>
+<p class="event-place">Renton Library, 100 Mill Avenue S</p>
+
+Stories, music, and rhymes in Spanish for young children. No registration.
+
+[Spanish Story Time](https://kcls.bibliocommons.com/events/6a7f68a7aafa6100295ca6dd)
 
 ### Salmon Stories and Science
 <p class="event-when">Thu Oct 8 · 10:30–11:30 a.m.</p>

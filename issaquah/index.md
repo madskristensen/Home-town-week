@@ -7,14 +7,6 @@ description: Upcoming family events in Issaquah on the Eastside.
 hook: Saturday and Sunday are Salmon Days downtown. The hatchery is the stop to make, and Sunday afternoon is a free family dance at Pickering Barn. Sunday noon is a free gallery open house in the Highlands.
 ---
 
-### Chess Club
-<p class="event-when">Wed Sep 30 · 6:00–9:00 p.m.</p>
-<p class="event-place">Blakely Hall, Issaquah Highlands</p>
-
-All ages and experience levels. Boards are there, so you do not need to bring one. First-time players fill out a short form so the hosts know who is coming. This session is at Blakely Hall in the Highlands.
-
-[Chess Club](https://issaquahhighlands.com/event/chess-club-4-11/2026-09-30/)
-
 ### Rise & Shine Story Time
 <p class="event-when">Thu Oct 1 · 10:30–11:00 a.m.</p>
 <p class="event-place">Issaquah Library, 10 W Sunset Way</p>
@@ -118,6 +110,14 @@ Issaquah is the first KCLS branch with a Library of Things, and this party opens
 A free workshop for teens using the En-ROADS climate simulator. No RSVP. The posted time is 4:00 to 5:00 p.m., and it may run until 5:30.
 
 [Teen Climate Workshop](https://issaquahhighlands.com/event/teen-climate-workshop/)
+
+### Snuggle Up Story Time
+<p class="event-when">Tue Oct 13 · 6:30–7:00 p.m.</p>
+<p class="event-place">Issaquah Library, 10 W Sunset Way</p>
+
+Stories, music, and movement for newborns to 5 with an adult, then up to 30 minutes of play. No registration. Space is limited.
+
+[Snuggle Up Story Time](https://kcls.bibliocommons.com/events/6a7104e288e9bf2800354858)
 
 ### Issaquah Goes Apples
 <p class="event-when">Sat Oct 17 · 9:00 a.m.–2:00 p.m.</p>

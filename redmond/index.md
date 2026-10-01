@@ -7,13 +7,6 @@ description: Upcoming family events in Redmond on the Eastside.
 hook: Saturday is flapjacks, the farm, and a youth cross-country meet. October 17 is the Farrel-McWhirter harvest festival and a pup parade at Redmond Town Center.
 ---
 
-### Teen Center Project Drop-in Session 1
-<p class="event-when">Wed Sep 30 · 2:30–4:30 p.m.</p>
-<p class="event-place">Redmond High School Library</p>
-
-Ages 12–18 (or middle/high school). Food, hands-on activities, share ideas. No names collected.  
-[Teen Center Project](https://www.redmond.gov/2494/Teen-Center-Project)
-
 ### Drop-In Play
 <p class="event-when">Thu Oct 1 · 10:00 a.m.–12:00 p.m.</p>
 <p class="event-place">Redmond Community Center at Marymoor Village, 6505 176th Ave NE</p>

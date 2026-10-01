@@ -229,6 +229,12 @@ venues:
     credit: "Photo: SuddenFrost, CC0"
     license: CC0
     source: https://commons.wikimedia.org/wiki/File:Bellevue_Library.jpg
+  - keys: ["lake hills library"]
+    image: /assets/images/bellevue/lake-hills-library.webp
+    alt: Lake Hills Library in Bellevue, a low brick building with a glass entry and a landscaped front.
+    credit: "Photo: SuddenFrost, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Lake_Hills_Library.jpg
   - keys: ["newport way library"]
     image: /assets/images/bellevue/newport-way-library.webp
     alt: Newport Way Library, a low building with a broad glass front and a covered entry.

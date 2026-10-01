@@ -1,13 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Film Screening: Ultimate Citizens"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-09-30T18:00:00-07:00"
-  end: "2026-09-30T19:30:00-07:00"
-  place: "Mercer Island Library, 4400 88th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/v2/events/6a727c39cca66c2f00a841fd"
 - name: "Mandarin Story Time"
   cost: "Free"
   ages: "Toddlers"

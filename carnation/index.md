@@ -79,6 +79,22 @@ A free planting day with Stewardship Partners along the Snoqualmie River. Volunt
 
 [Habitat Restoration Day](https://livingsnoqualmie.com/event/carnation-farms-habitat-restoration-day-with-stewardship-partners/)
 
+### LEGO Block Party
+<p class="event-when">Mon Oct 12 · 3:45–5:15 p.m.</p>
+<p class="event-place">Carnation Library, 4804 Tolt Avenue</p>
+
+Open building with Legos and Duplos. Stay the whole time or stop in. All ages. No registration.
+
+[LEGO Block Party](https://kcls.bibliocommons.com/events/6abdd612e8cf1c005cb01406)
+
+### Pokemon Club
+<p class="event-when">Fri Oct 16 · 2:45–4:15 p.m.</p>
+<p class="event-place">Carnation Library, 4804 Tolt Avenue</p>
+
+A drop-in club for ages 7 and older. Learn the Pokemon trading card game or Poke Catch, or use the worksheets and stickers. No experience needed. First come, first served.
+
+[Pokemon Club](https://kcls.bibliocommons.com/events/6abdd628ea50a10050a5ca02)
+
 ### Oxtober
 <p class="event-when">Sat Oct 17 and Sun Oct 18, then Sat Oct 24 and Sun Oct 25 · 10:00 a.m.–4:00 p.m.</p>
 <p class="event-place">Oxbow Farm and Conservation Center, 10819 Carnation-Duvall Road NE</p>
