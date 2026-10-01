@@ -94,6 +94,13 @@
     return price.toLowerCase() === "free";
   }
 
+  function withFree(text) {
+    if (mentionsFree(text)) return text;
+    if (!text) return "Free.";
+    var next = text + " Free.";
+    return next.length <= BLURB_LIMIT ? next : text;
+  }
+
   function sentencesOf(text) {
     var sentences = [];
     var start = 0;
@@ -148,14 +155,14 @@
     var sentences = sentencesOf(clean(blurb)).filter(function (sentence) {
       return !hasContact(sentence);
     });
-    if (!sentences.length) return price.length <= BLURB_LIMIT ? price : "";
+    if (!sentences.length) {
+      if (isFreeCost(price)) return "Free.";
+      return price.length <= BLURB_LIMIT ? price : "";
+    }
 
     if (sentences[0].length > BLURB_LIMIT) {
       var clipped = clipSentence(sentences[0]);
-      if (isFreeCost(price) && !mentionsFree(clipped) && (clipped + " Free").length <= BLURB_LIMIT) {
-        return clipped + " Free";
-      }
-      return clipped;
+      return isFreeCost(price) ? withFree(clipped) : clipped;
     }
 
     var indexes = [0];
@@ -177,12 +184,11 @@
     if (priceAt !== -1 && !priceIncluded) {
       var withSentence = joined(sentences[priceAt]);
       if (withSentence.length <= BLURB_LIMIT) body = withSentence;
-      else if (isFreeCost(price) && !mentionsFree(body) && (body + " Free").length <= BLURB_LIMIT) {
-        body += " Free";
-      }
-    } else if (!priceIncluded && price) {
-      var already = isFreeCost(price) ? mentionsFree(body) : hasPrice(body, price);
-      if (!already && (body + " " + price).length <= BLURB_LIMIT) body += " " + price;
+      else if (isFreeCost(price)) body = withFree(body);
+    } else if (isFreeCost(price)) {
+      body = withFree(body);
+    } else if (!priceIncluded && price && !hasPrice(body, price) && (body + " " + price).length <= BLURB_LIMIT) {
+      body += " " + price;
     }
     return body;
   }
