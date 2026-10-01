@@ -1680,10 +1680,70 @@ module EastsideCalendar
       end
     end
 
+    def school_day_off?(day)
+      return false if day["off"] == false
+
+      !%w[first last half early].include?(day["type"].to_s)
+    end
+
+    def mark_kind(day, off)
+      return "if" if off && day["conditional"] == true
+      return "grade" if off && !day["grades"].to_s.strip.empty?
+      return "off" if off
+
+      "note"
+    end
+
+    def cell_text(day, off)
+      return "If needed" if off && day["conditional"] == true
+
+      grades = day["grades"].to_s.strip
+      return grades if off && !grades.empty?
+      return "Off" if off
+
+      case day["type"].to_s
+      when "first" then "First day"
+      when "last" then "Last day"
+      when "half" then "Half day"
+      when "early" then "Early release"
+      else day["label"].to_s.strip
+      end
+    end
+
+    def reason_text(day)
+      label = day["label"].to_s.strip
+      grades = day["grades"].to_s.strip
+      text = label
+      unless grades.empty?
+        piece = "#{grades[0].downcase}#{grades[1..]}"
+        text = text.empty? ? grades : "#{text}, #{piece}"
+      end
+      if day["conditional"] == true && !text.downcase.include?("if needed")
+        text = text.empty? ? "If needed" : "#{text}, if needed"
+      end
+      text
+    end
+
+    def span_short(start_on, end_on)
+      if start_on == end_on
+        "#{MONTHS[start_on.month - 1]} #{start_on.day}"
+      elsif start_on.month == end_on.month && start_on.year == end_on.year
+        "#{MONTHS[start_on.month - 1]} #{start_on.day} to #{end_on.day}"
+      else
+        "#{MONTHS[start_on.month - 1]} #{start_on.day} to #{MONTHS[end_on.month - 1]} #{end_on.day}"
+      end
+    end
+
+    def line_id(slug, month_start, start_on, kind)
+      "ns-#{slug}-#{format("%04d-%02d", month_start.year, month_start.month)}-#{start_on.iso8601}-#{kind}"
+    end
+
     def no_school_by_date(districts, today)
       by_date = {}
       districts.each do |district|
         id = district["id"].to_s
+        slug = presence(district["slug"], id)
+        short = presence(district["short"], district["title"].to_s)
         Array(district["days"]).each do |day|
           next unless day.is_a?(Hash)
 
@@ -1692,14 +1752,20 @@ module EastsideCalendar
           next unless start_on && finish_on
           next if finish_on < today
 
-          info = {
-            "grades" => day["grades"].to_s.strip,
-            "conditional" => day["conditional"] == true
-          }
+          off = school_day_off?(day)
+          kind = mark_kind(day, off)
+          text = cell_text(day, off)
           cursor = start_on
           while cursor <= finish_on
             by_date[cursor] ||= {}
-            by_date[cursor][id] = info
+            by_date[cursor][id] ||= []
+            by_date[cursor][id] << {
+              "slug" => slug,
+              "short" => short,
+              "kind" => kind,
+              "text" => text,
+              "line" => line_id(slug, cursor, start_on, kind)
+            }
             cursor += 1
           end
         end
@@ -1736,16 +1802,7 @@ module EastsideCalendar
         date = Date.new(month_start.year, month_start.month, day_number)
         marks = []
         districts.each do |district|
-          info = by_date.dig(date, district["id"].to_s)
-          next unless info
-
-          marks << {
-            "slug" => presence(district["slug"], district["id"].to_s),
-            "abbr" => presence(district["abbr"], "NS"),
-            "short" => presence(district["short"], district["title"].to_s),
-            "kind" => closure_kind(info),
-            "text" => closure_text(info)
-          }
+          Array(by_date.dig(date, district["id"].to_s)).each { |info| marks << info }
         end
         cells << {
           "pad" => false,
@@ -1760,31 +1817,46 @@ module EastsideCalendar
       cells << { "pad" => true } while cells.size < 42
       weeks = []
       cells.each_slice(7) { |week| weeks << week }
+      month_end = Date.new(month_start.year, month_start.month, days_in)
       {
         "id" => format("%04d-%02d", month_start.year, month_start.month),
         "label" => "#{FULL_MONTHS[month_start.month - 1]} #{month_start.year}",
-        "weeks" => weeks
+        "weeks" => weeks,
+        "lines" => month_reason_lines(districts, month_start, month_end, today)
       }
     end
 
-    def closure_kind(info)
-      return "if" if info["conditional"]
-      return "grade" unless info["grades"].to_s.empty?
+    def month_reason_lines(districts, month_start, month_end, today)
+      lines = []
+      districts.each do |district|
+        id = district["id"].to_s
+        slug = presence(district["slug"], id)
+        short = presence(district["short"], district["title"].to_s)
+        Array(district["days"]).each do |day|
+          next unless day.is_a?(Hash)
 
-      "off"
-    end
+          start_on = date_only(day["start"])
+          finish_on = date_only(day["end"]) || start_on
+          next unless start_on && finish_on
+          next if finish_on < today
 
-    def closure_text(info)
-      grades = info["grades"].to_s.strip
-      if !grades.empty? && info["conditional"]
-        "#{grades}, if needed"
-      elsif !grades.empty?
-        grades
-      elsif info["conditional"]
-        "If needed"
-      else
-        "Off"
+          clip_start = [start_on, month_start].max
+          clip_end = [finish_on, month_end].min
+          next if clip_end < clip_start
+
+          off = school_day_off?(day)
+          kind = mark_kind(day, off)
+          lines << {
+            "id" => line_id(slug, month_start, start_on, kind),
+            "slug" => slug,
+            "short" => short,
+            "when" => span_short(clip_start, clip_end),
+            "reason" => reason_text(day),
+            "sort" => clip_start.iso8601
+          }
+        end
       end
+      lines.sort_by { |line| [line["sort"], line["short"].to_s, line["reason"].to_s] }
     end
 
     def write_no_school_feeds!(site, districts, today)
@@ -1822,12 +1894,12 @@ module EastsideCalendar
 
     def closure_feed_name(day)
       label = day["label"].to_s.strip
-      label = "No school" if label.empty?
       grades = day["grades"].to_s.strip
-      text = if day["conditional"] == true
-               "No school if needed: #{label}"
+      text = if school_day_off?(day)
+               label = "No school" if label.empty?
+               day["conditional"] == true ? "No school if needed: #{label}" : "No school: #{label}"
              else
-               "No school: #{label}"
+               label.empty? ? "School day" : label
              end
       grades.empty? ? text : "#{text} (#{grades})"
     end
@@ -1835,10 +1907,12 @@ module EastsideCalendar
     def closure_feed_description(day, title, source)
       parts = [title]
       note = day["note"].to_s.strip
-      if day["conditional"] == true
+      if school_day_off?(day) && day["conditional"] == true
         parts << (note.empty? ? "This day is off unless the district uses it as a snow make-up day." : note)
       elsif !note.empty?
         parts << note
+      elsif !school_day_off?(day)
+        parts << "This is not a day off."
       end
       grades = day["grades"].to_s.strip
       parts << "Applies to #{grades}." unless grades.empty?

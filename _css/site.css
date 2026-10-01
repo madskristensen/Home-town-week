@@ -53,16 +53,6 @@
   --btn-bg-hover: color-mix(in srgb, var(--accent) 73%, black);
   --btn-ink: var(--accent-contrast);
   --menu-border: var(--border-strong);
-
-  /* District dots. Eight hues, dark enough for the cream cells. */
-  --ns-blue: #1a56c4;
-  --ns-orange: #c2410c;
-  --ns-purple: #7a3ff2;
-  --ns-teal: #0e7c86;
-  --ns-red: #d1223a;
-  --ns-gold: #a16207;
-  --ns-green: #157a32;
-  --ns-pink: #d1267a;
   --menu-shadow: 0 0.55rem 1.6rem rgb(from var(--text) r g b / 0.18);
   --radius: 2px;
   --measure: 44rem;
@@ -109,16 +99,6 @@
     --btn-bg-hover: color-mix(in srgb, var(--accent) 92%, white);
     --menu-border: var(--border-strong);
     --menu-shadow: 0 0.7rem 1.8rem rgb(from var(--bg) r g b / 0.45);
-
-    /* Same eight hues, light enough for the slate cells. */
-    --ns-blue: #9ec5ff;
-    --ns-orange: #ffb15e;
-    --ns-purple: #e0c4ff;
-    --ns-teal: #5ee0d0;
-    --ns-red: #ffb0a0;
-    --ns-gold: #ffd36a;
-    --ns-green: #7ddea0;
-    --ns-pink: #ff9ec8;
   }
 }
 
@@ -1779,65 +1759,25 @@ h2.event-bucket.is-past {
   outline-offset: 2px;
 }
 
-.ns-legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem 0.75rem;
-  margin: 0.7rem 0 0;
-  padding: 0;
-  list-style: none;
-  font-size: 0.78rem;
+.ns-hint {
+  flex: 1 1 16rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
   font-weight: 650;
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
-.ns-legend li {
-  display: flex;
-  align-items: center;
-  gap: 0.28rem;
-}
-
-.ns-swatch,
-.ns-dot,
-.ns-sample {
-  --c: var(--accent);
-}
-
-.ns-swatch[data-d="nsd"],
-.ns-dot[data-d="nsd"] { --c: var(--ns-blue); }
-
-.ns-swatch[data-d="rvsd"],
-.ns-dot[data-d="rvsd"] { --c: var(--ns-orange); }
-
-.ns-swatch[data-d="renton"],
-.ns-dot[data-d="renton"] { --c: var(--ns-purple); }
-
-.ns-swatch[data-d="lwsd"],
-.ns-dot[data-d="lwsd"] { --c: var(--ns-teal); }
-
-.ns-swatch[data-d="bsd"],
-.ns-dot[data-d="bsd"] { --c: var(--ns-red); }
-
-.ns-swatch[data-d="isd"],
-.ns-dot[data-d="isd"] { --c: var(--ns-gold); }
-
-.ns-swatch[data-d="svsd"],
-.ns-dot[data-d="svsd"] { --c: var(--ns-green); }
-
-.ns-swatch[data-d="misd"],
-.ns-dot[data-d="misd"] { --c: var(--ns-pink); }
-
-html[data-ns] .ns-legend {
+html[data-ns-chosen] .ns-hint {
   display: none;
 }
 
-.ns-swatch,
 .ns-sample {
   display: inline-block;
   width: 0.55rem;
   height: 0.55rem;
-  border-radius: 999px;
-  background: var(--c);
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--ink) 16%, var(--sheet));
   flex: 0 0 auto;
 }
 
@@ -1858,32 +1798,19 @@ html[data-ns] .ns-legend {
   margin-left: 0;
 }
 
-.ns-sample.is-grade {
+.ns-sample.is-note {
   background: transparent;
-  box-shadow: inset 0 0 0 1.5px var(--accent);
+  box-shadow: inset 0 0 0 1.5px var(--ink);
 }
 
 .ns-sample.is-if {
   background: transparent;
-  border: 1px dashed var(--gold);
+  border: 1px dashed var(--ink);
   box-shadow: none;
 }
 
 .ns-sub {
   margin-top: 0.7rem;
-  min-height: 1.5rem;
-}
-
-.ns-sub-all {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.85rem;
-  font-weight: 650;
-  line-height: 1.4;
-}
-
-.ns-sub-one {
-  display: none;
 }
 
 .ns-sub .cal-subscribe {
@@ -1962,44 +1889,17 @@ html[data-ns] .ns-legend {
   line-height: 1.1;
 }
 
-.ns-marks {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-  gap: 0.14rem 0.12rem;
-  min-height: 1.05rem;
-  margin-top: 0.16rem;
-}
-
-.ns-dot {
-  width: 0.55rem;
-  height: 0.55rem;
-  border-radius: 999px;
-  background: var(--c);
-  flex: 0 0 auto;
-}
-
-.ns-dot.is-grade {
-  background: transparent;
-  box-shadow: inset 0 0 0 1.5px var(--c);
-}
-
-.ns-dot.is-if {
-  background: transparent;
-  border: 1px dashed var(--c);
-  box-shadow: none;
-}
-
 .ns-one {
   display: none;
   margin-top: 0.1rem;
   padding: 0.02rem 0.04rem;
   overflow: hidden;
   border-radius: 2px;
+  color: var(--ink);
   font-size: 0.78rem;
   font-weight: 700;
   line-height: 1.15;
+  text-decoration: none;
 }
 
 @container (max-width: 58px) {
@@ -2010,35 +1910,66 @@ html[data-ns] .ns-legend {
   }
 }
 
-.ns-one.is-off {
-  background: color-mix(in srgb, var(--accent) 16%, var(--sheet));
+.ns-one:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
 }
 
-.ns-one.is-grade {
-  box-shadow: inset 0 0 0 1px var(--accent);
+.ns-one.is-off {
+  background: color-mix(in srgb, var(--ink) 14%, var(--sheet));
+}
+
+.ns-one.is-grade,
+.ns-one.is-note {
+  box-shadow: inset 0 0 0 1px var(--ink);
 }
 
 .ns-one.is-if {
-  border: 1px dashed var(--gold);
+  border: 1px dashed var(--ink);
 }
 
-html[data-ns] .ns-marks,
-html[data-ns] .ns-sub-all {
+.ns-reasons {
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.ns-line {
   display: none;
+  margin: 0.22rem 0 0;
+  scroll-margin-top: 0.75rem;
 }
 
-html[data-ns] .ns-sub-one {
-  display: block;
+.ns-line:target {
+  background: color-mix(in srgb, var(--ink) 10%, var(--sheet));
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
 }
 
+.ns-when {
+  font-weight: 700;
+}
+
+html:not([data-ns]) .ns-one[data-d="lwsd"],
+html:not([data-ns]) .ns-line[data-d="lwsd"],
 html[data-ns="nsd"] .ns-one[data-d="nsd"],
+html[data-ns="nsd"] .ns-line[data-d="nsd"],
 html[data-ns="rvsd"] .ns-one[data-d="rvsd"],
+html[data-ns="rvsd"] .ns-line[data-d="rvsd"],
 html[data-ns="renton"] .ns-one[data-d="renton"],
+html[data-ns="renton"] .ns-line[data-d="renton"],
 html[data-ns="lwsd"] .ns-one[data-d="lwsd"],
+html[data-ns="lwsd"] .ns-line[data-d="lwsd"],
 html[data-ns="bsd"] .ns-one[data-d="bsd"],
+html[data-ns="bsd"] .ns-line[data-d="bsd"],
 html[data-ns="isd"] .ns-one[data-d="isd"],
+html[data-ns="isd"] .ns-line[data-d="isd"],
 html[data-ns="svsd"] .ns-one[data-d="svsd"],
-html[data-ns="misd"] .ns-one[data-d="misd"] {
+html[data-ns="svsd"] .ns-line[data-d="svsd"],
+html[data-ns="misd"] .ns-one[data-d="misd"],
+html[data-ns="misd"] .ns-line[data-d="misd"] {
   display: block;
 }
 

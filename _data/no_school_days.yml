@@ -1,7 +1,8 @@
 # Student no-school days for 2026-27. Dates are strings.
 # The spring break hub reads type: break rows inside its season window.
-# Weekly early release, late start, and half days stay in `early`.
-# They are not table rows. `conditional: true` means the day is off unless
+# Weekly early release and late start stay in `early`.
+# One-off early release, half days, and first and last days are rows
+# with `off: false`. `conditional: true` means the day is off unless
 # the district uses it as a snow make-up day. `pdf` is the file name a
 # stable link currently downloads. `stable` is a resource-manager link
 # when `source` is the versioned PDF the hub already shows.
@@ -26,6 +27,15 @@ districts:
       - { start: "2027-02-15", end: "2027-02-19", type: break, label: Mid-winter break }
       - { start: "2027-04-05", end: "2027-04-09", type: break, label: Spring break }
       - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
+      - { start: "2026-09-01", end: "2026-09-01", type: first, off: false, label: First day of school }
+      - { start: "2026-11-17", end: "2026-11-17", type: early, off: false, label: Early release, grades: Elementary }
+      - { start: "2026-11-19", end: "2026-11-20", type: early, off: false, label: Early release, grades: Elementary }
+      - { start: "2026-11-23", end: "2026-11-24", type: early, off: false, label: Early release, grades: Elementary }
+      - { start: "2026-11-25", end: "2026-11-25", type: half, off: false, label: Half day }
+      - { start: "2027-02-05", end: "2027-02-05", type: early, off: false, label: Early release, grades: Elementary }
+      - { start: "2027-06-14", end: "2027-06-14", type: early, off: false, label: Early release, grades: "Grades 9-11 at North Creek and Woodinville" }
+      - { start: "2027-06-15", end: "2027-06-15", type: early, off: false, label: Early release, grades: "Grades 9-11 at Inglemoor and Bothell" }
+      - { start: "2027-06-16", end: "2027-06-16", type: last, off: false, label: Last day of school }
   - id: riverview
     title: Riverview School District
     short: Riverview
@@ -51,6 +61,11 @@ districts:
       - { start: "2027-04-05", end: "2027-04-09", type: break, label: Spring break }
       - { start: "2027-05-28", end: "2027-05-28", type: snow, label: Snow make-up, conditional: true, note: "Off unless the district uses this day to make up a closure. If it is used, it becomes a 90-minute early release." }
       - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
+      - { start: "2026-09-01", end: "2026-09-01", type: first, off: false, label: First day of school }
+      - { start: "2026-10-02", end: "2026-10-02", type: early, off: false, label: Early release, grades: "Kindergarten through 5th grade and grades 9-12" }
+      - { start: "2026-11-19", end: "2026-11-19", type: half, off: false, label: Half day, grades: Kindergarten through 5th grade }
+      - { start: "2026-11-25", end: "2026-11-25", type: half, off: false, label: Half day }
+      - { start: "2027-06-16", end: "2027-06-16", type: last, off: false, label: Last day of school }
   - id: renton
     title: Renton School District
     short: Renton
@@ -76,6 +91,13 @@ districts:
       - { start: "2027-04-05", end: "2027-04-09", type: break, label: Spring break }
       - { start: "2027-05-28", end: "2027-05-28", type: snow, label: Snow make-up, conditional: true, note: "Off unless an emergency closure make-up day is needed." }
       - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
+      - { start: "2026-08-26", end: "2026-08-26", type: first, off: false, label: First day of school, grades: Grades 1-12 }
+      - { start: "2026-08-31", end: "2026-08-31", type: first, off: false, label: First day of school, grades: Kindergarten }
+      - { start: "2026-09-01", end: "2026-09-01", type: first, off: false, label: First day of school, grades: Meadow Crest }
+      - { start: "2026-11-19", end: "2026-11-22", type: early, off: false, label: Early release, grades: Elementary }
+      - { start: "2026-11-23", end: "2026-11-24", type: early, off: false, label: Early release, grades: Elementary and middle school }
+      - { start: "2026-11-25", end: "2026-11-25", type: early, off: false, label: Early release }
+      - { start: "2027-06-16", end: "2027-06-16", type: last, off: false, label: "Early release, last day of school" }
   - id: lake-washington
     title: Lake Washington School District
     short: Lake Washington
@@ -99,6 +121,12 @@ districts:
       - { start: "2027-05-28", end: "2027-05-28", type: teacher, label: LEAP day }
       - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
       - { start: "2027-06-01", end: "2027-06-01", type: snow, label: Snow make-up, conditional: true, note: "Off unless a school closure make-up day is needed." }
+      - { start: "2026-08-31", end: "2026-08-31", type: first, off: false, label: First day of school, grades: Grades 1-12 }
+      - { start: "2026-09-03", end: "2026-09-03", type: first, off: false, label: First day of school, grades: Kindergarten }
+      - { start: "2026-11-25", end: "2026-11-25", type: half, off: false, label: Half day }
+      - { start: "2027-01-26", end: "2027-01-26", type: half, off: false, label: Half day, grades: Elementary }
+      - { start: "2027-01-28", end: "2027-01-29", type: half, off: false, label: Half day, grades: Elementary }
+      - { start: "2027-06-16", end: "2027-06-16", type: last, off: false, label: "Half day, last day of school" }
   - id: bellevue
     title: Bellevue School District
     short: Bellevue
@@ -122,6 +150,10 @@ districts:
       - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
       - { start: "2027-06-01", end: "2027-06-01", type: snow, label: Snow make-up, conditional: true, note: "Off unless a make-up day is needed." }
       - { start: "2027-06-18", end: "2027-06-18", type: holiday, label: Juneteenth }
+      - { start: "2026-09-02", end: "2026-09-02", type: first, off: false, label: First day of school, grades: Grades 1-12 }
+      - { start: "2026-09-08", end: "2026-09-08", type: first, off: false, label: First day of school, grades: Kindergarten }
+      - { start: "2026-11-16", end: "2026-11-20", type: early, off: false, label: Early release, grades: Elementary }
+      - { start: "2027-06-23", end: "2027-06-23", type: last, off: false, label: Last day of school }
   - id: issaquah
     title: Issaquah School District
     short: Issaquah
@@ -143,6 +175,10 @@ districts:
       - { start: "2027-03-19", end: "2027-03-19", type: snow, label: Snow make-up, conditional: true, note: "Off unless this is the first weather make-up day." }
       - { start: "2027-04-12", end: "2027-04-16", type: break, label: Spring break }
       - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
+      - { start: "2026-08-27", end: "2026-08-27", type: first, off: false, label: First day of school }
+      - { start: "2026-09-01", end: "2026-09-01", type: first, off: false, label: First day of school, grades: Kindergarten }
+      - { start: "2026-11-04", end: "2026-11-05", type: early, off: false, label: "Elementary conferences. Check with the school.", grades: Elementary }
+      - { start: "2027-06-14", end: "2027-06-14", type: last, off: false, label: Last day of school }
   - id: snoqualmie-valley
     title: Snoqualmie Valley School District
     short: Snoqualmie
@@ -165,6 +201,13 @@ districts:
       - { start: "2027-02-15", end: "2027-02-19", type: break, label: Mid-winter break }
       - { start: "2027-04-12", end: "2027-04-16", type: break, label: Spring break }
       - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
+      - { start: "2026-08-26", end: "2026-08-26", type: first, off: false, label: First day of school, grades: Grades 1-12 }
+      - { start: "2026-08-31", end: "2026-08-31", type: first, off: false, label: First day of school, grades: Kindergarten }
+      - { start: "2026-11-20", end: "2026-11-20", type: half, off: false, label: Half day }
+      - { start: "2026-11-23", end: "2026-11-24", type: half, off: false, label: Half day, grades: Kindergarten through 5th grade }
+      - { start: "2026-11-25", end: "2026-11-25", type: half, off: false, label: Half day }
+      - { start: "2027-06-10", end: "2027-06-10", type: half, off: false, label: Half day }
+      - { start: "2027-06-11", end: "2027-06-11", type: last, off: false, label: "Half day, last day of school" }
   - id: mercer-island
     title: Mercer Island School District
     short: Mercer Island
@@ -191,3 +234,8 @@ districts:
       - { start: "2027-04-12", end: "2027-04-16", type: break, label: Spring break }
       - { start: "2027-05-28", end: "2027-05-28", type: snow, label: Snow make-up, conditional: true, note: "Scheduled weather make-up day. Off unless it is used." }
       - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
+      - { start: "2026-08-26", end: "2026-08-26", type: first, off: false, label: First day of school }
+      - { start: "2026-11-20", end: "2026-11-20", type: half, off: false, label: Half day, grades: Elementary }
+      - { start: "2026-11-25", end: "2026-11-25", type: half, off: false, label: Half day, grades: Middle and high school }
+      - { start: "2027-06-11", end: "2027-06-11", type: half, off: false, label: Half day, grades: Elementary }
+      - { start: "2027-06-17", end: "2027-06-17", type: last, off: false, label: "Half day, last day of school" }

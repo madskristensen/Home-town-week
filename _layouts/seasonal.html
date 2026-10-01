@@ -34,31 +34,23 @@ layout: default
   <div class="ns-filter">
     <label for="ns-district">District</label>
     <select id="ns-district" autocomplete="off">
-      <option value="">All districts</option>
       {%- for district in school.districts -%}
-      <option value="{{ district.slug }}">{{ district.short }}</option>
+      <option value="{{ district.slug }}"{% if district.slug == "lwsd" %} selected{% endif %}>{{ district.short }}</option>
       {%- endfor -%}
     </select>
+    <p class="ns-hint" id="ns-hint">Showing Lake Washington. Pick your district and we'll remember it.</p>
   </div>
   <script>
     (function () {
       var sel = document.getElementById("ns-district");
       if (!sel) return;
-      sel.value = document.documentElement.getAttribute("data-ns") || "";
+      sel.value = document.documentElement.getAttribute("data-ns") || "lwsd";
     })();
   </script>
-  <ul class="ns-legend">
-    {%- for district in school.districts -%}
-    <li><span class="ns-swatch" data-d="{{ district.slug }}" aria-hidden="true"></span> {{ district.abbr }} {{ district.short }}</li>
-    {%- endfor -%}
-  </ul>
-  <p class="ns-key"><span class="ns-sample is-off" aria-hidden="true"></span> All students <span class="ns-sample is-grade" aria-hidden="true"></span> Some grades <span class="ns-sample is-if" aria-hidden="true"></span> If needed</p>
-  <div class="ns-sub">
-    <p class="ns-sub-all">Each district's subscribe link is in the list below.</p>
-    <div class="ns-sub-one" id="ns-subscribe">
-      {%- assign ns_first = school.districts | first -%}
-      {%- include calendar-subscribe.html city=ns_first.id name=ns_first.feed_name path=ns_first.feed_path -%}
-    </div>
+  <p class="ns-key"><span class="ns-sample is-off" aria-hidden="true"></span> All students off <span class="ns-sample is-note" aria-hidden="true"></span> Some grades, or a first, last, or shortened day <span class="ns-sample is-if" aria-hidden="true"></span> Off if needed</p>
+  <div class="ns-sub" id="ns-subscribe">
+    {%- assign ns_default = school.districts | where: "slug", "lwsd" | first -%}
+    {%- include calendar-subscribe.html city=ns_default.id name=ns_default.feed_name path=ns_default.feed_path -%}
   </div>
   <script type="application/json" id="ns-feeds">
     [
@@ -90,7 +82,7 @@ layout: default
         var button = root.querySelector("[data-cal-copy]");
         if (button) button.setAttribute("data-cal-url", row.https);
       };
-      window.__nsApplyFeed(document.documentElement.getAttribute("data-ns") || "");
+      window.__nsApplyFeed(document.documentElement.getAttribute("data-ns") || "lwsd");
     })();
   </script>
   {%- if school_month_count == 0 -%}
@@ -113,24 +105,24 @@ layout: default
         {%- if cell.pad -%}
         <div class="ns-day is-pad" aria-hidden="true"></div>
         {%- else -%}
-        <div class="ns-day{% if cell.past %} is-past{% endif %}{% if cell.today %} is-today{% endif %}" aria-label="{{ cell.label }}">
+        <div class="ns-day{% if cell.past %} is-past{% endif %}{% if cell.today %} is-today{% endif %}">
           <span class="ns-num" aria-hidden="true">{{ cell.day }}</span>
-          {%- assign ns_mark_count = cell.marks | size -%}
-          {%- if ns_mark_count > 0 -%}
-          <span class="ns-marks">
-            {%- for mark in cell.marks -%}
-            <span class="ns-dot is-{{ mark.kind }}" data-d="{{ mark.slug }}" role="img" aria-label="{{ mark.short }}, {{ mark.text }}"></span>
-            {%- endfor -%}
-          </span>
           {%- for mark in cell.marks -%}
-          <span class="ns-one is-{{ mark.kind }}" data-d="{{ mark.slug }}">{{ mark.text }}</span>
+          <a class="ns-one is-{{ mark.kind }}" data-d="{{ mark.slug }}" href="#{{ mark.line }}" aria-label="{{ cell.label }}, {{ mark.text }}">{{ mark.text }}</a>
           {%- endfor -%}
-          {%- endif -%}
         </div>
         {%- endif -%}
         {%- endfor -%}
         {%- endfor -%}
       </div>
+      {%- assign ns_line_count = month.lines | size -%}
+      {%- if ns_line_count > 0 -%}
+      <ul class="ns-reasons">
+        {%- for line in month.lines -%}
+        <li class="ns-line" id="{{ line.id }}" data-d="{{ line.slug }}" tabindex="-1"><span class="ns-when">{{ line.when }}</span> {{ line.short }}. {{ line.reason }}</li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%}
     </section>
     {%- endfor -%}
   </div>
@@ -150,40 +142,33 @@ layout: default
         } catch (e) {}
       }
       function show(slug) {
-        if (known(slug)) {
-          document.documentElement.setAttribute("data-ns", slug);
-          sel.value = slug;
-          return slug;
-        }
-        document.documentElement.removeAttribute("data-ns");
-        sel.value = "";
-        return "";
+        if (!known(slug)) slug = "lwsd";
+        document.documentElement.setAttribute("data-ns", slug);
+        sel.value = slug;
+        return slug;
       }
-      function readSaved() {
-        try { return localStorage.getItem(key) || ""; } catch (e) { return ""; }
+      function markChosen() {
+        document.documentElement.setAttribute("data-ns-chosen", "");
       }
       function fromLocation() {
         var params = new URLSearchParams(location.search);
-        if (!params.has("district")) {
-          remember(show(""));
-          if (window.__nsApplyFeed) window.__nsApplyFeed("");
-          return;
-        }
-        var picked = params.get("district") || "";
-        if (picked === "all") picked = "";
-        if (picked && !known(picked)) {
-          show(readSaved());
-        } else {
+        var picked = params.has("district") ? (params.get("district") || "") : "";
+        if (known(picked)) {
           remember(show(picked));
+          markChosen();
+        } else {
+          try { localStorage.removeItem(key); } catch (e) {}
+          document.documentElement.removeAttribute("data-ns-chosen");
+          show("lwsd");
         }
-        if (window.__nsApplyFeed) window.__nsApplyFeed(document.documentElement.getAttribute("data-ns") || "");
+        if (window.__nsApplyFeed) window.__nsApplyFeed(document.documentElement.getAttribute("data-ns") || "lwsd");
       }
       sel.addEventListener("change", function () {
         var slug = show(sel.value);
         remember(slug);
+        markChosen();
         var url = new URL(location.href);
-        if (slug) url.searchParams.set("district", slug);
-        else url.searchParams.delete("district");
+        url.searchParams.set("district", slug);
         var next = url.pathname + url.search + url.hash;
         var now = location.pathname + location.search + location.hash;
         if (next !== now) history.pushState(null, "", url);

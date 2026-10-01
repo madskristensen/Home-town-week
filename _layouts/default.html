@@ -12,30 +12,28 @@
         {%- endfor -%}
       };
       var key = "no-school-district";
-      var slug = "";
+      var fallback = "lwsd";
+      var slug = fallback;
+      var chosen = false;
       var fromStorage = false;
       var params = null;
       try { params = new URLSearchParams(location.search); } catch (e) {}
-      if (params && params.has("district")) {
-        var picked = params.get("district") || "";
-        if (picked === "" || picked === "all") {
-          slug = "";
-          try { localStorage.removeItem(key); } catch (e) {}
-        } else if (ok[picked]) {
-          slug = picked;
-          try { localStorage.setItem(key, slug); } catch (e) {}
-        } else {
-          fromStorage = true;
-          try { slug = localStorage.getItem(key) || ""; } catch (e) { slug = ""; }
-          if (!ok[slug]) slug = "";
-        }
+      if (params && params.has("district") && ok[params.get("district")]) {
+        slug = params.get("district");
+        chosen = true;
+        try { localStorage.setItem(key, slug); } catch (e) {}
       } else {
-        fromStorage = true;
-        try { slug = localStorage.getItem(key) || ""; } catch (e) { slug = ""; }
-        if (!ok[slug]) slug = "";
+        var saved = "";
+        try { saved = localStorage.getItem(key) || ""; } catch (e) {}
+        if (ok[saved]) {
+          slug = saved;
+          chosen = true;
+          fromStorage = !(params && params.has("district") && params.get("district") === saved);
+        }
       }
-      if (slug) document.documentElement.setAttribute("data-ns", slug);
-      if (slug && fromStorage) {
+      document.documentElement.setAttribute("data-ns", slug);
+      if (chosen) document.documentElement.setAttribute("data-ns-chosen", "");
+      if (chosen && fromStorage) {
         try {
           var url = new URL(location.href);
           url.searchParams.set("district", slug);

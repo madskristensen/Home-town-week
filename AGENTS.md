@@ -107,15 +107,15 @@ Each row needs a name, city id, address, start, end, a date phrase in `when`, th
 
 `/no-school-days/` lists student no-school days for the eight Eastside districts in the 2026-27 year. The rows are `_data/no_school_days.yml`. Do not put them in a city events file. The spring break hub reads its April dates from the `break` rows in that file. Do not copy those dates back into `_data/seasonal_hubs.yml`.
 
-The page is month calendars from the current month through June, two across on a wide screen and one across on a phone. Each month is six weeks so the height does not change. A district `select` filters the days. `?district=` in the address wins and is saved. Otherwise the saved `no-school-district` value is used and written into the address. All districts clears it. The head script sets `data-ns` before paint. Each district needs `abbr`, `slug`, and a matching `html[data-ns]` rule in `_css/site.css`. Do not add event cards to this page.
+The page is month calendars from the current month through June, two across on a wide screen and one across on a phone. Each month is six weeks so the grid height does not change. The district `select` lists the eight districts and nothing else. With no `?district=` and nothing saved, the page shows Lake Washington and the line "Showing Lake Washington. Pick your district and we'll remember it." Choosing a district, or arriving with a saved one, hides that line. `?district=` wins and is saved. Otherwise a saved `no-school-district` value is used and written into the address. The head script sets `data-ns` before paint. The HTML also shows Lake Washington when that attribute is missing, so the first paint matches. Each district needs `slug` and a matching `html[data-ns]` rule in `_css/site.css`. Day cells use text and a neutral border: filled, outlined, or dashed. Do not add district colors. Do not add event cards to this page.
 
-The daily prune does not delete a day when it passes. The build hides a closure whose end is before today in America/Los_Angeles. Weekly early release, late start, and half days stay in the district `early` note. They are not calendar days.
+The daily prune does not delete a day when it passes. The build hides a row whose end is before today in America/Los_Angeles. Weekly early release and late start stay in the district `early` note. One-off early release, half days, and first and last days are rows with `off: false`.
 
 In late summer, load the next school year's calendars from each district's stable link. That is `stable` when it is set, and `source` when `source` is the resource-manager link. Replace that district's `days` and set `pdf` to the file name the link downloads. Run `python3 script/check-district-calendars.py`. It warns, and does not fail the build, when a stable link starts pointing at a new PDF.
 
 In January and February, check the same links for snow make-up changes. A day with `conditional: true` is off unless the district uses it as a make-up day. After the trigger date named in `note`, either drop `conditional` or delete the row, matching what the district posted.
 
-`type` is `holiday`, `teacher`, `conferences`, `break`, or `snow`. Set `grades` when the day is not for every student, for example `Grades 6-8 only` or `Elementary only`. Per-district feeds are `/calendar/no-school/{id}.ics`. Do not use `/calendar/{city}.ics` for these. That path is the city event feed.
+`type` is `holiday`, `teacher`, `conferences`, `break`, `snow`, `first`, `last`, `half`, or `early`. Set `grades` when the day is not for every student, for example `Grades 6-8 only` or `Elementary only`. Per-district feeds are `/calendar/no-school/{id}.ics`. Do not use `/calendar/{city}.ics` for these. That path is the city event feed.
 
 ## Dedupe
 
