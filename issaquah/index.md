@@ -87,6 +87,12 @@ The next downtown stroll, after Watercress comes down. Apple Pie Picnic, by Alic
 <p class="event-when">Sat Oct 10 · 9:00 a.m.–2:00 p.m.</p>
 <p class="event-place">Historic Shell Station, 232 Front St N</p>
 
+{% include event-photo.html
+   src="/assets/images/issaquah/shell-station.webp"
+   alt="The restored Historic Shell Station on Front Street in Issaquah, a white building with a red roof and vintage gas pumps."
+   credit="Photo: Steve Morgan, CC BY-SA 3.0"
+   source="https://commons.wikimedia.org/wiki/File:Restored_1940s_Shell_gas_station_in_Issaquah,_Washington,_in_2008.jpg" %}
+
 Downtown Issaquah Association's fall market, with Ayala Farms. Saturdays from Oct 10 through Dec 5, 9:00 a.m.–2:00 p.m., with live music 11:00 a.m.–1:00 p.m. This Saturday, then Oct 24.
 
 [Oct 10 listing](https://www.visitissaquahwa.com/event/fall-farm-fresh-market-2/2026-10-10/)
@@ -186,6 +192,12 @@ School-age kids read aloud to a certified therapy dog, with an adult. Free.
 ### Fall Farm Fresh Market
 <p class="event-when">Sat Oct 24 · 9:00 a.m.–2:00 p.m.</p>
 <p class="event-place">Historic Shell Station, 232 Front St N</p>
+
+{% include event-photo.html
+   src="/assets/images/issaquah/shell-station.webp"
+   alt="The restored Historic Shell Station on Front Street in Issaquah, a white building with a red roof and vintage gas pumps."
+   credit="Photo: Steve Morgan, CC BY-SA 3.0"
+   source="https://commons.wikimedia.org/wiki/File:Restored_1940s_Shell_gas_station_in_Issaquah,_Washington,_in_2008.jpg" %}
 
 9:00 a.m.–2:00 p.m., and the season continues through Dec 5. Live music is 11:00 a.m.–1:00 p.m.
 

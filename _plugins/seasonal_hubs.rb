@@ -741,12 +741,15 @@ module EastsideCalendar
       CGI.escapeHTML(text.to_s)
     end
 
-    # Own photo, then that venue, then a themed picture, then a licensed
-    # seasonal pool picture. A venue photo is the place itself, so every
-    # event there can use it. A theme file is used once on a page. A pool
-    # file is used once, then the least-used pool picture may repeat so
-    # the card stays a real photo. A designed card is not used. The city
-    # hero is not in this chain.
+    # Own photo, then that venue, then a themed picture, then a seasonal
+    # pool picture, then the year-round pool. Prefer a CC or public-domain
+    # photo of the event or the venue. When none exists, use the
+    # organizer's or venue's own photo (license: organizer), credited and
+    # linked. A venue photo is the place itself, so every event there can
+    # use it. A theme file is used once on a page. A pool file is used
+    # once, then the least-used pool picture may repeat so the card stays
+    # a real photo. A designed card is not used. The city hero is not in
+    # this chain.
     def attach_cards!(hub, site, pages, catalog, venues, groups, pools, hubs = nil)
       used = {}
       pool_uses = Hash.new(0)
@@ -1240,7 +1243,9 @@ module EastsideCalendar
       best_score >= 90 ? best : nil
     end
 
-    # CC0, CC BY, CC BY-SA, or public domain. A credit with no open license is not used.
+    # Credit, a source link, and either an open license or license "organizer".
+    # Open licenses are CC0, CC BY, CC BY-SA, and public domain. An organizer
+    # or venue photo with no open license still runs, credited and linked.
     def licensed_photo(photo)
       return nil unless photo.is_a?(Hash)
 
@@ -1248,10 +1253,13 @@ module EastsideCalendar
       credit = photo["credit"].to_s.strip
       source = photo["source"].to_s.strip
       license = photo["license"].to_s.strip
-      return nil if src.empty?
-      return nil if credit.empty? && source.empty?
+      return nil if src.empty? || credit.empty?
       return nil unless src.start_with?("/")
-      return nil unless "#{credit} #{license}".match?(/\b(?:CC0|CC\s*BY(?:-SA)?|public domain)\b/i)
+      return nil unless source.match?(%r{\Ahttps?://}i)
+
+      open_license = "#{credit} #{license}".match?(/\b(?:CC0|CC\s*BY(?:-SA)?|public domain)\b/i)
+      organizer = license.match?(/\borganizer\b/i)
+      return nil unless open_license || organizer
 
       photo.merge("src" => src, "credit" => credit, "source" => source, "license" => license)
     end
@@ -1265,7 +1273,8 @@ module EastsideCalendar
         "src" => liquid_arg(args, "src"),
         "alt" => liquid_arg(args, "alt"),
         "credit" => liquid_arg(args, "credit"),
-        "source" => liquid_arg(args, "source")
+        "source" => liquid_arg(args, "source"),
+        "license" => liquid_arg(args, "license")
       }
     end
 

@@ -11,6 +11,13 @@ hook: The Wednesday market closes the season. Saturday is a free harvest festiva
 <p class="event-when">Wed Sep 30 · 3:00–7:00 p.m.</p>
 <p class="event-place">Marina Park, 25 Lakeshore Plaza</p>
 
+{% include event-photo.html
+   src="/assets/images/kirkland/marina-fall.webp"
+   alt="Marina Park in fall, with yellow and orange trees along the shore of Lake Washington and the Seattle skyline across the water."
+   credit="Photo: City of Kirkland"
+   source="https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/PCS-Photo-Galleries/Marina-Park-Photo-Gallery"
+   license="organizer" %}
+
 Last day of the 2026 season. Every Wednesday from June 3 through September 30, 3:00–7:00 p.m.  
 [Kirkland Wednesday Market](https://kirklanddowntown.org/events/kirkland-market/)
 
@@ -18,6 +25,13 @@ Last day of the 2026 season. Every Wednesday from June 3 through September 30, 3
 ### Beats Beyond Boundaries
 <p class="event-when">Wed Sep 30 · 5:30–6:15 p.m.</p>
 <p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
+
+{% include event-photo.html
+   src="/assets/images/kirkland/kirkland-library.webp"
+   alt="Kirkland Library, a modern building with a glass and wood front and a covered entry."
+   credit="Photo: King County Library System."
+   source="https://kcls.org/locations/kirkland/"
+   license="organizer" %}
 
 Music with therapist Elizabeth VanSant for neurodivergent kids and their families. Ages 6–10 with an adult. All abilities welcome. No registration. Sponsored by Friends of the Library, Kirkland.  
 [KCLS event](https://kcls.bibliocommons.com/v2/events/6940ba637ed7c62f00aaa719)
@@ -80,6 +94,13 @@ Full-length ballet with light design and illuminated costumes. Better for older 
 ### Sensory Dough: Monster Makers
 <p class="event-when">Mon Oct 5 · 4:15–5:30 p.m.</p>
 <p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
+
+{% include event-photo.html
+   src="/assets/images/kirkland/kirkland-library.webp"
+   alt="Kirkland Library, a modern building with a glass and wood front and a covered entry."
+   credit="Photo: King County Library System."
+   source="https://kcls.org/locations/kirkland/"
+   license="organizer" %}
 
 Drop-in playdough and natural materials, for not-so-scary monsters. A relaxed room for sensory-seeking and neurodivergent kids and their adults. Friends of the Library, Kirkland, sponsors it. Monday hours are 10:00 a.m.–6:00 p.m.
 
@@ -155,6 +176,13 @@ A drop-in afternoon for middle and high school students. Games, crafts, homework
 <p class="event-when">Wed Oct 14 · 2:30–4:00 p.m.</p>
 <p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
 
+{% include event-photo.html
+   src="/assets/images/kirkland/kirkland-library.webp"
+   alt="Kirkland Library, a modern building with a glass and wood front and a covered entry."
+   credit="Photo: King County Library System."
+   source="https://kcls.org/locations/kirkland/"
+   license="organizer" %}
+
 Games, crafts, homework, music, and reading for tweens and teens. The library hosts it once a month on a Wednesday. Wednesday hours are noon–8:00 p.m.
 
 [Kirkland Library events](https://kcls.bibliocommons.com/v2/events?locations=1518)
@@ -210,6 +238,13 @@ An all-ages STEM stop presented by three local Girl Scouts. The short listing as
 ### Spooky Clay Creations
 <p class="event-when">Wed Oct 21 · 3:30–5:00 p.m.</p>
 <p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
+
+{% include event-photo.html
+   src="/assets/images/kirkland/kirkland-library.webp"
+   alt="Kirkland Library, a modern building with a glass and wood front and a covered entry."
+   credit="Photo: King County Library System."
+   source="https://kcls.org/locations/kirkland/"
+   license="organizer" %}
 
 Polymer clay and clay tools. Creations go home, with instructions for hardening them in an oven. Ages 8–12. Registration is required. Registration opens Oct 11 at midnight, with 40 seats. Friends of the Library, Kirkland, sponsors it. Wednesday the library is open noon–8:00 p.m.
 

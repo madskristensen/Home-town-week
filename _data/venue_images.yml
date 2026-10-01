@@ -1,7 +1,10 @@
-# A licensed photo of one specific place. Used when an event has no photo
-# of its own and its name or place contains a key. Once per page. Not a
-# city hero, and not a generic community center. A community-center event
-# takes a theme picture (a haunted house, a jack-o-lantern) instead.
+# A photo of one specific place. Used when an event has no photo of its
+# own and its name or place contains a key. The longest key wins. Prefer
+# CC0, CC BY, CC BY-SA, or public domain. When no licensed photo exists,
+# use the venue's own photo with license: organizer, a credit, and a
+# source link. Not a city hero, and not a generic community center. A
+# community-center event with no photo of that building takes a theme
+# picture instead.
 venues:
   - keys: ["kelsey creek"]
     image: /assets/images/bellevue/kelsey-creek.webp
@@ -196,7 +199,7 @@ venues:
     credit: "Photo: USFWS/Southeast, CC BY-SA 2.0"
     license: CC BY-SA 2.0
     source: https://commons.wikimedia.org/wiki/File:Red_wolf_at_Point_Defiance_Zoo_and_Aquarium.jpg
-  - keys: ["halloween at cougar mountain zoo"]
+  - keys: ["halloween at cougar mountain zoo", "cougar mountain zoo"]
     image: /assets/images/worth-the-drive/cougar-mountain-zoo.jpg
     alt: A tiger resting in an enclosure at Cougar Mountain Zoo.
     credit: "Photo: Ronincmc, CC BY-SA 4.0"
@@ -364,3 +367,123 @@ venues:
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     license: CC BY-SA 3.0
     source: https://commons.wikimedia.org/wiki/File:Fall_City,_WA_-_library_01.jpg
+  - keys: ["issaquah library"]
+    image: /assets/images/issaquah/issaquah-library.webp
+    alt: Issaquah Library, a low building with a broad glass front and a covered walkway.
+    credit: "Photo: King County Library System."
+    license: organizer
+    source: https://kcls.org/locations/issaquah/
+  - keys: ["historic shell station", "fall farm fresh"]
+    image: /assets/images/issaquah/shell-station.webp
+    alt: The restored Historic Shell Station on Front Street in Issaquah, a white building with a red roof and vintage gas pumps.
+    credit: "Photo: Steve Morgan, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Restored_1940s_Shell_gas_station_in_Issaquah,_Washington,_in_2008.jpg
+  - keys: ["kirkland library"]
+    image: /assets/images/kirkland/kirkland-library.webp
+    alt: Kirkland Library, a modern building with a glass and wood front and a covered entry.
+    credit: "Photo: King County Library System."
+    license: organizer
+    source: https://kcls.org/locations/kirkland/
+  - keys: ["marina park"]
+    image: /assets/images/kirkland/marina-fall.webp
+    alt: Marina Park in fall, with yellow and orange trees along the shore of Lake Washington and the Seattle skyline across the water.
+    credit: "Photo: City of Kirkland"
+    license: organizer
+    source: https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/PCS-Photo-Galleries/Marina-Park-Photo-Gallery
+  - keys: ["kingsgate library"]
+    image: /assets/images/kirkland/kingsgate-library.webp
+    alt: The entrance of Kingsgate Library, with the library sign beside the doors.
+    credit: "Photo: King County Library System."
+    license: organizer
+    source: https://kcls.org/locations/kingsgate/
+  - keys: ["redmond library"]
+    image: /assets/images/redmond/redmond-library.webp
+    alt: Redmond Library, a modern building with a glass front and a covered walkway.
+    credit: "Photo: King County Library System."
+    license: organizer
+    source: https://kcls.org/locations/redmond/
+  - keys: ["marymoor village"]
+    image: /assets/images/redmond/marymoor-center.webp
+    alt: Front of the Redmond Community Center at Marymoor Village, a low building with a covered entrance and young trees.
+    credit: "Photo: City of Redmond"
+    license: organizer
+    source: https://www.redmond.gov/ImageRepository/Document?documentID=40382
+  - keys: ["redmond senior"]
+    image: /assets/images/redmond/senior-center.webp
+    alt: The east entry of the Redmond Senior and Community Center, beside a bright geometric art wall.
+    credit: "Photo: City of Redmond"
+    license: organizer
+    source: https://www.redmond.gov/ImageRepository/Document?documentID=24797
+  - keys: ["redmond saturday market"]
+    image: /assets/images/redmond/saturday-market.webp
+    alt: White vendor tents along a tree-lined path at Redmond Saturday Market.
+    credit: "Photo: Redmond Saturday Market."
+    license: organizer
+    source: http://www.redmondsaturdaymarket.org/
+  - keys: ["carnation library"]
+    image: /assets/images/carnation/carnation-library.webp
+    alt: Carnation Library, a small building with a covered entry and a sign by the walk.
+    credit: "Photo: King County Library System."
+    license: organizer
+    source: https://kcls.org/locations/carnation/
+  - keys: ["kenmore library"]
+    image: /assets/images/kenmore/kenmore-library.webp
+    alt: Kenmore Library, a low building with a covered walkway and autumn trees in front.
+    credit: "Photo: King County Library System."
+    license: organizer
+    source: https://kcls.org/locations/kenmore/
+  - keys: ["woodinville library"]
+    image: /assets/images/woodinville/woodinville-library.webp
+    alt: Woodinville Library, a low building with a broad glass front and a covered walkway.
+    credit: "Photo: King County Library System."
+    license: organizer
+    source: https://kcls.org/locations/woodinville/
+  - keys: ["issaquah depot"]
+    image: /assets/images/issaquah/issaquah-depot.webp
+    alt: The historic Issaquah Depot, a wooden train station with a gabled roof and a platform.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Issaquah_Depot_02.jpg
+  - keys: ["hunt family theatre", "hunt family theater"]
+    image: /assets/images/issaquah/village-first-stage.webp
+    alt: Village Theatre First Stage in Issaquah, with the theatre marquee over the entrance.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Issaquah,_WA_%E2%80%94_Village_Theatre_First_Stage_(2022-04-06).jpg
+  - keys: ["inglemoor"]
+    image: /assets/images/kenmore/inglemoor-pac.webp
+    alt: Inglemoor High School Performing Arts Center, a brick and glass building.
+    credit: "Photo: HistoryTheorist, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Inglemoor_High_School_Performing_Arts_Center.png
+  - keys: ["mount si high", "mt. si high", "mt si high"]
+    image: /assets/images/snoqualmie/mount-si-high.webp
+    alt: Mount Si High School, a long school building with mountains behind it.
+    credit: "Photo: Smartpoints, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Mt_Si_High_School_4-2-2011.jpg
+  - keys: ["redmond high school"]
+    image: /assets/images/redmond/redmond-high-school.webp
+    alt: Redmond High School in spring, with cherry trees in front of the building.
+    credit: "Photo: Sxchen1110, CC BY 4.0"
+    license: CC BY 4.0
+    source: https://commons.wikimedia.org/wiki/File:Redmond_High_School_Cherry_Blossoms_in_Spring_2026.jpg
+  - keys: ["si view"]
+    image: /assets/images/north-bend/si-view.webp
+    alt: The Si View Park lodge in North Bend, a timber building with Mount Si behind it.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:North_Bend,_WA_-_Si_View_Park_02.jpg
+  - keys: ["oxbow"]
+    image: /assets/images/carnation/oxbow-barn.webp
+    alt: The barn at Oxbow Farm and Conservation Center, seen from above, with fields around it.
+    credit: "Photo: Oxbow Farm & Conservation Center"
+    license: organizer
+    source: https://www.oxbow.org/
+  - keys: ["fall city farms"]
+    image: /assets/images/snoqualmie/fall-city-farms.webp
+    alt: A green tractor in a field at Fall City Farms, with trees along the edge.
+    credit: "Photo: Fall City Farms"
+    license: organizer
+    source: https://fallcityfarms.com/

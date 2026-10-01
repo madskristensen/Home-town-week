@@ -46,9 +46,11 @@ Drop-off is only when the child stays and the adult leaves. Camps are not drop-o
 
 ## Photos
 
-Order for a hub card: the event's own photo, then a photo of that venue, then a themed picture, then the seasonal pool, then the year-round pool in `_data/hub_pools.yml`. A grid card with no image fails the build. Do not use a designed card.
+Order for a hub card: the event's own photo (the organizer page, og:image, or flyer), then a photo of that specific venue, then a themed picture, then the seasonal pool, then the year-round pool in `_data/hub_pools.yml`. A grid card with no image fails the build. Do not use a designed card.
 
-Every photo needs a credit and an open license: CC0, CC BY, CC BY-SA, or public domain. If a license cannot be established, remove the photo and let the chain fall back. No recognizable kids or teens. A venue key must name that place. "crossroads" is the mall (`crossroads mall`, `crossroads bellevue`), not Crossroads Community Center. The longest key wins.
+Always look for the event's own photo or the venue's own photo before a theme or pool picture. Prefer CC0, CC BY, CC BY-SA, or public domain when one exists. If no licensed photo exists, use the organizer's or venue's own photo anyway. Credit it as `Photo: <organizer or site name>`, link the source page, and set `license: organizer` (on the venue row, or `license="organizer"` on the event-photo include). A photo with a credit and a source link passes when it has an open license or that organizer marker. Do not drop an organizer photo only because it is unlicensed.
+
+No recognizable kids or teens. Removed on request. A venue key must name that place. "crossroads" is the mall (`crossroads mall`, `crossroads bellevue`), not Crossroads Community Center. The longest key wins.
 
 ## What the daily prune does
 
