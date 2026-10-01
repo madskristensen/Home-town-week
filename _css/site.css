@@ -393,18 +393,18 @@ picture {
 }
 
 .cities-menu .cities-panel nav + nav {
-  margin-top: 0.28rem;
-  padding-top: 0.28rem;
-  border-top: 1px solid var(--rule);
+  margin-top: 0.55rem;
 }
 
 .cities-menu .menu-label {
-  margin: 0.15rem 0.45rem 0.05rem;
-  color: var(--muted);
+  margin: 0.35rem 0.45rem 0.32rem;
+  padding: 0 0 0.28rem;
+  border-bottom: 1px solid var(--gold);
+  color: var(--gold);
   font-family: var(--sans);
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.14em;
   line-height: 1.2;
   text-transform: uppercase;
 }
