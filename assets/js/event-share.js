@@ -260,7 +260,10 @@
   }
 
   function shareSheetMessage(attrs) {
-    return joinLines(shareLines(attrs, false));
+    var lines = shareLines(attrs, false);
+    var source = sourceUrl(attrs.url);
+    if (source) lines.push(source);
+    return joinLines(lines);
   }
 
   function escapeHtml(value) {
@@ -386,12 +389,8 @@
     var attrs = attrsFrom(button);
     var plain = shareMessage(attrs);
     var html = shareHtml(attrs);
-    var title = clean(attrs.title);
-    var source = sourceUrl(attrs.url);
     if (navigator.share) {
-      var payload = { title: title, text: shareSheetMessage(attrs) };
-      if (source) payload.url = source;
-      navigator.share(payload).catch(function (error) {
+      navigator.share({ title: clean(attrs.title), text: shareSheetMessage(attrs) }).catch(function (error) {
         if (error && error.name === "AbortError") return;
         copyAndConfirm(button, plain, html);
       });
