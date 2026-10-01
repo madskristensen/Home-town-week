@@ -1,16 +1,4 @@
 <link rel="stylesheet" href="{{ site.data.css.site | relative_url }}">
-{%- if page.layout == "home" -%}
-<link rel="stylesheet" href="{{ site.data.css.home | relative_url }}">
-{%- endif -%}
-{%- if page.layout == "city" -%}
-<link rel="stylesheet" href="{{ site.data.css.city | relative_url }}">
-{%- endif -%}
-{%- if page.layout == "seasonal" or page.layout == "guide" -%}
-<link rel="stylesheet" href="{{ site.data.css.seasonal | relative_url }}">
-{%- endif -%}
-{%- if page.layout == "guide" or page.url contains "/guides/" -%}
-<link rel="stylesheet" href="{{ site.data.css.guide | relative_url }}">
-{%- endif -%}
 {%- assign css_lights = false -%}
 {%- if page.home_lights or page.hub_id == "christmas" or page.hub_id == "fall" or page.guide_id == "playgrounds" -%}
 {%- assign css_lights = true -%}
@@ -19,7 +7,15 @@
 {%- if page.layout == "home" and css_season == "/christmas/" -%}
 {%- assign css_lights = true -%}
 {%- endif -%}
-{%- if css_lights -%}
-<link rel="stylesheet" href="{{ site.data.css.lights | relative_url }}">
+{%- capture layout_css -%}
+{%- if page.layout == "home" -%}{{ site.data.css_inline.home }}{%- endif -%}
+{%- if page.layout == "city" -%}{{ site.data.css_inline.city }}{%- endif -%}
+{%- if page.layout == "seasonal" or page.layout == "guide" -%}{{ site.data.css_inline.seasonal }}{%- endif -%}
+{%- if page.layout == "guide" or page.url contains "/guides/" -%}{{ site.data.css_inline.guide }}{%- endif -%}
+{%- if css_lights -%}{{ site.data.css_inline.lights }}{%- endif -%}
+{%- endcapture -%}
+{%- assign layout_css = layout_css | strip -%}
+{%- if layout_css.size > 0 -%}
+<style>{{ layout_css }}</style>
 {%- endif -%}
 <link rel="stylesheet" href="{{ site.data.css.print | relative_url }}" media="print">

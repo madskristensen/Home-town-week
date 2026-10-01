@@ -6,7 +6,7 @@ A content change adds one source image and a path. This step writes the
 widths next to that file, and _data/image_variants.yml so the picture
 helper can list only files that exist.
 
-Widths are 400, 800, 1200, and 1600, and never wider than the source.
+Widths are 400, 640, 800, 1200, and 1600, and never wider than the source.
 Outputs live in .image-cache so Actions can restore them. Unchanged
 sources are copied, not encoded again. A source that fails to encode is
 left out of the manifest. The helper then uses the original file, and
@@ -19,7 +19,7 @@ import os
 import shutil
 import sys
 
-WIDTHS = (400, 800, 1200, 1600)
+WIDTHS = (400, 640, 800, 1200, 1600)
 IMAGE_ROOT = os.path.join("assets", "images")
 CACHE_ROOT = ".image-cache"
 CACHE_OUT = os.path.join(CACHE_ROOT, "out")
@@ -62,7 +62,10 @@ def file_sha256(path):
 
 
 def fingerprint():
-    lines = []
+    lines = [
+        "widths %s avif %s webp %s jpeg %s"
+        % (",".join(str(width) for width in WIDTHS), AVIF_QUALITY, WEBP_QUALITY, JPEG_QUALITY)
+    ]
     for path in source_files():
         rel = path.replace(os.sep, "/")
         lines.append("%s %s" % (rel, file_sha256(path)))
@@ -83,7 +86,12 @@ def variant_name(stem, width, ext):
     return "%s-%d%s" % (stem, width, ext)
 
 
-def cached_record(path):
+def read_record(path):
+    """Return a hash-matched cache record whose listed files are on disk.
+
+    A new width can be missing. Callers that need every width use
+    cached_record.
+    """
     key = rel_key(path)
     meta = meta_path(key)
     if not os.path.exists(meta):
@@ -95,13 +103,30 @@ def cached_record(path):
         return None
     if record.get("hash") != file_sha256(path):
         return None
+    stem = os.path.splitext(os.path.basename(path))[0]
+    folder = os.path.dirname(path)
     for fmt, ext in (("avif", ".avif"), ("webp", ".webp"), ("jpeg", ".jpg")):
-        stem = os.path.splitext(os.path.basename(path))[0]
-        folder = os.path.dirname(path)
         for width in record.get(fmt) or []:
             cached = os.path.join(CACHE_OUT, folder, variant_name(stem, width, ext))
             if not os.path.exists(cached):
                 return None
+    return record
+
+
+def widths_complete(record):
+    src_w = int(record.get("width") or 0)
+    expected = [width for width in WIDTHS if width <= src_w]
+    for fmt in ("avif", "webp", "jpeg"):
+        got = [int(width) for width in (record.get(fmt) or [])]
+        if got != expected:
+            return False
+    return True
+
+
+def cached_record(path):
+    record = read_record(path)
+    if not record or not widths_complete(record):
+        return None
     return record
 
 
@@ -200,14 +225,20 @@ def encode(path):
         return None
     src_w, src_h = image.size
     widths = [width for width in WIDTHS if width <= src_w]
-    record = {
-        "hash": file_sha256(path),
-        "width": src_w,
-        "height": src_h,
-        "avif": [],
-        "webp": [],
-        "jpeg": [],
-    }
+    prior = read_record(path)
+    if prior:
+        record = prior
+        record["width"] = src_w
+        record["height"] = src_h
+    else:
+        record = {
+            "hash": file_sha256(path),
+            "width": src_w,
+            "height": src_h,
+            "avif": [],
+            "webp": [],
+            "jpeg": [],
+        }
     if not widths:
         print("  %s is %dpx, narrower than 400. Original only." % (path, src_w))
         return None
@@ -220,25 +251,32 @@ def encode(path):
     for width in widths:
         height = max(1, round(src_h * width / src_w))
         frames[width] = image.resize((width, height), resample) if width != src_w else image
-    for width in widths:
-        frame = frames[width]
-        for kind, ext, field in (
-            ("avif", ".avif", "avif"),
-            ("webp", ".webp", "webp"),
-            ("jpeg", ".jpg", "jpeg"),
-        ):
+    for kind, ext, field in (
+        ("avif", ".avif", "avif"),
+        ("webp", ".webp", "webp"),
+        ("jpeg", ".jpg", "jpeg"),
+    ):
+        have = set(int(width) for width in (record.get(field) or []))
+        built = []
+        for width in widths:
             name = variant_name(stem, width, ext)
             cached = os.path.join(CACHE_OUT, folder, name)
             dest = os.path.join(folder, name)
+            if width in have and os.path.exists(cached):
+                os.makedirs(folder, exist_ok=True)
+                shutil.copy2(cached, dest)
+                built.append(width)
+                continue
             try:
-                save_variant(frame, cached, kind)
+                save_variant(frames[width], cached, kind)
                 os.makedirs(folder, exist_ok=True)
                 shutil.copy2(cached, dest)
             except Exception as exc:
                 print("  skip %s: %s" % (name, exc))
                 continue
-            record[field].append(width)
+            built.append(width)
             print("  %s (%dK)" % (os.path.join(folder, name), os.path.getsize(dest) // 1024))
+        record[field] = built
     if not (record["avif"] or record["webp"] or record["jpeg"]):
         return None
     jpeg_widths = record["jpeg"]

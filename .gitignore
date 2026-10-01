@@ -20,7 +20,11 @@ _data/build.yml
 # Fingerprinted stylesheets written by script/fingerprint-css.py.
 /assets/css/*.css
 /_data/css.yml
+/_data/css_inline.json
 assets/images/**/*-400.avif
+assets/images/**/*-640.avif
+assets/images/**/*-640.webp
+assets/images/**/*-640.jpg
 assets/images/**/*-400.webp
 assets/images/**/*-400.jpg
 assets/images/**/*-800.avif

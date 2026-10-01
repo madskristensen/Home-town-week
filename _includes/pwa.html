@@ -22,10 +22,14 @@
 
   window.addEventListener("load", registerServiceWorker);
 
-  // Run after the browser's own layout. A parser script here forced a
-  // reflow of the map, and refetching this page after the worker claimed
-  // added an empty follow-up request for the same document.
-  requestAnimationFrame(function () {
+  // DOM work waits for an idle turn, and each chunk is its own turn, so
+  // the module script does not spend a long task on first paint. A parser
+  // script here once forced a reflow of the map.
+  function onIdle(fn) {
+    if (window.requestIdleCallback) requestIdleCallback(fn, { timeout: 1500 });
+    else setTimeout(fn, 1);
+  }
+
   function pacificDay() {
     try {
       var parts = new Intl.DateTimeFormat("en-US", {
@@ -126,8 +130,9 @@
     }
   }
 
-  regroupEvents();
+  onIdle(regroupEvents);
 
+  onIdle(function () {
   // Chips are in the first HTML. A tap hides cards. Nothing moves on load.
   // Within ages or setting, checked chips OR. Across groups they AND.
   // A price is text on the card, not a chip. Free is the cost chip.
@@ -215,7 +220,9 @@
   for (var filterIndex = 0; filterIndex < filterBoxes.length; filterIndex++) {
     filterBoxes[filterIndex].addEventListener("change", applyFilters);
   }
+  });
 
+  onIdle(function () {
   var installLink = document.getElementById("install-link");
 
   function isIOS() {
@@ -283,7 +290,6 @@
       hideInstallLink();
     });
   }
-
   });
 })();
 </script>
