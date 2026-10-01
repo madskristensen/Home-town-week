@@ -625,3 +625,21 @@ venues:
     credit: "Photo: City of Issaquah"
     license: organizer
     source: https://historylink.tours/stop/confluence-park/
+  - keys: ["north creek high school"]
+    image: /assets/images/bothell/north-creek-high-school.webp
+    alt: North Creek High School in Bothell, a modern building with a covered walkway and a glass entry.
+    credit: "Photo: North Creek High School"
+    license: organizer
+    source: https://northcreek.nsd.org/
+  - keys: ["hilton garden inn"]
+    image: /assets/images/redmond/hilton-garden-inn.webp
+    alt: Hilton Garden Inn in Redmond, a multi-story hotel with a covered entrance along the street.
+    credit: "Photo: Hilton Garden Inn"
+    license: organizer
+    source: https://www.hilton.com/en/hotels/lkegigi-hilton-garden-inn-redmond-seattle/
+  - keys: ["pine lake community"]
+    image: /assets/images/sammamish/pine-lake-community-club.webp
+    alt: The log cabin entrance of Pine Lake Community Club in Sammamish, with a covered porch and a stone chimney.
+    credit: "Photo: Pine Lake Community Club"
+    license: organizer
+    source: https://www.pinelakecommunityclub.com/

@@ -322,6 +322,29 @@ Open building with the library's bricks. Stay for the whole session or stop in f
 
 [LEGO Block Party](https://kcls.bibliocommons.com/events/6a91f39069166f088b95a921)
 
+### Diwali Sangam
+<p class="event-when">Sat Oct 17 · 2:00–5:00 p.m.</p>
+<p class="event-place">Yuan Ru Art Gallery, 12737 NE Bel Red Rd</p>
+
+{% include event-photo.html
+   src="/assets/images/bellevue/diwali-sangam.webp"
+   alt="A poster for Diwali Sangam with a lit diya and two women in traditional dress."
+   credit="Image: Atelier By Priyanka"
+   source="https://www.eventbrite.com/e/diwali-celebration-tickets-2001421461468"
+   license="organizer" %}
+
+A ticketed Festival of Lights afternoon at Yuan Ru Art Gallery. The ticket includes the gallery, Indian stories, a handmade Diwali decoration, and dance and music. Tickets are $14.98 to $37.34.
+
+[Diwali Sangam](https://www.eventbrite.com/e/diwali-celebration-tickets-2001421461468)
+
+### Diwali Jharokha Workshop
+<p class="event-when">Sun Oct 18 · 1:00–3:00 p.m.</p>
+<p class="event-place">Crossroads Community Center, 16000 NE 10th St</p>
+
+Decorate a wooden candle holder shaped like a traditional Indian jharokha window, for Diwali. All ages, and children need an adult with them. Free. Registration is encouraged, not required. Deepti Designs hosts it.
+
+[Diwali Jharokha Workshop](https://kcls.bibliocommons.com/events/6a46e2a7c52cdc3600ee781b)
+
 ### Kids in the Garden: Owls
 <p class="event-when">Wed Oct 21 · 10:00–11:30 a.m.</p>
 <p class="event-place">Bellevue Botanical Garden, 12001 Main St</p>

@@ -130,3 +130,11 @@ A haunted walk, a bounce house, and carnival games. The Y describes these branch
 A free city party. There is a scavenger hunt with a prize, an animal encounter, and trick-or-treat at city booths and trunks, with allergy-friendly candy at every other stop. The library hosts a craft inside. Food vendors include The Cheese Pit. Costumes are welcome.
 
 [Pumpkins on the Plaza](https://www.sammamish.us/news/events/events/pumpkins-on-the-plaza/2026-pumpkins-on-the-plaza/)
+
+### Sammamish Diwali Bazaar
+<p class="event-when">Sun Nov 1 · 2:30–8:00 p.m.</p>
+<p class="event-place">Pine Lake Community Club, 21333 SE 20th St</p>
+
+A free all-ages bazaar of Diwali clothes, jewelry, and festival goods. Free parking. Get a free ticket.
+
+[Sammamish Diwali Bazaar](https://www.eventbrite.com/e/sammamish-diwali-bazaar-2026-tickets-1993428198403)

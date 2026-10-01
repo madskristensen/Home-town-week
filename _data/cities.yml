@@ -51,6 +51,10 @@
 # America/Los_Angeles. The first Friday of the month maintains this list
 # only (find a new URL or drop a stale one) and does not rewrite event
 # copy. A seed run may do both once. After that, keep the split.
+# Cultural holidays (Diwali, Lunar New Year, Día de los Muertos, Hanukkah,
+# Eid) need a targeted search about six weeks before the date. City calendars
+# and library feeds often miss them. Search this list, KCLS events for
+# Diwali and rangoli, and the temple and association pages below.
 - id: bellevue
   name: Bellevue
   state: wa
@@ -156,6 +160,10 @@
       url: "https://www.theatre33wa.org/our-productions"
       type: theater
       notes: "Multilingual theatre at 13243 NE 20th St. Little-kid shows are at Studio33, 13259 NE 20th St. Keep Little Red Hen, Under the Mushroom, Alice's Magical Adventure, and Seussical Jr. Skip adult plays such as A Picasso, Vassa, and 4.48 Psychosis."
+    - name: "Bellevue Hindu Temple"
+      url: "https://bellevuehindutemple.com/"
+      type: venue
+      notes: "Public festival days. Search for Diwali about six weeks out."
     - name: "AllEvents Bellevue"
       url: "https://allevents.in/bellevue"
       type: allevents
@@ -212,6 +220,14 @@
       url: "https://www.bothellwa.gov/1047/Signature-Events"
       type: parks
       notes: "Parks family events on Main Street."
+    - name: "Washington Indian Association"
+      url: "https://www.waia4us.org/"
+      type: venue
+      notes: "Annual Diwali Mela and other public family festivals. Search about six weeks before Diwali. Skip matrimonial meets."
+    - name: "Hindu Temple and Cultural Center"
+      url: "https://htccwa.org/"
+      type: venue
+      notes: "Bothell temple at 3818 212th St SE. Check for public Diwali and other festival days about six weeks out."
     - name: "AllEvents Bothell"
       url: "https://allevents.in/bothell"
       type: allevents
@@ -727,6 +743,10 @@
       url: "https://experienceredmond.com/redmond-events/"
       type: downtown
       notes: "Downtown and community events."
+    - name: "Redmond Hindu Temple and Cultural Center"
+      url: "https://redmondhindutempleandculturalcenter.org/"
+      type: venue
+      notes: "Public festival days. Search for Diwali about six weeks out."
     - name: "AllEvents Redmond"
       url: "https://allevents.in/redmond"
       type: allevents
@@ -841,6 +861,10 @@
       url: "https://www.sammamishfarmersmarket.org/"
       type: market
       notes: "Wednesday market at Sammamish Commons."
+    - name: "Vedic Cultural Center"
+      url: "https://www.vedicculturalcenter.org/"
+      type: venue
+      notes: "Sammamish temple at 1420 228th Ave SE. Search for public Diwali events about six weeks out."
     - name: "AllEvents Sammamish"
       url: "https://allevents.in/sammamish"
       type: allevents

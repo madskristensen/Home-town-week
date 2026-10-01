@@ -279,6 +279,7 @@ hubs:
         title: Diwali lights and festivals
         intro: Lights, dances, and family festivals.
         tags: [diwali]
+        keywords: [diwali]
     theme:
       background: "#f8ecd9"
       ink: "#1a2822"

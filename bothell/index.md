@@ -107,6 +107,14 @@ A collaborative storytelling game for middle school grades 6–8, funded by a Ci
 
 [Glorydays](https://kcls.bibliocommons.com/events/6a5538311006a63d00221d2a)
 
+### WAIA Diwali Mela
+<p class="event-when">Sat Oct 24 · 3:00–9:00 p.m.</p>
+<p class="event-place">North Creek High School Commons, 3613 191st Pl SE</p>
+
+A free evening of food, shopping, music, and performances from the Washington Indian Association. Registration is required. The night includes dance, henna, and activities for kids.
+
+[WAIA Diwali Mela](https://www.waia4us.org/) · [Register](https://form.jotform.com/262146931720151)
+
 ### Northshore Y Fall Family Festival
 <p class="event-when">Sat Oct 24 · 5:30–8:00 p.m.</p>
 <p class="event-place">Northshore YMCA, 11811 NE 195th St</p>
@@ -114,6 +122,14 @@ A collaborative storytelling game for middle school grades 6–8, funded by a Ci
 Carnival games, trunk-or-treat from decorated cars, and a bounce house. The Y describes these branch festivals as free and open to the community, and it asks adults not to wear masks. Costumes should stay family-friendly.
 
 [Fall festivals](https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities)
+
+### Rangoli Demonstration
+<p class="event-when">Sun Oct 25 · 1:00–3:00 p.m.</p>
+<p class="event-place">Bothell Library, 18215 98th Ave NE</p>
+
+Watch artist Rinkle Shah make a rangoli, the colored-powder floor design used for Diwali. All ages. Free, and registration is not required. Space is limited. Friends of the Bothell Library sponsor it.
+
+[Rangoli Demonstration](https://kcls.bibliocommons.com/events/6a85e616b20478002993f1ea)
 
 ### Evergreen Christmas Lights
 <p class="event-when">Tue Dec 1 through Thu Dec 24 · 6:00–9:00 p.m.</p>

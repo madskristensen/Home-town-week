@@ -265,6 +265,14 @@ Hours stay 9:00 a.m.–2:00 p.m. through the last day, Oct 31. The Preston Lee T
 
 [Calendar](http://redmondsaturdaymarket.org/Calendar.cshtml)
 
+### Karwa Chauth and Diwali Bazaar
+<p class="event-when">Sat Oct 24 · 1:00–8:00 p.m.</p>
+<p class="event-place">Hilton Garden Inn Redmond, 16630 Redmond Way</p>
+
+A free afternoon of clothes, jewelry, sweets, and Diwali shopping. Free parking. Get a free ticket.
+
+[Karwa Chauth and Diwali Bazaar](https://www.eventbrite.com/e/redmond-karwachauth-and-diwali-bazaar-2026-tickets-1987171722114)
+
 ### Spooky Spectacular
 <p class="event-when">Mon Oct 26 · 6:00–7:30 p.m.</p>
 <p class="event-place">Redmond Senior & Community Center, 8703 160th Ave NE</p>

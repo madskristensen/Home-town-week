@@ -121,6 +121,14 @@ A free stroll through Town Center in costume. Businesses with the two little gho
 
 [Town Center Trick or Treat](https://www.mercerisland.gov/parksrec/page/town-center-trick-or-treat-2026)
 
+### Discover Diwali
+<p class="event-when">Sun Nov 1 · 2:30–4:00 p.m.</p>
+<p class="event-place">Mercer Island Library, 4400 88th Ave SE</p>
+
+A story about Diwali, then a giant rangoli the library will display, plus a diya magnet kit to decorate. Recommended for kids 3 and up. Free. Registration is not required, and supplies are limited.
+
+[Discover Diwali](https://kcls.bibliocommons.com/events/6aa8a358ca248a002915dc39)
+
 ### The Queen in the Cave
 <p class="event-when">Fri Nov 6 through Sun Nov 15</p>
 <p class="event-place">Youth Theatre Northwest, 4400 86th Ave SE</p>

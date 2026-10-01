@@ -167,6 +167,15 @@
   end: "2026-10-24T14:00:00-07:00"
   place: "9900 Willows Rd NE"
   same_as: "http://redmondsaturdaymarket.org/Calendar.cshtml"
+- name: "Karwa Chauth and Diwali Bazaar"
+  cost: "Free"
+  setting: "Indoor"
+  signup: true
+  tags: [diwali]
+  start: "2026-10-24T13:00:00-07:00"
+  end: "2026-10-24T20:00:00-07:00"
+  place: "Hilton Garden Inn Redmond, 16630 Redmond Way"
+  same_as: "https://www.eventbrite.com/e/redmond-karwachauth-and-diwali-bazaar-2026-tickets-1987171722114"
 - name: "Spooky Spectacular"
   cost: "Free"
   setting: "Indoor"
