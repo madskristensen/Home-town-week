@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -54,7 +54,7 @@ jobs:
         run: echo "hash=$(python3 script/render-image-variants.py --fingerprint)" >> "$GITHUB_OUTPUT"
 
       - name: Restore image variant cache
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: .image-cache
           key: image-variants-v1-${{ steps.images.outputs.hash }}
@@ -82,7 +82,7 @@ jobs:
           python3 script/render-home-og.py
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: "22"
 
@@ -91,7 +91,7 @@ jobs:
         run: echo "hash=$(node script/render-share-cards.mjs --fingerprint)" >> "$GITHUB_OUTPUT"
 
       - name: Restore share card cache
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: .share-cache
           key: share-cards-v1-${{ steps.share.outputs.hash }}
@@ -147,7 +147,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -158,7 +158,7 @@ jobs:
 
   indexnow:
     name: Submit updated URLs to IndexNow
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: deploy
     env:
       INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
