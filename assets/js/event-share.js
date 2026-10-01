@@ -222,7 +222,9 @@
   function placeLine(venue, city) {
     var where = clean(venue);
     var town = clean(city);
-    if (where && town) return where + ", " + town;
+    if (where && town && where.toLowerCase().indexOf(town.toLowerCase()) === -1) {
+      return where + ", " + town;
+    }
     return where || town;
   }
 
