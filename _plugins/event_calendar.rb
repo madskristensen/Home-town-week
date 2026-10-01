@@ -2,6 +2,7 @@
 
 require "cgi"
 require "date"
+require "digest"
 require "fileutils"
 
 module EastsideCalendar
@@ -537,6 +538,88 @@ module EastsideCalendar
       end
     end
 
+    # Stable across builds. The source URL and the local start identify
+    # the event. A second event with the same pair gets a numbered hash.
+    def feed_uid(source, start_parsed, name, used)
+      date = start_parsed[:date].strftime("%Y%m%d")
+      if start_parsed[:time]
+        hour, min, sec = start_parsed[:time]
+        date += format("T%02d%02d%02d", hour, min, sec)
+      end
+      identity = source.to_s.strip
+      identity = name.to_s.strip if identity.empty?
+      key = "#{identity}|#{date}"
+      digest = Digest::SHA256.hexdigest(key)
+      n = 2
+      while used[digest]
+        digest = Digest::SHA256.hexdigest("#{key}|#{n}")
+        n += 1
+      end
+      used[digest] = true
+      "#{digest}@eastsidecalendar.com"
+    end
+
+    def feed_description(blurb, cost)
+      text = blurb.to_s.strip
+      price = cost.to_s.strip
+      parts = []
+      parts << text unless text.empty?
+      unless price.empty? || text.downcase.include?(price.downcase)
+        parts << price
+      end
+      parts.join("\n\n")
+    end
+
+    # Free is 0. A single amount such as "$12" or "$12.50" is that number.
+    # A range or a note is not a single price, so the offer is omitted.
+    def offer_price(cost)
+      text = cost.to_s.strip
+      return "0" if text.casecmp("free").zero?
+      return "" unless text.match?(/\A\$[\d,]+(?:\.\d{1,2})?\z/)
+
+      text.delete("$,")
+    end
+
+    def upcoming_event?(event, today)
+      return true unless today
+
+      finish = event[:end]&.[](:date) || event[:start][:date]
+      finish >= today
+    end
+
+    def build_feed(calname, events, dtstamp)
+      lines = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Eastside Family Calendar//eastsidecalendar.com//EN",
+        "CALSCALE:GREGORIAN",
+        "METHOD:PUBLISH",
+        "X-WR-CALNAME:#{escape_text(calname)}",
+        "X-WR-TIMEZONE:#{ZONE}",
+        "REFRESH-INTERVAL;VALUE=DURATION:PT6H",
+        "X-PUBLISHED-TTL:PT6H"
+      ]
+      lines.concat(VTIMEZONE.strip.split("\r\n"))
+      Array(events).each do |event|
+        lines << "BEGIN:VEVENT"
+        lines << "UID:#{event[:uid]}"
+        lines << "DTSTAMP:#{dtstamp}"
+        lines << format_dt("DTSTART", event[:start])
+        dtend = format_dtend(event[:start], event[:end])
+        lines << dtend if dtend
+        lines << "SUMMARY:#{escape_text(event[:name])}"
+        place = event[:place].to_s
+        lines << "LOCATION:#{escape_text(place)}" unless place.empty?
+        url = event[:url].to_s
+        lines << "URL:#{url}" unless url.empty?
+        description = event[:description].to_s
+        lines << "DESCRIPTION:#{escape_text(description)}" unless description.empty?
+        lines << "END:VEVENT"
+      end
+      lines << "END:VCALENDAR"
+      "#{lines.map { |line| fold(line) }.join("\r\n")}\r\n"
+    end
+
     def build_ics(event, issue_url, dtstamp)
       start_parsed = event[:start]
       lines = [
@@ -616,7 +699,7 @@ module EastsideCalendar
       end
     end
 
-    def inject!(html, groups, dates, today, city_name = nil, labels = nil, page = nil, ends = nil)
+    def inject!(html, groups, dates, today, city_name = nil, labels = nil, page = nil, ends = nil, schemas = nil)
       return html unless html.is_a?(String)
 
       match = html.match(/<div class="event-list"[^>]*>/)
@@ -626,7 +709,7 @@ module EastsideCalendar
       close_at = matching_div_end(html, content_at)
       return html unless close_at
 
-      inner = inject_inner(html[content_at...close_at], groups, dates, city_name, labels, page, ends)
+      inner = inject_inner(html[content_at...close_at], groups, dates, city_name, labels, page, ends, schemas)
       inner = group_events(inner, today)
       opener = stamp_today(html[match.begin(0)...content_at], today)
       html[0, match.begin(0)] + opener + inner + html[close_at..]
@@ -665,7 +748,7 @@ module EastsideCalendar
       nil
     end
 
-    def inject_inner(inner, groups, dates, city_name = nil, labels = nil, page = nil, ends = nil)
+    def inject_inner(inner, groups, dates, city_name = nil, labels = nil, page = nil, ends = nil, schemas = nil)
       groups ||= {}
       dates ||= {}
       labels ||= {}
@@ -696,7 +779,8 @@ module EastsideCalendar
         info = labels[key] && labels[key][index]
         part = link_event_place(part, city_name)
         part = mark_source_links(part)
-        wrap_event_card(part, iso, info, page, end_iso)
+        schema = schemas && schemas[key] && schemas[key][index]
+        wrap_event_card(part, iso, info, page, end_iso, schema)
       end
       prelude + rendered.join
     end
@@ -732,7 +816,7 @@ module EastsideCalendar
 
     # One card per event heading. The calendar icon is already on the date line.
     # The article wrapper is _includes/event-card.html so the markup cannot drift.
-    def wrap_event_card(part, iso = nil, info = nil, page = nil, end_iso = nil)
+    def wrap_event_card(part, iso = nil, info = nil, page = nil, end_iso = nil, schema = nil)
       body = part.sub(/\s+\z/, "")
       trail = part[body.length..] || ""
       tags = EventLabels.html(info)
@@ -742,6 +826,22 @@ module EastsideCalendar
       assigns["end"] = end_iso.to_s unless end_iso.to_s.empty?
       extra = EventLabels.attrs(info)
       assigns["attrs"] = extra unless extra.to_s.empty?
+      if schema.is_a?(Hash)
+        assigns["schema_start"] = schema["startDate"].to_s
+        assigns["schema_end"] = schema["endDate"].to_s
+        assigns["schema_description"] = schema["description"].to_s
+        assigns["schema_url"] = schema["sameAs"].to_s
+        assigns["schema_place"] = schema["place"].to_s
+        assigns["schema_street"] = schema["street"].to_s
+        assigns["schema_locality"] = schema["locality"].to_s
+        assigns["schema_cost"] = schema["cost"].to_s
+        if assigns["schema_url"].empty?
+          found = body[/<a class="event-source"[^>]*href="([^"]+)"/, 1]
+          assigns["schema_url"] = CGI.unescapeHTML(found.to_s) if found
+        end
+        photo = body[/<img\b[^>]*\ssrc="([^"]+)"/, 1]
+        assigns["schema_image"] = CGI.unescapeHTML(photo.to_s) if photo
+      end
       render_event_card(page, assigns) + trail
     end
 
@@ -988,6 +1088,7 @@ module EastsideCalendar
 
     def generate(site)
       linked = 0
+      feed_events = 0
       unmatched = 0
       undated = 0
       dtstamp = EventCalendar.stamp_utc(site.time)
@@ -998,13 +1099,14 @@ module EastsideCalendar
 
         result = build_city(site, page, dtstamp, today)
         linked += result[:linked]
+        feed_events += result[:feed]
         unmatched += result[:unmatched]
         undated += result[:undated]
       end
 
       Jekyll.logger.info(
         "Calendar:",
-        "#{linked} add-to-calendar links, #{unmatched} dated events without a matching pick, #{undated} undated skipped."
+        "#{linked} add-to-calendar links, #{feed_events} events in city feeds, #{unmatched} dated events without a matching pick, #{undated} undated skipped."
       )
     end
 
@@ -1027,6 +1129,9 @@ module EastsideCalendar
       labels = Hash.new { |hash, key| hash[key] = [] }
       used = {}
       used_ids = {}
+      feed_uids = {}
+      feed = []
+      schemas = Hash.new { |hash, key| hash[key] = [] }
       visible = []
       linked = 0
       city_name = EventCalendar.city_name_for(site, page)
@@ -1053,13 +1158,42 @@ module EastsideCalendar
           linked += 1
           { href: href, when_label: record[:when_label], name: heading[:text] }
         end
+        picks.each do |event|
+          next unless EventCalendar.upcoming_event?(event, today)
+
+          source = EventCalendar.http_url?(event[:same_as]) ? event[:same_as] : ""
+          blurb = EventCalendar.plain_blurb(heading[:body])
+          cost = event.dig(:labels, "cost").to_s.strip
+          feed << {
+            uid: EventCalendar.feed_uid(source, event[:start], heading[:text], feed_uids),
+            start: event[:start],
+            end: event[:end],
+            name: heading[:text],
+            place: event[:place].to_s,
+            url: source,
+            description: EventCalendar.feed_description(blurb, cost)
+          }
+        end
         groups[heading[:key]] << links
         date = EventCalendar.heading_date(heading, picks, today)
         dates[heading[:key]] << (date ? EventCalendar.iso_date(date) : nil)
         finish = EventCalendar.heading_end_date(heading, picks, date)
         ends[heading[:key]] << (finish ? EventCalendar.iso_date(finish) : nil)
-        labels[heading[:key]] << EventCalendar.card_labels(picks, date)
-        visible << EventCalendar.visible_event(heading, picks, today, city_name, city_url, used_ids)
+        info = EventCalendar.card_labels(picks, date)
+        labels[heading[:key]] << info
+        rec = EventCalendar.visible_event(heading, picks, today, city_name, city_url, used_ids)
+        rec["cost"] = info && info["cost"].to_s
+        schemas[heading[:key]] << rec
+        visible << rec
+      end
+
+      city_id = page.data["city"].to_s
+      unless city_id.empty?
+        site.static_files << CalendarFile.new(
+          "calendar",
+          "#{city_id}.ics",
+          EventCalendar.build_feed("Eastside Family Calendar: #{city_name}", feed, dtstamp)
+        )
       end
 
       ordered = visible.each_with_index.sort_by { |rec, index| [EventCalendar.bucket_rank(rec["bucket"]), index] }
@@ -1087,8 +1221,9 @@ module EastsideCalendar
       page.data["event_dates"] = dates
       page.data["event_ends"] = ends
       page.data["event_labels"] = labels
+      page.data["event_schema"] = schemas
       page.data["filter_counts"] = EventLabels.filter_counts(labels.values.flatten)
-      { linked: linked, unmatched: events.size - matched, undated: undated }
+      { linked: linked, feed: feed.size, unmatched: events.size - matched, undated: undated }
     end
 
     def load_events(site, page)
@@ -1157,7 +1292,8 @@ Jekyll::Hooks.register :pages, :post_render do |page|
     EastsideCalendar::EventCalendar.city_name_for(page.site, page),
     page.data["event_labels"],
     page,
-    page.data["event_ends"]
+    page.data["event_ends"],
+    page.data["event_schema"]
   )
 end
 
@@ -1186,5 +1322,36 @@ module EastsideCalendar
   end
 end
 
+module EastsideCalendar
+  module SchemaFilters
+    def schema_when(input)
+      EventCalendar.format_offset_time(EventCalendar.parse_when(input)).to_s
+    end
+
+    def schema_finish(input)
+      start_s, end_s = input.to_s.split("|", 2)
+      start_parsed = EventCalendar.parse_when(start_s)
+      end_parsed = EventCalendar.parse_when(end_s)
+      EventCalendar.format_offset_time(EventCalendar.schema_end(start_parsed, end_parsed)).to_s
+    end
+
+    def offer_price(input)
+      EventCalendar.offer_price(input).to_s
+    end
+
+    def street_of(place, city)
+      _name, street = EventCalendar.place_parts(place, city.to_s)
+      street.to_s
+    end
+
+    # The city heading is inside the card body. Name belongs on the h3,
+    # not the link, because an itemprop on an anchor uses the href.
+    def event_name_prop(html)
+      html.to_s.sub(/<h3\b(?![^>]*\bitemprop=)/, '<h3 itemprop="name"')
+    end
+  end
+end
+
 Liquid::Template.register_filter(EastsideCalendar::MailEscape)
 Liquid::Template.register_filter(EastsideCalendar::CardBlurbFilter)
+Liquid::Template.register_filter(EastsideCalendar::SchemaFilters)

@@ -150,37 +150,8 @@
       {
         "@type": "ListItem",
         "position": {{ forloop.index }},
-        "item": {
-          "@type": "Event",
-          "name": {{ event.name | jsonify }},
-          "url": {{ event.url | jsonify }},
-          "description": {{ event.description | jsonify }},
-          "startDate": {{ event.startDate | jsonify }}
-          {%- assign event_end = event.endDate | append: "" -%}
-          {%- if event_end.size > 0 -%},
-          "endDate": {{ event.endDate | jsonify }}
-          {%- endif -%},
-          "eventStatus": "https://schema.org/EventScheduled",
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "location": {
-            "@type": "Place",
-            "name": {{ event.place | jsonify }},
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": {{ event.locality | jsonify }},
-              "addressRegion": "WA",
-              "addressCountry": "US"
-              {%- assign event_street = event.street | append: "" -%}
-              {%- if event_street.size > 0 -%},
-              "streetAddress": {{ event.street | jsonify }}
-              {%- endif -%}
-            }
-          }
-          {%- assign event_same = event.sameAs | append: "" -%}
-          {%- if event_same.size > 0 -%},
-          "sameAs": {{ event.sameAs | jsonify }}
-          {%- endif -%}
-        }
+        "name": {{ event.name | jsonify }},
+        "url": {{ event.url | jsonify }}
       }{% unless forloop.last %},{% endunless %}
       {%- endfor -%}
     ]

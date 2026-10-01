@@ -56,7 +56,7 @@ No recognizable kids or teens. Removed on request. A venue key must name that pl
 
 `.github/workflows/prune.yml` runs at 09:00 UTC. It rebases onto main before pushing. It drops out-of-area rows, fills venue labels, and deletes events whose last day is before today in America/Los_Angeles. An explicit year is that year. Otherwise use the matching data row, or the next future occurrence. Do not delete a far-future youth theater show because the month and day look like last year.
 
-The browser hides a card whose end date is before today, so yesterday's cards do not sit on the page until the next build.
+The browser hides a card whose end date is before today, so yesterday's cards do not sit on the page until the next build. The Pages rebuild that follows writes `/calendar/{city}.ics` from the events still on each city page.
 
 ## Weekend picks
 

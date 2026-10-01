@@ -126,6 +126,8 @@ jobs:
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
           python3 script/minify-html.py
           python3 script/check-components.py --rendered _site
+          python3 -m pip install --quiet icalendar
+          python3 script/check-calendars.py
 
       - name: Add IndexNow verification key
         env:

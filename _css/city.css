@@ -237,3 +237,47 @@
   left: -9999px;
   top: 0;
 }
+
+.cal-subscribe {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.cal-subscribe summary {
+  color: var(--link);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cal-subscribe-note {
+  margin: 0.4rem 0 0;
+  max-width: 36rem;
+}
+
+.cal-subscribe-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cal-subscribe-links a,
+.cal-subscribe-copy {
+  color: var(--link);
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.cal-subscribe-copy {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}

@@ -17,6 +17,7 @@ Card and page markup lives in one include each. Pages, layouts, and the city cal
 | `_includes/map-frame.html` | Map poster and canvas. Includes the shared loader unless `loader` is `false`. |
 | `_includes/map-loader.html` | `loadMapCss` and `loadMapJs`. |
 | `_includes/guide-header.html` | Playground page title and introduction. The heading links to `/playgrounds/`. |
+| `_includes/calendar-subscribe.html` | City page control for the subscription feed at `/calendar/{city}.ics`. |
 
 The city plugin in `_plugins/event_calendar.rb` renders `event-card.html` for each city card. It still adds the calendar icon, the place link, and the source line before that render. Pass a page hash with `path` into Liquid registers. Do not pass the page object.
 
@@ -36,5 +37,6 @@ A file fails when it contains one of these outside the include that owns it:
 - `class="lights-feature`
 - `class="map-frame"`
 - `class="filter-chip"`
+- `class="cal-subscribe"`
 
 `COMPONENTS.md` may name those strings. The bare word `event-card` is also allowed in `_includes/event-card.html`, `_includes/pwa.html` (the script selects `article.event-card` and `.event-card`), and `README.md`. An `{% include event-card.html %}` call is not markup and is allowed.

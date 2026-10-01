@@ -34,6 +34,7 @@ RULES = (
     ('class="lights-feature', "_includes/lights-feature.html"),
     ('class="map-frame"', "_includes/map-frame.html"),
     ('class="filter-chip"', "_includes/filter-chip.html"),
+    ('class="cal-subscribe"', "_includes/calendar-subscribe.html"),
 )
 
 # The bare word, not the class markup. Include calls are handled separately.
