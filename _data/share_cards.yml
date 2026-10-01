@@ -79,7 +79,7 @@
   credit: "Photo: City of Sammamish"
   license: City of Sammamish
 - id: playgrounds
-  path: /guides/playgrounds/
+  path: /playgrounds/
   title: Playground map
   image: /assets/images/guides/grass-lawn.jpg
   alt: Play structure and swings at Grass Lawn Park in Redmond.

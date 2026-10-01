@@ -29,9 +29,9 @@ sitemap: false
 
 - [This weekend]({{ site.url }}{{ site.baseurl }}/this-weekend/): Friday through Sunday family events in all 14 cities, grouped by day. Rebuilt daily.
 
-## Guides
+## Playgrounds
 
-- [Playground map]({{ site.url }}{{ site.baseurl }}/guides/playgrounds/): Public park playgrounds in the 14 cities, with a click-to-load map. Town and amenity filters narrow the list before the map loads.
+- [Playground map]({{ site.url }}{{ site.baseurl }}/playgrounds/): Public park playgrounds in the 14 cities, with a click-to-load map. Town and amenity filters narrow the list before the map loads.
 
 ## Sitemap
 

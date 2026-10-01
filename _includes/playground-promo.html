@@ -3,7 +3,7 @@
   city: town id, default page.city.
   name: town name. When blank, the name in the playground data is used.
   Renders nothing when that town has no playgrounds.
-  The link is /guides/playgrounds/?town={id}, which checks that town's filter.
+  The link is /playgrounds/?town={id}, which checks that town's filter.
 {%- endcomment -%}
 {%- assign play_id = include.city | default: page.city | append: "" | strip -%}
 {%- assign play_name = include.name | append: "" | strip -%}
@@ -19,7 +19,7 @@
   {%- endfor -%}
 {%- endif -%}
 {%- if play_n > 0 and play_name.size > 0 -%}
-{%- capture play_href -%}/guides/playgrounds/?town={{ play_id }}{%- endcapture -%}
+{%- capture play_href -%}/playgrounds/?town={{ play_id }}{%- endcapture -%}
 <a class="playground-promo" href="{{ play_href | strip | relative_url }}">
   <span class="playground-promo-title">{{ play_n }} playground{% if play_n != 1 %}s{% endif %} in {{ play_name }}</span>
   <span class="playground-promo-go">See the map</span>

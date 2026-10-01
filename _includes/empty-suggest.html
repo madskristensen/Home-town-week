@@ -25,9 +25,9 @@ Date:{%- endcapture -%}
   {%- assign play_town = page.city | append: "" | strip -%}
 {%- endif -%}
 {%- if play_town.size > 0 -%}
-  {%- capture play_href -%}/guides/playgrounds/?town={{ play_town }}{%- endcapture -%}
+  {%- capture play_href -%}/playgrounds/?town={{ play_town }}{%- endcapture -%}
 {%- else -%}
-  {%- assign play_href = "/guides/playgrounds/" -%}
+  {%- assign play_href = "/playgrounds/" -%}
 {%- endif -%}
 <div class="empty-suggest{% if empty_mode == "filter" %} filter-empty{% endif %}"{% if empty_mode == "filter" %} hidden{% endif %}>
   {%- if empty_mode == "missing" -%}

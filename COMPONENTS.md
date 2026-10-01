@@ -10,12 +10,12 @@ Card and page markup lives in one include each. Pages, layouts, and the city cal
 | `_includes/event-photo.html` | Photo and the credit strip. `figure` defaults to `event-photo`. Home weekend picks pass `weekend-photo`. |
 | `_includes/filter-chip.html` | One filter chip. Event chips pass `group` and `value`. Playground chips pass `input_class`, `city`, `count`, or `amenity`, and do not pass `value`. |
 | `_includes/page-intro.html` | The one-line introduction. Renders nothing when `text` is blank. |
-| `_includes/empty-suggest.html` | Empty-state suggestion, including the playground line. |
-| `_includes/playground-promo.html` | Compact playground card on a city page. |
+| `_includes/empty-suggest.html` | Empty-state suggestion. The playground line links to `/playgrounds/`, with `?town=` on a city page. |
+| `_includes/playground-promo.html` | Compact playground card on a city page. Links to `/playgrounds/?town={id}`. |
 | `_includes/lights-feature.html` | Seasonal promo for the lights or decorations map. |
 | `_includes/map-frame.html` | Map poster and canvas. Includes the shared loader unless `loader` is `false`. |
 | `_includes/map-loader.html` | `loadMapCss` and `loadMapJs`. |
-| `_includes/guide-header.html` | Guide title and introduction. |
+| `_includes/guide-header.html` | Playground page title and introduction. The heading links to `/playgrounds/`. |
 
 The city plugin in `_plugins/event_calendar.rb` renders `event-card.html` for each city card. It still adds the calendar icon, the place link, and the source line before that render. Pass a page hash with `path` into Liquid registers. Do not pass the page object.
 
