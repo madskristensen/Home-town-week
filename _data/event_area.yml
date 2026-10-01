@@ -1,7 +1,8 @@
 # Where an event is allowed to resolve.
-# City files may use the 14 cities, Fall City (folded into Snoqualmie),
-# and the enclaves inside those cities. Worth the Drive is the short list
-# of towns and venues outside those cities, within about an hour of Bellevue.
+# City files may use the 15 cities, Fall City (folded into Snoqualmie),
+# Covington (folded into Maple Valley), and the enclaves inside those
+# cities. Worth the Drive is the short list of towns and venues outside
+# those cities, within about an hour of Bellevue.
 # A street direction such as "Ave NE" is not a state. Nebraska is "NE" plus
 # a ZIP, or the full name.
 
@@ -13,6 +14,7 @@ cities:
   - Issaquah
   - Kenmore
   - Kirkland
+  - Maple Valley
   - Mercer Island
   - North Bend
   - Redmond
@@ -23,6 +25,7 @@ cities:
 
 also_local:
   - Fall City
+  - Covington
   - Medina
   - Clyde Hill
   - Yarrow Point
@@ -74,9 +77,11 @@ eastside_zips:
   - "98029"
   - "98033"
   - "98034"
+  - "98038"
   - "98039"
   - "98040"
   - "98041"
+  - "98042"
   - "98045"
   - "98050"
   - "98052"
@@ -94,7 +99,7 @@ eastside_zips:
   - "98077"
   - "98083"
 
-# Rough boxes. The service box covers the 14 cities and the Worth the Drive towns.
+# Rough boxes. The service box covers the 15 cities and the Worth the Drive towns.
 washington_box:
   lat: [45.54, 49.05]
   lon: [-124.85, -116.91]

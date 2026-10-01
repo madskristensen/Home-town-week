@@ -213,6 +213,16 @@ hubs:
         toc: Mercer Island
         source: https://www.mercerislandschools.org/fs/resource-manager/view/bbbd8f25-77ca-469a-be7b-2f20e90fd80a
         source_label: Mercer Island School District calendar
+      - id: tahoma
+        title: Tahoma School District
+        toc: Tahoma
+        source: https://www.tahomasd.us/fs/resource-manager/view/946f2d0c-7bdc-415b-a5bc-23698dcca28c
+        source_label: Tahoma School District calendar
+      - id: kent
+        title: Kent School District
+        toc: Kent
+        source: https://www.kent.k12.wa.us/documents/about/district-information/student-calendar/683900
+        source_label: Kent School District calendar
     theme:
       background: "#e4f3df"
       ink: "#1a2822"

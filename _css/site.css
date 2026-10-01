@@ -498,8 +498,12 @@ picture {
 }
 
 @media (min-width: 42rem) {
+  .cities-menu .cities-panel {
+    width: min(48rem, calc(100vw - 3rem));
+  }
+
   .cities-menu .cities-panel ul.menu-cities {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 
@@ -2045,7 +2049,13 @@ html[data-ns="svsd"] .ns-line[data-d="svsd"],
 html[data-ns="svsd"] .ns-weekly[data-d="svsd"],
 html[data-ns="misd"] .ns-one[data-d="misd"],
 html[data-ns="misd"] .ns-line[data-d="misd"],
-html[data-ns="misd"] .ns-weekly[data-d="misd"] {
+html[data-ns="misd"] .ns-weekly[data-d="misd"],
+html[data-ns="tsd"] .ns-one[data-d="tsd"],
+html[data-ns="tsd"] .ns-line[data-d="tsd"],
+html[data-ns="tsd"] .ns-weekly[data-d="tsd"],
+html[data-ns="ksd"] .ns-one[data-d="ksd"],
+html[data-ns="ksd"] .ns-line[data-d="ksd"],
+html[data-ns="ksd"] .ns-weekly[data-d="ksd"] {
   display: block;
 }
 
@@ -2079,7 +2089,9 @@ html[data-ns="renton"] .ns-day:has(.ns-one[data-d="renton"]),
 html[data-ns="bsd"] .ns-day:has(.ns-one[data-d="bsd"]),
 html[data-ns="isd"] .ns-day:has(.ns-one[data-d="isd"]),
 html[data-ns="svsd"] .ns-day:has(.ns-one[data-d="svsd"]),
-html[data-ns="misd"] .ns-day:has(.ns-one[data-d="misd"]) {
+html[data-ns="misd"] .ns-day:has(.ns-one[data-d="misd"]),
+html[data-ns="tsd"] .ns-day:has(.ns-one[data-d="tsd"]),
+html[data-ns="ksd"] .ns-day:has(.ns-one[data-d="ksd"]) {
   background: color-mix(in srgb, var(--ink) 8%, var(--sheet));
 }
 

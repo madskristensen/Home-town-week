@@ -163,6 +163,30 @@ venues:
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     license: CC BY-SA 3.0
     source: https://commons.wikimedia.org/wiki/File:Snoqualmie_Depot_01.jpg
+  - keys: ["lake wilderness park"]
+    image: /assets/images/maple-valley/lake-wilderness-park.webp
+    alt: Lake Wilderness in Maple Valley, with a wooden dock and trees along the shore.
+    credit: "Photo: Roc0ast3r, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Lake_Wilderness_Park_in_Maple_Valley,_WA_(2024)_-_5.jpg
+  - keys: ["lake wilderness arboretum"]
+    image: /assets/images/maple-valley/lake-wilderness-arboretum.webp
+    alt: A path through the Lake Wilderness Arboretum in Maple Valley.
+    credit: "Photo: Roc0ast3r, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Lake_Wilderness_Arboretum_in_Maple_Valley,_WA_(2024)_-_12.jpg
+  - keys: ["maple valley library"]
+    image: /assets/images/maple-valley/library.webp
+    alt: Maple Valley Library, a King County Library System branch with a glass and wood front.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Maple_Valley,_WA_-_library_01.jpg
+  - keys: ["covington library"]
+    image: /assets/images/maple-valley/covington-library.webp
+    alt: Covington Library, a low King County Library System branch with a covered entry.
+    credit: "Photo: Senapa, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Covington,_WA_%E2%80%94_Covington_Library_(2021-08-23).jpg
   - keys: ["fire station 11"]
     image: /assets/images/renton/station-11.webp
     alt: Renton Fire Station 11, a brick firehouse with red bay doors on a downtown corner.

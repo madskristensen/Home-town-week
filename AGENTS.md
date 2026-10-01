@@ -8,15 +8,15 @@ List events a parent would take a child to. Story times, parks, farms, markets, 
 
 Leave out adult concerts, bar nights, brewery festivals, fitness classes for older adults, caregiver groups, parent-only workshops, English conversation hours, and 21+ events. Youth theater stays, including a teen or high-school cast. A paid camp or class series does not. A parents' night out where the kids stay and the adult leaves is family, and it gets `drop_off: true`.
 
-## The 14 cities
+## The 15 cities
 
-Bellevue, Bothell, Carnation, Duvall, Issaquah, Kenmore, Kirkland, Mercer Island, North Bend, Redmond, Renton, Sammamish, Snoqualmie, and Woodinville. Fall City is part of the Snoqualmie page, not its own page. Newcastle has no page. Do not add Maple Valley.
+Bellevue, Bothell, Carnation, Duvall, Issaquah, Kenmore, Kirkland, Maple Valley, Mercer Island, North Bend, Redmond, Renton, Sammamish, Snoqualmie, and Woodinville. Fall City is part of the Snoqualmie page, not its own page. Covington is part of the Maple Valley page, not its own page. Newcastle has no page.
 
-Worth the Drive is a separate short list in `_data/worth_the_drive_events.yml` for family venues outside those 14 cities and within about an hour of Bellevue. It does not go on a city page or on the home weekend picks. Cross-listing one Eastside event onto another city's page is fine when the event is useful there. A name that says Seattle can still be an Eastside event when the place is here, such as a race at Marymoor Park.
+Worth the Drive is a separate short list in `_data/worth_the_drive_events.yml` for family venues outside those 15 cities and within about an hour of Bellevue. It does not go on a city page or on the home weekend picks. Cross-listing one Eastside event onto another city's page is fine when the event is useful there. A name that says Seattle can still be an Eastside event when the place is here, such as a race at Marymoor Park.
 
 ## Location
 
-Every row has to resolve to Washington and to the 14 cities, the nearby towns folded into them, or a Worth the Drive town. `script/check-event-areas.py` rejects the rest. The build fails on a reject. The daily prune removes rejects. An unresolved row is logged and kept. A street direction such as Ave NE is not a state.
+Every row has to resolve to Washington and to the 15 cities, the nearby towns folded into them, or a Worth the Drive town. `script/check-event-areas.py` rejects the rest. The build fails on a reject. The daily prune removes rejects. An unresolved row is logged and kept. A street direction such as Ave NE is not a state.
 
 ## Write both places
 
@@ -68,7 +68,7 @@ There is no `/winter/` hub and no redirect. Winter events stay on their city pag
 
 ## Friday source hunt
 
-Each Friday, scan the lead sites for about the next six weeks. The Yodel embed needs a headless browser. For a new organizer or event in the 14 cities, verify it on the organizer's own page. Add a verified event with the organizer as the source link. Add a good organizer to `sources` in `_data/cities.yml`. Never link a lead site, and never copy its text. Skip a sponsored or paid listing unless the organizer's own page shows it is a real free or family event. Expect a lead site's clock to be off by an hour.
+Each Friday, scan the lead sites for about the next six weeks. The Yodel embed needs a headless browser. For a new organizer or event in the 15 cities, verify it on the organizer's own page. Add a verified event with the organizer as the source link. Add a good organizer to `sources` in `_data/cities.yml`. Never link a lead site, and never copy its text. Skip a sponsored or paid listing unless the organizer's own page shows it is a real free or family event. Expect a lead site's clock to be off by an hour.
 
 ### Lead sites (never cite or link)
 
@@ -76,12 +76,12 @@ Each Friday, scan the lead sites for about the next six weeks. The Yodel embed n
 - https://rentonwa.macaronikid.com/ covers Renton and Bellevue.
 - https://snoqualmievalley.macaronikid.com/ covers the Snoqualmie Valley, Issaquah, and Sammamish.
 - https://cherryvalley.macaronikid.com/ covers Monroe, Duvall, and Carnation.
-- https://www.parentmap.com/ covers all 14 cities. No JavaScript. Use The Events Calendar API, for example /wp-json/tribe/events/v1/events?start_date=...&end_date=...&per_page=50&page=N, or /wp-json/wp/v2/tribe_events?event_region=39 for the Eastside. Send a normal browser user-agent. Plain curl gets a 403. Wait between pages. robots.txt disallows filtered /calendar? URLs, so use the API. Skip business self-submissions such as paid classes, school open houses, and gyms.
+- https://www.parentmap.com/ covers all 15 cities. No JavaScript. Use The Events Calendar API, for example /wp-json/tribe/events/v1/events?start_date=...&end_date=...&per_page=50&page=N, or /wp-json/wp/v2/tribe_events?event_region=39 for the Eastside. Send a normal browser user-agent. Plain curl gets a 403. Wait between pages. robots.txt disallows filtered /calendar? URLs, so use the API. Skip business self-submissions such as paid classes, school open houses, and gyms.
 - https://www.seattleschild.com/ is seasonal guides only. Check it monthly, on the first Friday of each month. Never link it, and never copy it. Use the WordPress posts API, /wp-json/wp/v2/posts, for the guides. The calendar adds little beyond ParentMap, and robots.txt blocks /calendar/page/*. Skip sponsored posts, directories, and camps. Useful timing: a Halloween roundup in mid-September, fun runs and turkey trots in September and October, holiday trains in September, and a volunteer list each month.
 
 ## Weekend picks
 
-`/this-weekend/` is Friday through Sunday across the 14 cities. The home page shows a short pick of that list. Keep both in step with the city pages. Worth the Drive stays off that list.
+`/this-weekend/` is Friday through Sunday across the 15 cities. The home page shows a short pick of that list. Keep both in step with the city pages. Worth the Drive stays off that list.
 
 ## Cards
 
@@ -95,19 +95,19 @@ The missing page uses that same choice for its seasonal tile. `404.html` does no
 
 ## Farmers markets
 
-`/farmers-markets/` is the farmers market list for the 14 cities. The rows are `_data/farmers_markets.yml`. Do not put them in a city events file. The daily prune does not delete a market when its season ends. The build compares `season_start`, `season_end`, and `extra_dates` with today in America/Los_Angeles and writes Open now or the return line on the card. When a market posts new hours or the next season, update that row. Leave the row in place out of season. Bothell has no weekly market to list until a city or market site publishes one. Photos are CC0, CC BY, CC BY-SA, or public domain, or an organizer photo credited `Photo: <name>` with `license: organizer`. No recognizable kids. Blurbs are our own words. No em dashes.
+`/farmers-markets/` is the farmers market list for the 15 cities. The rows are `_data/farmers_markets.yml`. Do not put them in a city events file. The daily prune does not delete a market when its season ends. The build compares `season_start`, `season_end`, and `extra_dates` with today in America/Los_Angeles and writes Open now or the return line on the card. When a market posts new hours or the next season, update that row. Leave the row in place out of season. Bothell has no weekly market to list until a city or market site publishes one. Photos are CC0, CC BY, CC BY-SA, or public domain, or an organizer photo credited `Photo: <name>` with `license: organizer`. No recognizable kids. Blurbs are our own words. No em dashes.
 
 ## Book ahead
 
-`/book-ahead/` lists popular ticketed family events in the 14 cities that sell out and need a booking weeks ahead. The rows are `_data/book_ahead.yml`. Do not put them in a city events file. Do not add summer camps. A popular ticketed family event in spring or summer belongs here once the organizer posts it. Remlinger Farms has not posted a 2026 holiday ticketed event. Add that row when they do. Snowflake Lane is free, so it stays off this page.
+`/book-ahead/` lists popular ticketed family events in the 15 cities that sell out and need a booking weeks ahead. The rows are `_data/book_ahead.yml`. Do not put them in a city events file. Do not add summer camps. A popular ticketed family event in spring or summer belongs here once the organizer posts it. Remlinger Farms has not posted a 2026 holiday ticketed event. Add that row when they do. Snowflake Lane is free, so it stays off this page.
 
 Each row needs a name, city id, address, start, end, a date phrase in `when`, the ticket URL in `source`, a blurb, and a real photo. Price stays in the blurb as plain text. Do not set `cost`. That field becomes a price tag. `ticket_line` is the date-line sentence when tickets are not simply on sale, such as "Tickets go on sale soon." `tickets_on` is the sale date. When that date is still ahead, the card says tickets go on sale that day. Otherwise the card says tickets are on sale now. When the organizer says an event is sold out, set `sold_out: true` or delete the row. The daily prune deletes a sold-out row and a row whose end is before today in America/Los_Angeles. The build also leaves those rows off the page. Verify dates, price, and ticket status on the organizer's ticket page. Photos are CC0, CC BY, CC BY-SA, or public domain, or an organizer photo credited `Photo: <name>` with `license: organizer`. No recognizable kids. Blurbs are our own words. No em dashes.
 
 ## No-school days
 
-`/no-school-days/` lists student no-school days for the eight Eastside districts in the 2026-27 year. The rows are `_data/no_school_days.yml`. Do not put them in a city events file. The spring break hub reads its April dates from the `break` rows in that file. Do not copy those dates back into `_data/seasonal_hubs.yml`.
+`/no-school-days/` lists student no-school days for the ten Eastside districts in the 2026-27 year. The rows are `_data/no_school_days.yml`. Do not put them in a city events file. The spring break hub reads its April dates from the `break` rows in that file. Do not copy those dates back into `_data/seasonal_hubs.yml`.
 
-The page is month calendars from the current month through June, in the same content column as the other pages. Two months sit side by side on a wide screen and one on a phone. A week with no days is left out, and the two months in a row stay the same height. The grid height does not change when the district changes. The district menu, subscribe button, hint, and weekly sentence sit in one panel. The legend is a small line above the months. The district `select` lists the eight districts and nothing else. With no `?district=` and nothing saved, the page shows Lake Washington and the line "Showing Lake Washington. Pick your district and we'll remember it." Choosing a district, or arriving with a saved one, hides that line. `?district=` wins and is saved. Otherwise a saved `no-school-district` value is used and written into the address. The head script sets `data-ns` before paint. The HTML also shows Lake Washington when that attribute is missing, so the first paint matches. Each district needs `slug` and a matching `html[data-ns]` rule in `_css/site.css`. Day cells use text and a neutral border: filled, outlined, or dashed. The day cell's title is the reason. More than one reason on the same day is separated by a new line. Do not add district colors. Do not add event cards to this page. Nothing sits below the last month except the usual footer note.
+The page is month calendars from the current month through June, in the same content column as the other pages. Two months sit side by side on a wide screen and one on a phone. A week with no days is left out, and the two months in a row stay the same height. The grid height does not change when the district changes. The district menu, subscribe button, hint, and weekly sentence sit in one panel. The legend is a small line above the months. The district `select` lists the ten districts and nothing else. With no `?district=` and nothing saved, the page shows Lake Washington and the line "Showing Lake Washington. Pick your district and we'll remember it." Choosing a district, or arriving with a saved one, hides that line. `?district=` wins and is saved. Otherwise a saved `no-school-district` value is used and written into the address. The head script sets `data-ns` before paint. The HTML also shows Lake Washington when that attribute is missing, so the first paint matches. Each district needs `slug` and a matching `html[data-ns]` rule in `_css/site.css`. Day cells use text and a neutral border: filled, outlined, or dashed. The day cell's title is the reason. More than one reason on the same day is separated by a new line. Do not add district colors. Do not add event cards to this page. Nothing sits below the last month except the usual footer note.
 
 The daily prune does not delete a day when it passes. The build hides a row whose end is before today in America/Los_Angeles. `weekly` is the one sentence above the calendar for that district's regular early release or late start. One-off early release, half days, and first and last days are rows with `off: false`.
 

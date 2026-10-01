@@ -1,9 +1,8 @@
 # Eastside cities, alphabetical. lat and lon are the city center in
 # decimal degrees. nearby.yml uses them when choosing neighbors. The
-# home page does not read them. Newcastle and Fall City are not listed.
-# Maple Valley is not listed. Do not add it back. There is no
-# /maple-valley/ page and no redirect. Fall City events that passed a source check are folded
-# into Snoqualmie.
+# home page does not read them. Newcastle is not listed. Fall City events
+# that passed a source check are folded into Snoqualmie. Covington events
+# that passed a source check are folded into Maple Valley.
 # Do not add a city page until it has real events.
 # The site header is the mark, Eastside Family Calendar, and a Menu button.
 #
@@ -620,6 +619,70 @@
       type: allevents
       format: allevents
       notes: "Secondary sweep. This page is Kirkland, WA."
+- id: maple-valley
+  name: Maple Valley
+  state: wa
+  state_name: Washington
+  lat: 47.3926
+  lon: -122.0454
+  description: Upcoming family events in Maple Valley and Covington on the Eastside.
+  hero:
+    image: /assets/images/maple-valley/lake-wilderness-lodge.webp
+    alt: Lake Wilderness Lodge in Maple Valley, a low wood and stone building beside the lake.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Lake_Wilderness_Lodge_pano_02.jpg
+  summary: >-
+    Maple Valley and Covington, in the southeast King County foothills.
+  tagline: "Maple Valley and Covington, in the southeast King County foothills."
+  sources:
+    - name: "City of Maple Valley calendar"
+      url: "https://www.maplevalleywa.gov/calendar.php"
+      type: city_hall
+      format: html
+      notes: "Revize calendar. Asking for ical still returns HTML."
+    - name: "Maple Valley Parks special events"
+      url: "https://www.maplevalleywa.gov/government/departments/parks_and_recreation/special_events/index.php"
+      type: parks
+      notes: "Zombie Dash and Gnometown Holidays. Skip a date that is not on this page."
+    - name: "Maple Valley Farmers Market"
+      url: "https://www.maplevalleyfarmersmarket.com/"
+      type: market
+      notes: "Saturdays 9:00 a.m. to 2:00 p.m., May 2 through Oct 31, 2026, at the Legacy Site."
+    - name: "Maple Valley Library"
+      url: "https://kcls.org/locations/maple-valley/"
+      type: library
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1527"
+      notes: "KCLS branch at 21844 SE 248th St."
+    - name: "Maple Valley Creative Arts Council"
+      url: "https://mvcac.clubexpress.com/"
+      type: theater
+      notes: "Youth plays at the Creative Arts Center. Skip adult improv nights."
+    - name: "AllEvents Maple Valley"
+      url: "https://allevents.in/maple-valley"
+      type: allevents
+      format: allevents
+      notes: "Secondary sweep. This page is Maple Valley, WA. Confirm a date on the organizer page."
+    - name: "Lake Wilderness Arboretum"
+      url: "https://www.lakewildernessarboretum.org/events/"
+      type: nature
+      notes: "Story Walk meets at the information booth. Confirm the date on the library listing."
+    - name: "Maple Valley Historical Society"
+      url: "https://www.maplevalleyhistorical.com/upcoming-events"
+      type: museum
+      notes: "Museums at 22024 SE 248th St, open the first and third Saturday, 10:00 a.m. to 2:00 p.m. Admission is free."
+    - name: "City of Covington events"
+      url: "https://www.covingtonwa.gov/events/index.php"
+      type: city_hall
+      format: html
+      notes: "Covington family events live on the Maple Valley page. The special-events list has the dates. The Revize calendar.php page does not."
+    - name: "Covington Library"
+      url: "https://kcls.org/locations/covington/"
+      type: library
+      format: rss
+      feed_url: "https://gateway.bibliocommons.com/v2/libraries/kcls/rss/events?locations=1497"
+      notes: "KCLS branch at 27100 164th Ave SE. Skip adult programs and English conversation."
 - id: mercer-island
   name: Mercer Island
   state: wa

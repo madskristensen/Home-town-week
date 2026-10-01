@@ -27,23 +27,23 @@ sitemap: false
 
 ## This weekend
 
-- [This weekend]({{ site.url }}{{ site.baseurl }}/this-weekend/): Friday through Sunday family events in all 14 cities, grouped by day. Rebuilt daily.
+- [This weekend]({{ site.url }}{{ site.baseurl }}/this-weekend/): Friday through Sunday family events in all 15 cities, grouped by day. Rebuilt daily.
 
 ## Playgrounds
 
-- [Playground map]({{ site.url }}{{ site.baseurl }}/playgrounds/): Public park playgrounds in the 14 cities, with a click-to-load map. Town and amenity filters narrow the list before the map loads.
+- [Playground map]({{ site.url }}{{ site.baseurl }}/playgrounds/): Surveyed public park playgrounds, with a click-to-load map. Maple Valley and Covington are not on it yet. Town and amenity filters narrow the list before the map loads.
 
 ## Farmers markets
 
-- [Farmers markets]({{ site.url }}{{ site.baseurl }}/farmers-markets/): Weekly farmers markets in the 14 cities, with the day, hours, and season. The page says which markets are open now.
+- [Farmers markets]({{ site.url }}{{ site.baseurl }}/farmers-markets/): Weekly farmers markets in the 15 cities, with the day, hours, and season. The page says which markets are open now.
 
 ## Book ahead
 
-- [Book ahead]({{ site.url }}{{ site.baseurl }}/book-ahead/): Ticketed family events in the 14 cities that sell out and need a booking weeks ahead. The page says whether tickets are on sale now or the day they go on sale. Sold-out events come off the list. Summer camps are not listed.
+- [Book ahead]({{ site.url }}{{ site.baseurl }}/book-ahead/): Ticketed family events in the 15 cities that sell out and need a booking weeks ahead. The page says whether tickets are on sale now or the day they go on sale. Sold-out events come off the list. Summer camps are not listed.
 
 ## No-school days
 
-- [No-school days]({{ site.url }}{{ site.baseurl }}/no-school-days/): Student no-school days for the 2026-27 year in the eight Eastside school districts. Grade-only days and days that are off only if needed are marked. Each district has a calendar feed.
+- [No-school days]({{ site.url }}{{ site.baseurl }}/no-school-days/): Student no-school days for the 2026-27 year in the ten Eastside school districts. Grade-only days and days that are off only if needed are marked. Each district has a calendar feed.
 
 ## Sitemap
 

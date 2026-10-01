@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Reject events that resolve outside Washington or outside the Eastside.
 
-The 14 cities, Fall City, and the enclaves in _data/event_area.yml are
+The 15 cities, Fall City, Covington, and the enclaves in _data/event_area.yml are
 allowed on city files. Worth the Drive towns and venues are allowed too.
 A price, a street number, and a direction such as Ave NE are not a place
 check. An AllEvents city index is not an event address.
@@ -210,7 +210,7 @@ def location_reason(area, loc, is_wtd):
         return "coordinates outside the Eastside and Worth the Drive", formatted
     locality = (loc.get("locality") or "").strip()
     if locality:
-        return f"{locality} is outside the 14 cities and Worth the Drive", formatted
+        return f"{locality} is outside the 15 cities and Worth the Drive", formatted
     if title.strip() or formatted.strip():
         # A title with no city and no foreign marker is not a resolved address.
         return None, formatted

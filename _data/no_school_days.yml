@@ -248,3 +248,72 @@ districts:
       - { start: "2026-11-25", end: "2026-11-25", type: half, off: false, label: Half day, grades: Middle and high school }
       - { start: "2027-06-11", end: "2027-06-11", type: half, off: false, label: Half day, grades: Elementary }
       - { start: "2027-06-17", end: "2027-06-17", type: last, off: false, label: "Half day, last day of school" }
+  - id: tahoma
+    title: Tahoma School District
+    short: Tahoma
+    abbr: TH
+    slug: tsd
+    toc: Tahoma
+    source: https://www.tahomasd.us/fs/resource-manager/view/946f2d0c-7bdc-415b-a5bc-23698dcca28c
+    source_label: Tahoma School District calendar
+    pdf: TahomaSchoolDistrictSchoolYearCalendar2026-27-2026-27DistrictCalendar1.pdf
+    cities: [maple-valley]
+    early: Fridays are a 90-minute early release, except Aug 28. Nov 18 and 19 are elementary half days for conferences. Nov 23 through 25 are half days at every school. The last day of school is Jun 15, a 3-hour early release.
+    weekly: Tahoma has a 90-minute early release every Friday, except August 28.
+    days:
+      - { start: "2026-09-07", end: "2026-09-07", type: holiday, label: Labor Day }
+      - { start: "2026-10-09", end: "2026-10-09", type: teacher, label: Teacher workshop }
+      - { start: "2026-11-11", end: "2026-11-11", type: holiday, label: Veterans Day }
+      - { start: "2026-11-26", end: "2026-11-27", type: holiday, label: Thanksgiving break }
+      - { start: "2026-12-21", end: "2027-01-01", type: break, label: Winter break }
+      - { start: "2027-01-18", end: "2027-01-18", type: holiday, label: Martin Luther King Jr. Day }
+      - { start: "2027-01-25", end: "2027-01-25", type: break, label: Semester break }
+      - { start: "2027-02-15", end: "2027-02-15", type: holiday, label: Presidents Day }
+      - { start: "2027-02-16", end: "2027-02-19", type: break, label: Mid-winter break }
+      - { start: "2027-03-19", end: "2027-03-19", type: snow, label: Snow make-up, conditional: true, note: "Off unless the district uses this day to make up a closure." }
+      - { start: "2027-04-05", end: "2027-04-09", type: break, label: Spring break }
+      - { start: "2027-05-28", end: "2027-05-28", type: snow, label: Snow make-up, conditional: true, note: "Off unless the district uses this day to make up a closure." }
+      - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
+      - { start: "2026-08-26", end: "2026-08-26", type: first, off: false, label: First day of school, grades: Grades 1-12 }
+      - { start: "2026-08-31", end: "2026-08-31", type: first, off: false, label: First day of school, grades: Kindergarten }
+      - { start: "2026-09-08", end: "2026-09-08", type: first, off: false, label: First day of school, grades: Preschool }
+      - { start: "2027-01-13", end: "2027-01-13", type: first, off: false, label: First day of school, grades: Transition to Kindergarten }
+      - { start: "2026-11-18", end: "2026-11-19", type: half, off: false, label: "Half day, conferences", grades: Elementary }
+      - { start: "2026-11-23", end: "2026-11-25", type: half, off: false, label: "Half day, conferences" }
+      - { start: "2027-06-15", end: "2027-06-15", type: last, off: false, label: "Early release, last day of school" }
+  - id: kent
+    title: Kent School District
+    short: Kent
+    abbr: KE
+    slug: ksd
+    toc: Kent
+    source: https://www.kent.k12.wa.us/documents/about/district-information/student-calendar/683900
+    source_label: Kent School District calendar
+    pdf: Student_Calendar_2026-2027.pdf
+    cities: []
+    early: Wednesdays are a 2-hour early release, starting September 2. Oct 12 through 16 and Feb 8 through 12 are 3-hour elementary conference dismissals. Nov 24 is a 3-hour secondary conference dismissal. The last day of school is Jun 17, a 3-hour early release.
+    weekly: Kent has a 2-hour early release every Wednesday, starting September 2.
+    days:
+      - { start: "2026-09-07", end: "2026-09-07", type: holiday, label: Labor Day }
+      - { start: "2026-10-02", end: "2026-10-02", type: teacher, label: Teacher workshop }
+      - { start: "2026-11-06", end: "2026-11-06", type: teacher, label: Teacher workshop }
+      - { start: "2026-11-11", end: "2026-11-11", type: holiday, label: Veterans Day }
+      - { start: "2026-11-26", end: "2026-11-26", type: holiday, label: Thanksgiving }
+      - { start: "2026-11-27", end: "2026-11-27", type: holiday, label: Native American Heritage Day }
+      - { start: "2026-12-21", end: "2027-01-01", type: break, label: Winter break }
+      - { start: "2027-01-18", end: "2027-01-18", type: holiday, label: Martin Luther King Jr. Day }
+      - { start: "2027-01-22", end: "2027-01-22", type: holiday, label: Day off }
+      - { start: "2027-02-15", end: "2027-02-19", type: break, label: Mid-winter break }
+      - { start: "2027-03-12", end: "2027-03-12", type: teacher, label: Teacher workshop }
+      - { start: "2027-04-05", end: "2027-04-09", type: break, label: Spring break }
+      - { start: "2027-04-16", end: "2027-04-16", type: snow, label: Snow make-up, conditional: true, note: "Off unless the district uses this day to make up a closure. Later closures are made up after the last day of school." }
+      - { start: "2027-05-21", end: "2027-05-21", type: snow, label: Snow make-up, conditional: true, note: "Off unless the district uses this day to make up a closure. Later closures are made up after the last day of school." }
+      - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
+      - { start: "2026-08-26", end: "2026-08-26", type: first, off: false, label: First day of school, grades: Grades 1-12 }
+      - { start: "2026-08-31", end: "2026-08-31", type: first, off: false, label: First day of school, grades: Kindergarten }
+      - { start: "2026-09-08", end: "2026-09-08", type: first, off: false, label: First day of school, grades: Preschool }
+      - { start: "2026-10-12", end: "2026-10-16", type: early, off: false, label: Early release, grades: Elementary only }
+      - { start: "2026-11-24", end: "2026-11-24", type: early, off: false, label: Early release, grades: Secondary only }
+      - { start: "2027-02-08", end: "2027-02-12", type: early, off: false, label: Early release, grades: Elementary only }
+      - { start: "2027-06-10", end: "2027-06-10", type: last, off: false, label: Last day of school, grades: Early childhood special education }
+      - { start: "2027-06-17", end: "2027-06-17", type: last, off: false, label: "Early release, last day of school" }
