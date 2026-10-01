@@ -141,11 +141,12 @@
     return end;
   }
 
-  function clipSentence(sentence) {
-    if (sentence.length <= BLURB_LIMIT) return sentence;
-    var end = sentenceEnd(sentence, BLURB_LIMIT);
+  function clipSentence(sentence, limit) {
+    var max = limit || BLURB_LIMIT;
+    if (sentence.length <= max) return sentence;
+    var end = sentenceEnd(sentence, max);
     if (end > 40) return sentence.slice(0, end).trim();
-    var slice = sentence.slice(0, BLURB_LIMIT - 1);
+    var slice = sentence.slice(0, max - 1);
     var space = slice.lastIndexOf(" ");
     var trimmed = (space > 40 ? slice.slice(0, space) : slice).replace(/[\s,;:]+$/, "");
     while (/[.!?…]$/.test(trimmed) || /\.{2,}$/.test(trimmed)) {
@@ -219,6 +220,24 @@
     return body;
   }
 
+  var SHEET_BLURB_LIMIT = 120;
+
+  // Phone share keeps one sentence. Free. is added only when that sentence
+  // does not already say free and the result still fits.
+  function sheetBlurb(blurb, cost) {
+    var price = clean(cost);
+    var sentences = sentencesOf(tidyEllipsis(clean(blurb))).filter(function (sentence) {
+      return !hasContact(sentence);
+    });
+    if (!sentences.length) return isFreeCost(price) ? "Free." : "";
+
+    var body = clipSentence(sentences[0], SHEET_BLURB_LIMIT);
+    if (!isFreeCost(price) || mentionsFree(body)) return body;
+    if (!body) return "Free.";
+    var next = body + " Free.";
+    return next.length <= SHEET_BLURB_LIMIT ? next : body;
+  }
+
   function placeLine(venue, city) {
     var where = clean(venue);
     var town = clean(city);
@@ -262,10 +281,18 @@
   }
 
   function shareSheetMessage(attrs) {
-    var lines = shareLines(attrs, false);
+    var title = clean(attrs.title);
+    var when = whenLine(attrs.start, attrs.end);
+    var place = placeLine(attrs.venue, attrs.city);
+    var blurb = sheetBlurb(attrs.blurb, attrs.cost);
     var source = sourceUrl(attrs.url);
-    if (source) lines.push(source);
-    return joinLines(lines);
+    var lines = [];
+    if (title) lines.push(title);
+    if (when) lines.push("\uD83D\uDCC5 " + when);
+    if (place) lines.push("\uD83D\uDCCD " + place);
+    if (blurb) lines.push("", blurb);
+    if (source) lines.push("", source);
+    return lines.join("\n");
   }
 
   function escapeHtml(value) {
