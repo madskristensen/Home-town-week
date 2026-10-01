@@ -1672,6 +1672,7 @@ module EastsideCalendar
           "abbr" => presence(district["abbr"], "NS"),
           "slug" => presence(district["slug"], id),
           "early" => district["early"].to_s.strip,
+          "weekly" => presence(district["weekly"], district["early"].to_s.strip),
           "source" => district["source"].to_s.strip,
           "source_label" => presence(district["source_label"], "#{title} calendar"),
           "feed_name" => "No-school days, #{title}",
@@ -1755,6 +1756,7 @@ module EastsideCalendar
           off = school_day_off?(day)
           kind = mark_kind(day, off)
           text = cell_text(day, off)
+          tip = "#{short}. #{reason_text(day)}"
           cursor = start_on
           while cursor <= finish_on
             by_date[cursor] ||= {}
@@ -1764,6 +1766,7 @@ module EastsideCalendar
               "short" => short,
               "kind" => kind,
               "text" => text,
+              "tip" => tip,
               "line" => line_id(slug, cursor, start_on, kind)
             }
             cursor += 1

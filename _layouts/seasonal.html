@@ -32,12 +32,14 @@ layout: default
   {%- assign school_months = school.months -%}
   {%- assign school_month_count = school_months | size -%}
   <div class="ns-filter">
-    <label for="ns-district">District</label>
-    <select id="ns-district" autocomplete="off">
-      {%- for district in school.districts -%}
-      <option value="{{ district.slug }}"{% if district.slug == "lwsd" %} selected{% endif %}>{{ district.short }}</option>
-      {%- endfor -%}
-    </select>
+    <div class="ns-filter-row">
+      <label for="ns-district">District</label>
+      <select id="ns-district" autocomplete="off">
+        {%- for district in school.districts -%}
+        <option value="{{ district.slug }}"{% if district.slug == "lwsd" %} selected{% endif %}>{{ district.short }}</option>
+        {%- endfor -%}
+      </select>
+    </div>
     <p class="ns-hint" id="ns-hint">Showing Lake Washington. Pick your district and we'll remember it.</p>
   </div>
   <script>
@@ -47,7 +49,16 @@ layout: default
       sel.value = document.documentElement.getAttribute("data-ns") || "lwsd";
     })();
   </script>
-  <p class="ns-key"><span class="ns-sample is-off" aria-hidden="true"></span> All students off <span class="ns-sample is-note" aria-hidden="true"></span> Some grades or shortened day <span class="ns-sample is-if" aria-hidden="true"></span> Off if needed</p>
+  <div class="ns-notes">
+    {%- for district in school.districts -%}
+    <p class="ns-weekly" data-d="{{ district.slug }}">{{ district.weekly }} <a href="{{ district.source }}" rel="noopener">District calendar</a></p>
+    {%- endfor -%}
+  </div>
+  <ul class="ns-key">
+    <li><span class="ns-sample is-off" aria-hidden="true"></span> All students off</li>
+    <li><span class="ns-sample is-note" aria-hidden="true"></span> Some grades or shortened day</li>
+    <li><span class="ns-sample is-if" aria-hidden="true"></span> Off if needed</li>
+  </ul>
   <div class="ns-sub" id="ns-subscribe">
     {%- assign ns_default = school.districts | where: "slug", "lwsd" | first -%}
     {%- include calendar-subscribe.html city=ns_default.id name=ns_default.feed_name path=ns_default.feed_path -%}
@@ -108,7 +119,7 @@ layout: default
         <div class="ns-day{% if cell.past %} is-past{% endif %}{% if cell.today %} is-today{% endif %}">
           <span class="ns-num" aria-hidden="true">{{ cell.day }}</span>
           {%- for mark in cell.marks -%}
-          <a class="ns-one is-{{ mark.kind }}" data-d="{{ mark.slug }}" href="#{{ mark.line }}" aria-label="{{ cell.label }}, {{ mark.text }}">{{ mark.text }}</a>
+          <span class="ns-one is-{{ mark.kind }}" data-d="{{ mark.slug }}" tabindex="0" aria-describedby="tip-{{ cell.iso }}-{{ mark.slug }}-{{ forloop.index }}"><span class="ns-label">{{ mark.text }}</span><span class="ns-tip" id="tip-{{ cell.iso }}-{{ mark.slug }}-{{ forloop.index }}" role="tooltip">{{ mark.tip }}</span></span>
           {%- endfor -%}
         </div>
         {%- endif -%}
@@ -119,7 +130,7 @@ layout: default
       {%- if ns_line_count > 0 -%}
       <ul class="ns-reasons">
         {%- for line in month.lines -%}
-        <li class="ns-line" id="{{ line.id }}" data-d="{{ line.slug }}" tabindex="-1"><span class="ns-when">{{ line.when }}</span> {{ line.short }}. {{ line.reason }}</li>
+        <li class="ns-line" id="{{ line.id }}" data-d="{{ line.slug }}"><span class="ns-when">{{ line.when }}</span> {{ line.short }}. {{ line.reason }}</li>
         {%- endfor -%}
       </ul>
       {%- endif -%}
@@ -177,20 +188,6 @@ layout: default
       window.addEventListener("popstate", fromLocation);
     })();
   </script>
-  <h2 class="no-school-month" id="early-release">Early release</h2>
-  <p class="no-school-lead">Weekly early release and late start are not days off. Each district's pattern is below, with the calendar it came from.</p>
-  <ul class="no-school-districts">
-    {%- for district in school.districts -%}
-    <li>
-      <p><strong>{{ district.title }}</strong> {{ district.early }}</p>
-      {%- assign district_source = district.source | append: "" -%}
-      {%- if district_source.size > 0 -%}
-      <p><a href="{{ district.source }}" rel="noopener">{{ district.source_label }}</a></p>
-      {%- endif -%}
-      {%- include calendar-subscribe.html city=district.id name=district.feed_name path=district.feed_path -%}
-    </li>
-    {%- endfor -%}
-  </ul>
   {%- include map-tip.html kind="missing" -%}
 </article>
 {%- else -%}
