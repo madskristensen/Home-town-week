@@ -934,17 +934,6 @@ figure figcaption .source::before {
   font-weight: 700;
 }
 
-.empty-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 1.15rem;
-  margin: 0.85rem 0 0;
-}
-
-.empty-links a {
-  font-weight: 700;
-}
-
 .empty-suggest-btn,
 .prose a.empty-suggest-btn {
   display: inline-flex;
