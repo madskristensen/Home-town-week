@@ -945,7 +945,8 @@ figure figcaption .source::before {
   font-weight: 700;
 }
 
-.empty-suggest-btn {
+.empty-suggest-btn,
+.prose a.empty-suggest-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
