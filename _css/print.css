@@ -133,6 +133,11 @@ figure,
   background: none !important;
 }
 
+.badge-legend .park-badge {
+  background: none !important;
+  color: #000 !important;
+}
+
 .playground-list .park-badge {
   display: inline !important;
   width: auto !important;
