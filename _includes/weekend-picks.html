@@ -281,20 +281,23 @@
           {%- assign lcp_assigned = true -%}
         {%- endif -%}
         {%- endif -%}
+        {%- capture town_href -%}/{{ cid }}/{%- endcapture -%}
+        {%- assign town_href = town_href | strip -%}
+        {%- assign card_calendar = cid | calendar_href: event -%}
         {%- include event-card.html
-             layout="weekend"
              image=photo
              alt=photo_alt_text
              credit=photo_credit
              source=photo_source
              loading=pick_loading
              priority=pick_priority
-             sizes="(min-width: 42rem) calc((min(44rem, 100vw - 3rem) - 1.25rem) / 2), calc(100vw - 3rem)"
-             figure="weekend-photo"
+             sizes="(min-width: 42rem) 21rem, calc(100vw - 3rem)"
              href=event_href
              external=external
              town=city.name
+             town_href=town_href
              when=when_label
+             calendar=card_calendar
              title=event.name
              event=event
              place=place_label

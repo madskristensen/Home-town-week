@@ -1152,14 +1152,62 @@ module EastsideCalendar
       end
     end
 
+    COLUMN_PHOTO_SIZES = "(min-width: 42rem) 21rem, calc(100vw - 3rem)"
+
     def venue_photo_include(photo)
       <<~LIQUID.chomp
         {% include event-photo.html
            src="#{quote_attr(photo["src"])}"
            alt="#{quote_attr(photo["alt"])}"
            credit="#{quote_attr(photo["credit"])}"
-           source="#{quote_attr(photo["source"])}" %}
+           source="#{quote_attr(photo["source"])}"
+           sizes="#{COLUMN_PHOTO_SIZES}" %}
       LIQUID
+    end
+
+    # A city section with no photo of its own still needs one so two-column
+    # rows line up. Options were already chosen by the hub photo index.
+    def with_fallback_photos(markdown, city_id, options, fallback)
+      text = markdown.to_s
+      return text if text.empty?
+
+      bucket = options.is_a?(Hash) ? options[city_id.to_s] : nil
+      parts = text.split(/(?=^### )/m)
+      parts.map { |part| fallback_photo_section(part, bucket, fallback) }.join
+    end
+
+    def fallback_photo_section(part, bucket, fallback)
+      return part if part.match?(/\{%\s*include\s+event-photo\.html\b/)
+      return part unless part.start_with?("###")
+
+      name = part[/\A###\s+(.+)\s*$/, 1].to_s.strip
+      return part if name.empty?
+
+      photo = fallback_choice(bucket, name) || fallback
+      return part if photo.nil? || photo["src"].to_s.empty?
+
+      include = venue_photo_include(photo)
+      if part.sub!(/\A(###[^\n]*\n)/) { "#{Regexp.last_match(1)}\n#{include}\n" }
+        part
+      else
+        part
+      end
+    end
+
+    def fallback_choice(bucket, name)
+      return nil unless bucket.is_a?(Hash)
+
+      list = bucket[name]
+      if list.nil?
+        want = EventCalendar.normalize(name)
+        bucket.each do |key, value|
+          next unless EventCalendar.normalize(key) == want
+
+          list = value
+          break
+        end
+      end
+      Array(list).find { |photo| photo.is_a?(Hash) && photo["kind"].to_s != "designed" && !photo["src"].to_s.empty? }
     end
 
     def quote_attr(value)
@@ -1314,7 +1362,9 @@ module EastsideCalendar
       groups = page.data["calendar_groups"]
       return "" unless groups.is_a?(Hash)
 
-      start_parsed = EventCalendar.parse_when(event["start_raw"])
+      raw = event["start_raw"].to_s
+      raw = event["start"].to_s if raw.empty?
+      start_parsed = EventCalendar.parse_when(raw)
       return "" unless start_parsed
 
       want = EventCalendar.file_slug(event["name"], start_parsed)
@@ -1652,4 +1702,10 @@ Jekyll::Hooks.register :pages, :pre_render do |page|
 
   venues = page.site.data.dig("venue_images", "venues")
   page.content = EastsideCalendar::SeasonalHubs.with_venue_photos(page.content, venues)
+  page.content = EastsideCalendar::SeasonalHubs.with_fallback_photos(
+    page.content,
+    page.data["city"],
+    page.site.data["card_photo_options"],
+    page.site.data["card_photo_fallback"]
+  )
 end

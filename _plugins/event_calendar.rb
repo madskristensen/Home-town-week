@@ -363,7 +363,9 @@ module EastsideCalendar
         next if cards.nil? || cards.empty?
 
         grouped << %(<h2 class="event-bucket">#{label}</h2>\n)
+        grouped << %(<div class="hub-grid">\n)
         grouped << cards.join
+        grouped << "</div>\n"
       end
       grouped
     end
@@ -788,14 +790,7 @@ module EastsideCalendar
         index = cursors[key]
         cursors[key] = index + 1
         links = bucket && bucket[index]
-        if links && !links.empty?
-          snippet = calendar_actions(links)
-          unless part.sub!(%r{(<p class="event-when"[^>]*>)(.*?)(</p>)}m) {
-            "#{Regexp.last_match(1)}#{glue_calendar(Regexp.last_match(2), snippet)}#{Regexp.last_match(3)}"
-          }
-            part.sub!(%r{</h3>}) { "#{Regexp.last_match(0)}\n<p class=\"event-when\">#{snippet}</p>" }
-          end
-        end
+        snippet = links && !links.empty? ? calendar_actions(links) : nil
         iso = dates[key] && dates[key][index]
         iso = nil if iso.to_s.empty?
         end_iso = ends && ends[key] && ends[key][index]
@@ -804,7 +799,7 @@ module EastsideCalendar
         part = link_event_place(part, city_name)
         part = mark_source_links(part)
         schema = schemas && schemas[key] && schemas[key][index]
-        wrap_event_card(part, iso, info, page, end_iso, schema)
+        wrap_event_card(part, iso, info, page, end_iso, schema, snippet)
       end
       prelude + rendered.join
     end
@@ -838,14 +833,76 @@ module EastsideCalendar
       end
     end
 
-    # One card per event heading. The calendar icon is already on the date line.
-    # The article wrapper is _includes/event-card.html so the markup cannot drift.
-    def wrap_event_card(part, iso = nil, info = nil, page = nil, end_iso = nil, schema = nil)
+    def excise(html, chunk)
+      return html if chunk.to_s.empty?
+
+      at = html.index(chunk)
+      return html unless at
+
+      html[0, at] + html[(at + chunk.length)..]
+    end
+
+    # Pull the city writeup into the same fields the shared card renders.
+    def extract_card_fields(part)
+      html = part.to_s.dup
+      heading = html.match(/<h3\b([^>]*)>(.*?)<\/h3>/m)
+      title = heading ? visible_text(heading[2]) : ""
+      heading_id = heading ? heading[1][/id="([^"]*)"/, 1].to_s : ""
+      html = excise(html, heading[0]) if heading
+
+      photo = ""
+      while (fig = html[/<figure\b[^>]*\bclass="event-photo"[^>]*>.*?<\/figure>/m])
+        photo = fig if photo.empty?
+        html = excise(html, fig)
+      end
+
+      when_inner = html[/<p class="event-when"[^>]*>(.*?)<\/p>/m, 1]
+      when_text = visible_text(when_inner)
+      when_tag = html[/<p class="event-when"[^>]*>.*?<\/p>/m]
+      html = excise(html, when_tag)
+
+      places = html.scan(/<p class="event-place"[^>]*>.*?<\/p>/m)
+      places.each { |chunk| html = excise(html, chunk) }
+      links = html.scan(/<p class="event-links"[^>]*>.*?<\/p>/m)
+      links.each { |chunk| html = excise(html, chunk) }
+
+      blurbs = []
+      html.scan(/<p\b[^>]*>(.*?)<\/p>/m) do
+        inner = Regexp.last_match(1).to_s.strip
+        next if visible_text(inner).empty?
+
+        blurbs << %(<p class="hub-blurb">#{inner}</p>)
+      end
+
+      {
+        "title" => title,
+        "heading_id" => heading_id,
+        "when" => when_text,
+        "photo_html" => photo.strip,
+        "place_html" => places.join("\n"),
+        "links_html" => links.join("\n"),
+        "blurb_html" => blurbs.join("\n")
+      }
+    end
+
+    # One card per event heading. The include lays out the same elements as
+    # every other page. The calendar icon is a separate action, not glued
+    # to the last word of the date.
+    def wrap_event_card(part, iso = nil, info = nil, page = nil, end_iso = nil, schema = nil, calendar_html = nil)
       body = part.sub(/\s+\z/, "")
       trail = part[body.length..] || ""
+      fields = extract_card_fields(body)
       tags = EventLabels.html(info)
-      body = body.sub(%r{</h3>}) { "#{Regexp.last_match(0)}\n#{tags}" } unless tags.empty?
-      assigns = { "body" => body }
+      assigns = {}
+      assigns["title"] = fields["title"] unless fields["title"].empty?
+      assigns["heading_id"] = fields["heading_id"] unless fields["heading_id"].empty?
+      assigns["when"] = fields["when"] unless fields["when"].empty?
+      assigns["photo_html"] = fields["photo_html"] unless fields["photo_html"].empty?
+      assigns["place_html"] = fields["place_html"] unless fields["place_html"].empty?
+      assigns["links_html"] = fields["links_html"] unless fields["links_html"].empty?
+      assigns["blurb_html"] = fields["blurb_html"] unless fields["blurb_html"].empty?
+      assigns["tags_html"] = tags unless tags.empty?
+      assigns["calendar_html"] = calendar_html unless calendar_html.to_s.strip.empty?
       assigns["date"] = iso.to_s unless iso.to_s.empty?
       assigns["end"] = end_iso.to_s unless end_iso.to_s.empty?
       extra = EventLabels.attrs(info)
@@ -1427,6 +1484,25 @@ module EastsideCalendar
     def share_finish(input)
       start_s, end_s = input.to_s.split("|", 2)
       EventCalendar.share_end_value(EventCalendar.parse_when(start_s), EventCalendar.parse_when(end_s))
+    end
+
+    # Home weekend cards use the same .ics file the city page already wrote.
+    # city_id is the page id. event is the row from {city}_events.
+    def calendar_href(city_id, event)
+      site = @context.registers[:site]
+      return "" unless site && event
+
+      cid = city_id.to_s.strip
+      return "" if cid.empty?
+
+      page = site.pages.find do |item|
+        item.data["layout"].to_s == "city" && item.data["city"].to_s == cid
+      end
+      return "" unless page
+
+      start = event["start_raw"].to_s
+      start = event["start"].to_s if start.empty?
+      EastsideCalendar::SeasonalHubs.calendar_href(page, { "name" => event["name"].to_s, "start_raw" => start })
     end
 
     # The city date line is already in the card body. The button hangs off

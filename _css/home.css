@@ -49,63 +49,10 @@
 }
 
 .weekend-pick {
-  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
-  color: inherit;
-}
-
-.weekend-card {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-}
-
-.weekend-card-link {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-
-.weekend-name-link {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-}
-
-.weekend-pick img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  border-radius: var(--radius);
-}
-
-.weekend-pick figure {
-  position: relative;
-  margin: 0;
-  border-radius: var(--radius);
-}
-
-.weekend-town {
-  display: block;
-  margin-top: 0.45rem;
-  color: var(--forest);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
-.weekend-when {
-  display: inline-block;
-  max-width: calc(100% - 22px);
-  margin-top: 0.28rem;
-  color: var(--gold);
-  font-size: 0.92rem;
-  font-weight: 600;
-  line-height: 1.35;
+  min-width: 0;
 }
 
 .weekend-picks h2 a {
@@ -126,40 +73,6 @@
 
 .weekend-more a {
   font-weight: 650;
-}
-
-.weekend-name {
-  display: block;
-  margin-top: 0.28rem;
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1.22rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
-.weekend-card-link:hover ~ .weekend-name-link .weekend-name,
-.weekend-name-link:focus-visible .weekend-name {
-  text-decoration: underline;
-  text-underline-offset: 0.06em;
-}
-
-.weekend-place {
-  display: block;
-  margin-top: 0.18rem;
-  color: var(--muted);
-  font-size: 0.88rem;
-  font-weight: 500;
-  line-height: 1.35;
-}
-
-.weekend-blurb {
-  display: block;
-  margin-top: 0.28rem;
-  color: var(--text);
-  font-size: 0.92rem;
-  line-height: 1.4;
 }
 
 @media (max-width: 41.99rem) {
@@ -363,12 +276,3 @@
   text-decoration: none;
 }
 
-.weekend-photo figcaption {
-  pointer-events: none;
-}
-
-.weekend-photo figcaption a {
-  position: relative;
-  z-index: 1;
-  pointer-events: auto;
-}

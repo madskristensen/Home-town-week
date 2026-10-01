@@ -1136,8 +1136,7 @@ a.addr .addr-text {
   list-style: none;
 }
 
-.event-card .event-tags,
-.weekend-card .event-tags {
+.event-card .event-tags {
   margin: 0.4rem 0 0.1rem;
   padding: 0;
 }
@@ -1274,6 +1273,7 @@ a.addr .addr-text {
 .event-list h2.event-bucket.is-filtered-out,
 .hub-toc li.is-filtered-out,
 .event-card.is-past,
+.hub-grid.is-past,
 h2.event-bucket.is-past {
   display: none;
 }
@@ -1319,6 +1319,10 @@ h2.event-bucket.is-past {
 }
 
 .event-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
   margin: 0;
   padding: 0;
   background: transparent;
@@ -1329,11 +1333,9 @@ h2.event-bucket.is-past {
   overflow-wrap: break-word;
 }
 
-/* Screen chrome only. Print flattens .event-card, and the weekend photo
-   sits outside .weekend-card, so the surface belongs on the pick. */
+/* Screen chrome only. Print flattens .event-card. */
 @media screen {
-  .event-card:not(.weekend-card),
-  .weekend-pick {
+  .event-card {
     padding: 0.7rem 0.75rem 0.8rem;
     background: var(--sheet);
     border: 1px solid var(--rule);
@@ -1342,8 +1344,7 @@ h2.event-bucket.is-past {
 }
 
 @media screen and (prefers-contrast: more) {
-  .event-card:not(.weekend-card),
-  .weekend-pick {
+  .event-card {
     border-color: var(--ink);
   }
 }
@@ -1368,40 +1369,73 @@ h2.event-bucket.is-past {
   text-underline-offset: 0.08em;
 }
 
+.event-kicker {
+  margin: 0 0 0.15rem;
+  color: var(--forest);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.event-kicker a {
+  color: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-decoration: none;
+}
+
+.event-kicker a:hover,
+.event-kicker a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+/* The action group stays at the top-right of the date row. The date
+   column wraps in the space beside it, so a short date and a long date
+   leave the icons in the same place. */
+.event-when-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  align-items: start;
+  column-gap: 0.35rem;
+  min-height: 2rem;
+  margin: 0.2rem 0 0.15rem;
+}
+
 .event-card .event-when {
-  display: inline-block;
-  max-width: 100%;
-  margin: 0.3rem 0 0.1rem;
+  display: block;
+  max-width: none;
+  margin: 0;
+  padding-top: 0.32rem;
   color: var(--gold);
   font-size: 0.95rem;
   font-weight: 600;
   line-height: 1.35;
 }
 
-.event-when-tail {
-  white-space: nowrap;
-}
-
-/* Share sits just after the date, out of flow. The 22px slot is what
-   long dates already leave, and the 32px target uses the card padding
-   so it does not cover the calendar icon or the place link. */
-.event-card .event-when,
-.weekend-when {
-  position: relative;
-  max-width: calc(100% - 22px);
+.event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.05rem 0.1rem;
+  min-width: 4.6rem;
+  max-width: 11rem;
+  min-height: 2rem;
 }
 
 .event-share {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  left: 100%;
-  top: 50%;
   display: inline-flex;
+  flex: none;
   align-items: center;
   justify-content: center;
   width: 32px;
   height: 32px;
-  margin: -16px 0 0 1px;
+  margin: 0;
   padding: 6px;
   border: 0;
   border-radius: 2px;
@@ -1472,7 +1506,7 @@ h2.event-bucket.is-past {
   text-decoration: underline;
 }
 
-.event-card > p:not(.event-when):not(.event-place):not(.event-links):not(.hub-blurb),
+.event-card > p:not(.event-when):not(.event-place):not(.event-links):not(.hub-blurb):not(.event-kicker),
 .event-card > ul:not(.event-tags),
 .event-card > ol {
   margin: 0.8rem 0;
@@ -1508,8 +1542,9 @@ h2.event-bucket.is-past {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
   gap: 0.1rem 0.2rem;
-  margin-left: 0.3rem;
+  margin: 0;
   vertical-align: middle;
 }
 
@@ -1562,49 +1597,21 @@ h2.event-bucket.is-past {
   margin-top: 0.9rem;
 }
 
-.event-card--tile {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  min-width: 0;
+.event-list .hub-grid {
+  margin-top: 0;
 }
 
-.event-card--tile .event-photo {
+.event-card .event-photo {
   margin: 0 0 0.55rem;
   aspect-ratio: 16 / 9;
 }
 
-.event-card--tile .event-photo img {
+.event-card .event-photo img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.event-card--tile h3 {
-  font-size: 1.2rem;
-  line-height: 1.25;
-}
-
-.event-card--tile .event-when {
-  margin: 0.25rem 0 0;
-}
-
-.event-card--tile .event-place {
-  margin: 0.15rem 0 0;
-}
-
-.event-card--tile .event-cals {
-  flex-wrap: nowrap;
-  gap: 0;
-}
-
-.event-card--tile a.event-cal {
-  gap: 0;
-  font-size: inherit;
-  font-weight: inherit;
-  white-space: normal;
 }
 
 @media (max-width: 41.99rem) {

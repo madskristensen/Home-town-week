@@ -179,21 +179,15 @@ figure,
   box-shadow: none !important;
 }
 
-.weekend-pick {
-  margin: 0 0 0.75rem;
-  padding: 0 0 0.65rem;
-  border: 0;
-  border-bottom: 1px solid #000;
-  border-radius: 0;
-  background: none !important;
-  break-inside: avoid;
-  page-break-inside: avoid;
+.event-when-row {
+  display: block !important;
 }
 
-.weekend-pick .event-card {
-  margin: 0;
-  padding: 0;
-  border: 0;
+.event-actions {
+  display: inline-flex !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin-top: 0.15rem;
 }
 
 .event-tags li {

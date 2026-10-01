@@ -1,7 +1,7 @@
 {%- comment -%}
   Lights or decorations map and the stop list.
   No parameters. page.map_id "halloween" uses the decorations data.
-  Each stop is event-card.html with layout tile and place_first.
+  Each stop is the shared event card. The town name is the section heading.
 {%- endcomment -%}
 {%- if page.map_id == "halloween" -%}
 {%- assign home_lights = site.data.halloween_map -%}
@@ -104,8 +104,6 @@
     {%- endif -%}
     {%- capture light_dom_id -%}light-{{ light.id }}{%- endcapture -%}
     {%- include event-card.html
-         layout="tile"
-         place_first=true
          mark_kind=true
          id=light_dom_id
          image_kind=light.image_kind

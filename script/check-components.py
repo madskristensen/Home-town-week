@@ -25,10 +25,7 @@ SKIP = {
 # Literal markup that has to stay in one include. COMPONENTS.md may name it.
 RULES = (
     ('class="event-card', "_includes/event-card.html"),
-    ("weekend-card", "_includes/event-card.html"),
-    ("event-card--tile", "_includes/event-card.html"),
     ('class="event-photo"', "_includes/event-photo.html"),
-    ('class="weekend-photo"', "_includes/event-photo.html"),
     ('class="page-intro"', "_includes/page-intro.html"),
     ('class="empty-suggest', "_includes/empty-suggest.html"),
     ('class="lights-feature', "_includes/lights-feature.html"),
@@ -199,7 +196,7 @@ def main():
             if BARE_EVENT_CARD not in line or include_call(line):
                 continue
             # Class markup is already reported above.
-            if 'class="event-card' in line or "event-card--tile" in line:
+            if 'class="event-card' in line:
                 continue
             failures.append(
                 f"{name}:{number}: event-card belongs in _includes/event-card.html, "

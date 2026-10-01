@@ -6,8 +6,8 @@ Card and page markup lives in one include each. Pages, layouts, and the city cal
 
 | Include | What it renders |
 | --- | --- |
-| `_includes/event-card.html` | Every event card. `layout` is blank for a city stack, `tile` for hubs, lights, and decorations, and `weekend` for the home weekend picks. The weekend photo sits outside the card link. A dated card includes the share button. |
-| `_includes/event-photo.html` | Photo and the credit strip. `figure` defaults to `event-photo`. Home weekend picks pass `weekend-photo`. |
+| `_includes/event-card.html` | Every event card. The same elements on home, city, hub, and explore pages: photo and credit, city label when a town is passed, date line, calendar and share actions, title, tags, place, and blurb. A dated card includes the share button. |
+| `_includes/event-photo.html` | Photo and the credit strip. `figure` defaults to `event-photo`. |
 | `_includes/filter-chip.html` | One filter chip. Event chips pass `group` and `value`. Playground chips pass `input_class`, `city`, `count`, or `amenity`, and do not pass `value`. |
 | `_includes/page-intro.html` | The one-line introduction. Renders nothing when `text` is blank. |
 | `_includes/empty-suggest.html` | Empty-state suggestion. The playground line links to `/playgrounds/`, with `?town=` on a city page. |
@@ -27,11 +27,8 @@ Each include starts with a Liquid comment that lists its parameters. Liquid comm
 
 A file fails when it contains one of these outside the include that owns it:
 
-- `class="event-card` (city cards, tiles, and weekend cards)
-- `weekend-card`
-- `event-card--tile`
+- `class="event-card`
 - `class="event-photo"`
-- `class="weekend-photo"`
 - `class="page-intro"`
 - `class="empty-suggest` (the empty box and its button)
 - `class="lights-feature`

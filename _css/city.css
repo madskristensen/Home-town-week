@@ -127,43 +127,12 @@
     border-color: var(--ink);
   }
 }
-.city-home .event-card + .event-card {
-  margin-top: 1.15rem;
-}
-
-@media (max-width: 41.99rem) {
-  /* The column already has a 0.85rem gap, so this margin makes 2.5rem
-     between stacked event cards. */
-  .city-home .event-card + .event-card {
-    margin-top: 1.65rem;
-  }
-}
-
-.city-home .event-card h3 {
-  margin: 0;
-  color: var(--ink);
-  font-size: 1.32rem;
-  line-height: 1.2;
-}
-
 .city-home .event-card > :first-child {
   margin-top: 0;
 }
 
 .city-home .event-card > :last-child {
   margin-bottom: 0;
-}
-
-.city-home .event-card > p:not(.event-when):not(.event-place) {
-  margin: 0.55rem 0;
-}
-
-.city-home .event-card > p.event-links {
-  margin: 0.35rem 0 0;
-}
-
-.city-home .event-card .event-photo {
-  margin: 0.65rem 0 0.1rem;
 }
 
 .issue-share {
