@@ -215,12 +215,19 @@
         {%- assign option_kind = option.kind | append: "" -%}
         {%- capture marker -%}|{{ option_src }}|{%- endcapture -%}
         {%- assign marker = marker | strip -%}
-        {%- if option_kind == "designed" or used_photos contains marker -%}{% continue %}{%- endif -%}
+        {%- if option_kind == "designed" -%}{% continue %}{%- endif -%}
+        {%- comment -%}
+          Same order as hub cards: own, then venue, then theme, then pool.
+          A venue photo can repeat. A theme or pool file is used once here.
+        {%- endcomment -%}
+        {%- if option_kind != "own" and option_kind != "venue" and used_photos contains marker -%}{% continue %}{%- endif -%}
         {%- assign photo = option_src -%}
         {%- assign photo_credit = option.credit -%}
         {%- assign photo_source = option.source -%}
         {%- assign photo_alt_text = option.alt -%}
-        {%- assign used_photos = used_photos | append: option_src | append: "|" -%}
+        {%- if option_kind != "own" and option_kind != "venue" -%}
+          {%- assign used_photos = used_photos | append: option_src | append: "|" -%}
+        {%- endif -%}
         {%- break -%}
       {%- endfor -%}
     {%- endif -%}

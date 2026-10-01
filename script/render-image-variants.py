@@ -152,11 +152,23 @@ def copy_record(path, record):
 
 def write_manifest(records):
     os.makedirs("_data", exist_ok=True)
+    # The picture helper looks up the parent folder and the filename.
+    # A city photo is bellevue/kelsey-creek. A pool photo is
+    # hubs/fall/orchard, so the folder is fall and the stem is orchard.
+    # Splitting only on the first slash would file that under hubs and
+    # the helper would not find a srcset.
     nested = {}
+    seen = {}
     for key in sorted(records):
-        if "/" not in key:
+        parts = key.split("/")
+        if len(parts) < 2:
             continue
-        folder, stem = key.split("/", 1)
+        folder, stem = parts[-2], parts[-1]
+        slot = "%s/%s" % (folder, stem)
+        prior = seen.get(slot)
+        if prior and prior != key:
+            print("variant key collision %s from %s and %s" % (slot, prior, key))
+        seen[slot] = key
         nested.setdefault(folder, {})[stem] = records[key]
     count = 0
     with open(MANIFEST, "w", encoding="utf-8") as handle:

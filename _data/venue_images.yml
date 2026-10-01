@@ -399,10 +399,10 @@ venues:
     source: https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/PCS-Photo-Galleries/Marina-Park-Photo-Gallery
   - keys: ["kingsgate library"]
     image: /assets/images/kirkland/kingsgate-library.webp
-    alt: The entrance of Kingsgate Library, with the library sign beside the doors.
-    credit: "Photo: King County Library System."
+    alt: Kingsgate Library in Kirkland, a low wood building with a covered entrance and the library sign.
+    credit: "Photo: King County Library System"
     license: organizer
-    source: https://kcls.org/locations/kingsgate/
+    source: https://historylink.org/File/20165
   - keys: ["redmond library"]
     image: /assets/images/redmond/redmond-library.webp
     alt: Redmond Library, a modern building with a glass front and a covered walkway.
@@ -547,3 +547,15 @@ venues:
     credit: "Photo: City of Bellevue"
     license: organizer
     source: https://bellevuewa.gov/city-government/departments/parks/nature-and-environment/visitor-centers-environmental-programs/lewis-creek-park-visitor-center
+  - keys: ["evans creek"]
+    image: /assets/images/sammamish/evans-creek.webp
+    alt: A wooden boardwalk through the forest at Evans Creek Preserve in Sammamish.
+    credit: "Photo: Comradebunny, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Evans_Creek_Preserve_Boardwalk.jpg
+  - keys: ["woodinville heritage museum"]
+    image: /assets/images/woodinville/heritage-museum.webp
+    alt: The Woodinville Heritage Museum, a white former schoolhouse with a cupola.
+    credit: "Photo: Woodinville Heritage Museum"
+    license: organizer
+    source: https://www.woodinvilleheritage.org/

@@ -7,7 +7,9 @@
 
   Split on the full filename, not the stem. A stem that also appears
   in a parent folder (lake-oswego/lake.webp) would otherwise drop
-  that folder.
+  that folder. The variant entry is the parent folder plus the
+  filename. For a pool photo that is hubs/fall/orchard.webp, that
+  folder is fall.
 {%- endcomment -%}
 {%- assign img_file = include.src | split: "/" | last -%}
 {%- assign img_stem = img_file | split: "." | first -%}

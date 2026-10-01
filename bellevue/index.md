@@ -97,6 +97,13 @@ Clay studio, all ages. Free with admission or membership. Glaze and firing is an
 <p class="event-when">Sat Oct 3 through Sun Oct 11</p>
 <p class="event-place">Studio33, 13259 NE 20th St</p>
 
+{% include event-photo.html
+   src="/assets/images/bellevue/under-the-mushroom.webp"
+   alt="Poster for Under the Mushroom, with illustrated forest animals around the title."
+   credit="Image: Theatre33"
+   source="https://www.theatre33wa.org/"
+   license="organizer" %}
+
 A short Russian-language fairy tale from Theatre33 for little children, with older siblings and parents welcome. Games and a craft follow the story. Showtimes are Saturday, Oct 3 at 11:00 a.m. and 5:00 p.m., Saturday, Oct 10 at 11:00 a.m. and 5:00 p.m., and Sunday, Oct 11 at 11:00 a.m. Those performances are sold out.
 
 [Theatre33 tickets](https://theatre33.ludus.com/)
