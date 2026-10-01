@@ -87,6 +87,11 @@
   line-height: 1.35;
 }
 
+.playground-list a.addr,
+.playground-list a.addr .addr-text {
+  text-decoration: none;
+}
+
 .playground-list a.addr::before {
   flex: none;
 }
