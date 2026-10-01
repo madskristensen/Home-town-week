@@ -61,6 +61,14 @@ Stories, music, movement, and rhymes. Stay to play after. All ages with an adult
 
 [Family Story Time](https://kcls.bibliocommons.com/events/6aa899dc4b3b06003083c924)
 
+### Sunflower Festival
+<p class="event-when">Sat Oct 10 · 9:00 a.m.–7:00 p.m.</p>
+<p class="event-place">JB Family Growers, 14063 NE 145th Street, Woodinville</p>
+
+The last peak of the 7-acre sunflower field, plus the corn maze, u-pick pumpkins and flowers, and local vendors. It is included with regular farm admission. There is no separate festival ticket.
+
+[2026 events](https://www.jbfamilygrowers.com/2026-events)
+
 ### Sammamish Valley Harvest Fest
 <p class="event-when">Sat Oct 10 · 10:00 a.m.–3:00 p.m.</p>
 <p class="event-place">21 Acres, 13701 NE 171st St</p>
@@ -106,6 +114,14 @@ Teens and adults design a beaded bracelet around a personal quality such as stre
 
 [Intention bracelet](https://kcls.bibliocommons.com/events/6a922c70aafa6100295ff351)
 
+### Pup-kin Patch
+<p class="event-when">Sun Oct 18 · 9:00 a.m.–7:00 p.m.</p>
+<p class="event-place">JB Family Growers, 14063 NE 145th Street, Woodinville</p>
+
+Dogs are welcome all season, and this Sunday is set aside for them. A leashed dog can do the corn maze, the sunflower walk, and u-pick with you. Included with regular farm admission.
+
+[2026 events](https://www.jbfamilygrowers.com/2026-events)
+
 ### Aesop and Art
 <p class="event-when">Wed Oct 21 · 4:30–5:30 p.m.</p>
 <p class="event-place">Woodinville Library, 17105 Avondale Road NE</p>
@@ -129,3 +145,19 @@ A hands-on science session for ages 8 to 12. Materials are provided. No registra
 A Halloween family morning from IslandWood and King County. The plan is crafts and hands-on looks at how leaves, pumpkins, and soil break down. It is at Brightwater Center.
 
 [Spooky Soils](https://islandwood.org/events/2026-10-31/)
+
+### Teen Halloween Party
+<p class="event-when">Sat Oct 31 · 2:00–4:00 p.m.</p>
+<p class="event-place">Woodinville Library, 17105 Avondale Road NE</p>
+
+Games, crafts, tarot, karaoke, and treats for teens 12 to 18. Costumes are encouraged. Registration is encouraged and not required. Friends of the Woodinville Library sponsor it.
+
+[Teen Halloween Party](https://kcls.bibliocommons.com/events/6a5a9982e9de6536001c7059)
+
+### The Great Pumpkin Hunt
+<p class="event-when">Sat Oct 31 · 4:00–5:30 p.m.</p>
+<p class="event-place">Woodinville Library, 17105 Avondale Road NE</p>
+
+Find a pumpkin, join a short costume parade inside, and trick-or-treat at the library. No registration. Part of it may move outside if the weather is good. Friends of the Woodinville Library sponsor it.
+
+[The Great Pumpkin Hunt](https://kcls.bibliocommons.com/events/6aa8a328ab7a8e0037c1d44f)

@@ -273,6 +273,22 @@ A free afternoon of clothes, jewelry, sweets, and Diwali shopping. Free parking.
 
 [Karwa Chauth and Diwali Bazaar](https://www.eventbrite.com/e/redmond-karwachauth-and-diwali-bazaar-2026-tickets-1987171722114)
 
+### Trick or Treat at Marymoor Village
+<p class="event-when">Sat Oct 24 · 4:30–7:30 p.m.</p>
+<p class="event-place">Redmond Community Center at Marymoor Village, 6505 176th Ave NE</p>
+
+Indoor trick-or-treating from room to room, with crafts. Free, and for all ages. Children under 12 come with an adult. Register ahead.
+
+[Trick or Treat](https://app.amilia.com/store/en/city-of-redmond/shop/activities/7084082)
+
+### Haunted House at Marymoor Village
+<p class="event-when">Sat Oct 24 · 5:00–9:00 p.m.</p>
+<p class="event-place">Redmond Community Center at Marymoor Village, 6505 176th Ave NE</p>
+
+A darker walk through the same community center. Ages 12 and older are recommended. Expect dim light, strobes, loud noise, fog, and stairs. Tickets are $5 to $6 at the door.
+
+[Haunted House](https://app.amilia.com/store/en/city-of-redmond/shop/activities/7084090)
+
 ### Spooky Spectacular
 <p class="event-when">Mon Oct 26 · 6:00–7:30 p.m.</p>
 <p class="event-place">Redmond Senior & Community Center, 8703 160th Ave NE</p>
@@ -287,6 +303,14 @@ A free afternoon of clothes, jewelry, sweets, and Diwali shopping. Free parking.
 All ages. Come in costume for a photo booth, face painting, crafts, pumpkin decorating, and mini games. Bring your own pumpkin. The center supplies the decorating materials and there is no carving. Hot dogs, veggie dogs, chips, candy, and drinks are part of the evening.
 
 [Spooky Spectacular](https://www.redmond.gov/calendar.aspx?EID=3560)
+
+### Trunk-or-Treat at City Hall
+<p class="event-when">Fri Oct 30 · Time not posted</p>
+<p class="event-place">Redmond City Hall, 15670 NE 85th Street</p>
+
+A free evening of trick-or-treating, games, and community fun. The city's fall newsletter lists Friday, Oct. 30, and does not print a start time.
+
+[Focus, Fall 2026](https://www.redmond.gov/2642/Focus---Fall-2026)
 
 ### Day of the Dead
 <p class="event-when">Mon Nov 2 · 5:00–7:00 p.m.</p>

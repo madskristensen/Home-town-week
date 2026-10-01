@@ -131,6 +131,14 @@ Watch artist Rinkle Shah make a rangoli, the colored-powder floor design used fo
 
 [Rangoli Demonstration](https://kcls.bibliocommons.com/events/6a85e616b20478002993f1ea)
 
+### Trick-or-Treat on Main Street
+<p class="event-when">Fri Oct 30 · 5:00–7:00 p.m.</p>
+<p class="event-place">Main Street and 101st Ave NE, Downtown Bothell</p>
+
+A downtown stroll for costumes and candy. The city moved the date to Friday, Oct. 30, because of I-405 work and feedback from Main Street businesses.
+
+[Trick-or-Treat on Main Street](https://www.bothellwa.gov/1203/Trick-or-Treat-on-Main-Street)
+
 ### Evergreen Christmas Lights
 <p class="event-when">Tue Dec 1 through Thu Dec 24 · 6:00–9:00 p.m.</p>
 <p class="event-place">Evergreen Church, 3429 240th St SE</p>

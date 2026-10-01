@@ -23,6 +23,14 @@ One festival, open Friday through Sunday after the opening weekend. Gates close 
 
 [Fall Harvest Festival](https://remlingerfarms.com/fall-harvest-festival/)
 
+### Play and Learn
+<p class="event-when">Fri Oct 2 · 9:00–10:30 a.m.</p>
+<p class="event-place">Tolt Congregational Church, 4851 Tolt Ave, Carnation</p>
+
+Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar.
+
+[Play and Learn](https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/)
+
 ### Family Story Time
 <p class="event-when">Fri Oct 2 · 10:15–11:00 a.m.</p>
 <p class="event-place">Carnation Library, 4804 Tolt Avenue</p>
@@ -87,6 +95,14 @@ Open building with Legos and Duplos. Stay the whole time or stop in. All ages. N
 
 [LEGO Block Party](https://kcls.bibliocommons.com/events/6abdd612e8cf1c005cb01406)
 
+### Play and Learn
+<p class="event-when">Fri Oct 16 · 9:00–10:30 a.m.</p>
+<p class="event-place">Tolt Congregational Church, 4851 Tolt Ave, Carnation</p>
+
+Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar.
+
+[Play and Learn](https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/)
+
 ### Pokemon Club
 <p class="event-when">Fri Oct 16 · 2:45–4:15 p.m.</p>
 <p class="event-place">Carnation Library, 4804 Tolt Avenue</p>
@@ -94,6 +110,14 @@ Open building with Legos and Duplos. Stay the whole time or stop in. All ages. N
 A drop-in club for ages 7 and older. Learn the Pokemon trading card game or Poke Catch, or use the worksheets and stickers. No experience needed. First come, first served.
 
 [Pokemon Club](https://kcls.bibliocommons.com/events/6abdd628ea50a10050a5ca02)
+
+### Bird Walk at Tolt-MacDonald Park
+<p class="event-when">Sat Oct 17 · 7:45–10:45 a.m.</p>
+<p class="event-place">Tolt-MacDonald Park, 31020 NE 40th St, Carnation</p>
+
+A free walk where the Tolt River meets the Snoqualmie. Beginners are welcome. Children 10 and older may come with a parent or guardian. No registration. Bring binoculars if you have them.
+
+[Bird Walk at Tolt-MacDonald Park](https://www.eastsideaudubon.org/calendar/2026/bird-walk-at-tolt-macdonald-xldtt-hff82-gj7n6-czf3b-jry68)
 
 ### Oxtober
 <p class="event-when">Sat Oct 17 and Sun Oct 18, then Sat Oct 24 and Sun Oct 25 · 10:00 a.m.–4:00 p.m.</p>
@@ -119,6 +143,14 @@ Ages 9 and older decorate a mini pumpkin with markers or paint pens. Supplies ar
 
 [Mini pumpkin decorating](https://kcls.bibliocommons.com/v2/events/6aa324b6f9ed2e00384fb019)
 
+### Play and Learn
+<p class="event-when">Fri Oct 23 · 9:00–10:30 a.m.</p>
+<p class="event-place">Tolt Congregational Church, 4851 Tolt Ave, Carnation</p>
+
+Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar.
+
+[Play and Learn](https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/)
+
 ### Wildlife drawing in oil pastels
 <p class="event-when">Tue Oct 27 · 4:15–5:45 p.m.</p>
 <p class="event-place">Carnation Library, 4804 Tolt Avenue</p>
@@ -127,6 +159,22 @@ A Tolt Art Studio class for ages 6 to 10. Kids can bring an animal photo or pick
 
 [Wildlife drawing](https://kcls.bibliocommons.com/v2/events/6a721e5a0d65ac3600444d88)
 
+### Play and Learn
+<p class="event-when">Fri Oct 30 · 9:00–10:30 a.m.</p>
+<p class="event-place">Tolt Congregational Church, 4851 Tolt Ave, Carnation</p>
+
+Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar.
+
+[Play and Learn](https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/)
+
+### Play and Learn
+<p class="event-when">Fri Nov 6 · 9:00–10:30 a.m.</p>
+<p class="event-place">Tolt Congregational Church, 4851 Tolt Ave, Carnation</p>
+
+Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar.
+
+[Play and Learn](https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/)
+
 ### Yoga and Mindfulness for Tweens
 <p class="event-when">Mon Nov 9 · 4:30–5:00 p.m.</p>
 <p class="event-place">Carnation Library, 4804 Tolt Avenue</p>
@@ -134,3 +182,11 @@ A Tolt Art Studio class for ages 6 to 10. Kids can bring an animal photo or pick
 A half hour of yoga and mindfulness for ages 9 to 13, led by Lena from Yoga with Smile. Free. No registration.
 
 [Yoga and Mindfulness for Tweens](https://kcls.bibliocommons.com/events/6ab2bc78ab7a8e0037c39ca4)
+
+### Play and Learn
+<p class="event-when">Fri Nov 13 · 9:00–10:30 a.m.</p>
+<p class="event-place">Tolt Congregational Church, 4851 Tolt Ave, Carnation</p>
+
+Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar.
+
+[Play and Learn](https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/)

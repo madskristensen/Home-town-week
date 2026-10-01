@@ -27,6 +27,14 @@ Sixth annual, and free. Craft and food vendors, food trucks, contests, a cornhol
 Bring a non-perishable food donation if you can. Parking is limited. Bike valet is complimentary, and a city shuttle runs from the North Kirkland Community Center. Vendor applications are closed. Volunteers 16 and older can still sign up.  
 [Harvest Festival](https://www.kirklandwa.gov/Whats-Happening/Community-Events/Parks-and-Community-Services/Kirklands-Harvest-Festival)
 
+### Try Hockey Free
+<p class="event-when">Sat Oct 3 · 11:15 a.m.</p>
+<p class="event-place">Sno-King Kirkland, 14326 124th Ave NE</p>
+
+A free first time on the ice for ages 4 to 17. Coaches are out there, and kids do not need to have skated before. Register ahead. Sessions fill, and Sno-King asks registered families to answer an attendance survey about a week before.
+
+[Try Hockey Free](https://snokinghockey.com/club/tryhockeyfree)
+
 ### SUMM Family Math Fun
 <p class="event-when">Sat Oct 3 · 11:30 a.m.–1:00 p.m.</p>
 <p class="event-place">Kingsgate Library, 12315 NE 143rd St</p>
@@ -48,6 +56,14 @@ School-age kids (about ages 6 to 11) read to a therapy dog in 15-minute slots at
 
 Full-length ballet with light design and illuminated costumes. Better for older kids and ballet-curious families than for preschoolers. Tickets are on sale.  
 [Swan Lake](https://www.kpcenter.org/event/swan-lake-symphony-of-lights-2026/) · [KPC calendar](https://www.kpcenter.org/get-tickets/)
+
+### Juanita Bay Interpretive Tour
+<p class="event-when">Sun Oct 4 · 1:00–2:00 p.m.</p>
+<p class="event-place">Juanita Bay Park, 2201 Market Street, Kirkland</p>
+
+A one-hour walk with Eastside Audubon park rangers through the wildlife habitat. Children 6 and older are welcome with an adult. Bring binoculars if you have them. Free, and no registration. Meet at the kiosk by the parking lot.
+
+[Juanita Bay Interpretive Tour](https://www.eastsideaudubon.org/calendar/2025/12/juanita-bay-intepretive-tour-s98d6-6p6pe-6thlx-fm8g8)
 
 ### Sensory Dough: Monster Makers
 <p class="event-when">Mon Oct 5 · 4:15–5:30 p.m.</p>
@@ -71,6 +87,14 @@ Drop-in playdough and natural materials, for not-so-scary monsters. A relaxed ro
 Stories, songs, and play for newborns through age 6 with an adult. Pick one session. No registration. The afternoon hour is also on Tue Oct 13. The evening hour is also on Tue Oct 13 and Tue Oct 20. A Friday session is Fri Oct 21 at 10:30 a.m.
 
 [Family Story Time](https://kcls.bibliocommons.com/events/6a7f4c8060ccaf01c01e3cea)
+
+### Bird Walk at Juanita Bay Park
+<p class="event-when">Wed Oct 7 · 7:20–11:00 a.m.</p>
+<p class="event-place">Juanita Bay Park, 2201 Market Street, Kirkland</p>
+
+An early walk of about two miles at an easy pace. All levels are welcome, including children with an adult. Bring binoculars and meet at the upper end of the parking lot. The gates usually open by 7:15 a.m. This is Juanita Bay Park, not Juanita Beach.
+
+[Bird Walk at Juanita Bay Park](https://www.eastsideaudubon.org/calendar/2026/2/4/bird-walk-at-juanita-bay-park-wcjfz-ep5j2-bcm2c-zgezn-826lk-5cy52-wxn8h-7wydc-pxc82)
 
 ### Pajama Story Time
 <p class="event-when">Wed Oct 7 · 7:00–7:30 p.m.</p>
@@ -103,6 +127,14 @@ Stories, music, and movement in Japanese for all ages with an adult. The same ha
 Boards and pieces are provided. No registration. Kids, teens, and adults are welcome. Friends of the Library of Kirkland sponsors it. Friday hours are 10:00 a.m.–6:00 p.m.
 
 [Kirkland Library](https://kcls.org/locations/kirkland/)
+
+### Halloween Costume Swap
+<p class="event-when">Sat Oct 10 · 10:00 a.m.–12:00 p.m.</p>
+<p class="event-place">Kirkland City Hall, Peter Kirk Room, 123 5th Ave</p>
+
+Take home a clean costume, in sizes from infant to adult. Donating one is welcome and not required. Bring a reusable bag. Enter City Hall from the lower lobby on the lake side. Donations are accepted Oct 5 through Oct 9 at City Hall or the North Kirkland Community Center.
+
+[Costume Swap](https://www.kirklandwa.gov/costumeswap)
 
 ### After School Hangout
 <p class="event-when">Mon Oct 12 · 3:30–5:00 p.m.</p>
@@ -214,6 +246,30 @@ Play the Pokemon trading card game with a guided deck if you are new, or with th
 Tina's Dance Studios' annual showcase, with dancers of all ages and levels.  
 [KPC tickets](https://www.kpcenter.org/get-tickets/)
 
+### Skeletons! Stories and Science
+<p class="event-when">Mon Oct 26 · 4:15–5:30 p.m.</p>
+<p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
+
+A skeleton story, then a look at real skulls from the Burke Museum, including a seal, a bobcat, and a chipmunk, plus human x-rays. No registration. Friends of the Library, Kirkland, sponsor it.
+
+[Skeletons! Stories and Science](https://kcls.bibliocommons.com/events/6ab6ede786d845003118d290)
+
+### Teen Book Talk
+<p class="event-when">Wed Oct 28 · 2:30–3:30 p.m.</p>
+<p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
+
+Bring whatever you are reading now. There is no assigned book. Snacks come from Friends of the Library of Kirkland. The hour is aimed at teens.
+
+[Teen Book Talk](https://kcls.bibliocommons.com/events/6a9264113b6c71003e5c2ce1)
+
+### Pee Wee Monster Bash
+<p class="event-when">Fri Oct 30 · 10:00 a.m.–12:00 p.m.</p>
+<p class="event-place">North Kirkland Community Center, 12421 103rd Ave NE</p>
+
+Carnival games, a cookie stroll, bowling, and skee ball for ages 1 to 5. Kirkland Parks calls it kooky, not scary. Costumes are encouraged. $18 per child. Pre-register. It sells out, and the city asks families to leave strollers at home.
+
+[Pee Wee Monster Bash](https://secure.rec1.com/WA/city-of-kirkland/catalog/index?filter=c2VhcmNoPW1vbnN0ZXIlMjBiYXNoJnJlbnRhbCU1QmZyb20lNUQ9JnJlbnRhbCU1QnRvJTVEPSZkYWU2MGY5ZjQyMmY5MjczODdkZWRiNjU2ODM3Zjk2Mz1mOWE4NDdjY2JiNzNiMWExOGM4Y2NhNTc2ODc1MjczMA%3D%3D)
+
 ### Young Frankenstein
 <p class="event-when">Fri Oct 30 through Sun Nov 8</p>
 <p class="event-place">Studio East, 10718 NE 68th St</p>
@@ -228,6 +284,14 @@ Tina's Dance Studios' annual showcase, with dancers of all ages and levels.
 Studio East's youth cast, ages 9 to 20, in Mel Brooks' musical comedy. The company recommends it for teens and adults. Expect mature jokes, sexual innuendo, mild profanity, brief stage violence, and spooky stage effects. Friday, Oct 30 at 7:00 p.m. is a pay-what-you-will preview. Other shows are Sat Oct 31 at 7:00 p.m., Sun Nov 1 at 2:00 p.m., Thu Nov 5 at 7:00 p.m., Fri Nov 6 at 7:00 p.m., Sat Nov 7 at 2:00 and 7:00 p.m., and Sun Nov 8 at 2:00 p.m. Tickets go on sale October 5.
 
 [Studio East](https://studio-east.org/auditions/)
+
+### STEAM Family Story Time
+<p class="event-when">Mon Nov 2 · 4:30–5:30 p.m.</p>
+<p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
+
+Stories and a hands-on science activity, planned for ages 3 to 8. Other ages can come too. No registration.
+
+[STEAM Family Story Time](https://kcls.bibliocommons.com/events/6ab6edb060748300382995b7)
 
 ### A Christmas Story
 <p class="event-when">Fri Dec 11 through Sun Dec 20</p>

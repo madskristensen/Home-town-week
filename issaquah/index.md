@@ -185,6 +185,14 @@ School-age kids read aloud to a certified therapy dog, with an adult. Free.
 
 [Fall market series](https://www.visitissaquahwa.com/series/fall-farm-fresh-market-3/)
 
+### Zombie Walk
+<p class="event-when">Sat Oct 24 · 1:30–5:30 p.m.</p>
+<p class="event-place">Historic Shell Station, 232 Front Street N, Issaquah</p>
+
+A free walk through downtown, open to all ages. Makeup starts at 1:30 at the Historic Shell Station, dance practice is at 3:00, the crawl to City Hall is at 4:30, and a dance runs from 5:00 to 5:30. Optional makeovers are sold separately.
+
+[Zombie Walk](https://downtownissaquah.com/events/zombie-walk-17/)
+
 ### Halloween at Cougar Mountain Zoo
 <p class="event-when">Sat Oct 31 · Time not posted</p>
 <p class="event-place">Cougar Mountain Zoo, 19525 SE 54th St</p>

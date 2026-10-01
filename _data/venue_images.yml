@@ -133,6 +133,42 @@ venues:
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     license: CC BY-SA 3.0
     source: https://commons.wikimedia.org/wiki/File:Snoqualmie_Depot_01.jpg
+  - keys: ["fire station 11"]
+    image: /assets/images/renton/station-11.webp
+    alt: Renton Fire Station 11, a brick firehouse with red bay doors on a downtown corner.
+    credit: "Photo: Renton Regional Fire Authority"
+    license: organizer
+    source: https://www.rentonrfa.com/events/
+  - keys: ["fire station 12"]
+    image: /assets/images/renton/station-12.webp
+    alt: Renton Fire Station 12, a two-story brick firehouse with a flagpole and a wide drive.
+    credit: "Photo: Renton Regional Fire Authority"
+    license: organizer
+    source: https://www.rentonrfa.com/events/
+  - keys: ["fire station 13"]
+    image: /assets/images/renton/station-13.webp
+    alt: Renton Fire Station 13, a brick firehouse with red bay doors and a flagpole.
+    credit: "Photo: Renton Regional Fire Authority"
+    license: organizer
+    source: https://www.rentonrfa.com/events/
+  - keys: ["fire station 15"]
+    image: /assets/images/renton/station-15.webp
+    alt: Renton Fire Station 15, a modern firehouse with a glass entry and a wide apparatus bay.
+    credit: "Photo: Renton Regional Fire Authority"
+    license: organizer
+    source: https://www.rentonrfa.com/events/
+  - keys: ["fire station 16"]
+    image: /assets/images/renton/station-16.webp
+    alt: Renton Fire Station 16, a brick firehouse with red bay doors and a covered walk.
+    credit: "Photo: Renton Regional Fire Authority"
+    license: organizer
+    source: https://www.rentonrfa.com/events/
+  - keys: ["fire station 17"]
+    image: /assets/images/renton/station-17.webp
+    alt: Renton Fire Station 17, a brick firehouse with red bay doors beside a tall fir.
+    credit: "Photo: Renton Regional Fire Authority"
+    license: organizer
+    source: https://www.rentonrfa.com/events/
   - keys: ["renton civic theatre", "renton civic theater"]
     image: /assets/images/renton/civic-theatre.webp
     alt: The front of Renton Civic Theatre, with the marquee over the entrance.
@@ -307,6 +343,12 @@ venues:
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     license: CC BY-SA 3.0
     source: https://commons.wikimedia.org/wiki/File:Kirkland_Performance_Center_02.jpg
+  - keys: ["juanita bay park"]
+    image: /assets/images/kirkland/juanita-bay-park.webp
+    alt: A wooden boardwalk through the reeds at Juanita Bay Park, with Lake Washington and the Seattle skyline beyond.
+    credit: "Photo: Julie Jordan Scott, CC BY 2.0"
+    license: CC BY 2.0
+    source: https://commons.wikimedia.org/wiki/File:Juanita_Bay_Park,_Kirkland_(19903917750).jpg
   - keys: ["juanita beach"]
     image: /assets/images/kirkland/juanita-beach-park.webp
     alt: Juanita Beach Park, with the sandy shore, the pier, and Lake Washington.
@@ -415,6 +457,18 @@ venues:
     credit: "Photo: City of Redmond"
     license: organizer
     source: https://www.redmond.gov/ImageRepository/Document?documentID=40382
+  - keys: ["redmond city hall"]
+    image: /assets/images/redmond/city-hall.webp
+    alt: Redmond City Hall, a brick and glass building with a covered entry and a plaza.
+    credit: "Photo: Tim, CC BY-SA 2.0"
+    license: CC BY-SA 2.0
+    source: https://commons.wikimedia.org/wiki/File:Redmond,_WA_City_Hall.jpg
+  - keys: ["tolt-macdonald", "tolt macdonald"]
+    image: /assets/images/carnation/tolt-bridge.webp
+    alt: The pedestrian suspension bridge over the Snoqualmie River at Tolt-MacDonald Park in Carnation.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:2023-05-10,_Tolt-MacDonald_Park_footbridge,_24.jpg
   - keys: ["redmond senior"]
     image: /assets/images/redmond/senior-center.webp
     alt: The east entry of the Redmond Senior and Community Center, beside a bright geometric art wall.

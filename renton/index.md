@@ -141,6 +141,38 @@ School-age kids read aloud to a certified therapy dog. Reading with Rover works 
 
 [Reading with Rover](https://kcls.bibliocommons.com/v2/events/6aa89b32ca248a002915dafe)
 
+### Station 11 Open House
+<p class="event-when">Sat Oct 17 · 9:00–11:00 a.m.</p>
+<p class="event-place">Renton Fire Station 11, 211 Mill Ave S</p>
+
+Tour the ladder truck, fire engine, and medic unit, try on firefighter gear, and meet the crew. Free, no RSVP. It is in the apparatus bay, rain or shine. Parking at the station is limited. The library across the street has more.
+
+[Renton RFA events](https://www.rentonrfa.com/events/)
+
+### Station 12 Open House
+<p class="event-when">Sat Oct 17 · 1:00–3:00 p.m.</p>
+<p class="event-place">Renton Fire Station 12, 1209 Kirkland Ave NE</p>
+
+Tour the engine, the aid unit, and the dive rig, including the water rescue boat. Try the gear and meet the firefighters. Free, no RSVP. In the bay, rain or shine. Street parking is nearby.
+
+[Renton RFA events](https://www.rentonrfa.com/events/)
+
+### Station 13 Open House
+<p class="event-when">Sat Oct 24 · 9:00–11:00 a.m.</p>
+<p class="event-place">Renton Fire Station 13, 18002 108th Ave SE</p>
+
+Tour the engine and aid unit, try the gear, and pick up fire-safety information. Free, no RSVP. In the bay, rain or shine. Parking in the station lot is limited. The closest spaces in the Aliberto's lot next door are open to guests.
+
+[Renton RFA events](https://www.rentonrfa.com/events/)
+
+### Station 15 Open House
+<p class="event-when">Sat Oct 24 · 1:00–3:00 p.m.</p>
+<p class="event-place">Renton Fire Station 15, 1404 N 30th St</p>
+
+Tour the engine and look for the hidden images on the Kennydale water tower behind the station. Free, no RSVP. In the bay, rain or shine. Park at the park-and-ride on the corner of N 30th Street and Park Ave N.
+
+[Renton RFA events](https://www.rentonrfa.com/events/)
+
 ### Olde Fashioned Halloween Party
 <p class="event-when">Sat Oct 24 · 1:00–4:00 p.m.</p>
 <p class="event-place">Downtown Renton, then Legacy Square</p>
@@ -154,6 +186,22 @@ School-age kids read aloud to a certified therapy dog. Reading with Rover works 
 The Renton Downtown Partnership's family afternoon. Start with trick-or-treating at downtown businesses, then go to Legacy Square for zombie makeup, photos, games, and prizes. Costume contest categories include pets, kids, teens, and adults. At 3:00 p.m. the crowd learns the Thriller dance and joins the worldwide simultaneous performance.
 
 [Olde Fashioned Halloween Party](https://www.rentondowntown.com/events/halloween)
+
+### Station 16 Open House
+<p class="event-when">Sat Oct 31 · 9:00–11:00 a.m.</p>
+<p class="event-place">Renton Fire Station 16, 12923 156th Ave SE</p>
+
+Tour the station engine and a classic engine kept by the firefighters' local. Try the gear and meet the crew. Free, no RSVP. In the bay, rain or shine. Park behind the station, not along the road.
+
+[Renton RFA events](https://www.rentonrfa.com/events/)
+
+### Station 17 Open House
+<p class="event-when">Sat Oct 31 · 1:00–3:00 p.m.</p>
+<p class="event-place">Renton Fire Station 17, 14810 SE Petrovitsky Rd</p>
+
+Renton RFA and Fire District 40 host this one. Tour the engine and aid unit, try the gear, and meet firefighters and district commissioners. Free, no RSVP. Park at the KinderCare lot across Petrovitsky Road and wait for the crossing crew. Do not stop in front of the station.
+
+[Renton RFA events](https://www.rentonrfa.com/events/)
 
 ### Scrooge!
 <p class="event-when">Fri Dec 4 through Sun Dec 20</p>

@@ -23,6 +23,14 @@ Open building time. The library puts out bricks and other construction toys. Dro
 
 [LEGO Builders](https://kcls.bibliocommons.com/v2/events/6aa0a1c66562d02296858b8d)
 
+### Play and Learn
+<p class="event-when">Tue Oct 6 · 9:30–11:00 a.m.</p>
+<p class="event-place">Cascade Covenant Church, 13225 436th Ave SE, North Bend</p>
+
+Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. Use the entrance off Cedar Falls Way. The group follows the Snoqualmie Valley School District calendar.
+
+[Play and Learn](https://encompassnw.org/event/play-and-learn-playgroups-north-bend-snoqualmie-2026-10-06/)
+
 ### Pajama Story Time
 <p class="event-when">Wed Oct 7 · 6:30–7:00 p.m.</p>
 <p class="event-place">North Bend Library, 115 E 4th Street</p>
@@ -47,6 +55,14 @@ The Northwest Railway Museum boards this fall ride at the North Bend Depot, behi
 
 [Halloween Train](https://trainmuseum.org/upcoming-events/halloween/)
 
+### Play and Learn
+<p class="event-when">Tue Oct 13 · 9:30–11:00 a.m.</p>
+<p class="event-place">Cascade Covenant Church, 13225 436th Ave SE, North Bend</p>
+
+Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. Use the entrance off Cedar Falls Way. The group follows the Snoqualmie Valley School District calendar.
+
+[Play and Learn](https://encompassnw.org/event/play-and-learn-playgroups-north-bend-snoqualmie-2026-10-13/)
+
 ### Oaktoberfest and Arbor Day planting
 <p class="event-when">Sat Oct 17 · 9:00 a.m.–1:00 p.m.</p>
 <p class="event-place">Meadowbrook Farm Interpretive Center</p>
@@ -54,6 +70,14 @@ The Northwest Railway Museum boards this fall ride at the North Bend Depot, behi
 Oaktoberfest is free and independently organized, not a city festival. It includes children's activities, native plant sales, and booths about local trees. A tree tour starts at 1:00 p.m. Children under 13 need an adult.
 
 [Valley Record](https://livingsnoqualmie.com/arbor-day-planting-and-oaktoberfest-set-for-october-17-in-north-bend/)
+
+### Play and Learn
+<p class="event-when">Tue Oct 20 · 9:30–11:00 a.m.</p>
+<p class="event-place">Cascade Covenant Church, 13225 436th Ave SE, North Bend</p>
+
+Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. Use the entrance off Cedar Falls Way. The group follows the Snoqualmie Valley School District calendar.
+
+[Play and Learn](https://encompassnw.org/event/play-and-learn-playgroups-north-bend-snoqualmie-2026-10-20/)
 
 ### Chess Club
 <p class="event-when">Sat Oct 24 · 1:00–3:00 p.m.</p>
@@ -79,6 +103,22 @@ The North Bend Downtown Foundation's free afternoon for costumes on the downtown
 
 [Trick-or-Treat Street](https://www.northbenddowntown.org/trick-or-treat-street)
 
+### Play and Learn
+<p class="event-when">Tue Oct 27 · 9:30–11:00 a.m.</p>
+<p class="event-place">Cascade Covenant Church, 13225 436th Ave SE, North Bend</p>
+
+Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. Use the entrance off Cedar Falls Way. The group follows the Snoqualmie Valley School District calendar.
+
+[Play and Learn](https://encompassnw.org/event/play-and-learn-playgroups-north-bend-snoqualmie-2026-10-27/)
+
+### Play and Learn
+<p class="event-when">Tue Nov 3 · 9:30–11:00 a.m.</p>
+<p class="event-place">Cascade Covenant Church, 13225 436th Ave SE, North Bend</p>
+
+Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. Use the entrance off Cedar Falls Way. The group follows the Snoqualmie Valley School District calendar.
+
+[Play and Learn](https://encompassnw.org/event/play-and-learn-playgroups-north-bend-snoqualmie-2026-10-27/)
+
 ### All Ages Hoedown
 <p class="event-when">Fri Nov 6 · 6:30–8:30 p.m.</p>
 <p class="event-place">Si View Community Center, 400 SE Orchard Drive</p>
@@ -86,6 +126,14 @@ The North Bend Downtown Foundation's free afternoon for costumes on the downtown
 A family dance at Si View with instructor Amanda Johnson. The parks page describes it as western-themed dancing that works for beginners and for people who already know a few steps. All ages.
 
 [Si View family events](https://www.siviewpark.org/family-fun.phtml)
+
+### Play and Learn
+<p class="event-when">Tue Nov 10 · 9:30–11:00 a.m.</p>
+<p class="event-place">Cascade Covenant Church, 13225 436th Ave SE, North Bend</p>
+
+Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. Use the entrance off Cedar Falls Way. The group follows the Snoqualmie Valley School District calendar.
+
+[Play and Learn](https://encompassnw.org/event/play-and-learn-playgroups-north-bend-snoqualmie-2026-10-27/)
 
 ### North Pole Limited Santa Train
 <p class="event-when">Sat Nov 28 through Sun Dec 20</p>
