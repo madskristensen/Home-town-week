@@ -1,8 +1,8 @@
 {%- comment -%}
   Empty-state suggestion.
-  mode: missing, filter, button, or blank.
-  missing is the 404 actions: This weekend, Playgrounds, and the suggest link.
-  button renders only the suggest link. subject overrides the mail subject.
+  mode: line, filter, button, or blank.
+  line is one muted mailto sentence. button renders only the suggest link.
+  subject overrides the mail subject.
   name: mail subject. topic: "No {topic} events are listed yet."
   opening: a custom first sentence. The ask follows it.
   town: playground map town id. A city page uses page.city when town is blank.
@@ -15,7 +15,7 @@
 {%- capture empty_ask -%}Know of one? Or a school, library, church or neighborhood group with a family events calendar we should be checking? Tell us and we'll add it.{%- endcapture -%}
 {%- if empty_subject.size > 0 -%}
   {%- assign mail_subject = empty_subject -%}
-{%- elsif empty_mode == "missing" -%}
+{%- elsif empty_mode == "line" -%}
   {%- assign mail_subject = "Suggestion from the 404 page" -%}
 {%- elsif empty_name.size > 0 -%}
   {%- capture mail_subject -%}Suggestion for {{ empty_name }}{%- endcapture -%}
@@ -34,25 +34,20 @@ Date:{%- endcapture -%}
 {%- else -%}
   {%- assign play_href = "/playgrounds/" -%}
 {%- endif -%}
-{%- if empty_mode == "button" -%}
+{%- if empty_mode == "line" -%}
+<p class="list-updated">Looking for something we don't list? <a href="mailto:suggestions@eastsidecalendar.com?subject={{ mail_subject | strip | mail_escape }}&amp;body={{ mail_body | strip | mail_escape }}">Suggest an event or calendar</a>.</p>
+{%- elsif empty_mode == "button" -%}
 <p><a class="empty-suggest-btn" href="mailto:suggestions@eastsidecalendar.com?subject={{ mail_subject | strip | mail_escape }}&amp;body={{ mail_body | strip | mail_escape }}">Suggest an event or calendar</a></p>
 {%- else -%}
 <div class="empty-suggest{% if empty_mode == "filter" %} filter-empty{% endif %}"{% if empty_mode == "filter" %} hidden{% endif %}>
-  {%- if empty_mode == "missing" -%}
-  <p><a class="empty-suggest-btn" href="{{ '/this-weekend/' | relative_url }}">This weekend</a></p>
-  <p><a class="empty-suggest-btn" href="{{ '/playgrounds/' | relative_url }}">Playgrounds</a></p>
-  {%- elsif empty_mode == "filter" -%}
+  {%- if empty_mode == "filter" -%}
   <p>Nothing in this list matches. {{ empty_ask }}</p>
   {%- elsif empty_opening.size > 0 -%}
   <p>{{ empty_opening }} {{ empty_ask }}</p>
   {%- else -%}
   <p>No {{ empty_topic }} events are listed yet. {{ empty_ask }}</p>
   {%- endif -%}
-  {%- unless empty_mode == "missing" -%}
   <p class="empty-play"><a href="{{ play_href | strip | relative_url }}">Head to a playground instead</a></p>
-  {%- endunless -%}
-  {%- if empty_mode == "missing" -%}<p>{%- endif -%}
   <a class="empty-suggest-btn" href="mailto:suggestions@eastsidecalendar.com?subject={{ mail_subject | strip | mail_escape }}&amp;body={{ mail_body | strip | mail_escape }}">Suggest an event or calendar</a>
-  {%- if empty_mode == "missing" -%}</p>{%- endif -%}
 </div>
 {%- endif -%}

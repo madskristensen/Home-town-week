@@ -103,6 +103,8 @@
 {%- if forloop.index <= grid_eager -%}{%- assign card_loading = "eager" -%}{%- else -%}{%- assign card_loading = "lazy" -%}{%- endif -%}
 {%- assign card_priority = "" -%}
 {%- if include.priority and forloop.first -%}{%- assign card_priority = "high" -%}{%- endif -%}
+{%- assign card_stretch = "" -%}
+{%- if event.stretch -%}{%- assign card_stretch = "1" -%}{%- endif -%}
 {%- include event-card.html
      id=card_id
      number=card_number
@@ -132,7 +134,8 @@
      source_href=card_source_href
      source_label=event.source_label
      also_href=card_also_href
-     also_label=event.also_source_label -%}
+     also_label=event.also_source_label
+     stretch=card_stretch -%}
 {%- endif -%}
 {%- endfor -%}
 </div>

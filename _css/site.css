@@ -1378,6 +1378,27 @@ h2.event-bucket.is-past {
   text-underline-offset: 0.08em;
 }
 
+/* One title link covers the whole card. Cards with other links stay as they are. */
+.event-card[data-stretch] {
+  position: relative;
+}
+
+.event-card[data-stretch] h3 a::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+}
+
+.event-card[data-stretch] h3 a:focus-visible {
+  outline: none;
+}
+
+.event-card[data-stretch]:focus-within {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
 .event-kicker {
   margin: 0 0 0.15rem;
   color: var(--forest);

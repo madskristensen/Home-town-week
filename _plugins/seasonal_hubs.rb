@@ -493,6 +493,54 @@ module EastsideCalendar
       qualifying.min_by { |ends_on, index, _hub| [ends_on, index] }[2]
     end
 
+    # Three links for the missing page. The middle tile is whichever hub
+    # the seasonal banner is showing. Photos are the share-card pictures.
+    def missing_tiles(cards, hubs, banner)
+      tiles = []
+      weekend = share_by_id(cards, "this-weekend")
+      tiles << link_tile(weekend, "This weekend", "What's happening this weekend.") if weekend
+
+      if banner.is_a?(Hash)
+        path = banner["path"]
+        hub = Array(hubs).find { |item| normalize_path(item["path"]) == normalize_path(path) }
+        share = share_by_path(cards, path)
+        tiles << hub_tile(hub, share) if hub && share
+      end
+
+      play = share_by_id(cards, "playgrounds")
+      tiles << link_tile(play, "Playgrounds", "Find a playground near you.") if play
+      tiles
+    end
+
+    def hub_tile(hub, share)
+      title = hub["banner_title"].to_s.strip
+      title = hub["footer_label"].to_s.strip if title.empty?
+      blurb = hub["hook"].to_s.strip
+      blurb = "See what's listed." if blurb.empty?
+      link_tile(share, title, blurb)
+    end
+
+    def link_tile(card, title, blurb)
+      {
+        "title" => title,
+        "href" => normalize_path(card["path"]),
+        "blurb" => blurb,
+        "image" => card["image"].to_s,
+        "alt" => card["alt"].to_s,
+        "credit" => card["credit"].to_s,
+        "stretch" => true
+      }
+    end
+
+    def share_by_id(cards, id)
+      Array(cards).find { |card| card.is_a?(Hash) && card["id"].to_s == id }
+    end
+
+    def share_by_path(cards, path)
+      want = normalize_path(path)
+      Array(cards).find { |card| card.is_a?(Hash) && normalize_path(card["path"]) == want }
+    end
+
     def qualifying_identity(sections)
       events = {}
       Array(sections).each do |section|
@@ -1658,6 +1706,11 @@ module EastsideCalendar
       site.data["hub_pages"] = pages
       site.data["seasonal_hubs"] = public_hubs
       site.data["footer_seasons"] = SeasonalHubs.footer_seasons(prepared)
+      site.data["missing_tiles"] = SeasonalHubs.missing_tiles(
+        site.data["share_cards"],
+        prepared,
+        site.data["seasonal_banner"]
+      )
       HomeLights.attach!(site, prepared)
     end
 

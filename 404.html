@@ -10,14 +10,7 @@ robots: noindex,follow
 <article class="page wrap prose">
   <h1>This page wandered off</h1>
   <p>Maybe it moved, or the event already happened.</p>
-  <nav class="footer-group footer-group-cities" aria-labelledby="missing-cities">
-    <p id="missing-cities" class="footer-heading">Cities</p>
-    <ul class="footer-cities">
-      {%- for city in site.data.cities -%}
-      {%- capture city_url -%}/{{ city.id }}/{%- endcapture -%}
-      <li><a href="{{ city_url | strip | relative_url }}">{{ city.name }}</a></li>
-      {%- endfor -%}
-    </ul>
-  </nav>
-  {%- include empty-suggest.html mode="missing" -%}
+  <h2>Try one of these instead</h2>
+  {%- include card-grid.html events=site.data.missing_tiles eager=2 priority=true -%}
+  {%- include empty-suggest.html mode="line" -%}
 </article>
