@@ -1825,6 +1825,9 @@ html[data-ns-chosen] .ns-hint {
 }
 
 .ns-month {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   min-width: 0;
 }
 
@@ -1835,8 +1838,10 @@ html[data-ns-chosen] .ns-hint {
 
 .ns-grid {
   display: grid;
+  flex: 0 0 auto;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  grid-template-rows: 1.15rem repeat(6, 4.85rem);
+  grid-template-rows: 1.15rem;
+  grid-auto-rows: 4.85rem;
   gap: 2px;
 }
 
@@ -1929,7 +1934,7 @@ html[data-ns-chosen] .ns-hint {
 }
 
 .ns-reasons {
-  margin: 0.35rem 0 0;
+  margin: 0.3rem 0 0;
   padding: 0;
   list-style: none;
   font-size: 0.82rem;

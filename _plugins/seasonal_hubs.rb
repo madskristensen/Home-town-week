@@ -1774,7 +1774,8 @@ module EastsideCalendar
     end
 
     # September of the school year through June, starting at the current
-    # month. Every month is six weeks so filtering cannot change the height.
+    # month. A trailing week with no days is omitted. Filtering does not
+    # change the grid height.
     def no_school_calendars(districts, today, year_label)
       start_year = year_label.to_s[0, 4].to_i
       return [] if start_year < 2000
@@ -1814,7 +1815,7 @@ module EastsideCalendar
           "marks" => marks
         }
       end
-      cells << { "pad" => true } while cells.size < 42
+      cells << { "pad" => true } while (cells.size % 7) != 0
       weeks = []
       cells.each_slice(7) { |week| weeks << week }
       month_end = Date.new(month_start.year, month_start.month, days_in)

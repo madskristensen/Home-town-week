@@ -47,7 +47,7 @@ layout: default
       sel.value = document.documentElement.getAttribute("data-ns") || "lwsd";
     })();
   </script>
-  <p class="ns-key"><span class="ns-sample is-off" aria-hidden="true"></span> All students off <span class="ns-sample is-note" aria-hidden="true"></span> Some grades, or a first, last, or shortened day <span class="ns-sample is-if" aria-hidden="true"></span> Off if needed</p>
+  <p class="ns-key"><span class="ns-sample is-off" aria-hidden="true"></span> All students off <span class="ns-sample is-note" aria-hidden="true"></span> Some grades or shortened day <span class="ns-sample is-if" aria-hidden="true"></span> Off if needed</p>
   <div class="ns-sub" id="ns-subscribe">
     {%- assign ns_default = school.districts | where: "slug", "lwsd" | first -%}
     {%- include calendar-subscribe.html city=ns_default.id name=ns_default.feed_name path=ns_default.feed_path -%}
