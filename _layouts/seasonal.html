@@ -41,7 +41,7 @@ layout: default
     <ol>
       {%- for section in hub_sections -%}
       {%- assign section_count = section.events | size -%}
-      <li><a href="#{{ section.id }}">{{ section.toc }} <span class="hub-count">{{ section_count }}</span></a></li>
+      <li><a href="#{{ section.id }}">{{ section.toc }}{% if section_count > 0 %} <span class="hub-count">{{ section_count }}</span>{% endif %}</a></li>
       {%- endfor -%}
     </ol>
   </nav>
@@ -52,9 +52,15 @@ layout: default
     {%- if section_intro.size > 0 -%}
     <p class="hub-section-intro">{{ section.intro }}</p>
     {%- endif -%}
+    {%- assign section_source = section.source | append: "" -%}
+    {%- if section_source.size > 0 -%}
+    <p class="hub-section-intro"><a href="{{ section.source }}" rel="noopener">{{ section.source_label }}</a></p>
+    {%- endif -%}
     {%- if section.id == "worth-the-drive" -%}
     <p class="hub-section-intro"><a href="{{ '/worth-the-drive/' | relative_url }}">See every trip worth the drive</a></p>
     {%- endif -%}
+    {%- assign section_events = section.events | size -%}
+    {%- if section_events > 0 -%}
     <div class="hub-grid">
       {%- for event in section.events -%}
       {%- assign event_same = event.same_as | append: "" -%}
@@ -124,6 +130,7 @@ layout: default
       </article>
       {%- endfor -%}
     </div>
+    {%- endif -%}
   </section>
   {%- endfor -%}
   {%- endif -%}

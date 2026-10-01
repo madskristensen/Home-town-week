@@ -151,6 +151,86 @@ hubs:
         link: "#3a1430"
       svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><ellipse fill="#6b4e0e" cx="9.5" cy="13.2" rx="3.6" ry="5.2"/><circle fill="#1e4636" cx="16.2" cy="8" r="1.35"/><circle fill="#1e4636" cx="18.4" cy="9.7" r="1.35"/><circle fill="#1e4636" cx="16.2" cy="11.4" r="1.35"/><circle fill="#1e4636" cx="14" cy="9.7" r="1.35"/><circle fill="#c6a15a" cx="16.2" cy="9.7" r="0.7"/></svg>'
 
+  - id: spring-break
+    path: /spring-break/
+    title: Spring break for kids on the Eastside
+    banner_title: Spring break
+    hook: Camps, parks, and plans while school is out.
+    link_label: See events
+    footer: true
+    footer_label: Spring break
+    description: Spring break for kids on the Eastside. April 2027 school district dates, and family plans grouped by week, from Mar 15 through Apr 16.
+    llms: April school break dates for Eastside districts, and family plans grouped by week.
+    in_season_intro: School is out in April. Each district's dates are below, and family plans are grouped by week.
+    off_season_intro: The season runs Mar 15 through Apr 16.
+    empty: Nothing is listed yet. City pages are where each event is written up, and this page gathers the spring break ones.
+    season:
+      start: "03-15"
+      end: "04-16"
+    calendar_year: 2027
+    tags: [spring-break]
+    keywords: [spring break]
+    districts:
+      - id: northshore
+        title: Northshore School District
+        toc: Northshore
+        intro: No school April 5 through 9, 2027.
+        source: https://www.nsd.org/n/~board/district-news/post/now-available-calendar-for-the-2026-2027-school-year
+        source_label: Northshore School District calendar
+      - id: riverview
+        title: Riverview School District
+        toc: Riverview
+        intro: No school April 5 through 9, 2027.
+        source: https://www.rsd407.org/_files/ugd/78e1ab_ea117cd323af48aaab4c35485fa36dd4.pdf
+        source_label: Riverview School District calendar
+      - id: renton
+        title: Renton School District
+        toc: Renton
+        intro: No school April 5 through 9, 2027.
+        source: https://resources.finalsite.net/images/v1771364157/rentonschoolsus/jpgml7vzi513bghcfvbl/RSDstudentcalendar2026-27.pdf
+        source_label: Renton School District calendar
+      - id: lake-washington
+        title: Lake Washington School District
+        toc: Lake Washington
+        intro: No school April 12 through 16, 2027.
+        source: https://resources.finalsite.net/images/v1787679561/lwsdorg/eok5lsfktcue6muzply9/2026-27LWSD-one-page-calendar-English.pdf
+        source_label: Lake Washington School District calendar
+      - id: bellevue
+        title: Bellevue School District
+        toc: Bellevue
+        intro: No school April 12 through 16, 2027.
+        source: https://www.bsd405.org/about-us/calendar/important-dates-for-families
+        source_label: Bellevue School District calendar
+      - id: issaquah
+        title: Issaquah School District
+        toc: Issaquah
+        intro: No school April 12 through 16, 2027.
+        source: https://resources.finalsite.net/images/v1765910628/issaquah/issaquah/zoutkidnfjvrubyiocyy/26-27SchoolCalendar.pdf
+        source_label: Issaquah School District calendar
+      - id: snoqualmie-valley
+        title: Snoqualmie Valley School District
+        toc: Snoqualmie Valley
+        intro: No school April 12 through 16, 2027.
+        source: https://resources.finalsite.net/images/v1778164938/svsd410org/clm2ccn9nv0prepprxud/2026-2027StudentCalendarboardapproved250124.pdf
+        source_label: Snoqualmie Valley School District calendar
+      - id: mercer-island
+        title: Mercer Island School District
+        toc: Mercer Island
+        intro: No school April 12 through 16, 2027.
+        source: https://resources.finalsite.net/images/v1725988722/mercerislandschoolsorg/k83uvwsx9d5xusbfd2pm/2026-27AcademicCalendar.pdf
+        source_label: Mercer Island School District calendar
+    theme:
+      background: "#e4f3df"
+      ink: "#1a2822"
+      muted: "#3f5148"
+      link: "#1e4636"
+      dark:
+        background: "#9ccc65"
+        ink: "#1a2e14"
+        muted: "#1a2e14"
+        link: "#1a2e14"
+      svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="#6b4e0e" stroke-width="1.6" stroke-linecap="round" d="M4.2 18.6c3.4-1.4 6.2-4 8-7.2 1.4-2.4 2-4.8 2.1-7.2"/><circle fill="#1e4636" cx="8.2" cy="14.4" r="1.7"/><circle fill="#c6a15a" cx="12.4" cy="10.2" r="1.7"/><circle fill="#1e4636" cx="15.8" cy="6.2" r="1.7"/><circle fill="#c6a15a" cx="18.2" cy="9.2" r="1.25"/></svg>'
+
   - id: fourth
     path: /fourth/
     title: Fourth of July for kids on the Eastside
@@ -180,36 +260,6 @@ hubs:
         muted: "#1c2744"
         link: "#1c2744"
       svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="#6b4e0e" stroke-width="1.5" stroke-linecap="round"><path d="M12 3.2v3.6M12 17.2V21M3.2 12h3.6M17.2 12H21M6 6l2.6 2.6M15.4 15.4 18 18M18 6l-2.6 2.6M8.6 15.4 6 18"/></g><circle fill="#c6a15a" cx="12" cy="12" r="1.5"/></svg>'
-
-  - id: lunar-new-year
-    path: /lunar-new-year/
-    title: Lunar New Year for kids on the Eastside
-    banner_title: Lunar New Year
-    hook: Lion dances, lanterns, and family fairs.
-    link_label: See events
-    footer: false
-    footer_label: Lunar New Year
-    description: Lunar New Year for kids on the Eastside. Lion dances, lanterns, and family fairs from Jan 21 through Feb 20.
-    llms: Lion dances, lanterns, and family fairs for Lunar New Year.
-    season:
-      start: "01-21"
-      end: "02-20"
-    sections:
-      - id: lunar-new-year
-        title: Lunar New Year events
-        intro: Lion dances, lanterns, and family fairs.
-        tags: [lunar-new-year]
-    theme:
-      background: "#f8f0e2"
-      ink: "#1a2822"
-      muted: "#3f5148"
-      link: "#1e4636"
-      dark:
-        background: "#f6c453"
-        ink: "#5c1020"
-        muted: "#5c1020"
-        link: "#5c1020"
-      svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#8a5a22" d="M8.5 7h7l1.2 2.2v8.2l-1.2 2.2h-7l-1.2-2.2V9.2z"/><path fill="#6b4e0e" d="M10.6 4.2h2.8V7h-2.8z"/><path fill="#c6a15a" d="M11 11h2v4.2h-2z"/></svg>'
 
   - id: diwali
     path: /diwali/

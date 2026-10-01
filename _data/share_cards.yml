@@ -22,19 +22,19 @@
   alt: A field of yellow daffodils.
   credit: "Photo: Richard Humphrey, CC BY-SA 2.0"
   license: CC BY-SA 2.0
+- id: spring-break
+  path: /spring-break/
+  title: Spring break on the Eastside
+  image: /assets/images/hubs/spring-break/cherry-branch.webp
+  alt: A cherry tree branch covered in white blossoms.
+  credit: "Photo: Fjmustak, CC BY-SA 4.0"
+  license: CC BY-SA 4.0
 - id: fourth
   path: /fourth/
   title: Fourth of July on the Eastside
   image: /assets/images/hubs/fourth/fireworks-sky.webp
   alt: White and gold fireworks against the night sky.
   credit: "Photo: 些細な日常, CC BY-SA 4.0"
-  license: CC BY-SA 4.0
-- id: lunar-new-year
-  path: /lunar-new-year/
-  title: Lunar New Year on the Eastside
-  image: /assets/images/hubs/lunar-new-year/lanterns-temple.webp
-  alt: Colorful paper lanterns hanging in a temple courtyard.
-  credit: "Photo: Basile Morin, CC BY-SA 4.0"
   license: CC BY-SA 4.0
 - id: diwali
   path: /diwali/

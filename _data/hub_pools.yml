@@ -206,6 +206,17 @@ easter:
     credit: "Photo: W.carter, public domain"
     license: Public domain
     source: https://commons.wikimedia.org/wiki/File:Cherry_blossom_buds_1.jpg
+spring-break:
+  - image: /assets/images/hubs/spring-break/cherry-branch.webp
+    alt: A cherry tree branch covered in white blossoms.
+    credit: "Photo: Fjmustak, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Cherry_Branch_with_Blossoms.jpg
+  - image: /assets/images/hubs/spring-break/red-tulips.webp
+    alt: Red tulips in a field under a blue sky.
+    credit: "Photo: Aaron Burden, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Red_tulips_under_blue_sky_(Unsplash).jpg
 fourth:
   - image: /assets/images/hubs/fourth/fireworks-gold.webp
     alt: Gold fireworks bursting in a night sky.
@@ -237,37 +248,6 @@ fourth:
     credit: "Photo: Vyacheslav Argenberg, CC BY 4.0"
     license: CC BY 4.0
     source: https://commons.wikimedia.org/wiki/File:Red_fireworks_in_night_sky,_Victory_Day,_Rostov-on-Don,_Russia.jpg
-lunar-new-year:
-  - image: /assets/images/hubs/lunar-new-year/lanterns-temple.webp
-    alt: Colorful paper lanterns hanging in a temple courtyard.
-    credit: "Photo: Basile Morin, CC BY-SA 4.0"
-    license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:Open_gate_leaning_to_a_courtyard_of_colorful_paper_lanterns_at_Bulguksa_temple_in_Gyeongju_South_Korea.jpg
-  - image: /assets/images/hubs/lunar-new-year/lanterns-laos.webp
-    alt: Star-shaped lanterns hanging on a building at dusk.
-    credit: "Photo: Basile Morin, CC BY-SA 4.0"
-    license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:Colorful_star-shaped_lanterns_hanging_on_a_building_at_blue_hour_in_Luang_Prabang_Laos.jpg
-  - image: /assets/images/hubs/lunar-new-year/lanterns-manila.webp
-    alt: Paper lanterns hanging outdoors.
-    credit: "Photo: SwarmCheng, CC BY-SA 4.0"
-    license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:Paper_lanterns_in_the_Philippines_08.jpg
-  - image: /assets/images/hubs/lunar-new-year/lion-head.webp
-    alt: A red and gold lion dance head.
-    credit: "Photo: PQ77wd, CC BY-SA 4.0"
-    license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:Head_for_Lion_Dance_about_the_1st._Guangzhou_Chinese_New_Year_Parade.jpg
-  - image: /assets/images/hubs/lunar-new-year/mandarins.webp
-    alt: A painting of four mandarin oranges.
-    credit: "Painting: Édouard Manet, public domain"
-    license: Public domain
-    source: https://commons.wikimedia.org/wiki/File:Édouard_Manet_-_Four_Mandarin_Oranges.jpg
-  - image: /assets/images/hubs/lunar-new-year/citrus.webp
-    alt: Oranges and other citrus in a bowl.
-    credit: "Photo: rajucreddy, CC0"
-    license: CC0
-    source: https://commons.wikimedia.org/wiki/File:Citrus_Harmony_By_Raju_C_Reddy.jpg
 diwali:
   - image: /assets/images/hubs/diwali/diya-lamp.webp
     alt: A lit clay oil lamp.

@@ -156,6 +156,9 @@ module EastsideCalendar
         return append_drive_section(town_sections(hub, cities, data, today, site_url), hub, data, today, site_url)
       end
 
+      districts = Array(hub["districts"]).select { |district| district.is_a?(Hash) }
+      return district_sections(hub, districts, cities, data, today, site_url) unless districts.empty?
+
       names = city_names(cities)
       grouped = Hash.new { |hash, key| hash[key] = [] }
       seen = Hash.new { |hash, key| hash[key] = {} }
@@ -189,6 +192,87 @@ module EastsideCalendar
         section_payload(section, items)
       end
       append_drive_section(sections, hub, data, today, site_url)
+    end
+
+    # School-district date sections, then Monday weeks of matching events.
+    # Off season this returns nothing, so the page uses the shared empty state.
+    def district_sections(hub, districts, cities, data, today, site_url)
+      start_s = hub.dig("season", "start").to_s
+      end_s = hub.dig("season", "end").to_s
+      return [] unless in_season?(today, start_s, end_s)
+
+      sections = []
+      if district_year?(hub, today, start_s, end_s)
+        districts.each do |district|
+          sections << section_payload(district, [])
+        end
+      end
+      sections + week_sections(matching_rows(hub, cities, data, today, site_url))
+    end
+
+    def district_year?(hub, today, start_s, end_s)
+      year = Integer(hub["calendar_year"])
+      return false unless year.positive?
+
+      season_end_on(today, start_s, end_s)&.year == year
+    rescue ArgumentError, TypeError
+      false
+    end
+
+    def matching_rows(hub, cities, data, today, site_url)
+      matcher = {
+        "id" => hub["id"],
+        "tags" => hub["tags"],
+        "keywords" => hub["keywords"]
+      }
+      rows = []
+      seen = {}
+      names = city_names(cities)
+      names.each_key do |city_id|
+        Array(data["#{city_id}_events"]).each do |event|
+          next unless event.is_a?(Hash)
+          next unless section_match?(event, matcher)
+
+          row = event_row(event, city_id, names[city_id], site_url)
+          next unless upcoming_row?(row, today)
+
+          key = "#{row["city_id"]}|#{row["name"]}|#{row["sort"]}"
+          next if seen[key]
+
+          seen[key] = true
+          rows << row
+        end
+      end
+      rows
+    end
+
+    # An event is listed in every Monday-Sunday week its dates overlap.
+    def week_sections(rows)
+      buckets = Hash.new { |hash, key| hash[key] = [] }
+      rows.each do |row|
+        start_on = date_only(row["sort"])
+        next unless start_on
+
+        finish_on = date_only(row["end_on"]) || start_on
+        finish_on = start_on if finish_on < start_on
+        monday = start_on - ((start_on.wday + 6) % 7)
+        last = finish_on - ((finish_on.wday + 6) % 7)
+        while monday <= last
+          buckets[monday] << row
+          monday += 7
+        end
+      end
+      buckets.keys.sort.map do |monday|
+        items = buckets[monday].sort_by { |item| [item["sort"], item["name"].to_s] }
+        label = "Week of #{Date::MONTHNAMES[monday.month]} #{monday.day}"
+        {
+          "id" => "week-#{monday.iso8601}",
+          "title" => label,
+          "toc" => label,
+          "intro" => "",
+          "events" => items
+        }
+      end
     end
 
     def drive_match_tags(hub)
@@ -629,13 +713,19 @@ module EastsideCalendar
 
     def section_payload(section, items)
       title = section["title"].to_s
-      {
+      payload = {
         "id" => section["id"].to_s,
         "title" => title,
         "toc" => presence(section["toc"], title),
         "intro" => section["intro"].to_s.strip,
         "events" => items
       }
+      source = section["source"].to_s.strip
+      unless source.empty?
+        payload["source"] = source
+        payload["source_label"] = presence(section["source_label"], "Source")
+      end
+      payload
     end
 
     def date_only(value)
@@ -824,6 +914,8 @@ module EastsideCalendar
         end
         hub_tags = Array(hub["tags"]).map { |tag| tag.to_s.downcase }
         return hub["id"].to_s unless (tags & hub_tags).empty?
+
+        return hub["id"].to_s if phrases(hub["keywords"]).any? { |phrase| hay.include?(phrase) }
       end
       nil
     end
