@@ -568,7 +568,8 @@ picture {
 .share-button,
 .footer-install,
 .footer-group a,
-.footer-meta a {
+.footer-meta a,
+.footer-blog a {
   touch-action: manipulation;
 }
 
@@ -674,13 +675,15 @@ picture {
 
 .footer-group a,
 .footer-meta a,
+.footer-blog a,
 .footer-install {
   color: var(--forest);
   font-weight: 400;
   text-decoration: none;
 }
 
-.footer-meta a {
+.footer-meta a,
+.footer-blog a {
   font-weight: 600;
 }
 
@@ -698,6 +701,8 @@ picture {
 .footer-group a:focus-visible,
 .footer-meta a:hover,
 .footer-meta a:focus-visible,
+.footer-blog a:hover,
+.footer-blog a:focus-visible,
 .footer-install:hover,
 .footer-install:focus-visible {
   color: var(--link);
@@ -714,6 +719,10 @@ picture {
 }
 
 .footer-note {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
   margin-top: 1.85rem;
   padding-top: 1.1rem;
   border-top: 1px solid var(--rule);
@@ -723,7 +732,7 @@ picture {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  row-gap: 0.2rem;
+  row-gap: 0.15rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -739,10 +748,14 @@ picture {
 }
 
 .footer-meta li:not(:last-child)::after {
-  content: "·";
+  content: "\00B7";
   margin: 0 0.5rem;
   color: var(--muted);
   font-weight: 400;
+}
+
+.footer-meta li:has(+ li .footer-install[hidden])::after {
+  content: none;
 }
 
 .footer-meta li:has(.footer-install[hidden]) {
@@ -756,12 +769,18 @@ picture {
   line-height: inherit;
 }
 
-.footer-family {
+.footer-family,
+.footer-blog,
+.copyright {
   margin: 0;
   color: var(--muted);
-  font-size: inherit;
   font-weight: 400;
-  line-height: inherit;
+  line-height: 1.55;
+}
+
+.footer-family,
+.footer-blog {
+  font-size: 0.82rem;
 }
 
 .family-line {
@@ -773,8 +792,6 @@ picture {
 }
 
 .copyright {
-  margin: 0.4rem 0 0;
-  color: var(--muted);
   font-size: 0.78rem;
   line-height: 1.45;
 }

@@ -32,7 +32,6 @@
     </div>
     <div class="footer-note">
       <ul class="footer-meta">
-        <li class="footer-family">Made by an Eastside family, for Eastside families.</li>
         <li><a href="{{ '/about/' | relative_url }}"{% if page.url == "/about/" %} aria-current="page"{% endif %}>About</a></li>
         {%- capture suggest_subject -%}Suggest an event{%- endcapture -%}
         {%- capture suggest_body -%}I would like to suggest an event for Eastside Family Calendar.
@@ -53,8 +52,9 @@ City:
         <li><a href="mailto:suggestions@eastsidecalendar.com?subject={{ city_request_subject | strip | mail_escape }}&amp;body={{ city_request_body | strip | mail_escape }}">Request a city</a></li>
         <li><a href="{{ '/feed.xml' | relative_url }}">Feed</a></li>
         <li class="footer-install-slot"><button type="button" id="install-link" class="footer-install" hidden>Add to Home screen</button></li>
-        <li><a href="https://afterpickup.com">From our family: After Pickup</a></li>
       </ul>
+      <p class="footer-family">Made by an Eastside family, for Eastside families.</p>
+      <p class="footer-blog">Our family blog: <a href="https://afterpickup.com">After Pickup</a></p>
       <p class="copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
     </div>
   </div>
