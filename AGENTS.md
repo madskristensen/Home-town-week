@@ -76,7 +76,7 @@ Each Friday, scan the lead sites for about the next six weeks. The Yodel embed n
 - https://rentonwa.macaronikid.com/ covers Renton and Bellevue.
 - https://snoqualmievalley.macaronikid.com/ covers the Snoqualmie Valley, Issaquah, and Sammamish.
 - https://cherryvalley.macaronikid.com/ covers Monroe, Duvall, and Carnation.
-- https://www.parentmap.com/calendar covers the Eastside. Never link it, and never copy its text.
+- https://www.parentmap.com/ covers all 14 cities. No JavaScript. Use The Events Calendar API, for example /wp-json/tribe/events/v1/events?start_date=...&end_date=...&per_page=50&page=N, or /wp-json/wp/v2/tribe_events?event_region=39 for the Eastside. Send a normal browser user-agent. Plain curl gets a 403. Wait between pages. robots.txt disallows filtered /calendar? URLs, so use the API. Skip business self-submissions such as paid classes, school open houses, and gyms.
 
 ## Weekend picks
 
