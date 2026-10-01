@@ -344,28 +344,32 @@ module EastsideCalendar
       idx || BUCKETS.length
     end
 
-    def group_events(inner, today)
-      return inner unless today
+    def render_grouped_cards(page, cards, today)
+      return "" if cards.empty?
 
-      parts = inner.split(/(?=<article class="event-card")/)
-      prelude = parts.shift.to_s
-      buckets = Hash.new { |hash, key| hash[key] = [] }
-      parts.each do |part|
-        iso = part[/\bdata-date="(\d{4}-\d{2}-\d{2})"/, 1]
-        date = iso ? Date.iso8601(iso) : nil
-        buckets[bucket_key(date, today)] << part
-      rescue Date::Error, ArgumentError
-        buckets[:later] << part
+      unless today
+        return render_card_grid(page, "events" => cards, "show_city" => false, "eager" => 0)
       end
-      grouped = +prelude
-      BUCKETS.each do |key, label|
-        cards = buckets[key]
-        next if cards.nil? || cards.empty?
 
-        grouped << %(<h2 class="event-bucket">#{label}</h2>\n)
-        grouped << %(<div class="hub-grid">\n)
-        grouped << cards.join
-        grouped << "</div>\n"
+      buckets = Hash.new { |hash, key| hash[key] = [] }
+      cards.each do |assigns|
+        iso = assigns["date"].to_s
+        date = iso.empty? ? nil : Date.iso8601(iso)
+        buckets[bucket_key(date, today)] << assigns
+      rescue Date::Error, ArgumentError
+        buckets[:later] << assigns
+      end
+      grouped = +""
+      BUCKETS.each do |key, label|
+        list = buckets[key]
+        next if list.nil? || list.empty?
+
+        grouped << render_card_grid(page, {
+          "events" => list,
+          "heading" => label,
+          "show_city" => false,
+          "eager" => 0
+        })
       end
       grouped
     end
@@ -735,8 +739,8 @@ module EastsideCalendar
       close_at = matching_div_end(html, content_at)
       return html unless close_at
 
-      inner = inject_inner(html[content_at...close_at], groups, dates, city_name, labels, page, ends, schemas)
-      inner = group_events(inner, today)
+      prelude, cards = collect_event_cards(html[content_at...close_at], groups, dates, city_name, labels, page, ends, schemas)
+      inner = prelude + render_grouped_cards(page, cards, today)
       opener = stamp_today(html[match.begin(0)...content_at], today)
       html[0, match.begin(0)] + opener + inner + html[close_at..]
     end
@@ -774,16 +778,21 @@ module EastsideCalendar
       nil
     end
 
-    def inject_inner(inner, groups, dates, city_name = nil, labels = nil, page = nil, ends = nil, schemas = nil)
+    def collect_event_cards(inner, groups, dates, city_name = nil, labels = nil, page = nil, ends = nil, schemas = nil)
       groups ||= {}
       dates ||= {}
       labels ||= {}
       cursors = Hash.new(0)
       parts = inner.split(/(?=<h3\b)/)
       prelude = parts.shift.to_s
-      rendered = parts.map do |part|
+      loose = +""
+      cards = []
+      parts.each do |part|
         heading = part[/\A<h3\b[^>]*>.*?<\/h3>/m]
-        next part unless heading
+        unless heading
+          loose << part
+          next
+        end
 
         key = normalize(visible_text(heading))
         bucket = groups[key]
@@ -799,9 +808,9 @@ module EastsideCalendar
         part = link_event_place(part, city_name)
         part = mark_source_links(part)
         schema = schemas && schemas[key] && schemas[key][index]
-        wrap_event_card(part, iso, info, page, end_iso, schema, snippet)
+        cards << event_card_assigns(part, iso, info, end_iso, schema, snippet)
       end
-      prelude + rendered.join
+      [prelude + loose, cards]
     end
 
     # The place line stays plain text in the markdown. The link opens a map.
@@ -885,15 +894,13 @@ module EastsideCalendar
       }
     end
 
-    # One card per event heading. The include lays out the same elements as
-    # every other page. The calendar icon is a separate action, not glued
-    # to the last word of the date.
-    def wrap_event_card(part, iso = nil, info = nil, page = nil, end_iso = nil, schema = nil, calendar_html = nil)
+    # One card per event heading. card-grid.html renders event-card.html.
+    # The calendar icon is a separate action, not glued to the date.
+    def event_card_assigns(part, iso = nil, info = nil, end_iso = nil, schema = nil, calendar_html = nil)
       body = part.sub(/\s+\z/, "")
-      trail = part[body.length..] || ""
       fields = extract_card_fields(body)
       tags = EventLabels.html(info)
-      assigns = {}
+      assigns = { "prebuilt" => true }
       assigns["title"] = fields["title"] unless fields["title"].empty?
       assigns["heading_id"] = fields["heading_id"] unless fields["heading_id"].empty?
       assigns["when"] = fields["when"] unless fields["when"].empty?
@@ -926,12 +933,12 @@ module EastsideCalendar
         photo = body[/<img\b[^>]*\ssrc="([^"]+)"/, 1]
         assigns["schema_image"] = CGI.unescapeHTML(photo.to_s) if photo
       end
-      render_event_card(page, assigns) + trail
+      assigns
     end
 
-    def render_event_card(page, assigns)
+    def render_card_grid(page, assigns)
       site = page.site
-      path = File.join(site.source, "_includes", "event-card.html")
+      path = File.join(site.source, "_includes", "card-grid.html")
       template = site.liquid_renderer.file(path).parse(File.read(path))
       context = Liquid::Context.new(
         [site.site_payload],
@@ -942,8 +949,10 @@ module EastsideCalendar
       context["include"] = assigns
       site.regenerator.add_dependency(site.in_source_dir(page.path), path)
       rendered = template.render!(context).to_s
-      unless rendered.include?('<article class="event-card"')
-        raise "event-card include did not render an event card"
+      events = assigns["events"]
+      if events.respond_to?(:any?) && events.any?
+        raise "card-grid include did not render" unless rendered.include?('class="card-grid"')
+        raise "card-grid include did not render an event card" unless rendered.include?('<article class="event-card"')
       end
 
       rendered
@@ -1484,6 +1493,19 @@ module EastsideCalendar
     def share_finish(input)
       start_s, end_s = input.to_s.split("|", 2)
       EventCalendar.share_end_value(EventCalendar.parse_when(start_s), EventCalendar.parse_when(end_s))
+    end
+
+    # Weekend picks stash one card hash per line. Liquid cannot append a hash.
+    def push_card(list, json)
+      cards = list.is_a?(Array) ? list.dup : []
+      raw = json.to_s.strip
+      return cards if raw.empty?
+
+      parsed = JSON.parse(raw)
+      raise "push_card expected an object" unless parsed.is_a?(Hash)
+
+      cards << parsed
+      cards
     end
 
     # Home weekend cards use the same .ics file the city page already wrote.

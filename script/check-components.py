@@ -24,6 +24,7 @@ SKIP = {
 
 # Literal markup that has to stay in one include. COMPONENTS.md may name it.
 RULES = (
+    ('class="card-grid"', "_includes/card-grid.html"),
     ('class="event-card', "_includes/event-card.html"),
     ('class="event-photo"', "_includes/event-photo.html"),
     ('class="page-intro"', "_includes/page-intro.html"),

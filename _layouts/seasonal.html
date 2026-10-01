@@ -61,52 +61,12 @@ layout: default
     {%- endif -%}
     {%- assign section_events = section.events | size -%}
     {%- if section_events > 0 -%}
-    <div class="hub-grid">
-      {%- for event in section.events -%}
-      {%- capture city_href -%}/{{ event.city_id }}/{%- endcapture -%}
-      {%- assign event_same = event.same_as | append: "" | strip -%}
-      {%- assign card_external = false -%}
-      {%- assign card_href = city_href -%}
-      {%- if event_same.size > 0 -%}
-        {%- assign card_external = true -%}
-        {%- assign card_href = event.same_as -%}
-      {%- endif -%}
-      {%- if forloop.parentloop.first and forloop.index < 3 -%}
-        {%- assign card_loading = "eager" -%}
-      {%- else -%}
-        {%- assign card_loading = "lazy" -%}
-      {%- endif -%}
-      {%- if forloop.parentloop.first and forloop.first -%}
-        {%- assign card_priority = "high" -%}
-      {%- else -%}
-        {%- assign card_priority = "" -%}
-      {%- endif -%}
-      {%- include event-card.html
-           mark_kind=true
-           image_kind=event.image_kind
-           image=event.image
-           alt=event.image_alt
-           credit=event.image_credit
-           source=event.image_source
-           loading=card_loading
-           priority=card_priority
-           sizes="(min-width: 42rem) 21rem, calc(100vw - 3rem)"
-           title=event.name
-           href=card_href
-           external=card_external
-           event=event
-           when=event.when
-           calendar=event.calendar
-           place=event.place
-           place_city=event.city
-           town=event.city
-           town_href=city_href
-           drive=event.drive
-           blurb=event.blurb
-           date=event.sort
-           end=event.end_on -%}
-      {%- endfor -%}
-    </div>
+    {%- if forloop.first -%}
+      {%- assign section_eager = 2 -%}
+    {%- else -%}
+      {%- assign section_eager = 0 -%}
+    {%- endif -%}
+    {%- include card-grid.html events=section.events show_city=true eager=section_eager priority=forloop.first -%}
     {%- endif -%}
   </section>
   {%- endfor -%}

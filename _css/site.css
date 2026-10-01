@@ -1268,12 +1268,12 @@ a.addr .addr-text {
 }
 
 .event-card.is-filtered-out,
-.hub-grid.is-filtered-out,
+.card-grid.is-filtered-out,
 .hub-section.is-filtered-out,
 .event-list h2.event-bucket.is-filtered-out,
 .hub-toc li.is-filtered-out,
 .event-card.is-past,
-.hub-grid.is-past,
+.card-grid.is-past,
 h2.event-bucket.is-past {
   display: none;
 }
@@ -1305,7 +1305,7 @@ h2.event-bucket.is-past {
   line-height: 1.5;
 }
 
-/* Shared event card. The tile modifier is the photo-first grid. */
+/* Shared event card. */
 .event-list {
   display: flex;
   flex-direction: column;
@@ -1589,15 +1589,15 @@ h2.event-bucket.is-past {
   line-height: 1.4;
 }
 
-.hub-grid {
+.card-grid {
   display: grid;
   grid-template-columns: 1fr;
   align-items: stretch;
-  gap: 1.35rem;
-  margin-top: 0.9rem;
+  gap: 2.5rem;
+  margin: 0.9rem 0 0;
 }
 
-.event-list .hub-grid {
+.event-list > .card-grid {
   margin-top: 0;
 }
 
@@ -1614,14 +1614,8 @@ h2.event-bucket.is-past {
   object-fit: cover;
 }
 
-@media (max-width: 41.99rem) {
-  .hub-grid {
-    gap: 2.5rem;
-  }
-}
-
 @media (min-width: 42rem) {
-  .hub-grid {
+  .card-grid {
     grid-template-columns: 1fr 1fr;
     gap: 2.25rem 1.5rem;
   }

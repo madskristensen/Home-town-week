@@ -90,44 +90,11 @@
 {%- for town in home_lights.towns -%}
 <section class="hub-section" aria-labelledby="town-{{ town.id }}">
   <h2 id="town-{{ town.id }}">{{ town.name }}</h2>
-  <div class="hub-grid">
-    {%- for light in town.lights -%}
-    {%- assign light_image = light.image | append: "" -%}
-    {%- if light_image.size > 0 -%}
-      {%- if forloop.parentloop.first and forloop.first -%}
-        {%- assign card_loading = "eager" -%}
-        {%- assign card_priority = "high" -%}
-      {%- else -%}
-        {%- assign card_loading = "lazy" -%}
-        {%- assign card_priority = "" -%}
-      {%- endif -%}
-    {%- endif -%}
-    {%- capture light_dom_id -%}light-{{ light.id }}{%- endcapture -%}
-    {%- include event-card.html
-         mark_kind=true
-         id=light_dom_id
-         image_kind=light.image_kind
-         number=light.number
-         kicker=light.trust_label
-         title=light.name
-         image=light.image
-         alt=light.image_alt
-         credit=light.image_credit
-         source=light.image_source
-         loading=card_loading
-         priority=card_priority
-         sizes="(min-width: 42rem) 21rem, calc(100vw - 3rem)"
-         place=light.address
-         place_city=light.city
-         when=light.nights
-         hours=light.hours
-         blurb=light.description
-         source_href=light.source
-         source_label=light.source_label
-         also_href=light.also_source
-         also_label=light.also_source_label -%}
-    {%- endfor -%}
-  </div>
+  {%- if forloop.first -%}
+  {%- include card-grid.html events=town.lights eager=1 priority=true -%}
+  {%- else -%}
+  {%- include card-grid.html events=town.lights eager=0 -%}
+  {%- endif -%}
 </section>
 {%- endfor -%}
 {%- if page.map_id == "halloween" -%}

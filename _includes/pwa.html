@@ -111,7 +111,7 @@
     for (i = 0; i < headings.length; i++) {
       var node = headings[i].nextElementSibling;
       var any = false;
-      if (node && node.classList.contains("hub-grid")) {
+      if (node && node.classList.contains("card-grid")) {
         var nested = node.querySelectorAll("article.event-card");
         var n;
         for (n = 0; n < nested.length; n++) {
@@ -148,7 +148,7 @@
     for (i = 0; i < cards.length; i++) cards[i].parentNode.removeChild(cards[i]);
     var headings = eventList.querySelectorAll("h2.event-bucket");
     for (i = 0; i < headings.length; i++) headings[i].parentNode.removeChild(headings[i]);
-    var grids = eventList.querySelectorAll(".hub-grid");
+    var grids = eventList.querySelectorAll(".card-grid");
     for (i = 0; i < grids.length; i++) grids[i].parentNode.removeChild(grids[i]);
     var names = ["Today", "Tomorrow", "This week", "This weekend", "Later"];
     var groups = { Today: [], Tomorrow: [], "This week": [], "This weekend": [], Later: [] };
@@ -167,7 +167,7 @@
       heading.textContent = names[i];
       insertAfter(cursor, heading);
       var grid = document.createElement("div");
-      grid.className = "hub-grid";
+      grid.className = "card-grid";
       insertAfter(heading, grid);
       var j;
       for (j = 0; j < list.length; j++) grid.appendChild(list[j]);
@@ -221,7 +221,7 @@
     document.querySelectorAll("h2.event-bucket").forEach(function (heading) {
       var any = false;
       var node = heading.nextElementSibling;
-      if (node && node.classList.contains("hub-grid")) {
+      if (node && node.classList.contains("card-grid")) {
         var nested = node.querySelectorAll(".event-card");
         var n;
         for (n = 0; n < nested.length; n++) {
@@ -230,7 +230,7 @@
       }
       while (node && !node.classList.contains("event-bucket") && !node.classList.contains("filter-empty") && !node.classList.contains("suggest-event")) {
         if (node.classList.contains("event-card") && !node.classList.contains("is-filtered-out")) any = true;
-        if (node.classList.contains("hub-grid")) {
+        if (node.classList.contains("card-grid")) {
           var inner = node.querySelectorAll(".event-card");
           var j;
           for (j = 0; j < inner.length; j++) {
@@ -241,7 +241,7 @@
       }
       heading.classList.toggle("is-filtered-out", active && !any);
     });
-    document.querySelectorAll(".hub-grid").forEach(function (grid) {
+    document.querySelectorAll(".card-grid").forEach(function (grid) {
       var cards = grid.querySelectorAll(".event-card");
       if (!cards.length) return;
       var any = false;

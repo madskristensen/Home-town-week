@@ -1152,16 +1152,13 @@ module EastsideCalendar
       end
     end
 
-    COLUMN_PHOTO_SIZES = "(min-width: 42rem) 21rem, calc(100vw - 3rem)"
-
     def venue_photo_include(photo)
       <<~LIQUID.chomp
         {% include event-photo.html
            src="#{quote_attr(photo["src"])}"
            alt="#{quote_attr(photo["alt"])}"
            credit="#{quote_attr(photo["credit"])}"
-           source="#{quote_attr(photo["source"])}"
-           sizes="#{COLUMN_PHOTO_SIZES}" %}
+           source="#{quote_attr(photo["source"])}" %}
       LIQUID
     end
 

@@ -62,6 +62,10 @@ The browser hides a card whose end date is before today, so yesterday's cards do
 
 `/this-weekend/` is Friday through Sunday across the 14 cities. The home page shows a short pick of that list. Keep both in step with the city pages. Worth the Drive stays off that list.
 
+## Cards
+
+Grouped cards always use `_includes/card-grid.html`. It renders each item with `_includes/event-card.html` inside one grid. Home, city day buckets, seasonal hubs, this weekend, worth the drive, rainy day, lights lists, and explore pages all use that include. Do not add another grid class or a page-specific wrapper. The daily prune and content edits must not paste card markup.
+
 ## Dedupe
 
 One event, one row. Two sessions at different times can both stay when the page lists both. A second row with the same time and a near-duplicate name should be removed. The event check warns on same-day near-duplicates.

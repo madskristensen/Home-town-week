@@ -38,23 +38,6 @@
   line-height: 1.15;
 }
 
-.weekend-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: stretch;
-  gap: 2rem 1.25rem;
-  margin: 0.85rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.weekend-pick {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  min-width: 0;
-}
-
 .weekend-picks h2 a {
   color: inherit;
   font-weight: inherit;
@@ -73,19 +56,6 @@
 
 .weekend-more a {
   font-weight: 650;
-}
-
-@media (max-width: 41.99rem) {
-  .weekend-grid {
-    gap: 2.5rem;
-  }
-}
-
-@media (min-width: 42rem) {
-  .weekend-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 2.25rem 1.5rem;
-  }
 }
 
 .eastside-board {
@@ -268,11 +238,3 @@
     font-size: 1.18rem;
   }
 }
-.weekend-pick a.addr {
-  position: relative;
-  z-index: 1;
-  color: var(--link);
-  font-weight: 400;
-  text-decoration: none;
-}
-

@@ -1,0 +1,138 @@
+{%- comment -%}
+  One grid for every group of cards.
+  events: list of event hashes. Each item is rendered by event-card.html.
+  heading: optional day-bucket label, as h2.event-bucket before the grid.
+  show_city: when true, the town name is the card kicker.
+  eager: how many leading cards load immediately. Default 0.
+  priority: when true, the first card is fetchpriority high.
+  A city hash sets prebuilt and already holds photo_html, place_html, and the
+  other extracted fields. Hubs, weekend picks, and lights pass the event row.
+{%- endcomment -%}
+{%- assign grid_heading = include.heading | append: "" | strip -%}
+{%- if grid_heading.size > 0 -%}
+<h2 class="event-bucket">{{ grid_heading | escape }}</h2>
+{%- endif -%}
+{%- assign grid_eager = include.eager | default: 0 | plus: 0 -%}
+<div class="card-grid">
+{%- for event in include.events -%}
+{%- if event.prebuilt -%}
+{%- include event-card.html
+     title=event.title
+     heading_id=event.heading_id
+     when=event.when
+     photo_html=event.photo_html
+     place_html=event.place_html
+     links_html=event.links_html
+     blurb_html=event.blurb_html
+     tags_html=event.tags_html
+     calendar_html=event.calendar_html
+     date=event.date
+     end=event.end
+     attrs=event.attrs
+     schema_start=event.schema_start
+     schema_end=event.schema_end
+     schema_description=event.schema_description
+     schema_url=event.schema_url
+     schema_place=event.schema_place
+     schema_street=event.schema_street
+     schema_locality=event.schema_locality
+     schema_cost=event.schema_cost
+     schema_name=event.schema_name
+     schema_share_start=event.schema_share_start
+     schema_share_end=event.schema_share_end
+     schema_image=event.schema_image -%}
+{%- else -%}
+{%- assign row = event -%}
+{%- if event.event -%}{%- assign row = event.event -%}{%- endif -%}
+{%- assign card_title = event.title | append: "" | strip -%}
+{%- if card_title.size == 0 -%}{%- assign card_title = event.name | append: "" | strip -%}{%- endif -%}
+{%- assign card_when = event.when | append: "" | strip -%}
+{%- if card_when.size == 0 -%}{%- assign card_when = event.nights | append: "" | strip -%}{%- endif -%}
+{%- assign card_place = event.place | append: "" | strip -%}
+{%- assign card_address = event.address | append: "" | strip -%}
+{%- if card_place.size == 0 -%}{%- assign card_place = card_address -%}{%- endif -%}
+{%- assign card_blurb = event.blurb | append: "" | strip -%}
+{%- if card_blurb.size == 0 and card_address.size > 0 -%}{%- assign card_blurb = event.description | append: "" | strip -%}{%- endif -%}
+{%- assign card_alt = event.alt | append: "" | strip -%}
+{%- if card_alt.size == 0 -%}{%- assign card_alt = event.image_alt | append: "" | strip -%}{%- endif -%}
+{%- assign card_credit = event.credit | append: "" | strip -%}
+{%- if card_credit.size == 0 -%}{%- assign card_credit = event.image_credit | append: "" | strip -%}{%- endif -%}
+{%- assign card_kicker = event.kicker | append: "" | strip -%}
+{%- if card_kicker.size == 0 -%}{%- assign card_kicker = event.trust_label | append: "" | strip -%}{%- endif -%}
+{%- assign card_id = event.heading_id | append: "" | strip -%}
+{%- if card_id.size == 0 -%}{%- assign card_id = event.card_id | append: "" | strip -%}{%- endif -%}
+{%- assign card_number = event.number | append: "" | strip -%}
+{%- if card_id.size == 0 and card_number.size > 0 -%}{%- capture card_id -%}light-{{ event.id }}{%- endcapture -%}{%- endif -%}
+{%- assign card_href = event.href | append: "" | strip -%}
+{%- assign card_external = false -%}
+{%- if event.external -%}{%- assign card_external = true -%}{%- endif -%}
+{%- if card_href.size == 0 -%}
+{%- assign card_same = event.same_as | append: "" | strip -%}
+{%- assign card_sort = event.sort | append: "" | strip -%}
+{%- if card_same.size > 0 -%}
+{%- assign card_href = card_same -%}
+{%- assign card_external = true -%}
+{%- elsif card_sort.size > 0 -%}
+{%- capture card_href -%}/{{ event.city_id }}/{%- endcapture -%}
+{%- assign card_href = card_href | strip -%}
+{%- endif -%}
+{%- endif -%}
+{%- assign card_town = "" -%}
+{%- assign card_town_href = "" -%}
+{%- if include.show_city -%}
+{%- assign card_town = event.town | append: "" | strip -%}
+{%- if card_town.size == 0 -%}{%- assign card_town = event.city | append: "" | strip -%}{%- endif -%}
+{%- assign card_town_href = event.town_href | append: "" | strip -%}
+{%- if card_town_href.size == 0 -%}
+{%- assign card_cid = event.city_id | append: "" | strip -%}
+{%- if card_cid.size > 0 -%}{%- capture card_town_href -%}/{{ card_cid }}/{%- endcapture -%}{%- assign card_town_href = card_town_href | strip -%}{%- endif -%}
+{%- endif -%}
+{%- endif -%}
+{%- assign card_place_city = event.place_city | append: "" | strip -%}
+{%- if card_place_city.size == 0 -%}{%- assign card_place_city = event.city | append: "" | strip -%}{%- endif -%}
+{%- assign card_date = event.date | append: "" | strip -%}
+{%- if card_date.size == 0 -%}{%- assign card_date = event.sort | append: "" | strip -%}{%- endif -%}
+{%- assign card_end = event.end_on | append: "" | strip -%}
+{%- assign card_source_href = event.source_href | append: "" | strip -%}
+{%- if card_source_href.size == 0 and card_address.size > 0 -%}
+{%- assign card_raw_source = event.source | append: "" | strip -%}
+{%- if card_raw_source contains "://" -%}{%- assign card_source_href = card_raw_source -%}{%- endif -%}
+{%- endif -%}
+{%- assign card_also_href = event.also_href | append: "" | strip -%}
+{%- if card_also_href.size == 0 -%}{%- assign card_also_href = event.also_source | append: "" | strip -%}{%- endif -%}
+{%- if forloop.index <= grid_eager -%}{%- assign card_loading = "eager" -%}{%- else -%}{%- assign card_loading = "lazy" -%}{%- endif -%}
+{%- assign card_priority = "" -%}
+{%- if include.priority and forloop.first -%}{%- assign card_priority = "high" -%}{%- endif -%}
+{%- include event-card.html
+     id=card_id
+     number=card_number
+     kicker=card_kicker
+     title=card_title
+     href=card_href
+     external=card_external
+     event=row
+     when=card_when
+     calendar=event.calendar
+     town=card_town
+     town_href=card_town_href
+     place=card_place
+     place_city=card_place_city
+     drive=event.drive
+     hours=event.hours
+     blurb=card_blurb
+     image=event.image
+     image_kind=event.image_kind
+     alt=card_alt
+     credit=card_credit
+     source=event.image_source
+     loading=card_loading
+     priority=card_priority
+     date=card_date
+     end=card_end
+     source_href=card_source_href
+     source_label=event.source_label
+     also_href=card_also_href
+     also_label=event.also_source_label -%}
+{%- endif -%}
+{%- endfor -%}
+</div>

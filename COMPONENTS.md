@@ -6,7 +6,8 @@ Card and page markup lives in one include each. Pages, layouts, and the city cal
 
 | Include | What it renders |
 | --- | --- |
-| `_includes/event-card.html` | Every event card. The same elements on home, city, hub, and explore pages: photo and credit, city label when a town is passed, date line, calendar and share actions, title, tags, place, and blurb. A dated card includes the share button. |
+| `_includes/card-grid.html` | Every group of event cards. One `.card-grid` (one column on a phone, two from 42rem). Each item is `_includes/event-card.html`. Optional `heading` is a day bucket. `show_city` adds the town kicker. |
+| `_includes/event-card.html` | Every event card. The same elements on home, city, hub, and explore pages: photo and credit, city label when a town is passed, date line, calendar and share actions, title, tags, place, and blurb. A dated card includes the share button. The card photo `sizes` value lives here. |
 | `_includes/event-photo.html` | Photo and the credit strip. `figure` defaults to `event-photo`. |
 | `_includes/filter-chip.html` | One filter chip. Event chips pass `group` and `value`. Playground chips pass `input_class`, `city`, `count`, or `amenity`, and do not pass `value`. |
 | `_includes/page-intro.html` | The one-line introduction. Renders nothing when `text` is blank. |
@@ -19,7 +20,7 @@ Card and page markup lives in one include each. Pages, layouts, and the city cal
 | `_includes/guide-header.html` | Playground page title and introduction. The heading links to `/playgrounds/`. |
 | `_includes/calendar-subscribe.html` | City page control for the subscription feed at `/calendar/{city}.ics`. |
 
-The city plugin in `_plugins/event_calendar.rb` renders `event-card.html` for each city card. It still adds the calendar icon, the place link, and the source line before that render. Pass a page hash with `path` into Liquid registers. Do not pass the page object.
+The city plugin in `_plugins/event_calendar.rb` renders `card-grid.html` for each day bucket. That include renders `event-card.html`. The plugin still adds the calendar icon, the place link, and the source line before that render. Pass a page hash with `path` into Liquid registers. Do not pass the page object.
 
 Each include starts with a Liquid comment that lists its parameters. Liquid comments are not in the built HTML.
 
@@ -27,6 +28,7 @@ Each include starts with a Liquid comment that lists its parameters. Liquid comm
 
 A file fails when it contains one of these outside the include that owns it:
 
+- `class="card-grid"`
 - `class="event-card`
 - `class="event-photo"`
 - `class="page-intro"`
