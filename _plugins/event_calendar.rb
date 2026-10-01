@@ -86,14 +86,38 @@ module EastsideCalendar
     # One short blurb for a card. Drops source-link tails and notes about
     # other pages. Keeps what the event is.
     def card_blurb(input)
-      text = visitor_sentences(drop_source_marks(input)).join(" ")
-      return "" if text.empty?
-      return text if text.length <= 170
+      shorten_blurb(visitor_sentences(drop_source_marks(input)).join(" "), 170)
+    end
 
-      cut = text[0, 167]
-      spot = cut.rindex(" ")
-      trimmed = spot && spot > 40 ? cut[0, spot] : cut
-      "#{trimmed.rstrip.sub(/[,:;]\z/, "")}..."
+    # A sentence that fits ends on its period. A cut in the middle of a
+    # sentence ends on one ellipsis, not a period plus dots.
+    def shorten_blurb(text, max)
+      cleaned = text.to_s.gsub(/\s+/, " ").strip
+      return cleaned if cleaned.empty? || cleaned.length <= max
+
+      window = cleaned[0, max]
+      sentence_at = nil
+      offset = 0
+      while (match = window.match(/[.!?](?=\s|\z)/, offset))
+        index = match.begin(0)
+        rest = cleaned[(index + 1)..].to_s.sub(/\A\s+/, "")
+        sentence_at = index if rest.empty? || rest.match?(/\A[A-Z0-9"']/)
+        offset = index + 1
+      end
+      return cleaned[0, sentence_at + 1].strip if sentence_at && sentence_at >= 40
+
+      spot = window.rindex(" ")
+      trimmed = spot && spot > 40 ? window[0, spot] : window
+      trimmed = trimmed.rstrip.sub(/[,:;]+\z/, "")
+      loop do
+        break unless trimmed.match?(/[.!?…]+\z/) || trimmed.match?(/\.{2,}\z/)
+
+        space = trimmed.rindex(" ")
+        break unless space && space > 40
+
+        trimmed = trimmed[0, space].rstrip
+      end
+      "#{trimmed}…"
     end
 
     def drop_source_marks(text)

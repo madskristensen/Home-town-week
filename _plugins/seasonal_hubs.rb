@@ -1300,12 +1300,7 @@ module EastsideCalendar
 
       sentences = text.split(/(?<=[.!?])\s+/).map(&:strip).reject(&:empty?)
       sentence = sentences.find { |line| !meta_sentence?(line) && !EventCalendar.source_fragment?(line) } || ""
-      return sentence if sentence.length <= 150
-
-      cut = sentence[0, 148]
-      spot = cut.rindex(" ")
-      trimmed = spot && spot > 40 ? cut[0, spot] : cut
-      "#{trimmed.rstrip.sub(/[,:;]\z/, "")}..."
+      EventCalendar.shorten_blurb(sentence, 150)
     end
 
     def meta_sentence?(sentence)

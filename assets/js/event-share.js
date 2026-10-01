@@ -122,12 +122,38 @@
     return sentences;
   }
 
+  function tidyEllipsis(text) {
+    return text.replace(/([.!?])\s*(?:\.{2,}|\u2026)/g, "$1");
+  }
+
+  function sentenceEnd(text, limit) {
+    var end = -1;
+    var i;
+    var cap = Math.min(text.length, limit);
+    for (i = 0; i < cap; i++) {
+      var mark = text.charAt(i);
+      if (mark !== "." && mark !== "!" && mark !== "?") continue;
+      var rest = text.slice(i + 1);
+      if (rest && !/^\s/.test(rest) && rest.charAt(0) !== "") continue;
+      if (rest && !/^\s*$/.test(rest) && !/^\s+[A-Z0-9"']/.test(rest)) continue;
+      end = i + 1;
+    }
+    return end;
+  }
+
   function clipSentence(sentence) {
-    var budget = BLURB_LIMIT - 3;
-    var slice = sentence.slice(0, budget);
+    if (sentence.length <= BLURB_LIMIT) return sentence;
+    var end = sentenceEnd(sentence, BLURB_LIMIT);
+    if (end > 40) return sentence.slice(0, end).trim();
+    var slice = sentence.slice(0, BLURB_LIMIT - 1);
     var space = slice.lastIndexOf(" ");
-    var trimmed = (space > 0 ? slice.slice(0, space) : slice).replace(/[\s.,;:]+$/, "");
-    return trimmed + "...";
+    var trimmed = (space > 40 ? slice.slice(0, space) : slice).replace(/[\s,;:]+$/, "");
+    while (/[.!?…]$/.test(trimmed) || /\.{2,}$/.test(trimmed)) {
+      var back = trimmed.lastIndexOf(" ");
+      if (back <= 40) break;
+      trimmed = trimmed.slice(0, back).replace(/[\s,;:]+$/, "");
+    }
+    return trimmed + "\u2026";
   }
 
   function priceSentenceIndex(sentences, price) {
@@ -152,7 +178,7 @@
 
   function blurbLine(blurb, cost) {
     var price = clean(cost);
-    var sentences = sentencesOf(clean(blurb)).filter(function (sentence) {
+    var sentences = sentencesOf(tidyEllipsis(clean(blurb))).filter(function (sentence) {
       return !hasContact(sentence);
     });
     if (!sentences.length) {
@@ -206,21 +232,78 @@
     return url;
   }
 
-  function shareMessage(attrs) {
-    var lines = [
-      clean(attrs.title),
-      whenLine(attrs.start, attrs.end),
-      placeLine(attrs.venue, attrs.city),
-      blurbLine(attrs.blurb, attrs.cost),
-      sourceUrl(attrs.url),
-      "Found on eastsidecalendar.com"
-    ];
+  var FOUND = "Found on Eastside Family Calendar";
+
+  function joinLines(lines) {
     var kept = [];
     var i;
     for (i = 0; i < lines.length; i++) {
       if (lines[i]) kept.push(lines[i]);
     }
     return kept.join("\n");
+  }
+
+  function shareLines(attrs, includeSource) {
+    var lines = [
+      clean(attrs.title),
+      whenLine(attrs.start, attrs.end),
+      placeLine(attrs.venue, attrs.city),
+      blurbLine(attrs.blurb, attrs.cost)
+    ];
+    if (includeSource) lines.push(sourceUrl(attrs.url));
+    lines.push(FOUND);
+    return lines;
+  }
+
+  function shareMessage(attrs) {
+    return joinLines(shareLines(attrs, true));
+  }
+
+  function shareSheetMessage(attrs) {
+    return joinLines(shareLines(attrs, false));
+  }
+
+  function escapeHtml(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function cityPage(city) {
+    var slug = clean(city).toLowerCase().replace(/['’]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+    if (!slug) return "https://www.eastsidecalendar.com/";
+    return "https://www.eastsidecalendar.com/" + slug + "/";
+  }
+
+  function sourceLabel(url) {
+    var match = /^https?:\/\/([^/?#]+)/i.exec(url || "");
+    if (!match) return "Event details";
+    return match[1].replace(/^www\./i, "");
+  }
+
+  function shareHtml(attrs) {
+    var title = clean(attrs.title);
+    var when = whenLine(attrs.start, attrs.end);
+    var place = placeLine(attrs.venue, attrs.city);
+    var blurb = blurbLine(attrs.blurb, attrs.cost);
+    var source = sourceUrl(attrs.url);
+    var link = "color:inherit;";
+    var parts = [];
+    if (title) {
+      parts.push(source
+        ? "<strong><a href=\"" + escapeHtml(source) + "\" style=\"" + link + "\">" + escapeHtml(title) + "</a></strong>"
+        : "<strong>" + escapeHtml(title) + "</strong>");
+    }
+    if (when) parts.push(escapeHtml(when));
+    if (place) parts.push(escapeHtml(place));
+    if (blurb) parts.push(escapeHtml(blurb));
+    if (source) {
+      parts.push("<a href=\"" + escapeHtml(source) + "\" style=\"" + link + "\">" + escapeHtml(sourceLabel(source)) + "</a>");
+    }
+    parts.push("Found on <a href=\"" + escapeHtml(cityPage(attrs.city)) + "\" style=\"" + link + "\">Eastside Family Calendar</a>");
+    return "<div style=\"font-family:system-ui,sans-serif;color:inherit;\">" + parts.join("<br>") + "</div>";
   }
 
   function attrsFrom(button) {
@@ -262,6 +345,23 @@
     return copyWithTextarea(text);
   }
 
+  function copyRich(plain, html) {
+    if (navigator.clipboard && navigator.clipboard.write && typeof ClipboardItem !== "undefined") {
+      try {
+        var item = new ClipboardItem({
+          "text/html": new Blob([html], { type: "text/html" }),
+          "text/plain": new Blob([plain], { type: "text/plain" })
+        });
+        return navigator.clipboard.write([item]).catch(function () {
+          return copyText(plain);
+        });
+      } catch (error) {
+        return copyText(plain);
+      }
+    }
+    return copyText(plain);
+  }
+
   function showStatus(button, text) {
     var status = button.querySelector("[data-share-status]");
     if (!status) return;
@@ -274,8 +374,8 @@
     if (timers) timers.set(button, timer);
   }
 
-  function copyAndConfirm(button, text) {
-    copyText(text).then(function () {
+  function copyAndConfirm(button, plain, html) {
+    copyRich(plain, html).then(function () {
       showStatus(button, "Copied");
     }, function () {
       showStatus(button, "Could not copy.");
@@ -284,16 +384,20 @@
 
   function share(button) {
     var attrs = attrsFrom(button);
-    var text = shareMessage(attrs);
+    var plain = shareMessage(attrs);
+    var html = shareHtml(attrs);
     var title = clean(attrs.title);
+    var source = sourceUrl(attrs.url);
     if (navigator.share) {
-      navigator.share({ title: title, text: text }).catch(function (error) {
+      var payload = { title: title, text: shareSheetMessage(attrs) };
+      if (source) payload.url = source;
+      navigator.share(payload).catch(function (error) {
         if (error && error.name === "AbortError") return;
-        copyAndConfirm(button, text);
+        copyAndConfirm(button, plain, html);
       });
       return;
     }
-    copyAndConfirm(button, text);
+    copyAndConfirm(button, plain, html);
   }
 
   if (typeof document !== "undefined") document.addEventListener("click", function (event) {
@@ -305,6 +409,10 @@
   });
 
   if (typeof module !== "undefined" && module.exports) {
-    module.exports = { shareMessage: shareMessage };
+    module.exports = {
+      shareMessage: shareMessage,
+      shareSheetMessage: shareSheetMessage,
+      shareHtml: shareHtml
+    };
   }
 })();
