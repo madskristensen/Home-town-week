@@ -105,12 +105,6 @@ Gently used books, with proceeds to Sammamish Library programs. The listing is o
 <p class="event-when">Wed Oct 21 · 4:00 p.m.</p>
 <p class="event-place">Ebright Creek Park</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/tree-sapling.webp"
-   alt="A young tree sapling growing in a forest."
-   credit="Photo: Ben Hemmings, CC BY-SA 4.0"
-   source="https://commons.wikimedia.org/wiki/File:Tree_Sapling_in_British_Columbia,_Canada_2019.jpg" %}
-
 Plant native trees at a site started by Washington Native Plant Society stewards. Free. The city asks you to register on the event page. The posted time is 4:00 p.m.
 
 [Tree Planting at Ebright Creek Park](https://www.sammamish.us/news/events/events/volunteer-opportunities/10-21-tree-planting-at-ebright-creek-park/)

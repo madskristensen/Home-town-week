@@ -145,6 +145,13 @@ Free and all ages. Local food and vendors, with a Mak Fai lion dance at 5:00 p.m
 <p class="event-when">Sun Oct 4 · 11:00–11:45 a.m.</p>
 <p class="event-place">Studio33, 13259 NE 20th St</p>
 
+{% include event-photo.html
+   src="/assets/images/bellevue/little-red-hen.webp"
+   alt="Poster for The Little Red Hen, with an illustrated red hen in a straw hat."
+   credit="Image: Theatre33"
+   source="https://www.theatre33wa.org/"
+   license="organizer" %}
+
 Theatre33's first Little Play of the season, for ages 2 to 5. About 15 minutes of soft hand puppets, then play and a craft. It is sold out.
 
 [Theatre33 tickets](https://theatre33.ludus.com/)

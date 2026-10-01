@@ -151,12 +151,6 @@ Trick-or-treat for kids ages 3 to 10 with an adult. Bring a bag. The standby lin
 <p class="event-when">Sat Oct 17 · 1:00–2:30 p.m.</p>
 <p class="event-place">Confluence Park, 595 Rainier Blvd N, Issaquah</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/tree-sapling.webp"
-   alt="A young tree sapling growing in a forest."
-   credit="Photo: Ben Hemmings, CC BY-SA 4.0"
-   source="https://commons.wikimedia.org/wiki/File:Tree_Sapling_in_British_Columbia,_Canada_2019.jpg" %}
-
 A free hands-on lesson in planting, mulching, watering, and pruning young trees. Sammamish city staff lead it through the Eastside Climate Partnership, and the work is at Confluence Park in Issaquah. Tools are provided.
 
 [Planting and Tree Care 101](https://www.sammamish.us/news/events/events/tree-giveaway/october-17-2026-planting-and-tree-care-101/)

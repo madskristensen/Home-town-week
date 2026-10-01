@@ -11,6 +11,13 @@ hook: The Game's Afoot opens at the repertory theatre. Storytime is Thursday and
 <p class="event-when">Oct 2 through Oct 25 · Time not posted</p>
 <p class="event-place">Woodinville Repertory Theatre, 14300 NE 145th St, Suite 100</p>
 
+{% include event-photo.html
+   src="/assets/images/woodinville/games-afoot.webp"
+   alt="Poster for The Game's Afoot, with a top hat, a revolver, and a magnifying glass on a red curtain."
+   credit="Image: Woodinville Repertory Theatre"
+   source="https://www.woodinvillerep.org/the-games-afoot/"
+   license="organizer" %}
+
 Ken Ludwig's mystery-comedy, directed by Rael Esteves. Broadway star William Gillette, famous for playing Sherlock Holmes, hosts a weekend that turns into a murder hunt after a guest is stabbed. A killing is part of the plot. Treat it as a mystery for older kids and adults.  
 [The Game's Afoot](https://www.woodinvillerep.org/the-games-afoot/)
 

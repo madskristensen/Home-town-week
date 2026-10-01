@@ -218,6 +218,13 @@ Tina's Dance Studios' annual showcase, with dancers of all ages and levels.
 <p class="event-when">Fri Oct 30 through Sun Nov 8</p>
 <p class="event-place">Studio East, 10718 NE 68th St</p>
 
+{% include event-photo.html
+   src="/assets/images/kirkland/young-frankenstein.webp"
+   alt="Poster for Young Frankenstein, with an illustrated green monster, a bride, and a castle."
+   credit="Image: Studio East"
+   source="https://studio-east.org/season"
+   license="organizer" %}
+
 Studio East's youth cast, ages 9 to 20, in Mel Brooks' musical comedy. The company recommends it for teens and adults. Expect mature jokes, sexual innuendo, mild profanity, brief stage violence, and spooky stage effects. Friday, Oct 30 at 7:00 p.m. is a pay-what-you-will preview. Other shows are Sat Oct 31 at 7:00 p.m., Sun Nov 1 at 2:00 p.m., Thu Nov 5 at 7:00 p.m., Fri Nov 6 at 7:00 p.m., Sat Nov 7 at 2:00 and 7:00 p.m., and Sun Nov 8 at 2:00 p.m. Tickets go on sale October 5.
 
 [Studio East](https://studio-east.org/auditions/)
@@ -225,6 +232,13 @@ Studio East's youth cast, ages 9 to 20, in Mel Brooks' musical comedy. The compa
 ### A Christmas Story
 <p class="event-when">Fri Dec 11 through Sun Dec 20</p>
 <p class="event-place">Studio East, 10718 NE 68th St</p>
+
+{% include event-photo.html
+   src="/assets/images/kirkland/christmas-story.webp"
+   alt="Poster for A Christmas Story, with an illustrated boy in a winter hat and scarf."
+   credit="Image: Studio East"
+   source="https://studio-east.org/season"
+   license="organizer" %}
 
 Studio East's musical for a cast in grades 3 through 12. Ralphie wants a Red Ryder BB gun, and the holiday obstacles include bunny pajamas, a department-store Santa, and a frozen flagpole. The run may be extended.
 
@@ -273,6 +287,13 @@ Lake Washington High School students sing roles they would not usually be cast i
 ### James and the Giant Peach
 <p class="event-when">Fri Mar 19 through Sun Mar 28, 2027</p>
 <p class="event-place">Studio East, 10718 NE 68th St</p>
+
+{% include event-photo.html
+   src="/assets/images/kirkland/james-peach.webp"
+   alt="Poster for James and the Giant Peach, with an illustrated boy, a giant peach, and insects."
+   credit="Image: Studio East"
+   source="https://studio-east.org/season"
+   license="organizer" %}
 
 Studio East's family musical for a cast in grades 1 through 8. James and a crew of oversized insects ride a magic peach across the ocean.
 

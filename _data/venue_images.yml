@@ -559,3 +559,69 @@ venues:
     credit: "Photo: Woodinville Heritage Museum"
     license: organizer
     source: https://www.woodinvilleheritage.org/
+  - keys: ["novelty hill"]
+    image: /assets/images/duvall/novelty-hill-barn.webp
+    alt: A red barn with white trim at Novelty Hill Farm in Duvall.
+    credit: "Photo: Novelty Hill Farm"
+    license: organizer
+    source: https://noveltyhillfarm.com/history
+  - keys: ["muddy boots"]
+    image: /assets/images/duvall/muddy-boots.webp
+    alt: Rows of orange pumpkins in a field at Muddy Boots Pumpkins.
+    credit: "Photo: Muddy Boots Pumpkins"
+    license: organizer
+    source: https://muddybootspumpkins.com/
+  - keys: ["red barn farm"]
+    image: /assets/images/redmond/red-barn-farm.webp
+    alt: The red barn at Red Barn Farm, with a white fence and trees.
+    credit: "Photo: Red Barn Farm"
+    license: organizer
+    source: https://redbarnfarm.com/
+  - keys: ["21 acres"]
+    image: /assets/images/woodinville/21-acres-hall.webp
+    alt: The great hall at 21 Acres, a long room of wood beams and tall windows.
+    credit: "Photo: 21 Acres"
+    license: organizer
+    source: https://21acres.org/
+  - keys: ["hollywood schoolhouse"]
+    image: /assets/images/woodinville/hollywood-school.webp
+    alt: The Hollywood School in Woodinville, a wood schoolhouse with a bell tower, photographed around 1921.
+    credit: "Photo: Webster & Stevens, public domain"
+    license: Public domain
+    source: https://commons.wikimedia.org/wiki/File:Hollywood_School,_ca_1921_(MOHAI_5112).jpg
+  - keys: ["kenmore city hall"]
+    image: /assets/images/kenmore/city-hall.webp
+    alt: Kenmore City Hall, a modern building with a glass front and a covered entry.
+    credit: "Photo: HistoryTheorist, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Frontal_View_of_Kenmore_City_Hall.png
+  - keys: ["ebright creek"]
+    image: /assets/images/sammamish/ebright-creek.webp
+    alt: A boardwalk through the wetland at Ebright Creek Park in Sammamish.
+    credit: "Photo: Dhartop, public domain"
+    license: Public domain
+    source: https://commons.wikimedia.org/wiki/File:EbrightCreekWetlandBoardwalk.jpg
+  - keys: ["downtown park"]
+    image: /assets/images/redmond/downtown-park.webp
+    alt: The lawn and path at Downtown Park in Redmond, with evergreens and carved house poles.
+    credit: "Photo: HominyGrits007, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:20230101_DowntownPark_Redmond,WA.jpg
+  - keys: ["downtown north bend"]
+    image: /assets/images/north-bend/downtown.webp
+    alt: Downtown North Bend, with Mount Si behind the shops and the train depot.
+    credit: "Photo: Joe Mabel, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Downtown_North_Bend,_WA_from_the_northwest_01.jpg
+  - keys: ["mercerdale"]
+    image: /assets/images/mercer-island/mercerdale.webp
+    alt: The lawn and path at Mercerdale Park on Mercer Island, with downtown beyond the trees.
+    credit: "Photo: City of Mercer Island"
+    license: organizer
+    source: https://www.mercerisland.gov/parksrec/page/mercerdale-park
+  - keys: ["confluence park"]
+    image: /assets/images/issaquah/confluence-park.webp
+    alt: The picnic shelter at Confluence Park in Issaquah, a wood roof on posts beside the grass.
+    credit: "Photo: City of Issaquah"
+    license: organizer
+    source: https://historylink.tours/stop/confluence-park/
