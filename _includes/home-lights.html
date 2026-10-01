@@ -146,11 +146,13 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
   "numberOfItems": {{ home_count }},
   "itemListOrder": "https://schema.org/ItemListOrderAscending",
   "itemListElement": [
+    {%- assign list_pos = 0 -%}
     {%- for town in home_lights.towns -%}
     {%- for light in town.lights -%}
+    {%- assign list_pos = list_pos | plus: 1 -%}
     {
       "@type": "ListItem",
-      "position": {{ light.number }},
+      "position": {{ list_pos }},
       "item": {
         "@type": "Place",
         "name": {{ light.name | jsonify }},
