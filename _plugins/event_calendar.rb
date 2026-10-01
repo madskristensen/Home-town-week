@@ -589,6 +589,21 @@ module EastsideCalendar
       %(<span class="event-cals">#{anchors.join}</span>)
     end
 
+    # Keep the icon on the same line as the last word of the date.
+    # A long date may wrap, but the icon does not land alone.
+    def glue_calendar(inner, snippet)
+      text = inner.to_s
+      core = text.sub(/\s+\z/, "")
+      trail = text[core.length..] || ""
+      return "#{snippet}#{trail}" if core.empty?
+
+      if (match = core.match(/\A(.*\s)(\S+)\z/m))
+        %(#{match[1]}<span class="event-when-tail">#{match[2]}#{snippet}</span>#{trail})
+      else
+        %(<span class="event-when-tail">#{core}#{snippet}</span>#{trail})
+      end
+    end
+
     def inject!(html, groups, dates, today, city_name = nil, labels = nil, page = nil)
       return html unless html.is_a?(String)
 
@@ -657,7 +672,7 @@ module EastsideCalendar
         if links && !links.empty?
           snippet = calendar_actions(links)
           unless part.sub!(%r{(<p class="event-when"[^>]*>)(.*?)(</p>)}m) {
-            "#{Regexp.last_match(1)}#{Regexp.last_match(2)}#{snippet}#{Regexp.last_match(3)}"
+            "#{Regexp.last_match(1)}#{glue_calendar(Regexp.last_match(2), snippet)}#{Regexp.last_match(3)}"
           }
             part.sub!(%r{</h3>}) { "#{Regexp.last_match(0)}\n<p class=\"event-when\">#{snippet}</p>" }
           end

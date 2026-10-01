@@ -1108,6 +1108,7 @@ a.addr .addr-text {
 .event-card .event-tags,
 .weekend-card .event-tags {
   margin: 0.4rem 0 0.1rem;
+  padding: 0;
 }
 
 .event-tags li {
@@ -1310,6 +1311,10 @@ a.addr .addr-text {
   line-height: 1.35;
 }
 
+.event-when-tail {
+  white-space: nowrap;
+}
+
 .event-card .event-place {
   margin: 0.2rem 0 0.1rem;
   color: var(--muted);
@@ -1336,12 +1341,12 @@ a.addr .addr-text {
 }
 
 .event-card > p:not(.event-when):not(.event-place):not(.event-links):not(.hub-blurb),
-.event-card > ul,
+.event-card > ul:not(.event-tags),
 .event-card > ol {
   margin: 0.8rem 0;
 }
 
-.event-card > ul,
+.event-card > ul:not(.event-tags),
 .event-card > ol {
   padding-left: 1.25rem;
 }

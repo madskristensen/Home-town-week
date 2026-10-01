@@ -84,13 +84,25 @@
 {%- endif -%}
 {%- assign card_when = include.when | append: "" | strip -%}
 {%- assign card_calendar = include.calendar | append: "" | strip -%}
-{%- capture card_when_html -%}
-{%- if card_when.size > 0 or card_calendar.size > 0 -%}
-<p class="event-when">{%- if card_when.size > 0 -%}{{ card_when }}{%- endif -%}
+{%- capture card_cal_html -%}
 {%- if card_calendar.size > 0 -%}
 <span class="event-cals"><a class="event-cal" href="{{ card_calendar | relative_url }}" aria-label="Add {{ card_title | escape }} to calendar" title="Add {{ card_title | escape }} to calendar"><svg class="cal-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.75" y="2.75" width="12.5" height="11.5" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.4"></rect><path d="M1.75 6.4h12.5M5 1.35v2.5M11 1.35v2.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg></a></span>
 {%- endif -%}
-</p>
+{%- endcapture -%}
+{%- assign card_cal_html = card_cal_html | strip -%}
+{%- capture card_when_html -%}
+{%- if card_when.size > 0 or card_calendar.size > 0 -%}
+<p class="event-when">{%- if card_when.size > 0 and card_cal_html.size > 0 -%}
+{%- assign when_words = card_when | split: " " -%}
+{%- assign when_last = when_words | last -%}
+{%- assign when_last_len = when_last | size -%}
+{%- assign when_len = card_when | size -%}
+{%- assign when_head_len = when_len | minus: when_last_len -%}
+{%- if when_head_len > 0 -%}{{ card_when | slice: 0, when_head_len }}{%- endif -%}
+<span class="event-when-tail">{{ when_last }}{{ card_cal_html }}</span>
+{%- elsif card_when.size > 0 -%}{{ card_when }}
+{%- else -%}{{ card_cal_html }}
+{%- endif -%}</p>
 {%- endif -%}
 {%- endcapture -%}
 {%- assign card_place = include.place | append: "" | strip -%}
