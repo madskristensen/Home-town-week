@@ -1,0 +1,103 @@
+# Where an event is allowed to resolve.
+# City files may use the 14 cities, Fall City (folded into Snoqualmie),
+# and the enclaves inside those cities. Worth the Drive is the short list
+# of towns and venues outside those cities, within about an hour of Bellevue.
+# A street direction such as "Ave NE" is not a state. Nebraska is "NE" plus
+# a ZIP, or the full name.
+
+cities:
+  - Bellevue
+  - Bothell
+  - Carnation
+  - Duvall
+  - Issaquah
+  - Kenmore
+  - Kirkland
+  - Mercer Island
+  - North Bend
+  - Redmond
+  - Renton
+  - Sammamish
+  - Snoqualmie
+  - Woodinville
+
+also_local:
+  - Fall City
+  - Medina
+  - Clyde Hill
+  - Yarrow Point
+  - Hunts Point
+  - Beaux Arts Village
+  - Preston
+
+worth_the_drive:
+  towns:
+    - Snohomish
+    - Enumclaw
+    - Buckley
+    - Puyallup
+    - Auburn
+    - Seattle
+    - Kent
+    - Tacoma
+  venues:
+    - Craven Farm
+    - Bob's Corn and Pumpkin Farm
+    - Thomasson Family Farm
+    - Maris Farms
+    - Stocker Farms
+    - Spooner Farms
+    - Emerald Downs
+    - Woodland Park Zoo
+    - Honeytree Farm
+    - Pfaff's Christmas Trees
+    - Point Defiance Zoo
+    - Washington State Fair
+
+# Eastside ZIPs, including Fall City 98024, Kenmore 98028, and the enclaves.
+eastside_zips:
+  - "98004"
+  - "98005"
+  - "98006"
+  - "98007"
+  - "98008"
+  - "98009"
+  - "98011"
+  - "98012"
+  - "98014"
+  - "98015"
+  - "98019"
+  - "98021"
+  - "98024"
+  - "98027"
+  - "98028"
+  - "98029"
+  - "98033"
+  - "98034"
+  - "98039"
+  - "98040"
+  - "98041"
+  - "98045"
+  - "98050"
+  - "98052"
+  - "98053"
+  - "98055"
+  - "98056"
+  - "98057"
+  - "98058"
+  - "98059"
+  - "98065"
+  - "98072"
+  - "98073"
+  - "98074"
+  - "98075"
+  - "98077"
+  - "98083"
+
+# Rough boxes. The service box covers the 14 cities and the Worth the Drive towns.
+washington_box:
+  lat: [45.54, 49.05]
+  lon: [-124.85, -116.91]
+service_box:
+  lat: [46.90, 48.05]
+  lon: [-122.75, -121.40]

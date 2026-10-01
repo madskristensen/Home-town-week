@@ -28,6 +28,11 @@ jobs:
       - name: Check shared components
         run: python3 script/check-components.py
 
+      - name: Check event areas
+        run: |
+          python3 -m pip install --quiet pyyaml
+          python3 script/check-event-areas.py
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
