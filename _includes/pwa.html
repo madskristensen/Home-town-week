@@ -192,7 +192,7 @@
       for (i = 0; i < cards.length; i++) {
         if (!cards[i].classList.contains("is-filtered-out")) any = true;
       }
-      var pinned = section.querySelector(".decorations");
+      var pinned = section.querySelector(".lights-feature");
       section.classList.toggle("is-filtered-out", active && !any && !pinned);
     });
     document.querySelectorAll(".hub-toc li").forEach(function (item) {
@@ -207,7 +207,8 @@
       for (i = 0; i < cards.length; i++) {
         if (!cards[i].classList.contains("is-filtered-out")) any = true;
       }
-      item.classList.toggle("is-filtered-out", active && cards.length > 0 && !any);
+      var pinned = section.querySelector(".lights-feature");
+      item.classList.toggle("is-filtered-out", active && cards.length > 0 && !any && !pinned);
     });
     document.querySelectorAll(".filter-empty").forEach(function (note) {
       note.hidden = !active || visible > 0;

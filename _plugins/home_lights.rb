@@ -1,15 +1,22 @@
 # frozen_string_literal: true
 
 module EastsideCalendar
-  # Rows with map: true in _data/holiday_lights.yml become /christmas/lights/.
+  # Rows with map: true become a lights-style map.
+  # holiday_lights.yml is /christmas/lights/.
+  # halloween_decorations.yml is /fall/decorations/.
   module HomeLights
     module_function
 
-    def attach!(site, hubs)
+    def attach!(site, _hubs)
+      site.data["home_lights"] = collect(site, "holiday_lights", "christmas", "Home lights photos:")
+      site.data["halloween_map"] = collect(site, "halloween_decorations", "halloween", "Halloween decorations photos:")
+    end
+
+    def collect(site, data_key, pool_name, log_label)
       names = city_names(site.data["cities"])
-      rows = Array(site.data["holiday_lights"]).select { |row| row.is_a?(Hash) && row["map"] == true }
+      rows = Array(site.data[data_key]).select { |row| row.is_a?(Hash) && row["map"] == true }
       rows = rows.sort_by { |row| [names[row["city"].to_s].to_s.downcase, row["name"].to_s.downcase] }
-      fallbacks = fallback_photos(site, hubs)
+      fallbacks = fallback_photos(site, pool_name)
       used = {}
       audit = Hash.new { |hash, key| hash[key] = [] }
       items = []
@@ -31,11 +38,11 @@ module EastsideCalendar
         items << item
       end
       parts = audit.map { |kind, labels| "#{kind} #{labels.size}" }
-      Jekyll.logger.info("Home lights photos:", parts.join(", "))
+      Jekyll.logger.info(log_label, parts.join(", "))
       audit.each do |kind, labels|
         next if labels.empty?
 
-        Jekyll.logger.info("Home lights photos:", "  #{kind}: #{labels.join("; ")}")
+        Jekyll.logger.info(log_label, "  #{kind}: #{labels.join("; ")}")
       end
 
       towns = []
@@ -58,7 +65,7 @@ module EastsideCalendar
           "id" => item["id"]
         }
       end
-      site.data["home_lights"] = {
+      {
         "towns" => towns,
         "pins" => pins,
         "count" => items.size
@@ -165,10 +172,13 @@ module EastsideCalendar
       text.match?(/\b(child|children|kid|kids|teen|teens|toddler|baby)\b/i)
     end
 
-    def fallback_photos(site, _hubs)
-      pool = Array(site.data.dig("hub_pools", "christmas"))
-      lights, rest = pool.partition { |entry| entry.is_a?(Hash) && entry["image"].to_s.include?("/lights-") }
-      (lights + rest).filter_map { |entry| SeasonalHubs.listed_photo(entry, "pool") }
+    def fallback_photos(site, pool_name)
+      pool = Array(site.data.dig("hub_pools", pool_name))
+      if pool_name == "christmas"
+        lights, rest = pool.partition { |entry| entry.is_a?(Hash) && entry["image"].to_s.include?("/lights-") }
+        pool = lights + rest
+      end
+      pool.filter_map { |entry| SeasonalHubs.listed_photo(entry, "pool") }
     end
 
     def next_fallback(photos, used)

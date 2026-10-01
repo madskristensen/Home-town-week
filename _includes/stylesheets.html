@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="{{ site.data.css.guide | relative_url }}">
 {%- endif -%}
 {%- assign css_lights = false -%}
-{%- if page.home_lights or page.hub_id == "christmas" or page.guide_id == "playgrounds" -%}
+{%- if page.home_lights or page.hub_id == "christmas" or page.hub_id == "fall" or page.guide_id == "playgrounds" -%}
 {%- assign css_lights = true -%}
 {%- endif -%}
 {%- assign css_season = site.data.seasonal_banner.path | append: "" -%}

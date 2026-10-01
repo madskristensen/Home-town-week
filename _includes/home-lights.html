@@ -1,11 +1,21 @@
+{%- if page.map_id == "halloween" -%}
+{%- assign home_lights = site.data.halloween_map -%}
+{%- assign map_path = "/fall/decorations/" -%}
+{%- assign map_title = "Halloween decorations map" -%}
+{%- assign map_noun = "houses and streets" -%}
+{%- else -%}
 {%- assign home_lights = site.data.home_lights -%}
+{%- assign map_path = "/christmas/lights/" -%}
+{%- assign map_title = "Christmas lights map" -%}
+{%- assign map_noun = "homes and streets" -%}
+{%- endif -%}
 {%- assign home_count = home_lights.count | default: 0 -%}
 <section class="home-map-section" aria-labelledby="lights-map-title">
   <h2 id="lights-map-title" class="visually-hidden">Map</h2>
   <div class="home-map-frame">
     <div id="home-map-canvas" class="home-map-canvas" hidden></div>
     <div class="home-map-poster" id="home-map-poster">
-      <p class="home-map-count">{{ home_count }} homes and streets</p>
+      <p class="home-map-count">{{ home_count }} {{ map_noun }}</p>
       <button type="button" id="home-map-show">Show map</button>
     </div>
   </div>
@@ -143,6 +153,19 @@
   </div>
 </section>
 {%- endfor -%}
+{%- if page.map_id == "halloween" -%}
+{%- capture lights_subject -%}Halloween decorations{%- endcapture -%}
+{%- capture lights_body -%}House or street:
+
+Town:
+
+What to know:{%- endcapture -%}
+<section class="hub-section" aria-labelledby="send-lights">
+  <h2 id="send-lights">Tell us about a decorated house</h2>
+  <p class="hub-section-intro">Know a great decorated house or street? Tell us. Anyone can send one in.</p>
+  <p class="suggest-event"><a href="mailto:suggestions@eastsidecalendar.com?subject={{ lights_subject | strip | mail_escape }}&amp;body={{ lights_body | strip | mail_escape }}">Tell us</a></p>
+</section>
+{%- else -%}
 {%- capture lights_subject -%}Christmas lights: {%- endcapture -%}
 {%- capture lights_body -%}Name:
 Address or cross streets:
@@ -155,12 +178,13 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
   <p class="suggest-event"><a href="mailto:suggestions@eastsidecalendar.com?subject={{ lights_subject | strip | append: " " | mail_escape }}&amp;body={{ lights_body | strip | mail_escape }}">Send a display</a></p>
   <p class="hub-section-intro">When you go, stay on the street, leave driveways clear, and keep it quiet for the neighbors.</p>
 </section>
+{%- endif -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Christmas lights map",
-  "url": {{ "/christmas/lights/" | absolute_url | jsonify }},
+  "name": {{ map_title | jsonify }},
+  "url": {{ map_path | absolute_url | jsonify }},
   "numberOfItems": {{ home_count }},
   "itemListOrder": "https://schema.org/ItemListOrderAscending",
   "itemListElement": [
@@ -173,7 +197,7 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
         "@type": "Place",
         "name": {{ light.name | jsonify }},
         "description": {{ light.description | jsonify }},
-        "url": {{ "/christmas/lights/#light-" | append: light.id | absolute_url | jsonify }},
+        "url": {{ map_path | append: "#light-" | append: light.id | absolute_url | jsonify }},
         "isAccessibleForFree": true,
         "sameAs": {{ light.source | jsonify }}
         {%- assign light_image = light.image | append: "" -%}

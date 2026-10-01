@@ -11,6 +11,10 @@
   margin-bottom: 1.75rem;
 }
 
+.hub-section .lights-feature {
+  margin-top: 0.85rem;
+}
+
 .lights-feature-layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -374,6 +378,50 @@
     background: var(--sheet);
     color: var(--ink);
     border-color: var(--rule);
+  }
+}
+
+.map-theme-halloween {
+  --map-facade: #f6e2cc;
+  --map-facade-edge: #c47a3a;
+  --map-dot: #d9a36a;
+  --pin-bg: #c2410c;
+  --pin-ink: #fff8f2;
+  --pin-ring: #2a140c;
+  --pin-shadow: 0 1px 2px rgb(194 65 12 / 0.35);
+}
+
+@media (prefers-color-scheme: dark) {
+  .map-theme-halloween {
+    --map-facade: #3a2418;
+    --map-facade-edge: #e8a05a;
+    --map-dot: #8a5a32;
+    --pin-bg: #f09a3a;
+    --pin-ink: #2a140c;
+    --pin-ring: #fff6ea;
+    --pin-shadow: 0 1px 2px rgb(0 0 0 / 0.35);
+  }
+
+  .lights-feature-halloween {
+    background: #3a2158;
+    border-color: #f0a04a;
+    color: #fff6ea;
+  }
+
+  .lights-feature-halloween .lights-feature-title,
+  .lights-feature-halloween .lights-feature-line {
+    color: #fff6ea;
+  }
+
+  .lights-feature-halloween .lights-feature-btn {
+    background: #f09a3a;
+    color: #2a140c;
+  }
+
+  .lights-feature-halloween .lights-feature-btn:hover,
+  .lights-feature-halloween .lights-feature-btn:focus-visible {
+    background: #ffb15a;
+    color: #2a140c;
   }
 }
 

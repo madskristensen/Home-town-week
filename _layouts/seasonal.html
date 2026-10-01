@@ -2,7 +2,7 @@
 layout: default
 ---
 {%- if page.home_lights -%}
-<article class="page wrap hub-page">
+<article class="page wrap hub-page{% if page.map_id == "halloween" %} map-theme-halloween{% endif %}">
   <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
   <p class="hub-intro">{{ page.intro }}</p>
   <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
@@ -51,6 +51,9 @@ layout: default
     {%- endif -%}
     {%- if section.id == "worth-the-drive" -%}
     <p class="hub-section-intro"><a href="{{ '/worth-the-drive/' | relative_url }}">See every trip worth the drive</a></p>
+    {%- endif -%}
+    {%- if section.id == "halloween" -%}
+    {%- include lights-feature.html theme="halloween" -%}
     {%- endif -%}
     <div class="hub-grid">
       {%- for event in section.events -%}
@@ -121,9 +124,6 @@ layout: default
       </article>
       {%- endfor -%}
     </div>
-    {%- if section.id == "halloween" -%}
-    {%- include halloween-decorations.html -%}
-    {%- endif -%}
   </section>
   {%- endfor -%}
   {%- endif -%}

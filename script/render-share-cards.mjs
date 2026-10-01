@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Build 1200x630 share cards for city pages, seasonal hubs, Worth the
-// Drive, This weekend, the Playground map, and the Christmas lights map.
+// Drive, This weekend, the Playground map, the Christmas lights map,
+// and the Halloween decorations map.
 //
 // The Pages workflow runs this before Jekyll. PNGs and _data/share_manifest.yml
 // are not committed. A card is redrawn only when its photo, title, credit,

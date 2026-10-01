@@ -103,6 +103,22 @@ fall:
     credit: "Photo: Sarbjit Bahga, CC BY-SA 4.0"
     license: CC BY-SA 4.0
     source: https://commons.wikimedia.org/wiki/File:Pumpkin_in_farmers%27_market_in_Chandigarh.jpg
+halloween:
+  - image: /assets/images/themes/halloween-house.webp
+    alt: A house covered in Halloween decorations, with bats and pumpkins.
+    credit: "Photo: Mtaylor848, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Halloween_decorations_on_a_house_on_Bridle_Way,_Wetherby_(22nd_October_2020).jpg
+  - image: /assets/images/themes/halloween-graveyard.webp
+    alt: A jack-o-lantern in a small graveyard display.
+    credit: "Photo: Carly Lesser and Art Drauglis, CC BY-SA 2.0"
+    license: CC BY-SA 2.0
+    source: https://commons.wikimedia.org/wiki/File:Cucurbita_pepo_Halloween_pumpkin_-_Jack_o%27_lantern_graveyard.jpg
+  - image: /assets/images/themes/jack-o-lantern-night.webp
+    alt: A carved jack-o-lantern glowing at night.
+    credit: "Photo: Alabama Extension, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Jack-O-Lantern_at_night.jpg
 christmas:
   - image: /assets/images/hubs/christmas/ornaments-red.webp
     alt: Red and gold glass Christmas ornaments hanging close together.
