@@ -1727,25 +1727,34 @@ h2.event-bucket.is-past {
 }
 
 .no-school-page > .page-intro {
-  margin-top: 1.15rem;
+  margin-top: 0.85rem;
 }
 
 .no-school-page > .list-updated {
-  margin-top: 1.2rem;
+  margin-top: 0.3rem;
 }
 
-.ns-filter {
+.ns-panel {
+  margin-top: 1.5rem;
+  padding: 1rem 1.05rem 0.95rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--sheet) 42%, var(--page));
+}
+
+.ns-panel-row {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.45rem;
-  margin-top: 1.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
 }
 
 .ns-filter-row {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  min-width: 0;
 }
 
 .ns-filter label {
@@ -1774,8 +1783,8 @@ h2.event-bucket.is-past {
 }
 
 .ns-hint {
-  margin: 0;
-  max-width: 36rem;
+  margin: 0.7rem 0 0;
+  max-width: 40rem;
   color: var(--muted);
   font-size: 0.8rem;
   font-weight: 400;
@@ -1787,7 +1796,7 @@ html[data-ns-chosen] .ns-hint {
 }
 
 .ns-notes {
-  margin-top: 1.25rem;
+  margin-top: 0.7rem;
   max-width: 40rem;
 }
 
@@ -1807,12 +1816,12 @@ html[data-ns-chosen] .ns-hint {
 .ns-key {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem 1.35rem;
-  margin: 1.5rem 0 0;
+  gap: 0.4rem 1.1rem;
+  margin: 1.35rem 0 0;
   padding: 0;
   list-style: none;
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -1845,10 +1854,14 @@ html[data-ns-chosen] .ns-hint {
 }
 
 .ns-sub {
-  margin-top: 1.35rem;
+  flex: 0 1 auto;
+  margin: 0 0 0 auto;
+  max-width: 100%;
 }
 
 .ns-sub .cal-subscribe {
+  width: max-content;
+  max-width: 100%;
   margin: 0;
 }
 
@@ -1872,10 +1885,10 @@ html[data-ns-chosen] .ns-hint {
 .ns-months {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 1.5rem 1.25rem;
+  gap: 1.35rem 1.15rem;
   width: 100%;
   min-width: 0;
-  margin-top: 2rem;
+  margin-top: 0.55rem;
 }
 
 .ns-month {
@@ -1898,8 +1911,9 @@ html[data-ns-chosen] .ns-hint {
   min-width: 0;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   grid-template-rows: 1.15rem;
-  grid-auto-rows: 4.85rem;
-  gap: 2px;
+  grid-auto-rows: auto;
+  align-items: start;
+  gap: 0;
 }
 
 .ns-dow,
@@ -1919,11 +1933,13 @@ html[data-ns-chosen] .ns-hint {
 
 .ns-day {
   position: relative;
-  height: 4.85rem;
-  padding: 0.12rem 0.06rem 0.08rem;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  padding: 0.08rem 0.04rem;
   overflow: visible;
-  border: 1px solid var(--rule);
-  background: var(--sheet);
+  border: 1px solid color-mix(in srgb, var(--rule) 55%, transparent);
+  background: transparent;
   text-align: center;
   container-type: inline-size;
 }
@@ -1948,26 +1964,26 @@ html[data-ns-chosen] .ns-hint {
 
 .ns-num {
   display: block;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
   line-height: 1.1;
 }
 
 .ns-one {
   display: none;
-  margin-top: 0.1rem;
+  margin-top: 0.04rem;
   padding: 0.02rem 0.04rem;
   border-radius: 2px;
   color: var(--ink);
-  font-size: 0.78rem;
+  font-size: 0.62rem;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.1;
 }
 
 .ns-label {
   display: block;
   overflow: hidden;
-  max-height: 3.3rem;
+  max-height: 2.1em;
 }
 
 .ns-tip {
@@ -2076,9 +2092,37 @@ html[data-ns="misd"] .ns-weekly[data-d="misd"] {
   display: block;
 }
 
+@media (max-width: 47.99rem) {
+  .ns-panel-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ns-sub {
+    margin-left: 0;
+  }
+}
+
 @media (min-width: 48rem) {
+  .ns-day {
+    aspect-ratio: 5 / 6;
+    max-height: 60px;
+  }
+
   .ns-months {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
+}
+
+html:not([data-ns]) .ns-day:has(.ns-one[data-d="lwsd"]),
+html[data-ns="lwsd"] .ns-day:has(.ns-one[data-d="lwsd"]),
+html[data-ns="nsd"] .ns-day:has(.ns-one[data-d="nsd"]),
+html[data-ns="rvsd"] .ns-day:has(.ns-one[data-d="rvsd"]),
+html[data-ns="renton"] .ns-day:has(.ns-one[data-d="renton"]),
+html[data-ns="bsd"] .ns-day:has(.ns-one[data-d="bsd"]),
+html[data-ns="isd"] .ns-day:has(.ns-one[data-d="isd"]),
+html[data-ns="svsd"] .ns-day:has(.ns-one[data-d="svsd"]),
+html[data-ns="misd"] .ns-day:has(.ns-one[data-d="misd"]) {
+  background: color-mix(in srgb, var(--ink) 8%, var(--sheet));
 }
 

@@ -31,16 +31,27 @@ layout: default
   {%- assign school = site.data.no_school_page -%}
   {%- assign school_months = school.months -%}
   {%- assign school_month_count = school_months | size -%}
-  <div class="ns-filter">
-    <div class="ns-filter-row">
-      <label for="ns-district">District</label>
-      <select id="ns-district" autocomplete="off">
-        {%- for district in school.districts -%}
-        <option value="{{ district.slug }}"{% if district.slug == "lwsd" %} selected{% endif %}>{{ district.short }}</option>
-        {%- endfor -%}
-      </select>
+  <div class="ns-panel">
+    <div class="ns-panel-row">
+      <div class="ns-filter-row">
+        <label for="ns-district">District</label>
+        <select id="ns-district" autocomplete="off">
+          {%- for district in school.districts -%}
+          <option value="{{ district.slug }}"{% if district.slug == "lwsd" %} selected{% endif %}>{{ district.short }}</option>
+          {%- endfor -%}
+        </select>
+      </div>
+      <div class="ns-sub" id="ns-subscribe">
+    {%- assign ns_default = school.districts | where: "slug", "lwsd" | first -%}
+    {%- include calendar-subscribe.html city=ns_default.id name=ns_default.feed_name path=ns_default.feed_path -%}
+      </div>
     </div>
     <p class="ns-hint" id="ns-hint">Showing Lake Washington. Pick your district and we'll remember it.</p>
+    <div class="ns-notes">
+      {%- for district in school.districts -%}
+      <p class="ns-weekly" data-d="{{ district.slug }}">{{ district.weekly }} <a href="{{ district.source }}" rel="noopener">District calendar</a></p>
+      {%- endfor -%}
+    </div>
   </div>
   <script>
     (function () {
@@ -49,20 +60,6 @@ layout: default
       sel.value = document.documentElement.getAttribute("data-ns") || "lwsd";
     })();
   </script>
-  <div class="ns-notes">
-    {%- for district in school.districts -%}
-    <p class="ns-weekly" data-d="{{ district.slug }}">{{ district.weekly }} <a href="{{ district.source }}" rel="noopener">District calendar</a></p>
-    {%- endfor -%}
-  </div>
-  <ul class="ns-key">
-    <li><span class="ns-sample is-off" aria-hidden="true"></span> All students off</li>
-    <li><span class="ns-sample is-note" aria-hidden="true"></span> Some grades or shortened day</li>
-    <li><span class="ns-sample is-if" aria-hidden="true"></span> Off if needed</li>
-  </ul>
-  <div class="ns-sub" id="ns-subscribe">
-    {%- assign ns_default = school.districts | where: "slug", "lwsd" | first -%}
-    {%- include calendar-subscribe.html city=ns_default.id name=ns_default.feed_name path=ns_default.feed_path -%}
-  </div>
   <script type="application/json" id="ns-feeds">
     [
     {%- for district in school.districts -%}
@@ -96,6 +93,11 @@ layout: default
       window.__nsApplyFeed(document.documentElement.getAttribute("data-ns") || "lwsd");
     })();
   </script>
+  <ul class="ns-key">
+    <li><span class="ns-sample is-off" aria-hidden="true"></span> All students off</li>
+    <li><span class="ns-sample is-note" aria-hidden="true"></span> Some grades or shortened day</li>
+    <li><span class="ns-sample is-if" aria-hidden="true"></span> Off if needed</li>
+  </ul>
   {%- if school_month_count == 0 -%}
   <p class="no-school-empty">No upcoming no-school days are listed.</p>
   {%- else -%}
