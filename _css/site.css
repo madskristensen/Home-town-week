@@ -736,10 +736,17 @@ picture {
   .footer-meta {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
     column-gap: 1.15rem;
     row-gap: 0.15rem;
     align-items: start;
     width: 100%;
+  }
+
+  .footer-meta li.footer-install-slot {
+    grid-column: 1;
+    grid-row: 3;
   }
 
   .footer-meta li::after,
