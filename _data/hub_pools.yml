@@ -279,42 +279,6 @@ diwali:
     credit: "Photo: Prakhar Chaudhary, CC BY-SA 4.0"
     license: CC BY-SA 4.0
     source: https://commons.wikimedia.org/wiki/File:Diwali_diya.jpg
-dia-de-los-muertos:
-  - image: /assets/images/hubs/dia-de-los-muertos/marigolds.webp
-    alt: Orange marigold flowers.
-    credit: "Photo: Jesselikesweather, CC0"
-    license: CC0
-    source: https://commons.wikimedia.org/wiki/File:Orange_Marigold_Flowers.jpg
-  - image: /assets/images/hubs/dia-de-los-muertos/marigold-garden.webp
-    alt: A garden bed of orange marigolds.
-    credit: "Photo: George Chernilevsky, public domain"
-    license: Public domain
-    source: https://commons.wikimedia.org/wiki/File:French_marigold_garden_2009_G1.jpg
-  - image: /assets/images/hubs/dia-de-los-muertos/marigolds-yellow.webp
-    alt: Yellow marigold blooms.
-    credit: "Photo: Maina Tudu, CC0"
-    license: CC0
-    source: https://commons.wikimedia.org/wiki/File:Yellow_Marigold_Flowers_ᱠᱩᱥᱵᱤ.jpg
-  - image: /assets/images/hubs/dia-de-los-muertos/sugar.webp
-    alt: Sugar skulls and candy for Dia de los Muertos.
-    credit: "Photo: Tomascastelazo, CC BY-SA 3.0"
-    license: CC BY-SA 3.0
-    source: https://commons.wikimedia.org/wiki/File:Alfeniques_of_day_of_the_dead.jpg
-  - image: /assets/images/hubs/dia-de-los-muertos/papel.webp
-    alt: White papel picado banners hanging in a row.
-    credit: "Photo: Juan Carlos Fonseca Mata, CC BY-SA 4.0"
-    license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:Papel_picado_blanco_1.jpg
-  - image: /assets/images/hubs/dia-de-los-muertos/papel-purple.webp
-    alt: Purple papel picado cut-paper banners.
-    credit: "Photo: Luciernaga3, CC BY-SA 4.0"
-    license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:Papel_picado_morado.jpg
-  - image: /assets/images/hubs/dia-de-los-muertos/fruit.webp
-    alt: Fruit arranged for a Dia de los Muertos offering.
-    credit: "Photo: Karla Andrew, CC BY-SA 3.0"
-    license: CC BY-SA 3.0
-    source: https://commons.wikimedia.org/wiki/File:Fruta_para_ofrenda.JPG
 rainy-day:
   - image: /assets/images/hubs/rainy-day/rain-pane.webp
     alt: Raindrops on a window pane.

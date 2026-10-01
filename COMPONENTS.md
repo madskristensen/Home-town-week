@@ -42,3 +42,5 @@ A file fails when it contains one of these outside the include that owns it:
 - `class="event-share"`
 
 `COMPONENTS.md` may name those strings. The bare word `event-card` is also allowed in `_includes/event-card.html`, `_includes/pwa.html` (the script selects `article.event-card` and `.event-card`), and `README.md`. An `{% include event-card.html %}` call is not markup and is allowed.
+
+There is no `/dia-de-los-muertos/` hub and no redirect. Día de los Muertos events stay on city pages. Do not add the page back.

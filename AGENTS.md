@@ -62,6 +62,8 @@ The browser hides a card whose end date is before today, so yesterday's cards do
 
 Diwali, Lunar New Year, Día de los Muertos, Hanukkah, and Eid need a targeted search about six weeks before the date. City calendars and the library feeds often leave them off until someone looks. The Monday fill, the Thursday fill, and the first-Friday source review should use the city source list and those searches. Tag a Diwali row `diwali`. The hub runs from Oct 15 through Nov 15.
 
+There is no `/dia-de-los-muertos/` hub and no redirect. Día de los Muertos events stay on their city pages. Do not add the page back. Keep Día de los Muertos in the cultural-holiday search above.
+
 There is no `/winter/` hub and no redirect. Winter events stay on their city pages. Do not add the page back. The Christmas hub stays.
 
 ## Weekend picks

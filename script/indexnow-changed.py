@@ -27,7 +27,6 @@ HUBS = [
     "/spring-break/",
     "/fourth/",
     "/diwali/",
-    "/dia-de-los-muertos/",
     "/rainy-day/",
 ]
 SHARED_PREFIXES = (
