@@ -2,6 +2,7 @@
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
 - name: "Jubilee Farm Harvest Festival"
+  setting: "Outdoor"
   tags: [harvest, pumpkin-patch]
   start: "2026-10-01"
   end: "2026-10-31"
@@ -24,6 +25,7 @@
   place: "Carnation Library, 4804 Tolt Avenue"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a721ddec7e02e3d006dc715"
 - name: "Fall Native Plant Festival"
+  setting: "Outdoor"
   start: "2026-10-03T10:00:00-07:00"
   end: "2026-10-03T16:00:00-07:00"
   place: "Oxbow Farm and Conservation Center, 10819 Carnation-Duvall Road NE"
@@ -66,12 +68,14 @@
 - name: "Oxtober"
   cost: "$6 to $7"
   setting: "Outdoor"
+  signup: true
   tags: [harvest]
   start: "2026-10-17"
   end: "2026-10-25"
   place: "Oxbow Farm and Conservation Center, 10819 Carnation-Duvall Road NE"
   same_as: "https://www.oxbow.org/visit/events/oxtober/"
 - name: "Harvest Market"
+  setting: "Outdoor"
   tags: [harvest]
   start: "2026-10-17T10:00:00-07:00"
   end: "2026-10-17T15:00:00-07:00"

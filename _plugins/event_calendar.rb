@@ -1097,6 +1097,9 @@ module EastsideCalendar
           same_as: item["same_as"].to_s.strip,
           labels: {
             "name" => name,
+            "place" => item["place"].to_s,
+            "blurb" => item["blurb"].to_s,
+            "same_as" => item["same_as"].to_s,
             "cost" => item["cost"],
             "ages" => item["ages"],
             "setting" => item["setting"],

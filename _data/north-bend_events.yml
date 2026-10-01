@@ -23,12 +23,14 @@
 - name: "Shaun the Sheep: The Beast of Mossy Bottom"
   cost: "$8 to $10"
   setting: "Indoor"
+  signup: true
   start: "2026-10-08T18:00:00-07:00"
   end: "2026-10-08T19:30:00-07:00"
   place: "North Bend Theatre, 125 Bendigo Blvd N"
   same_as: "https://tix.northbendtheatre.com/event/shaun-the-sheep-the-beast-of-mossy-bottom-thursday-oct-8th-6pm"
 - name: "Halloween Train"
   cost: "$16 to $32"
+  setting: "Outdoor"
   signup: true
   tags: [halloween]
   start: "2026-10-10"
@@ -36,13 +38,15 @@
   place: "North Bend Depot, 205 E McClellan Street"
   same_as: "https://trainmuseum.org/upcoming-events/halloween/"
 - name: "Oaktoberfest and Arbor Day planting"
+  setting: "Outdoor"
+  cost: "Free"
   start: "2026-10-17T09:00:00-07:00"
   end: "2026-10-17T13:00:00-07:00"
   place: "Meadowbrook Farm Interpretive Center"
   same_as: "https://livingsnoqualmie.com/arbor-day-planting-and-oaktoberfest-set-for-october-17-in-north-bend/"
 - name: "Great Si View Spooktacular"
-  cost: "Free"
   setting: "Indoor"
+  signup: true
   tags: [halloween]
   start: "2026-10-24T12:00:00-07:00"
   end: "2026-10-24T14:45:00-07:00"
@@ -56,6 +60,8 @@
   place: "North Bend Library, 115 E 4th Street"
   same_as: "https://kcls.bibliocommons.com/v2/events/6955b919491b809c6f104708"
 - name: "Trick-or-Treat Street"
+  setting: "Outdoor"
+  cost: "Free"
   tags: [halloween]
   start: "2026-10-24T15:00:00-07:00"
   end: "2026-10-24T17:00:00-07:00"
@@ -71,6 +77,7 @@
 
 - name: "North Pole Limited Santa Train"
   cost: "$39"
+  setting: "Outdoor"
   signup: true
   tags: [santa]
   start: "2026-11-28"

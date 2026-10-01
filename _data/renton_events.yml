@@ -77,6 +77,7 @@
 - name: "Amharic and Tigrigna Story Time"
   cost: "Free"
   setting: "Indoor"
+  signup: true
   tags: [free, story-time]
   start: "2026-10-06T18:00:00-07:00"
   end: "2026-10-06T18:30:00-07:00"
@@ -92,12 +93,14 @@
   place: "Renton Library, 100 Mill Avenue S"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa0a274a3fb9722897b2737"
 - name: "Angel Tree Sign Ups"
+  signup: true
   start: "2026-10-09"
   same_as: "https://allevents.in/renton/angel-tree-sign-ups/200030711190948"
 - name: "Drawing Pumpkins"
   cost: "Free"
   ages: "All ages"
   setting: "Indoor"
+  signup: true
   start: "2026-10-11T13:00:00-07:00"
   end: "2026-10-11T14:00:00-07:00"
   place: "Fairwood Library, 17009 140th Avenue SE"
@@ -111,9 +114,13 @@
   place: "Fairwood Library, 17009 140th Avenue SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa89b32ca248a002915dafe"
 - name: "B.F.S Durgotsav Festival (Free Entry)"
+  cost: "Free"
+  setting: "Indoor"
   start: "2026-10-16"
+  place: "Aura Event Center and Banquet Hall, 3100 E Valley Rd"
   same_as: "https://allevents.in/renton/bfs-durgotsav-festival-free-entry/200030596061609"
 - name: "Olde Fashioned Halloween Party"
+  setting: "Outdoor"
   tags: [halloween]
   start: "2026-10-24T13:00:00-07:00"
   end: "2026-10-24T16:00:00-07:00"

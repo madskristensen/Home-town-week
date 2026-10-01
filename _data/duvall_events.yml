@@ -16,6 +16,7 @@
   place: "Taylor Landing, 16201 Main Street NE"
   same_as: "https://duvallfarmersmarket.org/"
 - name: "Muddy Boots Pumpkins"
+  setting: "Outdoor"
   tags: [pumpkin-patch, corn-maze]
   start: "2026-10-01"
   end: "2026-10-31"

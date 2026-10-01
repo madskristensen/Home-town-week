@@ -4,6 +4,7 @@
 # drive is a rough trip from Bellevue before traffic. Keep this list short.
 # These rows stay off city pages and off the home weekend picks.
 - name: "Craven Farm Fall Festival"
+  setting: "Outdoor"
   start: "2026-09-19"
   end: "2026-11-01"
   place: "Craven Farm, 13817 Shorts School Road"
@@ -35,6 +36,8 @@
   tags: [pumpkin-patch, corn-maze]
   blurb: "A 10-acre you-pick pumpkin patch and a 5-acre corn maze, open daily 9:30 a.m.–5:30 p.m. through Oct 30. Closed Oct 31. Admission is charged, weekdays cost less than weekends, and ages 2 and under are free."
 - name: "Maris Farms Fall Fest"
+  setting: "Outdoor"
+  signup: true
   start: "2026-09-26"
   end: "2026-10-31"
   place: "Maris Farms, 25001 Sumner-Buckley Highway"
@@ -44,6 +47,7 @@
   tags: [pumpkin-patch, corn-maze]
   blurb: "A full-day farm festival with a pumpkin patch, corn maze, pig races, and an evening light show. Select dates from Sept 26 through Oct 31. In October the farm is mainly open Friday through Sunday. Tickets are required, and days and hours vary."
 - name: "Stocker Farms Fall Festival"
+  setting: "Outdoor"
   start: "2026-10-01"
   end: "2026-10-31"
   place: "Stocker Farms, 8705 Marsh Road"
@@ -53,6 +57,7 @@
   tags: [pumpkin-patch, corn-maze]
   blurb: "Pumpkin patch, corn maze, and a long list of farm attractions. Open Oct 1 through Oct 31, 10 a.m.–6 p.m., last entry at 5 p.m."
 - name: "Spooner Farms Harvest Festival"
+  setting: "Outdoor"
   start: "2026-10-01"
   end: "2026-10-31"
   place: "Spooner Farms, 9710 State Route 162 E"
@@ -62,6 +67,7 @@
   tags: [pumpkin-patch, corn-maze]
   blurb: "A Puyallup Valley harvest festival with a pumpkin patch, corn maze, and farm play, open 9 a.m.–6 p.m. every day in October. More than 50 kinds of pumpkins, gourds, and squash."
 - name: "Hometown Hoedown family hours"
+  setting: "Outdoor"
   signup: true
   cost: "$10"
   start: "2026-10-10T11:00:00-07:00"
@@ -115,6 +121,7 @@
   tags: [holiday-lights]
   blurb: "A nighttime stroll through more than a million lights, 4:30–10 p.m., Nov 27 through Jan 3. Closed Dec 24 and 25. Online timed tickets are required. The animals are sleeping and the aquariums are closed during the event. Parking is free."
 - name: "Holiday Magic"
+  setting: "Indoor"
   start: "2026-12-04"
   end: "2026-12-23"
   place: "Washington State Fair Event Center, 110 9th Avenue SW"

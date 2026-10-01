@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "cgi"
+require "yaml"
 
 module EastsideCalendar
   # Optional card labels. A field is shown only when it is one of the
@@ -55,7 +56,68 @@ module EastsideCalendar
     def setting_label(event)
       setting = text(event, "setting")
       found = SETTINGS.find { |item| item.casecmp(setting).zero? }
-      found.to_s
+      return found if found
+
+      infer_setting(event)
+    end
+
+    # Theaters, libraries, and other buildings are Indoor. Parks, farms,
+    # trails, beaches, and streets are Outdoor. The longest phrase wins.
+    # A numbered street address does not count. A hike or parade in the
+    # name, or a parade tag, stays Outdoor.
+    def infer_setting(event)
+      rules = venue_setting_rules
+      return "" if rules.empty?
+
+      name = text(event, "name").downcase
+      blurb = text(event, "blurb").downcase
+      hay = "#{name} #{text(event, "place")}".downcase
+      tags = Array(value(event, "tags")).map { |tag| tag.to_s.downcase }
+      return "Outdoor" if (tags & %w[parade pumpkin-patch corn-maze]).any?
+
+      Array(rules["outdoor_activity"]).each do |phrase|
+        token = phrase.to_s.downcase.strip
+        next if token.empty?
+        next unless phrase_in?(name, token) || blurb.match?(/\b(?:a|an)\s+(?:[\w-]+\s+){0,3}#{Regexp.escape(token)}\b/)
+
+        return "Outdoor"
+      end
+
+      best_len = 0
+      best = ""
+      { "indoor" => "Indoor", "outdoor" => "Outdoor" }.each do |key, label|
+        Array(rules[key]).each do |phrase|
+          text = phrase.to_s.downcase.strip
+          next unless phrase_in?(hay, text)
+          next if text.length <= best_len
+
+          best_len = text.length
+          best = label
+        end
+      end
+      return best unless best.empty?
+      return "Indoor" if text(event, "same_as").downcase.include?("kcls.bibliocommons")
+
+      ""
+    end
+
+    def phrase_in?(hay, phrase)
+      text = phrase.to_s.downcase.strip
+      return false if text.empty? || hay.to_s.empty?
+      return false if text == "street" && hay.match?(/\d(?:st|nd|rd|th)?\s+(?:\w+\s+){0,3}street\b/)
+
+      hay.match?(/(?<![a-z0-9])#{Regexp.escape(text)}(?![a-z0-9])/)
+    end
+
+    def venue_setting_rules
+      return @venue_setting_rules if defined?(@venue_setting_rules) && @venue_setting_rules
+
+      path = File.expand_path("../_data/venue_settings.yml", __dir__)
+      @venue_setting_rules = if File.file?(path)
+                               YAML.safe_load(File.read(path)) || {}
+                             else
+                               {}
+                             end
     end
 
     def labels(event)

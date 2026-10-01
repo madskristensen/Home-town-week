@@ -1,0 +1,84 @@
+# Blank event settings are filled from the venue. The longest phrase in the
+# name or place wins, so a visitor center in a park stays Indoor and a
+# market on a street stays Outdoor. A numbered street address does not
+# count as a street. A hike, stroll, parade, or planting in the name or
+# the city-page blurb stays Outdoor. The build applies this when `setting`
+# is blank. The daily prune writes the same value into the event file.
+indoor:
+  - library
+  - theatre
+  - theater
+  - performance center
+  - museum
+  - community center
+  - event center
+  - banquet
+  - pickleball gym
+  - makerspace
+  - meeting room
+  - programming space
+  - programming room
+  - visitor center
+  - ymca
+  - studio east
+  - studio33
+  - theatre33
+  - gaudette
+  - blakely hall
+  - city hall
+  - council chamber
+  - performing arts
+  - board game cafe
+  - anderson school
+  - mcmenamins
+  - pickering barn
+  - train shed
+  - brewery
+  - brewing
+  - church
+  - mall
+  - meydenbauer
+  - brightwater
+  - activity center
+  - education center
+  - art center
+  - aquatic
+  - swimming pool
+  - rink
+outdoor:
+  - park
+  - farm
+  - farms
+  - trail
+  - beach
+  - parade
+  - market
+  - plaza
+  - greenbelt
+  - orchard
+  - botanical garden
+  - downtown
+  - town center
+  - preserve
+  - depot
+  - emerald downs
+  - pumpkin patch
+  - corn maze
+  - street
+# These win over a building when they are in the event name or the blurb
+# the daily script can see. A ranger walk that meets at a visitor center
+# is still outdoors.
+outdoor_activity:
+  - on the trail
+  - ranger walk
+  - ranger hike
+  - guided walk
+  - hike
+  - stroll
+  - parade
+  - planting
+  - pumpkin patch
+  - corn maze
+  - tree giveaway
+  - 5k
+  - run

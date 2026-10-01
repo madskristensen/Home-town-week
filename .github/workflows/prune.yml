@@ -29,6 +29,9 @@ jobs:
       - name: Install PyYAML
         run: python3 -m pip install pyyaml
 
+      - name: Fill blank venue settings
+        run: python3 script/apply-venue-settings.py
+
       - name: Delete events that ended before today
         run: python3 script/prune-past-events.py
 
@@ -56,7 +59,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -u
-          git commit -m "Remove events that ended before today."
+          git commit -m "Fill venue settings and remove events that ended before today."
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
