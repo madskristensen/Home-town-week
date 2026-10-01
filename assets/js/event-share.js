@@ -70,6 +70,8 @@
     return (value || "").replace(/\s+/g, " ").trim();
   }
 
+  var BLURB_LIMIT = 180;
+
   function hasPrice(text, price) {
     var lower = text.toLowerCase();
     var needle = price.toLowerCase();
@@ -79,13 +81,110 @@
     return !/\d/.test(after);
   }
 
+  function hasContact(text) {
+    return /(?:^|\D)(?:\+?1[\s.-]?)?(?:\(\d{3}\)|\d{3})[\s.-]\d{3}[\s.-]\d{4}\b/.test(text) ||
+      /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/.test(text);
+  }
+
+  function mentionsFree(text) {
+    return /\bfree\b/i.test(text);
+  }
+
+  function isFreeCost(price) {
+    return price.toLowerCase() === "free";
+  }
+
+  function sentencesOf(text) {
+    var sentences = [];
+    var start = 0;
+    var i;
+    for (i = 0; i < text.length; i++) {
+      var mark = text.charAt(i);
+      if (mark !== "." && mark !== "!" && mark !== "?") continue;
+      var rest = text.slice(i + 1);
+      if (rest && !/^\s/.test(rest)) continue;
+      var tail = rest.replace(/^\s+/, "");
+      if (tail && !/^[A-Z0-9"']/.test(tail)) continue;
+      var sentence = text.slice(start, i + 1).trim();
+      if (sentence) sentences.push(sentence);
+      start = text.length - tail.length;
+      i = start - 1;
+    }
+    var last = text.slice(start).trim();
+    if (last) sentences.push(last);
+    return sentences;
+  }
+
+  function clipSentence(sentence) {
+    var budget = BLURB_LIMIT - 3;
+    var slice = sentence.slice(0, budget);
+    var space = slice.lastIndexOf(" ");
+    var trimmed = (space > 0 ? slice.slice(0, space) : slice).replace(/[\s.,;:]+$/, "");
+    return trimmed + "...";
+  }
+
+  function priceSentenceIndex(sentences, price) {
+    var i;
+    if (!price) return -1;
+    if (isFreeCost(price)) {
+      for (i = 0; i < sentences.length; i++) {
+        if (mentionsFree(sentences[i])) return i;
+      }
+      return -1;
+    }
+    for (i = 0; i < sentences.length; i++) {
+      if (hasPrice(sentences[i], price)) return i;
+    }
+    if (price.charAt(0) === "$") {
+      for (i = 0; i < sentences.length; i++) {
+        if (/\$\d/.test(sentences[i])) return i;
+      }
+    }
+    return -1;
+  }
+
   function blurbLine(blurb, cost) {
-    var text = clean(blurb);
     var price = clean(cost);
-    if (!price) return text;
-    if (text && hasPrice(text, price)) return text;
-    if (!text) return price;
-    return text + " " + price;
+    var sentences = sentencesOf(clean(blurb)).filter(function (sentence) {
+      return !hasContact(sentence);
+    });
+    if (!sentences.length) return price.length <= BLURB_LIMIT ? price : "";
+
+    if (sentences[0].length > BLURB_LIMIT) {
+      var clipped = clipSentence(sentences[0]);
+      if (isFreeCost(price) && !mentionsFree(clipped) && (clipped + " Free").length <= BLURB_LIMIT) {
+        return clipped + " Free";
+      }
+      return clipped;
+    }
+
+    var indexes = [0];
+    if (sentences.length > 1 && (sentences[0] + " " + sentences[1]).length <= BLURB_LIMIT) {
+      indexes.push(1);
+    }
+
+    function joined(extra) {
+      var parts = [];
+      var n;
+      for (n = 0; n < indexes.length; n++) parts.push(sentences[indexes[n]]);
+      if (extra) parts.push(extra);
+      return parts.join(" ");
+    }
+
+    var body = joined();
+    var priceAt = priceSentenceIndex(sentences, price);
+    var priceIncluded = priceAt !== -1 && indexes.indexOf(priceAt) !== -1;
+    if (priceAt !== -1 && !priceIncluded) {
+      var withSentence = joined(sentences[priceAt]);
+      if (withSentence.length <= BLURB_LIMIT) body = withSentence;
+      else if (isFreeCost(price) && !mentionsFree(body) && (body + " Free").length <= BLURB_LIMIT) {
+        body += " Free";
+      }
+    } else if (!priceIncluded && price) {
+      var already = isFreeCost(price) ? mentionsFree(body) : hasPrice(body, price);
+      if (!already && (body + " " + price).length <= BLURB_LIMIT) body += " " + price;
+    }
+    return body;
   }
 
   function placeLine(venue, city) {
