@@ -205,7 +205,7 @@ hubs:
         title: Issaquah School District
         toc: Issaquah
         intro: No school April 12 through 16, 2027.
-        source: https://resources.finalsite.net/images/v1765910628/issaquah/issaquah/zoutkidnfjvrubyiocyy/26-27SchoolCalendar.pdf
+        source: https://www.isd411.org/fs/resource-manager/view/026edd0d-1d2c-4e5f-995d-785ae1f1b60c
         source_label: Issaquah School District calendar
       - id: snoqualmie-valley
         title: Snoqualmie Valley School District
@@ -217,7 +217,7 @@ hubs:
         title: Mercer Island School District
         toc: Mercer Island
         intro: No school April 12 through 16, 2027.
-        source: https://resources.finalsite.net/images/v1725988722/mercerislandschoolsorg/k83uvwsx9d5xusbfd2pm/2026-27AcademicCalendar.pdf
+        source: https://www.mercerislandschools.org/fs/resource-manager/view/bbbd8f25-77ca-469a-be7b-2f20e90fd80a
         source_label: Mercer Island School District calendar
     theme:
       background: "#e4f3df"
