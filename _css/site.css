@@ -1329,6 +1329,25 @@ h2.event-bucket.is-past {
   overflow-wrap: break-word;
 }
 
+/* Screen chrome only. Print flattens .event-card, and the weekend photo
+   sits outside .weekend-card, so the surface belongs on the pick. */
+@media screen {
+  .event-card:not(.weekend-card),
+  .weekend-pick {
+    padding: 0.7rem 0.75rem 0.8rem;
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+}
+
+@media screen and (prefers-contrast: more) {
+  .event-card:not(.weekend-card),
+  .weekend-pick {
+    border-color: var(--ink);
+  }
+}
+
 .event-card h3 {
   margin: 0;
   color: var(--ink);
@@ -1532,7 +1551,7 @@ h2.event-bucket.is-past {
 @media (min-width: 42rem) {
   .hub-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 1.35rem 1rem;
+    gap: 2.25rem 1.5rem;
   }
 }
 

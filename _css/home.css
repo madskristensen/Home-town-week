@@ -166,6 +166,7 @@
 @media (min-width: 42rem) {
   .weekend-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 2.25rem 1.5rem;
   }
 }
 
