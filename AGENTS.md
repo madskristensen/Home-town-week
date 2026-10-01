@@ -66,6 +66,17 @@ There is no `/dia-de-los-muertos/` hub and no redirect. Día de los Muertos even
 
 There is no `/winter/` hub and no redirect. Winter events stay on their city pages. Do not add the page back. The Christmas hub stays.
 
+## Friday source hunt
+
+Each Friday, scan the lead sites for about the next six weeks. The Yodel embed needs a headless browser. For a new organizer or event in the 14 cities, verify it on the organizer's own page. Add a verified event with the organizer as the source link. Add a good organizer to `sources` in `_data/cities.yml`. Never link a lead site, and never copy its text. Skip a sponsored or paid listing unless the organizer's own page shows it is a real free or family event. Expect a lead site's clock to be off by an hour.
+
+### Lead sites (never cite or link)
+
+- https://the-eastside.macaronikid.com/ covers Redmond, Kirkland, Bothell, and Woodinville.
+- https://rentonwa.macaronikid.com/ covers Renton and Bellevue.
+- https://snoqualmievalley.macaronikid.com/ covers the Snoqualmie Valley, Issaquah, and Sammamish.
+- https://cherryvalley.macaronikid.com/ covers Monroe, Duvall, and Carnation.
+
 ## Weekend picks
 
 `/this-weekend/` is Friday through Sunday across the 14 cities. The home page shows a short pick of that list. Keep both in step with the city pages. Worth the Drive stays off that list.
