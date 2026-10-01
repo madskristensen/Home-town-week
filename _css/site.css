@@ -1944,11 +1944,6 @@ html[data-ns-chosen] .ns-hint {
   container-type: inline-size;
 }
 
-.ns-day:hover,
-.ns-day:focus-within {
-  z-index: 2;
-}
-
 .ns-day.is-pad {
   border-color: transparent;
   background: transparent;
@@ -1986,50 +1981,12 @@ html[data-ns-chosen] .ns-hint {
   max-height: 2.1em;
 }
 
-.ns-tip {
-  position: absolute;
-  left: 0;
-  bottom: calc(100% + 0.35rem);
-  z-index: 3;
-  width: max-content;
-  max-width: 14rem;
-  padding: 0.3rem 0.45rem;
-  border-radius: 2px;
-  background: var(--ink);
-  color: var(--sheet);
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1.35;
-  text-align: left;
-  white-space: normal;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.ns-day:nth-child(7n) .ns-tip,
-.ns-day:nth-child(7n+6) .ns-tip {
-  left: auto;
-  right: 0;
-}
-
-.ns-one:hover .ns-tip,
-.ns-one:focus-visible .ns-tip {
-  opacity: 1;
-  visibility: visible;
-}
-
 @container (max-width: 58px) {
   .ns-one {
     font-size: 0.58rem;
     hyphens: auto;
     overflow-wrap: break-word;
   }
-}
-
-.ns-one:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 1px;
 }
 
 .ns-one.is-off {

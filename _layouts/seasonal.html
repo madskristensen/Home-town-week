@@ -118,10 +118,10 @@ layout: default
         {%- if cell.pad -%}
         <div class="ns-day is-pad" aria-hidden="true"></div>
         {%- else -%}
-        <div class="ns-day{% if cell.past %} is-past{% endif %}{% if cell.today %} is-today{% endif %}">
+        <div class="ns-day{% if cell.past %} is-past{% endif %}{% if cell.today %} is-today{% endif %}"{% if cell.tips.lwsd %} title="{{ cell.tips.lwsd | escape }}"{% endif %}{% if cell.tips.size > 0 %} data-tips="{{ cell.tips | jsonify | escape }}"{% endif %}>
           <span class="ns-num" aria-hidden="true">{{ cell.day }}</span>
           {%- for mark in cell.marks -%}
-          <span class="ns-one is-{{ mark.kind }}" data-d="{{ mark.slug }}" tabindex="0" aria-describedby="tip-{{ cell.iso }}-{{ mark.slug }}-{{ forloop.index }}"><span class="ns-label">{{ mark.text }}</span><span class="ns-tip" id="tip-{{ cell.iso }}-{{ mark.slug }}-{{ forloop.index }}" role="tooltip">{{ mark.tip }}</span></span>
+          <span class="ns-one is-{{ mark.kind }}" data-d="{{ mark.slug }}"><span class="ns-label">{{ mark.text }}</span></span>
           {%- endfor -%}
         </div>
         {%- endif -%}
@@ -158,8 +158,20 @@ layout: default
         if (!known(slug)) slug = "lwsd";
         document.documentElement.setAttribute("data-ns", slug);
         sel.value = slug;
+        applyTitles(slug);
         return slug;
       }
+      function applyTitles(slug) {
+        var days = document.querySelectorAll(".ns-day[data-tips]");
+        for (var i = 0; i < days.length; i++) {
+          var map = {};
+          try { map = JSON.parse(days[i].getAttribute("data-tips")); } catch (e) {}
+          var text = map[slug] || "";
+          if (text) days[i].setAttribute("title", text);
+          else days[i].removeAttribute("title");
+        }
+      }
+      applyTitles(document.documentElement.getAttribute("data-ns") || "lwsd");
       function markChosen() {
         document.documentElement.setAttribute("data-ns-chosen", "");
       }

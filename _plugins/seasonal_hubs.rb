@@ -1808,6 +1808,14 @@ module EastsideCalendar
         districts.each do |district|
           Array(by_date.dig(date, district["id"].to_s)).each { |info| marks << info }
         end
+        tips = {}
+        marks.each do |info|
+          slug = info["slug"].to_s
+          text = info["tip"].to_s
+          next if slug.empty? || text.empty?
+
+          tips[slug] = tips[slug] ? "#{tips[slug]}\n#{text}" : text
+        end
         cells << {
           "pad" => false,
           "day" => day_number,
@@ -1815,7 +1823,8 @@ module EastsideCalendar
           "label" => "#{FULL_MONTHS[date.month - 1]} #{date.day}",
           "past" => date < today,
           "today" => date == today,
-          "marks" => marks
+          "marks" => marks,
+          "tips" => tips
         }
       end
       cells << { "pad" => true } while (cells.size % 7) != 0
