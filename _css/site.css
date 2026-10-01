@@ -1382,8 +1382,9 @@ h2.event-bucket.is-past {
   white-space: nowrap;
 }
 
-/* Share hangs off the date line, in a 22px slot that long dates already
-   leave free. The 44px hit target is out of flow, so the line stays put. */
+/* Share sits just after the date, out of flow. The 22px slot is what
+   long dates already leave, and the 32px target uses the card padding
+   so it does not cover the calendar icon or the place link. */
 .event-card .event-when,
 .weekend-when {
   position: relative;
@@ -1398,10 +1399,10 @@ h2.event-bucket.is-past {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  margin: -22px 0 0 -10px;
-  padding: 12px;
+  width: 32px;
+  height: 32px;
+  margin: -16px 0 0 1px;
+  padding: 6px;
   border: 0;
   border-radius: 2px;
   background: transparent;
