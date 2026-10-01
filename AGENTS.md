@@ -107,7 +107,7 @@ Each row needs a name, city id, address, start, end, a date phrase in `when`, th
 
 `/no-school-days/` lists student no-school days for the eight Eastside districts in the 2026-27 year. The rows are `_data/no_school_days.yml`. Do not put them in a city events file. The spring break hub reads its April dates from the `break` rows in that file. Do not copy those dates back into `_data/seasonal_hubs.yml`.
 
-The page is month calendars from the current month through June, two across on a wide screen and one across on a phone. Each month is six weeks so the height does not change. A district `select` filters the days. `?district=` in the address wins and is saved. Otherwise the saved `no-school-district` value is used. All districts clears it. The head script sets `data-ns` before paint. Each district needs `abbr`, `slug`, and a matching `html[data-ns]` rule in `_css/site.css`. Do not add event cards to this page.
+The page is month calendars from the current month through June, two across on a wide screen and one across on a phone. Each month is six weeks so the height does not change. A district `select` filters the days. `?district=` in the address wins and is saved. Otherwise the saved `no-school-district` value is used and written into the address. All districts clears it. The head script sets `data-ns` before paint. Each district needs `abbr`, `slug`, and a matching `html[data-ns]` rule in `_css/site.css`. Do not add event cards to this page.
 
 The daily prune does not delete a day when it passes. The build hides a closure whose end is before today in America/Los_Angeles. Weekly early release, late start, and half days stay in the district `early` note. They are not calendar days.
 

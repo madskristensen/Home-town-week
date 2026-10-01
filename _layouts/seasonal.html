@@ -55,12 +55,44 @@ layout: default
   <p class="ns-key"><span class="ns-sample is-off" aria-hidden="true"></span> All students <span class="ns-sample is-grade" aria-hidden="true"></span> Some grades <span class="ns-sample is-if" aria-hidden="true"></span> If needed</p>
   <div class="ns-sub">
     <p class="ns-sub-all">Each district's subscribe link is in the list below.</p>
-    {%- for district in school.districts -%}
-    <div class="ns-sub-one" data-d="{{ district.slug }}">
-      {%- include calendar-subscribe.html city=district.id name=district.feed_name path=district.feed_path -%}
+    <div class="ns-sub-one" id="ns-subscribe">
+      {%- assign ns_first = school.districts | first -%}
+      {%- include calendar-subscribe.html city=ns_first.id name=ns_first.feed_name path=ns_first.feed_path -%}
     </div>
-    {%- endfor -%}
   </div>
+  <script type="application/json" id="ns-feeds">
+    [
+    {%- for district in school.districts -%}
+    {%- capture ns_https -%}https://www.eastsidecalendar.com/{{ district.feed_path }}{%- endcapture -%}
+    {%- capture ns_webcal -%}webcal://www.eastsidecalendar.com/{{ district.feed_path }}{%- endcapture -%}
+    {%- capture ns_title -%}Eastside Family Calendar: {{ district.feed_name }}{%- endcapture -%}
+    {"slug":"{{ district.slug }}","https":{{ ns_https | strip | jsonify }},"webcal":{{ ns_webcal | strip | jsonify }},"title":{{ ns_title | strip | jsonify }}}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+    ]
+  </script>
+  <script>
+    (function () {
+      var feeds = [];
+      try { feeds = JSON.parse(document.getElementById("ns-feeds").textContent); } catch (e) {}
+      window.__nsApplyFeed = function (slug) {
+        var row = null;
+        for (var i = 0; i < feeds.length; i++) if (feeds[i].slug === slug) row = feeds[i];
+        var root = document.getElementById("ns-subscribe");
+        if (!root || !row) return;
+        var links = root.querySelectorAll("a");
+        var web = encodeURIComponent(row.webcal);
+        var https = encodeURIComponent(row.https);
+        var name = encodeURIComponent(row.title);
+        if (links[0]) links[0].href = row.webcal;
+        if (links[1]) links[1].href = "https://calendar.google.com/calendar/r?cid=" + web;
+        if (links[2]) links[2].href = "https://outlook.live.com/calendar/0/addfromweb?url=" + https + "&name=" + name;
+        if (links[3]) links[3].href = "https://outlook.office.com/calendar/0/addfromweb?url=" + https + "&name=" + name;
+        var button = root.querySelector("[data-cal-copy]");
+        if (button) button.setAttribute("data-cal-url", row.https);
+      };
+      window.__nsApplyFeed(document.documentElement.getAttribute("data-ns") || "");
+    })();
+  </script>
   {%- if school_month_count == 0 -%}
   <p class="no-school-empty">No upcoming no-school days are listed.</p>
   {%- else -%}
@@ -79,19 +111,21 @@ layout: default
         {%- for week in month.weeks -%}
         {%- for cell in week -%}
         {%- if cell.pad -%}
-        <div class="ns-day is-pad"></div>
+        <div class="ns-day is-pad" aria-hidden="true"></div>
         {%- else -%}
-        <div class="ns-day{% if cell.past %} is-past{% endif %}{% if cell.today %} is-today{% endif %}">
+        <div class="ns-day{% if cell.past %} is-past{% endif %}{% if cell.today %} is-today{% endif %}" aria-label="{{ cell.label }}">
           <span class="ns-num" aria-hidden="true">{{ cell.day }}</span>
-          <span class="visually-hidden">{{ cell.label }}</span>
+          {%- assign ns_mark_count = cell.marks | size -%}
+          {%- if ns_mark_count > 0 -%}
           <span class="ns-marks">
             {%- for mark in cell.marks -%}
-            <span class="ns-dot is-{{ mark.kind }}" data-d="{{ mark.slug }}"><span class="visually-hidden">{{ mark.short }}, {{ mark.text }}</span></span>
+            <span class="ns-dot is-{{ mark.kind }}" data-d="{{ mark.slug }}" role="img" aria-label="{{ mark.short }}, {{ mark.text }}"></span>
             {%- endfor -%}
           </span>
           {%- for mark in cell.marks -%}
           <span class="ns-one is-{{ mark.kind }}" data-d="{{ mark.slug }}">{{ mark.text }}</span>
           {%- endfor -%}
+          {%- endif -%}
         </div>
         {%- endif -%}
         {%- endfor -%}
@@ -131,15 +165,18 @@ layout: default
       function fromLocation() {
         var params = new URLSearchParams(location.search);
         if (!params.has("district")) {
-          show(readSaved());
+          remember(show(""));
+          if (window.__nsApplyFeed) window.__nsApplyFeed("");
           return;
         }
         var picked = params.get("district") || "";
-        if (picked === "" || picked === "all" || known(picked)) {
-          remember(show(picked === "all" ? "" : picked));
-          return;
+        if (picked === "all") picked = "";
+        if (picked && !known(picked)) {
+          show(readSaved());
+        } else {
+          remember(show(picked));
         }
-        show(readSaved());
+        if (window.__nsApplyFeed) window.__nsApplyFeed(document.documentElement.getAttribute("data-ns") || "");
       }
       sel.addEventListener("change", function () {
         var slug = show(sel.value);
@@ -150,6 +187,7 @@ layout: default
         var next = url.pathname + url.search + url.hash;
         var now = location.pathname + location.search + location.hash;
         if (next !== now) history.pushState(null, "", url);
+        if (window.__nsApplyFeed) window.__nsApplyFeed(slug);
       });
       window.addEventListener("popstate", fromLocation);
     })();

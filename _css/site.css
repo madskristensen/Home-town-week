@@ -1991,22 +1991,18 @@ html[data-ns] .ns-sub-all {
   display: none;
 }
 
+html[data-ns] .ns-sub-one {
+  display: block;
+}
+
 html[data-ns="nsd"] .ns-one[data-d="nsd"],
-html[data-ns="nsd"] .ns-sub-one[data-d="nsd"],
 html[data-ns="rvsd"] .ns-one[data-d="rvsd"],
-html[data-ns="rvsd"] .ns-sub-one[data-d="rvsd"],
 html[data-ns="renton"] .ns-one[data-d="renton"],
-html[data-ns="renton"] .ns-sub-one[data-d="renton"],
 html[data-ns="lwsd"] .ns-one[data-d="lwsd"],
-html[data-ns="lwsd"] .ns-sub-one[data-d="lwsd"],
 html[data-ns="bsd"] .ns-one[data-d="bsd"],
-html[data-ns="bsd"] .ns-sub-one[data-d="bsd"],
 html[data-ns="isd"] .ns-one[data-d="isd"],
-html[data-ns="isd"] .ns-sub-one[data-d="isd"],
 html[data-ns="svsd"] .ns-one[data-d="svsd"],
-html[data-ns="svsd"] .ns-sub-one[data-d="svsd"],
-html[data-ns="misd"] .ns-one[data-d="misd"],
-html[data-ns="misd"] .ns-sub-one[data-d="misd"] {
+html[data-ns="misd"] .ns-one[data-d="misd"] {
   display: block;
 }
 

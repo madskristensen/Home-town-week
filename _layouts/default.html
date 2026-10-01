@@ -13,6 +13,7 @@
       };
       var key = "no-school-district";
       var slug = "";
+      var fromStorage = false;
       var params = null;
       try { params = new URLSearchParams(location.search); } catch (e) {}
       if (params && params.has("district")) {
@@ -24,14 +25,23 @@
           slug = picked;
           try { localStorage.setItem(key, slug); } catch (e) {}
         } else {
+          fromStorage = true;
           try { slug = localStorage.getItem(key) || ""; } catch (e) { slug = ""; }
           if (!ok[slug]) slug = "";
         }
       } else {
+        fromStorage = true;
         try { slug = localStorage.getItem(key) || ""; } catch (e) { slug = ""; }
         if (!ok[slug]) slug = "";
       }
       if (slug) document.documentElement.setAttribute("data-ns", slug);
+      if (slug && fromStorage) {
+        try {
+          var url = new URL(location.href);
+          url.searchParams.set("district", slug);
+          history.replaceState(null, "", url);
+        } catch (e) {}
+      }
     })();
   </script>
   {%- endif -%}
