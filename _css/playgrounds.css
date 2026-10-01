@@ -45,7 +45,10 @@
 }
 
 .playground-list .playground-name {
-  display: block;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 1.5rem;
   color: var(--ink);
   font-weight: 600;
   font-size: 1rem;
@@ -75,15 +78,17 @@
 }
 
 .playground-list a.addr {
-  display: block;
-  margin-top: 0.12rem;
+  display: flex;
+  align-items: center;
+  min-height: 1.5rem;
+  margin-top: 0.15rem;
   color: var(--muted);
   font-size: 0.82rem;
   line-height: 1.35;
 }
 
-.playground-list a.addr .addr-text {
-  text-decoration: none;
+.playground-list a.addr::before {
+  flex: none;
 }
 
 .playground-list a.addr:hover .addr-text,
