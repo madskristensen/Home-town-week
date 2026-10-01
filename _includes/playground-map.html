@@ -1,6 +1,7 @@
 {%- comment -%}
   Playground map, filters, and empty state.
   No parameters. The town preset reads ?town= and #town- after the frame.
+  A matching town opens the map. The plain page waits for Show map.
 {%- endcomment -%}
 {%- include playground-filters.html -%}
 {%- include empty-suggest.html mode="filter" name="playgrounds" -%}
@@ -19,6 +20,7 @@
 <script>
 (function () {
   var town = "";
+  var openTown = false;
   try {
     town = new URLSearchParams(window.location.search).get("town") || "";
   } catch (err) {
@@ -33,6 +35,7 @@
     var preset = document.querySelector('.playground-filters .flt-town[data-city="' + town + '"]');
     if (preset) {
       preset.checked = true;
+      openTown = true;
       var presetCount = parseInt(preset.getAttribute("data-count"), 10);
       var countEl = document.querySelector(".map-count");
       if (countEl && presetCount) {
@@ -88,6 +91,12 @@
     countEl.textContent = n + (n === 1 ? " playground" : " playgrounds");
   }
 
+  function fitMap(visible) {
+    if (!map || !visible.length) return;
+    if (visible.length === 1) map.setView(visible[0], 15);
+    else map.fitBounds(visible, { padding: [28, 28], maxZoom: 14 });
+  }
+
   function applyMapFilters() {
     if (!cluster || !map) return;
     cluster.clearLayers();
@@ -98,9 +107,12 @@
         visible.push(marker.getLatLng());
       }
     });
-    if (visible.length === 1) map.setView(visible[0], 15);
-    else if (visible.length > 1) map.fitBounds(visible, { padding: [28, 28], maxZoom: 14 });
-    window.setTimeout(function () { map.invalidateSize(); }, 50);
+    fitMap(visible);
+    window.setTimeout(function () {
+      if (!map) return;
+      map.invalidateSize();
+      fitMap(visible);
+    }, 50);
   }
 
   function updateFilterEmpty() {
@@ -250,7 +262,7 @@
     applyMapFilters();
   }
 
-  button.addEventListener("click", function () {
+  function loadMap() {
     if (started) return;
     started = true;
     button.disabled = true;
@@ -274,6 +286,12 @@
       button.textContent = "Show map";
       poster.insertAdjacentHTML("beforeend", "<p class=\"map-error\">The map did not load. The list below still has every playground.</p>");
     });
-  });
+  }
+
+  button.addEventListener("click", loadMap);
+  if (openTown) {
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", loadMap);
+    else loadMap();
+  }
 })();
 </script>

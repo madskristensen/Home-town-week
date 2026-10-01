@@ -12,6 +12,7 @@ Card and page markup lives in one include each. Pages, layouts, and the city cal
 | `_includes/page-intro.html` | The one-line introduction. Renders nothing when `text` is blank. |
 | `_includes/empty-suggest.html` | Empty-state suggestion. The playground line links to `/playgrounds/`, with `?town=` on a city page. |
 | `_includes/playground-promo.html` | Compact playground card on a city page. Links to `/playgrounds/?town={id}`. |
+| `_includes/playground-directory.html` | Playground list. The name line holds the star and the amenity badges. |
 | `_includes/lights-feature.html` | Seasonal promo for the lights or decorations map. |
 | `_includes/map-frame.html` | Map poster and canvas. Includes the shared loader unless `loader` is `false`. |
 | `_includes/map-loader.html` | `loadMapCss` and `loadMapJs`. |
