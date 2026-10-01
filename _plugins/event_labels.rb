@@ -39,11 +39,14 @@ module EastsideCalendar
     end
 
     # Free is the only cost tag. A price stays plain text on the card.
+    # A lone free tag means the same thing as cost: Free.
     def cost_label(event)
       cost = text(event, "cost")
       return "Free" if cost.casecmp("free").zero?
+      return "" unless cost.empty?
 
-      ""
+      tags = Array(value(event, "tags")).map { |tag| tag.to_s.strip.downcase }
+      tags.include?("free") ? "Free" : ""
     end
 
     def price_text(event)

@@ -92,6 +92,34 @@
     return "Later";
   }
 
+  function cardLastDay(card) {
+    return card.getAttribute("data-end") || card.getAttribute("data-date") || "";
+  }
+
+  // Hide a card once its last day is over, including on a stale morning page.
+  // A multi-day event that is still running stays up.
+  function hidePastEvents() {
+    var today = pacificDay();
+    if (!today) return;
+    var cards = document.querySelectorAll("article.event-card");
+    var i;
+    for (i = 0; i < cards.length; i++) {
+      var last = cardLastDay(cards[i]);
+      if (last && last < today) cards[i].classList.add("is-past");
+    }
+    var headings = document.querySelectorAll("h2.event-bucket");
+    for (i = 0; i < headings.length; i++) {
+      var node = headings[i].nextElementSibling;
+      var any = false;
+      while (node && !(node.tagName === "H2" && node.classList.contains("event-bucket"))) {
+        if (node.classList && node.classList.contains("event-card") && !node.classList.contains("is-past")) any = true;
+        node = node.nextElementSibling;
+      }
+      if (!any) headings[i].classList.add("is-past");
+      else headings[i].classList.remove("is-past");
+    }
+  }
+
   function insertAfter(node, next) {
     if (node.nextSibling) node.parentNode.insertBefore(next, node.nextSibling);
     else node.parentNode.appendChild(next);
@@ -105,6 +133,7 @@
     var today = pacificDay();
     if (!built || !today || built === today) return;
     var cards = Array.prototype.slice.call(eventList.querySelectorAll("article.event-card"));
+    cards = cards.filter(function (card) { return !card.classList.contains("is-past"); });
     if (!cards.length) return;
     var headings = eventList.querySelectorAll("h2.event-bucket");
     var i;
@@ -134,7 +163,11 @@
     }
   }
 
-  onIdle(regroupEvents);
+  onIdle(function () {
+    hidePastEvents();
+    regroupEvents();
+    hidePastEvents();
+  });
 
   onIdle(function () {
   // Chips are in the first HTML. A tap hides cards. Nothing moves on load.

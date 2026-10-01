@@ -4,7 +4,7 @@ title: Woodinville
 city: woodinville
 state: wa
 description: Upcoming family events in Woodinville on the Eastside.
-hook: Saturday is a whipped-soap workshop at the library. The Game's Afoot opens at the repertory theatre. Storytime is Thursday and Friday next week.
+hook: The Game's Afoot opens at the repertory theatre. Storytime is Thursday and Friday next week, and the heritage museum is open Sunday afternoon.
 ---
 
 ### The Game's Afoot
@@ -13,16 +13,6 @@ hook: Saturday is a whipped-soap workshop at the library. The Game's Afoot opens
 
 Ken Ludwig's mystery-comedy, directed by Rael Esteves. Broadway star William Gillette, famous for playing Sherlock Holmes, hosts a weekend that turns into a murder hunt after a guest is stabbed. A killing is part of the plot. Treat it as a mystery for older kids and adults.  
 [The Game's Afoot](https://www.woodinvillerep.org/the-games-afoot/)
-
-### Whipped Butter Soap Workshop
-<p class="event-when">Sat Oct 3 · 1:00–3:00 p.m.</p>
-<p class="event-place">Woodinville Library, 17105 Avondale Road NE</p>
-
-Lonnie Craft & Co. leads a baking-inspired workshop. You leave with whipped butter soap that looks like frosting, and you are asked to bring your own mug, cup, or small bowl to use as the container. For adults.
-
-Saturday hours are 11:00 a.m.–6:00 p.m.
-
-[Whipped Butter Soap Workshop](https://kcls.bibliocommons.com/events/6a85e0a457c264087ad23999)
 
 ### Woodinville Heritage Museum
 <p class="event-when">Sun Oct 4 · 1:00–4:00 p.m.</p>

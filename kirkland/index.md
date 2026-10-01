@@ -11,27 +11,13 @@ hook: The Wednesday market closes the season. Saturday is a free harvest festiva
 <p class="event-when">Wed Sep 30 · 3:00–7:00 p.m.</p>
 <p class="event-place">Marina Park, 25 Lakeshore Plaza</p>
 
-{% include event-photo.html
-   src="/assets/images/kirkland/marina-fall.webp"
-   alt="Marina Park in fall, with yellow and orange trees along the shore of Lake Washington and the Seattle skyline across the water."
-   credit="Photo: City of Kirkland"
-   source="https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/PCS-Photo-Galleries/Marina-Park-Photo-Gallery" %}
-
 Last day of the 2026 season. Every Wednesday from June 3 through September 30, 3:00–7:00 p.m.  
 [Kirkland Wednesday Market](https://kirklanddowntown.org/events/kirkland-market/)
 
-The Juanita Friday Market season is posted as June through September, so Friday Oct 2 is outside that window.  
-[Juanita Friday Market](https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Special-Event-Services/Juanita-Friday-Market)
 
 ### Beats Beyond Boundaries
 <p class="event-when">Wed Sep 30 · 5:30–6:15 p.m.</p>
 <p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
-
-{% include event-photo.html
-   src="/assets/images/kirkland/kirkland-library.webp"
-   alt="Kirkland Library, a modern building with a glass and wood front and a covered entry."
-   credit="Photo: King County Library System."
-   source="https://kcls.org/locations/kirkland/" %}
 
 Music with therapist Elizabeth VanSant for neurodivergent kids and their families. Ages 6–10 with an adult. All abilities welcome. No registration. Sponsored by Friends of the Library, Kirkland.  
 [KCLS event](https://kcls.bibliocommons.com/v2/events/6940ba637ed7c62f00aaa719)
@@ -43,26 +29,12 @@ Music with therapist Elizabeth VanSant for neurodivergent kids and their familie
 Stories, music, and movement in pajamas. Bring a stuffed animal or borrow one. A short play time follows. No registration.  
 [KCLS event](https://kcls.bibliocommons.com/v2/events/6a7fab8f386764026a1707e3)
 
-### Judy Collins
-<p class="event-when">Wed Sep 30 · 7:00 p.m.</p>
-<p class="event-place">Kirkland Performance Center, 350 Kirkland Ave</p>
-
-Sweet Judy Blue Eyes: Farewell. A parent night out, not a kids show.  
-[KPC calendar](https://www.kpcenter.org/get-tickets/)
-
 ### Baby Story Time
 <p class="event-when">Thu Oct 1 · 10:30–11:00 a.m.</p>
 <p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
 
 Stories, music, and rhymes for newborns to 12 months, with an adult. A short play time follows. No registration. First come, first seated. Space is limited.  
 [KCLS event](https://kcls.bibliocommons.com/v2/events/6a7faba35d8bc300315a702d)
-
-### The Ultimate Doors
-<p class="event-when">Thu Oct 1 · 7:00 p.m.</p>
-<p class="event-place">Kirkland Performance Center, 350 Kirkland Ave</p>
-
-Tribute to The Doors. Another adult-leaning night.  
-[KPC calendar](https://www.kpcenter.org/get-tickets/)
 
 ### Harvest Festival
 <p class="event-when">Sat Oct 3 · 11:00 a.m.–4:00 p.m.</p>
@@ -109,21 +81,9 @@ Full-length ballet with light design and illuminated costumes. Better for older 
 <p class="event-when">Mon Oct 5 · 4:15–5:30 p.m.</p>
 <p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
 
-{% include event-photo.html
-   src="/assets/images/kirkland/kirkland-library.webp"
-   alt="Kirkland Library, a modern building with a glass and wood front and a covered entry."
-   credit="Photo: King County Library System."
-   source="https://kcls.org/locations/kirkland/" %}
-
 Drop-in playdough and natural materials, for not-so-scary monsters. A relaxed room for sensory-seeking and neurodivergent kids and their adults. Friends of the Library, Kirkland, sponsors it. Monday hours are 10:00 a.m.–6:00 p.m.
 
 [Kirkland Library events](https://kcls.bibliocommons.com/v2/events?locations=1518)
-
-### Jake Shimabukuro
-<p class="event-when">Mon Oct 5 · 7:00 p.m.</p>
-<p class="event-place">Kirkland Performance Center, 350 Kirkland Ave</p>
-
-A ukulele concert. This is a concert, not a kids' matinee.
 
 ### Family Story Time
 <p class="event-when">Tue Oct 6 · 1:00–1:30 p.m. and 6:30–7:00 p.m.</p>
@@ -145,11 +105,15 @@ Stories, songs, and play for newborns through age 6 with an adult. Pick one sess
 
 Stories, music, and movement in pajamas. Bring a stuffed animal or borrow one. A short play time follows. No registration. Wednesday hours run until 8:00 p.m.
 
+[Kirkland Library events](https://kcls.bibliocommons.com/v2/events?locations=1518)
+
 ### Baby Story Time
 <p class="event-when">Thu Oct 8 · 10:30–11:00 a.m.</p>
 <p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
 
 Newborns to 12 months with an adult. A short play time follows. No registration. First come, first seated.
+
+[Kirkland Library events](https://kcls.bibliocommons.com/v2/events?locations=1518)
 
 ### Japanese Story Time
 <p class="event-when">Fri Oct 9 · 10:30–11:00 a.m.</p>
@@ -173,14 +137,6 @@ Boards and pieces are provided. No registration. Kids, teens, and adults are wel
 
 [Kirkland Library](https://kcls.org/locations/kirkland/)
 
-### Heart by Heart
-<p class="event-when">Fri Oct 9 · 8:00 p.m.</p>
-<p class="event-place">Kirkland Performance Center, 350 Kirkland Ave</p>
-
-Steve Fossen and Michael Derosier, the original Heart rhythm section, with the band playing Dreamboat Annie for the album's 50th anniversary. Tickets are $40, $51, and $62. Not a show for little kids.
-
-[KPC tickets](https://www.kpcenter.org/get-tickets/) · [Heart by Heart](https://www.kpcenter.org/event/heart-by-heart-with-steve-fossen-and-michael-derosier-of-heart-2/)
-
 ### After School Hangout
 <p class="event-when">Mon Oct 12 · 3:30–5:00 p.m.</p>
 <p class="event-place">Kingsgate Library, 12315 NE 143rd St</p>
@@ -199,13 +155,9 @@ A drop-in afternoon for middle and high school students. Games, crafts, homework
 <p class="event-when">Wed Oct 14 · 2:30–4:00 p.m.</p>
 <p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
 
-{% include event-photo.html
-   src="/assets/images/kirkland/kirkland-library.webp"
-   alt="Kirkland Library, a modern building with a glass and wood front and a covered entry."
-   credit="Photo: King County Library System."
-   source="https://kcls.org/locations/kirkland/" %}
-
 Games, crafts, homework, music, and reading for tweens and teens. The library hosts it once a month on a Wednesday. Wednesday hours are noon–8:00 p.m.
+
+[Kirkland Library events](https://kcls.bibliocommons.com/v2/events?locations=1518)
 
 ### Beats Beyond Boundaries
 <p class="event-when">Wed Oct 14 · 5:30–6:15 p.m.</p>
@@ -213,11 +165,15 @@ Games, crafts, homework, music, and reading for tweens and teens. The library ho
 
 Music with therapist Elizabeth VanSant for neurodivergent school-aged kids and their families. The September session was ages 6–10 with an adult. No registration.
 
+[Kirkland Library events](https://kcls.bibliocommons.com/v2/events?locations=1518)
+
 ### Pajama Story Time
 <p class="event-when">Wed Oct 14 · 7:00–7:30 p.m.</p>
 <p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
 
 Stories, music, and movement. Bring a stuffed animal or borrow one. A short play time follows. No registration.
+
+[Kirkland Library events](https://kcls.bibliocommons.com/v2/events?locations=1518)
 
 ### Baby Story Time
 <p class="event-when">Thu Oct 15 · 10:30–11:00 a.m.</p>
@@ -225,11 +181,15 @@ Stories, music, and movement. Bring a stuffed animal or borrow one. A short play
 
 Newborns to 12 months with an adult. No registration. First come, first seated. Thursday hours are 10:00 a.m.–6:00 p.m.
 
+[Kirkland Library events](https://kcls.bibliocommons.com/v2/events?locations=1518)
+
 ### Mandarin Story Time
 <p class="event-when">Fri Oct 16 · 10:30–11:00 a.m.</p>
 <p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
 
 Stories, music, and movement in Mandarin. The listing welcomes families with young children and people who want to learn Chinese. No registration. Friends of the Kirkland Library sponsors it.
+
+[Kirkland Library events](https://kcls.bibliocommons.com/v2/events?locations=1518)
 
 ### Boy Gets Girl
 <p class="event-when">Fri Oct 16 through Sat Oct 24</p>
@@ -247,53 +207,15 @@ An all-ages STEM stop presented by three local Girl Scouts. The short listing as
 
 [Kirkland events](https://kcls.bibliocommons.com/v2/events?locations=1518)
 
-### Amplify KPC
-<p class="event-when">Sat Oct 17 · 7:30–9:00 p.m.</p>
-<p class="event-place">Kirkland Performance Center, 350 Kirkland Ave</p>
-
-The Performance Center's fundraiser: heavy appetizers, drinks, and 1970s and 1980s dance music from Hit Explosion, on the stage. Ticketed, and not a kids' show. The library STEM program that afternoon ends at 1:00 p.m., so the two do not overlap.
-
-[KPC tickets](https://www.kpcenter.org/get-tickets/)
-
-{% include event-photo.html
-   src="/assets/images/kirkland/marina-fall.webp"
-   alt="Marina Park in fall, with yellow and orange trees along the shore of Lake Washington and the Seattle skyline across the water."
-   credit="Photo: City of Kirkland"
-   source="https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/PCS-Photo-Galleries/Marina-Park-Photo-Gallery" %}
-
-Marina Park is the walk if you want the water without a market. No city festival is posted there this week.
-
 ### Spooky Clay Creations
 <p class="event-when">Wed Oct 21 · 3:30–5:00 p.m.</p>
 <p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
 
-{% include event-photo.html
-   src="/assets/images/kirkland/kirkland-library.webp"
-   alt="Kirkland Library, a modern building with a glass and wood front and a covered entry."
-   credit="Photo: King County Library System."
-   source="https://kcls.org/locations/kirkland/" %}
+Polymer clay and clay tools. Creations go home, with instructions for hardening them in an oven. Ages 8–12. Registration is required. Registration opens Oct 11 at midnight, with 40 seats. Friends of the Library, Kirkland, sponsors it. Wednesday the library is open noon–8:00 p.m.
 
-Polymer clay and clay tools. Creations go home, with instructions for hardening them in an oven. Ages 8–12. Registration is required. The event page said registration opens Oct 11 at midnight, with 40 seats. Friends of the Library, Kirkland, sponsors it. Wednesday the library is open noon–8:00 p.m.
-
-The branch list fetched for this digest did not show a pajama storytime or baby storytime after Oct 15. Do not assume those weekly slots repeat on Oct 21 or Oct 22 until they appear on the calendar.
 
 [Spooky Clay](https://kcls.bibliocommons.com/v2/events/6aa89ebc3dd190003e71fe3f)
 
-Tuesday, Oct 20, is Crafternoon, 3:00–5:00 p.m., bring-your-own-project. The library files that one for adults.
-
-### Shoshana Bean
-<p class="event-when">Wed Oct 21 · 7:00 p.m.</p>
-<p class="event-place">Kirkland Performance Center, 350 Kirkland Ave</p>
-
-On the KPC calendar at 7:00 p.m. Clay class ends at 5:00 p.m., so a parent who stays through the workshop can still make the show if the handoff is planned. This is an adult concert.
-
-### Hell's Belles
-<p class="event-when">Fri Oct 23 · 8:00 p.m.</p>
-<p class="event-place">Kirkland Performance Center, 350 Kirkland Ave</p>
-
-An AC/DC tribute. Loud, and not a family matinee.
-
-[KPC tickets](https://www.kpcenter.org/get-tickets/)
 
 ### Keep on Dancing
 <p class="event-when">Sun Oct 25 · 7:00 p.m.</p>

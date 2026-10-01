@@ -11,7 +11,7 @@ hook: Saturday and Sunday are Salmon Days downtown. The hatchery is the stop to 
 <p class="event-when">Wed Sep 30 · 6:00–9:00 p.m.</p>
 <p class="event-place">Blakely Hall, Issaquah Highlands</p>
 
-All ages and experience levels. The Highlands calendar says you do not need to bring a board. It asks first-time players to fill out a short form so the hosts know who is coming. This is the Wednesday before Salmon Days, in the Highlands, not downtown.
+All ages and experience levels. Boards are there, so you do not need to bring one. First-time players fill out a short form so the hosts know who is coming. This session is at Blakely Hall in the Highlands.
 
 [Chess Club](https://issaquahhighlands.com/event/chess-club-4-11/2026-09-30/)
 
@@ -53,22 +53,6 @@ The 57th festival, hosted by the Greater Issaquah Chamber. Hours are 10:00 a.m.�
 
 [Salmon Days](https://www.salmondays.org/sd-2026-festival-information) · [City calendar](https://www.issaquahwa.gov/m/calendar/event/detail/14734)
 
-### Ragtime
-<p class="event-when">Through Sun Oct 18 · evenings 7:30 p.m.</p>
-<p class="event-place">Francis J. Gaudette Theatre, 303 Front St N</p>
-
-{% include event-photo.html
-   src="/assets/images/issaquah/ragtime.webp"
-   alt="Three Ragtime performers on stage in period costume, with a woman in a feathered hat in front."
-   credit="Photo: Village Theatre."
-   source="https://villagetheatre.org/mainstage/ragtime/" %}
-
-The Issaquah run is Sep 15 through Oct 18. Evening performances begin at 7:30 p.m. Saturday's posted matinee is 2:00 p.m. This Saturday, Oct 3, the 2:00 p.m. show is ASL-interpreted, and the 7:30 p.m. show has pay-what-you-choose seats. A captioned matinee is Sat Oct 17 at 2:00 p.m. Thursday 2:00 p.m. and Sunday 7:30 p.m. do not happen every week, so check the ticket calendar before you promise one of those.
-
-Audience note from the theatre: racist and offensive language, and moments of violence, including murder. Guns are fired onstage. About 2 hours 50 minutes with intermission. Not for young children. Tickets start at $42 online. KIDSTAGE's next public Issaquah show, Footloose, is in December.
-
-[Ragtime](https://villagetheatre.org/mainstage/ragtime/)
-
 ### Feathers and Scales Gallery Open House
 <p class="event-when">Sun Oct 4 · 12:00–1:30 p.m.</p>
 <p class="event-place">Blakely Hall, Issaquah Highlands</p>
@@ -87,7 +71,7 @@ A free open house for the Feathers and Scales show. Live music from Michael Thom
 <p class="event-when">Sun Oct 4 · 3:00–6:00 p.m.</p>
 <p class="event-place">Pickering Barn, 1730 10th Ave NW</p>
 
-Free Hispanic Heritage Month dance with the city and The Circle. Music from Spanish-speaking countries, dance lessons, and snacks. Open to everyone. It overlaps the last hours of Salmon Days, and it is at the barn, not on Front Street. Downtown in the morning, Pickering in the afternoon, works.
+Free Hispanic Heritage Month dance with the city and The Circle. Music from Spanish-speaking countries, dance lessons, and snacks. Open to everyone. It is at Pickering Barn, not on Front Street.
 
 [City calendar](https://www.issaquahwa.gov/m/calendar/event/detail/14731) · [The Circle](https://www.thecircle-wa.org/event-details-registration/hispanic-heritage-month-celebration-3)
 
@@ -102,12 +86,6 @@ The next downtown stroll, after Watercress comes down. Apple Pie Picnic, by Alic
 ### Fall Farm Fresh Market
 <p class="event-when">Sat Oct 10 · 9:00 a.m.–2:00 p.m.</p>
 <p class="event-place">Historic Shell Station, 232 Front St N</p>
-
-{% include event-photo.html
-   src="/assets/images/issaquah/farmers-market.webp"
-   alt="Shoppers and white tents at an outdoor farmers market, with produce crates and a red barn behind the crowd."
-   credit="Photo: Visit Issaquah."
-   source="https://www.visitissaquahwa.com/event/issaquah-farmers-market/2026-09-26/" %}
 
 Downtown Issaquah Association's fall market, with Ayala Farms. Saturdays from Oct 10 through Dec 5, 9:00 a.m.–2:00 p.m., with live music 11:00 a.m.–1:00 p.m. This Saturday, then Oct 24.
 
@@ -182,14 +160,6 @@ Trick-or-treat for kids ages 3 to 10 with an adult. Bring a bag. The standby lin
 A free hands-on lesson in planting, mulching, watering, and pruning young trees. Sammamish city staff lead it through the Eastside Climate Partnership, and the work is at Confluence Park in Issaquah. Tools are provided.
 
 [Planting and Tree Care 101](https://www.sammamish.us/news/events/events/tree-giveaway/october-17-2026-planting-and-tree-care-101/)
-
-### Ragtime, captioned
-<p class="event-when">Sat Oct 17 · 2:00 p.m.</p>
-<p class="event-place">Francis J. Gaudette Theatre, 303 Front St N</p>
-
-Village Theatre lists a captioned performance at 2:00 p.m. The Issaquah run ends the next day, Sunday, Oct 18. After that the production moves to Everett. Language and violence, about 2 hours 50 minutes with intermission. Not for young children.
-
-[Ragtime](https://villagetheatre.org/mainstage/ragtime/)
 
 ### Monster Mash Parent Survival Night
 <p class="event-when">Sat Oct 17 · 5:30–8:30 p.m.</p>

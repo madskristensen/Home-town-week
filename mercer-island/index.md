@@ -27,7 +27,7 @@ Stories, music, movement, and rhymes for early literacy. A family program, in Ch
 <p class="event-when">Sun Oct 4 · 10:00 a.m.–2:00 p.m.</p>
 <p class="event-place">7700 SE 32nd St</p>
 
-The 2026 season is May 31 through Oct 11, every Sunday, 10:00 a.m.–2:00 p.m. This is not the last one. Next Sunday is the closer.
+The 2026 season is May 31 through Oct 11, every Sunday, 10:00 a.m.–2:00 p.m. October 11 is the last Sunday.
 
 [City page](https://www.mercerisland.gov/community/page/mercer-island-farmers-market-0) · [Market site](https://www.mifarmersmarket.org/)
 

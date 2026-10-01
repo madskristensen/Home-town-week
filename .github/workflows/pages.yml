@@ -33,6 +33,12 @@ jobs:
           python3 -m pip install --quiet pyyaml
           python3 script/check-event-areas.py
 
+      - name: Fill venue settings for this build
+        run: python3 script/apply-venue-settings.py
+
+      - name: Check event records
+        run: python3 script/check-events.py
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -159,11 +165,15 @@ jobs:
         if: env.INDEXNOW_KEY == ''
         run: echo "::notice::Add the INDEXNOW_KEY repository secret to enable IndexNow submissions."
 
-      - name: Submit sitemap updates
+      - name: Submit changed URLs
         if: env.INDEXNOW_KEY != ''
-        uses: bojieyang/indexnow-action@v3
+        uses: actions/checkout@v7
         with:
-          sitemap-location: "https://www.eastsidecalendar.com/sitemap.xml"
-          key: ${{ env.INDEXNOW_KEY }}
-          endpoint: "api.indexnow.org"
-          failure-strategy: "error"
+          fetch-depth: 0
+
+      - name: Post changed URLs to IndexNow
+        if: env.INDEXNOW_KEY != ''
+        env:
+          BEFORE: ${{ github.event.before }}
+          SHA: ${{ github.sha }}
+        run: python3 script/indexnow-changed.py

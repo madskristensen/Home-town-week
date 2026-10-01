@@ -670,7 +670,7 @@ module EastsideCalendar
         "end_raw" => finish_s.to_s,
         "end_on" => finish_on ? finish_on.iso8601 : "",
         "url" => href,
-        "description" => "#{clean_name} in #{city_name}.",
+        "description" => clean_name,
         "startDate" => EventCalendar.format_offset_time(start_parsed).to_s,
         "endDate" => EventCalendar.format_offset_time(schema_finish).to_s,
         "street" => street.to_s,
@@ -755,17 +755,17 @@ module EastsideCalendar
       page_pool = pool_entries(pools, hub["id"])
       today = EventCalendar.pacific_today(site.time)
       Array(hub["sections"]).each do |section|
+        kept = []
         Array(section["events"]).each do |event|
           page = pages[event["city_id"].to_s]
           key = "#{event["city_id"]}|#{event["name"]}"
           card = find_card(catalog, event)
           blurb = event["blurb"].to_s.strip
-          if blurb.empty?
-            blurb = card ? card[:blurb].to_s : ""
-            blurb = "#{event["name"]} in #{event["city"]}." if blurb.empty?
-            event["blurb"] = blurb
-          end
-          event["description"] = event["blurb"]
+          blurb = card[:blurb].to_s if blurb.empty? && card
+          next unless real_blurb?(blurb, event)
+
+          event["blurb"] = blurb
+          event["description"] = blurb
           event["calendar"] = calendar_href(page, event)
           event["calendar"] = write_calendar(site, event) if event["calendar"].empty?
 
@@ -781,6 +781,7 @@ module EastsideCalendar
                     end
             apply_photo!(event, photo)
             record_photo!(audit, event, photo)
+            kept << event
             next
           end
 
@@ -788,7 +789,9 @@ module EastsideCalendar
           chosen[key] = photo
           apply_photo!(event, photo)
           record_photo!(audit, event, photo)
+          kept << event
         end
+        section["events"] = kept
       end
       parts = audit.map { |kind, names| "#{kind} #{names.size}" }
       Jekyll.logger.info("Hub photos:", "#{hub["path"]} #{parts.join(", ")}")
@@ -797,12 +800,29 @@ module EastsideCalendar
 
         Jekyll.logger.info("Hub photos:", "  #{kind}: #{names.join("; ")}")
       end
+      missing = audit["none"]
+      return if missing.empty?
+
+      raise "Hub #{hub["path"]} has #{missing.size} grid cards without an image: #{missing.join('; ')}"
+    end
+
+    def real_blurb?(blurb, event)
+      text = blurb.to_s.strip
+      return false if text.empty?
+
+      name = event["name"].to_s.strip
+      city = event["city"].to_s.strip
+      filler = "#{name} in #{city}."
+      return false if text.casecmp(filler).zero?
+      return false if text.casecmp("#{name} in #{city}").zero?
+
+      true
     end
 
     def index_card_photos!(site, pages, catalog, venues, groups, hubs, pools)
       today = EventCalendar.pacific_today(site.time)
       fallback = nil
-      seasonal_default_entries(pools, hubs, today).each do |entry|
+      (seasonal_default_entries(pools, hubs, today) + pool_entries(pools, "general")).each do |entry|
         fallback = listed_photo(entry, "pool")
         break if fallback
       end
@@ -873,6 +893,8 @@ module EastsideCalendar
       push.call(pool_entries(pools, matching_hub_id(event, hubs)))
       push.call(page_pool)
       push.call(seasonal_default_entries(pools, hubs, today)) if list.empty?
+      # Year-round pool is the last fallback, including in summer when no hub is in season.
+      push.call(pool_entries(pools, "general"))
       list
     end
 
@@ -1071,7 +1093,8 @@ module EastsideCalendar
         "src" => entry["image"],
         "alt" => entry["alt"],
         "credit" => entry["credit"],
-        "source" => entry["source"]
+        "source" => entry["source"],
+        "license" => entry["license"]
       )
       return nil unless photo
       return nil if people_photo?(photo)
@@ -1217,17 +1240,20 @@ module EastsideCalendar
       best_score >= 90 ? best : nil
     end
 
+    # CC0, CC BY, CC BY-SA, or public domain. A credit with no open license is not used.
     def licensed_photo(photo)
       return nil unless photo.is_a?(Hash)
 
       src = photo["src"].to_s.strip
       credit = photo["credit"].to_s.strip
       source = photo["source"].to_s.strip
+      license = photo["license"].to_s.strip
       return nil if src.empty?
       return nil if credit.empty? && source.empty?
       return nil unless src.start_with?("/")
+      return nil unless "#{credit} #{license}".match?(/\b(?:CC0|CC\s*BY(?:-SA)?|public domain)\b/i)
 
-      photo.merge("src" => src, "credit" => credit, "source" => source)
+      photo.merge("src" => src, "credit" => credit, "source" => source, "license" => license)
     end
 
     def parse_photo_include(body)
@@ -1502,7 +1528,31 @@ module EastsideCalendar
     # After the city calendar files exist, so hub cards can link to them.
     priority :lowest
 
+    def stamp_labels!(site)
+      ids = Array(site.data["cities"]).filter_map { |city| city["id"].to_s if city.is_a?(Hash) }
+      ids.each do |city_id|
+        Array(site.data["#{city_id}_events"]).each { |event| stamp_event!(event) }
+      end
+      Array(site.data["worth_the_drive_events"]).each { |event| stamp_event!(event) }
+    end
+
+    # City cards infer a blank setting at render. Hub and weekend cards read
+    # the same fields, so fill them the same way before either path renders.
+    def stamp_event!(event)
+      return unless event.is_a?(Hash)
+
+      if event["setting"].to_s.strip.empty?
+        setting = EventLabels.setting_label(event)
+        event["setting"] = setting unless setting.to_s.empty?
+      end
+      if event["cost"].to_s.strip.empty?
+        cost = EventLabels.cost_label(event)
+        event["cost"] = cost unless cost.to_s.empty?
+      end
+    end
+
     def generate(site)
+      stamp_labels!(site)
       raw = site.data["seasonal_hubs"]
       config = raw.is_a?(Hash) ? raw : {}
       today = EventCalendar.pacific_today(site.time)

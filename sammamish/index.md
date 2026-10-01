@@ -35,7 +35,7 @@ Drop-in homework help for grades K–12. Look for the tutor T-shirt. The club an
 <p class="event-when">Sat Oct 3 · 11:00 a.m.–2:00 p.m.</p>
 <p class="event-place">Evans Creek Preserve</p>
 
-A volunteer morning to prep a wild pollinator meadow, part of the Bee City work. The job is removing and covering reed canary grass so the next area can be planted. It is free. Signups are required because parking is limited. If you are not on the list, the page says you will not be permitted to volunteer.
+A volunteer morning to prep a wild pollinator meadow, part of the Bee City work. The job is removing and covering reed canary grass so the next area can be planted. It is free. Signups are required because parking is limited. If you are not on the list, you cannot volunteer that morning.
 
 [Evans Meadow Restoration](https://www.sammamish.us/news/events/events/volunteer-opportunities/10-03-evan-s-meadow-restoration/)
 

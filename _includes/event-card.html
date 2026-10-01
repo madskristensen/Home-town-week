@@ -53,7 +53,9 @@
   {%- assign ev_ages = card_event.ages | append: "" -%}
   {%- assign ev_setting = card_event.setting | append: "" -%}
 {%- endif -%}
-<article class="event-card event-card--tile"{% if card_id.size > 0 %} id="{{ card_id }}"{% endif %}{% if include.mark_kind %} data-image-kind="{{ card_kind }}"{% elsif card_kind.size > 0 %} data-image-kind="{{ card_kind }}"{% endif %}{% if ev_cost == "Free" or ev_cost == "free" %} data-cost="Free"{% endif %}{% if ev_ages == "Toddlers" or ev_ages == "Kids" or ev_ages == "Teens" %} data-ages="{{ ev_ages | escape }}"{% endif %}{% if ev_setting == "Indoor" or ev_setting == "Outdoor" %} data-setting="{{ ev_setting }}"{% endif %}{% if card_event.drop_off == true %} data-dropoff="1"{% endif %}{% if card_event.signup == true %} data-signup="1"{% endif %}{% if card_event.sensory == true %} data-sensory="1"{% endif %}>{%- assign card_image = include.image | append: "" | strip -%}
+{%- assign card_date = include.date | append: "" | strip -%}
+{%- assign card_end = include.end | append: "" | strip -%}
+<article class="event-card event-card--tile"{% if card_id.size > 0 %} id="{{ card_id }}"{% endif %}{% if card_date.size > 0 %} data-date="{{ card_date }}"{% endif %}{% if card_end.size > 0 %} data-end="{{ card_end }}"{% endif %}{% if include.mark_kind %} data-image-kind="{{ card_kind }}"{% elsif card_kind.size > 0 %} data-image-kind="{{ card_kind }}"{% endif %}{% if ev_cost == "Free" or ev_cost == "free" %} data-cost="Free"{% endif %}{% if ev_ages == "Toddlers" or ev_ages == "Kids" or ev_ages == "Teens" %} data-ages="{{ ev_ages | escape }}"{% endif %}{% if ev_setting == "Indoor" or ev_setting == "Outdoor" %} data-setting="{{ ev_setting }}"{% endif %}{% if card_event.drop_off == true %} data-dropoff="1"{% endif %}{% if card_event.signup == true %} data-signup="1"{% endif %}{% if card_event.sensory == true %} data-sensory="1"{% endif %}>{%- assign card_image = include.image | append: "" | strip -%}
 {%- if card_image.size > 0 -%}
 {%- include event-photo.html
      src=include.image
@@ -151,8 +153,9 @@
 </article>
 {%- else -%}
 {%- assign card_date = include.date | append: "" | strip -%}
+{%- assign card_end = include.end | append: "" | strip -%}
 {%- assign card_attrs = include.attrs | append: "" | strip -%}
-<article class="event-card"{% if card_date.size > 0 %} data-date="{{ card_date }}"{% endif %}{% if card_attrs.size > 0 %} {{ card_attrs }}{% endif %}>
+<article class="event-card"{% if card_date.size > 0 %} data-date="{{ card_date }}"{% endif %}{% if card_end.size > 0 %} data-end="{{ card_end }}"{% endif %}{% if card_attrs.size > 0 %} {{ card_attrs }}{% endif %}>
 {{ include.body }}
 </article>
 {%- endif -%}

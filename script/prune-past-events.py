@@ -23,9 +23,10 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 ZONE = ZoneInfo("America/Los_Angeles")
 DATE_RE = re.compile(
-    r"\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2})\b",
+    r"\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2})(?:\s*,\s*(\d{4}))?",
     re.I,
 )
+YEAR_RE = re.compile(r"\b(20\d{2})\b")
 WHEN_RE = re.compile(r'<p class="event-when">(.*?)</p>', re.I | re.S)
 MONTHS = {
     "jan": 1,
@@ -63,26 +64,46 @@ def as_date(value):
         return None
 
 
-def infer_date(month, day, today):
-    options = []
-    for year in (today.year - 1, today.year, today.year + 1):
-        try:
-            options.append(date(year, month, int(day)))
-        except ValueError:
-            continue
-    if not options:
+def infer_date(month, day, year, today):
+    """An explicit year is that year. Otherwise the next future occurrence."""
+    try:
+        day_n = int(day)
+        if year:
+            return date(int(year), month, day_n)
+        this = date(today.year, month, day_n)
+    except ValueError:
         return None
-    # Closest calendar day. On a tie, keep the later one so a live event stays.
-    return min(options, key=lambda item: (abs((item - today).days), 0 if item >= today else 1))
+    if this >= today:
+        return this
+    try:
+        return date(today.year + 1, month, day_n)
+    except ValueError:
+        return None
 
 
 def dates_in_when(when_text, today):
+    text = when_text or ""
     found = []
-    for mon, day in DATE_RE.findall(when_text or ""):
+    bare = []
+    for mon, day, year in DATE_RE.findall(text):
         month = MONTHS.get(mon.lower()[:3])
         if not month:
             continue
-        parsed = infer_date(month, day, today)
+        if year:
+            parsed = infer_date(month, day, year, today)
+            if parsed:
+                found.append(parsed)
+        else:
+            bare.append((month, int(day)))
+    years = {item.year for item in found}
+    line_years = {int(item) for item in YEAR_RE.findall(text)}
+    shared_year = None
+    if len(years) == 1:
+        shared_year = next(iter(years))
+    elif len(line_years) == 1:
+        shared_year = next(iter(line_years))
+    for month, day in bare:
+        parsed = infer_date(month, day, shared_year, today)
         if parsed:
             found.append(parsed)
     return found
@@ -136,12 +157,71 @@ def split_markdown_events(body):
     return prelude, events
 
 
-def markdown_last_day(block, today):
-    text = "".join(block)
-    match = WHEN_RE.search(text)
-    if not match:
+def normalize_name(text):
+    import unicodedata
+
+    raw = unicodedata.normalize("NFD", text or "")
+    raw = "".join(ch for ch in raw if unicodedata.category(ch) != "Mn")
+    raw = raw.lower().replace("&", " and ")
+    return re.sub(r"[^a-z0-9]+", " ", raw).strip()
+
+
+def name_score(left, right):
+    if not left or not right:
+        return 0
+    if left == right:
+        return 100
+    shorter, longer = sorted((left, right), key=len)
+    if longer.startswith(shorter + " ") and (
+        len(shorter) >= 8 or (" " not in shorter and len(shorter) >= 7)
+    ):
+        return 90
+    return 0
+
+
+def yaml_rows_for_page(page_path):
+    data_path = page_path.parents[1] / "_data" / f"{page_path.parent.name}_events.yml"
+    if page_path.parent.name == "worth-the-drive":
+        data_path = page_path.parents[1] / "_data" / "worth_the_drive_events.yml"
+    if not data_path.is_file():
+        return []
+    loaded = yaml.safe_load(data_path.read_text(encoding="utf-8"))
+    if not isinstance(loaded, list):
+        return []
+    return [row for row in loaded if isinstance(row, dict)]
+
+
+def matching_yaml_last_day(heading, rows):
+    key = normalize_name(heading)
+    days = []
+    for row in rows:
+        if name_score(key, normalize_name(row.get("name"))) < 90:
+            continue
+        start = as_date(row.get("start"))
+        end = as_date(row.get("end"))
+        days.extend(item for item in (start, end) if item)
+    if not days:
         return None
-    when_text = re.sub(r"\s+", " ", match.group(1))
+    return max(days)
+
+
+def markdown_last_day(block, today, rows=None):
+    text = "".join(block)
+    heading = ""
+    for line in block:
+        match = re.match(r"###[ \t]+(.+?)\s*$", line)
+        if match:
+            heading = match.group(1).strip()
+            break
+    when = WHEN_RE.search(text)
+    when_text = re.sub(r"\s+", " ", when.group(1)) if when else ""
+    # An explicit year in the date line is that year, not a guess.
+    if YEAR_RE.search(when_text):
+        found = dates_in_when(when_text, today)
+        return max(found) if found else None
+    yaml_day = matching_yaml_last_day(heading, rows or [])
+    if yaml_day:
+        return yaml_day
     found = dates_in_when(when_text, today)
     if not found:
         return None
@@ -159,10 +239,11 @@ def prune_markdown(path, today, dry_run):
     prelude, events = split_markdown_events(body)
     if not events:
         return 0
+    rows = yaml_rows_for_page(path)
     kept = []
     removed = 0
     for block in events:
-        last_day = markdown_last_day(block, today)
+        last_day = markdown_last_day(block, today, rows)
         if event_is_past(last_day, today):
             removed += 1
             continue
@@ -256,12 +337,30 @@ def prune_yaml(path, today, dry_run):
     return removed
 
 
+def self_test():
+    today = date(2026, 10, 1)
+    # No year in October: next May, not last May.
+    assert infer_date(5, 21, None, today) == date(2027, 5, 21)
+    assert infer_date(5, 21, 2027, today) == date(2027, 5, 21)
+    assert infer_date(9, 30, 2026, today) == date(2026, 9, 30)
+    when = "Fri Jan 8 through Sat Jan 16, 2027"
+    found = dates_in_when(when, today)
+    assert date(2027, 1, 8) in found and date(2027, 1, 16) in found, found
+    past = dates_in_when("Wed Sep 30", today)
+    assert past == [date(2027, 9, 30)], past
+    print("prune-past-events self-test ok")
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--today", help="Override the Pacific date, YYYY-MM-DD.")
     parser.add_argument("--dry-run", action="store_true", help="Report removals without writing.")
+    parser.add_argument("--self-test", action="store_true", help="Check year handling and exit.")
     parser.add_argument("--root", type=Path, help="Repository root. Defaults to the repo.")
     args = parser.parse_args()
+    if args.self_test:
+        return self_test()
     root = args.root.resolve() if args.root else ROOT
     if args.today:
         today = date.fromisoformat(args.today)

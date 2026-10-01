@@ -75,7 +75,7 @@ Open building for all ages. The bricks are the library's. Stay for the hour or a
 <p class="event-when">Sat Oct 17 · 11:00 a.m.–2:00 p.m.</p>
 <p class="event-place">Northwest Art Center, 15705 Main Street NE, Suite F</p>
 
-The Valley Record's Sep 25 community calendar lists a free drop-in art day here, with supplies for all ages. Children 14 and under need an adult. The center's own community page confirms it hosts free art days in 2026 with support from 4Culture, and points registration to its events page.
+A free drop-in art day, with supplies for all ages. Children 14 and under need an adult. The 2026 art days are supported by 4Culture. Register on the center's events page.
 
 [Valley Record calendar](https://www.valleyrecord.com/2026/09/25/snoqualmie-valley-community-calendar-sept-25-edition/) · [Northwest Art Center](https://northwestartcenter.org/events/community-events/)
 

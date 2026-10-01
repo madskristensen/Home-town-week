@@ -21,7 +21,8 @@ venues:
     credit: "Photo: Heptazane, public domain"
     license: Public domain
     source: https://commons.wikimedia.org/wiki/File:Bellevue_Botanical_Garden_Entrance.jpg
-  - keys: ["crossroads"]
+  # Mall only. "crossroads" also matches Crossroads Community Center.
+  - keys: ["crossroads mall", "crossroads bellevue"]
     image: /assets/images/bellevue/crossroads.webp
     alt: West entrance of Crossroads Bellevue, with the mall sign and a row of flags.
     credit: "Photo: Mark Yasuda, CC BY-SA 4.0"
@@ -57,12 +58,6 @@ venues:
     credit: "Photo: Joe Mabel, CC BY 4.0"
     license: CC BY 4.0
     source: https://commons.wikimedia.org/wiki/File:Bothell_Landing_03.jpg
-  - keys: ["issaquah library"]
-    image: /assets/images/issaquah/issaquah-library.webp
-    alt: Issaquah Library, a low building with a broad glass front and a covered walkway.
-    credit: "Photo: King County Library System."
-    license: King County Library System
-    source: https://kcls.org/locations/issaquah/
   - keys: ["salmon hatchery"]
     image: /assets/images/issaquah/salmon-hatchery.webp
     alt: The Issaquah Salmon Hatchery, a long building with a gray roof beside a creek, with yellow trees in front.
@@ -75,30 +70,12 @@ venues:
     credit: "Photo: Steve Morgan, CC BY-SA 4.0"
     license: CC BY-SA 4.0
     source: https://commons.wikimedia.org/wiki/File:Issaquah_Valley_Trolley_car_519_crossing_Front_St_in_2014.jpg
-  - keys: ["kirkland library"]
-    image: /assets/images/kirkland/kirkland-library.webp
-    alt: Kirkland Library, a modern building with a glass and wood front and a covered entry.
-    credit: "Photo: King County Library System."
-    license: King County Library System
-    source: https://kcls.org/locations/kirkland/
-  - keys: ["marina park"]
-    image: /assets/images/kirkland/marina-fall.webp
-    alt: Marina Park in fall, with yellow and orange trees along the shore of Lake Washington and the Seattle skyline across the water.
-    credit: "Photo: City of Kirkland"
-    license: City of Kirkland
-    source: https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/PCS-Photo-Galleries/Marina-Park-Photo-Gallery
   - keys: ["mercer island library"]
     image: /assets/images/mercer-island/library.webp
     alt: Mercer Island Library, a King County Library System branch.
     credit: "Photo: SuddenFrost, CC0"
     license: CC0
     source: https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Mercer_Island_Library.jpg
-  - keys: ["redmond library"]
-    image: /assets/images/redmond/redmond-library.webp
-    alt: Redmond Library, a modern building with a glass front and a covered walkway.
-    credit: "Photo: King County Library System."
-    license: King County Library System
-    source: https://kcls.org/locations/redmond/
   - keys: ["hartman park"]
     image: /assets/images/redmond/hartman-park.webp
     alt: A ballfield and backstop at Hartman Park in Redmond.
@@ -285,12 +262,6 @@ venues:
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     license: CC BY-SA 3.0
     source: https://commons.wikimedia.org/wiki/File:Bothell,_WA_-_Anderson_School_01.jpg
-  - keys: ["carnation library"]
-    image: /assets/images/carnation/carnation-library.webp
-    alt: Carnation Library, a small building with a covered entry and a sign by the walk.
-    credit: "Photo: King County Library System."
-    license: King County Library System
-    source: https://kcls.org/locations/carnation/
   - keys: ["remlinger"]
     image: /assets/images/carnation/remlinger-farms.webp
     alt: Remlinger Farms at sunset, with the farm grounds, rides, and the Snoqualmie Valley hills behind them.
@@ -321,24 +292,12 @@ venues:
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     license: CC BY-SA 3.0
     source: https://commons.wikimedia.org/wiki/File:Issaquah,_WA_-_Pickering_Farm_inside_dairy_barn_01.jpg
-  - keys: ["kenmore library"]
-    image: /assets/images/kenmore/kenmore-library.webp
-    alt: Kenmore Library, a low building with a covered walkway and autumn trees in front.
-    credit: "Photo: King County Library System."
-    license: King County Library System
-    source: https://kcls.org/locations/kenmore/
   - keys: ["kirkland performance center"]
     image: /assets/images/kirkland/performance-center.webp
     alt: Kirkland Performance Center, a brick building with a glass entry on a downtown corner.
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     license: CC BY-SA 3.0
     source: https://commons.wikimedia.org/wiki/File:Kirkland_Performance_Center_02.jpg
-  - keys: ["kingsgate library"]
-    image: /assets/images/kirkland/kingsgate-library.webp
-    alt: The entrance of Kingsgate Library, with the library sign beside the doors.
-    credit: "Photo: King County Library System."
-    license: King County Library System
-    source: https://kcls.org/locations/kingsgate/
   - keys: ["juanita beach"]
     image: /assets/images/kirkland/juanita-beach-park.webp
     alt: Juanita Beach Park, with the sandy shore, the pier, and Lake Washington.
@@ -405,9 +364,3 @@ venues:
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     license: CC BY-SA 3.0
     source: https://commons.wikimedia.org/wiki/File:Fall_City,_WA_-_library_01.jpg
-  - keys: ["woodinville library"]
-    image: /assets/images/woodinville/woodinville-library.webp
-    alt: Woodinville Library, a low building with a broad glass front and a covered walkway.
-    credit: "Photo: King County Library System."
-    license: King County Library System
-    source: https://kcls.org/locations/woodinville/

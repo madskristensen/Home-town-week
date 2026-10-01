@@ -33,6 +33,7 @@
 - name: "Baby Story Time"
   cost: "Free"
   setting: "Indoor"
+  ages: "Toddlers"
   start: "2026-10-05T10:30:00-07:00"
   end: "2026-10-05T11:30:00-07:00"
   place: "Duvall Library, 15508 Main Street NE"

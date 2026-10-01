@@ -103,7 +103,9 @@ layout: default
            city=event.city
            city_href=city_href
            drive=event.drive
-           blurb=event.blurb -%}
+           blurb=event.blurb
+           date=event.sort
+           end=event.end_on -%}
       {%- endfor -%}
     </div>
     {%- endif -%}

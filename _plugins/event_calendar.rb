@@ -277,6 +277,18 @@ module EastsideCalendar
       nil
     end
 
+    # Last inclusive day. The matching data row wins. Otherwise the start day.
+    def heading_end_date(heading, picks, start_date)
+      days = []
+      Array(picks).each do |event|
+        days << event[:end][:date] if event[:end].is_a?(Hash) && event[:end][:date]
+        days << event[:start][:date] if event[:start].is_a?(Hash) && event[:start][:date]
+      end
+      return days.max if days.any?
+
+      start_date
+    end
+
     def heading_date(heading, picks, today)
       parsed = parse_when_text(heading[:when_text], today)
       yaml_date = picks.filter_map { |event| event[:start] && event[:start][:date] }.min
@@ -604,7 +616,7 @@ module EastsideCalendar
       end
     end
 
-    def inject!(html, groups, dates, today, city_name = nil, labels = nil, page = nil)
+    def inject!(html, groups, dates, today, city_name = nil, labels = nil, page = nil, ends = nil)
       return html unless html.is_a?(String)
 
       match = html.match(/<div class="event-list"[^>]*>/)
@@ -614,7 +626,7 @@ module EastsideCalendar
       close_at = matching_div_end(html, content_at)
       return html unless close_at
 
-      inner = inject_inner(html[content_at...close_at], groups, dates, city_name, labels, page)
+      inner = inject_inner(html[content_at...close_at], groups, dates, city_name, labels, page, ends)
       inner = group_events(inner, today)
       opener = stamp_today(html[match.begin(0)...content_at], today)
       html[0, match.begin(0)] + opener + inner + html[close_at..]
@@ -653,7 +665,7 @@ module EastsideCalendar
       nil
     end
 
-    def inject_inner(inner, groups, dates, city_name = nil, labels = nil, page = nil)
+    def inject_inner(inner, groups, dates, city_name = nil, labels = nil, page = nil, ends = nil)
       groups ||= {}
       dates ||= {}
       labels ||= {}
@@ -679,10 +691,12 @@ module EastsideCalendar
         end
         iso = dates[key] && dates[key][index]
         iso = nil if iso.to_s.empty?
+        end_iso = ends && ends[key] && ends[key][index]
+        end_iso = nil if end_iso.to_s.empty?
         info = labels[key] && labels[key][index]
         part = link_event_place(part, city_name)
         part = mark_source_links(part)
-        wrap_event_card(part, iso, info, page)
+        wrap_event_card(part, iso, info, page, end_iso)
       end
       prelude + rendered.join
     end
@@ -718,13 +732,14 @@ module EastsideCalendar
 
     # One card per event heading. The calendar icon is already on the date line.
     # The article wrapper is _includes/event-card.html so the markup cannot drift.
-    def wrap_event_card(part, iso = nil, info = nil, page = nil)
+    def wrap_event_card(part, iso = nil, info = nil, page = nil, end_iso = nil)
       body = part.sub(/\s+\z/, "")
       trail = part[body.length..] || ""
       tags = EventLabels.html(info)
       body = body.sub(%r{</h3>}) { "#{Regexp.last_match(0)}\n#{tags}" } unless tags.empty?
       assigns = { "body" => body }
       assigns["date"] = iso.to_s unless iso.to_s.empty?
+      assigns["end"] = end_iso.to_s unless end_iso.to_s.empty?
       extra = EventLabels.attrs(info)
       assigns["attrs"] = extra unless extra.to_s.empty?
       render_event_card(page, assigns) + trail
@@ -1008,6 +1023,7 @@ module EastsideCalendar
       assigned = EventCalendar.assign_events(heading_rows, events)
       groups = Hash.new { |hash, key| hash[key] = [] }
       dates = Hash.new { |hash, key| hash[key] = [] }
+      ends = Hash.new { |hash, key| hash[key] = [] }
       labels = Hash.new { |hash, key| hash[key] = [] }
       used = {}
       used_ids = {}
@@ -1040,6 +1056,8 @@ module EastsideCalendar
         groups[heading[:key]] << links
         date = EventCalendar.heading_date(heading, picks, today)
         dates[heading[:key]] << (date ? EventCalendar.iso_date(date) : nil)
+        finish = EventCalendar.heading_end_date(heading, picks, date)
+        ends[heading[:key]] << (finish ? EventCalendar.iso_date(finish) : nil)
         labels[heading[:key]] << EventCalendar.card_labels(picks, date)
         visible << EventCalendar.visible_event(heading, picks, today, city_name, city_url, used_ids)
       end
@@ -1067,6 +1085,7 @@ module EastsideCalendar
       matched = assigned.values.sum(&:size)
       page.data["calendar_groups"] = groups
       page.data["event_dates"] = dates
+      page.data["event_ends"] = ends
       page.data["event_labels"] = labels
       page.data["filter_counts"] = EventLabels.filter_counts(labels.values.flatten)
       { linked: linked, unmatched: events.size - matched, undated: undated }
@@ -1137,7 +1156,8 @@ Jekyll::Hooks.register :pages, :post_render do |page|
     today,
     EastsideCalendar::EventCalendar.city_name_for(page.site, page),
     page.data["event_labels"],
-    page
+    page,
+    page.data["event_ends"]
   )
 end
 

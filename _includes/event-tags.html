@@ -20,6 +20,14 @@
   {%- assign tag_cost = "Free" -%}
 {%- elsif tag_cost != "" -%}
   {%- assign tag_price = tag_cost -%}
+{%- else -%}
+  {%- for tag_item in tag_event.tags -%}
+    {%- assign tag_item_key = tag_item | append: "" | downcase | strip -%}
+    {%- if tag_item_key == "free" -%}
+      {%- assign tag_show_cost = true -%}
+      {%- assign tag_cost = "Free" -%}
+    {%- endif -%}
+  {%- endfor -%}
 {%- endif -%}
 {%- assign tag_show_ages = false -%}
 {%- assign tag_ages_text = "" -%}

@@ -28,7 +28,19 @@ OUTDOOR = [item.lower() for item in RULES.get("outdoor") or []]
 ACTIVITY = [item.lower() for item in RULES.get("outdoor_activity") or []]
 
 TODDLER_RE = re.compile(
-    r"ages?\s*(0|1|2|3|4)\s*(to|–|-)\s*5\b|newborns?\s+to\s+5|under\s+5|little children|ages?\s*2\s+to\s+5|ages?\s*3\s*[–-]\s*5",
+    r"ages?\s*(0|1|2|3|4)\s*(to|–|-)\s*5\b|"
+    r"ages?\s*(0|1|2|3)\s*(to|–|-|and)\s*(2|3|4)\b|"
+    r"ages?\s*1\s+to\s+3\b|"
+    r"newborns?\s+to\s+(?:5|12\s+months|18\s+months)|"
+    r"under\s+5|"
+    r"\bpreschool\b|"
+    r"\bfor babies\b|\bbabies and toddlers\b|\bbaby and toddler\b|\btoddlers?\b|"
+    r"\b18\s+months\b|"
+    r"lap[\s-]?sit|"
+    r"baby story\s*time|"
+    r"little children|"
+    r"pre-?walking|"
+    r"ages?\s*2\s+to\s+5|ages?\s*3\s*[–-]\s*5",
     re.I,
 )
 PRICE_RE = re.compile(r"\$\s?\d")
@@ -136,9 +148,36 @@ def confirmed_toddlers(ages, blurb):
     text = blurb or ""
     if re.search(r"\ball ages\b", text, re.I):
         return False
-    if re.search(r"ages?\s*5\s+and\s+older|ages?\s*5\s+to\s+1", text, re.I):
-        return False
+    # A price exception is not the audience. "Babies are not admitted" is not either.
+    text = re.sub(
+        r"ages?\s+\d+\s*(?:to|–|-|and)\s+\d+\s+are\s+free",
+        " ",
+        text,
+        flags=re.I,
+    )
+    text = re.sub(
+        r"(?:children|kids|ages?|babies)\s+under\s+\d+\s+(?:are|is)\s+free",
+        " ",
+        text,
+        flags=re.I,
+    )
+    text = re.sub(r"babies in arms", " ", text, flags=re.I)
+    if re.search(r"preschool\s+and\s+elementary|elementary", text, re.I):
+        if not re.search(r"baby story\s*time|lap[\s-]?sit|\btoddlers?\b|under\s+5", text, re.I):
+            return False
+    # Ages 5 and up is Kids, not Toddlers. A baby story time still counts.
+    if re.search(r"ages?\s*5\s+and\s+(?:older|up)|ages?\s*5\s+to\s+1|ages?\s*5\s*\+", text, re.I):
+        if not re.search(r"baby story\s*time|\btoddlers?\b|under\s+5|preschool|lap[\s-]?sit", text, re.I):
+            return False
     return bool(TODDLER_RE.search(text))
+
+
+def tags_say_free(tags, cost, text):
+    if cost not in (None, "", False):
+        return False
+    if not any(str(tag).strip().lower() == "free" for tag in (tags or [])):
+        return False
+    return not PRICE_RE.search(text or "")
 
 
 def confirmed_signup(signup, blurb, name=""):
@@ -365,8 +404,9 @@ def process_file(path, pages, dry_run):
             rewritten = True
         elif setting and not has_key(block, "setting"):
             fields.append(("setting", setting))
-        if not has_key(block, "cost") and confirmed_free(
-            event.get("name"), place, blurb, event.get("cost"), same_as
+        if not has_key(block, "cost") and (
+            confirmed_free(event.get("name"), place, blurb, event.get("cost"), same_as)
+            or tags_say_free(tags, event.get("cost"), f"{event.get('name') or ''} {blurb}")
         ):
             fields.append(("cost", "Free"))
         if not has_key(block, "ages") and confirmed_toddlers(event.get("ages"), blurb):

@@ -1272,7 +1272,9 @@ a.addr .addr-text {
 .hub-grid.is-filtered-out,
 .hub-section.is-filtered-out,
 .event-list h2.event-bucket.is-filtered-out,
-.hub-toc li.is-filtered-out {
+.hub-toc li.is-filtered-out,
+.event-card.is-past,
+h2.event-bucket.is-past {
   display: none;
 }
 

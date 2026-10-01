@@ -18,12 +18,6 @@ Ages 12–18 (or middle/high school). Food, hands-on activities, share ideas. No
 <p class="event-when">Thu Oct 1 · 10:00 a.m.–12:00 p.m.</p>
 <p class="event-place">Redmond Community Center at Marymoor Village, 6505 176th Ave NE</p>
 
-{% include event-photo.html
-   src="/assets/images/redmond/marymoor-center.webp"
-   alt="Front of the Redmond Community Center at Marymoor Village, a low building with a covered entrance and young trees."
-   credit="Photo: City of Redmond"
-   source="https://www.redmond.gov/ImageRepository/Document?documentID=40382" %}
-
 Ages 0–6. An adult must stay. Drop-in fee on Amilia, and fee assistance is available. The series is every Tuesday and Thursday, 10:00 a.m. to 12:00 p.m.  
 [Experience Redmond](https://experienceredmond.com/event/drop-in-play-at-the-redmond-community-center-at-marymoor-village/2026-10-01/) · [Amilia](https://app.amilia.com/store/en/city-of-redmond/shop/activities/6788395)
 
@@ -31,24 +25,12 @@ Ages 0–6. An adult must stay. Drop-in fee on Amilia, and fee assistance is ava
 <p class="event-when">Thu Oct 1 · 10:30–11:30 a.m.</p>
 <p class="event-place">Redmond Library, 15990 NE 85th St</p>
 
-{% include event-photo.html
-   src="/assets/images/redmond/redmond-library.webp"
-   alt="Redmond Library, a modern building with a glass front and a covered walkway."
-   credit="Photo: King County Library System."
-   source="https://kcls.org/locations/redmond/" %}
-
 Stories, music, movement, and rhymes for 18 months to age 3 with an adult, then 20 to 30 minutes of play. No registration. Space is limited. Tickets are at the front desk 30 minutes before the start. First come, first seated. The same hour is also on Thu Oct 8 and Thu Oct 15.  
 [Toddler Story Time](https://kcls.bibliocommons.com/v2/events/6ab463b90c7bf418f4e3c6c1)
 
 ### Teen Center Project Drop-in Session 2
 <p class="event-when">Thu Oct 1 · 6:00–8:00 p.m.</p>
 <p class="event-place">Redmond Community Center at Marymoor Village, 6505 176th Ave NE</p>
-
-{% include event-photo.html
-   src="/assets/images/redmond/marymoor-lobby.webp"
-   alt="Lobby of the Redmond Community Center at Marymoor Village, with tall windows, a curved desk, and orange chairs."
-   credit="Photo: City of Redmond"
-   source="https://www.redmond.gov/ImageRepository/Document?documentID=367" %}
 
 Same teen invite as Wednesday.  
 [Teen Center Project](https://www.redmond.gov/2494/Teen-Center-Project) · [Calendar](https://www.redmond.gov/Calendar.aspx?EID=3553)
@@ -63,12 +45,6 @@ Stories, music, movement, and rhymes for newborns to 18 months with an adult, th
 ### Redmond Saturday Market
 <p class="event-when">Sat Oct 3 · 9:00 a.m.–2:00 p.m.</p>
 <p class="event-place">9900 Willows Rd NE</p>
-
-{% include event-photo.html
-   src="/assets/images/redmond/saturday-market.webp"
-   alt="Shoppers and white vendor tents along a tree-lined path at an outdoor market."
-   credit="Photo: Redmond Saturday Market."
-   source="http://www.redmondsaturdaymarket.org/" %}
 
 Season runs through Oct 31. The entertainment calendar names Elias Kauhane from 11:00 a.m. to 1:00 p.m. The homepage's "this week" line says Preston Lee & Friends and is undated. Use the calendar.  
 [Market calendar](http://redmondsaturdaymarket.org/Calendar.cshtml) · [redmondsaturdaymarket.org](http://www.redmondsaturdaymarket.org/)
@@ -98,12 +74,6 @@ A youth cross country club meet at Hartman Park.
 <p class="event-when">Sat Oct 3 · 9:30 a.m.–12:00 p.m.</p>
 <p class="event-place">Redmond Senior & Community Center, 8703 160th Ave NE</p>
 
-{% include event-photo.html
-   src="/assets/images/redmond/senior-center.webp"
-   alt="People in the east entry of the Redmond Senior and Community Center, beside a bright geometric art wall."
-   credit="Photo: City of Redmond"
-   source="https://www.redmond.gov/ImageRepository/Document?documentID=24797" %}
-
 Pancake breakfast 9:30–10:30 a.m., then snacks, games, and crafts. Wear flannel for a raffle entry. Registration required (Amilia about $10–$12).  
 [City calendar](https://www.redmond.gov/Calendar.aspx?EID=3538) · [Register on Amilia](https://app.amilia.com/store/en/city-of-redmond/shop/activities/7027191)
 
@@ -114,32 +84,12 @@ Pancake breakfast 9:30–10:30 a.m., then snacks, games, and crafts. Wear flanne
 8th annual fall festival. Petting zoo, train, and crafts. Tickets are booked through the farm.  
 [Red Barn Farm](https://redbarnfarm.com/) · [2026 posts](https://redbarnfarm.com/2026/)
 
-### Oktoberfest at Big Block Brewery
-<p class="event-when">Sat Oct 3 · 1:00–6:00 p.m.</p>
-<p class="event-place">Big Block Brewery, 14950 NE 95th St</p>
-
-Family-friendly, with vendors, an animal meet and greet, and beer. Free admission.  
-[AllEvents](https://allevents.in/redmond/oktoberfest/200030554602215)
-
 ### Family Halloween Tray Workshop
 <p class="event-when">Sat Oct 3 · 2:00–4:00 p.m.</p>
 <p class="event-place">Redmond Senior & Community Center, 8703 160th Ave NE</p>
 
 Family craft. Ages 15 and up, and under 16 with a parent. $30 per project, materials included.  
 [Eventbrite](https://www.eventbrite.com/e/family-halloween-tray-workshop-tickets-2000365873175)
-
-### Ragtime
-<p class="event-when">Sat Oct 3 · 2:00 and 7:30 p.m., Sun Oct 4 · 2:00 p.m.</p>
-<p class="event-place">Francis J. Gaudette Theatre, 303 Front St N, Issaquah</p>
-
-{% include event-photo.html
-   src="/assets/images/redmond/ragtime.webp"
-   alt="Three Ragtime performers on stage in period costume, with a woman in a feathered hat in front."
-   credit="Photo: Village Theatre."
-   source="https://villagetheatre.org/mainstage/ragtime/" %}
-
-Also Tue Sep 29 through Fri Oct 2 at 7:30 p.m., among other dates, through Oct 18. ASL interpretation at the Sat Oct 3, 2:00 p.m. show, and pay-what-you-can seats at Sat Oct 3, 7:30 p.m. Themes include immigration, class, and racial injustice. May not suit young children. Tickets from about $42 online.  
-[Ragtime](https://villagetheatre.org/mainstage/ragtime/) · [TeenTix](https://www.teentix.org/calendar/event/ragtime/)
 
 ### Basic Bicycle Maintenance for Youth
 <p class="event-when">Sat Oct 3 · 3:00–5:30 p.m.</p>
@@ -162,13 +112,6 @@ Full-length ballet with light design and illuminated costumes. Better for older 
 Between Velodrome Picnic Shelter and Climbing Wall; parking Lot I. Site opens 7:30 a.m., ceremonies 8:30 a.m. Registration via Melanoma Research Foundation.  
 [Event page](https://donate.melanoma.org/site/TR?fr_id=2256&pg=entry) · Also on [marymoor.org/events2026.pdf](https://marymoor.org/events2026.pdf)
 
-### Paws & Pumpkins
-<p class="event-when">Sun Oct 4 · 2:00 p.m.</p>
-<p class="event-place">Big Block Brewing, Redmond</p>
-
-Dog costume social at the brewery. Not a kids show. Optional pet outing. Free.  
-[AllEvents](https://allevents.in/redmond)
-
 ### Drop-In Play
 <p class="event-when">Tue Oct 6 · 10:00 a.m.–12:00 p.m.</p>
 <p class="event-place">Redmond Community Center at Marymoor Village, 6505 176th Ave NE</p>
@@ -187,12 +130,6 @@ Therapy dogs from Reading with Rover while teens work on homework, exams, or aca
 <p class="event-when">Thu Oct 8 · 6:00–8:00 p.m.</p>
 <p class="event-place">Redmond Senior & Community Center, Red Oak Community Room, 8703 160th Ave NE</p>
 
-{% include event-photo.html
-   src="/assets/images/redmond/senior-center.webp"
-   alt="People in the east entry of the Redmond Senior and Community Center, beside a bright geometric art wall."
-   credit="Photo: City of Redmond"
-   source="https://www.redmond.gov/ImageRepository/Document?documentID=24797" %}
-
 Open to everyone, and free. Free childcare for ages 3–12 for people who are attending the meeting. This follows the two teen-only drop-ins on Sep 30 and Oct 1.  
 [City calendar](https://www.redmond.gov/Calendar.aspx?EID=3554)
 
@@ -200,15 +137,7 @@ Open to everyone, and free. Free childcare for ages 3–12 for people who are at
 <p class="event-when">Sat Oct 10 · 9:00 a.m.–2:00 p.m.</p>
 <p class="event-place">9900 Willows Rd NE</p>
 
-{% include event-photo.html
-   src="/assets/images/redmond/saturday-market.webp"
-   alt="Shoppers and white vendor tents along a tree-lined path at an outdoor market."
-   credit="Photo: Redmond Saturday Market."
-   source="http://www.redmondsaturdaymarket.org/" %}
-
-Season runs through Oct 31, 9:00 a.m.–2:00 p.m. The market calendar lists Jon Andrew Franklin from 11:00 a.m. to 1:00 p.m. The homepage's "this week" line is undated. Use the calendar, not that line.
-
-The festival and the market overlap from 10:00 a.m. to 2:00 p.m. They are not within walking distance of a stroller loop. One caregiver can take older kids to the books and another can do the market, or you can do the market at 9:00 and reach the festival late.
+Season runs through Oct 31, 9:00 a.m.–2:00 p.m. Jon Andrew Franklin plays from 11:00 a.m. to 1:00 p.m.
 
 [Market calendar](http://redmondsaturdaymarket.org/Calendar.cshtml)
 
@@ -216,15 +145,7 @@ The festival and the market overlap from 10:00 a.m. to 2:00 p.m. They are not wi
 <p class="event-when">Sat Oct 10 · 10:00 a.m.–4:00 p.m.</p>
 <p class="event-place">Redmond Senior & Community Center, 8703 160th Ave NE</p>
 
-{% include event-photo.html
-   src="/assets/images/redmond/senior-center.webp"
-   alt="People in the east entry of the Redmond Senior and Community Center, beside a bright geometric art wall."
-   credit="Photo: City of Redmond"
-   source="https://www.redmond.gov/ImageRepository/Document?documentID=24797" %}
-
 Fourth annual, free, indoors. No tickets and no advance registration. Author read-alouds and activities are free. Brick & Mortar Books, the host shop, lists book signings, panels, and activities with children's authors and illustrators. The festival FAQ says it covers board books through young adult, and that you may bring books you already own. Disabled parking is at the center.
-
-The date, hours, and address are on the bookstore's festival page. The FAQ confirms the building, the free admission, and that it is all ages.
 
 [Bookstore page](https://www.brickandmortarbooks.com/bigfoot-kids-book-festival) · [FAQ](https://www.bigfootkidsbookfestival.com/faq)
 
@@ -232,13 +153,7 @@ The date, hours, and address are on the bookstore's festival page. The FAQ confi
 <p class="event-when">Sat Oct 17 · 9:00 a.m.–2:00 p.m.</p>
 <p class="event-place">9900 Willows Rd NE</p>
 
-{% include event-photo.html
-   src="/assets/images/redmond/saturday-market.webp"
-   alt="Shoppers and white vendor tents along a tree-lined path at an outdoor market."
-   credit="Photo: Redmond Saturday Market."
-   source="http://www.redmondsaturdaymarket.org/" %}
-
-The market homepage says the season runs May 2 through Oct 31, 9:00 a.m.–2:00 p.m. The entertainment calendar names Larry Murante for 11:00 a.m.–1:00 p.m. on Oct 17. That is a dated line, not the undated "this week" banner on the homepage.
+The season runs May 2 through Oct 31, 9:00 a.m.–2:00 p.m. Larry Murante plays 11:00 a.m.–1:00 p.m. on Oct 17.
 
 Free to walk. The address is 9900 Willows Rd NE.
 
@@ -268,7 +183,7 @@ Ages 2 and up. An all-access pass covers pressed apple cider, tractor wagon ride
    credit="Photo: SounderBruce, CC BY-SA 4.0"
    source="https://commons.wikimedia.org/wiki/File:Redmond_Town_Center_main_plaza,_Jan._2025.jpg" %}
 
-OneRedmond's second pup parade. Check-in is at noon at The Archer Hotel, with snacks. The parade through Redmond Town Center is at 1:00 p.m., with prizes for best dog costume, best duo, and best in show. From 2:00 to 4:00 p.m. the party moves to Hilton Garden Inn Seattle Redmond, with snacks for people and dogs and adoptable pups from Motley Zoo. The page says registration is coming soon, and that entry is free for overnight guests at participating Redmond hotels. The harvest festival at Farrel-McWhirter runs until 3:00 p.m., so the parade and the farm overlap.
+OneRedmond's second pup parade. Check-in is at noon at The Archer Hotel, with snacks. The parade through Redmond Town Center is at 1:00 p.m., with prizes for best dog costume, best duo, and best in show. From 2:00 to 4:00 p.m. the party moves to Hilton Garden Inn Seattle Redmond, with snacks for people and dogs and adoptable pups from Motley Zoo. Sign up when registration opens. Entry is free for overnight guests at participating Redmond hotels.
 
 [Howl-O-Ween](https://engage.oneredmond.org/howl-o-ween)
 
@@ -283,12 +198,6 @@ Free practice test for grades 9–12, then a look at which question types cost t
 <p class="event-when">Sat Oct 24 · 9:00 a.m.–2:00 p.m.</p>
 <p class="event-place">9900 Willows Rd NE</p>
 
-{% include event-photo.html
-   src="/assets/images/redmond/saturday-market.webp"
-   alt="Shoppers and white vendor tents along a tree-lined path at an outdoor market."
-   credit="Photo: Redmond Saturday Market."
-   source="http://www.redmondsaturdaymarket.org/" %}
-
 Hours stay 9:00 a.m.–2:00 p.m. through the last day, Oct 31. The Preston Lee Trio plays from 11:00 a.m. to 1:00 p.m. on Oct 24.
 
 [Calendar](http://redmondsaturdaymarket.org/Calendar.cshtml)
@@ -296,12 +205,6 @@ Hours stay 9:00 a.m.–2:00 p.m. through the last day, Oct 31. The Preston Lee T
 ### Spooky Spectacular
 <p class="event-when">Mon Oct 26 · 6:00–7:30 p.m.</p>
 <p class="event-place">Redmond Senior & Community Center, 8703 160th Ave NE</p>
-
-{% include event-photo.html
-   src="/assets/images/redmond/senior-center.webp"
-   alt="People in the east entry of the Redmond Senior and Community Center, beside a bright geometric art wall."
-   credit="Photo: City of Redmond"
-   source="https://www.redmond.gov/ImageRepository/Document?documentID=24797" %}
 
 All ages. Come in costume for a photo booth, face painting, crafts, pumpkin decorating, and mini games. Bring your own pumpkin. The center supplies the decorating materials and there is no carving. Hot dogs, veggie dogs, chips, candy, and drinks are part of the evening.
 

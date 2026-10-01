@@ -132,7 +132,7 @@ The 44th annual Farm Fair. The city lists animal interactions, heritage activiti
 
 On-site parking is limited to accessible spaces. Free shuttles run from Bannerwood Sports Park, 1790 Richards Road, and the Wilburton Park and Ride, 720 114th Ave SE. The last shuttle leaves the farm at 4:15 p.m. East Main light rail is the other option. Call the farm at 425-452-7688.
 
-Volunteers 15 and older can still email Stacy Stenslie at sstenslie@bellevuewa.gov. That is a work shift, not a kids' program.
+Volunteers 15 and older can still email Stacy Stenslie at sstenslie@bellevuewa.gov.
 
 [Farm Fair](https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/kelsey-creek-farm-fair) · [City news](https://bellevuewa.gov/city-news/kelsey-farm-fair-26)
 
@@ -281,6 +281,8 @@ Ages 1 and 2 with an adult. A short play time follows. No registration. Choose o
 
 Ages 3–5 with an adult. Why spiders spin webs, plus a story, art, a song, snack, and the garden. The series page marks this session full. Individual price is $25 per child, or $17.50 for members. Adults free. Cap is 12 children.
 
+[Kids in the Garden](https://bellevuebotanical.org/kids-in-the-garden/)
+
 ### LEGO Brick Builders
 <p class="event-when">Wed Oct 14 · 1:30–2:30 p.m.</p>
 <p class="event-place">Bellevue Library, third-floor programming room, 1111 110th Ave NE</p>
@@ -350,18 +352,6 @@ Oct 7 and Oct 14 in this series were already marked full. The owl page still sai
 The next session, Winter is Coming, is Wednesday, Oct 28, which is the following week.
 
 [Owls](https://65203.blackbaudhosting.com/65203/Kids-in-the-Garden-7-3-Owls) · [Series](https://bellevuebotanical.org/kids-in-the-garden/)
-
-### The Art of Hawaiian Kapa
-<p class="event-when">Wed Oct 21 · 6:00–7:30 p.m.</p>
-<p class="event-place">Bellevue Library, Room 1, 1111 110th Ave NE</p>
-
-Artist Malia Peoples talks about kapa, the traditional fabric of Hawaii, then participants stamp their own prints. Supplies are provided. Please register. The page said registration opens Oct 14 at 6:00 p.m., with 20 seats. Supported by the Bellevue Arts Commission and in part by 4Culture.
-
-For adults. It is the parent workshop, not a children's class.
-
-[Kapa workshop](https://kcls.bibliocommons.com/v2/events/6aa1ea1a129d8e0031f0fb66)
-
-No farmers market this week. The library's Monday toddler storytime was on the calendar for Oct 5 and Oct 12. It was not on the pages used for Oct 19. Check the branch list before you count on it.
 
 ### Eastside Dia de los Muertos
 <p class="event-when">Sat Oct 24 · 9:00 a.m.–8:00 p.m.</p>

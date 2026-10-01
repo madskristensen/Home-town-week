@@ -2,9 +2,9 @@ name: Prune past events
 
 on:
   schedule:
-    # 11:15 UTC is 4:15am during Pacific Daylight Time and 3:15am during
+    # 09:00 UTC is 2:00am during Pacific Daylight Time and 1:00am during
     # Pacific Standard Time, so the America/Los_Angeles date has already rolled.
-    - cron: "15 11 * * *"
+    - cron: "0 9 * * *"
   workflow_dispatch:
 
 # A push made with this token does not start another workflow. This job
@@ -25,6 +25,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+
+      - name: Rebase onto latest main
+        run: |
+          git fetch origin main
+          git rebase origin/main
 
       - name: Install PyYAML
         run: python3 -m pip install pyyaml
@@ -63,7 +68,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -u
           git commit -m "Fill venue settings, drop out-of-area events, and remove events that ended before today."
-          git push
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Rebuild the site

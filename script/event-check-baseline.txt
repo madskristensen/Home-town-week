@@ -1,0 +1,2 @@
+# Existing event-check errors. A new error fails the build.
+# None were left when this guard was added.

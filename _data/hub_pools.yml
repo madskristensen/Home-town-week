@@ -392,3 +392,68 @@ rainy-day:
     credit: "Photo: Szeronine, CC BY 4.0"
     license: CC BY 4.0
     source: https://commons.wikimedia.org/wiki/File:Bookshelves_and_interior_of_the_library_of_the_Academy_for_Judiciary.jpg
+
+# Last fallback when an event has no photo of its own, no venue photo,
+# no themed picture, and no in-season pool. Eastside parks and landmarks.
+# Licensed, credited, no recognizable kids. Not a designed card.
+general:
+  - image: /assets/images/bellevue/downtown-park-meadow.webp
+    alt: The circular lawn at Bellevue Downtown Park, with the downtown skyline beyond the water.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Bellevue_WA_-Downtown_Park_05A.jpg
+  - image: /assets/images/bellevue/kelsey-creek.webp
+    alt: Barn and pasture at Kelsey Creek Farm in Bellevue.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Kelsey_Creek_Farm_04.jpg
+  - image: /assets/images/bellevue/botanical-garden.webp
+    alt: The entrance sign and plantings at Bellevue Botanical Garden.
+    credit: "Photo: Heptazane, public domain"
+    license: Public domain
+    source: https://commons.wikimedia.org/wiki/File:Bellevue_Botanical_Garden_Entrance.jpg
+  - image: /assets/images/bellevue/mercer-slough.webp
+    alt: Mercer Slough Nature Park, with the downtown Bellevue skyline beyond the wetland trees.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Downtown_Bellevue,_WA_from_Mercer_Slough_Nature_Park.jpg
+  - image: /assets/images/bellevue/phantom-lake.webp
+    alt: Phantom Lake in the Lake Hills Greenbelt, with trees along the shore at sunset.
+    credit: "Photo: David Doan, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Indian_Summer_Sunset_on_Phantom_Lake_-_panoramio.jpg
+  - image: /assets/images/kirkland/juanita-beach-park.webp
+    alt: Juanita Beach Park, with the sandy shore, the pier, and Lake Washington.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Juanita_Beach_from_across_the_bay.jpg
+  - image: /assets/images/redmond/marymoor-park.webp
+    alt: A trail through open grass and trees at Marymoor Park in Redmond.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:2025-10-22,_Marymoor_Park_(Redmond,_Washington),_084454.jpg
+  - image: /assets/images/redmond/idylwood-park.webp
+    alt: Idylwood Park on Lake Sammamish, with the beach, the dock, and the water.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:2023-06-20,_Idylwood_Park,_Redmond,_Washington,_020.jpg
+  - image: /assets/images/redmond/farrel-mcwhirter.webp
+    alt: The entrance sign at Farrel-McWhirter Park in Redmond.
+    credit: "Photo: HominyGrits007, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Farrel-McWhirter_Park_Entrance.jpg
+  - image: /assets/images/bothell/landing-shore.webp
+    alt: Shore and trees at the Park at Bothell Landing.
+    credit: "Photo: Joe Mabel, CC BY 4.0"
+    license: CC BY 4.0
+    source: https://commons.wikimedia.org/wiki/File:Bothell_Landing_03.jpg
+  - image: /assets/images/issaquah/salmon-hatchery.webp
+    alt: The Issaquah Salmon Hatchery, a long building with a gray roof beside a creek, with yellow trees in front.
+    credit: "Photo: Chris Light, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Hatchery_6921.jpg
+  - image: /assets/images/sammamish/beaver-lake.webp
+    alt: The lodge at Beaver Lake Park in Sammamish.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:2022-06-13,_Lodge_at_Beaver_Lake,_Sammamish,_Washington.jpg

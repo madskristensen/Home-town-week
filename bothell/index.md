@@ -7,14 +7,6 @@ description: Upcoming family events in Bothell on the Eastside.
 hook: Thursday morning is music and movement. Saturday is the Friends book sale and an all-ages history tour at Anderson School. Monday morning is toddler and baby story time.
 ---
 
-### Oktoberfest Specials
-<p class="event-when">Mon Sep 28–Sat Oct 3 · Time not posted</p>
-<p class="event-place">Anderson School, 18607 Bothell Way NE</p>
-
-Oktoberfest specials from Sep 18 through Oct 3, all locations and all ages. A celebration with beer. The menu includes smoked German sausages and German potato salad.
-
-[Oktoberfest Specials](https://www.mcmenamins.com/events/278137-oktoberfest-specials)
-
 ### Music and Movement with Lana Van Boven
 <p class="event-when">Thu Oct 1 · 10:00–10:30 a.m. and 10:45–11:15 a.m.</p>
 <p class="event-place">Bothell Library, 18215 98th Ave NE</p>
@@ -35,7 +27,7 @@ Browse donated books. Proceeds support library programs. The listing includes ki
 <p class="event-when">Sat Oct 3 · 1:00 p.m.</p>
 <p class="event-place">Anderson School, 18607 Bothell Way NE</p>
 
-A public history and art tour. All ages. Tickets are $20.31 a person, and kids ages 3 and up need a ticket. The tour page says tours run every Saturday.
+A public history and art tour. All ages. Tickets are $20.31 a person, and kids ages 3 and up need a ticket. Tours run every Saturday.
 
 [Oct 3 tour](https://www.mcmenamins.com/events/278721-anderson-schools-history-art-tour)
 
