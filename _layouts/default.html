@@ -2,6 +2,39 @@
 <html lang="{{ site.lang | default: 'en-US' }}">
 <head>
   {%- include head.html -%}
+  {%- if page.explore_id == "no-school-days" -%}
+  <script>
+    (function () {
+      var ok = {
+        {%- assign ns_page = site.data.no_school_page -%}
+        {%- for district in ns_page.districts -%}
+        "{{ district.slug }}": 1{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      };
+      var key = "no-school-district";
+      var slug = "";
+      var params = null;
+      try { params = new URLSearchParams(location.search); } catch (e) {}
+      if (params && params.has("district")) {
+        var picked = params.get("district") || "";
+        if (picked === "" || picked === "all") {
+          slug = "";
+          try { localStorage.removeItem(key); } catch (e) {}
+        } else if (ok[picked]) {
+          slug = picked;
+          try { localStorage.setItem(key, slug); } catch (e) {}
+        } else {
+          try { slug = localStorage.getItem(key) || ""; } catch (e) { slug = ""; }
+          if (!ok[slug]) slug = "";
+        }
+      } else {
+        try { slug = localStorage.getItem(key) || ""; } catch (e) { slug = ""; }
+        if (!ok[slug]) slug = "";
+      }
+      if (slug) document.documentElement.setAttribute("data-ns", slug);
+    })();
+  </script>
+  {%- endif -%}
 </head>
 <body>
   {%- assign print_title = page.title | default: site.title -%}

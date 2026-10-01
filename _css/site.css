@@ -1726,98 +1726,288 @@ h2.event-bucket.is-past {
   line-height: 1.45;
 }
 
-.no-school {
-  width: 100%;
-  margin: 0.2rem 0 0;
-  border-collapse: collapse;
-}
-
-.no-school thead {
-  display: none;
-}
-
-.no-school,
-.no-school tbody {
-  display: block;
-}
-
-.no-school tr {
+.ns-filter {
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
-  gap: 0.35rem;
-  margin: 0 0 0.85rem;
+  align-items: center;
+  gap: 0.4rem 0.65rem;
+  margin-top: 0.85rem;
 }
 
-.no-school th,
-.no-school td {
-  display: block;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--ink);
-  font-family: var(--sans);
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25;
-  text-align: left;
-}
-
-.no-school th[scope="row"] {
-  flex: 1 0 100%;
-}
-
-.no-school td {
-  display: none;
-}
-
-.no-school td.is-off {
-  display: flex;
-  flex: 0 1 auto;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 3.5rem;
-  padding: 0.28rem 0.55rem;
-  border: 1px solid var(--rule);
-  background: color-mix(in srgb, var(--forest) 12%, var(--sheet));
-}
-
-.no-school-when {
-  display: block;
+.ns-filter label {
+  font-size: 0.92rem;
   font-weight: 700;
+}
+
+.ns-filter select {
+  width: 14.5rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.35rem 1.6rem 0.35rem 0.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: var(--sheet);
+  color: var(--ink);
+  font: inherit;
   font-size: 0.95rem;
+  font-weight: 650;
   line-height: 1.3;
 }
 
-.no-school-shared {
-  display: block;
-  margin-top: 0.1rem;
-  color: var(--muted);
+.ns-filter select:focus {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.ns-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.75rem;
+  margin: 0.7rem 0 0;
+  padding: 0;
+  list-style: none;
   font-size: 0.78rem;
   font-weight: 650;
   line-height: 1.3;
 }
 
-.no-school-name,
-.no-school-mark,
-.no-school-off {
-  display: block;
-  line-height: 1.25;
+.ns-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.28rem;
 }
 
-.no-school-name,
-.no-school-off {
-  font-weight: 700;
+.ns-swatch,
+.ns-dot,
+.ns-sample {
+  --c: var(--accent);
 }
 
-.no-school-mark {
-  font-size: 0.72rem;
-  font-weight: 700;
+.ns-swatch[data-d="nsd"],
+.ns-dot[data-d="nsd"] { --c: var(--accent); }
+
+.ns-swatch[data-d="rvsd"],
+.ns-dot[data-d="rvsd"] { --c: var(--gold); }
+
+.ns-swatch[data-d="renton"],
+.ns-dot[data-d="renton"] { --c: color-mix(in srgb, var(--map-shore) 55%, var(--text)); }
+
+.ns-swatch[data-d="lwsd"],
+.ns-dot[data-d="lwsd"] { --c: color-mix(in srgb, var(--map-shore) 35%, var(--accent)); }
+
+.ns-swatch[data-d="bsd"],
+.ns-dot[data-d="bsd"] { --c: color-mix(in srgb, var(--gold) 62%, var(--accent)); }
+
+.ns-swatch[data-d="isd"],
+.ns-dot[data-d="isd"] { --c: color-mix(in srgb, var(--accent) 42%, var(--text)); }
+
+.ns-swatch[data-d="svsd"],
+.ns-dot[data-d="svsd"] { --c: color-mix(in srgb, var(--map-shore) 28%, var(--gold)); }
+
+.ns-swatch[data-d="misd"],
+.ns-dot[data-d="misd"] { --c: var(--text); }
+
+.ns-swatch,
+.ns-sample {
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: var(--c);
+  flex: 0 0 auto;
 }
 
-.no-school-off {
+.ns-key {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.ns-sample {
+  margin: 0 0.15rem 0 0.45rem;
+  vertical-align: -0.05em;
+}
+
+.ns-key .ns-sample:first-child {
+  margin-left: 0;
+}
+
+.ns-sample.is-grade {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--accent);
+}
+
+.ns-sample.is-if {
+  background: transparent;
+  border: 1px dashed var(--gold);
+  box-shadow: none;
+}
+
+.ns-sub {
+  margin-top: 0.7rem;
+  min-height: 1.5rem;
+}
+
+.ns-sub-all {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.ns-sub-one {
   display: none;
+}
+
+.ns-sub .cal-subscribe {
+  margin: 0;
+}
+
+.ns-months {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.2rem 0.9rem;
+  margin-top: 1rem;
+}
+
+.ns-month {
+  min-width: 0;
+}
+
+.ns-month h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.2rem;
+}
+
+.ns-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-rows: 1.15rem repeat(6, 4.85rem);
+  gap: 2px;
+}
+
+.ns-dow,
+.ns-day {
+  min-width: 0;
+}
+
+.ns-dow {
+  height: 1.15rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.15rem;
+  text-align: center;
+}
+
+.ns-day {
+  height: 4.85rem;
+  padding: 0.12rem 0.08rem 0.08rem;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  background: var(--sheet);
+  text-align: center;
+}
+
+.ns-day.is-pad {
+  border-color: transparent;
+  background: transparent;
+}
+
+.ns-day.is-past .ns-num {
+  color: var(--muted);
+}
+
+.ns-day.is-today {
+  border-color: var(--accent);
+}
+
+.ns-num {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.ns-marks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 0.14rem 0.12rem;
+  min-height: 1.05rem;
+  margin-top: 0.16rem;
+}
+
+.ns-dot {
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 999px;
+  background: var(--c);
+  flex: 0 0 auto;
+}
+
+.ns-dot.is-grade {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--c);
+}
+
+.ns-dot.is-if {
+  background: transparent;
+  border: 1px dashed var(--c);
+  box-shadow: none;
+}
+
+.ns-one {
+  display: none;
+  margin-top: 0.12rem;
+  padding: 0.06rem 0.04rem;
+  overflow: hidden;
+  border-radius: 2px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.ns-one.is-off {
+  background: color-mix(in srgb, var(--accent) 16%, var(--sheet));
+}
+
+.ns-one.is-grade {
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.ns-one.is-if {
+  border: 1px dashed var(--gold);
+}
+
+html[data-ns] .ns-marks,
+html[data-ns] .ns-sub-all {
+  display: none;
+}
+
+html[data-ns="nsd"] .ns-one[data-d="nsd"],
+html[data-ns="nsd"] .ns-sub-one[data-d="nsd"],
+html[data-ns="rvsd"] .ns-one[data-d="rvsd"],
+html[data-ns="rvsd"] .ns-sub-one[data-d="rvsd"],
+html[data-ns="renton"] .ns-one[data-d="renton"],
+html[data-ns="renton"] .ns-sub-one[data-d="renton"],
+html[data-ns="lwsd"] .ns-one[data-d="lwsd"],
+html[data-ns="lwsd"] .ns-sub-one[data-d="lwsd"],
+html[data-ns="bsd"] .ns-one[data-d="bsd"],
+html[data-ns="bsd"] .ns-sub-one[data-d="bsd"],
+html[data-ns="isd"] .ns-one[data-d="isd"],
+html[data-ns="isd"] .ns-sub-one[data-d="isd"],
+html[data-ns="svsd"] .ns-one[data-d="svsd"],
+html[data-ns="svsd"] .ns-sub-one[data-d="svsd"],
+html[data-ns="misd"] .ns-one[data-d="misd"],
+html[data-ns="misd"] .ns-sub-one[data-d="misd"] {
+  display: block;
 }
 
 .no-school-districts {
@@ -1838,74 +2028,9 @@ h2.event-bucket.is-past {
   line-height: 1.45;
 }
 
-@media (min-width: 64rem) {
-  .no-school,
-  .no-school tbody {
-    display: table;
-    width: 100%;
-  }
-
-  .no-school {
-    table-layout: fixed;
-    border-collapse: separate;
-    border-spacing: 0.12rem 0.28rem;
-  }
-
-  .no-school thead {
-    display: table-header-group;
-  }
-
-  .no-school tbody {
-    display: table-row-group;
-  }
-
-  .no-school tr {
-    display: table-row;
-    margin: 0;
-  }
-
-  .no-school th,
-  .no-school td {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 0.28rem 0.15rem;
-    text-align: center;
-    overflow-wrap: anywhere;
-  }
-
-  .no-school thead th {
-    font-size: 0.66rem;
-    font-weight: 700;
-    line-height: 1.2;
-  }
-
-  .no-school th[scope="row"] {
-    width: 7.2rem;
-    padding-left: 0;
-    text-align: left;
-  }
-
-  .no-school td.is-off {
-    display: table-cell;
-    min-height: 0;
-    border: 0;
-    background: color-mix(in srgb, var(--forest) 12%, var(--sheet));
-  }
-
-  .no-school-name {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-
-  .no-school-off {
-    display: block;
+@media (min-width: 48rem) {
+  .ns-months {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 }
 

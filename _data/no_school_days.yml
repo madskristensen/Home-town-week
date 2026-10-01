@@ -10,6 +10,8 @@ districts:
   - id: northshore
     title: Northshore School District
     short: Northshore
+    abbr: NS
+    slug: nsd
     toc: Northshore
     source: https://www.nsd.org/n/~board/district-news/post/now-available-calendar-for-the-2026-2027-school-year
     source_label: Northshore School District calendar
@@ -27,6 +29,8 @@ districts:
   - id: riverview
     title: Riverview School District
     short: Riverview
+    abbr: RV
+    slug: rvsd
     toc: Riverview
     source: https://www.rsd407.org/_files/ugd/78e1ab_ea117cd323af48aaab4c35485fa36dd4.pdf
     source_label: Riverview School District calendar
@@ -50,6 +54,8 @@ districts:
   - id: renton
     title: Renton School District
     short: Renton
+    abbr: RE
+    slug: renton
     toc: Renton
     source: https://resources.finalsite.net/images/v1771364157/rentonschoolsus/jpgml7vzi513bghcfvbl/RSDstudentcalendar2026-27.pdf
     source_label: Renton School District calendar
@@ -73,6 +79,8 @@ districts:
   - id: lake-washington
     title: Lake Washington School District
     short: Lake Washington
+    abbr: LW
+    slug: lwsd
     toc: Lake Washington
     source: https://resources.finalsite.net/images/v1787679561/lwsdorg/eok5lsfktcue6muzply9/2026-27LWSD-one-page-calendar-English.pdf
     source_label: Lake Washington School District calendar
@@ -94,6 +102,8 @@ districts:
   - id: bellevue
     title: Bellevue School District
     short: Bellevue
+    abbr: BE
+    slug: bsd
     toc: Bellevue
     source: https://www.bsd405.org/about-us/calendar/important-dates-for-families
     source_label: Bellevue School District calendar
@@ -115,6 +125,8 @@ districts:
   - id: issaquah
     title: Issaquah School District
     short: Issaquah
+    abbr: IS
+    slug: isd
     toc: Issaquah
     source: https://www.isd411.org/fs/resource-manager/view/026edd0d-1d2c-4e5f-995d-785ae1f1b60c
     source_label: Issaquah School District calendar
@@ -134,6 +146,8 @@ districts:
   - id: snoqualmie-valley
     title: Snoqualmie Valley School District
     short: Snoqualmie
+    abbr: SV
+    slug: svsd
     toc: Snoqualmie Valley
     source: https://resources.finalsite.net/images/v1778164938/svsd410org/clm2ccn9nv0prepprxud/2026-2027StudentCalendarboardapproved250124.pdf
     source_label: Snoqualmie Valley School District calendar
@@ -154,6 +168,8 @@ districts:
   - id: mercer-island
     title: Mercer Island School District
     short: Mercer Island
+    abbr: MI
+    slug: misd
     toc: Mercer Island
     source: https://www.mercerislandschools.org/fs/resource-manager/view/bbbd8f25-77ca-469a-be7b-2f20e90fd80a
     source_label: Mercer Island School District calendar

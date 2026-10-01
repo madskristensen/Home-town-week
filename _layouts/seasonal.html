@@ -31,60 +31,129 @@ layout: default
   {%- assign school = site.data.no_school_page -%}
   {%- assign school_months = school.months -%}
   {%- assign school_month_count = school_months | size -%}
+  <div class="ns-filter">
+    <label for="ns-district">District</label>
+    <select id="ns-district" autocomplete="off">
+      <option value="">All districts</option>
+      {%- for district in school.districts -%}
+      <option value="{{ district.slug }}">{{ district.short }}</option>
+      {%- endfor -%}
+    </select>
+  </div>
+  <script>
+    (function () {
+      var sel = document.getElementById("ns-district");
+      if (!sel) return;
+      sel.value = document.documentElement.getAttribute("data-ns") || "";
+    })();
+  </script>
+  <ul class="ns-legend">
+    {%- for district in school.districts -%}
+    <li><span class="ns-swatch" data-d="{{ district.slug }}" aria-hidden="true"></span> {{ district.abbr }} {{ district.short }}</li>
+    {%- endfor -%}
+  </ul>
+  <p class="ns-key"><span class="ns-sample is-off" aria-hidden="true"></span> All students <span class="ns-sample is-grade" aria-hidden="true"></span> Some grades <span class="ns-sample is-if" aria-hidden="true"></span> If needed</p>
+  <div class="ns-sub">
+    <p class="ns-sub-all">Each district's subscribe link is in the list below.</p>
+    {%- for district in school.districts -%}
+    <div class="ns-sub-one" data-d="{{ district.slug }}">
+      {%- include calendar-subscribe.html city=district.id name=district.feed_name path=district.feed_path -%}
+    </div>
+    {%- endfor -%}
+  </div>
   {%- if school_month_count == 0 -%}
   <p class="no-school-empty">No upcoming no-school days are listed.</p>
   {%- else -%}
-  {%- for month in school_months -%}
-  <h2 class="no-school-month" id="{{ month.id }}">{{ month.label }}</h2>
-  <table class="no-school">
-    <caption class="visually-hidden">{{ month.label }} no-school days by district</caption>
-    <thead>
-      <tr>
-        <th scope="col">Date</th>
-        {%- for district in school.districts -%}
-        <th scope="col">{{ district.short }}</th>
-        {%- endfor -%}
-      </tr>
-    </thead>
-    <tbody>
-      {%- for row in month.rows -%}
-      <tr>
-        <th scope="row">
-          <span class="no-school-when">{{ row.when }}</span>
-          {%- assign row_shared = row.shared | append: "" -%}
-          {%- if row_shared.size > 0 -%}
-          <span class="no-school-shared">{{ row.shared }}</span>
-          {%- endif -%}
-        </th>
-        {%- for cell in row.cells -%}
-        <td{% if cell.off %} class="is-off"{% endif %}>
-          {%- if cell.off -%}
-          <span class="no-school-name">{{ cell.short }}</span>
-          {%- assign mark_count = cell.marks | size -%}
-          {%- if mark_count > 0 -%}
+  <div class="ns-months">
+    {%- for month in school_months -%}
+    <section class="ns-month" aria-labelledby="{{ month.id }}">
+      <h2 id="{{ month.id }}">{{ month.label }}</h2>
+      <div class="ns-grid">
+        <div class="ns-dow" aria-hidden="true">Su</div>
+        <div class="ns-dow" aria-hidden="true">Mo</div>
+        <div class="ns-dow" aria-hidden="true">Tu</div>
+        <div class="ns-dow" aria-hidden="true">We</div>
+        <div class="ns-dow" aria-hidden="true">Th</div>
+        <div class="ns-dow" aria-hidden="true">Fr</div>
+        <div class="ns-dow" aria-hidden="true">Sa</div>
+        {%- for week in month.weeks -%}
+        {%- for cell in week -%}
+        {%- if cell.pad -%}
+        <div class="ns-day is-pad"></div>
+        {%- else -%}
+        <div class="ns-day{% if cell.past %} is-past{% endif %}{% if cell.today %} is-today{% endif %}">
+          <span class="ns-num" aria-hidden="true">{{ cell.day }}</span>
+          <span class="visually-hidden">{{ cell.label }}</span>
+          <span class="ns-marks">
+            {%- for mark in cell.marks -%}
+            <span class="ns-dot is-{{ mark.kind }}" data-d="{{ mark.slug }}"><span class="visually-hidden">{{ mark.short }}, {{ mark.text }}</span></span>
+            {%- endfor -%}
+          </span>
           {%- for mark in cell.marks -%}
-          <span class="no-school-mark">{{ mark }}</span>
+          <span class="ns-one is-{{ mark.kind }}" data-d="{{ mark.slug }}">{{ mark.text }}</span>
           {%- endfor -%}
-          {%- else -%}
-          <span class="no-school-off">Off</span>
-          {%- endif -%}
-          {%- endif -%}
-        </td>
+        </div>
+        {%- endif -%}
         {%- endfor -%}
-      </tr>
-      {%- endfor -%}
-    </tbody>
-  </table>
-  {%- endfor -%}
+        {%- endfor -%}
+      </div>
+    </section>
+    {%- endfor -%}
+  </div>
   {%- endif -%}
-  {%- assign school_plans = school.plans -%}
-  {%- for plan in school_plans -%}
-  {%- if forloop.first -%}
-  {%- include card-grid.html events=plan.events heading=plan.heading show_city=true eager=2 priority=true -%}
-  {%- else -%}
-  {%- include card-grid.html events=plan.events heading=plan.heading show_city=true -%}
-  {%- endif -%}
-  {%- endfor -%}
+  <script>
+    (function () {
+      var sel = document.getElementById("ns-district");
+      if (!sel) return;
+      var key = "no-school-district";
+      function known(slug) {
+        return !!(slug && sel.querySelector('option[value="' + slug + '"]'));
+      }
+      function remember(slug) {
+        try {
+          if (slug) localStorage.setItem(key, slug);
+          else localStorage.removeItem(key);
+        } catch (e) {}
+      }
+      function show(slug) {
+        if (known(slug)) {
+          document.documentElement.setAttribute("data-ns", slug);
+          sel.value = slug;
+          return slug;
+        }
+        document.documentElement.removeAttribute("data-ns");
+        sel.value = "";
+        return "";
+      }
+      function readSaved() {
+        try { return localStorage.getItem(key) || ""; } catch (e) { return ""; }
+      }
+      function fromLocation() {
+        var params = new URLSearchParams(location.search);
+        if (!params.has("district")) {
+          show(readSaved());
+          return;
+        }
+        var picked = params.get("district") || "";
+        if (picked === "" || picked === "all" || known(picked)) {
+          remember(show(picked === "all" ? "" : picked));
+          return;
+        }
+        show(readSaved());
+      }
+      sel.addEventListener("change", function () {
+        var slug = show(sel.value);
+        remember(slug);
+        var url = new URL(location.href);
+        if (slug) url.searchParams.set("district", slug);
+        else url.searchParams.delete("district");
+        var next = url.pathname + url.search + url.hash;
+        var now = location.pathname + location.search + location.hash;
+        if (next !== now) history.pushState(null, "", url);
+      });
+      window.addEventListener("popstate", fromLocation);
+    })();
+  </script>
   <h2 class="no-school-month" id="early-release">Early release</h2>
   <p class="no-school-lead">Weekly early release and late start are not days off. Each district's pattern is below, with the calendar it came from.</p>
   <ul class="no-school-districts">
