@@ -1,6 +1,7 @@
 {%- comment -%}
   Empty-state suggestion.
-  mode: missing, filter, or blank.
+  mode: missing, filter, button, or blank.
+  button renders only the suggest link. subject overrides the mail subject.
   name: mail subject. topic: "No {topic} events are listed yet."
   opening: a custom first sentence. The ask follows it.
   town: playground map town id. A city page uses page.city when town is blank.
@@ -9,8 +10,11 @@
 {%- assign empty_name = include.name | append: "" | strip -%}
 {%- assign empty_topic = include.topic | append: "" | strip -%}
 {%- assign empty_opening = include.opening | append: "" | strip -%}
+{%- assign empty_subject = include.subject | append: "" | strip -%}
 {%- capture empty_ask -%}Know of one? Or a school, library, church or neighborhood group with a family events calendar we should be checking? Tell us and we'll add it.{%- endcapture -%}
-{%- if empty_mode == "missing" -%}
+{%- if empty_subject.size > 0 -%}
+  {%- assign mail_subject = empty_subject -%}
+{%- elsif empty_mode == "missing" -%}
   {%- assign mail_subject = "Suggestion from the 404 page" -%}
 {%- elsif empty_name.size > 0 -%}
   {%- capture mail_subject -%}Suggestion for {{ empty_name }}{%- endcapture -%}
@@ -29,6 +33,9 @@ Date:{%- endcapture -%}
 {%- else -%}
   {%- assign play_href = "/playgrounds/" -%}
 {%- endif -%}
+{%- if empty_mode == "button" -%}
+<p><a class="empty-suggest-btn" href="mailto:suggestions@eastsidecalendar.com?subject={{ mail_subject | strip | mail_escape }}&amp;body={{ mail_body | strip | mail_escape }}">Suggest an event or calendar</a></p>
+{%- else -%}
 <div class="empty-suggest{% if empty_mode == "filter" %} filter-empty{% endif %}"{% if empty_mode == "filter" %} hidden{% endif %}>
   {%- if empty_mode == "missing" -%}
   <p>We couldn't find that page. Maybe it moved, or the event already happened.</p>
@@ -48,3 +55,4 @@ Date:{%- endcapture -%}
   <p class="empty-play"><a href="{{ play_href | strip | relative_url }}">Head to a playground instead</a></p>
   <a class="empty-suggest-btn" href="mailto:suggestions@eastsidecalendar.com?subject={{ mail_subject | strip | mail_escape }}&amp;body={{ mail_body | strip | mail_escape }}">Suggest an event or calendar</a>
 </div>
+{%- endif -%}
