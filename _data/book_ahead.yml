@@ -1,0 +1,138 @@
+# Ticketed family events for /book-ahead/.
+# The daily prune deletes a row whose end is before today in
+# America/Los_Angeles, and any row with sold_out: true.
+# Do not add summer camps. Add a spring or summer ticketed family event
+# when the organizer posts it. Price stays in the blurb. Do not set cost.
+# ticket_line replaces the on-sale sentence. tickets_on is the sale date.
+# Verify dates, price, and ticket status on the organizer's ticket page.
+- id: remlinger-harvest
+  name: Remlinger Farms Fall Harvest Festival
+  city: carnation
+  address: "Remlinger Farms, 32610 NE 32nd St"
+  start: "2026-09-26"
+  end: "2026-11-01"
+  when: "Fri Sep 26 through Sun Nov 1, 10 a.m. to 6 p.m."
+  description: "The fall harvest festival at the farm, open Friday through Sunday, with rides and animals on the grounds. This is the ticketed farm day that sells out, not a holiday show. Online tickets are $33.95 for ages 2 to 65, $31.95 for ages 66 and up or a disability, and free under 2. The gate is $1 more. Saturdays in mid-October often sell out."
+  source: https://remlingerfarms.com/fall-harvest-festival/
+  source_label: Tickets
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/carnation/remlinger-farms.webp
+    alt: Remlinger Farms at sunset, with the farm grounds, rides, and the Snoqualmie Valley hills behind them.
+    credit: "Photo: Remlinger1, CC BY-SA 4.0"
+    credit_url: https://commons.wikimedia.org/wiki/File:Remlinger_Farms_at_Sunset.jpg
+- id: garden-dlights
+  name: "Garden d'Lights"
+  city: bellevue
+  address: "Bellevue Botanical Garden, 12001 Main St"
+  start: "2026-11-28"
+  end: "2027-01-03"
+  when: "Sat Nov 28, 2026 through Sun Jan 3, 2027"
+  tickets_on: "2026-10-15"
+  description: "A walk through Bellevue Botanical Garden after dark, with lights shaped into plants, animals, and waterfalls. Closed Christmas Day. Ages 11 and older are $10. Ages 10 and under are free. $5 nights are Monday through Thursday, Nov 30 to Dec 3 and Dec 7 to Dec 10. First entry is 4:30 p.m. General last entry is 9 p.m., and the lights go out at 9:30 p.m. On $5 nights, last entry is 8 p.m. Each ticket is a half-hour entry time, and tickets are not sold at the door. Tuesday Dec 8 is a sensory-friendly night."
+  source: https://bellevuebotanical.org/garden-dlights/
+  source_label: Tickets
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/lights/garden-dlights.webp
+    alt: Light sculptures along a path at Bellevue Botanical Garden.
+    credit: "Photo: Steven Pavlov, CC BY 4.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Garden_d%E2%80%99Lights_2008_at_the_Bellevue_Botanical_Garden,_img011.jpg"
+- id: north-pole-limited
+  name: North Pole Limited Santa Train
+  city: north-bend
+  address: "North Bend Depot, 205 E McClellan St"
+  start: "2026-11-28"
+  end: "2026-12-20"
+  when: "Nov 28 and 29, Dec 5 to 7, Dec 12 and 13, and Dec 19 and 20"
+  description: "A Santa train from the North Bend Depot, about two hours, with time in the Train Shed, a visit with Santa in the Chapel Car, a gift, cookies, and a hot drink. Tickets are $39 for ages 2 and up. Children under 2 do not need a ticket. These usually sell out before the first departure. The museum does not refund a ticket unless the train does not run."
+  source: https://shop.trainmuseum.org/Events.aspx
+  source_label: Tickets
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/snoqualmie/train-shed.webp
+    alt: Historic rail cars inside the Train Shed Exhibit Hall at the Northwest Railway Museum in Snoqualmie.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:2025-05-24,_Train_Shed_Exhibit_Hall,_Northwest_Railway_Museum_(Snoqualmie,_Washington),_142029.jpg"
+- id: kidstage-footloose
+  name: Village Theatre KIDSTAGE Footloose
+  city: issaquah
+  address: "Hunt Family Theatre, 120 Front St N"
+  start: "2026-12-04"
+  end: "2026-12-20"
+  when: "Dec 4 through Dec 20"
+  ticket_line: "Tickets go on sale soon."
+  description: "Village Theatre KIDSTAGE presents Footloose at the Hunt Family Theatre in Issaquah. The theatre says tickets go on sale soon. A price and the showtimes are not posted yet."
+  source: https://villagetheatre.org/two-great-kidstage-shows-coming-december-2026/
+  source_label: Tickets
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/issaquah/village-theatre.webp
+    alt: Village Theatre in Issaquah, a brick building with a tower and a marquee over the entrance.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    credit_url: https://commons.wikimedia.org/wiki/File:Issaquah_-_Village_Theatre_04.jpg
+- id: yuletide-express
+  name: Yuletide Express Santa Train
+  city: snoqualmie
+  address: "Snoqualmie Depot, 38625 SE King St"
+  start: "2026-12-04"
+  end: "2026-12-18"
+  when: "Dec 4, Dec 11, and Dec 18"
+  description: "A shorter Santa train from the Snoqualmie Depot, about 40 minutes, running past Snoqualmie Falls. Santa visits each family, with a gift and a peppermint. Tickets are $30 for ages 2 and up. Children under 2 ride free. These usually sell out soon after they go on sale."
+  source: https://shop.trainmuseum.org/Events.aspx
+  source_label: Tickets
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/snoqualmie/depot.webp
+    alt: The historic Snoqualmie Depot, home of the Northwest Railway Museum.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    credit_url: https://commons.wikimedia.org/wiki/File:Snoqualmie_Depot_01.jpg
+- id: issaquah-nutcracker
+  name: Issaquah Dance Theatre Ensemble The Nutcracker
+  city: issaquah
+  address: "Longman Performing Arts Center, Issaquah High School"
+  start: "2026-12-05"
+  end: "2026-12-06"
+  when: "Dec 5 and Dec 6"
+  ticket_line: "A ticket price is not posted yet."
+  description: "Issaquah Dance Theatre Ensemble's Nutcracker at Longman Performing Arts Center. Each day has an 11 a.m. one-hour show for a young audience, plus full shows at 1:30 p.m. and 5:30 p.m. A ticket price is not posted yet. Children under 2 on a lap do not need a ticket. Sales are final, and an exchange is $15."
+  source: https://www.issaquahdance.com/nutcracker
+  source_label: Tickets
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/issaquah/issaquah-high-school.webp
+    alt: Issaquah High School, a long brick building with a covered walkway.
+    credit: "Photo: Nrunje, CC BY-SA 4.0"
+    credit_url: https://commons.wikimedia.org/wiki/File:Issaquah_High_School.jpg
+- id: ibt-nutcracker
+  name: International Ballet Theatre The Nutcracker
+  city: bellevue
+  address: "Meydenbauer Theatre, 11100 NE 6th St"
+  start: "2026-12-11"
+  end: "2026-12-23"
+  when: "Dec 11 through Dec 23"
+  description: "International Ballet Theatre's Nutcracker at Meydenbauer Theatre. Reserved seats, fees included: $70 for ages 15 and up, $55 for military and for seniors 60 and older, and $45 for youth through age 14. Every person needs a ticket. Babies in arms are not admitted. The program is 1 hour 50 minutes, plus a 15-minute intermission. Friday Dec 11 and Friday Dec 18 are at 6 p.m. Saturday Dec 12, Saturday Dec 19, and Sunday Dec 20 are at 1 p.m. and 5 p.m. Sunday Dec 13 is at 1 p.m. only. Monday Dec 21, Tuesday Dec 22, and Wednesday Dec 23 are at 1 p.m."
+  source: https://www.ibtbellevue.com/nutcracker-dec-2026
+  source_label: Tickets
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/bellevue/meydenbauer-center.webp
+    alt: Meydenbauer Center in downtown Bellevue, a curved glass building beside the street.
+    credit: "Photo: SuddenFrost, CC0"
+    credit_url: https://commons.wikimedia.org/wiki/File:Meydenbauer_Center.jpg
+- id: kirkland-nutcracker
+  name: "Grand Kyiv Ballet The Nutcracker: Symphony of Lights"
+  city: kirkland
+  address: "Kirkland Performance Center, 350 Kirkland Ave"
+  start: "2026-12-17"
+  end: "2026-12-19"
+  when: "Dec 17 through Dec 19, 7 p.m."
+  description: "Grand Kyiv Ballet's Nutcracker: Symphony of Lights at Kirkland Performance Center. Thursday Dec 17, Friday Dec 18, and Saturday Dec 19, all at 7 p.m. Adult tickets are $74 and youth tickets are $64."
+  source: https://www.kpcenter.org/event/the-nutcracker-symphony-of-lights/
+  source_label: Tickets
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/kirkland/performance-center.webp
+    alt: Kirkland Performance Center, a brick building with a glass entry on a downtown corner.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    credit_url: https://commons.wikimedia.org/wiki/File:Kirkland_Performance_Center_02.jpg

@@ -2,9 +2,11 @@
 """Delete events whose last day is before today in America/Los_Angeles.
 
 City pages and _data/{city}_events.yml are the source. This script edits
-those files. It does not hide anything in the browser. A city page that
-loses every event keeps its front matter; the layout then says none are
-listed. Files that lose nothing are left byte for byte.
+those files. It also edits _data/book_ahead.yml: a row comes off when its
+last day is before today, or when sold_out is true. It does not hide
+anything in the browser. A city page that loses every event keeps its
+front matter; the layout then says none are listed. Files that lose
+nothing are left byte for byte.
 
     python3 script/prune-past-events.py
     python3 script/prune-past-events.py --dry-run
@@ -337,6 +339,49 @@ def prune_yaml(path, today, dry_run):
     return removed
 
 
+def book_row_drops(block, today):
+    loaded = yaml.safe_load("".join(block))
+    if isinstance(loaded, list):
+        event = loaded[0] if loaded else None
+    else:
+        event = loaded
+    if not isinstance(event, dict):
+        return False
+    flag = event.get("sold_out")
+    if flag is True or str(flag).strip().lower() == "true":
+        return True
+    return event_is_past(yaml_last_day(block), today)
+
+
+def prune_book_ahead(path, today, dry_run):
+    if not path.is_file():
+        return 0
+    original = path.read_text(encoding="utf-8")
+    header, blocks = split_yaml_events(original)
+    if not blocks:
+        return 0
+    kept = []
+    removed = 0
+    for block in blocks:
+        if book_row_drops(block, today):
+            removed += 1
+            continue
+        kept.append(block)
+    if removed == 0:
+        return 0
+    header_text = "".join(header)
+    if kept:
+        body = "".join("".join(block).rstrip("\n") + "\n" for block in kept)
+        updated = header_text + body
+    else:
+        if header_text and not header_text.endswith("\n"):
+            header_text += "\n"
+        updated = header_text + "[]\n"
+    if updated != original and not dry_run:
+        path.write_text(updated, encoding="utf-8")
+    return removed
+
+
 def self_test():
     today = date(2026, 10, 1)
     # No year in October: next May, not last May.
@@ -380,6 +425,11 @@ def main():
         if count:
             removed_rows += count
             touched.append(f"{path.relative_to(root)}: {count} row{'s' if count != 1 else ''}")
+    book_path = root / "_data" / "book_ahead.yml"
+    book_count = prune_book_ahead(book_path, today, args.dry_run)
+    if book_count:
+        removed_rows += book_count
+        touched.append(f"{book_path.relative_to(root)}: {book_count} row{'s' if book_count != 1 else ''}")
 
     print(f"Pacific date: {today.isoformat()}")
     if not touched:

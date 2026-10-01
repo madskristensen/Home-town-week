@@ -11,6 +11,7 @@ module EastsideCalendar
       site.data["home_lights"] = collect(site, "holiday_lights", "christmas", "Home lights photos:")
       site.data["halloween_map"] = collect(site, "halloween_decorations", "halloween", "Halloween decorations photos:")
       site.data["farmers_market_page"] = collect_markets(site)
+      site.data["book_ahead_cards"] = collect_book_ahead(site)
     end
 
     def collect(site, data_key, pool_name, log_label)
@@ -308,6 +309,108 @@ module EastsideCalendar
       return nil unless File.file?(path)
 
       built
+    end
+
+    # Book-ahead rows leave the page when the last day has passed or the
+    # organizer marks the event sold out. The daily prune deletes those rows.
+    def collect_book_ahead(site)
+      today = EventCalendar.pacific_today(site.time)
+      names = city_names(site.data["cities"])
+      rows = Array(site.data["book_ahead"]).select { |row| row.is_a?(Hash) }
+      items = []
+      rows.each do |row|
+        item = book_item(row, names, today, site)
+        items << item if item
+      end
+      items.sort_by! { |item| [item["sort_on"].to_s, item["name"].to_s.downcase] }
+      items.each { |item| item.delete("sort_on") }
+      Jekyll.logger.info("Book ahead:", "#{items.size} events")
+      items
+    end
+
+    def book_item(row, names, today, site)
+      return nil if sold_out?(row)
+
+      start_on = book_date(row["start"])
+      end_on = book_date(row["end"]) || start_on
+      return nil unless start_on
+      return nil if end_on < today
+
+      city_id = row["city"].to_s.strip
+      city_name = names[city_id].to_s
+      name = squash(row["name"])
+      if city_name.empty?
+        Jekyll.logger.error("Book ahead:", "unknown city for #{name}")
+        return nil
+      end
+
+      address = squash(row["address"])
+      description = squash(row["description"])
+      when_text = squash(row["when"])
+      source = row["source"].to_s.strip
+      if name.empty? || address.empty? || description.empty? || when_text.empty?
+        Jekyll.logger.error("Book ahead:", "incomplete row #{name}")
+        return nil
+      end
+      unless source.match?(%r{\Ahttps://\S+\z})
+        Jekyll.logger.error("Book ahead:", "no ticket link for #{name}")
+        return nil
+      end
+
+      photo = market_photo(row["photo"], name, site)
+      unless photo
+        Jekyll.logger.error("Book ahead:", "no usable photo for #{name}")
+        return nil
+      end
+
+      label = squash(row["source_label"])
+      label = "Tickets" if label.empty?
+      joiner = when_text.end_with?(".") ? " " : ". "
+      item = {
+        "id" => slug(row["id"], name),
+        "name" => name,
+        "city" => city_name,
+        "city_id" => city_id,
+        "address" => address,
+        "description" => description,
+        "nights" => "#{when_text}#{joiner}#{ticket_status(row, today)}",
+        "source" => source,
+        "source_label" => label,
+        "start" => start_on.iso8601,
+        "end" => end_on.iso8601,
+        "sort_on" => start_on.iso8601
+      }
+      apply_photo!(item, photo)
+      item
+    end
+
+    def ticket_status(row, today)
+      line = squash(row["ticket_line"])
+      return line unless line.empty?
+
+      on_sale = book_date(row["tickets_on"])
+      if on_sale && today < on_sale
+        return "Tickets go on sale #{on_sale.strftime("%b %-d")}."
+      end
+
+      "Tickets are on sale now."
+    end
+
+    def sold_out?(row)
+      value = row["sold_out"]
+      value == true || value.to_s.strip.casecmp("true").zero?
+    end
+
+    def book_date(value)
+      return value if value.is_a?(Date)
+      return Date.new(value.year, value.month, value.day) if value.is_a?(Time) || value.is_a?(DateTime)
+
+      text = value.to_s.strip
+      return nil if text.empty?
+
+      Date.iso8601(text[0, 10])
+    rescue ArgumentError, TypeError
+      nil
     end
 
     def pack_towns(items)
