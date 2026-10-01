@@ -207,6 +207,14 @@ Lake Washington High School's fall play. A magazine writer is stalked after a bl
 
 [LWHS Theatre](https://www.lwhstheatre.com/)
 
+### Juanita Bay Park East Habitat Stewardship
+<p class="event-when">Sat Oct 17 · 9:30 a.m.–12:00 p.m.</p>
+<p class="event-place">Juanita Bay Park East, 10442 Forbes Creek Dr</p>
+
+A free outdoor work morning with Green Kirkland. Volunteers pull blackberry and ivy, plant, mulch, and weed. Tools and training are provided. All ages can come. Children under 14 stay with an adult. Meet at 10442 Forbes Creek Drive, not the main Juanita Bay Park lot. Register so the crew has enough tools.
+
+[Juanita Bay Park East](https://www.eventbrite.com/e/juanita-bay-park-east-habitat-stewardship-day-tickets-2000273291260)
+
 ### Learning about Dyslexia
 <p class="event-when">Sat Oct 17 · 11:30 a.m.–1:00 p.m.</p>
 <p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
@@ -324,6 +332,14 @@ A free Día de Muertos celebration at Marina Park, presented by Mundo Catrina. T
 Stories and a hands-on science activity, planned for ages 3 to 8. Other ages can come too. No registration.
 
 [STEAM Family Story Time](https://kcls.bibliocommons.com/events/6ab6edb060748300382995b7)
+
+### Lil' Gobbler Run
+<p class="event-when">Sun Nov 15 · 9:30 a.m.</p>
+<p class="event-place">Juanita Beach Park, 9703 NE Juanita Dr</p>
+
+The kids race at the Kirkland Turkey Trot is a quarter-mile inside Juanita Beach Park, for ages 2 to 6. It starts at 9:30 a.m. Registration is $20. The 10K starts at 9:00 a.m. and the 5K at 9:05 a.m.
+
+[Lil' Gobbler Run](https://runsignup.com/Race/WA/Kirkland/KirklandTurkeyTrot)
 
 ### A Christmas Story
 <p class="event-when">Fri Dec 11 through Sun Dec 20</p>

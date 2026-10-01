@@ -251,6 +251,14 @@ The Renton Downtown Partnership's family afternoon. Start with trick-or-treating
 
 [Olde Fashioned Halloween Party](https://www.rentondowntown.com/events/halloween)
 
+### Truck or Treat
+<p class="event-when">Fri Oct 30 · 5:00–7:30 p.m.</p>
+<p class="event-place">Renton Community Center, 1715 Maple Valley Hwy</p>
+
+Two sessions, inside the community center and outside with the trucks. The sensory-friendly stroll is 5:00–6:00 p.m., with flashing lights, noise, and music kept down. The walk-through is 6:00–7:30 p.m., with treat stations, specialty vehicles, and Halloween music. Costumes are welcome. All ages can come. Registration is $15 for Renton residents and $18 for everyone else.
+
+[Truck or Treat](https://www.rentonwa.gov/TruckorTreat)
+
 ### Station 16 Open House
 <p class="event-when">Sat Oct 31 · 9:00–11:00 a.m.</p>
 <p class="event-place">Renton Fire Station 16, 12923 156th Ave SE</p>

@@ -451,6 +451,10 @@
       url: "https://infinityfarmissaquah.com/upcoming-events"
       type: farm
       notes: "16523 Issaquah-Hobart Road SE. Fall Y'all Market and Tract-or-Treat when the farm page posts the date."
+    - name: "Issaquah Schools Foundation"
+      url: "https://isfdn.org/events/"
+      type: school
+      notes: "Family fundraisers, including the Monster Mash 5K. Skip galas."
     - name: "Mountains to Sound Greenway Trust"
       url: "https://mtsgreenway.org/"
       type: nature
@@ -599,6 +603,14 @@
       url: "https://thevillageattotemlake.com/events"
       type: venue
       notes: "Family events at 11901 NE Village Plaza. Confirm the year on the event page."
+    - name: "Green Kirkland Partnership"
+      url: "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Green-Kirkland-Partnership"
+      type: nature
+      notes: "Habitat stewardship days. List a date from the Eventbrite registration. Children under 14 stay with an adult. Skip a date that is only on a scraper."
+    - name: "Kirkland Turkey Trot"
+      url: "https://kirklandturkeytrot.com/"
+      type: sports
+      notes: "The Lil' Gobbler Run is the kids race at Juanita Beach Park. Use the registration page for the current price and start time."
     - name: "Explore Kirkland"
       url: "https://www.explorekirkland.com/events"
       type: downtown
@@ -815,6 +827,10 @@
       url: "https://eastsideaudubon.org/calendar"
       type: nature
       notes: "Bird walks at Marymoor and the watershed. List a walk when the page welcomes children. Skip classes and the book club."
+    - name: "Orca Running"
+      url: "https://www.orcarunning.com/race/captain-jacks-treasure-run/"
+      type: sports
+      notes: "Captain Jack's Treasure Run in Redmond. The kids race is the family listing. Confirm the price on the race page."
     - name: "AllEvents Redmond"
       url: "https://allevents.in/redmond"
       type: allevents
@@ -1099,6 +1115,10 @@
       url: "https://www.jbfamilygrowers.com/events"
       type: farm
       notes: "Pumpkin Farm and Puzzle Patch at 14063 NE 145th Street. Open Thursday 2:00 to 7:00 p.m. and Friday through Sunday 9:00 a.m. to 7:00 p.m., Sept 19 through Oct 31, 2026. Dated family days stay the Sunflower Festival and Pup-kin Patch. Regular open hours are not separate rows."
+    - name: "Seattle Thrillers"
+      url: "https://seattlethrillers.org/"
+      type: venue
+      notes: "Thrill the World at Woodin Creek Village. The time is on the group's event page, not the performance list."
     - name: "WM Cascade Recycling Center"
       url: "https://www.wmnorthwest.com/recyclingcenters/recyclingcentertours/"
       type: venue

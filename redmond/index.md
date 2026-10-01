@@ -289,6 +289,14 @@ A darker walk through the same community center. Ages 12 and older are recommend
 
 [Haunted House](https://app.amilia.com/store/en/city-of-redmond/shop/activities/7084090)
 
+### Captain Jack's Treasure Run
+<p class="event-when">Sun Oct 25 · 9:45 a.m.–12:30 p.m.</p>
+<p class="event-place">Sammamish River Trail, 15670 NE 85th St, Redmond</p>
+
+The kids race starts at 9:45 a.m. on a course of about a third of a mile, from the same line as the longer races on the Sammamish River Trail. It is $10 for ages 12 and under, and each child gets a medal. The 5K starts at 10:00 a.m. Trunk-or-treat begins at 10:15 a.m. The course closes at 12:30 p.m.
+
+[Captain Jack's Treasure Run](https://www.orcarunning.com/race/captain-jacks-treasure-run/)
+
 ### Spooky Spectacular
 <p class="event-when">Mon Oct 26 · 6:00–7:30 p.m.</p>
 <p class="event-place">Redmond Senior & Community Center, 8703 160th Ave NE</p>

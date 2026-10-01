@@ -115,6 +115,13 @@
   end: "2026-10-21T17:30:00-07:00"
   place: "Woodinville Library, 17105 Avondale Road NE"
   same_as: "https://kcls.bibliocommons.com/events/6aa8a06d4b3b06003083cbc1"
+- name: "Thrill the World Eastside"
+  setting: "Outdoor"
+  tags: [halloween]
+  start: "2026-10-24T11:00:00-07:00"
+  end: "2026-10-24T16:15:00-07:00"
+  place: "Woodin Creek Village, 17255 135th Ave NE, Woodinville"
+  same_as: "https://www.meetup.com/seattlethrillers/events/313570589/"
 - name: "Full STEAM Ahead"
   cost: "Free"
   setting: "Indoor"

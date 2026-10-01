@@ -194,6 +194,15 @@
   end: "2026-10-24T21:00:00-07:00"
   place: "Redmond Community Center at Marymoor Village, 6505 176th Ave NE"
   same_as: "https://app.amilia.com/store/en/city-of-redmond/shop/activities/7084090"
+- name: "Captain Jack's Treasure Run"
+  cost: "$10"
+  setting: "Outdoor"
+  signup: true
+  tags: [halloween]
+  start: "2026-10-25T09:45:00-07:00"
+  end: "2026-10-25T12:30:00-07:00"
+  place: "Sammamish River Trail, 15670 NE 85th St, Redmond"
+  same_as: "https://www.orcarunning.com/race/captain-jacks-treasure-run/"
 - name: "Spooky Spectacular"
   cost: "Free"
   setting: "Indoor"

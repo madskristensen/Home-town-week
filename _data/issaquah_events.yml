@@ -160,6 +160,16 @@
   end: "2026-10-24T14:00:00-07:00"
   place: "Historic Shell Station, 232 Front St N"
   same_as: "https://www.visitissaquahwa.com/series/fall-farm-fresh-market-3/"
+- name: "Monster Mash 5K"
+  cost: "$40 to $45"
+  ages: "All ages"
+  setting: "Outdoor"
+  signup: true
+  tags: [halloween]
+  start: "2026-10-24T10:00:00-07:00"
+  end: "2026-10-24T12:00:00-07:00"
+  place: "Lake Sammamish Boat Launch, 4455 East Lake Sammamish Pkwy SE"
+  same_as: "https://isfdn.org/events/2026-monster-mash-5k/"
 - name: "Zombie Walk"
   cost: "Free"
   ages: "All ages"

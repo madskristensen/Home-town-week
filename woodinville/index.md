@@ -130,6 +130,14 @@ Ages 6 to 12, and caregivers are welcome. This session uses the fable The Tortoi
 
 [Aesop and Art](https://kcls.bibliocommons.com/events/6aa8a06d4b3b06003083cbc1)
 
+### Thrill the World Eastside
+<p class="event-when">Sat Oct 24 · 11:00 a.m.–4:15 p.m.</p>
+<p class="event-place">Woodin Creek Village, 17255 135th Ave NE, Woodinville</p>
+
+A public dance festival at the corner of 135th Ave NE and NE Village Square Dr. Other performances fill the early afternoon, the Thriller dance is at 3:00 p.m., and there is an activity tent for children and a costume contest. The afternoon ends around 4:15. Dancers check in and sign a waiver. Spectator donations go to the Woodinville Storehouse Food Bank.
+
+[Thrill the World Eastside](https://www.meetup.com/seattlethrillers/events/313570589/)
+
 ### Full STEAM Ahead
 <p class="event-when">Wed Oct 28 · 4:30–5:30 p.m.</p>
 <p class="event-place">Woodinville Library, 17105 Avondale Road NE</p>

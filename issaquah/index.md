@@ -209,6 +209,14 @@ School-age kids read aloud to a certified therapy dog, with an adult. Free.
 
 [Fall market series](https://www.visitissaquahwa.com/series/fall-farm-fresh-market-3/)
 
+### Monster Mash 5K
+<p class="event-when">Sat Oct 24 · 10:00 a.m.–12:00 p.m.</p>
+<p class="event-place">Lake Sammamish Boat Launch, 4455 East Lake Sammamish Pkwy SE</p>
+
+A family 5K on a flat paved out-and-back at the boat launch. Costumes are welcome, and all ages can walk or run. Registration is $40 through October 11 and $45 after that, plus a signup fee. Parking on site needs a Discover Pass.
+
+[Monster Mash 5K](https://isfdn.org/events/2026-monster-mash-5k/)
+
 ### Zombie Walk
 <p class="event-when">Sat Oct 24 · 1:30–5:30 p.m.</p>
 <p class="event-place">Historic Shell Station, 232 Front Street N, Issaquah</p>
