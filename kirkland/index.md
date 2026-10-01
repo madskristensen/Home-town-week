@@ -74,12 +74,6 @@ Free play-based math for ages 3 to 10 with a parent or caregiver. Games, a short
 <p class="event-when">Sat Oct 3 · 1:00–2:00 p.m.</p>
 <p class="event-place">Kingsgate Library, 12315 NE 143rd St</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/books.webp"
-   alt="A stack of hardcover books on a wooden table."
-   credit="Photo: Evan Bench, CC BY 2.0"
-   source="https://commons.wikimedia.org/wiki/File:Books_in_a_stack_(a_stack_of_books)_-_Flickr_-_austinevan.jpg" %}
-
 School-age kids (about ages 6 to 11) read to a therapy dog in 15-minute slots at 1:00, 1:15, 1:30, and 1:45. Please register.
 
 [Reading with Rover](https://kcls.bibliocommons.com/events/6a99d77b36204e08fbb96aa1)
@@ -110,12 +104,6 @@ Drop-in playdough and natural materials, for not-so-scary monsters. A relaxed ro
 <p class="event-when">Tue Oct 6 · 1:00–1:30 p.m. and 6:30–7:00 p.m.</p>
 <p class="event-place">Kingsgate Library, 12315 NE 143rd St</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/open-book.webp"
-   alt="An open book lying flat."
-   credit="Photo: Ben White, CC0"
-   source="https://commons.wikimedia.org/wiki/File:Open_book_(Unsplash).jpg" %}
-
 Stories, songs, and play for newborns through age 6 with an adult. Pick one session. No registration. The afternoon hour is also on Tue Oct 13. The evening hour is also on Tue Oct 13 and Tue Oct 20. A Friday session is Fri Oct 21 at 10:30 a.m.
 
 [Family Story Time](https://kcls.bibliocommons.com/events/6a7f4c8060ccaf01c01e3cea)
@@ -140,12 +128,6 @@ Newborns to 12 months with an adult. A short play time follows. No registration.
 <p class="event-when">Fri Oct 9 · 10:30–11:00 a.m.</p>
 <p class="event-place">Kingsgate Library, 12315 NE 143rd St</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/stack-of-books.webp"
-   alt="A stack of hardcover books tied with twine."
-   credit="Photo: mycurrency.com, CC BY-SA 4.0"
-   source="https://commons.wikimedia.org/wiki/File:Stack_of_Books_for_decor.jpg" %}
-
 Stories, music, and movement in Japanese for all ages with an adult. The same half hour is also on Fri Oct 23.
 
 [Oct 9](https://kcls.bibliocommons.com/events/6aa0a2e1a3fb9722897b273c) · [Oct 23](https://kcls.bibliocommons.com/events/6aa1eacb65abe8002a77f678)
@@ -161,12 +143,6 @@ Boards and pieces are provided. No registration. Kids, teens, and adults are wel
 ### After School Hangout
 <p class="event-when">Mon Oct 12 · 3:30–5:00 p.m.</p>
 <p class="event-place">Kingsgate Library, 12315 NE 143rd St</p>
-
-{% include event-photo.html
-   src="/assets/images/themes/board-game-pieces.webp"
-   alt="Small wooden and colored pieces from a board game."
-   credit="Photo: Mshuang2, CC0"
-   source="https://commons.wikimedia.org/wiki/File:Board_game_pieces.jpg" %}
 
 A drop-in afternoon for middle and high school students. Games, crafts, homework space, and snacks from Friends of the Kingsgate Library. No registration. The same hours are also on Mon Oct 26.
 

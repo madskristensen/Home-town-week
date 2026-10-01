@@ -35,12 +35,6 @@ Teacher and storyteller Sam Sanders signs stories, movement, and rhymes for d/De
 <p class="event-when">Fri Oct 23 · 10:00–10:30 a.m. and 10:45–11:15 a.m.</p>
 <p class="event-place">Kenmore Library, 6531 NE 181st Street</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/books.webp"
-   alt="A stack of hardcover books on a wooden table."
-   credit="Photo: Evan Bench, CC BY 2.0"
-   source="https://commons.wikimedia.org/wiki/File:Books_in_a_stack_(a_stack_of_books)_-_Flickr_-_austinevan.jpg" %}
-
 Stories, music, and movement for all ages with an adult. Pick one session. No registration. The same mornings are also on Fri Oct 30, and a morning session is also on Fri Nov 6.
 
 [Family Story Time](https://kcls.bibliocommons.com/events/6a81fe3aaafa6100295d009e)
@@ -48,12 +42,6 @@ Stories, music, and movement for all ages with an adult. Pick one session. No re
 ### Builders Club
 <p class="event-when">Sat Oct 24 · 3:00–5:00 p.m.</p>
 <p class="event-place">Kenmore Library, 6531 NE 181st Street</p>
-
-{% include event-photo.html
-   src="/assets/images/themes/wooden-blocks.webp"
-   alt="Two sets of plain wooden unit blocks."
-   credit="Photo: Ragesoss, CC BY-SA 3.0"
-   source="https://commons.wikimedia.org/wiki/File:Two_sets_of_wooden_unit_blocks.jpeg" %}
 
 Open building with materials the library supplies. Ages 8 and older can come on their own. Ages 5 to 7 need an adult. No registration.
 

@@ -487,3 +487,57 @@ venues:
     credit: "Photo: Fall City Farms"
     license: organizer
     source: https://fallcityfarms.com/
+  - keys: ["bellevue youth theatre"]
+    image: /assets/images/bellevue/bellevue-youth-theatre.webp
+    alt: Bellevue Youth Theatre, a low building with a covered walk and a sign by the entrance.
+    credit: "Photo: City of Bellevue"
+    license: organizer
+    source: https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre
+  - keys: ["bellevue family ymca"]
+    image: /assets/images/bellevue/bellevue-family-ymca.webp
+    alt: The entrance of Bellevue Family YMCA, with the YMCA sign over the doors.
+    credit: "Photo: YMCA of Greater Seattle"
+    license: organizer
+    source: https://www.seattleymca.org/locations/bellevue-family-ymca
+  - keys: ["northshore ymca"]
+    image: /assets/images/bothell/northshore-ymca.webp
+    alt: Northshore YMCA in Bothell, a modern building with a glass front.
+    credit: "Photo: YMCA of Greater Seattle"
+    license: organizer
+    source: https://www.seattleymca.org/locations/northshore-ymca
+  - keys: ["sammamish community ymca", "sammamish ymca"]
+    image: /assets/images/sammamish/sammamish-ymca.webp
+    alt: Sammamish Community YMCA, a low building with a covered entrance.
+    credit: "Photo: YMCA of Greater Seattle"
+    license: organizer
+    source: https://www.seattleymca.org/locations/sammamish-community-ymca
+  - keys: ["south bellevue community center"]
+    image: /assets/images/bellevue/south-bellevue-cc.webp
+    alt: The main entrance of South Bellevue Community Center, with the building sign by the doors.
+    credit: "Photo: City of Bellevue"
+    license: organizer
+    source: https://bellevuewa.gov/city-government/departments/parks/community-centers/sbcc
+  - keys: ["crossroads community center"]
+    image: /assets/images/bellevue/crossroads-community-center.webp
+    alt: The games room at Crossroads Community Center, with foosball and air hockey tables and orange chairs.
+    credit: "Photo: City of Bellevue"
+    license: organizer
+    source: https://bellevuewa.gov/city-government/departments/parks/community-centers/crossroads
+  - keys: ["issaquah high school", "longman performing"]
+    image: /assets/images/issaquah/issaquah-high-school.webp
+    alt: Issaquah High School, a long brick building with a covered walkway.
+    credit: "Photo: Nrunje, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:Issaquah_High_School.jpg
+  - keys: ["youth theatre northwest"]
+    image: /assets/images/mercer-island/emmanuel-church.webp
+    alt: Emmanuel Episcopal Church on Mercer Island, a wood and glass building with a steep roof.
+    credit: "Photo: Emmanuel Episcopal Church"
+    license: organizer
+    source: https://www.emmanuelmi.org/
+  - keys: ["lewis creek"]
+    image: /assets/images/bellevue/lewis-creek-visitor-center.webp
+    alt: The back of the Lewis Creek Visitor Center, a wood building with a deck among the trees.
+    credit: "Photo: City of Bellevue"
+    license: organizer
+    source: https://bellevuewa.gov/city-government/departments/parks/nature-and-environment/visitor-centers-environmental-programs/lewis-creek-park-visitor-center

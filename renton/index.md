@@ -25,12 +25,6 @@ Stories, music, and movement in Spanish for all ages with an adult, with play af
 <p class="event-when">Wed Sep 30 · 12:30–1:00 p.m.</p>
 <p class="event-place">Renton Library, 100 Mill Avenue S</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/books.webp"
-   alt="A stack of hardcover books on a wooden table."
-   credit="Photo: Evan Bench, CC BY 2.0"
-   source="https://commons.wikimedia.org/wiki/File:Books_in_a_stack_(a_stack_of_books)_-_Flickr_-_austinevan.jpg" %}
-
 Stories, music, movement, and rhymes in Spanish for young children. No registration. The same half hour is also on Wed Oct 7.
 
 [Spanish Story Time](https://kcls.bibliocommons.com/events/6a7f68a7aafa6100295ca6dc)
@@ -46,12 +40,6 @@ Michael Frayn's backstage farce. Opening night is Fri Oct 2, a pay-what-you-can 
 ### Vietnamese Story Time
 <p class="event-when">Fri Oct 2 · 4:00–5:00 p.m.</p>
 <p class="event-place">Renton Highlands Library, 2801 NE 10th Street</p>
-
-{% include event-photo.html
-   src="/assets/images/themes/open-book.webp"
-   alt="An open book lying flat."
-   credit="Photo: Ben White, CC0"
-   source="https://commons.wikimedia.org/wiki/File:Open_book_(Unsplash).jpg" %}
 
 Stories, music, and movement in Vietnamese for all ages with an adult. The same hour is also on Fri Oct 9.
 
@@ -77,12 +65,6 @@ Signed stories, movement, and rhymes for d/Deaf and hard-of-hearing children and
 <p class="event-when">Mon Oct 5 · 10:30–11:00 a.m.</p>
 <p class="event-place">Renton Library, 100 Mill Avenue S</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/bookcase.webp"
-   alt="A wooden bookcase filled with books."
-   credit="Photo: geosketch, CC BY-SA 4.0"
-   source="https://commons.wikimedia.org/wiki/File:Bookcase_in_Olten.jpg" %}
-
 Stories and songs for ages 1 to 3 with an adult. No registration.
 
 [Toddler Story Time](https://kcls.bibliocommons.com/events/6a90b2edbe148200298a96d3)
@@ -91,12 +73,6 @@ Stories and songs for ages 1 to 3 with an adult. No registration.
 <p class="event-when">Mon Oct 5 · 11:15–11:45 a.m.</p>
 <p class="event-place">Renton Library, 100 Mill Avenue S</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/library-hall.webp"
-   alt="A grand library hall with bookshelves, a painted ceiling, and statues."
-   credit="Photo: Matl, CC BY-SA 3.0"
-   source="https://commons.wikimedia.org/wiki/File:Bookshelf_Prunksaal_OeNB_Vienna_AT_matl00786ch.jpg" %}
-
 A short story time for newborns to 18 months with an adult. No registration.
 
 [Baby Story Time](https://kcls.bibliocommons.com/events/6a90b2e8be148200298a96c5)
@@ -104,12 +80,6 @@ A short story time for newborns to 18 months with an adult. No registration.
 ### Chess Club
 <p class="event-when">Tue Oct 6 · 6:00–7:30 p.m.</p>
 <p class="event-place">Renton Highlands Library, 2801 NE 10th Street</p>
-
-{% include event-photo.html
-   src="/assets/images/themes/chess-staunton.webp"
-   alt="A Staunton chess set on a board, seen from the side."
-   credit="Photo: Wilfredor, CC0"
-   source="https://commons.wikimedia.org/wiki/File:Chess_game_Staunton_No._6_perfil_view_8.jpg" %}
 
 Chess for ages 6 and older, all levels, with high school mentors. Boards are provided while supplies last. No registration.
 

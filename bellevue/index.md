@@ -34,12 +34,6 @@ The Thursday farmers market is the last of the regular season. Thursday morning,
 <p class="event-when">Thu Oct 1 · 10:30 a.m.–12:00 p.m.</p>
 <p class="event-place">Newport Way Library, 14250 SE Newport Way</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/alphabet-blocks.webp"
-   alt="A pile of wooden alphabet blocks."
-   credit="Photo: Bobjgalindo, CC BY 4.0"
-   source="https://commons.wikimedia.org/wiki/File:A_pile_of_alphabet_wooden_blocks.jpg" %}
-
 A Mandarin and English play-and-learn hour for toddlers and preschoolers with a caregiver. The morning can include stories, music, games, or a craft, and staff have parenting and child-care resources on hand. No registration. The same hours are also on Thu Oct 8 and Thu Oct 15.
 
 [Kaleidoscope Play and Learn](https://kcls.bibliocommons.com/events/69d91c2766c3387a9d06651c)
@@ -55,12 +49,6 @@ Stories, music, movement, and rhymes for ages 3 to 5 with an adult. A short play
 ### Baby Story Time
 <p class="event-when">Thu Oct 1 · 11:30 a.m.–12:15 p.m.</p>
 <p class="event-place">Bellevue Library, 1111 110th Ave NE</p>
-
-{% include event-photo.html
-   src="/assets/images/themes/open-book.webp"
-   alt="An open book lying flat."
-   credit="Photo: Ben White, CC0"
-   source="https://commons.wikimedia.org/wiki/File:Open_book_(Unsplash).jpg" %}
 
 Rhymes, songs, and stories for newborns to 12 months with an adult, then up to 15 minutes of play. No registration. Space is limited.
 
@@ -92,12 +80,6 @@ Free sunset market with Peace Peloton: local makers, food, and live performances
 ### Korean Story Time
 <p class="event-when">Fri Oct 2 · 4:45–5:30 p.m.</p>
 <p class="event-place">Newport Way Library, 14250 SE Newport Way</p>
-
-{% include event-photo.html
-   src="/assets/images/themes/books.webp"
-   alt="A stack of hardcover books on a wooden table."
-   credit="Photo: Evan Bench, CC BY 2.0"
-   source="https://commons.wikimedia.org/wiki/File:Books_in_a_stack_(a_stack_of_books)_-_Flickr_-_austinevan.jpg" %}
 
 Stories and songs in Korean, with time to explore Korean culture. The library lists it for preschoolers and early elementary kids. The same hour is also on Fri Oct 9 and Fri Oct 16.
 
@@ -139,12 +121,6 @@ Volunteers 15 and older can still email Stacy Stenslie at sstenslie@bellevuewa.g
 ### Math Club: Math Games
 <p class="event-when">Sat Oct 3 · 2:00–4:00 p.m.</p>
 <p class="event-place">Bellevue Library, 1111 110th Ave NE</p>
-
-{% include event-photo.html
-   src="/assets/images/themes/chess-staunton.webp"
-   alt="A Staunton chess set on a board, seen from the side."
-   credit="Photo: Wilfredor, CC0"
-   source="https://commons.wikimedia.org/wiki/File:Chess_game_Staunton_No._6_perfil_view_8.jpg" %}
 
 Drop-in math games for elementary grades. Activities are grouped for kindergarten and first grade, grades 2 and 3, and grades 4 and 5, and a student can pick the level. This Saturday the games are Connect Four, checkers, and chess.
 
@@ -295,12 +271,6 @@ Open building. Stay the hour or stop in. The library supplies the bricks. All ag
 <p class="event-when">Wed Oct 14 · 3:30–5:30 p.m.</p>
 <p class="event-place">Newport Way Library, 14250 SE Newport Way</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/board-game-pieces.webp"
-   alt="Small wooden and colored pieces from a board game."
-   credit="Photo: Mshuang2, CC0"
-   source="https://commons.wikimedia.org/wiki/File:Board_game_pieces.jpg" %}
-
 Drop-in board games for all abilities. Use the library's games or bring one you like. Teen volunteers can teach a game or sit down and play. Newport Way Library Teen Volunteers sponsor it. No registration.
 
 [Board Game Afternoon](https://kcls.bibliocommons.com/events/6a7f806f3b6c71003e58e9a6)
@@ -324,12 +294,6 @@ Theatre33's Russian-language family play, about an hour, for ages 5 and older. A
 ### LEGO Block Party
 <p class="event-when">Sat Oct 17 · 2:00–4:00 p.m.</p>
 <p class="event-place">Newport Way Library, 14250 SE Newport Way</p>
-
-{% include event-photo.html
-   src="/assets/images/themes/wooden-blocks.webp"
-   alt="Two sets of plain wooden unit blocks."
-   credit="Photo: Ragesoss, CC BY-SA 3.0"
-   source="https://commons.wikimedia.org/wiki/File:Two_sets_of_wooden_unit_blocks.jpeg" %}
 
 Open building with the library's bricks. Stay for the whole session or stop in for a few minutes. Ages 4 and older. No registration. Space is limited.
 

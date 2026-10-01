@@ -95,12 +95,6 @@ A free talk from the Woodinville Heritage Society on the Stimson family and Holl
 <p class="event-when">Wed Oct 21 · 4:30–5:30 p.m.</p>
 <p class="event-place">Woodinville Library, 17105 Avondale Road NE</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/open-book.webp"
-   alt="An open book lying flat."
-   credit="Photo: Ben White, CC0"
-   source="https://commons.wikimedia.org/wiki/File:Open_book_(Unsplash).jpg" %}
-
 Ages 6 to 12, and caregivers are welcome. This session uses the fable The Tortoise and the Hare, then an art project. Wear clothes that can get messy, and arrive on time. No registration. Space is limited. Friends of the Woodinville Library sponsor it.
 
 [Aesop and Art](https://kcls.bibliocommons.com/events/6aa8a06d4b3b06003083cbc1)
@@ -108,12 +102,6 @@ Ages 6 to 12, and caregivers are welcome. This session uses the fable The Tortoi
 ### Full STEAM Ahead
 <p class="event-when">Wed Oct 28 · 4:30–5:30 p.m.</p>
 <p class="event-place">Woodinville Library, 17105 Avondale Road NE</p>
-
-{% include event-photo.html
-   src="/assets/images/themes/blue-marble.webp"
-   alt="The Earth seen from Apollo 17, with Africa and Antarctica visible."
-   credit="Photo: NASA, public domain"
-   source="https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg" %}
 
 A hands-on science session for ages 8 to 12. Materials are provided. No registration. Friends of the Woodinville Library sponsor it.
 

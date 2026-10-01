@@ -49,12 +49,6 @@ The museum in the park is open Sundays from April through October, 1:00 to 4:00 
 <p class="event-when">Mon Oct 5 · 10:00–10:30 a.m.</p>
 <p class="event-place">Bothell Library, 18215 98th Ave NE</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/books.webp"
-   alt="A stack of hardcover books on a wooden table."
-   credit="Photo: Evan Bench, CC BY 2.0"
-   source="https://commons.wikimedia.org/wiki/File:Books_in_a_stack_(a_stack_of_books)_-_Flickr_-_austinevan.jpg" %}
-
 Stories, songs, and rhymes for toddlers about 18 months to age 3, with an adult. No registration. Doors close when the room is full, or 10 minutes after the start. The same half hour is also on Mon Oct 12 and Mon Oct 19.
 
 [Toddler Story Time](https://kcls.bibliocommons.com/events/6a80c21d3b6c71003e5919df)
@@ -62,12 +56,6 @@ Stories, songs, and rhymes for toddlers about 18 months to age 3, with an adult.
 ### Baby Story Time
 <p class="event-when">Mon Oct 5 · 11:00–11:30 a.m.</p>
 <p class="event-place">Bothell Library, 18215 98th Ave NE</p>
-
-{% include event-photo.html
-   src="/assets/images/themes/open-book.webp"
-   alt="An open book lying flat."
-   credit="Photo: Ben White, CC0"
-   source="https://commons.wikimedia.org/wiki/File:Open_book_(Unsplash).jpg" %}
 
 A short story time for pre-walking babies, newborn to about 18 months, with an adult. No registration. Doors close when the room is full, or 10 minutes after the start. The same half hour is also on Mon Oct 12 and Mon Oct 19.
 

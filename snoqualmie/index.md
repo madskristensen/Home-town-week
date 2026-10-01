@@ -27,12 +27,6 @@ Bring a finished paper mache pumpkin to the front desk any day the branch is ope
 <p class="event-when">Thu Oct 1 · 10:15–10:45 a.m.</p>
 <p class="event-place">Snoqualmie Library, 7824 Center Boulevard SE</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/books.webp"
-   alt="A stack of hardcover books on a wooden table."
-   credit="Photo: Evan Bench, CC BY 2.0"
-   source="https://commons.wikimedia.org/wiki/File:Books_in_a_stack_(a_stack_of_books)_-_Flickr_-_austinevan.jpg" %}
-
 Stories and play, with bubbles, for newborns to 36 months with an adult. Older children are welcome. No registration. The same time is also on Thu Oct 8 and Thu Oct 15.
 
 [Toddler Story Time](https://kcls.bibliocommons.com/events/6a80c10baafa6100295cdc4b)
@@ -70,12 +64,6 @@ The museum waives Train Shed admission every Wednesday through December 16. The 
 ### After School Hangout
 <p class="event-when">Wed Oct 7 · 3:00–4:30 p.m.</p>
 <p class="event-place">Fall City Library, 33415 SE 42nd Place</p>
-
-{% include event-photo.html
-   src="/assets/images/themes/board-game-pieces.webp"
-   alt="Small wooden and colored pieces from a board game."
-   credit="Photo: Mshuang2, CC0"
-   source="https://commons.wikimedia.org/wiki/File:Board_game_pieces.jpg" %}
 
 Crafts, tabletop games, a Nintendo Switch, and snacks for school-age kids through teens. No registration. Fall City Friends sponsor it. The same hours are also on Oct 14, Oct 21, and Oct 28.
 
@@ -116,12 +104,6 @@ Another Fall City listing on this page. Ages 4 and older can build with the libr
 ### Little Lab: Stories that Count
 <p class="event-when">Wed Oct 21 · 10:30–11:30 a.m.</p>
 <p class="event-place">Fall City Library, 33415 SE 42nd Place</p>
-
-{% include event-photo.html
-   src="/assets/images/themes/open-book.webp"
-   alt="An open book lying flat."
-   credit="Photo: Ben White, CC0"
-   source="https://commons.wikimedia.org/wiki/File:Open_book_(Unsplash).jpg" %}
 
 A KidsQuest educator leads numbers and counting for ages 3 to 6 with an adult, with hands-on stations. No registration.
 

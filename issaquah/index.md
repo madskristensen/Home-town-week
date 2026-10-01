@@ -101,12 +101,6 @@ Downtown Issaquah Association's fall market, with Ayala Farms. Saturdays from Oc
 <p class="event-when">Sat Oct 10 · 3:00–4:00 p.m.</p>
 <p class="event-place">Issaquah Library, 10 W Sunset Way</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/open-book.webp"
-   alt="An open book lying flat."
-   credit="Photo: Ben White, CC0"
-   source="https://commons.wikimedia.org/wiki/File:Open_book_(Unsplash).jpg" %}
-
 Issaquah is the first KCLS branch with a Library of Things, and this party opens the Curiosity Collection. Household tools and specialty equipment will be available to check out. Free.
 
 [Curiosity Collection](https://kcls.bibliocommons.com/events/6aa9dac5ca248a0029161b31)
@@ -178,12 +172,6 @@ A drop-off evening at the gym. The kids stay for games and gymnastics, and you g
 ### Reading with Rover
 <p class="event-when">Wed Oct 21 · 6:30–7:30 p.m.</p>
 <p class="event-place">Issaquah Library, 10 W Sunset Way</p>
-
-{% include event-photo.html
-   src="/assets/images/themes/books.webp"
-   alt="A stack of hardcover books on a wooden table."
-   credit="Photo: Evan Bench, CC BY 2.0"
-   source="https://commons.wikimedia.org/wiki/File:Books_in_a_stack_(a_stack_of_books)_-_Flickr_-_austinevan.jpg" %}
 
 School-age kids read aloud to a certified therapy dog, with an adult. Free.
 

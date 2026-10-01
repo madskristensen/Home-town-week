@@ -83,12 +83,6 @@ A free drop-in art day, with supplies for all ages. Children 14 and under need a
 <p class="event-when">Wed Oct 28 · 5:30–7:00 p.m.</p>
 <p class="event-place">Duvall Library, 15508 Main Street NE</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/board-game-pieces.webp"
-   alt="Small wooden and colored pieces from a board game."
-   credit="Photo: Mshuang2, CC0"
-   source="https://commons.wikimedia.org/wiki/File:Board_game_pieces.jpg" %}
-
 A drop-in hangout for middle and high school students. Games, homework space, art supplies, and free snacks. No registration. Friends of the Duvall Library sponsor it.
 
 [Teen Space](https://kcls.bibliocommons.com/events/6a46e34086636e3d0052475b)

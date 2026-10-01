@@ -59,12 +59,6 @@ KidsQuest brings circuit cubes for ages 9 and older. The blocks snap into small 
 <p class="event-when">Wed Oct 7 · 4:00–5:00 p.m.</p>
 <p class="event-place">Carnation Library, 4804 Tolt Avenue</p>
 
-{% include event-photo.html
-   src="/assets/images/themes/books.webp"
-   alt="A stack of hardcover books on a wooden table."
-   credit="Photo: Evan Bench, CC BY 2.0"
-   source="https://commons.wikimedia.org/wiki/File:Books_in_a_stack_(a_stack_of_books)_-_Flickr_-_austinevan.jpg" %}
-
 Kids in kindergarten through grade 6, and beginner English learners through grade 12, read aloud to a volunteer in a green shirt. Drop in. The same hour is also on Oct 14, Oct 21, Oct 29, and Nov 5.
 
 [Reading Buddies](https://kcls.bibliocommons.com/events/6a7a375ac7e02e3d006f4f43)
@@ -120,12 +114,6 @@ A Tolt Art Studio class for ages 6 to 10. Kids can bring an animal photo or pick
 ### Yoga and Mindfulness for Tweens
 <p class="event-when">Mon Nov 9 · 4:30–5:00 p.m.</p>
 <p class="event-place">Carnation Library, 4804 Tolt Avenue</p>
-
-{% include event-photo.html
-   src="/assets/images/themes/yoga-mat.webp"
-   alt="A rolled yoga mat and a water bottle on a living room floor."
-   credit="Photo: Femivaco, CC BY 4.0"
-   source="https://commons.wikimedia.org/wiki/File:Yoga_mat_and_water_bottle_in_a_living_room.jpg" %}
 
 A half hour of yoga and mindfulness for ages 9 to 13, led by Lena from Yoga with Smile. Free. No registration.
 
