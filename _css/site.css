@@ -762,6 +762,23 @@ picture {
   display: none;
 }
 
+@media (max-width: 41.99rem) {
+  .footer-meta {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 1.15rem;
+    row-gap: 0.15rem;
+    align-items: start;
+    width: 100%;
+  }
+
+  .footer-meta li::after,
+  .footer-meta li:not(:last-child)::after {
+    content: none;
+    margin: 0;
+  }
+}
+
 .footer-meta a,
 .footer-install {
   min-height: 1.5rem;
@@ -797,6 +814,10 @@ picture {
 }
 
 @media (min-width: 42rem) {
+  .footer-meta {
+    flex-wrap: nowrap;
+  }
+
   .footer-groups {
     grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.85fr) minmax(0, 1.15fr);
     gap: 1.25rem 1.75rem;
