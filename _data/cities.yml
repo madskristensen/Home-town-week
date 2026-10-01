@@ -827,6 +827,10 @@
       url: "https://eastsideaudubon.org/calendar"
       type: nature
       notes: "Bird walks at Marymoor and the watershed. List a walk when the page welcomes children. Skip classes and the book club."
+    - name: "Redmond Fire Department"
+      url: "https://www.redmond.gov/FirePreventionWeek"
+      type: venue
+      notes: "Fire Prevention Week station open houses. Skip the pub trivia unless the city page says it is for families."
     - name: "Orca Running"
       url: "https://www.orcarunning.com/race/captain-jacks-treasure-run/"
       type: sports

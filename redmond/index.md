@@ -140,6 +140,14 @@ Full-length ballet with light design and illuminated costumes. Better for older 
 Between Velodrome Picnic Shelter and Climbing Wall; parking Lot I. Site opens 7:30 a.m., ceremonies 8:30 a.m. Registration via Melanoma Research Foundation.  
 [Event page](https://donate.melanoma.org/site/TR?fr_id=2256&pg=entry) · Also on [marymoor.org/events2026.pdf](https://marymoor.org/events2026.pdf)
 
+### Station 17 Open House
+<p class="event-when">Mon Oct 5 · 6:00–8:00 p.m.</p>
+<p class="event-place">Redmond Fire Station 17, 16917 NE 116th St, Redmond</p>
+
+The first Fire Prevention Week open house. Cooking-fire demonstrations, a station tour, fire safety lessons, and family activities. This year's theme is safe charging.
+
+[Fire Prevention Week](https://www.redmond.gov/FirePreventionWeek)
+
 ### Drop-In Play
 <p class="event-when">Tue Oct 6 · 10:00 a.m.–12:00 p.m.</p>
 <p class="event-place">Redmond Community Center at Marymoor Village, 6505 176th Ave NE</p>
@@ -154,6 +162,14 @@ Same ages 0–6 session as Thursday. An adult must stay. Gym clothes and athleti
 Therapy dogs from Reading with Rover while teens work on homework, exams, or academic skills. Middle and high school only. Age limits enforced. No registration.  
 [KCLS event](https://kcls.bibliocommons.com/v2/events/6a95ffdd4cb69d003e24c6a4)
 
+### Station 16 Open House
+<p class="event-when">Wed Oct 7 · 6:00–8:00 p.m.</p>
+<p class="event-place">Redmond Fire Department Station 16, 6502 185th Ave NE, Redmond</p>
+
+A Fire Prevention Week open house at a second station. Cooking-fire demonstrations, a station tour, fire safety lessons, and family activities.
+
+[Fire Prevention Week](https://www.redmond.gov/FirePreventionWeek)
+
 ### Teen Center Project Community Visioning Session
 <p class="event-when">Thu Oct 8 · 6:00–8:00 p.m.</p>
 <p class="event-place">Redmond Senior & Community Center, Red Oak Community Room, 8703 160th Ave NE</p>
@@ -167,6 +183,22 @@ Therapy dogs from Reading with Rover while teens work on homework, exams, or aca
 
 Open to everyone, and free. Free childcare for ages 3–12 for people who are attending the meeting. This follows the two teen-only drop-ins on Sep 30 and Oct 1.  
 [City calendar](https://www.redmond.gov/Calendar.aspx?EID=3554)
+
+### Station 18 Open House
+<p class="event-when">Thu Oct 8 · 6:00–8:00 p.m.</p>
+<p class="event-place">Redmond Fire Department Station 18, 22710 NE Alder Crest Dr, Redmond</p>
+
+A Fire Prevention Week open house at Station 18. Cooking-fire demonstrations, a station tour, fire safety lessons, and family activities.
+
+[Fire Prevention Week](https://www.redmond.gov/FirePreventionWeek)
+
+### Station 11 Open House
+<p class="event-when">Fri Oct 9 · 5:00–8:00 p.m.</p>
+<p class="event-place">Redmond Fire Department Station 11, 8450 161st Ave NE, Redmond</p>
+
+The last open house of Fire Prevention Week, and it starts an hour earlier than the others. Cooking-fire demonstrations, a station tour, fire safety lessons, and family activities.
+
+[Fire Prevention Week](https://www.redmond.gov/FirePreventionWeek)
 
 ### Redmond Saturday Market
 <p class="event-when">Sat Oct 10 · 9:00 a.m.–2:00 p.m.</p>

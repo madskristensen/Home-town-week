@@ -109,6 +109,12 @@ venues:
     credit: "Photo: HominyGrits007, CC BY-SA 4.0"
     license: CC BY-SA 4.0
     source: https://commons.wikimedia.org/wiki/File:Farrel-McWhirter_Park_Entrance.jpg
+  - keys: ["redmond fire station 17"]
+    image: /assets/images/redmond/fire-station-17.webp
+    alt: Redmond Fire Station 17, a firehouse with a stone and siding front and red bay doors.
+    credit: "Photo: City of Redmond"
+    license: organizer
+    source: https://www.redmond.gov/2167/Fire-Station-17-Siding-Replacement
   - keys: ["sammamish river"]
     image: /assets/images/redmond/sammamish-river-trail.webp
     alt: The Sammamish River Trail, a paved path through grass with trees on both sides.
