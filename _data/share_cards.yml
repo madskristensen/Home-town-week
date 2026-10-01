@@ -71,6 +71,13 @@
   alt: Play structure and swings at Grass Lawn Park in Redmond.
   credit: "Photo: HominyGrits007, CC BY-SA 4.0"
   license: CC BY-SA 4.0
+- id: farmers-markets
+  path: /farmers-markets/
+  title: Farmers markets
+  image: /assets/images/redmond/saturday-market.webp
+  alt: White vendor tents along a tree-lined path at Redmond Saturday Market.
+  credit: "Photo: Redmond Saturday Market."
+  license: organizer
 - id: christmas-lights
   path: /christmas/lights/
   title: Christmas lights map

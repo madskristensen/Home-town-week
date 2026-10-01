@@ -74,6 +74,16 @@ There is no `/winter/` hub and no redirect. Winter events stay on their city pag
 
 Grouped cards always use `_includes/card-grid.html`. It renders each item with `_includes/event-card.html` inside one grid. Home, city day buckets, seasonal hubs, this weekend, worth the drive, rainy day, lights lists, and explore pages all use that include. Do not add another grid class or a page-specific wrapper. The daily prune and content edits must not paste card markup.
 
+## Seasonal banner
+
+The home page shows one seasonal banner, chosen when the site builds. It is the hub in `_data/seasonal_hubs.yml` that is in season, has at least 6 upcoming events from at least 3 towns, and has a theme drawing. If several hubs qualify, the one whose season ends soonest is the banner. If none qualify, there is no banner.
+
+The missing page uses that same choice for its seasonal tile. `404.html` does not name a season. The build in `_plugins/seasonal_hubs.rb` makes four tiles: This weekend, the current banner hub, Playgrounds, and Farmers markets. The banner tile's title, line, and photo come from that hub's `banner_title`, `hook`, and the share card with the same path. Switching the banner to Christmas switches that tile to Christmas for kids, with the Christmas share photo and the hook "Tree lightings, lights, Santa, and shows." Nothing on the missing page is edited by hand for that change. A hub can fill the tile only when `_data/share_cards.yml` has a card for its path. Every current hub has one. A new hub needs that share card, or the seasonal tile is left off.
+
+## Farmers markets
+
+`/farmers-markets/` is the farmers market list for the 14 cities. The rows are `_data/farmers_markets.yml`. Do not put them in a city events file. The daily prune does not delete a market when its season ends. The build compares `season_start`, `season_end`, and `extra_dates` with today in America/Los_Angeles and writes Open now or the return line on the card. When a market posts new hours or the next season, update that row. Leave the row in place out of season. Bothell has no weekly market to list until a city or market site publishes one. Photos are CC0, CC BY, CC BY-SA, or public domain, or an organizer photo credited `Photo: <name>` with `license: organizer`. No recognizable kids. Blurbs are our own words. No em dashes.
+
 ## Dedupe
 
 One event, one row. Two sessions at different times can both stay when the page lists both. A second row with the same time and a near-duplicate name should be removed. The event check warns on same-day near-duplicates.

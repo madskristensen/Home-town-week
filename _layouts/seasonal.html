@@ -7,6 +7,7 @@ layout: default
   {%- include page-intro.html text=page.intro -%}
   <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   {%- include home-lights.html -%}
+  {%- include map-tip.html kind="missing" -%}
 </article>
 {%- else -%}
 {%- assign hub = site.data.hub_pages[page.hub_id] -%}
@@ -71,5 +72,6 @@ layout: default
   </section>
   {%- endfor -%}
   {%- endif -%}
+  {%- include map-tip.html kind="missing" -%}
 </article>
 {%- endif -%}

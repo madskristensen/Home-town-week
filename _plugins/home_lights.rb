@@ -10,6 +10,7 @@ module EastsideCalendar
     def attach!(site, _hubs)
       site.data["home_lights"] = collect(site, "holiday_lights", "christmas", "Home lights photos:")
       site.data["halloween_map"] = collect(site, "halloween_decorations", "halloween", "Halloween decorations photos:")
+      site.data["farmers_market_page"] = collect_markets(site)
     end
 
     def collect(site, data_key, pool_name, log_label)
@@ -213,6 +214,124 @@ module EastsideCalendar
       item["image_credit"] = photo["credit"].to_s
       item["image_source"] = photo["source"].to_s
       item["image_kind"] = photo["kind"]
+    end
+
+    # Farmers markets stay in the data file after the season ends.
+    # The card line is Open now or the return text, from the dates.
+    def collect_markets(site)
+      today = EventCalendar.pacific_today(site.time)
+      names = city_names(site.data["cities"])
+      rows = Array(site.data["farmers_markets"]).select { |row| row.is_a?(Hash) }
+      rows = rows.sort_by { |row| [names[row["city"].to_s].to_s.downcase, row["name"].to_s.downcase] }
+      items = []
+      rows.each do |row|
+        item = market_item(row, names, today)
+        next unless item
+
+        photo = market_photo(row["photo"], item["name"], site)
+        unless photo
+          Jekyll.logger.error("Farmers markets:", "no usable photo for #{item["name"]}")
+          next
+        end
+        apply_photo!(item, photo)
+        items << item
+      end
+      number = 0
+      items.each do |item|
+        if item["lat"].nil? || item["lng"].nil?
+          item.delete("number")
+        else
+          number += 1
+          item["number"] = number
+        end
+      end
+      Jekyll.logger.info("Farmers markets:", "#{items.size} markets, #{number} on the map")
+      pack_towns(items)
+    end
+
+    def market_item(row, names, today)
+      item = light_item(row, names, 0)
+      return nil unless item
+
+      status = market_status(row, today)
+      return nil if status.empty?
+
+      item["nights"] = status
+      item["hours"] = ""
+      item
+    end
+
+    def market_status(row, today)
+      start_on = market_date(row["season_start"])
+      end_on = market_date(row["season_end"])
+      extras = Array(row["extra_dates"]).filter_map { |value| market_date(value) }.sort
+      if start_on && end_on && today >= start_on && today <= end_on
+        return squash(row["when_open"])
+      end
+
+      upcoming = extras.select { |date| date >= today }
+      unless upcoming.empty?
+        date = upcoming.first
+        if date == today
+          today_line = squash(row["when_extra_today"])
+          return today_line unless today_line.empty?
+        end
+        template = row["when_next"].to_s.strip
+        if template.include?("%s")
+          return format(template, date.strftime("%b %-d"))
+        end
+        return squash(template) unless template.empty?
+      end
+
+      if start_on && today < start_on
+        opens = squash(row["when_opens"])
+        return opens unless opens.empty?
+      end
+      squash(row["when_closed"])
+    end
+
+    def market_date(value)
+      Date.iso8601(value.to_s)
+    rescue ArgumentError, TypeError
+      nil
+    end
+
+    def squash(value)
+      value.to_s.gsub(/\s+/, " ").strip
+    end
+
+    def market_photo(photo, name, site)
+      built = real_photo(photo, name)
+      return nil unless built
+
+      path = File.join(site.source, built["src"].sub(%r{\A/}, ""))
+      return nil unless File.file?(path)
+
+      built
+    end
+
+    def pack_towns(items)
+      towns = []
+      items.each do |item|
+        town = towns.last
+        if town.nil? || town["id"] != item["city_id"]
+          town = { "id" => item["city_id"], "name" => item["city"], "lights" => [] }
+          towns << town
+        end
+        town["lights"] << item
+      end
+      pins = items.filter_map do |item|
+        next if item["lat"].nil? || item["lng"].nil? || item["number"].nil?
+
+        {
+          "n" => item["number"],
+          "lat" => item["lat"],
+          "lng" => item["lng"],
+          "name" => item["name"],
+          "id" => item["id"]
+        }
+      end
+      { "towns" => towns, "pins" => pins, "count" => items.size }
     end
   end
 end

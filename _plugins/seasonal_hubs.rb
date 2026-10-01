@@ -493,8 +493,9 @@ module EastsideCalendar
       qualifying.min_by { |ends_on, index, _hub| [ends_on, index] }[2]
     end
 
-    # Three links for the missing page. The middle tile is whichever hub
-    # the seasonal banner is showing. Photos are the share-card pictures.
+    # Four links for the missing page, two rows of two on a wide screen.
+    # The second tile is whichever hub the seasonal banner is showing, so
+    # a banner change switches that tile. Photos are the share-card pictures.
     def missing_tiles(cards, hubs, banner)
       tiles = []
       weekend = share_by_id(cards, "this-weekend")
@@ -509,6 +510,9 @@ module EastsideCalendar
 
       play = share_by_id(cards, "playgrounds")
       tiles << link_tile(play, "Playgrounds", "Find a playground near you.") if play
+
+      markets = share_by_id(cards, "farmers-markets")
+      tiles << link_tile(markets, "Farmers markets", "See which markets are open now.") if markets
       tiles
     end
 

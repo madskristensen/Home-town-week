@@ -16,7 +16,7 @@ Card and page markup lives in one include each. Pages, layouts, and the city cal
 | `_includes/playground-directory.html` | Playground list. The name line holds the star and the amenity badges. A legend under the heading uses the same badges. |
 | `_includes/lights-feature.html` | Seasonal promo for the lights or decorations map. |
 | `_includes/map-frame.html` | Map poster and canvas. Includes the shared loader unless `loader` is `false`. |
-| `_includes/map-tip.html` | One short muted line under the lights or decorations map. The link uses the same mailto as the longer tip at the bottom of that page. |
+| `_includes/map-tip.html` | One short muted line. Under a lights or decorations map, pass `href` and the line is "Know a display we're missing? Tip us off." `kind="missing"` is "Missing something? Tell us." and uses the same Suggest an event mailto as the footer. Hub pages and explore pages include that line once, at the end of the article. The farmers market page does not also put a tip under the map. |
 | `_includes/map-loader.html` | `loadMapCss` and `loadMapJs`. |
 | `_includes/guide-header.html` | Playground page title and introduction. The heading links to `/playgrounds/`. |
 | `_includes/calendar-subscribe.html` | City page control for the subscription feed at `/calendar/{city}.ics`. |

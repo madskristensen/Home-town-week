@@ -33,6 +33,10 @@ sitemap: false
 
 - [Playground map]({{ site.url }}{{ site.baseurl }}/playgrounds/): Public park playgrounds in the 14 cities, with a click-to-load map. Town and amenity filters narrow the list before the map loads.
 
+## Farmers markets
+
+- [Farmers markets]({{ site.url }}{{ site.baseurl }}/farmers-markets/): Weekly farmers markets in the 14 cities, with the day, hours, and season. The page says which markets are open now.
+
 ## Sitemap
 
 - [Sitemap]({{ site.url }}{{ site.baseurl }}/sitemap.xml): Every public page on this site.

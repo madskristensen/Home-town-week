@@ -1,6 +1,7 @@
 {%- comment -%}
-  Lights or decorations map and the stop list.
+  Lights, decorations, or farmers market map and the stop list.
   No parameters. page.map_id "halloween" uses the decorations data.
+  page.map_id "markets" uses the farmers market data.
   Each stop is the shared event card. The town name is the section heading.
 {%- endcomment -%}
 {%- if page.map_id == "halloween" -%}
@@ -15,6 +16,12 @@ Town:
 
 What to know:{%- endcapture -%}
 {%- capture lights_mailto -%}mailto:suggestions@eastsidecalendar.com?subject={{ lights_subject | strip | mail_escape }}&body={{ lights_body | strip | mail_escape }}{%- endcapture -%}
+{%- elsif page.map_id == "markets" -%}
+{%- assign home_lights = site.data.farmers_market_page -%}
+{%- assign map_path = "/farmers-markets/" -%}
+{%- assign map_title = "Farmers markets" -%}
+{%- assign map_noun = "markets" -%}
+{%- assign lights_mailto = "" -%}
 {%- else -%}
 {%- assign home_lights = site.data.home_lights -%}
 {%- assign map_path = "/christmas/lights/" -%}
@@ -28,7 +35,7 @@ Nights and hours:
 Photo: attach one if you have it. We will credit you. We do not post a photo where a kid can be recognized.{%- endcapture -%}
 {%- capture lights_mailto -%}mailto:suggestions@eastsidecalendar.com?subject={{ lights_subject | strip | append: " " | mail_escape }}&body={{ lights_body | strip | mail_escape }}{%- endcapture -%}
 {%- endif -%}
-{%- assign lights_mailto = lights_mailto | strip -%}
+{%- assign lights_mailto = lights_mailto | append: "" | strip -%}
 {%- assign home_count = home_lights.count | default: 0 -%}
 {%- capture lights_count -%}{{ home_count }} {{ map_noun }}{%- endcapture -%}
 {%- include map-frame.html
@@ -39,7 +46,9 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
      count_label=lights_count
      note="Numbers on the map match the list."
      loader="false" %}
+{%- if lights_mailto.size > 0 -%}
 {%- include map-tip.html href=lights_mailto -%}
+{%- endif -%}
 <script type="application/json" id="home-lights-pins">{{ home_lights.pins | jsonify }}</script>
 {%- include map-loader.html -%}
 <script>
@@ -113,7 +122,8 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
   {%- endif -%}
 </section>
 {%- endfor -%}
-{%- if page.map_id == "halloween" -%}
+{%- if page.map_id == "markets" -%}
+{%- elsif page.map_id == "halloween" -%}
 <section class="hub-section" aria-labelledby="send-lights">
   <h2 id="send-lights">Tell us about a decorated house</h2>
   <p class="hub-section-intro">Know a great decorated house or street? Tell us. Anyone can send one in.</p>

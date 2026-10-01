@@ -1,0 +1,296 @@
+# Weekly farmers markets for /farmers-markets/.
+# The daily prune does not read this file. Leave a row in place when the
+# season ends. The build labels Open now or the return line from
+# season_start, season_end, and extra_dates against today in
+# America/Los_Angeles. Update the row when the market posts new hours
+# or the next season. Bothell has no weekly market to list until a city
+# or market site publishes one.
+# Required: id, name, city, address, description, source, when_closed.
+# when_open is the line used while today is inside the season.
+# when_next may contain %s, replaced with the next extra date (Oct 31).
+# when_extra_today is used when today is one of those extra dates.
+# lat and lng pin the card. Omit both when the market publishes no street.
+# photo is image, alt, credit, and credit_url. credit_url must be https.
+# Prefer CC0, CC BY, CC BY-SA, or public domain. An organizer photo uses
+# credit "Photo: <name>" and license organizer. No recognizable kids.
+# city is a city id from _data/cities.yml. Fall City uses snoqualmie.
+# description is original. source is the market's own page, or the city
+# page when that is the page that states the season.
+# last_verified is the day the source was checked, YYYY-MM-DD.
+- id: bellevue-farmers-market
+  name: Bellevue Farmers Market
+  city: bellevue
+  address: "1717 Bellevue Way NE"
+  lat: 47.626384
+  lng: -122.205377
+  season_start: "2026-05-21"
+  season_end: "2026-10-01"
+  extra_dates:
+    - "2026-10-31"
+    - "2026-11-21"
+  when_open: "Open now. Last Thursday of the regular season is Oct 1, 3 to 7 p.m."
+  when_next: "Next market is %s. Saturday, 10 a.m. to 3 p.m."
+  when_extra_today: "Open today. Saturday, 10 a.m. to 3 p.m."
+  when_closed: "Back next May. Thursdays, 3 to 7 p.m., through Oct 1."
+  description: "Thursday market in the Bellevue Presbyterian Church lot. Hours are 3 to 7:30 p.m. from May through August, and 3 to 7 p.m. in September through Oct 1. Two Saturday markets follow, on Oct 31 and Nov 21, 10 a.m. to 3 p.m. SNAP EBT is at the info booth, with SNAP Market Match up to $25, plus WIC, Senior FMNP, and SunBucks. There are activities for families."
+  source: "https://bellevuefarmersmarket.org/"
+  source_label: "Market site"
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/bellevue/old-main-street.webp
+    alt: Old Main Street in Bellevue, with shops and a clock along the sidewalk.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Bellevue,_Washington_-_old_Main_Street_01.jpg"
+- id: crossroads-farmers-market
+  name: Crossroads Farmers Market
+  city: bellevue
+  address: "15600 NE 8th St"
+  lat: 47.619117
+  lng: -122.130461
+  season_start: "2026-06-02"
+  season_end: "2026-09-29"
+  when_closed: "Back next June. Tuesdays, noon to 6 p.m., June through September."
+  description: "Tuesday market in the east parking lot at Crossroads Bellevue. The market site lists Tuesdays, June 2 through September 29, noon to 6 p.m. The street address is from the 2026 Washington State Farmers Market Association directory."
+  source: "https://crossroadsbellevue.com/farmersmarket/"
+  source_label: "Market site"
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/bellevue/crossroads.webp
+    alt: West entrance of Crossroads Bellevue, with the mall sign and a row of flags.
+    credit: "Photo: Mark Yasuda, CC BY-SA 4.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:2018_Crossroads_Bellevue_west_entrance.jpg"
+- id: carnation-farmers-market
+  name: Carnation Farmers Market
+  city: carnation
+  address: "Tolt-MacDonald Park"
+  lat: 47.647893
+  lng: -121.934180
+  season_start: "2026-06-02"
+  season_end: "2026-08-25"
+  when_closed: "Back next June. Tuesdays, 3 to 7 p.m., June through August."
+  description: "Tuesday market at the Red Barn in Tolt-MacDonald Park. The 2026 season was June 2 through August 25, 3 to 7 p.m. The market offers free educational activities for kids."
+  source: "https://carnationfarmersmarket.org/"
+  source_label: "Market site"
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/carnation/tolt-bridge.webp
+    alt: The pedestrian suspension bridge over the Snoqualmie River at Tolt-MacDonald Park in Carnation.
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:2023-05-10,_Tolt-MacDonald_Park_footbridge,_24.jpg"
+- id: duvall-farmers-market
+  name: Duvall Farmers Market
+  city: duvall
+  address: "16201 Main St NE"
+  lat: 47.744165
+  lng: -121.985659
+  season_start: "2026-05-07"
+  season_end: "2026-10-15"
+  when_open: "Open now. Thursdays, 3 to 7 p.m., May through mid October."
+  when_closed: "Back next May. Thursdays, 3 to 7 p.m., through mid October."
+  description: "Thursday market at Taylor Landing. The market site says Thursdays, 3 to 7 p.m., from May 7 through mid October. There is a playground at the park."
+  source: "https://duvallfarmersmarket.org/"
+  source_label: "Market site"
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/markets/duvall-bridge.webp
+    alt: The bridge over the Snoqualmie River into downtown Duvall.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Duvall_WA_bridge_01.jpg"
+- id: issaquah-farmers-market
+  name: Issaquah Farmers Market
+  city: issaquah
+  address: "1730 10th Ave NW"
+  lat: 47.549929
+  lng: -122.049409
+  season_start: "2026-05-01"
+  season_end: "2026-09-26"
+  when_closed: "Back next May. Saturdays, 9 a.m. to 2 p.m., through late September."
+  description: "Saturday market at Pickering Barn. The city calendar lists Saturdays, 9 a.m. to 2 p.m., through September 26, 2026."
+  source: "https://www.issaquahwa.gov/m/calendar/event/detail/14500"
+  source_label: "City calendar"
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/issaquah/pickering-barn.webp
+    alt: The timber interior of the historic dairy barn at Pickering Farm in Issaquah.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Issaquah,_WA_-_Pickering_Farm_inside_dairy_barn_01.jpg"
+- id: kenmore-farmers-market
+  name: Kenmore Farmers Market
+  city: kenmore
+  address: "NE 181st St, next to The Hangar"
+  lat: 47.759722
+  lng: -122.250110
+  season_start: "2026-06-03"
+  season_end: "2026-08-26"
+  when_closed: "Back next June. Wednesdays, 3 to 7 p.m., June through August."
+  description: "Wednesday market on NE 181st St, next to The Hangar. The market site says Wednesdays in June, July, and August, 3 to 7 p.m. The 2026 state association directory lists the last day as August 26, at 6728 NE 181st St."
+  source: "https://www.northshorefarmersmarkets.org/kenmore-farmers-market"
+  source_label: "Market site"
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/kenmore/city-hall.webp
+    alt: Kenmore City Hall, a modern building with a glass front and a covered entry.
+    credit: "Photo: HistoryTheorist, CC BY-SA 4.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Frontal_View_of_Kenmore_City_Hall.png"
+- id: juanita-friday-market
+  name: Juanita Friday Market
+  city: kirkland
+  address: "9703 NE Juanita Dr"
+  lat: 47.706738
+  lng: -122.214234
+  season_start: "2026-06-05"
+  season_end: "2026-09-25"
+  when_closed: "Back in 2027. Fridays, 3 to 7 p.m., June through September."
+  description: "Friday market at Juanita Beach Park. The city parks page says the 2026 season is closed and that 2027 is the market's 20th anniversary, with details still to come. Explore Kirkland lists free kids crafts and notes the market skipped June 19 and July 3 in 2026."
+  source: "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Special-Event-Services/Juanita-Friday-Market"
+  source_label: "City of Kirkland"
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/kirkland/juanita-beach-park.webp
+    alt: Juanita Beach Park, with the sandy shore, the pier, and Lake Washington.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Juanita_Beach_from_across_the_bay.jpg"
+- id: kirkland-wednesday-market
+  name: Kirkland Wednesday Market
+  city: kirkland
+  address: "25 Lakeshore Plaza"
+  lat: 47.675448
+  lng: -122.209257
+  season_start: "2026-06-03"
+  season_end: "2026-09-30"
+  when_closed: "Back next June. Wednesdays, 3 to 7 p.m., June through September."
+  description: "Wednesday market at Marina Park. The 2026 season was June 3 through September 30, 3 to 7 p.m. EBT and SNAP are accepted, with SNAP Market Match, WIC, and FMNP."
+  source: "https://kirklanddowntown.org/events/kirkland-market/"
+  source_label: "Market site"
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/kirkland/marina-fall.webp
+    alt: Marina Park in fall, with yellow and orange trees along the shore of Lake Washington and the Seattle skyline across the water.
+    credit: "Photo: City of Kirkland"
+    credit_url: "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/PCS-Photo-Galleries/Marina-Park-Photo-Gallery"
+- id: mercer-island-farmers-market
+  name: Mercer Island Farmers Market
+  city: mercer-island
+  address: "7700 SE 32nd St"
+  lat: 47.581807
+  lng: -122.232717
+  season_start: "2026-06-07"
+  season_end: "2026-10-11"
+  when_open: "Open now, through Oct 11. Sundays, 10 a.m. to 2 p.m."
+  when_closed: "Back next spring. Sundays, 10 a.m. to 2 p.m., through mid October."
+  description: "Sunday market at Mercerdale Park, through Oct 11. The market lists activities for kids."
+  source: "https://mifarmersmarket.org/"
+  source_label: "Market site"
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/mercer-island/mercerdale.webp
+    alt: The lawn and path at Mercerdale Park on Mercer Island, with downtown beyond the trees.
+    credit: "Photo: City of Mercer Island"
+    credit_url: "https://www.mercerisland.gov/parksrec/page/mercerdale-park"
+- id: north-bend-farmers-market
+  name: North Bend Farmers Market
+  city: north-bend
+  address: "400 SE Orchard Dr"
+  lat: 47.490467
+  lng: -121.784678
+  season_start: "2026-06-04"
+  season_end: "2026-09-03"
+  when_closed: "Back next June. Thursdays, June through early September."
+  description: "Thursday market at Si View Park. In 2026 it ran June 4 through September 3. Hours were 4 to 8 p.m. through August 20, then 3:30 to 7:30 p.m. through September 3. EBT, SNAP, WIC FMNP, Senior FMNP, and Sun Bucks are at the info booth. Kids can play in the park."
+  source: "https://www.siviewpark.org/farmers-market.phtml"
+  source_label: "Market site"
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/north-bend/si-view.webp
+    alt: The Si View Park lodge in North Bend, a timber building with Mount Si behind it.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:North_Bend,_WA_-_Si_View_Park_02.jpg"
+- id: redmond-saturday-market
+  name: Redmond Saturday Market
+  city: redmond
+  address: "9900 Willows Rd NE"
+  lat: 47.689011
+  lng: -122.139102
+  season_start: "2026-05-02"
+  season_end: "2026-10-31"
+  when_open: "Open now, through Oct 31. Saturdays, 9 a.m. to 2 p.m."
+  when_closed: "Back next spring. Saturdays, 9 a.m. to 2 p.m., through October."
+  description: "Saturday market on Willows Road. The city says the season runs through Oct 31, Saturdays, 9 a.m. to 2 p.m. The market calendar lists music through Oct 31."
+  source: "https://redmondsaturdaymarket.org/Calendar.cshtml"
+  source_label: "Market calendar"
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/redmond/saturday-market.webp
+    alt: White vendor tents along a tree-lined path at Redmond Saturday Market.
+    credit: "Photo: Redmond Saturday Market."
+    credit_url: "https://redmondsaturdaymarket.org/Calendar.cshtml"
+- id: renton-farmers-market
+  name: Renton Farmers Market
+  city: renton
+  address: "S 3rd St and Logan Ave S"
+  lat: 47.480246
+  lng: -122.208509
+  season_start: "2026-06-02"
+  season_end: "2026-09-29"
+  when_closed: "Back next June. Tuesdays, 3 to 7 p.m., June through September."
+  description: "Tuesday market at Piazza Park, on the corner of S 3rd St and Logan Ave S. The 2026 season was Tuesdays, 3 to 7 p.m., June through September, with a final day of September 29. There is a Kids Patch. SNAP and Sun Bucks are accepted, with a match up to $25."
+  source: "https://rentonfarmersmarket.com/"
+  source_label: "Market site"
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/renton/downtown.webp
+    alt: Downtown Renton, with storefronts along the street.
+    credit: "Photo: Chris Light, CC BY-SA 4.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Renton_Downtown_2015-06_722.jpg"
+- id: sammamish-farmers-market
+  name: Sammamish Farmers Market
+  city: sammamish
+  address: "801 228th Ave SE"
+  lat: 47.601037
+  lng: -122.036775
+  season_start: "2026-05-06"
+  season_end: "2026-09-30"
+  when_closed: "Back May 5, 2027. Wednesdays, 4 to 8 p.m., May through September."
+  description: "Wednesday market at Sammamish Commons. Hours are 4 to 8 p.m. from May through August, and 4 to 7 p.m. in September. The market site says the next season opens May 5, 2027."
+  source: "https://sammamishfarmersmarket.org/"
+  source_label: "Market site"
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/sammamish/commons.webp
+    alt: Sammamish City Hall and the plaza at Sammamish Commons at night.
+    credit: "Photo: Johnmoffatt2000, CC BY-SA 4.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Sammamish_City_Hall2.jpg"
+- id: fall-city-summer-market
+  name: Fall City Summer Market
+  city: snoqualmie
+  address: "Fall City"
+  season_start: "2026-05-29"
+  season_end: "2026-08-28"
+  when_closed: "Back next May. Last Friday of May through August, 4 to 7 p.m."
+  description: "Last-Friday market in Fall City. The 2026 dates were May 29, June 26, July 31, and August 28, 4 to 7 p.m. The page lists produce, crafts, live music, and activities for kids. It does not publish a street address, so this one is not on the map."
+  source: "https://www.fallcity.org/summermarkets"
+  source_label: "Market site"
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/markets/fall-city.webp
+    alt: Fall City, with the Snoqualmie River and the valley hills.
+    credit: "Photo: Kgrr, CC BY-SA 3.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Fall_City_WA.jpg"
+- id: woodinville-farmers-market
+  name: Woodinville Farmers Market
+  city: woodinville
+  address: "13205 NE 175th St"
+  lat: 47.754390
+  lng: -122.163012
+  season_start: "2026-05-02"
+  season_end: "2026-09-30"
+  when_closed: "Back next May. Saturdays, 10 a.m. to 2 p.m., May through September."
+  description: "Saturday market on Festival Street, next to City Hall and the sports fields. The Northshore market site says Saturdays, May through September, 10 a.m. to 2 p.m."
+  source: "https://www.northshorefarmersmarkets.org/woodinville-farmers-market"
+  source_label: "Market site"
+  last_verified: "2026-10-01"
+  photo:
+    image: /assets/images/markets/woodinville-lot.webp
+    alt: An empty parking lot at Woodinville Town Center.
+    credit: "Photo: SounderBruce, CC BY-SA 4.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Woodinville_Town_Center_parking_lot,_2019.jpg"

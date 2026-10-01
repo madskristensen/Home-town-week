@@ -89,6 +89,9 @@ def urls_for(paths):
                 for hub in HUBS:
                     found.add(f"{SITE}{hub}")
             continue
+        if path == "_data/farmers_markets.yml":
+            found.add(f"{SITE}/farmers-markets/")
+            continue
         if path.startswith("_data/") and path.endswith("_events.yml"):
             city = Path(path).name.replace("_events.yml", "")
             if city == "worth_the_drive":
