@@ -95,14 +95,14 @@
 
   // Rebuild groups only when the Pacific day has moved past the build day.
   function regroupEvents() {
-    var prose = document.querySelector("article.city-home .prose");
-    if (!prose) return;
-    var built = prose.getAttribute("data-today") || "";
+    var eventList = document.querySelector("article.city-home .event-list");
+    if (!eventList) return;
+    var built = eventList.getAttribute("data-today") || "";
     var today = pacificDay();
     if (!built || !today || built === today) return;
-    var cards = Array.prototype.slice.call(prose.querySelectorAll("article.event-card"));
+    var cards = Array.prototype.slice.call(eventList.querySelectorAll("article.event-card"));
     if (!cards.length) return;
-    var headings = prose.querySelectorAll("h2.event-bucket");
+    var headings = eventList.querySelectorAll("h2.event-bucket");
     var i;
     for (i = 0; i < headings.length; i++) headings[i].parentNode.removeChild(headings[i]);
     var names = ["Today", "Tomorrow", "This week", "This weekend", "Later"];
@@ -111,7 +111,7 @@
       groups[bucketLabel(cards[i].getAttribute("data-date"), today)].push(cards[i]);
     }
     var anchor = document.getElementById("list-updated");
-    if (!anchor || anchor.parentNode !== prose) anchor = prose.querySelector("h2");
+    if (!anchor || anchor.parentNode !== eventList) anchor = eventList.querySelector("h2");
     if (!anchor) return;
     var cursor = anchor;
     for (i = 0; i < names.length; i++) {
@@ -164,8 +164,7 @@
     var groups = selectedFilterGroups();
     var active = Object.keys(groups).length > 0;
     var visible = 0;
-    document.querySelectorAll(".event-card, .hub-card").forEach(function (card) {
-      if (card.classList.contains("decor-card")) return;
+    document.querySelectorAll(".event-card").forEach(function (card) {
       var show = !active || matchingCard(card, groups);
       card.classList.toggle("is-filtered-out", !show);
       if (show) visible += 1;
@@ -180,7 +179,7 @@
       heading.classList.toggle("is-filtered-out", active && !any);
     });
     document.querySelectorAll(".hub-grid").forEach(function (grid) {
-      var cards = grid.querySelectorAll(".hub-card:not(.decor-card)");
+      var cards = grid.querySelectorAll(".event-card");
       if (!cards.length) return;
       var any = false;
       var i;
@@ -190,7 +189,7 @@
       grid.classList.toggle("is-filtered-out", active && !any);
     });
     document.querySelectorAll(".hub-section").forEach(function (section) {
-      var cards = section.querySelectorAll(".hub-card:not(.decor-card)");
+      var cards = section.querySelectorAll(".event-card");
       if (!cards.length) return;
       var any = false;
       var i;
@@ -205,7 +204,7 @@
       var id = (link.getAttribute("href") || "").replace(/^#/, "");
       var section = id ? document.getElementById(id) : null;
       if (!section) return;
-      var cards = section.querySelectorAll(".hub-card");
+      var cards = section.querySelectorAll(".event-card");
       var any = false;
       var i;
       for (i = 0; i < cards.length; i++) {

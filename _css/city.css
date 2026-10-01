@@ -9,14 +9,6 @@
   gap: 0.75rem;
 }
 
-.city-logo {
-  width: 4.25rem;
-  height: 4.25rem;
-  flex: none;
-  margin-top: 0.15rem;
-  object-fit: contain;
-}
-
 .city-heading-text {
   flex: 1;
   min-width: 0;
@@ -54,14 +46,6 @@
   line-height: 0.96;
 }
 
-.city-kicker {
-  margin: 0.45rem 0 0;
-  max-width: 40rem;
-  color: var(--muted);
-  font-size: 1.05rem;
-  font-weight: 500;
-  line-height: 1.35;
-}
 .also-close {
   margin: 1.35rem 0 0;
   padding-top: 0.95rem;
@@ -99,72 +83,6 @@
   color: var(--link);
   text-decoration: underline;
 }
-.hook {
-  margin: 0.35rem 0 0;
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  font-weight: 500;
-  line-height: 1.5;
-}
-
-.dek {
-  margin: 0 0 0.9rem;
-  color: var(--text);
-  font-size: 1.05rem;
-  line-height: 1.5;
-}
-
-.city-home .prose {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  margin-top: 1.7rem;
-}
-
-.city-home .prose h2 {
-  margin: 0;
-}
-
-.city-home .prose .list-updated {
-  margin: 0;
-}
-
-.prose h3 {
-  margin: 0;
-  font-size: 1.28rem;
-  line-height: 1.22;
-}
-
-.prose .event-when {
-  display: inline-block;
-  max-width: 100%;
-  margin: 0.3rem 0 0.1rem;
-  color: var(--gold);
-  font-size: 0.95rem;
-  font-weight: 600;
-  line-height: 1.35;
-}
-
-.prose .event-place {
-  margin: 0.2rem 0 0.1rem;
-  color: var(--muted);
-  font-size: 0.92rem;
-  font-weight: 500;
-  line-height: 1.4;
-}
-
-.event-card {
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  color: var(--text);
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  overflow-wrap: break-word;
-}
-
 .city-home .event-card + .event-card {
   margin-top: 1.15rem;
 }
@@ -198,67 +116,12 @@
 
 .city-home .event-card > p.event-links {
   margin: 0.35rem 0 0;
-  font-size: 0.9rem;
-  font-weight: 400;
-  line-height: 1.4;
-}
-
-.event-card a.event-source {
-  color: var(--link);
-  font-size: 0.9rem;
-  font-weight: 400;
-  line-height: 1.4;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.14em;
 }
 
 .city-home .event-card .event-photo {
   margin: 0.65rem 0 0.1rem;
 }
 
-.prose .event-cals {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.1rem 0.2rem;
-  margin-left: 0.3rem;
-  vertical-align: middle;
-}
-
-.prose a.event-cal {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25rem;
-  min-width: 2rem;
-  min-height: 2rem;
-  padding: 0.15rem 0.25rem;
-  border-radius: 2px;
-  color: var(--link);
-  font-size: 0.95rem;
-  font-weight: 700;
-  line-height: 1;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.prose a.event-cal:hover,
-.prose a.event-cal:focus-visible {
-  background: var(--wash);
-  text-decoration: none;
-}
-
-.prose .cal-icon {
-  display: block;
-  width: 1.15em;
-  height: 1.15em;
-  flex: none;
-}
-
-.prose .event-cal-when {
-  line-height: 1.2;
-}
 .issue-share {
   margin: 0;
 }

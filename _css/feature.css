@@ -1,0 +1,189 @@
+/* Lights and Halloween promo cards. */
+:root {
+  --map-facade: var(--surface-2);
+  --map-facade-edge: color-mix(in srgb, var(--map-land) 62%, var(--map-shore));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --xmas-bg: #b71c1c;
+    --xmas-ink: #fff8f2;
+    --xmas-border: #ffd27a;
+    --xmas-btn: #d8ffe6;
+    --xmas-btn-hover: #b6f5d0;
+  }
+}
+
+.lights-feature {
+  margin: 0 0 1.15rem;
+  background: var(--map-facade);
+  border: 1px solid var(--map-facade-edge);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.home .lights-feature {
+  margin-bottom: 1.75rem;
+}
+
+.lights-feature-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+
+.lights-feature-art {
+  position: relative;
+  align-self: stretch;
+  height: 100%;
+  min-height: 12rem;
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.lights-feature-art svg {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.lights-feature-copy {
+  padding: 0.9rem 1rem 1rem;
+}
+
+.lights-feature-title {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 3vw, 1.85rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.lights-feature-line {
+  margin: 0.4rem 0 0;
+  max-width: 36rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.lights-feature-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  margin-top: 0.85rem;
+  padding: 0.35rem 1rem;
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.lights-feature-btn:hover,
+.lights-feature-btn:focus-visible {
+  background: var(--btn-bg-hover);
+  color: var(--btn-ink);
+  text-decoration: none;
+}
+
+@media (min-width: 42rem) {
+  .lights-feature-layout {
+    grid-template-columns: 22rem minmax(0, 1fr);
+  }
+
+  .lights-feature-art {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 100%;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .lights-feature {
+    background: var(--sheet);
+    background-image: none;
+    border-color: var(--ink);
+  }
+
+  .lights-feature-line {
+    color: var(--ink);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .lights-feature {
+    background: var(--xmas-bg);
+    border-color: var(--xmas-border);
+    color: var(--xmas-ink);
+  }
+
+  .lights-feature-title {
+    color: var(--xmas-ink);
+  }
+
+  .lights-feature-line {
+    color: var(--xmas-ink);
+  }
+
+  .lights-feature-btn {
+    background: var(--xmas-btn);
+    color: var(--accent-contrast);
+  }
+
+  .lights-feature-btn:hover,
+  .lights-feature-btn:focus-visible {
+    background: var(--xmas-btn-hover);
+    color: var(--accent-contrast);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .lights-feature-halloween {
+    background: #3a2158;
+    border-color: #f0a04a;
+    color: #fff6ea;
+  }
+
+  .lights-feature-halloween .lights-feature-title,
+  .lights-feature-halloween .lights-feature-line {
+    color: #fff6ea;
+  }
+
+  .lights-feature-halloween .lights-feature-btn {
+    background: #f09a3a;
+    color: #2a140c;
+  }
+
+  .lights-feature-halloween .lights-feature-btn:hover,
+  .lights-feature-halloween .lights-feature-btn:focus-visible {
+    background: #ffb15a;
+    color: #2a140c;
+  }
+}
+
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  .lights-feature {
+    background: var(--sheet);
+    border-color: var(--ink);
+    color: var(--ink);
+  }
+
+  .lights-feature-title,
+  .lights-feature-line {
+    color: var(--ink);
+  }
+
+  .lights-feature-btn,
+  .lights-feature-btn:hover,
+  .lights-feature-btn:focus-visible {
+    background: var(--forest);
+    color: var(--on-accent);
+  }
+}

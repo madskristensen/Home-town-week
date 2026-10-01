@@ -1,0 +1,21 @@
+<script>
+window.loadMapCss = window.loadMapCss || function (href) {
+  return new Promise(function (resolve, reject) {
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = href;
+    link.onload = function () { resolve(); };
+    link.onerror = function () { reject(); };
+    document.head.appendChild(link);
+  });
+};
+window.loadMapJs = window.loadMapJs || function (src) {
+  return new Promise(function (resolve, reject) {
+    var script = document.createElement("script");
+    script.src = src;
+    script.onload = function () { resolve(); };
+    script.onerror = function () { reject(); };
+    document.body.appendChild(script);
+  });
+};
+</script>

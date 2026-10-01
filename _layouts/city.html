@@ -13,14 +13,15 @@ layout: default
           <h1 class="city-name"><a href="{{ city_url | relative_url }}">{{ city.name }}</a></h1>
           {%- include issue-share.html -%}
         </div>
-        {%- if city.slogan -%}
-        <p class="city-kicker">{{ city.slogan }}</p>
-        {%- endif -%}
       </div>
     </div>
   </div>
-  {%- if city.tagline -%}
-  <p class="dek">{{ city.tagline }}</p>
+  {%- assign city_lead = city.slogan | append: "" -%}
+  {%- if city_lead.size == 0 -%}
+  {%- assign city_lead = city.tagline | append: "" -%}
+  {%- endif -%}
+  {%- if city_lead.size > 0 -%}
+  <p class="page-intro">{{ city_lead }}</p>
   {%- endif -%}
   {%- assign hero_image = city.hero.image | append: "" -%}
   {%- if hero_image.size > 0 -%}
@@ -35,20 +36,18 @@ layout: default
     {%- assign hero_source = city.hero.source | append: "" -%}
     {%- if hero_credit.size > 0 or hero_source.size > 0 -%}
     <figcaption>
-      <p class="hero-credit">
-        {%- if hero_credit.size > 0 -%}<span class="credit">{{ city.hero.credit }}</span>{%- endif -%}
-        {%- if hero_source.size > 0 -%}<a class="source" href="{{ city.hero.source }}" rel="noopener">Source</a>{%- endif -%}
-      </p>
+      {%- if hero_credit.size > 0 -%}<span class="credit">{{ city.hero.credit }}</span>{%- endif -%}
+      {%- if hero_source.size > 0 -%}<a class="source" href="{{ city.hero.source }}" rel="noopener">Source</a>{%- endif -%}
     </figcaption>
     {%- endif -%}
   </figure>
   {%- endif -%}
   {%- if page.hook -%}
-  <p class="hook">{{ page.hook }}</p>
+  <p class="page-intro">{{ page.hook }}</p>
   {%- endif -%}
   {%- assign event_copy = content | strip -%}
   {%- if event_copy != "" -%}
-  <div class="prose" data-today="{{ site.time | date: '%Y-%m-%d' }}">
+  <div class="event-list" data-today="{{ site.time | date: '%Y-%m-%d' }}">
     <h2>Upcoming</h2>
     <p id="list-updated" class="list-updated">Events updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
     {%- include event-filters.html -%}

@@ -16,7 +16,7 @@ article,
 .city-home,
 .guide-page,
 .prose,
-.hub-card,
+.event-list,
 .event-card,
 .hub-section {
   background: #fff !important;
@@ -35,10 +35,7 @@ h3,
 p,
 li,
 a,
-.dek,
-.hook,
-.hub-intro,
-.guide-intro,
+.page-intro,
 .event-when,
 .event-place,
 .hub-blurb,
@@ -88,8 +85,8 @@ a:visited {
 .issue-share,
 .share-button,
 .season-banner,
-.home-map-section,
-.home-map-frame,
+.map-section,
+.map-frame,
 .leaflet-control-container,
 .skip-link,
 .suggest-event,
@@ -114,8 +111,7 @@ video,
 canvas,
 figure,
 .event-photo,
-.hero,
-.city-logo {
+.hero {
   display: none !important;
 }
 
@@ -128,15 +124,13 @@ figure,
 }
 
 .event-card,
-.hub-card,
 .playground-list li,
 .hub-section {
   break-inside: avoid;
   page-break-inside: avoid;
 }
 
-.event-card,
-.hub-card {
+.event-card {
   margin: 0 0 0.75rem;
   padding: 0 0 0.65rem;
   border: 0;
@@ -151,8 +145,7 @@ figure,
 }
 
 a.event-source::after,
-.hub-card h3 a[href^="http"]::after,
-.home-source a[href^="http"]::after {
+.event-card h3 a[href^="http"]::after {
   content: " (" attr(href) ")";
   font-weight: 400;
   font-size: 0.85em;

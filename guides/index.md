@@ -3,11 +3,11 @@ layout: default
 title: Guides
 description: Evergreen family guides for the Eastside. Playground map and library story times, with addresses and photos.
 permalink: /guides/
+intro: These pages stay up between the dated listings. I write them for the places we actually use, and I only keep a spot when I can point to the address.
 ---
 
-<article class="page wrap prose guide-page">
-  <h1><a href="{{ '/guides/' | relative_url }}">Guides</a></h1>
-  <p class="guide-intro">These pages stay up between the dated listings. I write them for the places we actually use, and I only keep a spot when I can point to the address.</p>
+<article class="page wrap guide-page">
+  {%- include guide-header.html -%}
   <ul class="guide-index">
     <li>
       <a href="{{ '/guides/playgrounds/' | relative_url }}">Playground map</a>

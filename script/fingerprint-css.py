@@ -23,7 +23,7 @@ SRC = ROOT / "_css"
 DEST = ROOT / "assets" / "css"
 DATA = ROOT / "_data" / "css.yml"
 LINKED = ("site", "print")
-INLINE = ("home", "city", "seasonal", "lights", "guide")
+INLINE = ("home", "city", "seasonal", "feature", "map", "map_halloween", "guide", "playgrounds")
 INLINE_DATA = ROOT / "_data" / "css_inline.json"
 
 

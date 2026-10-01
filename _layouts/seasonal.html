@@ -4,7 +4,7 @@ layout: default
 {%- if page.home_lights -%}
 <article class="page wrap hub-page{% if page.map_id == "halloween" %} map-theme-halloween{% endif %}">
   <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
-  <p class="hub-intro">{{ page.intro }}</p>
+  <p class="page-intro">{{ page.intro }}</p>
   <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   {%- include home-lights.html -%}
 </article>
@@ -18,7 +18,7 @@ layout: default
   {%- elsif page.hub_id == "fall" -%}
   {%- include lights-feature.html theme="halloween" -%}
   {%- endif -%}
-  <p class="hub-intro">{{ hub.intro }}</p>
+  <p class="page-intro">{{ hub.intro }}</p>
   <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   {%- assign suggest_lead = hub.suggest_lead | append: "" -%}
   {%- if suggest_lead.size > 0 -%}
@@ -64,7 +64,7 @@ layout: default
       {%- assign event_source = event.image_source | append: "" -%}
       {%- assign event_calendar = event.calendar | append: "" -%}
       {%- capture city_href -%}/{{ event.city_id }}/{%- endcapture -%}
-      <article class="hub-card" data-image-kind="{{ event.image_kind }}"{% if event.cost == "Free" or event.cost == "free" %} data-cost="Free"{% elsif event.cost contains "$" %} data-cost="{{ event.cost | escape }}"{% endif %}{% if event.ages == "Toddlers" or event.ages == "Kids" or event.ages == "Teens" or event.ages == "All ages" %} data-ages="{{ event.ages | escape }}"{% endif %}{% if event.setting == "Indoor" or event.setting == "Outdoor" %} data-setting="{{ event.setting }}"{% endif %}{% if event.drop_off == true %} data-dropoff="1"{% endif %}{% if event.signup == true %} data-signup="1"{% endif %}{% if event.sensory == true %} data-sensory="1"{% endif %}>
+      <article class="event-card event-card--tile" data-image-kind="{{ event.image_kind }}"{% if event.cost == "Free" or event.cost == "free" %} data-cost="Free"{% elsif event.cost contains "$" %} data-cost="{{ event.cost | escape }}"{% endif %}{% if event.ages == "Toddlers" or event.ages == "Kids" or event.ages == "Teens" or event.ages == "All ages" %} data-ages="{{ event.ages | escape }}"{% endif %}{% if event.setting == "Indoor" or event.setting == "Outdoor" %} data-setting="{{ event.setting }}"{% endif %}{% if event.drop_off == true %} data-dropoff="1"{% endif %}{% if event.signup == true %} data-signup="1"{% endif %}{% if event.sensory == true %} data-sensory="1"{% endif %}>
         {%- if event_image.size > 0 -%}
         {%- if forloop.parentloop.first and forloop.index < 3 -%}
           {%- assign card_loading = "eager" -%}

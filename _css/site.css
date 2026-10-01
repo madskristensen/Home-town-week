@@ -36,16 +36,11 @@
   --muted: var(--text-muted);
   --forest: var(--accent);
   --forest-deep: color-mix(in srgb, var(--accent) 73%, black);
-  --gold-bright: var(--gold);
   --gold-line: var(--map-road);
   --link: var(--accent);
   --rule: var(--border);
   --focus: var(--gold);
-  --header-ink: var(--accent-contrast);
   --on-accent: var(--accent-contrast);
-  --shadow: none;
-  --map-quiet: var(--border);
-  --map-label: var(--accent-contrast);
   --wash: rgb(from var(--accent) r g b / 0.07);
   --credit-bg: rgb(from var(--surface) r g b / 0.3);
   --credit-shadow: 0 0 2px rgb(from var(--surface) r g b / 0.8);
@@ -54,16 +49,9 @@
   --foothills: var(--map-land);
   --water: var(--map-water);
   --water-edge: var(--map-shore);
-  --map-facade: var(--surface-2);
-  --map-facade-edge: color-mix(in srgb, var(--map-land) 62%, var(--map-shore));
-  --map-dot: var(--map-facade-edge);
   --btn-bg: var(--accent);
   --btn-bg-hover: color-mix(in srgb, var(--accent) 73%, black);
   --btn-ink: var(--accent-contrast);
-  --pin-bg: var(--accent);
-  --pin-ink: var(--accent-contrast);
-  --pin-ring: var(--accent-contrast);
-  --pin-shadow: 0 1px 2px rgb(from var(--accent) r g b / 0.35);
   --menu-border: var(--border-strong);
   --menu-shadow: 0 0.55rem 1.6rem rgb(from var(--text) r g b / 0.18);
   --radius: 2px;
@@ -102,27 +90,13 @@
     --map-water: #345e78;
     --map-shore: #9ec4d6;
     --map-road: #e8b15a;
-    --pin: #146b45;
-
-    /* Christmas feature card. Red is too deep for the sage accent. */
-    --xmas-bg: #b71c1c;
-    --xmas-ink: #fff8f2;
-    --xmas-border: #ffd27a;
-    --xmas-btn: #d8ffe6;
-    --xmas-btn-hover: #b6f5d0;
 
     --forest-deep: color-mix(in srgb, var(--accent) 55%, white);
-    --header-ink: var(--text);
-    --map-label: var(--text);
     --wash: rgb(from var(--accent) r g b / 0.18);
     --credit-bg: rgb(from var(--bg) r g b / 0.3);
     --credit-shadow: 0 0 2px rgb(from var(--bg) r g b / 0.8);
     --selection-bg: color-mix(in srgb, var(--gold) 38%, var(--bg));
     --btn-bg-hover: color-mix(in srgb, var(--accent) 92%, white);
-    --pin-bg: var(--pin);
-    --pin-ink: var(--text);
-    --pin-ring: var(--text);
-    --pin-shadow: 0 1px 2px rgb(from var(--accent-contrast) r g b / 0.35);
     --menu-border: var(--border-strong);
     --menu-shadow: 0 0.7rem 1.8rem rgb(from var(--bg) r g b / 0.45);
   }
@@ -162,6 +136,7 @@
 
 html {
   background: var(--page);
+  -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
@@ -278,11 +253,11 @@ picture {
 }
 
 /* One-line wordmark. The same bar on home, city, hub, and About. */
-.site-header--compact .home-mast {
+.home-mast {
   padding: 0;
 }
 
-.site-header--compact .mast-title-row {
+.mast-title-row {
   align-items: center;
   box-sizing: border-box;
   height: auto;
@@ -290,7 +265,7 @@ picture {
   border-bottom: 1px solid var(--rule);
 }
 
-.site-header--compact .home-mast .brand {
+.home-mast .brand {
   display: flex;
   align-items: center;
   max-width: none;
@@ -305,7 +280,7 @@ picture {
   white-space: nowrap;
 }
 
-.site-header--compact .home-mast .brand a {
+.home-mast .brand a {
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -335,12 +310,6 @@ picture {
   }
 }
 
-.site-header--compact .cities-menu summary {
-  align-self: stretch;
-  min-height: 0;
-}
-
-
 .cities-menu {
   position: static;
   flex: none;
@@ -350,8 +319,9 @@ picture {
 .cities-menu summary {
   display: inline-flex;
   align-items: center;
+  align-self: stretch;
   gap: 0.4rem;
-  min-height: 2.75rem;
+  min-height: 0;
   padding: 0 0.15rem;
   color: var(--forest);
   font-family: var(--sans);
@@ -516,22 +486,17 @@ picture {
 
 
 @media (max-width: 42rem) {
-  .site-header--compact .mast-title-row {
+  .mast-title-row {
     padding: 0.823rem 0;
   }
 
-  .site-header--compact .home-mast .brand {
+  .home-mast .brand {
     font-size: 1.2rem;
     letter-spacing: -0.01em;
   }
 
-  .site-header--compact .home-mast .brand a {
+  .home-mast .brand a {
     gap: 0.38em;
-  }
-
-
-  .cities-menu summary {
-    min-height: 2.25rem;
   }
 }
 
@@ -544,6 +509,8 @@ picture {
 
 
 .home-cities h2,
+.event-list h2,
+.guide-page h2,
 .prose h2 {
   margin: 0;
   scroll-margin-top: 1rem;
@@ -574,7 +541,7 @@ picture {
 }
 
 
-.city-home .prose h2.event-bucket,
+.event-list h2.event-bucket,
 .hub-section > h2 {
   margin-top: 0.9rem;
   padding-bottom: 0.4rem;
@@ -869,13 +836,6 @@ figure figcaption a {
   text-underline-offset: 0.12em;
 }
 
-.hero-credit {
-  margin: 0;
-  color: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
 figure figcaption .source::before {
   content: "·";
   margin: 0 0.35rem;
@@ -898,16 +858,14 @@ figure figcaption .source::before {
   max-width: 40rem;
 }
 
-.empty-suggest p,
-.prose .empty-suggest p {
+.empty-suggest p {
   margin: 0;
   color: var(--text);
   font-size: 1.05rem;
   line-height: 1.45;
 }
 
-.empty-suggest p + p,
-.prose .empty-suggest p + p {
+.empty-suggest p + p {
   margin-top: 0.85rem;
 }
 
@@ -922,8 +880,7 @@ figure figcaption .source::before {
   font-weight: 700;
 }
 
-.empty-suggest-btn,
-.prose a.empty-suggest-btn {
+.empty-suggest-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -939,9 +896,7 @@ figure figcaption .source::before {
 }
 
 .empty-suggest-btn:hover,
-.empty-suggest-btn:focus-visible,
-.prose a.empty-suggest-btn:hover,
-.prose a.empty-suggest-btn:focus-visible {
+.empty-suggest-btn:focus-visible {
   background: var(--btn-bg-hover);
   color: var(--btn-ink);
   text-decoration: none;
@@ -1053,15 +1008,7 @@ figure figcaption .source::before {
 
 
 .list-updated {
-  margin: 0.3rem 0 0;
-  color: var(--muted);
-  font-size: 0.8rem;
-  font-weight: 500;
-  line-height: 1.35;
-}
-
-.prose p.list-updated {
-  margin: 0.15rem 0 0.85rem;
+  margin: 0.35rem 0 0;
   color: var(--muted);
   font-size: 0.8rem;
   font-weight: 500;
@@ -1106,13 +1053,6 @@ a.addr .addr-text {
   text-underline-offset: 0.14em;
 }
 
-.prose .event-place a.addr,
-.hub-card .event-place a.addr {
-  color: var(--link);
-  font-size: inherit;
-  font-weight: 400;
-  text-decoration: none;
-}
 
 
 
@@ -1150,8 +1090,7 @@ a.addr .addr-text {
   list-style: none;
 }
 
-.prose .event-tags,
-.hub-card .event-tags,
+.event-card .event-tags,
 .weekend-card .event-tags {
   margin: 0.4rem 0 0.1rem;
 }
@@ -1174,11 +1113,11 @@ a.addr .addr-text {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.45rem 0.55rem;
-  margin: 0;
+  margin: 0.85rem 0 1.35rem;
 }
 
-.hub-page .event-filters {
-  margin: 0.85rem 0 1.35rem;
+.event-list .event-filters {
+  margin: 0;
 }
 
 .filter-label {
@@ -1268,11 +1207,264 @@ a.addr .addr-text {
 }
 
 .event-card.is-filtered-out,
-.hub-card.is-filtered-out,
 .hub-grid.is-filtered-out,
 .hub-section.is-filtered-out,
-.prose h2.event-bucket.is-filtered-out,
+.event-list h2.event-bucket.is-filtered-out,
 .hub-toc li.is-filtered-out {
   display: none;
+}
+
+/* One introduction line. Context rules keep the old margins. */
+.page-intro {
+  margin: 0.85rem 0 0;
+  max-width: 40rem;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.guide-page .page-intro {
+  margin: 0.2rem 0 0;
+  line-height: 1.5;
+}
+
+.city-home > .page-intro {
+  margin: 0 0 0.9rem;
+  line-height: 1.5;
+}
+
+.city-home > .hero ~ .page-intro {
+  margin: 0.35rem 0 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Shared event card. The tile modifier is the photo-first grid. */
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1.7rem;
+}
+
+.event-list > h2,
+.event-list > .list-updated {
+  margin: 0;
+}
+
+.event-card {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--text);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow-wrap: break-word;
+}
+
+.event-card h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.28rem;
+  line-height: 1.22;
+}
+
+.event-card h3 a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.event-card h3 a:hover,
+.event-card h3 a:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.08em;
+}
+
+.event-card .event-when {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0.3rem 0 0.1rem;
+  color: var(--gold);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.event-card .event-place {
+  margin: 0.2rem 0 0.1rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.event-card .event-place a.place-town,
+.event-card .event-place span.place-town {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.event-card .event-place .drive-time::before {
+  content: " · ";
+}
+
+.event-card .event-place a.place-town:hover,
+.event-card .event-place a.place-town:focus-visible {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.event-card > p:not(.event-when):not(.event-place):not(.event-links):not(.hub-blurb),
+.event-card > ul,
+.event-card > ol {
+  margin: 0.8rem 0;
+}
+
+.event-card > ul,
+.event-card > ol {
+  padding-left: 1.25rem;
+}
+
+.event-card > p:not(.event-place):not(.event-links) a:not(.event-cal) {
+  font-weight: 600;
+}
+
+.event-card > p.event-links {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.event-card a.event-source {
+  color: var(--link);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
+}
+
+.event-card .event-cals {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.1rem 0.2rem;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+}
+
+.event-card a.event-cal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  min-width: 2rem;
+  min-height: 2rem;
+  padding: 0.15rem 0.25rem;
+  border-radius: 2px;
+  color: var(--link);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.event-card a.event-cal:hover,
+.event-card a.event-cal:focus-visible {
+  background: var(--wash);
+  text-decoration: none;
+}
+
+.event-card .cal-icon {
+  display: block;
+  width: 1.15em;
+  height: 1.15em;
+  flex: none;
+}
+
+.event-card .event-cal-when {
+  line-height: 1.2;
+}
+
+.hub-blurb {
+  margin: 0.35rem 0 0;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  gap: 1.35rem;
+  margin-top: 0.9rem;
+}
+
+.event-card--tile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+}
+
+.event-card--tile .event-photo {
+  margin: 0 0 0.55rem;
+  aspect-ratio: 16 / 9;
+}
+
+.event-card--tile .event-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-card--tile h3 {
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.event-card--tile .event-when {
+  margin: 0.25rem 0 0;
+}
+
+.event-card--tile .event-place {
+  margin: 0.15rem 0 0;
+}
+
+.event-card--tile .event-cals {
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+.event-card--tile a.event-cal {
+  gap: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  white-space: normal;
+}
+
+@media (max-width: 41.99rem) {
+  .hub-grid {
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 42rem) {
+  .hub-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.35rem 1rem;
+  }
 }
 

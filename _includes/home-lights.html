@@ -10,18 +10,19 @@
 {%- assign map_noun = "homes and streets" -%}
 {%- endif -%}
 {%- assign home_count = home_lights.count | default: 0 -%}
-<section class="home-map-section" aria-labelledby="lights-map-title">
+<section class="map-section" aria-labelledby="lights-map-title">
   <h2 id="lights-map-title" class="visually-hidden">Map</h2>
-  <div class="home-map-frame">
-    <div id="home-map-canvas" class="home-map-canvas" hidden></div>
-    <div class="home-map-poster" id="home-map-poster">
-      <p class="home-map-count">{{ home_count }} {{ map_noun }}</p>
+  <div class="map-frame">
+    <div id="home-map-canvas" class="map-canvas" hidden></div>
+    <div class="map-poster" id="home-map-poster">
+      <p class="map-count">{{ home_count }} {{ map_noun }}</p>
       <button type="button" id="home-map-show">Show map</button>
     </div>
   </div>
-  <p class="home-map-note">Numbers on the map match the list.</p>
+  <p class="map-note">Numbers on the map match the list.</p>
 </section>
 <script type="application/json" id="home-lights-pins">{{ home_lights.pins | jsonify }}</script>
+{%- include map-loader.html -%}
 <script>
 (function () {
   var button = document.getElementById("home-map-show");
@@ -33,27 +34,6 @@
   var jsUrl = {{ "/assets/leaflet/leaflet.js" | relative_url | jsonify }};
   var started = false;
 
-  function loadCss(href) {
-    return new Promise(function (resolve, reject) {
-      var link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = href;
-      link.onload = function () { resolve(); };
-      link.onerror = function () { reject(); };
-      document.head.appendChild(link);
-    });
-  }
-
-  function loadJs(src) {
-    return new Promise(function (resolve, reject) {
-      var script = document.createElement("script");
-      script.src = src;
-      script.onload = function () { resolve(); };
-      script.onerror = function () { reject(); };
-      document.body.appendChild(script);
-    });
-  }
-
   function showMap(pins) {
     var map = L.map(canvas, { scrollWheelZoom: false });
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -64,7 +44,7 @@
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     pins.forEach(function (pin) {
       var icon = L.divIcon({
-        className: "home-pin",
+        className: "map-pin",
         html: String(pin.n),
         iconSize: [28, 28],
         iconAnchor: [14, 14]
@@ -91,7 +71,7 @@
     button.textContent = "Loading map";
     var pins = [];
     try { pins = JSON.parse(data.textContent || "[]"); } catch (error) { pins = []; }
-    Promise.all([loadCss(cssUrl), loadJs(jsUrl)]).then(function () {
+    Promise.all([window.loadMapCss(cssUrl), window.loadMapJs(jsUrl)]).then(function () {
       canvas.hidden = false;
       poster.hidden = true;
       showMap(pins);
@@ -99,7 +79,7 @@
       started = false;
       button.disabled = false;
       button.textContent = "Show map";
-      poster.insertAdjacentHTML("beforeend", "<p class=\"home-map-error\">The map did not load. The list below still has every stop.</p>");
+      poster.insertAdjacentHTML("beforeend", "<p class=\"map-error\">The map did not load. The list below still has every stop.</p>");
     });
   });
 })();
@@ -114,7 +94,7 @@
     {%- assign light_image = light.image | append: "" -%}
     {%- assign light_credit = light.image_credit | append: "" -%}
     {%- assign light_source = light.image_source | append: "" -%}
-    <article class="hub-card" id="light-{{ light.id }}" data-image-kind="{{ light.image_kind }}">
+    <article class="event-card event-card--tile" id="light-{{ light.id }}" data-image-kind="{{ light.image_kind }}">
       {%- if light_image.size > 0 -%}
       {%- if forloop.parentloop.first and forloop.first -%}
         {%- assign card_loading = "eager" -%}
@@ -144,10 +124,10 @@
       <p class="event-when">{{ light_nights }}</p>
       {%- endif -%}
       {%- if light_hours.size > 0 -%}
-      <p class="home-hours">{{ light_hours }}</p>
+      <p class="event-place event-hours">{{ light_hours }}</p>
       {%- endif -%}
       <p class="hub-blurb">{{ light.description }}</p>
-      <p class="home-source"><a href="{{ light.source }}" rel="noopener">{% assign light_source_label = light.source_label | append: "" %}{% if light_source_label.size > 0 %}{{ light.source_label }}{% else %}Source{% endif %}</a>{% assign light_also = light.also_source | append: "" %}{% if light_also.size > 0 %} · <a href="{{ light.also_source }}" rel="noopener">{% assign light_also_label = light.also_source_label | append: "" %}{% if light_also_label.size > 0 %}{{ light.also_source_label }}{% else %}Source{% endif %}</a>{% endif %}</p>
+      <p class="event-links"><a class="event-source" href="{{ light.source }}" rel="noopener">{% assign light_source_label = light.source_label | append: "" %}{% if light_source_label.size > 0 %}{{ light.source_label }}{% else %}Source{% endif %}</a>{% assign light_also = light.also_source | append: "" %}{% if light_also.size > 0 %} · <a class="event-source" href="{{ light.also_source }}" rel="noopener">{% assign light_also_label = light.also_source_label | append: "" %}{% if light_also_label.size > 0 %}{{ light.also_source_label }}{% else %}Source{% endif %}</a>{% endif %}</p>
     </article>
     {%- endfor -%}
   </div>

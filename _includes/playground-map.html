@@ -1,19 +1,21 @@
 {%- include playground-filters.html -%}
+{%- include empty-suggest.html mode="filter" name="playgrounds" -%}
 {%- assign play_count = 0 -%}
 {%- for city in site.data.playground_map.cities -%}
 {%- assign play_count = play_count | plus: city.parks.size -%}
 {%- endfor -%}
-<section class="home-map-section" aria-labelledby="playground-map-title">
+<section class="map-section" aria-labelledby="playground-map-title">
   <h2 id="playground-map-title" class="visually-hidden">Map</h2>
-  <div class="home-map-frame">
-    <div id="playground-map-canvas" class="home-map-canvas" hidden></div>
-    <div class="home-map-poster" id="playground-map-poster">
-      <p class="home-map-count">{{ play_count }} playground{% if play_count != 1 %}s{% endif %}</p>
+  <div class="map-frame">
+    <div id="playground-map-canvas" class="map-canvas" hidden></div>
+    <div class="map-poster" id="playground-map-poster">
+      <p class="map-count">{{ play_count }} playground{% if play_count != 1 %}s{% endif %}</p>
       <button type="button" id="playground-map-show">Show map</button>
     </div>
   </div>
-  <p class="home-map-note">Open a pin for the park, the city, the address, and the park page. Coordinates are from OpenStreetMap contributors, ODbL.</p>
+  <p class="map-note">Open a pin for the park, the city, the address, and the park page. Coordinates are from OpenStreetMap contributors, ODbL.</p>
 </section>
+{%- include map-loader.html -%}
 <script>
 (function () {
   var button = document.getElementById("playground-map-show");
@@ -53,7 +55,7 @@
   }
 
   function updatePosterCount() {
-    var countEl = document.querySelector(".home-map-count");
+    var countEl = document.querySelector(".map-count");
     if (!countEl) return;
     var n = 0;
     var items = document.querySelectorAll(".playground-list li");
@@ -78,33 +80,30 @@
     window.setTimeout(function () { map.invalidateSize(); }, 50);
   }
 
+  function updateFilterEmpty() {
+    var note = document.querySelector(".guide-page .filter-empty");
+    if (!note) return;
+    var active = document.querySelector(".playground-filters input:checked");
+    if (!active) {
+      note.hidden = true;
+      return;
+    }
+    var items = document.querySelectorAll(".playground-list li");
+    var any = false;
+    var i;
+    for (i = 0; i < items.length; i++) {
+      if (items[i].getClientRects().length) any = true;
+    }
+    note.hidden = any;
+  }
+
   document.querySelectorAll(".playground-filters input").forEach(function (input) {
     input.addEventListener("change", function () {
       updatePosterCount();
+      updateFilterEmpty();
       applyMapFilters();
     });
   });
-
-  function loadCss(href) {
-    return new Promise(function (resolve, reject) {
-      var link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = href;
-      link.onload = function () { resolve(); };
-      link.onerror = function () { reject(); };
-      document.head.appendChild(link);
-    });
-  }
-
-  function loadJs(src) {
-    return new Promise(function (resolve, reject) {
-      var script = document.createElement("script");
-      script.src = src;
-      script.onload = function () { resolve(); };
-      script.onerror = function () { reject(); };
-      document.body.appendChild(script);
-    });
-  }
 
   function squash(value) {
     return String(value || "").replace(/\s+/g, " ").trim();
@@ -193,7 +192,7 @@
       iconCreateFunction: function (group) {
         var count = group.getChildCount();
         return L.divIcon({
-          className: "home-cluster",
+          className: "map-cluster",
           html: String(count),
           iconSize: [36, 36],
           iconAnchor: [18, 18]
@@ -203,7 +202,7 @@
     markers = [];
     pins.forEach(function (pin) {
       var icon = L.divIcon({
-        className: pin.standout ? "home-pin home-pin-standout" : "home-pin",
+        className: pin.standout ? "map-pin map-pin-standout" : "map-pin",
         html: pin.standout ? "<svg class=\"standout-star\" aria-hidden=\"true\" focusable=\"false\" width=\"12\" height=\"12\"><use href=\"#standout-star\"></use></svg>" : "",
         iconSize: [22, 22],
         iconAnchor: [11, 11]
@@ -234,8 +233,8 @@
     button.disabled = true;
     button.textContent = "Loading map";
     Promise.all([
-      loadCss(cssUrl),
-      loadJs(jsUrl).then(function () { return loadJs(clusterUrl); }),
+      window.loadMapCss(cssUrl),
+      window.loadMapJs(jsUrl).then(function () { return window.loadMapJs(clusterUrl); }),
       fetch(dataUrl).then(function (response) {
         if (!response.ok) throw new Error("pins");
         return response.json();
@@ -250,7 +249,7 @@
       started = false;
       button.disabled = false;
       button.textContent = "Show map";
-      poster.insertAdjacentHTML("beforeend", "<p class=\"home-map-error\">The map did not load. The list below still has every playground.</p>");
+      poster.insertAdjacentHTML("beforeend", "<p class=\"map-error\">The map did not load. The list below still has every playground.</p>");
     });
   });
 })();

@@ -592,7 +592,7 @@ module EastsideCalendar
     def inject!(html, groups, dates, today, city_name = nil, labels = nil)
       return html unless html.is_a?(String)
 
-      match = html.match(/<div class="prose"[^>]*>/)
+      match = html.match(/<div class="event-list"[^>]*>/)
       return html unless match
 
       content_at = match.end(0)
@@ -605,7 +605,7 @@ module EastsideCalendar
       html[0, match.begin(0)] + opener + inner + html[close_at..]
     end
 
-    # The prose attribute and the buckets share one Pacific day.
+    # The list attribute and the buckets share one Pacific day.
     # Liquid's date filter can print the UTC day instead.
     def stamp_today(opener, today)
       return opener unless today

@@ -1,0 +1,279 @@
+/* Map frame, pins, popups, and tooltips. */
+:root {
+  --map-facade: var(--surface-2);
+  --map-facade-edge: color-mix(in srgb, var(--map-land) 62%, var(--map-shore));
+  --map-dot: var(--map-facade-edge);
+  --pin-bg: var(--accent);
+  --pin-ink: var(--accent-contrast);
+  --pin-ring: var(--accent-contrast);
+  --pin-shadow: 0 1px 2px rgb(from var(--accent) r g b / 0.35);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pin-bg: #146b45;
+    --pin-ink: var(--text);
+    --pin-ring: var(--text);
+    --pin-shadow: 0 1px 2px rgb(from var(--accent-contrast) r g b / 0.35);
+  }
+}
+
+.map-frame .leaflet-marker-icon.map-pin,
+.map-frame .leaflet-marker-icon.map-cluster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--pin-ring);
+  border-radius: 999px;
+  background: var(--pin-bg);
+  color: var(--pin-ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: var(--pin-shadow);
+}
+
+.map-frame .leaflet-marker-icon.map-cluster {
+  font-size: 12px;
+}
+
+.map-frame {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  margin-top: 0.35rem;
+  overflow: hidden;
+  border: 1px solid var(--map-facade-edge);
+  border-radius: var(--radius);
+  background: var(--map-facade);
+}
+
+.map-canvas,
+.map-poster {
+  position: absolute;
+  inset: 0;
+}
+
+.map-canvas {
+  width: 100%;
+  height: 100%;
+  background: var(--map-facade);
+}
+
+.map-poster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--map-facade);
+  background-image: radial-gradient(var(--map-dot) 1.1px, transparent 1.1px);
+  background-size: 18px 18px;
+}
+
+.map-count {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.map-poster button {
+  min-height: 2.75rem;
+  padding: 0.35rem 1.1rem;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.map-poster button:hover,
+.map-poster button:focus-visible {
+  background: var(--btn-bg-hover);
+  color: var(--btn-ink);
+}
+
+.map-poster button:disabled {
+  cursor: progress;
+}
+
+.map-error {
+  margin: 0;
+  max-width: 18rem;
+  color: var(--gold);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.map-note {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.map-frame .leaflet-marker-icon.map-pin-standout .standout-star {
+  width: 12px;
+  height: 12px;
+}
+
+.home-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  margin-right: 0.35rem;
+  border-radius: 999px;
+  background: var(--pin-bg);
+  color: var(--pin-ink);
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+  vertical-align: 0.12em;
+}
+
+.leaflet-container {
+  font-family: var(--sans);
+}
+
+.map-frame .leaflet-popup-content-wrapper,
+.map-frame .leaflet-popup-tip {
+  background: var(--sheet);
+  color: var(--ink);
+}
+
+.map-frame .leaflet-popup-content {
+  margin: 0.65rem 0.8rem;
+  line-height: 1.35;
+}
+
+.map-frame .leaflet-container a.leaflet-popup-close-button {
+  color: var(--muted);
+}
+
+.map-frame .leaflet-container a.leaflet-popup-close-button:hover,
+.map-frame .leaflet-container a.leaflet-popup-close-button:focus {
+  color: var(--ink);
+}
+
+.map-popup-name {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.map-popup-city,
+.map-popup-address,
+.map-popup-link {
+  margin: 0.2rem 0 0;
+}
+
+.map-popup-city,
+.map-popup-address {
+  color: var(--muted);
+}
+
+.map-frame .leaflet-container a.addr {
+  color: var(--link);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.map-frame .leaflet-container a.addr .addr-text {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.map-popup-link a {
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  .map-frame .leaflet-container {
+    background: var(--map-facade);
+    color: var(--ink);
+  }
+
+  .map-frame .leaflet-tile-pane {
+    filter: sepia(0.15) saturate(0.85) brightness(0.85) contrast(1.02);
+  }
+
+  .map-frame .leaflet-bar a {
+    background: var(--sheet);
+    color: var(--ink);
+    border-bottom-color: var(--rule);
+  }
+
+  .map-frame .leaflet-bar a:hover,
+  .map-frame .leaflet-bar a:focus {
+    background: var(--page);
+    color: var(--ink);
+  }
+
+  .map-frame .leaflet-control-attribution {
+    background: rgb(from var(--bg) r g b / 0.88);
+    color: var(--muted);
+  }
+
+  .map-frame .leaflet-control-attribution a {
+    color: var(--link);
+  }
+
+  .map-frame .leaflet-tooltip {
+    background: var(--sheet);
+    color: var(--ink);
+    border-color: var(--rule);
+  }
+}
+.event-card .event-hours {
+  font-weight: 400;
+}
+
+.decor-kicker {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.12rem 0.45rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--sheet);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  vertical-align: 0.12em;
+}
+
+@media (prefers-contrast: more) {
+  .map-frame,
+  .map-poster {
+    background: var(--sheet);
+    background-image: none;
+    border-color: var(--ink);
+  }
+
+  .map-note {
+    color: var(--ink);
+  }
+
+  .decor-kicker {
+    background: var(--sheet);
+    border-color: var(--ink);
+    color: var(--ink);
+  }
+}

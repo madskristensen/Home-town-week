@@ -1,0 +1,203 @@
+/* Playground directory, map spacing, and filter rules.
+   The shared filter margin keeps the top gap. The map section owns
+   the space under the chips, so the bottom margin is not added twice. */
+.guide-page .playground-filters {
+  margin-bottom: 0;
+}
+
+.guide-page .map-section {
+  margin-top: 1.1rem;
+}
+
+/* Town chips are OR. Amenity chips are AND. The list follows the
+   checkboxes without waiting for the map. */
+.guide-page:has(.playground-filters .flt-town:checked) .playground-directory > h3,
+.guide-page:has(.playground-filters .flt-town:checked) .playground-directory > .playground-list {
+  display: none;
+}
+
+.guide-page .event-card {
+  scroll-margin-top: 1rem;
+}
+
+.playground-directory {
+  margin-top: 1.75rem;
+}
+
+.playground-directory h3 {
+  margin: 1.15rem 0 0.4rem;
+  font-size: 1.2rem;
+}
+
+.playground-list {
+  margin: 0 0 0.35rem;
+  padding: 0;
+  list-style: none;
+}
+
+.playground-list li {
+  margin: 0 0 0.45rem;
+  scroll-margin-top: 1rem;
+}
+
+.playground-list > li > a[rel] {
+  font-weight: 600;
+}
+
+.icon-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.standout-mark {
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  margin-left: 0.28em;
+  color: currentColor;
+  vertical-align: -0.05em;
+}
+
+.standout-star {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.playground-meta {
+  display: block;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+@media (min-width: 42rem) {
+  .playground-list {
+    columns: 2;
+    column-gap: 1.5rem;
+  }
+
+  .playground-list li {
+    break-inside: avoid;
+  }
+}
+
+.guide-page:has(.playground-filters .flt-town[data-city="bellevue"]:checked) #all-bellevue,
+.guide-page:has(.playground-filters .flt-town[data-city="bellevue"]:checked) #all-bellevue + .playground-list {
+  display: block;
+}
+
+.guide-page:has(.playground-filters .flt-town[data-city="bothell"]:checked) #all-bothell,
+.guide-page:has(.playground-filters .flt-town[data-city="bothell"]:checked) #all-bothell + .playground-list {
+  display: block;
+}
+
+.guide-page:has(.playground-filters .flt-town[data-city="carnation"]:checked) #all-carnation,
+.guide-page:has(.playground-filters .flt-town[data-city="carnation"]:checked) #all-carnation + .playground-list {
+  display: block;
+}
+
+.guide-page:has(.playground-filters .flt-town[data-city="duvall"]:checked) #all-duvall,
+.guide-page:has(.playground-filters .flt-town[data-city="duvall"]:checked) #all-duvall + .playground-list {
+  display: block;
+}
+
+.guide-page:has(.playground-filters .flt-town[data-city="issaquah"]:checked) #all-issaquah,
+.guide-page:has(.playground-filters .flt-town[data-city="issaquah"]:checked) #all-issaquah + .playground-list {
+  display: block;
+}
+
+.guide-page:has(.playground-filters .flt-town[data-city="kenmore"]:checked) #all-kenmore,
+.guide-page:has(.playground-filters .flt-town[data-city="kenmore"]:checked) #all-kenmore + .playground-list {
+  display: block;
+}
+
+.guide-page:has(.playground-filters .flt-town[data-city="kirkland"]:checked) #all-kirkland,
+.guide-page:has(.playground-filters .flt-town[data-city="kirkland"]:checked) #all-kirkland + .playground-list {
+  display: block;
+}
+
+.guide-page:has(.playground-filters .flt-town[data-city="mercer-island"]:checked) #all-mercer-island,
+.guide-page:has(.playground-filters .flt-town[data-city="mercer-island"]:checked) #all-mercer-island + .playground-list {
+  display: block;
+}
+
+.guide-page:has(.playground-filters .flt-town[data-city="north-bend"]:checked) #all-north-bend,
+.guide-page:has(.playground-filters .flt-town[data-city="north-bend"]:checked) #all-north-bend + .playground-list {
+  display: block;
+}
+
+.guide-page:has(.playground-filters .flt-town[data-city="redmond"]:checked) #all-redmond,
+.guide-page:has(.playground-filters .flt-town[data-city="redmond"]:checked) #all-redmond + .playground-list {
+  display: block;
+}
+
+.guide-page:has(.playground-filters .flt-town[data-city="renton"]:checked) #all-renton,
+.guide-page:has(.playground-filters .flt-town[data-city="renton"]:checked) #all-renton + .playground-list {
+  display: block;
+}
+
+.guide-page:has(.playground-filters .flt-town[data-city="sammamish"]:checked) #all-sammamish,
+.guide-page:has(.playground-filters .flt-town[data-city="sammamish"]:checked) #all-sammamish + .playground-list {
+  display: block;
+}
+
+.guide-page:has(.playground-filters .flt-town[data-city="snoqualmie"]:checked) #all-snoqualmie,
+.guide-page:has(.playground-filters .flt-town[data-city="snoqualmie"]:checked) #all-snoqualmie + .playground-list {
+  display: block;
+}
+
+.guide-page:has(.playground-filters .flt-town[data-city="woodinville"]:checked) #all-woodinville,
+.guide-page:has(.playground-filters .flt-town[data-city="woodinville"]:checked) #all-woodinville + .playground-list {
+  display: block;
+}
+
+
+
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="restrooms"]:checked) .playground-list li:not([data-restrooms]) {
+  display: none;
+}
+
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="restrooms"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-restrooms])),
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="restrooms"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-restrooms])) + .playground-list {
+  display: none !important;
+}
+
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="covered"]:checked) .playground-list li:not([data-covered]) {
+  display: none;
+}
+
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="covered"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-covered])),
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="covered"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-covered])) + .playground-list {
+  display: none !important;
+}
+
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="accessible"]:checked) .playground-list li:not([data-accessible]) {
+  display: none;
+}
+
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="accessible"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-accessible])),
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="accessible"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-accessible])) + .playground-list {
+  display: none !important;
+}
+
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="toddler"]:checked) .playground-list li:not([data-toddler]) {
+  display: none;
+}
+
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="toddler"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-toddler])),
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="toddler"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-toddler])) + .playground-list {
+  display: none !important;
+}
+
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="splash"]:checked) .playground-list li:not([data-splash]) {
+  display: none;
+}
+
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="splash"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-splash])),
+.guide-page:has(.playground-filters .flt-amenity[data-amenity="splash"]:checked) .playground-directory > h3:not(:has(+ .playground-list > li[data-splash])) + .playground-list {
+  display: none !important;
+}

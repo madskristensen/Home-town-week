@@ -356,3 +356,13 @@
   font-weight: 400;
   text-decoration: none;
 }
+
+.weekend-photo figcaption {
+  pointer-events: none;
+}
+
+.weekend-photo figcaption a {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+}

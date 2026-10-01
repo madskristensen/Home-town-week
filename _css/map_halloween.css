@@ -1,0 +1,22 @@
+/* Halloween decorations map theme. */
+.map-theme-halloween {
+  --map-facade: #f6e2cc;
+  --map-facade-edge: #c47a3a;
+  --map-dot: #d9a36a;
+  --pin-bg: #c2410c;
+  --pin-ink: #fff8f2;
+  --pin-ring: #2a140c;
+  --pin-shadow: 0 1px 2px rgb(194 65 12 / 0.35);
+}
+
+@media (prefers-color-scheme: dark) {
+  .map-theme-halloween {
+    --map-facade: #3a2418;
+    --map-facade-edge: #e8a05a;
+    --map-dot: #8a5a32;
+    --pin-bg: #f09a3a;
+    --pin-ink: #2a140c;
+    --pin-ring: #fff6ea;
+    --pin-shadow: 0 1px 2px rgb(0 0 0 / 0.35);
+  }
+}
