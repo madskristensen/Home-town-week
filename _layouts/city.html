@@ -45,6 +45,7 @@ layout: default
   {%- if page.hook -%}
   <p class="page-intro">{{ page.hook }}</p>
   {%- endif -%}
+  {%- include playground-promo.html city=page.city name=city.name -%}
   {%- assign event_copy = content | strip -%}
   {%- if event_copy != "" -%}
   <div class="event-list" data-today="{{ site.time | date: '%Y-%m-%d' }}">

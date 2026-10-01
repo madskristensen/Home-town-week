@@ -13,6 +13,15 @@
 {%- capture mail_body -%}Event or calendar link:
 Town:
 Date:{%- endcapture -%}
+{%- assign play_town = include.town | append: "" | strip -%}
+{%- if play_town.size == 0 and page.layout == "city" -%}
+  {%- assign play_town = page.city | append: "" | strip -%}
+{%- endif -%}
+{%- if play_town.size > 0 -%}
+  {%- capture play_href -%}/guides/playgrounds/?town={{ play_town }}{%- endcapture -%}
+{%- else -%}
+  {%- assign play_href = "/guides/playgrounds/" -%}
+{%- endif -%}
 <div class="empty-suggest{% if empty_mode == "filter" %} filter-empty{% endif %}"{% if empty_mode == "filter" %} hidden{% endif %}>
   {%- if empty_mode == "missing" -%}
   <p>We couldn't find that page. Maybe it moved, or the event already happened.</p>
@@ -29,5 +38,6 @@ Date:{%- endcapture -%}
   {%- else -%}
   <p>No {{ empty_topic }} events are listed yet. {{ empty_ask }}</p>
   {%- endif -%}
+  <p class="empty-play"><a href="{{ play_href | strip | relative_url }}">Head to a playground instead</a></p>
   <a class="empty-suggest-btn" href="mailto:suggestions@eastsidecalendar.com?subject={{ mail_subject | strip | mail_escape }}&amp;body={{ mail_body | strip | mail_escape }}">Suggest an event or calendar</a>
 </div>

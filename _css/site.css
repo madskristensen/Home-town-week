@@ -876,6 +876,14 @@ figure figcaption .source::before {
   margin-top: 0.85rem;
 }
 
+.empty-play {
+  margin-top: 0.85rem;
+}
+
+.empty-play a {
+  font-weight: 700;
+}
+
 .empty-links {
   display: flex;
   flex-wrap: wrap;

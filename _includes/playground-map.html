@@ -18,6 +18,29 @@
 {%- include map-loader.html -%}
 <script>
 (function () {
+  var town = "";
+  try {
+    town = new URLSearchParams(window.location.search).get("town") || "";
+  } catch (err) {
+    town = "";
+  }
+  if (!town) {
+    var hash = window.location.hash || "";
+    if (hash.indexOf("#town-") === 0) town = hash.slice(6);
+  }
+  town = String(town).toLowerCase();
+  if (/^[a-z0-9-]+$/.test(town)) {
+    var preset = document.querySelector('.playground-filters .flt-town[data-city="' + town + '"]');
+    if (preset) {
+      preset.checked = true;
+      var presetCount = parseInt(preset.getAttribute("data-count"), 10);
+      var countEl = document.querySelector(".map-count");
+      if (countEl && presetCount) {
+        countEl.textContent = presetCount + (presetCount === 1 ? " playground" : " playgrounds");
+      }
+    }
+  }
+
   var button = document.getElementById("playground-map-show");
   var poster = document.getElementById("playground-map-poster");
   var canvas = document.getElementById("playground-map-canvas");

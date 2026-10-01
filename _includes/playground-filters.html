@@ -22,7 +22,7 @@
   <span class="filter-label" id="playground-filter-label">Filter:</span>
   {%- for city in site.data.playground_map.cities -%}
   <label class="filter-chip">
-    <input type="checkbox" class="flt-town" data-city="{{ city.id }}">
+    <input type="checkbox" class="flt-town" data-city="{{ city.id }}" data-count="{{ city.parks.size }}">
     <span class="filter-switch" aria-hidden="true"></span>
     <span>{{ city.name }}</span>
   </label>
