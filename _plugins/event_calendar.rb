@@ -835,6 +835,9 @@ module EastsideCalendar
         assigns["schema_street"] = schema["street"].to_s
         assigns["schema_locality"] = schema["locality"].to_s
         assigns["schema_cost"] = schema["cost"].to_s
+        assigns["schema_name"] = schema["name"].to_s
+        assigns["schema_share_start"] = schema["shareStart"].to_s
+        assigns["schema_share_end"] = schema["shareEnd"].to_s
         if assigns["schema_url"].empty?
           found = body[/<a class="event-source"[^>]*href="([^"]+)"/, 1]
           assigns["schema_url"] = CGI.unescapeHTML(found.to_s) if found
@@ -943,6 +946,49 @@ module EastsideCalendar
       nil
     end
 
+    # A clock time stays as an offset ISO string. A date-only event stays
+    # YYYY-MM-DD so a share message does not invent a midnight time.
+    def share_start_value(parsed)
+      return "" unless parsed && parsed[:date]
+      return format_offset_time(parsed).to_s if parsed[:time]
+
+      parsed[:date].iso8601
+    end
+
+    def share_end_value(start_parsed, end_parsed)
+      return "" unless start_parsed && start_parsed[:date]
+      return "" unless end_parsed && end_parsed[:date]
+
+      if start_parsed[:time]
+        return "" unless end_parsed[:time]
+        return "" if sort_key(end_parsed) <= sort_key(start_parsed)
+
+        format_offset_time(end_parsed).to_s
+      else
+        return "" if end_parsed[:date] <= start_parsed[:date]
+
+        end_parsed[:date].iso8601
+      end
+    end
+
+    # Venue name without the street or a repeated city.
+    def venue_name(place, city_name)
+      text = place.to_s.gsub(/\s+/, " ").strip
+      return "" if text.empty?
+
+      parts = text.split(/\s*,\s*/)
+      street = parts.find { |part| part.match?(/\A\d{1,6}(?!st|nd|rd|th)\b/i) }
+      kept = []
+      parts.each do |part|
+        break if street && part == street
+
+        kept << part
+      end
+      kept.pop if !city_name.to_s.empty? && kept.last.to_s.casecmp(city_name.to_s).zero?
+      kept.pop if kept.last.to_s.match?(/\A(?:WA|Washington)\z/i)
+      kept.join(", ").strip
+    end
+
     def place_parts(place, city_name)
       text = place.to_s.gsub(/\s+/, " ").strip
       return ["", ""] if text.empty?
@@ -1040,7 +1086,9 @@ module EastsideCalendar
         "locality" => city_name,
         "sameAs" => http_url?(same) ? same : "",
         "date" => card_date ? iso_date(card_date) : "",
-        "bucket" => bucket_key(card_date, today).to_s
+        "bucket" => bucket_key(card_date, today).to_s,
+        "shareStart" => share_start_value(start_parsed),
+        "shareEnd" => share_end_value(start_parsed, chosen && chosen[:end])
       }
     end
   end
@@ -1342,6 +1390,30 @@ module EastsideCalendar
     def street_of(place, city)
       _name, street = EventCalendar.place_parts(place, city.to_s)
       street.to_s
+    end
+
+    def venue_of(place, city)
+      EventCalendar.venue_name(place, city.to_s)
+    end
+
+    def share_start(input)
+      EventCalendar.share_start_value(EventCalendar.parse_when(input))
+    end
+
+    def share_finish(input)
+      start_s, end_s = input.to_s.split("|", 2)
+      EventCalendar.share_end_value(EventCalendar.parse_when(start_s), EventCalendar.parse_when(end_s))
+    end
+
+    # The city date line is already in the card body. The button hangs off
+    # that line; it is not a new row.
+    def with_event_share(html, button)
+      snippet = button.to_s.strip
+      return html.to_s if snippet.empty?
+
+      html.to_s.sub(%r{(<p class="event-when"[^>]*>)(.*?)(</p>)}m) do
+        "#{Regexp.last_match(1)}#{Regexp.last_match(2)}#{snippet}#{Regexp.last_match(3)}"
+      end
     end
 
     # The city heading is inside the card body. Name belongs on the h3,

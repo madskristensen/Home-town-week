@@ -103,6 +103,37 @@
 {%- endif -%}
 {%- endif -%}
 {%- endcapture -%}
+{%- assign share_title = include.title | append: "" | strip -%}
+{%- if share_title.size == 0 -%}
+  {%- assign share_title = include.schema_name | append: "" | strip -%}
+{%- endif -%}
+{%- assign share_raw = "" -%}
+{%- if include.event -%}
+  {%- assign share_raw = include.event.start_raw | append: "" | strip -%}
+  {%- if share_raw.size == 0 -%}
+    {%- assign share_raw = include.event.start | append: "" | strip -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if share_raw.size > 0 -%}
+  {%- assign share_start = share_raw | share_start -%}
+  {%- assign share_end_raw = include.event.end_raw | append: "" | strip -%}
+  {%- if share_end_raw.size == 0 -%}
+    {%- assign share_end_raw = include.event.end | append: "" | strip -%}
+  {%- endif -%}
+  {%- capture share_pair -%}{{ share_raw }}|{{ share_end_raw }}{%- endcapture -%}
+  {%- assign share_end = share_pair | strip | share_finish -%}
+{%- else -%}
+  {%- assign share_start = include.schema_share_start | append: "" | strip -%}
+  {%- assign share_end = include.schema_share_end | append: "" | strip -%}
+{%- endif -%}
+{%- assign share_venue = schema_place | venue_of: schema_locality -%}
+{%- assign share_button = "" -%}
+{%- if share_title.size > 0 and share_start.size > 0 -%}
+{%- capture share_button -%}
+<button type="button" class="event-share" aria-label="Share {{ share_title | escape }}" data-share-title="{{ share_title | escape }}" data-share-start="{{ share_start | escape }}"{% if share_end.size > 0 %} data-share-end="{{ share_end | escape }}"{% endif %}{% if share_venue.size > 0 %} data-share-venue="{{ share_venue | escape }}"{% endif %}{% if schema_locality.size > 0 %} data-share-city="{{ schema_locality | escape }}"{% endif %}{% if schema_description.size > 0 %} data-share-blurb="{{ schema_description | escape }}"{% endif %}{% if schema_cost.size > 0 %} data-share-cost="{{ schema_cost | escape }}"{% endif %}{% if schema_url.size > 0 %} data-share-url="{{ schema_url | escape }}"{% endif %}><svg class="event-share-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 2.8v7.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path><path d="M6.7 6.1 10 2.8l3.3 3.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4.8 9.2v6.2c0 .8.6 1.4 1.4 1.4h7.6c.8 0 1.4-.6 1.4-1.4V9.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="event-share-status" data-share-status aria-live="polite"></span></button>
+{%- endcapture -%}
+{%- assign share_button = share_button | strip -%}
+{%- endif -%}
 {%- if card_layout == "weekend" -%}
 {%- assign card_image = include.image | append: "" | strip -%}
 {%- if card_image.size > 0 -%}
@@ -120,13 +151,14 @@
 {%- endif -%}
 {%- assign card_href = include.href | append: "" | strip -%}
 {%- assign card_external = include.external -%}
-<a class="event-card weekend-card" href="{{ card_href | relative_url }}"{% if card_external %} rel="noopener"{% endif %}{% if schema_start.size > 0 %} itemscope itemtype="https://schema.org/Event"{% endif %}>
+<article class="event-card weekend-card"{% if schema_start.size > 0 %} itemscope itemtype="https://schema.org/Event"{% endif %}>
           {{ event_microdata }}
+          <a class="weekend-card-link" href="{{ card_href | relative_url }}"{% if card_external %} rel="noopener"{% endif %} tabindex="-1" aria-hidden="true"></a>
           <span class="weekend-town">{{ include.town }}</span>
-          <span class="weekend-when">{{ include.when }}</span>
-          <span class="weekend-name"{% if schema_start.size > 0 %} itemprop="name"{% endif %}>{{ include.title }}</span>
+          <span class="weekend-when">{{ include.when }}{{ share_button }}</span>
+          <a class="weekend-name-link" href="{{ card_href | relative_url }}"{% if card_external %} rel="noopener"{% endif %}><span class="weekend-name"{% if schema_start.size > 0 %} itemprop="name"{% endif %}>{{ include.title }}</span></a>
           {%- if include.event -%}{%- include event-tags.html event=include.event -%}{%- endif -%}
-</a>
+</article>
 {%- assign card_place = include.place | append: "" | strip -%}
 {%- if card_place.size > 0 -%}
 <a class="addr weekend-place" href="{{ card_place | map_search: include.place_city }}"><span class="addr-text">{{ card_place }}</span></a>
@@ -198,7 +230,9 @@
 <span class="event-when-tail">{{ when_last }}{{ card_cal_html }}</span>
 {%- elsif card_when.size > 0 -%}{{ card_when }}
 {%- else -%}{{ card_cal_html }}
-{%- endif -%}</p>
+{%- endif -%}{{ share_button }}</p>
+{%- elsif share_button.size > 0 -%}
+<p class="event-when">{{ share_button }}</p>
 {%- endif -%}
 {%- endcapture -%}
 {%- assign card_place = include.place | append: "" | strip -%}
@@ -252,9 +286,9 @@
 <article class="event-card"{% if schema_start.size > 0 %} itemscope itemtype="https://schema.org/Event"{% endif %}{% if card_date.size > 0 %} data-date="{{ card_date }}"{% endif %}{% if card_end.size > 0 %} data-end="{{ card_end }}"{% endif %}{% if card_attrs.size > 0 %} {{ card_attrs }}{% endif %}>
 {{ event_microdata }}
 {%- if schema_start.size > 0 -%}
-{{ include.body | event_name_prop }}
+{{ include.body | event_name_prop | with_event_share: share_button }}
 {%- else -%}
-{{ include.body }}
+{{ include.body | with_event_share: share_button }}
 {%- endif -%}
 </article>
 {%- endif -%}

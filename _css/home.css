@@ -62,11 +62,20 @@
   text-decoration: none;
 }
 
-.weekend-card::after {
-  content: "";
+.weekend-card-link {
   position: absolute;
   inset: 0;
   z-index: 0;
+}
+
+.weekend-name-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.weekend-when .event-share {
+  margin-left: -22px;
 }
 
 .weekend-pick img {
@@ -134,8 +143,8 @@
   line-height: 1.2;
 }
 
-.weekend-card:hover .weekend-name,
-.weekend-card:focus-visible .weekend-name {
+.weekend-card-link:hover ~ .weekend-name-link .weekend-name,
+.weekend-name-link:focus-visible .weekend-name {
   text-decoration: underline;
   text-underline-offset: 0.06em;
 }

@@ -1382,6 +1382,70 @@ h2.event-bucket.is-past {
   white-space: nowrap;
 }
 
+/* Share hangs off the date line, in a 22px slot that long dates already
+   leave free. The 44px hit target is out of flow, so the line stays put. */
+.event-card .event-when,
+.weekend-when {
+  position: relative;
+  max-width: calc(100% - 22px);
+}
+
+.event-share {
+  position: absolute;
+  z-index: 2;
+  left: 100%;
+  top: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: -22px 0 0 -10px;
+  padding: 12px;
+  border: 0;
+  border-radius: 2px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.event-share-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.event-share:hover,
+.event-share:focus-visible {
+  color: var(--ink);
+}
+
+.event-share:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.event-share-status {
+  position: absolute;
+  right: calc(100% - 4px);
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.12rem 0.4rem;
+  border-radius: 0.25rem;
+  background: var(--sheet);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 650;
+  line-height: 1.2;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.event-share-status:empty {
+  display: none;
+}
+
 .event-card .event-place {
   margin: 0.2rem 0 0.1rem;
   color: var(--muted);

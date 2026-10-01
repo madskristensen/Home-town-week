@@ -6,7 +6,7 @@ Card and page markup lives in one include each. Pages, layouts, and the city cal
 
 | Include | What it renders |
 | --- | --- |
-| `_includes/event-card.html` | Every event card. `layout` is blank for a city stack, `tile` for hubs, lights, and decorations, and `weekend` for the home weekend picks. The weekend photo sits outside the link. |
+| `_includes/event-card.html` | Every event card. `layout` is blank for a city stack, `tile` for hubs, lights, and decorations, and `weekend` for the home weekend picks. The weekend photo sits outside the card link. A dated card includes the share button. |
 | `_includes/event-photo.html` | Photo and the credit strip. `figure` defaults to `event-photo`. Home weekend picks pass `weekend-photo`. |
 | `_includes/filter-chip.html` | One filter chip. Event chips pass `group` and `value`. Playground chips pass `input_class`, `city`, `count`, or `amenity`, and do not pass `value`. |
 | `_includes/page-intro.html` | The one-line introduction. Renders nothing when `text` is blank. |
@@ -38,5 +38,6 @@ A file fails when it contains one of these outside the include that owns it:
 - `class="map-frame"`
 - `class="filter-chip"`
 - `class="cal-subscribe"`
+- `class="event-share"`
 
 `COMPONENTS.md` may name those strings. The bare word `event-card` is also allowed in `_includes/event-card.html`, `_includes/pwa.html` (the script selects `article.event-card` and `.event-card`), and `README.md`. An `{% include event-card.html %}` call is not markup and is allowed.
