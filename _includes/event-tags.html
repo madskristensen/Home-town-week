@@ -1,3 +1,7 @@
+{%- comment -%}
+  Card tags for one event.
+  event: cost, ages, setting, drop_off, signup, and sensory.
+{%- endcomment -%}
 {%- assign tag_event = include.event -%}
 {%- assign tag_cost = tag_event.cost | append: "" | strip -%}
 {%- assign tag_ages = tag_event.ages | append: "" | strip -%}

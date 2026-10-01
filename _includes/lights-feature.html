@@ -1,3 +1,7 @@
+{%- comment -%}
+  Promo card for a seasonal map.
+  theme: blank is the Christmas lights map. "halloween" is the decorations map.
+{%- endcomment -%}
 {%- assign feature_theme = include.theme | append: "" -%}
 <aside class="lights-feature{% if feature_theme == "halloween" %} lights-feature-halloween{% endif %}" aria-label="{% if feature_theme == "halloween" %}Halloween decorations map{% else %}Christmas lights map{% endif %}">
   <div class="lights-feature-layout">

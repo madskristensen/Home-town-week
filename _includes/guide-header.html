@@ -1,5 +1,7 @@
+{%- comment -%}
+  Guide title and introduction.
+  href (default page.url), title (default page.title), intro (default page.intro).
+{%- endcomment -%}
 <h1><a href="{{ include.href | default: page.url | relative_url }}">{{ include.title | default: page.title }}</a></h1>
 {%- assign guide_intro = include.intro | default: page.intro | append: "" -%}
-{%- if guide_intro.size > 0 -%}
-<p class="page-intro">{{ guide_intro }}</p>
-{%- endif -%}
+{%- include page-intro.html text=guide_intro -%}

@@ -20,9 +20,7 @@ layout: default
   {%- if city_lead.size == 0 -%}
   {%- assign city_lead = city.tagline | append: "" -%}
   {%- endif -%}
-  {%- if city_lead.size > 0 -%}
-  <p class="page-intro">{{ city_lead }}</p>
-  {%- endif -%}
+  {%- include page-intro.html text=city_lead -%}
   {%- assign hero_image = city.hero.image | append: "" -%}
   {%- if hero_image.size > 0 -%}
   <figure class="hero">
@@ -42,9 +40,7 @@ layout: default
     {%- endif -%}
   </figure>
   {%- endif -%}
-  {%- if page.hook -%}
-  <p class="page-intro">{{ page.hook }}</p>
-  {%- endif -%}
+  {%- include page-intro.html text=page.hook -%}
   {%- include playground-promo.html city=page.city name=city.name -%}
   {%- assign event_copy = content | strip -%}
   {%- if event_copy != "" -%}

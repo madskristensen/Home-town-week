@@ -1,15 +1,42 @@
-<figure class="event-photo">
+{%- comment -%}
+  Photo and the credit strip on the image.
+  src, alt, credit, source, width, height.
+  figure: class, default event-photo. Use weekend-photo for home weekend picks.
+  loading: default lazy. priority: fetch priority, omitted when blank.
+  sizes: default (min-width: 47rem) 44rem, calc(100vw - 3rem).
+{%- endcomment -%}
+{%- assign photo_class = include.figure | append: "" | strip -%}
+{%- if photo_class.size == 0 -%}{%- assign photo_class = "event-photo" -%}{%- endif -%}
+{%- assign photo_loading = include.loading | append: "" | strip -%}
+{%- if photo_loading.size == 0 -%}{%- assign photo_loading = "lazy" -%}{%- endif -%}
+{%- assign photo_sizes = include.sizes | append: "" | strip -%}
+{%- if photo_sizes.size == 0 -%}{%- assign photo_sizes = "(min-width: 47rem) 44rem, calc(100vw - 3rem)" -%}{%- endif -%}
+{%- assign photo_credit = include.credit | append: "" | strip -%}
+{%- assign photo_source = include.source | append: "" | strip -%}
+{%- assign photo_width = include.width | append: "" | strip -%}
+{%- assign photo_height = include.height | append: "" | strip -%}
+<figure class="{{ photo_class }}">
+  {%- if photo_width.size > 0 and photo_height.size > 0 -%}
   {%- include responsive-img.html
        src=include.src
        alt=include.alt
-       width=include.width
-       height=include.height
-       loading="lazy"
-       sizes="(min-width: 47rem) 44rem, calc(100vw - 3rem)" -%}
-  {%- if include.credit or include.source -%}
+       width=photo_width
+       height=photo_height
+       loading=photo_loading
+       priority=include.priority
+       sizes=photo_sizes -%}
+  {%- else -%}
+  {%- include responsive-img.html
+       src=include.src
+       alt=include.alt
+       loading=photo_loading
+       priority=include.priority
+       sizes=photo_sizes -%}
+  {%- endif -%}
+  {%- if photo_credit.size > 0 or photo_source.size > 0 -%}
   <figcaption>
-    {%- if include.credit -%}<span class="credit">{{ include.credit }}</span>{%- endif -%}
-    {%- if include.source -%}<a class="source" href="{{ include.source }}" rel="noopener">Source</a>{%- endif -%}
+    {%- if photo_credit.size > 0 -%}<span class="credit">{{ include.credit }}</span>{%- endif -%}
+    {%- if photo_source.size > 0 -%}<a class="source" href="{{ include.source }}" rel="noopener">Source</a>{%- endif -%}
   </figcaption>
   {%- endif -%}
 </figure>

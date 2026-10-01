@@ -589,7 +589,7 @@ module EastsideCalendar
       %(<span class="event-cals">#{anchors.join}</span>)
     end
 
-    def inject!(html, groups, dates, today, city_name = nil, labels = nil)
+    def inject!(html, groups, dates, today, city_name = nil, labels = nil, page = nil)
       return html unless html.is_a?(String)
 
       match = html.match(/<div class="event-list"[^>]*>/)
@@ -599,7 +599,7 @@ module EastsideCalendar
       close_at = matching_div_end(html, content_at)
       return html unless close_at
 
-      inner = inject_inner(html[content_at...close_at], groups, dates, city_name, labels)
+      inner = inject_inner(html[content_at...close_at], groups, dates, city_name, labels, page)
       inner = group_events(inner, today)
       opener = stamp_today(html[match.begin(0)...content_at], today)
       html[0, match.begin(0)] + opener + inner + html[close_at..]
@@ -638,7 +638,7 @@ module EastsideCalendar
       nil
     end
 
-    def inject_inner(inner, groups, dates, city_name = nil, labels = nil)
+    def inject_inner(inner, groups, dates, city_name = nil, labels = nil, page = nil)
       groups ||= {}
       dates ||= {}
       labels ||= {}
@@ -667,7 +667,7 @@ module EastsideCalendar
         info = labels[key] && labels[key][index]
         part = link_event_place(part, city_name)
         part = mark_source_links(part)
-        wrap_event_card(part, iso, info)
+        wrap_event_card(part, iso, info, page)
       end
       prelude + rendered.join
     end
@@ -702,15 +702,37 @@ module EastsideCalendar
     end
 
     # One card per event heading. The calendar icon is already on the date line.
-    def wrap_event_card(part, iso = nil, info = nil)
+    # The article wrapper is _includes/event-card.html so the markup cannot drift.
+    def wrap_event_card(part, iso = nil, info = nil, page = nil)
       body = part.sub(/\s+\z/, "")
       trail = part[body.length..] || ""
       tags = EventLabels.html(info)
       body = body.sub(%r{</h3>}) { "#{Regexp.last_match(0)}\n#{tags}" } unless tags.empty?
-      date_attr = iso ? %( data-date="#{iso}") : ""
+      assigns = { "body" => body }
+      assigns["date"] = iso.to_s unless iso.to_s.empty?
       extra = EventLabels.attrs(info)
-      extra = extra.empty? ? "" : " #{extra}"
-      %(<article class="event-card"#{date_attr}#{extra}>\n#{body}\n</article>#{trail})
+      assigns["attrs"] = extra unless extra.to_s.empty?
+      render_event_card(page, assigns) + trail
+    end
+
+    def render_event_card(page, assigns)
+      site = page.site
+      path = File.join(site.source, "_includes", "event-card.html")
+      template = site.liquid_renderer.file(path).parse(File.read(path))
+      context = Liquid::Context.new(
+        [site.site_payload],
+        {},
+        { site: site, page: { "path" => page.path.to_s } },
+        true
+      )
+      context["include"] = assigns
+      site.regenerator.add_dependency(site.in_source_dir(page.path), path)
+      rendered = template.render!(context).to_s
+      unless rendered.include?('<article class="event-card"')
+        raise "event-card include did not render an event card"
+      end
+
+      rendered
     end
 
     # Labels for the card readers see. Recurring rows that share a heading
@@ -1096,7 +1118,8 @@ Jekyll::Hooks.register :pages, :post_render do |page|
     page.data["event_dates"],
     today,
     EastsideCalendar::EventCalendar.city_name_for(page.site, page),
-    page.data["event_labels"]
+    page.data["event_labels"],
+    page
   )
 end
 

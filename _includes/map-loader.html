@@ -1,3 +1,7 @@
+{%- comment -%}
+  Shared map loader. Defines window.loadMapCss and window.loadMapJs once.
+  No parameters. The map frame includes this before the page's map script.
+{%- endcomment -%}
 <script>
 window.loadMapCss = window.loadMapCss || function (href) {
   return new Promise(function (resolve, reject) {

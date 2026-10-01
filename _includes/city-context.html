@@ -1,3 +1,6 @@
+{%- comment -%}
+  Sets city and city_url from page.city and page.state. No parameters.
+{%- endcomment -%}
 {%- if page.city and page.state -%}
 {%- assign city = site.data.cities | where: "id", page.city | where: "state", page.state | first -%}
 {%- capture city_url -%}/{{ page.city }}/{%- endcapture -%}

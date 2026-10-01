@@ -1,3 +1,10 @@
+{%- comment -%}
+  Empty-state suggestion.
+  mode: missing, filter, or blank.
+  name: mail subject. topic: "No {topic} events are listed yet."
+  opening: a custom first sentence. The ask follows it.
+  town: playground map town id. A city page uses page.city when town is blank.
+{%- endcomment -%}
 {%- assign empty_mode = include.mode | append: "" | strip -%}
 {%- assign empty_name = include.name | append: "" | strip -%}
 {%- assign empty_topic = include.topic | append: "" | strip -%}

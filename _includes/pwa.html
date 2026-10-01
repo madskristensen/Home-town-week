@@ -1,3 +1,7 @@
+{%- comment -%}
+  Service worker registration and the install slot. No parameters.
+  The script selects article.event-card. It does not render a card.
+{%- endcomment -%}
 <script type="module" data-sw="{{ '/sw.js' | relative_url }}">
 (function () {
   // Older keys are not written: hw-last-city, hw-last-state, hw-city-visits,

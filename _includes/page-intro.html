@@ -1,0 +1,8 @@
+{%- comment -%}
+  The one-line introduction under a page title.
+  text: the line. Renders nothing when text is blank.
+{%- endcomment -%}
+{%- assign intro_text = include.text | append: "" | strip -%}
+{%- if intro_text.size > 0 -%}
+<p class="page-intro">{{ intro_text }}</p>
+{%- endif -%}

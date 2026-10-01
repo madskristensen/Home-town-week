@@ -273,33 +273,26 @@
           {%- assign pick_priority = "high" -%}
           {%- assign lcp_assigned = true -%}
         {%- endif -%}
-        <figure class="weekend-photo">
-        {%- include responsive-img.html
-             src=photo
+        {%- endif -%}
+        {%- include event-card.html
+             layout="weekend"
+             image=photo
              alt=photo_alt_text
+             credit=photo_credit
+             source=photo_source
              loading=pick_loading
              priority=pick_priority
-             sizes="(min-width: 42rem) calc((min(44rem, 100vw - 3rem) - 1.25rem) / 2), calc(100vw - 3rem)" -%}
-        {%- if photo_credit.size > 0 or photo_source.size > 0 -%}
-        <figcaption>
-          {%- if photo_credit.size > 0 -%}<span class="credit">{{ photo_credit }}</span>{%- endif -%}
-          {%- if photo_source.size > 0 -%}<a class="source" href="{{ photo_source }}" rel="noopener">Source</a>{%- endif -%}
-        </figcaption>
-        {%- endif -%}
-        </figure>
-        {%- endif -%}
-        <a class="event-card weekend-card" href="{{ event_href | relative_url }}"{% if external %} rel="noopener"{% endif %}>
-          <span class="weekend-town">{{ city.name }}</span>
-          <span class="weekend-when">{{ when_label }}</span>
-          <span class="weekend-name">{{ event.name }}</span>
-          {%- include event-tags.html event=event -%}
-        </a>
-        {%- if place_label.size > 0 -%}
-        <a class="addr weekend-place" href="{{ place_label | map_search: city.name }}"><span class="addr-text">{{ place_label }}</span></a>
-        {%- endif -%}
-        {%- if blurb.size > 0 -%}
-        <span class="weekend-blurb">{{ blurb }}</span>
-        {%- endif -%}
+             sizes="(min-width: 42rem) calc((min(44rem, 100vw - 3rem) - 1.25rem) / 2), calc(100vw - 3rem)"
+             figure="weekend-photo"
+             href=event_href
+             external=external
+             town=city.name
+             when=when_label
+             title=event.name
+             event=event
+             place=place_label
+             place_city=city.name
+             blurb=blurb -%}
       </div>
     </li>
     {%- endfor -%}

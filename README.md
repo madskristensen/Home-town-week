@@ -28,7 +28,7 @@ Seasonal hubs are generated from `_data/seasonal_hubs.yml`. Each hub stays up al
 
 City URLs have no state segment and no year or week segment. There is no `/maple-valley/` page and no redirect.
 
-The city page lists upcoming family events. There is no year index and no week issue.
+The city page lists upcoming family events. There is no year index and no week issue. Shared cards, photos, filter chips, introductions, empty states, and map frames live in `_includes/` and are listed in [COMPONENTS.md](COMPONENTS.md). Do not paste a second copy of that markup.
 
 Events stay in the city page in the order they are written. The build groups each `###` event into Today, Tomorrow, This week, This weekend, or Later from the first month and day on its gold date line (`<p class="event-when">`). This week is the days after tomorrow and before the coming Saturday. This weekend is the Saturday and Sunday of the current Pacific week (Monday through Sunday). Today and tomorrow take priority over those groups. A line with no month and day, and no matching dated row in `{city}_events.yml`, goes in Later. Empty groups are left out. The groups are in the HTML, so they still show with JavaScript off. If the Pacific date has moved past the build date, the browser moves the same cards into the current groups. The home page count and the city `ItemList` follow those cards, not every row in the data file.
 

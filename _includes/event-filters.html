@@ -1,14 +1,14 @@
+{%- comment -%}
+  Filter chip row built from page.filter_counts.
+  No parameters. Each chip is filter-chip.html. An empty match uses empty-suggest.html.
+{%- endcomment -%}
 {%- assign filter_chips = page.filter_counts -%}
 {%- assign filter_n = filter_chips | size -%}
 {%- if filter_n > 0 -%}
 <div class="event-filters" role="group" aria-labelledby="event-filter-label">
   <span class="filter-label" id="event-filter-label">Filter:</span>
   {%- for chip in filter_chips -%}
-  <label class="filter-chip">
-    <input type="checkbox" data-group="{{ chip.group }}" value="{{ chip.value | escape }}">
-    <span class="filter-switch" aria-hidden="true"></span>
-    <span>{{ chip.label | escape }}</span>
-  </label>
+  {%- include filter-chip.html label=chip.label group=chip.group value=chip.value -%}
   {%- endfor -%}
 </div>
 {%- include empty-suggest.html mode="filter" name=page.title -%}

@@ -1,3 +1,7 @@
+{%- comment -%}
+  Suggest-an-event mail link for a city page. No parameters.
+  Uses city from city-context.html when it is not already set.
+{%- endcomment -%}
 {%- unless city -%}
 {%- include city-context.html -%}
 {%- endunless -%}

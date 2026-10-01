@@ -1,0 +1,22 @@
+{%- comment -%}
+  Map poster and canvas.
+  title_id, canvas_id, poster_id, button_id, count_label, note.
+  loader: blank includes map-loader.html after the section. Pass false
+  when pin JSON has to sit between the section and the loader.
+{%- endcomment -%}
+{%- assign frame_count = include.count_label | append: "" | strip -%}
+{%- assign frame_loader = include.loader | append: "" | strip -%}
+<section class="map-section" aria-labelledby="{{ include.title_id }}">
+  <h2 id="{{ include.title_id }}" class="visually-hidden">Map</h2>
+  <div class="map-frame">
+    <div id="{{ include.canvas_id }}" class="map-canvas" hidden></div>
+    <div class="map-poster" id="{{ include.poster_id }}">
+      <p class="map-count">{{ frame_count }}</p>
+      <button type="button" id="{{ include.button_id }}">Show map</button>
+    </div>
+  </div>
+  <p class="map-note">{{ include.note }}</p>
+</section>
+{%- unless frame_loader == "false" -%}
+{%- include map-loader.html -%}
+{%- endunless -%}

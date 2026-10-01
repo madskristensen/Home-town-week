@@ -1,0 +1,20 @@
+{%- comment -%}
+  One filter chip.
+  label: visible text.
+  input_class: checkbox class. Playground uses flt-town or flt-amenity.
+  group, value: event chips. Omit value on playground chips.
+  city: data-city. count: data-count. amenity: data-amenity.
+{%- endcomment -%}
+{%- assign chip_label = include.label | append: "" -%}
+{%- assign chip_class = include.input_class | append: "" | strip -%}
+{%- assign chip_group = include.group | append: "" | strip -%}
+{%- assign chip_value = include.value | append: "" -%}
+{%- assign chip_city = include.city | append: "" | strip -%}
+{%- assign chip_count = include.count | append: "" | strip -%}
+{%- assign chip_amenity = include.amenity | append: "" | strip -%}
+<label class="filter-chip">
+    <input type="checkbox"{% if chip_class.size > 0 %} class="{{ chip_class }}"{% endif %}{% if chip_group.size > 0 %} data-group="{{ chip_group }}"{% endif %}{% if chip_value.size > 0 %} value="{{ chip_value | escape }}"{% endif %}{% if chip_city.size > 0 %} data-city="{{ chip_city }}"{% endif %}{% if chip_count.size > 0 %} data-count="{{ chip_count }}"{% endif %}{% if chip_amenity.size > 0 %} data-amenity="{{ chip_amenity }}"{% endif %}>
+    <span class="filter-switch" aria-hidden="true"></span>
+    <span>{{ chip_label | escape }}</span>
+  </label>
+{%- comment -%}{%- endcomment -%}

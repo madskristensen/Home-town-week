@@ -1,0 +1,146 @@
+{%- comment -%}
+  One event card.
+  layout: blank (city stack), tile, or weekend.
+  Stack: body (inner HTML), date (ISO), attrs (prebuilt data-* string).
+  Shared: id, image, alt, credit, source, width, height, loading, priority, sizes, figure,
+    title, href, external, event, image_kind, mark_kind.
+  Tile: number, kicker, when, calendar, place, place_city, place_name, city, city_href,
+    drive, blurb, hours, source_href, source_label, also_href, also_label, place_first.
+  Weekend: town, when, title, href, external, place, place_city, blurb, event, and the image fields.
+    figure is weekend-photo. The photo sits outside the link.
+{%- endcomment -%}
+{%- assign card_layout = include.layout | append: "" | strip -%}
+{%- if card_layout == "weekend" -%}
+{%- assign card_image = include.image | append: "" | strip -%}
+{%- if card_image.size > 0 -%}
+{%- include event-photo.html
+     src=include.image
+     alt=include.alt
+     credit=include.credit
+     source=include.source
+     width=include.width
+     height=include.height
+     loading=include.loading
+     priority=include.priority
+     sizes=include.sizes
+     figure=include.figure -%}
+{%- endif -%}
+{%- assign card_href = include.href | append: "" | strip -%}
+{%- assign card_external = include.external -%}
+<a class="event-card weekend-card" href="{{ card_href | relative_url }}"{% if card_external %} rel="noopener"{% endif %}>
+          <span class="weekend-town">{{ include.town }}</span>
+          <span class="weekend-when">{{ include.when }}</span>
+          <span class="weekend-name">{{ include.title }}</span>
+          {%- if include.event -%}{%- include event-tags.html event=include.event -%}{%- endif -%}
+</a>
+{%- assign card_place = include.place | append: "" | strip -%}
+{%- if card_place.size > 0 -%}
+<a class="addr weekend-place" href="{{ card_place | map_search: include.place_city }}"><span class="addr-text">{{ card_place }}</span></a>
+{%- endif -%}
+{%- assign card_blurb = include.blurb | append: "" | strip -%}
+{%- if card_blurb.size > 0 -%}
+<span class="weekend-blurb">{{ card_blurb }}</span>
+{%- endif -%}
+{%- elsif card_layout == "tile" -%}
+{%- assign card_id = include.id | append: "" | strip -%}
+{%- assign card_kind = include.image_kind | append: "" -%}
+{%- assign card_event = include.event -%}
+{%- assign ev_cost = "" -%}
+{%- assign ev_ages = "" -%}
+{%- assign ev_setting = "" -%}
+{%- if card_event -%}
+  {%- assign ev_cost = card_event.cost | append: "" -%}
+  {%- assign ev_ages = card_event.ages | append: "" -%}
+  {%- assign ev_setting = card_event.setting | append: "" -%}
+{%- endif -%}
+<article class="event-card event-card--tile"{% if card_id.size > 0 %} id="{{ card_id }}"{% endif %}{% if include.mark_kind %} data-image-kind="{{ card_kind }}"{% elsif card_kind.size > 0 %} data-image-kind="{{ card_kind }}"{% endif %}{% if ev_cost == "Free" or ev_cost == "free" %} data-cost="Free"{% elsif ev_cost contains "$" %} data-cost="{{ ev_cost | escape }}"{% endif %}{% if ev_ages == "Toddlers" or ev_ages == "Kids" or ev_ages == "Teens" or ev_ages == "All ages" %} data-ages="{{ ev_ages | escape }}"{% endif %}{% if ev_setting == "Indoor" or ev_setting == "Outdoor" %} data-setting="{{ ev_setting }}"{% endif %}{% if card_event.drop_off == true %} data-dropoff="1"{% endif %}{% if card_event.signup == true %} data-signup="1"{% endif %}{% if card_event.sensory == true %} data-sensory="1"{% endif %}>{%- assign card_image = include.image | append: "" | strip -%}
+{%- if card_image.size > 0 -%}
+{%- include event-photo.html
+     src=include.image
+     alt=include.alt
+     credit=include.credit
+     source=include.source
+     width=include.width
+     height=include.height
+     loading=include.loading
+     priority=include.priority
+     sizes=include.sizes
+     figure=include.figure -%}
+{%- endif -%}
+{%- assign card_number = include.number | append: "" | strip -%}
+{%- assign card_title = include.title | append: "" -%}
+{%- assign card_href = include.href | append: "" | strip -%}
+{%- assign card_kicker = include.kicker | append: "" | strip -%}
+<h3>{%- if card_number.size > 0 -%}<span class="home-num">{{ card_number }}</span> {% endif -%}
+{%- if card_href.size > 0 -%}
+<a href="{% if include.external %}{{ card_href }}{% else %}{{ card_href | relative_url }}{% endif %}"{% if include.external %} rel="noopener"{% endif %}>{{ card_title }}</a>
+{%- else -%}
+{{ card_title }}
+{%- endif -%}
+{%- if card_kicker.size > 0 %} <span class="decor-kicker">{{ card_kicker }}</span>{% endif -%}
+</h3>
+{%- if card_event -%}
+{%- include event-tags.html event=card_event -%}
+{%- endif -%}
+{%- assign card_when = include.when | append: "" | strip -%}
+{%- assign card_calendar = include.calendar | append: "" | strip -%}
+{%- capture card_when_html -%}
+{%- if card_when.size > 0 or card_calendar.size > 0 -%}
+<p class="event-when">{%- if card_when.size > 0 -%}{{ card_when }}{%- endif -%}
+{%- if card_calendar.size > 0 -%}
+<span class="event-cals"><a class="event-cal" href="{{ card_calendar | relative_url }}" aria-label="Add {{ card_title | escape }} to calendar" title="Add {{ card_title | escape }} to calendar"><svg class="cal-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.75" y="2.75" width="12.5" height="11.5" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.4"></rect><path d="M1.75 6.4h12.5M5 1.35v2.5M11 1.35v2.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg></a></span>
+{%- endif -%}
+</p>
+{%- endif -%}
+{%- endcapture -%}
+{%- assign card_place = include.place | append: "" | strip -%}
+{%- assign card_city = include.city | append: "" | strip -%}
+{%- assign card_drive = include.drive | append: "" | strip -%}
+{%- assign card_city_href = include.city_href | append: "" | strip -%}
+{%- capture card_place_html -%}
+{%- if card_place.size > 0 or card_city.size > 0 -%}
+<p class="event-place">{%- if card_place.size > 0 -%}<a class="addr" href="{{ card_place | map_search: include.place_city, include.place_name }}"><span class="addr-text">{{ card_place }}</span></a>{%- if card_city.size > 0 -%}, {% endif -%}{%- endif -%}
+{%- if card_drive.size > 0 -%}
+<span class="place-town">{{ card_city }}</span><span class="drive-time">{{ card_drive }}</span>
+{%- elsif card_city.size > 0 -%}
+{%- if card_city_href.size > 0 -%}
+<a class="place-town" href="{{ card_city_href | relative_url }}">{{ card_city }}</a>
+{%- else -%}
+<span class="place-town">{{ card_city }}</span>
+{%- endif -%}
+{%- endif -%}
+</p>
+{%- endif -%}
+{%- endcapture -%}
+{%- assign card_hours = include.hours | append: "" | strip -%}
+{%- if include.place_first -%}
+{{ card_place_html }}{{ card_when_html }}
+{%- else -%}
+{{ card_when_html }}{{ card_place_html }}
+{%- endif -%}
+{%- if card_hours.size > 0 -%}
+<p class="event-place event-hours">{{ card_hours }}</p>
+{%- endif -%}
+{%- assign card_blurb = include.blurb | append: "" | strip -%}
+{%- if card_blurb.size > 0 -%}
+<p class="hub-blurb">{{ card_blurb }}</p>
+{%- endif -%}
+{%- assign card_source_href = include.source_href | append: "" | strip -%}
+{%- assign card_also_href = include.also_href | append: "" | strip -%}
+{%- if card_source_href.size > 0 or card_also_href.size > 0 -%}
+{%- assign card_source_label = include.source_label | append: "" | strip -%}
+{%- assign card_also_label = include.also_label | append: "" | strip -%}
+{%- if card_source_label.size == 0 -%}{%- assign card_source_label = "Source" -%}{%- endif -%}
+{%- if card_also_label.size == 0 -%}{%- assign card_also_label = "Source" -%}{%- endif -%}
+<p class="event-links">{%- if card_source_href.size > 0 -%}<a class="event-source" href="{{ card_source_href }}" rel="noopener">{{ card_source_label }}</a>{%- endif -%}
+{%- if card_also_href.size > 0 -%}{% if card_source_href.size > 0 %} · {% endif %}<a class="event-source" href="{{ card_also_href }}" rel="noopener">{{ card_also_label }}</a>{%- endif -%}
+</p>
+{%- endif -%}
+</article>
+{%- else -%}
+{%- assign card_date = include.date | append: "" | strip -%}
+{%- assign card_attrs = include.attrs | append: "" | strip -%}
+<article class="event-card"{% if card_date.size > 0 %} data-date="{{ card_date }}"{% endif %}{% if card_attrs.size > 0 %} {{ card_attrs }}{% endif %}>
+{{ include.body }}
+</article>
+{%- endif -%}

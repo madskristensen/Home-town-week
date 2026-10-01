@@ -1,6 +1,9 @@
+{%- comment -%}
+  Playground list grouped by city. No parameters.
+{%- endcomment -%}
 <section class="playground-directory" aria-labelledby="every-playground">
   <h2 id="every-playground">Every playground</h2>
-  <p class="page-intro">Public park playgrounds, grouped by city. A star marks a standout, and those sit at the top of their city. The name links to the park page when the city publishes one, and to the city parks directory when it does not.</p>
+  {%- include page-intro.html text="Public park playgrounds, grouped by city. A star marks a standout, and those sit at the top of their city. The name links to the park page when the city publishes one, and to the city parks directory when it does not." -%}
   <svg class="icon-sprite" aria-hidden="true" focusable="false">
     <symbol id="standout-star" viewBox="0 0 16 16">
       <path fill="currentColor" d="M8 1.15 9.62 4.44 13.25 4.97 10.62 7.53 11.24 11.15 8 9.45 4.76 11.15 5.38 7.53 2.75 4.97 6.38 4.44Z"/>

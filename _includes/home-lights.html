@@ -1,3 +1,8 @@
+{%- comment -%}
+  Lights or decorations map and the stop list.
+  No parameters. page.map_id "halloween" uses the decorations data.
+  Each stop is event-card.html with layout tile and place_first.
+{%- endcomment -%}
 {%- if page.map_id == "halloween" -%}
 {%- assign home_lights = site.data.halloween_map -%}
 {%- assign map_path = "/fall/decorations/" -%}
@@ -10,17 +15,15 @@
 {%- assign map_noun = "homes and streets" -%}
 {%- endif -%}
 {%- assign home_count = home_lights.count | default: 0 -%}
-<section class="map-section" aria-labelledby="lights-map-title">
-  <h2 id="lights-map-title" class="visually-hidden">Map</h2>
-  <div class="map-frame">
-    <div id="home-map-canvas" class="map-canvas" hidden></div>
-    <div class="map-poster" id="home-map-poster">
-      <p class="map-count">{{ home_count }} {{ map_noun }}</p>
-      <button type="button" id="home-map-show">Show map</button>
-    </div>
-  </div>
-  <p class="map-note">Numbers on the map match the list.</p>
-</section>
+{%- capture lights_count -%}{{ home_count }} {{ map_noun }}{%- endcapture -%}
+{%- include map-frame.html
+     title_id="lights-map-title"
+     canvas_id="home-map-canvas"
+     poster_id="home-map-poster"
+     button_id="home-map-show"
+     count_label=lights_count
+     note="Numbers on the map match the list."
+     loader="false" %}
 <script type="application/json" id="home-lights-pins">{{ home_lights.pins | jsonify }}</script>
 {%- include map-loader.html -%}
 <script>
@@ -89,13 +92,8 @@
   <h2 id="town-{{ town.id }}">{{ town.name }}</h2>
   <div class="hub-grid">
     {%- for light in town.lights -%}
-    {%- assign light_nights = light.nights | append: "" -%}
-    {%- assign light_hours = light.hours | append: "" -%}
     {%- assign light_image = light.image | append: "" -%}
-    {%- assign light_credit = light.image_credit | append: "" -%}
-    {%- assign light_source = light.image_source | append: "" -%}
-    <article class="event-card event-card--tile" id="light-{{ light.id }}" data-image-kind="{{ light.image_kind }}">
-      {%- if light_image.size > 0 -%}
+    {%- if light_image.size > 0 -%}
       {%- if forloop.parentloop.first and forloop.first -%}
         {%- assign card_loading = "eager" -%}
         {%- assign card_priority = "high" -%}
@@ -103,32 +101,33 @@
         {%- assign card_loading = "lazy" -%}
         {%- assign card_priority = "" -%}
       {%- endif -%}
-      <figure class="event-photo">
-        {%- include responsive-img.html
-             src=light.image
-             alt=light.image_alt
-             loading=card_loading
-             priority=card_priority
-             sizes="(min-width: 42rem) 21rem, calc(100vw - 3rem)" -%}
-        {%- if light_credit.size > 0 or light_source.size > 0 -%}
-        <figcaption>
-          {%- if light_credit.size > 0 -%}<span class="credit">{{ light.image_credit }}</span>{%- endif -%}
-          {%- if light_source.size > 0 -%}<a class="source" href="{{ light.image_source }}" rel="noopener">Source</a>{%- endif -%}
-        </figcaption>
-        {%- endif -%}
-      </figure>
-      {%- endif -%}
-      <h3><span class="home-num">{{ light.number }}</span> {{ light.name }}{% assign light_trust = light.trust_label | append: "" %}{% if light_trust.size > 0 %} <span class="decor-kicker">{{ light.trust_label }}</span>{% endif %}</h3>
-      <p class="event-place"><a class="addr" href="{{ light.address | map_search: light.city }}"><span class="addr-text">{{ light.address }}</span></a></p>
-      {%- if light_nights.size > 0 -%}
-      <p class="event-when">{{ light_nights }}</p>
-      {%- endif -%}
-      {%- if light_hours.size > 0 -%}
-      <p class="event-place event-hours">{{ light_hours }}</p>
-      {%- endif -%}
-      <p class="hub-blurb">{{ light.description }}</p>
-      <p class="event-links"><a class="event-source" href="{{ light.source }}" rel="noopener">{% assign light_source_label = light.source_label | append: "" %}{% if light_source_label.size > 0 %}{{ light.source_label }}{% else %}Source{% endif %}</a>{% assign light_also = light.also_source | append: "" %}{% if light_also.size > 0 %} · <a class="event-source" href="{{ light.also_source }}" rel="noopener">{% assign light_also_label = light.also_source_label | append: "" %}{% if light_also_label.size > 0 %}{{ light.also_source_label }}{% else %}Source{% endif %}</a>{% endif %}</p>
-    </article>
+    {%- endif -%}
+    {%- capture light_dom_id -%}light-{{ light.id }}{%- endcapture -%}
+    {%- include event-card.html
+         layout="tile"
+         place_first=true
+         mark_kind=true
+         id=light_dom_id
+         image_kind=light.image_kind
+         number=light.number
+         kicker=light.trust_label
+         title=light.name
+         image=light.image
+         alt=light.image_alt
+         credit=light.image_credit
+         source=light.image_source
+         loading=card_loading
+         priority=card_priority
+         sizes="(min-width: 42rem) 21rem, calc(100vw - 3rem)"
+         place=light.address
+         place_city=light.city
+         when=light.nights
+         hours=light.hours
+         blurb=light.description
+         source_href=light.source
+         source_label=light.source_label
+         also_href=light.also_source
+         also_label=light.also_source_label -%}
     {%- endfor -%}
   </div>
 </section>

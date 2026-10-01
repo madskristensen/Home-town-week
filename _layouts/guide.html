@@ -20,18 +20,20 @@ layout: default
   {%- else -%}
   <div class="hub-grid">
     {%- for entry in guide.entries -%}
-    <article class="event-card event-card--tile">
-      {%- include event-photo.html
-           src=entry.image
-           alt=entry.alt
-           width=entry.width
-           height=entry.height
-           credit=entry.credit
-           source=entry.source -%}
-      <h3>{{ entry.name }}</h3>
-      <p class="event-place"><a class="addr" href="{{ entry.address | map_search: entry.city, entry.name }}"><span class="addr-text">{{ entry.address }}</span></a></p>
-      <p class="hub-blurb">{{ entry.text }}</p>
-    </article>
+    {%- include event-card.html
+         layout="tile"
+         place_first=true
+         title=entry.name
+         image=entry.image
+         alt=entry.alt
+         width=entry.width
+         height=entry.height
+         credit=entry.credit
+         source=entry.source
+         place=entry.address
+         place_city=entry.city
+         place_name=entry.name
+         blurb=entry.text -%}
     {%- endfor -%}
   </div>
   {%- endif -%}

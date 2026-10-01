@@ -1,21 +1,21 @@
+{%- comment -%}
+  Playground map, filters, and empty state.
+  No parameters. The town preset reads ?town= and #town- after the frame.
+{%- endcomment -%}
 {%- include playground-filters.html -%}
 {%- include empty-suggest.html mode="filter" name="playgrounds" -%}
 {%- assign play_count = 0 -%}
 {%- for city in site.data.playground_map.cities -%}
 {%- assign play_count = play_count | plus: city.parks.size -%}
 {%- endfor -%}
-<section class="map-section" aria-labelledby="playground-map-title">
-  <h2 id="playground-map-title" class="visually-hidden">Map</h2>
-  <div class="map-frame">
-    <div id="playground-map-canvas" class="map-canvas" hidden></div>
-    <div class="map-poster" id="playground-map-poster">
-      <p class="map-count">{{ play_count }} playground{% if play_count != 1 %}s{% endif %}</p>
-      <button type="button" id="playground-map-show">Show map</button>
-    </div>
-  </div>
-  <p class="map-note">Open a pin for the park, the city, the address, and the park page. Coordinates are from OpenStreetMap contributors, ODbL.</p>
-</section>
-{%- include map-loader.html -%}
+{%- capture play_label -%}{{ play_count }} playground{% if play_count != 1 %}s{% endif %}{%- endcapture -%}
+{%- include map-frame.html
+     title_id="playground-map-title"
+     canvas_id="playground-map-canvas"
+     poster_id="playground-map-poster"
+     button_id="playground-map-show"
+     count_label=play_label
+     note="Open a pin for the park, the city, the address, and the park page. Coordinates are from OpenStreetMap contributors, ODbL." -%}
 <script>
 (function () {
   var town = "";

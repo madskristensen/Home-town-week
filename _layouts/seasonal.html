@@ -4,7 +4,7 @@ layout: default
 {%- if page.home_lights -%}
 <article class="page wrap hub-page{% if page.map_id == "halloween" %} map-theme-halloween{% endif %}">
   <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
-  <p class="page-intro">{{ page.intro }}</p>
+  {%- include page-intro.html text=page.intro -%}
   <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   {%- include home-lights.html -%}
 </article>
@@ -18,7 +18,7 @@ layout: default
   {%- elsif page.hub_id == "fall" -%}
   {%- include lights-feature.html theme="halloween" -%}
   {%- endif -%}
-  <p class="page-intro">{{ hub.intro }}</p>
+  {%- include page-intro.html text=hub.intro -%}
   <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   {%- assign suggest_lead = hub.suggest_lead | append: "" -%}
   {%- if suggest_lead.size > 0 -%}
@@ -63,71 +63,47 @@ layout: default
     {%- if section_events > 0 -%}
     <div class="hub-grid">
       {%- for event in section.events -%}
-      {%- assign event_same = event.same_as | append: "" -%}
-      {%- assign event_place = event.place | append: "" -%}
-      {%- assign event_image = event.image | append: "" -%}
-      {%- assign event_credit = event.image_credit | append: "" -%}
-      {%- assign event_source = event.image_source | append: "" -%}
-      {%- assign event_calendar = event.calendar | append: "" -%}
       {%- capture city_href -%}/{{ event.city_id }}/{%- endcapture -%}
-      <article class="event-card event-card--tile" data-image-kind="{{ event.image_kind }}"{% if event.cost == "Free" or event.cost == "free" %} data-cost="Free"{% elsif event.cost contains "$" %} data-cost="{{ event.cost | escape }}"{% endif %}{% if event.ages == "Toddlers" or event.ages == "Kids" or event.ages == "Teens" or event.ages == "All ages" %} data-ages="{{ event.ages | escape }}"{% endif %}{% if event.setting == "Indoor" or event.setting == "Outdoor" %} data-setting="{{ event.setting }}"{% endif %}{% if event.drop_off == true %} data-dropoff="1"{% endif %}{% if event.signup == true %} data-signup="1"{% endif %}{% if event.sensory == true %} data-sensory="1"{% endif %}>
-        {%- if event_image.size > 0 -%}
-        {%- if forloop.parentloop.first and forloop.index < 3 -%}
-          {%- assign card_loading = "eager" -%}
-        {%- else -%}
-          {%- assign card_loading = "lazy" -%}
-        {%- endif -%}
-        {%- if forloop.parentloop.first and forloop.first -%}
-          {%- assign card_priority = "high" -%}
-        {%- else -%}
-          {%- assign card_priority = "" -%}
-        {%- endif -%}
-        <figure class="event-photo">
-          {%- include responsive-img.html
-               src=event.image
-               alt=event.image_alt
-               loading=card_loading
-               priority=card_priority
-               sizes="(min-width: 42rem) 21rem, calc(100vw - 3rem)" -%}
-          {%- if event_credit.size > 0 or event_source.size > 0 -%}
-          <figcaption>
-            {%- if event_credit.size > 0 -%}<span class="credit">{{ event.image_credit }}</span>{%- endif -%}
-            {%- if event_source.size > 0 -%}<a class="source" href="{{ event.image_source }}" rel="noopener">Source</a>{%- endif -%}
-          </figcaption>
-          {%- endif -%}
-        </figure>
-        {%- endif -%}
-        <h3>
-          {%- if event_same.size > 0 -%}
-          <a href="{{ event_same }}" rel="noopener">{{ event.name }}</a>
-          {%- else -%}
-          <a href="{{ city_href | strip | relative_url }}">{{ event.name }}</a>
-          {%- endif -%}
-        </h3>
-        {%- include event-tags.html event=event -%}
-        {%- assign event_when = event.when | append: "" -%}
-        {%- if event_when.size > 0 or event_calendar.size > 0 -%}
-        <p class="event-when">
-          {%- if event_when.size > 0 -%}{{ event.when }}{%- endif -%}
-          {%- if event_calendar.size > 0 -%}
-          <span class="event-cals"><a class="event-cal" href="{{ event.calendar | relative_url }}" aria-label="Add {{ event.name | escape }} to calendar" title="Add {{ event.name | escape }} to calendar"><svg class="cal-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.75" y="2.75" width="12.5" height="11.5" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.4"></rect><path d="M1.75 6.4h12.5M5 1.35v2.5M11 1.35v2.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg></a></span>
-          {%- endif -%}
-        </p>
-        {%- endif -%}
-        <p class="event-place">
-          {%- if event_place.size > 0 -%}<a class="addr" href="{{ event.place | map_search: event.city }}"><span class="addr-text">{{ event.place }}</span></a>, {% endif -%}
-          {%- assign event_drive = event.drive | append: "" -%}
-          {%- if event_drive.size > 0 -%}
-          <span class="place-town">{{ event.city }}</span><span class="drive-time">{{ event.drive }}</span>
-          {%- else -%}
-          <a class="place-town" href="{{ city_href | strip | relative_url }}">{{ event.city }}</a>
-          {%- endif -%}
-        </p>
-        {%- assign event_blurb = event.blurb | append: "" -%}
-        {%- if event_blurb.size > 0 -%}
-        <p class="hub-blurb">{{ event.blurb }}</p>
-        {%- endif -%}
-      </article>
+      {%- assign event_same = event.same_as | append: "" | strip -%}
+      {%- assign card_external = false -%}
+      {%- assign card_href = city_href -%}
+      {%- if event_same.size > 0 -%}
+        {%- assign card_external = true -%}
+        {%- assign card_href = event.same_as -%}
+      {%- endif -%}
+      {%- if forloop.parentloop.first and forloop.index < 3 -%}
+        {%- assign card_loading = "eager" -%}
+      {%- else -%}
+        {%- assign card_loading = "lazy" -%}
+      {%- endif -%}
+      {%- if forloop.parentloop.first and forloop.first -%}
+        {%- assign card_priority = "high" -%}
+      {%- else -%}
+        {%- assign card_priority = "" -%}
+      {%- endif -%}
+      {%- include event-card.html
+           layout="tile"
+           mark_kind=true
+           image_kind=event.image_kind
+           image=event.image
+           alt=event.image_alt
+           credit=event.image_credit
+           source=event.image_source
+           loading=card_loading
+           priority=card_priority
+           sizes="(min-width: 42rem) 21rem, calc(100vw - 3rem)"
+           title=event.name
+           href=card_href
+           external=card_external
+           event=event
+           when=event.when
+           calendar=event.calendar
+           place=event.place
+           place_city=event.city
+           city=event.city
+           city_href=city_href
+           drive=event.drive
+           blurb=event.blurb -%}
       {%- endfor -%}
     </div>
     {%- endif -%}

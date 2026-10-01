@@ -21,45 +21,21 @@
 <div class="event-filters playground-filters" role="group" aria-labelledby="playground-filter-label">
   <span class="filter-label" id="playground-filter-label">Filter:</span>
   {%- for city in site.data.playground_map.cities -%}
-  <label class="filter-chip">
-    <input type="checkbox" class="flt-town" data-city="{{ city.id }}" data-count="{{ city.parks.size }}">
-    <span class="filter-switch" aria-hidden="true"></span>
-    <span>{{ city.name }}</span>
-  </label>
+  {%- include filter-chip.html label=city.name input_class="flt-town" city=city.id count=city.parks.size -%}
   {%- endfor -%}
   {%- if n_restrooms >= amenity_min -%}
-  <label class="filter-chip">
-    <input type="checkbox" class="flt-amenity" data-amenity="restrooms">
-    <span class="filter-switch" aria-hidden="true"></span>
-    <span>Restrooms</span>
-  </label>
+  {%- include filter-chip.html label="Restrooms" input_class="flt-amenity" amenity="restrooms" -%}
   {%- endif -%}
   {%- if n_covered >= amenity_min -%}
-  <label class="filter-chip">
-    <input type="checkbox" class="flt-amenity" data-amenity="covered">
-    <span class="filter-switch" aria-hidden="true"></span>
-    <span>Covered or shade</span>
-  </label>
+  {%- include filter-chip.html label="Covered or shade" input_class="flt-amenity" amenity="covered" -%}
   {%- endif -%}
   {%- if n_accessible >= amenity_min -%}
-  <label class="filter-chip">
-    <input type="checkbox" class="flt-amenity" data-amenity="accessible">
-    <span class="filter-switch" aria-hidden="true"></span>
-    <span>Accessible</span>
-  </label>
+  {%- include filter-chip.html label="Accessible" input_class="flt-amenity" amenity="accessible" -%}
   {%- endif -%}
   {%- if n_toddler >= amenity_min -%}
-  <label class="filter-chip">
-    <input type="checkbox" class="flt-amenity" data-amenity="toddler">
-    <span class="filter-switch" aria-hidden="true"></span>
-    <span>Toddler area</span>
-  </label>
+  {%- include filter-chip.html label="Toddler area" input_class="flt-amenity" amenity="toddler" -%}
   {%- endif -%}
   {%- if n_splash >= amenity_min -%}
-  <label class="filter-chip">
-    <input type="checkbox" class="flt-amenity" data-amenity="splash">
-    <span class="filter-switch" aria-hidden="true"></span>
-    <span>Splash pad</span>
-  </label>
+  {%- include filter-chip.html label="Splash pad" input_class="flt-amenity" amenity="splash" -%}
   {%- endif -%}
 </div>
