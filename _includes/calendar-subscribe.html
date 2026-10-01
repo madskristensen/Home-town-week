@@ -1,12 +1,18 @@
 {%- comment -%}
-  City subscription control. city is the city id. name is the city name.
-  Links subscribe to /calendar/{city}.ics. Copy uses the https URL.
+  Subscription control. city is the feed id. name is the calendar title.
+  path is optional and defaults to calendar/{city}.ics, without a leading slash.
+  Copy uses the https URL.
 {%- endcomment -%}
 {%- assign sub_city = include.city | append: "" | strip -%}
 {%- assign sub_name = include.name | append: "" | strip -%}
+{%- assign sub_path = include.path | append: "" | strip -%}
 {%- if sub_city.size > 0 and sub_name.size > 0 -%}
-{%- capture sub_https -%}https://www.eastsidecalendar.com/calendar/{{ sub_city }}.ics{%- endcapture -%}
-{%- capture sub_webcal -%}webcal://www.eastsidecalendar.com/calendar/{{ sub_city }}.ics{%- endcapture -%}
+{%- if sub_path.size == 0 -%}
+{%- capture sub_path -%}calendar/{{ sub_city }}.ics{%- endcapture -%}
+{%- assign sub_path = sub_path | strip -%}
+{%- endif -%}
+{%- capture sub_https -%}https://www.eastsidecalendar.com/{{ sub_path }}{%- endcapture -%}
+{%- capture sub_webcal -%}webcal://www.eastsidecalendar.com/{{ sub_path }}{%- endcapture -%}
 {%- capture sub_title -%}Eastside Family Calendar: {{ sub_name }}{%- endcapture -%}
 {%- assign sub_https = sub_https | strip -%}
 {%- assign sub_webcal = sub_webcal | strip -%}

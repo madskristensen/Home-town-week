@@ -41,6 +41,10 @@ sitemap: false
 
 - [Book ahead]({{ site.url }}{{ site.baseurl }}/book-ahead/): Ticketed family events in the 14 cities that sell out and need a booking weeks ahead. The page says whether tickets are on sale now or the day they go on sale. Sold-out events come off the list. Summer camps are not listed.
 
+## No-school days
+
+- [No-school days]({{ site.url }}{{ site.baseurl }}/no-school-days/): Student no-school days for the 2026-27 year in the eight Eastside school districts. Grade-only days and days that are off only if needed are marked. Each district has a calendar feed.
+
 ## Sitemap
 
 - [Sitemap]({{ site.url }}{{ site.baseurl }}/sitemap.xml): Every public page on this site.

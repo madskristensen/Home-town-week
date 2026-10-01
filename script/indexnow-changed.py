@@ -95,6 +95,9 @@ def urls_for(paths):
         if path == "_data/book_ahead.yml":
             found.add(f"{SITE}/book-ahead/")
             continue
+        if path == "_data/no_school_days.yml":
+            found.add(f"{SITE}/no-school-days/")
+            continue
         if path.startswith("_data/") and path.endswith("_events.yml"):
             city = Path(path).name.replace("_events.yml", "")
             if city == "worth_the_drive":

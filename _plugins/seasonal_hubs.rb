@@ -10,6 +10,8 @@ module EastsideCalendar
   module SeasonalHubs
     HEX = /\A#[0-9a-fA-F]{6}\z/
     MONTHS = %w[Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec].freeze
+    FULL_MONTHS = %w[January February March April May June July August September October November December].freeze
+    WDAYS = %w[Sun Mon Tue Wed Thu Fri Sat].freeze
 
     module_function
 
@@ -204,7 +206,7 @@ module EastsideCalendar
       sections = []
       if district_year?(hub, today, start_s, end_s)
         districts.each do |district|
-          sections << section_payload(district, [])
+          sections << section_payload(district.merge("intro" => spring_break_intro(hub, district, data)), [])
         end
       end
       sections + week_sections(matching_rows(hub, cities, data, today, site_url))
@@ -1581,6 +1583,349 @@ module EastsideCalendar
       }
     end
 
+    # April break sentence for one district, from no_school_days.yml.
+    # The hub no longer stores those dates itself.
+    def spring_break_intro(hub, district, data)
+      year = Integer(hub["calendar_year"])
+      start_md = hub.dig("season", "start").to_s
+      end_md = hub.dig("season", "end").to_s
+      window_start = Date.iso8601(format("%04d-%s", year, start_md))
+      window_end = Date.iso8601(format("%04d-%s", year, end_md))
+      entry = no_school_entry(data, district["id"])
+      return "" unless entry
+
+      ranges = []
+      Array(entry["days"]).each do |day|
+        next unless day.is_a?(Hash) && day["type"].to_s == "break"
+
+        start_on = date_only(day["start"])
+        finish_on = date_only(day["end"]) || start_on
+        next unless start_on && finish_on
+        next if finish_on < window_start || start_on > window_end
+
+        ranges << [start_on, finish_on]
+      end
+      ranges.sort_by(&:first).map { |start_on, finish_on| break_sentence(start_on, finish_on) }.join(" ")
+    rescue ArgumentError, TypeError
+      ""
+    end
+
+    def break_sentence(start_on, end_on)
+      start_name = FULL_MONTHS[start_on.month - 1]
+      end_name = FULL_MONTHS[end_on.month - 1]
+      if start_on == end_on
+        "No school #{start_name} #{start_on.day}, #{start_on.year}."
+      elsif start_on.month == end_on.month && start_on.year == end_on.year
+        "No school #{start_name} #{start_on.day} through #{end_on.day}, #{end_on.year}."
+      else
+        "No school #{start_name} #{start_on.day} through #{end_name} #{end_on.day}, #{end_on.year}."
+      end
+    end
+
+    def no_school_entry(data, district_id)
+      file = data["no_school_days"]
+      return nil unless file.is_a?(Hash)
+
+      Array(file["districts"]).find { |district| district.is_a?(Hash) && district["id"].to_s == district_id.to_s }
+    end
+
+    # Upcoming no-school rows, the next few "what to do" grids, and one
+    # .ics feed per district. Past closures stay in the data file.
+    def attach_no_school!(site, city_pages, catalog, venues, groups, pools, hubs)
+      file = site.data["no_school_days"]
+      return unless file.is_a?(Hash)
+
+      today = EventCalendar.pacific_today(site.time)
+      districts = Array(file["districts"]).select { |district| district.is_a?(Hash) && !district["id"].to_s.empty? }
+      names = city_names(site.data["cities"])
+      rows = no_school_rows(districts, today)
+      plans = no_school_plans(rows, districts, site.data, names, today, site.config["url"].to_s)
+      attach_plan_cards!(site, plans, city_pages, catalog, venues, groups, pools, hubs)
+      write_no_school_feeds!(site, districts, today)
+      log_spring_break_sources!(site)
+      site.data["no_school_page"] = {
+        "districts" => no_school_directory(districts),
+        "months" => no_school_months(rows, districts),
+        "plans" => plans
+      }
+    end
+
+    def log_spring_break_sources!(site)
+      config = site.data["seasonal_hubs"]
+      return unless config.is_a?(Hash)
+
+      hub = Array(config["hubs"]).find { |item| item.is_a?(Hash) && item["id"].to_s == "spring-break" }
+      return unless hub.is_a?(Hash)
+
+      Array(hub["districts"]).each do |district|
+        next unless district.is_a?(Hash)
+
+        sentence = spring_break_intro(hub, district, site.data)
+        Jekyll.logger.info("Spring break:", "#{district["id"]} #{sentence}")
+        raise "Spring break date missing for #{district["id"]}" if sentence.empty?
+      end
+    end
+
+    def no_school_directory(districts)
+      districts.map do |district|
+        id = district["id"].to_s
+        title = district["title"].to_s.strip
+        {
+          "id" => id,
+          "title" => title,
+          "short" => presence(district["short"], presence(district["toc"], title)),
+          "early" => district["early"].to_s.strip,
+          "source" => district["source"].to_s.strip,
+          "source_label" => presence(district["source_label"], "#{title} calendar"),
+          "feed_name" => "No-school days, #{title}",
+          "feed_path" => "calendar/no-school/#{id}.ics"
+        }
+      end
+    end
+
+    def no_school_rows(districts, today)
+      by_date = {}
+      districts.each do |district|
+        id = district["id"].to_s
+        Array(district["days"]).each do |day|
+          next unless day.is_a?(Hash)
+
+          start_on = date_only(day["start"])
+          finish_on = date_only(day["end"]) || start_on
+          next unless start_on && finish_on
+          next if finish_on < today
+
+          info = {
+            "label" => day["label"].to_s.strip,
+            "grades" => day["grades"].to_s.strip,
+            "conditional" => day["conditional"] == true
+          }
+          cursor = start_on
+          while cursor <= finish_on
+            by_date[cursor] ||= {}
+            by_date[cursor][id] = info
+            cursor += 1
+          end
+        end
+      end
+
+      order = districts.map { |district| district["id"].to_s }
+      grouped = []
+      by_date.keys.sort.each do |date|
+        signature = order.map { |id| closure_signature(id, by_date[date][id]) }.join("|")
+        if grouped.last && grouped.last["signature"] == signature && grouped.last["end"] + 1 == date
+          grouped.last["end"] = date
+        else
+          grouped << { "start" => date, "end" => date, "signature" => signature, "cells" => by_date[date] }
+        end
+      end
+      grouped
+    end
+
+    def closure_signature(id, info)
+      return "" unless info
+
+      "#{id}=#{info["label"]}|#{info["grades"]}|#{info["conditional"] ? "1" : "0"}"
+    end
+
+    def no_school_months(rows, districts)
+      months = []
+      rows.each do |row|
+        label = "#{FULL_MONTHS[row["start"].month - 1]} #{row["start"].year}"
+        key = format("%04d-%02d", row["start"].year, row["start"].month)
+        current = months.last
+        if current.nil? || current["id"] != key
+          current = { "id" => key, "label" => label, "rows" => [] }
+          months << current
+        end
+        current["rows"] << no_school_table_row(row, districts)
+      end
+      months
+    end
+
+    def no_school_table_row(row, districts)
+      offs = districts.filter_map do |district|
+        info = row["cells"][district["id"].to_s]
+        next unless info
+
+        info.merge("id" => district["id"].to_s, "short" => presence(district["short"], district["title"].to_s))
+      end
+      labels = offs.map { |info| info["label"] }.reject(&:empty?).uniq
+      shared = labels.size == 1 ? labels.first : ""
+      cells = districts.map do |district|
+        info = row["cells"][district["id"].to_s]
+        short = presence(district["short"], district["title"].to_s)
+        next { "off" => false, "short" => short, "marks" => [] } unless info
+
+        marks = []
+        marks << info["label"] if shared.empty? && !info["label"].empty?
+        marks << info["grades"] unless info["grades"].empty?
+        marks << "If needed" if info["conditional"]
+        { "off" => true, "short" => short, "marks" => marks }
+      end
+      {
+        "id" => row["start"].iso8601,
+        "when" => span_label(row["start"], row["end"]),
+        "shared" => shared,
+        "cells" => cells
+      }
+    end
+
+    def span_label(start_on, end_on)
+      if start_on == end_on
+        short_day(start_on)
+      elsif start_on.year == end_on.year
+        "#{short_day(start_on)} to #{short_day(end_on)}"
+      else
+        "#{short_day(start_on)} to #{short_day(end_on)}, #{end_on.year}"
+      end
+    end
+
+    def short_day(date)
+      "#{WDAYS[date.wday]}, #{MONTHS[date.month - 1]} #{date.day}"
+    end
+
+    def no_school_plans(rows, districts, data, names, today, site_url)
+      city_sets = {}
+      districts.each do |district|
+        city_sets[district["id"].to_s] = Array(district["cities"]).map(&:to_s)
+      end
+      catalog_rows = []
+      names.each_key do |city_id|
+        Array(data["#{city_id}_events"]).each do |event|
+          next unless event.is_a?(Hash)
+
+          row = event_row(event, city_id, names[city_id], site_url)
+          next unless upcoming_row?(row, today)
+
+          catalog_rows << row
+        end
+      end
+
+      plans = []
+      rows.each do |row|
+        break if plans.size >= 5
+
+        events = events_on_closure(row, districts, city_sets, catalog_rows)
+        next if events.empty?
+
+        plans << {
+          "id" => "plan-#{row["start"].iso8601}",
+          "heading" => "What to do on #{span_label(row["start"], row["end"])}",
+          "events" => events
+        }
+      end
+      plans
+    end
+
+    def events_on_closure(row, districts, city_sets, catalog_rows)
+      cities = {}
+      districts.each do |district|
+        info = row["cells"][district["id"].to_s]
+        next unless info
+
+        Array(city_sets[district["id"].to_s]).each { |city_id| cities[city_id] = true }
+      end
+      return [] if cities.empty?
+
+      matches = catalog_rows.select do |event|
+        next false unless cities[event["city_id"].to_s]
+
+        start_on = date_only(event["sort"])
+        finish_on = date_only(event["end_on"]) || start_on
+        start_on && finish_on && start_on <= row["end"] && finish_on >= row["start"]
+      end
+      matches.sort_by do |event|
+        start_on = date_only(event["sort"])
+        finish_on = date_only(event["end_on"]) || start_on
+        starts = start_on == row["start"] ? 0 : 1
+        span = (finish_on - start_on).to_i
+        [starts, span, event["name"].to_s]
+      end.first(6).map(&:dup)
+    end
+
+    def attach_plan_cards!(site, plans, city_pages, catalog, venues, groups, pools, hubs)
+      return if plans.empty?
+
+      fake = {
+        "id" => "no-school-days",
+        "path" => "/no-school-days/",
+        "sections" => plans.map { |plan| { "id" => plan["id"], "events" => plan["events"] } }
+      }
+      attach_cards!(fake, site, city_pages, catalog, venues, groups, pools, hubs)
+      kept = []
+      Array(fake["sections"]).each do |section|
+        events = Array(section["events"])
+        next if events.empty?
+
+        plan = plans.find { |item| item["id"] == section["id"] }
+        next unless plan
+
+        plan["events"] = events
+        kept << plan
+      end
+      plans.replace(kept.first(3))
+    end
+
+    def write_no_school_feeds!(site, districts, today)
+      dtstamp = EventCalendar.stamp_utc(site.time)
+      districts.each do |district|
+        id = district["id"].to_s
+        title = district["title"].to_s.strip
+        source = district["source"].to_s.strip
+        events = []
+        Array(district["days"]).each do |day|
+          next unless day.is_a?(Hash)
+
+          start_on = date_only(day["start"])
+          finish_on = date_only(day["end"]) || start_on
+          next unless start_on && finish_on
+          next if finish_on < today
+
+          events << {
+            uid: "no-school-#{id}-#{start_on.iso8601}@eastsidecalendar.com",
+            start: { date: start_on, time: nil },
+            end: { date: finish_on, time: nil },
+            name: closure_feed_name(day),
+            place: title,
+            url: source,
+            description: closure_feed_description(day, title, source)
+          }
+        end
+        site.static_files << CalendarFile.new(
+          "calendar/no-school",
+          "#{id}.ics",
+          EventCalendar.build_feed("Eastside Family Calendar: No-school days, #{title}", events, dtstamp)
+        )
+      end
+    end
+
+    def closure_feed_name(day)
+      label = day["label"].to_s.strip
+      label = "No school" if label.empty?
+      grades = day["grades"].to_s.strip
+      text = if day["conditional"] == true
+               "No school if needed: #{label}"
+             else
+               "No school: #{label}"
+             end
+      grades.empty? ? text : "#{text} (#{grades})"
+    end
+
+    def closure_feed_description(day, title, source)
+      parts = [title]
+      note = day["note"].to_s.strip
+      if day["conditional"] == true
+        parts << (note.empty? ? "This day is off unless the district uses it as a snow make-up day." : note)
+      elsif !note.empty?
+        parts << note
+      end
+      grades = day["grades"].to_s.strip
+      parts << "Applies to #{grades}." unless grades.empty?
+      parts << source unless source.empty?
+      parts.join("\n\n")
+    end
+
     def weekend_motif
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="5" width="16" height="14" rx="1.5" fill="#1e4636"/><path d="M4 9h16" stroke="#c6a15a" stroke-width="1.4"/><path d="M8 3.5v3M16 3.5v3" stroke="#6b4e0e" stroke-width="1.4" stroke-linecap="round"/></svg>'
     end
@@ -1675,6 +2020,7 @@ module EastsideCalendar
       SeasonalHubs.attach_cards!(drive, site, pages, catalog, venues, groups, pools, raw_hubs)
       weekend = SeasonalHubs.prepare_weekend(site.data["cities"], site.data, today, site_url)
       SeasonalHubs.attach_cards!(weekend, site, pages, catalog, venues, groups, pools, raw_hubs)
+      SeasonalHubs.attach_no_school!(site, pages, catalog, venues, groups, pools, raw_hubs)
 
       rule = SeasonalHubs.banner_rule(config)
       chosen = SeasonalHubs.banner_choice(prepared, rule, today)

@@ -103,6 +103,18 @@ The missing page uses that same choice for its seasonal tile. `404.html` does no
 
 Each row needs a name, city id, address, start, end, a date phrase in `when`, the ticket URL in `source`, a blurb, and a real photo. Price stays in the blurb as plain text. Do not set `cost`. That field becomes a price tag. `ticket_line` is the date-line sentence when tickets are not simply on sale, such as "Tickets go on sale soon." `tickets_on` is the sale date. When that date is still ahead, the card says tickets go on sale that day. Otherwise the card says tickets are on sale now. When the organizer says an event is sold out, set `sold_out: true` or delete the row. The daily prune deletes a sold-out row and a row whose end is before today in America/Los_Angeles. The build also leaves those rows off the page. Verify dates, price, and ticket status on the organizer's ticket page. Photos are CC0, CC BY, CC BY-SA, or public domain, or an organizer photo credited `Photo: <name>` with `license: organizer`. No recognizable kids. Blurbs are our own words. No em dashes.
 
+## No-school days
+
+`/no-school-days/` lists student no-school days for the eight Eastside districts in the 2026-27 year. The rows are `_data/no_school_days.yml`. Do not put them in a city events file. The spring break hub reads its April dates from the `break` rows in that file. Do not copy those dates back into `_data/seasonal_hubs.yml`.
+
+The daily prune does not delete a day when it passes. The build hides a closure whose end is before today in America/Los_Angeles. Weekly early release, late start, and half days stay in the district `early` note. They are not table rows.
+
+In late summer, load the next school year's calendars from each district's stable link. That is `stable` when it is set, and `source` when `source` is the resource-manager link. Replace that district's `days` and set `pdf` to the file name the link downloads. Run `python3 script/check-district-calendars.py`. It warns, and does not fail the build, when a stable link starts pointing at a new PDF.
+
+In January and February, check the same links for snow make-up changes. A day with `conditional: true` is off unless the district uses it as a make-up day. After the trigger date named in `note`, either drop `conditional` or delete the row, matching what the district posted.
+
+`type` is `holiday`, `teacher`, `conferences`, `break`, or `snow`. Set `grades` when the day is not for every student, for example `Grades 6-8 only` or `Elementary only`. Per-district feeds are `/calendar/no-school/{id}.ics`. Do not use `/calendar/{city}.ics` for these. That path is the city event feed.
+
 ## Dedupe
 
 One event, one row. Two sessions at different times can both stay when the page lists both. A second row with the same time and a near-duplicate name should be removed. The event check warns on same-day near-duplicates.

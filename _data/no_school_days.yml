@@ -1,0 +1,177 @@
+# Student no-school days for 2026-27. Dates are strings.
+# The spring break hub reads type: break rows inside its season window.
+# Weekly early release, late start, and half days stay in `early`.
+# They are not table rows. `conditional: true` means the day is off unless
+# the district uses it as a snow make-up day. `pdf` is the file name a
+# stable link currently downloads. `stable` is a resource-manager link
+# when `source` is the versioned PDF the hub already shows.
+year: "2026-27"
+districts:
+  - id: northshore
+    title: Northshore School District
+    short: Northshore
+    toc: Northshore
+    source: https://www.nsd.org/n/~board/district-news/post/now-available-calendar-for-the-2026-2027-school-year
+    source_label: Northshore School District calendar
+    cities: [bothell, kenmore, woodinville]
+    early: Every Wednesday from Sep 9 is an early release, 1.5 hours. Nov 17, 19, 20, 23, and 24 are elementary conference early dismissals. Nov 25 is a half day. Feb 5 is an elementary early dismissal. The last day of school is Jun 16.
+    days:
+      - { start: "2026-11-11", end: "2026-11-11", type: holiday, label: Veterans Day }
+      - { start: "2026-11-26", end: "2026-11-27", type: holiday, label: Thanksgiving break }
+      - { start: "2026-12-21", end: "2027-01-01", type: break, label: Winter break }
+      - { start: "2027-01-18", end: "2027-01-18", type: holiday, label: Martin Luther King Jr. Day }
+      - { start: "2027-01-25", end: "2027-01-25", type: teacher, label: Grading day }
+      - { start: "2027-02-15", end: "2027-02-19", type: break, label: Mid-winter break }
+      - { start: "2027-04-05", end: "2027-04-09", type: break, label: Spring break }
+      - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
+  - id: riverview
+    title: Riverview School District
+    short: Riverview
+    toc: Riverview
+    source: https://www.rsd407.org/_files/ugd/78e1ab_ea117cd323af48aaab4c35485fa36dd4.pdf
+    source_label: Riverview School District calendar
+    cities: [carnation, duvall]
+    early: Most Fridays are a 90-minute early release. Nov 19 is a half day for kindergarten through 5th grade. Nov 25 is a half day. The last day of school is Jun 16.
+    days:
+      - { start: "2026-10-02", end: "2026-10-02", type: conferences, label: Conferences, grades: Grades 6-8 only }
+      - { start: "2026-10-09", end: "2026-10-09", type: teacher, label: Staff work day }
+      - { start: "2026-11-11", end: "2026-11-11", type: holiday, label: Veterans Day }
+      - { start: "2026-11-20", end: "2026-11-20", type: conferences, label: Conferences, grades: Elementary only }
+      - { start: "2026-11-26", end: "2026-11-27", type: holiday, label: Thanksgiving break }
+      - { start: "2026-12-21", end: "2027-01-01", type: break, label: Winter break }
+      - { start: "2027-01-18", end: "2027-01-18", type: holiday, label: Martin Luther King Jr. Day }
+      - { start: "2027-01-29", end: "2027-01-29", type: teacher, label: Staff work day }
+      - { start: "2027-02-12", end: "2027-02-12", type: break, label: Presidents Day weekend }
+      - { start: "2027-02-15", end: "2027-02-15", type: holiday, label: Presidents Day }
+      - { start: "2027-03-12", end: "2027-03-12", type: teacher, label: Staff work day }
+      - { start: "2027-04-05", end: "2027-04-09", type: break, label: Spring break }
+      - { start: "2027-05-28", end: "2027-05-28", type: snow, label: Snow make-up, conditional: true, note: "Off unless the district uses this day to make up a closure. If it is used, it becomes a 90-minute early release." }
+      - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
+  - id: renton
+    title: Renton School District
+    short: Renton
+    toc: Renton
+    source: https://resources.finalsite.net/images/v1771364157/rentonschoolsus/jpgml7vzi513bghcfvbl/RSDstudentcalendar2026-27.pdf
+    source_label: Renton School District calendar
+    stable: https://www.rentonschools.us/fs/resource-manager/view/2aa6752f-713e-48b2-ae89-b570c2e7189b
+    pdf: RSDstudentcalendar2026-27.pdf
+    cities: [renton]
+    early: Fridays are a 90-minute late start. Nov 19 through 25 are elementary conference early releases, and Nov 25 is an early release at every school. The last day of school is Jun 16.
+    days:
+      - { start: "2026-10-09", end: "2026-10-09", type: teacher, label: Teacher day }
+      - { start: "2026-11-06", end: "2026-11-06", type: teacher, label: Teacher day }
+      - { start: "2026-11-11", end: "2026-11-11", type: holiday, label: Veterans Day }
+      - { start: "2026-11-26", end: "2026-11-27", type: holiday, label: Thanksgiving break }
+      - { start: "2026-11-30", end: "2026-11-30", type: teacher, label: Teacher day }
+      - { start: "2026-12-21", end: "2027-01-01", type: break, label: Winter break }
+      - { start: "2027-01-18", end: "2027-01-18", type: holiday, label: Martin Luther King Jr. Day }
+      - { start: "2027-02-15", end: "2027-02-19", type: break, label: Mid-winter break }
+      - { start: "2027-03-15", end: "2027-03-15", type: teacher, label: Teacher day }
+      - { start: "2027-04-05", end: "2027-04-09", type: break, label: Spring break }
+      - { start: "2027-05-28", end: "2027-05-28", type: snow, label: Snow make-up, conditional: true, note: "Off unless an emergency closure make-up day is needed." }
+      - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
+  - id: lake-washington
+    title: Lake Washington School District
+    short: Lake Washington
+    toc: Lake Washington
+    source: https://resources.finalsite.net/images/v1787679561/lwsdorg/eok5lsfktcue6muzply9/2026-27LWSD-one-page-calendar-English.pdf
+    source_label: Lake Washington School District calendar
+    cities: [kirkland, redmond, sammamish]
+    early: Every Wednesday is an early release. Nov 25 is a half day. Jan 26, 28, and 29 are elementary half days for conferences. Jun 16 is a half day, and it is the last day of school.
+    days:
+      - { start: "2026-10-16", end: "2026-10-16", type: teacher, label: LEAP day }
+      - { start: "2026-11-11", end: "2026-11-11", type: holiday, label: Veterans Day }
+      - { start: "2026-11-26", end: "2026-11-27", type: holiday, label: Thanksgiving break }
+      - { start: "2026-12-21", end: "2027-01-01", type: break, label: Winter break }
+      - { start: "2027-01-18", end: "2027-01-18", type: holiday, label: Martin Luther King Jr. Day }
+      - { start: "2027-02-11", end: "2027-02-12", type: break, label: Mid-winter break }
+      - { start: "2027-02-15", end: "2027-02-15", type: holiday, label: Presidents Day }
+      - { start: "2027-03-12", end: "2027-03-12", type: teacher, label: LEAP day }
+      - { start: "2027-04-12", end: "2027-04-16", type: break, label: Spring break }
+      - { start: "2027-05-28", end: "2027-05-28", type: teacher, label: LEAP day }
+      - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
+      - { start: "2027-06-01", end: "2027-06-01", type: snow, label: Snow make-up, conditional: true, note: "Off unless a school closure make-up day is needed." }
+  - id: bellevue
+    title: Bellevue School District
+    short: Bellevue
+    toc: Bellevue
+    source: https://www.bsd405.org/about-us/calendar/important-dates-for-families
+    source_label: Bellevue School District calendar
+    cities: [bellevue]
+    early: Nov 16 through 20 are elementary conference early releases. The last day of school is Jun 23.
+    days:
+      - { start: "2026-10-09", end: "2026-10-09", type: snow, label: Snow make-up, conditional: true, note: "Off unless the district uses this day to make up a closure from before Oct 2, 2026." }
+      - { start: "2026-11-11", end: "2026-11-11", type: holiday, label: Veterans Day }
+      - { start: "2026-11-26", end: "2026-11-27", type: holiday, label: Thanksgiving break }
+      - { start: "2026-12-21", end: "2027-01-01", type: break, label: Winter break }
+      - { start: "2027-01-18", end: "2027-01-18", type: holiday, label: Martin Luther King Jr. Day }
+      - { start: "2027-01-29", end: "2027-01-29", type: teacher, label: Teacher work day }
+      - { start: "2027-02-15", end: "2027-02-19", type: break, label: Mid-winter break }
+      - { start: "2027-03-19", end: "2027-03-19", type: snow, label: Snow make-up, conditional: true, note: "Off unless the district uses this day to make up a closure from before Mar 12, 2027." }
+      - { start: "2027-04-12", end: "2027-04-16", type: break, label: Spring break }
+      - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
+      - { start: "2027-06-01", end: "2027-06-01", type: snow, label: Snow make-up, conditional: true, note: "Off unless a make-up day is needed." }
+      - { start: "2027-06-18", end: "2027-06-18", type: holiday, label: Juneteenth }
+  - id: issaquah
+    title: Issaquah School District
+    short: Issaquah
+    toc: Issaquah
+    source: https://www.isd411.org/fs/resource-manager/view/026edd0d-1d2c-4e5f-995d-785ae1f1b60c
+    source_label: Issaquah School District calendar
+    pdf: 2026-27SchoolCalendarITA11142025-BoardApproved121125Updated51126.pdf
+    cities: [issaquah, sammamish]
+    early: Elementary schools dismiss at 1:30 p.m. on Wednesdays. Nov 4 and 5 are elementary conferences. Check with the school about the schedule those two days.
+    days:
+      - { start: "2026-11-11", end: "2026-11-11", type: holiday, label: Veterans Day }
+      - { start: "2026-11-25", end: "2026-11-27", type: holiday, label: Thanksgiving break }
+      - { start: "2026-12-21", end: "2027-01-01", type: break, label: Winter break }
+      - { start: "2027-01-18", end: "2027-01-18", type: holiday, label: Martin Luther King Jr. Day }
+      - { start: "2027-01-25", end: "2027-01-25", type: teacher, label: Teacher work day }
+      - { start: "2027-02-15", end: "2027-02-19", type: break, label: Mid-winter break }
+      - { start: "2027-03-19", end: "2027-03-19", type: snow, label: Snow make-up, conditional: true, note: "Off unless this is the first weather make-up day." }
+      - { start: "2027-04-12", end: "2027-04-16", type: break, label: Spring break }
+      - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
+  - id: snoqualmie-valley
+    title: Snoqualmie Valley School District
+    short: Snoqualmie
+    toc: Snoqualmie Valley
+    source: https://resources.finalsite.net/images/v1778164938/svsd410org/clm2ccn9nv0prepprxud/2026-2027StudentCalendarboardapproved250124.pdf
+    source_label: Snoqualmie Valley School District calendar
+    stable: https://www.svsd410.org/fs/resource-manager/view/992f3df4-d428-42e2-9a56-a045c84baf7c
+    pdf: 2026-2027StudentCalendarboardapproved250124.pdf
+    cities: [snoqualmie, north-bend]
+    early: Fridays are a two-hour early release. Nov 20 and 25 are half days at every school. Nov 23 and 24 are half days for kindergarten through 5th grade. Jun 10 and 11 are half days, and Jun 11 is the last day of school.
+    days:
+      - { start: "2026-10-12", end: "2026-10-12", type: teacher, label: Teacher work day }
+      - { start: "2026-11-11", end: "2026-11-11", type: holiday, label: Veterans Day }
+      - { start: "2026-11-26", end: "2026-11-27", type: holiday, label: Thanksgiving break }
+      - { start: "2026-12-21", end: "2027-01-01", type: break, label: Winter break }
+      - { start: "2027-01-18", end: "2027-01-18", type: holiday, label: Martin Luther King Jr. Day }
+      - { start: "2027-01-25", end: "2027-01-25", type: teacher, label: Teacher work day }
+      - { start: "2027-02-15", end: "2027-02-19", type: break, label: Mid-winter break }
+      - { start: "2027-04-12", end: "2027-04-16", type: break, label: Spring break }
+      - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }
+  - id: mercer-island
+    title: Mercer Island School District
+    short: Mercer Island
+    toc: Mercer Island
+    source: https://www.mercerislandschools.org/fs/resource-manager/view/bbbd8f25-77ca-469a-be7b-2f20e90fd80a
+    source_label: Mercer Island School District calendar
+    pdf: AcademicCalendar_2026-27_Kinder-Aug26_revJune25-2026.pdf
+    cities: [mercer-island]
+    early: Nov 20 is an elementary half day. Nov 25 is a half day at the middle and high schools. Jun 11 is an elementary half day. The last day of school is Jun 17.
+    days:
+      - { start: "2026-10-08", end: "2026-10-08", type: teacher, label: Teacher training }
+      - { start: "2026-10-09", end: "2026-10-09", type: holiday, label: District closed }
+      - { start: "2026-11-11", end: "2026-11-11", type: holiday, label: Veterans Day }
+      - { start: "2026-11-23", end: "2026-11-25", type: conferences, label: Conferences, grades: Elementary only }
+      - { start: "2026-11-26", end: "2026-11-27", type: holiday, label: Thanksgiving break }
+      - { start: "2026-12-21", end: "2027-01-01", type: break, label: Winter break }
+      - { start: "2027-01-18", end: "2027-01-18", type: holiday, label: Martin Luther King Jr. Day }
+      - { start: "2027-01-25", end: "2027-01-25", type: teacher, label: Teacher work day }
+      - { start: "2027-02-15", end: "2027-02-19", type: break, label: Mid-winter break }
+      - { start: "2027-03-19", end: "2027-03-19", type: teacher, label: Teacher work day }
+      - { start: "2027-03-26", end: "2027-03-26", type: snow, label: Snow make-up, conditional: true, note: "Scheduled weather make-up day. Off unless it is used." }
+      - { start: "2027-04-12", end: "2027-04-16", type: break, label: Spring break }
+      - { start: "2027-05-28", end: "2027-05-28", type: snow, label: Snow make-up, conditional: true, note: "Scheduled weather make-up day. Off unless it is used." }
+      - { start: "2027-05-31", end: "2027-05-31", type: holiday, label: Memorial Day }

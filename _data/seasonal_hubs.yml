@@ -170,53 +170,47 @@ hubs:
     calendar_year: 2027
     tags: [spring-break]
     keywords: [spring break]
+    # Titles and sources stay here. April break sentences are built from
+    # type: break rows in _data/no_school_days.yml.
     districts:
       - id: northshore
         title: Northshore School District
         toc: Northshore
-        intro: No school April 5 through 9, 2027.
         source: https://www.nsd.org/n/~board/district-news/post/now-available-calendar-for-the-2026-2027-school-year
         source_label: Northshore School District calendar
       - id: riverview
         title: Riverview School District
         toc: Riverview
-        intro: No school April 5 through 9, 2027.
         source: https://www.rsd407.org/_files/ugd/78e1ab_ea117cd323af48aaab4c35485fa36dd4.pdf
         source_label: Riverview School District calendar
       - id: renton
         title: Renton School District
         toc: Renton
-        intro: No school April 5 through 9, 2027.
         source: https://resources.finalsite.net/images/v1771364157/rentonschoolsus/jpgml7vzi513bghcfvbl/RSDstudentcalendar2026-27.pdf
         source_label: Renton School District calendar
       - id: lake-washington
         title: Lake Washington School District
         toc: Lake Washington
-        intro: No school April 12 through 16, 2027.
         source: https://resources.finalsite.net/images/v1787679561/lwsdorg/eok5lsfktcue6muzply9/2026-27LWSD-one-page-calendar-English.pdf
         source_label: Lake Washington School District calendar
       - id: bellevue
         title: Bellevue School District
         toc: Bellevue
-        intro: No school April 12 through 16, 2027.
         source: https://www.bsd405.org/about-us/calendar/important-dates-for-families
         source_label: Bellevue School District calendar
       - id: issaquah
         title: Issaquah School District
         toc: Issaquah
-        intro: No school April 12 through 16, 2027.
         source: https://www.isd411.org/fs/resource-manager/view/026edd0d-1d2c-4e5f-995d-785ae1f1b60c
         source_label: Issaquah School District calendar
       - id: snoqualmie-valley
         title: Snoqualmie Valley School District
         toc: Snoqualmie Valley
-        intro: No school April 12 through 16, 2027.
         source: https://resources.finalsite.net/images/v1778164938/svsd410org/clm2ccn9nv0prepprxud/2026-2027StudentCalendarboardapproved250124.pdf
         source_label: Snoqualmie Valley School District calendar
       - id: mercer-island
         title: Mercer Island School District
         toc: Mercer Island
-        intro: No school April 12 through 16, 2027.
         source: https://www.mercerislandschools.org/fs/resource-manager/view/bbbd8f25-77ca-469a-be7b-2f20e90fd80a
         source_label: Mercer Island School District calendar
     theme:
