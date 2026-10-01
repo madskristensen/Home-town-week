@@ -1,21 +1,42 @@
 {%- comment -%}
   Playground list grouped by city. No parameters.
+  The heading carries the city and the count. The address line drops
+  that city. The map link still searches the full address.
 {%- endcomment -%}
 <section class="playground-directory" aria-labelledby="every-playground">
   <h2 id="every-playground">Every playground</h2>
-  {%- include page-intro.html text="Public park playgrounds, grouped by city. A star marks a standout, and those sit at the top of their city. The name links to the park page when the city publishes one, and to the city parks directory when it does not." -%}
+  {%- include page-intro.html text="Public park playgrounds by city. Stars mark our favorites." -%}
   <svg class="icon-sprite" aria-hidden="true" focusable="false">
     <symbol id="standout-star" viewBox="0 0 16 16">
       <path fill="currentColor" d="M8 1.15 9.62 4.44 13.25 4.97 10.62 7.53 11.24 11.15 8 9.45 4.76 11.15 5.38 7.53 2.75 4.97 6.38 4.44Z"/>
     </symbol>
   </svg>
   {%- for city in site.data.playground_map.cities -%}
-  <h3 id="all-{{ city.id }}">{{ city.name }}</h3>
+  <h3 id="all-{{ city.id }}">{{ city.name }} ({{ city.parks.size }})</h3>
   <ul class="playground-list">
     {%- for park in city.parks -%}
+    {%- assign city_suffix = ", " | append: city.name -%}
+    {%- assign suffix_size = city_suffix | size -%}
+    {%- assign head_size = park.address | size | minus: suffix_size -%}
+    {%- assign place_tail = park.address | slice: head_size, suffix_size -%}
+    {%- if place_tail == city_suffix -%}
+      {%- assign park_place = park.address | slice: 0, head_size -%}
+    {%- else -%}
+      {%- assign park_place = park.address -%}
+    {%- endif -%}
     <li id="{{ park.id }}" data-city="{{ city.id }}"{% if park.restrooms %} data-restrooms="1"{% endif %}{% if park.covered %} data-covered="1"{% endif %}{% if park.accessible %} data-accessible="1"{% endif %}{% if park.toddler %} data-toddler="1"{% endif %}{% if park.splash %} data-splash="1"{% endif %}>
-      <a href="{{ park.page }}" rel="noopener">{{ park.name }}{%- if park.standout -%}<span class="standout-mark"><svg class="standout-star" aria-hidden="true" focusable="false" width="16" height="16"><use href="#standout-star"></use></svg><span class="visually-hidden"> Standout playground</span></span>{%- endif -%}</a>
-      <span class="playground-meta"><a class="addr" href="{{ park.address | map_search: city.name, park.name }}"><span class="addr-text">{{ park.address }}</span></a></span>
+      <a class="playground-name" href="{{ park.page }}" rel="noopener">{{ park.name }}{%- if park.standout -%}<span class="standout-mark"><svg class="standout-star" aria-hidden="true" focusable="false" width="16" height="16"><use href="#standout-star"></use></svg><span class="visually-hidden"> Standout playground</span></span>{%- endif -%}</a>
+      <a class="addr" href="{{ park.address | map_search: city.name, park.name }}"><span class="addr-text">{{ park_place }}</span></a>
+      {%- assign amenity_n = 0 -%}
+      {%- if park.restrooms or park.splash or park.accessible or park.covered or park.toddler -%}
+      <p class="playground-amenities">
+        {%- if park.restrooms -%}{%- if amenity_n < 3 -%}<span>Restrooms</span>{%- assign amenity_n = amenity_n | plus: 1 -%}{%- endif -%}{%- endif -%}
+        {%- if park.splash -%}{%- if amenity_n < 3 -%}<span>Splash pad</span>{%- assign amenity_n = amenity_n | plus: 1 -%}{%- endif -%}{%- endif -%}
+        {%- if park.accessible -%}{%- if amenity_n < 3 -%}<span>Accessible</span>{%- assign amenity_n = amenity_n | plus: 1 -%}{%- endif -%}{%- endif -%}
+        {%- if park.covered -%}{%- if amenity_n < 3 -%}<span>Covered or shade</span>{%- assign amenity_n = amenity_n | plus: 1 -%}{%- endif -%}{%- endif -%}
+        {%- if park.toddler -%}{%- if amenity_n < 3 -%}<span>Toddler area</span>{%- assign amenity_n = amenity_n | plus: 1 -%}{%- endif -%}{%- endif -%}
+      </p>
+      {%- endif -%}
     </li>
     {%- endfor -%}
   </ul>
