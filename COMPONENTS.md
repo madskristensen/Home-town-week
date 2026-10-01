@@ -6,7 +6,7 @@ Card and page markup lives in one include each. Pages, layouts, and the city cal
 
 | Include | What it renders |
 | --- | --- |
-| `_includes/event-card.html` | Every event card. `layout` is blank for a city stack, `tile` for hubs, lights, decorations, and story times, and `weekend` for the home weekend picks. The weekend photo sits outside the link. |
+| `_includes/event-card.html` | Every event card. `layout` is blank for a city stack, `tile` for hubs, lights, and decorations, and `weekend` for the home weekend picks. The weekend photo sits outside the link. |
 | `_includes/event-photo.html` | Photo and the credit strip. `figure` defaults to `event-photo`. Home weekend picks pass `weekend-photo`. |
 | `_includes/filter-chip.html` | One filter chip. Event chips pass `group` and `value`. Playground chips pass `input_class`, `city`, `count`, or `amenity`, and do not pass `value`. |
 | `_includes/page-intro.html` | The one-line introduction. Renders nothing when `text` is blank. |

@@ -31,9 +31,7 @@ sitemap: false
 
 ## Guides
 
-- [Guides]({{ site.url }}{{ site.baseurl }}/guides/): Evergreen family guides.
 - [Playground map]({{ site.url }}{{ site.baseurl }}/guides/playgrounds/): Public park playgrounds in the 14 cities, with a click-to-load map. Town and amenity filters narrow the list before the map loads.
-- [Library story times]({{ site.url }}{{ site.baseurl }}/guides/story-times/): King County Library story times in these cities.
 
 ## Sitemap
 

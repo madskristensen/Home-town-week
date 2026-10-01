@@ -8,34 +8,6 @@ layout: default
   {%- include playground-map.html -%}
   {%- include playground-directory.html -%}
   {%- else -%}
-  {%- assign guide_count = guide.entries | size -%}
-  {%- if guide_count == 0 -%}
-  {%- if page.guide_id == "story-times" -%}
-  {%- include empty-suggest.html opening="No story times are listed yet." name="library story times" -%}
-  {%- elsif page.guide_id == "playgrounds" -%}
   {%- include empty-suggest.html opening="No playgrounds are listed yet." name="playgrounds" -%}
-  {%- else -%}
-  {%- include empty-suggest.html topic=page.title name=page.title -%}
-  {%- endif -%}
-  {%- else -%}
-  <div class="hub-grid">
-    {%- for entry in guide.entries -%}
-    {%- include event-card.html
-         layout="tile"
-         place_first=true
-         title=entry.name
-         image=entry.image
-         alt=entry.alt
-         width=entry.width
-         height=entry.height
-         credit=entry.credit
-         source=entry.source
-         place=entry.address
-         place_city=entry.city
-         place_name=entry.name
-         blurb=entry.text -%}
-    {%- endfor -%}
-  </div>
-  {%- endif -%}
   {%- endif -%}
 </article>

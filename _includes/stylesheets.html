@@ -24,7 +24,6 @@
 {%- if css_feature -%}{{ site.data.css_inline.feature }}{%- endif -%}
 {%- if css_map -%}{{ site.data.css_inline.map }}{%- endif -%}
 {%- if page.map_id == "halloween" -%}{{ site.data.css_inline.map_halloween }}{%- endif -%}
-{%- if page.url == "/guides/" -%}{{ site.data.css_inline.guide }}{%- endif -%}
 {%- if page.guide_id == "playgrounds" -%}{{ site.data.css_inline.playgrounds }}{%- endif -%}
 {%- endcapture -%}
 {%- assign layout_css = layout_css | strip -%}
