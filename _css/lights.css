@@ -11,10 +11,6 @@
   margin-bottom: 1.75rem;
 }
 
-.hub-section .lights-feature {
-  margin-top: 0.85rem;
-}
-
 .lights-feature-layout {
   display: grid;
   grid-template-columns: 1fr;
