@@ -161,3 +161,11 @@ Games, crafts, tarot, karaoke, and treats for teens 12 to 18. Costumes are encou
 Find a pumpkin, join a short costume parade inside, and trick-or-treat at the library. No registration. Part of it may move outside if the weather is good. Friends of the Woodinville Library sponsor it.
 
 [The Great Pumpkin Hunt](https://kcls.bibliocommons.com/events/6aa8a328ab7a8e0037c1d44f)
+
+### Cascade Recycling Center Tour
+<p class="event-when">Fri Nov 13 · 12:00–1:00 p.m.</p>
+<p class="event-place">Cascade Recycling Center, 14020 NE 190th St, Woodinville</p>
+
+A free look at what happens to recycling after it is picked up. WM hosts the tour. It is recommended for ages 10 and up, and registration is required.
+
+[Cascade Recycling Center Tour](https://www.kirklandwa.gov/Whats-Happening/Community-Events/Public-Works-Department-Events/CRC-Tour)

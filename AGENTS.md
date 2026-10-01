@@ -76,6 +76,7 @@ Each Friday, scan the lead sites for about the next six weeks. The Yodel embed n
 - https://rentonwa.macaronikid.com/ covers Renton and Bellevue.
 - https://snoqualmievalley.macaronikid.com/ covers the Snoqualmie Valley, Issaquah, and Sammamish.
 - https://cherryvalley.macaronikid.com/ covers Monroe, Duvall, and Carnation.
+- https://www.parentmap.com/calendar covers the Eastside. Never link it, and never copy its text.
 
 ## Weekend picks
 

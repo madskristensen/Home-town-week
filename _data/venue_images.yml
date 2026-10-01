@@ -24,6 +24,18 @@ venues:
     credit: "Photo: Heptazane, public domain"
     license: Public domain
     source: https://commons.wikimedia.org/wiki/File:Bellevue_Botanical_Garden_Entrance.jpg
+  - keys: ["bellevue college"]
+    image: /assets/images/bellevue/bellevue-college.webp
+    alt: A brick building and lawn on the Bellevue College campus.
+    credit: "Photo: Bellevue College, CC BY-SA 2.5"
+    license: CC BY-SA 2.5
+    source: https://commons.wikimedia.org/wiki/File:BellevueCommunityCollege.jpg
+  - keys: ["marketplace at factoria"]
+    image: /assets/images/bellevue/factoria.webp
+    alt: The shopping-center sign at Factoria in Bellevue, with trees around the lot.
+    credit: "Photo: erocsid, CC BY 2.0"
+    license: CC BY 2.0
+    source: https://commons.wikimedia.org/wiki/File:Factoria_Mall_sign,_Bellevue,_WA.jpg
   # Mall only. "crossroads" also matches Crossroads Community Center.
   - keys: ["crossroads mall", "crossroads bellevue"]
     image: /assets/images/bellevue/crossroads.webp
@@ -79,6 +91,12 @@ venues:
     credit: "Photo: SuddenFrost, CC0"
     license: CC0
     source: https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Mercer_Island_Library.jpg
+  - keys: ["stroum jewish community center"]
+    image: /assets/images/mercer-island/stroum-jcc.webp
+    alt: The Stroum Jewish Community Center on Mercer Island, a brick building with a curved roof.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Sam_and_Althea_Stroum_Jewish_Community_Center_of_Greater_Seattle_01.jpg
   - keys: ["hartman park"]
     image: /assets/images/redmond/hartman-park.webp
     alt: A ballfield and backstop at Hartman Park in Redmond.
@@ -343,6 +361,12 @@ venues:
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     license: CC BY-SA 3.0
     source: https://commons.wikimedia.org/wiki/File:Kirkland_Performance_Center_02.jpg
+  - keys: ["village at totem lake"]
+    image: /assets/images/kirkland/village-totem-lake.webp
+    alt: The Village at Totem Lake in Kirkland, with storefronts and fall trees along the walk.
+    credit: "Photo: Bri, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:The_Village_at_Totem_Lake_October_2017.jpg
   - keys: ["juanita bay park"]
     image: /assets/images/kirkland/juanita-bay-park.webp
     alt: A wooden boardwalk through the reeds at Juanita Bay Park, with Lake Washington and the Seattle skyline beyond.

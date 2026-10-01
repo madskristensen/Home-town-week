@@ -50,6 +50,14 @@ School-age kids (about ages 6 to 11) read to a therapy dog in 15-minute slots at
 
 [Reading with Rover](https://kcls.bibliocommons.com/events/6a99d77b36204e08fbb96aa1)
 
+### Hispanic Heritage Celebration
+<p class="event-when">Sat Oct 3 · 2:00–4:00 p.m.</p>
+<p class="event-place">The Village at Totem Lake, 11901 NE Village Plaza</p>
+
+Mariachi Seattle at 2:00 p.m., Santana Charro Bros. at 3:00 p.m., and Joyas Mestizas at 4:00 p.m. There are also flower-bracelet and magnet crafts, and face painting.
+
+[Hispanic Heritage Celebration](https://thevillageattotemlake.com/events/hispanic-heritage-celebration)
+
 ### Swan Lake: Symphony of Lights
 <p class="event-when">Sat Oct 3 · 7:00 p.m., and Sun Oct 4 · 4:00 p.m.</p>
 <p class="event-place">Kirkland Performance Center, 350 Kirkland Ave</p>
@@ -231,6 +239,14 @@ Stories and simple songs in Ukrainian for children of any age with an adult. No 
 
 [Ukrainian Story Time](https://kcls.bibliocommons.com/events/6a63e1ecf494c55649eb13c9)
 
+### Village Halloween Celebration
+<p class="event-when">Sat Oct 24 · 12:00–2:00 p.m.</p>
+<p class="event-place">The Village at Totem Lake, 11901 NE Village Plaza</p>
+
+Costumed characters, a stage performance, and a craft station. Costumes are welcome. It is not a trick-or-treat, and it goes on rain or shine. Parking in the Green Garage is free.
+
+[Village Halloween Celebration](https://thevillageattotemlake.com/events/village-halloween-celebration)
+
 ### Pokemon Club
 <p class="event-when">Sat Oct 24 · 1:00–2:00 p.m.</p>
 <p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
@@ -238,6 +254,14 @@ Stories and simple songs in Ukrainian for children of any age with an adult. No 
 Play the Pokemon trading card game with a guided deck if you are new, or with the library's cards if you already know it. Best for ages 5 to 10. Drawing and small giveaways while supplies last. No registration. Space is limited.
 
 [Pokemon Club](https://kcls.bibliocommons.com/events/6abad22629c3d600332c3de1)
+
+### Día de los Muertos
+<p class="event-when">Sat Oct 24 · 1:00–4:00 p.m.</p>
+<p class="event-place">Peter Kirk Community Center, 352 Kirkland Ave</p>
+
+A free city celebration for all ages, with traditional activities, food, and music. On-site parking is limited. The garage under the library is the backup.
+
+[Día de los Muertos](https://www.kirklandwa.gov/Whats-Happening/Community-Events/Parks-and-Community-Services/D%C3%ADa-de-los-Muertos)
 
 ### Keep on Dancing
 <p class="event-when">Sun Oct 25 · 7:00 p.m.</p>
@@ -284,6 +308,14 @@ Carnival games, a cookie stroll, bowling, and skee ball for ages 1 to 5. Kirklan
 Studio East's youth cast, ages 9 to 20, in Mel Brooks' musical comedy. The company recommends it for teens and adults. Expect mature jokes, sexual innuendo, mild profanity, brief stage violence, and spooky stage effects. Friday, Oct 30 at 7:00 p.m. is a pay-what-you-will preview. Other shows are Sat Oct 31 at 7:00 p.m., Sun Nov 1 at 2:00 p.m., Thu Nov 5 at 7:00 p.m., Fri Nov 6 at 7:00 p.m., Sat Nov 7 at 2:00 and 7:00 p.m., and Sun Nov 8 at 2:00 p.m. Tickets go on sale October 5.
 
 [Studio East](https://studio-east.org/auditions/)
+
+### Kirkland Catrina Walk
+<p class="event-when">Sat Oct 31 · 11:00 a.m.–8:30 p.m.</p>
+<p class="event-place">Marina Park, 25 Lakeshore Plaza</p>
+
+A free Día de Muertos celebration at Marina Park, presented by Mundo Catrina. The day has music, performances, art, vendors, family activities, and a walk through downtown Kirkland.
+
+[Kirkland Catrina Walk](https://www.explorekirkland.com/events/kirkland-catrina-walk/)
 
 ### STEAM Family Story Time
 <p class="event-when">Mon Nov 2 · 4:30–5:30 p.m.</p>

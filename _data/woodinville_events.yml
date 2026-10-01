@@ -155,3 +155,11 @@
   end: "2026-10-31T17:30:00-07:00"
   place: "Woodinville Library, 17105 Avondale Road NE"
   same_as: "https://kcls.bibliocommons.com/events/6aa8a328ab7a8e0037c1d44f"
+- name: "Cascade Recycling Center Tour"
+  cost: "Free"
+  setting: "Indoor"
+  signup: true
+  start: "2026-11-13T12:00:00-08:00"
+  end: "2026-11-13T13:00:00-08:00"
+  place: "Cascade Recycling Center, 14020 NE 190th St, Woodinville"
+  same_as: "https://www.kirklandwa.gov/Whats-Happening/Community-Events/Public-Works-Department-Events/CRC-Tour"

@@ -39,6 +39,30 @@ Stories, music, and movement in Vietnamese for all ages with an adult. The same 
 
 [Vietnamese Story Time](https://kcls.bibliocommons.com/events/6a46e315c52cdc3600ee7850)
 
+### Renton parkrun
+<p class="event-when">Sat Oct 3 · 9:00 a.m.</p>
+<p class="event-place">Cedar River Trail trailhead by the I-405 overpass, Renton</p>
+
+A free weekly 5k you can walk, jog, or run. It starts every Saturday at 9:00 a.m. Register once before your first visit, and bring the barcode from that registration.
+
+[Renton parkrun](https://www.parkrun.us/renton/)
+
+### Cedar River Salmon Journey at the Library
+<p class="event-when">Sat Oct 3 · 10:00 a.m.–2:00 p.m.</p>
+<p class="event-place">Renton Library, 100 Mill Avenue S</p>
+
+Seattle Aquarium naturalists are at the library with the Cedar River salmon story. The posted hours run 10:00 a.m. to 2:00 p.m.
+
+[Cedar River Salmon Journey at the Library](https://www.seattleaquarium.org/explore-the-aquarium/programs/cedar-river-salmon-journey/)
+
+### Cedar River Salmon Journey at Cedar River Park
+<p class="event-when">Sat Oct 3 · 10:00 a.m.–2:00 p.m.</p>
+<p class="event-place">Cedar River Park, Renton</p>
+
+Seattle Aquarium naturalists are stationed at Cedar River Park. The posted hours run 10:00 a.m. to 2:00 p.m.
+
+[Cedar River Salmon Journey at Cedar River Park](https://www.seattleaquarium.org/explore-the-aquarium/programs/cedar-river-salmon-journey/)
+
 ### Lucha Libro
 <p class="event-when">Sat Oct 3 · noon, 2:00 p.m., and 5:00 p.m.</p>
 <p class="event-place">Renton Library, 100 Mill Avenue S</p>
@@ -125,6 +149,38 @@ The Environmental Science Center reads a story and leads a hands-on salmon activ
 
 [Salmon Stories and Science](https://kcls.bibliocommons.com/v2/events/6aa0a274a3fb9722897b2737)
 
+### Cedar River Salmon Journey at Cedar River Park
+<p class="event-when">Sat Oct 10 · 10:00 a.m.–12:00 p.m.</p>
+<p class="event-place">Cedar River Park, Renton</p>
+
+Seattle Aquarium naturalists are stationed at Cedar River Park. This Saturday the posted hours are 10:00 a.m. to noon.
+
+[Cedar River Salmon Journey at Cedar River Park](https://www.seattleaquarium.org/explore-the-aquarium/programs/cedar-river-salmon-journey/)
+
+### Cedar River Salmon Festival
+<p class="event-when">Sat Oct 10 · 10:00 a.m.–12:00 p.m.</p>
+<p class="event-place">Renton Community Center, 1715 Maple Valley Hwy</p>
+
+A free family festival with the Environmental Science Center and Renton Parks. Watch for salmon, try a science station, and make something to take home. Part of it is outside by the river and part is in the ballroom. No registration.
+
+[Cedar River Salmon Festival](https://www.envsciencecenter.org/event-details/cedar-river-salmon-festival-1)
+
+### Cedar River Salmon Journey at the Library
+<p class="event-when">Sun Oct 11 · 10:00 a.m.–2:00 p.m.</p>
+<p class="event-place">Renton Library, 100 Mill Avenue S</p>
+
+Seattle Aquarium naturalists are at the library with the Cedar River salmon story. The posted hours run 10:00 a.m. to 2:00 p.m.
+
+[Cedar River Salmon Journey at the Library](https://www.seattleaquarium.org/explore-the-aquarium/programs/cedar-river-salmon-journey/)
+
+### Cedar River Salmon Journey at Cedar River Park
+<p class="event-when">Sun Oct 11 · 10:00 a.m.–2:00 p.m.</p>
+<p class="event-place">Cedar River Park, Renton</p>
+
+Seattle Aquarium naturalists are stationed at Cedar River Park. The posted hours run 10:00 a.m. to 2:00 p.m.
+
+[Cedar River Salmon Journey at Cedar River Park](https://www.seattleaquarium.org/explore-the-aquarium/programs/cedar-river-salmon-journey/)
+
 ### Drawing Pumpkins
 <p class="event-when">Sun Oct 11 · 1:00–2:00 p.m.</p>
 <p class="event-place">Fairwood Library, 17009 140th Avenue SE</p>
@@ -156,6 +212,14 @@ Tour the ladder truck, fire engine, and medic unit, try on firefighter gear, and
 Tour the engine, the aid unit, and the dive rig, including the water rescue boat. Try the gear and meet the firefighters. Free, no RSVP. In the bay, rain or shine. Street parking is nearby.
 
 [Renton RFA events](https://www.rentonrfa.com/events/)
+
+### Spooky Nature Science
+<p class="event-when">Thu Oct 22 · 4:00–5:30 p.m.</p>
+<p class="event-place">Renton Library, 100 Mill Avenue S</p>
+
+A drop-in science and craft hour with the Environmental Science Center. Mix a color-changing potion and take a look at some creepy-crawlies. It is for all ages, and you may get a little dusty. No registration.
+
+[Spooky Nature Science](https://www.envsciencecenter.org/event-details/spooky-nature-science)
 
 ### Station 13 Open House
 <p class="event-when">Sat Oct 24 · 9:00–11:00 a.m.</p>

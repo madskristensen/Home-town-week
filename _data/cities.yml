@@ -164,6 +164,14 @@
       url: "https://bellevuehindutemple.com/"
       type: venue
       notes: "Public festival days. Search for Diwali about six weeks out."
+    - name: "Bellevue College Japan Week"
+      url: "https://studentweb.bellevuecollege.edu/japan-week/"
+      type: school
+      notes: "The Saturday festival is the public day. Weekday sessions are for students."
+    - name: "Marketplace at Factoria"
+      url: "https://marketplaceatfactoria.shopkimco.com/events"
+      type: venue
+      notes: "Shopping-center events. Confirm the date on the events page."
     - name: "AllEvents Bellevue"
       url: "https://allevents.in/bellevue"
       type: allevents
@@ -443,6 +451,10 @@
       url: "https://infinityfarmissaquah.com/upcoming-events"
       type: farm
       notes: "16523 Issaquah-Hobart Road SE. Fall Y'all Market and Tract-or-Treat when the farm page posts the date."
+    - name: "Mountains to Sound Greenway Trust"
+      url: "https://mtsgreenway.org/"
+      type: nature
+      notes: "The annual planting celebration and other family outings. Skip trail-crew days that are not posted for families."
     - name: "AllEvents Issaquah"
       url: "https://allevents.in/issaquah"
       type: allevents
@@ -583,6 +595,14 @@
       url: "https://kirklandurban.com/"
       type: venue
       notes: "Treat Street and other plaza events. The 2025 Treat Street page is not a 2026 date. Confirm the year."
+    - name: "The Village at Totem Lake"
+      url: "https://thevillageattotemlake.com/events"
+      type: venue
+      notes: "Family events at 11901 NE Village Plaza. Confirm the year on the event page."
+    - name: "Explore Kirkland"
+      url: "https://www.explorekirkland.com/events"
+      type: downtown
+      notes: "Visitor events, including the Catrina Walk. Skip nightlife."
     - name: "AllEvents Kirkland"
       url: "https://allevents.in/kirkland"
       type: allevents
@@ -624,7 +644,11 @@
     - name: "Stroum Jewish Community Center"
       url: "https://sjcc.org/events/"
       type: venue
-      notes: "Public family programs at 3801 E Mercer Way. The events index sometimes rate-limits. Confirm the date on the event page."
+      notes: "Public family programs at 3801 E Mercer Way, including Friday Tot Shabbat at 9:45 a.m. The events index sometimes rate-limits. Confirm the date on the event page."
+    - name: "Island Books"
+      url: "https://www.islandbooks.com/childrens-story-times"
+      type: venue
+      notes: "Saturday singing at 9:30 a.m. for ages 1 to 4, and Wednesday picture-book story time at 10:30 a.m."
     - name: "Youth Theatre Northwest"
       url: "https://youththeatre.org/"
       type: theater
@@ -859,6 +883,22 @@
       url: "https://snokinghockey.com/club/tryhockeyfree"
       type: sports
       notes: "Free Try Hockey for ages 4 to 17. Add a Renton rink date only when this page posts one. Skip the Rookies class series."
+    - name: "Environmental Science Center"
+      url: "https://www.envsciencecenter.org/events"
+      type: nature
+      notes: "Family science at Renton libraries and the Cedar River Salmon Festival. Skip adult workshops and programs outside Renton."
+    - name: "Seattle Aquarium Cedar River Salmon Journey"
+      url: "https://www.seattleaquarium.org/explore-the-aquarium/programs/cedar-river-salmon-journey/"
+      type: nature
+      notes: "Naturalists on posted October weekends at Renton Library and Cedar River Park. Skip the Ballard Locks and Maple Valley stops."
+    - name: "The Landing"
+      url: "https://thelandinginrenton.com/events"
+      type: venue
+      notes: "Plaza events. Confirm a date on this page before listing it."
+    - name: "Renton parkrun"
+      url: "https://www.parkrun.us/renton/"
+      type: sports
+      notes: "Free Saturday 5k at 9:00 a.m. on the Cedar River Trail. Register once before the first visit."
     - name: "AllEvents Renton"
       url: "https://allevents.in/renton"
       type: allevents
@@ -1058,7 +1098,11 @@
     - name: "JB Family Growers"
       url: "https://www.jbfamilygrowers.com/events"
       type: farm
-      notes: "Pumpkin Farm and Puzzle Patch at 14063 NE 145th Street. Open Thursday through Sunday, Sept 19 through Oct 31, 2026. Dated days are on the 2026 events page, including the Sunflower Festival and Pup-kin Patch."
+      notes: "Pumpkin Farm and Puzzle Patch at 14063 NE 145th Street. Open Thursday 2:00 to 7:00 p.m. and Friday through Sunday 9:00 a.m. to 7:00 p.m., Sept 19 through Oct 31, 2026. Dated family days stay the Sunflower Festival and Pup-kin Patch. Regular open hours are not separate rows."
+    - name: "WM Cascade Recycling Center"
+      url: "https://www.wmnorthwest.com/recyclingcenters/recyclingcentertours/"
+      type: venue
+      notes: "Tours at 14020 NE 190th St. List a date when a host page publishes one. Ages 10 and up."
     - name: "AllEvents Woodinville"
       url: "https://allevents.in/woodinville"
       type: allevents

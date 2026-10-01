@@ -304,6 +304,14 @@ All ages. Come in costume for a photo booth, face painting, crafts, pumpkin deco
 
 [Spooky Spectacular](https://www.redmond.gov/calendar.aspx?EID=3560)
 
+### Ofrenda for Animals
+<p class="event-when">Tue Oct 27 through Sun Nov 1 · 11:00 a.m.–4:00 p.m.</p>
+<p class="event-place">Farrel-McWhirter Park, 19545 NE Redmond Road</p>
+
+A free remembrance at the farm for animals and pets who have died, with art as part of the visit. It runs 11:00 a.m. to 4:00 p.m. each day. Register for a session.
+
+[Ofrenda for Animals](https://www.redmond.gov/register)
+
 ### Trunk-or-Treat at City Hall
 <p class="event-when">Fri Oct 30 · Time not posted</p>
 <p class="event-place">Redmond City Hall, 15670 NE 85th Street</p>
@@ -319,6 +327,30 @@ A free evening of trick-or-treating, games, and community fun. The city's fall n
 All ages. A joyful visit with loved ones who have died, with crafts, music, food, and a short look at the tradition.
 
 [Day of the Dead](https://www.redmond.gov/calendar.aspx?EID=3561)
+
+### Pumpkin Drop
+<p class="event-when">Sat Nov 7 · 10:00 a.m.–2:00 p.m.</p>
+<p class="event-place">Farrel-McWhirter Park, 19545 NE Redmond Road</p>
+
+A free pumpkin drop-in at Farrel-McWhirter Park, 10:00 a.m. to 2:00 p.m. Register on the city's recreation site.
+
+[Pumpkin Drop](https://www.redmond.gov/register)
+
+### Pumpkin Drop
+<p class="event-when">Fri Nov 13 · 10:00 a.m.–2:00 p.m.</p>
+<p class="event-place">Farrel-McWhirter Park, 19545 NE Redmond Road</p>
+
+A free pumpkin drop-in at Farrel-McWhirter Park, 10:00 a.m. to 2:00 p.m. Register on the city's recreation site.
+
+[Pumpkin Drop](https://www.redmond.gov/register)
+
+### Pumpkin Drop
+<p class="event-when">Sat Nov 14 · 10:00 a.m.–2:00 p.m.</p>
+<p class="event-place">Farrel-McWhirter Park, 19545 NE Redmond Road</p>
+
+A free pumpkin drop-in at Farrel-McWhirter Park, 10:00 a.m. to 2:00 p.m. Register on the city's recreation site.
+
+[Pumpkin Drop](https://www.redmond.gov/register)
 
 ### Redmond Lights
 <p class="event-when">Sat Dec 5 · 4:00–8:00 p.m.</p>

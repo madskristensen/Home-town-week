@@ -65,7 +65,7 @@ Volunteers from the Seattle Go Center teach the board game, and people who alrea
    credit="Photo: Steven Pavlov, CC BY-SA 4.0"
    source="https://commons.wikimedia.org/wiki/File:2025-05-24,_Train_Shed_Exhibit_Hall,_Northwest_Railway_Museum_(Snoqualmie,_Washington),_142029.jpg" %}
 
-The museum waives Train Shed admission every Wednesday through December 16. The Railway History Campus, where the shed sits, is open 11:00 a.m. to 4:00 p.m. that day. Later Wednesdays in this stretch are October 14, 21, and 28, and November 4.
+The museum waives Train Shed admission on Wednesdays through December 16. The Railway History Campus is open 11:00 a.m. to 4:00 p.m. No ticket and no reservation. A story time starts at 11:00 a.m. in the shed that day.
 
 [Upcoming events](https://trainmuseum.org/upcoming-events/)
 
@@ -101,6 +101,14 @@ The Northwest Railway Museum runs a family ride from the Snoqualmie Depot, with 
 
 [Halloween Train](https://trainmuseum.org/upcoming-events/halloween/)
 
+### Free Wednesday at the Train Shed
+<p class="event-when">Wed Oct 14 · 11:00 a.m.–4:00 p.m.</p>
+<p class="event-place">Train Shed Exhibit Hall, 9320 Stone Quarry Road, Snoqualmie</p>
+
+The museum waives Train Shed admission on Wednesdays through December 16. The Railway History Campus is open 11:00 a.m. to 4:00 p.m. No ticket and no reservation.
+
+[Free Wednesday at the Train Shed](https://trainmuseum.org/upcoming-events/)
+
 ### LEGO Block Party in Fall City
 <p class="event-when">Sat Oct 17 · 1:00–3:00 p.m.</p>
 <p class="event-place">Fall City Library, 33415 SE 42nd Place</p>
@@ -117,6 +125,14 @@ A KidsQuest educator leads numbers and counting for ages 3 to 6 with an adult, w
 
 [Little Lab](https://kcls.bibliocommons.com/events/6ab42bdba472a016061f3c59)
 
+### Free Wednesday at the Train Shed
+<p class="event-when">Wed Oct 21 · 11:00 a.m.–4:00 p.m.</p>
+<p class="event-place">Train Shed Exhibit Hall, 9320 Stone Quarry Road, Snoqualmie</p>
+
+The museum waives Train Shed admission on Wednesdays through December 16. The Railway History Campus is open 11:00 a.m. to 4:00 p.m. No ticket and no reservation. A story time starts at 11:00 a.m. in the shed that day.
+
+[Free Wednesday at the Train Shed](https://trainmuseum.org/upcoming-events/)
+
 ### Spooktacular Halloween
 <p class="event-when">Sat Oct 24 · 1:30–4:00 p.m.</p>
 <p class="event-place">Starts at 35018 SE Ridge Street</p>
@@ -124,6 +140,14 @@ A KidsQuest educator leads numbers and counting for ages 3 to 6 with an adult, w
 A free city afternoon in three stops. Begin on Snoqualmie Ridge, walk to the trunk-or-treat in the Snoqualmie Valley YMCA parking lot (that stop runs until 3:00 p.m.), and continue into historic downtown. The YMCA leg is co-sponsored by the city and Sno Falls Credit Union.
 
 [Spooktacular](https://www.snoqualmiewa.gov/Calendar.aspx?EID=3412)
+
+### Free Wednesday at the Train Shed
+<p class="event-when">Wed Oct 28 · 11:00 a.m.–4:00 p.m.</p>
+<p class="event-place">Train Shed Exhibit Hall, 9320 Stone Quarry Road, Snoqualmie</p>
+
+The museum waives Train Shed admission on Wednesdays through December 16. The Railway History Campus is open 11:00 a.m. to 4:00 p.m. No ticket and no reservation.
+
+[Free Wednesday at the Train Shed](https://trainmuseum.org/upcoming-events/)
 
 ### Treasure Hunt
 <p class="event-when">Wed Oct 28 · 5:30–7:00 p.m.</p>
@@ -156,6 +180,22 @@ A Halloween round of stories, music, and movement for young children with an adu
 North by Northwest Paranormal talks through ghosts, hauntings, and the tools investigators use, then lets families try the gear. All ages. Ages 15 and younger should come with an adult. No registration.
 
 [Paranormal Investigation](https://kcls.bibliocommons.com/events/6a8201542dac6e00371f7607)
+
+### Free Wednesday at the Train Shed
+<p class="event-when">Wed Nov 4 · 11:00 a.m.–4:00 p.m.</p>
+<p class="event-place">Train Shed Exhibit Hall, 9320 Stone Quarry Road, Snoqualmie</p>
+
+The museum waives Train Shed admission on Wednesdays through December 16. The Railway History Campus is open 11:00 a.m. to 4:00 p.m. No ticket and no reservation. A story time starts at 11:00 a.m. in the shed that day.
+
+[Free Wednesday at the Train Shed](https://trainmuseum.org/upcoming-events/)
+
+### Free Wednesday at the Train Shed
+<p class="event-when">Wed Nov 11 · 11:00 a.m.–4:00 p.m.</p>
+<p class="event-place">Train Shed Exhibit Hall, 9320 Stone Quarry Road, Snoqualmie</p>
+
+The museum waives Train Shed admission on Wednesdays through December 16. The Railway History Campus is open 11:00 a.m. to 4:00 p.m. No ticket and no reservation.
+
+[Free Wednesday at the Train Shed](https://trainmuseum.org/upcoming-events/)
 
 ### Snoqualmie Winter Lights
 <p class="event-when">Thu Nov 26 through Fri Jan 1</p>

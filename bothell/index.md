@@ -139,6 +139,14 @@ A downtown stroll for costumes and candy. The city moved the date to Friday, Oct
 
 [Trick-or-Treat on Main Street](https://www.bothellwa.gov/1203/Trick-or-Treat-on-Main-Street)
 
+### Spooky Family Fun
+<p class="event-when">Sat Oct 31 · 3:00–8:00 p.m.</p>
+<p class="event-place">Anderson School, 18607 Bothell Way NE</p>
+
+Free, and all ages are welcome. Come in costume for games, kid-friendly Halloween movies, trick-or-treating around the property, and a kids costume contest at 6:00 p.m. Food and drink specials are separate from the free admission.
+
+[Spooky Family Fun](https://www.mcmenamins.com/events/278333-spooky-family-fun)
+
 ### Evergreen Christmas Lights
 <p class="event-when">Tue Dec 1 through Thu Dec 24 · 6:00–9:00 p.m.</p>
 <p class="event-place">Evergreen Church, 3429 240th St SE</p>

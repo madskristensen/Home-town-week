@@ -15,6 +15,14 @@ Same shape as Tuesday night: stories, music, and play time after, for newborns t
 
 [Rise & Shine Story Time](https://kcls.bibliocommons.com/v2/events/6a710898c7e02e3d006da0ee)
 
+### Toddler Time
+<p class="event-when">Fri Oct 2 · 7:00–11:30 a.m.</p>
+<p class="event-place">Issaquah Community Center, 301 Rainier Blvd S</p>
+
+Drop-in indoor play for ages 4 and under, with cars, bikes, slides, and wagons. A parent stays with their own child. It is $2 per child. The center runs it Wednesdays and Fridays during the school year, and it is closed on Nov 28.
+
+[Toddler Time](https://www.issaquahwa.gov/1098/Toddler-Time)
+
 ### Story Stroll: Watercress
 <p class="event-when">Sat Oct 3 · all day</p>
 <p class="event-place">Starts at Issaquah Library, 10 W Sunset Way</p>
@@ -66,6 +74,14 @@ A free open house for the Feathers and Scales show. Live music from Michael Thom
 Free Hispanic Heritage Month dance with the city and The Circle. Music from Spanish-speaking countries, dance lessons, and snacks. Open to everyone. It is at Pickering Barn, not on Front Street.
 
 [City calendar](https://www.issaquahwa.gov/m/calendar/event/detail/14731) · [The Circle](https://www.thecircle-wa.org/event-details-registration/hispanic-heritage-month-celebration-3)
+
+### Annual Tree Planting Celebration
+<p class="event-when">Sat Oct 10 · 9:00 a.m.–1:00 p.m.</p>
+<p class="event-place">Lake Sammamish State Park, near 5150 220th Ave SE</p>
+
+A free family planting along Issaquah Creek with the Mountains to Sound Greenway Trust. Tools, instructions, and lunch are provided. Register ahead. Children under 13 come with an adult. An optional creek walk runs 1:00 to 2:00 p.m. for up to 30 people. Meet at the ParQ parking area near the Issaquah FedEx Ship Center. The planting site is down about a flight and a half of stairs, with no railing.
+
+[Annual Tree Planting Celebration](https://mtsgreenway.org/get-involved/annual-tree-planting-celebration-2026/)
 
 ### Story Stroll: Apple Pie Picnic
 <p class="event-when">Sat Oct 10 and Sat Oct 17 · all day</p>
@@ -163,6 +179,14 @@ A drop-off evening at the gym. The kids stay for games and gymnastics, and you g
 
 [Monster Mash Parent Survival Night](https://www.thelittlegym.com/washington-issaquah/events-more/)
 
+### Walk n Wag Harvest
+<p class="event-when">Sun Oct 18 · 12:00–4:00 p.m.</p>
+<p class="event-place">Lake Sammamish State Park, 2010 NW Sammamish Rd</p>
+
+A free dog walk and harvest afternoon from Friends of Lake Sammamish State Park. The 3K starts at noon and winds through the apple orchard. A vendor village, talks, and a pet costume contest run until 4:00 p.m. Dogs stay on a leash.
+
+[Walk n Wag Harvest](https://www.lakesammamishfriends.org/events-old/2026/10/18/walk-n-wag-harvest)
+
 ### Reading with Rover
 <p class="event-when">Wed Oct 21 · 6:30–7:30 p.m.</p>
 <p class="event-place">Issaquah Library, 10 W Sunset Way</p>
@@ -192,6 +216,14 @@ School-age kids read aloud to a certified therapy dog, with an adult. Free.
 A free walk through downtown, open to all ages. Makeup starts at 1:30 at the Historic Shell Station, dance practice is at 3:00, the crawl to City Hall is at 4:30, and a dance runs from 5:00 to 5:30. Optional makeovers are sold separately.
 
 [Zombie Walk](https://downtownissaquah.com/events/zombie-walk-17/)
+
+### BOO at the Barn
+<p class="event-when">Sat Oct 24 · 2:00–8:00 p.m.</p>
+<p class="event-place">Pickering Barn, 1730 10th Ave NW</p>
+
+Two sessions at Pickering Barn. From 2:00 to 4:00 p.m. the city runs carnival games and crafts. From 6:00 to 8:00 p.m. the haunted hay barn and trail are open, and that session is not recommended for children under 6. Door admission is $15, and children 3 and younger are free. Space is limited.
+
+[BOO at the Barn](https://www.issaquahwa.gov/calendar.aspx?EID=14732)
 
 ### Halloween at Cougar Mountain Zoo
 <p class="event-when">Sat Oct 31 · Time not posted</p>

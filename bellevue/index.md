@@ -49,6 +49,14 @@ A short ranger program for ages 2 to 5. Each session has a nature theme, time on
 
 [Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
 
+### Story Time at the Garden
+<p class="event-when">Fri Oct 2 · 10:00–10:30 a.m.</p>
+<p class="event-place">Bellevue Botanical Garden, 12001 Main St</p>
+
+A free story time for preschoolers in the Sharp Cabin, southwest of the Urban Meadow. The garden reads a garden book and follows it with a short activity. Adults stay with the children, and registration is not required.
+
+[Story Time at the Garden](https://bellevuebotanical.org/event/story-time-at-the-garden-for-preschoolers-2/2026-10-02/)
+
 ### Baby and Toddler Story Time
 <p class="event-when">Fri Oct 2 · 10:30–11:15 a.m.</p>
 <p class="event-place">Lake Hills Library, 15590 Lake Hills Blvd</p>
@@ -188,6 +196,14 @@ A single session is $25 per child for non-members and $17.50 for garden-society 
 
 [Kids in the Garden](https://bellevuebotanical.org/kids-in-the-garden/) · [Oct 7 registration](https://65203.blackbaudhosting.com/65203/Kids-in-the-Garden-7-1--Pumpkins--Seeds)
 
+### Made in Bellevue
+<p class="event-when">Wed Oct 7 · 12:00–2:00 p.m.</p>
+<p class="event-place">The Meadow, 600 108th Ave NE</p>
+
+A free walk-up craft at The Meadow. This date is ferns and broad-leaf house plants. Drop in any time from noon to 2:00 p.m. Supplies are first come, first served, and it is open to everyone.
+
+[Made in Bellevue](https://www.bellevuedowntown.com/do/made-in-bellevue-ferns-broad-leaf-house-plants)
+
 ### Art Cart
 <p class="event-when">Wed Oct 7 · 3:00–5:00 p.m.</p>
 <p class="event-place">Newport Way Library, 14250 SE Newport Way</p>
@@ -236,6 +252,14 @@ Ages 4 to 13. A ranger program on where deer feed in Bellevue parks, plus a deer
 
 [Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
 
+### Japan Week
+<p class="event-when">Sat Oct 10 · 10:00 a.m.–5:00 p.m.</p>
+<p class="event-place">Bellevue College, 3000 Landerholm Circle SE</p>
+
+Bellevue College's Saturday Japan Week festival is free and open to the public. The day has cultural workshops, performances, a market, and contests on the main campus. Weekday sessions that week are for students.
+
+[Japan Week](https://studentweb.bellevuecollege.edu/japan-week/2026-saturday-schedule/)
+
 ### Ranger-led hike at Lewis Creek
 <p class="event-when">Sat Oct 10 · 10:30–11:30 a.m.</p>
 <p class="event-place">Lewis Creek Park Visitor Center, 5808 Lakemont Blvd SE</p>
@@ -260,6 +284,14 @@ A free one-mile ranger hike for all ages on the mostly level gravel trails. The 
 
 [Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
 
+### Drop-in Play at Kelsey Creek Farm
+<p class="event-when">Mon Oct 12 · 10:00–11:30 a.m.</p>
+<p class="event-place">Kelsey Creek Farm, 410 130th Pl SE</p>
+
+Free drop-in play for ages 2 to 5. Toys, games, and hands-on activities are set out, and families can come and go through the morning.
+
+[Drop-in Play at Kelsey Creek Farm](https://bellevuewa.gov/city-government/departments/parks/activity-guide)
+
 ### Toddler Story Time
 <p class="event-when">Mon Oct 12 · 10:15–11:00 a.m., repeated at 11:15 a.m.</p>
 <p class="event-place">Bellevue Library, third-floor programming room, 1111 110th Ave NE</p>
@@ -281,6 +313,14 @@ Ages 1 and 2 with an adult. A short play time follows. No registration. Choose o
 Ages 3–5 with an adult. Why spiders spin webs, plus a story, art, a song, snack, and the garden. The series page marks this session full. Individual price is $25 per child, or $17.50 for members. Adults free. Cap is 12 children.
 
 [Kids in the Garden](https://bellevuebotanical.org/kids-in-the-garden/)
+
+### Kelsey Creek Farm Story Time
+<p class="event-when">Wed Oct 14 · 10:00–10:30 a.m.</p>
+<p class="event-place">Kelsey Creek Farm, 410 130th Pl SE</p>
+
+A free farm story and a visit with one of the animals. It is recommended for ages 1 to 5, and an adult comes with the child. No registration. The doors close when it starts or when the space is full.
+
+[Kelsey Creek Farm Story Time](https://bellevuewa.gov/city-government/departments/parks/activity-guide)
 
 ### LEGO Brick Builders
 <p class="event-when">Wed Oct 14 · 1:30–2:30 p.m.</p>
@@ -363,6 +403,14 @@ The next session, Winter is Coming, is Wednesday, Oct 28, which is the following
 
 [Owls](https://65203.blackbaudhosting.com/65203/Kids-in-the-Garden-7-3-Owls) · [Series](https://bellevuebotanical.org/kids-in-the-garden/)
 
+### Made in Bellevue
+<p class="event-when">Wed Oct 21 · 12:00–2:00 p.m.</p>
+<p class="event-place">The Meadow, 600 108th Ave NE</p>
+
+A free walk-up craft at The Meadow. This date is decorating a small pumpkin. Drop in any time from noon to 2:00 p.m. Supplies are first come, first served, and it is open to everyone.
+
+[Made in Bellevue](https://www.bellevuedowntown.com/do/made-in-bellevue-ferns-broad-leaf-house-plants)
+
 ### Eastside Dia de los Muertos
 <p class="event-when">Sat Oct 24 · 9:00 a.m.–8:00 p.m.</p>
 <p class="event-place">Crossroads Community Center, 16000 NE 10th St</p>
@@ -372,7 +420,7 @@ A free community celebration with the city, Youth Eastside Services, and Cafesit
 [Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
 
 ### Halloween on the Hill
-<p class="event-when">Sat Oct 24 · 12:00–3:00 p.m.</p>
+<p class="event-when">Sat Oct 24 · 10:00 a.m.–3:00 p.m.</p>
 <p class="event-place">South Bellevue Community Center, 14509 SE Newport Way</p>
 
 A family carnival at South Bellevue Community Center, with inflatables, games, face painting, a climbing wall, and a play area for ages 3 and younger. Presale wristbands are $10. Wristbands the day of the event are $12. Adults 18 and older, and children 3 and younger, do not need one. The Great Pumpkin Race is the same day, with check-in at 9:45 a.m. and race times at 10:00 a.m. and noon. A racer kit is $25, and you bring your own pumpkin. Free demos are Sat Oct 17, 10:30–11:00 a.m., and Wed Oct 21, 6:30–7:00 p.m. A free build workshop is Fri Oct 23, 5:00–6:30 p.m.
@@ -417,6 +465,14 @@ A drop-off evening at the gym. The kids stay for games and gymnastics, and you g
 
 [Monster Mash Parent Survival Night](https://www.thelittlegym.com/washington-bellevue-redmond/events-more/)
 
+### Monster Mash Halloween Bash
+<p class="event-when">Fri Oct 30 · 5:30–8:00 p.m.</p>
+<p class="event-place">Northwest Arts Center, 9825 NE 24th St</p>
+
+A free indoor trick-or-treat at the Northwest Arts Center, with themed crafts. The toddler play gym is open too. No registration. The fall activity guide lists it for all ages.
+
+[Monster Mash Halloween Bash](https://bellevuewa.gov/city-government/departments/parks/activity-guide)
+
 ### Sunset Stroll
 <p class="event-when">Fri Oct 30 · 6:00–7:00 p.m.</p>
 <p class="event-place">Larsen Lake Blueberry Farm, 14812 SE 8th St</p>
@@ -460,6 +516,38 @@ The museum's Halloween day, this year set as a Haunted Hoedown. Costumes are enc
 A free costume afternoon from the Old Bellevue Merchants Association. Businesses, restaurants, and residential communities along Main Street hand out candy.
 
 [Little Monsters on Main Street](https://www.visitoldbellevue.com/events/little-monsters-on-main-street-2026)
+
+### Halloween Factoria
+<p class="event-when">Sat Oct 31 · 2:00–4:00 p.m.</p>
+<p class="event-place">The Marketplace at Factoria, Bellevue</p>
+
+The Marketplace at Factoria lists Halloween Factoria for this afternoon at the shopping center.
+
+[Halloween Factoria](https://marketplaceatfactoria.shopkimco.com/events)
+
+### Kelsey Creek Farm Story Time
+<p class="event-when">Wed Nov 4 · 10:00–10:30 a.m.</p>
+<p class="event-place">Kelsey Creek Farm, 410 130th Pl SE</p>
+
+A free farm story and a visit with one of the animals. It is recommended for ages 1 to 5, and an adult comes with the child. No registration. The doors close when it starts or when the space is full.
+
+[Kelsey Creek Farm Story Time](https://bellevuewa.gov/city-government/departments/parks/activity-guide)
+
+### Story Time at the Garden
+<p class="event-when">Fri Nov 6 · 10:00–10:30 a.m.</p>
+<p class="event-place">Bellevue Botanical Garden, 12001 Main St</p>
+
+A free story time for preschoolers in the Sharp Cabin, southwest of the Urban Meadow. The garden reads a garden book and follows it with a short activity. Adults stay with the children, and registration is not required.
+
+[Story Time at the Garden](https://bellevuebotanical.org/event/story-time-at-the-garden-for-preschoolers-2/2026-11-06/)
+
+### Drop-in Play at Kelsey Creek Farm
+<p class="event-when">Mon Nov 9 · 10:00–11:30 a.m.</p>
+<p class="event-place">Kelsey Creek Farm, 410 130th Pl SE</p>
+
+Free drop-in play for ages 2 to 5. Toys, games, and hands-on activities are set out, and families can come and go through the morning.
+
+[Drop-in Play at Kelsey Creek Farm](https://bellevuewa.gov/city-government/departments/parks/activity-guide)
 
 ### Sugar Skulls, Calaveritas de Azucar
 <p class="event-when">Thu Nov 12 · 4:00–5:15 p.m.</p>

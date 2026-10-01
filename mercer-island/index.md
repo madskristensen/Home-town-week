@@ -15,6 +15,22 @@ Stories, music, movement, and rhymes for early literacy. A family program, in Ch
 
 [Mandarin Story Time](https://kcls.bibliocommons.com/v2/events/6a6ba3514523092f0033b54d)
 
+### Tot Shabbat
+<p class="event-when">Fri Oct 2 · 9:45–10:30 a.m.</p>
+<p class="event-place">Stroum Jewish Community Center, 3801 East Mercer Way</p>
+
+Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome.
+
+[Tot Shabbat](https://sjcc.org/series/tot-shabbat/)
+
+### Singing and Stories with Nancy Stewart
+<p class="event-when">Sat Oct 3 · 9:30 a.m.</p>
+<p class="event-place">Island Books, 3014 78th Ave SE</p>
+
+Songs and stories for ages 1 to 4. Island Books lists this every Saturday at 9:30 a.m.
+
+[Singing and Stories with Nancy Stewart](https://www.islandbooks.com/childrens-story-times)
+
 ### Mercer Island Farmers Market
 <p class="event-when">Sun Oct 4 · 10:00 a.m.–2:00 p.m.</p>
 <p class="event-place">7700 SE 32nd St</p>
@@ -38,6 +54,22 @@ Stories, music, movement, and rhymes, then play time. Recommended for ages 0 to 
 An open building hour. The library supplies the materials and science toys. Ages 4 and older. Ages 4 to 7 need an adult. No registration.
 
 [Building Club](https://kcls.bibliocommons.com/v2/events/6a63c74fe1bf262b5115d995)
+
+### Story Time with a Bookseller
+<p class="event-when">Wed Oct 7 · 10:30 a.m.</p>
+<p class="event-place">Island Books, 3014 78th Ave SE</p>
+
+A bookseller reads picture books. It is aimed at toddlers through kindergarten. Island Books lists this every Wednesday at 10:30 a.m.
+
+[Story Time with a Bookseller](https://www.islandbooks.com/childrens-story-times)
+
+### Tot Shabbat
+<p class="event-when">Fri Oct 9 · 9:45–10:30 a.m.</p>
+<p class="event-place">Stroum Jewish Community Center, 3801 East Mercer Way</p>
+
+Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome.
+
+[Tot Shabbat](https://sjcc.org/series/tot-shabbat/)
 
 ### Mercer Island Farmers Market
 <p class="event-when">Sun Oct 11 · 10:00 a.m.–2:00 p.m.</p>
@@ -77,6 +109,22 @@ A walk to learn common plants at Pioneer Park. All ages, and no experience is ne
 
 [Plant ID Walk](https://www.mercerisland.gov/parksrec/page/plant-id-walk-pioneer-park-3)
 
+### Tot Shabbat
+<p class="event-when">Fri Oct 16 · 9:45–10:30 a.m.</p>
+<p class="event-place">Stroum Jewish Community Center, 3801 East Mercer Way</p>
+
+Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome.
+
+[Tot Shabbat](https://sjcc.org/series/tot-shabbat/)
+
+### Tot Shabbat
+<p class="event-when">Fri Oct 23 · 9:45–10:30 a.m.</p>
+<p class="event-place">Stroum Jewish Community Center, 3801 East Mercer Way</p>
+
+Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome.
+
+[Tot Shabbat](https://sjcc.org/series/tot-shabbat/)
+
 ### Arbor Day at Homestead Park
 <p class="event-when">Sat Oct 24 · 10:00 a.m.–1:00 p.m.</p>
 <p class="event-place">Homestead Park</p>
@@ -113,6 +161,14 @@ Draw and write outside at Pioneer Park. All ages, and no experience is needed. B
 
 [Nature Journaling](https://www.mercerisland.gov/parksrec/page/nature-journaling-pioneer-park-1)
 
+### Tot Shabbat
+<p class="event-when">Fri Oct 30 · 9:45–10:30 a.m.</p>
+<p class="event-place">Stroum Jewish Community Center, 3801 East Mercer Way</p>
+
+Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome.
+
+[Tot Shabbat](https://sjcc.org/series/tot-shabbat/)
+
 ### Town Center Trick or Treat
 <p class="event-when">Fri Oct 30 · 4:00–6:00 p.m.</p>
 <p class="event-place">Town Center, Mercer Island</p>
@@ -129,6 +185,14 @@ A story about Diwali, then a giant rangoli the library will display, plus a diya
 
 [Discover Diwali](https://kcls.bibliocommons.com/events/6aa8a358ca248a002915dc39)
 
+### Tot Shabbat
+<p class="event-when">Fri Nov 6 · 9:45–10:30 a.m.</p>
+<p class="event-place">Stroum Jewish Community Center, 3801 East Mercer Way</p>
+
+Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome.
+
+[Tot Shabbat](https://sjcc.org/series/tot-shabbat/)
+
 ### The Queen in the Cave
 <p class="event-when">Fri Nov 6 through Sun Nov 15</p>
 <p class="event-place">Youth Theatre Northwest, 4400 86th Ave SE</p>
@@ -136,6 +200,14 @@ A story about Diwali, then a giant rangoli the library will display, plus a diya
 A world-premiere play from Júlia Sardà's picture book, performed by Youth Theatre Northwest. Three sisters go into the forest looking for a queen who lives in a cave. Fridays at 7:00 p.m., Saturdays at 2:00 and 7:00 p.m., and Sundays at 2:00 p.m.
 
 [YTN auditions](https://youththeatre.org/auditions/)
+
+### Tot Shabbat
+<p class="event-when">Fri Nov 13 · 9:45–10:30 a.m.</p>
+<p class="event-place">Stroum Jewish Community Center, 3801 East Mercer Way</p>
+
+Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome.
+
+[Tot Shabbat](https://sjcc.org/series/tot-shabbat/)
 
 ### Holiday Tree Lighting
 <p class="event-when">Thu Dec 3</p>
