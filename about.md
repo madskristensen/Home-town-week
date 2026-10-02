@@ -14,6 +14,6 @@ permalink: /about/
   <p>We still miss some. If your school, club, church or favorite farm posts events, email <a href="mailto:suggestions@eastsidecalendar.com">suggestions@eastsidecalendar.com</a>.</p>
   <p>Photos are credited, and we'll remove one on request.</p>
   <h2>Other things we made</h2>
-  <p>We started <a href="https://mathtable.fun/">Math Table</a> to help our own kids learn their times tables. It's now free games for math facts, geography and history, made for phones and tablets.</p>
+  <p>We started <a href="https://mathtable.fun/">Math Table</a> to help our own kids learn their times tables. It's now free games for math facts, geography and history that run in the browser on phones and tablets, with no install needed.</p>
   <p>I also write about family life at <a href="https://afterpickup.com">After Pickup</a>.</p>
 </article>

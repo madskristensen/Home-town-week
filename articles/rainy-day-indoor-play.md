@@ -105,7 +105,7 @@ When the rain settles in, the useful indoor stops are the ones that do not need 
 
 King County Library System branches are the easiest rainy-day default. You can walk in, read, and catch a story time. This week's story times and other programs are on the city pages, not on a separate library calendar here.
 
-For a quiet hour at home or in the car, our kids play [Math Table](https://mathtable.fun/), a free math and geography game we made for phones and tablets.
+For a quiet hour at home or in the car, our kids play [Math Table](https://mathtable.fun/), a free math and geography game that runs in the browser on phones and tablets, with no install needed.
 
 [Bellevue Aquatic Center](https://bellevuewa.gov/city-government/departments/parks/sports-and-athletics/bellevue-aquatic-center) at 601 143rd Ave NE has two indoor pools and swim lessons. The city posts the hours and the session dates. [Mary Wayte Pool](https://mercerislandpool.com/) is the indoor pool on Mercer Island.
 

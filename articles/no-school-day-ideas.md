@@ -79,7 +79,7 @@ When the weather holds, start with a playground. The [playgrounds map](/playgrou
 
 A library is the indoor default, and walking in is free. [Bellevue Library](https://kcls.org/locations/bellevue/) and [Kirkland Library](https://kcls.org/locations/kirkland/) both have children's rooms. This week's story times are on the city pages.
 
-For a quiet hour at home or in the car, our kids play [Math Table](https://mathtable.fun/), a free math and geography game we made for phones and tablets.
+For a quiet hour at home or in the car, our kids play [Math Table](https://mathtable.fun/), a free math and geography game that runs in the browser on phones and tablets, with no install needed.
 
 [KidsQuest Children's Museum](https://www.kidsquestmuseum.org/) at 1116 108th Ave NE is the indoor play stop in downtown Bellevue, next to the library. Check the museum site for hours and tickets. [Bellevue Aquatic Center](https://bellevuewa.gov/city-government/departments/parks/sports-and-athletics/bellevue-aquatic-center) at 601 143rd Ave NE is the indoor pool if the kids want water. The city posts the day's hours.
 
