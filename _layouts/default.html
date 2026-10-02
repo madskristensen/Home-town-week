@@ -62,6 +62,9 @@
     {{ content }}
   </main>
   {%- include footer.html -%}
+  <button type="button" class="to-top" aria-label="Back to top" tabindex="-1" aria-hidden="true">
+    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 12.4V3.6M4.1 7.3 8 3.4l3.9 3.9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+  </button>
   {%- include pwa.html -%}
   <script src="{{ '/assets/js/event-share.js' | relative_url }}" defer></script>
   <script>
@@ -79,6 +82,83 @@
   </script>
   <script type="module">
     if ("scrollRestoration" in history) history.scrollRestoration = "auto";
+  </script>
+  <script>
+    (function () {
+      var button = document.querySelector(".to-top");
+      if (!button) return;
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+      var brand = document.querySelector(".brand a");
+
+      function shown(on) {
+        button.classList.toggle("is-on", on);
+        button.tabIndex = on ? 0 : -1;
+        button.setAttribute("aria-hidden", on ? "false" : "true");
+        if (!on && document.activeElement === button && brand) {
+          brand.focus({ preventScroll: true });
+        }
+      }
+
+      function hits(box) {
+        var nodes = document.querySelectorAll(".event-actions, .footer-meta a, .footer-meta button, .footer-family a, .leaflet-bottom");
+        var found = null;
+        for (var i = 0; i < nodes.length; i++) {
+          var el = nodes[i];
+          if (el.hidden) continue;
+          var r = el.getBoundingClientRect();
+          if (r.width < 1 || r.height < 1) continue;
+          if (r.right < box.left || r.left > box.right || r.bottom < box.top || r.top > box.bottom) continue;
+          if (!found || r.top < found.top) found = r;
+        }
+        return found;
+      }
+
+      function place() {
+        button.style.setProperty("--to-top-lift", "0px");
+        var lift = 0;
+        var cap = window.innerHeight * 0.42;
+        for (var n = 0; n < 5; n++) {
+          var box = button.getBoundingClientRect();
+          var hit = hits(box);
+          if (!hit) return true;
+          lift += box.bottom - hit.top + 8;
+          if (lift > cap) return false;
+          button.style.setProperty("--to-top-lift", lift + "px");
+        }
+        return !hits(button.getBoundingClientRect());
+      }
+
+      function update() {
+        var on = window.scrollY > window.innerHeight * 1.5;
+        if (!on) {
+          shown(false);
+          button.style.setProperty("--to-top-lift", "0px");
+          return;
+        }
+        if (!place()) {
+          shown(false);
+          return;
+        }
+        shown(true);
+      }
+
+      var queued = false;
+      function queue() {
+        if (queued) return;
+        queued = true;
+        requestAnimationFrame(function () {
+          queued = false;
+          update();
+        });
+      }
+
+      window.addEventListener("scroll", queue, { passive: true });
+      window.addEventListener("resize", queue);
+      button.addEventListener("click", function () {
+        window.scrollTo({ top: 0, left: 0, behavior: reduce.matches ? "auto" : "smooth" });
+        if (reduce.matches && brand) brand.focus({ preventScroll: true });
+      });
+    })();
   </script>
   <script type="module">
     var ua = navigator.userAgent || "";
