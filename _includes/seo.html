@@ -72,8 +72,6 @@
 {%- assign head_title = head_title | strip -%}
 {%- assign canonical_url = page.url | absolute_url -%}
 {%- assign seo_image = seo_image_path | absolute_url -%}
-{%- assign org_id = "/" | absolute_url | append: "#organization" -%}
-{%- assign site_id = "/" | absolute_url | append: "#website" -%}
 <title>{{ head_title | escape }}</title>
 <meta name="description" content="{{ seo_description | escape }}">
 {%- assign google_verify = site.google_site_verification | append: "" -%}
@@ -113,73 +111,3 @@
 {%- if seo_image_alt %}
 <meta name="twitter:image:alt" content="{{ seo_image_alt | escape }}">
 {%- endif %}
-{%- unless page.url == "/404.html" %}
-{%- if page.url == "/" %}
-{%- include site-schema.html -%}
-{%- else %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  {%- assign schema_collection = false -%}
-  {%- unless page.home_lights -%}
-  {%- if page.layout == "city" or page.layout == "seasonal" -%}
-  {%- assign schema_collection = true -%}
-  {%- endif -%}
-  {%- endunless -%}
-  {%- if schema_collection %}
-  "@type": "CollectionPage",
-  "name": {{ head_title | jsonify }},
-  "url": {{ canonical_url | jsonify }},
-  "isPartOf": {
-    "@id": {{ site_id | jsonify }}
-  },
-  {%- assign visible_events = page.visible_events -%}
-  {%- assign visible_count = visible_events | size -%}
-  {%- if page.layout == "city" and city -%}
-  {%- capture list_name -%}Upcoming events in {{ city.name }}{%- endcapture -%}
-  {%- else -%}
-  {%- assign list_name = page.title -%}
-  {%- endif -%}
-  "mainEntity": {
-    "@type": "ItemList",
-    "name": {{ list_name | strip | jsonify }},
-    "itemListOrder": "https://schema.org/ItemListOrderAscending",
-    "numberOfItems": {{ visible_count }},
-    "itemListElement": [
-      {%- for event in visible_events -%}
-      {
-        "@type": "ListItem",
-        "position": {{ forloop.index }},
-        "name": {{ event.name | jsonify }},
-        "url": {{ event.url | jsonify }}
-      }{% unless forloop.last %},{% endunless %}
-      {%- endfor -%}
-    ]
-  },
-  {%- else %}
-  "@type": "WebPage",
-  "name": {{ head_title | jsonify }},
-  "url": {{ canonical_url | jsonify }},
-  "isPartOf": {
-    "@id": {{ site_id | jsonify }}
-  },
-  {%- endif %}
-  "description": {{ seo_description | jsonify }},
-  "image": {{ seo_image | jsonify }},
-  "publisher": {
-    "@type": "Organization",
-    "@id": {{ org_id | jsonify }},
-    "name": {{ site.title | jsonify }},
-    "url": {{ "/" | absolute_url | jsonify }},
-    "logo": {
-      "@type": "ImageObject",
-      "@id": {{ "/#logo" | absolute_url | jsonify }},
-      "url": {{ site.logo | absolute_url | jsonify }},
-      "width": 512,
-      "height": 512
-    }
-  }
-}
-</script>
-{%- endif -%}
-{%- endunless %}

@@ -77,30 +77,6 @@
 {%- if schema_organizer.size == 0 and include.event -%}
   {%- assign schema_organizer = include.event.organizer | append: "" | strip -%}
 {%- endif -%}
-{%- assign visible_plain_blurb = include.blurb | append: "" | strip -%}
-{%- capture event_microdata -%}
-{%- if schema_start.size > 0 -%}
-<meta itemprop="startDate" content="{{ schema_start | escape }}">{%- if schema_end.size > 0 -%}
-<meta itemprop="endDate" content="{{ schema_end | escape }}">{%- endif -%}
-<meta itemprop="eventStatus" content="https://schema.org/EventScheduled">
-<link itemprop="eventAttendanceMode" href="https://schema.org/OfflineEventAttendanceMode">
-{%- if schema_url.size > 0 -%}
-<link itemprop="url" href="{{ schema_url | escape }}">{%- endif -%}
-{%- if schema_image.size > 0 -%}
-<link itemprop="image" href="{{ schema_image | escape }}">{%- endif -%}
-{%- if schema_description.size > 0 and visible_plain_blurb.size == 0 -%}
-<meta itemprop="description" content="{{ schema_description | escape }}">{%- endif -%}
-{%- if schema_place.size > 0 or schema_locality.size > 0 -%}
-<span class="visually-hidden" itemprop="location" itemscope itemtype="https://schema.org/Place">{%- if schema_place.size > 0 -%}<meta itemprop="name" content="{{ schema_place | escape }}">{%- endif -%}<span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">{%- if schema_street.size > 0 -%}<meta itemprop="streetAddress" content="{{ schema_street | escape }}">{%- endif -%}{%- if schema_locality.size > 0 -%}<meta itemprop="addressLocality" content="{{ schema_locality | escape }}">{%- endif -%}<meta itemprop="addressRegion" content="WA"><meta itemprop="addressCountry" content="US"></span></span>
-{%- endif -%}
-{%- if schema_price.size > 0 -%}
-<span class="visually-hidden" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="{{ schema_price | escape }}"><meta itemprop="priceCurrency" content="USD"><link itemprop="availability" href="https://schema.org/InStock">{%- if schema_url.size > 0 -%}<link itemprop="url" href="{{ schema_url | escape }}">{%- endif -%}</span>
-{%- endif -%}
-{%- if schema_organizer.size > 0 -%}
-<span class="visually-hidden" itemprop="organizer" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="{{ schema_organizer | escape }}"></span>
-{%- endif -%}
-{%- endif -%}
-{%- endcapture -%}
 {%- assign share_title = include.title | append: "" | strip -%}
 {%- if share_title.size == 0 -%}
   {%- assign share_title = include.schema_name | append: "" | strip -%}
@@ -149,8 +125,7 @@
   {%- assign ev_ages = card_event.ages | append: "" -%}
   {%- assign ev_setting = card_event.setting | append: "" -%}
 {%- endif -%}
-<article class="event-card"{% if include.stretch == "1" %} data-stretch{% endif %}{% if schema_start.size > 0 %} itemscope itemtype="https://schema.org/Event"{% endif %}{% if card_id.size > 0 %} id="{{ card_id | escape }}"{% endif %}{% if card_date.size > 0 %} data-date="{{ card_date }}"{% endif %}{% if card_end.size > 0 %} data-end="{{ card_end }}"{% endif %}{% if card_attrs.size > 0 %} {{ card_attrs }}{% endif %}{% if card_kind.size > 0 %} data-image-kind="{{ card_kind }}"{% endif %}{% if ev_cost == "Free" or ev_cost == "free" %} data-cost="Free"{% endif %}{% if ev_ages == "Toddlers" or ev_ages == "Kids" or ev_ages == "Teens" %} data-ages="{{ ev_ages | escape }}"{% endif %}{% if ev_setting == "Indoor" or ev_setting == "Outdoor" %} data-setting="{{ ev_setting }}"{% endif %}{% if card_attrs.size == 0 and card_event.drop_off == true %} data-dropoff="1"{% endif %}{% if card_attrs.size == 0 and card_event.signup == true %} data-signup="1"{% endif %}{% if card_attrs.size == 0 and card_event.sensory == true %} data-sensory="1"{% endif %}>
-{{ event_microdata }}
+<article class="event-card"{% if include.stretch == "1" %} data-stretch{% endif %}{% if card_id.size > 0 %} id="{{ card_id | escape }}"{% endif %}{% if card_date.size > 0 %} data-date="{{ card_date }}"{% endif %}{% if card_end.size > 0 %} data-end="{{ card_end }}"{% endif %}{% if card_attrs.size > 0 %} {{ card_attrs }}{% endif %}{% if card_kind.size > 0 %} data-image-kind="{{ card_kind }}"{% endif %}{% if ev_cost == "Free" or ev_cost == "free" %} data-cost="Free"{% endif %}{% if ev_ages == "Toddlers" or ev_ages == "Kids" or ev_ages == "Teens" %} data-ages="{{ ev_ages | escape }}"{% endif %}{% if ev_setting == "Indoor" or ev_setting == "Outdoor" %} data-setting="{{ ev_setting }}"{% endif %}{% if card_attrs.size == 0 and card_event.drop_off == true %} data-dropoff="1"{% endif %}{% if card_attrs.size == 0 and card_event.signup == true %} data-signup="1"{% endif %}{% if card_attrs.size == 0 and card_event.sensory == true %} data-sensory="1"{% endif %}>
 {%- assign card_photo_html = include.photo_html | append: "" | strip -%}
 {%- if card_photo_html.size > 0 -%}
 {{ card_photo_html }}
@@ -196,7 +171,7 @@
 {%- assign card_href = include.href | append: "" | strip -%}
 {%- assign card_kicker = include.kicker | append: "" | strip -%}
 {%- if card_title.size > 0 or card_number.size > 0 -%}
-<h3{% if schema_start.size > 0 %} itemprop="name"{% endif %}>{%- if card_number.size > 0 -%}<span class="home-num">{{ card_number | escape }}</span> {% endif -%}
+<h3>{%- if card_number.size > 0 -%}<span class="home-num">{{ card_number | escape }}</span> {% endif -%}
 {%- if card_href.size > 0 -%}
 <a href="{% if include.external %}{{ card_href }}{% else %}{{ card_href | relative_url }}{% endif %}"{% if include.external %} rel="noopener"{% endif %}>{{ card_title | escape }}</a>
 {%- else -%}
@@ -242,7 +217,7 @@
 {%- if card_blurb_html.size > 0 -%}
 {{ card_blurb_html }}
 {%- elsif card_blurb.size > 0 -%}
-<p class="hub-blurb"{% if schema_start.size > 0 %} itemprop="description"{% endif %}>{{ card_blurb | escape }}</p>
+<p class="hub-blurb">{{ card_blurb | escape }}</p>
 {%- endif -%}
 {%- assign card_links_html = include.links_html | append: "" | strip -%}
 {%- if card_links_html.size > 0 -%}
