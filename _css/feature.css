@@ -242,14 +242,14 @@
   }
 
   .lights-feature-halloween {
-    background: #3a2158;
-    border-color: #f0a04a;
-    color: #fff6ea;
+    background: var(--sheet);
+    border-color: var(--rule);
+    color: var(--ink);
   }
 
   .lights-feature-halloween .lights-feature-title,
   .lights-feature-halloween .lights-feature-line {
-    color: #fff6ea;
+    color: var(--ink);
   }
 
   .lights-feature-halloween .lights-feature-btn {
