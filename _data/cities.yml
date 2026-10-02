@@ -179,6 +179,20 @@
       url: "https://marketplaceatfactoria.shopkimco.com/events"
       type: venue
       notes: "Shopping-center events. Confirm the date on the events page."
+    - name: "Bellevue Arts Museum"
+      url: "https://www.bellevuearts.org/public-programs-and-events"
+      type: museum
+      format: rss
+      feed_url: "https://www.bellevuearts.org/public-programs-and-events?format=rss"
+      notes: "Community programs and Bellevue Arts Fair Weekend. The museum building was sold to KidsQuest, and BAM still posts public events. Skip adult artist talks."
+    - name: "The Bellevue Collection"
+      url: "https://bellevuecollection.com/holiday/"
+      type: venue
+      notes: "Snowflake Lane is the free nightly parade, Nov 27 through Dec 24, 2026, at 7:00 p.m. on Bellevue Way. Santa photos are on the same holiday page. Skip hotel packages."
+    - name: "Kelsey Creek Farm"
+      url: "https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events"
+      type: farm
+      notes: "Farm Fair, sheep shearing, trick-or-treat with the animals, and holiday barn lighting at 410 130th Pl SE. Skip adult fiber classes."
     - name: "AllEvents Bellevue"
       url: "https://allevents.in/bellevue"
       type: allevents
@@ -302,8 +316,12 @@
       url: "https://events.carnationfarms.org/events/"
       type: venue
       notes: "Harvest Market and other public days. Skip wine and cocktail nights."
+    - name: "Carnation Farmers Market"
+      url: "https://carnationfarmersmarket.org/"
+      type: market
+      notes: "Tuesdays 3:00 to 7:00 p.m. in June, July, and August at Tolt-MacDonald Park. Live music and kids activities."
     - name: "Eastside Audubon Society"
-      url: "https://eastsideaudubon.org/calendar"
+      url: "https://www.eastsideaudubon.org/calendar"
       type: nature
       notes: "Bird walk at Tolt-MacDonald Park. List it when the page welcomes children. Skip classes."
     - name: "Encompass NW"
@@ -333,11 +351,11 @@
   tagline: "A river town at the north end of the Snoqualmie Valley."
   sources:
     - name: "City of Duvall calendar"
-      url: "https://www.duvallwa.gov/calendar.aspx"
+      url: "https://www.duvallwa.gov/m/calendar"
       type: city_hall
       format: rss
       feed_url: "https://www.duvallwa.gov/RSSFeed.aspx?ModID=58&CID=All-0"
-      notes: "Mostly field reservations and meetings. Use it for a dated public event, not a practice slot."
+      notes: "calendar.aspx redirects here. Mostly field reservations and meetings. Use it for a dated public event, not a practice slot."
     - name: "Duvall Library"
       url: "https://kcls.org/locations/duvall/"
       type: library
@@ -455,11 +473,11 @@
       type: nature
       notes: "Family programs include Walk n' Wag and Camp S'more. List a date only when the events page posts one. Skip restoration work parties."
     - name: "Infinity Farm"
-      url: "https://infinityfarmissaquah.com/upcoming-events"
+      url: "https://www.infinityfarmissaquah.com/upcoming-events"
       type: farm
       notes: "16523 Issaquah-Hobart Road SE. Fall Y'all Market and Tract-or-Treat when the farm page posts the date."
     - name: "Issaquah Schools Foundation"
-      url: "https://isfdn.org/events/"
+      url: "https://isfdn.org/upcoming-events/"
       type: school
       notes: "Family fundraisers, including the Monster Mash 5K. Skip galas."
     - name: "Mountains to Sound Greenway Trust"
@@ -599,7 +617,7 @@
       type: sports
       notes: "Free Try Hockey for ages 4 to 17 at the Kirkland rink, 14326 124th Ave NE. Confirm the date on the page. Skip the Rookies class series."
     - name: "Eastside Audubon Society"
-      url: "https://eastsideaudubon.org/calendar"
+      url: "https://www.eastsideaudubon.org/calendar"
       type: nature
       notes: "Public bird walks. List a walk when the page welcomes children. Skip classes, the book club, the photography group, and evening talks."
     - name: "Kirkland Urban"
@@ -622,6 +640,18 @@
       url: "https://www.explorekirkland.com/events"
       type: downtown
       notes: "Visitor events, including the Catrina Walk. Skip nightlife."
+    - name: "City of Kirkland community events"
+      url: "https://www.kirklandwa.gov/Whats-Happening/Community-Events"
+      type: city_hall
+      notes: "Dated city calendar. Harvest Festival, the costume swap, and drive-in movies are family. Skip council, the planning commission, and neighborhood meetings. The site often returns 403 to scripts."
+    - name: "Kirkland community building events"
+      url: "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Recreation-Programs-Services/Community-Building-Events"
+      type: parks
+      notes: "Parks family festivals, including Lunar New Year, the Harvest Festival, and Día de los Muertos at Peter Kirk Community Center."
+    - name: "Juanita Friday Market"
+      url: "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Special-Event-Services/Juanita-Friday-Market"
+      type: market
+      notes: "Fridays 3:00 to 7:00 p.m. at Juanita Beach Park, June through September. No market June 19 or July 3. Kids crafts and live music."
     - name: "AllEvents Kirkland"
       url: "https://allevents.in/kirkland"
       type: allevents
@@ -729,7 +759,7 @@
       type: venue
       notes: "Public family programs at 3801 E Mercer Way, including Friday Tot Shabbat at 9:45 a.m. The events index sometimes rate-limits. Confirm the date on the event page."
     - name: "Island Books"
-      url: "https://www.islandbooks.com/childrens-story-times"
+      url: "https://islandbooks.com/childrens-story-times"
       type: venue
       notes: "Saturday singing at 9:30 a.m. for ages 1 to 4, and Wednesday picture-book story time at 10:30 a.m."
     - name: "Youth Theatre Northwest"
@@ -763,11 +793,11 @@
   tagline: "A mountain town at the foot of Mount Si."
   sources:
     - name: "City of North Bend calendar"
-      url: "https://www.northbendwa.gov/calendar.aspx"
+      url: "https://www.northbendwa.gov/m/calendar"
       type: city_hall
       format: ical
       feed_url: "https://www.northbendwa.gov/common/modules/iCalendar/iCalendar.aspx?catID=21&feed=calendar"
-      notes: "Community Events category. Oaktoberfest, Spooktacular, and Trick-or-Treat Street are here. The all-category RSS is mostly meetings. Skip Blues Walk and What's Brewing."
+      notes: "calendar.aspx redirects here. Community Events category. Oaktoberfest, Spooktacular, and Trick-or-Treat Street are here. The all-category RSS is mostly meetings. Skip Blues Walk and What's Brewing."
     - name: "Si View Metropolitan Park District"
       url: "https://www.siviewpark.org/family-fun.phtml"
       type: parks
@@ -800,6 +830,14 @@
       url: "https://www.northbenddowntown.org/all-events"
       type: downtown
       notes: "Trick-or-Treat Street and other downtown days. Skip the pub crawl."
+    - name: "Si View special events"
+      url: "https://www.siviewpark.org/events.phtml"
+      type: parks
+      notes: "Outdoor movies, concerts in the park, Spooktacular, and the holiday bazaar. Skip camps and class series."
+    - name: "Meadowbrook Farm Preserve"
+      url: "https://www.meadowbrookfarmpreserve.org/classes-and-events"
+      type: nature
+      notes: "Family hikes and seasonal festivals at the interpretive center, 1711 Boalch Ave. Skip weddings and rentals."
     - name: "North Bend Theatre"
       url: "https://tix.northbendtheatre.com/"
       type: theater
@@ -821,10 +859,10 @@
       type: venue
       notes: "Free drop-in Play and Learn for ages 12 to 36 months, Tuesdays at Cascade Covenant Church in North Bend. The Snoqualmie group meets here. Skip paid class series."
     - name: "AllEvents North Bend"
-      url: "https://allevents.in/north-bend"
+      url: "https://allevents.in/north-bend-wa"
       type: allevents
       format: allevents
-      notes: "Secondary sweep. This page is North Bend, WA."
+      notes: "Secondary sweep. This page is North Bend, WA. The old /north-bend path redirects to the global events page."
 - id: redmond
   name: Redmond
   state: wa
@@ -895,17 +933,21 @@
       type: farm
       notes: "13925 Redmond-Woodinville Rd NE. Pumpkin season opened Sept 23, 2026. U-cut Christmas trees open Nov 27, 2026, for the Christmas hub. Daily hours are not posted beyond those open dates."
     - name: "Eastside Audubon Society"
-      url: "https://eastsideaudubon.org/calendar"
+      url: "https://www.eastsideaudubon.org/calendar"
       type: nature
       notes: "Bird walks at Marymoor and the watershed. List a walk when the page welcomes children. Skip classes and the book club."
     - name: "Redmond Fire Department"
-      url: "https://www.redmond.gov/FirePreventionWeek"
+      url: "https://www.redmond.gov/1262/Fire-Prevention-Week"
       type: venue
       notes: "Fire Prevention Week station open houses. Skip the pub trivia unless the city page says it is for families."
     - name: "Orca Running"
       url: "https://www.orcarunning.com/race/captain-jacks-treasure-run/"
       type: sports
       notes: "Captain Jack's Treasure Run in Redmond. The kids race is the family listing. Confirm the price on the race page."
+    - name: "Friends of Marymoor Park"
+      url: "https://www.marymoor.org/events.htm"
+      type: parks
+      notes: "2026 park calendar PDF. Keep a family movie or a kids run. Skip amphitheater concerts and club racing."
     - name: "AllEvents Redmond"
       url: "https://allevents.in/redmond"
       type: allevents
@@ -967,7 +1009,7 @@
       type: downtown
       notes: "Festivals and family events."
     - name: "Renton Regional Fire Authority"
-      url: "https://www.rentonrfa.com/events/"
+      url: "https://rentonrfa.com/events/"
       type: venue
       notes: "Saturday station open houses in October. Skip governance and fire-district board meetings."
     - name: "Sno-King Amateur Hockey"
@@ -990,6 +1032,10 @@
       url: "https://www.parkrun.us/renton/"
       type: sports
       notes: "Free Saturday 5k at 9:00 a.m. on the Cedar River Trail. Register once before the first visit."
+    - name: "Renton Parks and Recreation events"
+      url: "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Events"
+      type: parks
+      notes: "River Days, the Tuesday market, Hometown 4th of July, and the November holiday bazaar. The city site often returns 403 to scripts."
     - name: "AllEvents Renton"
       url: "https://allevents.in/renton"
       type: allevents
@@ -1118,6 +1164,10 @@
       url: "https://fallcityfarms.com/pumpkin-patch/"
       type: venue
       notes: "Fall City has no city page. The weekend pumpkin patch is listed with Snoqualmie."
+    - name: "Meadowbrook Farm Preserve"
+      url: "https://www.meadowbrookfarmpreserve.org/classes-and-events"
+      type: nature
+      notes: "Shared preserve with North Bend. Family hikes and seasonal festivals meet at 1711 Boalch Ave. Skip weddings and rentals."
     - name: "Fall City Library"
       url: "https://kcls.org/locations/fall-city/"
       type: library
