@@ -14,7 +14,7 @@ sitemap: false
 
 ## About
 
-- [About]({{ site.url }}{{ site.baseurl }}/about/): How we pick and check events.
+- [About]({{ site.url }}{{ site.baseurl }}/about/): A local parent with three kids. Free family events across 15 Eastside cities.
 - Blurbs are original and link to sources.
 
 ## Seasons
