@@ -1934,10 +1934,10 @@ html[data-ns-chosen] .ns-hint {
   align-items: center;
   min-height: 2.4rem;
   padding: 0.35rem 0.85rem;
-  border: 1px solid var(--forest);
+  border: 1px solid var(--btn-bg);
   border-radius: var(--radius);
-  background: var(--sheet);
-  color: var(--forest);
+  background: var(--btn-bg);
+  color: var(--btn-ink);
   font-weight: 650;
   list-style: none;
   white-space: nowrap;
@@ -1949,8 +1949,9 @@ html[data-ns-chosen] .ns-hint {
 
 .ns-sub .cal-subscribe summary:hover,
 .ns-sub .cal-subscribe summary:focus-visible {
-  border-color: var(--forest);
-  background: var(--wash);
+  border-color: var(--btn-bg-hover);
+  background: var(--btn-bg-hover);
+  color: var(--btn-ink);
 }
 
 .ns-sub .cal-subscribe summary:focus-visible {
