@@ -69,6 +69,8 @@
   start: "2026-10-17T11:00:00-07:00"
   end: "2026-10-17T14:00:00-07:00"
   place: "Northwest Art Center, 15705 Main Street NE, Suite F"
+  organizer: "Northwest Art Center"
+  organizer_url: "https://northwestartcenter.org/"
   same_as: "https://www.valleyrecord.com/2026/09/25/snoqualmie-valley-community-calendar-sept-25-edition/"
 - name: "Teen Space"
   cost: "Free"

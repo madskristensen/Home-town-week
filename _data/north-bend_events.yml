@@ -63,6 +63,8 @@
   start: "2026-10-17T09:00:00-07:00"
   end: "2026-10-17T13:00:00-07:00"
   place: "Meadowbrook Farm Interpretive Center"
+  organizer: "Meadowbrook Farm Interpretive Center"
+  organizer_url: "https://www.siviewpark.org/"
   same_as: "https://livingsnoqualmie.com/arbor-day-planting-and-oaktoberfest-set-for-october-17-in-north-bend/"
 - name: "Play and Learn"
   cost: "Free"

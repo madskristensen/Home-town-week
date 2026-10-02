@@ -121,6 +121,8 @@
   start: "2026-10-24T11:00:00-07:00"
   end: "2026-10-24T16:15:00-07:00"
   place: "Woodin Creek Village, 17255 135th Ave NE, Woodinville"
+  organizer: "Seattle Thrillers"
+  organizer_url: "https://seattlethrillers.org/"
   same_as: "https://www.meetup.com/seattlethrillers/events/313570589/"
 - name: "Full STEAM Ahead"
   cost: "Free"

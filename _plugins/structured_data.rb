@@ -20,7 +20,10 @@ module EastsideCalendar
       "mercerisland.gov" => ["City of Mercer Island", "https://www.mercerisland.gov/"],
       "rentonwa.gov" => ["City of Renton", "https://www.rentonwa.gov/"],
       "woodinvillewa.gov" => ["City of Woodinville", "https://www.ci.woodinville.wa.us/"],
+      "woodinville.gov" => ["City of Woodinville", "https://www.woodinville.gov/"],
+      "ci.woodinville.wa.us" => ["City of Woodinville", "https://www.woodinville.gov/"],
       "maplevalleywa.gov" => ["City of Maple Valley", "https://www.maplevalleywa.gov/"],
+      "covingtonwa.gov" => ["City of Covington", "https://www.covingtonwa.gov/"],
       "duvallwa.gov" => ["City of Duvall", "https://www.duvallwa.gov/"],
       "carnationwa.gov" => ["City of Carnation", "https://www.carnationwa.gov/"],
       "kenmorewa.gov" => ["City of Kenmore", "https://www.kenmorewa.gov/"],
@@ -29,8 +32,20 @@ module EastsideCalendar
       "kidsquestmuseum.org" => ["KidsQuest Children's Museum", "https://www.kidsquestmuseum.org/"],
       "kpcenter.org" => ["Kirkland Performance Center", "https://www.kpcenter.org/"],
       "eastsideaudubon.org" => ["Eastside Audubon", "https://www.eastsideaudubon.org/"],
-      "snokinghockey.com" => ["Sno-King Hockey", "https://snokinghockey.com/"]
+      "snokinghockey.com" => ["Sno-King Hockey", "https://snokinghockey.com/"],
+      "theatre33.ludus.com" => ["Theatre33", "https://www.theatre33wa.org/"]
     }.freeze
+
+    # Ticket and news hosts are not the organizer. A path can still name
+    # the city that sells the registration.
+    PATH_ORGANIZERS = [
+      ["amilia.com", %r{/city-of-redmond/}i, "City of Redmond", "https://www.redmond.gov/"],
+      ["rec1.com", %r{/city-of-kirkland/}i, "City of Kirkland", "https://www.kirklandwa.gov/"]
+    ].freeze
+    LISTING_HOSTS = %w[
+      eventbrite.com allevents.in meetup.com runsignup.com amilia.com rec1.com
+      livingsnoqualmie.com valleyrecord.com donate.melanoma.org
+    ].freeze
 
     module_function
 
@@ -506,10 +521,12 @@ module EastsideCalendar
       image = event["image"].to_s
       image = extra["image"].to_s if image.empty?
       node["image"] = [abs(page.site, image)] unless image.empty?
-      organizer = organizer_node(official, extra["link_label"], name, venue)
+      organizer = organizer_for(page, event, official, venue)
       node["organizer"] = organizer if organizer
       node["sameAs"] = official if official && official != event_url
-      offer = offer_node(event, official || event_url)
+      performer = performer_node(event)
+      node["performer"] = performer if performer
+      offer = offer_node(event, official, page.site)
       if offer
         node["offers"] = offer
         node["isAccessibleForFree"] = true if offer["price"].to_s == "0" || offer["price"] == 0
@@ -534,34 +551,195 @@ module EastsideCalendar
       }
     end
 
-    def organizer_node(url, label, event_name, venue)
-      return nil if url.nil? || url.empty?
-
-      host = host_key(url)
-      known = host && ORGANIZERS[host]
-      name = known ? known[0] : ""
-      org_url = known ? known[1] : origin_of(url)
-      if name.empty?
-        text = label.to_s.strip
-        name = text if !text.empty? && !text.casecmp(event_name).zero? && text.length <= 80
-      end
-      name = venue if name.empty? && !venue.empty? && !venue.casecmp(event_name).zero?
-      return nil if name.empty? || org_url.nil? || org_url.empty?
-
-      { "@type" => "Organization", "name" => name, "url" => org_url }
+    def organization(name, url)
+      { "@type" => "Organization", "name" => name, "url" => url }
     end
 
-    def offer_node(event, url)
-      amount = offer_amount(event["cost"])
-      return nil if amount.nil?
+    # The host on the source URL, then a city source with that host, then
+    # the venue and the source site. An explicit organizer on the event wins.
+    def organizer_for(page, event, url, venue)
+      explicit_name = event["organizer"].to_s.strip
+      explicit_url = first_http(event["organizer_url"])
+      return organization(explicit_name, explicit_url) if !explicit_name.empty? && explicit_url
+      return nil if url.nil? || url.empty?
 
-      {
+      host = bare_host(url)
+      return nil if host.empty?
+
+      listed = path_organizer(host, url)
+      return organization(listed[0], listed[1]) if listed
+
+      known = organizers_for(host)
+      return organization(known[0], known[1]) if known
+
+      city_id = event["city_id"].to_s
+      city_id = page.data["city"].to_s if city_id.empty?
+      city_name = event["city"].to_s.strip
+      city_name = event["locality"].to_s.strip if city_name.empty?
+      picked = pick_source(page.site, host, url, city_id, city_name, venue)
+      return organization(source_org_name(picked["name"]), picked["url"]) if picked
+      return nil if listing_host?(host)
+
+      origin = origin_of(url)
+      return nil if origin.nil?
+
+      candidate = venue.to_s.strip
+      unless organization_like?(candidate)
+        head = candidate.split(",").first.to_s.strip
+        candidate = head if organization_like?(head)
+      end
+      return nil unless organization_like?(candidate)
+
+      organization(candidate, origin)
+    end
+
+    def path_organizer(host, url)
+      PATH_ORGANIZERS.each do |key, pattern, name, org_url|
+        next unless host == key || host.end_with?(".#{key}")
+        return [name, org_url] if url.match?(pattern)
+      end
+      nil
+    end
+
+    def organizers_for(host)
+      ORGANIZERS.each do |key, value|
+        return value if host == key || host.end_with?(".#{key}")
+      end
+      nil
+    end
+
+    def listing_host?(host)
+      LISTING_HOSTS.any? { |key| host == key || host.end_with?(".#{key}") }
+    end
+
+    def pick_source(site, host, url, city_id, city_name, venue)
+      cands = source_rows(site).select { |row| row["host"] == host || host.end_with?(".#{row["host"]}") }
+      cands.reject! { |row| %w[allevents news].include?(row["type"]) }
+      return nil if cands.empty?
+
+      names = cands.map { |row| row["name"] }.uniq
+      return cands.min_by { |row| row["path"].length } if names.size == 1
+
+      path = URI.parse(url).path.to_s.sub(%r{/\z}, "")
+      prefixed = cands.select do |row|
+        base = row["path"]
+        !base.empty? && (path == base || path.start_with?("#{base}/"))
+      end
+      return prefixed.max_by { |row| row["path"].length } unless prefixed.empty?
+
+      [city_id, city_name].each do |token|
+        next if token.to_s.empty?
+
+        city_rows = if token == city_id
+                      cands.select { |row| row["city_id"] == city_id }
+                    else
+                      cands.select { |row| row["city"].casecmp(city_name).zero? }
+                    end
+        next unless city_rows.map { |row| row["name"] }.uniq.size == 1
+
+        return city_rows.min_by { |row| row["path"].length }
+      end
+      cands.find { |row| row["name"].casecmp(venue.to_s).zero? }
+    rescue URI::InvalidURIError
+      nil
+    end
+
+    def source_rows(site)
+      @source_rows ||= {}
+      @source_rows[site.object_id] ||= Array(site.data["cities"]).flat_map do |city|
+        next [] unless city.is_a?(Hash)
+
+        Array(city["sources"]).filter_map do |source|
+          next unless source.is_a?(Hash)
+
+          raw = source["url"].to_s.strip
+          next if raw.empty?
+
+          uri = URI.parse(raw)
+          host = uri.host.to_s.downcase.sub(/\Awww\./, "")
+          next if host.empty?
+
+          name = source["name"].to_s.strip
+          next if name.empty?
+
+          {
+            "name" => name,
+            "url" => raw,
+            "type" => source["type"].to_s,
+            "host" => host,
+            "path" => uri.path.to_s.sub(%r{/\z}, ""),
+            "city_id" => city["id"].to_s,
+            "city" => city["name"].to_s
+          }
+        rescue URI::InvalidURIError
+          nil
+        end
+      end
+    end
+
+    def source_org_name(name)
+      text = name.to_s.strip.sub(/\s+(?:events|calendar)\z/i, "")
+      text.empty? ? name.to_s.strip : text
+    end
+
+    def organization_like?(name)
+      text = name.to_s.strip
+      return false if text.empty? || text.length > 80
+      return false if text.match?(/\A\d/)
+      return false if text.match?(/\bbetween\b/i)
+
+      street = /\b(?:Ave|Avenue|St|Street|Rd|Road|Blvd|Boulevard|Dr|Drive|Way|Ln|Lane|Pl|NE|NW|SE|SW)\b/i
+      place = /\b(?:Park|Library|Center|Centre|Museum|Theatre|Theater|Market|Farm|Zoo|Church|Club|Gym|YMCA|School|Gallery|Hall|Depot|Station)\b/i
+      return false if text.match?(street) && !text.match?(place)
+
+      true
+    end
+
+    def performer_node(event)
+      name = event["performer"].to_s.strip
+      return nil if name.empty?
+
+      { "@type" => "Person", "name" => name }
+    end
+
+    # A known price is 0 for Free or the published amount. An unknown
+    # price still gets an offer with the source URL, because a price is
+    # not required for the offer to validate.
+    def offer_node(event, url, site)
+      return nil if url.nil? || url.empty?
+
+      from = valid_from(event, site)
+      return nil if from.empty?
+
+      offer = {
         "@type" => "Offer",
-        "price" => amount,
-        "priceCurrency" => "USD",
+        "url" => url,
         "availability" => "https://schema.org/InStock",
-        "url" => url
+        "validFrom" => from
       }
+      amount = offer_amount(event["cost"])
+      unless amount.nil?
+        offer["price"] = amount
+        offer["priceCurrency"] = "USD"
+      end
+      offer
+    end
+
+    def valid_from(event, site)
+      added = event["added"].to_s.strip
+      unless added.empty?
+        parsed = EventCalendar.parse_when(added)
+        if parsed && parsed[:date]
+          clock = parsed[:time] || [12, 0, 0]
+          clock = [12, 0, 0] if clock == [0, 0, 0]
+          stamped = EventCalendar.format_offset_time(date: parsed[:date], time: clock)
+          return stamped unless stamped.nil? || stamped.empty?
+        end
+      end
+      local = EventCalendar.pacific_time(site.time)
+      return "" if local.nil?
+
+      local.strftime("%Y-%m-%dT%H:%M:%S%:z")
     end
 
     def offer_amount(cost)
@@ -644,16 +822,10 @@ module EastsideCalendar
       nil
     end
 
-    def host_key(url)
-      host = URI.parse(url).host.to_s.downcase.sub(/\Awww\./, "")
-      return nil if host.empty?
-
-      ORGANIZERS.each_key do |key|
-        return key if host == key || host.end_with?(".#{key}")
-      end
-      nil
+    def bare_host(url)
+      URI.parse(url).host.to_s.downcase.sub(/\Awww\./, "")
     rescue URI::InvalidURIError
-      nil
+      ""
     end
 
     def origin_of(url)

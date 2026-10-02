@@ -64,6 +64,8 @@
   start: "2026-10-10T11:00:00-07:00"
   end: "2026-10-10T16:00:00-07:00"
   place: "Bothell Landing Park, 9919 NE 180th St"
+  organizer: "Artisan Alley Shop"
+  organizer_url: "https://www.artisanalleypnw.com/"
   same_as: "https://allevents.in/bothell/halloween-in-the-park-market-by-artisan-alley-pnw/200030246017330"
 - name: "Anderson School History and Art Tour"
   cost: "$20.31"

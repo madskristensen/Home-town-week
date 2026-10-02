@@ -692,6 +692,10 @@ module EastsideCalendar
       end
       blurb = event["blurb"].to_s.strip
       row["blurb"] = blurb unless blurb.empty?
+      %w[organizer organizer_url performer added].each do |key|
+        raw = event[key].to_s.strip
+        row[key] = raw unless raw.empty?
+      end
       drive = event["drive"].to_s.strip
       row["drive"] = drive unless drive.empty?
       row

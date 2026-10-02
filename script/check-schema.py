@@ -3,8 +3,11 @@
 
 One JSON-LD graph per page. Events need name, startDate, and a Place with
 an address. Timed dates need a UTC offset. Date-only events stay dates.
-isAccessibleForFree is allowed only when the price is 0. Warnings do not
-fail the build. Missing required fields do.
+isAccessibleForFree is allowed only when the price is 0. Every event
+needs an organizer and an offer. The offer needs a source URL, InStock,
+and validFrom with an offset. Price and USD are required when a price
+is known, and omitted together when it is not. Performer is optional.
+Warnings do not fail the build. Missing required fields do.
 """
 
 import json
@@ -21,6 +24,7 @@ SCRIPT = re.compile(
 TIMED = re.compile(r"T\d{2}:\d{2}")
 OFFSET = re.compile(r"T\d{2}:\d{2}:\d{2}[+-]\d{2}:\d{2}\Z")
 DATE_ONLY = re.compile(r"\A\d{4}-\d{2}-\d{2}\Z")
+VALID_FROM = re.compile(r"\A\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+-]\d{2}:\d{2}\Z")
 
 errors = []
 warnings = []
@@ -138,24 +142,46 @@ def check_event(node, rel, index):
     elif not isinstance(node.get("image"), list):
         add(warnings, rel, f"{label} image is not a list of URLs")
     organizer = node.get("organizer") or {}
-    if not organizer.get("name") or not organizer.get("url"):
-        add(warnings, rel, f"{label} organizer is missing a name or url")
+    if not isinstance(organizer, dict) or organizer.get("@type") != "Organization":
+        add(errors, rel, f"{label} organizer is not an Organization")
+    elif not organizer.get("name") or not str(organizer.get("url") or "").startswith("http"):
+        add(errors, rel, f"{label} organizer is missing a name or url")
+    performer = node.get("performer")
+    if performer is not None:
+        if not isinstance(performer, dict) or not performer.get("name"):
+            add(errors, rel, f"{label} performer has no name")
+        elif performer.get("@type") not in ("Person", "PerformingGroup", "MusicGroup"):
+            add(errors, rel, f"{label} performer type is {performer.get('@type') or 'missing'}")
     free = node.get("isAccessibleForFree")
     offer = node.get("offers") or {}
+    if not isinstance(offer, dict) or not offer:
+        add(errors, rel, f"{label} missing offers")
+        offer = {}
     price = offer.get("price") if isinstance(offer, dict) else None
+    has_price = "price" in offer
     if free is False:
         add(errors, rel, f"{label} sets isAccessibleForFree false")
     if free is True and price not in (0, 0.0, "0"):
         add(errors, rel, f"{label} is free but offer price is {price!r}")
     if price in (0, 0.0, "0") and free is not True:
         add(warnings, rel, f"{label} price is 0 without isAccessibleForFree")
-    if isinstance(offer, dict) and offer:
-        if offer.get("priceCurrency") != "USD":
-            add(errors, rel, f"{label} offer currency is not USD")
+    if offer:
+        if not str(offer.get("url") or "").startswith("http"):
+            add(errors, rel, f"{label} offer url is not the source page")
         if "InStock" not in str(offer.get("availability")):
-            add(warnings, rel, f"{label} offer has no InStock availability")
-        if not offer.get("url"):
-            add(warnings, rel, f"{label} offer has no url")
+            add(errors, rel, f"{label} offer availability is not InStock")
+        valid_from = offer.get("validFrom") or ""
+        if not VALID_FROM.search(valid_from):
+            add(errors, rel, f"{label} offer validFrom needs an offset: {valid_from or 'missing'}")
+        elif "T00:00:00" in valid_from:
+            add(errors, rel, f"{label} offer validFrom is midnight: {valid_from}")
+        if has_price:
+            if offer.get("priceCurrency") != "USD":
+                add(errors, rel, f"{label} offer currency is not USD")
+            if not isinstance(price, (int, float)) or isinstance(price, bool):
+                add(errors, rel, f"{label} offer price is not a number: {price!r}")
+        elif offer.get("priceCurrency"):
+            add(errors, rel, f"{label} offer has a currency without a price")
 
 
 def check_article(graph, rel):

@@ -32,7 +32,7 @@ Write the blurb in our own words: what it is, who it is for, and any cost or reg
 
 ## Tags
 
-Labels are `cost`, `ages`, `setting`, `drop_off`, `signup`, and `sensory`. Seasonal words stay in `tags`.
+Labels are `cost`, `ages`, `setting`, `drop_off`, `signup`, and `sensory`. Seasonal words stay in `tags`. Set `organizer` and `organizer_url` when the host is not the source site. Set `performer` only when the source names that person. The build fills the other organizers from the source site.
 
 Free is the only cost pill. A price is plain text. All ages is plain text. Never a price pill and never an All ages pill. A `free` tag with no price is the Free pill.
 
