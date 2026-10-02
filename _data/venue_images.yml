@@ -375,10 +375,10 @@ venues:
     source: https://commons.wikimedia.org/wiki/File:Hjertoos_Farm.jpg
   - keys: ["duvall library"]
     image: /assets/images/duvall/duvall-library.webp
-    alt: Duvall Library, a low building with a dark roof and a covered entry among the trees.
-    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
-    license: CC BY-SA 3.0
-    source: https://commons.wikimedia.org/wiki/File:Duvall,_Washington_public_library_01.jpg
+    alt: Duvall Library, a wood and glass building with a deep roof and a covered entry.
+    credit: "Photo: King County Library System."
+    license: organizer
+    source: https://kcls.org/locations/duvall/
   - keys: ["gaudette", "village theatre"]
     image: /assets/images/issaquah/village-theatre.webp
     alt: Village Theatre in Issaquah, a brick building with a tower and a marquee over the entrance.
