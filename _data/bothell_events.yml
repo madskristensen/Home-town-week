@@ -126,6 +126,7 @@
 - name: "Spooky Family Fun"
   cost: "Free"
   ages: "All ages"
+  setting: "Indoor"
   tags: [halloween]
   start: "2026-10-31T15:00:00-07:00"
   end: "2026-10-31T20:00:00-07:00"

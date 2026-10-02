@@ -205,6 +205,7 @@
   same_as: "https://kcls.bibliocommons.com/events/6a63e1ecf494c55649eb13c9"
 - name: "Village Halloween Celebration"
   setting: "Outdoor"
+  cost: "Free"
   tags: [halloween]
   start: "2026-10-24T12:00:00-07:00"
   end: "2026-10-24T14:00:00-07:00"
@@ -252,7 +253,7 @@
 - name: "Pee Wee Monster Bash"
   cost: "$18"
   ages: "Toddlers"
-  setting: "Indoor"
+  setting: "Outdoor"
   signup: true
   tags: [halloween]
   start: "2026-10-30T10:00:00-07:00"
