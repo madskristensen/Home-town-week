@@ -24,15 +24,17 @@
 {%- assign sub_webcal = sub_webcal | strip -%}
 <details class="cal-subscribe">
   <summary><svg class="cal-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.75" y="2.75" width="12.5" height="11.5" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.4"></rect><path d="M1.75 6.4h12.5M5 1.35v2.5M11 1.35v2.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg>Subscribe to this calendar</summary>
-  <p class="cal-subscribe-note">Updates automatically. Google and Outlook can take several hours to refresh.</p>
-  <ul class="cal-subscribe-links">
-    <li><a href="{{ sub_webcal | escape }}">Apple, iPhone, and Mac</a></li>
-    <li><a href="https://calendar.google.com/calendar/r?cid={{ sub_webcal | mail_escape }}" rel="noopener">Google Calendar</a></li>
-    <li><a href="https://outlook.live.com/calendar/0/addfromweb?url={{ sub_https | mail_escape }}&amp;name={{ sub_title | mail_escape }}" rel="noopener">Outlook.com and new Outlook</a></li>
-    <li><a href="https://outlook.office.com/calendar/0/addfromweb?url={{ sub_https | mail_escape }}&amp;name={{ sub_title | mail_escape }}" rel="noopener">Outlook for work or school</a></li>
-    <li><button type="button" class="cal-subscribe-copy" data-cal-copy data-cal-url="{{ sub_https | escape }}">Copy link</button></li>
-  </ul>
-  <p class="cal-subscribe-status visually-hidden" data-cal-status role="status"></p>
+  <div class="cal-subscribe-panel">
+    <p class="cal-subscribe-note">Updates automatically. Google and Outlook can take several hours to refresh.</p>
+    <ul class="cal-subscribe-links">
+      <li><a href="{{ sub_webcal | escape }}">Apple, iPhone, and Mac</a></li>
+      <li><a href="https://calendar.google.com/calendar/r?cid={{ sub_webcal | mail_escape }}" rel="noopener">Google Calendar</a></li>
+      <li><a href="https://outlook.live.com/calendar/0/addfromweb?url={{ sub_https | mail_escape }}&amp;name={{ sub_title | mail_escape }}" rel="noopener">Outlook.com and new Outlook</a></li>
+      <li><a href="https://outlook.office.com/calendar/0/addfromweb?url={{ sub_https | mail_escape }}&amp;name={{ sub_title | mail_escape }}" rel="noopener">Outlook for work or school</a></li>
+      <li><button type="button" class="cal-subscribe-copy" data-cal-copy data-cal-url="{{ sub_https | escape }}">Copy link</button></li>
+    </ul>
+    <p class="cal-subscribe-status visually-hidden" data-cal-status role="status"></p>
+  </div>
 </details>
 <script>
 (function () {

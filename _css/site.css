@@ -1764,6 +1764,9 @@ h2.event-bucket.is-past {
 }
 
 .cal-subscribe {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
   margin: 0.45rem 0 0;
   color: var(--muted);
   font-size: 0.85rem;
@@ -1847,11 +1850,33 @@ h2.event-bucket.is-past {
 
 .cal-subscribe summary {
   display: inline-flex;
+  grid-row: 1;
   align-items: center;
+  justify-self: start;
   gap: 0.4rem;
   color: var(--link);
   font-weight: 600;
+  list-style: none;
   cursor: pointer;
+}
+
+.cal-subscribe summary::-webkit-details-marker {
+  display: none;
+}
+
+.cal-subscribe summary::marker {
+  content: none;
+}
+
+.cal-subscribe-panel {
+  grid-row: 2;
+  justify-self: stretch;
+  width: 100%;
+  min-width: 0;
+}
+
+.cal-subscribe:not([open]) > .cal-subscribe-panel {
+  display: none;
 }
 
 .cal-subscribe .cal-icon {
@@ -1923,15 +1948,18 @@ h2.event-bucket.is-past {
 }
 
 .ns-panel-row {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem 1rem;
+  column-gap: 1rem;
+  row-gap: 0.75rem;
+  container-type: inline-size;
 }
 
 .ns-filter-row {
   display: flex;
+  grid-column: 1;
+  grid-row: 1;
   align-items: center;
   gap: 0.6rem;
   min-width: 0;
@@ -2039,21 +2067,17 @@ html[data-ns-chosen] .ns-hint {
   box-shadow: none;
 }
 
-.ns-sub {
-  flex: 0 1 auto;
-  margin: 0 0 0 auto;
-  max-width: 100%;
-}
-
+.ns-sub,
 .ns-sub .cal-subscribe {
-  width: max-content;
-  max-width: 100%;
-  margin: 0;
+  display: contents;
 }
 
 .ns-sub .cal-subscribe summary {
   display: inline-flex;
+  grid-column: 2;
+  grid-row: 1;
   align-items: center;
+  justify-self: end;
   min-height: 2.4rem;
   padding: 0.35rem 0.85rem;
   border: 1px solid var(--btn-bg);
@@ -2063,6 +2087,18 @@ html[data-ns-chosen] .ns-hint {
   font-weight: 650;
   list-style: none;
   white-space: nowrap;
+}
+
+.ns-sub .cal-subscribe-panel {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  width: 100cqi;
+  max-width: 100cqi;
+  min-width: 0;
+}
+
+.ns-sub .cal-subscribe-panel > :first-child {
+  margin-top: 0;
 }
 
 .ns-sub .cal-subscribe summary::-webkit-details-marker {
@@ -2265,8 +2301,7 @@ html[data-ns="ksd"] .ns-weekly[data-d="ksd"] {
 
 @media (max-width: 47.99rem) {
   .ns-panel-row {
-    flex-direction: column;
-    align-items: stretch;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .ns-filter-row select {
@@ -2275,8 +2310,17 @@ html[data-ns="ksd"] .ns-weekly[data-d="ksd"] {
     min-width: 0;
   }
 
-  .ns-sub {
-    margin-left: 0;
+  .ns-sub .cal-subscribe summary {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+  }
+
+  .ns-sub .cal-subscribe-panel {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    width: 100%;
+    max-width: none;
   }
 }
 
