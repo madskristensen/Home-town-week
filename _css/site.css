@@ -1968,6 +1968,15 @@ html[data-ns-chosen] .ns-hint {
   margin-top: 0.55rem;
 }
 
+.ns-made {
+  margin: 1.15rem 0 0;
+  max-width: 40rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
 .ns-month {
   display: flex;
   flex-direction: column;
