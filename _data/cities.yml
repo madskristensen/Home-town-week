@@ -375,11 +375,11 @@
   lon: -122.0326
   description: Upcoming family events in Issaquah on the Eastside.
   hero:
-    image: /assets/images/issaquah/front-street-alps.webp
-    alt: Front Street in Issaquah, with brick storefronts and the mountains behind the town.
+    image: /assets/images/issaquah/tiger-mountain.webp
+    alt: Tiger Mountain above the trees in Issaquah, under a clear blue sky.
     credit: "Photo: Chris Light, CC BY-SA 4.0"
     license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:Front_Street_9246.jpg
+    source: https://commons.wikimedia.org/wiki/File:Tiger_Mtn_253.jpg
   summary: >-
     A foothill city at the south end of Lake Sammamish.
   tagline: "A foothill city at the south end of Lake Sammamish."
