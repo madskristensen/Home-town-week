@@ -360,16 +360,23 @@ module EastsideCalendar
         buckets[:later] << assigns
       end
       grouped = +""
+      site = page.site
       BUCKETS.each do |key, label|
         list = buckets[key]
         next if list.nil? || list.empty?
 
-        grouped << render_card_grid(page, {
+        assigns = {
           "events" => list,
           "heading" => label,
           "show_city" => false,
           "eager" => 0
-        })
+        }
+        if key == :weekend
+          assigns["share"] = "weekend"
+          assigns["share_url"] = absolute_url(site, page.url)
+          assigns["share_title"] = "This weekend in #{city_name_for(site, page)}"
+        end
+        grouped << render_card_grid(page, assigns)
       end
       grouped
     end

@@ -106,3 +106,24 @@
   alt: A house covered in Halloween decorations, with bats and pumpkins.
   credit: "Photo: Mtaylor848, CC BY-SA 4.0"
   license: CC BY-SA 4.0
+- id: articles
+  path: /articles/
+  title: Articles
+  image: /assets/images/bellevue/bellevue-library.webp
+  alt: Bellevue Library, a glass and brick building with a covered walkway and trees in front.
+  credit: "Photo: SuddenFrost, CC0"
+  license: CC0
+- id: rainy-day-indoor-play
+  path: /articles/rainy-day-indoor-play/
+  title: Rainy day activities for kids
+  image: /assets/images/bellevue/kidsquest.webp
+  alt: Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance.
+  credit: "Photo: Julian Fong, CC BY-SA 4.0"
+  license: CC BY-SA 4.0
+- id: free-things-to-do
+  path: /articles/free-things-to-do/
+  title: Free things to do with kids
+  image: /assets/images/bellevue/botanical-garden.webp
+  alt: The entrance sign and plantings at Bellevue Botanical Garden.
+  credit: "Photo: Heptazane, public domain"
+  license: Public domain

@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-// Build 1200x630 share cards for city pages, seasonal hubs, Worth the
-// Drive, This weekend, the Playground map, the Christmas lights map,
-// and the Halloween decorations map.
+// Build 1200x630 share cards for city pages, seasonal hubs, explore
+// pages, and articles. The title on the card is the page name.
 //
 // The Pages workflow runs this before Jekyll. PNGs and _data/share_manifest.yml
 // are not committed. A card is redrawn only when its photo, title, credit,
@@ -99,9 +98,9 @@ function cards() {
   const cityCards = cities.map((city) => ({
     id: city.id,
     path: `/${city.id}/`,
-    title: `${city.name} family events`,
+    title: city.name,
     image: city.image,
-    alt: city.alt || `${city.name} family events`,
+    alt: city.alt || city.name,
     credit: city.credit || "",
     license: city.license || "",
   }));

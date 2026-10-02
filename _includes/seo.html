@@ -70,6 +70,11 @@
 {%- capture head_title -%}{{ seo_title }} | {{ site.title }}{%- endcapture -%}
 {%- endif -%}
 {%- assign head_title = head_title | strip -%}
+{%- assign social_title = head_title -%}
+{%- if page.layout == "city" and city -%}
+{%- capture social_title -%}This weekend in {{ city.name }}{%- endcapture -%}
+{%- assign social_title = social_title | strip -%}
+{%- endif -%}
 {%- assign canonical_url = page.url | absolute_url -%}
 {%- assign seo_image = seo_image_path | absolute_url -%}
 <title>{{ head_title | escape }}</title>
@@ -91,7 +96,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="{{ site.title | escape }}">
 <meta property="og:url" content="{{ canonical_url }}">
-<meta property="og:title" content="{{ head_title | escape }}">
+<meta property="og:title" content="{{ social_title | escape }}">
 <meta property="og:description" content="{{ seo_description | escape }}">
 <meta property="og:image" content="{{ seo_image }}">
 <meta property="og:image:width" content="{{ seo_image_width }}">
@@ -105,7 +110,7 @@
 {%- if site.twitter.username %}
 <meta name="twitter:site" content="@{{ site.twitter.username | remove: '@' }}">
 {%- endif %}
-<meta name="twitter:title" content="{{ head_title | escape }}">
+<meta name="twitter:title" content="{{ social_title | escape }}">
 <meta name="twitter:description" content="{{ seo_description | escape }}">
 <meta name="twitter:image" content="{{ seo_image }}">
 {%- if seo_image_alt %}

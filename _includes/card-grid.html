@@ -9,8 +9,33 @@
   other extracted fields. Hubs, weekend picks, and lights pass the event row.
 {%- endcomment -%}
 {%- assign grid_heading = include.heading | append: "" | strip -%}
+{%- assign grid_share = include.share | append: "" | strip -%}
 {%- if grid_heading.size > 0 -%}
+{%- if grid_share == "weekend" -%}
+{%- assign weekend_picks = "" -%}
+{%- assign weekend_n = 0 -%}
+{%- for event in include.events -%}
+{%- if weekend_n >= 5 -%}{%- break -%}{%- endif -%}
+{%- assign pick_title = event.title | append: "" | strip -%}
+{%- if pick_title.size == 0 -%}{%- assign pick_title = event.name | append: "" | strip -%}{%- endif -%}
+{%- assign pick_when = event.when | append: "" | strip -%}
+{%- assign pick_day = pick_when | split: "·" | first | strip -%}
+{%- if pick_title.size > 0 and pick_day.size > 0 -%}
+{%- if weekend_n > 0 -%}{%- assign weekend_picks = weekend_picks | append: " || " -%}{%- endif -%}
+{%- assign weekend_line = pick_title | append: ", " | append: pick_day -%}
+{%- assign weekend_picks = weekend_picks | append: weekend_line -%}
+{%- assign weekend_n = weekend_n | plus: 1 -%}
+{%- endif -%}
+{%- endfor -%}
+<div class="event-bucket-row">
 <h2 class="event-bucket">{{ grid_heading | escape }}</h2>
+{%- if weekend_n > 0 -%}
+<button type="button" class="event-share event-share-labeled" aria-label="Share this weekend" data-share-mode="weekend" data-share-title="{{ include.share_title | escape }}" data-share-url="{{ include.share_url | escape }}" data-share-picks="{{ weekend_picks | escape }}"><svg class="event-share-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 2.8v7.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path><path d="M6.7 6.1 10 2.8l3.3 3.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4.8 9.2v6.2c0 .8.6 1.4 1.4 1.4h7.6c.8 0 1.4-.6 1.4-1.4V9.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Share this weekend</span><span class="event-share-status" data-share-status aria-live="polite"></span></button>
+{%- endif -%}
+</div>
+{%- else -%}
+<h2 class="event-bucket">{{ grid_heading | escape }}</h2>
+{%- endif -%}
 {%- endif -%}
 {%- assign grid_eager = include.eager | default: 0 | plus: 0 -%}
 <div class="card-grid">

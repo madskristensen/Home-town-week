@@ -1532,6 +1532,46 @@ h2.event-bucket.is-past {
   display: none;
 }
 
+.event-bucket-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem 0.75rem;
+  margin-top: 0.9rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.event-bucket-row > h2.event-bucket {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.event-share-labeled {
+  width: auto;
+  height: auto;
+  min-height: 32px;
+  gap: 0.3rem;
+  padding: 0.15rem 0.1rem 0.15rem 0.15rem;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 650;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.event-share-labeled .event-share-status {
+  position: static;
+  transform: none;
+  padding: 0;
+  background: transparent;
+  font-size: inherit;
+}
+
 .article-page .prose h2 {
   margin: 1.35rem 0 0.55rem;
 }

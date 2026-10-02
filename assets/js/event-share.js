@@ -414,7 +414,45 @@
     });
   }
 
+  function weekendText(button) {
+    var picks = (button.getAttribute("data-share-picks") || "").split(" || ");
+    var lines = [];
+    var i;
+    for (i = 0; i < picks.length && lines.length < 5; i++) {
+      var line = clean(picks[i]);
+      if (line) lines.push(line);
+    }
+    var url = clean(button.getAttribute("data-share-url"));
+    if (url) lines.push(url);
+    return lines.join("\n");
+  }
+
+  function shareWeekend(button) {
+    var text = weekendText(button);
+    var title = clean(button.getAttribute("data-share-title")) || "This weekend";
+    if (navigator.share) {
+      navigator.share({ title: title, text: text }).catch(function (error) {
+        if (error && error.name === "AbortError") return;
+        copyText(text).then(function () {
+          showStatus(button, "Copied");
+        }, function () {
+          showStatus(button, "Could not copy.");
+        });
+      });
+      return;
+    }
+    copyText(text).then(function () {
+      showStatus(button, "Copied");
+    }, function () {
+      showStatus(button, "Could not copy.");
+    });
+  }
+
   function share(button) {
+    if (button.getAttribute("data-share-mode") === "weekend") {
+      shareWeekend(button);
+      return;
+    }
     var attrs = attrsFrom(button);
     var plain = shareMessage(attrs);
     var html = shareHtml(attrs);
@@ -440,7 +478,8 @@
     module.exports = {
       shareMessage: shareMessage,
       shareSheetMessage: shareSheetMessage,
-      shareHtml: shareHtml
+      shareHtml: shareHtml,
+      weekendText: weekendText
     };
   }
 })();
