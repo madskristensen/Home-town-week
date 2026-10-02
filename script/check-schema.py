@@ -284,6 +284,10 @@ def main():
             if blocks:
                 add(errors, rel, "404 should not emit JSON-LD")
             continue
+        if rel == "font-preview.html":
+            if blocks:
+                add(errors, rel, "font preview should not emit JSON-LD")
+            continue
         graph = graph_of(blocks, rel)
         if not graph:
             continue
