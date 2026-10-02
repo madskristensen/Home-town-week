@@ -101,6 +101,7 @@ module EastsideCalendar
 
     def inject(page)
       return if page.url.to_s == "/404.html"
+      return if page.data["sitemap"] == false
 
       json = page.data["json_ld"].to_s
       return if json.empty?

@@ -71,6 +71,9 @@ def urls_for(paths):
     found = set()
     shared = False
     for path in paths:
+        # Temporary wordmark preview. Do not submit it.
+        if path == "font-preview.html":
+            continue
         if path.startswith(SHARED_PREFIXES) or path in {"README.md", "AGENTS.md"}:
             if path.startswith(SHARED_PREFIXES):
                 shared = True
