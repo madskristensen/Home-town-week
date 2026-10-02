@@ -98,6 +98,21 @@
   stroke-width: 1.6;
 }
 
+.lights-feature-playgrounds .lights-feature-btn {
+  background: #f09a3a;
+  color: #2a140c;
+}
+
+.lights-feature-playgrounds .lights-feature-btn:hover,
+.lights-feature-playgrounds .lights-feature-btn:focus-visible {
+  background: #ffb15a;
+  color: #2a140c;
+}
+
+.lights-feature-playgrounds .light-pin {
+  fill: #f09a3a;
+}
+
 .lights-feature-art .pumpkin-stem {
   fill: none;
   stroke: #2f6b32;
@@ -244,6 +259,28 @@
 
   .lights-feature-halloween .lights-feature-btn:hover,
   .lights-feature-halloween .lights-feature-btn:focus-visible {
+    background: #ffb15a;
+    color: #2a140c;
+  }
+
+  .lights-feature-playgrounds {
+    background: #1e4636;
+    border-color: #f0a04a;
+    color: #fff6ea;
+  }
+
+  .lights-feature-playgrounds .lights-feature-title,
+  .lights-feature-playgrounds .lights-feature-line {
+    color: #fff6ea;
+  }
+
+  .lights-feature-playgrounds .lights-feature-btn {
+    background: #f09a3a;
+    color: #2a140c;
+  }
+
+  .lights-feature-playgrounds .lights-feature-btn:hover,
+  .lights-feature-playgrounds .lights-feature-btn:focus-visible {
     background: #ffb15a;
     color: #2a140c;
   }

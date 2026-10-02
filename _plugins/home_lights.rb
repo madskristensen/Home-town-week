@@ -442,11 +442,12 @@ module EastsideCalendar
     # cities.yml and the city dots in eastside-map.html fix the fit.
     def feature_map_pins(site)
       x_coeff, y_coeff = map_fit(site)
-      return { "halloween" => [], "christmas" => [] } if x_coeff.nil?
+      return { "halloween" => [], "christmas" => [], "playgrounds" => [] } if x_coeff.nil?
 
       {
         "halloween" => project_pins(site.data.dig("halloween_map", "pins"), x_coeff, y_coeff),
-        "christmas" => project_pins(site.data.dig("home_lights", "pins"), x_coeff, y_coeff)
+        "christmas" => project_pins(site.data.dig("home_lights", "pins"), x_coeff, y_coeff),
+        "playgrounds" => project_pins(playground_pins(site), x_coeff, y_coeff)
       }
     end
 
@@ -478,6 +479,23 @@ module EastsideCalendar
         samples << [center[0], center[1], Float(x), Float(y)]
       end
       samples
+    end
+
+    def playground_pins(site)
+      groups = site.data.dig("guides", "playgrounds", "groups")
+      Array(groups).flat_map do |group|
+        next [] unless group.is_a?(Hash)
+
+        Array(group["entries"]).filter_map do |entry|
+          next unless entry.is_a?(Hash)
+
+          {
+            "name" => entry["name"].to_s,
+            "lat" => entry["lat"],
+            "lng" => entry["lng"]
+          }
+        end
+      end
     end
 
     def project_pins(pins, x_coeff, y_coeff)

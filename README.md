@@ -32,7 +32,7 @@ Seasonal hubs are generated from `_data/seasonal_hubs.yml`. Each hub stays up al
 
 `/book-ahead/` lists ticketed family events in the 15 cities that sell out and need a booking weeks ahead. Rows live in `_data/book_ahead.yml`. The daily prune deletes a row whose last day is before today, and any row marked sold out. Summer camps are not listed. The page uses the same card grid as the other Explore pages. It is in the sitemap. The footer lists it under Explore.
 
-`/articles/` lists evergreen guides. Each guide is its own page, uses the shared card grid, and is in the sitemap. The footer Explore group links it. The header does not. `/articles/free-things-to-do/` adds the next Free-tagged events from the city files when the site builds.
+`/articles/` lists evergreen guides. Each guide is its own page, uses the shared card grid, and is in the sitemap. The footer Explore group links it. The header does not. `/articles/free-things-to-do/` adds the next Free-tagged events from the city files when the site builds. `/articles/toddler-friendly-outings/` does the same for events tagged Toddlers. `/articles/best-playgrounds/` is built from the starred playgrounds and uses the same map card as the seasonal hubs.
 
 Every page carries one JSON-LD graph. The home page adds WebSite, Organization with the logo, and a Person. City, hub, guide, and article pages add a BreadcrumbList. City, seasonal, and weekend pages add an Event for each current card, with the fields Google asks for on event rich results. Articles add Article markup. Event microdata is not repeated on the cards.
 

@@ -1,10 +1,11 @@
 {%- comment -%}
-  Promo card for a seasonal map.
+  Promo card for a map.
   theme: blank is the Christmas lights map. "halloween" is the decorations map.
+  "playgrounds" is the playgrounds map. Same markup, with a theme class.
   The drawing is the home page Eastside map. Pins are placed at build time.
 {%- endcomment -%}
 {%- assign feature_theme = include.theme | append: "" -%}
-<aside class="lights-feature{% if feature_theme == "halloween" %} lights-feature-halloween{% endif %}" aria-label="{% if feature_theme == "halloween" %}Halloween decorations map{% else %}Christmas lights map{% endif %}">
+<aside class="lights-feature{% if feature_theme == "halloween" %} lights-feature-halloween{% elsif feature_theme == "playgrounds" %} lights-feature-playgrounds{% endif %}" aria-label="{% if feature_theme == "halloween" %}Halloween decorations map{% elsif feature_theme == "playgrounds" %}Eastside playgrounds map{% else %}Christmas lights map{% endif %}">
   <div class="lights-feature-layout">
     <div class="lights-feature-art">
       {%- include lights-feature-map.html theme=feature_theme -%}
@@ -14,6 +15,10 @@
       <p class="lights-feature-title">The Eastside Halloween decorations map</p>
       <p class="lights-feature-line">Houses and neighborhood streets decorated for Halloween, all on one map.</p>
       <a class="lights-feature-btn" href="{{ '/fall/decorations/' | relative_url }}">Open the Halloween decorations map</a>
+      {%- elsif feature_theme == "playgrounds" -%}
+      <p class="lights-feature-title">The Eastside playgrounds map</p>
+      <p class="lights-feature-line">Standout playgrounds across the Eastside, all on one map.</p>
+      <a class="lights-feature-btn" href="{{ '/playgrounds/' | relative_url }}">Open the playgrounds map</a>
       {%- else -%}
       <p class="lights-feature-title">The Eastside Christmas lights map</p>
       <p class="lights-feature-line">Homes and neighborhood streets lit up across the Eastside, all on one map.</p>

@@ -127,3 +127,45 @@
   alt: The entrance sign and plantings at Bellevue Botanical Garden.
   credit: "Photo: Heptazane, public domain"
   license: Public domain
+- id: salmon-spawning
+  path: /articles/salmon-spawning/
+  title: Salmon on the Eastside
+  image: /assets/images/issaquah/salmon-hatchery.webp
+  alt: The Issaquah Salmon Hatchery, a long building with a gray roof beside a creek, with yellow trees in front.
+  credit: "Photo: Chris Light, CC BY-SA 4.0"
+  license: CC BY-SA 4.0
+- id: no-school-day-ideas
+  path: /articles/no-school-day-ideas/
+  title: No-school day ideas
+  image: /assets/images/guides/inspiration.jpg
+  alt: Play structure with slides and climbing nets at Inspiration Playground in Bellevue Downtown Park.
+  credit: "Photo: City of Bellevue"
+  license: organizer
+- id: toddler-friendly-outings
+  path: /articles/toddler-friendly-outings/
+  title: Toddler outings
+  image: /assets/images/guides/crossroads.jpg
+  alt: Play structure and slides at Crossroads Park in Bellevue.
+  credit: "Photo: City of Bellevue"
+  license: organizer
+- id: best-playgrounds
+  path: /articles/best-playgrounds/
+  title: Best playgrounds
+  image: /assets/images/guides/grass-lawn.jpg
+  alt: Play structure and swings at Grass Lawn Park in Redmond.
+  credit: "Photo: HominyGrits007, CC BY-SA 4.0"
+  license: CC BY-SA 4.0
+- id: birthday-party-places
+  path: /articles/birthday-party-places/
+  title: Birthday party places
+  image: /assets/images/bellevue/kidsquest.webp
+  alt: Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance.
+  credit: "Photo: Julian Fong, CC BY-SA 4.0"
+  license: CC BY-SA 4.0
+- id: easy-hikes-with-kids
+  path: /articles/easy-hikes-with-kids/
+  title: Easy hikes with kids
+  image: /assets/images/hikes/snoqualmie-falls.webp
+  alt: Snoqualmie Falls, a wide waterfall dropping into a gorge with mist at the bottom.
+  credit: "Photo: Kurt Kaiser, CC0"
+  license: CC0

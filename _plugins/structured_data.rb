@@ -399,6 +399,7 @@ module EastsideCalendar
     def list_name(page)
       return "Upcoming events in #{city_name(page)}" if page.data["layout"].to_s == "city"
       return "Free events coming up" if page.data["article_id"].to_s == "free-things-to-do"
+      return "Toddler events coming up" if page.data["article_id"].to_s == "toddler-friendly-outings"
 
       page.data["title"].to_s
     end
@@ -433,7 +434,8 @@ module EastsideCalendar
     def event_page?(page)
       layout = page.data["layout"].to_s
       return true if layout == "city" || layout == "seasonal"
-      return true if page.data["article_id"].to_s == "free-things-to-do"
+      id = page.data["article_id"].to_s
+      return true if id == "free-things-to-do" || id == "toddler-friendly-outings"
 
       false
     end
@@ -737,6 +739,109 @@ module EastsideCalendar
       page.data["visible_events"] = picked
     end
 
+    def attach_toddler_events(site)
+      page = site.pages.find { |item| item.data["article_id"].to_s == "toddler-friendly-outings" }
+      return unless page
+
+      pages = SeasonalHubs.city_pages(site)
+      catalog = SeasonalHubs.card_catalog(pages)
+      venues = Array(site.data.dig("venue_images", "venues"))
+      names = {}
+      Array(site.data["cities"]).each do |row|
+        next unless row.is_a?(Hash)
+
+        names[row["id"].to_s] = row["name"].to_s
+      end
+      today = EventCalendar.pacific_today(site.time)
+      root = origin(site)
+      rows = []
+      site.data.each do |key, records|
+        name = key.to_s
+        next unless name.end_with?("_events")
+        next if name == "worth_the_drive_events"
+
+        city_id = name.sub(/_events\z/, "")
+        city_name = names[city_id].to_s
+        next if city_name.empty?
+
+        Array(records).each do |event|
+          next unless event.is_a?(Hash)
+          next unless event["ages"].to_s.strip == "Toddlers"
+
+          row = SeasonalHubs.event_row(event, city_id, city_name, root)
+          next unless SeasonalHubs.upcoming_row?(row, today)
+
+          card = SeasonalHubs.find_card(catalog, row)
+          blurb = card && card[:blurb].to_s.strip
+          next if blurb.nil? || blurb.empty?
+
+          photo = photo_for(card, row, venues)
+          next unless photo
+
+          row["blurb"] = blurb
+          row["description"] = blurb
+          row["image"] = photo["src"]
+          row["alt"] = photo["alt"].to_s
+          row["image_alt"] = photo["alt"].to_s
+          row["credit"] = photo["credit"].to_s
+          row["image_credit"] = photo["credit"].to_s
+          row["image_source"] = photo["source"].to_s
+          rows << row
+        end
+      end
+      rows.sort_by! { |row| [row["sort"].to_s, row["city"].to_s, row["name"].to_s] }
+      seen = {}
+      picked = []
+      rows.each do |row|
+        key = "#{row["city_id"]}|#{EventCalendar.normalize(row["name"])}|#{row["sort"]}"
+        next if seen[key]
+
+        seen[key] = true
+        picked << row
+        break if picked.length >= 12
+      end
+      page.data["toddler_events"] = picked
+      page.data["visible_events"] = picked
+    end
+
+    def attach_playground_places(site)
+      page = site.pages.find { |item| item.data["article_id"].to_s == "best-playgrounds" }
+      return unless page
+
+      groups = site.data.dig("guides", "playgrounds", "groups")
+      places = []
+      Array(groups).each do |group|
+        next unless group.is_a?(Hash)
+
+        Array(group["entries"]).each do |entry|
+          next unless entry.is_a?(Hash)
+
+          text = entry["text"].to_s.strip
+          blurb = text.split(/(?<=[.!?])\s+/, 2).first.to_s.strip
+          next if blurb.empty?
+
+          street = entry["address"].to_s.split(",").first.to_s.strip
+          href = entry["page"].to_s.strip
+          next if href.empty?
+
+          places << {
+            "name" => entry["name"].to_s,
+            "blurb" => blurb,
+            "place" => street,
+            "city" => group["city"].to_s,
+            "city_id" => group["id"].to_s,
+            "href" => href,
+            "external" => true,
+            "image" => entry["image"].to_s,
+            "alt" => entry["alt"].to_s,
+            "credit" => entry["credit"].to_s,
+            "image_source" => entry["source"].to_s
+          }
+        end
+      end
+      page.data["places"] = places
+    end
+
     def photo_for(card, row, venues)
       if card && card[:photo].is_a?(Hash)
         own = SeasonalHubs.licensed_photo(card[:photo])
@@ -752,6 +857,8 @@ module EastsideCalendar
 
     def generate(site)
       StructuredData.attach_free_events(site)
+      StructuredData.attach_toddler_events(site)
+      StructuredData.attach_playground_places(site)
     end
   end
 end

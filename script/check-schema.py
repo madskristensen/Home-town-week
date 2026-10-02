@@ -215,6 +215,7 @@ EVENT_HUBS = (
     "worth-the-drive/index.html",
     "this-weekend/index.html",
     "articles/free-things-to-do/index.html",
+    "articles/toddler-friendly-outings/index.html",
 )
 
 

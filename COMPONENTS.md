@@ -14,7 +14,7 @@ Card and page markup lives in one include each. Pages, layouts, and the city cal
 | `_includes/empty-suggest.html` | Empty-state suggestion. The playground line links to `/playgrounds/`, with `?town=` on a city page. `mode="button"` renders only the Suggest an event or calendar link. `mode="line"` is the small muted mailto line on the missing page. |
 | `_includes/playground-promo.html` | Compact playground card on a city page. Links to `/playgrounds/?town={id}`. |
 | `_includes/playground-directory.html` | Playground list. The name line holds the star and the amenity badges. A legend under the heading uses the same badges. |
-| `_includes/lights-feature.html` | Seasonal promo for the lights or decorations map. |
+| `_includes/lights-feature.html` | Promo for the lights, decorations, or playgrounds map. `theme` picks the copy and the pin set. |
 | `_includes/map-frame.html` | Map poster and canvas. Includes the shared loader unless `loader` is `false`. |
 | `_includes/map-tip.html` | One short muted line. Under a lights or decorations map, pass `href` and the line is "Know a display we're missing? Tip us off." `kind="missing"` is "Missing something? Tell us." and uses the same Suggest an event mailto as the footer. Hub pages and explore pages include that line once, at the end of the article. The farmers market page does not also put a tip under the map. |
 | `_includes/map-loader.html` | `loadMapCss` and `loadMapJs`. |

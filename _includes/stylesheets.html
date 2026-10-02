@@ -17,6 +17,9 @@
 {%- if page.layout == "home" and css_season == "/christmas/" -%}
 {%- assign css_feature = true -%}
 {%- endif -%}
+{%- if page.feature_theme -%}
+{%- assign css_feature = true -%}
+{%- endif -%}
 {%- capture layout_css -%}
 {%- if page.layout == "home" -%}{{ site.data.css_inline.home }}{%- endif -%}
 {%- if page.layout == "city" -%}{{ site.data.css_inline.city }}{%- endif -%}

@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Articles
-description: Evergreen guides for Eastside families, including rainy-day indoor plans and free things to do with kids around Bellevue and Kirkland.
+description: Evergreen guides for Eastside families, from rainy-day plans and free outings to salmon, playgrounds, and easy hikes.
 intro: Evergreen guides for Eastside families. Each one links back to the city pages.
 article_index: true
 permalink: /articles/

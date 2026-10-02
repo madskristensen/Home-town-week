@@ -1,12 +1,15 @@
 {%- comment -%}
-  Eastside map for a seasonal feature card.
+  Eastside map for a feature card.
   theme: "halloween" draws a pumpkin at each decorations pin.
-  Anything else draws the round lights-map pin at each Christmas lights pin.
+  "playgrounds" draws the round pin at each starred playground.
+  Anything else draws the round pin at each Christmas lights pin.
   Positions are computed at build time in home_lights.rb.
 {%- endcomment -%}
 {%- assign feature_theme = include.theme | append: "" -%}
 {%- if feature_theme == "halloween" -%}
 {%- assign feature_pins = site.data.feature_map_pins.halloween -%}
+{%- elsif feature_theme == "playgrounds" -%}
+{%- assign feature_pins = site.data.feature_map_pins.playgrounds -%}
 {%- else -%}
 {%- assign feature_pins = site.data.feature_map_pins.christmas -%}
 {%- endif -%}

@@ -3,6 +3,9 @@ layout: default
 ---
 <article class="page wrap article-page">
   <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
+  {%- if page.feature_theme -%}
+  {%- include lights-feature.html theme=page.feature_theme -%}
+  {%- endif -%}
   {%- include page-intro.html text=page.intro -%}
   <div class="prose">
     {{ content }}
