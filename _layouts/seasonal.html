@@ -25,7 +25,7 @@ layout: default
 </article>
 {%- elsif page.explore_id == "no-school-days" -%}
 <article class="page wrap hub-page no-school-page">
-  <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
+  <h1><a href="{{ page.url | relative_url }}">{{ page.heading | default: page.title }}</a></h1>
   {%- include page-intro.html text=page.intro -%}
   <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   {%- assign school = site.data.no_school_page -%}

@@ -107,7 +107,7 @@ The missing page uses that same choice for its seasonal tile. `404.html` does no
 
 Each row needs a name, city id, address, start, end, a date phrase in `when`, the ticket URL in `source`, a blurb, and a real photo. Price stays in the blurb as plain text. Do not set `cost`. That field becomes a price tag. `ticket_line` is the date-line sentence when tickets are not simply on sale, such as "Tickets go on sale soon." `tickets_on` is the sale date. When that date is still ahead, the card says tickets go on sale that day. Otherwise the card says tickets are on sale now. When the organizer says an event is sold out, set `sold_out: true` or delete the row. The daily prune deletes a sold-out row and a row whose end is before today in America/Los_Angeles. The build also leaves those rows off the page. Verify dates, price, and ticket status on the organizer's ticket page. Photos are CC0, CC BY, CC BY-SA, or public domain, or an organizer photo credited `Photo: <name>` with `license: organizer`. No recognizable kids. Blurbs are our own words. No em dashes.
 
-## No-school days
+## School calendars
 
 `/no-school-days/` lists student no-school days for the ten Eastside districts in the 2026-27 year. The rows are `_data/no_school_days.yml`. Do not put them in a city events file. The spring break hub reads its April dates from the `break` rows in that file. Do not copy those dates back into `_data/seasonal_hubs.yml`.
 

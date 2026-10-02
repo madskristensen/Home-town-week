@@ -73,7 +73,7 @@ places:
     image_source: https://commons.wikimedia.org/wiki/File:Kelsey_Creek_Farm_04.jpg
 ---
 
-District days are on [No-school days](/no-school-days/).
+District days are on [School calendars](/no-school-days/).
 
 When the weather holds, start with a playground. The [playgrounds map](/playgrounds/) has the standouts, with parking and restrooms called out on the park pages.
 
