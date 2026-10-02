@@ -1,0 +1,7 @@
+{%- comment -%}
+  Quiet Atom link beside the calendar subscribe control.
+{%- endcomment -%}
+{%- assign feed_href = page.atom_feed | append: "" | strip -%}
+{%- if feed_href.size > 0 -%}
+<p class="feed-note"><a href="{{ feed_href | relative_url }}" type="application/atom+xml">Feed</a></p>
+{%- endif -%}

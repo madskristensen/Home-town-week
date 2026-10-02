@@ -21,7 +21,7 @@ Newcastle is an Eastside city that does not have a page yet. Do not invent a pag
 | Book ahead | `/book-ahead/` |
 | No-school days | `/no-school-days/` |
 | Articles | `/articles/` |
-| Feed | `/feed.xml` |
+| Feed | `/feed.xml`, plus `/{city}/feed.xml` and a feed for each hub and explore page that lists events |
 | LLM guide | `/llms.txt` |
 
 `llms.txt` is written at build time from `_data/cities.yml`, `_data/seasonal_hubs.yml`, and a line for `/worth-the-drive/`. It lists each city page, the about page, each seasonal hub, Worth the drive, and the sitemap. It says the blurbs are original and link to sources. It does not include upcoming-event counts. Do not maintain it by hand.

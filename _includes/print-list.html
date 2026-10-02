@@ -1,0 +1,12 @@
+{%- comment -%}
+  Print button for a one-page checklist. Hidden when printing.
+{%- endcomment -%}
+<p class="check-actions"><button type="button" class="print-list">Print this list</button></p>
+<script>
+(function () {
+  var slot = document.currentScript && document.currentScript.previousElementSibling;
+  var button = slot && slot.querySelector(".print-list");
+  if (!button) return;
+  button.addEventListener("click", function () { window.print(); });
+})();
+</script>

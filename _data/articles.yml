@@ -1,4 +1,11 @@
 # Evergreen guides. The /articles/ page renders these with card-grid.
+- name: Fall family bucket list
+  blurb: Pumpkin patches, salmon, corn mazes, and Halloween, in a list you can print.
+  href: /articles/fall-bucket-list/
+  image: /assets/images/bellevue/botanical-garden.webp
+  alt: The entrance sign and plantings at Bellevue Botanical Garden.
+  credit: "Photo: Heptazane, public domain"
+  image_source: https://commons.wikimedia.org/wiki/File:Bellevue_Botanical_Garden_Entrance.jpg
 - name: Rainy day activities for kids on the Eastside
   blurb: Indoor play, libraries, museums, and pools when the weather turns.
   href: /articles/rainy-day-indoor-play/

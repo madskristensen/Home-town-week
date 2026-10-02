@@ -48,12 +48,14 @@ layout: default
     <h2>Upcoming</h2>
     <p id="list-updated" class="list-updated">Events updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
     {%- include calendar-subscribe.html city=page.city name=city.name -%}
+    {%- include feed-note.html -%}
     {%- include event-filters.html -%}
     {{ content }}
   </div>
   {%- else -%}
   <p id="list-updated" class="list-updated">Events updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   {%- include calendar-subscribe.html city=page.city name=city.name -%}
+  {%- include feed-note.html -%}
   {%- include empty-suggest.html topic=city.name name=city.name -%}
   {%- endif -%}
   {%- if event_copy != "" -%}

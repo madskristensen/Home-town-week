@@ -44,6 +44,8 @@ places:
     image_source: https://commons.wikimedia.org/wiki/File:2022-05-28,_Bear_Creek_Park,_Redmond,_Washington,_10.jpg
 ---
 
+The hatchery, the Cedar River, and Bear Creek are on the [fall family bucket list](/articles/fall-bucket-list/) too, if you want one page to check off.
+
 The [Issaquah Salmon Hatchery](https://www.issaquahfish.org/) at 125 W Sunset Way is open dawn to dusk, and admission is free. [Friends of the Issaquah Salmon Hatchery](https://www.issaquahfish.org/fall/) say chinook show up in late August, with the bulk of that run from mid-September through mid-October. Coho run from late September through late November, and a few sockeye appear from late September through October. Fish are visible from the bridge over Issaquah Creek and through the glass on the ladder. The indoor windows, aquarium, and theater are generally open about 8:30 a.m. to 4 p.m. Tuesday morning spawning, when staff take eggs from the fish, is not a stop for small children. Watch from the bridge and the windows instead. Hours and the visit plan are on the [hatchery site](https://www.issaquahfish.org/plan-your-visit/).
 
 [Salmon Days](https://www.salmondays.org/) is the downtown Issaquah festival during the fall run. The festival site posts this year's days and hours. The hatchery is still the place to see the fish.

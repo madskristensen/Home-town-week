@@ -216,6 +216,9 @@ layout: default
   {%- include lights-feature.html theme="halloween" -%}
   {%- endif -%}
   {%- include page-intro.html text=hub.intro -%}
+  {%- if page.hub_id == "fall" -%}
+  <p class="hub-section-intro">Want something to check off together? <a href="{{ '/articles/fall-bucket-list/' | relative_url }}">The fall family bucket list</a> is a one-page list you can print.</p>
+  {%- endif -%}
   <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   {%- assign suggest_lead = hub.suggest_lead | append: "" -%}
   {%- if suggest_lead.size > 0 -%}
