@@ -44,7 +44,7 @@ places:
     image_source: https://commons.wikimedia.org/wiki/File:2022-05-28,_Bear_Creek_Park,_Redmond,_Washington,_10.jpg
 ---
 
-The hatchery, the Cedar River, and Bear Creek are on the [fall family bucket list](/articles/fall-bucket-list/) too, if you want one page to check off.
+These three stops are also on the [fall family bucket list](/fall/bucket-list/).
 
 The [Issaquah Salmon Hatchery](https://www.issaquahfish.org/) at 125 W Sunset Way is open dawn to dusk, and admission is free. [Friends of the Issaquah Salmon Hatchery](https://www.issaquahfish.org/fall/) say chinook show up in late August, with the bulk of that run from mid-September through mid-October. Coho run from late September through late November, and a few sockeye appear from late September through October. Fish are visible from the bridge over Issaquah Creek and through the glass on the ladder. The indoor windows, aquarium, and theater are generally open about 8:30 a.m. to 4 p.m. Tuesday morning spawning, when staff take eggs from the fish, is not a stop for small children. Watch from the bridge and the windows instead. Hours and the visit plan are on the [hatchery site](https://www.issaquahfish.org/plan-your-visit/).
 
@@ -55,5 +55,32 @@ The City of Bothell's [Salmon SEEson](https://bothellwa.gov/1412/Salmon-SEEson) 
 The Cedar River in Renton is a fall viewing river. The [Seattle Aquarium](https://www.seattleaquarium.org/explore-the-aquarium/programs/cedar-river-salmon-journey/) stations naturalists along it in October, including at the Renton Library and Cedar River Park. That page has this year's days. Do not treat one weekend's schedule as the whole season.
 
 [Bear Creek](https://www.redmond.gov/2049/Streams-and-Habitat) in Redmond holds chinook, coho, sockeye, and kokanee. The city says the places to look are the Sammamish River, Bear Creek, and the tributaries. The state's fish trap on Bear Creek, below Redmond Way, runs from January through June. That trap is monitoring, not the fall viewing.
+
+<div class="check-sheet salmon-sheet">
+<h2>Where to go</h2>
+<ul class="check-list">
+  <li><input id="salmon-1" type="checkbox"><label for="salmon-1"><a href="https://www.issaquahfish.org/">Issaquah Salmon Hatchery</a>, from the bridge and the windows</label></li>
+  <li><input id="salmon-2" type="checkbox"><label for="salmon-2"><a href="/renton/#cedar-river-salmon-journey-at-cedar-river-park">Cedar River</a> in Renton, including Cedar River Park</label></li>
+  <li><input id="salmon-3" type="checkbox"><label for="salmon-3">Bear Creek in Redmond, along the park and the tributaries</label></li>
+</ul>
+<h2>What to look for</h2>
+<ul class="check-list">
+  <li><input id="salmon-4" type="checkbox"><label for="salmon-4">Chinook, from late summer into mid-October</label></li>
+  <li><input id="salmon-5" type="checkbox"><label for="salmon-5">Coho, from late September through November</label></li>
+  <li><input id="salmon-6" type="checkbox"><label for="salmon-6">A few sockeye, from late September through October</label></li>
+  <li><input id="salmon-7" type="checkbox"><label for="salmon-7">Kokanee, from mid-October into early December</label></li>
+  <li><input id="salmon-8" type="checkbox"><label for="salmon-8">A redd, the pale patch of gravel where the fish have dug</label></li>
+  <li><input id="salmon-9" type="checkbox"><label for="salmon-9">Fish holding over that gravel</label></li>
+  <li><input id="salmon-13" type="checkbox"><label for="salmon-13">Spawning color: sockeye and kokanee turn red with a green head, coho redden on the sides, and chinook stay olive to dark</label></li>
+</ul>
+<h2>Before you go</h2>
+<ul class="check-list">
+  <li><input id="salmon-10" type="checkbox"><label for="salmon-10">Skip the Tuesday morning egg take. Watch from the bridge and the windows.</label></li>
+  <li><input id="salmon-11" type="checkbox"><label for="salmon-11">The Bear Creek trap below Redmond Way runs January through June. It is not the fall viewing.</label></li>
+  <li><input id="salmon-12" type="checkbox"><label for="salmon-12">A naturalist weekend on the Cedar River is not the whole season.</label></li>
+</ul>
+<p class="check-print-foot">Eastside Family Calendar · eastsidecalendar.com/articles/salmon-spawning/</p>
+{% include print-list.html %}
+</div>
 
 {% include card-grid.html events=page.places show_city=true eager=2 priority=true %}

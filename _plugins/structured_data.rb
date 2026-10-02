@@ -169,6 +169,12 @@ module EastsideCalendar
         items = [home, { "name" => name, "item" => "#{root}#{url}" }] unless name.empty?
       elsif page.data["article_index"]
         items = [home, { "name" => "Articles", "item" => "#{root}#{url}" }]
+      elsif page.data["layout"].to_s == "article" && url.start_with?("/fall/")
+        items = [
+          home,
+          { "name" => "Fall", "item" => "#{root}/fall/" },
+          { "name" => page.data["title"].to_s, "item" => "#{root}#{url}" }
+        ]
       elsif page.data["layout"].to_s == "article"
         items = [
           home,

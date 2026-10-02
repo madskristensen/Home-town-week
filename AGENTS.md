@@ -89,7 +89,7 @@ Grouped cards always use `_includes/card-grid.html`. It renders each item with `
 
 ## Articles
 
-`/articles/` lists evergreen guides. Each guide is its own page and uses the same card grid. The guides are rainy-day indoor places, free things to do with kids, salmon spawning, a printable fall family bucket list, no-school day ideas, toddler outings, starred playgrounds, birthday party places, and easy hikes. The free guide adds the next Free-tagged events from the city files at build time. The toddler guide does the same for events tagged Toddlers. The playground guide is built from the starred playgrounds and opens with the playgrounds map card. Link the organizer's own page. Use a real licensed or credited photo of that place. Do not cite a lead site. No em dashes. The footer Explore group links Articles. The header does not.
+`/articles/` lists evergreen guides. Each guide is its own page and uses the same card grid. The guides are rainy-day indoor places, free things to do with kids, salmon spawning, no-school day ideas, toddler outings, starred playgrounds, birthday party places, and easy hikes. `/fall/bucket-list/` is the printable fall checklist. The salmon article includes a printable spotting checklist. The free guide adds the next Free-tagged events from the city files at build time. The toddler guide does the same for events tagged Toddlers. The playground guide is built from the starred playgrounds and opens with the playgrounds map card. Link the organizer's own page. Use a real licensed or credited photo of that place. Do not cite a lead site. No em dashes. The footer Explore group links Articles. The header does not.
 
 ## Seasonal banner
 
