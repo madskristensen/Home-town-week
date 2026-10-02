@@ -1,8 +1,8 @@
 ---
 layout: article
 title: Toddler-friendly outings on the Eastside
-description: Short outings for toddlers on the Eastside, including tot lots and libraries, plus upcoming events tagged Toddlers.
-intro: Short stops that work with a toddler, and the next events tagged Toddlers.
+description: Short outings for toddlers on the Eastside, from tot lots and libraries to programs for kids under 5.
+intro: Keep it short. A tot lot, a library, or the farm, and a way to leave when everyone is done.
 article_id: toddler-friendly-outings
 permalink: /articles/toddler-friendly-outings/
 date: 2026-10-02
@@ -77,13 +77,11 @@ places:
     image_source: https://commons.wikimedia.org/wiki/File:Kelsey_Creek_Farm_04.jpg
 ---
 
-A toddler outing should be short, with a place to stop when it is enough. The tot lots at Inspiration Playground and Crossroads Park are built for ages 2 to 5, and both have parking close to the play area. A library or KidsQuest covers the same kind of trip when it is raining.
-
-[Inspiration Playground](https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/bellevue-downtown-park) is the play space at Bellevue Downtown Park. The city says the tot lot is for ages 2 to 5 and the larger playground is for ages 5 to 12. [Crossroads Park](https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/crossroads-park) has the same split. The rest of the starred playgrounds are on the [playgrounds map](/playgrounds/).
+The tot lots at [Inspiration Playground](https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/bellevue-downtown-park) and [Crossroads Park](https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/crossroads-park) are for ages 2 to 5, with a bigger playground beside each one and parking close to the play area. When it rains, KidsQuest and Bellevue Library are the same kind of short trip. More playgrounds are on the [playgrounds map](/playgrounds/).
 
 [KidsQuest Children's Museum](https://www.kidsquestmuseum.org/) at 1116 108th Ave NE is indoor and built for younger kids. [Bellevue Library](https://kcls.org/locations/bellevue/) next door is free to walk into. [Kelsey Creek Farm](https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm) does not charge admission or parking. [Bellevue Botanical Garden](https://bellevuebotanical.org/) is a short walk, not a hike.
 
-Events tagged Toddlers on the city calendars are listed below when one is coming up. That tag is for the under-5 crowd. A program marked All ages is not added here.
+Programs for kids under 5 are listed below when one is coming up.
 
 {% include card-grid.html events=page.places show_city=true eager=2 priority=true %}
 
@@ -91,7 +89,7 @@ Events tagged Toddlers on the city calendars are listed below when one is coming
 {% if toddler_count > 0 %}
 ## Toddler events coming up
 
-These are the next events tagged Toddlers on the city calendars. The list changes as events are added and as they end.
+Story times and other programs for little kids. The list changes as they end.
 
 {% include card-grid.html events=page.toddler_events show_city=true eager=0 %}
 {% endif %}

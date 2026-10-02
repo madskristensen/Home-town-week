@@ -2,7 +2,7 @@
 layout: article
 title: Easy hikes with kids on and near the Eastside
 description: Easy hikes with kids on and near the Eastside, with distance, elevation, stroller notes, and whether a parking pass is required.
-intro: Short trails on and near the Eastside. Distances and elevation are the figures the land manager publishes.
+intro: Short trails you can do with kids, from a stroller walk at Snoqualmie Falls to the climb at Rattlesnake Ledge.
 article_id: easy-hikes-with-kids
 permalink: /articles/easy-hikes-with-kids/
 date: 2026-10-02
@@ -77,11 +77,11 @@ places:
     image_source: https://commons.wikimedia.org/wiki/File:Rattlesnake_Ledge,_United_States.jpg
 ---
 
-The easiest walk in this set is the upper viewpoint at Snoqualmie Falls. The two that feel like hikes, Twin Falls and Rattlesnake Ledge, are still short, and both need a Discover Pass. Coal Creek, Cougar Mountain, and Tradition Lake are the closer Eastside trails. Where a land manager does not publish a distance or an elevation gain, that number is left off.
+Snoqualmie Falls is the easy one. The upper viewpoint works with a stroller. Twin Falls and Rattlesnake Ledge are real hikes, still short, and both need a Discover Pass. Coal Creek, Cougar Mountain, and Tradition Lake are closer to home.
 
 [Snoqualmie Falls](https://www.snoqualmiefalls.com/) at 6501 Railroad Ave SE is open from sunrise to sunset, and admission is free. The falls drop 270 feet. The [upper platform](https://www.snoqualmiefalls.com/hiking/) is about 200 feet from the upper lot and is wheelchair accessible, so a stroller works there. The lower trail drops 250 feet. The site says the walk down is about 15 minutes and the climb back is steep, and it is not accessible. There is no Discover Pass. The upper lot is paid. A lot across the street, reached by the pedestrian bridge, is free. Picnic tables are on site. Barbecues are not.
 
-[Tradition Lake](https://dnr.wa.gov/natural-areas/natural-resources-conservation-areas/west-tiger-mountain-natural-resources-conservation-area) sits on Tradition Plateau, reached from the High Point trailhead. DNR describes an accessible interpretive loop there, which is the stroller option. The trails out to the lake are not a stroller walk. A Discover Pass is required. DNR does not publish one loop length for the lake, so this page does not invent one. The City of Issaquah co-manages the plateau.
+[Tradition Lake](https://dnr.wa.gov/natural-areas/natural-resources-conservation-areas/west-tiger-mountain-natural-resources-conservation-area) sits on Tradition Plateau, reached from the High Point trailhead. DNR describes an accessible interpretive loop there, which is the stroller option. The trails out to the lake are not a stroller walk. A Discover Pass is required. DNR does not publish one loop length for the lake. The City of Issaquah co-manages the plateau.
 
 [Coal Creek Natural Area](https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/nature-trails/coal-creek-natural-area) has 4.5 miles of trails. The Cinder Mine trailhead is on Newcastle Golf Club Road. The city does not publish an elevation gain, and it does not describe the trails as stroller-friendly. No Discover Pass is required. Red Cedar Trailhead is closed through 2031 for King County sewer work. Use a trailhead the city still lists as open.
 

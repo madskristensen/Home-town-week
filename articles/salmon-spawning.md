@@ -2,7 +2,7 @@
 layout: article
 title: Where to see salmon spawning on the Eastside
 description: Where to see salmon spawning on the Eastside, from the Issaquah hatchery to the Cedar River in Renton and Bear Creek in Redmond.
-intro: The fall run is when Eastside creeks fill with salmon. These are the stops families use.
+intro: Chinook come in late summer, then coho. The hatchery, the Cedar River, and Bear Creek are where families go to watch.
 article_id: salmon-spawning
 permalink: /articles/salmon-spawning/
 date: 2026-10-02
@@ -43,8 +43,6 @@ places:
     credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
     image_source: https://commons.wikimedia.org/wiki/File:2022-05-28,_Bear_Creek_Park,_Redmond,_Washington,_10.jpg
 ---
-
-Chinook arrive first. Coho follow them. The Issaquah hatchery is the easiest place to watch, and the Cedar River in Renton and Bear Creek in Redmond are the other stops that stay useful through the fall.
 
 The [Issaquah Salmon Hatchery](https://www.issaquahfish.org/) at 125 W Sunset Way is open dawn to dusk, and admission is free. [Friends of the Issaquah Salmon Hatchery](https://www.issaquahfish.org/fall/) say chinook show up in late August, with the bulk of that run from mid-September through mid-October. Coho run from late September through late November, and a few sockeye appear from late September through October. Fish are visible from the bridge over Issaquah Creek and through the glass on the ladder. The indoor windows, aquarium, and theater are generally open about 8:30 a.m. to 4 p.m. Tuesday morning spawning, when staff take eggs from the fish, is not a stop for small children. Watch from the bridge and the windows instead. Hours and the visit plan are on the [hatchery site](https://www.issaquahfish.org/plan-your-visit/).
 

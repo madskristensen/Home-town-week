@@ -2,7 +2,7 @@
 layout: article
 title: What to do on no-school days
 description: What to do with kids on no-school days on the Eastside. Playgrounds, libraries, museums, and parks, with the dates kept on the district page.
-intro: Weekday ideas that do not depend on a school bell, and a link to the page that lists the days.
+intro: A weekday off is a long one. A playground, a library, or a short stop at the farm will fill it.
 article_id: no-school-day-ideas
 permalink: /articles/no-school-day-ideas/
 date: 2026-10-02
@@ -73,11 +73,11 @@ places:
     image_source: https://commons.wikimedia.org/wiki/File:Kelsey_Creek_Farm_04.jpg
 ---
 
-The days themselves are on [No-school days](/no-school-days/). That page follows the district calendars. This page is what to do once you already have the day off. It does not list dates.
+District days are on [No-school days](/no-school-days/).
 
 When the weather holds, start with a playground. The [playgrounds map](/playgrounds/) has the standouts, with parking and restrooms called out on the park pages.
 
-A library is the indoor default, and walking in is free. [Bellevue Library](https://kcls.org/locations/bellevue/) and [Kirkland Library](https://kcls.org/locations/kirkland/) both have children's rooms. Story times for the week you are in show up on the city pages, not as a standing list here.
+A library is the indoor default, and walking in is free. [Bellevue Library](https://kcls.org/locations/bellevue/) and [Kirkland Library](https://kcls.org/locations/kirkland/) both have children's rooms. This week's story times are on the city pages.
 
 [KidsQuest Children's Museum](https://www.kidsquestmuseum.org/) at 1116 108th Ave NE is the indoor play stop in downtown Bellevue, next to the library. Check the museum site for hours and tickets. [Bellevue Aquatic Center](https://bellevuewa.gov/city-government/departments/parks/sports-and-athletics/bellevue-aquatic-center) at 601 143rd Ave NE is the indoor pool if the kids want water. The city posts the day's hours.
 
