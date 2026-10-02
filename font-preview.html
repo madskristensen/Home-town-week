@@ -334,6 +334,34 @@ title: Wordmark preview
   <div class="wrap"><p class="preview-label"><span class="preview-ask">37. ui-serif, Iowan Old Style, Charter, Sitka Text, Cambria, Georgia</span> <span class="preview-face">Checking the rendered face…</span></p></div>
   {%- include header.html -%}
 </section>
+<div class="wrap preview-group-wrap">
+  <h2 class="preview-group">Handwritten system fonts</h2>
+  <p class="preview-group-note">Live text, not outlines. The first row is the full stack, in that order. Each named face is followed by cursive. The line under the header names the face that actually painted.</p>
+</div>
+<section class="preview-row" data-kind="text" data-n="38" data-stack='"Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual, cursive' data-faces="Segoe Print|Bradley Hand|Chilanka|TSCu_Comic" style='--preview-font: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual, cursive'>
+  <div class="wrap"><p class="preview-label"><span class="preview-ask">38. Segoe Print, Bradley Hand, Chilanka, TSCu_Comic, casual, cursive</span> <span class="preview-face">Checking the rendered face…</span></p></div>
+  {%- include header.html -%}
+</section>
+<section class="preview-row" data-kind="text" data-n="39" data-stack='"Segoe Print", cursive' data-faces="Segoe Print" style='--preview-font: "Segoe Print", cursive'>
+  <div class="wrap"><p class="preview-label"><span class="preview-ask">39. Segoe Print (Windows)</span> <span class="preview-face">Checking the rendered face…</span></p></div>
+  {%- include header.html -%}
+</section>
+<section class="preview-row" data-kind="text" data-n="40" data-stack='"Bradley Hand", cursive' data-faces="Bradley Hand" style='--preview-font: "Bradley Hand", cursive'>
+  <div class="wrap"><p class="preview-label"><span class="preview-ask">40. Bradley Hand (macOS/iOS)</span> <span class="preview-face">Checking the rendered face…</span></p></div>
+  {%- include header.html -%}
+</section>
+<section class="preview-row" data-kind="text" data-n="41" data-stack='Chilanka, cursive' data-faces="Chilanka" style='--preview-font: Chilanka, cursive'>
+  <div class="wrap"><p class="preview-label"><span class="preview-ask">41. Chilanka (Linux)</span> <span class="preview-face">Checking the rendered face…</span></p></div>
+  {%- include header.html -%}
+</section>
+<section class="preview-row" data-kind="text" data-n="42" data-stack='TSCu_Comic, cursive' data-faces="TSCu_Comic" style='--preview-font: TSCu_Comic, cursive'>
+  <div class="wrap"><p class="preview-label"><span class="preview-ask">42. TSCu_Comic (Linux)</span> <span class="preview-face">Checking the rendered face…</span></p></div>
+  {%- include header.html -%}
+</section>
+<section class="preview-row" data-kind="text" data-n="43" data-stack='casual' data-faces="" style='--preview-font: casual'>
+  <div class="wrap"><p class="preview-label"><span class="preview-ask">43. casual (Android, Coming Soon)</span> <span class="preview-face">Checking the rendered face…</span></p></div>
+  {%- include header.html -%}
+</section>
 
 </main>
 <template id="svg-p-instrument">
@@ -511,8 +539,9 @@ title: Wordmark preview
     if (list.length === 2) return list[0] + " and " + list[1];
     return list.slice(0, -1).join(", ") + ", and " + list[list.length - 1];
   }
-  var generics = { serif: 1, "sans-serif": 1, "ui-serif": 1, "ui-sans-serif": 1, "ui-rounded": 1, "system-ui": 1, cursive: 1, fantasy: 1, monospace: 1 };
+  var generics = { serif: 1, "sans-serif": 1, "ui-serif": 1, "ui-sans-serif": 1, "ui-rounded": 1, "system-ui": 1, cursive: 1, casual: 1, fantasy: 1, monospace: 1 };
   var identifyOrder = ["New York", "New York Medium", "Iowan Old Style", "Charter", "Didot", "Hoefler Text", "Baskerville", "Baskerville Old Face", "Palatino", "Sitka Heading", "Sitka Text", "Cambria", "Constantia", "Palatino Linotype", "Book Antiqua", "Georgia", "Noto Serif", "Liberation Serif", "Times New Roman", "Times", "DejaVu Serif"];
+  var handOrder = ["Segoe Print", "Bradley Hand", "Bradley Hand ITC", "Chilanka", "TSCu_Comic", "Coming Soon", "Comic Sans MS", "Segoe Script", "Ink Free", "Lucida Handwriting", "Apple Chancery", "Snell Roundhand", "Marker Felt", "Chalkboard SE", "Noteworthy", "Savoye LET"];
   function specFor(name) {
     if (generics[name.toLowerCase()]) return "48px " + name.toLowerCase();
     return '48px "' + name + '"';
@@ -532,9 +561,16 @@ title: Wordmark preview
     var named = parts.filter(function (part) { return !generics[part.toLowerCase()]; });
     var probes = {};
     named.concat(identifyOrder).forEach(function (name) { probes[name] = 1; });
+    var wantsHand = parts.some(function (part) {
+      var lower = part.toLowerCase();
+      return lower === "cursive" || lower === "casual";
+    });
+    if (wantsHand) handOrder.forEach(function (name) { probes[name] = 1; });
     await Promise.all(Object.keys(probes).map(faceLoads));
     var stackSpec = "48px " + stack;
     var serifSpec = "48px serif";
+    var cursiveSpec = "48px cursive";
+    var sansSpec = "48px sans-serif";
     var chosen = "";
     var fromNamed = false;
     var genericUsed = "";
@@ -542,8 +578,17 @@ title: Wordmark preview
       var part = parts[i];
       var lower = part.toLowerCase();
       if (generics[lower]) {
-        genericUsed = lower;
         var genericSpec = specFor(lower);
+        if (!same(stackSpec, genericSpec)) continue;
+        genericUsed = lower;
+        if (lower === "cursive" || lower === "casual") {
+          var handHit = "";
+          handOrder.forEach(function (cand) {
+            if (!handHit && installed[cand] === true && same(stackSpec, specFor(cand)) && same(genericSpec, specFor(cand))) handHit = cand;
+          });
+          chosen = handHit || lower;
+          break;
+        }
         var namedHit = "";
         identifyOrder.forEach(function (cand) {
           if (!namedHit && installed[cand] === true && same(stackSpec, specFor(cand)) && same(genericSpec, specFor(cand))) namedHit = cand;
@@ -574,6 +619,14 @@ title: Wordmark preview
     var sentence = "Rendered: " + chosen + ".";
     if (genericUsed === "ui-serif" && chosen !== "ui-serif") sentence += " ui-serif resolved to this face.";
     else if (chosen === "ui-serif") sentence += " It does not match the generic serif on this device.";
+    else if (genericUsed === "casual" && chosen !== "casual") sentence += " casual resolved to this face.";
+    else if (chosen === "casual") {
+      if (same("48px casual", cursiveSpec)) sentence += " It matches cursive on this device.";
+      else if (same("48px casual", sansSpec)) sentence += " It matches the sans-serif on this device, not a handwriting face.";
+      else sentence += " It does not match cursive on this device.";
+    }
+    else if (genericUsed === "cursive" && chosen !== "cursive") sentence += " cursive resolved to this face.";
+    else if (chosen === "cursive" && same(cursiveSpec, serifSpec)) sentence += " It matches the generic serif on this device.";
     if (missing.length) sentence += " " + joinNames(missing) + (missing.length > 1 ? " are" : " is") + " not installed here.";
     if (chosen !== "generic serif" && chosen !== "an unidentified face") sentence += weightNote(chosen);
     if (row.getAttribute("data-kind") === "smallcaps") sentence += " Small caps.";
