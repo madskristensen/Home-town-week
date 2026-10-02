@@ -7,22 +7,6 @@ description: Upcoming family events in Sammamish on the Eastside.
 hook: Saturday afternoon is a codebreaking workshop at the library, and Saturday morning is a meadow work party. Thursday evening is a sewing hour for kids and adults at Beaver Lake Lodge.
 ---
 
-### Middle School and Tween Graphic Novel Club
-<p class="event-when">Thu Oct 1 · 4:00–5:00 p.m.</p>
-<p class="event-place">Sammamish Library, 825 228th Ave SE</p>
-
-Ages 11 to 14. This month's book is The Circuit, the graphic novel by Francisco Jiménez. Stay after the talk and draw your own. The library provides drawing and writing materials while they last. Registration is not required.
-
-[Graphic Novel Club](https://kcls.bibliocommons.com/events/6945dbef4be11d3d00d90b6c)
-
-### Tutors at Sammamish Library
-<p class="event-when">Thu Oct 1 · 4:00–6:00 p.m.</p>
-<p class="event-place">Sammamish Library, 825 228th Ave SE</p>
-
-Drop-in homework help for grades K–12. Look for the tutor T-shirt. The club and the tutors share the 4:00 hour. They are different stops in the building.
-
-[Tutors](https://kcls.bibliocommons.com/events/6aa06462d94765189bb9fb1a)
-
 ### Evans Meadow Restoration
 <p class="event-when">Sat Oct 3 · 11:00 a.m.–2:00 p.m.</p>
 <p class="event-place">Evans Creek Preserve</p>

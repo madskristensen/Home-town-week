@@ -7,13 +7,6 @@ description: Upcoming family events in Kirkland on the Eastside.
 hook: Saturday is a free harvest festival at Juanita Beach, with family math at Kingsgate that morning, and Swan Lake lights up the Performance Center that night and Sunday. Studio East opens Young Frankenstein on October 30.
 ---
 
-### Baby Story Time
-<p class="event-when">Thu Oct 1 · 10:30–11:00 a.m.</p>
-<p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
-
-Stories, music, and rhymes for newborns to 12 months, with an adult. A short play time follows. No registration. First come, first seated. Space is limited.  
-[KCLS event](https://kcls.bibliocommons.com/v2/events/6a7faba35d8bc300315a702d)
-
 ### Harvest Festival
 <p class="event-when">Sat Oct 3 · 11:00 a.m.–4:00 p.m.</p>
 <p class="event-place">Juanita Beach Park, north side, 9703 NE Juanita Dr</p>

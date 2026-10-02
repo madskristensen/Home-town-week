@@ -4,16 +4,8 @@ title: Bothell
 city: bothell
 state: wa
 description: Upcoming family events in Bothell on the Eastside.
-hook: Thursday morning is music and movement. Saturday is the Friends book sale and an all-ages history tour at Anderson School. Monday morning is toddler and baby story time.
+hook: Saturday is the Friends book sale and an all-ages history tour at Anderson School. Monday morning is toddler and baby story time.
 ---
-
-### Music and Movement with Lana Van Boven
-<p class="event-when">Thu Oct 1 · 10:00–10:30 a.m. and 10:45–11:15 a.m.</p>
-<p class="event-place">Bothell Library, 18215 98th Ave NE</p>
-
-Lana Van Boven, a speech language pathologist and musician, uses music and movement in story time. All ages with an adult. Registration is not required. Space is limited. Doors close when the room is full, or 10 minutes after the start. Attend one session only.
-
-[10:00 session](https://kcls.bibliocommons.com/events/6a921bf91c197d11325b96fa) · [10:45 session](https://kcls.bibliocommons.com/events/6a921bf91c197d11325b96fb)
 
 ### Friends of the Bothell Library Book Sale
 <p class="event-when">Sat Oct 3 · 11:00 a.m.–5:30 p.m.</p>

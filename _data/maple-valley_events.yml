@@ -41,6 +41,7 @@
   same_as: "https://mvcac.clubexpress.com/content.aspx?page_id=4091&club_id=181069&item_id=2756096"
 - name: "Family Fall Fest"
   setting: "Outdoor"
+  tags: [harvest]
   start: "2026-10-03T12:00:00-07:00"
   end: "2026-10-03T15:00:00-07:00"
   place: "Covington Town Center Lawn, 17070 SE Wax Rd, Covington"
@@ -52,6 +53,15 @@
   end: "2026-10-03T16:30:00-07:00"
   place: "Covington Library, 27100 164th Ave SE, Covington"
   same_as: "https://kcls.bibliocommons.com/events/69e2b7b6deee9abd8ee82147"
+- name: "Haunted Forest Family Walk"
+  cost: "$7"
+  setting: "Outdoor"
+  signup: true
+  tags: [halloween]
+  start: "2026-10-04T12:00:00-07:00"
+  end: "2026-10-25T15:00:00-07:00"
+  place: "Royal Arch Park, 20821 Renton-Maple Valley Rd, Maple Valley"
+  same_as: "https://hauntedforestofmaplevalley.org/ticket-info"
 - name: "Baby Story Time"
   cost: "Free"
   ages: "Toddlers"

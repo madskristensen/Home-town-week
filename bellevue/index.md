@@ -7,39 +7,7 @@ description: Upcoming family events in Bellevue on the Eastside.
 hook: Saturday is the Kelsey Creek Farm Fair, with math games at the library that afternoon and a Russian fairy tale for little kids at Studio33. Friday morning is story time at Lake Hills Library. Friday, October 9 is a free pumpkin afternoon at The Meadow, and Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
 ---
 
-The Thursday farmers market is the last of the regular season. Thursday morning, before the stalls, is preschool storytime. Newport Way has a bilingual play hour the same morning.
-
-### Bilingual Kaleidoscope Play and Learn
-<p class="event-when">Thu Oct 1 · 10:30 a.m.–12:00 p.m.</p>
-<p class="event-place">Newport Way Library, 14250 SE Newport Way</p>
-
-A Mandarin and English play-and-learn hour for toddlers and preschoolers with a caregiver. The morning can include stories, music, games, or a craft, and staff have parenting and child-care resources on hand. No registration. The same hours are also on Thu Oct 8 and Thu Oct 15.
-
-[Kaleidoscope Play and Learn](https://kcls.bibliocommons.com/events/69d91c2766c3387a9d06651c)
-
-### Preschool Story Time
-<p class="event-when">Thu Oct 1 · 10:30–11:15 a.m.</p>
-<p class="event-place">Bellevue Library, third-floor programming space, 1111 110th Ave NE</p>
-
-Stories, music, movement, and rhymes for ages 3 to 5 with an adult. A short play time follows. No registration. Thursday hours are 10:00 a.m.–6:00 p.m., so this ends well before the market opens at 3:00.
-
-[Preschool Story Time](https://kcls.bibliocommons.com/v2/events/6a8df1aa81e9d60947cc7d51)
-
-### Baby Story Time
-<p class="event-when">Thu Oct 1 · 11:30 a.m.–12:15 p.m.</p>
-<p class="event-place">Bellevue Library, 1111 110th Ave NE</p>
-
-Rhymes, songs, and stories for newborns to 12 months with an adult, then up to 15 minutes of play. No registration. Space is limited.
-
-[Baby Story Time](https://kcls.bibliocommons.com/events/6a95fe8869166f088b9651a7)
-
-### Bellevue Farmers Market
-<p class="event-when">Thu Oct 1 · 3:00–7:00 p.m.</p>
-<p class="event-place">1717 Bellevue Way NE</p>
-
-Last day of the Thursday season, 3:00–7:00 p.m. The market has posted two later Saturdays, both 10:00 a.m.–3:00 p.m.: Oct 31 and Nov 21.
-
-[Bellevue Farmers Market](https://bellevuefarmersmarket.org/)
+The Thursday market season ended Oct 1. Two Saturday markets remain, Oct 31 and Nov 21, both 10:00 a.m.–3:00 p.m.
 
 ### Tiny Trailblazers
 <p class="event-when">Fri Oct 2 · 10:00–10:45 a.m.</p>
@@ -212,6 +180,14 @@ Craft supplies for ages 6 and older. Make your own project or try the week's sug
 
 [Art Cart](https://kcls.bibliocommons.com/events/6a921fd3aafa6100295ff1dc)
 
+### Bilingual Kaleidoscope Play and Learn
+<p class="event-when">Thu Oct 8 · 10:30 a.m.–12:00 p.m.</p>
+<p class="event-place">Newport Way Library, 14250 SE Newport Way</p>
+
+A Mandarin and English play-and-learn hour for toddlers and preschoolers with a caregiver. The morning can include stories, music, games, or a craft, and staff have parenting and child-care resources on hand. No registration. The same hours are also on Thu Oct 15.
+
+[Kaleidoscope Play and Learn](https://kcls.bibliocommons.com/events/69d91c2766c3387a9d06651c)
+
 ### Story and Stroll
 <p class="event-when">Fri Oct 9 · 10:30–11:30 a.m.</p>
 <p class="event-place">Mercer Slough Environmental Education Center, 1625 118th Ave SE</p>
@@ -283,6 +259,14 @@ A guided walk for ages 5 to 10 about mushrooms and the other fungi in the forest
 A free one-mile ranger hike for all ages on the mostly level gravel trails. The fall guide lists it Saturdays at 2:00 p.m. through Dec 26. Oct 3 is not on that list. Register ahead. Bring binoculars if you have them.
 
 [Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
+
+### Bellevue Jazz Student Showcase
+<p class="event-when">Sun Oct 11 · 11:00 a.m.–5:15 p.m.</p>
+<p class="event-place">Meydenbauer Center Theatre, 11100 NE 6th Street</p>
+
+A free afternoon of school jazz at Meydenbauer Center Theatre. Six combos, from middle school and high school, each play a short set. You can stay for one or for the whole afternoon. No tickets.
+
+[Jazz and Blues lineup](https://www.bellevuedowntown.com/jazz-and-blues-music-series/lineup)
 
 ### Drop-in Play at Kelsey Creek Farm
 <p class="event-when">Mon Oct 12 · 10:00–11:30 a.m.</p>
@@ -502,6 +486,14 @@ Bellevue Youth Theatre's family ghost story, with music and dancing. Tickets are
 The museum's Halloween day, this year set as a Haunted Hoedown. Costumes are encouraged. General admission is $16.75 for adults and children. Members are free. It opens at 9:00 a.m., so it is the morning half of Halloween if you also want Main Street.
 
 [Spooktacular](https://www.bellevuedowntown.com/do/spooktacular)
+
+### Bellevue Farmers Market
+<p class="event-when">Sat Oct 31 · 10:00 a.m.–3:00 p.m.</p>
+<p class="event-place">1717 Bellevue Way NE</p>
+
+A Saturday market after the Thursday season. Hours are 10:00 a.m.–3:00 p.m. The next Saturday is Nov 21, same hours.
+
+[Bellevue Farmers Market](https://bellevuefarmersmarket.org/)
 
 ### Little Monsters on Main Street
 <p class="event-when">Sat Oct 31 · 1:00–3:00 p.m.</p>

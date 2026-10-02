@@ -1,20 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Middle School and Tween Graphic Novel Club"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-01T16:00:00-07:00"
-  end: "2026-10-01T17:00:00-07:00"
-  place: "Sammamish Library, 825 228th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/events/6945dbef4be11d3d00d90b6c"
-- name: "Tutors at Sammamish Library"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-01T16:00:00-07:00"
-  end: "2026-10-01T18:00:00-07:00"
-  place: "Sammamish Library, 825 228th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/events/6aa06462d94765189bb9fb1a"
 - name: "Evans Meadow Restoration"
   setting: "Outdoor"
   cost: "Free"

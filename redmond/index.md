@@ -7,48 +7,6 @@ description: Upcoming family events in Redmond on the Eastside.
 hook: Saturday is flapjacks, the farm, and a youth cross-country meet. October 17 is the Farrel-McWhirter harvest festival and a pup parade at Redmond Town Center.
 ---
 
-### Drop-In Play
-<p class="event-when">Thu Oct 1 · 10:00 a.m.–12:00 p.m.</p>
-<p class="event-place">Redmond Community Center at Marymoor Village, 6505 176th Ave NE</p>
-
-{% include event-photo.html
-   src="/assets/images/redmond/marymoor-center.webp"
-   alt="Front of the Redmond Community Center at Marymoor Village, a low building with a covered entrance and young trees."
-   credit="Photo: City of Redmond"
-   source="https://www.redmond.gov/ImageRepository/Document?documentID=40382"
-   license="organizer" %}
-
-Ages 0–6. An adult must stay. Drop-in fee on Amilia, and fee assistance is available. The series is every Tuesday and Thursday, 10:00 a.m. to 12:00 p.m.  
-[Experience Redmond](https://experienceredmond.com/event/drop-in-play-at-the-redmond-community-center-at-marymoor-village/2026-10-01/) · [Amilia](https://app.amilia.com/store/en/city-of-redmond/shop/activities/6788395)
-
-### Toddler Story Time
-<p class="event-when">Thu Oct 1 · 10:30–11:30 a.m.</p>
-<p class="event-place">Redmond Library, 15990 NE 85th St</p>
-
-{% include event-photo.html
-   src="/assets/images/redmond/redmond-library.webp"
-   alt="Redmond Library, a modern building with a glass front and a covered walkway."
-   credit="Photo: King County Library System."
-   source="https://kcls.org/locations/redmond/"
-   license="organizer" %}
-
-Stories, music, movement, and rhymes for 18 months to age 3 with an adult, then 20 to 30 minutes of play. No registration. Space is limited. Tickets are at the front desk 30 minutes before the start. First come, first seated. The same hour is also on Thu Oct 8 and Thu Oct 15.  
-[Toddler Story Time](https://kcls.bibliocommons.com/v2/events/6ab463b90c7bf418f4e3c6c1)
-
-### Teen Center Project Drop-in Session 2
-<p class="event-when">Thu Oct 1 · 6:00–8:00 p.m.</p>
-<p class="event-place">Redmond Community Center at Marymoor Village, 6505 176th Ave NE</p>
-
-{% include event-photo.html
-   src="/assets/images/redmond/marymoor-lobby.webp"
-   alt="Lobby of the Redmond Community Center at Marymoor Village, with tall windows, a curved desk, and orange chairs."
-   credit="Photo: City of Redmond"
-   source="https://www.redmond.gov/ImageRepository/Document?documentID=367"
-   license="organizer" %}
-
-Same teen invite as Wednesday.  
-[Teen Center Project](https://www.redmond.gov/2494/Teen-Center-Project) · [Calendar](https://www.redmond.gov/Calendar.aspx?EID=3553)
-
 ### Lap Sit Baby Story Time
 <p class="event-when">Fri Oct 2 · 10:30–11:30 a.m.</p>
 <p class="event-place">Redmond Library, 15990 NE 85th St</p>
@@ -152,7 +110,8 @@ The first Fire Prevention Week open house. Cooking-fire demonstrations, a statio
 <p class="event-when">Tue Oct 6 · 10:00 a.m.–12:00 p.m.</p>
 <p class="event-place">Redmond Community Center at Marymoor Village, 6505 176th Ave NE</p>
 
-Same ages 0–6 session as Thursday. An adult must stay. Gym clothes and athletic shoes are recommended. Drop-in fee on Amilia, and fee assistance is available.  
+Drop-in play for ages 0 to 6. An adult must stay. Gym clothes and athletic shoes are recommended. There is a drop-in fee on Amilia, and fee assistance is available.
+
 [Experience Redmond](https://experienceredmond.com/event/drop-in-play-at-the-redmond-community-center-at-marymoor-village/2026-10-06/)
 
 ### Study with Dogs
@@ -169,6 +128,21 @@ Therapy dogs from Reading with Rover while teens work on homework, exams, or aca
 A Fire Prevention Week open house at a second station. Cooking-fire demonstrations, a station tour, fire safety lessons, and family activities.
 
 [Fire Prevention Week](https://www.redmond.gov/FirePreventionWeek)
+
+### Toddler Story Time
+<p class="event-when">Thu Oct 8 · 10:30–11:30 a.m.</p>
+<p class="event-place">Redmond Library, 15990 NE 85th St</p>
+
+{% include event-photo.html
+   src="/assets/images/redmond/redmond-library.webp"
+   alt="Redmond Library, a modern building with a glass front and a covered walkway."
+   credit="Photo: King County Library System."
+   source="https://kcls.org/locations/redmond/"
+   license="organizer" %}
+
+Stories, music, movement, and rhymes for 18 months to age 3 with an adult, then 20 to 30 minutes of play. No registration. Space is limited. Tickets are at the front desk 30 minutes before the start. First come, first seated. The same hour is also on Thu Oct 15.
+
+[Toddler Story Time](https://kcls.bibliocommons.com/v2/events/6ab463b90c7bf418f4e3c6c1)
 
 ### Teen Center Project Community Visioning Session
 <p class="event-when">Thu Oct 8 · 6:00–8:00 p.m.</p>

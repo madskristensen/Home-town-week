@@ -4,7 +4,7 @@ title: Maple Valley
 city: maple-valley
 state: wa
 description: Upcoming family events in Maple Valley and Covington on the Eastside.
-hook: Saturday is the farmers market, a youth play festival, and Covington's Family Fall Fest. Oct 17 is the Zombie Dash at Lake Wilderness.
+hook: Saturday is the farmers market, a youth play festival, and Covington's Family Fall Fest. Sunday is a daylight walk at the Haunted Forest. Oct 17 is the Zombie Dash at Lake Wilderness.
 ---
 
 ### Latine Heritage Celebration
@@ -62,6 +62,14 @@ Covington's fall party on the town center lawn, with yard games, inflatables, tr
 Play and practice with the chess club volunteers. Ages 5 and older, and ages 7 and younger stay with an adult. Also Sat Oct 10, same hours. No registration.
 
 [Chess Club](https://kcls.bibliocommons.com/events/69e2b7b6deee9abd8ee82147)
+
+### Haunted Forest Family Walk
+<p class="event-when">Sundays Oct 4, Oct 11, Oct 18, and Oct 25 · 12:00–3:00 p.m.</p>
+<p class="event-place">Royal Arch Park, 20821 Renton-Maple Valley Rd, Maple Valley</p>
+
+A daylight walk on the haunted trail, with no jump scares, and trick-or-treating while the candy lasts. Admission is $7. Ages 3 and under are free. The ticket booth closes at 2:30 p.m. This is the Sunday family walk. The Friday and Saturday night show is a separate, scarier ticket.
+
+[Ticket info](https://hauntedforestofmaplevalley.org/ticket-info)
 
 ### Baby Story Time
 <p class="event-when">Mon Oct 5 · 1:00–2:00 p.m.</p>

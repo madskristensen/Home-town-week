@@ -23,22 +23,6 @@ Bring a finished paper mache pumpkin to the front desk any day the branch is ope
 
 [Pumpkin contest](https://kcls.bibliocommons.com/v2/events/6a921b7b3b6c71003e5c2515)
 
-### Toddler Story Time
-<p class="event-when">Thu Oct 1 · 10:15–10:45 a.m.</p>
-<p class="event-place">Snoqualmie Library, 7824 Center Boulevard SE</p>
-
-Stories and play, with bubbles, for newborns to 36 months with an adult. Older children are welcome. No registration. The same time is also on Thu Oct 8 and Thu Oct 15.
-
-[Toddler Story Time](https://kcls.bibliocommons.com/events/6a80c10baafa6100295cdc4b)
-
-### Family Story Time
-<p class="event-when">Thu Oct 1 · 11:15–11:45 a.m.</p>
-<p class="event-place">Snoqualmie Library, 7824 Center Boulevard SE</p>
-
-Stories, music, and movement for young children with an adult. A short playtime follows, and it ends with bubbles. No registration. The same hour is also on Thu Oct 8 and Thu Oct 15.
-
-[Family Story Time](https://kcls.bibliocommons.com/v2/events/6a80c1292dac6e00371f5445)
-
 ### Green Snoqualmie Day
 <p class="event-when">Sat Oct 3 · 9:00 a.m.–12:00 p.m.</p>
 <p class="event-place">Across from Mount Si High School, next to the Park Street Community Orchard</p>
@@ -76,6 +60,22 @@ The museum waives Train Shed admission on Wednesdays through December 16. The Ra
 Crafts, tabletop games, a Nintendo Switch, and snacks for school-age kids through teens. No registration. Fall City Friends sponsor it. The same hours are also on Oct 14, Oct 21, and Oct 28.
 
 [After School Hangout](https://kcls.bibliocommons.com/events/6a90cee2aafa6100295fb1f0)
+
+### Toddler Story Time
+<p class="event-when">Thu Oct 8 · 10:15–10:45 a.m.</p>
+<p class="event-place">Snoqualmie Library, 7824 Center Boulevard SE</p>
+
+Stories and play, with bubbles, for newborns to 36 months with an adult. Older children are welcome. No registration. The same time is also on Thu Oct 15.
+
+[Toddler Story Time](https://kcls.bibliocommons.com/events/6a80c10baafa6100295cdc4b)
+
+### Family Story Time
+<p class="event-when">Thu Oct 8 · 11:15–11:45 a.m.</p>
+<p class="event-place">Snoqualmie Library, 7824 Center Boulevard SE</p>
+
+Stories, music, and movement for young children with an adult. A short playtime follows, and it ends with bubbles. No registration. The same time is also on Thu Oct 15.
+
+[Family Story Time](https://kcls.bibliocommons.com/v2/events/6a80c1292dac6e00371f5445)
 
 ### Mount Si Dramafest
 <p class="event-when">Fri Oct 9 and Sat Oct 10 · 7:00 p.m.</p>

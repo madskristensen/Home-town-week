@@ -4,24 +4,8 @@ title: Duvall
 city: duvall
 state: wa
 description: Upcoming family events in Duvall on the Eastside.
-hook: Thursday is the farmers market and family story time. Friday opens Novelty Hill's patch, and Oct 17 is a free art day on Main Street.
+hook: The farmers market is open Thursday, Oct 8 and Thursday, Oct 15. Family story time is Thursday morning, and Oct 17 is a free art day on Main Street.
 ---
-
-### Family Story Time
-<p class="event-when">Thu Oct 1 · 10:30–11:30 a.m.</p>
-<p class="event-place">Duvall Library, 15508 Main Street NE</p>
-
-Stories, music, and movement for all ages with an adult, then a short play time. No registration. The same hour is also on Thu Oct 8, Thu Oct 15, Thu Oct 22, and Thu Oct 29.
-
-[Family Story Time](https://kcls.bibliocommons.com/v2/events/6a847411b20478002993aafd)
-
-### Duvall Farmers Market
-<p class="event-when">Thu Oct 1 · 3:00–7:00 p.m.</p>
-<p class="event-place">Taylor Landing, 16201 Main Street NE</p>
-
-Produce, handmade goods, and a playground under the trees by the river. It runs every Thursday from May through mid-October, so later Thursdays in that stretch keep the same hours.
-
-[Farmers market](https://duvallfarmersmarket.org/)
 
 ### Muddy Boots Pumpkins
 <p class="event-when">Through Sat Oct 31 · Sun–Thu 10:00 a.m.–8:00 p.m., Fri–Sat 10:00 a.m.–10:00 p.m.</p>
@@ -46,6 +30,22 @@ Five acres of pumpkins still on the vine, a corn maze with a shorter path for sm
 Rhymes, songs, and stories for newborns through 18 months, with an adult. Up to 30 minutes of play follows. Older children can be in the room. The same hour is also on Mon Oct 12, Mon Oct 19, and Mon Oct 26.
 
 [Baby Story Time](https://kcls.bibliocommons.com/v2/events/6a847417b20478002993ab03)
+
+### Family Story Time
+<p class="event-when">Thu Oct 8 · 10:30–11:30 a.m.</p>
+<p class="event-place">Duvall Library, 15508 Main Street NE</p>
+
+Stories, music, and movement for all ages with an adult, then a short play time. No registration. The same hour is also on Thu Oct 15, Thu Oct 22, and Thu Oct 29.
+
+[Family Story Time](https://kcls.bibliocommons.com/v2/events/6a847411b20478002993aafd)
+
+### Duvall Farmers Market
+<p class="event-when">Thu Oct 8 and Thu Oct 15 · 3:00–7:00 p.m.</p>
+<p class="event-place">Taylor Landing, 16201 Main Street NE</p>
+
+Produce, handmade goods, and a playground under the trees by the river. These are the last two Thursdays of the season, 3:00–7:00 p.m.
+
+[Farmers market](https://duvallfarmersmarket.org/)
 
 ### Drawing and Doughnuts
 <p class="event-when">Tue Oct 13 · 3:00–5:00 p.m.</p>

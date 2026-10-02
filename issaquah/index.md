@@ -8,12 +8,12 @@ hook: Saturday and Sunday are Salmon Days downtown. The hatchery is the stop to 
 ---
 
 ### Rise & Shine Story Time
-<p class="event-when">Thu Oct 1 · 10:30–11:00 a.m.</p>
+<p class="event-when">Thu Nov 5 · 10:30–11:00 a.m.</p>
 <p class="event-place">Issaquah Library, 10 W Sunset Way</p>
 
-Same shape as Tuesday night: stories, music, and play time after, for newborns to 5 with an adult. No registration. Space is limited. A calm morning before the festival.
+Stories, music, movement, and rhymes for newborns to 5 with an adult, then up to 30 minutes of play. No registration. Space is limited.
 
-[Rise & Shine Story Time](https://kcls.bibliocommons.com/v2/events/6a710898c7e02e3d006da0ee)
+[Rise & Shine Story Time](https://kcls.bibliocommons.com/events/6a710898c7e02e3d006da0f2)
 
 ### Toddler Time
 <p class="event-when">Fri Oct 2 · 7:00–11:30 a.m.</p>
@@ -240,6 +240,14 @@ Two sessions at Pickering Barn. From 2:00 to 4:00 p.m. the city runs carnival ga
 Howl-O-ween at the zoo.
 
 [Zoo events](https://www.cougarmountainzoo.org/events-at-the-zoo/)
+
+### Day of the Dead Celebration
+<p class="event-when">Sun Nov 1 · 1:00–5:00 p.m.</p>
+<p class="event-place">Issaquah Community Center, 301 Rainier Blvd S</p>
+
+A free afternoon from The Circle, this year focused on Oaxaca. Families can decorate a mask made in Mexico, join art workshops, and see dancers and mariachi. Face painting and food are part of the afternoon. Each person needs a free ticket, and one order can hold up to five.
+
+[Day of the Dead](https://www.thecircle-wa.org/event-details-registration/day-of-the-dead-celebration-3)
 
 ### Issaquah Highlands Holiday Tree Lighting
 <p class="event-when">Thu Nov 19 · 5:00–6:30 p.m.</p>
