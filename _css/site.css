@@ -1532,6 +1532,10 @@ h2.event-bucket.is-past {
   display: none;
 }
 
+.article-page .prose h2 {
+  margin: 1.35rem 0 0.55rem;
+}
+
 .event-card .event-place {
   margin: 0.2rem 0 0.1rem;
   color: var(--muted);

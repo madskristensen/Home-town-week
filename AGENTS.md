@@ -85,7 +85,11 @@ Each Friday, scan the lead sites for about the next six weeks. The Yodel embed n
 
 ## Cards
 
-Grouped cards always use `_includes/card-grid.html`. It renders each item with `_includes/event-card.html` inside one grid. Home, city day buckets, seasonal hubs, this weekend, worth the drive, rainy day, lights lists, and explore pages all use that include. Do not add another grid class or a page-specific wrapper. The daily prune and content edits must not paste card markup.
+Grouped cards always use `_includes/card-grid.html`. It renders each item with `_includes/event-card.html` inside one grid. Home, city day buckets, seasonal hubs, this weekend, worth the drive, rainy day, lights lists, explore pages, and articles all use that include. Do not add another grid class or a page-specific wrapper. The daily prune and content edits must not paste card markup.
+
+## Articles
+
+`/articles/` lists evergreen guides. Each guide is its own page and uses the same card grid. The first two are rainy-day indoor places and free things to do with kids. The free guide adds the next Free-tagged events from the city files at build time. Link the organizer's own page. Use a real licensed or credited photo of that place. Do not cite a lead site. No em dashes. The footer Explore group links Articles. The header does not.
 
 ## Seasonal banner
 

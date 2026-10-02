@@ -1,0 +1,15 @@
+# Evergreen guides. The /articles/ page renders these with card-grid.
+- name: Rainy day activities for kids on the Eastside
+  blurb: Indoor play, libraries, museums, and pools when the weather turns.
+  href: /articles/rainy-day-indoor-play/
+  image: /assets/images/bellevue/kidsquest.webp
+  alt: Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance.
+  credit: "Photo: Julian Fong, CC BY-SA 4.0"
+  image_source: https://commons.wikimedia.org/wiki/File:KidsQuest_Children%27s_Museum_2.jpg
+- name: Free things to do with kids on the Eastside
+  blurb: Parks and libraries that stay free, plus the next free events.
+  href: /articles/free-things-to-do/
+  image: /assets/images/bellevue/botanical-garden.webp
+  alt: The entrance sign and plantings at Bellevue Botanical Garden.
+  credit: "Photo: Heptazane, public domain"
+  image_source: https://commons.wikimedia.org/wiki/File:Bellevue_Botanical_Garden_Entrance.jpg

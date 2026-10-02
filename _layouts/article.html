@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<article class="page wrap article-page">
+  <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
+  {%- include page-intro.html text=page.intro -%}
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>
