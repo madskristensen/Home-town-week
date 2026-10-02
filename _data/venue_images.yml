@@ -175,6 +175,12 @@ venues:
     credit: "Photo: Roc0ast3r, CC0"
     license: CC0
     source: https://commons.wikimedia.org/wiki/File:Lake_Wilderness_Arboretum_in_Maple_Valley,_WA_(2024)_-_12.jpg
+  - keys: ["royal arch park"]
+    image: /assets/images/maple-valley/royal-arch-park.webp
+    alt: A log picnic shelter among the trees at Royal Arch Park in Maple Valley.
+    credit: "Photo: Royal Arch Park"
+    license: organizer
+    source: https://royalarchpark.org/
   - keys: ["maple valley library"]
     image: /assets/images/maple-valley/library.webp
     alt: Maple Valley Library, a King County Library System branch with a glass and wood front.
@@ -475,6 +481,12 @@ venues:
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     license: CC BY-SA 3.0
     source: https://commons.wikimedia.org/wiki/File:Fall_City,_WA_-_library_01.jpg
+  - keys: ["issaquah community center"]
+    image: /assets/images/issaquah/community-center.webp
+    alt: Issaquah Community Center, a brick building with a covered entry and a lawn in front.
+    credit: "Photo: City of Issaquah"
+    license: organizer
+    source: https://www.issaquahwa.gov/Facilities/Facility/Details/Issaquah-Community-Center-41
   - keys: ["issaquah library"]
     image: /assets/images/issaquah/issaquah-library.webp
     alt: Issaquah Library, a low building with a broad glass front and a covered walkway.
