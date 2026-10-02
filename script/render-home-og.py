@@ -73,6 +73,21 @@ def xml_escape(text):
     )
 
 
+def expand_includes(raw):
+    def repl(match):
+        name = match.group(1).strip()
+        text = (ROOT / "_includes" / name).read_text()
+        text = re.sub(
+            r"\{%-?\s*comment\s*-?%\}.*?\{%-?\s*endcomment\s*-?%\}",
+            "",
+            text,
+            flags=re.S,
+        )
+        return text
+
+    return re.sub(r"\{%-?\s*include\s+([^\s%]+)\s*-?%\}", repl, raw)
+
+
 def extract_map():
     raw = MAP_INCLUDE.read_text()
     raw = re.sub(
@@ -81,6 +96,7 @@ def extract_map():
         raw,
         flags=re.S,
     )
+    raw = expand_includes(raw)
     match = re.search(r"<svg\b([^>]*)>(.*)</svg>", raw, flags=re.S)
     if not match:
         raise SystemExit("eastside-map.html has no svg")

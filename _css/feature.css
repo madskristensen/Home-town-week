@@ -35,11 +35,12 @@
 .lights-feature-art {
   position: relative;
   align-self: stretch;
-  height: 100%;
-  min-height: 12rem;
+  height: auto;
+  min-height: 0;
   margin: 0;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 624 / 568;
+  background: var(--bg);
 }
 
 .lights-feature-art svg {
@@ -48,6 +49,75 @@
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.lights-feature-art .eastside-svg .foothills {
+  fill: var(--foothills);
+}
+
+.lights-feature-art .eastside-svg .water {
+  fill: var(--water);
+  stroke: var(--water-edge);
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+}
+
+.lights-feature-art .eastside-svg .river {
+  fill: none;
+  stroke: var(--water-edge);
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.lights-feature-art .eastside-svg .island {
+  fill: var(--page);
+  stroke: var(--water-edge);
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+}
+
+.lights-feature-art .eastside-svg .road {
+  fill: none;
+  stroke: var(--gold-line);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.9;
+}
+
+.lights-feature-art .eastside-svg .water-label,
+.lights-feature-art .eastside-svg .road-label {
+  fill: var(--muted);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.lights-feature-art .light-pin {
+  fill: var(--forest);
+  stroke: var(--sheet);
+  stroke-width: 1.6;
+}
+
+.lights-feature-art .pumpkin-stem {
+  fill: none;
+  stroke: #2f6b32;
+  stroke-width: 1.15;
+  stroke-linecap: round;
+}
+
+.lights-feature-art .pumpkin-body {
+  fill: #c2410c;
+}
+
+.lights-feature-art .pumpkin-shade {
+  fill: #9a3412;
+}
+
+.lights-feature-art .pumpkin-rib {
+  fill: #f4a261;
 }
 
 .lights-feature-copy {
@@ -99,9 +169,9 @@
   }
 
   .lights-feature-art {
-    aspect-ratio: auto;
-    height: 100%;
-    min-height: 100%;
+    aspect-ratio: 624 / 568;
+    height: auto;
+    min-height: 0;
   }
 }
 
@@ -145,6 +215,22 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  .lights-feature-art .pumpkin-stem {
+    stroke: #d7efc4;
+  }
+
+  .lights-feature-art .pumpkin-body {
+    fill: #f09a3a;
+  }
+
+  .lights-feature-art .pumpkin-shade {
+    fill: #c2410c;
+  }
+
+  .lights-feature-art .pumpkin-rib {
+    fill: #ffd7a8;
+  }
+
   .lights-feature-halloween {
     background: #3a2158;
     border-color: #f0a04a;

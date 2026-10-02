@@ -104,7 +104,7 @@ A public light display with published dates for this season is an ordinary event
 
 ### Christmas lights map
 
-`/christmas/lights/` is the Christmas lights map, a map of private homes and neighborhood streets. The URL stays `/christmas/lights/`. It uses the same seasonal layout, header, and card grid as the other hub pages. `/christmas/` leads with a feature card under the page heading, above the jump links, linking to the map. When the Christmas hub is the home page banner, that same card sits under the home page intro. The button says "Open the Christmas lights map".
+`/christmas/lights/` is the Christmas lights map, a map of private homes and neighborhood streets. The URL stays `/christmas/lights/`. It uses the same seasonal layout, header, and card grid as the other hub pages. `/christmas/` leads with a feature card under the page heading, above the jump links, linking to the map. The drawing is the same Eastside map as the home page, with a pin at each stop on the lights map. When the Christmas hub is the home page banner, that same card sits under the home page intro. The button says "Open the Christmas lights map".
 
 Rows live in `_data/holiday_lights.yml`. A row with `map: true` is on the map when its city is in `_data/cities.yml`. Public displays stay in the file without that flag and are not pinned. Do not add `same_as`, and do not copy a home onto a city page. When a source describes a past season and the next one is not announced, start `nights` with `Last seen 2025` (use that season's year). Do not invent the next season's dates.
 
@@ -118,7 +118,7 @@ Anyone can send in a home or a street. The page links a mailto to `suggestions@e
 
 ### Halloween decorations map
 
-`/fall/decorations/` is the Halloween decorations map. It uses the same seasonal layout, map, numbered pins, town list, card grid, and mailto pattern as `/christmas/lights/`. The palette is Halloween: orange pins and a purple night on the feature card. `/fall/` leads with that card under the page heading, in the same spot as the Christmas lights card. The button says "Open the Halloween decorations map". The footer lists the page under Explore, next to the Christmas lights map. The page is in the sitemap. There is no redirect from another path.
+`/fall/decorations/` is the Halloween decorations map. It uses the same seasonal layout, map, numbered pins, town list, card grid, and mailto pattern as `/christmas/lights/`. The feature card on `/fall/` uses that same Eastside map, with a small pumpkin at each pin from this page. `/fall/` leads with that card under the page heading, in the same spot as the Christmas lights card. The button says "Open the Halloween decorations map". The footer lists the page under Explore, next to the Christmas lights map. The page is in the sitemap. There is no redirect from another path.
 
 Rows live in `_data/halloween_decorations.yml`, with the same fields as a Christmas lights row. A row with `map: true` is pinned when its city is in `_data/cities.yml`. A house number is used only when the owner or a news story published it. A neighborhood pin sits at that neighborhood's center. `trust: owner` shows Listed by owner. `trust: tip` shows Community tip. A row without `trust` has no label. When `photo` is missing, the build uses a licensed picture from the Halloween pool in `_data/hub_pools.yml`.
 

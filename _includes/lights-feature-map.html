@@ -1,0 +1,34 @@
+{%- comment -%}
+  Eastside map for a seasonal feature card.
+  theme: "halloween" draws a pumpkin at each decorations pin.
+  Anything else draws the round lights-map pin at each Christmas lights pin.
+  Positions are computed at build time in home_lights.rb.
+{%- endcomment -%}
+{%- assign feature_theme = include.theme | append: "" -%}
+{%- if feature_theme == "halloween" -%}
+{%- assign feature_pins = site.data.feature_map_pins.halloween -%}
+{%- else -%}
+{%- assign feature_pins = site.data.feature_map_pins.christmas -%}
+{%- endif -%}
+<svg class="eastside-svg lights-map" viewBox="104 90 624 568" width="624" height="568" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+  {%- include eastside-geo.html -%}
+  {%- if feature_theme == "halloween" -%}
+  <g class="pumpkin-pins">
+    {%- for pin in feature_pins -%}
+    <g class="pumpkin-pin" transform="translate({{ pin.x }} {{ pin.y }})">
+      <title>{{ pin.name | escape }}</title>
+      <path class="pumpkin-stem" d="M0.1,-7.6 C1,-5.8 0.7,-4.4 -0.2,-3.5"/>
+      <ellipse class="pumpkin-shade" cx="1.35" cy="0.35" rx="3.15" ry="4.15"/>
+      <ellipse class="pumpkin-body" cx="-0.15" cy="0.45" rx="4.35" ry="4.05"/>
+      <ellipse class="pumpkin-rib" cx="-1.7" cy="0.5" rx="1.75" ry="3.45"/>
+    </g>
+    {%- endfor -%}
+  </g>
+  {%- else -%}
+  <g class="light-pins">
+    {%- for pin in feature_pins -%}
+    <circle class="light-pin" cx="{{ pin.x }}" cy="{{ pin.y }}" r="4.2"><title>{{ pin.name | escape }}</title></circle>
+    {%- endfor -%}
+  </g>
+  {%- endif -%}
+</svg>

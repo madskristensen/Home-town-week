@@ -12,6 +12,7 @@ module EastsideCalendar
       site.data["halloween_map"] = collect(site, "halloween_decorations", "halloween", "Halloween decorations photos:")
       site.data["farmers_market_page"] = collect_markets(site)
       site.data["book_ahead_cards"] = collect_book_ahead(site)
+      site.data["feature_map_pins"] = feature_map_pins(site)
     end
 
     def collect(site, data_key, pool_name, log_label)
@@ -435,6 +436,101 @@ module EastsideCalendar
         }
       end
       { "towns" => towns, "pins" => pins, "count" => items.size }
+    end
+
+    # Place map pins on the hand-drawn Eastside map. City centers in
+    # cities.yml and the city dots in eastside-map.html fix the fit.
+    def feature_map_pins(site)
+      x_coeff, y_coeff = map_fit(site)
+      return { "halloween" => [], "christmas" => [] } if x_coeff.nil?
+
+      {
+        "halloween" => project_pins(site.data.dig("halloween_map", "pins"), x_coeff, y_coeff),
+        "christmas" => project_pins(site.data.dig("home_lights", "pins"), x_coeff, y_coeff)
+      }
+    end
+
+    def map_fit(site)
+      samples = map_samples(site)
+      return [nil, nil] if samples.size < 3
+
+      [solve_axis(samples, :x), solve_axis(samples, :y)]
+    end
+
+    def map_samples(site)
+      centers = {}
+      Array(site.data["cities"]).each do |city|
+        next unless city.is_a?(Hash)
+
+        lat = coordinate(city["lat"])
+        lon = coordinate(city["lon"])
+        next if lat.nil? || lon.nil?
+
+        centers[city["id"].to_s] = [lon, lat]
+      end
+      path = File.join(site.source, "_includes", "eastside-map.html")
+      html = File.read(path)
+      samples = []
+      html.scan(%r{href="\{\{ '/([^']+)/' \| relative_url \}\}">\s*<circle class="city-hit" cx="([^"]+)" cy="([^"]+)"}) do |id, x, y|
+        center = centers[id]
+        next unless center
+
+        samples << [center[0], center[1], Float(x), Float(y)]
+      end
+      samples
+    end
+
+    def project_pins(pins, x_coeff, y_coeff)
+      Array(pins).filter_map do |pin|
+        lat = coordinate(pin["lat"])
+        lng = coordinate(pin["lng"])
+        next if lat.nil? || lng.nil?
+
+        {
+          "name" => pin["name"].to_s,
+          "x" => format("%.1f", (x_coeff[0] * lng) + (x_coeff[1] * lat) + x_coeff[2]),
+          "y" => format("%.1f", (y_coeff[0] * lng) + (y_coeff[1] * lat) + y_coeff[2])
+        }
+      end
+    end
+
+    def solve_axis(samples, axis)
+      ata = Array.new(3) { Array.new(3, 0.0) }
+      atb = Array.new(3, 0.0)
+      samples.each do |lon, lat, x, y|
+        row = [lon, lat, 1.0]
+        target = axis == :x ? x : y
+        3.times do |i|
+          atb[i] += row[i] * target
+          3.times { |j| ata[i][j] += row[i] * row[j] }
+        end
+      end
+      solve3(ata, atb)
+    end
+
+    def solve3(matrix, vector)
+      coeff = matrix.map(&:dup)
+      values = vector.dup
+      3.times do |col|
+        pivot = (col...3).max_by { |row| coeff[row][col].abs }
+        coeff[col], coeff[pivot] = coeff[pivot], coeff[col]
+        values[col], values[pivot] = values[pivot], values[col]
+        scale = coeff[col][col]
+        return [0.0, 0.0, 0.0] if scale.abs < 1e-9
+
+        ((col + 1)...3).each do |row|
+          factor = coeff[row][col] / scale
+          3.times { |k| coeff[row][k] -= factor * coeff[col][k] }
+          values[row] -= factor * values[col]
+        end
+      end
+      solved = Array.new(3, 0.0)
+      2.downto(0) do |row|
+        sum = values[row]
+        ((row + 1)...3).each { |k| sum -= coeff[row][k] * solved[k] }
+        solved[row] = sum / coeff[row][row]
+      end
+      solved
     end
   end
 end

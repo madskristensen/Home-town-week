@@ -6,23 +6,7 @@
 {%- assign map_title_id = include.title_id | default: "eastside-map-title" -%}
 <svg class="eastside-svg" viewBox="104 90 624 568" role="group" aria-labelledby="{{ map_title_id }}">
   <title id="{{ map_title_id }}">{{ map_title }}</title>
-  <g class="map-geo" aria-hidden="true" focusable="false">
-    <path class="foothills" d="M548 148 C572 210 555 280 590 350 C630 420 655 480 688 540 C708 600 690 650 706 668 L728 672 L728 140 C660 128 580 136 548 148 Z"/>
-    <path class="water" d="M232 157 L212 189 L209 240 L205 304 L220 368 L232 432 L240 483 L259 511 L287 502 L294 444 L283 380 L275 329 L271 278 L263 240 L244 195 Z"/>
-    <path class="island" d="M250 365 L237 387 L244 416 L263 421 L276 403 L275 374 Z"/>
-    <path class="water" d="M341 294 L330 329 L341 387 L365 425 L376 434 L388 393 L384 329 L361 291 Z"/>
-    <path class="road" d="M283 99 L287 176 L291 253 L287 329 L302 393 L283 483 L267 547"/>
-    <path class="road" d="M197 304 L275 310 L330 278 L361 265"/>
-    <path class="road" d="M197 368 L252 374 L291 387 L361 412 L415 438 L450 468 L530 472 L580 478 L612 494"/>
-    <path class="road" d="M440 168 L478 292 L520 392 L552 442"/>
-    <path class="river" d="M462 188 C498 250 488 320 528 392 C552 442 572 472 598 512"/>
-    <text class="water-label" x="188" y="300">Lake Washington</text>
-    <text class="water-label" x="332" y="372">Lake Sammamish</text>
-    <text class="road-label" x="306" y="214">405</text>
-    <text class="road-label" x="292" y="302">520</text>
-    <text class="road-label" x="318" y="404">90</text>
-    <text class="water-label" x="508" y="396">Snoqualmie River</text>
-  </g>
+  {%- include eastside-geo.html -%}
   <a href="{{ '/kenmore/' | relative_url }}">
     <circle class="city-hit" cx="240.5" cy="153.7" r="18"/>
     <circle class="city-pin" cx="240.5" cy="153.7" r="6.5"/>
