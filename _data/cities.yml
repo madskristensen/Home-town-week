@@ -529,11 +529,11 @@
   lon: -122.2087
   description: Upcoming family events in Kirkland on the Eastside.
   hero:
-    image: /assets/images/kirkland/marina-park.webp
-    alt: The gazebo and lawn at Marina Park in Kirkland, with Lake Washington beyond.
+    image: /assets/images/kirkland/marina-waterfront.webp
+    alt: The waterfront at Marina Park in Kirkland, with the lake, a pier, and trees along the shore.
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     license: CC BY-SA 3.0
-    source: https://commons.wikimedia.org/wiki/File:Kirkland_Marina_Park_01.jpg
+    source: https://commons.wikimedia.org/wiki/File:Kirkland,_WA_-_Marina_Park_pano_02.jpg
   summary: >-
     A waterfront city on Lake Washington.
   tagline: "A waterfront city on Lake Washington."
@@ -829,11 +829,11 @@
   lon: -122.1215
   description: Upcoming family events in Redmond on the Eastside.
   hero:
-    image: /assets/images/redmond/marymoor-windmill.webp
-    alt: The windmill at Marymoor Park in Redmond, with a wide lawn and blue sky.
-    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    image: /assets/images/redmond/town-center-plaza.webp
+    alt: The plaza stair and glass canopy at Redmond Town Center, under a blue sky.
+    credit: "Photo: Joe Mabel, CC BY-SA 4.0"
     license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:2025-10-22_Marymoor_Windmill_IMG_6518.jpg
+    source: https://commons.wikimedia.org/wiki/File:Redmond_Town_Center_03.jpg
   summary: >-
     Bicycle Capital of the Northwest.
   slogan: "Bicycle Capital of the Northwest."
