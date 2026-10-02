@@ -15,7 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "_site"
 SCRIPT = re.compile(
-    r"<script\b[^>]*type=[\"']application/ld\+json[\"'][^>]*>(.*?)</script>",
+    r"<script\b[^>]*type=[\"']?application/ld\+json[\"']?[^>]*>(.*?)</script>",
     re.IGNORECASE | re.DOTALL,
 )
 TIMED = re.compile(r"T\d{2}:\d{2}")
