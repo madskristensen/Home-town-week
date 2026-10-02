@@ -1783,6 +1783,102 @@
       ]
     },
     {
+      "id": "maple-valley",
+      "name": "Maple Valley",
+      "parks": [
+        {
+          "id": "maple-valley-covington-community-park",
+          "name": "Covington Community Park",
+          "lat": 47.384756,
+          "lng": -122.104224,
+          "page": "https://www.covingtonwa.gov/parks/covingtoncommunitypark.php",
+          "page_label": "Park page",
+          "address": "17649 SE 240th Street, Covington",
+          "address_source": "directory",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": true,
+          "splash": false
+        },
+        {
+          "id": "maple-valley-crystal-view-park",
+          "name": "Crystal View Park",
+          "lat": 47.373526,
+          "lng": -122.114064,
+          "page": "https://www.covingtonwa.gov/parks/crystalviewpark.php",
+          "page_label": "Park page",
+          "address": "25412 170th Place SE, Covington",
+          "address_source": "directory",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": true,
+          "splash": false
+        },
+        {
+          "id": "maple-valley-friendship-park",
+          "name": "Friendship Park",
+          "lat": 47.374031,
+          "lng": -122.130626,
+          "page": "https://www.covingtonwa.gov/parks/friendshippark.php",
+          "page_label": "Park page",
+          "address": "15808 SE 254th Place, Covington",
+          "address_source": "directory",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": true,
+          "splash": false
+        },
+        {
+          "id": "maple-valley-lake-wilderness-park",
+          "name": "Lake Wilderness Park",
+          "lat": 47.376149,
+          "lng": -122.04046,
+          "page": "https://www.maplevalleywa.gov/government/departments/parks_and_recreation/lake_wilderness_park.php",
+          "page_label": "Park page",
+          "address": "22500 SE 248th Street, Maple Valley",
+          "address_source": "directory",
+          "restrooms": true,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
+        },
+        {
+          "id": "maple-valley-summit-park",
+          "name": "Summit Park",
+          "lat": 47.356046,
+          "lng": -122.021232,
+          "page": "https://www.maplevalleywa.gov/government/departments/parks_and_recreation/summit_park.php",
+          "page_label": "Park page",
+          "address": "23675 SE Tahoma Way, Maple Valley",
+          "address_source": "directory",
+          "restrooms": true,
+          "covered": false,
+          "accessible": true,
+          "toddler": false,
+          "splash": false
+        },
+        {
+          "id": "maple-valley-take-a-break-park",
+          "name": "Take-A-Break Park",
+          "lat": 47.390656,
+          "lng": -122.048753,
+          "page": "https://www.maplevalleywa.gov/government/departments/parks_and_recreation/parks_and_trails.php",
+          "page_label": "City parks",
+          "address": "21849 SE Wax Road, Maple Valley",
+          "address_source": "directory",
+          "restrooms": false,
+          "covered": false,
+          "accessible": false,
+          "toddler": false,
+          "splash": false
+        }
+      ]
+    },
+    {
       "id": "mercer-island",
       "name": "Mercer Island",
       "parks": [
