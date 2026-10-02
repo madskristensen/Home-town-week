@@ -9,7 +9,7 @@ permalink: /about/
   <h1>About</h1>
   <p class="family-line">Made by an Eastside family, for Eastside families.</p>
   <h2>Made by an Eastside family</h2>
-  <p>We're a local family with two kids, and we built this because we kept missing the good stuff. Not the big festivals, but the little things we only heard about afterward: the library's Saturday craft hour, a farm's first pumpkin weekend, a church Nerf war, a ranger walk at the park down the street.</p>
+  <p>We're a local family with three kids, and we built this because we kept missing the good stuff. Not the big festivals, but the little things we only heard about afterward: the library's Saturday craft hour, a farm's first pumpkin weekend, a church Nerf war, a ranger walk at the park down the street.</p>
   <p>So it mattered to us to include even the smallest venues and the most hyper-local activities. Every morning we check more than 140 neighborhood calendars across the Eastside: city parks, libraries, farms, little theaters, museums, community centers. The places only a local family would know to look.</p>
   <p>We still miss some, and that's where you come in. If your school, club, church or favorite farm posts events, send us the link and we'll check it every day too.</p>
   {%- include empty-suggest.html mode="button" subject="Suggest an event" -%}
