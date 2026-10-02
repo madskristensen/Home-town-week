@@ -4,7 +4,7 @@
 {%- endcomment -%}
 {%- assign map_title = include.title | default: "Map of Eastside cities" -%}
 {%- assign map_title_id = include.title_id | default: "eastside-map-title" -%}
-<svg class="eastside-svg" viewBox="104 90 624 568" role="group" aria-labelledby="{{ map_title_id }}">
+<svg class="eastside-svg" viewBox="104 90 624 568" width="624" height="568" role="group" aria-labelledby="{{ map_title_id }}">
   <title id="{{ map_title_id }}">{{ map_title }}</title>
   {%- include eastside-geo.html -%}
   <a href="{{ '/kenmore/' | relative_url }}">
