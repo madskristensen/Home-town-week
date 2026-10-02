@@ -1679,7 +1679,7 @@ module EastsideCalendar
           "weekly" => presence(district["weekly"], district["early"].to_s.strip),
           "source" => district["source"].to_s.strip,
           "source_label" => presence(district["source_label"], "#{title} calendar"),
-          "feed_name" => "No-school days, #{title}",
+          "feed_name" => title,
           "feed_path" => "calendar/no-school/#{id}.ics"
         }
       end
@@ -1904,7 +1904,7 @@ module EastsideCalendar
         site.static_files << CalendarFile.new(
           "calendar/no-school",
           "#{id}.ics",
-          EventCalendar.build_feed("Eastside Family Calendar: No-school days, #{title}", events, dtstamp)
+          EventCalendar.build_feed(title, events, dtstamp)
         )
       end
     end

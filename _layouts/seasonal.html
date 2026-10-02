@@ -43,7 +43,7 @@ layout: default
       </div>
       <div class="ns-sub" id="ns-subscribe">
     {%- assign ns_default = school.districts | where: "slug", "lwsd" | first -%}
-    {%- include calendar-subscribe.html city=ns_default.id name=ns_default.feed_name path=ns_default.feed_path -%}
+    {%- include calendar-subscribe.html city=ns_default.id name=ns_default.feed_name path=ns_default.feed_path plain=true -%}
       </div>
     </div>
     <p class="ns-hint" id="ns-hint">Showing Lake Washington. Pick your district and we'll remember it.</p>
@@ -65,8 +65,7 @@ layout: default
     {%- for district in school.districts -%}
     {%- capture ns_https -%}https://www.eastsidecalendar.com/{{ district.feed_path }}{%- endcapture -%}
     {%- capture ns_webcal -%}webcal://www.eastsidecalendar.com/{{ district.feed_path }}{%- endcapture -%}
-    {%- capture ns_title -%}Eastside Family Calendar: {{ district.feed_name }}{%- endcapture -%}
-    {"slug":"{{ district.slug }}","https":{{ ns_https | strip | jsonify }},"webcal":{{ ns_webcal | strip | jsonify }},"title":{{ ns_title | strip | jsonify }}}{% unless forloop.last %},{% endunless %}
+    {"slug":"{{ district.slug }}","https":{{ ns_https | strip | jsonify }},"webcal":{{ ns_webcal | strip | jsonify }},"title":{{ district.feed_name | jsonify }}}{% unless forloop.last %},{% endunless %}
     {%- endfor -%}
     ]
   </script>
