@@ -20,9 +20,13 @@
 #
 # hero: the one town photo. It is the visible hero under the city name
 # and the og:image and twitter:image. image, alt, credit, license, and
-# source. A wide landmark or scenic view of the town. Not a venue
+# source. A scenic or landmark view someone would put on a postcard:
+# a lake, mountain, waterfall, park, historic building at its best, or
+# a sunset. Not a parking lot, gas station, chain store, traffic,
+# windshield, or a frame that is mostly cars or road. Not a venue
 # interior, not identifiable kids or teens, and not a photo that also
-# appears on an event card.
+# appears on an event card. Prefer a high-resolution Wikimedia Commons
+# featured or quality image, or a CC-licensed Flickr photo.
 #
 # sources: lives on each city entry here, not in a separate file. Each item
 # is a name, url, type, and notes. Types: city_hall, parks, allevents,
@@ -62,11 +66,11 @@
   lon: -122.2015
   description: Upcoming family events in Bellevue on the Eastside.
   hero:
-    image: /assets/images/bellevue/downtown-park.webp
-    alt: Aerial view of Bellevue Downtown Park, with lawns, paths, and the downtown skyline.
-    credit: "Photo: Spicypepper999, CC0"
-    license: CC0
-    source: https://commons.wikimedia.org/wiki/File:Bellevue_Downtown_Park_aerial,_April_2023.png
+    image: /assets/images/bellevue/lake-washington-dusk.webp
+    alt: Downtown Bellevue at dusk, with the skyline reflected on Lake Washington and mountains behind.
+    credit: "Photo: Matthew Rutledge, CC BY 2.0"
+    license: CC BY 2.0
+    source: https://commons.wikimedia.org/wiki/File:Bellevue_and_Lake_Washington_at_dusk.jpg
   summary: >-
     A city in a park.
   slogan: "A city in a park."
@@ -248,11 +252,11 @@
   lon: -121.9140
   description: Upcoming family events in Carnation on the Eastside.
   hero:
-    image: /assets/images/carnation/tolt-bridge.webp
-    alt: The pedestrian suspension bridge over the Snoqualmie River at Tolt-MacDonald Park in Carnation.
+    image: /assets/images/carnation/tolt-footbridge.webp
+    alt: The pedestrian suspension bridge at Tolt-MacDonald Park in Carnation, under a blue sky.
     credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
     license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:2023-05-10,_Tolt-MacDonald_Park_footbridge,_24.jpg
+    source: https://commons.wikimedia.org/wiki/File:2023-05-10,_Tolt-MacDonald_Park_footbridge,_15.jpg
   summary: >-
     A farm town on the Snoqualmie River.
   tagline: "A farm town on the Snoqualmie River."
@@ -375,11 +379,11 @@
   lon: -122.0326
   description: Upcoming family events in Issaquah on the Eastside.
   hero:
-    image: /assets/images/issaquah/tiger-mountain.webp
-    alt: Tiger Mountain above the trees in Issaquah, under a clear blue sky.
-    credit: "Photo: Chris Light, CC BY-SA 4.0"
-    license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:Tiger_Mtn_253.jpg
+    image: /assets/images/issaquah/lake-sammamish-park.webp
+    alt: Lake Sammamish State Park in Issaquah, with a picnic lawn, poplars, and the lake.
+    credit: "Photo: Mggkitsap, CC BY 3.0"
+    license: CC BY 3.0
+    source: https://commons.wikimedia.org/wiki/File:2006-08-0449lake-sammamish-washington.jpg
   summary: >-
     A foothill city at the south end of Lake Sammamish.
   tagline: "A foothill city at the south end of Lake Sammamish."
@@ -471,11 +475,11 @@
   lon: -122.244
   description: Upcoming family events in Kenmore on the Eastside.
   hero:
-    image: /assets/images/kenmore/log-boom.webp
-    alt: The pier at Log Boom Park in Kenmore, looking back toward the shore of Lake Washington.
-    credit: "Photo: Joe Mabel, CC BY-SA 4.0"
-    license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:Kenmore,_WA_-_Log_Boom_Park,_seen_from_the_Pier_01.jpg
+    image: /assets/images/kenmore/saint-edward.webp
+    alt: Saint Edward Seminary at Saint Edward State Park in Kenmore, a brick building with a bell tower.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:St_Edward_Seminary_pano_02.jpg
   summary: >-
     A lakeside city at the north end of Lake Washington.
   tagline: "A lakeside city at the north end of Lake Washington."
@@ -525,11 +529,11 @@
   lon: -122.2087
   description: Upcoming family events in Kirkland on the Eastside.
   hero:
-    image: /assets/images/kirkland/juanita-beach.webp
-    alt: Juanita Beach Park on Lake Washington, with a sandy beach, lawn, and the Seattle skyline across the water.
-    credit: "Photo: City of Kirkland"
-    license: City of Kirkland
-    source: https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park/Juanita-Beach-Park
+    image: /assets/images/kirkland/marina-park.webp
+    alt: The gazebo and lawn at Marina Park in Kirkland, with Lake Washington beyond.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Kirkland_Marina_Park_01.jpg
   summary: >-
     A waterfront city on Lake Washington.
   tagline: "A waterfront city on Lake Washington."
@@ -627,11 +631,11 @@
   lon: -122.0454
   description: Upcoming family events in Maple Valley and Covington on the Eastside.
   hero:
-    image: /assets/images/maple-valley/lake-wilderness-lodge.webp
-    alt: Lake Wilderness Lodge in Maple Valley, a low wood and stone building beside the lake.
-    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
-    license: CC BY-SA 3.0
-    source: https://commons.wikimedia.org/wiki/File:Lake_Wilderness_Lodge_pano_02.jpg
+    image: /assets/images/maple-valley/lake-wilderness-open.webp
+    alt: Lake Wilderness in Maple Valley, with open water and a fir forest on the far shore.
+    credit: "Photo: Roc0ast3r, CC0"
+    license: CC0
+    source: https://commons.wikimedia.org/wiki/File:Lake_Wilderness_in_Maple_Valley,_WA_(2024)_-_1.jpg
   summary: >-
     Maple Valley and Covington, in the southeast King County foothills.
   tagline: "Maple Valley and Covington, in the southeast King County foothills."
@@ -745,11 +749,11 @@
   lon: -121.7868
   description: Upcoming family events in North Bend on the Eastside.
   hero:
-    image: /assets/images/north-bend/mount-si.webp
-    alt: Mount Si and Little Si seen from Southeast North Bend Way in North Bend.
+    image: /assets/images/north-bend/rattlesnake-lake.webp
+    alt: Rattlesnake Lake seen from Rattlesnake Ledge, with forested peaks behind the water.
     credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
     license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:2022-07-19,_Mount_Si_from_SE_N_Bend_Way,_North_Bend,_Washington.jpg
+    source: https://commons.wikimedia.org/wiki/File:2023-06-06,_Rattlesnake_Lake_from_Rattlesnake_Ledge,_05.jpg
   summary: >-
     A mountain town at the foot of Mount Si.
   tagline: "A mountain town at the foot of Mount Si."
@@ -911,11 +915,11 @@
   lon: -122.2171
   description: Upcoming family events in Renton on the Eastside.
   hero:
-    image: /assets/images/renton/gene-coulon.webp
-    alt: The swimming beach and lawn at Gene Coulon Memorial Beach Park in Renton, with Lake Washington beyond.
+    image: /assets/images/renton/coulon-sailboats.webp
+    alt: Sailboats on the water at Gene Coulon Memorial Beach Park in Renton.
     credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
     license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:2009-05-09,_Gene_Coulon_Memorial_Beach_Park_(Renton,_Washington),_181857.jpg
+    source: https://commons.wikimedia.org/wiki/File:2009-05-09,_Gene_Coulon_Memorial_Beach_Park_(Renton,_Washington),_175718.jpg
   summary: >-
     Where the Cedar River meets Lake Washington.
   tagline: "Where the Cedar River meets Lake Washington."
@@ -1133,11 +1137,11 @@
   lon: -122.1635
   description: Upcoming family events in Woodinville on the Eastside.
   hero:
-    image: /assets/images/woodinville/chateau-ste-michelle.webp
-    alt: The chateau at Chateau Ste. Michelle in Woodinville, with lawn, a fountain, and blue sky.
+    image: /assets/images/woodinville/chateau-gardens.webp
+    alt: Flower beds and a path leading to the chateau at Chateau Ste. Michelle in Woodinville.
     credit: "Photo: Another Believer, CC BY-SA 4.0"
     license: CC BY-SA 4.0
-    source: https://commons.wikimedia.org/wiki/File:Chateau_Ste._Michelle_(2022)_-_03.jpg
+    source: https://commons.wikimedia.org/wiki/File:Chateau_Ste._Michelle_(2022)_-_17.jpg
   summary: >-
     Wine country in the Sammamish Valley.
   tagline: "Wine country in the Sammamish Valley."
