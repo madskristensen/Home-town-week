@@ -1680,9 +1680,19 @@ h2.event-bucket.is-past {
 }
 
 .cal-subscribe summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   color: var(--link);
   font-weight: 600;
   cursor: pointer;
+}
+
+.cal-subscribe .cal-icon {
+  display: block;
+  width: 1.15em;
+  height: 1.15em;
+  flex: none;
 }
 
 .cal-subscribe-note {
@@ -1880,16 +1890,28 @@ html[data-ns-chosen] .ns-hint {
   align-items: center;
   min-height: 2.4rem;
   padding: 0.35rem 0.85rem;
-  border: 1px solid var(--rule);
+  border: 1px solid var(--forest);
   border-radius: var(--radius);
   background: var(--sheet);
-  color: var(--ink);
+  color: var(--forest);
   font-weight: 650;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.ns-sub .cal-subscribe summary::-webkit-details-marker {
+  display: none;
 }
 
 .ns-sub .cal-subscribe summary:hover,
 .ns-sub .cal-subscribe summary:focus-visible {
-  border-color: var(--ink);
+  border-color: var(--forest);
+  background: var(--wash);
+}
+
+.ns-sub .cal-subscribe summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
 }
 
 .ns-months {
