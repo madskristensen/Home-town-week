@@ -3,14 +3,14 @@
   src, alt, credit, source, width, height.
   figure: class, default event-photo.
   loading: default lazy. priority: fetch priority, omitted when blank.
-  sizes: default (min-width: 42rem) 21rem, calc(100vw - 3rem).
+  sizes: the photo inside the card padding, not the full column.
 {%- endcomment -%}
 {%- assign photo_class = include.figure | append: "" | strip -%}
 {%- if photo_class.size == 0 -%}{%- assign photo_class = "event-photo" -%}{%- endif -%}
 {%- assign photo_loading = include.loading | append: "" | strip -%}
 {%- if photo_loading.size == 0 -%}{%- assign photo_loading = "lazy" -%}{%- endif -%}
 {%- assign photo_sizes = include.sizes | append: "" | strip -%}
-{%- if photo_sizes.size == 0 -%}{%- assign photo_sizes = "(min-width: 42rem) 21rem, calc(100vw - 3rem)" -%}{%- endif -%}
+{%- if photo_sizes.size == 0 -%}{%- assign photo_sizes = "(min-width: 47rem) calc(19.75rem - 2px), (min-width: 42rem) calc((100vw - 4.5rem) / 2 - 1.5rem - 2px), calc(100vw - 4.5rem - 2px)" -%}{%- endif -%}
 {%- assign photo_credit = include.credit | append: "" | strip -%}
 {%- assign photo_source = include.source | append: "" | strip -%}
 {%- assign photo_width = include.width | append: "" | strip -%}

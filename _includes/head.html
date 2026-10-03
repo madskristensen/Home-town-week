@@ -16,7 +16,7 @@
 {%- assign preload_event = preload_hub.sections.first.events.first -%}
 {%- assign preload_src = preload_event.image | append: "" | strip -%}
 {%- if preload_src.size > 0 -%}
-{%- include responsive-img.html src=preload_src sizes="(min-width: 42rem) 21rem, calc(100vw - 3rem)" max="800" preload=true -%}
+{%- include responsive-img.html src=preload_src sizes="(min-width: 47rem) calc(19.75rem - 2px), (min-width: 42rem) calc((100vw - 4.5rem) / 2 - 1.5rem - 2px), calc(100vw - 4.5rem - 2px)" max="800" preload=true -%}
 {%- endif -%}
 {%- endif -%}
 {%- include stylesheets.html -%}

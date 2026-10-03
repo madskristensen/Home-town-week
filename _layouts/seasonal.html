@@ -267,7 +267,9 @@ layout: default
     {%- endif -%}
     {%- assign section_events = section.events | size -%}
     {%- if section_events > 0 -%}
-    {%- if forloop.first -%}
+    {%- if forloop.first and page.hub_id == "this-weekend" -%}
+      {%- assign section_eager = 4 -%}
+    {%- elsif forloop.first -%}
       {%- assign section_eager = 1 -%}
     {%- else -%}
       {%- assign section_eager = 0 -%}
