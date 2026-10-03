@@ -278,6 +278,7 @@
   {%- if weekend_ready -%}
   <p class="weekend-more"><a href="{{ '/this-weekend/' | relative_url }}">See everything this weekend</a></p>
   {%- endif -%}
+  {%- include newsletter.html id="weekend" lead="Get this list by email, every Thursday" -%}
 </section>
 {%- else -%}
 <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
