@@ -71,6 +71,9 @@
   {%- endcomment -%}
   <main id="main-content">
     {{ content }}
+    <div class="newsletter-slot wrap">
+      {%- include newsletter.html -%}
+    </div>
   </main>
   {%- include footer.html -%}
   <button type="button" class="to-top" aria-label="Back to top" tabindex="-1" aria-hidden="true">

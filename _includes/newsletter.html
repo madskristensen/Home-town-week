@@ -1,19 +1,14 @@
 {%- comment -%}
   One Eastside newsletter, not one per city. Plain HTML, no script.
-  id: unique suffix so two forms on the home page do not share an id.
-  lead: the visible line beside the field.
+  Sits at the end of main, above the footer rule. Once per page.
 {%- endcomment -%}
-{%- assign newsletter_id = include.id | append: "" | strip -%}
-{%- assign newsletter_lead = include.lead | append: "" | strip -%}
-<form class="newsletter" action="https://buttondown.com/api/emails/embed-subscribe/madskristensen" method="post" target="_blank" rel="noopener noreferrer" aria-labelledby="newsletter-{{ newsletter_id }}-lead">
-  <div class="newsletter-line">
-    <p class="newsletter-lead" id="newsletter-{{ newsletter_id }}-lead">{{ newsletter_lead | escape }}</p>
-    <div class="newsletter-fields">
-      <label class="visually-hidden" for="newsletter-{{ newsletter_id }}-email">Email</label>
-      <input id="newsletter-{{ newsletter_id }}-email" name="email" type="email" required autocomplete="email" placeholder="Email address" aria-describedby="newsletter-{{ newsletter_id }}-note">
-      <input type="hidden" name="tag" value="website">
-      <button type="submit">Subscribe</button>
-    </div>
+<form class="newsletter" action="https://buttondown.com/api/emails/embed-subscribe/madskristensen" method="post" target="_blank" rel="noopener noreferrer" aria-labelledby="newsletter-lead">
+  <p class="newsletter-lead" id="newsletter-lead">Weekend picks by email, every Thursday</p>
+  <div class="newsletter-fields">
+    <label class="visually-hidden" for="newsletter-email">Email</label>
+    <input id="newsletter-email" name="email" type="email" required autocomplete="email" placeholder="Email address" aria-describedby="newsletter-note">
+    <input type="hidden" name="tag" value="website">
+    <button type="submit">Subscribe</button>
   </div>
-  <p class="newsletter-fine" id="newsletter-{{ newsletter_id }}-note">One email a week. Unsubscribe anytime.</p>
+  <p class="newsletter-fine" id="newsletter-note">One email a week. Unsubscribe anytime.</p>
 </form>
