@@ -1,0 +1,8 @@
+{%- comment -%}
+  One quiet line on the home page. Chosen at build time from
+  _data/featured_articles.yml. Not a banner: muted text, no fill.
+{%- endcomment -%}
+{%- assign featured = site.data.featured_article -%}
+{%- if featured -%}
+<p class="featured-article"><a href="{{ featured.url | relative_url }}">{{ featured.text | escape }}<span class="featured-article-arrow" aria-hidden="true"> →</span></a></p>
+{%- endif -%}

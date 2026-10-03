@@ -26,6 +26,30 @@
   margin: 0;
 }
 
+.featured-article {
+  margin: 1.15rem 0 1.35rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 550;
+  line-height: 1.4;
+}
+
+.featured-article a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.featured-article a:hover,
+.featured-article a:focus-visible {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.featured-article-arrow {
+  text-decoration: none;
+}
+
 .weekend-picks {
   margin: 0 0 2rem;
 }

@@ -8,7 +8,6 @@ layout: default
   {%- if season_path == "/christmas/" -%}
   {%- include lights-feature.html -%}
   {%- endif -%}
-  {%- include weekend-picks.html -%}
   <section class="home-cities" aria-labelledby="cities">
     <h2 id="cities">Pick your town</h2>
     <div class="eastside-board">
@@ -65,4 +64,6 @@ layout: default
       </nav>
     </div>
   </section>
+  {%- include featured-article.html -%}
+  {%- include weekend-picks.html -%}
 </article>

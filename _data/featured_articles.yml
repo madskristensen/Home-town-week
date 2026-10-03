@@ -1,0 +1,59 @@
+# Quiet featured-article line on the home page, under the town map
+# and above the weekend picks. Not a banner.
+#
+# Windows use month-day, so they repeat each year. Today is
+# America/Los_Angeles. When more than one window contains today, the
+# one that started most recently wins. The ISO week then picks one
+# line from that window, so a daily rebuild changes it on Monday.
+# A line is used only when articles/{article}.md exists.
+# March through September, and any empty window, use the fallback.
+fallback:
+  text: Free things to do with kids
+  article: free-things-to-do
+windows:
+  - id: fall
+    start: "10-01"
+    end: "11-15"
+    items:
+      - text: Rainy weekend? Indoor places to play
+        article: rainy-day-indoor-play
+      - text: Free things to do with kids
+        article: free-things-to-do
+  - id: lights
+    start: "11-16"
+    end: "11-30"
+    items:
+      - text: Out to see the Christmas lights?
+        article: christmas-lights
+      - text: Where to meet Santa
+        article: meeting-santa
+  - id: december
+    start: "12-01"
+    end: "12-24"
+    items:
+      - text: Out to see the Christmas lights?
+        article: christmas-lights
+      - text: Where to meet Santa
+        article: meeting-santa
+      - text: Winter break with kids
+        article: winter-break
+  - id: christmas-day
+    start: "12-25"
+    end: "12-25"
+    items:
+      - text: Winter break with kids
+        article: winter-break
+  - id: new-year
+    start: "12-26"
+    end: "12-31"
+    items:
+      - text: New Year's Eve with kids
+        article: new-years-eve
+  - id: deep-winter
+    start: "01-01"
+    end: "02-29"
+    items:
+      - text: Snow play near the Eastside
+        article: snow-play
+      - text: Rainy weekend? Indoor places to play
+        article: rainy-day-indoor-play
