@@ -1621,30 +1621,47 @@ h2.event-bucket.is-past {
   text-underline-offset: 0.12em;
 }
 
-/* The action group stays at the top-right of the date row. The date
-   column wraps in the space beside it, so a short date and a long date
-   leave the icons in the same place. */
-.event-when-row {
+/* The date wraps beside a fixed top-right slot, so a short date and a
+   long date leave the icons in the same place. One calendar link and the
+   share button are columns. Several dates stay in .event-actions. */
+.event-card > .event-when {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-columns:
+    minmax(0, 1fr)
+    calc(0.35rem + 4.6rem - 2rem - 0.1rem - 2rem)
+    2rem
+    0.1rem
+    2rem;
   align-items: start;
-  column-gap: 0.35rem;
+  column-gap: 0;
   min-height: 2rem;
   margin: 0.2rem 0 0.15rem;
-}
-
-.event-card .event-when {
-  display: block;
-  max-width: none;
-  margin: 0;
   padding-top: 0.32rem;
+  max-width: none;
   color: var(--gold);
   font-size: 0.95rem;
   font-weight: 600;
   line-height: 1.35;
 }
 
-.event-actions {
+.event-card > .event-when:has(.event-actions) {
+  grid-template-columns: minmax(0, 1fr) max-content;
+  column-gap: 0.35rem;
+}
+
+.event-card > .event-when > :is(a.event-cal, .event-share, .event-actions) {
+  margin-top: -0.32rem;
+}
+
+.event-card > .event-when:not(:has(.event-actions)) > a.event-cal {
+  grid-column: 3;
+}
+
+.event-card > .event-when:not(:has(.event-actions)) > .event-share {
+  grid-column: 5;
+}
+
+.event-card > .event-when > .event-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1754,7 +1771,7 @@ h2.event-bucket.is-past {
   margin: 1.35rem 0 0.55rem;
 }
 
-.event-card .event-place {
+.event-card > .event-place {
   margin: 0.2rem 0 0.1rem;
   color: var(--muted);
   font-size: 0.92rem;
@@ -1762,19 +1779,18 @@ h2.event-bucket.is-past {
   line-height: 1.4;
 }
 
-.event-card .event-place a.place-town,
-.event-card .event-place span.place-town {
+.event-card > .event-place :is(a, span).place-town {
   color: inherit;
   font-weight: 600;
   text-decoration: none;
 }
 
-.event-card .event-place .drive-time::before {
+.event-card > .event-place .drive-time::before {
   content: " · ";
 }
 
-.event-card .event-place a.place-town:hover,
-.event-card .event-place a.place-town:focus-visible {
+.event-card > .event-place a.place-town:hover,
+.event-card > .event-place a.place-town:focus-visible {
   color: var(--link);
   text-decoration: underline;
 }
@@ -1838,17 +1854,17 @@ h2.event-bucket.is-past {
   white-space: nowrap;
 }
 
-.event-card a.event-cal:hover,
-.event-card a.event-cal:focus-visible {
-  background: var(--wash);
-  text-decoration: none;
-}
-
 .event-card .cal-icon {
   display: block;
   width: 1.15em;
   height: 1.15em;
   flex: none;
+}
+
+.event-card a.event-cal:hover,
+.event-card a.event-cal:focus-visible {
+  background: var(--wash);
+  text-decoration: none;
 }
 
 .event-card .event-cal-when {
@@ -1874,12 +1890,12 @@ h2.event-bucket.is-past {
   margin-top: 0;
 }
 
-.event-card .event-photo {
+.event-card > .event-photo {
   margin: 0 0 0.55rem;
   aspect-ratio: 16 / 9;
 }
 
-.event-card .event-photo img {
+.event-card > .event-photo img {
   position: absolute;
   inset: 0;
   width: 100%;

@@ -99,7 +99,6 @@
     height="{{ img_h }}"
     {%- if img_loading.size > 0 %} loading="{{ img_loading }}"{% endif %}
     {%- if img_priority.size > 0 %} fetchpriority="{{ img_priority }}"{% elsif img_loading == "lazy" %} fetchpriority="low"{% endif %}
-    data-photo="{{ include.src | escape }}"
     {%- if img_priority != "high" %} decoding="async"{% endif %}>
 </picture>
 {%- endif -%}

@@ -699,7 +699,7 @@ module EastsideCalendar
     end
 
     # Small calendar glyph. The link name lives on aria-label and title.
-    CALENDAR_ICON = '<svg class="cal-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#icon-cal"></use></svg>'.freeze
+    CALENDAR_ICON = '<svg class="cal-icon" viewBox="0 0 16 16" aria-hidden="true"><use href="#icon-cal"></use></svg>'.freeze
 
     def calendar_label(link, count)
       name = link[:name].to_s.strip
@@ -718,7 +718,10 @@ module EastsideCalendar
 
     def calendar_actions(links)
       anchors = links.map { |link| calendar_anchor(link, links.length) }
-      %(<span class="event-cals">#{anchors.join}</span>)
+      joined = anchors.join
+      return joined if links.length < 2
+
+      %(<span class="event-cals">#{joined}</span>)
     end
 
     # Keep the icon on the same line as the last word of the date.

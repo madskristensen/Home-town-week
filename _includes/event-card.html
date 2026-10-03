@@ -104,7 +104,7 @@
 {%- assign share_button = "" -%}
 {%- if share_title.size > 0 and share_start.size > 0 -%}
 {%- capture share_button -%}
-<button type="button" class="event-share" aria-label="Share {{ share_title | escape }}" data-share-title="{{ share_title | escape }}" data-share-start="{{ share_start | escape }}"{% if share_end.size > 0 %} data-share-end="{{ share_end | escape }}"{% endif %}{% if share_venue.size > 0 %} data-share-venue="{{ share_venue | escape }}"{% endif %}{% if schema_locality.size > 0 %} data-share-city="{{ schema_locality | escape }}"{% endif %}{% if schema_description.size > 0 %} data-share-blurb="{{ schema_description | escape }}"{% endif %}{% if schema_cost.size > 0 %} data-share-cost="{{ schema_cost | escape }}"{% endif %}{% if schema_url.size > 0 %} data-share-url="{{ schema_url | escape }}"{% endif %}><svg class="event-share-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#icon-share"></use></svg><span class="event-share-status" data-share-status aria-live="polite"></span></button>
+<button type="button" class="event-share" aria-label="Share {{ share_title | escape }}" data-share-title="{{ share_title | escape }}" data-share-start="{{ share_start | escape }}"{% if share_end.size > 0 %} data-share-end="{{ share_end | escape }}"{% endif %}{% if share_venue.size > 0 %} data-share-venue="{{ share_venue | escape }}"{% endif %}{% if schema_locality.size > 0 %} data-share-city="{{ schema_locality | escape }}"{% endif %}{% if schema_description.size > 0 %} data-share-blurb="{{ schema_description | escape }}"{% endif %}{% if schema_cost.size > 0 %} data-share-cost="{{ schema_cost | escape }}"{% endif %}{% if schema_url.size > 0 %} data-share-url="{{ schema_url | escape }}"{% endif %}><svg class="event-share-icon" viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-share"></use></svg><span class="event-share-status" data-share-status aria-live="polite"></span></button>
 {%- endcapture -%}
 {%- assign share_button = share_button | strip -%}
 {%- endif -%}
@@ -112,7 +112,6 @@
 {%- if card_id.size == 0 -%}
   {%- assign card_id = include.heading_id | append: "" | strip -%}
 {%- endif -%}
-{%- assign card_kind = include.image_kind | append: "" | strip -%}
 {%- assign card_event = include.event -%}
 {%- assign card_date = include.date | append: "" | strip -%}
 {%- assign card_end = include.end | append: "" | strip -%}
@@ -125,7 +124,7 @@
   {%- assign ev_ages = card_event.ages | append: "" -%}
   {%- assign ev_setting = card_event.setting | append: "" -%}
 {%- endif -%}
-<article class="event-card"{% if include.stretch == "1" %} data-stretch{% endif %}{% if card_id.size > 0 %} id="{{ card_id | escape }}"{% endif %}{% if card_date.size > 0 %} data-date="{{ card_date }}"{% endif %}{% if card_end.size > 0 %} data-end="{{ card_end }}"{% endif %}{% if card_attrs.size > 0 %} {{ card_attrs }}{% endif %}{% if card_kind.size > 0 %} data-image-kind="{{ card_kind }}"{% endif %}{% if ev_cost == "Free" or ev_cost == "free" %} data-cost="Free"{% endif %}{% if ev_ages == "Toddlers" or ev_ages == "Kids" or ev_ages == "Teens" %} data-ages="{{ ev_ages | escape }}"{% endif %}{% if ev_setting == "Indoor" or ev_setting == "Outdoor" %} data-setting="{{ ev_setting }}"{% endif %}{% if card_attrs.size == 0 and card_event.drop_off == true %} data-dropoff="1"{% endif %}{% if card_attrs.size == 0 and card_event.signup == true %} data-signup="1"{% endif %}{% if card_attrs.size == 0 and card_event.sensory == true %} data-sensory="1"{% endif %}>
+<article class="event-card"{% if include.stretch == "1" %} data-stretch{% endif %}{% if card_id.size > 0 %} id="{{ card_id | escape }}"{% endif %}{% if card_date.size > 0 %} data-date="{{ card_date }}"{% endif %}{% if card_end.size > 0 %} data-end="{{ card_end }}"{% endif %}{% if card_attrs.size > 0 %} {{ card_attrs }}{% endif %}{% if ev_cost == "Free" or ev_cost == "free" %} data-cost="Free"{% endif %}{% if ev_ages == "Toddlers" or ev_ages == "Kids" or ev_ages == "Teens" %} data-ages="{{ ev_ages | escape }}"{% endif %}{% if ev_setting == "Indoor" or ev_setting == "Outdoor" %} data-setting="{{ ev_setting }}"{% endif %}{% if card_attrs.size == 0 and card_event.drop_off == true %} data-dropoff="1"{% endif %}{% if card_attrs.size == 0 and card_event.signup == true %} data-signup="1"{% endif %}{% if card_attrs.size == 0 and card_event.sensory == true %} data-sensory="1"{% endif %}>
 {%- assign card_photo_html = include.photo_html | append: "" | strip -%}
 {%- if card_photo_html.size > 0 -%}
 {{ card_photo_html }}
@@ -154,17 +153,12 @@
 {%- assign card_title = include.title | append: "" -%}
 {%- if card_calendar_html.size == 0 and card_calendar.size > 0 -%}
 {%- capture card_calendar_html -%}
-<span class="event-cals"><a class="event-cal" href="{{ card_calendar | relative_url }}" aria-label="Add {{ card_title | escape }} to calendar" title="Add {{ card_title | escape }} to calendar"><svg class="cal-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#icon-cal"></use></svg></a></span>
+<a class="event-cal" href="{{ card_calendar | relative_url }}" aria-label="Add {{ card_title | escape }} to calendar" title="Add {{ card_title | escape }} to calendar"><svg class="cal-icon" viewBox="0 0 16 16" aria-hidden="true"><use href="#icon-cal"></use></svg></a>
 {%- endcapture -%}
 {%- assign card_calendar_html = card_calendar_html | strip -%}
 {%- endif -%}
 {%- if card_when.size > 0 or card_calendar_html.size > 0 or share_button.size > 0 -%}
-<div class="event-when-row">
-<p class="event-when">{{ card_when | escape }}</p>
-{%- if card_calendar_html.size > 0 or share_button.size > 0 -%}
-<div class="event-actions">{{ card_calendar_html }}{{ share_button }}</div>
-{%- endif -%}
-</div>
+<p class="event-when">{{ card_when | escape }}{%- if card_calendar_html contains "event-cals" -%}<span class="event-actions">{{ card_calendar_html }}{{ share_button }}</span>{%- else -%}{{ card_calendar_html }}{{ share_button }}{%- endif -%}</p>
 {%- endif -%}
 {%- assign card_number = include.number | append: "" | strip -%}
 {%- assign card_href = include.href | append: "" | strip -%}

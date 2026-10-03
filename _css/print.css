@@ -266,15 +266,21 @@ figure,
   box-shadow: none !important;
 }
 
-.event-when-row {
+.event-card > .event-when {
   display: block !important;
+  min-height: 0 !important;
+  padding-bottom: 5px;
 }
 
-.event-actions {
-  display: inline-flex !important;
-  min-width: 0 !important;
+.event-card > .event-when > :is(.event-actions, a.event-cal) {
+  display: flex !important;
+  width: max-content;
   max-width: none !important;
-  margin-top: 0.15rem;
+  margin: 0.15rem 0 0 !important;
+}
+
+.event-card > .event-when > .event-actions {
+  min-width: 0 !important;
 }
 
 .event-tags li {

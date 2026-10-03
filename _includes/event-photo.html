@@ -36,9 +36,6 @@
        max="800" -%}
   {%- endif -%}
   {%- if photo_credit.size > 0 or photo_source.size > 0 -%}
-  <figcaption>
-    {%- if photo_credit.size > 0 -%}<span class="credit">{{ include.credit }}</span>{%- endif -%}
-    {%- if photo_source.size > 0 -%}<a class="source" href="{{ include.source }}" rel="noopener">Source</a>{%- endif -%}
-  </figcaption>
+  <figcaption>{%- if photo_credit.size > 0 -%}{{ include.credit }}{%- endif -%}{%- if photo_source.size > 0 -%}<a class="source" href="{{ include.source }}" rel="noopener">Source</a>{%- endif -%}</figcaption>
   {%- endif -%}
 </figure>
