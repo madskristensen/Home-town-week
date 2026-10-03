@@ -1793,21 +1793,6 @@ h2.event-bucket.is-past {
   }
 }
 
-.card-grid > .event-card + .event-card,
-.hub-section + .hub-section {
-  content-visibility: auto;
-  contain-intrinsic-block-size: 28rem;
-  contain-intrinsic-block-size: auto 28rem;
-}
-
-@media (max-width: 41.99rem) {
-  .playground-list > li + li {
-    content-visibility: auto;
-    contain-intrinsic-block-size: 4.5rem;
-    contain-intrinsic-block-size: auto 4.5rem;
-  }
-}
-
 .cal-subscribe {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
