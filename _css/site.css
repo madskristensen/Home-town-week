@@ -1793,6 +1793,12 @@ h2.event-bucket.is-past {
   }
 }
 
+.card-grid > .event-card + .event-card {
+  content-visibility: auto;
+  contain-intrinsic-block-size: 26rem;
+  contain-intrinsic-block-size: auto 26rem;
+}
+
 .cal-subscribe {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
