@@ -1911,15 +1911,35 @@ h2.event-bucket.is-past {
 }
 
 .feed-note {
-  margin: 0.3rem 0 0;
+  margin: 0.45rem 0 0;
   color: var(--muted);
+  font-family: var(--sans);
   font-size: 0.8rem;
   font-weight: 400;
   line-height: 1.4;
 }
 
+.suggest-event .feed-note {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
 .feed-note a {
-  font-weight: 600;
+  display: inline-block;
+  min-height: 1.5rem;
+  padding: 0.15rem 0;
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
+}
+
+.feed-note a:hover,
+.feed-note a:focus-visible {
+  color: var(--link);
 }
 
 .check-list {

@@ -16,5 +16,5 @@ Link:
 Short blurb:
 Who it's for (kids, families):
 {%- endcapture -%}
-<p class="suggest-event">Know something fun in {{ city.name }}? <a href="mailto:suggestions@eastsidecalendar.com?subject={{ suggest_subject | strip | mail_escape }}&amp;body={{ suggest_body | strip | mail_escape }}">Suggest an event</a>.</p>
+<p class="suggest-event">Know something fun in {{ city.name }}? <a href="mailto:suggestions@eastsidecalendar.com?subject={{ suggest_subject | strip | mail_escape }}&amp;body={{ suggest_body | strip | mail_escape }}">Suggest an event</a>{%- include feed-note.html inline=true -%}</p>
 {%- endif -%}

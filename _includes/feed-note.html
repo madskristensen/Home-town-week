@@ -1,7 +1,12 @@
 {%- comment -%}
-  Quiet Atom link beside the calendar subscribe control.
+  Quiet link to this page's Atom feed. The head already has
+  link rel=alternate. inline sits the link in a sentence.
 {%- endcomment -%}
 {%- assign feed_href = page.atom_feed | append: "" | strip -%}
 {%- if feed_href.size > 0 -%}
-<p class="feed-note"><a href="{{ feed_href | relative_url }}" type="application/atom+xml">Feed</a></p>
+{%- if include.inline -%}
+<span class="feed-note"> · <a href="{{ feed_href | relative_url }}" type="application/atom+xml">RSS feed</a></span>
+{%- else -%}
+<p class="feed-note"><a href="{{ feed_href | relative_url }}" type="application/atom+xml">RSS feed</a></p>
+{%- endif -%}
 {%- endif -%}
