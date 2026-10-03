@@ -80,7 +80,34 @@
     <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 12.4V3.6M4.1 7.3 8 3.4l3.9 3.9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
   </button>
   {%- include pwa.html -%}
-  <script src="{{ '/assets/js/event-share.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/event-share.js' | relative_url }}" defer fetchpriority="low"></script>
+  <script>
+    (function () {
+      var printHref = "{{ site.data.css.print | relative_url }}";
+      function addPrint() {
+        if (document.head.querySelector("link[data-print-css]")) return;
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = printHref;
+        link.media = "print";
+        link.setAttribute("data-print-css", "");
+        document.head.appendChild(link);
+      }
+      function addBeacon() {
+        if (document.querySelector("script[data-cf-beacon]")) return;
+        var script = document.createElement("script");
+        script.src = "https://static.cloudflareinsights.com/beacon.min.js";
+        script.type = "module";
+        script.setAttribute("data-cf-beacon", "{\"token\": \"1c415eee86e04aaea8cd73a99feaf064\"}");
+        document.head.appendChild(script);
+      }
+      window.addEventListener("beforeprint", addPrint);
+      window.addEventListener("load", function () {
+        addPrint();
+        addBeacon();
+      });
+    })();
+  </script>
   <script>
     (function () {
       var el = document.querySelector("[data-print-date]");

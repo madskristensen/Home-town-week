@@ -5,6 +5,7 @@
   show_city: when true, the town name is the card kicker.
   eager: how many leading cards load immediately. Default 0.
   priority: when true, the first card is fetchpriority high.
+  Later eager cards are fetchpriority low so they do not compete with that image.
   A city hash sets prebuilt and already holds photo_html, place_html, and the
   other extracted fields. Hubs, weekend picks, and lights pass the event row.
 {%- endcomment -%}
@@ -127,7 +128,11 @@
 {%- if card_also_href.size == 0 -%}{%- assign card_also_href = event.also_source | append: "" | strip -%}{%- endif -%}
 {%- if forloop.index <= grid_eager -%}{%- assign card_loading = "eager" -%}{%- else -%}{%- assign card_loading = "lazy" -%}{%- endif -%}
 {%- assign card_priority = "" -%}
-{%- if include.priority and forloop.first -%}{%- assign card_priority = "high" -%}{%- endif -%}
+{%- if include.priority and forloop.first -%}
+{%- assign card_priority = "high" -%}
+{%- elsif card_loading == "eager" and forloop.index > 1 -%}
+{%- assign card_priority = "low" -%}
+{%- endif -%}
 {%- assign card_stretch = "" -%}
 {%- if event.stretch -%}{%- assign card_stretch = "1" -%}{%- endif -%}
 {%- include event-card.html

@@ -33,4 +33,7 @@
 {%- if layout_css.size > 0 -%}
 <style>{{ layout_css }}</style>
 {%- endif -%}
-<link rel="stylesheet" href="{{ site.data.css.print | relative_url }}" media="print">
+{%- comment -%}
+  Print CSS is added after load, from the script in default.html, so it
+  is not discovered while the first paint is still waiting.
+{%- endcomment -%}

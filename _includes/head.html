@@ -38,6 +38,6 @@
 {%- endif -%}
 {%- include seo.html -%}
 {%- comment -%}
-  Cloudflare Web Analytics. Cookieless, loads as a module, and adds no markup.
+  Cloudflare Web Analytics loads after the page, from the script in default.html.
+  One beacon. Do not add another.
 {%- endcomment -%}
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1c415eee86e04aaea8cd73a99feaf064"}'></script><!-- End Cloudflare Web Analytics -->
