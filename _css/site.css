@@ -1068,8 +1068,9 @@ picture {
 }
 
 .install-howto {
-  width: min(20rem, calc(100vw - 2rem));
+  width: min(22rem, calc(100vw - 2rem));
   max-height: calc(100dvh - 2rem);
+  overflow: auto;
   margin: auto;
   padding: 1rem 1rem 0.9rem;
   border: 1px solid var(--border-strong);
@@ -1111,7 +1112,23 @@ picture {
 }
 
 .install-howto li + li {
-  margin-top: 0.35rem;
+  margin-top: 0.55rem;
+}
+
+.install-safari-bar {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0.7rem 0 0.1rem;
+  color: var(--ink);
+}
+
+.install-safari-glyph {
+  fill: none;
+  stroke: var(--sheet);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .newsletter-slot {
