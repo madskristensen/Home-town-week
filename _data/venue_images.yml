@@ -181,6 +181,18 @@ venues:
     credit: "Photo: Royal Arch Park"
     license: organizer
     source: https://royalarchpark.org/
+  - keys: ["maple valley farmers market", "legacy site"]
+    image: /assets/images/maple-valley/farmers-market.webp
+    alt: Vendor tents at the Maple Valley Farmers Market, along a path under the trees.
+    credit: "Photo: Maple Valley Farmers Market"
+    license: organizer
+    source: https://www.maplevalleyfarmersmarket.com/
+  - keys: ["maple valley historical society", "historical society museum"]
+    image: /assets/images/maple-valley/historical-museum.webp
+    alt: The Gibbons-Mezzavilla General Store at the Maple Valley Historical Society Museum.
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Maple_Valley,_WA_-_museum_01.jpg
   - keys: ["maple valley library"]
     image: /assets/images/maple-valley/library.webp
     alt: Maple Valley Library, a King County Library System branch with a glass and wood front.
