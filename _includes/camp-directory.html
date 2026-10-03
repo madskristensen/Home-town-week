@@ -1,18 +1,18 @@
 {%- comment -%}
   One list. Town groups are the HTML, so #bellevue works with no
-  JavaScript. The select moves these same rows into other groups.
+  JavaScript. The pills move these same rows into other groups.
   One empty sponsored slot per group stays hidden.
 {%- endcomment -%}
 {%- assign camp_page = site.data.summer_camps_page -%}
 <section class="camp-directory">
   <div class="camp-group-row">
-    <label for="camp-group">Group by</label>
-    <select id="camp-group">
-      <option value="town" selected>Town</option>
-      <option value="type">Type</option>
-      <option value="signup">Sign-up date</option>
-      <option value="ages">Ages</option>
-    </select>
+    <span class="camp-group-label" id="camp-group-label">Group by</span>
+    <div class="camp-group-pills" role="group" aria-labelledby="camp-group-label">
+      <button type="button" class="camp-pill" data-group="town" aria-pressed="true">Town</button>
+      <button type="button" class="camp-pill" data-group="type" aria-pressed="false">Type</button>
+      <button type="button" class="camp-pill" data-group="signup" aria-pressed="false">Sign-up</button>
+      <button type="button" class="camp-pill" data-group="ages" aria-pressed="false">Ages</button>
+    </div>
   </div>
   <div id="camp-groups">
     {%- for town in camp_page.towns -%}
@@ -31,9 +31,9 @@
 <script>
 (function () {
   var root = document.querySelector(".camp-directory");
-  var select = document.getElementById("camp-group");
+  var pills = root ? root.querySelector(".camp-group-pills") : null;
   var host = document.getElementById("camp-groups");
-  if (!root || !select || !host) return;
+  if (!root || !pills || !host) return;
 
   var ages = [
     ["preschool", "Preschool 3-5"],
@@ -158,11 +158,16 @@
     blocks.forEach(function (block) { host.appendChild(block); });
   }
 
-  select.addEventListener("change", function () {
+  pills.addEventListener("click", function (event) {
+    var pill = event.target.closest ? event.target.closest(".camp-pill") : null;
+    if (!pill || pill.getAttribute("aria-pressed") === "true") return;
+    var mode = pill.getAttribute("data-group");
     var rows = originals();
-    var mode = select.value;
     var blocks = mode === "type" ? byType(rows) : mode === "signup" ? bySignup(rows) : mode === "ages" ? byAges(rows) : byTown(rows);
     paint(blocks);
+    Array.prototype.forEach.call(pills.querySelectorAll(".camp-pill"), function (button) {
+      button.setAttribute("aria-pressed", button === pill ? "true" : "false");
+    });
   });
 })();
 </script>
