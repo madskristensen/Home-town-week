@@ -125,6 +125,10 @@ In January and February, check the same links for snow make-up changes. A day wi
 
 `type` is `holiday`, `teacher`, `conferences`, `break`, `snow`, `first`, `last`, `half`, or `early`. Set `grades` when the day is not for every student, for example `Grades 6-8 only` or `Elementary only`. Per-district feeds are `/calendar/no-school/{id}.ics`. Do not use `/calendar/{city}.ics` for these. That path is the city event feed.
 
+## Navigation preview
+
+`/preview/nav/` is a mockup of a four-group menu. It is not linked from the header, the footer, or any other page. It is `noindex` and it is left out of the sitemap. Do not point the live menu at it, and do not replace `_includes/header.html` or `_includes/footer.html` with it. Cities lists the 15 cities and This weekend. Seasons lists Fall, Halloween, Christmas, Winter break, Spring break, Summer camps, and Worth the drive, and only when that hub exists. Halloween is the Halloween section of Fall. Guides lists Articles, each article, bucket lists, Playgrounds, and School calendars. About lists About, Suggest an event, Partner with us, and Request a city.
+
 ## Dedupe
 
 One event, one row. Two sessions at different times can both stay when the page lists both. A second row with the same time and a near-duplicate name should be removed. The event check warns on same-day near-duplicates.
