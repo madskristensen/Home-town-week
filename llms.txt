@@ -15,6 +15,7 @@ sitemap: false
 ## About
 
 - [About]({{ site.url }}{{ site.baseurl }}/about/): A local parent with three kids. Free family events across 15 Eastside cities.
+- [Suggest an event]({{ site.url }}{{ site.baseurl }}/suggest/): How to send an event we missed. The note asks for the name, date and time, place, link, a short blurb, and who it's for.
 - Blurbs are original and link to sources.
 
 ## Seasons

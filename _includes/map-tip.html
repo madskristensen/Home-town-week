@@ -1,7 +1,7 @@
 {%- comment -%}
   One short muted line.
-  kind "missing": "Missing something? Tell us." The link is the footer
-  Suggest an event mailto. Use this at the end of a hub or explore page.
+  kind "missing": "Missing something? Tell us." The link is /suggest/.
+  Use this at the end of a hub or explore page.
   kind "camp": "Know a camp we missed?" with a camp suggestion mailto.
   Otherwise pass href, the lights or decorations mailto, and the line stays
   "Know a display we're missing? Tip us off."
@@ -17,17 +17,7 @@ Link:
 {%- endcapture -%}
 <p class="map-tip">Know a camp we missed? <a href="mailto:suggestions@eastsidecalendar.com?subject={{ suggest_subject | strip | mail_escape }}&amp;body={{ suggest_body | strip | mail_escape }}">Tell us</a>.</p>
 {%- elsif include.kind == "missing" -%}
-{%- capture suggest_subject -%}Suggest an event{%- endcapture -%}
-{%- capture suggest_body -%}I would like to suggest an event for Eastside Family Calendar.
-
-Event name:
-Date and time:
-Place:
-Link:
-Short blurb:
-Who it's for (kids, families):
-{%- endcapture -%}
-<p class="map-tip">Missing something? <a href="mailto:suggestions@eastsidecalendar.com?subject={{ suggest_subject | strip | mail_escape }}&amp;body={{ suggest_body | strip | mail_escape }}">Tell us</a>.</p>
+<p class="map-tip">Missing something? <a href="{{ '/suggest/' | relative_url }}">Tell us</a>.</p>
 {%- else -%}
 {%- assign tip_href = include.href | append: "" | strip -%}
 {%- if tip_href.size > 0 -%}

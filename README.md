@@ -60,7 +60,7 @@ The site is published with a custom GitHub Actions workflow at https://www.easts
 
 IndexNow is told about URLs whose source files changed in that push, not the whole sitemap. A city page or that city's event file also refreshes the home page, This weekend, and the seasonal hubs. The verification key file is written at the site root during the Pages build, so it is served at `https://www.eastsidecalendar.com/{key}.txt`.
 
-Suggestion and request links use `suggestions@eastsidecalendar.com`.
+`/suggest/` is the page for sending an event. The footer Suggest an event link, city Suggest an event links, empty-state suggest links, and "Missing something? Tell us" go there. The page shows the fields, a plain-text template on a light background, Email us, Open in Gmail, and Copy template, plus the address `suggestions@eastsidecalendar.com` as text. Request a city, camp tips, and display tips still use a mailto to that address. The page is in the sitemap.
 
 ## Local build
 

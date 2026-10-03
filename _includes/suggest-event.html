@@ -1,20 +1,11 @@
 {%- comment -%}
-  Suggest-an-event mail link for a city page. No parameters.
+  Suggest-an-event link for a city page. No parameters.
   Uses city from city-context.html when it is not already set.
+  The link goes to /suggest/, which holds the plain-text template.
 {%- endcomment -%}
 {%- unless city -%}
 {%- include city-context.html -%}
 {%- endunless -%}
 {%- if city -%}
-{%- capture suggest_subject -%}Event idea for {{ city.name }}{%- endcapture -%}
-{%- capture suggest_body -%}I would like to suggest an event for Eastside Family Calendar in {{ city.name }}.
-
-Event name:
-Date and time:
-Place:
-Link:
-Short blurb:
-Who it's for (kids, families):
-{%- endcapture -%}
-<p class="suggest-event">Know something fun in {{ city.name }}? <a href="mailto:suggestions@eastsidecalendar.com?subject={{ suggest_subject | strip | mail_escape }}&amp;body={{ suggest_body | strip | mail_escape }}">Suggest an event</a>{%- include feed-note.html inline=true -%}</p>
+<p class="suggest-event">Know something fun in {{ city.name }}? <a href="{{ '/suggest/' | relative_url }}">Suggest an event</a>{%- include feed-note.html inline=true -%}</p>
 {%- endif -%}

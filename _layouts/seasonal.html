@@ -232,7 +232,7 @@ layout: default
   <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   {%- assign suggest_lead = hub.suggest_lead | append: "" -%}
   {%- if suggest_lead.size > 0 -%}
-  <p class="suggest-event">{{ hub.suggest_lead }} <a href="mailto:suggestions@eastsidecalendar.com?subject={{ hub.suggest_subject | strip | mail_escape }}&amp;body={{ hub.suggest_body | strip | mail_escape }}">{{ hub.suggest_link }}</a>.</p>
+  <p class="suggest-event">{{ hub.suggest_lead }} <a href="{{ '/suggest/' | relative_url }}">{{ hub.suggest_link }}</a>.</p>
   {%- endif -%}
   {%- assign hub_sections = hub.sections -%}
   {%- assign section_count = hub_sections | size -%}

@@ -4,16 +4,6 @@
   Android show that link after beforeinstallprompt. iOS Safari shows
   Install app, which opens the how-to dialog. The family credit sits under that.
 {%- endcomment -%}
-{%- capture suggest_subject -%}Suggest an event{%- endcapture -%}
-{%- capture suggest_body -%}I would like to suggest an event for Eastside Family Calendar.
-
-Event name:
-Date and time:
-Place:
-Link:
-Short blurb:
-Who it's for (kids, families):
-{%- endcapture -%}
 {%- capture city_request_subject -%}Request a city{%- endcapture -%}
 {%- capture city_request_body -%}I would like Eastside Family Calendar to cover a city.
 
@@ -23,7 +13,7 @@ City:
   <div class="wrap">
     <ul class="footer-meta">
       <li><a href="{{ '/about/' | relative_url }}"{% if page.url == "/about/" %} aria-current="page"{% endif %}>About</a></li>
-      <li><a href="mailto:suggestions@eastsidecalendar.com?subject={{ suggest_subject | strip | mail_escape }}&amp;body={{ suggest_body | strip | mail_escape }}">Suggest an event</a></li>
+      <li><a href="{{ '/suggest/' | relative_url }}"{% if page.url == "/suggest/" %} aria-current="page"{% endif %}>Suggest an event</a></li>
       <li><a href="{{ '/partner/' | relative_url }}"{% if page.url == "/partner/" %} aria-current="page"{% endif %}>Partner with us</a></li>
       <li><a href="mailto:suggestions@eastsidecalendar.com?subject={{ city_request_subject | strip | mail_escape }}&amp;body={{ city_request_body | strip | mail_escape }}">Request a city</a></li>
       <li><a href="{{ '/feed.xml' | relative_url }}">Feed</a></li>

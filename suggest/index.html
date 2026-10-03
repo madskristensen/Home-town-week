@@ -1,0 +1,72 @@
+---
+layout: default
+title: Suggest an event
+description: Send a family event for Eastside Family Calendar. Include the name, date and time, place, link, a short blurb, and who it's for.
+permalink: /suggest/
+---
+{%- capture suggest_subject -%}Suggest an event{%- endcapture -%}
+{%- capture suggest_body -%}I would like to suggest an event for Eastside Family Calendar.
+
+Event name:
+Date and time:
+Place:
+Link:
+Short blurb:
+Who it's for (kids, families):
+{%- endcapture -%}
+{%- assign suggest_body = suggest_body | strip -%}
+{%- assign suggest_subject = suggest_subject | strip -%}
+<article class="page wrap prose suggest-page">
+  <h1>Suggest an event</h1>
+  <p>Send a family event, a school calendar, or a small thing we missed. We read every note.</p>
+  <h2>What to include</h2>
+  <ul>
+    <li>Event name</li>
+    <li>Date and time</li>
+    <li>Place</li>
+    <li>Link</li>
+    <li>Short blurb</li>
+    <li>Who it's for</li>
+  </ul>
+  <h2>How to send it</h2>
+  <div class="suggest-actions">
+    <a class="btn" href="mailto:suggestions@eastsidecalendar.com?subject={{ suggest_subject | mail_escape }}&amp;body={{ suggest_body | mail_escape }}">Email us</a>
+    <a class="btn" href="https://mail.google.com/mail/?view=cm&amp;to=suggestions@eastsidecalendar.com&amp;su={{ suggest_subject | mail_escape }}&amp;body={{ suggest_body | mail_escape }}" target="_blank" rel="noopener noreferrer">Open in Gmail</a>
+    <button type="button" class="btn" id="suggest-copy">Copy template</button>
+  </div>
+  <div class="suggest-sheet">
+    <p class="suggest-address">suggestions@eastsidecalendar.com</p>
+    <label for="suggest-template">Template</label>
+    <textarea id="suggest-template" class="suggest-template" readonly rows="8">{{ suggest_body | escape }}</textarea>
+  </div>
+</article>
+<script>
+  (function () {
+    var button = document.getElementById("suggest-copy");
+    var field = document.getElementById("suggest-template");
+    if (!button || !field) return;
+    var label = button.textContent;
+    button.addEventListener("click", function () {
+      var text = field.value;
+      function done(ok) {
+        button.textContent = ok ? "Copied" : "Select the template";
+        if (!ok) {
+          field.focus();
+          field.select();
+        }
+        window.setTimeout(function () {
+          button.textContent = label;
+        }, 2000);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          done(true);
+        }, function () {
+          done(false);
+        });
+      } else {
+        done(false);
+      }
+    });
+  })();
+</script>

@@ -11,12 +11,12 @@ Card and page markup lives in one include each. Pages, layouts, and the city cal
 | `_includes/event-photo.html` | Photo and the credit strip. `figure` defaults to `event-photo`. |
 | `_includes/filter-chip.html` | One filter chip. Event chips pass `group` and `value`. Playground chips pass `input_class`, `city`, `count`, or `amenity`, and do not pass `value`. |
 | `_includes/page-intro.html` | The one-line introduction. Renders nothing when `text` is blank. |
-| `_includes/empty-suggest.html` | Empty-state suggestion. The playground line links to `/playgrounds/`, with `?town=` on a city page. `mode="button"` renders only the Suggest an event or calendar link. `mode="line"` is the small muted mailto line on the missing page. |
+| `_includes/empty-suggest.html` | Empty-state suggestion. The playground line links to `/playgrounds/`, with `?town=` on a city page. `mode="button"` renders only the Suggest an event or calendar link. `mode="line"` is the small muted line on the missing page. Those suggest links go to `/suggest/`. |
 | `_includes/playground-promo.html` | Compact playground card on a city page. Links to `/playgrounds/?town={id}`. |
 | `_includes/playground-directory.html` | Playground list. The name line holds the star and the amenity badges. A legend under the heading uses the same badges. |
 | `_includes/lights-feature.html` | Promo for the lights, decorations, or playgrounds map. `theme` picks the copy and the pin set. |
 | `_includes/map-frame.html` | Map poster and canvas. Includes the shared loader unless `loader` is `false`. |
-| `_includes/map-tip.html` | One short muted line. Under a lights or decorations map, pass `href` and the line is "Know a display we're missing? Tip us off." `kind="missing"` is "Missing something? Tell us." and uses the same Suggest an event mailto as the footer. Hub pages and explore pages include that line once, at the end of the article. The farmers market page does not also put a tip under the map. |
+| `_includes/map-tip.html` | One short muted line. Under a lights or decorations map, pass `href` and the line is "Know a display we're missing? Tip us off." `kind="missing"` is "Missing something? Tell us." and links to `/suggest/`. Hub pages and explore pages include that line once, at the end of the article. The farmers market page does not also put a tip under the map. |
 | `_includes/map-loader.html` | `loadMapCss` and `loadMapJs`. |
 | `_includes/guide-header.html` | Playground page title and introduction. The heading links to `/playgrounds/`. |
 | `_includes/calendar-subscribe.html` | Subscribe control. City pages use `/calendar/{city}.ics`. Pass `path` for another feed, such as `/calendar/no-school/{district}.ics`. |
