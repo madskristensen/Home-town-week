@@ -1067,6 +1067,53 @@ picture {
   line-height: 1.45;
 }
 
+.install-howto {
+  width: min(20rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: 1rem 1rem 0.9rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 0.8rem;
+  background: var(--sheet);
+  color: var(--ink);
+  font-family: var(--sans);
+  box-shadow: var(--menu-shadow);
+}
+
+.install-howto:focus {
+  outline: none;
+}
+
+.install-howto:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.install-howto::backdrop {
+  background: rgb(from var(--text) r g b / 0.28);
+}
+
+.install-howto-title {
+  margin: 0 0 0.65rem;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.install-howto ol {
+  margin: 0 0 0.9rem;
+  padding-left: 1.2rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.install-howto li + li {
+  margin-top: 0.35rem;
+}
+
 .newsletter-slot {
   margin: 1.35rem auto 1.5rem;
 }

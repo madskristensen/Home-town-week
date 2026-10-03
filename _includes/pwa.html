@@ -282,8 +282,8 @@
   }
   });
 
-  onIdle(function () {
   var installLink = document.getElementById("install-link");
+  var installHowto = document.getElementById("install-howto");
 
   function isIOS() {
     var ua = navigator.userAgent || "";
@@ -309,8 +309,29 @@
     return "Pin to taskbar";
   }
 
-  if (isIOS() || runningInstalled()) {
+  function openInstallHowto() {
+    if (!installHowto || typeof installHowto.showModal !== "function") return;
+    if (!installHowto.open) installHowto.showModal();
+    installHowto.focus();
+  }
+
+  if (runningInstalled()) {
     hideInstallLink();
+    window.addEventListener("beforeinstallprompt", function (event) {
+      event.preventDefault();
+    });
+  } else if (isIOS() && installLink && installHowto) {
+    installLink.textContent = "Install app";
+    installLink.hidden = false;
+    installLink.setAttribute("aria-haspopup", "dialog");
+    installLink.setAttribute("aria-controls", "install-howto");
+    installLink.addEventListener("click", openInstallHowto);
+    installHowto.querySelector("[data-install-close]").addEventListener("click", function () {
+      installHowto.close();
+    });
+    installHowto.addEventListener("close", function () {
+      installLink.focus();
+    });
     window.addEventListener("beforeinstallprompt", function (event) {
       event.preventDefault();
     });
@@ -350,6 +371,5 @@
       hideInstallLink();
     });
   }
-  });
 })();
 </script>

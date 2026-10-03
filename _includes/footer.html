@@ -1,7 +1,8 @@
 {%- comment -%}
   Site footer. One quiet row: About, Suggest an event, Partner with us,
-  Request a city, and Feed, plus the install link when the browser offers it.
-  The family credit sits under that.
+  Request a city, and Feed, plus the install link. Chrome, Edge, and
+  Android show that link after beforeinstallprompt. iOS Safari shows
+  Install app, which opens the how-to dialog. The family credit sits under that.
 {%- endcomment -%}
 {%- capture suggest_subject -%}Suggest an event{%- endcapture -%}
 {%- capture suggest_body -%}I would like to suggest an event for Eastside Family Calendar.
@@ -28,6 +29,14 @@ City:
       <li><a href="{{ '/feed.xml' | relative_url }}">Feed</a></li>
       <li class="footer-install-slot"><button type="button" id="install-link" class="footer-install" hidden>Add to Home screen</button></li>
     </ul>
+    <dialog class="install-howto" id="install-howto" aria-labelledby="install-howto-title" tabindex="-1">
+      <p class="install-howto-title" id="install-howto-title">Install app</p>
+      <ol>
+        <li>Tap the Share button (square with arrow)</li>
+        <li>Choose Add to Home Screen</li>
+      </ol>
+      <button type="button" class="btn" data-install-close>Close</button>
+    </dialog>
     <p class="footer-family">Made by an Eastside family, for Eastside families. We also blog at <a href="https://afterpickup.com">After Pickup</a>.</p>
   </div>
 </footer>
