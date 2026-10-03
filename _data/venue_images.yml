@@ -451,6 +451,18 @@ venues:
     credit: "Photo: Julie Jordan Scott, CC BY 2.0"
     license: CC BY 2.0
     source: https://commons.wikimedia.org/wiki/File:Juanita_Bay_Park,_Kirkland_(19903917750).jpg
+  - keys: ["o. o. denny", "oo denny park"]
+    image: /assets/images/kirkland/oo-denny-park.webp
+    alt: A sunny lakeshore at O. O. Denny Park, framed by pines and a flowering tree.
+    credit: "Photo: Joe Mabel, CC BY-SA 4.0"
+    license: CC BY-SA 4.0
+    source: https://commons.wikimedia.org/wiki/File:O.O._Denny_Park_06.jpg
+  - keys: ["saint edward"]
+    image: /assets/images/kenmore/saint-edward-forest.webp
+    alt: A mossy forest at Saint Edward State Park, with ferns and leaning trunks.
+    credit: "Photo: BlueCanoe, CC BY-SA 3.0"
+    license: CC BY-SA 3.0
+    source: https://commons.wikimedia.org/wiki/File:Saint_Edward_forest.jpg
   - keys: ["juanita beach"]
     image: /assets/images/kirkland/juanita-beach-park.webp
     alt: Juanita Beach Park, with the sandy shore, the pier, and Lake Washington.

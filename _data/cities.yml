@@ -652,6 +652,10 @@
       url: "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Special-Event-Services/Juanita-Friday-Market"
       type: market
       notes: "Fridays 3:00 to 7:00 p.m. at Juanita Beach Park, June through September. No market June 19 or July 3. Kids crafts and live music."
+    - name: "Finn Hill Neighborhood Alliance"
+      url: "https://www.finnhill.org/"
+      type: neighborhood
+      notes: "The homepage lists upcoming events. There is no public calendar feed. Family walks and festivals stay. Skip neighborhood meetings. DennyFest and the Christmas Ships bonfire are annual. Add a date only when this site posts one. A walk at Saint Edward State Park also goes on the Kenmore page."
     - name: "AllEvents Kirkland"
       url: "https://allevents.in/kirkland"
       type: allevents

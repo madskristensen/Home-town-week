@@ -55,6 +55,21 @@ Inglemoor High School's fall play, in the Little Theatre on the south side of th
 
 [Inglemoor Theatre](https://www.inglemoortheatreboosters.com/services-1)
 
+### Tracking Basics: Learning by Looking
+<p class="event-when">Sat Nov 7 · 10:00 a.m.–12:00 p.m.</p>
+<p class="event-place">Saint Edward State Park, 14445 Juanita Dr NE, Kenmore</p>
+
+{% include event-photo.html
+   src="/assets/images/kenmore/saint-edward-forest.webp"
+   alt="A mossy forest at Saint Edward State Park, with ferns and leaning trunks."
+   credit="Photo: BlueCanoe, CC BY-SA 3.0"
+   source="https://commons.wikimedia.org/wiki/File:Saint_Edward_forest.jpg"
+   license="CC BY-SA 3.0" %}
+
+A free workshop on animal tracks. The group meets at the Environmental Education and Resource Center next to the Lodge, makes paw molds, then takes a flat 1 to 2 mile walk. Finn Hill Neighborhood Alliance and the CoSEE host it. Ages 12 and up. Wear shoes that can handle mud and rain. Tickets are free.
+
+[Tracking Basics](https://www.finnhill.org/event-details-registration/tracking-basics-learning-by-looking)
+
 ### Winterfest
 <p class="event-when">Sat Dec 5 · 11:00 a.m.–3:00 p.m.</p>
 <p class="event-place">Kenmore City Hall, 18120 68th Ave NE, and the Hangar, 6728 NE 181st St</p>

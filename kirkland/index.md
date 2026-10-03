@@ -272,6 +272,21 @@ A free city celebration for all ages, with traditional activities, food, and mus
 
 [Día de los Muertos](https://www.kirklandwa.gov/Whats-Happening/Community-Events/Parks-and-Community-Services/D%C3%ADa-de-los-Muertos)
 
+### Mushroom Mania
+<p class="event-when">Sun Oct 25 · 10:00 a.m.–12:00 p.m.</p>
+<p class="event-place">O. O. Denny Park, 12302 Holmes Point Dr NE, Kirkland</p>
+
+{% include event-photo.html
+   src="/assets/images/kirkland/oo-denny-park.webp"
+   alt="A sunny lakeshore at O. O. Denny Park, framed by pines and a flowering tree."
+   credit="Photo: Joe Mabel, CC BY-SA 4.0"
+   source="https://commons.wikimedia.org/wiki/File:O.O._Denny_Park_06.jpg"
+   license="CC BY-SA 4.0" %}
+
+A free forest walk to look for mushrooms and learn how they support the woods around them. Finn Hill Neighborhood Alliance and the CoSEE host it. Ages 8 and up. Some paths are narrow and have a moderate slope. Meet in the parking lot across from the playground. Tickets are free.
+
+[Mushroom Mania](https://www.finnhill.org/event-details-registration/mushroom-mania)
+
 ### Keep on Dancing
 <p class="event-when">Sun Oct 25 · 7:00 p.m.</p>
 <p class="event-place">Kirkland Performance Center, 350 Kirkland Ave</p>
@@ -333,6 +348,21 @@ A free Día de Muertos celebration at Marina Park, presented by Mundo Catrina. T
 Stories and a hands-on science activity, planned for ages 3 to 8. Other ages can come too. No registration.
 
 [STEAM Family Story Time](https://kcls.bibliocommons.com/events/6ab6edb060748300382995b7)
+
+### Tracking Basics: Learning by Looking
+<p class="event-when">Sat Nov 7 · 10:00 a.m.–12:00 p.m.</p>
+<p class="event-place">Saint Edward State Park, 14445 Juanita Dr NE, Kenmore</p>
+
+{% include event-photo.html
+   src="/assets/images/kenmore/saint-edward-forest.webp"
+   alt="A mossy forest at Saint Edward State Park, with ferns and leaning trunks."
+   credit="Photo: BlueCanoe, CC BY-SA 3.0"
+   source="https://commons.wikimedia.org/wiki/File:Saint_Edward_forest.jpg"
+   license="CC BY-SA 3.0" %}
+
+A free workshop on animal tracks. The group meets at the Environmental Education and Resource Center next to the Lodge, makes paw molds, then takes a flat 1 to 2 mile walk. Finn Hill Neighborhood Alliance and the CoSEE host it. Ages 12 and up. Wear shoes that can handle mud and rain. Tickets are free.
+
+[Tracking Basics](https://www.finnhill.org/event-details-registration/tracking-basics-learning-by-looking)
 
 ### Lil' Gobbler Run
 <p class="event-when">Sun Nov 15 · 9:30 a.m.</p>
