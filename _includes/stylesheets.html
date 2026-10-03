@@ -28,7 +28,7 @@
 {%- if css_map -%}{{ site.data.css_inline.map }}{%- endif -%}
 {%- if page.map_id == "halloween" -%}{{ site.data.css_inline.map_halloween }}{%- endif -%}
 {%- if page.guide_id == "playgrounds" -%}{{ site.data.css_inline.playgrounds }}{%- endif -%}
-{%- if page.camps -%}{{ site.data.css_inline.camps }}{%- endif -%}
+{%- if page.camps or page.partner -%}{{ site.data.css_inline.camps }}{%- endif -%}
 {%- endcapture -%}
 {%- assign layout_css = layout_css | strip -%}
 {%- if layout_css.size > 0 -%}

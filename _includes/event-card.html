@@ -163,10 +163,18 @@
 {%- assign card_number = include.number | append: "" | strip -%}
 {%- assign card_href = include.href | append: "" | strip -%}
 {%- assign card_kicker = include.kicker | append: "" | strip -%}
+{%- assign card_rel = "" -%}
+{%- assign card_sponsored_flag = include.sponsored | append: "" | strip -%}
+{%- if card_sponsored_flag == "true" -%}{%- assign card_rel = "sponsored" -%}{%- endif -%}
+{%- if include.external -%}
+{%- if card_rel.size > 0 -%}{%- assign card_rel = "sponsored noopener" -%}
+{%- else -%}{%- assign card_rel = "noopener" -%}
+{%- endif -%}
+{%- endif -%}
 {%- if card_title.size > 0 or card_number.size > 0 -%}
 <h3>{%- if card_number.size > 0 -%}<span class="home-num">{{ card_number | escape }}</span> {% endif -%}
 {%- if card_href.size > 0 -%}
-<a href="{% if include.external %}{{ card_href }}{% else %}{{ card_href | relative_url }}{% endif %}"{% if include.external %} rel="noopener"{% endif %}>{{ card_title | escape }}</a>
+<a href="{% if include.external %}{{ card_href }}{% else %}{{ card_href | relative_url }}{% endif %}"{% if card_rel.size > 0 %} rel="{{ card_rel }}"{% endif %}>{{ card_title | escape }}</a>
 {%- else -%}
 {{ card_title | escape }}
 {%- endif -%}

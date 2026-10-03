@@ -42,6 +42,11 @@ layout: default
   {%- endif -%}
   {%- include page-intro.html text=page.hook -%}
   {%- include playground-promo.html city=page.city name=city.name -%}
+  {%- assign city_sponsor_cards = site.data.sponsors.cards.cities[page.city] -%}
+  {%- assign city_sponsor_count = city_sponsor_cards | size -%}
+  {%- if city_sponsor_count > 0 -%}
+  {%- include card-grid.html events=city_sponsor_cards show_city=true -%}
+  {%- endif -%}
   {%- assign event_copy = content | strip -%}
   {%- if event_copy != "" -%}
   <div class="event-list" data-today="{{ site.time | date: '%Y-%m-%d' }}">

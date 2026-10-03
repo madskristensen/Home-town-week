@@ -7,8 +7,8 @@
   Score is deterministic: festivals and fairs first, then parades, farms,
   markets, dance, and similar titles. Storytime, library hours, and
   council-style meetings rank last and are used only when little else is
-  left. One event per city until four picks exist. A sponsored pick can
-  be pinned ahead of this list later. It is not built yet.
+  left. One event per city until four picks exist. A card in
+  _data/sponsors.yml under cards.weekend is pinned ahead of this list.
 
   _data/weekend_picks.yml overrides this when it lists events that are
   still ahead. Each item is a city id and the event name. Past entries
@@ -158,6 +158,13 @@
   <h2 id="weekend-picks-title">{%- if weekend_ready -%}<a href="{{ '/this-weekend/' | relative_url }}">{{ picks_title }}</a>{%- else -%}{{ picks_title }}{%- endif -%}</h2>
   <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   {%- assign home_cards = "" -%}
+  {%- for sponsor in site.data.sponsors.cards.weekend -%}
+  {%- assign sponsor_title = sponsor.title | append: "" | strip -%}
+  {%- if sponsor_title.size > 0 -%}
+  {%- capture card_json -%}{{ sponsor | jsonify }}{%- endcapture -%}
+  {%- assign home_cards = home_cards | push_card: card_json -%}
+  {%- endif -%}
+  {%- endfor -%}
   {%- for line in pick_lines -%}
     {%- assign line = line | strip -%}
     {%- if line.size == 0 -%}{% continue %}{%- endif -%}

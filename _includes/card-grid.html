@@ -92,6 +92,8 @@
 {%- assign card_href = event.href | append: "" | strip -%}
 {%- assign card_external = false -%}
 {%- if event.external -%}{%- assign card_external = true -%}{%- endif -%}
+{%- assign card_sponsored = false -%}
+{%- if event.sponsored -%}{%- assign card_sponsored = true -%}{%- endif -%}
 {%- if card_href.size == 0 -%}
 {%- assign card_same = event.same_as | append: "" | strip -%}
 {%- assign card_sort = event.sort | append: "" | strip -%}
@@ -135,6 +137,8 @@
 {%- endif -%}
 {%- assign card_stretch = "" -%}
 {%- if event.stretch -%}{%- assign card_stretch = "1" -%}{%- endif -%}
+{%- assign card_city_label = "" -%}
+{%- if card_sponsored -%}{%- assign card_city_label = card_place_city -%}{%- endif -%}
 {%- include event-card.html
      id=card_id
      number=card_number
@@ -142,6 +146,7 @@
      title=card_title
      href=card_href
      external=card_external
+     sponsored=card_sponsored
      event=row
      when=card_when
      calendar=event.calendar
@@ -149,6 +154,7 @@
      town_href=card_town_href
      place=card_place
      place_city=card_place_city
+     city=card_city_label
      drive=event.drive
      hours=event.hours
      blurb=card_blurb

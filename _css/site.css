@@ -942,6 +942,18 @@ picture {
   text-underline-offset: 0.08em;
 }
 
+.prose h3 a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.prose h3 a:hover,
+.prose h3 a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.08em;
+}
+
 
 .prose p,
 .prose ul,
@@ -2683,5 +2695,114 @@ html[data-ns="misd"] .ns-day:has(.ns-one[data-d="misd"]),
 html[data-ns="tsd"] .ns-day:has(.ns-one[data-d="tsd"]),
 html[data-ns="ksd"] .ns-day:has(.ns-one[data-d="ksd"]) {
   background: color-mix(in srgb, var(--ink) 8%, var(--sheet));
+}
+
+/* One sponsor label, on the line, the card kicker, and the camp row. */
+.sponsor-mark {
+  color: var(--forest);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.sponsor-line {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.sponsor-line a,
+.email-sponsor a {
+  color: var(--ink);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.sponsor-line a:hover,
+.sponsor-line a:focus-visible,
+.email-sponsor a:hover,
+.email-sponsor a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.08em;
+}
+
+.email-sponsor {
+  margin: 0.55rem 0 0;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.sponsor-preview {
+  margin: 0.7rem 0 0.15rem;
+  padding: 0.55rem 0.7rem 0.7rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+.sponsor-preview-label {
+  margin: 0 0 0.45rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.sponsor-preview .sponsor-line,
+.sponsor-preview .card-grid {
+  margin-top: 0.45rem;
+}
+
+.sponsor-preview .sponsor-line {
+  margin-bottom: 0;
+}
+
+.sponsor-preview-label + .sponsor-line {
+  margin-top: 0;
+}
+
+.email-sample-kicker,
+.email-sample-subject {
+  margin: 0;
+}
+
+.email-sample-kicker {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.email-sample-subject {
+  margin-top: 0.2rem;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.sponsor-preview .email-sample-kicker,
+.sponsor-preview .event-kicker {
+  margin: 0;
+}
+
+.sponsor-preview .email-sample-subject {
+  margin: 0.2rem 0 0;
+}
+
+.sponsor-preview .email-sponsor {
+  margin: 0.55rem 0 0;
+}
+
+.sponsor-preview .event-kicker {
+  margin-bottom: 0.15rem;
+}
+
+.sponsor-preview .hub-blurb {
+  margin: 0.35rem 0 0;
 }
 

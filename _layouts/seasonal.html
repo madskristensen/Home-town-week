@@ -5,6 +5,7 @@ layout: default
 <article class="page wrap hub-page{% if page.map_id == "halloween" %} map-theme-halloween{% endif %}">
   <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
   {%- include page-intro.html text=page.intro -%}
+  {%- include season-sponsor.html -%}
   <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   {%- include home-lights.html -%}
   {%- include map-tip.html kind="missing" -%}
@@ -215,6 +216,14 @@ layout: default
   {%- include lights-feature.html theme="halloween" -%}
   {%- endif -%}
   {%- include page-intro.html text=hub.intro -%}
+  {%- include season-sponsor.html -%}
+  {%- if page.hub_id == "this-weekend" -%}
+  {%- assign weekend_cards = site.data.sponsors.cards.weekend -%}
+  {%- assign weekend_card_count = weekend_cards | size -%}
+  {%- if weekend_card_count > 0 -%}
+  {%- include card-grid.html events=weekend_cards show_city=true eager=1 -%}
+  {%- endif -%}
+  {%- endif -%}
   {%- if page.hub_id == "fall" -%}
   <p class="hub-section-intro">Want something to check off together? <a href="{{ '/fall/bucket-list/' | relative_url }}">The fall family bucket list</a> prints on one page.</p>
   {%- elsif page.hub_id == "christmas" -%}

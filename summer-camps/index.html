@@ -10,7 +10,7 @@ intro: "I'm in Kirkland with three kids, and the camp week is the one I cannot a
 <article class="page wrap camps-page">
   <h1><a href="{{ page.url | relative_url }}">{{ page.heading | escape }}</a></h1>
   {%- include page-intro.html text=page.intro -%}
-  <p class="camp-season-sponsor" hidden></p>
+  {%- include season-sponsor.html -%}
   {%- include camp-directory.html -%}
   <section class="camp-tips" aria-labelledby="camp-tips-title">
     <h2 id="camp-tips-title">A few things that help</h2>

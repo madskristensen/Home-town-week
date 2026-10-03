@@ -31,6 +31,7 @@ module EastsideCalendar
     def prepare(site)
       today = EventCalendar.pacific_today(site.time)
       names = city_names(site.data["cities"])
+      sanitize_sponsors(site, names)
       rows = Array(site.data["summer_camps"]).select { |row| row.is_a?(Hash) }
       camps = []
       rows.each do |row|
@@ -341,6 +342,165 @@ module EastsideCalendar
       Date.iso8601(value.to_s)
     rescue ArgumentError, TypeError
       nil
+    end
+
+    def sanitize_sponsors(site, names)
+      raw = site.data["sponsors"]
+      return unless raw.is_a?(Hash)
+
+      seasons = raw["seasons"].is_a?(Hash) ? raw["seasons"] : {}
+      seasons.each do |key, season|
+        next unless season.is_a?(Hash)
+
+        clean_sponsor_line(season, "season #{key}")
+        season["cards"] = Array(season["cards"]).filter_map { |card| clean_sponsor_card(card, "season #{key}") }
+      end
+      raw["seasons"] = seasons
+
+      cards = raw["cards"].is_a?(Hash) ? raw["cards"] : {}
+      cards["weekend"] = Array(cards["weekend"]).filter_map { |card| clean_sponsor_card(card, "weekend card") }
+      cities = cards["cities"].is_a?(Hash) ? cards["cities"] : {}
+      cities.each do |city, list|
+        cities[city] = Array(list).filter_map { |card| clean_sponsor_card(card, "#{city} card") }
+      end
+      cards["cities"] = cities
+      raw["cards"] = cards
+
+      raw["listings"] = Array(raw["listings"]).filter_map { |row| clean_listing(row, names, site) }
+
+      email = raw["email"].is_a?(Hash) ? raw["email"] : {}
+      clean_sponsor_line(email, "email")
+      if email["line"].to_s.include?("\u2014")
+        Jekyll.logger.error("Sponsors:", "em dash in the email line")
+        email["line"] = ""
+      else
+        email["line"] = squash(email["line"])
+      end
+      raw["email"] = email
+    end
+
+    def clean_sponsor_line(row, label)
+      name = squash(row["name"])
+      url = row["url"].to_s.strip
+      if name.include?("\u2014")
+        Jekyll.logger.error("Sponsors:", "em dash in #{label}")
+        row["name"] = ""
+        return
+      end
+      if name.empty?
+        row["name"] = ""
+        return
+      end
+      unless url.match?(%r{\Ahttps://\S+\z})
+        Jekyll.logger.error("Sponsors:", "no https url for #{label}")
+        row["name"] = ""
+        return
+      end
+      row["name"] = name
+      row["url"] = url
+    end
+
+    def clean_sponsor_card(card, label)
+      return nil unless card.is_a?(Hash)
+
+      title = squash(card["title"])
+      href = card["href"].to_s.strip
+      text = [title, card["blurb"], card["when"], card["place"], card["town"], card["alt"], card["credit"]].join(" ")
+      if title.empty? || text.include?("\u2014")
+        Jekyll.logger.error("Sponsors:", "bad card for #{label}")
+        return nil
+      end
+      unless href.match?(%r{\Ahttps://\S+\z})
+        Jekyll.logger.error("Sponsors:", "no https link for #{label}")
+        return nil
+      end
+      card["title"] = title
+      card["href"] = href
+      card["sponsored"] = true
+      card["external"] = true
+      card["town"] = "Sponsored" if squash(card["town"]).empty?
+      card
+    end
+
+    def clean_listing(row, names, site)
+      return nil unless row.is_a?(Hash)
+
+      name = squash(row["name"])
+      url = row["url"].to_s.strip
+      town = squash(row["town"])
+      text = [name, row["blurb"], row["meta"], row["alt"], row["credit"]].join(" ")
+      if name.empty? || text.include?("\u2014")
+        Jekyll.logger.error("Sponsors:", "bad camp listing #{name}")
+        return nil
+      end
+      unless url.match?(%r{\Ahttps://\S+\z})
+        Jekyll.logger.error("Sponsors:", "no https url for #{name}")
+        return nil
+      end
+      town_name = names[town] || EXTRAS[town]
+      if town_name.nil? || town_name.empty?
+        Jekyll.logger.error("Sponsors:", "unknown town #{town} for #{name}")
+        return nil
+      end
+
+      type = squash(row["type"])
+      type_label = ""
+      type_order = ""
+      unless type.empty?
+        found = TYPES.each_with_index.find { |pair, _index| pair[0] == type }
+        if found.nil?
+          Jekyll.logger.error("Sponsors:", "bad type #{type} on #{name}")
+          return nil
+        end
+        type_label = found[0][1]
+        type_order = found[1].to_s
+      end
+
+      ages = Array(row["ages"]).map { |value| value.to_s.strip }.reject(&:empty?)
+      unknown = ages.reject { |key| AGES.any? { |pair| pair[0] == key } }
+      unless unknown.empty?
+        Jekyll.logger.error("Sponsors:", "bad ages on #{name}")
+        return nil
+      end
+
+      photo = listing_photo(row, name, site)
+      return nil if photo.nil?
+
+      id = squash(row["id"])
+      id = name.downcase.gsub(/[^a-z0-9]+/, "-").gsub(/\A-|-\z/, "") if id.empty?
+      order = (names.keys + EXTRAS.keys).index(town) || 0
+      {
+        "id" => id,
+        "name" => name,
+        "url" => url,
+        "town" => town,
+        "town_name" => town_name,
+        "town_order" => order,
+        "type" => type,
+        "type_label" => type_label,
+        "type_order" => type_order,
+        "ages" => ages,
+        "meta" => squash(row["meta"]),
+        "blurb" => squash(row["blurb"])
+      }.merge(photo)
+    end
+
+    # A missing image is fine. A broken image drops the whole listing.
+    def listing_photo(row, name, site)
+      image = squash(row["image"])
+      return {} if image.empty?
+
+      alt = squash(row["alt"])
+      credit = squash(row["credit"])
+      source = row["image_source"].to_s.strip
+      path = File.join(site.source, image.sub(%r{\A/}, ""))
+      if alt.empty? || credit.empty? || alt.include?("\u2014") || credit.include?("\u2014") ||
+         !source.match?(%r{\Ahttps://\S+\z}) || !File.file?(path)
+        Jekyll.logger.error("Sponsors:", "bad photo for #{name}")
+        return nil
+      end
+
+      { "image" => image, "alt" => alt, "credit" => credit, "image_source" => source }
     end
 
     def city_names(cities)

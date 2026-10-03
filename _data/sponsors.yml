@@ -1,0 +1,41 @@
+# Paid spots. A blank name stays off the page.
+# The partner page previews use the same includes with example names.
+# Do not put an example business in this file.
+#
+# seasons.*.name and seasons.*.url are the "Sponsored by" line.
+# seasons.*.cards is the labeled card at the top of that hub.
+# christmas covers /christmas/ and /christmas/lights/.
+# fall covers /fall/ and /fall/decorations/.
+# summer-camps is the line on /summer-camps/ only.
+# cards.weekend is pinned at the front of the weekend picks.
+# cards.cities.<id> is the card near the top of that city page.
+# listings are enhanced camp rows, one per camp, labeled Sponsored.
+# email is the one line in the Thursday email. It is not shown on the site.
+
+seasons:
+  christmas:
+    name: ""
+    url: ""
+    cards: []
+  fall:
+    name: ""
+    url: ""
+    cards: []
+  spring-break:
+    name: ""
+    url: ""
+    cards: []
+  summer-camps:
+    name: ""
+    url: ""
+
+cards:
+  weekend: []
+  cities: {}
+
+listings: []
+
+email:
+  name: ""
+  url: ""
+  line: ""

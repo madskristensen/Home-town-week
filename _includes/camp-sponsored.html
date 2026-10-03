@@ -1,0 +1,32 @@
+{%- comment -%}
+  One enhanced camp row. listing: name, url, town, meta, blurb, photo.
+  Sits at the top of its town. The Group by script moves it with the list.
+{%- endcomment -%}
+{%- assign listing = include.listing -%}
+{%- assign listing_name = listing.name | append: "" | strip -%}
+{%- assign listing_url = listing.url | append: "" | strip -%}
+{%- if listing_name.size > 0 and listing_url.size > 0 -%}
+<li class="camp-sponsored" id="sponsor-{{ listing.id | escape }}" data-town="{{ listing.town | escape }}" data-town-name="{{ listing.town_name | escape }}" data-town-order="{{ listing.town_order }}" data-type="{{ listing.type | escape }}" data-type-label="{{ listing.type_label | escape }}" data-type-order="{{ listing.type_order }}" data-signup="{{ listing.signup | escape }}" data-signup-label="{{ listing.signup_label | escape }}" data-signup-order="{{ listing.signup_order | escape }}"{% for age in listing.ages %} data-{{ age }}="1"{% endfor %}>
+  <p class="sponsor-mark">Sponsored</p>
+  {%- assign listing_image = listing.image | append: "" | strip -%}
+  {%- if listing_image.size > 0 -%}
+  {%- include event-photo.html
+       src=listing.image
+       alt=listing.alt
+       credit=listing.credit
+       source=listing.image_source
+       loading="lazy"
+       sizes="(min-width: 42rem) 18rem, calc(100vw - 4.5rem)"
+       max="640" -%}
+  {%- endif -%}
+  <p class="camp-name-line"><a href="{{ listing_url }}" rel="sponsored noopener">{{ listing_name | escape }}</a></p>
+  {%- assign listing_meta = listing.meta | append: "" | strip -%}
+  {%- if listing_meta.size > 0 -%}
+  <p class="camp-meta">{{ listing_meta | escape }}</p>
+  {%- endif -%}
+  {%- assign listing_blurb = listing.blurb | append: "" | strip -%}
+  {%- if listing_blurb.size > 0 -%}
+  <p class="camp-blurb">{{ listing_blurb | escape }}</p>
+  {%- endif -%}
+</li>
+{%- endif -%}

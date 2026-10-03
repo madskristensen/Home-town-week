@@ -1,0 +1,27 @@
+{%- comment -%}
+  The season sponsor for this page, from _data/sponsors.yml.
+  Nothing is rendered when that season's name is blank.
+{%- endcomment -%}
+{%- assign season_slot = "" -%}
+{%- if page.camps -%}
+{%- assign season_slot = "summer-camps" -%}
+{%- elsif page.url == "/christmas/lights/" or page.hub_id == "christmas" -%}
+{%- assign season_slot = "christmas" -%}
+{%- elsif page.url == "/fall/decorations/" or page.hub_id == "fall" -%}
+{%- assign season_slot = "fall" -%}
+{%- elsif page.hub_id == "spring-break" -%}
+{%- assign season_slot = "spring-break" -%}
+{%- endif -%}
+{%- if season_slot.size > 0 -%}
+{%- assign season_pack = site.data.sponsors.seasons[season_slot] -%}
+{%- assign season_kind = "" -%}
+{%- if page.camps -%}{%- assign season_kind = "camp-season-sponsor" -%}{%- endif -%}
+{%- include sponsor-line.html name=season_pack.name url=season_pack.url kind=season_kind -%}
+{%- unless page.camps -%}
+{%- assign season_cards = season_pack.cards -%}
+{%- assign season_card_count = season_cards | size -%}
+{%- if season_card_count > 0 -%}
+{%- include card-grid.html events=season_cards show_city=true eager=1 -%}
+{%- endif -%}
+{%- endunless -%}
+{%- endif -%}

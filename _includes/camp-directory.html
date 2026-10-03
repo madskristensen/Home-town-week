@@ -1,9 +1,10 @@
 {%- comment -%}
   One list. Town groups are the HTML, so #bellevue works with no
   JavaScript. The pills move these same rows into other groups.
-  One empty sponsored slot per group stays hidden.
+  An enhanced listing from sponsors.yml is pinned at the top of its town.
 {%- endcomment -%}
 {%- assign camp_page = site.data.summer_camps_page -%}
+{%- assign camp_listings = site.data.sponsors.listings -%}
 <section class="camp-directory">
   <div class="camp-group-row">
     <span class="camp-group-label" id="camp-group-label">Group by</span>
@@ -16,10 +17,18 @@
   </div>
   <div id="camp-groups">
     {%- for town in camp_page.towns -%}
+    {%- assign sponsor_count = 0 -%}
+    {%- for listing in camp_listings -%}
+    {%- if listing.town == town.id -%}{%- assign sponsor_count = sponsor_count | plus: 1 -%}{%- endif -%}
+    {%- endfor -%}
     <section class="camp-town" id="{{ town.id }}">
-      <h2><span class="camp-group-name">{{ town.name | escape }}</span> (<span class="camp-group-count">{{ town.count }}</span>)</h2>
+      <h2 class="camp-town-title"><span class="camp-group-name">{{ town.name | escape }}</span> (<span class="camp-group-count">{{ town.count | plus: sponsor_count }}</span>)</h2>
       <ul class="camp-list">
-        <li class="camp-sponsored" hidden></li>
+        {%- for listing in camp_listings -%}
+        {%- if listing.town == town.id -%}
+        {%- include camp-sponsored.html listing=listing -%}
+        {%- endif -%}
+        {%- endfor -%}
         {%- for camp in town.camps -%}
         {%- include camp-row.html -%}
         {%- endfor -%}
@@ -27,6 +36,7 @@
     </section>
     {%- endfor -%}
   </div>
+  <div id="camp-sponsor-hold" hidden></div>
 </section>
 <script>
 (function () {
@@ -49,7 +59,7 @@
   }
 
   function dropClones() {
-    Array.prototype.forEach.call(root.querySelectorAll(".camp-row[data-clone]"), function (row) {
+    Array.prototype.forEach.call(root.querySelectorAll("[data-clone='1']"), function (row) {
       row.remove();
     });
   }
@@ -60,31 +70,52 @@
     });
   }
 
-  function section(id, title, list) {
+  function sponsors() {
+    return Array.prototype.filter.call(root.querySelectorAll(".camp-sponsored"), function (row) {
+      return row.getAttribute("data-clone") !== "1";
+    });
+  }
+
+  function section(id, title, list, slots) {
     var block = document.createElement("section");
     var heading = document.createElement("h2");
     var name = document.createElement("span");
     var count = document.createElement("span");
     var ul = document.createElement("ul");
-    var slot = document.createElement("li");
+    var pinned = slots || [];
     block.className = "camp-town";
     if (id) block.id = id;
+    heading.className = "camp-town-title";
     name.className = "camp-group-name";
     name.textContent = title;
     count.className = "camp-group-count";
-    count.textContent = String(list.length);
+    count.textContent = String(list.length + pinned.length);
     heading.appendChild(name);
     heading.appendChild(document.createTextNode(" ("));
     heading.appendChild(count);
     heading.appendChild(document.createTextNode(")"));
     ul.className = "camp-list";
-    slot.className = "camp-sponsored";
-    slot.hidden = true;
-    ul.appendChild(slot);
+    pinned.forEach(function (row) { ul.appendChild(row); });
     list.forEach(function (row) { ul.appendChild(row); });
     block.appendChild(heading);
     block.appendChild(ul);
     return block;
+  }
+
+  function take(pool, attr, value) {
+    var hit = [];
+    var rest = [];
+    pool.forEach(function (row) {
+      if (row.getAttribute(attr) === value) hit.push(row);
+      else rest.push(row);
+    });
+    return { hit: hit, rest: rest };
+  }
+
+  function withLeftovers(blocks, rest) {
+    var hold = document.getElementById("camp-sponsor-hold");
+    if (hold) rest.forEach(function (row) { hold.appendChild(row); });
+    return blocks;
   }
 
   function grouped(rows, keyFn) {
@@ -101,36 +132,49 @@
     return { map: map, keys: keys };
   }
 
-  function byTown(rows) {
+  function byTown(rows, ads) {
     var groups = grouped(rows, function (row) { return row.getAttribute("data-town-order"); });
     groups.keys.sort(function (a, b) { return Number(a) - Number(b); });
-    return groups.keys.map(function (key) {
+    var pool = ads.slice();
+    var blocks = groups.keys.map(function (key) {
       var list = bySort(groups.map[key]);
-      return section(list[0].getAttribute("data-town"), list[0].getAttribute("data-town-name"), list);
+      var picked = take(pool, "data-town", list[0].getAttribute("data-town"));
+      pool = picked.rest;
+      return section(list[0].getAttribute("data-town"), list[0].getAttribute("data-town-name"), list, picked.hit);
     });
+    return withLeftovers(blocks, pool);
   }
 
-  function byType(rows) {
+  function byType(rows, ads) {
     var groups = grouped(rows, function (row) { return row.getAttribute("data-type-order"); });
     groups.keys.sort(function (a, b) { return Number(a) - Number(b); });
-    return groups.keys.map(function (key) {
+    var pool = ads.slice();
+    var blocks = groups.keys.map(function (key) {
       var list = bySort(groups.map[key]);
-      return section("type-" + list[0].getAttribute("data-type"), list[0].getAttribute("data-type-label"), list);
+      var picked = take(pool, "data-type", list[0].getAttribute("data-type"));
+      pool = picked.rest;
+      return section("type-" + list[0].getAttribute("data-type"), list[0].getAttribute("data-type-label"), list, picked.hit);
     });
+    return withLeftovers(blocks, pool);
   }
 
-  function bySignup(rows) {
+  function bySignup(rows, ads) {
     var groups = grouped(rows, function (row) { return row.getAttribute("data-signup-order"); });
     groups.keys.sort();
-    return groups.keys.map(function (key) {
+    var pool = ads.slice();
+    var blocks = groups.keys.map(function (key) {
       var list = bySort(groups.map[key]);
-      return section("signup-" + list[0].getAttribute("data-signup"), list[0].getAttribute("data-signup-label"), list);
+      var picked = take(pool, "data-signup", list[0].getAttribute("data-signup"));
+      pool = picked.rest;
+      return section("signup-" + list[0].getAttribute("data-signup"), list[0].getAttribute("data-signup-label"), list, picked.hit);
     });
+    return withLeftovers(blocks, pool);
   }
 
-  function byAges(rows) {
+  function byAges(rows, ads) {
     var blocks = [];
     var placed = Object.create(null);
+    var adPlaced = Object.create(null);
     ages.forEach(function (pair) {
       var list = [];
       rows.forEach(function (row) {
@@ -145,10 +189,24 @@
           list.push(row);
         }
       });
-      if (list.length) blocks.push(section("age-" + pair[0], pair[1], bySort(list)));
+      var pinned = [];
+      ads.forEach(function (row) {
+        if (row.getAttribute("data-" + pair[0]) !== "1") return;
+        if (adPlaced[row.id]) {
+          var copy = row.cloneNode(true);
+          copy.removeAttribute("id");
+          copy.setAttribute("data-clone", "1");
+          pinned.push(copy);
+        } else {
+          adPlaced[row.id] = true;
+          pinned.push(row);
+        }
+      });
+      if (list.length || pinned.length) blocks.push(section("age-" + pair[0], pair[1], bySort(list), pinned));
     });
     var rest = rows.filter(function (row) { return !placed[row.id]; });
-    if (rest.length) blocks.push(section("age-unlisted", "Ages not listed", bySort(rest)));
+    var restAds = ads.filter(function (row) { return !adPlaced[row.id]; });
+    if (rest.length || restAds.length) blocks.push(section("age-unlisted", "Ages not listed", bySort(rest), restAds));
     return blocks;
   }
 
@@ -163,7 +221,8 @@
     if (!pill || pill.getAttribute("aria-pressed") === "true") return;
     var mode = pill.getAttribute("data-group");
     var rows = originals();
-    var blocks = mode === "type" ? byType(rows) : mode === "signup" ? bySignup(rows) : mode === "ages" ? byAges(rows) : byTown(rows);
+    var ads = sponsors();
+    var blocks = mode === "type" ? byType(rows, ads) : mode === "signup" ? bySignup(rows, ads) : mode === "ages" ? byAges(rows, ads) : byTown(rows, ads);
     paint(blocks);
     Array.prototype.forEach.call(pills.querySelectorAll(".camp-pill"), function (button) {
       button.setAttribute("aria-pressed", button === pill ? "true" : "false");

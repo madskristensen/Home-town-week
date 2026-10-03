@@ -134,9 +134,12 @@
   margin-top: 1.15rem;
 }
 
-.camp-town h2 {
+.camp-town .camp-town-title {
   margin: 0 0 0.4rem;
+  color: var(--ink);
   font-size: 1.15rem;
+  font-weight: 650;
+  line-height: 1.25;
 }
 
 .camp-tips p {
@@ -146,6 +149,62 @@
 .camp-season-sponsor[hidden],
 .camp-sponsored[hidden] {
   display: none;
+}
+
+.camp-sponsored .sponsor-mark {
+  margin: 0;
+}
+
+.camp-sponsored .event-photo {
+  width: min(100%, 18rem);
+  aspect-ratio: 16 / 9;
+  margin: 0.4rem 0 0.2rem;
+  overflow: hidden;
+}
+
+.camp-sponsored .event-photo picture,
+.camp-sponsored .event-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.camp-sponsored .event-photo img {
+  object-fit: cover;
+}
+
+.camp-blurb {
+  margin: 0.28rem 0 0;
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.sponsor-preview .camp-town {
+  margin-top: 0;
+}
+
+.sponsor-preview .camp-list {
+  margin-top: 0.15rem;
+}
+
+.sponsor-preview .camp-name-line,
+.sponsor-preview .camp-meta,
+.sponsor-preview .camp-signup,
+.sponsor-preview .camp-blurb,
+.sponsor-preview .sponsor-mark {
+  margin: 0;
+}
+
+.sponsor-preview .camp-meta,
+.sponsor-preview .camp-signup {
+  margin-top: 0.12rem;
+}
+
+.sponsor-preview .camp-blurb {
+  margin-top: 0.28rem;
 }
 
 @media (min-width: 42rem) {
