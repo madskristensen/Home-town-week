@@ -821,6 +821,18 @@ picture {
     grid-row: 3;
   }
 
+  /* Left column: About, Feed, install. Right column: Suggest an event,
+     Request a city, Partner with us. */
+  .footer-meta li:nth-child(1) { grid-column: 1; grid-row: 1; }
+  .footer-meta li:nth-child(2) { grid-column: 1; grid-row: 2; }
+  .footer-meta li:nth-child(3) { grid-column: 2; grid-row: 1; }
+  .footer-meta li:nth-child(4) { grid-column: 2; grid-row: 2; }
+
+  .footer-meta li.footer-partner {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
   .footer-meta li::after,
   .footer-meta li:not(:last-child)::after {
     content: none;

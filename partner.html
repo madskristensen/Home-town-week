@@ -1,0 +1,102 @@
+---
+layout: default
+title: Partner with us
+description: Reach Eastside parents with a clearly labeled sponsored spot on Eastside Family Calendar. Local, family-only, and free of ad networks.
+permalink: /partner/
+sample_cards:
+  - title: "Your Farm: Fall u-pick weekends"
+    town: "Sponsored · Woodinville"
+    when: "Sat and Sun through Oct 31 · 10:00 a.m.–5:00 p.m."
+    place: "Your address"
+    place_city: Woodinville
+    blurb: "Pick apples and pumpkins, ride the hay wagon, and say hi to the goats. $12 a person, and kids 2 and under are free."
+    image: /assets/images/hubs/fall/orchard.webp
+    alt: Rows of apple trees in an orchard.
+    credit: "Photo: Gerda Arendt, CC0"
+    image_source: https://commons.wikimedia.org/wiki/File:Apple_orchard_overlooking_Idstein.jpg
+  - title: "Your Camp: Forest explorers summer camp"
+    town: "Sponsored · Summer camp · Redmond"
+    when: "Weekdays, Jun 21 to Aug 20 · 9:00 a.m.–3:00 p.m."
+    place: "Your address"
+    place_city: Redmond
+    blurb: "A week outdoors for ages 6 to 10, with trail games, fort building, and creek walks. $395 a week, with a sibling discount."
+    image: /assets/images/themes/autumn-forest.webp
+    alt: A trail through an autumn forest, with yellow and orange leaves.
+    credit: "Photo: Thomas, CC BY-SA 2.0"
+    image_source: "https://commons.wikimedia.org/wiki/File:Autumn_forest_-_Darlington_Trail,_Middletown_-_PA.jpg"
+---
+{%- capture partner_subject -%}Partner with Eastside Family Calendar{%- endcapture -%}
+{%- capture partner_body -%}Hi Mads,
+
+I'd like to talk about partnering with Eastside Family Calendar.
+
+Business name:
+Town:
+Website:
+What we'd like to promote:
+Option we're interested in:
+{%- endcapture -%}
+{%- capture partner_mailto -%}mailto:mads@eastsidecalendar.com?subject={{ partner_subject | strip | mail_escape }}&amp;body={{ partner_body | strip | mail_escape }}{%- endcapture -%}
+<article class="page wrap article-page">
+  <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
+  {%- include page-intro.html text="Help Eastside families find your farm, camp, class, or venue, with a clearly labeled spot on a calendar parents already trust." -%}
+  <div class="prose">
+    <p>Eastside Family Calendar is where local parents check what to do with their kids this weekend. It covers 15 cities, from Bothell and Kirkland to Snoqualmie and Maple Valley, plus the no-school days for ten school districts. It's free, it's made by a local family, and it has no ad networks.</p>
+    <p>A few local businesses help keep it that way. If you run a place that Eastside kids love, we'd be glad to help more families find you.</p>
+
+    <h2>Who you'll reach</h2>
+    <ul>
+      <li>Parents of toddlers through teens in Bellevue, Bothell, Carnation, Duvall, Issaquah, Kenmore, Kirkland, Maple Valley, Mercer Island, North Bend, Redmond, Renton, Sammamish, Snoqualmie, and Woodinville.</li>
+      <li>Families planning the weekend, the next no-school day, the holidays, or the summer.</li>
+      <li>More than 400 upcoming family events on the calendar right now, updated every day.</li>
+    </ul>
+
+    <h2>What sponsors get</h2>
+    <ul>
+      <li>A card that looks like the rest of the calendar, with a real photo, a short blurb, and a link straight to your site.</li>
+      <li>A clear "Sponsored" label, so parents know exactly what they're looking at and keep trusting it.</li>
+      <li>A link tagged with our name, so your own site stats show the visits that came from us.</li>
+      <li>A real person to work with. Mads, a Kirkland dad of three, reads and answers every email.</li>
+    </ul>
+
+    <h2>What a sponsored card looks like</h2>
+    <p>These are samples. Your card uses your own photo and details, and we write the blurb with you in the same plain style as every other listing.</p>
+    {% include card-grid.html events=page.sample_cards show_city=true %}
+
+    <h2>Ways to partner</h2>
+
+    <h3>Featured sponsored card</h3>
+    <p>Your card in the weekend picks on the home page and on This weekend, or near the top of one city page. One sponsor per spot at a time.</p>
+    <p><strong>$150 a month in the weekend picks. $60 a month on a city page.</strong></p>
+
+    <h3>Seasonal sponsor</h3>
+    <p>Be the only sponsor of a seasonal page for its whole season, with a "Sponsored by" line and your card at the top.</p>
+    <ul>
+      <li><strong>Christmas and the Christmas lights map</strong>, November and December: $400 for the season</li>
+      <li><strong>Fall, Halloween, and the decorations map</strong>, September and October: $300 for the season</li>
+      <li><strong>Spring break</strong>, mid-March through spring break week: $150 for the season</li>
+      <li><strong>Summer camps guide</strong>, January through June: $300 for the season (coming soon)</li>
+    </ul>
+
+    <h3>Weekly email sponsor (coming soon)</h3>
+    <p>One short, labeled sponsor line in our weekend email for Eastside parents. One sponsor per issue.</p>
+    <p><strong>$35 an issue, or $120 for four issues in a row.</strong></p>
+
+    <h3>Enhanced summer camp listing (coming soon)</h3>
+    <p>Basic camp listings will be free. An enhanced listing adds a photo, a longer description, and a spot near the top for its town and age group, labeled Sponsored.</p>
+    <p><strong>$49 per camp for the season.</strong></p>
+
+    <h2>Our standards</h2>
+    <ul>
+      <li>Every paid spot says "Sponsored." Always.</li>
+      <li>Family only: camps, classes, farms, museums, venues, and kids' activities we'd happily take our own three kids to.</li>
+      <li>We say no when something isn't a fit, and we don't take alcohol, cannabis, vaping, gambling, or anything meant for adults only.</li>
+      <li>Free events stay free. Nobody pays to have an event listed, and sponsoring doesn't change what we list or what we write about anyone.</li>
+      <li>No ad networks, and we never collect kids' data.</li>
+      <li>Sponsored spots are few, so the calendar stays a calendar.</li>
+    </ul>
+
+    <h2>Get in touch</h2>
+    <p>Email <a href="{{ partner_mailto }}">mads@eastsidecalendar.com</a> with your business name, your town, and what you'd like to promote. We'll reply with open dates and help you put your card together.</p>
+  </div>
+</article>

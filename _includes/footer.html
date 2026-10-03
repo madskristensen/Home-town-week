@@ -1,6 +1,6 @@
 {%- comment -%}
   Site footer. No parameters.
-  Phone links are About, Feed, then Suggest an event, Request a city.
+  Phone links are About, Feed, then Suggest an event, Request a city, Partner with us.
 {%- endcomment -%}
 <footer class="site-footer">
   <div class="wrap">
@@ -58,6 +58,7 @@ Who it's for (kids, families):
 City:
         {%- endcapture -%}
         <li><a href="mailto:suggestions@eastsidecalendar.com?subject={{ city_request_subject | strip | mail_escape }}&amp;body={{ city_request_body | strip | mail_escape }}">Request a city</a></li>
+        <li class="footer-partner"><a href="{{ '/partner/' | relative_url }}"{% if page.url == "/partner/" %} aria-current="page"{% endif %}>Partner with us</a></li>
         <li class="footer-install-slot"><button type="button" id="install-link" class="footer-install" hidden>Add to Home screen</button></li>
       </ul>
       <p class="footer-family">Made by an Eastside family, for Eastside families. We also blog at <a href="https://afterpickup.com">After Pickup</a>.</p>
