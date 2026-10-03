@@ -20,14 +20,6 @@ intro: "I'm in Kirkland with three kids, and the camp week is the one I cannot a
     <p>Put the resident morning on the calendar the week the guide comes out. The general day is the backup, not the plan.</p>
     <p>A full day covers a work day. A half day still needs a ride at noon.</p>
     <p>When a row says 2027 dates are not posted yet, last year's weeks are a hint. Check the camp before you plan a vacation around them.</p>
-    {%- capture suggest_subject -%}A summer camp you missed{%- endcapture -%}
-    {%- capture suggest_body -%}I would like to suggest a summer camp for Eastside Family Calendar.
-
-Camp name:
-Town:
-Ages:
-Link:
-{%- endcapture -%}
-    <p class="map-tip">Know a camp we missed? <a href="mailto:suggestions@eastsidecalendar.com?subject={{ suggest_subject | strip | mail_escape }}&amp;body={{ suggest_body | strip | mail_escape }}">Tell us</a>.</p>
+    {%- include map-tip.html kind="camp" -%}
   </section>
 </article>
