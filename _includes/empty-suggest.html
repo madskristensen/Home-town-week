@@ -37,7 +37,7 @@ Date:{%- endcapture -%}
 {%- if empty_mode == "line" -%}
 <p class="list-updated">Looking for something we don't list? <a href="mailto:suggestions@eastsidecalendar.com?subject={{ mail_subject | strip | mail_escape }}&amp;body={{ mail_body | strip | mail_escape }}">Suggest an event or calendar</a>.</p>
 {%- elsif empty_mode == "button" -%}
-<p><a class="empty-suggest-btn" href="mailto:suggestions@eastsidecalendar.com?subject={{ mail_subject | strip | mail_escape }}&amp;body={{ mail_body | strip | mail_escape }}">Suggest an event or calendar</a></p>
+<p><a class="empty-suggest-btn btn" href="mailto:suggestions@eastsidecalendar.com?subject={{ mail_subject | strip | mail_escape }}&amp;body={{ mail_body | strip | mail_escape }}">Suggest an event or calendar</a></p>
 {%- else -%}
 <div class="empty-suggest{% if empty_mode == "filter" %} filter-empty{% endif %}"{% if empty_mode == "filter" %} hidden{% endif %}>
   {%- if empty_mode == "filter" -%}
@@ -48,6 +48,6 @@ Date:{%- endcapture -%}
   <p>No {{ empty_topic }} events are listed yet. {{ empty_ask }}</p>
   {%- endif -%}
   <p class="empty-play"><a href="{{ play_href | strip | relative_url }}">Head to a playground instead</a></p>
-  <a class="empty-suggest-btn" href="mailto:suggestions@eastsidecalendar.com?subject={{ mail_subject | strip | mail_escape }}&amp;body={{ mail_body | strip | mail_escape }}">Suggest an event or calendar</a>
+  <a class="empty-suggest-btn btn" href="mailto:suggestions@eastsidecalendar.com?subject={{ mail_subject | strip | mail_escape }}&amp;body={{ mail_body | strip | mail_escape }}">Suggest an event or calendar</a>
 </div>
 {%- endif -%}

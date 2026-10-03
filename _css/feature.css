@@ -98,17 +98,6 @@
   stroke-width: 1.6;
 }
 
-.lights-feature-playgrounds .lights-feature-btn {
-  background: #f09a3a;
-  color: #2a140c;
-}
-
-.lights-feature-playgrounds .lights-feature-btn:hover,
-.lights-feature-playgrounds .lights-feature-btn:focus-visible {
-  background: #ffb15a;
-  color: #2a140c;
-}
-
 .lights-feature-playgrounds .light-pin {
   fill: #f09a3a;
 }
@@ -155,24 +144,7 @@
 }
 
 .lights-feature-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.75rem;
   margin-top: 0.85rem;
-  padding: 0.35rem 1rem;
-  background: var(--btn-bg);
-  color: var(--btn-ink);
-  font-weight: 700;
-  line-height: 1.2;
-  text-decoration: none;
-}
-
-.lights-feature-btn:hover,
-.lights-feature-btn:focus-visible {
-  background: var(--btn-bg-hover);
-  color: var(--btn-ink);
-  text-decoration: none;
 }
 
 @media (min-width: 42rem) {
@@ -211,17 +183,6 @@
   .lights-feature-line {
     color: var(--xmas-ink);
   }
-
-  .lights-feature-btn {
-    background: var(--xmas-btn);
-    color: var(--accent-contrast);
-  }
-
-  .lights-feature-btn:hover,
-  .lights-feature-btn:focus-visible {
-    background: var(--xmas-btn-hover);
-    color: var(--accent-contrast);
-  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -252,17 +213,6 @@
     color: var(--ink);
   }
 
-  .lights-feature-halloween .lights-feature-btn {
-    background: #f09a3a;
-    color: #2a140c;
-  }
-
-  .lights-feature-halloween .lights-feature-btn:hover,
-  .lights-feature-halloween .lights-feature-btn:focus-visible {
-    background: #ffb15a;
-    color: #2a140c;
-  }
-
   .lights-feature-playgrounds {
     background: #1e4636;
     border-color: #f0a04a;
@@ -272,17 +222,6 @@
   .lights-feature-playgrounds .lights-feature-title,
   .lights-feature-playgrounds .lights-feature-line {
     color: #fff6ea;
-  }
-
-  .lights-feature-playgrounds .lights-feature-btn {
-    background: #f09a3a;
-    color: #2a140c;
-  }
-
-  .lights-feature-playgrounds .lights-feature-btn:hover,
-  .lights-feature-playgrounds .lights-feature-btn:focus-visible {
-    background: #ffb15a;
-    color: #2a140c;
   }
 }
 
@@ -296,12 +235,5 @@
   .lights-feature-title,
   .lights-feature-line {
     color: var(--ink);
-  }
-
-  .lights-feature-btn,
-  .lights-feature-btn:hover,
-  .lights-feature-btn:focus-visible {
-    background: var(--forest);
-    color: var(--on-accent);
   }
 }

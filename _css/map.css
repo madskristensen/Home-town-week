@@ -83,25 +83,6 @@
   text-align: center;
 }
 
-.map-poster button {
-  min-height: 2.75rem;
-  padding: 0.35rem 1.1rem;
-  border: 0;
-  border-radius: var(--radius);
-  background: var(--btn-bg);
-  color: var(--btn-ink);
-  font: inherit;
-  font-weight: 700;
-  line-height: 1.2;
-  cursor: pointer;
-}
-
-.map-poster button:hover,
-.map-poster button:focus-visible {
-  background: var(--btn-bg-hover);
-  color: var(--btn-ink);
-}
-
 .map-poster button:disabled {
   cursor: progress;
 }

@@ -8,7 +8,7 @@
 {%- capture share_text -%}What's on in {{ city.name }}.{%- endcapture -%}
 {%- assign share_text = share_text | strip -%}
 <div class="issue-share" data-url="{{ share_url | escape }}" data-title="{{ page.title | escape }}" data-text="{{ share_text | escape }}">
-  <button type="button" class="share-button" data-share aria-label="Share">
+  <button type="button" class="share-button btn" data-share aria-label="Share">
     <svg class="share-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       <path d="M12 3v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
       <path d="M8 7l4-4 4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>

@@ -30,12 +30,6 @@
   flex: none;
 }
 
-.city-name-row .share-button {
-  min-height: 2.15rem;
-  padding: 0.28rem 0.65rem;
-  font-size: 0.85rem;
-}
-
 .city-name {
   margin: 0;
   color: var(--ink);
@@ -139,30 +133,6 @@
   margin: 0;
 }
 
-.share-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  min-height: 2.5rem;
-  padding: 0.35rem 0.7rem;
-  border: 1px solid var(--forest);
-  border-radius: var(--radius);
-  background: transparent;
-  color: var(--forest);
-  font: inherit;
-  font-size: 0.9rem;
-  font-weight: 600;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.share-button:hover,
-.share-button:focus-visible {
-  background: var(--forest);
-  color: var(--on-accent);
-}
-
 .share-icon {
   display: block;
   width: 0.95rem;
@@ -172,7 +142,7 @@
 
 @media (max-width: 36rem) {
   .city-name-row .share-button {
-    width: 2.15rem;
+    width: 2.75rem;
     padding: 0;
   }
 
@@ -191,7 +161,7 @@
 
   .city-name-row .share-button.is-copied {
     width: auto;
-    padding: 0.28rem 0.65rem;
+    padding: 0 0.85rem;
   }
 }
 

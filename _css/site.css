@@ -182,6 +182,59 @@ a {
   outline-offset: 3px;
 }
 
+/* Primary solid control. Newsletter, calendar subscribe, map, print,
+   share, empty states, and feature links all use this. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  box-sizing: border-box;
+  min-height: 2.75rem;
+  margin: 0;
+  padding: 0 0.85rem;
+  border: 1px solid var(--btn-bg);
+  border-radius: var(--radius);
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  font-weight: 650;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.prose a.btn {
+  color: var(--btn-ink);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  border-color: var(--btn-bg-hover);
+  background: var(--btn-bg-hover);
+  color: var(--btn-ink);
+  text-decoration: none;
+}
+
+.prose a.btn:hover,
+.prose a.btn:focus-visible {
+  color: var(--btn-ink);
+  text-decoration: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -946,32 +999,11 @@ picture {
   outline-offset: 2px;
 }
 
-.newsletter button {
+.newsletter .btn {
   flex: 0 0 auto;
   height: 2.75rem;
   min-height: 2.75rem;
-  margin: 0;
-  padding: 0 0.85rem;
-  border: 1px solid var(--forest);
-  border-radius: var(--radius);
   white-space: nowrap;
-  background: transparent;
-  color: var(--forest);
-  font-family: var(--sans);
-  font-size: 0.875rem;
-  font-weight: 650;
-  line-height: 1.2;
-  cursor: pointer;
-  touch-action: manipulation;
-}
-
-.newsletter button:hover,
-.newsletter button:focus-visible {
-  color: var(--link);
-  text-decoration: underline;
-  text-underline-offset: 0.14em;
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
 }
 
 .newsletter-fine {
@@ -1116,25 +1148,7 @@ figure figcaption .source::before {
 
 .empty-suggest-btn,
 .prose a.empty-suggest-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.75rem;
   margin-top: 0.85rem;
-  padding: 0.35rem 1rem;
-  border-radius: var(--radius);
-  background: var(--btn-bg);
-  color: var(--btn-ink);
-  font-weight: 700;
-  line-height: 1.2;
-  text-decoration: none;
-}
-
-.empty-suggest-btn:hover,
-.empty-suggest-btn:focus-visible {
-  background: var(--btn-bg-hover);
-  color: var(--btn-ink);
-  text-decoration: none;
 }
 
 .season-banner {
@@ -2017,34 +2031,13 @@ h2.event-bucket.is-past {
 }
 
 .print-list {
-  appearance: none;
   margin: 1rem 0 0;
-  padding: 0.45rem 0.9rem;
-  border: 1px solid var(--btn-bg);
-  border-radius: var(--radius);
-  background: var(--btn-bg);
-  color: var(--btn-ink);
-  font: inherit;
-  font-weight: 650;
-  cursor: pointer;
-}
-
-.print-list:hover,
-.print-list:focus-visible {
-  background: var(--btn-bg-hover);
-  border-color: var(--btn-bg-hover);
 }
 
 .cal-subscribe summary {
-  display: inline-flex;
   grid-row: 1;
-  align-items: center;
   justify-self: start;
-  gap: 0.4rem;
-  color: var(--link);
-  font-weight: 600;
-  list-style: none;
-  cursor: pointer;
+  white-space: nowrap;
 }
 
 .cal-subscribe summary::-webkit-details-marker {
@@ -2260,19 +2253,9 @@ html[data-ns-chosen] .ns-hint {
 }
 
 .ns-sub .cal-subscribe summary {
-  display: inline-flex;
   grid-column: 2;
   grid-row: 1;
-  align-items: center;
   justify-self: end;
-  min-height: 2.4rem;
-  padding: 0.35rem 0.85rem;
-  border: 1px solid var(--btn-bg);
-  border-radius: var(--radius);
-  background: var(--btn-bg);
-  color: var(--btn-ink);
-  font-weight: 650;
-  list-style: none;
   white-space: nowrap;
 }
 
@@ -2290,18 +2273,6 @@ html[data-ns-chosen] .ns-hint {
 
 .ns-sub .cal-subscribe summary::-webkit-details-marker {
   display: none;
-}
-
-.ns-sub .cal-subscribe summary:hover,
-.ns-sub .cal-subscribe summary:focus-visible {
-  border-color: var(--btn-bg-hover);
-  background: var(--btn-bg-hover);
-  color: var(--btn-ink);
-}
-
-.ns-sub .cal-subscribe summary:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
 }
 
 .ns-months {
