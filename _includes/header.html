@@ -1,8 +1,9 @@
 {%- comment -%}
   Two-row header. The wordmark is its own row. Cities, Seasons, Guides,
   and Explore are a bar under it. A Menu button shows only under 340px.
-  Guides follow site.data.nav_guides. Explore is the old Explore list
-  with anything already in Cities, Seasons, or Guides left out.
+  Guides follow site.data.nav_guides: articles in season, School
+  calendars, bucket lists in season, then All guides. Explore lists
+  the maps, Playgrounds, Farmers markets, and Book ahead.
 {%- endcomment -%}
 {%- capture nav_cities -%}
 <li><a href="{{ '/this-weekend/' | relative_url }}"{% if page.url == "/this-weekend/" %} aria-current="page"{% endif %}>This weekend</a></li>
@@ -44,17 +45,18 @@
 {%- for nav_article in nav_guide_set.articles -%}
 <li><a href="{{ nav_article.href | relative_url }}"{% if page.url == nav_article.href %} aria-current="page"{% endif %}>{{ nav_article.name }}</a></li>
 {%- endfor -%}
-<li><a href="{{ '/articles/' | relative_url }}"{% if page.url == "/articles/" %} aria-current="page"{% endif %}>All articles</a></li>
 {%- for nav_evergreen in nav_guide_set.evergreen -%}
 <li><a href="{{ nav_evergreen.href | relative_url }}"{% if page.url == nav_evergreen.href %} aria-current="page"{% endif %}>{{ nav_evergreen.name }}</a></li>
 {%- endfor -%}
 {%- for nav_bucket in nav_guide_set.buckets -%}
 <li><a href="{{ nav_bucket.href | relative_url }}"{% if page.url == nav_bucket.href %} aria-current="page"{% endif %}>{{ nav_bucket.name }}</a></li>
 {%- endfor -%}
+<li><a href="{{ '/articles/' | relative_url }}"{% if page.url == "/articles/" %} aria-current="page"{% endif %}>All guides</a></li>
 {%- endcapture -%}
 {%- capture nav_explore -%}
 <li><a href="{{ '/christmas/lights/' | relative_url }}"{% if page.url == "/christmas/lights/" %} aria-current="page"{% endif %}>Christmas lights map</a></li>
 <li><a href="{{ '/fall/decorations/' | relative_url }}"{% if page.url == "/fall/decorations/" %} aria-current="page"{% endif %}>Halloween decorations map</a></li>
+<li><a href="{{ '/playgrounds/' | relative_url }}"{% if page.url == "/playgrounds/" %} aria-current="page"{% endif %}>Playgrounds</a></li>
 <li><a href="{{ '/farmers-markets/' | relative_url }}"{% if page.url == "/farmers-markets/" %} aria-current="page"{% endif %}>Farmers markets</a></li>
 <li><a href="{{ '/book-ahead/' | relative_url }}"{% if page.url == "/book-ahead/" %} aria-current="page"{% endif %}>Book ahead</a></li>
 {%- endcapture -%}
