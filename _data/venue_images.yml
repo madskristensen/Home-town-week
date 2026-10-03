@@ -193,6 +193,24 @@ venues:
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     license: CC BY-SA 3.0
     source: https://commons.wikimedia.org/wiki/File:Maple_Valley,_WA_-_museum_01.jpg
+  - keys: ["covington aquatic"]
+    image: /assets/images/maple-valley/aquatic-center.webp
+    alt: A metal seahorse sculpture in front of the Covington Aquatic Center.
+    credit: "Photo: City of Covington"
+    license: organizer
+    source: https://www.covingtonwa.gov/parks/covingtonaquaticcenter.php
+  - keys: ["gnometown"]
+    image: /assets/images/maple-valley/gnometown-gnomes.webp
+    alt: Lit inflatable gnomes at night for Maple Valley's Gnometown Holidays.
+    credit: "Photo: City of Maple Valley"
+    license: organizer
+    source: https://www.maplevalleywa.gov/government/departments/parks_and_recreation/special_events/maple_valley_hometown_holidays.php
+  - keys: ["creative arts center", "maple valley creative arts"]
+    image: /assets/images/maple-valley/creative-arts-center.webp
+    alt: Rows of chairs facing a screen inside the Maple Valley Creative Arts Center.
+    credit: "Photo: Maple Valley Creative Arts Council"
+    license: organizer
+    source: https://mvcac.clubexpress.com/content.aspx?page_id=22&club_id=181069&module_id=45458
   - keys: ["maple valley library"]
     image: /assets/images/maple-valley/library.webp
     alt: Maple Valley Library, a King County Library System branch with a glass and wood front.
