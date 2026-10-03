@@ -206,6 +206,97 @@
   line-height: 1.45;
 }
 
+.nav-preview-footer {
+  margin-top: 0;
+  padding: 0 0 calc(1.15rem + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+.nav-preview-footer .nav-mock-wide {
+  padding-top: 0.85rem;
+}
+
+.nav-preview-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 0.1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-preview-meta li {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+.nav-preview-meta li:not(:last-child)::after {
+  content: "\00B7";
+  margin: 0 0.4rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.nav-preview-meta li:has(+ li .footer-install[hidden])::after {
+  content: none;
+}
+
+.nav-preview-meta li:has(.footer-install[hidden]) {
+  display: none;
+}
+
+.nav-preview-meta a,
+.nav-preview-footer .footer-install {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--forest);
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.nav-preview-meta a:hover,
+.nav-preview-meta a:focus-visible,
+.nav-preview-footer .footer-install:hover,
+.nav-preview-footer .footer-install:focus-visible,
+.nav-preview-family a:hover,
+.nav-preview-family a:focus-visible {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.nav-preview-family {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.nav-preview-family a {
+  color: var(--forest);
+  font-weight: 500;
+  text-decoration: none;
+}
+
 @media (min-width: 30rem) {
   .nav-links.is-wide {
     width: 100%;
@@ -256,7 +347,8 @@
 
 @media print {
   .nav-mock-bar,
-  .nav-phone {
+  .nav-phone,
+  .nav-preview-footer {
     display: none;
   }
 }
