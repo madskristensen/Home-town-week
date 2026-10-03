@@ -58,7 +58,7 @@ windows:
       - text: Rainy weekend? Indoor places to play
         article: rainy-day-indoor-play
 
-# Guides in the live footer and the nav preview. Not the home page line.
+# Guides in the nav preview. Not the home page line.
 # An article is listed when today falls in a range, or when it is
 # evergreen. Ranges are month-day and repeat each year. The menu
 # keeps the first cap articles, then All articles, the evergreen

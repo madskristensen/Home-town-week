@@ -1,9 +1,9 @@
 {%- comment -%}
-  Navigation mockup. part is header or footer.
-  Does not replace the live header. The live footer uses the same
-  four groups. Seasons are the named
-  hubs that exist. Halloween is the Fall section when that section is
-  on the hub. Winter break and Summer camps are omitted until a hub exists.
+  Navigation mockup for the preview header. part is header.
+  Does not replace the live header or the live footer. There is no
+  footer menu. Seasons are the named hubs that exist. Halloween is the
+  Fall section when that section is on the hub. Winter break and
+  Summer camps are omitted until a hub exists.
 {%- endcomment -%}
 {%- capture nav_cities -%}
 <li><a href="{{ '/this-weekend/' | relative_url }}">This weekend</a></li>
@@ -189,27 +189,4 @@ City:
   });
 })();
 </script>
-{%- elsif include.part == "footer" -%}
-<footer class="nav-mock-footer">
-  <div class="nav-mock-wide">
-    <div class="nav-mock-footer-groups">
-      <nav aria-labelledby="nav-foot-cities">
-        <p id="nav-foot-cities" class="nav-mock-label">Cities</p>
-        <ul class="nav-links">{{ nav_cities }}</ul>
-      </nav>
-      <nav aria-labelledby="nav-foot-seasons">
-        <p id="nav-foot-seasons" class="nav-mock-label">Seasons</p>
-        <ul class="nav-links">{{ nav_seasons }}</ul>
-      </nav>
-      <nav aria-labelledby="nav-foot-guides">
-        <p id="nav-foot-guides" class="nav-mock-label">Guides</p>
-        <ul class="nav-links">{{ nav_guides }}</ul>
-      </nav>
-      <nav aria-labelledby="nav-foot-about">
-        <p id="nav-foot-about" class="nav-mock-label">About</p>
-        <ul class="nav-links">{{ nav_about }}</ul>
-      </nav>
-    </div>
-  </div>
-</footer>
 {%- endif -%}
