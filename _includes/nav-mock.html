@@ -40,16 +40,17 @@
 {%- endif -%}
 {%- endcapture -%}
 {%- capture nav_guides -%}
-<li><a href="{{ '/articles/' | relative_url }}">Articles</a></li>
-{%- for nav_article in site.data.articles -%}
+{%- assign nav_guide_set = site.data.nav_guides -%}
+{%- for nav_article in nav_guide_set.articles -%}
 <li><a href="{{ nav_article.href | relative_url }}">{{ nav_article.name }}</a></li>
 {%- endfor -%}
-{%- assign nav_buckets = site.pages | where_exp: "item", "item.url contains 'bucket-list'" -%}
-{%- for nav_bucket in nav_buckets -%}
-<li><a href="{{ nav_bucket.url | relative_url }}">{{ nav_bucket.title }}</a></li>
+<li><a href="{{ '/articles/' | relative_url }}">All articles</a></li>
+{%- for nav_evergreen in nav_guide_set.evergreen -%}
+<li><a href="{{ nav_evergreen.href | relative_url }}">{{ nav_evergreen.name }}</a></li>
 {%- endfor -%}
-<li><a href="{{ '/playgrounds/' | relative_url }}">Playgrounds</a></li>
-<li><a href="{{ '/no-school-days/' | relative_url }}">School calendars</a></li>
+{%- for nav_bucket in nav_guide_set.buckets -%}
+<li><a href="{{ nav_bucket.href | relative_url }}">{{ nav_bucket.name }}</a></li>
+{%- endfor -%}
 {%- endcapture -%}
 {%- capture nav_suggest_subject -%}Suggest an event{%- endcapture -%}
 {%- capture nav_suggest_body -%}I would like to suggest an event for Eastside Family Calendar.

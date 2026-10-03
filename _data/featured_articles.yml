@@ -57,3 +57,65 @@ windows:
         article: snow-play
       - text: Rainy weekend? Indoor places to play
         article: rainy-day-indoor-play
+
+# Guides in the nav preview. Not the home page line.
+# An article is listed when today falls in a range, or when it is
+# evergreen. Ranges are month-day and repeat each year. The menu
+# keeps the first cap articles, then All articles, the evergreen
+# links, and bucket lists whose ranges contain today. Names come
+# from articles.yml. A bucket is used only when that page exists.
+guides:
+  cap: 5
+  evergreen:
+    - name: Playgrounds
+      href: /playgrounds/
+    - name: School calendars
+      href: /no-school-days/
+  articles:
+    - article: rainy-day-indoor-play
+      evergreen: true
+    - article: free-things-to-do
+      evergreen: true
+    - article: salmon-spawning
+      ranges:
+        - start: "09-01"
+          end: "11-30"
+    - article: christmas-lights
+      ranges:
+        - start: "11-16"
+          end: "12-31"
+    - article: meeting-santa
+      ranges:
+        - start: "11-16"
+          end: "12-24"
+    - article: winter-break
+      ranges:
+        - start: "12-01"
+          end: "01-05"
+    - article: new-years-eve
+      ranges:
+        - start: "12-26"
+          end: "01-01"
+    - article: snow-play
+      ranges:
+        - start: "01-01"
+          end: "02-29"
+    - article: no-school-day-ideas
+      ranges:
+        - start: "12-15"
+          end: "01-05"
+        - start: "03-20"
+          end: "04-15"
+    - article: easy-hikes-with-kids
+      ranges:
+        - start: "04-01"
+          end: "09-30"
+    - article: best-playgrounds
+      ranges:
+        - start: "05-01"
+          end: "09-15"
+  buckets:
+    - href: /fall/bucket-list/
+      ranges:
+        - start: "09-01"
+          end: "11-30"
