@@ -1,7 +1,10 @@
 /* One camp list. Town groups are the HTML. The select rearranges
    those rows. The script runs on change, so the first paint is Town. */
 
-.camps-page .camp-directory,
+.camps-page .camp-directory {
+  margin-top: 1rem;
+}
+
 .camps-page .camp-tips {
   margin-top: 1.75rem;
 }
