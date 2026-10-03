@@ -17,8 +17,8 @@ module EastsideCalendar
       ["sports", "Sports"],
       ["stem", "STEM"],
       ["arts", "Arts"],
-      ["outdoor", "Outdoor"],
-      ["general", "General"]
+      ["outdoor", "Nature/outdoor"],
+      ["general", "General day camp"]
     ].freeze
     EXTRAS = {
       "newcastle" => "Newcastle",
@@ -47,6 +47,7 @@ module EastsideCalendar
         "camps" => camps,
         "featured" => featured,
         "towns" => towns,
+        "type_groups" => group_types(directory),
         "signups" => signups,
         "ages" => chips(AGES, directory) { |camp, key| Array(camp["age_groups"]).include?(key) },
         "types" => chips(TYPES, directory) { |camp, key| camp["type"] == key },
@@ -71,7 +72,7 @@ module EastsideCalendar
         rows = groups[town]
         next if rows.nil? || rows.empty?
 
-        rows = rows.sort_by { |camp| camp["name"].downcase }
+        rows = rows.sort_by { |camp| camp["group_sort"] }
         {
           "id" => town,
           "name" => rows.first["town_name"],
@@ -150,6 +151,7 @@ module EastsideCalendar
         "on_signup_list" => row["on_signup_list"] == true,
         "confirmed_2027" => row["confirmed_2027"] == true,
         "signup_sort" => signup_sort(row, today),
+        "group_sort" => group_sort(row, today),
         "audiences" => audiences(row, today),
         "blurb" => squash(row["blurb"]),
         "card_when" => card_when(row, status)
@@ -247,6 +249,38 @@ module EastsideCalendar
       return status if camp_date(row["reg_on"])
 
       "2027 dates not posted yet"
+    end
+
+    def group_types(camps)
+      groups = camps.group_by { |camp| camp["type"] }
+      TYPES.filter_map do |key, label|
+        rows = groups[key]
+        next if rows.nil? || rows.empty?
+
+        {
+          "id" => key,
+          "name" => label,
+          "count" => rows.size,
+          "camps" => rows.sort_by { |camp| camp["group_sort"] }
+        }
+      end
+    end
+
+    # Soonest sign-up first, then name. Open now is first. A future
+    # registration date is next. Not posted yet is last, by name.
+    def group_sort(row, today)
+      name = squash(row["name"]).downcase
+      return "0-#{name}" if row["signup_open"] == true
+
+      dates = [camp_date(row["reg_on"])]
+      Array(row["audiences"]).each do |line|
+        dates << camp_date(line["reg_on"]) if line.is_a?(Hash)
+      end
+      dates.compact!
+      return "2-#{name}" if dates.empty?
+      return "0-#{name}" if dates.any? { |date| date <= today }
+
+      "1-#{dates.min.iso8601}-#{name}"
     end
 
     def signup_sort(row, today)

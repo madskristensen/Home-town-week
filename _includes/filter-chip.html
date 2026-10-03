@@ -1,9 +1,10 @@
 {%- comment -%}
   One filter chip.
   label: visible text.
-  input_class: checkbox class. Playground uses flt-town or flt-amenity.
+  input_class: input class. Playground uses flt-town or flt-amenity.
   group, value: event chips. Omit value on playground chips.
   city: data-city. count: data-count. amenity: data-amenity.
+  type: checkbox (default) or radio. name and checked are for a radio group.
 {%- endcomment -%}
 {%- assign chip_label = include.label | append: "" -%}
 {%- assign chip_class = include.input_class | append: "" | strip -%}
@@ -12,8 +13,14 @@
 {%- assign chip_city = include.city | append: "" | strip -%}
 {%- assign chip_count = include.count | append: "" | strip -%}
 {%- assign chip_amenity = include.amenity | append: "" | strip -%}
+{%- assign chip_name = include.name | append: "" | strip -%}
+{%- if include.type == "radio" -%}
+{%- assign chip_type = "radio" -%}
+{%- else -%}
+{%- assign chip_type = "checkbox" -%}
+{%- endif -%}
 <label class="filter-chip">
-    <input type="checkbox"{% if chip_class.size > 0 %} class="{{ chip_class }}"{% endif %}{% if chip_group.size > 0 %} data-group="{{ chip_group }}"{% endif %}{% if chip_value.size > 0 %} value="{{ chip_value | escape }}"{% endif %}{% if chip_city.size > 0 %} data-city="{{ chip_city }}"{% endif %}{% if chip_count.size > 0 %} data-count="{{ chip_count }}"{% endif %}{% if chip_amenity.size > 0 %} data-amenity="{{ chip_amenity }}"{% endif %}>
+    <input type="{{ chip_type }}"{% if chip_class.size > 0 %} class="{{ chip_class }}"{% endif %}{% if chip_group.size > 0 %} data-group="{{ chip_group }}"{% endif %}{% if chip_value.size > 0 %} value="{{ chip_value | escape }}"{% endif %}{% if chip_city.size > 0 %} data-city="{{ chip_city }}"{% endif %}{% if chip_count.size > 0 %} data-count="{{ chip_count }}"{% endif %}{% if chip_amenity.size > 0 %} data-amenity="{{ chip_amenity }}"{% endif %}{% if chip_name.size > 0 %} name="{{ chip_name | escape }}"{% endif %}{% if include.checked == true or include.checked == "true" %} checked{% endif %}>
     <span class="filter-switch" aria-hidden="true"></span>
     <span>{{ chip_label | escape }}</span>
   </label>
