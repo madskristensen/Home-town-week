@@ -45,6 +45,15 @@ sitemap: false
 
 - [School calendars]({{ site.url }}{{ site.baseurl }}/no-school-days/): No-school days, early release, and breaks for the 2026-27 year in the ten Eastside school districts. Grade-only days and days that are off only if needed are marked. Each district has a calendar feed.
 
+## Articles
+
+- [Articles]({{ site.url }}{{ site.baseurl }}/articles/): Evergreen guides for Eastside families.
+- [Best Christmas lights on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/christmas-lights/): Public displays, two posted home shows, and zoo light walks within reach.
+- [Meeting Santa on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/meeting-santa/): Free and low-cost Santa visits, tree lightings, and the Santa trains.
+- [Winter break with kids on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/winter-break/): Break dates, indoor plans, and a snow day at Snoqualmie Pass.
+- [New Year's Eve with kids on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/new-years-eve/): What is open on December 31, and which noon countdowns are still unannounced.
+- [Snow play near the Eastside]({{ site.url }}{{ site.baseurl }}/articles/snow-play/): Summit tubing, the Hyak sledding hill, and the pass check.
+
 ## Sitemap
 
 - [Sitemap]({{ site.url }}{{ site.baseurl }}/sitemap.xml): Every public page on this site.

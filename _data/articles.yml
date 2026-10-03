@@ -1,4 +1,39 @@
 # Evergreen guides. The /articles/ page renders these with card-grid.
+- name: Best Christmas lights on the Eastside
+  blurb: Public displays, two home shows on the lights map, and zoo light walks within reach.
+  href: /articles/christmas-lights/
+  image: /assets/images/lights/garden-dlights.webp
+  alt: Light sculptures along a path at Bellevue Botanical Garden.
+  credit: "Photo: Steven Pavlov, CC BY 4.0"
+  image_source: https://commons.wikimedia.org/wiki/File:Garden_d%E2%80%99Lights_2008_at_the_Bellevue_Botanical_Garden,_img011.jpg
+- name: Meeting Santa on the Eastside
+  blurb: Free tree lightings, Santa visits, and the two Santa trains.
+  href: /articles/meeting-santa/
+  image: /assets/images/bellevue/kelsey-creek.webp
+  alt: Barn and pasture at Kelsey Creek Farm in Bellevue.
+  credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+  image_source: https://commons.wikimedia.org/wiki/File:Kelsey_Creek_Farm_04.jpg
+- name: Winter break with kids on the Eastside
+  blurb: District break dates, KidsQuest hours, libraries, and a snow day at the pass.
+  href: /articles/winter-break/
+  image: /assets/images/bellevue/kidsquest.webp
+  alt: Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance.
+  credit: "Photo: Julian Fong, CC BY-SA 4.0"
+  image_source: https://commons.wikimedia.org/wiki/File:KidsQuest_Children%27s_Museum_2.jpg
+- name: New Year's Eve with kids on the Eastside
+  blurb: What is open on December 31, and which noon countdowns are still unannounced.
+  href: /articles/new-years-eve/
+  image: /assets/images/worth-the-drive/woodland-park-zoo.jpg
+  alt: A pond and autumn trees at Woodland Park Zoo.
+  credit: "Photo: Bernie Ongewe, CC BY-SA 4.0"
+  image_source: https://commons.wikimedia.org/wiki/File:Woodland_Park_Zoo_2.jpg
+- name: Snow play near the Eastside
+  blurb: Summit tubing, the Hyak sledding hill, and the pass check before you drive.
+  href: /articles/snow-play/
+  image: /assets/images/hikes/snoqualmie-pass-snow.webp
+  alt: Snow on the trees beside the highway at Snoqualmie Pass.
+  credit: "Photo: Leslie Seaton, CC BY 2.0"
+  image_source: https://commons.wikimedia.org/wiki/File:Snow_at_the_pass_(8167962840).jpg
 - name: Rainy day activities for kids on the Eastside
   blurb: Indoor play, libraries, museums, and pools when the weather turns.
   href: /articles/rainy-day-indoor-play/

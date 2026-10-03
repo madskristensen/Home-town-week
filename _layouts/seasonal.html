@@ -217,6 +217,8 @@ layout: default
   {%- include page-intro.html text=hub.intro -%}
   {%- if page.hub_id == "fall" -%}
   <p class="hub-section-intro">Want something to check off together? <a href="{{ '/fall/bucket-list/' | relative_url }}">The fall family bucket list</a> prints on one page.</p>
+  {%- elsif page.hub_id == "christmas" -%}
+  <p class="hub-section-intro">Guides for the season: <a href="{{ '/articles/christmas-lights/' | relative_url }}">best Christmas lights</a>, <a href="{{ '/articles/meeting-santa/' | relative_url }}">meeting Santa</a>, and <a href="{{ '/articles/new-years-eve/' | relative_url }}">New Year's Eve with kids</a>.</p>
   {%- endif -%}
   <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   {%- assign suggest_lead = hub.suggest_lead | append: "" -%}
@@ -257,6 +259,11 @@ layout: default
     {%- endif -%}
     {%- if section.id == "worth-the-drive" -%}
     <p class="hub-section-intro"><a href="{{ '/worth-the-drive/' | relative_url }}">See every trip worth the drive</a></p>
+    {%- endif -%}
+    {%- if page.hub_id == "christmas" and section.id == "holiday-lights" -%}
+    <p class="hub-section-intro"><a href="{{ '/articles/christmas-lights/' | relative_url }}">Best Christmas lights on the Eastside</a> covers the public displays and the zoo walks within reach.</p>
+    {%- elsif page.hub_id == "christmas" and section.id == "santa" -%}
+    <p class="hub-section-intro"><a href="{{ '/articles/meeting-santa/' | relative_url }}">Meeting Santa on the Eastside</a> lists the free visits, tree lightings, and the Santa trains.</p>
     {%- endif -%}
     {%- assign section_events = section.events | size -%}
     {%- if section_events > 0 -%}
