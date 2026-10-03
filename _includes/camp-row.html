@@ -1,11 +1,10 @@
 {%- comment -%}
-  One camp row. The id stays on this node so a town anchor's camps
-  are unique. Age grouping clones the node and drops the id.
+  One camp row. Three short lines: name, ages and day and town, sign-up.
 {%- endcomment -%}
 <li class="camp-row" id="{{ camp.id }}" data-town="{{ camp.town_id }}" data-town-name="{{ camp.town_name | escape }}" data-town-order="{{ camp.town_order }}" data-type="{{ camp.type }}" data-type-label="{{ camp.type_label | escape }}" data-type-order="{{ camp.type_order }}" data-sort="{{ camp.group_sort | escape }}" data-signup="{{ camp.signup_group }}" data-signup-label="{{ camp.signup_label | escape }}" data-signup-order="{{ camp.signup_order }}"{% if camp.full_day %} data-full="1"{% endif %}{% for age in camp.age_groups %} data-{{ age }}="1"{% endfor %}>
-  <p class="camp-name-line"><a href="{{ camp.source }}" rel="noopener">{{ camp.name | escape }}</a>{% if camp.meta.size > 0 %} <span>{{ camp.meta | escape }}</span>{% endif %}</p>
-  {%- if camp.detail.size > 0 -%}
-  <p class="camp-detail">{{ camp.detail | escape }}</p>
+  <p class="camp-name-line"><a href="{{ camp.source }}" rel="noopener">{{ camp.name | escape }}</a></p>
+  {%- if camp.meta.size > 0 -%}
+  <p class="camp-meta">{{ camp.meta | escape }}</p>
   {%- endif -%}
   <p class="camp-signup">{{ camp.signup | escape }}</p>
 </li>

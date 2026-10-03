@@ -110,7 +110,6 @@ module EastsideCalendar
       end
 
       status = status_for(row, today)
-      signup = signup_line(row, status)
       bucket = signup_bucket(row, today)
       featured = row["featured"] == true
       photo = featured ? photo_for(row["photo"], name, site) : nil
@@ -128,9 +127,8 @@ module EastsideCalendar
         "type_order" => TYPES.index { |pair| pair[0] == type } || 9,
         "age_groups" => ages,
         "full_day" => row["full_day"] == true,
-        "meta" => join_bits(row["age_label"], row["day_label"]),
-        "detail" => join_bits(type_label, row["location"], row["weeks"], row["price"]),
-        "signup" => signup,
+        "meta" => skim_meta(row, town_name),
+        "signup" => skim_signup(row, today),
         "source" => source,
         "source_label" => presence(row["source_label"], "Camp site"),
         "featured" => featured,
@@ -219,6 +217,64 @@ module EastsideCalendar
           "hint" => squash(line["hint"])
         }
       end
+    end
+
+    # Three short facts. Ages are omitted when the page did not list them.
+    # Day length is Full day or Half or full day. The town is always there.
+    def skim_meta(row, town_name)
+      join_bits(known_age(row), short_day(row), town_name)
+    end
+
+    def known_age(row)
+      label = squash(row["age_label"])
+      return nil if label.empty?
+      return nil if label.match?(/\Aages (on the|vary)\b/i)
+
+      label
+    end
+
+    def short_day(row)
+      label = squash(row["day_label"]).downcase
+      half = label.include?("half")
+      full = row["full_day"] == true || label.include?("full day")
+      return "Half or full day" if half && full
+      return "Full day" if full
+
+      nil
+    end
+
+    # Open now, Sign-up opens Jan 19, or a one-line not-posted note.
+    def skim_signup(row, today)
+      return "Open now" if row["signup_open"] == true
+
+      dates = [camp_date(row["reg_on"])]
+      Array(row["audiences"]).each do |line|
+        dates << camp_date(line["reg_on"]) if line.is_a?(Hash)
+      end
+      dates.compact!
+      return "Open now" if dates.any? { |date| date <= today }
+
+      future = dates.select { |date| date > today }.min
+      if future
+        return "Sign-up opens #{Date::ABBR_MONTHNAMES[future.month]} #{future.day}"
+      end
+
+      hint = past_signup_phrase(row)
+      hint ? "2027 dates not posted yet (#{hint})" : "2027 dates not posted yet"
+    end
+
+    def past_signup_phrase(row)
+      hint = squash(row["hint"])
+      return nil unless hint.match?(/regist/i)
+
+      match = hint.match(/registered(?:\s+on)?\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})\b/i)
+      return nil unless match
+
+      day = match[2].to_i
+      span = day <= 10 ? "early" : day <= 20 ? "mid-" : "late"
+      gap = span.end_with?("-") ? "" : " "
+      year = hint[/\b(20\d{2})\b/, 1] || "2026"
+      "#{span}#{gap}#{match[1]} #{year}"
     end
 
     def signup_line(row, status)

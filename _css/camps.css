@@ -62,11 +62,16 @@
 }
 
 .camp-list > li {
-  margin: 0 0 0.45rem;
-  padding: 0.55rem 0.7rem 0.5rem;
-  background: var(--sheet);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
+  margin: 0;
+  padding: 0.85rem 0.1rem 0.9rem;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  border-radius: 0;
+}
+
+.camp-list > li:last-child {
+  border-bottom: 0;
 }
 
 .camp-name-line a {
@@ -82,7 +87,7 @@
 }
 
 .camp-name-line,
-.camp-detail,
+.camp-meta,
 .camp-signup {
   margin: 0;
 }
@@ -90,25 +95,16 @@
 .camp-name-line {
   color: var(--ink);
   font-size: 1rem;
-  line-height: 1.35;
+  line-height: 1.3;
 }
 
-.camp-name-line span,
-.camp-detail,
+.camp-meta,
 .camp-signup {
+  margin-top: 0.12rem;
   color: var(--muted);
   font-size: 0.88rem;
   font-weight: 400;
-  line-height: 1.4;
-}
-
-.camp-detail,
-.camp-signup {
-  margin-top: 0.12rem;
-}
-
-.camp-signup {
-  color: var(--text);
+  line-height: 1.35;
 }
 
 .camp-town {
