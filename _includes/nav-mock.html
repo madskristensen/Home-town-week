@@ -77,54 +77,54 @@ City:
   <div class="nav-mock-wide home-mast">
     <div class="mast-title-row">
       <p class="brand"><a href="{{ '/' | relative_url }}"><svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="34" height="34" aria-hidden="true" focusable="false"><rect x="2" y="4" width="28" height="26" rx="5" fill="#3f7d5f"/><rect x="4" y="12" width="24" height="16" rx="2.5" fill="#fffdf8"/><rect class="mark-bind" x="8" y="2" width="4" height="6" rx="2" fill="#243044"/><rect class="mark-bind" x="20" y="2" width="4" height="6" rx="2" fill="#243044"/><path d="M16 12.5 L22 19 H19.5 L24 25.5 H8 L12.5 19 H10 Z" fill="#3f7d5f"/><rect x="14" y="25.5" width="4" height="2.5" fill="#243044"/></svg><span class="brand-name">Eastside Family Calendar</span></a></p>
-      <nav class="nav-mock-desktop" aria-label="Primary">
-        <details class="nav-fly" name="nav-mock-desktop">
-          <summary aria-controls="nav-panel-cities">Cities</summary>
-          <div class="nav-fly-panel" id="nav-panel-cities">
-            <ul class="nav-links is-wide">{{ nav_cities }}</ul>
-          </div>
-        </details>
-        <details class="nav-fly" name="nav-mock-desktop">
-          <summary aria-controls="nav-panel-seasons">Seasons</summary>
-          <div class="nav-fly-panel" id="nav-panel-seasons">
-            <ul class="nav-links">{{ nav_seasons }}</ul>
-          </div>
-        </details>
-        <details class="nav-fly" name="nav-mock-desktop">
-          <summary aria-controls="nav-panel-guides">Guides</summary>
-          <div class="nav-fly-panel" id="nav-panel-guides">
-            <ul class="nav-links is-wide">{{ nav_guides }}</ul>
-          </div>
-        </details>
-        <details class="nav-fly" name="nav-mock-desktop">
-          <summary aria-controls="nav-panel-about">About</summary>
-          <div class="nav-fly-panel" id="nav-panel-about">
-            <ul class="nav-links">{{ nav_about }}</ul>
-          </div>
-        </details>
-      </nav>
-      <details class="nav-phone">
-        <summary aria-controls="nav-phone-panel">Menu</summary>
+    </div>
+    <nav class="nav-mock-bar" aria-label="Primary">
+      <details class="nav-fly" name="nav-mock-desktop">
+        <summary aria-controls="nav-panel-cities" aria-expanded="false">Cities</summary>
+        <div class="nav-fly-panel" id="nav-panel-cities">
+          <ul class="nav-links is-wide">{{ nav_cities }}</ul>
+        </div>
+      </details>
+      <details class="nav-fly" name="nav-mock-desktop">
+        <summary aria-controls="nav-panel-seasons" aria-expanded="false">Seasons</summary>
+        <div class="nav-fly-panel" id="nav-panel-seasons">
+          <ul class="nav-links">{{ nav_seasons }}</ul>
+        </div>
+      </details>
+      <details class="nav-fly" name="nav-mock-desktop">
+        <summary aria-controls="nav-panel-guides" aria-expanded="false">Guides</summary>
+        <div class="nav-fly-panel" id="nav-panel-guides">
+          <ul class="nav-links is-wide">{{ nav_guides }}</ul>
+        </div>
+      </details>
+      <details class="nav-fly" name="nav-mock-desktop">
+        <summary aria-controls="nav-panel-about" aria-expanded="false">About</summary>
+        <div class="nav-fly-panel" id="nav-panel-about">
+          <ul class="nav-links">{{ nav_about }}</ul>
+        </div>
+      </details>
+    </nav>
+    <details class="nav-phone">
+      <summary aria-controls="nav-phone-panel" aria-expanded="false">Menu</summary>
         <div class="nav-phone-panel" id="nav-phone-panel">
           <details class="nav-section" name="nav-mock-phone">
-            <summary aria-controls="nav-phone-cities">Cities</summary>
+            <summary aria-controls="nav-phone-cities" aria-expanded="false">Cities</summary>
             <ul class="nav-links" id="nav-phone-cities">{{ nav_cities }}</ul>
           </details>
           <details class="nav-section" name="nav-mock-phone">
-            <summary aria-controls="nav-phone-seasons">Seasons</summary>
+            <summary aria-controls="nav-phone-seasons" aria-expanded="false">Seasons</summary>
             <ul class="nav-links" id="nav-phone-seasons">{{ nav_seasons }}</ul>
           </details>
           <details class="nav-section" name="nav-mock-phone">
-            <summary aria-controls="nav-phone-guides">Guides</summary>
+            <summary aria-controls="nav-phone-guides" aria-expanded="false">Guides</summary>
             <ul class="nav-links" id="nav-phone-guides">{{ nav_guides }}</ul>
           </details>
           <details class="nav-section" name="nav-mock-phone">
-            <summary aria-controls="nav-phone-about">About</summary>
+            <summary aria-controls="nav-phone-about" aria-expanded="false">About</summary>
             <ul class="nav-links" id="nav-phone-about">{{ nav_about }}</ul>
           </details>
         </div>
       </details>
-    </div>
   </div>
 </header>
 <script>
@@ -145,6 +145,10 @@ City:
       other.open = false;
     }
   }
+  function syncAll() {
+    var i;
+    for (i = 0; i < menus.length; i++) sync(menus[i]);
+  }
   var n;
   for (n = 0; n < menus.length; n++) {
     sync(menus[n]);
@@ -153,6 +157,9 @@ City:
       if (this.open) closeOthers(this);
     });
   }
+  header.addEventListener("click", function () {
+    window.setTimeout(syncAll, 0);
+  });
   document.addEventListener("keydown", function (event) {
     if (event.key !== "Escape") return;
     var open = header.querySelectorAll("details[open]");
@@ -163,6 +170,7 @@ City:
     }
     if (!inner) return;
     inner.open = false;
+    sync(inner);
     var summary = inner.querySelector(":scope > summary");
     if (summary) summary.focus();
     event.preventDefault();
@@ -171,7 +179,10 @@ City:
     var open = header.querySelectorAll("details[open]");
     var i;
     for (i = 0; i < open.length; i++) {
-      if (!open[i].contains(event.target)) open[i].open = false;
+      if (!open[i].contains(event.target)) {
+        open[i].open = false;
+        sync(open[i]);
+      }
     }
   });
 })();
