@@ -917,12 +917,30 @@ picture {
   position: relative;
   margin: 0 0 1rem;
   border-radius: var(--radius);
+  aspect-ratio: 16 / 9;
+}
+
+.hero picture {
+  position: absolute;
+  inset: 0;
 }
 
 .hero img,
 .event-photo img {
   width: 100%;
   border-radius: var(--radius);
+}
+
+.hero img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.icon-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 /* One credit strip for every photo. 0.30 white, full width, rounded
@@ -1772,6 +1790,21 @@ h2.event-bucket.is-past {
   .card-grid {
     grid-template-columns: 1fr 1fr;
     gap: 2.25rem 1.5rem;
+  }
+}
+
+.card-grid > .event-card + .event-card,
+.hub-section + .hub-section {
+  content-visibility: auto;
+  contain-intrinsic-block-size: 28rem;
+  contain-intrinsic-block-size: auto 28rem;
+}
+
+@media (max-width: 41.99rem) {
+  .playground-list > li + li {
+    content-visibility: auto;
+    contain-intrinsic-block-size: 4.5rem;
+    contain-intrinsic-block-size: auto 4.5rem;
   }
 }
 

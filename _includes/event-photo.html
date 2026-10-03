@@ -24,14 +24,16 @@
        height=photo_height
        loading=photo_loading
        priority=include.priority
-       sizes=photo_sizes -%}
+       sizes=photo_sizes
+       max="800" -%}
   {%- else -%}
   {%- include responsive-img.html
        src=include.src
        alt=include.alt
        loading=photo_loading
        priority=include.priority
-       sizes=photo_sizes -%}
+       sizes=photo_sizes
+       max="800" -%}
   {%- endif -%}
   {%- if photo_credit.size > 0 or photo_source.size > 0 -%}
   <figcaption>

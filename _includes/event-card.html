@@ -104,7 +104,7 @@
 {%- assign share_button = "" -%}
 {%- if share_title.size > 0 and share_start.size > 0 -%}
 {%- capture share_button -%}
-<button type="button" class="event-share" aria-label="Share {{ share_title | escape }}" data-share-title="{{ share_title | escape }}" data-share-start="{{ share_start | escape }}"{% if share_end.size > 0 %} data-share-end="{{ share_end | escape }}"{% endif %}{% if share_venue.size > 0 %} data-share-venue="{{ share_venue | escape }}"{% endif %}{% if schema_locality.size > 0 %} data-share-city="{{ schema_locality | escape }}"{% endif %}{% if schema_description.size > 0 %} data-share-blurb="{{ schema_description | escape }}"{% endif %}{% if schema_cost.size > 0 %} data-share-cost="{{ schema_cost | escape }}"{% endif %}{% if schema_url.size > 0 %} data-share-url="{{ schema_url | escape }}"{% endif %}><svg class="event-share-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 2.8v7.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path><path d="M6.7 6.1 10 2.8l3.3 3.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4.8 9.2v6.2c0 .8.6 1.4 1.4 1.4h7.6c.8 0 1.4-.6 1.4-1.4V9.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="event-share-status" data-share-status aria-live="polite"></span></button>
+<button type="button" class="event-share" aria-label="Share {{ share_title | escape }}" data-share-title="{{ share_title | escape }}" data-share-start="{{ share_start | escape }}"{% if share_end.size > 0 %} data-share-end="{{ share_end | escape }}"{% endif %}{% if share_venue.size > 0 %} data-share-venue="{{ share_venue | escape }}"{% endif %}{% if schema_locality.size > 0 %} data-share-city="{{ schema_locality | escape }}"{% endif %}{% if schema_description.size > 0 %} data-share-blurb="{{ schema_description | escape }}"{% endif %}{% if schema_cost.size > 0 %} data-share-cost="{{ schema_cost | escape }}"{% endif %}{% if schema_url.size > 0 %} data-share-url="{{ schema_url | escape }}"{% endif %}><svg class="event-share-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#icon-share"></use></svg><span class="event-share-status" data-share-status aria-live="polite"></span></button>
 {%- endcapture -%}
 {%- assign share_button = share_button | strip -%}
 {%- endif -%}
@@ -155,7 +155,7 @@
 {%- assign card_title = include.title | append: "" -%}
 {%- if card_calendar_html.size == 0 and card_calendar.size > 0 -%}
 {%- capture card_calendar_html -%}
-<span class="event-cals"><a class="event-cal" href="{{ card_calendar | relative_url }}" aria-label="Add {{ card_title | escape }} to calendar" title="Add {{ card_title | escape }} to calendar"><svg class="cal-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.75" y="2.75" width="12.5" height="11.5" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.4"></rect><path d="M1.75 6.4h12.5M5 1.35v2.5M11 1.35v2.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg></a></span>
+<span class="event-cals"><a class="event-cal" href="{{ card_calendar | relative_url }}" aria-label="Add {{ card_title | escape }} to calendar" title="Add {{ card_title | escape }} to calendar"><svg class="cal-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#icon-cal"></use></svg></a></span>
 {%- endcapture -%}
 {%- assign card_calendar_html = card_calendar_html | strip -%}
 {%- endif -%}

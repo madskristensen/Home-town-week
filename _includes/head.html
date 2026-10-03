@@ -5,6 +5,20 @@
 <meta charset="utf-8">
 <meta name="color-scheme" content="light dark">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+{%- if page.layout == "city" and page.city and page.state -%}
+{%- assign preload_city = site.data.cities | where: "id", page.city | where: "state", page.state | first -%}
+{%- assign preload_src = preload_city.hero.image | append: "" | strip -%}
+{%- if preload_src.size > 0 -%}
+{%- include responsive-img.html src=preload_src sizes="(min-width: 47rem) 44rem, calc(100vw - 3rem)" preload=true -%}
+{%- endif -%}
+{%- elsif page.hub_id == "this-weekend" -%}
+{%- assign preload_hub = site.data.hub_pages["this-weekend"] -%}
+{%- assign preload_event = preload_hub.sections.first.events.first -%}
+{%- assign preload_src = preload_event.image | append: "" | strip -%}
+{%- if preload_src.size > 0 -%}
+{%- include responsive-img.html src=preload_src sizes="(min-width: 42rem) 21rem, calc(100vw - 3rem)" max="800" preload=true -%}
+{%- endif -%}
+{%- endif -%}
 {%- include stylesheets.html -%}
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">

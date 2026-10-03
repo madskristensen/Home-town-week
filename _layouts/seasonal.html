@@ -19,7 +19,7 @@ layout: default
   {%- if book_count == 0 -%}
   {%- include empty-suggest.html opening="No ticketed events need booking ahead right now." name="Book ahead" -%}
   {%- else -%}
-  {%- include card-grid.html events=book_cards show_city=true eager=2 priority=true -%}
+  {%- include card-grid.html events=book_cards show_city=true eager=1 priority=true -%}
   {%- endif -%}
   {%- include map-tip.html kind="missing" -%}
 </article>
@@ -268,7 +268,7 @@ layout: default
     {%- assign section_events = section.events | size -%}
     {%- if section_events > 0 -%}
     {%- if forloop.first -%}
-      {%- assign section_eager = 2 -%}
+      {%- assign section_eager = 1 -%}
     {%- else -%}
       {%- assign section_eager = 0 -%}
     {%- endif -%}
