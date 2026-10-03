@@ -1,0 +1,118 @@
+/* Summer camp directory. Town chips are OR. Age chips are OR.
+   Type chips are OR. Full day, when checked, keeps full-day rows.
+   The script applies that on change. The first paint is the full list. */
+
+.camps-page .camp-signups,
+.camps-page .camp-start,
+.camps-page .camp-directory,
+.camps-page .camp-tips {
+  margin-top: 1.75rem;
+}
+
+.camps-page h2 {
+  margin: 0 0 0.45rem;
+  font-size: 1.35rem;
+}
+
+.camp-signups ol,
+.camp-list {
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.camp-signups li,
+.camp-list > li {
+  margin: 0 0 0.45rem;
+  padding: 0.55rem 0.7rem 0.5rem;
+  background: var(--sheet);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+.camp-signup-name,
+.camp-name-line a {
+  color: var(--ink);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.camp-signup-name:hover,
+.camp-name-line a:hover,
+.camp-signup-name:focus-visible,
+.camp-name-line a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.08em;
+}
+
+.camp-signup-line,
+.camp-name-line,
+.camp-detail,
+.camp-signup {
+  margin: 0;
+}
+
+.camp-name-line {
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.camp-name-line span,
+.camp-detail,
+.camp-signup,
+.camp-signup-line {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.camp-detail,
+.camp-signup,
+.camp-signup-line {
+  margin-top: 0.12rem;
+}
+
+.camp-signup,
+.camp-who {
+  color: var(--text);
+}
+
+.camp-town {
+  margin-top: 1.15rem;
+}
+
+.camp-town h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.15rem;
+}
+
+.camp-filters {
+  margin-top: 1.25rem;
+}
+
+.camp-filter-empty {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+}
+
+.camp-tips p {
+  margin: 0.4rem 0 0;
+}
+
+.camp-season-sponsor[hidden],
+.camp-sponsored[hidden] {
+  display: none;
+}
+
+@media (min-width: 42rem) {
+  .camp-list {
+    columns: 2;
+    column-gap: 0.7rem;
+  }
+
+  .camp-list > li {
+    break-inside: avoid;
+  }
+}

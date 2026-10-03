@@ -2064,6 +2064,11 @@ module EastsideCalendar
         pages[extra["id"]] = extra
         site.pages << hub_page(site, extra)
       end
+      # The summer camps page is a real file, not an event hub. The
+      # Seasons menu uses this key. Do not add a banner for it.
+      if Array(site.data["summer_camps"]).any? { |row| row.is_a?(Hash) }
+        pages["summer-camps"] = { "id" => "summer-camps", "path" => "/summer-camps/" }
+      end
       site.data["hub_pages"] = pages
       site.data["seasonal_hubs"] = public_hubs
       site.data["footer_seasons"] = SeasonalHubs.footer_seasons(prepared)

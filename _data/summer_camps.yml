@@ -1,0 +1,524 @@
+# Day camps for /summer-camps/. One row per camp.
+# The build compares reg_on and signup_open with today in
+# America/Los_Angeles and writes Open now, Opens in N days, or
+# Not posted yet. confirmed_2027 is only for a fact posted on the
+# camp's own site. A 2026 date is a hint, not a promise.
+# Day camps only. Church camps stay off, except SAMBICA day camp,
+# whose 2027 registration date is posted. Newcastle and Preston are
+# just outside the 15 cities. Chains such as Skyhawks are a basic row.
+# source is the camp's own page. Never a lead site.
+# price is plain text. Do not set cost. Free is the only cost pill,
+# and none of these rows are free.
+# featured rows need a photo of the venue or organizer. No kids.
+# in_directory: false keeps a catalog card out of the town list when
+# the named camps under it are already rows.
+# {{status}} in signup is replaced at build.
+- id: bellevue-parks
+  name: Bellevue Parks summer day camps
+  town: bellevue
+  type: parks
+  age_groups: [preschool, kids, tweens, teens]
+  age_label: "Ages 4 to 15"
+  day_label: "Full day and half day"
+  full_day: true
+  location: "Bellevue community centers"
+  weeks: "June through August in 2026"
+  price: "About $280 to $412 a week in 2026"
+  hint: "In 2026, Bellevue residents registered March 30 at noon and everyone else April 6 at noon."
+  source: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+  source_label: "City guide"
+  last_verified: "2026-10-03"
+  featured: true
+  feature_rank: 1
+  on_signup_list: true
+  ref_sort: "2026-03-30"
+  card_place: "Community centers"
+  blurb: "The city catalog is the wide net: sports, art, outdoor days, and the general day camps at the community centers. In 2026 a week ran about $280 to $412 for residents, and a bit more for everyone else. Next summer is not posted yet."
+  audiences:
+    - who: Bellevue residents
+      hint: "In 2026, registration opened March 30 at noon."
+    - who: Everyone else
+      hint: "In 2026, registration opened April 6 at noon."
+  photo:
+    image: /assets/images/bellevue/crossroads-community-center.webp
+    alt: "The games room at Crossroads Community Center, with foosball and air hockey tables and orange chairs."
+    credit: "Photo: City of Bellevue"
+    source: "https://bellevuewa.gov/city-government/departments/parks/community-centers/crossroads"
+- id: kirkland-parks
+  name: Kirkland Parks summer camps
+  town: kirkland
+  type: parks
+  age_groups: [preschool, kids, tweens, teens]
+  age_label: "Ages vary by camp"
+  day_label: "Day camp"
+  full_day: true
+  location: "Kirkland community centers"
+  weeks: "Spring and summer guide in 2026"
+  hint: "In 2026, Kirkland residents registered March 17 and everyone else March 19. Aquatics opened for residents on March 18."
+  source: "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Recreation-Programs-Services/Recreation-Activity-Guide"
+  source_label: "City guide"
+  last_verified: "2026-10-03"
+  featured: true
+  feature_rank: 2
+  on_signup_list: true
+  ref_sort: "2026-03-17"
+  card_place: "Peter Kirk Building and other centers"
+  blurb: "This is the guide that fills in a morning. In 2026, residents got March 17 and everyone else March 19. The 2027 guide is not up yet."
+  audiences:
+    - who: Kirkland residents
+      hint: "In 2026, camps opened March 17 at 7 a.m. Aquatics opened March 18."
+    - who: Everyone else
+      hint: "In 2026, registration opened March 19 at 8 a.m."
+  photo:
+    image: /assets/images/kirkland/peter-kirk-building.webp
+    alt: "Front of the Peter Kirk Building in downtown Kirkland, a brick building with a covered entry."
+    credit: "Photo: Carl Waluconis, CC BY-SA 4.0"
+    source: "https://commons.wikimedia.org/wiki/File:Peter_Kirk_Building_Front_and_Right.jpg"
+- id: redmond-parks
+  name: Redmond Parks summer camps
+  town: redmond
+  type: parks
+  age_groups: [preschool, kids, tweens, teens]
+  age_label: "Ages 4 to 16"
+  day_label: "Full day and shorter camps"
+  full_day: true
+  location: "Redmond community centers and parks"
+  weeks: "June 22 through August 28 in 2026"
+  hint: "The city gives people who live or work in Redmond an earlier registration day. The 2026 weeks ran June 22 through August 28. The 2027 day is not posted."
+  source: "https://www.redmond.gov/1156/Summer-Camps"
+  source_label: "City page"
+  last_verified: "2026-10-03"
+  featured: true
+  feature_rank: 3
+  on_signup_list: true
+  ref_sort: "2026-06-22"
+  card_place: "Redmond Community Center at Marymoor Village"
+  blurb: "Art, drama, sports, STEM, tennis, and Camp Redmond, the city's full day program. Extended care is at the community center at Marymoor Village. 2027 is not posted yet."
+  audiences:
+    - who: Redmond residents
+      hint: "People who live or work in Redmond register first. The 2027 day is not posted."
+    - who: Everyone else
+      hint: "General registration opens after the resident day. That day is not posted for 2027."
+  photo:
+    image: /assets/images/redmond/marymoor-center.webp
+    alt: "Front of the Redmond Community Center at Marymoor Village, a low building with a covered entrance and young trees."
+    credit: "Photo: City of Redmond"
+    source: "https://www.redmond.gov/1156/Summer-Camps"
+- id: issaquah-parks
+  name: Issaquah Parks day camps
+  town: issaquah
+  type: parks
+  age_groups: [kids, tweens, teens]
+  age_label: "Ages 6 to 14"
+  day_label: "Full day, 9 a.m. to 4 p.m."
+  full_day: true
+  location: "Issaquah schools and the community center"
+  weeks: "June through August in 2026"
+  price: "Extended care was $50 in 2026"
+  in_directory: false
+  hint: "In 2026, Issaquah residents registered March 21 at 9 a.m. and everyone else March 28 at 9 a.m."
+  source: "https://www.issaquahwa.gov/753/Day-Camps"
+  source_label: "City page"
+  last_verified: "2026-10-03"
+  featured: true
+  feature_rank: 4
+  on_signup_list: true
+  ref_sort: "2026-03-21"
+  card_place: "Issaquah Community Center"
+  blurb: "Three city day camps, 9 a.m. to 4 p.m. Issy Camp is ages 6 to 7, Camp 'Quah is 8 to 10, and Adventure Camp is 11 to 14. Extended care was another $50 in 2026. Next summer is not posted yet."
+  audiences:
+    - who: Issaquah residents
+      hint: "In 2026, registration opened March 21 at 9 a.m."
+    - who: Everyone else
+      hint: "In 2026, registration opened March 28 at 9 a.m."
+  photo:
+    image: /assets/images/issaquah/community-center.webp
+    alt: "Issaquah Community Center, a brick building with a covered entry and a lawn in front."
+    credit: "Photo: City of Issaquah"
+    source: "https://www.issaquahwa.gov/Facilities/Facility/Details/Issaquah-Community-Center-41"
+- id: ymca-east
+  name: YMCA East day camps
+  town: bellevue
+  type: general
+  age_groups: [kids]
+  age_label: "Ages vary by camp"
+  day_label: "Day camp"
+  location: "Bellevue, Sammamish, Newcastle, and Preston"
+  weeks: "Late June through late August in 2026"
+  in_directory: false
+  hint: "In 2026, returning families registered February 4, members February 11, and everyone else February 18. Members saved about $50 a week."
+  source: "https://www.seattleymca.org/programs/camp-and-outdoor-leadership/day-camp/region/east"
+  source_label: "YMCA page"
+  last_verified: "2026-10-03"
+  featured: true
+  feature_rank: 5
+  on_signup_list: true
+  ref_sort: "2026-02-04"
+  card_place: "Bellevue Family YMCA"
+  blurb: "Day camps at the Bellevue Family Y, the Sammamish Community Y, and Coal Creek Family Y in Newcastle, plus outdoor days at Camp Terry in Preston. 2027 registration is not posted yet."
+  photo:
+    image: /assets/images/bellevue/bellevue-family-ymca.webp
+    alt: "The entrance of Bellevue Family YMCA, with the YMCA sign over the doors."
+    credit: "Photo: YMCA of Greater Seattle"
+    source: "https://www.seattleymca.org/locations/bellevue-family-ymca"
+- id: bgc-bellevue
+  name: Boys & Girls Clubs of Bellevue summer camp
+  town: bellevue
+  type: general
+  age_label: "Ages on the club page"
+  day_label: "Day camp"
+  location: "Clubhouses across Bellevue"
+  weeks: "The page still describes summer 2026"
+  hint: "The club page lists eight Bellevue clubhouses, including South Bellevue Community Center and the downtown clubhouse. 2027 is not posted."
+  source: "https://www.bgcbellevue.org/Programs/Summer-Camp"
+  source_label: "Club page"
+  last_verified: "2026-10-03"
+  featured: true
+  feature_rank: 6
+  card_place: "South Bellevue Community Center"
+  blurb: "Summer camp at the Bellevue clubhouses, including South Bellevue Community Center, the downtown clubhouse, and the school sites. The page still describes 2026. Next summer is not posted yet."
+  photo:
+    image: /assets/images/bellevue/south-bellevue-cc.webp
+    alt: "The main entrance of South Bellevue Community Center, with the building sign by the doors."
+    credit: "Photo: City of Bellevue"
+    source: "https://bellevuewa.gov/city-government/departments/parks/community-centers/sbcc"
+- id: kidsquest
+  name: KidsQuest summer camps
+  town: bellevue
+  type: stem
+  age_groups: [preschool, kids]
+  age_label: "Ages 4 to 10"
+  day_label: "Half day or full day"
+  full_day: true
+  location: "KidsQuest Children's Museum, Bellevue"
+  weeks: "2027 weeks are still TBD"
+  price: "About $350 for a half-day week, or $525 for a full day"
+  confirmed_2027: true
+  signup_open: true
+  on_signup_list: true
+  signup: "Open now. 2027 themes and prices are posted, and enrollment is open. The weeks are still TBD. A five-day half day is $350. A five-day full day is $525."
+  source: "https://www.kidsquestmuseum.org/programs/summer-camp/"
+  source_label: "Museum page"
+  last_verified: "2026-10-03"
+  featured: true
+  feature_rank: 7
+  card_place: "1116 108th Ave NE"
+  blurb: "Hands-on camps at the museum for ages 4 to 10. The 2027 themes are up and enrollment is open. The weeks are still TBD. A five-day half day is $350, and a five-day full day is $525."
+  photo:
+    image: /assets/images/bellevue/kidsquest.webp
+    alt: "Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance."
+    credit: "Photo: Julian Fong, CC BY-SA 4.0"
+    source: "https://commons.wikimedia.org/wiki/File:KidsQuest_Children%27s_Museum_2.jpg"
+- id: pacsci
+  name: Pacific Science Center camps
+  town: bellevue
+  type: stem
+  age_groups: [preschool, kids, tweens, teens]
+  age_label: "Grades PreK to 8"
+  day_label: "Day camp"
+  location: "Bellevue, Bothell, and Kenmore"
+  weeks: "June 22 through August 21 in 2026"
+  in_directory: false
+  hint: "In 2026, members registered February 2 at 10 a.m. and everyone else February 9 at 10 a.m."
+  source: "https://pacificsciencecenter.org/education/camps/"
+  source_label: "Camp guide"
+  last_verified: "2026-10-03"
+  featured: true
+  feature_rank: 8
+  on_signup_list: true
+  ref_sort: "2026-02-02"
+  card_place: "Mercer Slough Environmental Education Center"
+  blurb: "Camps for grades PreK to 8. On the Eastside they use Mercer Slough in Bellevue, a Bothell campus, and an all-outdoors week in Kenmore. 2027 is not posted yet."
+  audiences:
+    - who: Members
+      hint: "In 2026, member registration opened February 2 at 10 a.m."
+    - who: Everyone else
+      hint: "In 2026, general registration opened February 9 at 10 a.m."
+  photo:
+    image: /assets/images/bellevue/mercer-slough.webp
+    alt: "Mercer Slough Nature Park, with the downtown Bellevue skyline beyond the wetland trees."
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    source: "https://commons.wikimedia.org/wiki/File:Downtown_Bellevue,_WA_from_Mercer_Slough_Nature_Park.jpg"
+- id: issy-camp
+  name: Issy Camp
+  town: issaquah
+  type: parks
+  age_groups: [kids]
+  age_label: "Ages 6 to 7"
+  day_label: "Full day, 9 a.m. to 4 p.m."
+  full_day: true
+  location: "Clark Elementary, Issaquah"
+  weeks: "8 weeks, June through August in 2026"
+  price: "Extended care was $50"
+  hint: "In 2026, Issaquah residents registered March 21 and everyone else March 28."
+  source: "https://www.issaquahwa.gov/753/Day-Camps"
+  source_label: "City page"
+  last_verified: "2026-10-03"
+- id: camp-quah
+  name: "Camp 'Quah"
+  town: issaquah
+  type: parks
+  age_groups: [kids]
+  age_label: "Ages 8 to 10"
+  day_label: "Full day, 9 a.m. to 4 p.m."
+  full_day: true
+  location: "Issaquah Middle School"
+  weeks: "9 weeks, June through August in 2026"
+  price: "Extended care was $50"
+  hint: "In 2026, Issaquah residents registered March 21 and everyone else March 28."
+  source: "https://www.issaquahwa.gov/753/Day-Camps"
+  source_label: "City page"
+  last_verified: "2026-10-03"
+- id: adventure-camp
+  name: Adventure Camp
+  town: issaquah
+  type: parks
+  age_groups: [tweens, teens]
+  age_label: "Ages 11 to 14"
+  day_label: "Full day, 9 a.m. to 4 p.m."
+  full_day: true
+  location: "Issaquah Community Center"
+  weeks: "8 weeks, June through August in 2026"
+  price: "Extended care was $50"
+  hint: "In 2026, Issaquah residents registered March 21 and everyone else March 28."
+  source: "https://www.issaquahwa.gov/753/Day-Camps"
+  source_label: "City page"
+  last_verified: "2026-10-03"
+- id: arena-issaquah
+  name: Arena Sports Issaquah summer camp
+  town: issaquah
+  type: sports
+  age_groups: [preschool, kids, tweens]
+  age_label: "Ages 3 to 12"
+  day_label: "Half day or full day, 9 a.m. to 4 p.m."
+  full_day: true
+  location: "2115 NW Poplar Way, Issaquah"
+  weeks: "2027 weeks are not dated yet"
+  confirmed_2027: true
+  on_signup_list: true
+  ref_sort: "2026-06-01"
+  signup: "Not posted yet. 2027 weeks are not dated yet. The Issaquah page lists summer 2027 ages and hours: half days at 9 a.m. to noon, and a full day from 9 a.m. to 4 p.m. for ages 6 to 12."
+  source: "https://www.arenasports.net/locations/issaquah/camps/"
+  source_label: "Camp page"
+  last_verified: "2026-10-03"
+- id: camp-invention-redmond
+  name: Camp Invention Redmond
+  town: redmond
+  type: stem
+  age_groups: [preschool, kids, tweens]
+  age_label: "Entering grades K to 6"
+  day_label: "Day camp"
+  location: "Redmond. The 2027 site is still TBD."
+  weeks: "2027 week is still TBD"
+  price: "About $340"
+  confirmed_2027: true
+  signup_open: true
+  on_signup_list: true
+  signup: "Open now. 2027 preregistration is open. The Redmond site and the week are still TBD. About $340 for kids entering grades K to 6."
+  source: "https://www.invent.org/program-search/camp-invention/wa18/10311"
+  source_label: "Camp page"
+  last_verified: "2026-10-03"
+- id: camp-invention-maple-valley
+  name: Camp Invention Maple Valley
+  town: maple-valley
+  type: stem
+  age_groups: [preschool, kids, tweens]
+  age_label: "Entering grades K to 6"
+  day_label: "Day camp"
+  location: "Maple Valley. The 2027 site is still TBD."
+  weeks: "2027 week is still TBD"
+  price: "About $310"
+  confirmed_2027: true
+  signup_open: true
+  on_signup_list: true
+  signup: "Open now. 2027 preregistration is open. The Maple Valley site and the week are still TBD. About $310 for kids entering grades K to 6."
+  source: "https://www.invent.org/program-search/camp-invention/wa18/17943"
+  source_label: "Camp page"
+  last_verified: "2026-10-03"
+- id: real-madrid-bellevue
+  name: Real Madrid Foundation soccer camp
+  town: bellevue
+  type: sports
+  age_groups: [preschool, kids, tweens, teens]
+  age_label: "Ages 5 to 17"
+  day_label: "Full day in 2026, 9 a.m. to 3 p.m."
+  full_day: true
+  location: "Bellevue. The 2027 field is not posted yet."
+  weeks: "2026 camp was a weekday clinic"
+  confirmed_2027: true
+  signup_open: true
+  on_signup_list: true
+  signup: "Open now. A 2027 waiting list is open for ages 5 to 17. 2027 dates not posted yet. In 2026 the camp ran 9 a.m. to 3 p.m. at Ivanhoe Sports Fields."
+  source: "https://rmfclinicsusa.com/waiting-list-486-soccer-summer-camp-bellevue-2027"
+  source_label: "Camp page"
+  last_verified: "2026-10-03"
+- id: sambica-day
+  name: SAMBICA day camp
+  town: bellevue
+  type: outdoor
+  age_groups: [kids, tweens, teens]
+  age_label: "Grades 2 to 9"
+  day_label: "Day camp"
+  location: "4114 W Lake Sammamish Pkwy SE, Bellevue"
+  weeks: "June 21 through August 27, 2027"
+  price: "About $997 a week"
+  confirmed_2027: true
+  reg_on: "2027-01-19"
+  on_signup_list: true
+  signup: "2027 day camp weeks run June 21 through August 27. About $997 a week. Registration opens January 19, 2027. {{status}}."
+  source: "https://www.sambica.com/dates-and-availabilities"
+  source_label: "Camp dates"
+  last_verified: "2026-10-03"
+- id: ymca-bellevue-sports
+  name: Bellevue Family Y sport and swim camp
+  town: bellevue
+  type: sports
+  age_label: "Ages on the camp page"
+  day_label: "Day camp"
+  location: "14230 Bel-Red Rd, Bellevue"
+  weeks: "Selected weeks from June 22 to August 21 in 2026"
+  hint: "In 2026, returning families registered February 4, members February 11, and everyone else February 18."
+  source: "https://www.seattleymca.org/programs/camp-and-outdoor-leadership/day-camp/programs/swim-sports"
+  source_label: "YMCA page"
+  last_verified: "2026-10-03"
+- id: ymca-coal-creek
+  name: Coal Creek Family Y sport and swim camp
+  town: newcastle
+  type: sports
+  age_label: "Ages on the camp page"
+  day_label: "Day camp"
+  location: "13750 Newcastle Golf Club Rd, Newcastle"
+  weeks: "Selected weeks from June 22 to August 21 in 2026"
+  hint: "In 2026, returning families registered February 4, members February 11, and everyone else February 18."
+  source: "https://www.seattleymca.org/programs/camp-and-outdoor-leadership/day-camp/programs/swim-sports"
+  source_label: "YMCA page"
+  last_verified: "2026-10-03"
+- id: ymca-sammamish-sports
+  name: Sammamish Community Y sport and swim camp
+  town: sammamish
+  type: sports
+  age_label: "Ages on the camp page"
+  day_label: "Day camp"
+  location: "831 228th Ave SE, Sammamish"
+  weeks: "Selected weeks from June 22 to August 21 in 2026"
+  hint: "In 2026, returning families registered February 4, members February 11, and everyone else February 18."
+  source: "https://www.seattleymca.org/programs/camp-and-outdoor-leadership/day-camp/programs/swim-sports"
+  source_label: "YMCA page"
+  last_verified: "2026-10-03"
+- id: ymca-outdoor
+  name: YMCA Outdoor Day Camp at Camp Terry
+  town: preston
+  type: outdoor
+  age_groups: [kids]
+  age_label: "Entering grades 1 to 4"
+  day_label: "Full day, 9 a.m. to 4 p.m."
+  full_day: true
+  location: "Camp Terry, Preston. Drop-off also at Coal Creek Y in Newcastle."
+  weeks: "June 22 through August 26 in 2026"
+  hint: "In 2026, returning families registered February 4, members February 11, and everyone else February 18."
+  source: "https://www.seattleymca.org/programs/camp-and-outdoor-leadership/day-camp/programs/outdoor-day"
+  source_label: "YMCA page"
+  last_verified: "2026-10-03"
+- id: ymca-discovery-redmond
+  name: YMCA Discovery Camp in Redmond
+  town: redmond
+  type: general
+  age_label: "Ages on the camp page"
+  day_label: "Day camp"
+  location: "Ben Rush Elementary and Horace Mann Elementary"
+  weeks: "East region day camps in 2026"
+  hint: "In 2026, returning families registered February 4, members February 11, and everyone else February 18."
+  source: "https://www.seattleymca.org/programs/camp-and-outdoor-leadership/day-camp/region/east"
+  source_label: "YMCA page"
+  last_verified: "2026-10-03"
+- id: pacsci-bellevue
+  name: Pacific Science Center at Mercer Slough
+  town: bellevue
+  type: stem
+  age_groups: [preschool, kids, tweens, teens]
+  age_label: "Grades PreK to 8"
+  day_label: "Day camp"
+  location: "1625 118th Ave SE, Bellevue"
+  weeks: "June 22 through August 21 in 2026"
+  hint: "In 2026, members registered February 2 and everyone else February 9."
+  source: "https://pacificsciencecenter.org/education/camps/"
+  source_label: "Camp guide"
+  last_verified: "2026-10-03"
+- id: pacsci-bothell
+  name: Pacific Science Center in Bothell
+  town: bothell
+  type: stem
+  age_groups: [preschool, kids, tweens, teens]
+  age_label: "Grades PreK to 8"
+  day_label: "Day camp"
+  location: "Woodinville Montessori, 19102 N Creek Pkwy, Bothell"
+  weeks: "June 22 through August 21 in 2026"
+  hint: "In 2026, members registered February 2 and everyone else February 9."
+  source: "https://pacificsciencecenter.org/education/camps/"
+  source_label: "Camp guide"
+  last_verified: "2026-10-03"
+- id: pacsci-kenmore
+  name: Pacific Science Center in Kenmore
+  town: kenmore
+  type: outdoor
+  age_groups: [preschool, kids, tweens, teens]
+  age_label: "Grades PreK to 8"
+  day_label: "All outdoors"
+  location: "14445 Juanita Dr NE, Kenmore"
+  weeks: "June 22 through August 21 in 2026"
+  hint: "In 2026, members registered February 2 and everyone else February 9. This site is all outdoors."
+  source: "https://pacificsciencecenter.org/education/camps/"
+  source_label: "Camp guide"
+  last_verified: "2026-10-03"
+- id: skyhawks-kirkland
+  name: Skyhawks sports camps in Kirkland
+  town: kirkland
+  type: sports
+  age_label: "Ages vary by session"
+  day_label: "Session length varies"
+  location: "Kirkland. The site varies by session."
+  weeks: "2027 sessions are not posted yet"
+  hint: "Skyhawks lists summer sports camps for Kirkland. The 2027 weeks are not on the page yet."
+  source: "https://skyhawks.com/sports-academy-in-kirkland-wa-98034/"
+  source_label: "Skyhawks page"
+  last_verified: "2026-10-03"
+- id: skyhawks-issaquah
+  name: Skyhawks sports camps in Issaquah
+  town: issaquah
+  type: sports
+  age_label: "Ages vary by session"
+  day_label: "Session length varies"
+  location: "Issaquah. The site varies by session."
+  weeks: "2027 sessions are not posted yet"
+  hint: "Skyhawks lists summer sports camps for Issaquah. The 2027 weeks are not on the page yet."
+  source: "https://skyhawks.com/youth-sports-near-me-in-issaquah-wa-98027/"
+  source_label: "Skyhawks page"
+  last_verified: "2026-10-03"
+- id: outdoors-for-all
+  name: Outdoors for All at Lake Sammamish
+  town: issaquah
+  type: outdoor
+  age_groups: [kids, tweens, teens]
+  age_label: "Ages 7 to 17"
+  day_label: "9 a.m. to 3 p.m."
+  full_day: true
+  location: "Lake Sammamish State Park, Issaquah"
+  weeks: "A posted 2026 week was June 22 to 26"
+  hint: "In 2026, one posted week was June 22 to 26, 9 a.m. to 3 p.m., with cycling, swimming, hiking, and climbing."
+  source: "https://outdoorsforall.org/events/youth-summer-camp-at-lake-sammamish/"
+  source_label: "Camp page"
+  last_verified: "2026-10-03"
+- id: mercer-island-partners
+  name: Mercer Island partner summer camps
+  town: mercer-island
+  type: general
+  age_groups: [preschool, kids, tweens, teens]
+  age_label: "Ages 5 to 18"
+  day_label: "Full day and shorter options"
+  full_day: true
+  location: "Mercer Island Parks partners"
+  weeks: "June 22 through August 14 in 2026"
+  hint: "In 2026 the city listed Coding with Kids for ages 5 to 12, June 22 through August 7, and a learn-to-row week series for ages 13 to 18. 2027 is not posted."
+  source: "https://www.mercerisland.gov/parksrec/page/summer-camps-0"
+  source_label: "City page"
+  last_verified: "2026-10-03"

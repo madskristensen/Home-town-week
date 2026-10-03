@@ -1,0 +1,35 @@
+{%- comment -%}
+  Town, age, type, and full day. The directory script reads these.
+{%- endcomment -%}
+{%- assign camp_page = site.data.summer_camps_page -%}
+<div class="event-filters camp-filters" role="group" aria-labelledby="camp-filter-label">
+  <span class="filter-label" id="camp-filter-label">Filter:</span>
+  {%- for town in camp_page.towns -%}
+  <label class="filter-chip">
+    <input type="checkbox" class="flt-town" data-town="{{ town.id }}">
+    <span class="filter-switch" aria-hidden="true"></span>
+    <span>{{ town.name | escape }}</span>
+  </label>
+  {%- endfor -%}
+  {%- for age in camp_page.ages -%}
+  <label class="filter-chip">
+    <input type="checkbox" class="flt-age" data-age="{{ age.id }}">
+    <span class="filter-switch" aria-hidden="true"></span>
+    <span>{{ age.label | escape }}</span>
+  </label>
+  {%- endfor -%}
+  {%- for kind in camp_page.types -%}
+  <label class="filter-chip">
+    <input type="checkbox" class="flt-type" data-type="{{ kind.id }}">
+    <span class="filter-switch" aria-hidden="true"></span>
+    <span>{{ kind.label | escape }}</span>
+  </label>
+  {%- endfor -%}
+  {%- if camp_page.full_day_count > 0 -%}
+  <label class="filter-chip">
+    <input type="checkbox" class="flt-full">
+    <span class="filter-switch" aria-hidden="true"></span>
+    <span>Full day</span>
+  </label>
+  {%- endif -%}
+</div>

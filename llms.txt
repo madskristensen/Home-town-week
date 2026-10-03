@@ -25,6 +25,10 @@ sitemap: false
 - [Worth the drive]({{ site.url }}{{ site.baseurl }}/worth-the-drive/): Family outings a little outside the Eastside, with the town and a rough drive time from Bellevue. The page stays up all year.
 - [Christmas lights map]({{ site.url }}{{ site.baseurl }}/christmas/lights/): Homes and neighborhood streets with Christmas lights, on one map. Public displays stay on the Christmas page.
 
+## Summer camps
+
+- [Summer camps]({{ site.url }}{{ site.baseurl }}/summer-camps/): Day camps for Eastside kids in summer 2027, with sign-up dates and a list by town. A 2027 date is listed only when the camp's own site has posted it. The page stays up all year.
+
 ## This weekend
 
 - [This weekend]({{ site.url }}{{ site.baseurl }}/this-weekend/): Friday through Sunday family events in all 15 cities, grouped by day. Rebuilt daily.

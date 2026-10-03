@@ -261,6 +261,7 @@ def wants_breadcrumb(rel):
         return True
     extras = (
         "playgrounds/", "farmers-markets/", "book-ahead/", "no-school-days/",
+        "summer-camps/",
         "fall/decorations/", "fall/bucket-list/", "christmas/lights/",
     )
     return any(rel.startswith(item) for item in extras)

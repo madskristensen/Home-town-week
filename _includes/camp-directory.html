@@ -1,0 +1,65 @@
+{%- comment -%}
+  Compact rows by town. The name links to the camp's own page.
+  One empty sponsored slot per town stays hidden.
+{%- endcomment -%}
+{%- assign camp_page = site.data.summer_camps_page -%}
+<section class="camp-directory" aria-labelledby="all-camps">
+  <h2 id="all-camps">All camps</h2>
+  <p class="camp-filter-empty" hidden>No camps match those filters.</p>
+  {%- for town in camp_page.towns -%}
+  <section class="camp-town" id="{{ town.id }}" data-town="{{ town.id }}">
+    <h3>{{ town.name | escape }} ({{ town.count }})</h3>
+    <ul class="camp-list">
+      <li class="camp-sponsored" hidden></li>
+      {%- for camp in town.camps -%}
+      <li class="camp-row" id="{{ camp.id }}" data-type="{{ camp.type }}"{% if camp.full_day %} data-full="1"{% endif %}{% for age in camp.age_groups %} data-{{ age }}="1"{% endfor %}>
+        <p class="camp-name-line"><a href="{{ camp.source }}" rel="noopener">{{ camp.name | escape }}</a>{% if camp.meta.size > 0 %} <span>{{ camp.meta | escape }}</span>{% endif %}</p>
+        {%- if camp.detail.size > 0 -%}
+        <p class="camp-detail">{{ camp.detail | escape }}</p>
+        {%- endif -%}
+        <p class="camp-signup">{{ camp.signup | escape }}</p>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </section>
+  {%- endfor -%}
+</section>
+<script>
+(function () {
+  var root = document.querySelector(".camps-page");
+  if (!root) return;
+  var empty = root.querySelector(".camp-filter-empty");
+  function picked(selector, attr) {
+    return Array.prototype.map.call(root.querySelectorAll(selector + ":checked"), function (input) {
+      return input.getAttribute(attr);
+    });
+  }
+  function apply() {
+    var towns = picked(".flt-town", "data-town");
+    var ages = picked(".flt-age", "data-age");
+    var types = picked(".flt-type", "data-type");
+    var full = root.querySelector(".flt-full:checked");
+    var any = false;
+    root.querySelectorAll(".camp-town").forEach(function (section) {
+      var townOk = !towns.length || towns.indexOf(section.getAttribute("data-town")) !== -1;
+      var townAny = false;
+      section.querySelectorAll(".camp-row").forEach(function (row) {
+        var ageOk = !ages.length || ages.some(function (age) {
+          return row.getAttribute("data-" + age) === "1";
+        });
+        var typeOk = !types.length || types.indexOf(row.getAttribute("data-type")) !== -1;
+        var fullOk = !full || row.getAttribute("data-full") === "1";
+        var show = townOk && ageOk && typeOk && fullOk;
+        row.hidden = !show;
+        if (show) townAny = true;
+      });
+      section.hidden = !townAny;
+      if (townAny) any = true;
+    });
+    if (empty) empty.hidden = any;
+  }
+  root.addEventListener("change", function (event) {
+    if (event.target && event.target.matches && event.target.matches(".camp-filters input")) apply();
+  });
+})();
+</script>

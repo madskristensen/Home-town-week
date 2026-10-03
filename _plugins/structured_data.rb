@@ -184,6 +184,10 @@ module EastsideCalendar
         ]
       elsif page.data["layout"].to_s == "guide"
         items = [home, { "name" => page.data["title"].to_s, "item" => "#{root}#{url}" }]
+      elsif page.data["camps"]
+        label = page.data["heading"].to_s.strip
+        label = page.data["title"].to_s if label.empty?
+        items = [home, { "name" => label, "item" => "#{root}#{url}" }]
       elsif page.data["layout"].to_s == "seasonal" || !page.data["hub_id"].to_s.empty?
         items = [home]
         if url.start_with?("/christmas/") && url != "/christmas/"
@@ -279,6 +283,7 @@ module EastsideCalendar
       return false if page.data["home_lights"]
       return true if page.data["article_index"]
       return true if page.data["layout"].to_s == "city"
+      return true if page.data["camps"]
 
       page.data["layout"].to_s == "seasonal" && !Array(page.data["visible_events"]).empty?
     end
