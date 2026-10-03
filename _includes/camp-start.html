@@ -1,9 +1,0 @@
-{%- comment -%}
-  Start-here cards. The shared card grid. No cost pill.
-{%- endcomment -%}
-{%- assign camp_page = site.data.summer_camps_page -%}
-<section class="camp-start" aria-labelledby="camp-start-title">
-  <h2 id="camp-start-title">Start here</h2>
-  {%- include page-intro.html text="The city catalogs and the big day-camp programs. Open the card for the camp's own page." -%}
-  {%- include card-grid.html events=camp_page.featured show_city=true eager=0 -%}
-</section>

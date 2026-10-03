@@ -2,7 +2,7 @@
 layout: default
 title: "Eastside summer camps 2027: Bellevue, Kirkland, Redmond, and nearby"
 heading: "Summer camps for Eastside kids, 2027"
-description: "Day camps for Eastside kids in summer 2027. Sign-up dates for city parks and the big programs, plus a camp list by town. Each one is checked on the camp's own site."
+description: "Day camps for Eastside kids in summer 2027. One list grouped by town. Each camp is checked on the camp's own site."
 permalink: /summer-camps/
 camps: true
 intro: "I'm in Kirkland with three kids, and the camp week is the one I cannot afford to miss. These are day camps for summer 2027, each one checked on that camp's own site. Most of next summer is not posted yet, so the line says so, and last year's timing is only a hint."
@@ -11,9 +11,6 @@ intro: "I'm in Kirkland with three kids, and the camp week is the one I cannot a
   <h1><a href="{{ page.url | relative_url }}">{{ page.heading | escape }}</a></h1>
   {%- include page-intro.html text=page.intro -%}
   <p class="camp-season-sponsor" hidden></p>
-  {%- include camp-signups.html -%}
-  {%- include camp-start.html -%}
-  {%- include camp-filters.html -%}
   {%- include camp-directory.html -%}
   <section class="camp-tips" aria-labelledby="camp-tips-title">
     <h2 id="camp-tips-title">A few things that help</h2>

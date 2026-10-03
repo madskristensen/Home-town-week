@@ -37,32 +37,18 @@ module EastsideCalendar
         camp = build(row, names, today, site)
         camps << camp if camp
       end
-      featured = camps.select { |camp| camp["featured"] }.sort_by { |camp| [camp["feature_rank"], camp["name"].downcase] }
       directory = camps.select { |camp| camp["in_directory"] }
       towns = group_towns(directory, names)
-      signups = camps.select { |camp| camp["on_signup_list"] }.sort_by { |camp| [camp["signup_sort"], camp["name"].downcase] }
       confirmed = camps.count { |camp| camp["confirmed_2027"] }
-      Jekyll.logger.info("Summer camps:", "#{directory.size} in the directory, #{confirmed} with 2027 info, #{featured.size} start-here cards")
+      towns.each_with_index do |town, index|
+        town["camps"].each { |camp| camp["town_order"] = index }
+      end
+      Jekyll.logger.info("Summer camps:", "#{directory.size} in the directory, #{confirmed} with 2027 info")
       {
         "camps" => camps,
-        "featured" => featured,
         "towns" => towns,
-        "type_groups" => group_types(directory),
-        "signups" => signups,
-        "ages" => chips(AGES, directory) { |camp, key| Array(camp["age_groups"]).include?(key) },
-        "types" => chips(TYPES, directory) { |camp, key| camp["type"] == key },
-        "full_day_count" => directory.count { |camp| camp["full_day"] },
         "confirmed" => confirmed
       }
-    end
-
-    def chips(pairs, camps)
-      pairs.filter_map do |key, label|
-        count = camps.count { |camp| yield(camp, key) }
-        next if count.zero?
-
-        { "id" => key, "label" => label, "count" => count }
-      end
     end
 
     def group_towns(camps, names)
@@ -125,6 +111,7 @@ module EastsideCalendar
 
       status = status_for(row, today)
       signup = signup_line(row, status)
+      bucket = signup_bucket(row, today)
       featured = row["featured"] == true
       photo = featured ? photo_for(row["photo"], name, site) : nil
       return nil if featured && photo.nil?
@@ -138,6 +125,7 @@ module EastsideCalendar
         "city_id" => names.key?(town) ? town : "",
         "type" => type,
         "type_label" => type_label,
+        "type_order" => TYPES.index { |pair| pair[0] == type } || 9,
         "age_groups" => ages,
         "full_day" => row["full_day"] == true,
         "meta" => join_bits(row["age_label"], row["day_label"]),
@@ -151,7 +139,10 @@ module EastsideCalendar
         "on_signup_list" => row["on_signup_list"] == true,
         "confirmed_2027" => row["confirmed_2027"] == true,
         "signup_sort" => signup_sort(row, today),
-        "group_sort" => group_sort(row, today),
+        "group_sort" => "#{bucket["order"]}-#{name.downcase}",
+        "signup_group" => bucket["id"],
+        "signup_label" => bucket["label"],
+        "signup_order" => bucket["order"],
         "audiences" => audiences(row, today),
         "blurb" => squash(row["blurb"]),
         "card_when" => card_when(row, status)
@@ -251,36 +242,26 @@ module EastsideCalendar
       "2027 dates not posted yet"
     end
 
-    def group_types(camps)
-      groups = camps.group_by { |camp| camp["type"] }
-      TYPES.filter_map do |key, label|
-        rows = groups[key]
-        next if rows.nil? || rows.empty?
-
-        {
-          "id" => key,
-          "name" => label,
-          "count" => rows.size,
-          "camps" => rows.sort_by { |camp| camp["group_sort"] }
-        }
+    # Open now, then a future registration date, then not posted yet.
+    def signup_bucket(row, today)
+      if row["signup_open"] == true
+        return { "id" => "open", "label" => "Open now", "order" => "0" }
       end
-    end
-
-    # Soonest sign-up first, then name. Open now is first. A future
-    # registration date is next. Not posted yet is last, by name.
-    def group_sort(row, today)
-      name = squash(row["name"]).downcase
-      return "0-#{name}" if row["signup_open"] == true
 
       dates = [camp_date(row["reg_on"])]
       Array(row["audiences"]).each do |line|
         dates << camp_date(line["reg_on"]) if line.is_a?(Hash)
       end
       dates.compact!
-      return "2-#{name}" if dates.empty?
-      return "0-#{name}" if dates.any? { |date| date <= today }
+      return { "id" => "later", "label" => "Not posted yet", "order" => "2" } if dates.empty?
+      return { "id" => "open", "label" => "Open now", "order" => "0" } if dates.any? { |date| date <= today }
 
-      "1-#{dates.min.iso8601}-#{name}"
+      date = dates.min
+      {
+        "id" => "date-#{date.iso8601}",
+        "label" => "#{Date::MONTHNAMES[date.month]} #{date.day}, #{date.year}",
+        "order" => "1-#{date.iso8601}"
+      }
     end
 
     def signup_sort(row, today)
@@ -338,7 +319,7 @@ module EastsideCalendar
     def generate(site)
       page_data = SummerCamps.prepare(site)
       site.data["summer_camps_page"] = page_data
-      places = page_data["camps"].map do |camp|
+      places = page_data["camps"].select { |camp| camp["in_directory"] }.map do |camp|
         { "name" => camp["name"], "href" => camp["source"] }
       end
       site.pages.each do |page|

@@ -1,10 +1,6 @@
-/* Summer camp directory. Town chips are OR. Age chips are OR.
-   Type chips are OR. Full day, when checked, keeps full-day rows.
-   The script applies that on change. The first paint is the full list.
-   Town is the HTML. Type is the same rows, hidden until that radio is on. */
+/* One camp list. Town groups are the HTML. The select rearranges
+   those rows. The script runs on change, so the first paint is Town. */
 
-.camps-page .camp-signups,
-.camps-page .camp-start,
 .camps-page .camp-directory,
 .camps-page .camp-tips {
   margin-top: 1.75rem;
@@ -15,14 +11,53 @@
   font-size: 1.35rem;
 }
 
-.camp-signups ol,
+.camp-group-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 0.6rem;
+  margin: 0.15rem 0 0;
+}
+
+.camp-group-row label {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.camp-group-row select {
+  flex: 1 1 12rem;
+  width: 14.5rem;
+  max-width: 100%;
+  height: 2.4rem;
+  margin: 0;
+  padding: 0 2rem 0 0.85rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.camp-group-row select:hover,
+.camp-group-row select:focus-visible {
+  border-color: var(--ink);
+}
+
+.camp-group-row select:focus {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
 .camp-list {
   margin: 0.35rem 0 0;
   padding: 0;
   list-style: none;
 }
 
-.camp-signups li,
 .camp-list > li {
   margin: 0 0 0.45rem;
   padding: 0.55rem 0.7rem 0.5rem;
@@ -31,22 +66,18 @@
   border-radius: var(--radius);
 }
 
-.camp-signup-name,
 .camp-name-line a {
   color: var(--ink);
   font-weight: 650;
   text-decoration: none;
 }
 
-.camp-signup-name:hover,
 .camp-name-line a:hover,
-.camp-signup-name:focus-visible,
 .camp-name-line a:focus-visible {
   text-decoration: underline;
   text-underline-offset: 0.08em;
 }
 
-.camp-signup-line,
 .camp-name-line,
 .camp-detail,
 .camp-signup {
@@ -61,8 +92,7 @@
 
 .camp-name-line span,
 .camp-detail,
-.camp-signup,
-.camp-signup-line {
+.camp-signup {
   color: var(--muted);
   font-size: 0.88rem;
   font-weight: 400;
@@ -70,47 +100,21 @@
 }
 
 .camp-detail,
-.camp-signup,
-.camp-signup-line {
+.camp-signup {
   margin-top: 0.12rem;
 }
 
-.camp-signup,
-.camp-who {
+.camp-signup {
   color: var(--text);
 }
 
-.camp-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.45rem 0.55rem;
-  margin: 0.2rem 0 0;
-}
-
-.camps-page:has(.camp-group-type:checked) .camp-by-town,
-.camps-page:not(:has(.camp-group-type:checked)) .camp-by-type {
-  display: none;
-}
-
-.camp-town,
-.camp-type {
+.camp-town {
   margin-top: 1.15rem;
 }
 
-.camp-town h3,
-.camp-type h3 {
+.camp-town h3 {
   margin: 0 0 0.4rem;
   font-size: 1.15rem;
-}
-
-.camp-filters {
-  margin-top: 1.25rem;
-}
-
-.camp-filter-empty {
-  margin: 0.75rem 0 0;
-  color: var(--muted);
 }
 
 .camp-tips p {

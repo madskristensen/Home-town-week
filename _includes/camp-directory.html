@@ -1,48 +1,27 @@
 {%- comment -%}
-  Compact rows. Town is the HTML, so #bellevue works with no JavaScript.
-  Type is the same rows under type headings. A blocking script applies
-  a saved camp-group choice before the lists are parsed.
+  One list. Town groups are the HTML, so #bellevue works with no
+  JavaScript. The select moves these same rows into other groups.
   One empty sponsored slot per group stays hidden.
 {%- endcomment -%}
 {%- assign camp_page = site.data.summer_camps_page -%}
 <section class="camp-directory" aria-labelledby="all-camps">
   <h2 id="all-camps">All camps</h2>
-  <div class="camp-group" role="group" aria-labelledby="camp-group-label">
-    <span class="filter-label" id="camp-group-label">Group by:</span>
-    {%- include filter-chip.html label="Town" input_class="camp-group-town" type="radio" name="camp-group" value="town" checked="true" -%}
-    {%- include filter-chip.html label="Type" input_class="camp-group-type" type="radio" name="camp-group" value="type" -%}
+  <div class="camp-group-row">
+    <label for="camp-group">Group by</label>
+    <select id="camp-group">
+      <option value="town" selected>Town</option>
+      <option value="type">Type</option>
+      <option value="signup">Sign-up date</option>
+      <option value="ages">Ages</option>
+    </select>
   </div>
-  <script>
-  (function () {
-    try {
-      if (localStorage.getItem("camp-group") === "type") {
-        var input = document.querySelector(".camp-group-type");
-        if (input) input.checked = true;
-      }
-    } catch (err) {}
-  })();
-  </script>
-  <p class="camp-filter-empty" hidden>No camps match those filters.</p>
-  <div class="camp-by-town">
+  <div id="camp-groups">
     {%- for town in camp_page.towns -%}
-    <section class="camp-town" id="{{ town.id }}" data-town="{{ town.id }}">
+    <section class="camp-town" id="{{ town.id }}">
       <h3><span class="camp-group-name">{{ town.name | escape }}</span> (<span class="camp-group-count">{{ town.count }}</span>)</h3>
       <ul class="camp-list">
         <li class="camp-sponsored" hidden></li>
         {%- for camp in town.camps -%}
-        {%- include camp-row.html with_id="yes" -%}
-        {%- endfor -%}
-      </ul>
-    </section>
-    {%- endfor -%}
-  </div>
-  <div class="camp-by-type">
-    {%- for kind in camp_page.type_groups -%}
-    <section class="camp-type" id="type-{{ kind.id }}" data-type-group="{{ kind.id }}">
-      <h3><span class="camp-group-name">{{ kind.name | escape }}</span> (<span class="camp-group-count">{{ kind.count }}</span>)</h3>
-      <ul class="camp-list">
-        <li class="camp-sponsored" hidden></li>
-        {%- for camp in kind.camps -%}
         {%- include camp-row.html -%}
         {%- endfor -%}
       </ul>
@@ -52,48 +31,139 @@
 </section>
 <script>
 (function () {
-  var root = document.querySelector(".camps-page");
-  if (!root) return;
-  var empty = root.querySelector(".camp-filter-empty");
-  function picked(selector, attr) {
-    return Array.prototype.map.call(root.querySelectorAll(selector + ":checked"), function (input) {
-      return input.getAttribute(attr);
+  var root = document.querySelector(".camp-directory");
+  var select = document.getElementById("camp-group");
+  var host = document.getElementById("camp-groups");
+  if (!root || !select || !host) return;
+
+  var ages = [
+    ["preschool", "Preschool 3-5"],
+    ["kids", "Kids 6-10"],
+    ["tweens", "Tweens 11-13"],
+    ["teens", "Teens 14+"]
+  ];
+
+  function originals() {
+    return Array.prototype.filter.call(root.querySelectorAll(".camp-row"), function (row) {
+      return row.getAttribute("data-clone") !== "1";
     });
   }
-  function apply() {
-    var towns = picked(".flt-town", "data-city");
-    var ages = picked(".flt-age", "data-amenity");
-    var types = picked(".flt-type", "data-amenity");
-    var full = root.querySelector(".flt-full:checked");
-    root.querySelectorAll(".camp-town, .camp-type").forEach(function (section) {
-      var n = 0;
-      section.querySelectorAll(".camp-row").forEach(function (row) {
-        var ageOk = !ages.length || ages.some(function (age) {
-          return row.getAttribute("data-" + age) === "1";
-        });
-        var typeOk = !types.length || types.indexOf(row.getAttribute("data-type")) !== -1;
-        var townOk = !towns.length || towns.indexOf(row.getAttribute("data-town")) !== -1;
-        var fullOk = !full || row.getAttribute("data-full") === "1";
-        var show = townOk && ageOk && typeOk && fullOk;
-        row.hidden = !show;
-        if (show) n += 1;
+
+  function dropClones() {
+    Array.prototype.forEach.call(root.querySelectorAll(".camp-row[data-clone]"), function (row) {
+      row.remove();
+    });
+  }
+
+  function bySort(list) {
+    return list.slice().sort(function (a, b) {
+      return a.getAttribute("data-sort").localeCompare(b.getAttribute("data-sort"));
+    });
+  }
+
+  function section(id, title, list) {
+    var block = document.createElement("section");
+    var heading = document.createElement("h3");
+    var name = document.createElement("span");
+    var count = document.createElement("span");
+    var ul = document.createElement("ul");
+    var slot = document.createElement("li");
+    block.className = "camp-town";
+    if (id) block.id = id;
+    name.className = "camp-group-name";
+    name.textContent = title;
+    count.className = "camp-group-count";
+    count.textContent = String(list.length);
+    heading.appendChild(name);
+    heading.appendChild(document.createTextNode(" ("));
+    heading.appendChild(count);
+    heading.appendChild(document.createTextNode(")"));
+    ul.className = "camp-list";
+    slot.className = "camp-sponsored";
+    slot.hidden = true;
+    ul.appendChild(slot);
+    list.forEach(function (row) { ul.appendChild(row); });
+    block.appendChild(heading);
+    block.appendChild(ul);
+    return block;
+  }
+
+  function grouped(rows, keyFn) {
+    var map = Object.create(null);
+    var keys = [];
+    rows.forEach(function (row) {
+      var key = keyFn(row);
+      if (!map[key]) {
+        map[key] = [];
+        keys.push(key);
+      }
+      map[key].push(row);
+    });
+    return { map: map, keys: keys };
+  }
+
+  function byTown(rows) {
+    var groups = grouped(rows, function (row) { return row.getAttribute("data-town-order"); });
+    groups.keys.sort(function (a, b) { return Number(a) - Number(b); });
+    return groups.keys.map(function (key) {
+      var list = bySort(groups.map[key]);
+      return section(list[0].getAttribute("data-town"), list[0].getAttribute("data-town-name"), list);
+    });
+  }
+
+  function byType(rows) {
+    var groups = grouped(rows, function (row) { return row.getAttribute("data-type-order"); });
+    groups.keys.sort(function (a, b) { return Number(a) - Number(b); });
+    return groups.keys.map(function (key) {
+      var list = bySort(groups.map[key]);
+      return section("type-" + list[0].getAttribute("data-type"), list[0].getAttribute("data-type-label"), list);
+    });
+  }
+
+  function bySignup(rows) {
+    var groups = grouped(rows, function (row) { return row.getAttribute("data-signup-order"); });
+    groups.keys.sort();
+    return groups.keys.map(function (key) {
+      var list = bySort(groups.map[key]);
+      return section("signup-" + list[0].getAttribute("data-signup"), list[0].getAttribute("data-signup-label"), list);
+    });
+  }
+
+  function byAges(rows) {
+    var blocks = [];
+    var placed = Object.create(null);
+    ages.forEach(function (pair) {
+      var list = [];
+      rows.forEach(function (row) {
+        if (row.getAttribute("data-" + pair[0]) !== "1") return;
+        if (placed[row.id]) {
+          var copy = row.cloneNode(true);
+          copy.removeAttribute("id");
+          copy.setAttribute("data-clone", "1");
+          list.push(copy);
+        } else {
+          placed[row.id] = true;
+          list.push(row);
+        }
       });
-      var count = section.querySelector(".camp-group-count");
-      if (count) count.textContent = String(n);
-      section.hidden = n === 0;
+      if (list.length) blocks.push(section("age-" + pair[0], pair[1], bySort(list)));
     });
-    var typeOn = root.querySelector(".camp-group-type:checked");
-    var list = typeOn ? root.querySelector(".camp-by-type") : root.querySelector(".camp-by-town");
-    var any = list && list.querySelector(".camp-town:not([hidden]), .camp-type:not([hidden])");
-    if (empty) empty.hidden = !!any;
+    var rest = rows.filter(function (row) { return !placed[row.id]; });
+    if (rest.length) blocks.push(section("age-unlisted", "Ages not listed", bySort(rest)));
+    return blocks;
   }
-  root.addEventListener("change", function (event) {
-    var input = event.target;
-    if (!input || !input.matches) return;
-    if (input.matches(".camp-group input")) {
-      try { localStorage.setItem("camp-group", input.value); } catch (err) {}
-    }
-    if (input.matches(".camp-filters input, .camp-group input")) apply();
+
+  function paint(blocks) {
+    dropClones();
+    host.textContent = "";
+    blocks.forEach(function (block) { host.appendChild(block); });
+  }
+
+  select.addEventListener("change", function () {
+    var rows = originals();
+    var mode = select.value;
+    var blocks = mode === "type" ? byType(rows) : mode === "signup" ? bySignup(rows) : mode === "ages" ? byAges(rows) : byTown(rows);
+    paint(blocks);
   });
 })();
 </script>

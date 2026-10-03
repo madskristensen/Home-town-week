@@ -27,7 +27,7 @@ sitemap: false
 
 ## Summer camps
 
-- [Summer camps]({{ site.url }}{{ site.baseurl }}/summer-camps/): Day camps for Eastside kids in summer 2027, with sign-up dates and a list grouped by town or by type. A 2027 date is listed only when the camp's own site has posted it. The page stays up all year.
+- [Summer camps]({{ site.url }}{{ site.baseurl }}/summer-camps/): Day camps for Eastside kids in summer 2027. One list, grouped by town, that can also be grouped by type, sign-up date, or age. A 2027 date is listed only when the camp's own site has posted it. The page stays up all year.
 
 ## This weekend
 
