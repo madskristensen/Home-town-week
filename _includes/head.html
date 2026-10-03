@@ -23,3 +23,13 @@
 <link rel="alternate" type="application/atom+xml" title="{{ page.title | escape }} feed" href="{{ page_feed | absolute_url }}">
 {%- endif -%}
 {%- include seo.html -%}
+{%- comment -%}
+  Microsoft Clarity analytics. Loads async from clarity.ms and adds no markup, so it does not shift layout.
+{%- endcomment -%}
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yrrj621dmc");
+</script>
