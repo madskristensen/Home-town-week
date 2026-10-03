@@ -1,67 +1,15 @@
 {%- comment -%}
-  Site footer. No parameters.
-  Phone links are About, Feed, then Suggest an event, Request a city, Partner with us.
+  Site footer. One quiet row: About, Partner with us, Feed, and the
+  install link when the browser offers it. The family credit sits under that.
 {%- endcomment -%}
 <footer class="site-footer">
   <div class="wrap">
-    <div class="footer-groups">
-      <nav class="footer-group footer-group-cities" aria-labelledby="footer-cities">
-        <p id="footer-cities" class="footer-heading">Cities</p>
-        <ul class="footer-cities">
-          {%- for city in site.data.cities -%}
-          {%- capture city_url -%}/{{ city.id }}/{%- endcapture -%}
-          <li><a href="{{ city_url | strip | relative_url }}"{% if page.city == city.id %} aria-current="page"{% endif %}>{{ city.name }}</a></li>
-          {%- endfor -%}
-        </ul>
-      </nav>
-      <nav class="footer-group" aria-labelledby="footer-seasons">
-        <p id="footer-seasons" class="footer-heading">Seasons</p>
-        <ul class="footer-seasons">
-          {%- for season in site.data.footer_seasons -%}
-          <li><a href="{{ season.path | relative_url }}"{% if page.hub_id == season.id %} aria-current="page"{% endif %}>{{ season.label }}</a></li>
-          {%- endfor -%}
-        </ul>
-      </nav>
-      <nav class="footer-group" aria-labelledby="footer-explore">
-        <p id="footer-explore" class="footer-heading">Explore</p>
-        <ul class="footer-explore">
-          <li><a href="{{ '/worth-the-drive/' | relative_url }}"{% if page.hub_id == "worth-the-drive" %} aria-current="page"{% endif %}>Worth the Drive</a></li>
-          <li><a href="{{ '/this-weekend/' | relative_url }}"{% if page.hub_id == "this-weekend" %} aria-current="page"{% endif %}>This weekend</a></li>
-          <li><a href="{{ '/christmas/lights/' | relative_url }}"{% if page.url == "/christmas/lights/" %} aria-current="page"{% endif %}>Christmas lights map</a></li>
-          <li><a href="{{ '/fall/decorations/' | relative_url }}"{% if page.url == "/fall/decorations/" %} aria-current="page"{% endif %}>Halloween decorations map</a></li>
-          <li><a href="{{ '/playgrounds/' | relative_url }}"{% if page.url == "/playgrounds/" %} aria-current="page"{% endif %}>Playground map</a></li>
-          <li><a href="{{ '/farmers-markets/' | relative_url }}"{% if page.url == "/farmers-markets/" %} aria-current="page"{% endif %}>Farmers markets</a></li>
-          <li><a href="{{ '/book-ahead/' | relative_url }}"{% if page.url == "/book-ahead/" %} aria-current="page"{% endif %}>Book ahead</a></li>
-          <li><a href="{{ '/no-school-days/' | relative_url }}"{% if page.url == "/no-school-days/" %} aria-current="page"{% endif %}>School calendars</a></li>
-          <li><a href="{{ '/articles/' | relative_url }}"{% if page.url == "/articles/" or page.layout == "article" %} aria-current="page"{% endif %}>Articles</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="footer-note">
-      <ul class="footer-meta">
-        <li><a href="{{ '/about/' | relative_url }}"{% if page.url == "/about/" %} aria-current="page"{% endif %}>About</a></li>
-        <li><a href="{{ '/feed.xml' | relative_url }}">Feed</a></li>
-        {%- capture suggest_subject -%}Suggest an event{%- endcapture -%}
-        {%- capture suggest_body -%}I would like to suggest an event for Eastside Family Calendar.
-
-Event name:
-Date and time:
-Place:
-Link:
-Short blurb:
-Who it's for (kids, families):
-        {%- endcapture -%}
-        <li><a href="mailto:suggestions@eastsidecalendar.com?subject={{ suggest_subject | strip | mail_escape }}&amp;body={{ suggest_body | strip | mail_escape }}">Suggest an event</a></li>
-        {%- capture city_request_subject -%}Request a city{%- endcapture -%}
-        {%- capture city_request_body -%}I would like Eastside Family Calendar to cover a city.
-
-City:
-        {%- endcapture -%}
-        <li><a href="mailto:suggestions@eastsidecalendar.com?subject={{ city_request_subject | strip | mail_escape }}&amp;body={{ city_request_body | strip | mail_escape }}">Request a city</a></li>
-        <li class="footer-partner"><a href="{{ '/partner/' | relative_url }}"{% if page.url == "/partner/" %} aria-current="page"{% endif %}>Partner with us</a></li>
-        <li class="footer-install-slot"><button type="button" id="install-link" class="footer-install" hidden>Add to Home screen</button></li>
-      </ul>
-      <p class="footer-family">Made by an Eastside family, for Eastside families. We also blog at <a href="https://afterpickup.com">After Pickup</a>.</p>
-    </div>
+    <ul class="footer-meta">
+      <li><a href="{{ '/about/' | relative_url }}"{% if page.url == "/about/" %} aria-current="page"{% endif %}>About</a></li>
+      <li><a href="{{ '/partner/' | relative_url }}"{% if page.url == "/partner/" %} aria-current="page"{% endif %}>Partner with us</a></li>
+      <li><a href="{{ '/feed.xml' | relative_url }}">Feed</a></li>
+      <li class="footer-install-slot"><button type="button" id="install-link" class="footer-install" hidden>Add to Home screen</button></li>
+    </ul>
+    <p class="footer-family">Made by an Eastside family, for Eastside families. We also blog at <a href="https://afterpickup.com">After Pickup</a>.</p>
   </div>
 </footer>

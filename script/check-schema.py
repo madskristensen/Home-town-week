@@ -288,10 +288,6 @@ def main():
             if blocks:
                 add(errors, rel, "font preview should not emit JSON-LD")
             continue
-        if rel == "preview/nav/index.html":
-            if blocks:
-                add(errors, rel, "nav preview should not emit JSON-LD")
-            continue
         graph = graph_of(blocks, rel)
         if not graph:
             continue
