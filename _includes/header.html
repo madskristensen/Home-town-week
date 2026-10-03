@@ -1,7 +1,8 @@
 {%- comment -%}
   Two-row header. The wordmark is its own row. Cities, Seasons, Guides,
-  and About are a bar under it. A Menu button shows only under 340px.
-  Guides follow site.data.nav_guides.
+  and Explore are a bar under it. A Menu button shows only under 340px.
+  Guides follow site.data.nav_guides. Explore is the old Explore list
+  with anything already in Cities, Seasons, or Guides left out.
 {%- endcomment -%}
 {%- capture nav_cities -%}
 <li><a href="{{ '/this-weekend/' | relative_url }}"{% if page.url == "/this-weekend/" %} aria-current="page"{% endif %}>This weekend</a></li>
@@ -51,26 +52,11 @@
 <li><a href="{{ nav_bucket.href | relative_url }}"{% if page.url == nav_bucket.href %} aria-current="page"{% endif %}>{{ nav_bucket.name }}</a></li>
 {%- endfor -%}
 {%- endcapture -%}
-{%- capture nav_suggest_subject -%}Suggest an event{%- endcapture -%}
-{%- capture nav_suggest_body -%}I would like to suggest an event for Eastside Family Calendar.
-
-Event name:
-Date and time:
-Place:
-Link:
-Short blurb:
-Who it's for (kids, families):
-{%- endcapture -%}
-{%- capture nav_city_subject -%}Request a city{%- endcapture -%}
-{%- capture nav_city_body -%}I would like Eastside Family Calendar to cover a city.
-
-City:
-{%- endcapture -%}
-{%- capture nav_about -%}
-<li><a href="{{ '/about/' | relative_url }}"{% if page.url == "/about/" %} aria-current="page"{% endif %}>About</a></li>
-<li><a href="mailto:suggestions@eastsidecalendar.com?subject={{ nav_suggest_subject | strip | mail_escape }}&amp;body={{ nav_suggest_body | strip | mail_escape }}">Suggest an event</a></li>
-<li><a href="{{ '/partner/' | relative_url }}"{% if page.url == "/partner/" %} aria-current="page"{% endif %}>Partner with us</a></li>
-<li><a href="mailto:suggestions@eastsidecalendar.com?subject={{ nav_city_subject | strip | mail_escape }}&amp;body={{ nav_city_body | strip | mail_escape }}">Request a city</a></li>
+{%- capture nav_explore -%}
+<li><a href="{{ '/christmas/lights/' | relative_url }}"{% if page.url == "/christmas/lights/" %} aria-current="page"{% endif %}>Christmas lights map</a></li>
+<li><a href="{{ '/fall/decorations/' | relative_url }}"{% if page.url == "/fall/decorations/" %} aria-current="page"{% endif %}>Halloween decorations map</a></li>
+<li><a href="{{ '/farmers-markets/' | relative_url }}"{% if page.url == "/farmers-markets/" %} aria-current="page"{% endif %}>Farmers markets</a></li>
+<li><a href="{{ '/book-ahead/' | relative_url }}"{% if page.url == "/book-ahead/" %} aria-current="page"{% endif %}>Book ahead</a></li>
 {%- endcapture -%}
 <header class="site-header nav-mock">
   <div class="nav-mock-wide home-mast">
@@ -97,9 +83,9 @@ City:
         </div>
       </details>
       <details class="nav-fly" name="nav-desktop">
-        <summary aria-controls="nav-panel-about" aria-expanded="false">About</summary>
-        <div class="nav-fly-panel" id="nav-panel-about">
-          <ul class="nav-links">{{ nav_about }}</ul>
+        <summary aria-controls="nav-panel-explore" aria-expanded="false">Explore</summary>
+        <div class="nav-fly-panel" id="nav-panel-explore">
+          <ul class="nav-links">{{ nav_explore }}</ul>
         </div>
       </details>
     </nav>
@@ -119,8 +105,8 @@ City:
           <ul class="nav-links" id="nav-phone-guides">{{ nav_guides }}</ul>
         </details>
         <details class="nav-section" name="nav-phone">
-          <summary aria-controls="nav-phone-about" aria-expanded="false">About</summary>
-          <ul class="nav-links" id="nav-phone-about">{{ nav_about }}</ul>
+          <summary aria-controls="nav-phone-explore" aria-expanded="false">Explore</summary>
+          <ul class="nav-links" id="nav-phone-explore">{{ nav_explore }}</ul>
         </details>
       </div>
     </details>
