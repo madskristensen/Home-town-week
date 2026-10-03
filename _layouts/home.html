@@ -4,6 +4,9 @@ layout: default
 <article class="home wrap">
   <h1 class="home-title">Things to do with kids on the Eastside</h1>
   <p class="home-lead">Upcoming family events in Eastside cities, so you never miss the fun.</p>
+  <p class="home-jump"><a href="#cities">Pick your town</a></p>
+  {%- include weekend-picks.html -%}
+  {%- include featured-article.html -%}
   {%- assign season_path = site.data.seasonal_banner.path | append: "" -%}
   {%- if season_path == "/christmas/" -%}
   {%- include lights-feature.html -%}
@@ -42,7 +45,7 @@ layout: default
                 schedule();
                 return;
               }
-            }, { rootMargin: "240px 0px" });
+            }, { rootMargin: "80px 0px" });
             watcher.observe(slot);
           }
         }
@@ -64,6 +67,4 @@ layout: default
       </nav>
     </div>
   </section>
-  {%- include featured-article.html -%}
-  {%- include weekend-picks.html -%}
 </article>

@@ -10,7 +10,7 @@
 }
 
 .home-lead {
-  margin: 0.75rem 0 1.75rem;
+  margin: 0.75rem 0 0.15rem;
   max-width: 40rem;
   color: var(--ink);
   font-family: var(--serif);
@@ -19,15 +19,38 @@
   letter-spacing: -0.02em;
   line-height: 1.35;
 }
+
+.home-jump {
+  margin: 0 0 1.35rem;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.home-jump a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  color: var(--forest);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.home-jump a:hover,
+.home-jump a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
 .home {
   padding-top: 1.5rem;
 }
 .home-cities {
-  margin: 0;
+  margin: 2rem 0 0;
 }
 
 .featured-article {
-  margin: 1.15rem 0 1.35rem;
+  margin: 1.25rem 0 0;
   font-family: var(--sans);
   font-size: 0.95rem;
   font-weight: 550;
@@ -51,7 +74,7 @@
 }
 
 .weekend-picks {
-  margin: 0 0 2rem;
+  margin: 0;
 }
 
 .weekend-picks h2 {
@@ -262,7 +285,7 @@
 @media (max-width: 42rem) {
   .home-lead {
     margin-top: 0.65rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.1rem;
     font-size: 1.18rem;
   }
 }

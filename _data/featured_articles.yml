@@ -1,5 +1,5 @@
-# Quiet featured-article line on the home page, under the town map
-# and above the weekend picks. Not a banner.
+# Quiet featured-article line on the home page, under the weekend picks
+# and above the town map. Not a banner.
 #
 # Windows use month-day, so they repeat each year. Today is
 # America/Los_Angeles. When more than one window contains today, the
