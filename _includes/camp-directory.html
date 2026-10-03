@@ -17,7 +17,7 @@
   <div id="camp-groups">
     {%- for town in camp_page.towns -%}
     <section class="camp-town" id="{{ town.id }}">
-      <h3><span class="camp-group-name">{{ town.name | escape }}</span> (<span class="camp-group-count">{{ town.count }}</span>)</h3>
+      <h2><span class="camp-group-name">{{ town.name | escape }}</span> (<span class="camp-group-count">{{ town.count }}</span>)</h2>
       <ul class="camp-list">
         <li class="camp-sponsored" hidden></li>
         {%- for camp in town.camps -%}
@@ -62,7 +62,7 @@
 
   function section(id, title, list) {
     var block = document.createElement("section");
-    var heading = document.createElement("h3");
+    var heading = document.createElement("h2");
     var name = document.createElement("span");
     var count = document.createElement("span");
     var ul = document.createElement("ul");
