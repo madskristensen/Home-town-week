@@ -1928,38 +1928,54 @@ h2.event-bucket.is-past {
   padding: 0;
 }
 
+.prose .check-list {
+  margin: 0.2rem 0 0;
+  padding: 0;
+}
+
 .check-list li {
   margin: 0;
-  padding: 0.55rem 0;
+  padding: 0;
   border-bottom: 1px solid var(--rule);
 }
 
 .check-list label {
-  display: flex;
-  gap: 0.7rem;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.75rem;
+  align-items: start;
+  min-height: 3rem;
+  padding: 0.7rem 0;
   cursor: pointer;
+  font-family: var(--sans);
+  line-height: 1.45;
+}
+
+.check-list .check-text {
+  min-width: 0;
 }
 
 .check-list input {
-  appearance: none;
-  width: 1.15rem;
-  height: 1.15rem;
+  width: 1.25rem;
+  height: 1.25rem;
   margin: 0.15rem 0 0;
-  border: 1.5px solid var(--ink);
-  border-radius: 2px;
-  background: var(--sheet);
-  flex: none;
+  accent-color: var(--accent);
 }
 
-.check-list input:checked {
-  background: var(--ink);
-  box-shadow: inset 0 0 0 2.5px var(--sheet);
+.check-list input:checked + .check-text {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
+.check-list input:checked + .check-text a {
+  color: inherit;
+  text-decoration-line: underline line-through;
 }
 
 .check-list input:focus-visible {
   outline: 2px solid var(--focus);
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
 .check-print-foot {

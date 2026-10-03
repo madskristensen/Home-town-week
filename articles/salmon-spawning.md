@@ -59,25 +59,25 @@ The Cedar River in Renton is a fall viewing river. The [Seattle Aquarium](https:
 <div class="check-sheet salmon-sheet">
 <h2>Where to go</h2>
 <ul class="check-list">
-  <li><input id="salmon-1" type="checkbox"><label for="salmon-1"><a href="https://www.issaquahfish.org/">Issaquah Salmon Hatchery</a>, from the bridge and the windows</label></li>
-  <li><input id="salmon-2" type="checkbox"><label for="salmon-2"><a href="/renton/#cedar-river-salmon-journey-at-cedar-river-park">Cedar River</a> in Renton, including Cedar River Park</label></li>
-  <li><input id="salmon-3" type="checkbox"><label for="salmon-3">Bear Creek in Redmond, along the park and the tributaries</label></li>
+  <li><label><input id="salmon-1" type="checkbox"><span class="check-text"><a href="https://www.issaquahfish.org/">Issaquah Salmon Hatchery</a>, from the bridge and the windows</span></label></li>
+  <li><label><input id="salmon-2" type="checkbox"><span class="check-text"><a href="/renton/#cedar-river-salmon-journey-at-cedar-river-park">Cedar River</a> in Renton, including Cedar River Park</span></label></li>
+  <li><label><input id="salmon-3" type="checkbox"><span class="check-text">Bear Creek in Redmond, along the park and the tributaries</span></label></li>
 </ul>
 <h2>What to look for</h2>
 <ul class="check-list">
-  <li><input id="salmon-4" type="checkbox"><label for="salmon-4">Chinook, from late summer into mid-October</label></li>
-  <li><input id="salmon-5" type="checkbox"><label for="salmon-5">Coho, from late September through November</label></li>
-  <li><input id="salmon-6" type="checkbox"><label for="salmon-6">A few sockeye, from late September through October</label></li>
-  <li><input id="salmon-7" type="checkbox"><label for="salmon-7">Kokanee, from mid-October into early December</label></li>
-  <li><input id="salmon-8" type="checkbox"><label for="salmon-8">A redd, the pale patch of gravel where the fish have dug</label></li>
-  <li><input id="salmon-9" type="checkbox"><label for="salmon-9">Fish holding over that gravel</label></li>
-  <li><input id="salmon-13" type="checkbox"><label for="salmon-13">Spawning color: sockeye and kokanee turn red with a green head, coho redden on the sides, and chinook stay olive to dark</label></li>
+  <li><label><input id="salmon-4" type="checkbox"><span class="check-text">Chinook, from late summer into mid-October</span></label></li>
+  <li><label><input id="salmon-5" type="checkbox"><span class="check-text">Coho, from late September through November</span></label></li>
+  <li><label><input id="salmon-6" type="checkbox"><span class="check-text">A few sockeye, from late September through October</span></label></li>
+  <li><label><input id="salmon-7" type="checkbox"><span class="check-text">Kokanee, from mid-October into early December</span></label></li>
+  <li><label><input id="salmon-8" type="checkbox"><span class="check-text">A redd, the pale patch of gravel where the fish have dug</span></label></li>
+  <li><label><input id="salmon-9" type="checkbox"><span class="check-text">Fish holding over that gravel</span></label></li>
+  <li><label><input id="salmon-13" type="checkbox"><span class="check-text">Spawning color: sockeye and kokanee turn red with a green head, coho redden on the sides, and chinook stay olive to dark</span></label></li>
 </ul>
 <h2>Before you go</h2>
 <ul class="check-list">
-  <li><input id="salmon-10" type="checkbox"><label for="salmon-10">Skip the Tuesday morning egg take. Watch from the bridge and the windows.</label></li>
-  <li><input id="salmon-11" type="checkbox"><label for="salmon-11">The Bear Creek trap below Redmond Way runs January through June. It is not the fall viewing.</label></li>
-  <li><input id="salmon-12" type="checkbox"><label for="salmon-12">A naturalist weekend on the Cedar River is not the whole season.</label></li>
+  <li><label><input id="salmon-10" type="checkbox"><span class="check-text">Skip the Tuesday morning egg take. Watch from the bridge and the windows.</span></label></li>
+  <li><label><input id="salmon-11" type="checkbox"><span class="check-text">The Bear Creek trap below Redmond Way runs January through June. It is not the fall viewing.</span></label></li>
+  <li><label><input id="salmon-12" type="checkbox"><span class="check-text">A naturalist weekend on the Cedar River is not the whole season.</span></label></li>
 </ul>
 <p class="check-print-foot">Eastside Family Calendar · eastsidecalendar.com/articles/salmon-spawning/</p>
 {% include print-list.html %}
