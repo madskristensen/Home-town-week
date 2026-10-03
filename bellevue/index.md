@@ -4,70 +4,10 @@ title: Bellevue
 city: bellevue
 state: wa
 description: Upcoming family events in Bellevue on the Eastside.
-hook: Saturday is the Kelsey Creek Farm Fair, with math games at the library that afternoon and a Russian fairy tale for little kids at Studio33. Friday morning is story time at Lake Hills Library. Friday, October 9 is a free pumpkin afternoon at The Meadow, and Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
+hook: Saturday is the Kelsey Creek Farm Fair, with math games at the library that afternoon and a Russian fairy tale for little kids at Studio33. Sunday is Little Red Hen at Studio33 and a salmon walk at Lewis Creek. Friday, October 9 is a free pumpkin afternoon at The Meadow, and Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
 ---
 
 The Thursday market season ended Oct 1. Two Saturday markets remain, Oct 31 and Nov 21, both 10:00 a.m.–3:00 p.m.
-
-### Tiny Trailblazers
-<p class="event-when">Fri Oct 2 · 10:00–10:45 a.m.</p>
-<p class="event-place">Lake Hills Greenbelt Ranger Station, 15416 SE 16th St</p>
-
-A short ranger program for ages 2 to 5. Each session has a nature theme, time on the trail, and a craft to take home. It is free, and every child and adult needs a registration. Come rain or shine in shoes that can handle a trail. The same hour is also on Fri Nov 6 and Fri Dec 4.
-
-[Activity guide](https://bellevuewa.gov/city-government/departments/parks/activity-guide) · [Register](https://register.bellevuewa.gov)
-
-### Story Time at the Garden
-<p class="event-when">Fri Oct 2 · 10:00–10:30 a.m.</p>
-<p class="event-place">Bellevue Botanical Garden, 12001 Main St</p>
-
-A free story time for preschoolers in the Sharp Cabin, southwest of the Urban Meadow. The garden reads a garden book and follows it with a short activity. Adults stay with the children, and registration is not required.
-
-[Story Time at the Garden](https://bellevuebotanical.org/event/story-time-at-the-garden-for-preschoolers-2/2026-10-02/)
-
-### Baby and Toddler Story Time
-<p class="event-when">Fri Oct 2 · 10:30–11:15 a.m.</p>
-<p class="event-place">Lake Hills Library, 15590 Lake Hills Blvd</p>
-
-{% include event-photo.html
-   src="/assets/images/bellevue/lake-hills-library.webp"
-   alt="Lake Hills Library in Bellevue, a low brick building with a glass entry and a landscaped front."
-   credit="Photo: SuddenFrost, CC0"
-   source="https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Lake_Hills_Library.jpg" %}
-
-Stories, songs, and a short play time for newborns to 24 months with an adult. No registration.
-
-[Baby and Toddler Story Time](https://kcls.bibliocommons.com/events/6a91f37869166f088b95a90a)
-
-### Family Story Time
-<p class="event-when">Fri Oct 2 · 10:45–11:45 a.m.</p>
-<p class="event-place">Newport Way Library, 14250 SE Newport Way</p>
-
-Stories, music, and movement for all ages with an adult, then a short play time. No registration. Space is limited.
-
-[Family Story Time](https://kcls.bibliocommons.com/events/6a85ddf057c264087ad23828)
-
-### GATHER Bellevue Sunset Market
-<p class="event-when">Fri Oct 2 · 4:00–10:00 p.m.</p>
-<p class="event-place">10620 NE 8th St</p>
-
-Free sunset market with Peace Peloton: local makers, food, and live performances. It includes a 21+ beer garden.  
-[City listing](https://bellevuewa.gov/events/gather-bellevue-sunset-market)
-
-### Korean Story Time
-<p class="event-when">Fri Oct 2 · 4:45–5:30 p.m.</p>
-<p class="event-place">Newport Way Library, 14250 SE Newport Way</p>
-
-Stories and songs in Korean, with time to explore Korean culture. The library lists it for preschoolers and early elementary kids. The same hour is also on Fri Oct 9 and Fri Oct 16.
-
-[Korean Story Time](https://kcls.bibliocommons.com/events/6aa9c030101eb7003f3063e6)
-
-### Fired Up Fridays
-<p class="event-when">Fri Oct 2 · 5:00–7:00 p.m.</p>
-<p class="event-place">KidsQuest Children's Museum, 1116 108th Ave NE</p>
-
-Clay studio, all ages. Free with admission or membership. Glaze and firing is an extra $10.50.  
-[Free programming](https://www.kidsquestmuseum.org/programs/free-programming/)
 
 ### Under the Mushroom
 <p class="event-when">Sat Oct 3 through Sun Oct 11</p>
@@ -146,7 +86,23 @@ A ranger walk for ages 5 to 10 about how salmon travel from a stream to the ocea
 
 Stories, music, movement, and rhymes for ages 1 and 2 with an adult. A short play time follows. No registration. Space is limited. Pick one session. Monday hours are 10:00 a.m.–6:00 p.m.
 
-[10:15 session](https://kcls.bibliocommons.com/v2/events/6a8df1a881e9d60947cc7d4d) · [Bellevue Library](https://kcls.org/locations/bellevue/)
+[10:15 session](https://kcls.bibliocommons.com/v2/events/6a8df1a881e9d60947cc7d4d) · [11:15 session](https://kcls.bibliocommons.com/events/6a8df1a6db86e4004d8722c0)
+
+### Baby Story Time
+<p class="event-when">Tue Oct 6 · 1:00–2:00 p.m.</p>
+<p class="event-place">Newport Way Library, 14250 SE Newport Way</p>
+
+Rhymes, songs, and stories for newborns through 12 months with an adult. About 30 minutes of play time follows. No registration.
+
+[Baby Story Time](https://kcls.bibliocommons.com/events/6a85dcd64cb69d003e21d686)
+
+### Family Story Time
+<p class="event-when">Tue Oct 6 · 5:30–6:15 p.m.</p>
+<p class="event-place">Bellevue Library, 1111 110th Ave NE</p>
+
+Stories, music, and movement for all ages with an adult. A short play time follows. No registration.
+
+[Family Story Time](https://kcls.bibliocommons.com/events/6a8df1a3db86e4004d8722bb)
 
 ### Kids in the Garden: Pumpkins & Seeds
 <p class="event-when">Wed Oct 7 · 10:00–11:30 a.m.</p>
@@ -179,6 +135,22 @@ A free walk-up craft at The Meadow. This date is ferns and broad-leaf house plan
 Craft supplies for ages 6 and older. Make your own project or try the week's suggested one. No registration. The Newport Way Library Association helps sponsor it. Space is limited.
 
 [Art Cart](https://kcls.bibliocommons.com/events/6a921fd3aafa6100295ff1dc)
+
+### Preschool Story Time
+<p class="event-when">Thu Oct 8 · 10:30–11:15 a.m.</p>
+<p class="event-place">Bellevue Library, 1111 110th Ave NE</p>
+
+Stories, music, and movement for ages 3 to 5 with an adult. A short play time follows. No registration.
+
+[Preschool Story Time](https://kcls.bibliocommons.com/events/6a8df1aa81e9d60947cc7d52)
+
+### Family Story Time
+<p class="event-when">Thu Oct 8 · 10:30–11:15 a.m.</p>
+<p class="event-place">Lake Hills Library, 15590 Lake Hills Blvd</p>
+
+Stories, music, and rhymes for children from birth through age 5 with an adult. A short play time follows. No registration.
+
+[Family Story Time](https://kcls.bibliocommons.com/events/6a91f37c69166f088b95a910)
 
 ### Bilingual Kaleidoscope Play and Learn
 <p class="event-when">Thu Oct 8 · 10:30 a.m.–12:00 p.m.</p>

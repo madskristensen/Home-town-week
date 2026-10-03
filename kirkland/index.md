@@ -97,6 +97,14 @@ An early walk of about two miles at an easy pace. All levels are welcome, includ
 
 [Bird Walk at Juanita Bay Park](https://www.eastsideaudubon.org/calendar/2026/2/4/bird-walk-at-juanita-bay-park-wcjfz-ep5j2-bcm2c-zgezn-826lk-5cy52-wxn8h-7wydc-pxc82)
 
+### Ozo-Town
+<p class="event-when">Wed Oct 7 · 4:30–5:45 p.m.</p>
+<p class="event-place">Kirkland Library, 308 Kirkland Ave</p>
+
+Build a town out of LEGOs and markers, then send an Ozobot through it. Marker codes tell the robot where to go. For ages 6 to 11. Free, and registration is required.
+
+[Ozo-Town](https://kcls.bibliocommons.com/events/6abebb3a96ec3a003ad78fdd)
+
 ### Pajama Story Time
 <p class="event-when">Wed Oct 7 · 7:00–7:30 p.m.</p>
 <p class="event-place">Kirkland Library, 308 Kirkland Ave</p>

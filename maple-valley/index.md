@@ -7,14 +7,6 @@ description: Upcoming family events in Maple Valley and Covington on the Eastsid
 hook: Saturday is the farmers market, a youth play festival, and Covington's Family Fall Fest. Sunday is a daylight walk at the Haunted Forest. Oct 17 is the Zombie Dash at Lake Wilderness.
 ---
 
-### Latine Heritage Celebration
-<p class="event-when">Fri Oct 2 · 2:00–3:00 p.m.</p>
-<p class="event-place">Covington Library, 27100 164th Ave SE, Covington</p>
-
-A Spanish-language story time, then crafts, for Latine Heritage Month. All ages. No registration.
-
-[Latine Heritage Celebration](https://kcls.bibliocommons.com/events/6a5a998c0e562e28009a98ec)
-
 ### Maple Valley Farmers Market
 <p class="event-when">Sat Oct 3 through Sat Oct 31 · Saturdays 9:00 a.m.–2:00 p.m.</p>
 <p class="event-place">Legacy Site, 25719 Maple Valley Black Diamond Road SE, Maple Valley</p>

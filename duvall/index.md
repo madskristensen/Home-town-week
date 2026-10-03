@@ -79,6 +79,14 @@ A free drop-in art day, with supplies for all ages. Children 14 and under need a
 
 [Valley Record calendar](https://www.valleyrecord.com/2026/09/25/snoqualmie-valley-community-calendar-sept-25-edition/) · [Northwest Art Center](https://northwestartcenter.org/events/community-events/)
 
+### Duvall LGBTQ+ Youth Group
+<p class="event-when">Tue Oct 20 · 4:00–5:30 p.m.</p>
+<p class="event-place">Duvall Library, 15508 Main Street NE</p>
+
+A social hour with Lambert House volunteers for youth ages 11 to 22. Each month has a different activity. No registration.
+
+[Duvall LGBTQ+ Youth Group](https://kcls.bibliocommons.com/events/6ab1b2b4ca248a002917741d)
+
 ### Teen Space
 <p class="event-when">Wed Oct 28 · 5:30–7:00 p.m.</p>
 <p class="event-place">Duvall Library, 15508 Main Street NE</p>

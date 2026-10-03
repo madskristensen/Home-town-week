@@ -4,7 +4,7 @@ title: Sammamish
 city: sammamish
 state: wa
 description: Upcoming family events in Sammamish on the Eastside.
-hook: Saturday afternoon is a codebreaking workshop at the library, and Saturday morning is a meadow work party. Thursday evening is a sewing hour for kids and adults at Beaver Lake Lodge.
+hook: Saturday afternoon is a codebreaking workshop at the library, and Saturday morning is a meadow work party. Thursday afternoon is a teen hangout at the library, and Thursday evening is a sewing hour at Beaver Lake Lodge.
 ---
 
 ### Evans Meadow Restoration
@@ -38,6 +38,14 @@ A social hour with Lambert House volunteers for youth ages 11 to 22 who identify
 Students in grades K through 8, and English learners through grade 12, read aloud to a volunteer. Add your name for a 30-minute spot. Look for the green shirt. The same hours are also on Wed Oct 14.
 
 [Reading Buddies](https://kcls.bibliocommons.com/events/6aa0645e2f780f1bf01c79ad)
+
+### Teens Around the Fire
+<p class="event-when">Thu Oct 8 · 3:45–5:30 p.m.</p>
+<p class="event-place">Sammamish Library, 825 228th Ave SE</p>
+
+A hangout for high school students, with games or homework beside the library fire. No registration. It meets on the second and fourth Thursdays.
+
+[Teens Around the Fire](https://kcls.bibliocommons.com/events/6abeee7796ec3a003ad7a455)
 
 ### Creative Connect: Sew a Pouch
 <p class="event-when">Thu Oct 8 · 6:30–8:00 p.m.</p>

@@ -7,14 +7,6 @@ description: Upcoming family events in Mercer Island on the Eastside.
 hook: Sunday is the farmers market, with family storytime the same morning. The market's last Sunday is Oct 11. Oct 15 is an all-ages plant walk at Pioneer Park, and Youth Theatre Northwest opens The Queen in the Cave on November 6.
 ---
 
-### Tot Shabbat
-<p class="event-when">Fri Oct 2 · 9:45–10:30 a.m.</p>
-<p class="event-place">Stroum Jewish Community Center, 3801 East Mercer Way</p>
-
-Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome.
-
-[Tot Shabbat](https://sjcc.org/series/tot-shabbat/)
-
 ### Singing and Stories with Nancy Stewart
 <p class="event-when">Sat Oct 3 · 9:30 a.m.</p>
 <p class="event-place">Island Books, 3014 78th Ave SE</p>
@@ -54,6 +46,14 @@ An open building hour. The library supplies the materials and science toys. Ages
 A bookseller reads picture books. It is aimed at toddlers through kindergarten. Island Books lists this every Wednesday at 10:30 a.m.
 
 [Story Time with a Bookseller](https://www.islandbooks.com/childrens-story-times)
+
+### Mandarin Story Time
+<p class="event-when">Thu Oct 8 · 10:30–11:00 a.m.</p>
+<p class="event-place">Mercer Island Library, 4400 88th Ave SE</p>
+
+Stories, music, and rhymes in Mandarin for toddlers and preschoolers with an adult. People who want to practice Chinese are welcome. No registration.
+
+[Mandarin Story Time](https://kcls.bibliocommons.com/events/6a6ba3514523092f0033b54e)
 
 ### Tot Shabbat
 <p class="event-when">Fri Oct 9 · 9:45–10:30 a.m.</p>

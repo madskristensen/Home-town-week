@@ -66,6 +66,18 @@
   same_as: "https://spoonerberries.com/harvest-festival/"
   tags: [pumpkin-patch, corn-maze]
   blurb: "A Puyallup Valley harvest festival with a pumpkin patch, corn maze, and farm play, open 9 a.m.–6 p.m. every day in October. More than 50 kinds of pumpkins, gourds, and squash."
+- name: "The Patch at Knutson Farms"
+  cost: "$16 to $20.94"
+  setting: "Outdoor"
+  signup: true
+  start: "2026-10-03"
+  end: "2026-10-31"
+  place: "Knutson Farms, 16406 78th St E"
+  town: Sumner
+  drive: "about 45 min from Bellevue"
+  same_as: "https://knutsonfarmsinc.com/the-patch"
+  tags: [pumpkin-patch, corn-maze]
+  blurb: "A Sumner fall festival with pumpkin picking, a corn maze, farm animals, and rides. Open Oct 3 through Oct 31, closed Mondays, last admission 5:15 p.m. General admission is $16 online before fees, or $20.94 at the gate. Ages 2 and under are free. Tickets are required, and some activities cost extra. On Oct 10, 17, and 24 the farm stays open until 8 p.m. for fireworks at 7:30."
 - name: "Hometown Hoedown family hours"
   setting: "Outdoor"
   signup: true

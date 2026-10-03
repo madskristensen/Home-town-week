@@ -146,6 +146,14 @@ A hands-on science session for ages 8 to 12. Materials are provided. No registra
 
 [Full STEAM Ahead](https://kcls.bibliocommons.com/events/6aa8a2884b3b06003083cc86)
 
+### Trick or Tree
+<p class="event-when">Thu Oct 29 · 3:00–6:00 p.m.</p>
+<p class="event-place">Woodinville City Hall, 17301 133rd Ave NE</p>
+
+A free city afternoon for kids and families. Make a spooky treat bag, try crafts and games, get your face painted, meet some creepy crawlies, and take home a free tree.
+
+[Trick or Tree](https://www.woodinville.gov/calendar.aspx?EID=765)
+
 ### Spooky Soils
 <p class="event-when">Sat Oct 31 · 10:00 a.m.–12:00 p.m.</p>
 <p class="event-place">Brightwater Center, 22505 State Route 9 SE</p>

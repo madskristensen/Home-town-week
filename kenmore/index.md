@@ -7,14 +7,6 @@ description: Upcoming family events in Kenmore on the Eastside.
 hook: Friday night is family karaoke, Saturday is ASL story time, and November 1 is Dia de los Muertos at the Hangar. Inglemoor's Alice in Wonderland opens November 6.
 ---
 
-### Music and Movement with Lana Van Boven
-<p class="event-when">Fri Oct 2 · 10:00–10:30 a.m. and 10:45–11:15 a.m.</p>
-<p class="event-place">Kenmore Library, 6531 NE 181st Street</p>
-
-Lana Van Boven, a speech language pathologist and musician, uses music and movement to make stories come alive. All ages with an adult. Registration is not required. Space is limited. Pick one session.
-
-[10:00 session](https://kcls.bibliocommons.com/events/6a921c7a2dac6e0037228009) · [10:45 session](https://kcls.bibliocommons.com/events/6a921c7a2dac6e003722800a)
-
 ### Family Friendly Karaoke
 <p class="event-when">Fri Oct 9 · 6:30–8:00 p.m.</p>
 <p class="event-place">Northlake Lutheran Church, 6620 NE 185th Street</p>

@@ -77,6 +77,14 @@ Stories, music, and movement for young children with an adult. A short playtime 
 
 [Family Story Time](https://kcls.bibliocommons.com/v2/events/6a80c1292dac6e00371f5445)
 
+### Family Story Time
+<p class="event-when">Fri Oct 9 · 10:30–11:30 a.m.</p>
+<p class="event-place">Fall City Library, 33415 SE 42nd Place</p>
+
+Stories, music, movement, and play for newborns through age 5 with an adult. No registration. Space is limited.
+
+[Family Story Time](https://kcls.bibliocommons.com/events/6a6cea16f4e5db3d00c5a385)
+
 ### Mount Si Dramafest
 <p class="event-when">Fri Oct 9 and Sat Oct 10 · 7:00 p.m.</p>
 <p class="event-place">Mount Si High School Performing Arts Center, 8651 Meadowbrook Way SE</p>

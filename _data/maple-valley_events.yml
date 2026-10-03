@@ -2,14 +2,6 @@
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
 # Covington events are listed on this page, the way Fall City is listed on Snoqualmie.
-- name: "Latine Heritage Celebration"
-  cost: "Free"
-  ages: "All ages"
-  setting: "Indoor"
-  start: "2026-10-02T14:00:00-07:00"
-  end: "2026-10-02T15:00:00-07:00"
-  place: "Covington Library, 27100 164th Ave SE, Covington"
-  same_as: "https://kcls.bibliocommons.com/events/6a5a998c0e562e28009a98ec"
 - name: "Maple Valley Farmers Market"
   setting: "Outdoor"
   start: "2026-10-03T09:00:00-07:00"

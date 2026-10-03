@@ -4,7 +4,7 @@ title: Renton
 city: renton
 state: wa
 description: Upcoming family events in Renton on the Eastside.
-hook: Saturday is Lucha Libro at the downtown library, with shows at noon and 5:00 p.m. Friday, Noises Off opens at Renton Civic Theatre for ages 10 and up.
+hook: Saturday is Lucha Libro at the downtown library, with shows at noon and 5:00 p.m. Noises Off is on at Renton Civic Theatre through Oct 18, for ages 10 and up.
 ---
 
 ### Noises Off
@@ -14,30 +14,6 @@ hook: Saturday is Lucha Libro at the downtown library, with shows at noon and 5:
 Michael Frayn's backstage farce. Opening night is Fri Oct 2, a pay-what-you-can night is Mon Oct 12, and closing night is Sun Oct 18. Recommended for ages 10 and up. The humor includes innuendo, fast-paced chaos, and adult misunderstandings. No explicit content. The comedy is aimed at older kids, teens, and adults who can follow the farce.
 
 [Noises Off](https://www.rentoncivictheatre.org/shows/noises-off)
-
-### Toddler Story Time
-<p class="event-when">Fri Oct 2 · 11:00–11:30 a.m.</p>
-<p class="event-place">Renton Highlands Library, 2801 NE 10th Street</p>
-
-Stories, music, and movement for ages 1 to 3 with an adult. No registration. Space is limited.
-
-[Toddler Story Time](https://kcls.bibliocommons.com/events/6a6794c9cca66c2f00a6523c)
-
-### Baby Story Time
-<p class="event-when">Fri Oct 2 · 12:00–12:30 p.m.</p>
-<p class="event-place">Renton Highlands Library, 2801 NE 10th Street</p>
-
-Rhymes, songs, and stories for newborns to 18 months with an adult. Bring a mat or blanket. No registration.
-
-[Baby Story Time](https://kcls.bibliocommons.com/events/6a6794e40d65ac3600428926)
-
-### Vietnamese Story Time
-<p class="event-when">Fri Oct 2 · 4:00–5:00 p.m.</p>
-<p class="event-place">Renton Highlands Library, 2801 NE 10th Street</p>
-
-Stories, music, and movement in Vietnamese for all ages with an adult. The same hour is also on Fri Oct 9.
-
-[Vietnamese Story Time](https://kcls.bibliocommons.com/events/6a46e315c52cdc3600ee7850)
 
 ### Renton parkrun
 <p class="event-when">Sat Oct 3 · 9:00 a.m.</p>
@@ -103,6 +79,14 @@ A short story time for newborns to 18 months with an adult. No registration.
 
 [Baby Story Time](https://kcls.bibliocommons.com/events/6a90b2e8be148200298a96c5)
 
+### Tuesday Crafternoon
+<p class="event-when">Tue Oct 6 · 3:30–5:00 p.m.</p>
+<p class="event-place">Renton Library, 100 Mill Avenue S</p>
+
+Drop in at the children's library for a seasonal craft or a game. Supplies are on the tables. For elementary kids. No registration. The same afternoon is also Tue Oct 13.
+
+[Tuesday Crafternoon](https://kcls.bibliocommons.com/events/6a95fe6169166f088b965154)
+
 ### Chess Club
 <p class="event-when">Tue Oct 6 · 6:00–7:30 p.m.</p>
 <p class="event-place">Renton Highlands Library, 2801 NE 10th Street</p>
@@ -164,6 +148,14 @@ Seattle Aquarium naturalists are stationed at Cedar River Park. This Saturday th
 A free family festival with the Environmental Science Center and Renton Parks. Watch for salmon, try a science station, and make something to take home. Part of it is outside by the river and part is in the ballroom. No registration.
 
 [Cedar River Salmon Festival](https://www.envsciencecenter.org/event-details/cedar-river-salmon-festival-1)
+
+### Korean Story Time
+<p class="event-when">Sat Oct 10 · 2:00–3:00 p.m.</p>
+<p class="event-place">Renton Highlands Library, 2801 NE 10th Street</p>
+
+Stories and songs in Korean, with a short activity about Korean culture. For preschoolers and early elementary kids with an adult. No registration. The same hour continues on Saturdays through Dec 19, except Nov 28.
+
+[Korean Story Time](https://kcls.bibliocommons.com/events/6a304d968ea300e2631dd23f)
 
 ### Cedar River Salmon Journey at the Library
 <p class="event-when">Sun Oct 11 · 10:00 a.m.–2:00 p.m.</p>

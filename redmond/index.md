@@ -7,13 +7,6 @@ description: Upcoming family events in Redmond on the Eastside.
 hook: Saturday is flapjacks, the farm, and a youth cross-country meet. October 17 is the Farrel-McWhirter harvest festival and a pup parade at Redmond Town Center.
 ---
 
-### Lap Sit Baby Story Time
-<p class="event-when">Fri Oct 2 · 10:30–11:30 a.m.</p>
-<p class="event-place">Redmond Library, 15990 NE 85th St</p>
-
-Stories, music, movement, and rhymes for newborns to 18 months with an adult, then up to 20 minutes of play. No registration. Limited to 20 families. Tickets are at the front desk 30 minutes before the start. First come, first seated. The same hour is also on Fri Oct 9 and Fri Oct 16.  
-[Lap Sit Baby Story Time](https://kcls.bibliocommons.com/v2/events/6ab463b60c7bf418f4e3c6b9)
-
 ### Redmond Saturday Market
 <p class="event-when">Sat Oct 3 · 9:00 a.m.–2:00 p.m.</p>
 <p class="event-place">9900 Willows Rd NE</p>
@@ -341,6 +334,14 @@ A free evening of trick-or-treating, games, and community fun. The city's fall n
 All ages. A joyful visit with loved ones who have died, with crafts, music, food, and a short look at the tradition.
 
 [Day of the Dead](https://www.redmond.gov/calendar.aspx?EID=3561)
+
+### The Zaniac Family Comedy Show
+<p class="event-when">Fri Nov 6 · 6:00–7:30 p.m.</p>
+<p class="event-place">Redmond Senior & Community Center, 8703 160th Ave NE</p>
+
+Alex Zerbe, the Zaniac, brings juggling and physical comedy for ages 3 and up. Tickets are $14.17 to $17. The show is in the Red Oak Community Room.
+
+[Tickets](https://app.amilia.com/store/en/city-of-redmond/shop/activities/7053263)
 
 ### Pumpkin Drop
 <p class="event-when">Sat Nov 7 · 10:00 a.m.–2:00 p.m.</p>

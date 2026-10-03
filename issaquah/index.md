@@ -15,14 +15,6 @@ Stories, music, movement, and rhymes for newborns to 5 with an adult, then up to
 
 [Rise & Shine Story Time](https://kcls.bibliocommons.com/events/6a710898c7e02e3d006da0f2)
 
-### Toddler Time
-<p class="event-when">Fri Oct 2 · 7:00–11:30 a.m.</p>
-<p class="event-place">Issaquah Community Center, 301 Rainier Blvd S</p>
-
-Drop-in indoor play for ages 4 and under, with cars, bikes, slides, and wagons. A parent stays with their own child. It is $2 per child. The center runs it Wednesdays and Fridays during the school year, and it is closed on Nov 28.
-
-[Toddler Time](https://www.issaquahwa.gov/1098/Toddler-Time)
-
 ### Story Stroll: Watercress
 <p class="event-when">Sat Oct 3 · all day</p>
 <p class="event-place">Starts at Issaquah Library, 10 W Sunset Way</p>

@@ -283,6 +283,12 @@ venues:
     credit: "Photo: Chris McBrien, CC BY-SA 2.0"
     license: CC BY-SA 2.0
     source: https://commons.wikimedia.org/wiki/File:Row_of_Pumpkins_(4008750012).jpg
+  - keys: ["knutson"]
+    image: /assets/images/worth-the-drive/knutson-farms.jpg
+    alt: Orange and white pumpkins in a field, with a row of flags behind them.
+    credit: "Photo: Knutson Farms"
+    license: organizer
+    source: https://knutsonfarmsinc.com/the-patch
   - keys: ["spooner farms"]
     image: /assets/images/themes/pumpkin-stone-steps.jpg
     alt: Pumpkins and gourds arranged on stone steps.

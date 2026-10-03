@@ -4,7 +4,7 @@ title: Carnation
 city: carnation
 state: wa
 description: Upcoming family events in Carnation on the Eastside.
-hook: Friday opens Remlinger's harvest weekends. Saturday is a plant festival at Oxbow and Jubilee's first October harvest weekend, and Oct 17 is both Oxtober and the Carnation Farms market.
+hook: Remlinger's harvest weekends run Friday through Sunday through Nov 1. Saturday is a plant festival at Oxbow and Jubilee's October harvest weekend, and Oct 17 is both Oxtober and the Carnation Farms market.
 ---
 
 ### Jubilee Farm Harvest Festival
@@ -22,22 +22,6 @@ Jubilee's October harvest festival. Saturdays and Sundays run 10:00 a.m.–5:00 
 One festival, open Friday through Sunday after the opening weekend. Gates close at 6:00 p.m. The grounds include rides, a pumpkin village, a corn maze included with admission, and u-pick pumpkins. The farm is closed Monday through Thursday.
 
 [Fall Harvest Festival](https://remlingerfarms.com/fall-harvest-festival/)
-
-### Play and Learn
-<p class="event-when">Fri Oct 2 · 9:00–10:30 a.m.</p>
-<p class="event-place">Tolt Congregational Church, 4851 Tolt Ave, Carnation</p>
-
-Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar.
-
-[Play and Learn](https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/)
-
-### Family Story Time
-<p class="event-when">Fri Oct 2 · 10:15–11:00 a.m.</p>
-<p class="event-place">Carnation Library, 4804 Tolt Avenue</p>
-
-Stories, music, and movement for all ages with an adult. Play time is 10:45 to 11:00. The same hour is also on Fri Oct 9, Fri Oct 16, Fri Oct 23, and Fri Oct 30.
-
-[Family Story Time](https://kcls.bibliocommons.com/v2/events/6a721ddec7e02e3d006dc715)
 
 ### Fall Native Plant Festival
 <p class="event-when">Sat Oct 3 · 10:00 a.m.–4:00 p.m.</p>
