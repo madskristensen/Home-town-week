@@ -5,6 +5,17 @@
 <meta charset="utf-8">
 <meta name="color-scheme" content="light dark">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+{%- if page.url == "/subscribed/" or page.url == "/confirmed/" -%}
+<meta name="referrer" content="origin">
+<script>
+(function () {
+  try {
+    if (!location.search) return;
+    history.replaceState(null, "", location.pathname + location.hash);
+  } catch (e) {}
+})();
+</script>
+{%- endif -%}
 {%- if page.layout == "city" and page.city and page.state -%}
 {%- assign preload_city = site.data.cities | where: "id", page.city | where: "state", page.state | first -%}
 {%- assign preload_src = preload_city.hero.image | append: "" | strip -%}
