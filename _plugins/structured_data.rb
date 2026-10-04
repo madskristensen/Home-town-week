@@ -527,21 +527,32 @@ module EastsideCalendar
       node["endDate"] = end_on unless end_on.nil? || end_on.empty?
       description = event["description"].to_s.strip
       description = event["blurb"].to_s.strip if description.empty? || description.casecmp(name).zero?
-      node["description"] = description unless description.empty?
+      node["description"] = short_description(description) unless description.empty?
       image = event["image"].to_s
       image = extra["image"].to_s if image.empty?
       node["image"] = [abs(page.site, image)] unless image.empty?
       organizer = organizer_for(page, event, official, venue)
       node["organizer"] = organizer if organizer
-      node["sameAs"] = official if official && official != event_url
-      performer = performer_node(event)
-      node["performer"] = performer if performer
       offer = offer_node(event, event_url, page.site)
       if offer
         node["offers"] = offer
         node["isAccessibleForFree"] = true if offer["price"].to_s == "0" || offer["price"] == 0
       end
       node
+    end
+
+    # Rich results use a short description. Longer copy stays on the card.
+    def short_description(text)
+      clean = text.to_s.gsub(/\s+/, " ").strip
+      return clean if clean.length <= 180
+
+      cut = clean[0, 180]
+      space = cut.rindex(" ")
+      cut = cut[0...space] if space && space > 80
+      cut = cut.sub(/[\s,;:]+$/, "")
+      return cut if cut.end_with?(".", "!", "?")
+
+      "#{cut}."
     end
 
     def location_node(venue, street, locality, place)

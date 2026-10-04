@@ -7,10 +7,12 @@ widths next to that file, and _data/image_variants.yml so the picture
 helper can list only files that exist.
 
 Widths are 400, 640, 800, 1200, and 1600, and never wider than the source.
-Outputs live in .image-cache so Actions can restore them. Unchanged
-sources are copied, not encoded again. A source that fails to encode is
-left out of the manifest. The helper then uses the original file, and
-this script still exits 0.
+A 640-wide card file that comes out over its budget is encoded again at
+a lower quality until it fits or the floor is reached. Wide hero AVIF
+files have their own budget. Outputs live in .image-cache so Actions can
+restore them. The cache only matches this encoder id, so a budget change
+encodes again. A source that fails to encode is left out of the manifest.
+The helper then uses the original file, and this script still exits 0.
 """
 
 import hashlib
@@ -30,6 +32,13 @@ SOURCE_EXT = {".webp", ".jpg", ".jpeg", ".png"}
 AVIF_QUALITY = 50
 WEBP_QUALITY = 68
 JPEG_QUALITY = 75
+# Card files are requested at 640. Hero files at 1200 and 1600 cover a
+# 44rem picture on a 2x screen. The floor keeps a detailed photo from
+# being crushed when the budget is tight.
+ENCODER_ID = "budget-640-avif60-jpeg80-hero220"
+AVIF_CARD_QUALITIES = (50, 46, 42, 38, 34)
+JPEG_CARD_QUALITIES = (75, 64, 55, 48, 40, 34)
+AVIF_HERO_QUALITIES = (50, 44, 38, 32)
 
 
 def source_files():
@@ -63,8 +72,14 @@ def file_sha256(path):
 
 def fingerprint():
     lines = [
-        "widths %s avif %s webp %s jpeg %s"
-        % (",".join(str(width) for width in WIDTHS), AVIF_QUALITY, WEBP_QUALITY, JPEG_QUALITY)
+        "widths %s avif %s webp %s jpeg %s %s"
+        % (
+            ",".join(str(width) for width in WIDTHS),
+            AVIF_QUALITY,
+            WEBP_QUALITY,
+            JPEG_QUALITY,
+            ENCODER_ID,
+        )
     ]
     for path in source_files():
         rel = path.replace(os.sep, "/")
@@ -102,6 +117,8 @@ def read_record(path):
     except (OSError, ValueError):
         return None
     if record.get("hash") != file_sha256(path):
+        return None
+    if record.get("encoder") != ENCODER_ID:
         return None
     stem = os.path.splitext(os.path.basename(path))[0]
     folder = os.path.dirname(path)
@@ -214,16 +231,49 @@ def open_image(path):
     return image
 
 
-def save_variant(image, dest, kind):
+def qualities_for(kind, width):
+    if kind == "avif" and width <= 640:
+        return AVIF_CARD_QUALITIES
+    if kind == "jpeg" and width <= 640:
+        return JPEG_CARD_QUALITIES
+    if kind == "avif" and width >= 1200:
+        return AVIF_HERO_QUALITIES
+    if kind == "jpeg":
+        return (JPEG_QUALITY,)
+    if kind == "webp":
+        return (WEBP_QUALITY,)
+    return (AVIF_QUALITY,)
+
+
+def byte_budget(kind, width):
+    if kind == "avif" and width <= 640:
+        return 60 * 1024
+    if kind == "jpeg" and width <= 640:
+        return 80 * 1024
+    if kind == "avif" and width >= 1200:
+        return 220 * 1024
+    return None
+
+
+def save_variant(image, dest, kind, quality):
     os.makedirs(os.path.dirname(dest), exist_ok=True)
     if kind == "jpeg":
         flat = image.convert("RGB")
-        flat.save(dest, "JPEG", quality=JPEG_QUALITY, optimize=True, progressive=True)
+        flat.save(dest, "JPEG", quality=quality, optimize=True, progressive=True)
         return
     if kind == "webp":
-        image.save(dest, "WEBP", quality=WEBP_QUALITY, method=4)
+        image.save(dest, "WEBP", quality=quality, method=4)
         return
-    image.save(dest, "AVIF", quality=AVIF_QUALITY)
+    image.save(dest, "AVIF", quality=quality)
+
+
+def save_within_budget(image, dest, kind, width):
+    budget = byte_budget(kind, width)
+    for quality in qualities_for(kind, width):
+        save_variant(image, dest, kind, quality)
+        if budget is None or os.path.getsize(dest) <= budget:
+            return quality
+    return qualities_for(kind, width)[-1]
 
 
 def encode(path):
@@ -245,12 +295,14 @@ def encode(path):
     else:
         record = {
             "hash": file_sha256(path),
+            "encoder": ENCODER_ID,
             "width": src_w,
             "height": src_h,
             "avif": [],
             "webp": [],
             "jpeg": [],
         }
+    record["encoder"] = ENCODER_ID
     if not widths:
         print("  %s is %dpx, narrower than 400. Original only." % (path, src_w))
         return None
@@ -280,7 +332,7 @@ def encode(path):
                 built.append(width)
                 continue
             try:
-                save_variant(frames[width], cached, kind)
+                save_within_budget(frames[width], cached, kind, width)
                 os.makedirs(folder, exist_ok=True)
                 shutil.copy2(cached, dest)
             except Exception as exc:
