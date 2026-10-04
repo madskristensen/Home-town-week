@@ -1,4 +1,11 @@
 # Evergreen guides. The /articles/ page renders these with card-grid.
+- name: Halloween with kids on the Eastside
+  blurb: Trunk-or-treats, downtown candy walks, and quieter plans for little kids.
+  href: /articles/halloween/
+  image: /assets/images/themes/pumpkin-field.webp
+  alt: Rows of orange pumpkins in a field.
+  credit: "Photo: Rodney Campbell, CC BY 2.0"
+  image_source: https://commons.wikimedia.org/wiki/File:Pumpkin_Field.jpg
 - name: Best Christmas lights on the Eastside
   blurb: Public displays, two home shows on the lights map, and zoo light walks within reach.
   href: /articles/christmas-lights/

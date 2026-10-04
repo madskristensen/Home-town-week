@@ -197,6 +197,13 @@
   alt: A pond and autumn trees at Woodland Park Zoo.
   credit: "Photo: Bernie Ongewe, CC BY-SA 4.0"
   license: CC BY-SA 4.0
+- id: halloween
+  path: /articles/halloween/
+  title: Halloween with kids
+  image: /assets/images/themes/pumpkin-field.webp
+  alt: Rows of orange pumpkins in a field.
+  credit: "Photo: Rodney Campbell, CC BY 2.0"
+  license: CC BY 2.0
 - id: snow-play
   path: /articles/snow-play/
   title: Snow play nearby

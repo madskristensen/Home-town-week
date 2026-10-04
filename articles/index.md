@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Articles
-description: Evergreen guides for Eastside families, from Christmas lights, Santa, and winter break to rainy-day plans, playgrounds, and easy hikes.
+description: Evergreen guides for Eastside families, from Halloween and Christmas lights to rainy-day plans, playgrounds, and easy hikes.
 intro: Evergreen guides for Eastside families. Each one links back to the city pages.
 article_index: true
 permalink: /articles/

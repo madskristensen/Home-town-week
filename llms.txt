@@ -53,6 +53,7 @@ sitemap: false
 ## Articles
 
 - [Articles]({{ site.url }}{{ site.baseurl }}/articles/): Evergreen guides for Eastside families.
+- [Halloween with kids on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/halloween/): Trunk-or-treats, downtown candy walks, and quieter plans for little kids.
 - [Best Christmas lights on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/christmas-lights/): Public displays, two posted home shows, and zoo light walks within reach.
 - [Meeting Santa on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/meeting-santa/): Free and low-cost Santa visits, tree lightings, and the Santa trains.
 - [Winter break with kids on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/winter-break/): Break dates, indoor plans, and a snow day at Snoqualmie Pass.
