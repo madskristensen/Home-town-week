@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Build AVIF, WebP, and JPEG widths for local photos.
+"""Local encoder kept for the earlier budget experiment.
 
-The Pages workflow runs this. It is not part of the daily content edit.
-A content change adds one source image and a path. This step writes the
-widths next to that file, and _data/image_variants.yml so the picture
-helper can list only files that exist.
+Pages does not run this. The Optimize images workflow runs
+.github/scripts/resize_images.py and commits the variants and
+_data/image_variants.yml. Running this script overwrites that manifest.
 
 Widths are 400, 640, 800, 1200, and 1600, and never wider than the source.
 A 640-wide card file that comes out over its budget is encoded again at

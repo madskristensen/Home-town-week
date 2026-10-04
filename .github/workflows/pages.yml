@@ -49,18 +49,6 @@ jobs:
         id: pages
         uses: actions/configure-pages@v6
 
-      - name: Use committed image variants
-        run: |
-          # Optimize images commits AVIF widths and the JPEG fallback.
-          # A photo that landed in this push before that job finished is
-          # encoded here so the deploy still has sized files.
-          python3 -m pip install --quiet Pillow pillow-avif-plugin
-          if python3 script/optimize-images.py --check; then
-            echo "Committed AVIF variants match the source photos."
-          else
-            python3 script/optimize-images.py --missing
-          fi
-
       - name: Render the home share image
         run: |
           # One 1200x630 card from the Eastside map. A map edit on this

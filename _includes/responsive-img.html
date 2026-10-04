@@ -1,9 +1,9 @@
 {%- comment -%}
-  Picture with AVIF and WebP srcsets, and a JPEG file on the img.
-  Widths come from _data/image_variants.yml, written by the Pages
-  workflow. If that file is missing, or this image has no entry, the
-  tag is the original file alone. Never point srcset at a width that
-  is not listed.
+  Picture with an AVIF srcset and a JPEG fallback on the img.
+  Widths come from _data/image_variants.yml, written by
+  .github/scripts/resize_images.py. If that file is missing, or this
+  image has no entry, the tag is the original file alone. Never point
+  srcset at a width that is not listed.
 
   Split on the full filename, not the stem. A stem that also appears
   in a parent folder (lake-oswego/lake.webp) would otherwise drop
