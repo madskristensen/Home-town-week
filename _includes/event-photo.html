@@ -10,7 +10,7 @@
 {%- assign photo_loading = include.loading | append: "" | strip -%}
 {%- if photo_loading.size == 0 -%}{%- assign photo_loading = "lazy" -%}{%- endif -%}
 {%- assign photo_sizes = include.sizes | append: "" | strip -%}
-{%- if photo_sizes.size == 0 -%}{%- assign photo_sizes = "(min-width: 47rem) calc(19.75rem - 2px), (min-width: 42rem) calc((100vw - 4.5rem) / 2 - 1.5rem - 2px), calc(100vw - 4.5rem - 2px)" -%}{%- endif -%}
+{%- if photo_sizes.size == 0 -%}{%- assign photo_sizes = "20rem" -%}{%- endif -%}
 {%- assign photo_credit = include.credit | append: "" | strip -%}
 {%- assign photo_source = include.source | append: "" | strip -%}
 {%- assign photo_width = include.width | append: "" | strip -%}
@@ -25,7 +25,8 @@
        loading=photo_loading
        priority=include.priority
        sizes=photo_sizes
-       max="800" -%}
+       max="640"
+       lean="1" -%}
   {%- else -%}
   {%- include responsive-img.html
        src=include.src
@@ -33,7 +34,8 @@
        loading=photo_loading
        priority=include.priority
        sizes=photo_sizes
-       max="800" -%}
+       max="640"
+       lean="1" -%}
   {%- endif -%}
   {%- if photo_credit.size > 0 or photo_source.size > 0 -%}
   <figcaption>{%- if photo_credit.size > 0 -%}{{ include.credit }}{%- endif -%}{%- if photo_source.size > 0 -%}<a class="source" href="{{ include.source }}" rel="noopener">Source</a>{%- endif -%}</figcaption>

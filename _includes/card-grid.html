@@ -32,7 +32,7 @@
 <div class="event-bucket-row">
 <h2 class="event-bucket">{{ grid_heading | escape }}</h2>
 {%- if weekend_n > 0 -%}
-<button type="button" class="event-share event-share-labeled" aria-label="Share this weekend" data-share-mode="weekend" data-share-title="{{ include.share_title | escape }}" data-share-url="{{ include.share_url | escape }}" data-share-picks="{{ weekend_picks | escape }}"><svg class="event-share-icon" viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-share"></use></svg><span>Share this weekend</span><span class="event-share-status" data-share-status aria-live="polite"></span></button>
+<button type="button" class="event-share event-share-labeled" aria-label="Share this weekend" data-share-mode="weekend" data-share-title="{{ include.share_title | escape }}" data-share-url="{{ include.share_url | escape }}" data-share-picks="{{ weekend_picks | escape }}"><span>Share this weekend</span></button>
 {%- endif -%}
 </div>
 {%- else -%}

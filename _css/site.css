@@ -52,6 +52,7 @@
   --btn-bg: var(--accent);
   --btn-bg-hover: color-mix(in srgb, var(--accent) 73%, black);
   --btn-ink: var(--accent-contrast);
+  --icon-share: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 2.8v7.6' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round'/%3E%3Cpath d='M6.7 6.1 10 2.8l3.3 3.3' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4.8 9.2v6.2c0 .8.6 1.4 1.4 1.4h7.6c.8 0 1.4-.6 1.4-1.4V9.2' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   --menu-border: var(--border-strong);
   --menu-shadow: 0 0.55rem 1.6rem rgb(from var(--text) r g b / 0.18);
   --radius: 2px;
@@ -1800,7 +1801,9 @@ h2.event-bucket.is-past {
   outline-offset: 3px;
 }
 
-.event-kicker {
+a.event-kicker,
+p.event-kicker {
+  display: block;
   margin: 0 0 0.15rem;
   color: var(--forest);
   font-size: 0.72rem;
@@ -1817,6 +1820,15 @@ h2.event-bucket.is-past {
   text-decoration: none;
 }
 
+a.event-kicker {
+  color: var(--forest);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+a.event-kicker:hover,
+a.event-kicker:focus-visible,
 .event-kicker a:hover,
 .event-kicker a:focus-visible {
   text-decoration: underline;
@@ -1892,10 +1904,15 @@ h2.event-bucket.is-past {
   cursor: pointer;
 }
 
-.event-share-icon {
+.event-share::before {
+  content: "";
   display: block;
   width: 20px;
   height: 20px;
+  flex: none;
+  background: currentColor;
+  -webkit-mask: var(--icon-share) center / contain no-repeat;
+  mask: var(--icon-share) center / contain no-repeat;
 }
 
 .event-share:hover,
@@ -1979,6 +1996,12 @@ h2.event-bucket.is-past {
   font-size: 0.92rem;
   font-weight: 500;
   line-height: 1.4;
+}
+
+.event-card > a.event-place {
+  display: block;
+  color: var(--link);
+  font-weight: 400;
 }
 
 .event-card > .event-place :is(a, span).place-town {

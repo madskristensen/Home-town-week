@@ -733,7 +733,7 @@ module EastsideCalendar
       CGI.unescapeHTML(html.to_s.gsub(/<[^>]+>/, " ")).gsub(/\s+/, " ").strip
     end
 
-    # Small calendar glyph. The link name lives on aria-label and title.
+    # Small calendar glyph. The link name lives on aria-label.
     CALENDAR_ICON = '<svg class="cal-icon" viewBox="0 0 16 16" aria-hidden="true"><use href="#icon-cal"></use></svg>'.freeze
 
     def calendar_label(link, count)
@@ -748,7 +748,7 @@ module EastsideCalendar
       href = CGI.escapeHTML(link[:href])
       safe = CGI.escapeHTML(label)
       extra = count > 1 ? %(<span class="event-cal-when">#{CGI.escapeHTML(link[:when_label])}</span>) : ""
-      %(<a class="event-cal" href="#{href}" aria-label="#{safe}" title="#{safe}">#{CALENDAR_ICON}#{extra}</a>)
+      %(<a class="event-cal" href="#{href}" aria-label="#{safe}">#{CALENDAR_ICON}#{extra}</a>)
     end
 
     def calendar_actions(links)

@@ -104,7 +104,7 @@
 {%- assign share_button = "" -%}
 {%- if share_title.size > 0 and share_start.size > 0 -%}
 {%- capture share_button -%}
-<button type="button" class="event-share" aria-label="Share {{ share_title | escape }}" data-share-title="{{ share_title | escape }}" data-share-start="{{ share_start | escape }}"{% if share_end.size > 0 %} data-share-end="{{ share_end | escape }}"{% endif %}{% if share_venue.size > 0 %} data-share-venue="{{ share_venue | escape }}"{% endif %}{% if schema_locality.size > 0 %} data-share-city="{{ schema_locality | escape }}"{% endif %}{% if schema_description.size > 0 %} data-share-blurb="{{ schema_description | escape }}"{% endif %}{% if schema_cost.size > 0 %} data-share-cost="{{ schema_cost | escape }}"{% endif %}{% if schema_url.size > 0 %} data-share-url="{{ schema_url | escape }}"{% endif %}><svg class="event-share-icon" viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-share"></use></svg><span class="event-share-status" data-share-status aria-live="polite"></span></button>
+<button type="button" class="event-share" aria-label="Share {{ share_title | escape }}" data-share-title="{{ share_title | escape }}" data-share-start="{{ share_start | escape }}"{% if share_end.size > 0 %} data-share-end="{{ share_end | escape }}"{% endif %}{% if share_venue.size > 0 %} data-share-venue="{{ share_venue | escape }}"{% endif %}{% if schema_locality.size > 0 %} data-share-city="{{ schema_locality | escape }}"{% endif %}{% if schema_description.size > 0 %} data-share-blurb="{{ schema_description | escape }}"{% endif %}{% if schema_cost.size > 0 %} data-share-cost="{{ schema_cost | escape }}"{% endif %}{% if schema_url.size > 0 %} data-share-url="{{ schema_url | escape }}"{% endif %}></button>
 {%- endcapture -%}
 {%- assign share_button = share_button | strip -%}
 {%- endif -%}
@@ -145,7 +145,11 @@
 {%- assign card_town = include.town | append: "" | strip -%}
 {%- assign card_town_href = include.town_href | append: "" | strip -%}
 {%- if card_town.size > 0 -%}
-<p class="event-kicker">{%- if card_town_href.size > 0 -%}<a href="{{ card_town_href | relative_url }}">{{ card_town | escape }}</a>{%- else -%}{{ card_town | escape }}{%- endif -%}</p>
+{%- if card_town_href.size > 0 -%}
+<a class="event-kicker" href="{{ card_town_href | relative_url }}">{{ card_town | escape }}</a>
+{%- else -%}
+<p class="event-kicker">{{ card_town | escape }}</p>
+{%- endif -%}
 {%- endif -%}
 {%- assign card_when = include.when | append: "" | strip -%}
 {%- assign card_calendar = include.calendar | append: "" | strip -%}
@@ -153,7 +157,7 @@
 {%- assign card_title = include.title | append: "" -%}
 {%- if card_calendar_html.size == 0 and card_calendar.size > 0 -%}
 {%- capture card_calendar_html -%}
-<a class="event-cal" href="{{ card_calendar | relative_url }}" aria-label="Add {{ card_title | escape }} to calendar" title="Add {{ card_title | escape }} to calendar"><svg class="cal-icon" viewBox="0 0 16 16" aria-hidden="true"><use href="#icon-cal"></use></svg></a>
+<a class="event-cal" href="{{ card_calendar | relative_url }}" aria-label="Add {{ card_title | escape }} to calendar"><svg class="cal-icon" viewBox="0 0 16 16" aria-hidden="true"><use href="#icon-cal"></use></svg></a>
 {%- endcapture -%}
 {%- assign card_calendar_html = card_calendar_html | strip -%}
 {%- endif -%}
@@ -196,6 +200,9 @@
 {%- assign card_drive = include.drive | append: "" | strip -%}
 {%- assign card_city_href = include.city_href | append: "" | strip -%}
 {%- if card_place.size > 0 or card_city.size > 0 or card_drive.size > 0 -%}
+{%- if card_place.size > 0 and card_city.size == 0 and card_drive.size == 0 -%}
+<a class="event-place addr" href="{{ card_place | map_search: include.place_city, include.place_name }}"><span class="addr-text">{{ card_place | escape }}</span></a>
+{%- else -%}
 <p class="event-place">{%- if card_place.size > 0 -%}<a class="addr" href="{{ card_place | map_search: include.place_city, include.place_name }}"><span class="addr-text">{{ card_place | escape }}</span></a>{%- if card_city.size > 0 -%}, {% endif -%}{%- endif -%}
 {%- if card_drive.size > 0 -%}
 {%- if card_city.size > 0 -%}<span class="place-town">{{ card_city | escape }}</span>{%- endif -%}<span class="drive-time">{{ card_drive | escape }}</span>
@@ -207,6 +214,7 @@
 {%- endif -%}
 {%- endif -%}
 </p>
+{%- endif -%}
 {%- endif -%}
 {%- endif -%}
 {%- assign card_hours = include.hours | append: "" | strip -%}

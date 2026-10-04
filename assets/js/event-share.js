@@ -396,8 +396,16 @@
 
   function showStatus(button, text) {
     var status = button.querySelector("[data-share-status]");
-    if (!status) return;
-    status.textContent = text;
+    if (!status) {
+      status = document.createElement("span");
+      status.className = "event-share-status";
+      status.setAttribute("data-share-status", "");
+      status.setAttribute("aria-live", "polite");
+      button.appendChild(status);
+    }
+    window.setTimeout(function () {
+      status.textContent = text;
+    }, 20);
     var previous = timers ? timers.get(button) : 0;
     window.clearTimeout(previous);
     var timer = window.setTimeout(function () {

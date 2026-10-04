@@ -343,8 +343,6 @@ module EastsideCalendar
             {
               "@type" => "ListItem",
               "position" => index + 1,
-              "name" => event[:node]["name"],
-              "url" => event[:node]["url"],
               "item" => { "@id" => event[:node]["@id"] }
             }
           end
