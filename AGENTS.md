@@ -46,6 +46,8 @@ Drop-off is only when the child stays and the adult leaves. Camps are not drop-o
 
 ## Photos
 
+Leave existing photo files untouched. Before committing a new photo, run `python3 script/cap-master.py` on that file. The long side is capped at 1600px, or 2000px when the path is a city hero in `_data/cities.yml`. The file stays WebP, JPEG, or PNG. The Pages build warns if that new master is still over the cap. It does not rewrite the file.
+
 Order for a hub card: the event's own photo (the organizer page, og:image, or flyer), then a photo of that specific venue, then a themed picture, then the seasonal pool, then the year-round pool in `_data/hub_pools.yml`. A grid card with no image fails the build. Do not use a designed card.
 
 Always look for the event's own photo or the venue's own photo before a theme or pool picture. Prefer CC0, CC BY, CC BY-SA, or public domain when one exists. If no licensed photo exists, use the organizer's or venue's own photo anyway. Credit it as `Photo: <organizer or site name>`, link the source page, and set `license: organizer` (on the venue row, or `license="organizer"` on the event-photo include). A show poster or key art from the organizer counts as the event's own image. Credit that `Image: <organizer>`, with the same organizer marker and a link. A photo with a credit and a source link passes when it has an open license or that organizer marker. Do not drop an organizer photo only because it is unlicensed.
