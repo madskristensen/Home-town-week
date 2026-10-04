@@ -271,7 +271,7 @@
     {%- capture event_href -%}/{{ cid }}/#{{ slug }}{%- endcapture -%}
     {%- assign event_href = event_href | strip -%}
     {%- assign external = false -%}
-    {%- if chunk.size == 0 and event.same_as contains "http" -%}
+    {%- if event.same_as contains "://" -%}
       {%- assign event_href = event.same_as -%}
       {%- assign external = true -%}
     {%- endif -%}
