@@ -1,13 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Singing and Stories with Nancy Stewart"
-  ages: "Toddlers"
-  setting: "Indoor"
-  start: "2026-10-03T09:30:00-07:00"
-  place: "Island Books, 3014 78th Ave SE"
-  performer: "Nancy Stewart"
-  same_as: "https://www.islandbooks.com/childrens-story-times"
 - name: "Mercer Island Farmers Market"
   setting: "Outdoor"
   start: "2026-10-04T10:00:00-07:00"

@@ -4,24 +4,8 @@ title: North Bend
 city: north-bend
 state: wa
 description: Upcoming family events in North Bend on the Eastside.
-hook: Saturday morning is a free volunteer day around town, and Saturday afternoon is LEGO at the library. Thursday night is a Shaun the Sheep film. Oct 24 stacks a park party, chess, and downtown trick-or-treat.
+hook: Thursday night is a Shaun the Sheep film. The Halloween Train opens Saturday. Oct 24 stacks a park party, chess, and downtown trick-or-treat.
 ---
-
-### Love Snoqualmie Valley Volunteer Day
-<p class="event-when">Sat Oct 3 · 9:00 a.m.–12:00 p.m.</p>
-<p class="event-place">Several North Bend sites, including the Mt. Si Senior Center, 411 Main Ave S</p>
-
-A free morning of service projects for all ages, run by Love Snoqualmie Valley. North Bend stops include the Mt. Si Senior Center and the Snoqualmie Valley Food Bank at 122 E 3rd St.
-
-[Volunteer Day](https://www.northbendwa.gov/m/calendar/event/detail/4741)
-
-### LEGO Builders
-<p class="event-when">Sat Oct 3 · 3:00–4:30 p.m.</p>
-<p class="event-place">North Bend Library, 115 E 4th Street</p>
-
-Open building time. The library puts out bricks and other construction toys. Drop in for a few minutes or stay until 4:30. The Friends of the library sponsor it. No registration.
-
-[LEGO Builders](https://kcls.bibliocommons.com/v2/events/6aa0a1c66562d02296858b8d)
 
 ### Play and Learn
 <p class="event-when">Tue Oct 6 · 9:30–11:00 a.m.</p>

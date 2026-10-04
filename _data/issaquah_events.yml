@@ -1,20 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Story Stroll: Watercress"
-  cost: "Free"
-  setting: "Outdoor"
-  start: "2026-09-05"
-  end: "2026-10-03"
-  place: "Issaquah Library, 10 W Sunset Way"
-  same_as: "https://kcls.bibliocommons.com/v2/events/6a80b39d2dac6e00371f4f85"
-- name: "Grande Parade"
-  cost: "Free"
-  setting: "Outdoor"
-  tags: [salmon]
-  start: "2026-10-03T10:00:00-07:00"
-  place: "Confluence Park, downtown Issaquah"
-  same_as: "https://www.salmondays.org/sd-2026-parade"
 - name: "Salmon Days Festival"
   setting: "Outdoor"
   tags: [salmon]
@@ -45,6 +31,7 @@
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa0a306442d35226f67899a"
 - name: "Fall Farm Fresh Market"
   setting: "Outdoor"
+  tags: [harvest]
   start: "2026-10-10T09:00:00-07:00"
   end: "2026-10-10T14:00:00-07:00"
   place: "Historic Shell Station, 232 Front St N"
@@ -135,6 +122,14 @@
   end: "2026-10-18T16:00:00-07:00"
   place: "Lake Sammamish State Park, 2010 NW Sammamish Rd"
   same_as: "https://www.lakesammamishfriends.org/events-old/2026/10/18/walk-n-wag-harvest"
+- name: "T/ween ASL Social"
+  cost: "Free"
+  ages: "Teens"
+  setting: "Indoor"
+  start: "2026-10-21T17:30:00-07:00"
+  end: "2026-10-21T18:30:00-07:00"
+  place: "Issaquah Library, 10 W Sunset Way"
+  same_as: "https://kcls.bibliocommons.com/events/6a63ce693edb05633e902d50"
 - name: "Reading with Rover"
   cost: "Free"
   setting: "Indoor"
@@ -145,6 +140,7 @@
   same_as: "https://kcls.bibliocommons.com/events/697182f81e64afd01e55e554"
 - name: "Fall Farm Fresh Market"
   setting: "Outdoor"
+  tags: [harvest]
   start: "2026-10-24T09:00:00-07:00"
   end: "2026-10-24T14:00:00-07:00"
   place: "Historic Shell Station, 232 Front St N"

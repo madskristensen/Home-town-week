@@ -4,7 +4,7 @@ title: Snoqualmie
 city: snoqualmie
 state: wa
 description: Upcoming family events in Snoqualmie on the Eastside.
-hook: Saturday is a community planting. Sunday afternoon is a free Go lesson at the library. Oct 24 is the city's free Spooktacular.
+hook: Sunday afternoon is a free Go lesson at the library. Saturday is LEGO, the Halloween Train, and Mount Si Dramafest. Oct 24 is the city's free Spooktacular.
 ---
 
 ### Fall City Farms pumpkin patch
@@ -22,14 +22,6 @@ A pumpkin patch for families, with animals to see and hot mini doughnuts and cid
 Bring a finished paper mache pumpkin to the front desk any day the branch is open in October. Judges pick winners in a few categories, and the library will say who won by Nov 7. Paper is available at the desk if you need it.
 
 [Pumpkin contest](https://kcls.bibliocommons.com/v2/events/6a921b7b3b6c71003e5c2515)
-
-### Green Snoqualmie Day
-<p class="event-when">Sat Oct 3 · 9:00 a.m.–12:00 p.m.</p>
-<p class="event-place">Across from Mount Si High School, next to the Park Street Community Orchard</p>
-
-A morning of planting in the city's climate-adaptation demonstration forest. It is a work party, not a festival: neighbors plant trees and hear how the new grove is meant to handle a hotter, drier season. The city points people to the site across from the high school.
-
-[Green Snoqualmie Day](https://www.snoqualmiewa.gov/Calendar.aspx?EID=3408)
 
 ### Learn to Play Go
 <p class="event-when">Sun Oct 4 · 3:00–5:00 p.m.</p>
@@ -248,3 +240,19 @@ A Santa train for families from the Snoqualmie Depot, $30 for ages 2 and up, and
 A town tree lighting for families at the Railroad Park gazebo.
 
 [Snoqualmie Winter Lights](https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights)
+
+### A Midsummer Night's Dream
+<p class="event-when">Thu Dec 10 through Sat Dec 12</p>
+<p class="event-place">Mount Si High School Performing Arts Center, 8651 Meadowbrook Way SE</p>
+
+Mount Si High School's student production of Shakespeare's comedy. Shows are Thursday, Dec 10 and Friday, Dec 11 at 7:00 p.m., and Saturday, Dec 12 at 1:30 and 7:00 p.m. The drama club lists general admission at $15 and $10 for students and Mount Si staff.
+
+[Mount Si Drama](https://mshsdrama.weebly.com/a-midsummer-nights-dream.html)
+
+### Visit with Santa
+<p class="event-when">Sun Dec 13 · 1:30–3:30 p.m.</p>
+<p class="event-place">Mini Treehouse, 8050 Railroad Ave</p>
+
+A free visit with Santa. The first 30 minutes are held for families with special needs.
+
+[Visit with Santa](https://www.snoqualmiewa.gov/calendar.aspx?EID=3418)

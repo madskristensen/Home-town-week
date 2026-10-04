@@ -1,12 +1,12 @@
-# Home-page picks for Saturday Oct 3 through Sunday Oct 4, 2026.
-# Refreshed Saturday Oct 3. Salmon Days and Red Barn Farm run both days.
-# The farm fair and the Juanita Beach harvest festival are Saturday.
+# Home-page picks for Friday Oct 10 through Sunday Oct 12, 2026.
+# Refreshed Sunday Oct 4. Salmon festival, the book festival, and Japan Week
+# are Saturday. The harvest fest runs Saturday too.
 # Names match _data/{city}_events.yml.
-- city: issaquah
-  name: Salmon Days Festival
-- city: bellevue
-  name: Kelsey Creek Farm Fair
-- city: kirkland
-  name: Harvest Festival
+- city: renton
+  name: Cedar River Salmon Festival
 - city: redmond
-  name: Red Barn Farm Fall Festival
+  name: Bigfoot Kids' Book Festival
+- city: bellevue
+  name: Japan Week
+- city: woodinville
+  name: Sammamish Valley Harvest Fest

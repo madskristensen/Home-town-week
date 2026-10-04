@@ -4,7 +4,7 @@ title: Issaquah
 city: issaquah
 state: wa
 description: Upcoming family events in Issaquah on the Eastside.
-hook: Saturday and Sunday are Salmon Days downtown. The hatchery is the stop to make, and Sunday afternoon is a free family dance at Pickering Barn. Sunday noon is a free gallery open house in the Highlands.
+hook: Sunday is the last day of Salmon Days, with a free family dance at Pickering Barn and a gallery open house in the Highlands. Next Saturday is a tree planting, a farm market, and the Curiosity Collection launch at the library.
 ---
 
 ### Rise & Shine Story Time
@@ -14,22 +14,6 @@ hook: Saturday and Sunday are Salmon Days downtown. The hatchery is the stop to 
 Stories, music, movement, and rhymes for newborns to 5 with an adult, then up to 30 minutes of play. No registration. Space is limited.
 
 [Rise & Shine Story Time](https://kcls.bibliocommons.com/events/6a710898c7e02e3d006da0f2)
-
-### Story Stroll: Watercress
-<p class="event-when">Sat Oct 3 · all day</p>
-<p class="event-place">Starts at Issaquah Library, 10 W Sunset Way</p>
-
-A self-led walk through Watercress, by Andrea Wang, illustrated by Jason Chin. The story starts at the library and continues through historic downtown. The stroll runs from Sep 5 through Oct 3. Free. Sponsored by the association and Friends of the Issaquah Library.
-
-[KCLS event](https://kcls.bibliocommons.com/v2/events/6a80b39d2dac6e00371f4f85) · [Downtown events](https://downtownissaquah.com/events/)
-
-### Grande Parade
-<p class="event-when">Sat Oct 3 · 10:00 a.m.</p>
-<p class="event-place">Starts at Confluence Park</p>
-
-The chamber lists a 10:00 a.m. start. The 2026 theme is "Stars, Stripes & Salmon." The route leaves Confluence Park, goes down Rainier Blvd N, turns onto NW Dogwood St, heads north on Front St, then turns onto NE Gilman Blvd toward the dispersal area. Road closures on the downtown info page begin at 9:00 a.m. and reopen after the last entry passes.
-
-[Parade](https://www.salmondays.org/sd-2026-parade)
 
 ### Salmon Days Festival
 <p class="event-when">Sat Oct 3 and Sun Oct 4 · 10:00 a.m.–6:00 p.m.</p>
@@ -178,6 +162,14 @@ A drop-off evening at the gym. The kids stay for games and gymnastics, and you g
 A free dog walk and harvest afternoon from Friends of Lake Sammamish State Park. The 3K starts at noon and winds through the apple orchard. A vendor village, talks, and a pet costume contest run until 4:00 p.m. Dogs stay on a leash.
 
 [Walk n Wag Harvest](https://www.lakesammamishfriends.org/events-old/2026/10/18/walk-n-wag-harvest)
+
+### T/ween ASL Social
+<p class="event-when">Wed Oct 21 · 5:30–6:30 p.m.</p>
+<p class="event-place">Issaquah Library, 10 W Sunset Way</p>
+
+A voices-off hangout for middle and high schoolers who already know basic American Sign Language. A deaf librarian and a volunteer host games if the group wants them. It is practice, not a class. Free.
+
+[T/ween ASL Social](https://kcls.bibliocommons.com/events/6a63ce693edb05633e902d50)
 
 ### Reading with Rover
 <p class="event-when">Wed Oct 21 · 6:30–7:30 p.m.</p>

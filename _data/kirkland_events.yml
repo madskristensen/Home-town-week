@@ -1,50 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Harvest Festival"
-  setting: "Outdoor"
-  cost: "Free"
-  tags: [harvest]
-  start: "2026-10-03T11:00:00-07:00"
-  end: "2026-10-03T16:00:00-07:00"
-  place: "Juanita Beach Park, 9703 NE Juanita Dr"
-  same_as: "https://www.kirklandwa.gov/Whats-Happening/Community-Events/Parks-and-Community-Services/Kirklands-Harvest-Festival"
-- name: "Try Hockey Free"
-  cost: "Free"
-  setting: "Indoor"
-  signup: true
-  start: "2026-10-03T11:15:00-07:00"
-  place: "Sno-King Kirkland, 14326 124th Ave NE"
-  same_as: "https://snokinghockey.com/club/tryhockeyfree"
-- name: "SUMM Family Math Fun"
-  cost: "Free"
-  setting: "Indoor"
-  signup: true
-  start: "2026-10-03T11:30:00-07:00"
-  end: "2026-10-03T13:00:00-07:00"
-  place: "Kingsgate Library, 12315 NE 143rd St"
-  same_as: "https://kcls.bibliocommons.com/v2/events/6a7f4c9b4027d701ebc45c62"
-- name: "Reading with Rover"
-  cost: "Free"
-  setting: "Indoor"
-  signup: true
-  tags: [free]
-  start: "2026-10-03T13:00:00-07:00"
-  end: "2026-10-03T14:00:00-07:00"
-  place: "Kingsgate Library, 12315 NE 143rd St"
-  same_as: "https://kcls.bibliocommons.com/events/6a99d77b36204e08fbb96aa1"
-- name: "Hispanic Heritage Celebration"
-  setting: "Outdoor"
-  start: "2026-10-03T14:00:00-07:00"
-  end: "2026-10-03T16:00:00-07:00"
-  place: "The Village at Totem Lake, 11901 NE Village Plaza"
-  same_as: "https://thevillageattotemlake.com/events/hispanic-heritage-celebration"
-- name: "Swan Lake: Symphony of Lights"
-  setting: "Indoor"
-  signup: true
-  start: "2026-10-03T19:00:00-07:00"
-  place: "Kirkland Performance Center, 350 Kirkland Ave"
-  same_as: "https://www.kpcenter.org/event/swan-lake-symphony-of-lights-2026/"
 - name: "Juanita Bay Interpretive Tour"
   cost: "Free"
   setting: "Outdoor"
@@ -86,7 +42,9 @@
   same_as: "https://kcls.bibliocommons.com/events/6abebb3a96ec3a003ad78fdd"
 - name: "Pajama Story Time"
   cost: "Free"
+  ages: "Toddlers"
   setting: "Indoor"
+  tags: [story-time]
   start: "2026-10-07T19:00:00-07:00"
   end: "2026-10-07T19:30:00-07:00"
   place: "Kirkland Library, 308 Kirkland Ave"

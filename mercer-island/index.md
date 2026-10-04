@@ -4,16 +4,8 @@ title: Mercer Island
 city: mercer-island
 state: wa
 description: Upcoming family events in Mercer Island on the Eastside.
-hook: Sunday is the farmers market, with family storytime the same morning. The market's last Sunday is Oct 11. Oct 15 is an all-ages plant walk at Pioneer Park, and Youth Theatre Northwest opens The Queen in the Cave on November 6.
+hook: This Sunday and Oct 11 are the farmers market, with family storytime the same morning. Oct 11 is the last Sunday. Oct 15 is an all-ages plant walk at Pioneer Park, and Youth Theatre Northwest opens The Queen in the Cave on November 6.
 ---
-
-### Singing and Stories with Nancy Stewart
-<p class="event-when">Sat Oct 3 · 9:30 a.m.</p>
-<p class="event-place">Island Books, 3014 78th Ave SE</p>
-
-Songs and stories for ages 1 to 4. Island Books lists this every Saturday at 9:30 a.m.
-
-[Singing and Stories with Nancy Stewart](https://www.islandbooks.com/childrens-story-times)
 
 ### Mercer Island Farmers Market
 <p class="event-when">Sun Oct 4 · 10:00 a.m.–2:00 p.m.</p>

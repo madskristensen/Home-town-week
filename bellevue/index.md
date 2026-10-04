@@ -4,7 +4,7 @@ title: Bellevue
 city: bellevue
 state: wa
 description: Upcoming family events in Bellevue on the Eastside.
-hook: Saturday is the Kelsey Creek Farm Fair, with math games at the library that afternoon and a Russian fairy tale for little kids at Studio33. Sunday is Little Red Hen at Studio33 and a salmon walk at Lewis Creek. Friday, October 9 is a free pumpkin afternoon at The Meadow, and Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
+hook: Sunday is Little Red Hen at Studio33 and a salmon walk at Lewis Creek. Under the Mushroom continues at Studio33 through Oct 11. Friday, October 9 is a free pumpkin afternoon at The Meadow, and Saturday is Japan Week. Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
 ---
 
 The Thursday market season ended Oct 1. Two Saturday markets remain, Oct 31 and Nov 21, both 10:00 a.m.–3:00 p.m.
@@ -23,39 +23,6 @@ The Thursday market season ended Oct 1. Two Saturday markets remain, Oct 31 and 
 A short Russian-language fairy tale from Theatre33 for little children, with older siblings and parents welcome. Games and a craft follow the story. Showtimes are Saturday, Oct 3 at 11:00 a.m. and 5:00 p.m., Saturday, Oct 10 at 11:00 a.m. and 5:00 p.m., and Sunday, Oct 11 at 11:00 a.m. Those performances are sold out.
 
 [Theatre33 tickets](https://theatre33.ludus.com/)
-
-### Kelsey Creek Farm Fair
-<p class="event-when">Sat Oct 3 · 11:00 a.m.–4:00 p.m.</p>
-<p class="event-place">Kelsey Creek Farm, 410 130th Pl SE</p>
-
-{% include event-photo.html
-   src="/assets/images/bellevue/kelsey-creek.webp"
-   alt="Barn and pasture at Kelsey Creek Farm in Bellevue."
-   credit="Photo: Joe Mabel, CC BY-SA 3.0"
-   source="https://commons.wikimedia.org/wiki/File:Kelsey_Creek_Farm_04.jpg" %}
-
-The 44th annual Farm Fair. The city lists animal interactions, heritage activities, pedal tractors, a pumpkin patch, pony rides, wagon rides, and food trucks. Admission, parking, and the shuttle are free. Pony rides, pumpkins, the harvest play patch, wagon rides, and food have fees. No ATM on site. Pets are not allowed in the barnyard or on the shuttle buses.
-
-On-site parking is limited to accessible spaces. Free shuttles run from Bannerwood Sports Park, 1790 Richards Road, and the Wilburton Park and Ride, 720 114th Ave SE. The last shuttle leaves the farm at 4:15 p.m. East Main light rail is the other option. Call the farm at 425-452-7688.
-
-Volunteers 15 and older can still email Stacy Stenslie at sstenslie@bellevuewa.gov.
-
-[Farm Fair](https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/kelsey-creek-farm-fair) · [City news](https://bellevuewa.gov/city-news/kelsey-farm-fair-26)
-
-### Math Club: Math Games
-<p class="event-when">Sat Oct 3 · 2:00–4:00 p.m.</p>
-<p class="event-place">Bellevue Library, 1111 110th Ave NE</p>
-
-Drop-in math games for elementary grades. Activities are grouped for kindergarten and first grade, grades 2 and 3, and grades 4 and 5, and a student can pick the level. This Saturday the games are Connect Four, checkers, and chess.
-
-[Math Club](https://kcls.bibliocommons.com/events/6a7fa3f72dac6e00371f2c03)
-
-### Autumn Moon Night Market
-<p class="event-when">Sat Oct 3 · 2:00–7:00 p.m.</p>
-<p class="event-place">Spring District Station, 12164 NE Spring Blvd</p>
-
-Free and all ages. Local food and vendors, with a Mak Fai lion dance at 5:00 p.m. The market is steps from the 120th/Spring District light rail station.  
-[Night market](https://bellevuewa.gov/events/autumn-moon-night-market)
 
 ### Little Red Hen
 <p class="event-when">Sun Oct 4 · 11:00–11:45 a.m.</p>

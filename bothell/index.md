@@ -4,24 +4,8 @@ title: Bothell
 city: bothell
 state: wa
 description: Upcoming family events in Bothell on the Eastside.
-hook: Saturday is the Friends book sale and an all-ages history tour at Anderson School. Monday morning is toddler and baby story time.
+hook: Saturday is a fire station open house and an Arbor Day planting at East Norway Hill Park, plus a Halloween market at Bothell Landing. Monday morning is toddler and baby story time.
 ---
-
-### Friends of the Bothell Library Book Sale
-<p class="event-when">Sat Oct 3 · 11:00 a.m.–5:30 p.m.</p>
-<p class="event-place">Bothell Library, 18215 98th Ave NE</p>
-
-Browse donated books. Proceeds support library programs. The listing includes kids through adults.
-
-[Book sale](https://kcls.bibliocommons.com/events/6a3481bc2ea730c17ab8096c)
-
-### Anderson School History and Art Tour
-<p class="event-when">Sat Oct 3 · 1:00 p.m.</p>
-<p class="event-place">Anderson School, 18607 Bothell Way NE</p>
-
-A public history and art tour. All ages. Tickets are $20.31 a person, and kids ages 3 and up need a ticket. Tours run every Saturday.
-
-[Oct 3 tour](https://www.mcmenamins.com/events/278721-anderson-schools-history-art-tour)
 
 ### Bothell Historical Museum
 <p class="event-when">Sun Oct 4 · 1:00–4:00 p.m.</p>
@@ -60,6 +44,22 @@ A short story time for pre-walking babies, newborn to about 18 months, with an a
 Stories, music, movement, and rhymes. All ages with an adult. Registration is not required. Space is limited. Doors close when the room is full, or 10 minutes after the start. Attend one session only.
 
 [10:00 session](https://kcls.bibliocommons.com/events/6a80df8ad4b10d003006ba62) · [10:45 session](https://kcls.bibliocommons.com/events/6a80df8ad4b10d003006ba65)
+
+### Fire Prevention Week Open House
+<p class="event-when">Sat Oct 10 · 10:00 a.m.–1:00 p.m.</p>
+<p class="event-place">Fire Station 42, 10726 Beardslee Boulevard</p>
+
+The fire department's annual open house. Meet firefighters, tour the station, and watch live demonstrations. Free.
+
+[Open house](https://www.bothellwa.gov/Calendar.aspx?EID=2749)
+
+### Arbor Day Celebration
+<p class="event-when">Sat Oct 10 · 10:30–11:30 a.m.</p>
+<p class="event-place">East Norway Hill Park, 11920 NE 155th St</p>
+
+A short planting party for the 154th Arbor Day. Parks staff lead invasive-weed removal and tree planting. All ages. Registration is required, and spots are limited. Free.
+
+[Arbor Day](https://www.bothellwa.gov/m/calendar/event/detail/2753)
 
 ### Halloween in the Park Market
 <p class="event-when">Sat Oct 10 · 11:00 a.m.–4:00 p.m.</p>

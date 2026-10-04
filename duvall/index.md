@@ -16,7 +16,7 @@ A pumpkin patch and corn maze that opened Sep 26 and stays open every day throug
 [Muddy Boots](https://muddybootspumpkins.com/)
 
 ### Novelty Hill Farm pumpkin patch
-<p class="event-when">Opens Sat Oct 2 · Fri 3:00–6:00 p.m., Sat–Sun 10:00 a.m.–5:00 p.m.</p>
+<p class="event-when">Through Sat Oct 31 · Fri 3:00–6:00 p.m., Sat–Sun 10:00 a.m.–5:00 p.m.</p>
 <p class="event-place">Novelty Hill Farm, 26617 NE 124th Street</p>
 
 Five acres of pumpkins still on the vine, a corn maze with a shorter path for small children, and goats, pigs, and cows. Walking the patch and visiting the animals is free. The hay mow, maze, trike track, and corn crib are $5 for ages 5 and under and $10 for ages 6 and up. Infants are free. Leashed dogs are allowed. Groups can book weekdays. The farm has not posted a last day, so this listing stays up through October.

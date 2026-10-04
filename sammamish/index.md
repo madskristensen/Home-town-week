@@ -4,24 +4,8 @@ title: Sammamish
 city: sammamish
 state: wa
 description: Upcoming family events in Sammamish on the Eastside.
-hook: Saturday afternoon is a codebreaking workshop at the library, and Saturday morning is a meadow work party. Thursday afternoon is a teen hangout at the library, and Thursday evening is a sewing hour at Beaver Lake Lodge.
+hook: Saturday morning is a planting at Sammamish Landing, and Saturday afternoon is a slime workshop at the library. Thursday afternoon is a teen hangout, and Thursday evening is a sewing hour at Beaver Lake Lodge.
 ---
-
-### Evans Meadow Restoration
-<p class="event-when">Sat Oct 3 · 11:00 a.m.–2:00 p.m.</p>
-<p class="event-place">Evans Creek Preserve</p>
-
-A volunteer morning to prep a wild pollinator meadow, part of the Bee City work. The job is removing and covering reed canary grass so the next area can be planted. It is free. Signups are required because parking is limited. If you are not on the list, you cannot volunteer that morning.
-
-[Evans Meadow Restoration](https://www.sammamish.us/news/events/events/volunteer-opportunities/10-03-evan-s-meadow-restoration/)
-
-### STEM Saturday: Codebreaking with Mathematics
-<p class="event-when">Sat Oct 3 · 2:00–4:00 p.m.</p>
-<p class="event-place">Sammamish Library, 825 228th Ave SE</p>
-
-The library marks this workshop as a date change, so use the event page if the room moved again. Teen presenters introduce Caesar and Vigenère ciphers for kids and tweens. Registration is not required.
-
-[STEM Saturday](https://kcls.bibliocommons.com/events/6a76b561e30fe4845967de60)
 
 ### Sammamish LGBTQ+ Youth Group
 <p class="event-when">Tue Oct 6 · 4:00–5:30 p.m.</p>

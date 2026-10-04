@@ -4,7 +4,7 @@ title: Carnation
 city: carnation
 state: wa
 description: Upcoming family events in Carnation on the Eastside.
-hook: Remlinger's harvest weekends run Friday through Sunday through Nov 1. Saturday is a plant festival at Oxbow and Jubilee's October harvest weekend, and Oct 17 is both Oxtober and the Carnation Farms market.
+hook: Remlinger's harvest weekends run Friday through Sunday through Nov 1. Jubilee's harvest festival runs through Oct 31. Oct 17 is both Oxtober and the Carnation Farms market.
 ---
 
 ### Jubilee Farm Harvest Festival
@@ -22,22 +22,6 @@ Jubilee's October harvest festival. Saturdays and Sundays run 10:00 a.m.–5:00 
 One festival, open Friday through Sunday after the opening weekend. Gates close at 6:00 p.m. The grounds include rides, a pumpkin village, a corn maze included with admission, and u-pick pumpkins. The farm is closed Monday through Thursday.
 
 [Fall Harvest Festival](https://remlingerfarms.com/fall-harvest-festival/)
-
-### Fall Native Plant Festival
-<p class="event-when">Sat Oct 3 · 10:00 a.m.–4:00 p.m.</p>
-<p class="event-place">Oxbow Farm and Conservation Center, 10819 Carnation-Duvall Road NE</p>
-
-Oxbow's fall plant day. Shop native trees, flowers, and shrubs from the nursery, and ask the staff about planting them.
-
-[City listing](https://www.carnationwa.gov/event/fall-native-plant-festival/)
-
-### Hjertoos House
-<p class="event-when">Sat Oct 3 · 11:00 a.m.–3:00 p.m.</p>
-<p class="event-place">31523 NE 40th St</p>
-
-The Tolt Historical Society opens the house on Saturdays from April through October. There is no charge. Later Saturdays in this stretch are October 10, 17, 24, and 31. It is just off the road to MacDonald Park.
-
-[Tolt Historical Society](https://tolthistoricalsociety.org/)
 
 ### KidsQuest: Creative Circuits
 <p class="event-when">Tue Oct 6 · 4:15–5:15 p.m.</p>

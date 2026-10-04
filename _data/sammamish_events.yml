@@ -1,22 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Evans Meadow Restoration"
-  setting: "Outdoor"
-  cost: "Free"
-  signup: true
-  start: "2026-10-03T11:00:00-07:00"
-  end: "2026-10-03T14:00:00-07:00"
-  place: "Evans Creek Preserve"
-  same_as: "https://www.sammamish.us/news/events/events/volunteer-opportunities/10-03-evan-s-meadow-restoration/"
-- name: "STEM Saturday: Codebreaking with Mathematics"
-  cost: "Free"
-  setting: "Indoor"
-  ages: "Kids"
-  start: "2026-10-03T14:00:00-07:00"
-  end: "2026-10-03T16:00:00-07:00"
-  place: "Sammamish Library, 825 228th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/events/6a76b561e30fe4845967de60"
 - name: "Sammamish LGBTQ+ Youth Group"
   cost: "Free"
   setting: "Indoor"

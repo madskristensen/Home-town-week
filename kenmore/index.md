@@ -70,6 +70,14 @@ A free workshop on animal tracks. The group meets at the Environmental Education
 
 [Tracking Basics](https://www.finnhill.org/event-details-registration/tracking-basics-learning-by-looking)
 
+### Family Friendly Karaoke
+<p class="event-when">Fri Nov 13 · 6:30–8:00 p.m.</p>
+<p class="event-place">Northlake Lutheran Church, 6620 NE 185th Street</p>
+
+IMAGINE hosts this on the second Friday. All ages. Sing, or stay and cheer. Free.
+
+[Family karaoke](https://findkenmore.org/event/imagine-presents-family-friendly-karaoke-5/)
+
 ### Winterfest
 <p class="event-when">Sat Dec 5 · 11:00 a.m.–3:00 p.m.</p>
 <p class="event-place">Kenmore City Hall, 18120 68th Ave NE, and the Hangar, 6728 NE 181st St</p>
@@ -77,3 +85,11 @@ A free workshop on animal tracks. The group meets at the Environmental Education
 A free city craft market for families at City Hall and the Hangar, with local makers and pop-up shops.
 
 [Winterfest](https://www.kenmorewa.gov/our-city/special-events/winterfest)
+
+### Family Friendly Karaoke
+<p class="event-when">Fri Dec 11 · 6:30–8:00 p.m.</p>
+<p class="event-place">Northlake Lutheran Church, 6620 NE 185th Street</p>
+
+IMAGINE hosts this on the second Friday. All ages. Sing, or stay and cheer. Free.
+
+[Family karaoke](https://findkenmore.org/event/imagine-presents-family-friendly-karaoke-6/)

@@ -4,57 +4,8 @@ title: Redmond
 city: redmond
 state: wa
 description: Upcoming family events in Redmond on the Eastside.
-hook: Saturday is flapjacks, the farm, and a youth cross-country meet. October 17 is the Farrel-McWhirter harvest festival and a pup parade at Redmond Town Center.
+hook: Sunday is the last day of the Red Barn Farm festival. Saturday is the Bigfoot Kids' Book Festival and the Saturday market. October 17 is the Farrel-McWhirter harvest festival and a pup parade at Redmond Town Center.
 ---
-
-### Redmond Saturday Market
-<p class="event-when">Sat Oct 3 · 9:00 a.m.–2:00 p.m.</p>
-<p class="event-place">9900 Willows Rd NE</p>
-
-{% include event-photo.html
-   src="/assets/images/redmond/saturday-market.webp"
-   alt="White vendor tents along a tree-lined path at Redmond Saturday Market."
-   credit="Photo: Redmond Saturday Market."
-   source="http://www.redmondsaturdaymarket.org/"
-   license="organizer" %}
-
-Season runs through Oct 31. The entertainment calendar names Elias Kauhane from 11:00 a.m. to 1:00 p.m. The homepage's "this week" line says Preston Lee & Friends and is undated. Use the calendar.  
-[Market calendar](http://redmondsaturdaymarket.org/Calendar.cshtml) · [redmondsaturdaymarket.org](http://www.redmondsaturdaymarket.org/)
-
-### Exotics at Redmond Town Center
-<p class="event-when">Sat Oct 3 · 9:00–11:00 a.m.</p>
-<p class="event-place">Redmond Town Center, 7525 166th Ave NE</p>
-
-Weekly exotic/rare car gathering (weather dependent). Free to watch.  
-[Experience Redmond](https://experienceredmond.com/event/exotics-at-rtc/2026-10-03/)
-
-### Redmond Youth Cross Country Club Meet
-<p class="event-when">Sat Oct 3 · 9:00 a.m.–12:00 p.m.</p>
-<p class="event-place">Hartman Park, 17300 NE 104th St</p>
-
-{% include event-photo.html
-   src="/assets/images/redmond/hartman-park.webp"
-   alt="A ballfield and backstop at Hartman Park in Redmond."
-   credit="Photo: HominyGrits007, CC BY-SA 4.0"
-   source="https://commons.wikimedia.org/wiki/File:Hartman_Park_Ballfield.jpg" %}
-
-A youth cross country club meet at Hartman Park.
-
-[City calendar](https://www.redmond.gov/calendar.aspx?EID=3556)
-
-### 2nd Annual Flapjacks & Flannel Breakfast
-<p class="event-when">Sat Oct 3 · 9:30 a.m.–12:00 p.m.</p>
-<p class="event-place">Redmond Senior & Community Center, 8703 160th Ave NE</p>
-
-{% include event-photo.html
-   src="/assets/images/redmond/senior-center.webp"
-   alt="The east entry of the Redmond Senior and Community Center, beside a bright geometric art wall."
-   credit="Photo: City of Redmond"
-   source="https://www.redmond.gov/ImageRepository/Document?documentID=24797"
-   license="organizer" %}
-
-Pancake breakfast 9:30–10:30 a.m., then snacks, games, and crafts. Wear flannel for a raffle entry. Registration required (Amilia about $10–$12).  
-[City calendar](https://www.redmond.gov/Calendar.aspx?EID=3538) · [Register on Amilia](https://app.amilia.com/store/en/city-of-redmond/shop/activities/7027191)
 
 ### Red Barn Farm Fall Festival
 <p class="event-when">Sat Oct 3 and Sun Oct 4 · 10:00 a.m.–4:00 p.m.</p>
@@ -62,27 +13,6 @@ Pancake breakfast 9:30–10:30 a.m., then snacks, games, and crafts. Wear flanne
 
 8th annual fall festival. Petting zoo, train, and crafts. Tickets are booked through the farm.  
 [Red Barn Farm](https://redbarnfarm.com/) · [2026 posts](https://redbarnfarm.com/2026/)
-
-### Family Halloween Tray Workshop
-<p class="event-when">Sat Oct 3 · 2:00–4:00 p.m.</p>
-<p class="event-place">Redmond Senior & Community Center, 8703 160th Ave NE</p>
-
-Family craft. Ages 15 and up, and under 16 with a parent. $30 per project, materials included.  
-[Eventbrite](https://www.eventbrite.com/e/family-halloween-tray-workshop-tickets-2000365873175)
-
-### Basic Bicycle Maintenance for Youth
-<p class="event-when">Sat Oct 3 · 3:00–5:30 p.m.</p>
-<p class="event-place">Redmond Library, 15990 NE 85th St</p>
-
-Ages roughly 9–18. Bring a bike if you have one; limited to 10; registration required (Move Redmond partnership).  
-[KCLS event](https://kcls.bibliocommons.com/v2/events/6a9478c437716d0d1ad74c8f)
-
-### Swan Lake: Symphony of Lights
-<p class="event-when">Sat Oct 3 · 7:00 p.m., and Sun Oct 4 · 4:00 p.m.</p>
-<p class="event-place">Kirkland Performance Center, 350 Kirkland Ave</p>
-
-Full-length ballet with light design and illuminated costumes. Better for older kids and ballet-curious families than for preschoolers. Adult $69. Youth $59.  
-[Event page](https://www.kpcenter.org/event/swan-lake-symphony-of-lights-2026/) · [KPC calendar](https://www.kpcenter.org/get-tickets/)
 
 ### Seattle Miles for Melanoma 5K
 <p class="event-when">Sun Oct 4 · Race 9:00 a.m.</p>
@@ -327,6 +257,14 @@ A free evening of trick-or-treating, games, and community fun. The city's fall n
 
 [Focus, Fall 2026](https://www.redmond.gov/2642/Focus---Fall-2026)
 
+### Green Redmond Day
+<p class="event-when">Sat Oct 31 · 9:00 a.m.–12:00 p.m.</p>
+<p class="event-place">Smith Woods, 176th Avenue NE and NE 124th Street</p>
+
+A community morning planting native trees and shrubs with the Green Redmond Partnership. Free.
+
+[Green Redmond Day](https://www.redmond.gov/calendar.aspx?EID=3542)
+
 ### Day of the Dead
 <p class="event-when">Mon Nov 2 · 5:00–7:00 p.m.</p>
 <p class="event-place">Redmond Senior & Community Center, 8703 160th Ave NE</p>
@@ -367,6 +305,14 @@ A free pumpkin drop-in at Farrel-McWhirter Park, 10:00 a.m. to 2:00 p.m. Registe
 
 [Pumpkin Drop](https://www.redmond.gov/register)
 
+### Kids Superhero Adventure Day
+<p class="event-when">Sat Nov 21 · 10:00 a.m.–12:00 p.m.</p>
+<p class="event-place">Redmond Senior & Community Center, 8703 160th Ave NE</p>
+
+Games, crafts, and a quest for ages 4 to 10, each registered with a parent or guardian. Costumes are welcome, and snacks are included. Registration is $42.50 for Redmond residents and $51 for everyone else, for one child and one adult. A sibling needs a separate registration.
+
+[Register](https://app.amilia.com/store/en/city-of-redmond/shop/activities/7062544)
+
 ### Redmond Lights
 <p class="event-when">Sat Dec 5 · 4:00–8:00 p.m.</p>
 <p class="event-place">Downtown Park, 16101 Redmond Way</p>
@@ -374,3 +320,11 @@ A free pumpkin drop-in at Farrel-McWhirter Park, 10:00 a.m. to 2:00 p.m. Registe
 A Redmond Lights kickoff for families at Downtown Park, with free crafts, light art, music, and snowfall. The night also has a luminary trail, a family lights promenade, and a kids light fashion show. Light art in the park continues through Jan 4.
 
 [Redmond Lights](https://www.redmond.gov/1139/Redmond-Lights)
+
+### Solstice at the Farm
+<p class="event-when">Mon Dec 21 · 5:00–8:00 p.m.</p>
+<p class="event-place">Farrel-McWhirter Park, 19545 Redmond Road</p>
+
+An all-ages evening at the farm on the longest night of the year. The visit includes a luminary trail, live music in the barn, crafts, a hot drink, and dessert. Children under 8 are free. Registration is $15 for Redmond residents and $18 for everyone else. Dress for the weather. Most of it is outdoors.
+
+[Register](https://www.redmond.gov/calendar.aspx?EID=3565)

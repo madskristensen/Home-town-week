@@ -4,7 +4,7 @@ title: Maple Valley
 city: maple-valley
 state: wa
 description: Upcoming family events in Maple Valley and Covington on the Eastside.
-hook: Saturday is the farmers market, a youth play festival, and Covington's Family Fall Fest. Sunday is a daylight walk at the Haunted Forest. Oct 17 is the Zombie Dash at Lake Wilderness.
+hook: The farmers market runs Saturdays through Oct 31. Sunday is a daylight walk at the Haunted Forest. Oct 17 is the Zombie Dash at Lake Wilderness.
 ---
 
 ### Maple Valley Farmers Market
@@ -14,46 +14,6 @@ hook: Saturday is the farmers market, a youth play festival, and Covington's Fam
 The Saturday market, open each Saturday from May 2 through Oct 31.
 
 [Maple Valley Farmers Market](https://www.maplevalleyfarmersmarket.com/)
-
-### Historical Society Museum
-<p class="event-when">Sat Oct 3 · 10:00 a.m.–2:00 p.m.</p>
-<p class="event-place">Maple Valley Historical Society Museum, 22024 SE 248th St, Maple Valley</p>
-
-The museums are open the first and third Saturday of the month. Admission is always free. The next open Saturday after this one is Oct 17.
-
-[Historical Society](https://www.maplevalleyhistorical.com/upcoming-events)
-
-### Saturday Family Story Time
-<p class="event-when">Sat Oct 3 · 11:00 a.m.–12:00 p.m.</p>
-<p class="event-place">Covington Library, 27100 164th Ave SE, Covington</p>
-
-Stories, songs, and movement, then bubbles and play. All ages, with an adult. The library skips this story time on Oct 31, Nov 7, and Nov 28. No registration.
-
-[Saturday Family Story Time](https://kcls.bibliocommons.com/events/6a5a99a50e562e28009a9915)
-
-### Youth Short Play Festival
-<p class="event-when">Sat Oct 3 · 12:00–2:30 p.m.</p>
-<p class="event-place">Maple Valley Creative Arts Center, 23220 Maple Valley Black Diamond Rd SE, Ste 15, Maple Valley</p>
-
-Seven short plays written by local youth and performed by local actors. Tickets are $5, and registration is required. The actor call is at 12:15 p.m.
-
-[Youth Short Play Festival](https://mvcac.clubexpress.com/content.aspx?page_id=4091&club_id=181069&item_id=2756096)
-
-### Family Fall Fest
-<p class="event-when">Sat Oct 3 · 12:00–3:00 p.m.</p>
-<p class="event-place">Covington Town Center Lawn, 17070 SE Wax Rd, Covington</p>
-
-Covington's fall party on the town center lawn, with yard games, inflatables, train rides, music, and crafts. Food trucks will be there.
-
-[Covington events](https://www.covingtonwa.gov/events/index.php)
-
-### Chess Club
-<p class="event-when">Sat Oct 3 · 2:30–4:30 p.m.</p>
-<p class="event-place">Covington Library, 27100 164th Ave SE, Covington</p>
-
-Play and practice with the chess club volunteers. Ages 5 and older, and ages 7 and younger stay with an adult. Also Sat Oct 10, same hours. No registration.
-
-[Chess Club](https://kcls.bibliocommons.com/events/69e2b7b6deee9abd8ee82147)
 
 ### Haunted Forest Family Walk
 <p class="event-when">Sundays Oct 4, Oct 11, Oct 18, and Oct 25 · 12:00–3:00 p.m.</p>

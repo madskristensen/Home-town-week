@@ -4,7 +4,7 @@ title: Renton
 city: renton
 state: wa
 description: Upcoming family events in Renton on the Eastside.
-hook: Saturday is Lucha Libro at the downtown library, with shows at noon and 5:00 p.m. Noises Off is on at Renton Civic Theatre through Oct 18, for ages 10 and up.
+hook: Saturday is the Cedar River Salmon Festival, with salmon viewing at the park Saturday and Sunday. Noises Off is on at Renton Civic Theatre through Oct 18, for ages 10 and up.
 ---
 
 ### Noises Off
@@ -14,46 +14,6 @@ hook: Saturday is Lucha Libro at the downtown library, with shows at noon and 5:
 Michael Frayn's backstage farce. Opening night is Fri Oct 2, a pay-what-you-can night is Mon Oct 12, and closing night is Sun Oct 18. Recommended for ages 10 and up. The humor includes innuendo, fast-paced chaos, and adult misunderstandings. No explicit content. The comedy is aimed at older kids, teens, and adults who can follow the farce.
 
 [Noises Off](https://www.rentoncivictheatre.org/shows/noises-off)
-
-### Renton parkrun
-<p class="event-when">Sat Oct 3 · 9:00 a.m.</p>
-<p class="event-place">Cedar River Trail trailhead by the I-405 overpass, Renton</p>
-
-A free weekly 5k you can walk, jog, or run. It starts every Saturday at 9:00 a.m. Register once before your first visit, and bring the barcode from that registration.
-
-[Renton parkrun](https://www.parkrun.us/renton/)
-
-### Cedar River Salmon Journey at the Library
-<p class="event-when">Sat Oct 3 · 10:00 a.m.–2:00 p.m.</p>
-<p class="event-place">Renton Library, 100 Mill Avenue S</p>
-
-Seattle Aquarium naturalists are at the library with the Cedar River salmon story. The posted hours run 10:00 a.m. to 2:00 p.m.
-
-[Cedar River Salmon Journey at the Library](https://www.seattleaquarium.org/explore-the-aquarium/programs/cedar-river-salmon-journey/)
-
-### Cedar River Salmon Journey at Cedar River Park
-<p class="event-when">Sat Oct 3 · 10:00 a.m.–2:00 p.m.</p>
-<p class="event-place">Cedar River Park, Renton</p>
-
-Seattle Aquarium naturalists are stationed at Cedar River Park. The posted hours run 10:00 a.m. to 2:00 p.m.
-
-[Cedar River Salmon Journey at Cedar River Park](https://www.seattleaquarium.org/explore-the-aquarium/programs/cedar-river-salmon-journey/)
-
-### Lucha Libro
-<p class="event-when">Sat Oct 3 · noon, 2:00 p.m., and 5:00 p.m.</p>
-<p class="event-place">Renton Library, 100 Mill Avenue S</p>
-
-Wrestlers and books share the downtown library for a free all-ages Saturday. Lucha Libro shows are at noon and 5:00 p.m., Mariachi Monarca plays at 2:00 p.m., and the afternoon also has music, crafts, and coloring. No registration.
-
-[Lucha Libro](https://kcls.bibliocommons.com/events/6aa1e4e84b3b060030829c8b)
-
-### Community Ballet and Jazz for Young Dancers
-<p class="event-when">Sat Oct 3 · 1:00–3:00 p.m.</p>
-<p class="event-place">Renton Highlands Library, 2801 NE 10th Street</p>
-
-An introduction to ballet and jazz for young dancers, with age-appropriate movement. For kids ages 6 to 8.
-
-[Ballet and jazz](https://kcls.bibliocommons.com/v2/events/6ab31be0da318a10e6360eb8)
 
 ### ASL Story Time
 <p class="event-when">Sun Oct 4 · 11:15 a.m.–12:15 p.m.</p>
@@ -132,6 +92,14 @@ Stories, music, and rhymes in Spanish for young children. No registration.
 The Environmental Science Center reads a story and leads a hands-on salmon activity, then steps outside with naturalists to watch salmon in the Cedar River.
 
 [Salmon Stories and Science](https://kcls.bibliocommons.com/v2/events/6aa0a274a3fb9722897b2737)
+
+### Vietnamese Story Time
+<p class="event-when">Fri Oct 9 · 4:00–5:00 p.m.</p>
+<p class="event-place">Renton Highlands Library, 2801 NE 10th Street</p>
+
+Stories, music, and rhymes in Vietnamese for families. All ages, with an adult. No registration.
+
+[Vietnamese Story Time](https://kcls.bibliocommons.com/events/6a46e315c52cdc3600ee7851)
 
 ### Cedar River Salmon Journey at Cedar River Park
 <p class="event-when">Sat Oct 10 · 10:00 a.m.–12:00 p.m.</p>

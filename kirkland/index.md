@@ -4,59 +4,8 @@ title: Kirkland
 city: kirkland
 state: wa
 description: Upcoming family events in Kirkland on the Eastside.
-hook: Saturday is a free harvest festival at Juanita Beach, with family math at Kingsgate that morning, and Swan Lake lights up the Performance Center that night and Sunday. Studio East opens Young Frankenstein on October 30.
+hook: Sunday is a free ranger walk at Juanita Bay Park. Saturday, Oct 10 is a free Halloween costume swap. Studio East opens Young Frankenstein on October 30.
 ---
-
-### Harvest Festival
-<p class="event-when">Sat Oct 3 · 11:00 a.m.–4:00 p.m.</p>
-<p class="event-place">Juanita Beach Park, north side, 9703 NE Juanita Dr</p>
-
-Sixth annual, and free. Craft and food vendors, food trucks, contests, a cornhole tournament, pony rides, and a kids area with games and crafts. Stage times posted by the city:
-
-- 11:30 a.m. 24 Madison
-- 1:45 p.m. The Silverbacks
-- 3:00 p.m. School of Rock Bellevue
-
-Bring a non-perishable food donation if you can. Parking is limited. Bike valet is complimentary, and a city shuttle runs from the North Kirkland Community Center. Vendor applications are closed. Volunteers 16 and older can still sign up.  
-[Harvest Festival](https://www.kirklandwa.gov/Whats-Happening/Community-Events/Parks-and-Community-Services/Kirklands-Harvest-Festival)
-
-### Try Hockey Free
-<p class="event-when">Sat Oct 3 · 11:15 a.m.</p>
-<p class="event-place">Sno-King Kirkland, 14326 124th Ave NE</p>
-
-A free first time on the ice for ages 4 to 17. Coaches are out there, and kids do not need to have skated before. Register ahead. Sessions fill, and Sno-King asks registered families to answer an attendance survey about a week before.
-
-[Try Hockey Free](https://snokinghockey.com/club/tryhockeyfree)
-
-### SUMM Family Math Fun
-<p class="event-when">Sat Oct 3 · 11:30 a.m.–1:00 p.m.</p>
-<p class="event-place">Kingsgate Library, 12315 NE 143rd St</p>
-
-Free play-based math for ages 3 to 10 with a parent or caregiver. Games, a short circle time, and an allergy-friendly snack. Register online or at the information desk. The same hour is also on Sat Oct 10.  
-[Family Math Fun](https://kcls.bibliocommons.com/v2/events/6a7f4c9b4027d701ebc45c62)
-
-### Reading with Rover
-<p class="event-when">Sat Oct 3 · 1:00–2:00 p.m.</p>
-<p class="event-place">Kingsgate Library, 12315 NE 143rd St</p>
-
-School-age kids (about ages 6 to 11) read to a therapy dog in 15-minute slots at 1:00, 1:15, 1:30, and 1:45. Please register.
-
-[Reading with Rover](https://kcls.bibliocommons.com/events/6a99d77b36204e08fbb96aa1)
-
-### Hispanic Heritage Celebration
-<p class="event-when">Sat Oct 3 · 2:00–4:00 p.m.</p>
-<p class="event-place">The Village at Totem Lake, 11901 NE Village Plaza</p>
-
-Mariachi Seattle at 2:00 p.m., Santana Charro Bros. at 3:00 p.m., and Joyas Mestizas at 4:00 p.m. There are also flower-bracelet and magnet crafts, and face painting.
-
-[Hispanic Heritage Celebration](https://thevillageattotemlake.com/events/hispanic-heritage-celebration)
-
-### Swan Lake: Symphony of Lights
-<p class="event-when">Sat Oct 3 · 7:00 p.m., and Sun Oct 4 · 4:00 p.m.</p>
-<p class="event-place">Kirkland Performance Center, 350 Kirkland Ave</p>
-
-Full-length ballet with light design and illuminated costumes. Better for older kids and ballet-curious families than for preschoolers. Tickets are on sale.  
-[Swan Lake](https://www.kpcenter.org/event/swan-lake-symphony-of-lights-2026/) · [KPC calendar](https://www.kpcenter.org/get-tickets/)
 
 ### Juanita Bay Interpretive Tour
 <p class="event-when">Sun Oct 4 · 1:00–2:00 p.m.</p>
