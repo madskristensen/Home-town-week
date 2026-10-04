@@ -300,6 +300,10 @@ def main():
             if blocks:
                 add(errors, rel, "404 should not emit JSON-LD")
             continue
+        if rel in ("subscribed/index.html", "confirmed/index.html"):
+            if blocks:
+                add(errors, rel, "newsletter result page should not emit JSON-LD")
+            continue
         if rel == "font-preview.html":
             if blocks:
                 add(errors, rel, "font preview should not emit JSON-LD")
