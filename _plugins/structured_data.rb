@@ -74,26 +74,29 @@ module EastsideCalendar
       EventCalendar.absolute_url(site, value.start_with?("/") ? value : "/#{value}")
     end
 
-    # Rich results and feeds use a sized AVIF file. The card template
-    # still receives the source path and builds its own srcset.
+    # Rich results and feeds use a fixed AVIF name. Cards are 640.
+    # A city hero is 1200. The card template does not read this.
     def avif_source(site, path)
       raw = path.to_s.strip
       return raw if raw.empty? || raw.match?(%r{\Ahttps?://}i)
 
       file = raw.split("/").last.to_s
       stem = file.sub(/\.[A-Za-z0-9]+\z/, "")
-      folder = raw.split("/")[-2].to_s
-      return raw if folder.empty? || stem.empty?
+      return raw if stem.empty?
 
-      entry = site.data.dig("image_variants", folder, stem)
-      return raw unless entry.is_a?(Hash)
-
-      widths = Array(entry["avif"]).map { |width| width.to_i }.select(&:positive?)
-      return raw if widths.empty?
-
-      pick = widths.select { |width| width <= 1200 }.max || widths.max
+      width = hero_path?(site, raw) ? 1200 : 640
       base = raw.sub(%r{[^/]+\z}, "")
-      "#{base}#{stem}-#{pick}.avif"
+      "#{base}#{stem}-#{width}.avif"
+    end
+
+    def hero_path?(site, path)
+      target = path.to_s.sub(%r{\A/}, "")
+      Array(site.data["cities"]).any? do |city|
+        next false unless city.is_a?(Hash)
+
+        hero = city.dig("hero", "image").to_s.sub(%r{\A/}, "")
+        !hero.empty? && hero == target
+      end
     end
 
     def build(page)

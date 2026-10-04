@@ -16,8 +16,7 @@
        credit=listing.credit
        source=listing.image_source
        loading="lazy"
-       sizes="(min-width: 42rem) 18rem, calc(100vw - 4.5rem)"
-       max="640" -%}
+       sizes="(min-width: 42rem) 18rem, calc(100vw - 4.5rem)" -%}
   {%- endif -%}
   <p class="camp-name-line"><a href="{{ listing_url }}" rel="sponsored noopener">{{ listing_name | escape }}</a></p>
   {%- assign listing_meta = listing.meta | append: "" | strip -%}

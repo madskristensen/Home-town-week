@@ -1,99 +1,34 @@
 {%- comment -%}
-  Picture with an AVIF srcset and a JPEG fallback on the img.
-  Widths come from _data/image_variants.yml, written by
-  .github/scripts/resize_images.py. If that file is missing, or this
-  image has no entry, the tag is the original file alone. Never point
-  srcset at a width that is not listed.
-
-  Split on the full filename, not the stem. A stem that also appears
-  in a parent folder (lake-oswego/lake.webp) would otherwise drop
-  that folder. The variant entry is the parent folder plus the
-  filename. For a pool photo that is hubs/fall/orchard.webp, that
-  folder is fall.
+  Fixed names, no manifest. A card is name-400.avif, name-640.avif,
+  and name-640.jpg. Pass hero=1 for a city hero, which adds
+  name-800.avif, name-1200.avif, and name-1600.avif.
 {%- endcomment -%}
 {%- assign img_file = include.src | split: "/" | last -%}
 {%- assign img_stem = img_file | split: "." | first -%}
 {%- assign img_base = include.src | split: img_file | first -%}
-{%- assign img_sizes = include.sizes | default: "(min-width: 47rem) 44rem, calc(100vw - 3rem)" -%}
-{%- assign img_dir = "" -%}
-{%- assign base_bits = img_base | split: "/" -%}
-{%- for bit in base_bits -%}
-  {%- if bit.size > 0 -%}
-    {%- assign img_dir = bit -%}
-  {%- endif -%}
-{%- endfor -%}
-{%- assign img_group = nil -%}
-{%- if site.data.image_variants -%}
-  {%- assign img_group = site.data.image_variants[img_dir] -%}
-{%- endif -%}
-{%- assign img_entry = nil -%}
-{%- if img_group -%}
-  {%- assign img_entry = img_group[img_stem] -%}
-{%- endif -%}
-{%- assign img_w = 1600 -%}
-{%- assign img_h = 900 -%}
-{%- if img_entry.width -%}
-  {%- assign img_w = img_entry.width -%}
-  {%- assign img_h = img_entry.height -%}
-{%- endif -%}
-{%- if include.width -%}
-  {%- assign img_w = include.width -%}
-  {%- assign img_h = include.height -%}
-{%- endif -%}
-{%- assign img_src = include.src -%}
-{%- if img_entry.fallback -%}
-  {%- assign img_src = img_base | append: img_stem | append: "-" | append: img_entry.fallback | append: ".jpg" -%}
-{%- endif -%}
+{%- assign img_sizes = include.sizes | default: "20rem" -%}
+{%- assign img_w = include.width | append: "" | strip -%}
+{%- assign img_h = include.height | append: "" | strip -%}
+{%- if img_w.size == 0 -%}{%- assign img_w = "1600" -%}{%- endif -%}
+{%- if img_h.size == 0 -%}{%- assign img_h = "900" -%}{%- endif -%}
 {%- assign img_title = include.title | append: "" -%}
 {%- assign img_loading = include.loading | append: "" -%}
 {%- assign img_priority = include.priority | append: "" -%}
-{%- assign img_cap = include.max | plus: 0 -%}
-{%- assign img_lean = include.lean | append: "" | strip -%}
-{%- capture avif_widths -%}
-{%- if img_entry -%}
-{%- for w in img_entry.avif -%}
-{%- assign wnum = w | plus: 0 -%}
-{%- if img_cap == 0 or wnum <= img_cap -%}{{ w }} {% endif -%}
-{%- endfor -%}
+{%- assign img_400 = img_base | append: img_stem | append: "-400.avif" | relative_url -%}
+{%- assign img_640 = img_base | append: img_stem | append: "-640.avif" | relative_url -%}
+{%- assign img_jpg = img_base | append: img_stem | append: "-640.jpg" | relative_url -%}
+{%- if include.hero == "1" -%}
+{%- capture img_srcset -%}{{ img_400 }} 400w, {{ img_640 }} 640w, {{ img_base | append: img_stem | append: "-800.avif" | relative_url }} 800w, {{ img_base | append: img_stem | append: "-1200.avif" | relative_url }} 1200w, {{ img_base | append: img_stem | append: "-1600.avif" | relative_url }} 1600w{%- endcapture -%}
+{%- else -%}
+{%- capture img_srcset -%}{{ img_400 }} 400w, {{ img_640 }} 640w{%- endcapture -%}
 {%- endif -%}
-{%- endcapture -%}
-{%- assign avif_widths = avif_widths | strip | split: " " -%}
-{%- capture webp_widths -%}
-{%- if img_entry -%}
-{%- for w in img_entry.webp -%}
-{%- assign wnum = w | plus: 0 -%}
-{%- if img_cap == 0 or wnum <= img_cap -%}{{ w }} {% endif -%}
-{%- endfor -%}
-{%- endif -%}
-{%- endcapture -%}
-{%- assign webp_widths = webp_widths | strip | split: " " -%}
-{%- capture jpeg_widths -%}
-{%- if img_entry -%}
-{%- for w in img_entry.jpeg -%}
-{%- assign wnum = w | plus: 0 -%}
-{%- if img_cap == 0 or wnum <= img_cap -%}{{ w }} {% endif -%}
-{%- endfor -%}
-{%- endif -%}
-{%- endcapture -%}
-{%- assign jpeg_widths = jpeg_widths | strip | split: " " -%}
 {%- if include.preload -%}
-{%- if avif_widths.size > 0 and avif_widths.first.size > 0 -%}
-<link rel="preload" as="image" type="image/avif" fetchpriority="high" imagesizes="{{ img_sizes }}" imagesrcset="{%- for w in avif_widths -%}{{ img_base | append: img_stem | append: "-" | append: w | append: ".avif" | relative_url }} {{ w }}w{% unless forloop.last %}, {% endunless %}{%- endfor -%}">
-{%- endif -%}
+<link rel="preload" as="image" type="image/avif" fetchpriority="high" imagesizes="{{ img_sizes }}" imagesrcset="{{ img_srcset }}">
 {%- else -%}
 <picture>
-  {%- if avif_widths.size > 0 and avif_widths.first.size > 0 %}
-  <source type="image/avif" srcset="{%- for w in avif_widths -%}{{ img_base | append: img_stem | append: "-" | append: w | append: ".avif" | relative_url }} {{ w }}w{% unless forloop.last %}, {% endunless %}{%- endfor -%}" sizes="{{ img_sizes }}">
-  {%- endif %}
-  {%- if img_lean != "1" and webp_widths.size > 0 and webp_widths.first.size > 0 %}
-  <source type="image/webp" srcset="{%- for w in webp_widths -%}{{ img_base | append: img_stem | append: "-" | append: w | append: ".webp" | relative_url }} {{ w }}w{% unless forloop.last %}, {% endunless %}{%- endfor -%}" sizes="{{ img_sizes }}">
-  {%- endif %}
+  <source type="image/avif" srcset="{{ img_srcset }}" sizes="{{ img_sizes }}">
   <img
-    src="{{ img_src | relative_url }}"
-    {%- if img_lean != "1" and jpeg_widths.size > 0 and jpeg_widths.first.size > 0 %}
-    srcset="{%- for w in jpeg_widths -%}{{ img_base | append: img_stem | append: "-" | append: w | append: ".jpg" | relative_url }} {{ w }}w{% unless forloop.last %}, {% endunless %}{%- endfor -%}"
-    sizes="{{ img_sizes }}"
-    {%- endif %}
+    src="{{ img_jpg }}"
     alt="{{ include.alt | escape }}"
     {%- if img_title.size > 0 %} title="{{ img_title | escape }}"{% endif %}
     width="{{ img_w }}"

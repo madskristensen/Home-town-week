@@ -20,14 +20,14 @@
 {%- assign preload_city = site.data.cities | where: "id", page.city | where: "state", page.state | first -%}
 {%- assign preload_src = preload_city.hero.image | append: "" | strip -%}
 {%- if preload_src.size > 0 -%}
-{%- include responsive-img.html src=preload_src sizes="(min-width: 47rem) 44rem, calc(100vw - 3rem)" preload=true -%}
+{%- include responsive-img.html src=preload_src sizes="(min-width: 47rem) 44rem, calc(100vw - 3rem)" hero="1" preload=true -%}
 {%- endif -%}
 {%- elsif page.hub_id == "this-weekend" -%}
 {%- assign preload_hub = site.data.hub_pages["this-weekend"] -%}
 {%- assign preload_event = preload_hub.sections.first.events.first -%}
 {%- assign preload_src = preload_event.image | append: "" | strip -%}
 {%- if preload_src.size > 0 -%}
-{%- include responsive-img.html src=preload_src sizes="20rem" max="640" preload=true -%}
+{%- include responsive-img.html src=preload_src sizes="20rem" preload=true -%}
 {%- endif -%}
 {%- endif -%}
 {%- include stylesheets.html -%}

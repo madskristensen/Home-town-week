@@ -13,30 +13,15 @@
 {%- if photo_sizes.size == 0 -%}{%- assign photo_sizes = "20rem" -%}{%- endif -%}
 {%- assign photo_credit = include.credit | append: "" | strip -%}
 {%- assign photo_source = include.source | append: "" | strip -%}
-{%- assign photo_width = include.width | append: "" | strip -%}
-{%- assign photo_height = include.height | append: "" | strip -%}
 <figure class="{{ photo_class }}">
-  {%- if photo_width.size > 0 and photo_height.size > 0 -%}
   {%- include responsive-img.html
        src=include.src
        alt=include.alt
-       width=photo_width
-       height=photo_height
+       width=include.width
+       height=include.height
        loading=photo_loading
        priority=include.priority
-       sizes=photo_sizes
-       max="640"
-       lean="1" -%}
-  {%- else -%}
-  {%- include responsive-img.html
-       src=include.src
-       alt=include.alt
-       loading=photo_loading
-       priority=include.priority
-       sizes=photo_sizes
-       max="640"
-       lean="1" -%}
-  {%- endif -%}
+       sizes=photo_sizes -%}
   {%- if photo_credit.size > 0 or photo_source.size > 0 -%}
   <figcaption>{%- if photo_credit.size > 0 -%}{{ include.credit }}{%- endif -%}{%- if photo_source.size > 0 -%}<a class="source" href="{{ include.source }}" rel="noopener">Source</a>{%- endif -%}</figcaption>
   {%- endif -%}

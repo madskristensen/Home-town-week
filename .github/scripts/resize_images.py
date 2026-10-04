@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""Generate responsive AVIF variants for card and hero photos.
+"""Generate the same AVIF and JPEG names for every photo.
 
-Cards render at about 20rem, so the files they need are AVIF at 400
-and 640 plus one JPEG fallback. A city hero is wider: up to 44rem, so
-those photos also get 800, 1200, and 1600, and a full-width AVIF when
-the master is some other width. The original stays in git. There is no
-WebP tier. AVIF has been Baseline "high" since January 2024, so the
-fallback is one JPEG (or the original when the master is already small).
+Every card photo gets name-400.avif, name-640.avif, and name-640.jpg.
+Every city hero gets those plus name-800.avif, name-1200.avif, and
+name-1600.avif. The pixel width matches the number in the filename,
+so a master that is already smaller is scaled up. The original stays
+in git. There is no WebP tier and no extra width for one photo.
 
 Safe to re-run. Outputs are rebuilt when the source content changes
 (sha256 of the original), not when mtime says the source is newer.
@@ -150,14 +149,19 @@ def variant_current(out, source_changed):
     return os.path.exists(out) and not source_changed
 
 
-def widths_for(path, im, heroes):
+def widths_for(path, heroes):
+    """The fixed set. Cards and heroes do not get a custom list."""
     rel = path.replace(os.sep, "/")
-    widths = [width for width in CARD_WIDTHS if width < im.width]
     if rel in heroes:
-        widths.extend(width for width in HERO_WIDTHS if width < im.width)
-        if im.width not in widths:
-            widths.append(im.width)
-    return sorted(set(widths))
+        return list(CARD_WIDTHS) + [width for width in HERO_WIDTHS if width not in CARD_WIDTHS]
+    return list(CARD_WIDTHS)
+
+
+def frame_at(im, width):
+    if width == im.width:
+        return im
+    height = max(1, round(im.height * width / im.width))
+    return im.resize((width, height), Image.LANCZOS)
 
 
 def remove_stale(path, keep_avif, keep_jpeg):
@@ -182,7 +186,7 @@ def remove_stale(path, keep_avif, keep_jpeg):
 
 
 def build(path, heroes, prev_hash=None):
-    """Return a manifest record for one original, or None to skip it."""
+    """Write the fixed set for one original. Return None when a file is missing."""
     stem, _ext = os.path.splitext(os.path.basename(path))
     if is_variant(stem):
         return None
@@ -191,7 +195,7 @@ def build(path, heroes, prev_hash=None):
         im = Image.open(path)
         im.load()
     except Exception as exc:
-        print("  skip %s: %s" % (path, exc))
+        print("  unreadable %s: %s" % (path, exc))
         return None
 
     im = im.convert("RGB")
@@ -200,58 +204,43 @@ def build(path, heroes, prev_hash=None):
     # the first run. Only a known previous hash that differs counts.
     source_changed = prev_hash is not None and prev_hash != src_hash
     out_dir = os.path.dirname(path)
-    widths = widths_for(path, im, heroes)
-    made = []
+    widths = widths_for(path, heroes)
 
     for width in widths:
         out = os.path.join(out_dir, "%s-%d.avif" % (stem, width))
-        made.append(width)
         if variant_current(out, source_changed):
             continue
-        if width == im.width:
-            frame = im
-        else:
-            height = round(im.height * width / im.width)
-            frame = im.resize((width, height), Image.LANCZOS)
         try:
-            frame.save(out, "AVIF", quality=AVIF_QUALITY)
+            frame_at(im, width).save(out, "AVIF", quality=AVIF_QUALITY)
         except Exception as exc:
-            print("  skip avif %s: %s" % (os.path.basename(out), exc))
-            break
+            print("  avif failed %s: %s" % (os.path.basename(out), exc))
+            continue
         print("  wrote %s (%dK)" % (os.path.basename(out), os.path.getsize(out) // 1024))
 
-    have = [width for width in made if os.path.exists(
-        os.path.join(out_dir, "%s-%d.avif" % (stem, width))
-    )]
-    avif_ok = bool(have) and have == made
+    jpg = os.path.join(out_dir, "%s-%d.jpg" % (stem, JPEG_FALLBACK))
+    if not variant_current(jpg, source_changed):
+        try:
+            frame_at(im, JPEG_FALLBACK).save(
+                jpg, "JPEG", quality=JPEG_QUALITY, optimize=True, progressive=True
+            )
+            print("  wrote %s (%dK)" % (os.path.basename(jpg), os.path.getsize(jpg) // 1024))
+        except Exception as exc:
+            print("  jpeg failed %s: %s" % (os.path.basename(jpg), exc))
 
-    jpeg = []
-    if JPEG_FALLBACK < im.width:
-        out = os.path.join(out_dir, "%s-%d.jpg" % (stem, JPEG_FALLBACK))
-        if not variant_current(out, source_changed):
-            height = round(im.height * JPEG_FALLBACK / im.width)
-            frame = im.resize((JPEG_FALLBACK, height), Image.LANCZOS)
-            try:
-                frame.save(
-                    out, "JPEG", quality=JPEG_QUALITY, optimize=True, progressive=True
-                )
-                print("  wrote %s (%dK)" % (
-                    os.path.basename(out), os.path.getsize(out) // 1024
-                ))
-            except Exception as exc:
-                print("  skip jpeg %s: %s" % (os.path.basename(out), exc))
-        if os.path.exists(out):
-            jpeg.append(JPEG_FALLBACK)
-
-    remove_stale(path, set(have), set(jpeg))
-    if not have and not jpeg:
+    remove_stale(path, set(widths), {JPEG_FALLBACK})
+    missing = []
+    for width in widths:
+        name = "%s-%d.avif" % (stem, width)
+        if not os.path.exists(os.path.join(out_dir, name)):
+            missing.append(name)
+    if not os.path.exists(jpg):
+        missing.append(os.path.basename(jpg))
+    if missing:
+        print("  missing %s" % ", ".join(missing))
         return None
     return {
         "width": im.width,
         "height": im.height,
-        "widths": have,
-        "avif": avif_ok,
-        "jpeg": jpeg,
         "source_hash": src_hash,
     }
 
@@ -379,11 +368,10 @@ def write_manifest(records):
     os.makedirs("_data", exist_ok=True)
     with open(DATA_FILE, "w", encoding="utf-8") as handle:
         handle.write("# Generated by .github/scripts/resize_images.py. Do not edit.\n")
-        handle.write("# widths: avif variants that exist on disk. avif: true when\n")
-        handle.write("# one exists at every width, so the template can offer an\n")
-        handle.write("# AVIF source and fall back to the JPEG otherwise.\n")
-        handle.write("# source_hash: sha256 of the original; variants rebuild when\n")
+        handle.write("# source_hash: sha256 of the original. Variants rebuild when\n")
         handle.write("# it changes, because checkout mtimes are not trustworthy.\n")
+        handle.write("# Filenames are fixed. Cards are name-400.avif, name-640.avif,\n")
+        handle.write("# and name-640.jpg. Heroes add 800, 1200, and 1600 AVIF.\n")
         for folder in sorted(nested):
             handle.write("%s:\n" % folder)
             for stem in sorted(nested[folder]):
@@ -391,19 +379,6 @@ def write_manifest(records):
                 handle.write("  %s:\n" % stem)
                 handle.write("    width: %d\n" % record["width"])
                 handle.write("    height: %d\n" % record["height"])
-                if record["jpeg"]:
-                    handle.write("    fallback: %d\n" % record["jpeg"][0])
-                handle.write("    widths:\n")
-                for width in record["widths"]:
-                    handle.write("      - %d\n" % width)
-                handle.write("    avif:\n")
-                if record["avif"]:
-                    for width in record["widths"]:
-                        handle.write("      - %d\n" % width)
-                if record["jpeg"]:
-                    handle.write("    jpeg:\n")
-                    for width in record["jpeg"]:
-                        handle.write("      - %d\n" % width)
                 handle.write("    source_hash: %s\n" % record["source_hash"])
     return len(records)
 
@@ -422,16 +397,22 @@ def main():
 
     prev = load_source_hashes(DATA_FILE)
     records = {}
+    failed = []
     print("Generating variants...")
     for path in source_files():
         rel = os.path.splitext(path.replace(os.sep, "/"))[0]
         rel = rel[len(IMAGE_ROOT) + 1:]
         folder, stem = rel.rsplit("/", 1) if "/" in rel else ("", rel)
-        # The manifest key the helper reads is the parent folder, not hubs/.
+        # The manifest key is the parent folder, not hubs/.
         key = "%s/%s" % (folder.split("/")[-1], stem)
         record = build(path, heroes, prev.get(key))
         if record:
             records[rel] = record
+        else:
+            failed.append(path)
+
+    if failed:
+        sys.exit("required variants missing for %d photo(s)" % len(failed))
 
     count = write_manifest(records)
     print("\nWrote %s with %d image(s).\n" % (DATA_FILE, count))
