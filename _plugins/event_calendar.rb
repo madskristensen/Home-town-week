@@ -442,6 +442,41 @@ module EastsideCalendar
       assigned
     end
 
+    # One card link for every event row. A webpage in same_as wins.
+    # Otherwise the link is the event's heading on its city page.
+    def card_link(same_as, city_id, name)
+      same = same_as.to_s.strip
+      if same.include?("://")
+        return { "href" => same, "external" => true }
+      end
+
+      cid = city_id.to_s.strip
+      slug = Jekyll::Utils.slugify(name.to_s)
+      href = ""
+      href = "/#{cid}/##{slug}" unless cid.empty? || slug.to_s.empty?
+      { "href" => href, "external" => false }
+    end
+
+    def stamp_card_links!(site)
+      ids = Array(site.data["cities"]).filter_map { |city| city["id"].to_s if city.is_a?(Hash) }
+      ids.each do |cid|
+        Array(site.data["#{cid}_events"]).each do |row|
+          next unless row.is_a?(Hash)
+
+          link = card_link(row["same_as"], cid, row["name"])
+          row["href"] = link["href"]
+          row["external"] = link["external"]
+        end
+      end
+      Array(site.data["worth_the_drive_events"]).each do |row|
+        next unless row.is_a?(Hash)
+
+        link = card_link(row["same_as"], "worth-the-drive", row["name"])
+        row["href"] = link["href"]
+        row["external"] = link["external"]
+      end
+    end
+
     def slugify(text)
       text.to_s
           .downcase
@@ -818,7 +853,8 @@ module EastsideCalendar
         part = link_event_place(part, city_name)
         part = mark_source_links(part)
         schema = schemas && schemas[key] && schemas[key][index]
-        cards << event_card_assigns(part, iso, info, end_iso, schema, snippet)
+        city_id = page && page.data["city"]
+        cards << event_card_assigns(part, iso, info, end_iso, schema, snippet, city_id)
       end
       [prelude + loose, cards]
     end
@@ -906,7 +942,7 @@ module EastsideCalendar
 
     # One card per event heading. card-grid.html renders event-card.html.
     # The calendar icon is a separate action, not glued to the date.
-    def event_card_assigns(part, iso = nil, info = nil, end_iso = nil, schema = nil, calendar_html = nil)
+    def event_card_assigns(part, iso = nil, info = nil, end_iso = nil, schema = nil, calendar_html = nil, city_id = nil)
       body = part.sub(/\s+\z/, "")
       fields = extract_card_fields(body)
       tags = EventLabels.html(info)
@@ -924,6 +960,10 @@ module EastsideCalendar
       assigns["end"] = end_iso.to_s unless end_iso.to_s.empty?
       extra = EventLabels.attrs(info)
       assigns["attrs"] = extra unless extra.to_s.empty?
+      same = info.is_a?(Hash) ? info["same_as"] : ""
+      link = card_link(same, city_id, fields["title"])
+      assigns["href"] = link["href"]
+      assigns["external"] = link["external"]
       if schema.is_a?(Hash)
         assigns["schema_start"] = schema["startDate"].to_s
         assigns["schema_end"] = schema["endDate"].to_s
@@ -1434,6 +1474,10 @@ module EastsideCalendar
       candidate
     end
   end
+end
+
+Jekyll::Hooks.register :site, :post_read do |site|
+  EastsideCalendar::EventCalendar.stamp_card_links!(site)
 end
 
 Jekyll::Hooks.register :pages, :post_render do |page|

@@ -716,6 +716,7 @@ module EastsideCalendar
       start_parsed = EventCalendar.parse_when(start_s)
       finish_parsed = EventCalendar.parse_when(finish_s)
       schema_finish = EventCalendar.schema_end(start_parsed, finish_parsed)
+      link = EventCalendar.card_link(same_clean, city_id, clean_name)
       {
         "name" => clean_name,
         "city" => city_name,
@@ -723,6 +724,8 @@ module EastsideCalendar
         "place" => place_name,
         "when" => when_text(start_s, finish_s),
         "same_as" => same_clean,
+        "href" => link["href"],
+        "external" => link["external"],
         "sort" => start_on ? start_on.iso8601 : "9999-99-99",
         "start_raw" => start_s.to_s,
         "end_raw" => finish_s.to_s,

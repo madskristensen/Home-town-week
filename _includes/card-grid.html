@@ -8,7 +8,7 @@
   Later eager cards are fetchpriority low so they do not compete with that image.
   A city hash sets prebuilt and already holds photo_html, place_html, and the
   other extracted fields. Hubs, weekend picks, and lights pass the event row.
-  The title link is same_as when that is a webpage. The town name links to the city.
+  href and external are set when the row is built. The town name links to the city.
 {%- endcomment -%}
 {%- assign grid_heading = include.heading | append: "" | strip -%}
 {%- assign grid_share = include.share | append: "" | strip -%}
@@ -91,36 +91,9 @@
 {%- assign card_number = event.number | append: "" | strip -%}
 {%- if card_id.size == 0 and card_number.size > 0 -%}{%- capture card_id -%}light-{{ event.id }}{%- endcapture -%}{%- endif -%}
 {%- assign card_href = event.href | append: "" | strip -%}
-{%- assign card_external = false -%}
-{%- if event.external -%}{%- assign card_external = true -%}{%- endif -%}
+{%- assign card_external = event.external -%}
 {%- assign card_sponsored = false -%}
 {%- if event.sponsored -%}{%- assign card_sponsored = true -%}{%- endif -%}
-{%- assign card_same = event.same_as | append: "" | strip -%}
-{%- if card_same.size == 0 -%}{%- assign card_same = row.same_as | append: "" | strip -%}{%- endif -%}
-{%- if card_href.size == 0 and card_same contains "://" -%}
-{%- assign card_href = card_same -%}
-{%- assign card_external = true -%}
-{%- elsif card_href.size == 0 -%}
-{%- assign card_sort = event.sort | append: "" | strip -%}
-{%- if card_sort.size == 0 -%}{%- assign card_sort = row.sort | append: "" | strip -%}{%- endif -%}
-{%- assign card_cid = event.city_id | append: "" | strip -%}
-{%- if card_cid.size == 0 -%}{%- assign card_cid = row.city_id | append: "" | strip -%}{%- endif -%}
-{%- if card_sort.size > 0 and card_cid.size > 0 -%}
-{%- capture card_href -%}/{{ card_cid }}/{%- endcapture -%}
-{%- assign card_href = card_href | strip -%}
-{%- endif -%}
-{%- endif -%}
-{%- comment -%}
-  The title is the event's own page. A link to a city page on this site
-  is only the fallback when same_as is missing. The town label stays the
-  city link.
-{%- endcomment -%}
-{%- if card_same contains "://" -%}
-{%- unless card_href contains "://" -%}
-{%- assign card_href = card_same -%}
-{%- assign card_external = true -%}
-{%- endunless -%}
-{%- endif -%}
 {%- assign card_town = "" -%}
 {%- assign card_town_href = "" -%}
 {%- if include.show_city -%}

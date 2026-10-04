@@ -267,18 +267,10 @@
       {%- endfor -%}
     {%- endif -%}
     {%- assign blurb = blurb | card_blurb -%}
-    {%- assign slug = event.name | slugify -%}
-    {%- capture event_href -%}/{{ cid }}/#{{ slug }}{%- endcapture -%}
-    {%- assign event_href = event_href | strip -%}
-    {%- assign external = false -%}
-    {%- if event.same_as contains "://" -%}
-      {%- assign event_href = event.same_as -%}
-      {%- assign external = true -%}
-    {%- endif -%}
     {%- capture town_href -%}/{{ cid }}/{%- endcapture -%}
     {%- assign town_href = town_href | strip -%}
     {%- assign card_calendar = cid | calendar_href: event -%}
-    {%- capture card_json -%}{"title":{{ event.name | jsonify }},"href":{{ event_href | jsonify }},"external":{% if external %}true{% else %}false{% endif %},"town":{{ city.name | jsonify }},"town_href":{{ town_href | jsonify }},"when":{{ when_label | jsonify }},"calendar":{{ card_calendar | jsonify }},"image":{{ photo | jsonify }},"image_alt":{{ photo_alt_text | jsonify }},"image_credit":{{ photo_credit | jsonify }},"image_source":{{ photo_source | jsonify }},"place":{{ place_label | jsonify }},"place_city":{{ city.name | jsonify }},"blurb":{{ blurb | jsonify }},"event":{{ event | jsonify }}}{%- endcapture -%}
+    {%- capture card_json -%}{"title":{{ event.name | jsonify }},"href":{{ event.href | jsonify }},"external":{{ event.external | jsonify }},"town":{{ city.name | jsonify }},"town_href":{{ town_href | jsonify }},"when":{{ when_label | jsonify }},"calendar":{{ card_calendar | jsonify }},"image":{{ photo | jsonify }},"image_alt":{{ photo_alt_text | jsonify }},"image_credit":{{ photo_credit | jsonify }},"image_source":{{ photo_source | jsonify }},"place":{{ place_label | jsonify }},"place_city":{{ city.name | jsonify }},"blurb":{{ blurb | jsonify }},"event":{{ event | jsonify }}}{%- endcapture -%}
     {%- assign home_cards = home_cards | push_card: card_json -%}
     {%- endfor -%}
   {%- include card-grid.html events=home_cards show_city=true eager=1 priority=true -%}
