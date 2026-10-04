@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """Check built pages against Google's event, article, and site markup rules.
 
-One JSON-LD graph per page. Events need name, startDate, and a Place with
-an address. Timed dates need a UTC offset. Date-only events stay dates.
-isAccessibleForFree is allowed only when the price is 0. Every event
-needs an organizer and an offer. The offer needs a source URL, InStock,
-and validFrom with an offset. Price and USD are required when a price
-is known, and omitted together when it is not. Performer is optional.
-Warnings do not fail the build. Missing required fields do.
+One JSON-LD graph per page. Events need name, startDate, endDate, and a
+Place with an address. Timed dates need a UTC offset. Date-only events
+stay dates. A timed event with no end clock ends two hours later, or on
+a later date when only that date is known. isAccessibleForFree is set
+only when the price is 0. Every event needs an organizer. An offer is
+present only for a known price: 0 for free, or the lowest number for a
+paid price, with USD, InStock, a URL, and validFrom. An unknown price
+has no offers object. Performer is optional. Warnings do not fail the
+build. Missing required fields do.
 """
 
 import json
@@ -100,11 +102,21 @@ def check_event(node, rel, index):
     elif not DATE_ONLY.search(start):
         add(errors, rel, f"{label} startDate is not a date or offset time: {start}")
     end = node.get("endDate") or ""
-    if end:
-        if TIMED.search(end) and not OFFSET.search(end):
+    if not end:
+        add(errors, rel, f"{label} missing endDate")
+    elif TIMED.search(end):
+        if not OFFSET.search(end):
             add(errors, rel, f"{label} timed endDate has no UTC offset: {end}")
-        if "T23:59:59" in end or (TIMED.search(end) and "T00:00:00" in end):
+        if "T23:59:59" in end or "T00:00:00" in end:
             add(errors, rel, f"{label} endDate uses a placeholder clock: {end}")
+        if TIMED.search(start) and end <= start:
+            add(errors, rel, f"{label} endDate is not after startDate: {end}")
+    elif not DATE_ONLY.search(end):
+        add(errors, rel, f"{label} endDate is not a date or offset time: {end}")
+    elif TIMED.search(start) and end <= start[:10]:
+        add(errors, rel, f"{label} date-only endDate is not after the start day: {end}")
+    elif DATE_ONLY.search(start) and end < start:
+        add(errors, rel, f"{label} endDate is before startDate: {end}")
     location = node.get("location") or {}
     if location.get("@type") != "Place":
         add(errors, rel, f"{label} location is not a Place")
@@ -153,35 +165,38 @@ def check_event(node, rel, index):
         elif performer.get("@type") not in ("Person", "PerformingGroup", "MusicGroup"):
             add(errors, rel, f"{label} performer type is {performer.get('@type') or 'missing'}")
     free = node.get("isAccessibleForFree")
-    offer = node.get("offers") or {}
-    if not isinstance(offer, dict) or not offer:
-        add(errors, rel, f"{label} missing offers")
-        offer = {}
-    price = offer.get("price") if isinstance(offer, dict) else None
-    has_price = "price" in offer
+    raw_offer = node.get("offers")
     if free is False:
         add(errors, rel, f"{label} sets isAccessibleForFree false")
+    if raw_offer is None:
+        if free is True:
+            add(errors, rel, f"{label} is free but has no offers")
+        return
+    if not isinstance(raw_offer, dict) or not raw_offer:
+        add(errors, rel, f"{label} offers is empty")
+        return
+    offer = raw_offer
+    price = offer.get("price")
+    has_price = "price" in offer
     if free is True and price not in (0, 0.0, "0"):
         add(errors, rel, f"{label} is free but offer price is {price!r}")
     if price in (0, 0.0, "0") and free is not True:
-        add(warnings, rel, f"{label} price is 0 without isAccessibleForFree")
-    if offer:
-        if not str(offer.get("url") or "").startswith("http"):
-            add(errors, rel, f"{label} offer url is not the source page")
-        if "InStock" not in str(offer.get("availability")):
-            add(errors, rel, f"{label} offer availability is not InStock")
-        valid_from = offer.get("validFrom") or ""
-        if not VALID_FROM.search(valid_from):
-            add(errors, rel, f"{label} offer validFrom needs an offset: {valid_from or 'missing'}")
-        elif "T00:00:00" in valid_from:
-            add(errors, rel, f"{label} offer validFrom is midnight: {valid_from}")
-        if has_price:
-            if offer.get("priceCurrency") != "USD":
-                add(errors, rel, f"{label} offer currency is not USD")
-            if not isinstance(price, (int, float)) or isinstance(price, bool):
-                add(errors, rel, f"{label} offer price is not a number: {price!r}")
-        elif offer.get("priceCurrency"):
-            add(errors, rel, f"{label} offer has a currency without a price")
+        add(errors, rel, f"{label} price is 0 without isAccessibleForFree")
+    if not str(offer.get("url") or "").startswith("http"):
+        add(errors, rel, f"{label} offer url is not the source page")
+    if "InStock" not in str(offer.get("availability")):
+        add(errors, rel, f"{label} offer availability is not InStock")
+    valid_from = offer.get("validFrom") or ""
+    if not VALID_FROM.search(valid_from):
+        add(errors, rel, f"{label} offer validFrom needs an offset: {valid_from or 'missing'}")
+    elif "T00:00:00" in valid_from:
+        add(errors, rel, f"{label} offer validFrom is midnight: {valid_from}")
+    if not has_price:
+        add(errors, rel, f"{label} offer is missing price")
+    elif offer.get("priceCurrency") != "USD":
+        add(errors, rel, f"{label} offer currency is not USD")
+    elif not isinstance(price, (int, float)) or isinstance(price, bool):
+        add(errors, rel, f"{label} offer price is not a number: {price!r}")
 
 
 def check_article(graph, rel):

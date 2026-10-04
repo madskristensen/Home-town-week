@@ -538,7 +538,7 @@ module EastsideCalendar
       node["sameAs"] = official if official && official != event_url
       performer = performer_node(event)
       node["performer"] = performer if performer
-      offer = offer_node(event, official, page.site)
+      offer = offer_node(event, event_url, page.site)
       if offer
         node["offers"] = offer
         node["isAccessibleForFree"] = true if offer["price"].to_s == "0" || offer["price"] == 0
@@ -714,27 +714,26 @@ module EastsideCalendar
       { "@type" => "Person", "name" => name }
     end
 
-    # A known price is 0 for Free or the published amount. An unknown
-    # price still gets an offer with the source URL, because a price is
-    # not required for the offer to validate.
+    # Free is 0 USD. A published price, or the low end of a range, is
+    # that number in USD. An unknown price is left off so the offer is
+    # never missing price or priceCurrency.
     def offer_node(event, url, site)
       return nil if url.nil? || url.empty?
+
+      amount = offer_amount(event["cost"])
+      return nil if amount.nil?
 
       from = valid_from(event, site)
       return nil if from.empty?
 
-      offer = {
+      {
         "@type" => "Offer",
         "url" => url,
         "availability" => "https://schema.org/InStock",
+        "price" => amount,
+        "priceCurrency" => "USD",
         "validFrom" => from
       }
-      amount = offer_amount(event["cost"])
-      unless amount.nil?
-        offer["price"] = amount
-        offer["priceCurrency"] = "USD"
-      end
-      offer
     end
 
     def valid_from(event, site)
@@ -781,13 +780,7 @@ module EastsideCalendar
       end_parsed = bound(event, :end)
       if start_parsed[:time]
         start_on = EventCalendar.format_offset_time(start_parsed)
-        end_on = nil
-        if end_parsed && end_parsed[:time] && EventCalendar.sort_key(end_parsed) > EventCalendar.sort_key(start_parsed)
-          end_on = EventCalendar.format_offset_time(end_parsed)
-        elsif end_parsed && end_parsed[:date] && end_parsed[:time].nil? && end_parsed[:date] > start_parsed[:date]
-          end_on = end_parsed[:date].iso8601
-        end
-        [start_on, end_on]
+        [start_on, timed_end(start_parsed, end_parsed)]
       else
         start_on = start_parsed[:date].iso8601
         end_on = if end_parsed && end_parsed[:date] && end_parsed[:date] >= start_parsed[:date]
@@ -797,6 +790,30 @@ module EastsideCalendar
                  end
         [start_on, end_on]
       end
+    end
+
+    # A later clock is that end. A later date with no clock stays a date.
+    # Otherwise the end is two hours after the start, in local time.
+    def timed_end(start_parsed, end_parsed)
+      if end_parsed && end_parsed[:time] && EventCalendar.sort_key(end_parsed) > EventCalendar.sort_key(start_parsed)
+        return EventCalendar.format_offset_time(end_parsed)
+      end
+      if end_parsed && end_parsed[:date] && end_parsed[:time].nil? && end_parsed[:date] > start_parsed[:date]
+        return end_parsed[:date].iso8601
+      end
+
+      EventCalendar.format_offset_time(shift_hours(start_parsed, 2))
+    end
+
+    def shift_hours(parsed, hours)
+      hour, min, sec = parsed[:time]
+      total = (hour * 3600) + (min * 60) + sec + (hours * 3600)
+      days = total.div(86_400)
+      total %= 86_400
+      {
+        date: parsed[:date] + days,
+        time: [total / 3600, (total % 3600) / 60, total % 60]
+      }
     end
 
     def bound(event, which)
