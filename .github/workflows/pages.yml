@@ -49,27 +49,16 @@ jobs:
         id: pages
         uses: actions/configure-pages@v6
 
-      - name: Fingerprint source images
-        id: images
-        run: echo "hash=$(python3 script/render-image-variants.py --fingerprint)" >> "$GITHUB_OUTPUT"
-
-      - name: Restore image variant cache
-        uses: actions/cache@v6
-        with:
-          path: .image-cache
-          key: image-variants-v1-${{ steps.images.outputs.hash }}
-          restore-keys: |
-            image-variants-v1-
-
-      - name: Generate image variants
+      - name: Use committed image variants
         run: |
-          # Encode only on a cache miss. A failed width is omitted from the
-          # manifest and the page keeps the original file. The build continues.
-          if python3 script/render-image-variants.py --check-cache; then
-            python3 script/render-image-variants.py --from-cache
+          # Optimize images commits AVIF widths and the JPEG fallback.
+          # A photo that landed in this push before that job finished is
+          # encoded here so the deploy still has sized files.
+          python3 -m pip install --quiet Pillow pillow-avif-plugin
+          if python3 script/optimize-images.py --check; then
+            echo "Committed AVIF variants match the source photos."
           else
-            python3 -m pip install --quiet Pillow pillow-avif-plugin
-            python3 script/render-image-variants.py
+            python3 script/optimize-images.py --missing
           fi
 
       - name: Render the home share image

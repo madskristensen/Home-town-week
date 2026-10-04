@@ -15,24 +15,17 @@ assets/images/share/
 _data/share_manifest.yml
 .image-cache/
 node_modules
-_data/image_variants.yml
 _data/build.yml
 # Fingerprinted stylesheets written by script/fingerprint-css.py.
 /assets/css/*.css
 /_data/css.yml
 /_data/css_inline.json
-assets/images/**/*-400.avif
-assets/images/**/*-640.avif
-assets/images/**/*-640.webp
-assets/images/**/*-640.jpg
+# WebP widths and the extra JPEG widths are build leftovers. The
+# committed set is AVIF plus the one JPEG fallback from Optimize images.
 assets/images/**/*-400.webp
-assets/images/**/*-400.jpg
-assets/images/**/*-800.avif
+assets/images/**/*-640.webp
 assets/images/**/*-800.webp
-assets/images/**/*-800.jpg
-assets/images/**/*-1200.avif
 assets/images/**/*-1200.webp
 assets/images/**/*-1200.jpg
-assets/images/**/*-1600.avif
 assets/images/**/*-1600.webp
 assets/images/**/*-1600.jpg

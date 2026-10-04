@@ -74,6 +74,28 @@ module EastsideCalendar
       EventCalendar.absolute_url(site, value.start_with?("/") ? value : "/#{value}")
     end
 
+    # Rich results and feeds use a sized AVIF file. The card template
+    # still receives the source path and builds its own srcset.
+    def avif_source(site, path)
+      raw = path.to_s.strip
+      return raw if raw.empty? || raw.match?(%r{\Ahttps?://}i)
+
+      file = raw.split("/").last.to_s
+      stem = file.sub(/\.[A-Za-z0-9]+\z/, "")
+      folder = raw.split("/")[-2].to_s
+      return raw if folder.empty? || stem.empty?
+
+      entry = site.data.dig("image_variants", folder, stem)
+      return raw unless entry.is_a?(Hash)
+
+      widths = Array(entry["avif"]).map { |width| width.to_i }.select(&:positive?)
+      return raw if widths.empty?
+
+      pick = widths.select { |width| width <= 1200 }.max || widths.max
+      base = raw.sub(%r{[^/]+\z}, "")
+      "#{base}#{stem}-#{pick}.avif"
+    end
+
     def build(page)
       site = page.site
       root = origin(site)
@@ -308,7 +330,7 @@ module EastsideCalendar
         return abs(page.site, found) unless found.nil? || found.empty?
       end
       image = page.data["image"].to_s
-      return abs(page.site, image) unless image.empty?
+      return abs(page.site, avif_source(page.site, image)) unless image.empty?
       return abs(page.site, page.site.config["image"]) if page.url == "/"
 
       hero = nil
@@ -316,7 +338,7 @@ module EastsideCalendar
         row = Array(page.site.data["cities"]).find { |item| item.is_a?(Hash) && item["id"].to_s == page.data["city"].to_s }
         hero = row && row.dig("hero", "image").to_s
       end
-      return abs(page.site, hero) unless hero.nil? || hero.empty?
+      return abs(page.site, avif_source(page.site, hero)) unless hero.nil? || hero.empty?
 
       ""
     end
@@ -403,7 +425,7 @@ module EastsideCalendar
           source = place["source"].to_s
           item["sameAs"] = source if source.match?(%r{\Ahttps://})
           image = place["image"].to_s
-          item["image"] = abs(page.site, image) unless image.empty?
+          item["image"] = abs(page.site, avif_source(page.site, image)) unless image.empty?
           {
             "@type" => "ListItem",
             "position" => index + 1,
@@ -530,7 +552,7 @@ module EastsideCalendar
       node["description"] = short_description(description) unless description.empty?
       image = event["image"].to_s
       image = extra["image"].to_s if image.empty?
-      node["image"] = [abs(page.site, image)] unless image.empty?
+      node["image"] = [abs(page.site, avif_source(page.site, image))] unless image.empty?
       organizer = organizer_for(page, event, official, venue)
       node["organizer"] = organizer if organizer
       offer = offer_node(event, event_url, page.site)

@@ -147,7 +147,7 @@ module EastsideCalendar
     end
 
     def image_xml(site, path)
-      src = path.to_s.strip
+      src = StructuredData.avif_source(site, path.to_s.strip)
       return "" unless src.start_with?("/")
 
       href = EventCalendar.absolute_url(site, src)
@@ -160,6 +160,7 @@ module EastsideCalendar
       when ".jpg", ".jpeg" then "image/jpeg"
       when ".gif" then "image/gif"
       when ".webp" then "image/webp"
+      when ".avif" then "image/avif"
       else "application/octet-stream"
       end
     end
