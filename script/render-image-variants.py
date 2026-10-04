@@ -1,43 +1,67 @@
 #!/usr/bin/env python3
-"""Local encoder kept for the earlier budget experiment.
+"""Build the fixed AVIF and JPEG names during the Pages deploy.
 
-Pages does not run this. The Optimize images workflow runs
-.github/scripts/resize_images.py and commits the variants and
-_data/image_variants.yml. Running this script overwrites that manifest.
+Every card photo gets name-400.avif, name-640.avif, and name-640.jpg.
+Every city hero also gets name-800.avif, name-1200.avif, and
+name-1600.avif. A master narrower than a target is scaled up so the
+width in the filename is the pixel width. Nothing here is committed.
+Actions caches .image-cache on a hash of the masters and this encoder.
 
-Widths are 400, 640, 800, 1200, and 1600, and never wider than the source.
-A 640-wide card file that comes out over its budget is encoded again at
-a lower quality until it fits or the floor is reached. Wide hero AVIF
-files have their own budget. Outputs live in .image-cache so Actions can
-restore them. The cache only matches this encoder id, so a budget change
-encodes again. A source that fails to encode is left out of the manifest.
-The helper then uses the original file, and this script still exits 0.
+    python3 script/render-image-variants.py --fingerprint
+    python3 script/render-image-variants.py --check-cache
+    python3 script/render-image-variants.py --from-cache
+    python3 script/render-image-variants.py
+
+A referenced photo that cannot be encoded fails the build.
 """
 
 import hashlib
 import json
 import os
+import re
 import shutil
+import subprocess
 import sys
 
-WIDTHS = (400, 640, 800, 1200, 1600)
 IMAGE_ROOT = os.path.join("assets", "images")
 CACHE_ROOT = ".image-cache"
 CACHE_OUT = os.path.join(CACHE_ROOT, "out")
 CACHE_META = os.path.join(CACHE_ROOT, "meta")
-MANIFEST = os.path.join("_data", "image_variants.yml")
-SKIP_TOP = {"cities", "og"}
+SKIP_TOP = {"cities", "og", "share"}
+SKIP_NAMES = {"logo.png", "apple-touch-icon.png", "favicon.png"}
 SOURCE_EXT = {".webp", ".jpg", ".jpeg", ".png"}
-AVIF_QUALITY = 50
-WEBP_QUALITY = 68
+CARD_AVIF = (400, 640)
+HERO_AVIF = (400, 640, 800, 1200, 1600)
+JPEG_WIDTH = 640
+AVIF_QUALITY = 60
 JPEG_QUALITY = 75
-# Card files are requested at 640. Hero files at 1200 and 1600 cover a
-# 44rem picture on a 2x screen. The floor keeps a detailed photo from
-# being crushed when the budget is tight.
-ENCODER_ID = "budget-640-avif60-jpeg80-hero220"
-AVIF_CARD_QUALITIES = (50, 46, 42, 38, 34)
-JPEG_CARD_QUALITIES = (75, 64, 55, 48, 40, 34)
-AVIF_HERO_QUALITIES = (50, 44, 38, 32)
+ENCODER_ID = "fixed-card-400-640-jpg640-hero-800-1200-1600"
+VARIANT_RE = re.compile(r"-(?:400|640|800|960|1200|1280|1600)$")
+
+
+def hero_paths():
+    path = os.path.join("_data", "cities.yml")
+    if not os.path.exists(path):
+        return set()
+    with open(path, encoding="utf-8") as handle:
+        text = handle.read()
+    found = set()
+    for block in re.finditer(r"\n  hero:\n(?:    .+\n)+", text):
+        match = re.search(r"image:\s*(\S+)", block.group(0))
+        if not match:
+            continue
+        found.add(match.group(1).strip().strip("\"'").lstrip("/"))
+    return found
+
+
+def is_hero(path, heroes):
+    return path.replace(os.sep, "/") in heroes
+
+
+def avif_widths(path, heroes):
+    if is_hero(path, heroes):
+        return HERO_AVIF
+    return CARD_AVIF
 
 
 def source_files():
@@ -47,14 +71,13 @@ def source_files():
         rel_dir = os.path.relpath(dirpath, IMAGE_ROOT)
         if rel_dir == ".":
             continue
-        top = rel_dir.split(os.sep)[0]
-        if top in SKIP_TOP:
-            continue
         for name in filenames:
+            if name in SKIP_NAMES or name.startswith("icon-"):
+                continue
             stem, ext = os.path.splitext(name)
             if ext.lower() not in SOURCE_EXT:
                 continue
-            if stem.endswith(tuple("-%d" % width for width in WIDTHS)):
+            if VARIANT_RE.search(stem):
                 continue
             found.append(os.path.join(dirpath, name))
     found.sort()
@@ -70,19 +93,9 @@ def file_sha256(path):
 
 
 def fingerprint():
-    lines = [
-        "widths %s avif %s webp %s jpeg %s %s"
-        % (
-            ",".join(str(width) for width in WIDTHS),
-            AVIF_QUALITY,
-            WEBP_QUALITY,
-            JPEG_QUALITY,
-            ENCODER_ID,
-        )
-    ]
+    lines = ["encoder %s avif %s jpeg %s" % (ENCODER_ID, AVIF_QUALITY, JPEG_QUALITY)]
     for path in source_files():
-        rel = path.replace(os.sep, "/")
-        lines.append("%s %s" % (rel, file_sha256(path)))
+        lines.append("%s %s" % (path.replace(os.sep, "/"), file_sha256(path)))
     payload = "\n".join(lines).encode("utf-8")
     return hashlib.sha256(payload).hexdigest()
 
@@ -101,11 +114,6 @@ def variant_name(stem, width, ext):
 
 
 def read_record(path):
-    """Return a hash-matched cache record whose listed files are on disk.
-
-    A new width can be missing. Callers that need every width use
-    cached_record.
-    """
     key = rel_key(path)
     meta = meta_path(key)
     if not os.path.exists(meta):
@@ -121,105 +129,45 @@ def read_record(path):
         return None
     stem = os.path.splitext(os.path.basename(path))[0]
     folder = os.path.dirname(path)
-    for fmt, ext in (("avif", ".avif"), ("webp", ".webp"), ("jpeg", ".jpg")):
+    for fmt, ext in (("avif", ".avif"), ("jpeg", ".jpg")):
         for width in record.get(fmt) or []:
-            cached = os.path.join(CACHE_OUT, folder, variant_name(stem, width, ext))
+            cached = os.path.join(CACHE_OUT, folder, variant_name(stem, int(width), ext))
             if not os.path.exists(cached):
                 return None
     return record
 
 
-def widths_complete(record):
-    src_w = int(record.get("width") or 0)
-    expected = [width for width in WIDTHS if width <= src_w]
-    for fmt in ("avif", "webp", "jpeg"):
-        got = [int(width) for width in (record.get(fmt) or [])]
-        if got != expected:
-            return False
-    return True
+def widths_complete(path, record, heroes):
+    avif = [int(width) for width in (record.get("avif") or [])]
+    jpeg = [int(width) for width in (record.get("jpeg") or [])]
+    return avif == list(avif_widths(path, heroes)) and jpeg == [JPEG_WIDTH]
 
 
-def cached_record(path):
+def cached_record(path, heroes):
     record = read_record(path)
-    if not record or not widths_complete(record):
+    if not record or not widths_complete(path, record, heroes):
         return None
     return record
 
 
-def cache_complete():
+def cache_complete(heroes):
     files = source_files()
     if not files:
         return True
-    return all(cached_record(path) for path in files)
+    return all(cached_record(path, heroes) for path in files)
 
 
 def copy_record(path, record):
     stem = os.path.splitext(os.path.basename(path))[0]
     folder = os.path.dirname(path)
     os.makedirs(folder, exist_ok=True)
-    for fmt, ext in (("avif", ".avif"), ("webp", ".webp"), ("jpeg", ".jpg")):
+    for fmt, ext in (("avif", ".avif"), ("jpeg", ".jpg")):
         for width in record.get(fmt) or []:
-            name = variant_name(stem, width, ext)
+            name = variant_name(stem, int(width), ext)
             src = os.path.join(CACHE_OUT, folder, name)
             dest = os.path.join(folder, name)
             if os.path.exists(src):
                 shutil.copy2(src, dest)
-
-
-def write_manifest(records):
-    os.makedirs("_data", exist_ok=True)
-    # The picture helper looks up the parent folder and the filename.
-    # A city photo is bellevue/kelsey-creek. A pool photo is
-    # hubs/fall/orchard, so the folder is fall and the stem is orchard.
-    # Splitting only on the first slash would file that under hubs and
-    # the helper would not find a srcset.
-    nested = {}
-    seen = {}
-    for key in sorted(records):
-        parts = key.split("/")
-        if len(parts) < 2:
-            continue
-        folder, stem = parts[-2], parts[-1]
-        slot = "%s/%s" % (folder, stem)
-        prior = seen.get(slot)
-        if prior and prior != key:
-            print("variant key collision %s from %s and %s" % (slot, prior, key))
-        seen[slot] = key
-        nested.setdefault(folder, {})[stem] = records[key]
-    count = 0
-    with open(MANIFEST, "w", encoding="utf-8") as handle:
-        handle.write("# Generated by script/optimize-images.py. Do not edit.\n")
-        handle.write("# Missing entries fall back to the source file.\n")
-        for folder in sorted(nested):
-            handle.write("%s:\n" % folder)
-            for stem in sorted(nested[folder]):
-                record = nested[folder][stem]
-                count += 1
-                handle.write("  %s:\n" % stem)
-                handle.write("    width: %d\n" % int(record["width"]))
-                handle.write("    height: %d\n" % int(record["height"]))
-                if record.get("fallback"):
-                    handle.write("    fallback: %d\n" % int(record["fallback"]))
-                for fmt in ("avif", "webp", "jpeg"):
-                    widths = record.get(fmt) or []
-                    if not widths:
-                        continue
-                    handle.write("    %s:\n" % fmt)
-                    for width in widths:
-                        handle.write("      - %d\n" % int(width))
-    return count
-
-
-def publish_from_cache():
-    records = {}
-    for path in source_files():
-        record = cached_record(path)
-        if not record:
-            continue
-        copy_record(path, record)
-        records[rel_key(path)] = record
-    count = write_manifest(records)
-    print("Restored %d image(s) from cache." % count)
 
 
 def open_image(path):
@@ -227,163 +175,120 @@ def open_image(path):
 
     image = ImageOps.exif_transpose(Image.open(path))
     image.load()
+    if image.mode not in ("RGB", "RGBA"):
+        image = image.convert("RGB")
     return image
 
 
-def qualities_for(kind, width):
-    if kind == "avif" and width <= 640:
-        return AVIF_CARD_QUALITIES
-    if kind == "jpeg" and width <= 640:
-        return JPEG_CARD_QUALITIES
-    if kind == "avif" and width >= 1200:
-        return AVIF_HERO_QUALITIES
-    if kind == "jpeg":
-        return (JPEG_QUALITY,)
-    if kind == "webp":
-        return (WEBP_QUALITY,)
-    return (AVIF_QUALITY,)
+def frame_at(image, width):
+    from PIL import Image
+
+    if width == image.width:
+        return image
+    height = max(1, round(image.height * width / image.width))
+    return image.resize((width, height), Image.Resampling.LANCZOS)
 
 
-def byte_budget(kind, width):
-    if kind == "avif" and width <= 640:
-        return 60 * 1024
-    if kind == "jpeg" and width <= 640:
-        return 80 * 1024
-    if kind == "avif" and width >= 1200:
-        return 220 * 1024
-    return None
-
-
-def save_variant(image, dest, kind, quality):
+def save_variant(image, dest, kind):
     os.makedirs(os.path.dirname(dest), exist_ok=True)
     if kind == "jpeg":
-        flat = image.convert("RGB")
-        flat.save(dest, "JPEG", quality=quality, optimize=True, progressive=True)
+        image.convert("RGB").save(
+            dest, "JPEG", quality=JPEG_QUALITY, optimize=True, progressive=True
+        )
         return
-    if kind == "webp":
-        image.save(dest, "WEBP", quality=quality, method=4)
-        return
-    image.save(dest, "AVIF", quality=quality)
+    image.convert("RGB").save(dest, "AVIF", quality=AVIF_QUALITY)
 
 
-def save_within_budget(image, dest, kind, width):
-    budget = byte_budget(kind, width)
-    for quality in qualities_for(kind, width):
-        save_variant(image, dest, kind, quality)
-        if budget is None or os.path.getsize(dest) <= budget:
-            return quality
-    return qualities_for(kind, width)[-1]
-
-
-def encode(path):
+def encode(path, heroes):
     key = rel_key(path)
     stem = os.path.splitext(os.path.basename(path))[0]
     folder = os.path.dirname(path)
-    try:
-        image = open_image(path)
-    except Exception as exc:
-        print("  skip %s: %s" % (path, exc))
-        return None
-    src_w, src_h = image.size
-    widths = [width for width in WIDTHS if width <= src_w]
-    prior = read_record(path)
-    if prior:
-        record = prior
-        record["width"] = src_w
-        record["height"] = src_h
-    else:
-        record = {
-            "hash": file_sha256(path),
-            "encoder": ENCODER_ID,
-            "width": src_w,
-            "height": src_h,
-            "avif": [],
-            "webp": [],
-            "jpeg": [],
-        }
-    record["encoder"] = ENCODER_ID
-    if not widths:
-        print("  %s is %dpx, narrower than 400. Original only." % (path, src_w))
-        return None
-    if image.mode not in ("RGB", "RGBA"):
-        image = image.convert("RGB")
-    from PIL import Image
-
-    resample = Image.Resampling.LANCZOS
-    frames = {}
+    image = open_image(path)
+    widths = list(avif_widths(path, heroes))
+    record = {
+        "hash": file_sha256(path),
+        "encoder": ENCODER_ID,
+        "width": image.width,
+        "height": image.height,
+        "avif": [],
+        "jpeg": [],
+    }
+    built = []
     for width in widths:
-        height = max(1, round(src_h * width / src_w))
-        frames[width] = image.resize((width, height), resample) if width != src_w else image
-    for kind, ext, field in (
-        ("avif", ".avif", "avif"),
-        ("webp", ".webp", "webp"),
-        ("jpeg", ".jpg", "jpeg"),
-    ):
-        have = set(int(width) for width in (record.get(field) or []))
-        built = []
-        for width in widths:
-            name = variant_name(stem, width, ext)
-            cached = os.path.join(CACHE_OUT, folder, name)
-            dest = os.path.join(folder, name)
-            if width in have and os.path.exists(cached):
-                os.makedirs(folder, exist_ok=True)
-                shutil.copy2(cached, dest)
-                built.append(width)
-                continue
-            try:
-                save_within_budget(frames[width], cached, kind, width)
-                os.makedirs(folder, exist_ok=True)
-                shutil.copy2(cached, dest)
-            except Exception as exc:
-                print("  skip %s: %s" % (name, exc))
-                continue
-            built.append(width)
-            print("  %s (%dK)" % (os.path.join(folder, name), os.path.getsize(dest) // 1024))
-        record[field] = built
-    if not (record["avif"] or record["webp"] or record["jpeg"]):
-        return None
-    jpeg_widths = record["jpeg"]
-    if jpeg_widths:
-        record["fallback"] = 800 if 800 in jpeg_widths else jpeg_widths[-1]
+        name = variant_name(stem, width, ".avif")
+        cached = os.path.join(CACHE_OUT, folder, name)
+        dest = os.path.join(folder, name)
+        save_variant(frame_at(image, width), cached, "avif")
+        os.makedirs(folder, exist_ok=True)
+        shutil.copy2(cached, dest)
+        built.append(width)
+        print("  %s (%dK)" % (dest, os.path.getsize(dest) // 1024))
+    record["avif"] = built
+    name = variant_name(stem, JPEG_WIDTH, ".jpg")
+    cached = os.path.join(CACHE_OUT, folder, name)
+    dest = os.path.join(folder, name)
+    save_variant(frame_at(image, JPEG_WIDTH), cached, "jpeg")
+    shutil.copy2(cached, dest)
+    record["jpeg"] = [JPEG_WIDTH]
+    print("  %s (%dK)" % (dest, os.path.getsize(dest) // 1024))
     os.makedirs(os.path.dirname(meta_path(key)), exist_ok=True)
     with open(meta_path(key), "w", encoding="utf-8") as handle:
         json.dump(record, handle)
     return record
 
 
-def generate():
+def require_variants():
+    script = os.path.join("script", "check-image-variants.py")
+    result = subprocess.call([sys.executable, script])
+    if result != 0:
+        sys.exit(result)
+
+
+def publish_from_cache(heroes):
+    for path in source_files():
+        record = cached_record(path, heroes)
+        if not record:
+            sys.exit("image cache is missing %s" % path)
+        copy_record(path, record)
+    print("Restored %d image(s) from cache." % len(source_files()))
+    require_variants()
+
+
+def generate(heroes):
     try:
         import PIL  # noqa: F401
+        import pillow_avif  # noqa: F401
     except ImportError:
-        print("Pillow is not installed. Serving original images.")
-        write_manifest({})
-        return
-    records = {}
+        sys.exit("Pillow and pillow-avif-plugin are required")
+    failed = []
     for path in source_files():
-        existing = cached_record(path)
+        existing = cached_record(path, heroes)
         if existing:
             copy_record(path, existing)
-            records[rel_key(path)] = existing
             print("cached %s" % path)
             continue
         print(path)
-        record = encode(path)
-        if record:
-            records[rel_key(path)] = record
-    count = write_manifest(records)
-    print("Manifest lists %d image(s)." % count)
+        try:
+            encode(path, heroes)
+        except Exception as exc:
+            print("  failed %s: %s" % (path, exc))
+            failed.append(path)
+    if failed:
+        sys.exit("could not encode %d photo(s)" % len(failed))
+    require_variants()
 
 
 def main():
+    heroes = hero_paths()
     if "--fingerprint" in sys.argv:
         print(fingerprint())
         return
     if "--check-cache" in sys.argv:
-        sys.exit(0 if cache_complete() else 1)
+        sys.exit(0 if cache_complete(heroes) else 1)
     if "--from-cache" in sys.argv:
-        publish_from_cache()
+        publish_from_cache(heroes)
         return
-    generate()
+    generate(heroes)
 
 
 if __name__ == "__main__":

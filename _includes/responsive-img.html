@@ -2,6 +2,7 @@
   Fixed names, no manifest. A card is name-400.avif, name-640.avif,
   and name-640.jpg. Pass hero=1 for a city hero, which adds
   name-800.avif, name-1200.avif, and name-1600.avif.
+  The Pages build writes these files. They are not committed.
 {%- endcomment -%}
 {%- assign img_file = include.src | split: "/" | last -%}
 {%- assign img_stem = img_file | split: "." | first -%}
