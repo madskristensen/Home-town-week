@@ -63,15 +63,12 @@ windows:
 # Guides in the header. Not the home page line.
 # An article is listed when today falls in a range, or when it is
 # evergreen. Ranges are month-day and repeat each year. The menu
-# keeps the first cap articles, then School calendars, bucket lists
-# whose ranges contain today, and All guides last. Playgrounds is
-# in the Explore menu. Names come from articles.yml. A bucket is
-# used only when that page exists.
+# keeps the first cap articles, then bucket lists whose ranges
+# contain today, and All guides last. School calendars is in the
+# Explore menu, after Book ahead. Names come from articles.yml.
+# A bucket is used only when that page exists.
 guides:
   cap: 5
-  evergreen:
-    - name: School calendars
-      href: /no-school-days/
   articles:
     - article: rainy-day-indoor-play
       evergreen: true

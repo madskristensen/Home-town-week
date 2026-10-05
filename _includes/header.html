@@ -1,9 +1,9 @@
 {%- comment -%}
   Two-row header. The wordmark is its own row. Cities, Seasons, Guides,
   and Explore are a bar under it. A Menu button shows only under 340px.
-  Guides follow site.data.nav_guides: articles in season, School
-  calendars, bucket lists in season, then All guides. Explore lists
-  the maps, Playgrounds, Farmers markets, and Book ahead.
+  Guides follow site.data.nav_guides: articles in season, bucket
+  lists in season, then All guides. Explore lists the maps,
+  Playgrounds, Farmers markets, Book ahead, and School calendars.
 {%- endcomment -%}
 {%- capture nav_cities -%}
 <li><a href="{{ '/this-weekend/' | relative_url }}"{% if page.url == "/this-weekend/" %} aria-current="page"{% endif %}>This weekend</a></li>
@@ -48,7 +48,7 @@
 <li><a href="{{ '/articles/' | relative_url }}"{% if page.url == "/articles/" %} aria-current="page"{% endif %}>All guides</a></li>
 {%- endcapture -%}
 {%- capture nav_explore -%}
-{%- assign nav_explore_rows = "Christmas lights map|/christmas/lights/,Halloween decorations map|/fall/decorations/,Playgrounds|/playgrounds/,Farmers markets|/farmers-markets/,Book ahead|/book-ahead/" | split: "," -%}
+{%- assign nav_explore_rows = "Christmas lights map|/christmas/lights/,Halloween decorations map|/fall/decorations/,Playgrounds|/playgrounds/,Farmers markets|/farmers-markets/,Book ahead|/book-ahead/,School calendars|/no-school-days/" | split: "," -%}
 {%- for nav_row in nav_explore_rows -%}
 {%- assign nav_bits = nav_row | split: "|" -%}
 <li><a href="{{ nav_bits[1] | relative_url }}"{% if page.url == nav_bits[1] %} aria-current="page"{% endif %}>{{ nav_bits[0] }}</a></li>
