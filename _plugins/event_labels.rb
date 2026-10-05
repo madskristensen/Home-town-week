@@ -151,14 +151,6 @@ module EastsideCalendar
       list
     end
 
-    def free?(event)
-      cost_label(event) == "Free"
-    end
-
-    def indoor?(event)
-      setting_label(event) == "Indoor"
-    end
-
     def attrs(event)
       bits = []
       cost = cost_label(event)

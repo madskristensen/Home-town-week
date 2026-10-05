@@ -284,18 +284,6 @@ module EastsideCalendar
       "#{span}#{gap}#{match[1]} #{year}"
     end
 
-    def signup_line(row, status, year)
-      custom = squash(row["signup"])
-      line = custom.empty? ? default_signup(row, year) : custom
-      line.gsub("{{status}}", status)
-    end
-
-    def default_signup(row, year)
-      hint = squash(row["hint"])
-      base = "#{year} dates not posted yet."
-      hint.empty? ? base : "#{base} #{hint}"
-    end
-
     def card_when(row, status, year)
       custom = squash(row["card_when"])
       return custom.gsub("{{status}}", status) unless custom.empty?

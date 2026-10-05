@@ -2,7 +2,6 @@
 
 require "cgi"
 require "date"
-require "fileutils"
 
 module EastsideCalendar
   # Seasonal hubs and the one sitewide banner are data in
@@ -1033,88 +1032,6 @@ module EastsideCalendar
     end
 
     # Kept for the SVG helper. Event cards do not call this.
-    def section_card!(site, hub, section)
-      theme = hub["theme"] || {}
-      dark = theme["dark"].is_a?(Hash) ? theme["dark"] : {}
-      designed_card!(
-        site,
-        "#{hub["id"]}-#{section["id"]}",
-        theme["background"],
-        theme["ink"],
-        theme["svg"],
-        section["title"].to_s,
-        dark["background"],
-        dark["ink"]
-      )
-    end
-
-    def designed_cards
-      @designed_cards ||= {}
-    end
-
-    def designed_card!(site, key, background, ink, motif, label, dark_background = nil, dark_ink = nil)
-      cached = designed_cards[key]
-      return cached if cached
-
-      label = label.to_s.strip
-      label = "Family event" if label.empty?
-      background = hex_color(background, "#f4efe6")
-      ink = hex_color(ink, "#1a2822")
-      dark_background = hex_color(dark_background, "#2a2433")
-      dark_ink = hex_color(dark_ink, "#f6efe4")
-      dir = "assets/images/hubs/designed"
-      name = "#{key}.svg"
-      site.static_files << DesignedCardFile.new(dir, name, designed_svg(background, ink, motif, label, dark_background, dark_ink))
-      photo = {
-        "src" => "/#{dir}/#{name}",
-        "alt" => label,
-        "credit" => "Eastside Family Calendar",
-        "source" => "",
-        "kind" => "designed"
-      }
-      designed_cards[key] = photo
-    end
-
-    def designed_svg(background, ink, motif, label, dark_background, dark_ink)
-      size = if label.length > 36
-               48
-             elsif label.length > 24
-               60
-             else
-               72
-             end
-      safe = safe_svg(motif)
-      view = "0 0 24 24"
-      inner = ""
-      unless safe.empty?
-        view = safe[/viewBox="([^"]+)"/, 1] || view
-        inner = safe.sub(/\A<svg\b[^>]*>/i, "").sub(%r{</svg>\s*\z}i, "")
-      end
-      motif_tag = ""
-      unless inner.strip.empty?
-        motif_tag = %(<svg x="590" y="120" width="420" height="420" viewBox="#{esc(view)}">#{inner}</svg>)
-      end
-      <<~SVG
-        <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
-          <style>
-            .card-bg { fill: #{background}; }
-            .card-ink { fill: #{ink}; }
-            @media (prefers-color-scheme: dark) {
-              .card-bg { fill: #{dark_background}; }
-              .card-ink { fill: #{dark_ink}; }
-            }
-          </style>
-          <rect class="card-bg" width="1600" height="900"/>
-          <g class="card-motif">#{motif_tag}</g>
-          <text class="card-ink" x="800" y="760" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="#{size}">#{esc(label)}</text>
-        </svg>
-      SVG
-    end
-
-    def generic_motif
-      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#1e4636" d="M12 3c2.2 3.6 6 5.6 6 9.4a6 6 0 0 1-12 0C6 8.6 9.8 6.6 12 3z"/><path fill="#6b4e0e" d="M11.2 11h1.6V21h-1.6z"/></svg>'
-    end
-
     def apply_photo!(event, photo)
       if photo
         alt = photo["alt"].to_s.strip
@@ -2215,46 +2132,6 @@ module EastsideCalendar
       [photo, credit, source, alt]
     end
 
-  end
-
-  # Written during generate. Jekyll does not copy a file that is not in
-  # the source tree unless it is registered as a static file.
-  class DesignedCardFile
-    attr_reader :relative_path
-
-    def initialize(dir, name, content)
-      @dir = dir
-      @name = name
-      @content = content
-      @relative_path = "#{dir}/#{name}"
-    end
-
-    def path
-      nil
-    end
-
-    def url
-      "/#{@dir}/#{@name}"
-    end
-
-    def extname
-      ".svg"
-    end
-
-    def write?
-      true
-    end
-
-    def destination(dest)
-      File.join(dest, @dir, @name)
-    end
-
-    def write(dest)
-      dest_path = destination(dest)
-      FileUtils.mkdir_p(File.dirname(dest_path))
-      File.binwrite(dest_path, @content)
-      true
-    end
   end
 
   class SeasonalHubsGenerator < Jekyll::Generator

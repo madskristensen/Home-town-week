@@ -1,7 +1,0 @@
-# Optional overlay. The live site uses https://www.eastsidecalendar.com
-# in _config.yml. CNAME must stay www.eastsidecalendar.com so a deploy
-# keeps the Pages custom domain.
-# A build can pass both files:
-#   bundle exec jekyll build --config _config.yml,_config.domain.yml
-url: https://www.eastsidecalendar.com
-baseurl: ""

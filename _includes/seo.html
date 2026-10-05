@@ -4,15 +4,10 @@
 {%- assign seo_image_width = 1200 -%}
 {%- assign seo_image_height = 630 -%}
 {%- assign seo_image_mime = "image/png" -%}
-{%- assign map_og = nil -%}
-{%- if city -%}
-  {%- assign map_og = "/assets/images/og/" | append: city.state | append: "/" | append: city.id | append: ".png" -%}
-{%- endif -%}
 {%- comment -%}
   Share cards should feel like the place. The home page uses the Eastside
   map card the Pages build writes. A city page uses its hero photo when
-  it has one, and otherwise the 1200x630 map and pin. Social apps do not
-  render the header SVG.
+  the share card is missing. Social apps do not render the header SVG.
 {%- endcomment -%}
 {%- assign hero_image = city.hero.image | append: "" -%}
 {%- assign share_card = nil -%}
@@ -39,10 +34,6 @@
   {%- assign seo_image_width = 1600 -%}
   {%- assign seo_image_height = 900 -%}
   {%- assign seo_image_mime = "image/webp" -%}
-{%- elsif page.layout == "city" and map_og -%}
-  {%- assign seo_image_path = map_og -%}
-  {%- capture seo_image_alt -%}Map of {{ city.name }} with a pin. Eastside Family Calendar.{%- endcapture -%}
-  {%- assign seo_image_alt = seo_image_alt | strip -%}
 {%- elsif page.image -%}
   {%- assign seo_image_path = page.image -%}
   {%- assign seo_image_alt = page.image_alt -%}

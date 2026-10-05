@@ -18,6 +18,8 @@ _data/share_manifest.yml
 node_modules
 _data/build.yml
 _data/image_variants.yml
+# Trimmed from assets/leaflet/leaflet.full.css at the start of every build.
+/assets/leaflet/leaflet.css
 # Fingerprinted stylesheets and scripts written before Jekyll reads files.
 /assets/css/*.css
 /_data/css.yml

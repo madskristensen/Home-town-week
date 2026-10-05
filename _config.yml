@@ -40,9 +40,6 @@ kramdown:
     em_dash: "---"
     en_dash: "--"
 
-sass:
-  style: compressed
-
 plugins:
   - jekyll-sitemap
 
@@ -54,7 +51,6 @@ exclude:
   - .bundle
   - .ruby-version
   - .gitignore
-  - _config.domain.yml
   - artifacts
   - script
   - node_modules

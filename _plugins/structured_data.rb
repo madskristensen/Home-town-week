@@ -117,7 +117,7 @@ module EastsideCalendar
       nodes << crumbs if crumbs
       # Event details live on the shared card as microdata. An ItemList
       # here is only a guide or a map, not a list of those events.
-      list = item_list(page, canonical, [])
+      list = item_list(page, canonical)
       list = map_list(page, canonical) if list.nil?
       nodes << page_node(page, site, canonical, site_id, org_id, person_id, logo, list)
       nodes << list if list
@@ -356,24 +356,7 @@ module EastsideCalendar
       day || published
     end
 
-    def item_list(page, canonical, events)
-      if events.any?
-        return {
-          "@type" => "ItemList",
-          "@id" => "#{canonical}#events",
-          "name" => list_name(page),
-          "itemListOrder" => "https://schema.org/ItemListOrderAscending",
-          "numberOfItems" => events.length,
-          "itemListElement" => events.each_with_index.map do |event, index|
-            {
-              "@type" => "ListItem",
-              "position" => index + 1,
-              "item" => { "@id" => event[:node]["@id"] }
-            }
-          end
-        }
-      end
-
+    def item_list(page, canonical)
       places = guide_items(page)
       return nil if places.empty?
 
@@ -446,14 +429,6 @@ module EastsideCalendar
       end
     end
 
-    def list_name(page)
-      return "Upcoming events in #{city_name(page)}" if page.data["layout"].to_s == "city"
-      return "Free events coming up" if page.data["article_id"].to_s == "free-things-to-do"
-      return "Toddler events coming up" if page.data["article_id"].to_s == "toddler-friendly-outings"
-
-      page.data["title"].to_s
-    end
-
     def guide_items(page)
       if page.data["article_index"]
         return Array(page.site.data["articles"]).select { |row| row.is_a?(Hash) }
@@ -462,111 +437,6 @@ module EastsideCalendar
       Array(page.data["places"]).select { |row| row.is_a?(Hash) && !row["href"].to_s.empty? }
     end
 
-    def event_nodes(page, canonical)
-      return [] unless event_page?(page)
-
-      today = EventCalendar.pacific_today(page.site.time)
-      sections = section_index(page.content)
-      used = {}
-      nodes = []
-      Array(page.data["visible_events"]).each do |event|
-        next unless event.is_a?(Hash)
-        next unless current_event?(event, today)
-
-        extra = sections[event["name"].to_s]
-        extra ||= sections[EventCalendar.normalize(event["name"])]
-        node = event_node(page, event, extra || {}, canonical, nodes.length + 1, used)
-        nodes << { node: node } if node
-      end
-      nodes
-    end
-
-    def event_page?(page)
-      layout = page.data["layout"].to_s
-      return true if layout == "city" || layout == "seasonal"
-      id = page.data["article_id"].to_s
-      return true if id == "free-things-to-do" || id == "toddler-friendly-outings"
-
-      false
-    end
-
-    def current_event?(event, today)
-      finish = event["end_on"].to_s[/\A\d{4}-\d{2}-\d{2}/]
-      finish ||= event["date"].to_s[/\A\d{4}-\d{2}-\d{2}/]
-      finish ||= event["endDate"].to_s[/\A\d{4}-\d{2}-\d{2}/]
-      finish ||= event["startDate"].to_s[/\A\d{4}-\d{2}-\d{2}/]
-      return true if finish.nil? || finish.empty?
-
-      Date.iso8601(finish) >= today
-    rescue Date::Error, ArgumentError
-      true
-    end
-
-    def section_index(markdown)
-      index = {}
-      markdown.to_s.split(/(?=^### )/m).each do |part|
-        name = part[/\A###[ \t]+([^\n]+)/, 1].to_s.strip
-        next if name.empty?
-
-        src = part[/\{%\s*include\s+event-photo\.html\b.*?src="([^"]+)"/m, 1]
-        label = part[/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/, 1]
-        url = part[/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/, 2]
-        info = { "image" => src.to_s, "link_label" => label.to_s, "link_url" => url.to_s }
-        index[name] = info
-        index[EventCalendar.normalize(name)] = info
-      end
-      index
-    end
-
-    def event_node(page, event, extra, canonical, position, used)
-      name = event["name"].to_s.strip
-      return nil if name.empty?
-
-      start_on, end_on = google_interval(event)
-      return nil if start_on.nil? || start_on.empty?
-
-      locality = event["locality"].to_s.strip
-      locality = event["city"].to_s.strip if locality.empty?
-      locality = event["town"].to_s.strip if locality.empty?
-      place = event["place"].to_s
-      venue = EventCalendar.venue_name(place, locality)
-      venue = locality if venue.empty? || venue.casecmp(name).zero?
-      return nil if venue.empty?
-
-      street = event["street"].to_s.strip
-      street = EventCalendar.place_parts(place, locality).last.to_s if street.empty?
-      slug = unique_slug(used, name)
-      fragment = "#{canonical}##{slug}"
-      official = first_http(event["sameAs"], event["same_as"], extra["link_url"])
-      event_url = official || fragment
-      node = {
-        "@type" => "Event",
-        "@id" => event_url,
-        "name" => name,
-        "startDate" => start_on,
-        "eventStatus" => "https://schema.org/EventScheduled",
-        "eventAttendanceMode" => "https://schema.org/OfflineEventAttendanceMode",
-        "url" => event_url,
-        "location" => location_node(venue, street, locality, place)
-      }
-      node["endDate"] = end_on unless end_on.nil? || end_on.empty?
-      description = event["description"].to_s.strip
-      description = event["blurb"].to_s.strip if description.empty? || description.casecmp(name).zero?
-      node["description"] = short_description(description) unless description.empty?
-      image = event["image"].to_s
-      image = extra["image"].to_s if image.empty?
-      node["image"] = [abs(page.site, avif_source(page.site, image))] unless image.empty?
-      organizer = organizer_for(page, event, official, venue)
-      node["organizer"] = organizer if organizer
-      offer = offer_node(event, event_url, page.site)
-      if offer
-        node["offers"] = offer
-        node["isAccessibleForFree"] = true if offer["price"].to_s == "0" || offer["price"] == 0
-      end
-      node
-    end
-
-    # Rich results use a short description. Longer copy stays on the card.
     def short_description(text)
       clean = text.to_s.gsub(/\s+/, " ").strip
       return clean if clean.length <= 180
@@ -578,23 +448,6 @@ module EastsideCalendar
       return cut if cut.end_with?(".", "!", "?")
 
       "#{cut}."
-    end
-
-    def location_node(venue, street, locality, place)
-      address = {
-        "@type" => "PostalAddress",
-        "addressRegion" => "WA",
-        "addressCountry" => "US"
-      }
-      address["streetAddress"] = street unless street.empty?
-      address["addressLocality"] = locality unless locality.empty?
-      zip = place.to_s[/\b(\d{5})(?:-\d{4})?\b/, 1]
-      address["postalCode"] = zip if zip
-      {
-        "@type" => "Place",
-        "name" => venue,
-        "address" => address
-      }
     end
 
     def organization(name, url)
@@ -741,35 +594,6 @@ module EastsideCalendar
       true
     end
 
-    def performer_node(event)
-      name = event["performer"].to_s.strip
-      return nil if name.empty?
-
-      { "@type" => "Person", "name" => name }
-    end
-
-    # Free is 0 USD. A published price, or the low end of a range, is
-    # that number in USD. An unknown price is left off so the offer is
-    # never missing price or priceCurrency.
-    def offer_node(event, url, site)
-      return nil if url.nil? || url.empty?
-
-      amount = offer_amount(event["cost"])
-      return nil if amount.nil?
-
-      from = valid_from(event, site)
-      return nil if from.empty?
-
-      {
-        "@type" => "Offer",
-        "url" => url,
-        "availability" => "https://schema.org/InStock",
-        "price" => amount,
-        "priceCurrency" => "USD",
-        "validFrom" => from
-      }
-    end
-
     def valid_from(event, site)
       added = event["added"].to_s.strip
       unless added.empty?
@@ -898,14 +722,6 @@ module EastsideCalendar
       "#{uri.scheme}://#{uri.host}/"
     rescue URI::InvalidURIError
       nil
-    end
-
-    def unique_slug(used, name)
-      base = name.to_s.downcase.gsub(/[^a-z0-9]+/, "-").gsub(/\A-+|-+\z/, "")
-      base = "event" if base.empty?
-      count = used[base].to_i + 1
-      used[base] = count
-      count == 1 ? "event-#{base}" : "event-#{base}-#{count}"
     end
 
     def attach_free_events(site)

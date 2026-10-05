@@ -34,7 +34,6 @@ SHARED_PREFIXES = (
     "_layouts/",
     "_plugins/",
     "_css/",
-    "_sass/",
     "assets/css/",
     "assets/js/",
 )
