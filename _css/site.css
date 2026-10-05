@@ -1265,21 +1265,25 @@ picture {
   overflow: hidden;
 }
 
-/* One credit strip for every photo. 0.30 white, full width, rounded
-   with the picture. Type is 0.65rem, about 13% under the old 0.75rem.
-   The halo and blur stay so the ink still reads on the photo. */
-figure figcaption {
+/* One credit strip for every photo. The credit element is the banner:
+   0.30 white, full width, rounded with the picture. Type is 0.65rem.
+   The halo and blur stay so the ink still reads on the photo.
+   The credit text is the link. No underline, and the ink stays the banner color. */
+figure > .photo-credit {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1;
+  display: block;
   margin: 0;
   padding: 0.28rem 0.6rem;
   background: var(--credit-bg);
   color: var(--ink);
   font-size: 0.65rem;
+  font-weight: 400;
   line-height: 1.4;
+  text-decoration: none;
   text-shadow: var(--credit-shadow);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
@@ -1287,18 +1291,13 @@ figure figcaption {
   border-bottom-left-radius: inherit;
 }
 
-figure figcaption a {
+figure > a.photo-credit:hover,
+figure > a.photo-credit:focus,
+figure > a.photo-credit:focus-visible,
+figure > a.photo-credit:visited,
+figure > a.photo-credit:active {
   color: var(--ink);
-  font-size: inherit;
-  font-weight: 600;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.12em;
-}
-
-figure figcaption .source::before {
-  content: "·";
-  margin: 0 0.35rem;
+  text-decoration: none;
 }
 
 
@@ -1431,9 +1430,15 @@ figure figcaption .source::before {
     color: var(--link);
   }
 
-  figure figcaption {
+  figure > .photo-credit,
+  figure > a.photo-credit:hover,
+  figure > a.photo-credit:focus,
+  figure > a.photo-credit:focus-visible,
+  figure > a.photo-credit:visited,
+  figure > a.photo-credit:active {
     background: var(--sheet);
     color: var(--ink);
+    text-decoration: none;
     text-shadow: none;
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
@@ -2771,8 +2776,8 @@ html[data-ns="ksd"] .ns-day:has(.ns-one[data-d="ksd"]) {
   border-radius: var(--radius);
 }
 
-/* The site credit strip is position absolute and blurred on every
-   figcaption. Preview labels stay in normal flow inside the box. */
+/* Partner-page example labels. The photo banner is .photo-credit, so
+   these stay in normal flow inside the box. */
 figure.sponsor-preview > figcaption.sponsor-preview-label {
   position: static;
   inset: auto;

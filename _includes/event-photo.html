@@ -1,6 +1,7 @@
 {%- comment -%}
   Photo and the credit strip on the image.
-  src, alt, credit, width, height. source is accepted and not shown.
+  src, alt, credit, width, height, source.
+  The credit text is the link when source is a URL. With no source it is the same banner as text.
   figure: class, default event-photo.
   loading: default lazy. priority: fetch priority, omitted when blank.
   sizes: the photo inside the card padding, not the full column.
@@ -12,6 +13,7 @@
 {%- assign photo_sizes = include.sizes | append: "" | strip -%}
 {%- if photo_sizes.size == 0 -%}{%- assign photo_sizes = "20rem" -%}{%- endif -%}
 {%- assign photo_credit = include.credit | append: "" | strip -%}
+{%- assign photo_source = include.source | append: "" | strip -%}
 <figure class="{{ photo_class }}">
   {%- include responsive-img.html
        src=include.src
@@ -23,6 +25,10 @@
        sizes=photo_sizes
        itemprop=include.itemprop -%}
   {%- if photo_credit.size > 0 -%}
-  <figcaption>{{ include.credit }}</figcaption>
+    {%- if photo_source.size > 0 -%}
+  <a class="photo-credit" href="{{ photo_source }}" rel="noopener">{{ photo_credit }}</a>
+    {%- else -%}
+  <span class="photo-credit">{{ photo_credit }}</span>
+    {%- endif -%}
   {%- endif -%}
 </figure>

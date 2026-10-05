@@ -31,13 +31,14 @@ layout: default
          priority="high"
          hero="1"
          sizes="(min-width: 47rem) 44rem, calc(100vw - 3rem)" -%}
-    {%- assign hero_credit = city.hero.credit | append: "" -%}
-    {%- assign hero_source = city.hero.source | append: "" -%}
-    {%- if hero_credit.size > 0 or hero_source.size > 0 -%}
-    <figcaption>
-      {%- if hero_credit.size > 0 -%}<span class="credit">{{ city.hero.credit }}</span>{%- endif -%}
-      {%- if hero_source.size > 0 -%}<a class="source" href="{{ city.hero.source }}" rel="noopener">Source</a>{%- endif -%}
-    </figcaption>
+    {%- assign hero_credit = city.hero.credit | append: "" | strip -%}
+    {%- assign hero_source = city.hero.source | append: "" | strip -%}
+    {%- if hero_credit.size > 0 -%}
+      {%- if hero_source.size > 0 -%}
+    <a class="photo-credit" href="{{ hero_source }}" rel="noopener">{{ hero_credit }}</a>
+      {%- else -%}
+    <span class="photo-credit">{{ hero_credit }}</span>
+      {%- endif -%}
     {%- endif -%}
   </figure>
   {%- endif -%}

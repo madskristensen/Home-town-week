@@ -1351,8 +1351,8 @@ module EastsideCalendar
 
     # Credit text, a source URL, and either an open license or license "organizer".
     # Open licenses are CC0, CC BY, CC BY-SA, and public domain. An organizer
-    # or venue photo with no open license still runs. The card shows the credit
-    # and does not link the source.
+    # or venue photo with no open license still runs. The credit text links
+    # to the source.
     def licensed_photo(photo)
       return nil unless photo.is_a?(Hash)
 
