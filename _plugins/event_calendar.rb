@@ -897,7 +897,7 @@ module EastsideCalendar
     def parse_card_photo(fig)
       srcset = fig[/srcset="([^"]+)"/, 1].to_s
       first = srcset.split(",").first.to_s.strip.split(/\s+/).first.to_s
-      src = first.sub(/-400\.avif\z/, ".webp")
+      src = master_photo(first)
       img = fig[/<img\b[^>]*>/m].to_s
       caption = fig[/<figcaption\b[^>]*>(.*?)<\/figcaption>/m, 1].to_s
       {
@@ -908,6 +908,19 @@ module EastsideCalendar
         "credit" => visible_text(caption),
         "source" => CGI.unescapeHTML(caption[/href="([^"]+)"/, 1].to_s)
       }
+    end
+
+    # The rendered card names a width, not the master. Prefer the file
+    # that is actually in the repo: webp, jpg, jpeg, or png.
+    def master_photo(variant_url)
+      stem = variant_url.to_s.sub(/-400\.avif\z/, "")
+      return variant_url if stem.empty? || stem == variant_url
+
+      %w[webp jpg jpeg png].each do |ext|
+        relative = "#{stem.sub(%r{\A/}, '')}.#{ext}"
+        return "/#{relative}" if File.file?(relative)
+      end
+      "#{stem}.webp"
     end
 
     # One card per event heading. card-grid.html renders event-card.html
@@ -1313,12 +1326,13 @@ module EastsideCalendar
     priority :low
 
     def generate(site)
+      today = EventCalendar.pacific_today(site.time)
+      site.data["pacific_today"] = EventCalendar.iso_date(today)
       linked = 0
       feed_events = 0
       unmatched = 0
       undated = 0
       dtstamp = EventCalendar.stamp_utc(site.time)
-      today = EventCalendar.pacific_today(site.time)
 
       site.pages.each do |page|
         next unless page.data["layout"] == "city"

@@ -4,7 +4,7 @@
 
 The site is published at https://www.eastsidecalendar.com. The naked domain redirects there. `CNAME` contains `www.eastsidecalendar.com`. `_config.yml` sets `url` to that host and `baseurl` to an empty string. A `/Home-town-week` baseurl breaks CSS and images on the custom domain.
 
-IndexNow is told about URLs whose source files changed in a push, not the whole sitemap. A city page or that city's event file also refreshes the home page, This weekend, and the seasonal hubs. The verification key file is written at the site root during the Pages build.
+IndexNow is told about URLs whose source files changed in a push, not the whole sitemap. A city page or that city's event file also refreshes the home page, This weekend, and the seasonal hubs. Those hub paths come from `_data/seasonal_hubs.yml`. A daily rebuild, which is a workflow dispatch and not a push, submits the pages the Pacific date roll changes. The verification key file is written at the site root during the Pages build.
 
 `/suggest/` is the page for sending an event. The address `suggestions@eastsidecalendar.com` is shown as text.
 

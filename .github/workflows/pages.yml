@@ -201,4 +201,5 @@ jobs:
         env:
           BEFORE: ${{ github.event.before }}
           SHA: ${{ github.sha }}
+          EVENT_NAME: ${{ github.event_name }}
         run: python3 script/indexnow-changed.py

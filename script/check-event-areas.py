@@ -7,7 +7,8 @@ A price, a street number, and a direction such as Ave NE are not a place
 check. An AllEvents city index is not an event address.
 
 Unresolved events are logged and left in place. A failed fetch does not
-fail the build when the place already looks local.
+fail the build when the place already looks local. --remove writes
+nothing if any fetch failed.
 
     python3 script/check-event-areas.py
     python3 script/check-event-areas.py --remove
@@ -285,6 +286,7 @@ def page_title(html):
 class Fetcher:
     def __init__(self):
         self.cache = {}
+        self.errors = []
 
     def html(self, url):
         if url in self.cache:
@@ -296,7 +298,8 @@ class Fetcher:
         try:
             with urllib.request.urlopen(request, timeout=25) as response:
                 text = response.read(900_000).decode("utf-8", "replace")
-        except Exception:
+        except Exception as exc:
+            self.errors.append((url, str(exc)))
             text = None
         self.cache[url] = text
         return text
@@ -489,24 +492,25 @@ def check_yaml(path, area, fetcher, remove, dry_run):
         if status == "unresolved":
             notes.append(("unresolved", rel(path), event["name"], reason, where))
         kept.append(block)
-    if remove and len(kept) != len(blocks) and not dry_run:
-        updated = "".join(header) + "".join("".join(block) for block in kept)
-        if updated != original:
-            path.write_text(updated, encoding="utf-8")
-    return notes
+    updated = None
+    if remove and len(kept) != len(blocks):
+        candidate = "".join(header) + "".join("".join(block) for block in kept)
+        if candidate != original:
+            updated = candidate
+    return notes, (path, updated) if updated else None
 
 
 def check_markdown(path, area, fetcher, remove, dry_run):
     original = path.read_text(encoding="utf-8")
     split = split_front_matter(original)
     if split is None:
-        return []
+        return [], None
     prefix, body = split
     if "\nlayout: city\n" not in prefix and not prefix.startswith("---\nlayout: city\n"):
-        return []
+        return [], None
     prelude, events = split_markdown_events(body)
     if not events:
-        return []
+        return [], None
     kept = []
     notes = []
     for block in events:
@@ -521,7 +525,8 @@ def check_markdown(path, area, fetcher, remove, dry_run):
         if status == "unresolved":
             notes.append(("unresolved", rel(path), event["name"], reason, where))
         kept.append(block)
-    if remove and len(kept) != len(events) and not dry_run:
+    updated = None
+    if remove and len(kept) != len(events):
         parts = []
         prelude_text = "".join(prelude).strip("\n")
         if prelude_text:
@@ -531,10 +536,10 @@ def check_markdown(path, area, fetcher, remove, dry_run):
         rebuilt = "\n\n".join(parts)
         if rebuilt:
             rebuilt += "\n"
-        updated = prefix + ("\n" if rebuilt else "") + rebuilt
-        if updated != original:
-            path.write_text(updated, encoding="utf-8")
-    return notes
+        candidate = prefix + ("\n" if rebuilt else "") + rebuilt
+        if candidate != original:
+            updated = candidate
+    return notes, (path, updated) if updated else None
 
 
 def self_test():
@@ -612,6 +617,25 @@ def self_test():
     assert reason is None
     assert allowed_place(area, "Marymoor Park, Redmond", False)
     assert not allowed_place(area, "Showbox, Seattle", False)
+
+    class Offline(Fetcher):
+        def html(self, url):
+            self.errors.append((url, "offline"))
+            return None
+
+    fetcher = Offline()
+    status, _reason, _where = judge(
+        area,
+        {
+            "name": "Sample",
+            "place": "Not a known town",
+            "same_as": "https://allevents.in/kirkland/sample-event/1",
+        },
+        False,
+        fetcher,
+    )
+    assert status == "unresolved", status
+    assert fetcher.errors
     print("event area self-test passed")
     return 0
 
@@ -629,10 +653,28 @@ def main():
     area = load_area()
     fetcher = Fetcher()
     notes = []
+    writes = []
     for path in sorted(ROOT.glob("*/index.md")):
-        notes.extend(check_markdown(path, area, fetcher, args.remove, args.dry_run))
+        found, write = check_markdown(path, area, fetcher, args.remove, args.dry_run)
+        notes.extend(found)
+        if write:
+            writes.append(write)
     for path in sorted(DATA.glob("*_events.yml")):
-        notes.extend(check_yaml(path, area, fetcher, args.remove, args.dry_run))
+        found, write = check_yaml(path, area, fetcher, args.remove, args.dry_run)
+        notes.extend(found)
+        if write:
+            writes.append(write)
+    if args.remove and fetcher.errors:
+        print(
+            "Refusing to delete events because a source page could not be fetched.",
+            file=sys.stderr,
+        )
+        for url, err in fetcher.errors:
+            print(f"fetch failed: {url}: {err}", file=sys.stderr)
+        return 1
+    if args.remove and not args.dry_run:
+        for path, updated in writes:
+            path.write_text(updated, encoding="utf-8")
 
     rejects = [note for note in notes if note[0] == "reject"]
     unresolved = [note for note in notes if note[0] == "unresolved"]

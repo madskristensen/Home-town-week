@@ -10,6 +10,7 @@ those pages list the same events.
 
 import json
 import os
+import re
 import subprocess
 import sys
 import urllib.request
@@ -17,18 +18,33 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://www.eastsidecalendar.com"
-HUBS = [
-    "/",
-    "/this-weekend/",
-    "/worth-the-drive/",
-    "/fall/",
-    "/christmas/",
-    "/easter/",
-    "/spring-break/",
-    "/fourth/",
-    "/diwali/",
-    "/rainy-day/",
-]
+
+
+def hub_paths():
+    """Home, the standing hubs, and every hub path in the data file."""
+    paths = ["/", "/this-weekend/", "/worth-the-drive/"]
+    text = (ROOT / "_data" / "seasonal_hubs.yml").read_text(encoding="utf-8")
+    in_hubs = False
+    for line in text.splitlines():
+        if line.startswith("hubs:"):
+            in_hubs = True
+            continue
+        if in_hubs and line and not line.startswith((" ", "#")):
+            break
+        if not in_hubs:
+            continue
+        match = re.match(r"\s+path:\s*(\S+)", line)
+        if not match:
+            continue
+        path = match.group(1).strip("\"'")
+        if not path.endswith("/"):
+            path += "/"
+        paths.append(path)
+    seen = []
+    for path in paths:
+        if path not in seen:
+            seen.append(path)
+    return seen
 SHARED_PREFIXES = (
     "_includes/",
     "_layouts/",
@@ -58,10 +74,10 @@ def git_diff(before, sha):
 
 
 def content_pages():
-    urls = {f"{SITE}/", f"{SITE}/this-weekend/", f"{SITE}/worth-the-drive/", f"{SITE}/playgrounds/"}
+    urls = {f"{SITE}/playgrounds/"}
     for path in ROOT.glob("*/index.md"):
         urls.add(f"{SITE}/{path.parent.name}/")
-    for hub in HUBS:
+    for hub in hub_paths():
         urls.add(f"{SITE}{hub}")
     return sorted(urls)
 
@@ -88,7 +104,7 @@ def urls_for(paths):
                 "worth-the-drive",
                 "playgrounds",
             }:
-                for hub in HUBS:
+                for hub in hub_paths():
                     found.add(f"{SITE}{hub}")
             continue
         if path == "_data/farmers_markets.yml":
@@ -109,7 +125,7 @@ def urls_for(paths):
                 found.add(f"{SITE}/worth-the-drive/")
             else:
                 found.add(f"{SITE}/{city}/")
-            for hub in HUBS:
+            for hub in hub_paths():
                 found.add(f"{SITE}{hub}")
             continue
         if path.endswith(".md"):
@@ -143,13 +159,33 @@ def submit(urls, key):
     return 0
 
 
+def date_rolled_pages():
+    """Pages a rebuild changes when no source file changed.
+
+    The Pacific date moves the home picks, day groups, hubs, school
+    calendars, camp sign-up lines, and open or closed cards.
+    """
+    urls = {f"{SITE}{path}" for path in hub_paths()}
+    for path in ROOT.glob("*/index.md"):
+        head = path.read_text(encoding="utf-8")[:500]
+        if "layout: city" in head:
+            urls.add(f"{SITE}/{path.parent.name}/")
+    for extra in ("/no-school-days/", "/summer-camps/", "/book-ahead/", "/farmers-markets/"):
+        urls.add(f"{SITE}{extra}")
+    return sorted(urls)
+
+
 def main():
     key = os.environ.get("INDEXNOW_KEY", "").strip()
     if not key:
         print("IndexNow: INDEXNOW_KEY is not set.")
         return 0
-    paths = git_diff(os.environ.get("BEFORE", "").strip(), os.environ.get("SHA", "").strip())
-    urls = urls_for(paths)
+    event = os.environ.get("EVENT_NAME", "").strip()
+    if event == "workflow_dispatch":
+        urls = date_rolled_pages()
+    else:
+        paths = git_diff(os.environ.get("BEFORE", "").strip(), os.environ.get("SHA", "").strip())
+        urls = urls_for(paths)
     for url in urls:
         print(url)
     return submit(urls, key)

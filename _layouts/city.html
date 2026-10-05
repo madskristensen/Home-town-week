@@ -43,7 +43,7 @@ layout: default
   {%- endif -%}
   {%- assign event_copy = content | strip -%}
   {%- if event_copy != "" -%}
-  <div class="event-list" data-today="{{ site.time | date: '%Y-%m-%d' }}">
+  <div class="event-list" data-today="{{ site.data.pacific_today }}">
     <h2>Upcoming</h2>
     {%- include updated-line.html id="list-updated" -%}
     {%- include calendar-subscribe.html city=page.city name=city.name -%}
