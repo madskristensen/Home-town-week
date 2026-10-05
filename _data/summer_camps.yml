@@ -1,8 +1,9 @@
 # Day camps for /summer-camps/. One row per camp.
 # The build compares reg_on and signup_open with today in
 # America/Los_Angeles and writes Open now, Opens in N days, or
-# Not posted yet. confirmed_2027 is only for a fact posted on the
-# camp's own site. A 2026 date is a hint, not a promise.
+# Not posted yet. confirmed_<year> is only for a fact posted on the
+# camp's own site for that summer. The year is the coming summer
+# (next year after August). A date from the previous summer is a hint.
 # Day camps only. Church camps stay off, except SAMBICA day camp,
 # whose 2027 registration date is posted. Newcastle and Preston are
 # just outside the 15 cities. Chains such as Skyhawks are a basic row.

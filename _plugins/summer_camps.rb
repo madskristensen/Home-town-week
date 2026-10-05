@@ -28,23 +28,29 @@ module EastsideCalendar
 
     module_function
 
+    # The coming summer. After August, camps are posting next year's dates.
+    def season_year(today)
+      today.month >= 9 ? today.year + 1 : today.year
+    end
+
     def prepare(site)
       today = EventCalendar.pacific_today(site.time)
+      year = season_year(today)
       names = city_names(site.data["cities"])
       sanitize_sponsors(site, names)
       rows = Array(site.data["summer_camps"]).select { |row| row.is_a?(Hash) }
       camps = []
       rows.each do |row|
-        camp = build(row, names, today, site)
+        camp = build(row, names, today, year, site)
         camps << camp if camp
       end
       directory = camps.select { |camp| camp["in_directory"] }
       towns = group_towns(directory, names)
-      confirmed = camps.count { |camp| camp["confirmed_2027"] }
+      confirmed = camps.count { |camp| camp["confirmed_#{year}"] }
       towns.each_with_index do |town, index|
         town["camps"].each { |camp| camp["town_order"] = index }
       end
-      Jekyll.logger.info("Summer camps:", "#{directory.size} in the directory, #{confirmed} with 2027 info")
+      Jekyll.logger.info("Summer camps:", "#{directory.size} in the directory, #{confirmed} with #{year} info")
       {
         "camps" => camps,
         "towns" => towns,
@@ -69,7 +75,7 @@ module EastsideCalendar
       end
     end
 
-    def build(row, names, today, site)
+    def build(row, names, today, year, site)
       name = squash(row["name"])
       id = squash(row["id"])
       town = squash(row["town"])
@@ -129,14 +135,14 @@ module EastsideCalendar
         "age_groups" => ages,
         "full_day" => row["full_day"] == true,
         "meta" => skim_meta(row, town_name),
-        "signup" => skim_signup(row, today),
+        "signup" => skim_signup(row, today, year),
         "source" => source,
         "source_label" => presence(row["source_label"], "Camp site"),
         "featured" => featured,
         "feature_rank" => row["feature_rank"].to_i,
         "in_directory" => row["in_directory"] != false,
         "on_signup_list" => row["on_signup_list"] == true,
-        "confirmed_2027" => row["confirmed_2027"] == true,
+        "confirmed_#{year}" => row["confirmed_#{year}"] == true,
         "signup_sort" => signup_sort(row, today),
         "group_sort" => "#{bucket["order"]}-#{name.downcase}",
         "signup_group" => bucket["id"],
@@ -144,7 +150,7 @@ module EastsideCalendar
         "signup_order" => bucket["order"],
         "audiences" => audiences(row, today),
         "blurb" => squash(row["blurb"]),
-        "card_when" => card_when(row, status)
+        "card_when" => card_when(row, status, year)
       }
       if photo
         camp["image"] = photo["image"]
@@ -245,7 +251,7 @@ module EastsideCalendar
     end
 
     # Open now, Sign-up opens Jan 19, or a one-line not-posted note.
-    def skim_signup(row, today)
+    def skim_signup(row, today, year)
       return "Open now" if row["signup_open"] == true
 
       dates = [camp_date(row["reg_on"])]
@@ -260,11 +266,11 @@ module EastsideCalendar
         return "Sign-up opens #{Date::ABBR_MONTHNAMES[future.month]} #{future.day}"
       end
 
-      hint = past_signup_phrase(row)
-      hint ? "2027 dates not posted yet (#{hint})" : "2027 dates not posted yet"
+      hint = past_signup_phrase(row, year - 1)
+      hint ? "#{year} dates not posted yet (#{hint})" : "#{year} dates not posted yet"
     end
 
-    def past_signup_phrase(row)
+    def past_signup_phrase(row, fallback_year)
       hint = squash(row["hint"])
       return nil unless hint.match?(/regist/i)
 
@@ -274,29 +280,29 @@ module EastsideCalendar
       day = match[2].to_i
       span = day <= 10 ? "early" : day <= 20 ? "mid-" : "late"
       gap = span.end_with?("-") ? "" : " "
-      year = hint[/\b(20\d{2})\b/, 1] || "2026"
+      year = hint[/\b(20\d{2})\b/, 1] || fallback_year.to_s
       "#{span}#{gap}#{match[1]} #{year}"
     end
 
-    def signup_line(row, status)
+    def signup_line(row, status, year)
       custom = squash(row["signup"])
-      line = custom.empty? ? default_signup(row) : custom
+      line = custom.empty? ? default_signup(row, year) : custom
       line.gsub("{{status}}", status)
     end
 
-    def default_signup(row)
+    def default_signup(row, year)
       hint = squash(row["hint"])
-      base = "2027 dates not posted yet."
+      base = "#{year} dates not posted yet."
       hint.empty? ? base : "#{base} #{hint}"
     end
 
-    def card_when(row, status)
+    def card_when(row, status, year)
       custom = squash(row["card_when"])
       return custom.gsub("{{status}}", status) unless custom.empty?
       return "Open now" if row["signup_open"] == true
       return status if camp_date(row["reg_on"])
 
-      "2027 dates not posted yet"
+      "#{year} dates not posted yet"
     end
 
     # Open now, then a future registration date, then not posted yet.
@@ -535,6 +541,11 @@ module EastsideCalendar
     def generate(site)
       page_data = SummerCamps.prepare(site)
       site.data["summer_camps_page"] = page_data
+      year = SummerCamps.season_year(EventCalendar.pacific_today(site.time))
+      site.pages.each do |page|
+        sample = page.data["sample_camp"]
+        sample["signup"] = "#{year} dates not posted yet" if sample.is_a?(Hash)
+      end
       places = page_data["camps"].select { |camp| camp["in_directory"] }.map do |camp|
         { "name" => camp["name"], "href" => camp["source"] }
       end
