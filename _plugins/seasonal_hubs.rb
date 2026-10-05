@@ -2364,7 +2364,8 @@ module EastsideCalendar
       page.data["hub_id"] = hub["id"]
       page.data["visible_events"] = hub["visible_events"]
       page.data["filter_counts"] = EventLabels.filter_counts(hub["visible_events"])
-      page.data["last_modified_at"] = EventCalendar.pacific_time(site.time)
+      latest = LastModified.latest_commit(site, LastModified.hub_sources(site, hub["id"]))
+      page.data["last_modified_at"] = EventCalendar.pacific_time(latest) if latest
       page.content = ""
       page
     end
