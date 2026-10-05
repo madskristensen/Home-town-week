@@ -498,15 +498,7 @@ module EastsideCalendar
     end
 
     def city_names(cities)
-      names = {}
-      Array(cities).each do |city|
-        next unless city.is_a?(Hash)
-
-        id = city["id"].to_s
-        name = city["name"].to_s.strip
-        names[id] = name unless id.empty? || name.empty?
-      end
-      names
+      TextUtil.city_names(cities)
     end
 
     def join_bits(*parts)
@@ -514,7 +506,7 @@ module EastsideCalendar
     end
 
     def squash(value)
-      value.to_s.gsub(/\s+/, " ").strip
+      TextUtil.squash(value)
     end
 
     def presence(value, fallback)

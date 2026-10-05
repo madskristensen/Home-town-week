@@ -140,6 +140,8 @@
     });
   });
 
+  var knownCities = [{% for map_city in site.data.cities %}{{ map_city.name | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+
   function squash(value) {
     return String(value || "").replace(/\s+/g, " ").trim();
   }
@@ -147,6 +149,14 @@
   function endsWithPhrase(text, phrase) {
     if (!phrase) return false;
     return new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\s*$", "i").test(text);
+  }
+
+  function endsWithKnownCity(text) {
+    var i;
+    for (i = 0; i < knownCities.length; i++) {
+      if (endsWithPhrase(text, knownCities[i])) return true;
+    }
+    return false;
   }
 
   function queryText(place, city, name) {
@@ -160,7 +170,7 @@
     text = text.replace(/,?\s*\b(?:WA|Washington)\b(?:\s+\d{5}(?:-\d{4})?)?\s*$/i, "");
     text = text.replace(/\s+\d{5}(?:-\d{4})?\s*$/, "");
     text = text.replace(/[,\s]+$/, "");
-    if (city && !endsWithPhrase(text, city)) text = text ? text + ", " + city : city;
+    if (city && !endsWithPhrase(text, city) && !endsWithKnownCity(text)) text = text ? text + ", " + city : city;
     text = text.replace(/[,\s]+$/, "");
     return text ? text + ", WA" : "WA";
   }

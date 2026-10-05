@@ -1551,16 +1551,7 @@ end
 module EastsideCalendar
   module MailEscape
     def mail_escape(input)
-      input.to_s.each_byte.map do |byte|
-        if byte == 45 || byte == 46 || byte == 95 || byte == 126 ||
-           (byte >= 48 && byte <= 57) ||
-           (byte >= 65 && byte <= 90) ||
-           (byte >= 97 && byte <= 122)
-          byte.chr
-        else
-          format("%%%02X", byte)
-        end
-      end.join
+      TextUtil.encode(input)
     end
   end
 end

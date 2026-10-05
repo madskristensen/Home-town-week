@@ -104,7 +104,6 @@ def infer_setting(name, place, blurb, tags=None, same_as=""):
         return "Outdoor"
     name_l = (name or "").lower()
     hay = f"{name_l} {(place or '').lower()}"
-    blob = f"{hay} {(blurb or '').lower()}"
     best_len = 0
     best = ""
     for label, phrases in (("Indoor", INDOOR), ("Outdoor", OUTDOOR)):
@@ -112,12 +111,6 @@ def infer_setting(name, place, blurb, tags=None, same_as=""):
             if contains_phrase(hay, phrase) and len(phrase) > best_len:
                 best_len = len(phrase)
                 best = label
-    if best:
-        return best
-    for phrase in OUTDOOR:
-        if contains_phrase(blob, phrase) and len(phrase) > best_len:
-            best_len = len(phrase)
-            best = "Outdoor"
     if best:
         return best
     if "kcls.bibliocommons" in (same_as or "").lower():

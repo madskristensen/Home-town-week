@@ -1,0 +1,58 @@
+{
+  "match_score": [
+    {"left": "kids quest", "right": "kids quest", "score": 100},
+    {"left": "story time", "right": "story time bellevue", "score": 90},
+    {"left": "library", "right": "library tour", "score": 90},
+    {"left": "art walk", "right": "art", "score": 0},
+    {"left": "kelsey creek day", "right": "kelsey creek night", "score": 65},
+    {"left": "pumpkin patch", "right": "the pumpkin patch festival", "score": 60},
+    {"left": "story time hour", "right": "story time special", "score": 0},
+    {"left": "", "right": "library", "score": 0}
+  ],
+  "year": [
+    {"text": "Jan 8", "today": "2026-12-20", "iso": "2027-01-08"},
+    {"text": "Oct 3", "today": "2026-10-05", "iso": "2026-10-03"},
+    {"text": "May 21", "today": "2026-10-05", "iso": "2027-05-21"},
+    {"text": "Sep 30", "today": "2026-10-01", "iso": "2026-09-30"}
+  ],
+  "buckets": [
+    {"date": "2026-10-05", "today": "2026-10-05", "key": "today", "label": "Today"},
+    {"date": "2026-10-06", "today": "2026-10-05", "key": "tomorrow", "label": "Tomorrow"},
+    {"date": "2026-10-07", "today": "2026-10-05", "key": "week", "label": "This week"},
+    {"date": "2026-10-10", "today": "2026-10-05", "key": "weekend", "label": "This weekend"},
+    {"date": "2026-10-11", "today": "2026-10-05", "key": "weekend", "label": "This weekend"},
+    {"date": "2026-10-12", "today": "2026-10-05", "key": "later", "label": "Later"},
+    {"date": "2026-10-04", "today": "2026-10-05", "key": "later", "label": "Later"}
+  ],
+  "dst": [
+    {"utc": "2026-01-15T18:00:00", "offset": -8},
+    {"utc": "2026-03-08T09:59:59", "offset": -8},
+    {"utc": "2026-03-08T10:00:00", "offset": -7},
+    {"utc": "2026-07-04T17:00:00", "offset": -7},
+    {"utc": "2026-11-01T08:59:59", "offset": -7},
+    {"utc": "2026-11-01T09:00:00", "offset": -8}
+  ],
+  "parse_when": [
+    {"value": "2026-10-05", "date": "2026-10-05", "time": null},
+    {"value": "2026-07-04T17:00:00Z", "date": "2026-07-04", "time": [10, 0, 0]}
+  ],
+  "blurbs": [
+    {"text": "A short visit.", "max": 40, "out": "A short visit."},
+    {"text": "Families walk the trail and look for birds. The center is open on Saturday.", "max": 55, "out": "Families walk the trail and look for birds."},
+    {"text": "Families walk the trail beside the creek and then stop for a snack at the visitor center before heading home", "max": 80, "out": "Families walk the trail beside the creek and then stop for a snack at the…"}
+  ],
+  "maps": [
+    {"place": "10201 NE 4th St, Bellevue, WA 98004", "city": "Bellevue", "name": "Downtown Park", "query": "Downtown Park, 10201 NE 4th St, Bellevue, WA"},
+    {"place": "125 W Sunset Way, Issaquah, WA", "city": "Redmond", "name": "", "query": "125 W Sunset Way, Issaquah, WA"},
+    {"place": "", "city": "Kirkland", "name": "", "query": "Kirkland, WA"}
+  ],
+  "encode": [
+    {"text": "Bellevue, WA", "encoded": "Bellevue%2C%20WA"}
+  ],
+  "settings": [
+    {"name": "Story time", "place": "Bellevue Library", "blurb": "", "tags": [], "same_as": "", "label": "Indoor"},
+    {"name": "Saturday market", "place": "Downtown Park", "blurb": "", "tags": [], "same_as": "", "label": "Outdoor"},
+    {"name": "Saturday songs", "place": "Room B", "blurb": "We will be at the park if it is sunny.", "tags": [], "same_as": "", "label": ""},
+    {"name": "Creek hike", "place": "Bellevue Library", "blurb": "", "tags": [], "same_as": "", "label": "Outdoor"}
+  ]
+}

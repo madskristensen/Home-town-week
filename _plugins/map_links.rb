@@ -34,20 +34,11 @@ module EastsideCalendar
     end
 
     def encode(text)
-      text.to_s.encode("UTF-8").each_byte.map do |byte|
-        if byte == 45 || byte == 46 || byte == 95 || byte == 126 ||
-           (byte >= 48 && byte <= 57) ||
-           (byte >= 65 && byte <= 90) ||
-           (byte >= 97 && byte <= 122)
-          byte.chr
-        else
-          format("%%%02X", byte)
-        end
-      end.join
+      TextUtil.encode(text)
     end
 
     def squash(value)
-      value.to_s.gsub(/\s+/, " ").strip
+      TextUtil.squash(value)
     end
 
     def contains_phrase?(text, phrase)

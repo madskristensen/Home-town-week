@@ -76,13 +76,7 @@ module EastsideCalendar
     end
 
     def city_names(cities)
-      names = {}
-      Array(cities).each do |city|
-        next unless city.is_a?(Hash)
-
-        names[city["id"].to_s] = city["name"].to_s.strip
-      end
-      names
+      TextUtil.city_names(cities)
     end
 
     def light_item(row, names, number)
@@ -299,7 +293,7 @@ module EastsideCalendar
     end
 
     def squash(value)
-      value.to_s.gsub(/\s+/, " ").strip
+      TextUtil.squash(value)
     end
 
     def market_photo(photo, name, site)

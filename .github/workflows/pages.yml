@@ -27,6 +27,12 @@ jobs:
       - name: Install Python packages
         run: python3 -m pip install --quiet -r requirements.txt
 
+      - name: Check shared rules
+        run: |
+          python3 script/check-event-areas.py --self-test
+          python3 script/prune-past-events.py --self-test
+          python3 script/check-rules.py
+
       - name: Check shared components
         run: python3 script/check-components.py
 
@@ -44,6 +50,9 @@ jobs:
         with:
           # Reads .ruby-version (3.2.3).
           bundler-cache: true
+
+      - name: Test calendar rules
+        run: bundle exec ruby -Itest test/rules_test.rb
 
       - name: Setup Pages
         id: pages
@@ -103,6 +112,9 @@ jobs:
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
         with:
           node-version: "22"
+
+      - name: Test browser rules
+        run: node test/check-rules.mjs
 
       - name: Fingerprint share cards
         id: share

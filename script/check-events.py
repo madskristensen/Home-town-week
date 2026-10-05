@@ -41,7 +41,53 @@ def normalize(text):
     return re.sub(r"[^a-z0-9]+", " ", raw).strip()
 
 
+GENERIC = {
+    "ages", "art", "arts", "baby", "center", "city", "club", "community",
+    "council", "county", "downtown", "family", "farmers", "festival", "kids",
+    "library", "market", "park", "preschool", "public", "story", "storytime",
+    "teen", "time", "toddler",
+}
+
+
+def tokens_in_order(needle, haystack):
+    tokens = needle.split()
+    if len(tokens) < 2:
+        return False
+    rest = haystack
+    for token in tokens:
+        found_at = None
+        start = 0
+        while True:
+            idx = rest.find(token, start)
+            if idx < 0:
+                break
+            before_ok = idx == 0 or rest[idx - 1] == " "
+            after = idx + len(token)
+            after_ok = after == len(rest) or rest[after] == " "
+            if before_ok and after_ok:
+                found_at = after
+                break
+            start = idx + 1
+        if found_at is None:
+            return False
+        rest = rest[found_at + 1 :]
+    return True
+
+
+def leading_name_match(left, right):
+    left_tokens = left.split()
+    right_tokens = right.split()
+    if len(left_tokens) < 2 or len(right_tokens) < 2:
+        return False
+    if left_tokens[0] != right_tokens[0] or left_tokens[1] != right_tokens[1]:
+        return False
+    if left_tokens[0] in GENERIC or left_tokens[1] in GENERIC:
+        return False
+    return len(left_tokens[0]) >= 4 and len(left_tokens[1]) >= 4
+
+
 def match_score(left, right):
+    """Same scores as EventCalendar.match_score: 100, 90, 65, 60, or 0."""
     if not left or not right:
         return 0
     if left == right:
@@ -51,6 +97,10 @@ def match_score(left, right):
         len(shorter) >= 8 or (" " not in shorter and len(shorter) >= 7)
     ):
         return 90
+    if len(shorter) >= 12 and len(shorter.split()) >= 2 and tokens_in_order(shorter, longer):
+        return 60
+    if leading_name_match(left, right):
+        return 65
     return 0
 
 

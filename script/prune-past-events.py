@@ -16,7 +16,7 @@ nothing are left byte for byte.
 import argparse
 import re
 import sys
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -67,7 +67,13 @@ def as_date(value):
 
 
 def infer_date(month, day, year, today):
-    """An explicit year is that year. Otherwise the next future occurrence."""
+    """An explicit year is that year.
+
+    A bare month and day uses this year, unless that day is more than 45
+    days behind today. Then it is next year, so a January line written in
+    December stays ahead. A day from the last month and a half stays this
+    year and can be pruned.
+    """
     try:
         day_n = int(day)
         if year:
@@ -75,12 +81,12 @@ def infer_date(month, day, year, today):
         this = date(today.year, month, day_n)
     except ValueError:
         return None
-    if this >= today:
-        return this
-    try:
-        return date(today.year + 1, month, day_n)
-    except ValueError:
-        return None
+    if this < today - timedelta(days=45):
+        try:
+            return date(today.year + 1, month, day_n)
+        except ValueError:
+            return None
+    return this
 
 
 def dates_in_when(when_text, today):
@@ -392,7 +398,7 @@ def self_test():
     found = dates_in_when(when, today)
     assert date(2027, 1, 8) in found and date(2027, 1, 16) in found, found
     past = dates_in_when("Wed Sep 30", today)
-    assert past == [date(2027, 9, 30)], past
+    assert past == [date(2026, 9, 30)], past
     print("prune-past-events self-test ok")
     return 0
 

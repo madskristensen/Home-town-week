@@ -82,10 +82,7 @@ module EastsideCalendar
     end
 
     def month_day_ord(value)
-      month, day = month_day(value)
-      return nil unless month
-
-      month * 100 + day
+      TextUtil.month_day_number(value)
     end
 
     def season_label(start_s, end_s)
@@ -692,13 +689,7 @@ module EastsideCalendar
     end
 
     def city_names(cities)
-      names = {}
-      Array(cities).each do |city|
-        next unless city.is_a?(Hash)
-
-        names[city["id"].to_s] = city["name"].to_s.strip
-      end
-      names
+      TextUtil.city_names(cities)
     end
 
     def event_row(event, city_id, city_name, site_url)

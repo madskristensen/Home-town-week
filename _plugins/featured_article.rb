@@ -62,14 +62,7 @@ module EastsideCalendar
     end
 
     def month_day(value)
-      match = value.to_s.strip.match(/\A(\d{1,2})-(\d{1,2})\z/)
-      return nil unless match
-
-      month = match[1].to_i
-      day = match[2].to_i
-      return nil unless (1..12).cover?(month) && (1..31).cover?(day)
-
-      month * 100 + day
+      TextUtil.month_day_number(value)
     end
 
     def lines_for(site, window)
