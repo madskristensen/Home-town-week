@@ -62,17 +62,13 @@ jobs:
             image-variants-v2-
 
       - name: Generate image variants
-        env:
-          BEFORE: ${{ github.event.before }}
         run: |
           # Encode only on a cache miss. Card photos are name-400.avif,
           # name-640.avif, and name-640.jpg. Heroes add 800, 1200, and
           # 1600 AVIF. The files are not committed. A referenced photo
-          # that cannot be encoded fails the build. Existing masters
-          # are left as they are. A newly committed master over 1600px
-          # (2000px for a city hero) is a warning.
+          # that cannot be encoded fails the build. Master cap and
+          # compression happen in the Optimize images workflow.
           python3 -m pip install --quiet Pillow pillow-avif-plugin
-          python3 script/check-master-cap.py
           if python3 script/render-image-variants.py --check-cache; then
             python3 script/render-image-variants.py --from-cache
           else
