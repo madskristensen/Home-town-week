@@ -46,7 +46,7 @@ Drop-off is only when the child stays and the adult leaves. Camps are not drop-o
 
 ## Photos
 
-Image optimization is automatic. The Optimize images workflow runs when a push adds or changes a file under `assets/images`. It caps width at 1600px, or 2000px for a city hero, compresses, and turns a new JPEG or PNG into WebP. It commits that result. Photos the push did not change are left as they are. Do not resize or recompress photos in an agent script. The Pages build still writes the card variants (`name-400.avif`, `name-640.avif`, `name-640.jpg`, and the hero AVIF widths). Those files are not committed.
+Image optimization is automatic at deploy. Add the master photo. The Pages build writes the card variants (`name-400.avif`, `name-640.avif`, `name-640.jpg`, and the hero AVIF widths) and publishes a capped copy when a master is longer than 1600px, or 2000px for a city hero. Those files are not committed. The master in the repo is left as you added it. Do not resize or recompress photos in an agent script.
 
 Order for a hub card: the event's own photo (the organizer page, og:image, or flyer), then a photo of that specific venue, then a themed picture, then the seasonal pool, then the year-round pool in `_data/hub_pools.yml`. A grid card with no image fails the build. Do not use a designed card.
 

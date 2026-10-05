@@ -66,8 +66,8 @@ jobs:
           # Encode only on a cache miss. Card photos are name-400.avif,
           # name-640.avif, and name-640.jpg. Heroes add 800, 1200, and
           # 1600 AVIF. The files are not committed. A referenced photo
-          # that cannot be encoded fails the build. Master cap and
-          # compression happen in the Optimize images workflow.
+          # that cannot be encoded fails the build. Oversized masters
+          # are capped in the same cache. The repo files stay as they are.
           python3 -m pip install --quiet Pillow pillow-avif-plugin
           if python3 script/render-image-variants.py --check-cache; then
             python3 script/render-image-variants.py --from-cache
@@ -127,6 +127,7 @@ jobs:
           python3 -m pip install --quiet rcssmin minify-html
           printf 'sha: "%s"\n' "$GITHUB_SHA" > _data/build.yml
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+          python3 script/render-image-variants.py --publish-site
           python3 script/minify-html.py
           python3 script/check-schema.py
           python3 script/check-components.py --rendered _site

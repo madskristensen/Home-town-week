@@ -4,13 +4,17 @@
 Every card photo gets name-400.avif, name-640.avif, and name-640.jpg.
 Every city hero also gets name-800.avif, name-1200.avif, and
 name-1600.avif. A master narrower than a target is scaled up so the
-width in the filename is the pixel width. Nothing here is committed.
-Actions caches .image-cache on a hash of the masters and this encoder.
+width in the filename is the pixel width. A master longer than 1600px,
+or 2000px for a city hero, is capped in the cache and copied over the
+file Jekyll published to _site. The repo original is not changed.
+Nothing here is committed. Actions caches .image-cache on a hash of
+the masters and this encoder.
 
     python3 script/render-image-variants.py --fingerprint
     python3 script/render-image-variants.py --check-cache
     python3 script/render-image-variants.py --from-cache
     python3 script/render-image-variants.py
+    python3 script/render-image-variants.py --publish-site
 
 A referenced photo that cannot be encoded fails the build.
 """
@@ -27,6 +31,7 @@ IMAGE_ROOT = os.path.join("assets", "images")
 CACHE_ROOT = ".image-cache"
 CACHE_OUT = os.path.join(CACHE_ROOT, "out")
 CACHE_META = os.path.join(CACHE_ROOT, "meta")
+CACHE_MASTERS = os.path.join(CACHE_ROOT, "masters")
 SKIP_TOP = {"cities", "og", "share"}
 SKIP_NAMES = {"logo.png", "apple-touch-icon.png", "favicon.png"}
 SOURCE_EXT = {".webp", ".jpg", ".jpeg", ".png"}
@@ -35,6 +40,10 @@ HERO_AVIF = (400, 640, 800, 1200, 1600)
 JPEG_WIDTH = 640
 AVIF_QUALITY = 60
 JPEG_QUALITY = 75
+CARD_MASTER_CAP = 1600
+HERO_MASTER_CAP = 2000
+MASTER_WEBP_QUALITY = 82
+MASTER_JPEG_QUALITY = 85
 ENCODER_ID = "fixed-card-400-640-jpg640-hero-800-1200-1600"
 VARIANT_RE = re.compile(r"-(?:400|640|800|960|1200|1280|1600)$")
 
@@ -244,6 +253,153 @@ def require_variants():
         sys.exit(result)
 
 
+def master_cap(path, heroes):
+    if is_hero(path, heroes):
+        return HERO_MASTER_CAP
+    return CARD_MASTER_CAP
+
+
+def capped_cache_path(path):
+    return os.path.join(CACHE_MASTERS, path)
+
+
+def master_long_side(path):
+    from PIL import Image, ImageOps
+
+    with Image.open(path) as image:
+        exif = image.getexif()
+        orientation = exif.get(274) if exif else None
+        if orientation and orientation != 1:
+            image = ImageOps.exif_transpose(image)
+        return max(image.width, image.height)
+
+
+def oriented_image(path):
+    from PIL import Image, ImageOps
+
+    image = ImageOps.exif_transpose(Image.open(path))
+    image.load()
+    return image
+
+
+def frame_within(image, cap):
+    from PIL import Image
+
+    long_side = max(image.width, image.height)
+    if long_side <= cap:
+        return image
+    if image.width >= image.height:
+        width = cap
+        height = max(1, round(image.height * cap / image.width))
+    else:
+        height = cap
+        width = max(1, round(image.width * cap / image.height))
+    return image.resize((width, height), Image.Resampling.LANCZOS)
+
+
+def save_master(image, dest, ext):
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
+    if ext in {".jpg", ".jpeg"}:
+        image.convert("RGB").save(
+            dest, "JPEG", quality=MASTER_JPEG_QUALITY, optimize=True, progressive=True
+        )
+        return
+    if ext == ".webp":
+        if image.mode not in ("RGB", "RGBA"):
+            bands = image.getbands()
+            image = image.convert("RGBA" if bands and "A" in bands else "RGB")
+        image.save(dest, "WEBP", quality=MASTER_WEBP_QUALITY, method=6)
+        return
+    if image.mode == "P":
+        image = image.convert("RGBA" if "transparency" in image.info else "RGB")
+    elif image.mode not in ("RGB", "RGBA"):
+        bands = image.getbands()
+        image = image.convert("RGBA" if bands and "A" in bands else "RGB")
+    image.save(dest, "PNG", optimize=True)
+
+
+def drop_capped(path):
+    cached = capped_cache_path(path)
+    for extra in (cached, cached + ".sha256"):
+        if os.path.exists(extra):
+            os.remove(extra)
+
+
+def capped_stamp(path, cap):
+    return "%s %d" % (file_sha256(path), cap)
+
+
+def capped_current(path, cap):
+    cached = capped_cache_path(path)
+    stamp = cached + ".sha256"
+    if not os.path.exists(cached) or not os.path.exists(stamp):
+        return False
+    with open(stamp, encoding="utf-8") as handle:
+        return handle.read().strip() == capped_stamp(path, cap)
+
+
+def write_capped(path, heroes):
+    """Write a capped copy into the cache. Does not touch the repo file."""
+    cap = master_cap(path, heroes)
+    ext = os.path.splitext(path)[1].lower()
+    dest = capped_cache_path(path)
+    tmp = dest + ".tmp"
+    try:
+        image = oriented_image(path)
+        try:
+            resized = frame_within(image, cap)
+            long_side = max(resized.width, resized.height)
+            save_master(resized, tmp, ext)
+        finally:
+            image.close()
+        os.replace(tmp, dest)
+    finally:
+        if os.path.exists(tmp):
+            os.remove(tmp)
+    with open(dest + ".sha256", "w", encoding="utf-8") as handle:
+        handle.write(capped_stamp(path, cap))
+    print("capped master %s -> cache (%dpx, cap %d)" % (path, long_side, cap))
+
+
+def ensure_capped_masters(heroes):
+    capped = 0
+    for path in source_files():
+        cap = master_cap(path, heroes)
+        long_side = master_long_side(path)
+        if long_side <= cap:
+            drop_capped(path)
+            continue
+        if not capped_current(path, cap):
+            write_capped(path, heroes)
+        capped += 1
+    if capped:
+        print("%d capped master(s) in cache." % capped)
+    else:
+        print("no oversized masters")
+    return capped
+
+
+def publish_site(heroes):
+    if not os.path.isdir("_site"):
+        sys.exit("_site is missing, so capped masters were not published")
+    ensure_capped_masters(heroes)
+    copied = 0
+    for path in source_files():
+        cached = capped_cache_path(path)
+        if not os.path.exists(cached):
+            continue
+        dest = os.path.join("_site", path)
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        shutil.copy2(cached, dest)
+        source_hash = file_sha256(path)
+        published_hash = file_sha256(dest)
+        if published_hash == source_hash:
+            sys.exit("capped master matches the repo file for %s" % path)
+        copied += 1
+        print("published %s" % dest)
+    print("Published %d capped master(s) to _site." % copied)
+
+
 def publish_from_cache(heroes):
     for path in source_files():
         record = cached_record(path, heroes)
@@ -251,6 +407,7 @@ def publish_from_cache(heroes):
             sys.exit("image cache is missing %s" % path)
         copy_record(path, record)
     print("Restored %d image(s) from cache." % len(source_files()))
+    ensure_capped_masters(heroes)
     require_variants()
 
 
@@ -275,6 +432,10 @@ def generate(heroes):
             failed.append(path)
     if failed:
         sys.exit("could not encode %d photo(s)" % len(failed))
+    try:
+        ensure_capped_masters(heroes)
+    except Exception as exc:
+        sys.exit("could not cap masters: %s" % exc)
     require_variants()
 
 
@@ -287,6 +448,9 @@ def main():
         sys.exit(0 if cache_complete(heroes) else 1)
     if "--from-cache" in sys.argv:
         publish_from_cache(heroes)
+        return
+    if "--publish-site" in sys.argv:
+        publish_site(heroes)
         return
     generate(heroes)
 
