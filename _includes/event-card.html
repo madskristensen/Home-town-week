@@ -124,10 +124,101 @@
   {%- assign ev_ages = card_event.ages | append: "" -%}
   {%- assign ev_setting = card_event.setting | append: "" -%}
 {%- endif -%}
-<article class="event-card"{% if include.stretch == "1" %} data-stretch{% endif %}{% if card_id.size > 0 %} id="{{ card_id | escape }}"{% endif %}{% if card_date.size > 0 %} data-date="{{ card_date }}"{% endif %}{% if card_end.size > 0 %} data-end="{{ card_end }}"{% endif %}{% if card_attrs.size > 0 %} {{ card_attrs }}{% endif %}{% if ev_cost == "Free" or ev_cost == "free" %} data-cost="Free"{% endif %}{% if ev_ages == "Toddlers" or ev_ages == "Kids" or ev_ages == "Teens" %} data-ages="{{ ev_ages | escape }}"{% endif %}{% if ev_setting == "Indoor" or ev_setting == "Outdoor" %} data-setting="{{ ev_setting }}"{% endif %}{% if card_attrs.size == 0 and card_event.drop_off == true %} data-dropoff="1"{% endif %}{% if card_attrs.size == 0 and card_event.signup == true %} data-signup="1"{% endif %}{% if card_attrs.size == 0 and card_event.sensory == true %} data-sensory="1"{% endif %}>
+{%- assign raw_start = "" -%}
+{%- assign raw_end = "" -%}
+{%- assign org_city = "" -%}
+{%- assign org_name = include.schema_organizer | append: "" | strip -%}
+{%- assign org_url = include.schema_organizer_url | append: "" | strip -%}
+{%- assign schema_added = include.schema_added | append: "" | strip -%}
+{%- if card_event -%}
+  {%- assign raw_start = card_event.start_raw | append: "" | strip -%}
+  {%- if raw_start.size == 0 -%}{%- assign raw_start = card_event.start | append: "" | strip -%}{%- endif -%}
+  {%- assign raw_end = card_event.end_raw | append: "" | strip -%}
+  {%- if raw_end.size == 0 -%}{%- assign raw_end = card_event.end | append: "" | strip -%}{%- endif -%}
+  {%- assign org_city = card_event.city_id | append: "" | strip -%}
+  {%- if org_name.size == 0 -%}{%- assign org_name = card_event.organizer | append: "" | strip -%}{%- endif -%}
+  {%- if org_url.size == 0 -%}{%- assign org_url = card_event.organizer_url | append: "" | strip -%}{%- endif -%}
+  {%- if schema_added.size == 0 -%}{%- assign schema_added = card_event.added | append: "" | strip -%}{%- endif -%}
+{%- endif -%}
+{%- capture date_key -%}{{ include.schema_share_start }}|{{ include.schema_share_end }}|{{ raw_start }}|{{ raw_end }}|{{ schema_start }}|{{ schema_end }}{%- endcapture -%}
+{%- assign date_pair = date_key | strip | google_dates -%}
+{%- assign micro_start = date_pair | split: "|" | first | strip -%}
+{%- assign micro_end = date_pair | split: "|" | last | strip -%}
+{%- assign schema_venue = schema_place | venue_of: schema_locality -%}
+{%- assign venue_down = schema_venue | downcase -%}
+{%- assign title_down = share_title | downcase -%}
+{%- if schema_venue.size == 0 or venue_down == title_down -%}{%- assign schema_venue = schema_locality -%}{%- endif -%}
+{%- assign finish_day = "" -%}
+{%- if card_event -%}
+  {%- assign finish_day = card_event.end_on | append: "" | slice: 0, 10 -%}
+{%- endif -%}
+{%- if finish_day.size == 0 -%}
+  {%- assign finish_day = card_date | slice: 0, 10 -%}
+{%- endif -%}
+{%- if finish_day.size == 0 -%}
+  {%- assign finish_day = micro_end | slice: 0, 10 -%}
+{%- endif -%}
+{%- assign today_iso = "" | pacific_day -%}
+{%- assign card_is_event = false -%}
+{%- if include.microdata == "1" and micro_start.size > 0 and micro_end.size > 0 and schema_venue.size > 0 and share_title.size > 0 and schema_url.size > 0 -%}
+  {%- if finish_day.size == 0 or finish_day >= today_iso -%}
+    {%- assign card_is_event = true -%}
+  {%- endif -%}
+{%- endif -%}
+{%- assign schema_amount = "" -%}
+{%- assign schema_from = "" -%}
+{%- assign org_out = "" -%}
+{%- assign org_url_out = "" -%}
+{%- assign url_on_title = false -%}
+{%- assign shown_blurb = false -%}
+{%- if include.blurb_html -%}
+  {%- assign shown_probe = include.blurb_html | append: "" | strip -%}
+  {%- if shown_probe.size > 0 -%}{%- assign shown_blurb = true -%}{%- endif -%}
+{%- endif -%}
+{%- if shown_blurb == false -%}
+  {%- assign shown_probe = include.blurb | append: "" | strip -%}
+  {%- if shown_probe.size > 0 -%}{%- assign shown_blurb = true -%}{%- endif -%}
+{%- endif -%}
+{%- if card_is_event -%}
+  {%- assign schema_amount = schema_cost | offer_amount -%}
+  {%- assign schema_from = schema_added | offer_from -%}
+  {%- if org_name.size > 0 and org_url.size > 0 -%}
+    {%- assign org_out = org_name -%}
+    {%- assign org_url_out = org_url -%}
+  {%- else -%}
+    {%- capture org_extra -%}{{ schema_venue }}	{{ schema_locality }}	{{ org_city }}	{{ org_name }}	{{ org_url }}{%- endcapture -%}
+    {%- assign org_pair = schema_url | organizer_pair: org_extra -%}
+    {%- assign org_out = org_pair | split: "	" | first | strip -%}
+    {%- assign org_url_out = org_pair | split: "	" | last | strip -%}
+  {%- endif -%}
+  {%- assign card_href = include.href | append: "" | strip -%}
+  {%- assign href_abs = card_href | absolute_url -%}
+  {%- if card_href.size > 0 and href_abs == schema_url -%}{%- assign url_on_title = true -%}{%- endif -%}
+{%- endif -%}
+{%- capture card_schema -%}
+{%- if card_is_event -%}
+<meta itemprop="startDate" content="{{ micro_start | escape }}"><meta itemprop="endDate" content="{{ micro_end | escape }}"><meta itemprop="eventStatus" content="https://schema.org/EventScheduled"><meta itemprop="eventAttendanceMode" content="https://schema.org/OfflineEventAttendanceMode">
+{%- unless url_on_title -%}<link itemprop="url" href="{{ schema_url | escape }}">{%- endunless -%}
+{%- if schema_amount.size > 0 and schema_from.size > 0 -%}
+<span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="{{ schema_amount | escape }}"><meta itemprop="priceCurrency" content="USD"><meta itemprop="availability" content="https://schema.org/InStock"><link itemprop="url" href="{{ schema_url | escape }}"><meta itemprop="validFrom" content="{{ schema_from | escape }}"></span>
+{%- endif -%}
+{%- if schema_amount == "0" -%}<meta itemprop="isAccessibleForFree" content="true">{%- endif -%}
+{%- if org_out.size > 0 and org_url_out.size > 0 -%}
+<span itemprop="organizer" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="{{ org_out | escape }}"><link itemprop="url" href="{{ org_url_out | escape }}"></span>
+{%- endif -%}
+{%- unless shown_blurb -%}
+{%- assign schema_short = schema_description | schema_short -%}
+{%- if schema_short.size > 0 -%}<meta itemprop="description" content="{{ schema_short | escape }}">{%- endif -%}
+{%- endunless -%}
+{%- endif -%}
+{%- endcapture -%}
+{%- assign card_schema = card_schema | strip -%}
+{%- assign card_image_prop = "" -%}
+{%- if card_is_event -%}{%- assign card_image_prop = "image" -%}{%- endif -%}
+<article class="event-card"{% if include.stretch == "1" %} data-stretch{% endif %}{% if card_id.size > 0 %} id="{{ card_id | escape }}"{% endif %}{% if card_date.size > 0 %} data-date="{{ card_date }}"{% endif %}{% if card_end.size > 0 %} data-end="{{ card_end }}"{% endif %}{% if card_attrs.size > 0 %} {{ card_attrs }}{% endif %}{% if ev_cost == "Free" or ev_cost == "free" %} data-cost="Free"{% endif %}{% if ev_ages == "Toddlers" or ev_ages == "Kids" or ev_ages == "Teens" %} data-ages="{{ ev_ages | escape }}"{% endif %}{% if ev_setting == "Indoor" or ev_setting == "Outdoor" %} data-setting="{{ ev_setting }}"{% endif %}{% if card_attrs.size == 0 and card_event.drop_off == true %} data-dropoff="1"{% endif %}{% if card_attrs.size == 0 and card_event.signup == true %} data-signup="1"{% endif %}{% if card_attrs.size == 0 and card_event.sensory == true %} data-sensory="1"{% endif %}{%- if card_is_event %} itemscope itemtype="https://schema.org/Event"{% endif %}>
 {%- assign card_photo_html = include.photo_html | append: "" | strip -%}
 {%- if card_photo_html.size > 0 -%}
-{{ card_photo_html }}
+{%- if card_is_event -%}{{ card_photo_html | mark_image }}{%- else -%}{{ card_photo_html }}{%- endif -%}
 {%- else -%}
 {%- assign card_image = include.image | append: "" | strip -%}
 {%- if card_image.size > 0 -%}
@@ -139,7 +230,8 @@
      width=include.width
      height=include.height
      loading=include.loading
-     priority=include.priority -%}
+     priority=include.priority
+     itemprop=card_image_prop -%}
 {%- endif -%}
 {%- endif -%}
 {%- assign card_town = include.town | append: "" | strip -%}
@@ -176,9 +268,9 @@
 {%- endif -%}
 {%- endif -%}
 {%- if card_title.size > 0 or card_number.size > 0 -%}
-<h3>{%- if card_number.size > 0 -%}<span class="home-num">{{ card_number | escape }}</span> {% endif -%}
+<h3{%- if card_is_event and card_href.size == 0 %} itemprop="name"{% endif -%}>{%- if card_schema.size > 0 -%}{{ card_schema }}{%- endif -%}{%- if card_number.size > 0 -%}<span class="home-num">{{ card_number | escape }}</span> {% endif -%}
 {%- if card_href.size > 0 -%}
-<a href="{% if include.external %}{{ card_href }}{% else %}{{ card_href | relative_url }}{% endif %}"{% if card_rel.size > 0 %} rel="{{ card_rel }}"{% endif %}>{{ card_title | escape }}</a>
+<a href="{% if include.external %}{{ card_href }}{% else %}{{ card_href | relative_url }}{% endif %}"{% if card_rel.size > 0 %} rel="{{ card_rel }}"{% endif %}{% if card_is_event %} itemprop="{% if url_on_title %}name url{% else %}name{% endif %}"{% endif %}>{{ card_title | escape }}</a>
 {%- else -%}
 {{ card_title | escape }}
 {%- endif -%}
@@ -191,9 +283,24 @@
 {%- elsif card_event -%}
 {%- include event-tags.html event=card_event -%}
 {%- endif -%}
+{%- assign schema_zip = schema_place | postal_of -%}
+{%- capture place_metas -%}
+{%- if card_is_event -%}
+{%- if schema_street.size > 0 -%}<meta itemprop="streetAddress" content="{{ schema_street | escape }}">{%- endif -%}
+{%- if schema_locality.size > 0 -%}<meta itemprop="addressLocality" content="{{ schema_locality | escape }}">{%- endif -%}
+<meta itemprop="addressRegion" content="WA"><meta itemprop="addressCountry" content="US">
+{%- if schema_zip.size > 0 -%}<meta itemprop="postalCode" content="{{ schema_zip | escape }}">{%- endif -%}
+{%- endif -%}
+{%- endcapture -%}
+{%- assign place_metas = place_metas | strip -%}
 {%- assign card_place_html = include.place_html | append: "" | strip -%}
 {%- if card_place_html.size > 0 -%}
+{%- if card_is_event -%}
+{%- capture place_extra -%}{{ schema_venue }}	{{ schema_street }}	{{ schema_locality }}	{{ schema_zip }}{%- endcapture -%}
+{{ card_place_html | mark_place: place_extra }}
+{%- else -%}
 {{ card_place_html }}
+{%- endif -%}
 {%- else -%}
 {%- assign card_place = include.place | append: "" | strip -%}
 {%- assign card_city = include.city | append: "" | strip -%}
@@ -201,9 +308,9 @@
 {%- assign card_city_href = include.city_href | append: "" | strip -%}
 {%- if card_place.size > 0 or card_city.size > 0 or card_drive.size > 0 -%}
 {%- if card_place.size > 0 and card_city.size == 0 and card_drive.size == 0 -%}
-<a class="event-place addr" href="{{ card_place | map_search: include.place_city, include.place_name }}"><span class="addr-text">{{ card_place | escape }}</span></a>
+<a class="event-place addr" href="{{ card_place | map_search: include.place_city, include.place_name }}"{% if card_is_event %} itemprop="location" itemscope itemtype="https://schema.org/Place"{% endif %}><span class="addr-text"{% if card_is_event %} itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"{% endif %}>{{ card_place | escape }}{{ place_metas }}</span>{%- if card_is_event -%}<meta itemprop="name" content="{{ schema_venue | escape }}">{%- endif -%}</a>
 {%- else -%}
-<p class="event-place">{%- if card_place.size > 0 -%}<a class="addr" href="{{ card_place | map_search: include.place_city, include.place_name }}"><span class="addr-text">{{ card_place | escape }}</span></a>{%- if card_city.size > 0 -%}, {% endif -%}{%- endif -%}
+<p class="event-place"{% if card_is_event %} itemprop="location" itemscope itemtype="https://schema.org/Place"{% endif %}>{%- if card_place.size > 0 -%}<a class="addr" href="{{ card_place | map_search: include.place_city, include.place_name }}"><span class="addr-text"{% if card_is_event %} itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"{% endif %}>{{ card_place | escape }}{{ place_metas }}</span></a>{%- if card_city.size > 0 -%}, {% endif -%}{%- endif -%}
 {%- if card_drive.size > 0 -%}
 {%- if card_city.size > 0 -%}<span class="place-town">{{ card_city | escape }}</span>{%- endif -%}<span class="drive-time">{{ card_drive | escape }}</span>
 {%- elsif card_city.size > 0 -%}
@@ -213,6 +320,7 @@
 <span class="place-town">{{ card_city | escape }}</span>
 {%- endif -%}
 {%- endif -%}
+{%- if card_is_event -%}<meta itemprop="name" content="{{ schema_venue | escape }}">{%- endif -%}
 </p>
 {%- endif -%}
 {%- endif -%}
@@ -224,9 +332,9 @@
 {%- assign card_blurb_html = include.blurb_html | append: "" | strip -%}
 {%- assign card_blurb = include.blurb | append: "" | strip -%}
 {%- if card_blurb_html.size > 0 -%}
-{{ card_blurb_html }}
+{%- if card_is_event -%}{{ card_blurb_html | mark_blurb }}{%- else -%}{{ card_blurb_html }}{%- endif -%}
 {%- elsif card_blurb.size > 0 -%}
-<p class="hub-blurb">{{ card_blurb | escape }}</p>
+<p class="hub-blurb"{% if card_is_event %} itemprop="description"{% endif %}>{{ card_blurb | escape }}</p>
 {%- endif -%}
 {%- assign card_links_html = include.links_html | append: "" | strip -%}
 {%- if card_links_html.size > 0 -%}

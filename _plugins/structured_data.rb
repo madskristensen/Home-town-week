@@ -115,12 +115,12 @@ module EastsideCalendar
       end
       crumbs = breadcrumbs(page, root)
       nodes << crumbs if crumbs
-      events = event_nodes(page, canonical)
-      list = item_list(page, canonical, events)
+      # Event details live on the shared card as microdata. An ItemList
+      # here is only a guide or a map, not a list of those events.
+      list = item_list(page, canonical, [])
       list = map_list(page, canonical) if list.nil?
       nodes << page_node(page, site, canonical, site_id, org_id, person_id, logo, list)
       nodes << list if list
-      nodes.concat(events.map { |event| event[:node] })
       nodes
     end
 

@@ -40,6 +40,11 @@
 {%- endif -%}
 {%- endif -%}
 {%- assign grid_eager = include.eager | default: 0 | plus: 0 -%}
+{%- assign grid_micro = include.microdata | append: "" | strip -%}
+{%- if grid_micro.size == 0 -%}
+{%- if page.layout == "city" or page.layout == "seasonal" -%}{%- assign grid_micro = "1" -%}{%- endif -%}
+{%- if page.article_id == "free-things-to-do" or page.article_id == "toddler-friendly-outings" -%}{%- assign grid_micro = "1" -%}{%- endif -%}
+{%- endif -%}
 <div class="card-grid">
 {%- for event in include.events -%}
 {%- if event.prebuilt -%}
@@ -67,7 +72,11 @@
      schema_name=event.schema_name
      schema_share_start=event.schema_share_start
      schema_share_end=event.schema_share_end
-     schema_image=event.schema_image -%}
+     schema_image=event.schema_image
+     schema_organizer=event.schema_organizer
+     schema_organizer_url=event.schema_organizer_url
+     schema_added=event.schema_added
+     microdata=grid_micro -%}
 {%- else -%}
 {%- assign row = event -%}
 {%- if event.event -%}{%- assign row = event.event -%}{%- endif -%}
@@ -159,7 +168,8 @@
      source_label=event.source_label
      also_href=card_also_href
      also_label=event.also_source_label
-     stretch=card_stretch -%}
+     stretch=card_stretch
+     microdata=grid_micro -%}
 {%- endif -%}
 {%- endfor -%}
 </div>

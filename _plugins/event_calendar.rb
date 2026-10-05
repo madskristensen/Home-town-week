@@ -348,7 +348,7 @@ module EastsideCalendar
       return "" if cards.empty?
 
       unless today
-        return render_card_grid(page, "events" => cards, "show_city" => false, "eager" => 0)
+        return render_card_grid(page, "events" => cards, "show_city" => false, "eager" => 0, "microdata" => "1")
       end
 
       buckets = Hash.new { |hash, key| hash[key] = [] }
@@ -369,7 +369,8 @@ module EastsideCalendar
           "events" => list,
           "heading" => label,
           "show_city" => false,
-          "eager" => 0
+          "eager" => 0,
+          "microdata" => "1"
         }
         if key == :weekend
           assigns["share"] = "weekend"
@@ -854,7 +855,7 @@ module EastsideCalendar
         part = mark_source_links(part)
         schema = schemas && schemas[key] && schemas[key][index]
         city_id = page && page.data["city"]
-        cards << event_card_assigns(part, iso, info, end_iso, schema, snippet, city_id)
+        cards << event_card_assigns(part, iso, info, end_iso, schema, snippet, city_id, page)
       end
       [prelude + loose, cards]
     end
@@ -942,7 +943,7 @@ module EastsideCalendar
 
     # One card per event heading. card-grid.html renders event-card.html.
     # The calendar icon is a separate action, not glued to the date.
-    def event_card_assigns(part, iso = nil, info = nil, end_iso = nil, schema = nil, calendar_html = nil, city_id = nil)
+    def event_card_assigns(part, iso = nil, info = nil, end_iso = nil, schema = nil, calendar_html = nil, city_id = nil, page = nil)
       body = part.sub(/\s+\z/, "")
       fields = extract_card_fields(body)
       tags = EventLabels.html(info)
@@ -982,6 +983,27 @@ module EastsideCalendar
         end
         photo = body[/<img\b[^>]*\ssrc="([^"]+)"/, 1]
         assigns["schema_image"] = CGI.unescapeHTML(photo.to_s) if photo
+        assigns["schema_added"] = schema["added"].to_s
+        if assigns["schema_url"].to_s.empty?
+          assigns["schema_url"] = schema["url"].to_s
+        end
+        if page
+          org_event = {
+            "organizer" => schema["organizer"].to_s,
+            "organizer_url" => schema["organizer_url"].to_s,
+            "place" => schema["place"].to_s,
+            "locality" => schema["locality"].to_s,
+            "city" => schema["locality"].to_s,
+            "city_id" => city_id.to_s,
+            "added" => schema["added"].to_s
+          }
+          venue = schema["place"].to_s
+          org = StructuredData.organizer_for(page, org_event, assigns["schema_url"].to_s, venue)
+          if org
+            assigns["schema_organizer"] = org["name"].to_s
+            assigns["schema_organizer_url"] = org["url"].to_s
+          end
+        end
       end
       assigns
     end
@@ -1555,6 +1577,116 @@ module EastsideCalendar
     def share_finish(input)
       start_s, end_s = input.to_s.split("|", 2)
       EventCalendar.share_end_value(EventCalendar.parse_when(start_s), EventCalendar.parse_when(end_s))
+    end
+
+    # Same start and end the old Event JSON-LD used. End is never blank
+    # when a start exists.
+    def google_dates(input)
+      share_start, share_end, raw_start, raw_end, iso_start, iso_end = input.to_s.split("|", 6)
+      event = {
+        "shareStart" => share_start.to_s,
+        "shareEnd" => share_end.to_s,
+        "start_raw" => raw_start.to_s,
+        "end_raw" => raw_end.to_s,
+        "start" => raw_start.to_s,
+        "end" => raw_end.to_s,
+        "startDate" => iso_start.to_s,
+        "endDate" => iso_end.to_s
+      }
+      start_on, end_on = StructuredData.google_interval(event)
+      start_on = start_on.to_s
+      end_on = end_on.to_s
+      end_on = start_on if end_on.empty? && !start_on.empty?
+      "#{start_on}|#{end_on}"
+    end
+
+    def offer_amount(input)
+      amount = StructuredData.offer_amount(input)
+      return "" if amount.nil?
+      return amount.to_i.to_s if amount.is_a?(Float) && (amount % 1).zero?
+
+      amount.to_s
+    end
+
+    def offer_from(input)
+      site = @context.registers[:site]
+      StructuredData.valid_from({ "added" => input.to_s }, site).to_s
+    end
+
+    def schema_short(input)
+      StructuredData.short_description(input.to_s)
+    end
+
+    def postal_of(input)
+      input.to_s[/\b(?:WA|Washington)\s+(\d{5})(?:-\d{4})?\b/i, 1].to_s
+    end
+
+    def pacific_day(_input)
+      site = @context.registers[:site]
+      EventCalendar.pacific_today(site.time).iso8601
+    end
+
+    # Name and URL separated by a tab. Blank when this event has no host.
+    def organizer_pair(url, extra)
+      site = @context.registers[:site]
+      page = @context.registers[:page]
+      venue, locality, city_id, org_name, org_url = extra.to_s.split("\t", 5)
+      event = {
+        "organizer" => org_name.to_s,
+        "organizer_url" => org_url.to_s,
+        "city_id" => city_id.to_s,
+        "city" => locality.to_s,
+        "locality" => locality.to_s,
+        "place" => venue.to_s
+      }
+      unless page.respond_to?(:site) && page.site
+        page = Struct.new(:data, :site).new({ "city" => city_id.to_s }, site)
+      end
+      node = StructuredData.organizer_for(page, event, url.to_s, venue.to_s)
+      return "" unless node
+
+      "#{node["name"]}\t#{node["url"]}"
+    end
+
+    def mark_image(input)
+      html = input.to_s
+      return html if html.empty? || html.match?(/<img\b[^>]*\bitemprop=/i)
+
+      html.sub(/<img\b/i, '<img itemprop="image"')
+    end
+
+    def mark_blurb(input)
+      html = input.to_s
+      return html if html.empty? || html.include?("itemprop=")
+
+      html.sub('class="hub-blurb"', 'class="hub-blurb" itemprop="description"')
+    end
+
+    # Place and PostalAddress on the existing place line. No new box.
+    def mark_place(input, extra)
+      html = input.to_s
+      return html if html.empty? || html.include?("itemprop=")
+
+      name, street, locality, zip = extra.to_s.split("\t", 4)
+      name = CGI.escapeHTML(name.to_s)
+      street = CGI.escapeHTML(street.to_s)
+      locality = CGI.escapeHTML(locality.to_s)
+      zip = CGI.escapeHTML(zip.to_s)
+      addr = +""
+      addr << %(<meta itemprop="streetAddress" content="#{street}">) unless street.empty?
+      addr << %(<meta itemprop="addressLocality" content="#{locality}">) unless locality.empty?
+      addr << %(<meta itemprop="addressRegion" content="WA"><meta itemprop="addressCountry" content="US">)
+      addr << %(<meta itemprop="postalCode" content="#{zip}">) unless zip.empty?
+      loc = ' itemprop="location" itemscope itemtype="https://schema.org/Place"'
+      marked = html.sub('class="event-place"', "class=\"event-place\"#{loc}")
+      if marked.include?('class="addr-text"')
+        marked = marked.sub(
+          'class="addr-text"',
+          'class="addr-text" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"'
+        )
+        marked = marked.sub("</span>", "#{addr}</span>")
+      end
+      marked.sub("</p>", %(<meta itemprop="name" content="#{name}"></p>))
     end
 
     # Weekend picks stash one card hash per line. Liquid cannot append a hash.

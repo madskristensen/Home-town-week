@@ -1,20 +1,22 @@
 #!/usr/bin/env python3
 """Check built pages against Google's event, article, and site markup rules.
 
-One JSON-LD graph per page. Events need name, startDate, endDate, and a
-Place with an address. Timed dates need a UTC offset. Date-only events
-stay dates. A timed event with no end clock ends two hours later, or on
-a later date when only that date is known. isAccessibleForFree is set
-only when the price is 0. Every event needs an organizer. An offer is
-present only for a known price: 0 for free, or the lowest number for a
-paid price, with USD, InStock, a URL, and validFrom. An unknown price
-has no offers object. Performer is optional. Warnings do not fail the
-build. Missing required fields do.
+One JSON-LD graph per page, for WebSite, Organization, BreadcrumbList,
+and Article. Events are schema.org microdata on the shared card. They
+need name, startDate, endDate, and a Place with an address. Timed dates
+need a UTC offset. Date-only events stay dates. A timed event with no
+end clock ends two hours later, or on a later date when only that date
+is known. isAccessibleForFree is set only when the price is 0. Every
+event needs an organizer. An offer is present only for a known price:
+0 for free, or the lowest number for a paid price, with USD, InStock,
+a URL, and validFrom. An unknown price has no offers object. Performer
+is optional. Warnings do not fail the build. Missing required fields do.
 """
 
 import json
 import re
 import sys
+from html.parser import HTMLParser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -86,6 +88,114 @@ def check_sitewide(graph, rel):
         add(errors, rel, f"logo width {width} is under 112")
 
 
+URL_PROPS = {"url", "image"}
+PRICE = re.compile(r"\A\d+(?:\.\d+)?\Z")
+VOID = {
+    "area", "base", "br", "col", "embed", "hr", "img", "input",
+    "link", "meta", "source", "track", "wbr",
+}
+
+
+def price_number(price):
+    if isinstance(price, bool) or price is None:
+        return None
+    if isinstance(price, (int, float)):
+        return price
+    if isinstance(price, str) and PRICE.search(price):
+        return float(price) if "." in price else int(price)
+    return None
+
+
+class MicrodataParser(HTMLParser):
+    """Pull itemscope trees out of a page. Enough for the event card."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.skip = 0
+        self.stack = []
+        self.events = []
+        self.depth = 0
+        self.texts = []
+
+    def handle_starttag(self, tag, attrs):
+        self._start(tag, attrs)
+        if tag in VOID:
+            self._end(tag)
+
+    def handle_startendtag(self, tag, attrs):
+        self.handle_starttag(tag, attrs)
+
+    def _start(self, tag, attrs):
+        if tag in ("script", "style"):
+            self.skip += 1
+        if self.skip:
+            self.depth += 1
+            return
+        ad = {key.lower(): ("" if value is None else value) for key, value in attrs}
+        props = ad.get("itemprop", "").split()
+        item = None
+        if "itemscope" in ad:
+            type_name = ad.get("itemtype", "").rstrip("/").rsplit("/", 1)[-1]
+            item = {"@type": type_name}
+            if self.stack and props:
+                parent = self.stack[-1][0]
+                for prop in props:
+                    parent[prop] = item
+            self.stack.append((item, self.depth))
+            if type_name == "Event":
+                self.events.append(item)
+        elif props and self.stack:
+            parent = self.stack[-1][0]
+            if tag == "meta":
+                for prop in props:
+                    parent[prop] = ad.get("content", "")
+            elif tag == "img":
+                for prop in props:
+                    parent[prop] = ad.get("src", "")
+            elif tag in ("a", "link", "area"):
+                href = ad.get("href", "")
+                for prop in props:
+                    if prop in URL_PROPS:
+                        parent[prop] = href
+                    else:
+                        self.texts.append((parent, prop, self.depth, []))
+            elif tag == "time":
+                for prop in props:
+                    parent[prop] = ad.get("datetime") or ""
+                    if not parent[prop]:
+                        self.texts.append((parent, prop, self.depth, []))
+            else:
+                for prop in props:
+                    self.texts.append((parent, prop, self.depth, []))
+        self.depth += 1
+
+    def handle_endtag(self, tag):
+        self._end(tag)
+
+    def _end(self, tag):
+        self.depth -= 1
+        if tag in ("script", "style") and self.skip:
+            self.skip -= 1
+        while self.texts and self.texts[-1][2] >= self.depth:
+            parent, prop, _depth, parts = self.texts.pop()
+            parent[prop] = "".join(parts).strip()
+        while self.stack and self.stack[-1][1] >= self.depth:
+            self.stack.pop()
+
+    def handle_data(self, data):
+        if self.skip or not data:
+            return
+        for _parent, _prop, _depth, parts in self.texts:
+            parts.append(data)
+
+
+def micro_events(html):
+    parser = MicrodataParser()
+    parser.feed(html)
+    parser.close()
+    return parser.events
+
+
 def check_event(node, rel, index):
     name = node.get("name") or f"event {index}"
     label = f"Event {name!r}"
@@ -149,10 +259,13 @@ def check_event(node, rel, index):
         add(errors, rel, f"{label} url is not the source: {url or 'missing'}")
     if not node.get("description"):
         add(errors, rel, f"{label} has no description")
-    if not node.get("image"):
+    image = node.get("image")
+    if not image:
         add(warnings, rel, f"{label} has no image")
-    elif not isinstance(node.get("image"), list):
-        add(warnings, rel, f"{label} image is not a list of URLs")
+    else:
+        images = image if isinstance(image, list) else [image]
+        if not images or not str(images[0]).startswith(("http", "/")):
+            add(warnings, rel, f"{label} image is not a URL")
     organizer = node.get("organizer") or {}
     if not isinstance(organizer, dict) or organizer.get("@type") != "Organization":
         add(errors, rel, f"{label} organizer is not an Organization")
@@ -165,6 +278,11 @@ def check_event(node, rel, index):
         elif performer.get("@type") not in ("Person", "PerformingGroup", "MusicGroup"):
             add(errors, rel, f"{label} performer type is {performer.get('@type') or 'missing'}")
     free = node.get("isAccessibleForFree")
+    if isinstance(free, str):
+        if free.lower() == "true":
+            free = True
+        elif free.lower() == "false":
+            free = False
     raw_offer = node.get("offers")
     if free is False:
         add(errors, rel, f"{label} sets isAccessibleForFree false")
@@ -177,10 +295,11 @@ def check_event(node, rel, index):
         return
     offer = raw_offer
     price = offer.get("price")
-    has_price = "price" in offer
-    if free is True and price not in (0, 0.0, "0"):
+    amount = price_number(price)
+    has_price = "price" in offer and amount is not None
+    if free is True and amount not in (0, 0.0):
         add(errors, rel, f"{label} is free but offer price is {price!r}")
-    if price in (0, 0.0, "0") and free is not True:
+    if amount in (0, 0.0) and free is not True:
         add(errors, rel, f"{label} price is 0 without isAccessibleForFree")
     if not str(offer.get("url") or "").startswith("http"):
         add(errors, rel, f"{label} offer url is not the source page")
@@ -195,8 +314,6 @@ def check_event(node, rel, index):
         add(errors, rel, f"{label} offer is missing price")
     elif offer.get("priceCurrency") != "USD":
         add(errors, rel, f"{label} offer currency is not USD")
-    elif not isinstance(price, (int, float)) or isinstance(price, bool):
-        add(errors, rel, f"{label} offer price is not a number: {price!r}")
 
 
 def check_article(graph, rel):
@@ -295,7 +412,7 @@ def main():
         rel = str(path.relative_to(SITE))
         if rel.startswith("assets/"):
             continue
-        _html, blocks = load(path)
+        html, blocks = load(path)
         if rel == "404.html":
             if blocks:
                 add(errors, rel, "404 should not emit JSON-LD")
@@ -321,7 +438,9 @@ def main():
             )
         ):
             add(warnings, rel, "WebSite or Organization logo belongs on the home page")
-        events = find_type(graph, "Event")
+        if find_type(graph, "Event"):
+            add(errors, rel, "JSON-LD still includes Event nodes")
+        events = micro_events(html)
         if wants_events(rel):
             if not events:
                 add(warnings, rel, "no Event nodes")
@@ -330,14 +449,11 @@ def main():
             if events:
                 samples.append((rel, len(events)))
         elif events:
-            add(warnings, rel, f"{len(events)} Event nodes on a page that is not an event list")
+            add(errors, rel, f"{len(events)} Event nodes on a page that is not an event list")
         if wants_breadcrumb(rel):
             check_breadcrumb(graph, rel)
         if wants_article(rel):
             check_article(graph, rel)
-        micro = path.read_text(encoding="utf-8", errors="replace").lower()
-        if "itemtype=\"https://schema.org/event\"" in micro or "itemtype='https://schema.org/event'" in micro:
-            add(errors, rel, "still has Event microdata")
 
     print(f"Checked {len(pages)} HTML files.")
     if samples:
