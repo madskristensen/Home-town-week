@@ -289,6 +289,7 @@
 - name: "Korean Story Time"
   cost: "Free"
   setting: "Indoor"
+  ages: "Toddlers"
   tags: [free, story-time]
   start: "2026-10-09T16:45:00-07:00"
   end: "2026-10-09T17:30:00-07:00"
