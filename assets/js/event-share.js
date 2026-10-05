@@ -338,16 +338,112 @@
     return "<div style=\"font-family:system-ui,sans-serif;color:inherit;\">" + parts.join("<br>") + "</div>";
   }
 
+  function propList(el) {
+    return (el.getAttribute("itemprop") || "").split(/\s+/);
+  }
+
+  function hasProp(el, name) {
+    return propList(el).indexOf(name) !== -1;
+  }
+
+  function directProp(card, name) {
+    var nodes = card.querySelectorAll("[itemprop]");
+    var i;
+    for (i = 0; i < nodes.length; i++) {
+      if (!hasProp(nodes[i], name)) continue;
+      if (nodes[i].closest("[itemscope]") !== card) continue;
+      return nodes[i];
+    }
+    return null;
+  }
+
+  function propText(el) {
+    if (!el) return "";
+    if (el.hasAttribute("datetime")) return el.getAttribute("datetime") || "";
+    if (el.tagName === "META") return el.getAttribute("content") || "";
+    if (el.tagName === "A" || el.tagName === "LINK") {
+      if (hasProp(el, "url") || hasProp(el, "image")) return el.getAttribute("href") || "";
+    }
+    return el.textContent || "";
+  }
+
+  function eventTitle(card) {
+    var heading = card.querySelector("h3");
+    if (!heading) return "";
+    if (hasProp(heading, "name")) return heading.textContent || "";
+    var named = heading.querySelector("[itemprop~='name']");
+    if (named) return named.textContent || "";
+    var link = heading.querySelector("a");
+    return (link ? link.textContent : heading.textContent) || "";
+  }
+
+  function eventUrl(card) {
+    var node = directProp(card, "url");
+    if (node) return node.getAttribute("href") || node.getAttribute("content") || "";
+    var link = card.querySelector("h3 a[href]");
+    return link ? link.getAttribute("href") || "" : "";
+  }
+
+  function eventPlace(card) {
+    var loc = directProp(card, "location");
+    if (!loc) {
+      var plain = card.querySelector(".addr-text");
+      return plain ? plain.textContent || "" : "";
+    }
+    var named = loc.querySelector("[itemprop~='name']");
+    var addr = loc.querySelector("[itemprop~='address']");
+    var town = clean(eventCity(card)).toLowerCase();
+    if (named && named !== addr) {
+      var name = clean(propText(named));
+      if (name && name.toLowerCase() !== town) return name;
+    }
+    if (addr) return addr.textContent || "";
+    return loc.textContent || "";
+  }
+
+  function eventCity(card) {
+    var town = card.querySelector(".event-kicker, .place-town");
+    return town ? town.textContent || "" : "";
+  }
+
+  function eventCost(card) {
+    var offer = directProp(card, "offers");
+    if (offer) {
+      var price = offer.querySelector("[itemprop='price']");
+      var amount = price ? price.getAttribute("content") || "" : "";
+      if (amount === "0") return "Free";
+      if (amount) return "$" + amount;
+    }
+    if (card.getAttribute("data-cost") === "Free") return "Free";
+    return "";
+  }
+
   function attrsFrom(button) {
+    var card = button.closest ? button.closest("article.event-card") : null;
+    if (!card) {
+      return {
+        title: button.getAttribute("data-share-title"),
+        start: button.getAttribute("data-share-start"),
+        end: button.getAttribute("data-share-end"),
+        venue: button.getAttribute("data-share-venue"),
+        city: button.getAttribute("data-share-city"),
+        blurb: button.getAttribute("data-share-blurb"),
+        cost: button.getAttribute("data-share-cost"),
+        url: button.getAttribute("data-share-url")
+      };
+    }
+    var startNode = directProp(card, "startDate") || card.querySelector("time[datetime]");
+    var endNode = directProp(card, "endDate");
+    var blurbNode = directProp(card, "description") || card.querySelector(".hub-blurb");
     return {
-      title: button.getAttribute("data-share-title"),
-      start: button.getAttribute("data-share-start"),
-      end: button.getAttribute("data-share-end"),
-      venue: button.getAttribute("data-share-venue"),
-      city: button.getAttribute("data-share-city"),
-      blurb: button.getAttribute("data-share-blurb"),
-      cost: button.getAttribute("data-share-cost"),
-      url: button.getAttribute("data-share-url")
+      title: eventTitle(card),
+      start: startNode ? (startNode.getAttribute("datetime") || startNode.getAttribute("content") || "") : (card.getAttribute("data-date") || ""),
+      end: endNode ? (endNode.getAttribute("content") || endNode.getAttribute("datetime") || "") : (card.getAttribute("data-end") || ""),
+      venue: eventPlace(card),
+      city: eventCity(card),
+      blurb: blurbNode ? (blurbNode.getAttribute("content") || blurbNode.textContent || "") : "",
+      cost: eventCost(card),
+      url: eventUrl(card)
     };
   }
 

@@ -3,14 +3,14 @@
 
 One JSON-LD graph per page, for WebSite, Organization, BreadcrumbList,
 and Article. Events are schema.org microdata on the shared card. They
-need name, startDate, endDate, and a Place with an address. Timed dates
-need a UTC offset. Date-only events stay dates. A timed event with no
-end clock ends two hours later, or on a later date when only that date
-is known. isAccessibleForFree is set only when the price is 0. Every
-event needs an organizer. An offer is present only for a known price:
-0 for free, or the lowest number for a paid price, with USD, InStock,
-a URL, and validFrom. An unknown price has no offers object. Performer
-is optional. Warnings do not fail the build. Missing required fields do.
+need name, startDate, endDate, and a Place whose address is text.
+Timed dates need a UTC offset. Date-only events stay dates. A timed
+event with no end clock ends two hours later, or on a later date when
+only that date is known. isAccessibleForFree is set only when the
+price is 0. An offer is present only for a known price: 0 for free, or
+the lowest number for a paid price, with USD, InStock, a URL, and
+validFrom. An unknown price has no offers object. Performer is
+optional. Warnings do not fail the build. Missing required fields do.
 """
 
 import json
@@ -228,32 +228,29 @@ def check_event(node, rel, index):
     elif DATE_ONLY.search(start) and end < start:
         add(errors, rel, f"{label} endDate is before startDate: {end}")
     location = node.get("location") or {}
-    if location.get("@type") != "Place":
+    if not isinstance(location, dict) or location.get("@type") != "Place":
         add(errors, rel, f"{label} location is not a Place")
-    elif not location.get("name"):
-        add(errors, rel, f"{label} missing location.name")
     address = location.get("address") if isinstance(location, dict) else None
-    if not isinstance(address, dict) or address.get("@type") != "PostalAddress":
-        add(errors, rel, f"{label} missing PostalAddress")
-    else:
+    if isinstance(address, str):
+        if not address.strip():
+            add(errors, rel, f"{label} address is empty")
+    elif isinstance(address, dict) and address.get("@type") == "PostalAddress":
         if not address.get("addressLocality"):
             add(errors, rel, f"{label} missing addressLocality")
         if not address.get("addressRegion"):
             add(errors, rel, f"{label} missing addressRegion")
         if not address.get("addressCountry"):
             add(errors, rel, f"{label} missing addressCountry")
-        if not address.get("streetAddress"):
-            add(warnings, rel, f"{label} has no streetAddress")
-        if not address.get("postalCode"):
-            add(warnings, rel, f"{label} has no postalCode")
+    else:
+        add(errors, rel, f"{label} missing address")
     if location.get("name") and node.get("name") and location.get("name") == node.get("name"):
         add(warnings, rel, f"{label} location.name repeats the event name")
     status = node.get("eventStatus") or ""
-    if status != "https://schema.org/EventScheduled":
-        add(errors, rel, f"{label} eventStatus is {status or 'missing'}")
+    if status and status != "https://schema.org/EventScheduled":
+        add(errors, rel, f"{label} eventStatus is {status}")
     mode = node.get("eventAttendanceMode") or ""
-    if mode != "https://schema.org/OfflineEventAttendanceMode":
-        add(errors, rel, f"{label} eventAttendanceMode is {mode or 'missing'}")
+    if mode and mode != "https://schema.org/OfflineEventAttendanceMode":
+        add(errors, rel, f"{label} eventAttendanceMode is {mode}")
     url = node.get("url") or ""
     if not url.startswith("http"):
         add(errors, rel, f"{label} url is not the source: {url or 'missing'}")
@@ -266,11 +263,12 @@ def check_event(node, rel, index):
         images = image if isinstance(image, list) else [image]
         if not images or not str(images[0]).startswith(("http", "/")):
             add(warnings, rel, f"{label} image is not a URL")
-    organizer = node.get("organizer") or {}
-    if not isinstance(organizer, dict) or organizer.get("@type") != "Organization":
-        add(errors, rel, f"{label} organizer is not an Organization")
-    elif not organizer.get("name") or not str(organizer.get("url") or "").startswith("http"):
-        add(errors, rel, f"{label} organizer is missing a name or url")
+    organizer = node.get("organizer")
+    if organizer:
+        if not isinstance(organizer, dict) or organizer.get("@type") != "Organization":
+            add(errors, rel, f"{label} organizer is not an Organization")
+        elif not organizer.get("name") or not str(organizer.get("url") or "").startswith("http"):
+            add(errors, rel, f"{label} organizer is missing a name or url")
     performer = node.get("performer")
     if performer is not None:
         if not isinstance(performer, dict) or not performer.get("name"):

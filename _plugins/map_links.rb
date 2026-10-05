@@ -3,12 +3,12 @@
 require "cgi"
 
 module EastsideCalendar
-  # Google Maps search link. A deferred script swaps Apple and Android.
+  # Apple Maps search link. The query is the place and the address.
   module MapLinks
     module_function
 
     def href(place, city = nil, name = nil)
-      "https://www.google.com/maps/search/?api=1&query=#{encode(query_text(place, city, name))}"
+      "https://maps.apple.com/?q=#{encode(query_text(place, city, name))}"
     end
 
     # Venue and street, then the town, then WA.

@@ -734,8 +734,7 @@ module EastsideCalendar
       CGI.unescapeHTML(html.to_s.gsub(/<[^>]+>/, " ")).gsub(/\s+/, " ").strip
     end
 
-    # Small calendar glyph. The link name lives on aria-label.
-    CALENDAR_ICON = '<svg class="cal-icon" viewBox="0 0 16 16" aria-hidden="true"><use href="#icon-cal"></use></svg>'.freeze
+    # The calendar glyph is a CSS mask on .event-cal. The link name lives on aria-label.
 
     def calendar_label(link, count)
       name = link[:name].to_s.strip
@@ -749,7 +748,7 @@ module EastsideCalendar
       href = CGI.escapeHTML(link[:href])
       safe = CGI.escapeHTML(label)
       extra = count > 1 ? %(<span class="event-cal-when">#{CGI.escapeHTML(link[:when_label])}</span>) : ""
-      %(<a class="event-cal" href="#{href}" aria-label="#{safe}">#{CALENDAR_ICON}#{extra}</a>)
+      %(<a class="event-cal" href="#{href}" aria-label="#{safe}">#{extra}</a>)
     end
 
     def calendar_actions(links)
@@ -1662,31 +1661,25 @@ module EastsideCalendar
       html.sub('class="hub-blurb"', 'class="hub-blurb" itemprop="description"')
     end
 
-    # Place and PostalAddress on the existing place line. No new box.
-    def mark_place(input, extra)
+    # Place on the existing place line. Address is the visible text.
+    # A hidden name is added only when that name is not already in the line.
+    def mark_place(input, name)
       html = input.to_s
       return html if html.empty? || html.include?("itemprop=")
 
-      name, street, locality, zip = extra.to_s.split("\t", 4)
-      name = CGI.escapeHTML(name.to_s)
-      street = CGI.escapeHTML(street.to_s)
-      locality = CGI.escapeHTML(locality.to_s)
-      zip = CGI.escapeHTML(zip.to_s)
-      addr = +""
-      addr << %(<meta itemprop="streetAddress" content="#{street}">) unless street.empty?
-      addr << %(<meta itemprop="addressLocality" content="#{locality}">) unless locality.empty?
-      addr << %(<meta itemprop="addressRegion" content="WA"><meta itemprop="addressCountry" content="US">)
-      addr << %(<meta itemprop="postalCode" content="#{zip}">) unless zip.empty?
+      venue = name.to_s.strip
       loc = ' itemprop="location" itemscope itemtype="https://schema.org/Place"'
       marked = html.sub('class="event-place"', "class=\"event-place\"#{loc}")
+      visible = marked.gsub(/<[^>]+>/, " ").gsub(/\s+/, " ").strip
+      shown = !venue.empty? && visible.downcase.include?(venue.downcase)
+      exact = shown && visible.casecmp(venue).zero?
       if marked.include?('class="addr-text"')
-        marked = marked.sub(
-          'class="addr-text"',
-          'class="addr-text" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"'
-        )
-        marked = marked.sub("</span>", "#{addr}</span>")
+        prop = exact ? "name address" : "address"
+        marked = marked.sub('class="addr-text"', "class=\"addr-text\" itemprop=\"#{prop}\"")
       end
-      marked.sub("</p>", %(<meta itemprop="name" content="#{name}"></p>))
+      return marked if shown || venue.empty?
+
+      marked.sub("</p>", %(<meta itemprop="name" content="#{CGI.escapeHTML(venue)}"></p>))
     end
 
     # Weekend picks stash one card hash per line. Liquid cannot append a hash.
