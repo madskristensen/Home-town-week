@@ -22,34 +22,6 @@ layout: default
       <template id="eastside-map-src">
         {%- include eastside-map.html -%}
       </template>
-      <script type="module">
-        var slot = document.getElementById("eastside-map");
-        var source = document.getElementById("eastside-map-src");
-        if (slot && source && source.content) {
-          var mount = function () {
-            if (slot.querySelector("svg")) return;
-            slot.appendChild(source.content.cloneNode(true));
-          };
-          var schedule = function () {
-            if (window.requestIdleCallback) requestIdleCallback(mount, { timeout: 1200 });
-            else setTimeout(mount, 1);
-          };
-          if (!("IntersectionObserver" in window)) {
-            schedule();
-          } else {
-            var watcher = new IntersectionObserver(function (entries) {
-              var i;
-              for (i = 0; i < entries.length; i++) {
-                if (!entries[i].isIntersecting) continue;
-                watcher.disconnect();
-                schedule();
-                return;
-              }
-            }, { rootMargin: "80px 0px" });
-            watcher.observe(slot);
-          }
-        }
-      </script>
       <nav class="city-key" aria-label="Eastside cities">
         {%- for city in site.data.cities -%}
         {%- capture city_href -%}/{{ city.id }}/{%- endcapture -%}
