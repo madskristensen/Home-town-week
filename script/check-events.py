@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Check event records before the site builds.
 
-Schema, dates, page/data match, and em dashes fail the build when they are
+Schema, dates, card text, and em dashes fail the build when they are
 not already listed in script/event-check-baseline.txt. Adult-only wording
-and same-day near-duplicate names are warnings.
+and same-day near-duplicate names are warnings. City cards live in
+_data/{city}_events.yml. The city page is the intro only.
 
     python3 script/check-events.py
     python3 script/check-events.py --write-baseline
@@ -205,22 +206,30 @@ def check_row(path, event, errors):
 def check_pages(errors):
     for city in city_ids():
         page = ROOT / city / "index.md"
+        if headings(page):
+            errors.append(("page", f"{city}/index.md", "event headings belong in the data file"))
         rows = load_rows(DATA / f"{city}_events.yml")
-        row_keys = [normalize(row.get("name")) for row in rows]
-        page_keys = []
-        for heading in headings(page):
-            page_keys.append(normalize(heading["text"]))
-            if not re.search(r'class="event-when"', heading["body"]):
-                errors.append(("page", f"{city}/index.md: {heading['text']}", "missing date line"))
-            if not re.search(r"\]\(https?://", heading["body"]):
-                errors.append(("page", f"{city}/index.md: {heading['text']}", "missing source link"))
-            best = max((match_score(normalize(heading["text"]), key) for key in row_keys), default=0)
-            if best < 90:
-                errors.append(("match", f"{city}/index.md: {heading['text']}", "no matching data row"))
+        groups = {}
         for row in rows:
-            best = max((match_score(normalize(row.get("name")), key) for key in page_keys), default=0)
-            if best < 90:
-                errors.append(("orphan", f"{city}: {row.get('name')}", "no matching city-page event"))
+            card = str(row.get("card") or "").strip()
+            name = str(row.get("name") or "").strip()
+            if not card:
+                errors.append(("card", f"{city}: {name}", "missing card id"))
+                continue
+            groups.setdefault(card, []).append(row)
+        for card, group in groups.items():
+            shown = [row for row in group if str(row.get("when") or "").strip() or row.get("blurbs")]
+            if len(shown) != 1:
+                errors.append(("card", f"{city}: {card}", "card needs one when line and blurb"))
+                continue
+            row = shown[0]
+            name = str(row.get("name") or "").strip()
+            if not str(row.get("when") or "").strip():
+                errors.append(("page", f"{city}: {name}", "missing date line"))
+            links = row.get("links") or []
+            same = str(row.get("same_as") or "").strip()
+            if not links and not same.startswith("http"):
+                errors.append(("page", f"{city}: {name}", "missing source link"))
 
 
 def check_emdash(errors):
@@ -237,12 +246,12 @@ def check_emdash(errors):
 def warn_content():
     warnings = []
     for city in city_ids():
-        page = ROOT / city / "index.md"
-        for heading in headings(page):
-            blob = f"{heading['text']} {heading['body']}"
-            if DENY_RE.search(blob):
-                warnings.append(f"denylist\t{city}/index.md: {heading['text']}")
         rows = load_rows(DATA / f"{city}_events.yml")
+        for row in rows:
+            blurbs = row.get("blurbs") or []
+            blob = " ".join([str(row.get("name") or "")] + [str(item) for item in blurbs])
+            if DENY_RE.search(blob):
+                warnings.append(f"denylist\t{city}: {row.get('name')}")
         for index, left in enumerate(rows):
             left_name = normalize(left.get("name"))
             left_start = str(left.get("start") or "")

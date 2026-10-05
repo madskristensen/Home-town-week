@@ -42,13 +42,15 @@ layout: default
   {%- include card-grid.html events=city_sponsor_cards show_city=true defer="1" -%}
   {%- endif -%}
   {%- assign event_copy = content | strip -%}
-  {%- if event_copy != "" -%}
+  {%- assign city_cards = page.city_cards_html | strip -%}
+  {%- if event_copy != "" or city_cards != "" -%}
   <div class="event-list" data-today="{{ site.data.pacific_today }}">
     <h2>Upcoming</h2>
     {%- include updated-line.html id="list-updated" -%}
     {%- include calendar-subscribe.html city=page.city name=city.name -%}
     {%- include event-filters.html -%}
     {{ content }}
+    {{ page.city_cards_html }}
   </div>
   {%- else -%}
   {%- include updated-line.html id="list-updated" -%}
@@ -56,7 +58,7 @@ layout: default
   {%- include empty-suggest.html topic=city.name name=city.name -%}
   {%- include feed-note.html -%}
   {%- endif -%}
-  {%- if event_copy != "" -%}
+  {%- if event_copy != "" or city_cards != "" -%}
   {%- include suggest-event.html -%}
   {%- endif -%}
   {%- include nearby-cities.html -%}

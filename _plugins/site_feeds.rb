@@ -21,6 +21,13 @@ module EastsideCalendar
       path = feed_path(page)
       page.data["atom_feed"] = path
       photos = photos_by_name(page.content)
+      Array(page.data["visible_events"]).each do |row|
+        next unless row.is_a?(Hash)
+
+        image = row["image"].to_s
+        name = row["name"].to_s
+        photos[name] = image unless image.empty? || name.empty?
+      end
       entries = rows.filter_map { |row| entry_for(row, photos) }
       entries = dedupe(entries)
       xml = document(site, page, path, entries)

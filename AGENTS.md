@@ -18,17 +18,17 @@ Worth the Drive is a separate short list in `_data/worth_the_drive_events.yml` f
 
 Every row has to resolve to Washington and to the 15 cities, the nearby towns folded into them, or a Worth the Drive town. `script/check-event-areas.py` rejects the rest. The build fails on a reject. The daily prune removes rejects. An unresolved row is logged and kept. A street direction such as Ave NE is not a state.
 
-## Write both places
+## Write the data file
 
-An event is a `###` heading on `{city}/index.md` and a row in `_data/{city}_events.yml`. The heading, the date line (`<p class="event-when">`), the place line, the blurb, and a source link live on the city page. The row has `name`, `start`, `end`, `place`, `same_as`, and any labels. There are no individual event pages. Each event row gets `href` and `external` when it is built: `same_as` when that is a webpage, otherwise `/city/#slug`. Aggregate cards use that href. The town name links to the city page. A city page card keeps the source link under the blurb. Each dated card has a share button. It sends the title, when, place, and a short blurb. The phone share sheet attaches the source link by itself. A desktop copy pastes that note as text and as simple HTML, and the HTML links the source and the city page. The blurb stops after a sentence or two, keeps Free or the price when that fits, and leaves out phone numbers and email addresses. It does not send a page on this site as the main link.
+An event is one row in `_data/{city}_events.yml`. The city page `{city}/index.md` keeps the intro only. Do not add a `###` heading, a date line, or a blurb on the city page. The row has `name`, `start`, `end`, `place`, `same_as`, and any labels. It also has the card text: `card`, `when` (the gold date line), `blurbs` (one string per paragraph), `links` (label and href), and `photo` when the event has its own picture (`src`, `alt`, `credit`, `source`, `license`). Rows that are the same card, such as two sessions on one date line, share `card`. The date line, blurbs, links, and photo live on one of those rows. There are no individual event pages. Each event row gets `href` and `external` when it is built: `same_as` when that is a webpage, otherwise `/city/#slug`. Aggregate cards use that href. The town name links to the city page. A city page card keeps the source link under the blurb. Each dated card has a share button. It sends the title, when, place, and a short blurb. The phone share sheet attaches the source link by itself. A desktop copy pastes that note as text and as simple HTML, and the HTML links the source and the city page. The blurb stops after a sentence or two, keeps Free or the price when that fits, and leaves out phone numbers and email addresses. It does not send a page on this site as the main link.
 
-A data row with no matching city-page event is an orphan. Delete it. The build fails if a new one appears. Hub pages skip a row that has no real blurb. Do not invent a filler such as "Name in Mercer Island."
+A row with no `card` id fails the build. Hub pages skip a row that has no real blurb. Do not invent a filler such as "Name in Mercer Island."
 
 ## Blurbs
 
 Write the blurb in our own words: what it is, who it is for, and any cost or registration a parent needs. Link the source. Do not quote a calendar against itself, and do not point at another listing. No em dashes. En dashes in a time range are fine.
 
-`script/check-events.py` checks required fields, ISO dates, end on or after start, cost of `Free` or `$...`, ages and setting labels, a place, an http source, a date line and source link on each city event, a match between the city page and the data row, and em dashes. It fails on new errors only. Adult-only wording and same-day near-duplicate names are warnings.
+`script/check-events.py` checks required fields, ISO dates, end on or after start, cost of `Free` or `$...`, ages and setting labels, a place, an http source, a date line and source link on each card, and em dashes. It fails on new errors only. Adult-only wording and same-day near-duplicate names are warnings.
 
 ## Tags
 
@@ -58,7 +58,7 @@ No recognizable kids or teens. Removed on request. A venue key must name that pl
 
 `.github/workflows/prune.yml` runs at 09:17 UTC, with a backup at 10:47 UTC. It rebases onto main before pushing. It drops out-of-area rows, fills venue labels, and deletes events whose last day is before today in America/Los_Angeles. An explicit year is that year. Otherwise use the matching data row, or the next future occurrence. Do not delete a far-future youth theater show because the month and day look like last year.
 
-The browser hides a card whose end date is before today, so yesterday's cards do not sit on the page until the next build. The Pages rebuild that follows writes `/calendar/{city}.ics` from the events still on each city page. Subscribe to this calendar stays under the updated line. The city Atom feed stays in the head as `link rel=alternate`. The visible link is a small "RSS feed" beside Suggest an event, at the bottom of the list, not under Upcoming.
+The browser hides a card whose end date is before today, so yesterday's cards do not sit on the page until the next build. The Pages rebuild that follows writes `/calendar/{city}.ics` from the rows still in each city's data file. Subscribe to this calendar stays under the updated line. The city Atom feed stays in the head as `link rel=alternate`. The visible link is a small "RSS feed" beside Suggest an event, at the bottom of the list, not under Upcoming.
 
 ## Cultural holidays
 

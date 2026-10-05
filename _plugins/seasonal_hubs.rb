@@ -1252,11 +1252,19 @@ module EastsideCalendar
     def card_catalog(pages)
       catalog = Hash.new { |hash, key| hash[key] = [] }
       pages.each do |city_id, page|
-        EventCalendar.markdown_headings(page.content).each do |heading|
+        rows = Array(page.site.data["#{city_id}_events"])
+        rows.each do |event|
+          next unless event.is_a?(Hash)
+          next if event["when"].to_s.empty? && Array(event["blurbs"]).empty?
+
+          title = event["title"].to_s
+          title = event["name"].to_s if title.empty?
+          blurb = event["hub_blurb"].to_s
+          photo = event["photo"].is_a?(Hash) ? event["photo"] : nil
           catalog[city_id] << {
-            key: EventCalendar.normalize(heading[:text]),
-            blurb: one_line_blurb(heading[:body]),
-            photo: parse_photo_include(heading[:body])
+            key: EventCalendar.normalize(title),
+            blurb: blurb,
+            photo: photo
           }
         end
       end
@@ -2032,21 +2040,20 @@ module EastsideCalendar
       return nil unless event.is_a?(Hash)
 
       page = pages[cid]
-      chunk = home_pick_chunk(site, page, event["name"].to_s, html_cache)
-      when_label = ""
-      if chunk.include?('class="event-when">')
-        when_label = chunk.split('class="event-when">', 2).last.split("</p>", 2).first.split("<span", 2).first.strip
-      end
+      source_row = card_display_row(site, cid, event)
+      # A heading whose rendered text differs from the data name (a curly
+      # apostrophe) used to miss the old HTML search, so the card showed
+      # the date and no blurb.
+      missed = !source_row["title"].to_s.empty? && source_row["title"].to_s != event["name"].to_s
+      when_label = missed ? "" : source_row["when"].to_s.strip
       if when_label.empty?
         parsed = Date.iso8601(day)
         when_label = "#{WDAYS[parsed.wday]} #{MONTHS[parsed.month - 1]} #{parsed.day}"
       end
-      place_label = event["place"].to_s
-      if chunk.include?('class="event-place">')
-        raw = chunk.split('class="event-place">', 2).last.split("</p>", 2).first
-        place_label = raw.gsub(/<[^>]*>/, "").strip
-      end
+      place_label = missed ? "" : source_row["place_line"].to_s.strip
+      place_label = event["place"].to_s if place_label.empty?
       photo, credit, source, alt = home_pick_photo(site, cid, event["name"].to_s, city["name"].to_s, used)
+      blurb = missed ? "" : EventCalendar.card_blurb(Array(source_row["blurbs"]).first.to_s)
       {
         "title" => event["name"],
         "href" => event["href"],
@@ -2061,9 +2068,22 @@ module EastsideCalendar
         "image_source" => source,
         "place" => place_label,
         "place_city" => city["name"],
-        "blurb" => EventCalendar.card_blurb(home_pick_blurb(chunk)),
+        "blurb" => blurb,
         "event" => event
       }
+    end
+
+    def card_display_row(site, cid, event)
+      return event unless event.is_a?(Hash)
+      return event if !event["when"].to_s.empty? || Array(event["blurbs"]).any?
+
+      card_id = event["card"].to_s
+      return event if card_id.empty?
+
+      found = Array(site.data["#{cid}_events"]).find do |row|
+        row.is_a?(Hash) && row["card"].to_s == card_id && (!row["when"].to_s.empty? || Array(row["blurbs"]).any?)
+      end
+      found || event
     end
 
     # The old include read city pages after Markdown conversion, so a
@@ -2240,6 +2260,13 @@ module EastsideCalendar
         site.data["seasonal_banner"]
       )
       HomeLights.attach!(site, prepared)
+      # City card photos use the hub index above. Render the HTML here,
+      # while page data still reaches the layout.
+      site.pages.each do |page|
+        next unless page.data["layout"] == "city"
+
+        EventCalendar.finish_city_cards!(page)
+      end
     end
 
     def hub_page(site, hub)
@@ -2276,15 +2303,3 @@ end
 
 Liquid::Template.register_tag("seasonal_banner", EastsideCalendar::SeasonalBannerTag)
 
-Jekyll::Hooks.register :pages, :pre_render do |page|
-  next unless page.data["layout"] == "city"
-
-  venues = page.site.data.dig("venue_images", "venues")
-  page.content = EastsideCalendar::SeasonalHubs.with_venue_photos(page.content, venues)
-  page.content = EastsideCalendar::SeasonalHubs.with_fallback_photos(
-    page.content,
-    page.data["city"],
-    page.site.data["card_photo_options"],
-    page.site.data["card_photo_fallback"]
-  )
-end

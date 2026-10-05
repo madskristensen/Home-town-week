@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Delete events whose last day is before today in America/Los_Angeles.
 
-City pages and _data/{city}_events.yml are the source. This script edits
-those files. It also edits _data/book_ahead.yml: a row comes off when its
-last day is before today, or when sold_out is true. It does not hide
-anything in the browser. A city page that loses every event keeps its
-front matter; the layout then says none are listed. Files that lose
-nothing are left byte for byte.
+_data/{city}_events.yml is the source. This script deletes a row whose
+last day is before today. When that row carries the card text, the text
+moves to the next row that shares its card id. It also edits
+_data/book_ahead.yml: a row comes off when its last day is before today,
+or when sold_out is true. It does not hide anything in the browser. A
+city page that loses every event keeps its front matter; the layout then
+says none are listed. Files that lose nothing are left byte for byte.
 
     python3 script/prune-past-events.py
     python3 script/prune-past-events.py --dry-run
@@ -317,6 +318,45 @@ def yaml_last_day(block):
     return max(days)
 
 
+DISPLAY_KEYS = {
+    "order",
+    "heading_id",
+    "title",
+    "when",
+    "place_line",
+    "blurbs",
+    "links",
+    "photo",
+    "description",
+    "hub_blurb",
+}
+
+
+def card_id_of(block):
+    match = re.search(r'(?m)^  card:\s*"?([^"\n]+)"?\s*$', "".join(block))
+    return match.group(1).strip() if match else ""
+
+
+def split_display(block):
+    kept = []
+    moving = []
+    index = 0
+    while index < len(block):
+        line = block[index]
+        match = re.match(r"^  ([A-Za-z0-9_]+):", line)
+        if match and match.group(1) in DISPLAY_KEYS:
+            chunk = [line]
+            index += 1
+            while index < len(block) and not re.match(r"^  [A-Za-z0-9_]+:", block[index]):
+                chunk.append(block[index])
+                index += 1
+            moving.extend(chunk)
+        else:
+            kept.append(line)
+            index += 1
+    return kept, moving
+
+
 def prune_yaml(path, today, dry_run):
     original = path.read_text(encoding="utf-8")
     header, blocks = split_yaml_events(original)
@@ -324,11 +364,23 @@ def prune_yaml(path, today, dry_run):
         return 0
     kept = []
     removed = 0
+    pending = {}
     for block in blocks:
         last_day = yaml_last_day(block)
         if event_is_past(last_day, today):
             removed += 1
+            _kept_lines, moving = split_display(block)
+            card = card_id_of(block)
+            if card and moving:
+                pending.setdefault(card, []).extend(moving)
             continue
+        card = card_id_of(block)
+        if card and card in pending and not any(line.startswith("  when:") for line in block):
+            block = block[:]
+            while block and block[-1].strip() == "":
+                block.pop()
+            block.extend(pending.pop(card))
+            block.append("")
         kept.append(block)
     if removed == 0:
         return 0

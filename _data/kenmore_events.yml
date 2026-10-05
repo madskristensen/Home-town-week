@@ -8,6 +8,18 @@
   end: "2026-10-09T20:00:00-07:00"
   place: "Northlake Lutheran Church, 6620 NE 185th Street"
   same_as: "https://findkenmore.org/event/imagine-presents-family-friendly-karaoke-4/"
+  card: "family-friendly-karaoke"
+  order: "0"
+  heading_id: "family-friendly-karaoke"
+  when: "Fri Oct 9 · 6:30–8:00 p.m."
+  blurbs:
+    - "IMAGINE hosts this on the second Friday. All ages. Sing, or stay and cheer. Free."
+  links:
+    - href: "https://findkenmore.org/event/imagine-presents-family-friendly-karaoke-4/"
+      label: "Family karaoke"
+  description: "IMAGINE hosts this on the second Friday. All ages. Sing, or stay and cheer. Free."
+  hub_blurb: "IMAGINE hosts this on the second Friday."
+
 - name: "ASL Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -16,6 +28,18 @@
   end: "2026-10-10T12:15:00-07:00"
   place: "Kenmore Library, 6531 NE 181st Street"
   same_as: "https://kcls.bibliocommons.com/events/6a76c37ce30fe4845967df1c"
+  card: "asl-story-time"
+  order: "1"
+  heading_id: "asl-story-time"
+  when: "Sat Oct 10 · 11:15 a.m.–12:15 p.m."
+  blurbs:
+    - "Teacher and storyteller Sam Sanders signs stories, movement, and rhymes for d/Deaf and hard-of-hearing children and their families. Families may stay afterward for 30 minutes of play."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a76c37ce30fe4845967df1c"
+      label: "ASL Story Time"
+  description: "Teacher and storyteller Sam Sanders signs stories, movement, and rhymes for d/Deaf and hard-of-hearing children and their families. Families may stay afterward for 30 minutes of play."
+  hub_blurb: "Teacher and storyteller Sam Sanders signs stories, movement, and rhymes for d/Deaf and hard-of-hearing children and their families."
+
 - name: "Family Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -25,6 +49,18 @@
   end: "2026-10-23T10:30:00-07:00"
   place: "Kenmore Library, 6531 NE 181st Street"
   same_as: "https://kcls.bibliocommons.com/events/6a81fe3aaafa6100295d009e"
+  card: "family-story-time"
+  order: "2"
+  heading_id: "family-story-time"
+  when: "Fri Oct 23 · 10:00–10:30 a.m. and 10:45–11:15 a.m."
+  blurbs:
+    - "Stories, music, and movement for all ages with an adult. Pick one session. No registration. The same mornings are also on Fri Oct 30, and a morning session is also on Fri Nov 6."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a81fe3aaafa6100295d009e"
+      label: "Family Story Time"
+  description: "Stories, music, and movement for all ages with an adult. Pick one session. No registration. The same mornings are also on Fri Oct 30, and a morning session is also on Fri Nov 6."
+  hub_blurb: "Stories, music, and movement for all ages with an adult."
+
 - name: "Builders Club"
   cost: "Free"
   setting: "Indoor"
@@ -33,6 +69,18 @@
   end: "2026-10-24T17:00:00-07:00"
   place: "Kenmore Library, 6531 NE 181st Street"
   same_as: "https://kcls.bibliocommons.com/events/6a91f39f57c264087ad490db"
+  card: "builders-club"
+  order: "3"
+  heading_id: "builders-club"
+  when: "Sat Oct 24 · 3:00–5:00 p.m."
+  blurbs:
+    - "Open building with materials the library supplies. Ages 8 and older can come on their own. Ages 5 to 7 need an adult. No registration."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a91f39f57c264087ad490db"
+      label: "Builders Club"
+  description: "Open building with materials the library supplies. Ages 8 and older can come on their own. Ages 5 to 7 need an adult. No registration."
+  hub_blurb: "Open building with materials the library supplies."
+
 - name: "Dia de los Muertos"
   cost: "Free"
   setting: "Indoor"
@@ -41,12 +89,36 @@
   end: "2026-11-01T15:00:00-08:00"
   place: "The Hangar, Kenmore Town Square, 6728 NE 181st St"
   same_as: "https://www.kenmorewa.gov/our-city/special-events/dia-de-los-muertos"
+  card: "dia-de-los-muertos"
+  order: "4"
+  heading_id: "dia-de-los-muertos"
+  when: "Sun Nov 1 · 11:00 a.m.–3:00 p.m."
+  blurbs:
+    - "The third annual celebration, on Sunday, November 1. Free, with an ofrenda, performances, crafts, and activities."
+  links:
+    - href: "https://www.kenmorewa.gov/our-city/special-events/dia-de-los-muertos"
+      label: "Dia de los Muertos"
+  description: "The third annual celebration, on Sunday, November 1. Free, with an ofrenda, performances, crafts, and activities."
+  hub_blurb: "The third annual celebration, on Sunday, November 1."
+
 - name: "Alice in Wonderland"
   setting: "Indoor"
   start: "2026-11-06T19:00:00-08:00"
   end: "2026-11-14T19:00:00-08:00"
   place: "Inglemoor High School Little Theatre, 15500 Simonds Road NE"
   same_as: "https://www.inglemoortheatreboosters.com/services-1"
+  card: "alice-in-wonderland"
+  order: "5"
+  heading_id: "alice-in-wonderland"
+  when: "Fri Nov 6 through Sat Nov 14"
+  blurbs:
+    - "Inglemoor High School’s fall play, in the Little Theatre on the south side of the school. Shows at 7:00 p.m. on Nov 6, 7, 13, and 14, a 2:00 p.m. matinee on Nov 14, and an understudy show at 7:00 p.m. on Nov 12."
+  links:
+    - href: "https://www.inglemoortheatreboosters.com/services-1"
+      label: "Inglemoor Theatre"
+  description: "Inglemoor High School's fall play, in the Little Theatre on the south side of the school. Shows at 7:00 p.m. on Nov 6, 7, 13, and 14, a 2:00 p.m. matinee on Nov 14, and an understudy show at 7:00 p.m. on Nov 12."
+  hub_blurb: "Inglemoor High School's fall play, in the Little Theatre on the south side of the school."
+
 - name: "Tracking Basics: Learning by Looking"
   cost: "Free"
   setting: "Outdoor"
@@ -57,6 +129,24 @@
   organizer: "Finn Hill Neighborhood Alliance"
   organizer_url: "https://www.finnhill.org/"
   same_as: "https://www.finnhill.org/event-details-registration/tracking-basics-learning-by-looking"
+  card: "tracking-basics-learning-by-looking"
+  order: "6"
+  heading_id: "tracking-basics-learning-by-looking"
+  when: "Sat Nov 7 · 10:00 a.m.–12:00 p.m."
+  blurbs:
+    - "A free workshop on animal tracks. The group meets at the Environmental Education and Resource Center next to the Lodge, makes paw molds, then takes a flat 1 to 2 mile walk. Finn Hill Neighborhood Alliance and the CoSEE host it. Ages 12 and up. Wear shoes that can handle mud and rain. Tickets are free."
+  links:
+    - href: "https://www.finnhill.org/event-details-registration/tracking-basics-learning-by-looking"
+      label: "Tracking Basics"
+  photo:
+    src: "/assets/images/kenmore/saint-edward-forest.webp"
+    alt: "A mossy forest at Saint Edward State Park, with ferns and leaning trunks."
+    credit: "Photo: BlueCanoe, CC BY-SA 3.0"
+    source: "https://commons.wikimedia.org/wiki/File:Saint_Edward_forest.jpg"
+    license: "CC BY-SA 3.0"
+  description: "A free workshop on animal tracks. The group meets at the Environmental Education and Resource Center next to the Lodge, makes paw molds, then takes a flat 1 to 2 mile walk. Finn Hill Neighborhood Alliance and the CoSEE host it. Ages 12 and up. Wear shoes that can handle mud and rain. Tickets are free."
+  hub_blurb: "A free workshop on animal tracks."
+
 - name: "Family Friendly Karaoke"
   setting: "Indoor"
   cost: "Free"
@@ -64,6 +154,18 @@
   end: "2026-11-13T20:00:00-08:00"
   place: "Northlake Lutheran Church, 6620 NE 185th Street"
   same_as: "https://findkenmore.org/event/imagine-presents-family-friendly-karaoke-5/"
+  card: "family-friendly-karaoke-1"
+  order: "7"
+  heading_id: "family-friendly-karaoke-1"
+  when: "Fri Nov 13 · 6:30–8:00 p.m."
+  blurbs:
+    - "IMAGINE hosts this on the second Friday. All ages. Sing, or stay and cheer. Free."
+  links:
+    - href: "https://findkenmore.org/event/imagine-presents-family-friendly-karaoke-5/"
+      label: "Family karaoke"
+  description: "IMAGINE hosts this on the second Friday. All ages. Sing, or stay and cheer. Free."
+  hub_blurb: "IMAGINE hosts this on the second Friday."
+
 - name: "Winterfest"
   setting: "Indoor"
   cost: "Free"
@@ -72,6 +174,18 @@
   end: "2026-12-05T15:00:00-08:00"
   place: "Kenmore City Hall, 18120 68th Ave NE, and the Hangar, 6728 NE 181st St"
   same_as: "https://www.kenmorewa.gov/our-city/special-events/winterfest"
+  card: "winterfest"
+  order: "8"
+  heading_id: "winterfest"
+  when: "Sat Dec 5 · 11:00 a.m.–3:00 p.m."
+  blurbs:
+    - "A free city craft market for families at City Hall and the Hangar, with local makers and pop-up shops."
+  links:
+    - href: "https://www.kenmorewa.gov/our-city/special-events/winterfest"
+      label: "Winterfest"
+  description: "A free city craft market for families at City Hall and the Hangar, with local makers and pop-up shops."
+  hub_blurb: "A free city craft market for families at City Hall and the Hangar, with local makers and pop-up shops."
+
 - name: "Family Friendly Karaoke"
   setting: "Indoor"
   cost: "Free"
@@ -79,3 +193,14 @@
   end: "2026-12-11T20:00:00-08:00"
   place: "Northlake Lutheran Church, 6620 NE 185th Street"
   same_as: "https://findkenmore.org/event/imagine-presents-family-friendly-karaoke-6/"
+  card: "family-friendly-karaoke-2"
+  order: "9"
+  heading_id: "family-friendly-karaoke-2"
+  when: "Fri Dec 11 · 6:30–8:00 p.m."
+  blurbs:
+    - "IMAGINE hosts this on the second Friday. All ages. Sing, or stay and cheer. Free."
+  links:
+    - href: "https://findkenmore.org/event/imagine-presents-family-friendly-karaoke-6/"
+      label: "Family karaoke"
+  description: "IMAGINE hosts this on the second Friday. All ages. Sing, or stay and cheer. Free."
+  hub_blurb: "IMAGINE hosts this on the second Friday."

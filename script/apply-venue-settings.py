@@ -207,27 +207,26 @@ def confirmed_dropoff(event, blurb):
 
 def city_pages():
     found = {}
-    for path in ROOT.glob("*/index.md"):
-        city = path.parent.name
-        if not (DATA / f"{city}_events.yml").exists():
+    for path in sorted(DATA.glob("*_events.yml")):
+        city = path.name.replace("_events.yml", "")
+        if not (ROOT / city / "index.md").exists():
             continue
-        text = path.read_text()
-        parts = re.split(r"(?m)^### ", text)
+        loaded = yaml.safe_load(path.read_text(encoding="utf-8")) or []
         rows = []
-        for part in parts[1:]:
-            lines = part.split("\n", 1)
-            name = lines[0].strip()
-            body = lines[1] if len(lines) > 1 else ""
-            place = ""
-            match = re.search(r'<p class="event-place">(.*?)</p>', body, re.S)
-            if match:
-                place = re.sub(r"<[^>]+>", " ", match.group(1))
-                place = re.sub(r"\s+", " ", place).strip()
-            links = " ".join(re.findall(r"\((https?://[^)]+)\)", body))
-            plain = re.sub(r"\{%.*?%\}", " ", body, flags=re.S)
-            plain = re.sub(r"<[^>]+>", " ", plain)
-            plain = re.sub(r"\[([^\]]+)\]\([^)]+\)", r" \1 ", plain)
-            plain = re.sub(r"\s+", " ", plain).strip()
+        for event in loaded:
+            if not isinstance(event, dict):
+                continue
+            if not str(event.get("when") or "").strip() and not event.get("blurbs"):
+                continue
+            name = str(event.get("name") or "").strip()
+            place = str(event.get("place_line") or event.get("place") or "").strip()
+            blurbs = event.get("blurbs") or []
+            plain = re.sub(r"\s+", " ", " ".join(str(item) for item in blurbs)).strip()
+            links = " ".join(
+                str(item.get("href") or "")
+                for item in (event.get("links") or [])
+                if isinstance(item, dict)
+            )
             rows.append({"name": name, "place": place, "blurb": plain, "links": links})
         found[city] = rows
     return found

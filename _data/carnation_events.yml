@@ -8,6 +8,18 @@
   end: "2026-10-31"
   place: "Jubilee Farm, 229 W Snoqualmie River Rd NE"
   same_as: "https://www.jubileefarm.org/contact-us"
+  card: "jubilee-farm-harvest-festival"
+  order: "0"
+  heading_id: "jubilee-farm-harvest-festival"
+  when: "Thu Oct 1 through Sat Oct 31"
+  blurbs:
+    - "Jubilee’s October harvest festival. Saturdays and Sundays run 10:00 a.m.–5:00 p.m. The weekday u-pick pumpkin patch is Monday through Friday, noon–5:00 p.m."
+  links:
+    - href: "https://www.jubileefarm.org/contact-us"
+      label: "Jubilee Farm"
+  description: "Jubilee's October harvest festival. Saturdays and Sundays run 10:00 a.m.–5:00 p.m. The weekday u-pick pumpkin patch is Monday through Friday, noon–5:00 p.m."
+  hub_blurb: "Jubilee's October harvest festival."
+
 - name: "Fall Harvest Festival at Remlinger Farms"
   cost: "$33.95 to $34.95"
   setting: "Outdoor"
@@ -16,6 +28,18 @@
   end: "2026-11-01"
   place: "Remlinger Farms, 32610 NE 32nd Street"
   same_as: "https://remlingerfarms.com/fall-harvest-festival/"
+  card: "fall-harvest-festival-at-remlinger-farms"
+  order: "1"
+  heading_id: "fall-harvest-festival-at-remlinger-farms"
+  when: "Fri Oct 2 through Sun Nov 1 · Fri–Sun 10:00 a.m.–6:00 p.m."
+  blurbs:
+    - "One festival, open Friday through Sunday after the opening weekend. Gates close at 6:00 p.m. The grounds include rides, a pumpkin village, a corn maze included with admission, and u-pick pumpkins. The farm is closed Monday through Thursday."
+  links:
+    - href: "https://remlingerfarms.com/fall-harvest-festival/"
+      label: "Fall Harvest Festival"
+  description: "One festival, open Friday through Sunday after the opening weekend. Gates close at 6:00 p.m. The grounds include rides, a pumpkin village, a corn maze included with admission, and u-pick pumpkins. The farm is closed Monday through Thursday."
+  hub_blurb: "One festival, open Friday through Sunday after the opening weekend."
+
 - name: "KidsQuest: Creative Circuits"
   cost: "Free"
   ages: "Kids"
@@ -24,6 +48,18 @@
   end: "2026-10-06T17:15:00-07:00"
   place: "Carnation Library, 4804 Tolt Avenue"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa8992aca248a002915dab2"
+  card: "kidsquest-creative-circuits"
+  order: "2"
+  heading_id: "kidsquest-creative-circuits"
+  when: "Tue Oct 6 · 4:15–5:15 p.m."
+  blurbs:
+    - "KidsQuest brings circuit cubes for ages 9 and older. The blocks snap into small electronic builds. The same hour is also on Tue Oct 13 and Tue Oct 20."
+  links:
+    - href: "https://kcls.bibliocommons.com/v2/events/6aa8992aca248a002915dab2"
+      label: "Creative Circuits"
+  description: "KidsQuest brings circuit cubes for ages 9 and older. The blocks snap into small electronic builds. The same hour is also on Tue Oct 13 and Tue Oct 20."
+  hub_blurb: "KidsQuest brings circuit cubes for ages 9 and older."
+
 - name: "Reading Buddies"
   cost: "Free"
   setting: "Indoor"
@@ -32,6 +68,18 @@
   end: "2026-10-07T17:00:00-07:00"
   place: "Carnation Library, 4804 Tolt Avenue"
   same_as: "https://kcls.bibliocommons.com/events/6a7a375ac7e02e3d006f4f43"
+  card: "reading-buddies"
+  order: "3"
+  heading_id: "reading-buddies"
+  when: "Wed Oct 7 · 4:00–5:00 p.m."
+  blurbs:
+    - "Kids in kindergarten through grade 6, and beginner English learners through grade 12, read aloud to a volunteer in a green shirt. Drop in. The same hour is also on Oct 14, Oct 21, Oct 29, and Nov 5."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a7a375ac7e02e3d006f4f43"
+      label: "Reading Buddies"
+  description: "Kids in kindergarten through grade 6, and beginner English learners through grade 12, read aloud to a volunteer in a green shirt. Drop in. The same hour is also on Oct 14, Oct 21, Oct 29, and Nov 5."
+  hub_blurb: "Kids in kindergarten through grade 6, and beginner English learners through grade 12, read aloud to a volunteer in a green shirt."
+
 - name: "Drawing and Donuts"
   cost: "Free"
   setting: "Indoor"
@@ -39,6 +87,18 @@
   end: "2026-10-09T17:15:00-07:00"
   place: "Carnation Library, 4804 Tolt Avenue"
   same_as: "https://kcls.bibliocommons.com/v2/events/6ab1bdf8ca248a00291777f5"
+  card: "drawing-and-donuts"
+  order: "4"
+  heading_id: "drawing-and-donuts"
+  when: "Fri Oct 9 · 3:30–5:15 p.m."
+  blurbs:
+    - "Drop-in drawing for ages 9 and older, with donuts. Use a book tutorial or draw on your own. Supplies are provided. The Carnation Friends of the Library sponsor it."
+  links:
+    - href: "https://kcls.bibliocommons.com/v2/events/6ab1bdf8ca248a00291777f5"
+      label: "Drawing and Donuts"
+  description: "Drop-in drawing for ages 9 and older, with donuts. Use a book tutorial or draw on your own. Supplies are provided. The Carnation Friends of the Library sponsor it."
+  hub_blurb: "Drop-in drawing for ages 9 and older, with donuts."
+
 - name: "Habitat Restoration Day"
   cost: "Free"
   setting: "Outdoor"
@@ -48,6 +108,18 @@
   organizer: "Stewardship Partners"
   organizer_url: "https://www.stewardshippartners.org/"
   same_as: "https://livingsnoqualmie.com/event/carnation-farms-habitat-restoration-day-with-stewardship-partners/"
+  card: "habitat-restoration-day"
+  order: "5"
+  heading_id: "habitat-restoration-day"
+  when: "Sat Oct 10 · 10:00 a.m.–2:00 p.m."
+  blurbs:
+    - "A free planting day with Stewardship Partners along the Snoqualmie River. Volunteers put in native trees and shrubs for salmon habitat. Coffee and a pizza lunch are listed. Wear long pants, a long-sleeve shirt, and boots you can get muddy, and bring rain gear if you have it. Gloves and tools are provided."
+  links:
+    - href: "https://livingsnoqualmie.com/event/carnation-farms-habitat-restoration-day-with-stewardship-partners/"
+      label: "Habitat Restoration Day"
+  description: "A free planting day with Stewardship Partners along the Snoqualmie River. Volunteers put in native trees and shrubs for salmon habitat. Coffee and a pizza lunch are listed. Wear long pants, a long-sleeve shirt, and boots you can get muddy, and bring rain gear if you have it. Gloves and tools are provided."
+  hub_blurb: "A free planting day with Stewardship Partners along the Snoqualmie River."
+
 - name: "LEGO Block Party"
   cost: "Free"
   ages: "All ages"
@@ -56,6 +128,18 @@
   end: "2026-10-12T17:15:00-07:00"
   place: "Carnation Library, 4804 Tolt Avenue"
   same_as: "https://kcls.bibliocommons.com/events/6abdd612e8cf1c005cb01406"
+  card: "lego-block-party"
+  order: "6"
+  heading_id: "lego-block-party"
+  when: "Mon Oct 12 · 3:45–5:15 p.m."
+  blurbs:
+    - "Open building with Legos and Duplos. Stay the whole time or stop in. All ages. No registration."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6abdd612e8cf1c005cb01406"
+      label: "LEGO Block Party"
+  description: "Open building with Legos and Duplos. Stay the whole time or stop in. All ages. No registration."
+  hub_blurb: "Open building with Legos and Duplos."
+
 - name: "Play and Learn"
   cost: "Free"
   ages: "Toddlers"
@@ -64,6 +148,18 @@
   end: "2026-10-16T10:30:00-07:00"
   place: "Tolt Congregational Church, 4851 Tolt Ave, Carnation"
   same_as: "https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/"
+  card: "play-and-learn"
+  order: "7"
+  heading_id: "play-and-learn"
+  when: "Fri Oct 16 · 9:00–10:30 a.m."
+  blurbs:
+    - "Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar."
+  links:
+    - href: "https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/"
+      label: "Play and Learn"
+  description: "Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar."
+  hub_blurb: "Free drop-in play for children 12 to 36 months and a caregiver."
+
 - name: "Pokemon Club"
   cost: "Free"
   ages: "Kids"
@@ -72,6 +168,18 @@
   end: "2026-10-16T16:15:00-07:00"
   place: "Carnation Library, 4804 Tolt Avenue"
   same_as: "https://kcls.bibliocommons.com/events/6abdd628ea50a10050a5ca02"
+  card: "pokemon-club"
+  order: "8"
+  heading_id: "pokemon-club"
+  when: "Fri Oct 16 · 2:45–4:15 p.m."
+  blurbs:
+    - "A drop-in club for ages 7 and older. Learn the Pokemon trading card game or Poke Catch, or use the worksheets and stickers. No experience needed. First come, first served."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6abdd628ea50a10050a5ca02"
+      label: "Pokemon Club"
+  description: "A drop-in club for ages 7 and older. Learn the Pokemon trading card game or Poke Catch, or use the worksheets and stickers. No experience needed. First come, first served."
+  hub_blurb: "A drop-in club for ages 7 and older."
+
 - name: "Bird Walk at Tolt-MacDonald Park"
   cost: "Free"
   setting: "Outdoor"
@@ -79,6 +187,18 @@
   end: "2026-10-17T10:45:00-07:00"
   place: "Tolt-MacDonald Park, 31020 NE 40th St, Carnation"
   same_as: "https://www.eastsideaudubon.org/calendar/2026/bird-walk-at-tolt-macdonald-xldtt-hff82-gj7n6-czf3b-jry68"
+  card: "bird-walk-at-tolt-macdonald-park"
+  order: "9"
+  heading_id: "bird-walk-at-tolt-macdonald-park"
+  when: "Sat Oct 17 · 7:45–10:45 a.m."
+  blurbs:
+    - "A free walk where the Tolt River meets the Snoqualmie. Beginners are welcome. Children 10 and older may come with a parent or guardian. No registration. Bring binoculars if you have them."
+  links:
+    - href: "https://www.eastsideaudubon.org/calendar/2026/bird-walk-at-tolt-macdonald-xldtt-hff82-gj7n6-czf3b-jry68"
+      label: "Bird Walk at Tolt-MacDonald Park"
+  description: "A free walk where the Tolt River meets the Snoqualmie. Beginners are welcome. Children 10 and older may come with a parent or guardian. No registration. Bring binoculars if you have them."
+  hub_blurb: "A free walk where the Tolt River meets the Snoqualmie."
+
 - name: "Oxtober"
   cost: "$6 to $7"
   setting: "Outdoor"
@@ -88,6 +208,18 @@
   end: "2026-10-25"
   place: "Oxbow Farm and Conservation Center, 10819 Carnation-Duvall Road NE"
   same_as: "https://www.oxbow.org/visit/events/oxtober/"
+  card: "oxtober"
+  order: "10"
+  heading_id: "oxtober"
+  when: "Sat Oct 17 and Sun Oct 18, then Sat Oct 24 and Sun Oct 25 · 10:00 a.m.–4:00 p.m."
+  blurbs:
+    - "Oxbow’s fall festival: pumpkins, a kids’ farm tour, outdoor play, and music. Admission is $6 in advance and $7 at the door. Ages 0 to 3 are free. A ticket covers parking, activities, and tours. Pumpkins, food, and a few workshops cost extra. Food trucks stay until about 3:30 p.m."
+  links:
+    - href: "https://www.oxbow.org/visit/events/oxtober/"
+      label: "Oxtober"
+  description: "Oxbow's fall festival: pumpkins, a kids' farm tour, outdoor play, and music. Admission is $6 in advance and $7 at the door. Ages 0 to 3 are free. A ticket covers parking, activities, and tours. Pumpkins, food, and a few workshops cost extra. Food trucks stay until about 3:30 p.m."
+  hub_blurb: "Oxbow's fall festival: pumpkins, a kids' farm tour, outdoor play, and music."
+
 - name: "Harvest Market"
   setting: "Outdoor"
   tags: [harvest]
@@ -95,6 +227,18 @@
   end: "2026-10-17T15:00:00-07:00"
   place: "Carnation Farms, 28901 NE Carnation Farm Road"
   same_as: "https://events.carnationfarms.org/event/2026-harvest-market/"
+  card: "harvest-market"
+  order: "11"
+  heading_id: "harvest-market"
+  when: "Sat Oct 17 · 10:00 a.m.–3:00 p.m."
+  blurbs:
+    - "The farm’s market in the historic Hippodrome. Hot food from the culinary team, a history walk with the archivist, a fall photo spot, and artisan vendors. The farm calls it a day for the whole family and asks visitors to leave pets at home."
+  links:
+    - href: "https://events.carnationfarms.org/event/2026-harvest-market/"
+      label: "Harvest Market"
+  description: "The farm's market in the historic Hippodrome. Hot food from the culinary team, a history walk with the archivist, a fall photo spot, and artisan vendors. The farm calls it a day for the whole family and asks visitors to leave pets at home."
+  hub_blurb: "The farm's market in the historic Hippodrome."
+
 - name: "Mini pumpkin decorating"
   cost: "Free"
   ages: "Kids"
@@ -104,6 +248,18 @@
   end: "2026-10-22T17:30:00-07:00"
   place: "Carnation Library, 4804 Tolt Avenue"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa324b6f9ed2e00384fb019"
+  card: "mini-pumpkin-decorating"
+  order: "12"
+  heading_id: "mini-pumpkin-decorating"
+  when: "Thu Oct 22 · 4:15–5:30 p.m."
+  blurbs:
+    - "Ages 9 and older decorate a mini pumpkin with markers or paint pens. Supplies are limited and it is first come, first served. The Carnation Friends of the Library sponsor it."
+  links:
+    - href: "https://kcls.bibliocommons.com/v2/events/6aa324b6f9ed2e00384fb019"
+      label: "Mini pumpkin decorating"
+  description: "Ages 9 and older decorate a mini pumpkin with markers or paint pens. Supplies are limited and it is first come, first served. The Carnation Friends of the Library sponsor it."
+  hub_blurb: "Ages 9 and older decorate a mini pumpkin with markers or paint pens."
+
 - name: "Play and Learn"
   cost: "Free"
   ages: "Toddlers"
@@ -112,6 +268,18 @@
   end: "2026-10-23T10:30:00-07:00"
   place: "Tolt Congregational Church, 4851 Tolt Ave, Carnation"
   same_as: "https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/"
+  card: "play-and-learn-1"
+  order: "13"
+  heading_id: "play-and-learn-1"
+  when: "Fri Oct 23 · 9:00–10:30 a.m."
+  blurbs:
+    - "Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar."
+  links:
+    - href: "https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/"
+      label: "Play and Learn"
+  description: "Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar."
+  hub_blurb: "Free drop-in play for children 12 to 36 months and a caregiver."
+
 - name: "Wildlife drawing in oil pastels"
   cost: "Free"
   ages: "Kids"
@@ -120,6 +288,18 @@
   end: "2026-10-27T17:45:00-07:00"
   place: "Carnation Library, 4804 Tolt Avenue"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a721e5a0d65ac3600444d88"
+  card: "wildlife-drawing-in-oil-pastels"
+  order: "14"
+  heading_id: "wildlife-drawing-in-oil-pastels"
+  when: "Tue Oct 27 · 4:15–5:45 p.m."
+  blurbs:
+    - "A Tolt Art Studio class for ages 6 to 10. Kids can bring an animal photo or pick one at the library, then rebuild it in oil pastel with the instructor."
+  links:
+    - href: "https://kcls.bibliocommons.com/v2/events/6a721e5a0d65ac3600444d88"
+      label: "Wildlife drawing"
+  description: "A Tolt Art Studio class for ages 6 to 10. Kids can bring an animal photo or pick one at the library, then rebuild it in oil pastel with the instructor."
+  hub_blurb: "A Tolt Art Studio class for ages 6 to 10."
+
 - name: "Play and Learn"
   cost: "Free"
   ages: "Toddlers"
@@ -128,6 +308,18 @@
   end: "2026-10-30T10:30:00-07:00"
   place: "Tolt Congregational Church, 4851 Tolt Ave, Carnation"
   same_as: "https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/"
+  card: "play-and-learn-2"
+  order: "15"
+  heading_id: "play-and-learn-2"
+  when: "Fri Oct 30 · 9:00–10:30 a.m."
+  blurbs:
+    - "Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar."
+  links:
+    - href: "https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/"
+      label: "Play and Learn"
+  description: "Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar."
+  hub_blurb: "Free drop-in play for children 12 to 36 months and a caregiver."
+
 - name: "Play and Learn"
   cost: "Free"
   ages: "Toddlers"
@@ -136,6 +328,18 @@
   end: "2026-11-06T10:30:00-08:00"
   place: "Tolt Congregational Church, 4851 Tolt Ave, Carnation"
   same_as: "https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/"
+  card: "play-and-learn-3"
+  order: "16"
+  heading_id: "play-and-learn-3"
+  when: "Fri Nov 6 · 9:00–10:30 a.m."
+  blurbs:
+    - "Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar."
+  links:
+    - href: "https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/"
+      label: "Play and Learn"
+  description: "Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar."
+  hub_blurb: "Free drop-in play for children 12 to 36 months and a caregiver."
+
 - name: "Yoga and Mindfulness for Tweens"
   cost: "Free"
   setting: "Indoor"
@@ -144,6 +348,18 @@
   end: "2026-11-09T17:00:00-08:00"
   place: "Carnation Library, 4804 Tolt Avenue"
   same_as: "https://kcls.bibliocommons.com/events/6ab2bc78ab7a8e0037c39ca4"
+  card: "yoga-and-mindfulness-for-tweens"
+  order: "17"
+  heading_id: "yoga-and-mindfulness-for-tweens"
+  when: "Mon Nov 9 · 4:30–5:00 p.m."
+  blurbs:
+    - "A half hour of yoga and mindfulness for ages 9 to 13, led by Lena from Yoga with Smile. Free. No registration."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6ab2bc78ab7a8e0037c39ca4"
+      label: "Yoga and Mindfulness for Tweens"
+  description: "A half hour of yoga and mindfulness for ages 9 to 13, led by Lena from Yoga with Smile. Free. No registration."
+  hub_blurb: "A half hour of yoga and mindfulness for ages 9 to 13, led by Lena from Yoga with Smile."
+
 - name: "Play and Learn"
   cost: "Free"
   ages: "Toddlers"
@@ -152,3 +368,14 @@
   end: "2026-11-13T10:30:00-08:00"
   place: "Tolt Congregational Church, 4851 Tolt Ave, Carnation"
   same_as: "https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/"
+  card: "play-and-learn-4"
+  order: "18"
+  heading_id: "play-and-learn-4"
+  when: "Fri Nov 13 · 9:00–10:30 a.m."
+  blurbs:
+    - "Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar."
+  links:
+    - href: "https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/"
+      label: "Play and Learn"
+  description: "Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar."
+  hub_blurb: "Free drop-in play for children 12 to 36 months and a caregiver."

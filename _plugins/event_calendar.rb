@@ -930,6 +930,10 @@ module EastsideCalendar
     # from these plain fields. The calendar icon is a separate action.
     def event_card_assigns(part, iso = nil, info = nil, end_iso = nil, schema = nil, calendar_links = nil, city_id = nil, page = nil, city_name = nil)
       fields = extract_card_fields(part.sub(/\s+\z/, ""))
+      assigns_for_fields(fields, iso, info, end_iso, schema, calendar_links, city_id, page, city_name)
+    end
+
+    def assigns_for_fields(fields, iso = nil, info = nil, end_iso = nil, schema = nil, calendar_links = nil, city_id = nil, page = nil, city_name = nil)
       label_source = info.is_a?(Hash) ? info : {}
       photo = fields["photo"].is_a?(Hash) ? fields["photo"] : {}
       source_links = Array(fields["links"])
@@ -1285,6 +1289,156 @@ module EastsideCalendar
         "shareEnd" => share_end_value(start_parsed, chosen && chosen[:end])
       }
     end
+
+    # Rows that share a card id are one city card. Display text lives on
+    # the row that has it. Order follows the old heading order.
+    def card_groups(events)
+      groups = []
+      index = {}
+      events.each do |event|
+        card_id = event.dig(:labels, "card").to_s
+        card_id = "row-#{groups.length}" if card_id.empty?
+        if index.key?(card_id)
+          groups[index[card_id]][:picks] << event
+        else
+          index[card_id] = groups.length
+          groups << { id: card_id, picks: [event], display: event }
+        end
+      end
+      groups.each do |group|
+        display = group[:picks].find do |event|
+          labels = event[:labels] || {}
+          !labels["when"].to_s.empty? || Array(labels["blurbs"]).any?
+        end
+        group[:display] = display if display
+      end
+      groups.sort_by { |group| group[:display].dig(:labels, "order").to_i }
+    end
+
+    def fields_from_card(display, title)
+      labels = display[:labels] || {}
+      place = labels["place_line"].to_s
+      place = display[:place].to_s if place.empty?
+      photo = labels["photo"].is_a?(Hash) ? labels["photo"] : {}
+      {
+        "title" => title,
+        "heading_id" => labels["heading_id"].to_s,
+        "when" => labels["when"].to_s,
+        "place" => place,
+        "blurbs" => Array(labels["blurbs"]),
+        "links" => Array(labels["links"]),
+        "photo" => photo
+      }
+    end
+
+    def visible_from_card(display, picks, today, city_name, city_url)
+      labels = display[:labels] || {}
+      title = labels["title"].to_s
+      title = display[:name] if title.empty?
+      when_text = labels["when"].to_s
+      heading = { text: title, when_text: when_text, body: "" }
+      card_date = heading_date(heading, picks, today)
+      chosen = picks.find { |event| card_date && event[:start] && event[:start][:date] == card_date }
+      chosen ||= picks.min_by { |event| sort_key(event[:start]) }
+      start_parsed = if chosen && chosen[:start] && (card_date.nil? || chosen[:start][:date] == card_date)
+                       chosen[:start]
+                     elsif card_date
+                       { date: card_date, time: nil }
+                     end
+      finish = schema_end(start_parsed, chosen && chosen[:end])
+      place = labels["place_line"].to_s
+      place = chosen[:place].to_s if place.empty? && chosen
+      place_name, street = place_parts(place, city_name)
+      place_name = city_name if place_name.empty?
+      blurb = labels["description"].to_s
+      blurb = "#{title} in #{city_name}." if blurb.empty?
+      same = chosen && chosen[:same_as].to_s
+      anchor = labels["heading_id"].to_s
+      anchor = slugify(title) if anchor.empty?
+      {
+        "name" => title,
+        "url" => "#{city_url}##{anchor}",
+        "description" => blurb,
+        "startDate" => format_offset_time(start_parsed).to_s,
+        "endDate" => format_offset_time(finish).to_s,
+        "place" => place_name,
+        "street" => street.to_s,
+        "locality" => city_name,
+        "sameAs" => http_url?(same) ? same : "",
+        "organizer" => chosen ? chosen.dig(:labels, "organizer").to_s : "",
+        "organizer_url" => chosen ? chosen.dig(:labels, "organizer_url").to_s : "",
+        "performer" => chosen ? chosen.dig(:labels, "performer").to_s : "",
+        "added" => chosen ? chosen.dig(:labels, "added").to_s : "",
+        "date" => card_date ? iso_date(card_date) : "",
+        "bucket" => bucket_key(card_date, today).to_s,
+        "shareStart" => share_start_value(start_parsed),
+        "shareEnd" => share_end_value(start_parsed, chosen && chosen[:end]),
+        "heading_id" => anchor
+      }
+    end
+
+    # Venue and pool photos are chosen after the hub index exists.
+    # The card HTML is what the city layout prints under the intro.
+    def finish_city_cards!(page)
+      assigns = page.data["city_card_assigns"]
+      return unless assigns.is_a?(Array)
+
+      site = page.site
+      city_id = page.data["city"].to_s
+      venues = site.data.dig("venue_images", "venues")
+      options = site.data.dig("card_photo_options", city_id)
+      fallback = site.data["card_photo_fallback"]
+      assigns.each do |card|
+        next unless card.is_a?(Hash)
+        next unless card["image"].to_s.empty?
+
+        photo = venue_card_photo(card, venues) || fallback_card_photo(card, options, fallback)
+        next unless photo
+
+        card["image"] = photo["src"].to_s
+        card["alt"] = photo["alt"].to_s
+        card["credit"] = photo["credit"].to_s
+        card["image_source"] = photo["source"].to_s
+        card["schema_image"] = photo["src"].to_s
+      end
+      today = pacific_today(site.time)
+      page.data["city_cards_html"] = render_grouped_cards(page, assigns, today)
+      images = {}
+      assigns.each do |card|
+        src = card["image"].to_s
+        anchor = card["heading_id"].to_s
+        images[anchor] = src unless anchor.empty? || src.empty?
+      end
+      Array(page.data["visible_events"]).each do |event|
+        next unless event.is_a?(Hash)
+
+        anchor = event["url"].to_s.split("#", 2).last.to_s
+        event["image"] = images[anchor] if images[anchor]
+      end
+    end
+
+    def venue_card_photo(card, venues)
+      place = card["place"].to_s
+      place = card["schema_place"].to_s if place.empty?
+      return nil if card["title"].to_s.empty? && place.empty?
+
+      venue = SeasonalHubs.matching_venues({ "name" => card["title"].to_s, "place" => place }, venues).first
+      photo = SeasonalHubs.listed_photo(venue, "venue") if venue
+      return nil unless photo
+
+      photo
+    end
+
+    def fallback_card_photo(card, options, fallback)
+      photo = SeasonalHubs.fallback_choice(options, card["title"].to_s)
+      photo ||= SeasonalHubs.fallback_choice(options, card["name"].to_s)
+      if photo.nil? && fallback.is_a?(Hash) && !fallback["src"].to_s.empty?
+        photo = fallback
+      end
+      return nil if photo.nil? || photo["src"].to_s.empty?
+
+      photo
+    end
   end
 
   class CalendarFile
@@ -1355,23 +1509,12 @@ module EastsideCalendar
 
     def build_city(site, page, dtstamp, today)
       events, undated = load_events(site, page)
-      headings = EventCalendar.markdown_headings(page.content)
-      heading_rows = headings.map do |heading|
-        when_text = heading[:body][/<p class="event-when">(.*?)<\/p>/m, 1].to_s
-        {
-          key: EventCalendar.normalize(heading[:text]),
-          text: heading[:text],
-          body: heading[:body],
-          when_text: when_text
-        }
-      end
-      assigned = EventCalendar.assign_events(heading_rows, events)
+      card_groups = EventCalendar.card_groups(events)
       groups = Hash.new { |hash, key| hash[key] = [] }
       dates = Hash.new { |hash, key| hash[key] = [] }
       ends = Hash.new { |hash, key| hash[key] = [] }
       labels = Hash.new { |hash, key| hash[key] = [] }
       used = {}
-      used_ids = {}
       feed_uids = {}
       feed = []
       schemas = Hash.new { |hash, key| hash[key] = [] }
@@ -1383,12 +1526,23 @@ module EastsideCalendar
       city_url = EventCalendar.absolute_url(site, city_path)
       dir = "#{city_path.sub(%r{\A/}, '').sub(%r{/\z}, '')}/calendar"
 
-      heading_rows.each_with_index do |heading, index|
-        picks = (assigned[index] || []).sort_by { |event| EventCalendar.sort_key(event[:start]) }
+      card_assigns = []
+      card_groups.each do |group|
+        picks = group[:picks].sort_by { |event| EventCalendar.sort_key(event[:start]) }
+        display = group[:display]
+        meta = display[:labels] || {}
+        title = meta["title"].to_s
+        title = display[:name] if title.empty?
+        heading = {
+          key: EventCalendar.normalize(title),
+          text: title,
+          when_text: meta["when"].to_s
+        }
+        blurb = meta["description"].to_s
+        blurb = EventCalendar.plain_blurb(Array(meta["blurbs"]).join(" ")) if blurb.empty?
         links = picks.map do |event|
           slug = unique_slug(used, EventCalendar.file_slug(event[:name], event[:start]))
           filename = "#{slug}.ics"
-          blurb = EventCalendar.plain_blurb(heading[:body])
           page_url = event[:same_as] && EventCalendar.http_url?(event[:same_as]) ? event[:same_as] : city_url
           record = event.merge(
             uid: "#{page.data['city']}-#{slug}@eastsidecalendar.com",
@@ -1399,19 +1553,18 @@ module EastsideCalendar
           href = EventCalendar.root_path(site, "/#{dir}/#{filename}")
           site.static_files << CalendarFile.new(dir, filename, EventCalendar.build_ics(record, city_url, dtstamp))
           linked += 1
-          { href: href, when_label: record[:when_label], name: heading[:text] }
+          { href: href, when_label: record[:when_label], name: title }
         end
         picks.each do |event|
           next unless EventCalendar.upcoming_event?(event, today)
 
           source = EventCalendar.http_url?(event[:same_as]) ? event[:same_as] : ""
-          blurb = EventCalendar.plain_blurb(heading[:body])
           cost = event.dig(:labels, "cost").to_s.strip
           feed << {
-            uid: EventCalendar.feed_uid(source, event[:start], heading[:text], feed_uids),
+            uid: EventCalendar.feed_uid(source, event[:start], title, feed_uids),
             start: event[:start],
             end: event[:end],
-            name: heading[:text],
+            name: title,
             place: event[:place].to_s,
             url: source,
             description: EventCalendar.feed_description(blurb, cost)
@@ -1424,11 +1577,24 @@ module EastsideCalendar
         ends[heading[:key]] << (finish ? EventCalendar.iso_date(finish) : nil)
         info = EventCalendar.card_labels(picks, date)
         labels[heading[:key]] << info
-        rec = EventCalendar.visible_event(heading, picks, today, city_name, city_url, used_ids)
+        rec = EventCalendar.visible_from_card(display, picks, today, city_name, city_url)
         rec["cost"] = info && info["cost"].to_s
         schemas[heading[:key]] << rec
         visible << rec
+        fields = EventCalendar.fields_from_card(display, title)
+        card_assigns << EventCalendar.assigns_for_fields(
+          fields,
+          rec["date"],
+          info,
+          finish ? EventCalendar.iso_date(finish) : nil,
+          rec,
+          links,
+          page.data["city"],
+          page,
+          city_name
+        )
       end
+      page.data["city_card_assigns"] = card_assigns
 
       city_id = page.data["city"].to_s
       unless city_id.empty?
@@ -1459,7 +1625,7 @@ module EastsideCalendar
         Jekyll.logger.warn("Calendar:", "#{city_name} description is #{description.length} characters")
       end
 
-      matched = assigned.values.sum(&:size)
+      matched = card_groups.sum { |group| group[:picks].size }
       page.data["calendar_groups"] = groups
       page.data["event_dates"] = dates
       page.data["event_ends"] = ends
@@ -1507,7 +1673,18 @@ module EastsideCalendar
             "drop_off" => item["drop_off"],
             "signup" => item["signup"],
             "sensory" => item["sensory"],
-            "tags" => item["tags"]
+            "tags" => item["tags"],
+            "card" => item["card"].to_s,
+            "order" => item["order"],
+            "heading_id" => item["heading_id"].to_s,
+            "title" => item["title"].to_s,
+            "when" => item["when"].to_s,
+            "place_line" => item["place_line"].to_s,
+            "blurbs" => item["blurbs"],
+            "links" => item["links"],
+            "photo" => item["photo"],
+            "description" => item["description"].to_s,
+            "hub_blurb" => item["hub_blurb"].to_s
           }
         }
       end
@@ -1529,23 +1706,6 @@ end
 
 Jekyll::Hooks.register :site, :post_read do |site|
   EastsideCalendar::EventCalendar.stamp_card_links!(site)
-end
-
-Jekyll::Hooks.register :pages, :post_render do |page|
-  next unless page.data["layout"] == "city"
-
-  today = EastsideCalendar::EventCalendar.pacific_today(page.site.time)
-  page.output = EastsideCalendar::EventCalendar.inject!(
-    page.output,
-    page.data["calendar_groups"],
-    page.data["event_dates"],
-    today,
-    EastsideCalendar::EventCalendar.city_name_for(page.site, page),
-    page.data["event_labels"],
-    page,
-    page.data["event_ends"],
-    page.data["event_schema"]
-  )
 end
 
 module EastsideCalendar

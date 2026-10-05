@@ -8,6 +8,23 @@
   end: "2026-10-04T16:00:00-07:00"
   place: "Park at Bothell Landing, 9919 NE 180th St"
   same_as: "https://www.bothellhistoricalmuseum.org/"
+  card: "bothell-historical-museum"
+  order: "0"
+  heading_id: "bothell-historical-museum"
+  when: "Sun Oct 4 · 1:00–4:00 p.m."
+  blurbs:
+    - "The museum in the park is open Sundays from April through October, 1:00 to 4:00 p.m. Admission is free. Later Sundays in this stretch are October 11, 18, and 25."
+  links:
+    - href: "https://www.bothellhistoricalmuseum.org/"
+      label: "Bothell Historical Museum"
+  photo:
+    src: "/assets/images/bothell/hannan-house.webp"
+    alt: "Hannan House, the 1893 building that houses the Bothell Historical Museum at Bothell Landing."
+    credit: "Photo: Joe Mabel, CC BY-SA 4.0"
+    source: "https://commons.wikimedia.org/wiki/File:Hannan_House_-_Bothell_Landing_01.jpg"
+  description: "The museum in the park is open Sundays from April through October, 1:00 to 4:00 p.m. Admission is free. Later Sundays in this stretch are October 11, 18, and 25."
+  hub_blurb: "The museum in the park is open Sundays from April through October, 1:00 to 4:00 p.m."
+
 - name: "Toddler Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -17,6 +34,18 @@
   end: "2026-10-05T10:30:00-07:00"
   place: "Bothell Library, 18215 98th Ave NE"
   same_as: "https://kcls.bibliocommons.com/events/6a80c21d3b6c71003e5919df"
+  card: "toddler-story-time"
+  order: "1"
+  heading_id: "toddler-story-time"
+  when: "Mon Oct 5 · 10:00–10:30 a.m."
+  blurbs:
+    - "Stories, songs, and rhymes for toddlers about 18 months to age 3, with an adult. No registration. Doors close when the room is full, or 10 minutes after the start. The same half hour is also on Mon Oct 12 and Mon Oct 19."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a80c21d3b6c71003e5919df"
+      label: "Toddler Story Time"
+  description: "Stories, songs, and rhymes for toddlers about 18 months to age 3, with an adult. No registration. Doors close when the room is full, or 10 minutes after the start. The same half hour is also on Mon Oct 12 and Mon Oct 19."
+  hub_blurb: "Stories, songs, and rhymes for toddlers about 18 months to age 3, with an adult."
+
 - name: "Baby Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -26,6 +55,18 @@
   end: "2026-10-05T11:30:00-07:00"
   place: "Bothell Library, 18215 98th Ave NE"
   same_as: "https://kcls.bibliocommons.com/events/6a80c2312dac6e00371f5490"
+  card: "baby-story-time"
+  order: "2"
+  heading_id: "baby-story-time"
+  when: "Mon Oct 5 · 11:00–11:30 a.m."
+  blurbs:
+    - "A short story time for pre-walking babies, newborn to about 18 months, with an adult. No registration. Doors close when the room is full, or 10 minutes after the start. The same half hour is also on Mon Oct 12 and Mon Oct 19."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a80c2312dac6e00371f5490"
+      label: "Baby Story Time"
+  description: "A short story time for pre-walking babies, newborn to about 18 months, with an adult. No registration. Doors close when the room is full, or 10 minutes after the start. The same half hour is also on Mon Oct 12 and Mon Oct 19."
+  hub_blurb: "A short story time for pre-walking babies, newborn to about 18 months, with an adult."
+
 - name: "Family Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -34,6 +75,20 @@
   end: "2026-10-08T10:30:00-07:00"
   place: "Bothell Library, 18215 98th Ave NE"
   same_as: "https://kcls.bibliocommons.com/events/6a80df8ad4b10d003006ba62"
+  card: "family-story-time"
+  order: "3"
+  heading_id: "family-story-time"
+  when: "Thu Oct 8 · 10:00–10:30 a.m. and 10:45–11:15 a.m."
+  blurbs:
+    - "Stories, music, movement, and rhymes. All ages with an adult. Registration is not required. Space is limited. Doors close when the room is full, or 10 minutes after the start. Attend one session only."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a80df8ad4b10d003006ba62"
+      label: "10:00 session"
+    - href: "https://kcls.bibliocommons.com/events/6a80df8ad4b10d003006ba65"
+      label: "10:45 session"
+  description: "Stories, music, movement, and rhymes. All ages with an adult. Registration is not required. Space is limited. Doors close when the room is full, or 10 minutes after the start. Attend one session only."
+  hub_blurb: "Stories, music, movement, and rhymes."
+
 - name: "Family Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -42,6 +97,8 @@
   end: "2026-10-08T11:15:00-07:00"
   place: "Bothell Library, 18215 98th Ave NE"
   same_as: "https://kcls.bibliocommons.com/events/6a80df8ad4b10d003006ba65"
+  card: "family-story-time"
+
 - name: "Fire Prevention Week Open House"
   cost: "Free"
   setting: "Indoor"
@@ -49,6 +106,18 @@
   end: "2026-10-10T13:00:00-07:00"
   place: "Fire Station 42, 10726 Beardslee Boulevard"
   same_as: "https://www.bothellwa.gov/Calendar.aspx?EID=2749"
+  card: "fire-prevention-week-open-house"
+  order: "4"
+  heading_id: "fire-prevention-week-open-house"
+  when: "Sat Oct 10 · 10:00 a.m.–1:00 p.m."
+  blurbs:
+    - "The fire department’s annual open house. Meet firefighters, tour the station, and watch live demonstrations. Free."
+  links:
+    - href: "https://www.bothellwa.gov/Calendar.aspx?EID=2749"
+      label: "Open house"
+  description: "The fire department's annual open house. Meet firefighters, tour the station, and watch live demonstrations. Free."
+  hub_blurb: "The fire department's annual open house."
+
 - name: "Arbor Day Celebration"
   cost: "Free"
   ages: "All ages"
@@ -58,6 +127,18 @@
   end: "2026-10-10T11:30:00-07:00"
   place: "East Norway Hill Park, 11920 NE 155th St"
   same_as: "https://www.bothellwa.gov/m/calendar/event/detail/2753"
+  card: "arbor-day-celebration"
+  order: "5"
+  heading_id: "arbor-day-celebration"
+  when: "Sat Oct 10 · 10:30–11:30 a.m."
+  blurbs:
+    - "A short planting party for the 154th Arbor Day. Parks staff lead invasive-weed removal and tree planting. All ages. Registration is required, and spots are limited. Free."
+  links:
+    - href: "https://www.bothellwa.gov/m/calendar/event/detail/2753"
+      label: "Arbor Day"
+  description: "A short planting party for the 154th Arbor Day. Parks staff lead invasive-weed removal and tree planting. All ages. Registration is required, and spots are limited. Free."
+  hub_blurb: "A short planting party for the 154th Arbor Day."
+
 - name: "Halloween in the Park Market"
   cost: "Free"
   setting: "Outdoor"
@@ -68,6 +149,23 @@
   organizer: "Artisan Alley Shop"
   organizer_url: "https://www.artisanalleypnw.com/"
   same_as: "https://allevents.in/bothell/halloween-in-the-park-market-by-artisan-alley-pnw/200030246017330"
+  card: "halloween-in-the-park-market"
+  order: "6"
+  heading_id: "halloween-in-the-park-market"
+  when: "Sat Oct 10 · 11:00 a.m.–4:00 p.m."
+  blurbs:
+    - "A makers market with artisans, bakers, and food trucks. Treats and prizes for kids, a scavenger hunt, and an hourly raffle. Artisan Alley Shop organizes it."
+  links:
+    - href: "https://allevents.in/bothell/halloween-in-the-park-market-by-artisan-alley-pnw/200030246017330"
+      label: "Halloween in the Park Market"
+  photo:
+    src: "/assets/images/bothell/landing-shore.webp"
+    alt: "Shore and trees at the Park at Bothell Landing."
+    credit: "Photo: Joe Mabel, CC BY 4.0"
+    source: "https://commons.wikimedia.org/wiki/File:Bothell_Landing_03.jpg"
+  description: "A makers market with artisans, bakers, and food trucks. Treats and prizes for kids, a scavenger hunt, and an hourly raffle. Artisan Alley Shop organizes it."
+  hub_blurb: "A makers market with artisans, bakers, and food trucks."
+
 - name: "Anderson School History and Art Tour"
   cost: "$20.31"
   ages: "All ages"
@@ -76,6 +174,18 @@
   start: "2026-10-10T13:00:00-07:00"
   place: "Anderson School, 18607 Bothell Way NE"
   same_as: "https://www.mcmenamins.com/events/278720-anderson-schools-history-art-tour"
+  card: "anderson-school-history-and-art-tour"
+  order: "7"
+  heading_id: "anderson-school-history-and-art-tour"
+  when: "Sat Oct 10 · 1:00 p.m."
+  blurbs:
+    - "All ages. Tickets are $20.31 a person, and kids ages 3 and up need a ticket."
+  links:
+    - href: "https://www.mcmenamins.com/events/278720-anderson-schools-history-art-tour"
+      label: "Oct 10 tour"
+  description: "All ages. Tickets are $20.31 a person, and kids ages 3 and up need a ticket."
+  hub_blurb: "All ages."
+
 - name: "Reading with Rover"
   cost: "Free"
   setting: "Indoor"
@@ -83,6 +193,18 @@
   end: "2026-10-11T14:00:00-07:00"
   place: "Bothell Library, 18215 98th Ave NE"
   same_as: "https://kcls.bibliocommons.com/events/6952db4a94297d3600a22eb9"
+  card: "reading-with-rover"
+  order: "8"
+  heading_id: "reading-with-rover"
+  when: "Sun Oct 11 · 1:00–2:00 p.m."
+  blurbs:
+    - "School-age kids read aloud to a certified therapy dog. Registration is not required. Space is limited."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6952db4a94297d3600a22eb9"
+      label: "Reading with Rover"
+  description: "School-age kids read aloud to a certified therapy dog. Registration is not required. Space is limited."
+  hub_blurb: "School-age kids read aloud to a certified therapy dog."
+
 - name: "Glorydays"
   cost: "Free"
   setting: "Indoor"
@@ -90,6 +212,18 @@
   end: "2026-10-17T16:00:00-07:00"
   place: "Bothell Library, 18215 98th Ave NE"
   same_as: "https://kcls.bibliocommons.com/events/6a5538311006a63d00221d2a"
+  card: "glorydays"
+  order: "9"
+  heading_id: "glorydays"
+  when: "Sat Oct 17 · 2:00–4:00 p.m."
+  blurbs:
+    - "A collaborative storytelling game for middle school grades 6–8, funded by a City of Bothell Creative Arts Grant."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a5538311006a63d00221d2a"
+      label: "Glorydays"
+  description: "A collaborative storytelling game for middle school grades 6–8, funded by a City of Bothell Creative Arts Grant."
+  hub_blurb: "A collaborative storytelling game for middle school grades 6–8, funded by a City of Bothell Creative Arts Grant."
+
 - name: "WAIA Diwali Mela"
   cost: "Free"
   setting: "Indoor"
@@ -99,6 +233,20 @@
   end: "2026-10-24T21:00:00-07:00"
   place: "North Creek High School Commons, 3613 191st Pl SE"
   same_as: "https://www.waia4us.org/"
+  card: "waia-diwali-mela"
+  order: "10"
+  heading_id: "waia-diwali-mela"
+  when: "Sat Oct 24 · 3:00–9:00 p.m."
+  blurbs:
+    - "A free evening of food, shopping, music, and performances from the Washington Indian Association. Registration is required. The night includes dance, henna, and activities for kids."
+  links:
+    - href: "https://www.waia4us.org/"
+      label: "WAIA Diwali Mela"
+    - href: "https://form.jotform.com/262146931720151"
+      label: "Register"
+  description: "A free evening of food, shopping, music, and performances from the Washington Indian Association. Registration is required. The night includes dance, henna, and activities for kids."
+  hub_blurb: "A free evening of food, shopping, music, and performances from the Washington Indian Association."
+
 - name: "Northshore Y Fall Family Festival"
   setting: "Indoor"
   cost: "Free"
@@ -107,6 +255,18 @@
   end: "2026-10-24T20:00:00-07:00"
   place: "Northshore YMCA, 11811 NE 195th St"
   same_as: "https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities"
+  card: "northshore-y-fall-family-festival"
+  order: "11"
+  heading_id: "northshore-y-fall-family-festival"
+  when: "Sat Oct 24 · 5:30–8:00 p.m."
+  blurbs:
+    - "Carnival games, trunk-or-treat from decorated cars, and a bounce house. The Y describes these branch festivals as free and open to the community, and it asks adults not to wear masks. Costumes should stay family-friendly."
+  links:
+    - href: "https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities"
+      label: "Fall festivals"
+  description: "Carnival games, trunk-or-treat from decorated cars, and a bounce house. The Y describes these branch festivals as free and open to the community, and it asks adults not to wear masks. Costumes should stay family-friendly."
+  hub_blurb: "Carnival games, trunk-or-treat from decorated cars, and a bounce house."
+
 - name: "Rangoli Demonstration"
   cost: "Free"
   setting: "Indoor"
@@ -116,6 +276,18 @@
   end: "2026-10-25T15:00:00-07:00"
   place: "Bothell Library, 18215 98th Ave NE"
   same_as: "https://kcls.bibliocommons.com/events/6a85e616b20478002993f1ea"
+  card: "rangoli-demonstration"
+  order: "12"
+  heading_id: "rangoli-demonstration"
+  when: "Sun Oct 25 · 1:00–3:00 p.m."
+  blurbs:
+    - "Watch artist Rinkle Shah make a rangoli, the colored-powder floor design used for Diwali. All ages. Free, and registration is not required. Space is limited. Friends of the Bothell Library sponsor it."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a85e616b20478002993f1ea"
+      label: "Rangoli Demonstration"
+  description: "Watch artist Rinkle Shah make a rangoli, the colored-powder floor design used for Diwali. All ages. Free, and registration is not required. Space is limited. Friends of the Bothell Library sponsor it."
+  hub_blurb: "Watch artist Rinkle Shah make a rangoli, the colored-powder floor design used for Diwali."
+
 - name: "Trick-or-Treat on Main Street"
   cost: "Free"
   setting: "Outdoor"
@@ -124,6 +296,18 @@
   end: "2026-10-30T19:00:00-07:00"
   place: "Main Street and 101st Ave NE, Downtown Bothell"
   same_as: "https://www.bothellwa.gov/1203/Trick-or-Treat-on-Main-Street"
+  card: "trick-or-treat-on-main-street"
+  order: "13"
+  heading_id: "trick-or-treat-on-main-street"
+  when: "Fri Oct 30 · 5:00–7:00 p.m."
+  blurbs:
+    - "A downtown stroll for costumes and candy. The city moved the date to Friday, Oct. 30, because of I-405 work and feedback from Main Street businesses."
+  links:
+    - href: "https://www.bothellwa.gov/1203/Trick-or-Treat-on-Main-Street"
+      label: "Trick-or-Treat on Main Street"
+  description: "A downtown stroll for costumes and candy. The city moved the date to Friday, Oct. 30, because of I-405 work and feedback from Main Street businesses."
+  hub_blurb: "A downtown stroll for costumes and candy."
+
 - name: "Spooky Family Fun"
   cost: "Free"
   ages: "All ages"
@@ -133,6 +317,18 @@
   end: "2026-10-31T20:00:00-07:00"
   place: "Anderson School, 18607 Bothell Way NE"
   same_as: "https://www.mcmenamins.com/events/278333-spooky-family-fun"
+  card: "spooky-family-fun"
+  order: "14"
+  heading_id: "spooky-family-fun"
+  when: "Sat Oct 31 · 3:00–8:00 p.m."
+  blurbs:
+    - "Free, and all ages are welcome. Come in costume for games, kid-friendly Halloween movies, trick-or-treating around the property, and a kids costume contest at 6:00 p.m. Food and drink specials are separate from the free admission."
+  links:
+    - href: "https://www.mcmenamins.com/events/278333-spooky-family-fun"
+      label: "Spooky Family Fun"
+  description: "Free, and all ages are welcome. Come in costume for games, kid-friendly Halloween movies, trick-or-treating around the property, and a kids costume contest at 6:00 p.m. Food and drink specials are separate from the free admission."
+  hub_blurb: "Free, and all ages are welcome."
+
 - name: "Evergreen Christmas Lights"
   setting: "Outdoor"
   cost: "Free"
@@ -142,3 +338,19 @@
   end: "2026-12-24"
   place: "Evergreen Church, 3429 240th St SE"
   same_as: "https://evergreenchristmaslights.com/"
+  card: "evergreen-christmas-lights"
+  order: "15"
+  heading_id: "evergreen-christmas-lights"
+  when: "Tue Dec 1 through Thu Dec 24 · 6:00–9:00 p.m."
+  blurbs:
+    - "A free walk at Evergreen Church, nightly from 6:00 to 9:00 p.m., with light tunnels, a show set to music, a train, and a snow play area. The church lists it from December 1 through December 24."
+  links:
+    - href: "https://evergreenchristmaslights.com/"
+      label: "Evergreen Christmas Lights"
+  photo:
+    src: "/assets/images/themes/lights-path.webp"
+    alt: "A path lined with blue and white lights at night."
+    credit: "Photo: Yoonahkim, CC BY-SA 3.0"
+    source: "https://commons.wikimedia.org/wiki/File:Luminescent_lights.jpg"
+  description: "A free walk at Evergreen Church, nightly from 6:00 to 9:00 p.m., with light tunnels, a show set to music, a train, and a snow play area. The church lists it from December 1 through December 24."
+  hub_blurb: "A free walk at Evergreen Church, nightly from 6:00 to 9:00 p.m., with light tunnels, a show set to music, a train, and a snow play area."

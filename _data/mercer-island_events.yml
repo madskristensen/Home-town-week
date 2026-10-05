@@ -7,6 +7,20 @@
   end: "2026-10-04T14:00:00-07:00"
   place: "7700 SE 32nd St"
   same_as: "https://www.mercerisland.gov/community/page/mercer-island-farmers-market-0"
+  card: "mercer-island-farmers-market"
+  order: "0"
+  heading_id: "mercer-island-farmers-market"
+  when: "Sun Oct 4 · 10:00 a.m.–2:00 p.m."
+  blurbs:
+    - "The 2026 season is May 31 through Oct 11, every Sunday, 10:00 a.m.–2:00 p.m. October 11 is the last Sunday."
+  links:
+    - href: "https://www.mercerisland.gov/community/page/mercer-island-farmers-market-0"
+      label: "City page"
+    - href: "https://www.mifarmersmarket.org/"
+      label: "Market site"
+  description: "The 2026 season is May 31 through Oct 11, every Sunday, 10:00 a.m.–2:00 p.m. October 11 is the last Sunday."
+  hub_blurb: "The 2026 season is May 31 through Oct 11, every Sunday, 10:00 a.m.–2:00 p.m."
+
 - name: "Family Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -15,6 +29,18 @@
   end: "2026-10-04T12:00:00-07:00"
   place: "Mercer Island Library, 4400 88th Ave SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a7e21c1be14820029872dad"
+  card: "family-story-time"
+  order: "1"
+  heading_id: "family-story-time"
+  when: "Sun Oct 4 · 11:15 a.m.–12:00 p.m."
+  blurbs:
+    - "Stories, music, movement, and rhymes, then play time. Recommended for ages 0 to 5 with an adult."
+  links:
+    - href: "https://kcls.bibliocommons.com/v2/events/6a7e21c1be14820029872dad"
+      label: "Family Story Time"
+  description: "Stories, music, movement, and rhymes, then play time. Recommended for ages 0 to 5 with an adult."
+  hub_blurb: "Stories, music, movement, and rhymes, then play time."
+
 - name: "Building Club"
   cost: "Free"
   setting: "Indoor"
@@ -22,12 +48,36 @@
   end: "2026-10-06T17:00:00-07:00"
   place: "Mercer Island Library, 4400 88th Ave SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a63c74fe1bf262b5115d995"
+  card: "building-club"
+  order: "2"
+  heading_id: "building-club"
+  when: "Tue Oct 6 · 4:00–5:00 p.m."
+  blurbs:
+    - "An open building hour. The library supplies the materials and science toys. Ages 4 and older. Ages 4 to 7 need an adult. No registration."
+  links:
+    - href: "https://kcls.bibliocommons.com/v2/events/6a63c74fe1bf262b5115d995"
+      label: "Building Club"
+  description: "An open building hour. The library supplies the materials and science toys. Ages 4 and older. Ages 4 to 7 need an adult. No registration."
+  hub_blurb: "An open building hour."
+
 - name: "Story Time with a Bookseller"
   ages: "Toddlers"
   setting: "Indoor"
   start: "2026-10-07T10:30:00-07:00"
   place: "Island Books, 3014 78th Ave SE"
   same_as: "https://www.islandbooks.com/childrens-story-times"
+  card: "story-time-with-a-bookseller"
+  order: "3"
+  heading_id: "story-time-with-a-bookseller"
+  when: "Wed Oct 7 · 10:30 a.m."
+  blurbs:
+    - "A bookseller reads picture books. It is aimed at toddlers through kindergarten. Island Books lists this every Wednesday at 10:30 a.m."
+  links:
+    - href: "https://www.islandbooks.com/childrens-story-times"
+      label: "Story Time with a Bookseller"
+  description: "A bookseller reads picture books. It is aimed at toddlers through kindergarten. Island Books lists this every Wednesday at 10:30 a.m."
+  hub_blurb: "A bookseller reads picture books."
+
 - name: "Mandarin Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -37,6 +87,18 @@
   end: "2026-10-08T11:00:00-07:00"
   place: "Mercer Island Library, 4400 88th Ave SE"
   same_as: "https://kcls.bibliocommons.com/events/6a6ba3514523092f0033b54e"
+  card: "mandarin-story-time"
+  order: "4"
+  heading_id: "mandarin-story-time"
+  when: "Thu Oct 8 · 10:30–11:00 a.m."
+  blurbs:
+    - "Stories, music, and rhymes in Mandarin for toddlers and preschoolers with an adult. People who want to practice Chinese are welcome. No registration."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a6ba3514523092f0033b54e"
+      label: "Mandarin Story Time"
+  description: "Stories, music, and rhymes in Mandarin for toddlers and preschoolers with an adult. People who want to practice Chinese are welcome. No registration."
+  hub_blurb: "Stories, music, and rhymes in Mandarin for toddlers and preschoolers with an adult."
+
 - name: "Tot Shabbat"
   ages: "Toddlers"
   setting: "Indoor"
@@ -45,12 +107,36 @@
   end: "2026-10-09T10:30:00-07:00"
   place: "Stroum Jewish Community Center, 3801 East Mercer Way"
   same_as: "https://sjcc.org/series/tot-shabbat/"
+  card: "tot-shabbat"
+  order: "5"
+  heading_id: "tot-shabbat"
+  when: "Fri Oct 9 · 9:45–10:30 a.m."
+  blurbs:
+    - "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome."
+  links:
+    - href: "https://sjcc.org/series/tot-shabbat/"
+      label: "Tot Shabbat"
+  description: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome."
+  hub_blurb: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups."
+
 - name: "Mercer Island Farmers Market"
   setting: "Outdoor"
   start: "2026-10-11T10:00:00-07:00"
   end: "2026-10-11T14:00:00-07:00"
   place: "7700 SE 32nd St"
   same_as: "https://www.mifarmersmarket.org/"
+  card: "mercer-island-farmers-market-1"
+  order: "6"
+  heading_id: "mercer-island-farmers-market-1"
+  when: "Sun Oct 11 · 10:00 a.m.–2:00 p.m."
+  blurbs:
+    - "The last Sunday. The season ends Oct 11. Same hours, 10:00 a.m.–2:00 p.m."
+  links:
+    - href: "https://www.mercerisland.gov/community/page/mercer-island-farmers-market-0"
+      label: "City page"
+  description: "The last Sunday. The season ends Oct 11. Same hours, 10:00 a.m.–2:00 p.m."
+  hub_blurb: "The last Sunday."
+
 - name: "Family Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -59,6 +145,18 @@
   end: "2026-10-11T12:00:00-07:00"
   place: "Mercer Island Library, 4400 88th Ave SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a7e21c1be14820029872dae"
+  card: "family-story-time-1"
+  order: "7"
+  heading_id: "family-story-time-1"
+  when: "Sun Oct 11 · 11:15 a.m.–12:00 p.m."
+  blurbs:
+    - "Stories and play time for ages 0 to 5 with an adult."
+  links:
+    - href: "https://kcls.bibliocommons.com/v2/events/6a7e21c1be14820029872dae"
+      label: "Family Story Time"
+  description: "Stories and play time for ages 0 to 5 with an adult."
+  hub_blurb: "Stories and play time for ages 0 to 5 with an adult."
+
 - name: "Pumpkin Painting"
   cost: "Free"
   ages: "All ages"
@@ -68,6 +166,18 @@
   end: "2026-10-13T18:30:00-07:00"
   place: "Mercer Island Library, 4400 88th Ave SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a63e186d23de82955c8fba5"
+  card: "pumpkin-painting"
+  order: "8"
+  heading_id: "pumpkin-painting"
+  when: "Tue Oct 13 · 5:30–6:30 p.m."
+  blurbs:
+    - "Paint a mini pumpkin. Materials are provided while they last. Friends of the Mercer Island Library sponsor it. Kids and teens of all ages. Ages 7 and under need an adult. No registration. First come, first served."
+  links:
+    - href: "https://kcls.bibliocommons.com/v2/events/6a63e186d23de82955c8fba5"
+      label: "Pumpkin Painting"
+  description: "Paint a mini pumpkin. Materials are provided while they last. Friends of the Mercer Island Library sponsor it. Kids and teens of all ages. Ages 7 and under need an adult. No registration. First come, first served."
+  hub_blurb: "Paint a mini pumpkin."
+
 - name: "Plant ID Walk"
   cost: "Free"
   ages: "All ages"
@@ -78,6 +188,23 @@
   end: "2026-10-15T15:00:00-07:00"
   place: "Pioneer Park, meet at Island Crest Way and SE 68th St"
   same_as: "https://www.mercerisland.gov/parksrec/page/plant-id-walk-pioneer-park-3"
+  card: "plant-id-walk"
+  order: "9"
+  heading_id: "plant-id-walk"
+  when: "Thu Oct 15 · 1:00–3:00 p.m."
+  blurbs:
+    - "A walk to learn common plants at Pioneer Park. All ages, and no experience is needed. Register ahead."
+  links:
+    - href: "https://www.mercerisland.gov/parksrec/page/plant-id-walk-pioneer-park-3"
+      label: "Plant ID Walk"
+  photo:
+    src: "/assets/images/themes/autumn-forest.webp"
+    alt: "A trail through an autumn forest, with yellow and orange leaves."
+    credit: "Photo: Thomas, CC BY-SA 2.0"
+    source: "https://commons.wikimedia.org/wiki/File:Autumn_forest_-_Darlington_Trail,_Middletown_-_PA.jpg"
+  description: "A walk to learn common plants at Pioneer Park. All ages, and no experience is needed. Register ahead."
+  hub_blurb: "A walk to learn common plants at Pioneer Park."
+
 - name: "Tot Shabbat"
   ages: "Toddlers"
   setting: "Indoor"
@@ -86,6 +213,18 @@
   end: "2026-10-16T10:30:00-07:00"
   place: "Stroum Jewish Community Center, 3801 East Mercer Way"
   same_as: "https://sjcc.org/series/tot-shabbat/"
+  card: "tot-shabbat-1"
+  order: "10"
+  heading_id: "tot-shabbat-1"
+  when: "Fri Oct 16 · 9:45–10:30 a.m."
+  blurbs:
+    - "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome."
+  links:
+    - href: "https://sjcc.org/series/tot-shabbat/"
+      label: "Tot Shabbat"
+  description: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome."
+  hub_blurb: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups."
+
 - name: "Tot Shabbat"
   ages: "Toddlers"
   setting: "Indoor"
@@ -94,6 +233,18 @@
   end: "2026-10-23T10:30:00-07:00"
   place: "Stroum Jewish Community Center, 3801 East Mercer Way"
   same_as: "https://sjcc.org/series/tot-shabbat/"
+  card: "tot-shabbat-2"
+  order: "11"
+  heading_id: "tot-shabbat-2"
+  when: "Fri Oct 23 · 9:45–10:30 a.m."
+  blurbs:
+    - "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome."
+  links:
+    - href: "https://sjcc.org/series/tot-shabbat/"
+      label: "Tot Shabbat"
+  description: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome."
+  hub_blurb: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups."
+
 - name: "Arbor Day at Homestead Park"
   cost: "Free"
   setting: "Outdoor"
@@ -103,12 +254,41 @@
   end: "2026-10-24T13:00:00-07:00"
   place: "Homestead Park"
   same_as: "https://www.mercerisland.gov/parksrec/page/arbor-day-homestead-park"
+  card: "arbor-day-at-homestead-park"
+  order: "12"
+  heading_id: "arbor-day-at-homestead-park"
+  when: "Sat Oct 24 · 10:00 a.m.–1:00 p.m."
+  blurbs:
+    - "A work party for blackberry removal, planting, and mulch. Snacks, lunch, gloves, and tools are provided. Bring water and clothes that can get dirty. Register ahead."
+  links:
+    - href: "https://www.mercerisland.gov/parksrec/page/arbor-day-homestead-park"
+      label: "Arbor Day"
+  photo:
+    src: "/assets/images/themes/tree-sapling.webp"
+    alt: "A young tree sapling growing in a forest."
+    credit: "Photo: Ben Hemmings, CC BY-SA 4.0"
+    source: "https://commons.wikimedia.org/wiki/File:Tree_Sapling_in_British_Columbia,_Canada_2019.jpg"
+  description: "A work party for blackberry removal, planting, and mulch. Snacks, lunch, gloves, and tools are provided. Bring water and clothes that can get dirty. Register ahead."
+  hub_blurb: "A work party for blackberry removal, planting, and mulch."
+
 - name: "Night of 1000 Scares"
   setting: "Indoor"
   tags: [halloween]
   start: "2026-10-25T19:00:00-07:00"
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/auditions/"
+  card: "night-of-1000-scares"
+  order: "13"
+  heading_id: "night-of-1000-scares"
+  when: "Sat Oct 25 · 7:00 p.m."
+  blurbs:
+    - "Chaos Theory’s Old Timers, grades 9 through 12, in a public improv night at Youth Theatre Northwest."
+  links:
+    - href: "https://youththeatre.org/auditions/"
+      label: "YTN auditions"
+  description: "Chaos Theory's Old Timers, grades 9 through 12, in a public improv night at Youth Theatre Northwest."
+  hub_blurb: "Chaos Theory's Old Timers, grades 9 through 12, in a public improv night at Youth Theatre Northwest."
+
 - name: "Nature Journaling"
   cost: "Free"
   setting: "Outdoor"
@@ -117,6 +297,23 @@
   end: "2026-10-27T12:00:00-07:00"
   place: "Pioneer Park NW, Island Crest Way and SE 68th St"
   same_as: "https://www.mercerisland.gov/parksrec/page/nature-journaling-pioneer-park-1"
+  card: "nature-journaling"
+  order: "14"
+  heading_id: "nature-journaling"
+  when: "Tue Oct 27 · 10:00 a.m.–12:00 p.m."
+  blurbs:
+    - "Draw and write outside at Pioneer Park. All ages, and no experience is needed. Bring a notebook and pens, pencils, watercolors, or crayons."
+  links:
+    - href: "https://www.mercerisland.gov/parksrec/page/nature-journaling-pioneer-park-1"
+      label: "Nature Journaling"
+  photo:
+    src: "/assets/images/themes/fallen-leaves.webp"
+    alt: "Fallen autumn leaves covering the ground in a forest."
+    credit: "Photo: Vronnhk, CC BY-SA 4.0"
+    source: "https://commons.wikimedia.org/wiki/File:Autumn_Forest_and_Fallen_Leaves.jpg"
+  description: "Draw and write outside at Pioneer Park. All ages, and no experience is needed. Bring a notebook and pens, pencils, watercolors, or crayons."
+  hub_blurb: "Draw and write outside at Pioneer Park."
+
 - name: "Tot Shabbat"
   ages: "Toddlers"
   setting: "Indoor"
@@ -125,6 +322,18 @@
   end: "2026-10-30T10:30:00-07:00"
   place: "Stroum Jewish Community Center, 3801 East Mercer Way"
   same_as: "https://sjcc.org/series/tot-shabbat/"
+  card: "tot-shabbat-3"
+  order: "15"
+  heading_id: "tot-shabbat-3"
+  when: "Fri Oct 30 · 9:45–10:30 a.m."
+  blurbs:
+    - "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome."
+  links:
+    - href: "https://sjcc.org/series/tot-shabbat/"
+      label: "Tot Shabbat"
+  description: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome."
+  hub_blurb: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups."
+
 - name: "Town Center Trick or Treat"
   cost: "Free"
   setting: "Outdoor"
@@ -133,6 +342,18 @@
   end: "2026-10-30T18:00:00-07:00"
   place: "Town Center, Mercer Island"
   same_as: "https://www.mercerisland.gov/parksrec/page/town-center-trick-or-treat-2026"
+  card: "town-center-trick-or-treat"
+  order: "16"
+  heading_id: "town-center-trick-or-treat"
+  when: "Fri Oct 30 · 4:00–6:00 p.m."
+  blurbs:
+    - "A free stroll through Town Center in costume. Businesses with the two little ghost posters in the window are the ones handing out treats. The city says the business list keeps growing up to the day, so check the page again that week."
+  links:
+    - href: "https://www.mercerisland.gov/parksrec/page/town-center-trick-or-treat-2026"
+      label: "Town Center Trick or Treat"
+  description: "A free stroll through Town Center in costume. Businesses with the two little ghost posters in the window are the ones handing out treats. The city says the business list keeps growing up to the day, so check the page again that week."
+  hub_blurb: "A free stroll through Town Center in costume."
+
 - name: "Discover Diwali"
   cost: "Free"
   setting: "Indoor"
@@ -141,6 +362,18 @@
   end: "2026-11-01T16:00:00-08:00"
   place: "Mercer Island Library, 4400 88th Ave SE"
   same_as: "https://kcls.bibliocommons.com/events/6aa8a358ca248a002915dc39"
+  card: "discover-diwali"
+  order: "17"
+  heading_id: "discover-diwali"
+  when: "Sun Nov 1 · 2:30–4:00 p.m."
+  blurbs:
+    - "A story about Diwali, then a giant rangoli the library will display, plus a diya magnet kit to decorate. Recommended for kids 3 and up. Free. Registration is not required, and supplies are limited."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6aa8a358ca248a002915dc39"
+      label: "Discover Diwali"
+  description: "A story about Diwali, then a giant rangoli the library will display, plus a diya magnet kit to decorate. Recommended for kids 3 and up. Free. Registration is not required, and supplies are limited."
+  hub_blurb: "A story about Diwali, then a giant rangoli the library will display, plus a diya magnet kit to decorate."
+
 - name: "Tot Shabbat"
   ages: "Toddlers"
   setting: "Indoor"
@@ -149,12 +382,36 @@
   end: "2026-11-06T10:30:00-08:00"
   place: "Stroum Jewish Community Center, 3801 East Mercer Way"
   same_as: "https://sjcc.org/series/tot-shabbat/"
+  card: "tot-shabbat-4"
+  order: "18"
+  heading_id: "tot-shabbat-4"
+  when: "Fri Nov 6 · 9:45–10:30 a.m."
+  blurbs:
+    - "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome."
+  links:
+    - href: "https://sjcc.org/series/tot-shabbat/"
+      label: "Tot Shabbat"
+  description: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome."
+  hub_blurb: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups."
+
 - name: "The Queen in the Cave"
   setting: "Indoor"
   start: "2026-11-06T19:00:00-08:00"
   end: "2026-11-15T14:00:00-08:00"
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/auditions/"
+  card: "the-queen-in-the-cave"
+  order: "19"
+  heading_id: "the-queen-in-the-cave"
+  when: "Fri Nov 6 through Sun Nov 15"
+  blurbs:
+    - "A world-premiere play from Júlia Sardà’s picture book, performed by Youth Theatre Northwest. Three sisters go into the forest looking for a queen who lives in a cave. Fridays at 7:00 p.m., Saturdays at 2:00 and 7:00 p.m., and Sundays at 2:00 p.m."
+  links:
+    - href: "https://youththeatre.org/auditions/"
+      label: "YTN auditions"
+  description: "A world-premiere play from Júlia Sardà's picture book, performed by Youth Theatre Northwest. Three sisters go into the forest looking for a queen who lives in a cave. Fridays at 7:00 p.m., Saturdays at 2:00 and 7:00 p.m., and Sundays at 2:00 p.m."
+  hub_blurb: "A world-premiere play from Júlia Sardà's picture book, performed by Youth Theatre Northwest."
+
 - name: "Family Story Time"
   setting: "Indoor"
   cost: "Free"
@@ -162,6 +419,8 @@
   end: "2026-11-10T11:00:00-08:00"
   place: "Mercer Island"
   same_as: "https://kcls.bibliocommons.com/events/6abacfc8e06996003a7fda92"
+  card: "family-story-time"
+
 - name: "Tot Shabbat"
   ages: "Toddlers"
   setting: "Indoor"
@@ -170,6 +429,18 @@
   end: "2026-11-13T10:30:00-08:00"
   place: "Stroum Jewish Community Center, 3801 East Mercer Way"
   same_as: "https://sjcc.org/series/tot-shabbat/"
+  card: "tot-shabbat-5"
+  order: "20"
+  heading_id: "tot-shabbat-5"
+  when: "Fri Nov 13 · 9:45–10:30 a.m."
+  blurbs:
+    - "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome."
+  links:
+    - href: "https://sjcc.org/series/tot-shabbat/"
+      label: "Tot Shabbat"
+  description: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome."
+  hub_blurb: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups."
+
 - name: "Holiday Tree Lighting"
   cost: "Free"
   setting: "Outdoor"
@@ -177,6 +448,18 @@
   start: "2026-12-03"
   place: "Mercerdale Park"
   same_as: "https://www.mercerisland.gov/parksrec/page/city-special-events"
+  card: "holiday-tree-lighting"
+  order: "21"
+  heading_id: "holiday-tree-lighting"
+  when: "Thu Dec 3"
+  blurbs:
+    - "A town tree lighting for families at Mercerdale Park."
+  links:
+    - href: "https://www.mercerisland.gov/parksrec/page/city-special-events"
+      label: "City special events"
+  description: "A town tree lighting for families at Mercerdale Park."
+  hub_blurb: "A town tree lighting for families at Mercerdale Park."
+
 - name: "It's a Wonderful Life"
   setting: "Indoor"
   tags: [holiday-show]
@@ -184,6 +467,19 @@
   end: "2026-12-06T16:00:00-08:00"
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/auditions/"
+  card: "its-a-wonderful-life"
+  order: "22"
+  heading_id: "its-a-wonderful-life"
+  title: "It’s a Wonderful Life"
+  when: "Fri Dec 4 through Sun Dec 6"
+  blurbs:
+    - "A radio-play version of the holiday story, performed by Youth Theatre Northwest for grades 5 through 12. George Bailey meets the angel Clarence on Christmas Eve. Friday and Saturday at 7:00 p.m., Sunday at 4:00 p.m."
+  links:
+    - href: "https://youththeatre.org/auditions/"
+      label: "YTN auditions"
+  description: "A radio-play version of the holiday story, performed by Youth Theatre Northwest for grades 5 through 12. George Bailey meets the angel Clarence on Christmas Eve. Friday and Saturday at 7:00 p.m., Sunday at 4:00 p.m."
+  hub_blurb: "A radio-play version of the holiday story, performed by Youth Theatre Northwest for grades 5 through 12."
+
 - name: "Holiday Makers Market"
   setting: "Indoor"
   cost: "Free"
@@ -194,6 +490,18 @@
   organizer: "Mercer Island Chamber of Commerce"
   organizer_url: "https://www.mercerislandchamber.com/"
   same_as: "https://www.mercerislandchamber.com/holiday-market"
+  card: "holiday-makers-market"
+  order: "23"
+  heading_id: "holiday-makers-market"
+  when: "Sat Dec 5 · 10:00 a.m.–3:00 p.m."
+  blurbs:
+    - "A free makers market for families at the Community and Event Center, held with the Mercer Island Chamber of Commerce."
+  links:
+    - href: "https://www.mercerislandchamber.com/holiday-market"
+      label: "Holiday Market"
+  description: "A free makers market for families at the Community and Event Center, held with the Mercer Island Chamber of Commerce."
+  hub_blurb: "A free makers market for families at the Community and Event Center, held with the Mercer Island Chamber of Commerce."
+
 - name: "The Nutcracker and the Mouse King"
   setting: "Indoor"
   tags: [holiday-show]
@@ -201,32 +509,93 @@
   end: "2026-12-13T14:00:00-08:00"
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/auditions/"
+  card: "the-nutcracker-and-the-mouse-king"
+  order: "24"
+  heading_id: "the-nutcracker-and-the-mouse-king"
+  when: "Sat Dec 5 through Sun Dec 13 · Saturdays and Sundays at 2:00 p.m."
+  blurbs:
+    - "Youth Theatre Northwest’s holiday play, with a cast in grades 1 through 8. Grown-up Clara tells her daughter Marie how she met the Nutcracker, from the party and the mouse battle through the lands of snow and sweets."
+  links:
+    - href: "https://youththeatre.org/auditions/"
+      label: "YTN auditions"
+  description: "Youth Theatre Northwest's holiday play, with a cast in grades 1 through 8. Grown-up Clara tells her daughter Marie how she met the Nutcracker, from the party and the mouse battle through the lands of snow and sweets."
+  hub_blurb: "Youth Theatre Northwest's holiday play, with a cast in grades 1 through 8."
+
 - name: "Chaos Theory"
   setting: "Indoor"
   start: "2026-12-11T19:00:00-08:00"
   end: "2026-12-12T19:00:00-08:00"
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/auditions/"
+  card: "chaos-theory"
+  order: "25"
+  heading_id: "chaos-theory"
+  when: "Fri Dec 11 and Sat Dec 12 · 7:00 p.m."
+  blurbs:
+    - "Public improv from Youth Theatre Northwest. Rookies are grades 7 through 9, and Old Timers are grades 9 through 12."
+  links:
+    - href: "https://youththeatre.org/auditions/"
+      label: "YTN auditions"
+  description: "Public improv from Youth Theatre Northwest. Rookies are grades 7 through 9, and Old Timers are grades 9 through 12."
+  hub_blurb: "Public improv from Youth Theatre Northwest."
+
 - name: "MacBeth"
   setting: "Indoor"
   start: "2026-12-18T19:00:00-08:00"
   end: "2026-12-19T19:00:00-08:00"
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/classes-and-camps/school-year-6th-up/"
+  card: "macbeth"
+  order: "26"
+  heading_id: "macbeth"
+  when: "Fri Dec 18 and Sat Dec 19 · 7:00 p.m."
+  blurbs:
+    - "The performance-series cast, grades 5 through 12, in Shakespeare’s Scottish play. Sword fights, ambition, and a bloody ending. Everyone in the series is cast."
+  links:
+    - href: "https://youththeatre.org/classes-and-camps/school-year-6th-up/"
+      label: "Performance Series"
+  description: "The performance-series cast, grades 5 through 12, in Shakespeare's Scottish play. Sword fights, ambition, and a bloody ending. Everyone in the series is cast."
+  hub_blurb: "The performance-series cast, grades 5 through 12, in Shakespeare's Scottish play."
+
 - name: "Staff vs Students"
   setting: "Indoor"
   start: "2027-01-30T19:00:00-08:00"
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/auditions/"
+  card: "staff-vs-students"
+  order: "27"
+  heading_id: "staff-vs-students"
+  when: "Sat Jan 30, 2027 · 7:00 p.m."
+  blurbs:
+    - "Chaos Theory’s Old Timers improvise against the Youth Theatre Northwest staff."
+  links:
+    - href: "https://youththeatre.org/auditions/"
+      label: "YTN auditions"
+  description: "Chaos Theory's Old Timers improvise against the Youth Theatre Northwest staff."
+  hub_blurb: "Chaos Theory's Old Timers improvise against the Youth Theatre Northwest staff."
+
 - name: "Urinetown"
   setting: "Indoor"
   start: "2027-03-12T19:00:00-08:00"
   end: "2027-03-28T14:00:00-07:00"
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/auditions/"
+  card: "urinetown"
+  order: "28"
+  heading_id: "urinetown"
+  when: "Fri Mar 12 through Sun Mar 28, 2027"
+  blurbs:
+    - "A satirical musical for grades 8 through 12. A long drought puts toilets under one company, and a hero starts a revolt. Fridays and Saturdays at 7:00 p.m., Sundays at 2:00 p.m., with an added 2:00 p.m. show on Saturday, March 28."
+  links:
+    - href: "https://youththeatre.org/auditions/"
+      label: "YTN auditions"
+  description: "A satirical musical for grades 8 through 12. A long drought puts toilets under one company, and a hero starts a revolt. Fridays and Saturdays at 7:00 p.m., Sundays at 2:00 p.m., with an added 2:00 p.m. show on Saturday, March 28."
+  hub_blurb: "A satirical musical for grades 8 through 12."
+
 - name: "Chaos Theory"
   setting: "Indoor"
   start: "2027-04-23T19:00:00-07:00"
   end: "2027-04-24T19:00:00-07:00"
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/auditions/"
+  card: "chaos-theory"
