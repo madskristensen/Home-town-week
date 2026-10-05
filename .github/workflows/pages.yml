@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -19,19 +17,20 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           # Full history so sitemap lastmod can use each file's commit time.
           # A depth of 1 makes every unchanged page look unmodified.
           fetch-depth: 0
 
+      - name: Install Python packages
+        run: python3 -m pip install --quiet -r requirements.txt
+
       - name: Check shared components
         run: python3 script/check-components.py
 
       - name: Check event areas
-        run: |
-          python3 -m pip install --quiet pyyaml
-          python3 script/check-event-areas.py
+        run: python3 script/check-event-areas.py
 
       - name: Fill venue settings for this build
         run: python3 script/apply-venue-settings.py
@@ -40,21 +39,21 @@ jobs:
         run: python3 script/check-events.py
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@e5517072e87f198d9533967ae13d97c11b604005 # v1.99.0
         with:
-          ruby-version: "3.2"
+          # Reads .ruby-version (3.2.3).
           bundler-cache: true
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v6
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
 
       - name: Fingerprint source images
         id: images
         run: echo "hash=$(python3 script/render-image-variants.py --fingerprint)" >> "$GITHUB_OUTPUT"
 
       - name: Restore image variant cache
-        uses: actions/cache@v6
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
           path: .image-cache
           key: image-variants-v2-${{ steps.images.outputs.hash }}
@@ -68,7 +67,6 @@ jobs:
           # 1600 AVIF. The files are not committed. A referenced photo
           # that cannot be encoded fails the build. Oversized masters
           # are capped in the same cache. The repo files stay as they are.
-          python3 -m pip install --quiet Pillow pillow-avif-plugin
           if python3 script/render-image-variants.py --check-cache; then
             python3 script/render-image-variants.py --from-cache
           else
@@ -81,11 +79,10 @@ jobs:
           # push updates the image. The PNG is not committed.
           sudo apt-get update
           sudo apt-get install -y librsvg2-bin fonts-liberation
-          python3 -m pip install --quiet Pillow
           python3 script/render-home-og.py
 
       - name: Setup Node
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
         with:
           node-version: "22"
 
@@ -94,7 +91,7 @@ jobs:
         run: echo "hash=$(node script/render-share-cards.mjs --fingerprint)" >> "$GITHUB_OUTPUT"
 
       - name: Restore share card cache
-        uses: actions/cache@v6
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
           path: .share-cache
           key: share-cards-v1-${{ steps.share.outputs.hash }}
@@ -124,14 +121,12 @@ jobs:
           # rcssmin minifies _css and fingerprints assets/css/<name>.<hash>.css
           # when Jekyll starts. minify-html then compacts the built pages,
           # inline scripts, and JSON-LD.
-          python3 -m pip install --quiet rcssmin minify-html
           printf 'sha: "%s"\n' "$GITHUB_SHA" > _data/build.yml
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
           python3 script/render-image-variants.py --publish-site
           python3 script/minify-html.py
           python3 script/check-schema.py
           python3 script/check-components.py --rendered _site
-          python3 -m pip install --quiet icalendar
           python3 script/check-calendars.py
 
       - name: Add IndexNow verification key
@@ -146,20 +141,23 @@ jobs:
           printf '%s' "$INDEXNOW_KEY" > "_site/${INDEXNOW_KEY}.txt"
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with:
           path: _site
 
   deploy:
     needs: build
     runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
 
   indexnow:
     name: Submit updated URLs to IndexNow
@@ -174,7 +172,7 @@ jobs:
 
       - name: Submit changed URLs
         if: env.INDEXNOW_KEY != ''
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
 

@@ -59,5 +59,6 @@ exclude:
   - script
   - node_modules
   - .share-cache
+  - requirements.txt
   - assets/leaflet/leaflet.full.css
 
