@@ -22,26 +22,6 @@
     license: "organizer"
   description: "Ken Ludwig's mystery-comedy, directed by Rael Esteves. Broadway star William Gillette, famous for playing Sherlock Holmes, hosts a weekend that turns into a murder hunt after a guest is stabbed. A killing is part of the plot. Treat it as a mystery for older kids and adults."
   hub_blurb: "Ken Ludwig's mystery-comedy, directed by Rael Esteves."
-
-- name: "Woodinville Heritage Museum"
-  setting: "Indoor"
-  cost: "Free"
-  start: "2026-10-04T13:00:00-07:00"
-  end: "2026-10-04T16:00:00-07:00"
-  place: "14121 NE 171st St"
-  same_as: "https://woodinvilleheritage.org/events-programs/"
-  card: "woodinville-heritage-museum"
-  order: "1"
-  heading_id: "woodinville-heritage-museum"
-  when: "Sun Oct 4 · 1:00–4:00 p.m."
-  blurbs:
-    - "The heritage society opens the museum on the first Sunday of the month, 1:00 to 4:00 p.m., from September through May. Admission is free. October 4 is that Sunday."
-  links:
-    - href: "https://woodinvilleheritage.org/events-programs/"
-      label: "Events and programs"
-  description: "The heritage society opens the museum on the first Sunday of the month, 1:00 to 4:00 p.m., from September through May. Admission is free. October 4 is that Sunday."
-  hub_blurb: "The heritage society opens the museum on the first Sunday of the month, 1:00 to 4:00 p.m., from September through May."
-
 - name: "Paper Flower Craft"
   cost: "Free"
   setting: "Indoor"
@@ -61,7 +41,6 @@
       label: "Paper Flower Craft"
   description: "Friends of the Woodinville Library sponsor a paper-flower craft. Supplies are provided. Please register for the craft. A Friends general meeting follows from 2:00 to 3:00 p.m. and does not require registration."
   hub_blurb: "Friends of the Woodinville Library sponsor a paper-flower craft."
-
 - name: "Rainbow Youth Group"
   cost: "Free"
   setting: "Indoor"
@@ -80,7 +59,6 @@
       label: "Rainbow Youth Group"
   description: "A social group with Lambert House volunteers for ages 11–22 who are LGBTQIA+ or who are questioning or exploring gender or sexual identity. The description mentions parent or guardian permission. Read that line on the event page before you go. Wednesday hours are noon–8:00 p.m."
   hub_blurb: "A social group with Lambert House volunteers for ages 11–22 who are LGBTQIA+ or who are questioning or exploring gender or sexual identity."
-
 - name: "Baby and Toddler Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -100,7 +78,6 @@
       label: "Baby and Toddler Story Time"
   description: "Rhymes, songs, and bounces for newborns to 24 months with a caregiver. Siblings are welcome. Registration is not required. The library opens at 10:00 a.m. on Thursday, so this starts after the doors."
   hub_blurb: "Rhymes, songs, and bounces for newborns to 24 months with a caregiver."
-
 - name: "Family Story Time"
   cost: "Free"
   ages: "All ages"
@@ -121,7 +98,6 @@
       label: "Family Story Time"
   description: "Stories, music, movement, and rhymes. Stay to play after. All ages with an adult."
   hub_blurb: "Stories, music, movement, and rhymes."
-
 - name: "Sunflower Festival"
   setting: "Outdoor"
   signup: true
@@ -141,7 +117,6 @@
       label: "2026 events"
   description: "The last peak of the 7-acre sunflower field, plus the corn maze, u-pick pumpkins and flowers, and local vendors. It is included with regular farm admission. There is no separate festival ticket."
   hub_blurb: "The last peak of the 7-acre sunflower field, plus the corn maze, u-pick pumpkins and flowers, and local vendors."
-
 - name: "Sammamish Valley Harvest Fest"
   setting: "Outdoor"
   cost: "Free"
@@ -161,7 +136,6 @@
       label: "Harvest Fest"
   description: "Free and family-friendly. The Farm Market patio has artisan and farmer vendors, live music, food, apple pressing, and pumpkins, including a guess-the-weight for the giant ones. 21 Acres and the Sammamish Valley Grange are the hosts. A guided tour of the Grange Heritage Garden is part of the day. Parking on site is limited. Carpool, bike, take the bus, or park in the neighborhood and walk."
   hub_blurb: "Free and family-friendly."
-
 - name: "Reading with Rover"
   cost: "Free"
   ages: "Kids"
@@ -178,7 +152,6 @@
     - "Read aloud to a certified therapy dog. Ages 6–12. No registration. Space is limited. Reading with Rover"
   description: "Read aloud to a certified therapy dog. Ages 6–12. No registration. Space is limited."
   hub_blurb: "Read aloud to a certified therapy dog."
-
 - name: "Baby and Toddler Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -195,7 +168,6 @@
     - "Rhymes, songs, and bounces for newborns to 24 months with a caregiver. Siblings are welcome. No registration. Baby and Toddler Story Time"
   description: "Rhymes, songs, and bounces for newborns to 24 months with a caregiver. Siblings are welcome. No registration."
   hub_blurb: "Rhymes, songs, and bounces for newborns to 24 months with a caregiver."
-
 - name: "Family Story Time"
   cost: "Free"
   ages: "All ages"
@@ -212,7 +184,6 @@
     - "Stories, music, movement, and rhymes. Stay to play after. All ages with an adult. Family Story Time"
   description: "Stories, music, movement, and rhymes. Stay to play after. All ages with an adult."
   hub_blurb: "Stories, music, movement, and rhymes."
-
 - name: "Cows and Carnations"
   cost: "Free"
   setting: "Indoor"
@@ -231,7 +202,6 @@
       label: "Cows and Carnations"
   description: "A free talk from the Woodinville Heritage Society on the Stimson family and Hollywood Farm, the agricultural estate Frederick Stimson built in the Sammamish Valley. It is a history program, not a wine tasting."
   hub_blurb: "A free talk from the Woodinville Heritage Society on the Stimson family and Hollywood Farm, the agricultural estate Frederick Stimson built in the…"
-
 - name: "Beading: Make an Intention Bracelet"
   cost: "Free"
   ages: "Teens"
@@ -252,7 +222,6 @@
       label: "Intention bracelet"
   description: "Teens and adults design a beaded bracelet around a personal quality such as strength or kindness. Supplies are included. Please register. SilverKite Community Arts leads it."
   hub_blurb: "Teens and adults design a beaded bracelet around a personal quality such as strength or kindness."
-
 - name: "Pup-kin Patch"
   setting: "Outdoor"
   tags: [pumpkin-patch]
@@ -271,7 +240,6 @@
       label: "2026 events"
   description: "Dogs are welcome all season, and this Sunday is set aside for them. A leashed dog can do the corn maze, the sunflower walk, and u-pick with you. Included with regular farm admission."
   hub_blurb: "Dogs are welcome all season, and this Sunday is set aside for them."
-
 - name: "Aesop and Art"
   cost: "Free"
   setting: "Indoor"
@@ -292,7 +260,6 @@
       label: "Aesop and Art"
   description: "Ages 6 to 12, and caregivers are welcome. This session uses the fable The Tortoise and the Hare, then an art project. Wear clothes that can get messy, and arrive on time. No registration. Space is limited. Friends of the Woodinville Library sponsor it."
   hub_blurb: "Ages 6 to 12, and caregivers are welcome."
-
 - name: "Thrill the World Eastside"
   setting: "Outdoor"
   tags: [halloween]
@@ -313,7 +280,6 @@
       label: "Thrill the World Eastside"
   description: "A public dance festival at the corner of 135th Ave NE and NE Village Square Dr. Other performances fill the early afternoon, the Thriller dance is at 3:00 p.m., and there is an activity tent for children and a costume contest. The afternoon ends around 4:15. Dancers check in and sign a waiver. Spectator donations go to the Woodinville Storehouse Food Bank."
   hub_blurb: "A public dance festival at the corner of 135th Ave NE and NE Village Square Dr."
-
 - name: "Full STEAM Ahead"
   cost: "Free"
   setting: "Indoor"
@@ -334,7 +300,6 @@
       label: "Full STEAM Ahead"
   description: "A hands-on science session for ages 8 to 12. Materials are provided. No registration. Friends of the Woodinville Library sponsor it."
   hub_blurb: "A hands-on science session for ages 8 to 12."
-
 - name: "Trick or Tree"
   cost: "Free"
   ages: "All ages"
@@ -355,7 +320,6 @@
       label: "Trick or Tree"
   description: "A free city afternoon for kids and families. Make a spooky treat bag, try crafts and games, get your face painted, meet some creepy crawlies, and take home a free tree."
   hub_blurb: "A free city afternoon for kids and families."
-
 - name: "Family Story Time"
   setting: "Indoor"
   cost: "Free"
@@ -364,7 +328,6 @@
   place: "Woodinville"
   same_as: "https://kcls.bibliocommons.com/events/6aa8a0884b3b06003083cbc6"
   card: "family-story-time"
-
 - name: "Spooky Soils"
   setting: "Indoor"
   tags: [halloween]
@@ -383,7 +346,6 @@
       label: "Spooky Soils"
   description: "A Halloween family morning from IslandWood and King County. The plan is crafts and hands-on looks at how leaves, pumpkins, and soil break down. It is at Brightwater Center."
   hub_blurb: "A Halloween family morning from IslandWood and King County."
-
 - name: "Teen Halloween Party"
   cost: "Free"
   ages: "Teens"
@@ -405,7 +367,6 @@
       label: "Teen Halloween Party"
   description: "Games, crafts, tarot, karaoke, and treats for teens 12 to 18. Costumes are encouraged. Registration is encouraged and not required. Friends of the Woodinville Library sponsor it."
   hub_blurb: "Games, crafts, tarot, karaoke, and treats for teens 12 to 18."
-
 - name: "The Great Pumpkin Hunt"
   cost: "Free"
   setting: "Outdoor"
@@ -425,7 +386,6 @@
       label: "The Great Pumpkin Hunt"
   description: "Find a pumpkin, join a short costume parade inside, and trick-or-treat at the library. No registration. Part of it may move outside if the weather is good. Friends of the Woodinville Library sponsor it."
   hub_blurb: "Find a pumpkin, join a short costume parade inside, and trick-or-treat at the library."
-
 - name: "Cascade Recycling Center Tour"
   cost: "Free"
   setting: "Indoor"

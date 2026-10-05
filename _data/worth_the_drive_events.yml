@@ -56,6 +56,18 @@
   same_as: "https://www.stockerfarms.com/"
   tags: [pumpkin-patch, corn-maze]
   blurb: "Pumpkin patch, corn maze, and a long list of farm attractions. Open Oct 1 through Oct 31, 10 a.m.–6 p.m., last entry at 5 p.m."
+- name: "Swans Trail Farms Harvest Festival"
+  cost: "$16.95 to $24.95"
+  setting: "Outdoor"
+  signup: true
+  start: "2026-09-12"
+  end: "2026-10-31"
+  place: "Swans Trail Farms, 7301 Rivershore Road"
+  town: Snohomish
+  drive: "about 40 min from Bellevue"
+  same_as: "https://www.swanstrailfarms.com/hours-and-directions.aspx"
+  tags: [pumpkin-patch, harvest]
+  blurb: "A Snohomish harvest festival with a pumpkin patch and farm play, open daily 10 a.m.–6 p.m. through Oct 31. Admission is $16.95 on weekdays and $24.95 on weekends, plus tax, for ages 2 to 64. Under 2 is free. The evening light walk, Great Harvest Glow, is a separate ticket."
 - name: "Spooner Farms Harvest Festival"
   setting: "Outdoor"
   start: "2026-10-01"

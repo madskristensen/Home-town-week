@@ -19,7 +19,6 @@
       label: "Pumpkin patch"
   description: "A pumpkin patch for families, with animals to see and hot mini doughnuts and cider. Open Friday through Sunday from Sep 26 through Oct 31. Leave pets at home."
   hub_blurb: "A pumpkin patch for families, with animals to see and hot mini doughnuts and cider."
-
 - name: "Paper mache pumpkin contest"
   cost: "Free"
   setting: "Indoor"
@@ -39,26 +38,6 @@
       label: "Pumpkin contest"
   description: "Bring a finished paper mache pumpkin to the front desk any day the branch is open in October. Judges pick winners in a few categories, and the library will say who won by Nov 7. Paper is available at the desk if you need it."
   hub_blurb: "Bring a finished paper mache pumpkin to the front desk any day the branch is open in October."
-
-- name: "Learn to Play Go"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-04T15:00:00-07:00"
-  end: "2026-10-04T17:00:00-07:00"
-  place: "Snoqualmie Library, 7824 Center Boulevard SE"
-  same_as: "https://kcls.bibliocommons.com/events/6a95ff07b204780029970602"
-  card: "learn-to-play-go"
-  order: "2"
-  heading_id: "learn-to-play-go"
-  when: "Sun Oct 4 · 3:00–5:00 p.m."
-  blurbs:
-    - "Volunteers from the Seattle Go Center teach the board game, and people who already play can sit down for a free game. Tweens, teens, and adults. No registration. The same hours are also on Sun Oct 11."
-  links:
-    - href: "https://kcls.bibliocommons.com/events/6a95ff07b204780029970602"
-      label: "Learn to Play Go"
-  description: "Volunteers from the Seattle Go Center teach the board game, and people who already play can sit down for a free game. Tweens, teens, and adults. No registration. The same hours are also on Sun Oct 11."
-  hub_blurb: "Volunteers from the Seattle Go Center teach the board game, and people who already play can sit down for a free game."
-
 - name: "Free Wednesday at the Train Shed"
   setting: "Indoor"
   cost: "Free"
@@ -83,7 +62,6 @@
     source: "https://commons.wikimedia.org/wiki/File:2025-05-24,_Train_Shed_Exhibit_Hall,_Northwest_Railway_Museum_(Snoqualmie,_Washington),_142029.jpg"
   description: "The museum waives Train Shed admission on Wednesdays through December 16. The Railway History Campus is open 11:00 a.m. to 4:00 p.m. No ticket and no reservation. A story time starts at 11:00 a.m. in the shed that day."
   hub_blurb: "The museum waives Train Shed admission on Wednesdays through December 16."
-
 - name: "After School Hangout"
   cost: "Free"
   setting: "Indoor"
@@ -103,7 +81,6 @@
       label: "After School Hangout"
   description: "Crafts, tabletop games, a Nintendo Switch, and snacks for school-age kids through teens. No registration. Fall City Friends sponsor it. The same hours are also on Oct 14, Oct 21, and Oct 28."
   hub_blurb: "Crafts, tabletop games, a Nintendo Switch, and snacks for school-age kids through teens."
-
 - name: "Toddler Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -124,7 +101,6 @@
       label: "Toddler Story Time"
   description: "Stories and play, with bubbles, for newborns to 36 months with an adult. Older children are welcome. No registration. The same time is also on Thu Oct 15."
   hub_blurb: "Stories and play, with bubbles, for newborns to 36 months with an adult."
-
 - name: "Family Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -144,7 +120,6 @@
       label: "Family Story Time"
   description: "Stories, music, and movement for young children with an adult. A short playtime follows, and it ends with bubbles. No registration. The same time is also on Thu Oct 15."
   hub_blurb: "Stories, music, and movement for young children with an adult."
-
 - name: "Family Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -165,7 +140,6 @@
       label: "Family Story Time"
   description: "Stories, music, movement, and play for newborns through age 5 with an adult. No registration. Space is limited."
   hub_blurb: "Stories, music, movement, and play for newborns through age 5 with an adult."
-
 - name: "Mount Si Dramafest"
   cost: "$10"
   setting: "Indoor"
@@ -185,7 +159,6 @@
       label: "Dramafest"
   description: "Student one-act plays. General admission is $10, at the door or on the drama club site. The audience votes, and awards follow the Saturday show. The show starts at 7:00 p.m."
   hub_blurb: "Student one-act plays."
-
 - name: "LEGO Builders"
   cost: "Free"
   ages: "All ages"
@@ -205,7 +178,6 @@
       label: "LEGO Builders"
   description: "An open build for all ages. Bricks and other construction toys are on the tables. Stay for the whole session or stop in for a few minutes. The Friends of the Snoqualmie Library sponsor it. No registration."
   hub_blurb: "An open build for all ages."
-
 - name: "Halloween Train"
   cost: "$16 to $32"
   setting: "Outdoor"
@@ -226,7 +198,6 @@
       label: "Halloween Train"
   description: "The Northwest Railway Museum runs a family ride from the Snoqualmie Depot, with another boarding point in North Bend. Coaches are dressed for fall. At the stop by the Train Shed there is cider pressing, apple coring, crafts, and music. Costumes are welcome if you can manage the steps. Tickets are required for ages 2 and up. Departures from Snoqualmie start at 11:00 a.m. and run every two hours."
   hub_blurb: "The Northwest Railway Museum runs a family ride from the Snoqualmie Depot, with another boarding point in North Bend."
-
 - name: "Mount Si Dramafest"
   cost: "$10"
   setting: "Indoor"
@@ -236,7 +207,6 @@
   organizer_url: "https://mshsdrama.weebly.com/"
   same_as: "https://livingsnoqualmie.com/event/mt-si-high-school-dramafest-26/"
   card: "mount-si-dramafest"
-
 - name: "Free Wednesday at the Train Shed"
   cost: "Free"
   setting: "Indoor"
@@ -256,7 +226,6 @@
       label: "Free Wednesday at the Train Shed"
   description: "The museum waives Train Shed admission on Wednesdays through December 16. The Railway History Campus is open 11:00 a.m. to 4:00 p.m. No ticket and no reservation."
   hub_blurb: "The museum waives Train Shed admission on Wednesdays through December 16."
-
 - name: "LEGO Block Party in Fall City"
   cost: "Free"
   setting: "Indoor"
@@ -275,7 +244,6 @@
       label: "LEGO Block Party"
   description: "Another Fall City listing on this page. Ages 4 and older can build with the library's bricks and leave when they are done. No registration."
   hub_blurb: "Another Fall City listing on this page."
-
 - name: "Little Lab: Stories that Count"
   cost: "Free"
   setting: "Indoor"
@@ -295,7 +263,6 @@
       label: "Little Lab"
   description: "A KidsQuest educator leads numbers and counting for ages 3 to 6 with an adult, with hands-on stations. No registration."
   hub_blurb: "A KidsQuest educator leads numbers and counting for ages 3 to 6 with an adult, with hands-on stations."
-
 - name: "Free Wednesday at the Train Shed"
   cost: "Free"
   setting: "Indoor"
@@ -315,7 +282,6 @@
       label: "Free Wednesday at the Train Shed"
   description: "The museum waives Train Shed admission on Wednesdays through December 16. The Railway History Campus is open 11:00 a.m. to 4:00 p.m. No ticket and no reservation. A story time starts at 11:00 a.m. in the shed that day."
   hub_blurb: "The museum waives Train Shed admission on Wednesdays through December 16."
-
 - name: "Spooktacular Halloween"
   setting: "Outdoor"
   cost: "Free"
@@ -335,7 +301,6 @@
       label: "Spooktacular"
   description: "A free city afternoon in three stops. Begin on Snoqualmie Ridge, walk to the trunk-or-treat in the Snoqualmie Valley YMCA parking lot (that stop runs until 3:00 p.m.), and continue into historic downtown. The YMCA leg is co-sponsored by the city and Sno Falls Credit Union."
   hub_blurb: "A free city afternoon in three stops."
-
 - name: "Free Wednesday at the Train Shed"
   cost: "Free"
   setting: "Indoor"
@@ -355,7 +320,6 @@
       label: "Free Wednesday at the Train Shed"
   description: "The museum waives Train Shed admission on Wednesdays through December 16. The Railway History Campus is open 11:00 a.m. to 4:00 p.m. No ticket and no reservation."
   hub_blurb: "The museum waives Train Shed admission on Wednesdays through December 16."
-
 - name: "Garden Super Heroes in Fall City"
   cost: "Free"
   setting: "Indoor"
@@ -374,7 +338,6 @@
       label: "Garden Super Heroes"
   description: "Urban farmer Lisa Taylor leads a music-and-movement hour about the slimy workers in an organic garden: slugs, snails, and red worms. It is at the Fall City branch."
   hub_blurb: "Urban farmer Lisa Taylor leads a music-and-movement hour about the slimy workers in an organic garden: slugs, snails, and red worms."
-
 - name: "Treasure Hunt"
   cost: "Free"
   setting: "Indoor"
@@ -393,7 +356,6 @@
       label: "Treasure Hunt"
   description: "Two clue trails, one for children and one for teens and adults. Finish the map and race for the prize. The first finishers in each trail win something, and there are snacks. The teen advisory board planned it, with help from the Friends of the library. Come alone or in a group."
   hub_blurb: "Two clue trails, one for children and one for teens and adults."
-
 - name: "Halloween Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -414,7 +376,6 @@
       label: "Halloween Story Time"
   description: "A Halloween round of stories, music, and movement for young children with an adult. Costumes are fine. Play time and bubbles come after the stories. No registration."
   hub_blurb: "A Halloween round of stories, music, and movement for young children with an adult."
-
 - name: "Paranormal Investigation: Behind the Hauntings"
   cost: "Free"
   ages: "All ages"
@@ -435,7 +396,6 @@
       label: "Paranormal Investigation"
   description: "North by Northwest Paranormal talks through ghosts, hauntings, and the tools investigators use, then lets families try the gear. All ages. Ages 15 and younger should come with an adult. No registration."
   hub_blurb: "North by Northwest Paranormal talks through ghosts, hauntings, and the tools investigators use, then lets families try the gear."
-
 - name: "Free Wednesday at the Train Shed"
   cost: "Free"
   setting: "Indoor"
@@ -455,7 +415,6 @@
       label: "Free Wednesday at the Train Shed"
   description: "The museum waives Train Shed admission on Wednesdays through December 16. The Railway History Campus is open 11:00 a.m. to 4:00 p.m. No ticket and no reservation. A story time starts at 11:00 a.m. in the shed that day."
   hub_blurb: "The museum waives Train Shed admission on Wednesdays through December 16."
-
 - name: "Free Wednesday at the Train Shed"
   cost: "Free"
   setting: "Indoor"
@@ -475,7 +434,6 @@
       label: "Free Wednesday at the Train Shed"
   description: "The museum waives Train Shed admission on Wednesdays through December 16. The Railway History Campus is open 11:00 a.m. to 4:00 p.m. No ticket and no reservation."
   hub_blurb: "The museum waives Train Shed admission on Wednesdays through December 16."
-
 - name: "Snoqualmie Winter Lights"
   setting: "Outdoor"
   cost: "Free"
@@ -500,7 +458,6 @@
     source: "https://commons.wikimedia.org/wiki/File:George_Square_Christmas_lights_-_geograph.org.uk_-_3806944.jpg"
   description: "A free nightly walk of lit trains and trees from Salish Lodge along the Centennial Trail into historic downtown. The city runs it from Thanksgiving through New Year's."
   hub_blurb: "A free nightly walk of lit trains and trees from Salish Lodge along the Centennial Trail into historic downtown."
-
 - name: "Brilliant Blvd"
   setting: "Outdoor"
   tags: [holiday-lights]
@@ -524,7 +481,6 @@
     source: "https://commons.wikimedia.org/wiki/File:Navidad-rusia.jpg"
   description: "Lit trees along Snoqualmie Parkway in Snoqualmie Ridge. The city pairs this drive with the downtown light walk, and it runs from Thanksgiving through New Year's."
   hub_blurb: "Lit trees along Snoqualmie Parkway in Snoqualmie Ridge."
-
 - name: "Yuletide Express Santa Train"
   cost: "$30"
   setting: "Outdoor"
@@ -545,7 +501,6 @@
       label: "Santa Train"
   description: "A Santa train for families from the Snoqualmie Depot, $30 for ages 2 and up, and no ticket under 2. The round trip past Snoqualmie Falls is about 40 minutes. Santa visits each family on board, and riders get a small gift and a peppermint. It runs Friday, Dec 4, Dec 11, and Dec 18. Tickets are on sale now. Buy ahead. Trains run rain or shine, and the museum does not refund tickets unless the train does not run."
   hub_blurb: "A Santa train for families from the Snoqualmie Depot, $30 for ages 2 and up, and no ticket under 2."
-
 - name: "Snoqualmie Tree Lighting"
   cost: "Free"
   setting: "Outdoor"
@@ -564,7 +519,6 @@
       label: "Snoqualmie Winter Lights"
   description: "A town tree lighting for families at the Railroad Park gazebo."
   hub_blurb: "A town tree lighting for families at the Railroad Park gazebo."
-
 - name: "A Midsummer Night's Dream"
   cost: "$10 to $15"
   setting: "Indoor"
@@ -585,7 +539,6 @@
       label: "Mount Si Drama"
   description: "Mount Si High School's student production of Shakespeare's comedy. Shows are Thursday, Dec 10 and Friday, Dec 11 at 7:00 p.m., and Saturday, Dec 12 at 1:30 and 7:00 p.m. The drama club lists general admission at $15 and $10 for students and Mount Si staff."
   hub_blurb: "Mount Si High School's student production of Shakespeare's comedy."
-
 - name: "Visit with Santa"
   cost: "Free"
   setting: "Indoor"

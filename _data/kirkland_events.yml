@@ -1,25 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Juanita Bay Interpretive Tour"
-  cost: "Free"
-  setting: "Outdoor"
-  start: "2026-10-04T13:00:00-07:00"
-  end: "2026-10-04T14:00:00-07:00"
-  place: "Juanita Bay Park, 2201 Market Street, Kirkland"
-  same_as: "https://www.eastsideaudubon.org/calendar/2025/12/juanita-bay-intepretive-tour-s98d6-6p6pe-6thlx-fm8g8"
-  card: "juanita-bay-interpretive-tour"
-  order: "0"
-  heading_id: "juanita-bay-interpretive-tour"
-  when: "Sun Oct 4 · 1:00–2:00 p.m."
-  blurbs:
-    - "A one-hour walk with Eastside Audubon park rangers through the wildlife habitat. Children 6 and older are welcome with an adult. Bring binoculars if you have them. Free, and no registration. Meet at the kiosk by the parking lot."
-  links:
-    - href: "https://www.eastsideaudubon.org/calendar/2025/12/juanita-bay-intepretive-tour-s98d6-6p6pe-6thlx-fm8g8"
-      label: "Juanita Bay Interpretive Tour"
-  description: "A one-hour walk with Eastside Audubon park rangers through the wildlife habitat. Children 6 and older are welcome with an adult. Bring binoculars if you have them. Free, and no registration. Meet at the kiosk by the parking lot."
-  hub_blurb: "A one-hour walk with Eastside Audubon park rangers through the wildlife habitat."
-
 - name: "Sensory Dough: Monster Makers"
   cost: "Free"
   setting: "Indoor"
@@ -45,7 +26,6 @@
     license: "organizer"
   description: "Drop-in playdough and natural materials, for not-so-scary monsters. A relaxed room for sensory-seeking and neurodivergent kids and their adults. Friends of the Library, Kirkland, sponsors it. Monday hours are 10:00 a.m.–6:00 p.m."
   hub_blurb: "Drop-in playdough and natural materials, for not-so-scary monsters."
-
 - name: "Family Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -65,7 +45,6 @@
       label: "Family Story Time"
   description: "Stories, songs, and play for newborns through age 6 with an adult. Pick one session. No registration. The afternoon hour is also on Tue Oct 13. The evening hour is also on Tue Oct 13 and Tue Oct 20. A Friday session is Fri Oct 21 at 10:30 a.m."
   hub_blurb: "Stories, songs, and play for newborns through age 6 with an adult."
-
 - name: "Bird Walk at Juanita Bay Park"
   cost: "Free"
   setting: "Outdoor"
@@ -84,7 +63,6 @@
       label: "Bird Walk at Juanita Bay Park"
   description: "An early walk of about two miles at an easy pace. All levels are welcome, including children with an adult. Bring binoculars and meet at the upper end of the parking lot. The gates usually open by 7:15 a.m. This is Juanita Bay Park, not Juanita Beach."
   hub_blurb: "An early walk of about two miles at an easy pace."
-
 - name: "Ozo-Town"
   cost: "Free"
   ages: "Kids"
@@ -105,7 +83,6 @@
       label: "Ozo-Town"
   description: "Build a town out of LEGOs and markers, then send an Ozobot through it. Marker codes tell the robot where to go. For ages 6 to 11. Free, and registration is required."
   hub_blurb: "Build a town out of LEGOs and markers, then send an Ozobot through it."
-
 - name: "Pajama Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -126,7 +103,6 @@
       label: "Kirkland Library events"
   description: "Stories, music, and movement in pajamas. Bring a stuffed animal or borrow one. A short play time follows. No registration. Wednesday hours run until 8:00 p.m."
   hub_blurb: "Stories, music, and movement in pajamas."
-
 - name: "Baby Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -146,7 +122,6 @@
       label: "Kirkland Library events"
   description: "Newborns to 12 months with an adult. A short play time follows. No registration. First come, first seated."
   hub_blurb: "Newborns to 12 months with an adult."
-
 - name: "Japanese Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -169,7 +144,6 @@
       label: "Oct 23"
   description: "Stories, music, and movement in Japanese for all ages with an adult. The same half hour is also on Fri Oct 23."
   hub_blurb: "Stories, music, and movement in Japanese for all ages with an adult."
-
 - name: "Chess Club"
   cost: "Free"
   setting: "Indoor"
@@ -188,7 +162,6 @@
       label: "Kirkland Library"
   description: "Boards and pieces are provided. No registration. Kids, teens, and adults are welcome. Friends of the Library of Kirkland sponsors it. Friday hours are 10:00 a.m.–6:00 p.m."
   hub_blurb: "Boards and pieces are provided."
-
 - name: "Halloween Costume Swap"
   cost: "Free"
   setting: "Indoor"
@@ -208,7 +181,6 @@
       label: "Costume Swap"
   description: "Take home a clean costume, in sizes from infant to adult. Donating one is welcome and not required. Bring a reusable bag. Enter City Hall from the lower lobby on the lake side. Donations are accepted Oct 5 through Oct 9 at City Hall or the North Kirkland Community Center."
   hub_blurb: "Take home a clean costume, in sizes from infant to adult."
-
 - name: "After School Hangout"
   cost: "Free"
   setting: "Indoor"
@@ -228,7 +200,6 @@
       label: "After School Hangout"
   description: "A drop-in afternoon for middle and high school students. Games, crafts, homework space, and snacks from Friends of the Kingsgate Library. No registration. The same hours are also on Mon Oct 26."
   hub_blurb: "A drop-in afternoon for middle and high school students."
-
 - name: "Teen Hangout"
   cost: "Free"
   setting: "Indoor"
@@ -253,26 +224,25 @@
     license: "organizer"
   description: "Games, crafts, homework, music, and reading for tweens and teens. The library hosts it once a month on a Wednesday. Wednesday hours are noon–8:00 p.m."
   hub_blurb: "Games, crafts, homework, music, and reading for tweens and teens."
-
 - name: "Beats Beyond Boundaries"
   cost: "Free"
+  ages: "Kids"
   setting: "Indoor"
   start: "2026-10-14T17:30:00-07:00"
   end: "2026-10-14T18:15:00-07:00"
   place: "Kirkland Library, 308 Kirkland Ave"
-  same_as: "https://kcls.org/locations/kirkland/"
+  same_as: "https://kcls.bibliocommons.com/events/6940ba637ed7c62f00aaa71a"
   card: "beats-beyond-boundaries"
   order: "12"
   heading_id: "beats-beyond-boundaries"
   when: "Wed Oct 14 · 5:30–6:15 p.m."
   blurbs:
-    - "Music with therapist Elizabeth VanSant for neurodivergent school-aged kids and their families. The September session was ages 6–10 with an adult. No registration."
+    - "Music with therapist Elizabeth VanSant for neurodivergent kids ages 6 to 10 and their adults. Kids of all abilities are welcome. No registration."
   links:
-    - href: "https://kcls.bibliocommons.com/v2/events?locations=1518"
-      label: "Kirkland Library events"
-  description: "Music with therapist Elizabeth VanSant for neurodivergent school-aged kids and their families. The September session was ages 6–10 with an adult. No registration."
-  hub_blurb: "Music with therapist Elizabeth VanSant for neurodivergent school-aged kids and their families."
-
+    - href: "https://kcls.bibliocommons.com/events/6940ba637ed7c62f00aaa71a"
+      label: "Beats Beyond Boundaries"
+  description: "Music with therapist Elizabeth VanSant for neurodivergent kids ages 6 to 10 and their adults. Kids of all abilities are welcome. No registration."
+  hub_blurb: "Music with therapist Elizabeth VanSant for neurodivergent kids ages 6 to 10 and their adults."
 - name: "Pajama Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -292,7 +262,6 @@
       label: "Kirkland Library events"
   description: "Stories, music, and movement. Bring a stuffed animal or borrow one. A short play time follows. No registration."
   hub_blurb: "Stories, music, and movement."
-
 - name: "Baby Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -312,7 +281,6 @@
       label: "Kirkland Library events"
   description: "Newborns to 12 months with an adult. No registration. First come, first seated. Thursday hours are 10:00 a.m.–6:00 p.m."
   hub_blurb: "Newborns to 12 months with an adult."
-
 - name: "Mandarin Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -331,7 +299,6 @@
       label: "Kirkland Library events"
   description: "Stories, music, and movement in Mandarin. The listing welcomes families with young children and people who want to learn Chinese. No registration. Friends of the Kirkland Library sponsors it."
   hub_blurb: "Stories, music, and movement in Mandarin."
-
 - name: "Boy Gets Girl"
   setting: "Indoor"
   start: "2026-10-16"
@@ -349,7 +316,6 @@
       label: "LWHS Theatre"
   description: "Lake Washington High School's fall play. A magazine writer is stalked after a blind date, and the story turns into a thriller. For teens and adults."
   hub_blurb: "Lake Washington High School's fall play."
-
 - name: "Juanita Bay Park East Habitat Stewardship"
   cost: "Free"
   ages: "All ages"
@@ -373,7 +339,6 @@
       label: "Juanita Bay Park East"
   description: "A free outdoor work morning with Green Kirkland. Volunteers pull blackberry and ivy, plant, mulch, and weed. Tools and training are provided. All ages can come. Children under 14 stay with an adult. Meet at 10442 Forbes Creek Drive, not the main Juanita Bay Park lot. Register so the crew has enough tools."
   hub_blurb: "A free outdoor work morning with Green Kirkland."
-
 - name: "Learning about Dyslexia"
   cost: "Free"
   setting: "Indoor"
@@ -392,7 +357,6 @@
       label: "Kirkland events"
   description: "An all-ages STEM stop presented by three local Girl Scouts. The short listing asks which celebrities experience dyslexia, then invites people to look and take part. Saturday hours are 11:00 a.m.–6:00 p.m. The library is closed Sunday."
   hub_blurb: "An all-ages STEM stop presented by three local Girl Scouts."
-
 - name: "Spooky Clay Creations"
   cost: "Free"
   ages: "Kids"
@@ -420,7 +384,6 @@
     license: "organizer"
   description: "Polymer clay and clay tools. Creations go home, with instructions for hardening them in an oven. Ages 8–12. Registration is required. Registration opens Oct 11 at midnight, with 40 seats. Friends of the Library, Kirkland, sponsors it. Wednesday the library is open noon–8:00 p.m."
   hub_blurb: "Polymer clay and clay tools."
-
 - name: "Ukrainian Story Time"
   cost: "Free"
   ages: "All ages"
@@ -441,7 +404,6 @@
       label: "Ukrainian Story Time"
   description: "Stories and simple songs in Ukrainian for children of any age with an adult. No registration."
   hub_blurb: "Stories and simple songs in Ukrainian for children of any age with an adult."
-
 - name: "Village Halloween Celebration"
   setting: "Outdoor"
   cost: "Free"
@@ -461,7 +423,6 @@
       label: "Village Halloween Celebration"
   description: "Costumed characters, a stage performance, and a craft station. Costumes are welcome. It is not a trick-or-treat, and it goes on rain or shine. Parking in the Green Garage is free."
   hub_blurb: "Costumed characters, a stage performance, and a craft station."
-
 - name: "Pokemon Club"
   cost: "Free"
   ages: "Kids"
@@ -481,7 +442,6 @@
       label: "Pokemon Club"
   description: "Play the Pokemon trading card game with a guided deck if you are new, or with the library's cards if you already know it. Best for ages 5 to 10. Drawing and small giveaways while supplies last. No registration. Space is limited."
   hub_blurb: "Play the Pokemon trading card game with a guided deck if you are new, or with the library's cards if you already know it."
-
 - name: "Día de los Muertos"
   cost: "Free"
   ages: "All ages"
@@ -502,7 +462,6 @@
       label: "Día de los Muertos"
   description: "A free city celebration for all ages, with traditional activities, food, and music. On-site parking is limited. The garage under the library is the backup."
   hub_blurb: "A free city celebration for all ages, with traditional activities, food, and music."
-
 - name: "Mushroom Mania"
   cost: "Free"
   setting: "Outdoor"
@@ -530,7 +489,6 @@
     license: "CC BY-SA 4.0"
   description: "A free forest walk to look for mushrooms and learn how they support the woods around them. Finn Hill Neighborhood Alliance and the CoSEE host it. Ages 8 and up. Some paths are narrow and have a moderate slope. Meet in the parking lot across from the playground. Tickets are free."
   hub_blurb: "A free forest walk to look for mushrooms and learn how they support the woods around them."
-
 - name: "Keep on Dancing"
   setting: "Indoor"
   signup: true
@@ -545,7 +503,6 @@
     - "Tina’s Dance Studios’ annual showcase, with dancers of all ages and levels. KPC tickets"
   description: "Tina's Dance Studios' annual showcase, with dancers of all ages and levels."
   hub_blurb: "Tina's Dance Studios' annual showcase, with dancers of all ages and levels."
-
 - name: "Skeletons! Stories and Science"
   cost: "Free"
   setting: "Indoor"
@@ -565,7 +522,6 @@
       label: "Skeletons! Stories and Science"
   description: "A skeleton story, then a look at real skulls from the Burke Museum, including a seal, a bobcat, and a chipmunk, plus human x-rays. No registration. Friends of the Library, Kirkland, sponsor it."
   hub_blurb: "A skeleton story, then a look at real skulls from the Burke Museum, including a seal, a bobcat, and a chipmunk, plus human x-rays."
-
 - name: "Teen Book Talk"
   cost: "Free"
   ages: "Teens"
@@ -585,7 +541,6 @@
       label: "Teen Book Talk"
   description: "Bring whatever you are reading now. There is no assigned book. Snacks come from Friends of the Library of Kirkland. The hour is aimed at teens."
   hub_blurb: "Bring whatever you are reading now."
-
 - name: "Pee Wee Monster Bash"
   cost: "$18"
   ages: "Toddlers"
@@ -607,7 +562,6 @@
       label: "Pee Wee Monster Bash"
   description: "Carnival games, a cookie stroll, bowling, and skee ball for ages 1 to 5. Kirkland Parks calls it kooky, not scary. Costumes are encouraged. $18 per child. Pre-register. It sells out, and the city asks families to leave strollers at home."
   hub_blurb: "Carnival games, a cookie stroll, bowling, and skee ball for ages 1 to 5."
-
 - name: "Young Frankenstein"
   setting: "Indoor"
   signup: true
@@ -632,7 +586,6 @@
     license: "organizer"
   description: "Studio East's youth cast, ages 9 to 20, in Mel Brooks' musical comedy. The company recommends it for teens and adults. Expect mature jokes, sexual innuendo, mild profanity, brief stage violence, and spooky stage effects. Friday, Oct 30 at 7:00 p.m. is a pay-what-you-will preview. Other shows are Sat Oct 31 at 7:00 p.m., Sun Nov 1 at 2:00 p.m., Thu Nov 5 at 7:00 p.m., Fri Nov 6 at 7:00 p.m., Sat Nov 7 at 2:00 and 7:00 p.m., and Sun Nov 8 at 2:00 p.m. Tickets go on sale October 5."
   hub_blurb: "Studio East's youth cast, ages 9 to 20, in Mel Brooks' musical comedy."
-
 - name: "Kirkland Catrina Walk"
   cost: "Free"
   setting: "Outdoor"
@@ -652,7 +605,25 @@
       label: "Kirkland Catrina Walk"
   description: "A free Día de Muertos celebration at Marina Park, presented by Mundo Catrina. The day has music, performances, art, vendors, family activities, and a walk through downtown Kirkland."
   hub_blurb: "A free Día de Muertos celebration at Marina Park, presented by Mundo Catrina."
-
+- name: "Kandi Bracelets"
+  cost: "Free"
+  ages: "Teens"
+  setting: "Indoor"
+  start: "2026-11-02T16:00:00-08:00"
+  end: "2026-11-02T17:30:00-08:00"
+  place: "Kingsgate Library, 12315 NE 143rd St"
+  same_as: "https://kcls.bibliocommons.com/events/6abffb22035faf0033d9e253"
+  card: "kandi-bracelets"
+  order: "31"
+  heading_id: "kandi-bracelets"
+  when: "Mon Nov 2 · 4:00–5:30 p.m."
+  blurbs:
+    - "Make colorful beaded bracelets to trade with friends, with presenter Emily Donnel. For middle and high school students. Friends of the Kingsgate Library sponsor it. No registration."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6abffb22035faf0033d9e253"
+      label: "Kandi Bracelets"
+  description: "Make colorful beaded bracelets to trade with friends, with presenter Emily Donnel. For middle and high school students. Friends of the Kingsgate Library sponsor it. No registration."
+  hub_blurb: "Make colorful beaded bracelets to trade with friends, with presenter Emily Donnel."
 - name: "STEAM Family Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -671,7 +642,6 @@
       label: "STEAM Family Story Time"
   description: "Stories and a hands-on science activity, planned for ages 3 to 8. Other ages can come too. No registration."
   hub_blurb: "Stories and a hands-on science activity, planned for ages 3 to 8."
-
 - name: "Tracking Basics: Learning by Looking"
   cost: "Free"
   setting: "Outdoor"
@@ -699,7 +669,26 @@
     license: "CC BY-SA 3.0"
   description: "A free workshop on animal tracks. The group meets at the Environmental Education and Resource Center next to the Lodge, makes paw molds, then takes a flat 1 to 2 mile walk. Finn Hill Neighborhood Alliance and the CoSEE host it. Ages 12 and up. Wear shoes that can handle mud and rain. Tickets are free."
   hub_blurb: "A free workshop on animal tracks."
-
+- name: "Reading with Rover"
+  cost: "Free"
+  ages: "Kids"
+  setting: "Indoor"
+  signup: true
+  start: "2026-11-07T13:00:00-08:00"
+  end: "2026-11-07T13:15:00-08:00"
+  place: "Kingsgate Library, 12315 NE 143rd St"
+  same_as: "https://kcls.bibliocommons.com/events/6ac00fd49dbc2b002c8bdacc"
+  card: "reading-with-rover"
+  order: "32"
+  heading_id: "reading-with-rover"
+  when: "Sat Nov 7 · 1:00–1:15 p.m."
+  blurbs:
+    - "Read aloud to a certified therapy dog. Each reader gets about 15 minutes. For elementary and middle-grade kids. Register ahead."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6ac00fd49dbc2b002c8bdacc"
+      label: "Reading with Rover"
+  description: "Read aloud to a certified therapy dog. Each reader gets about 15 minutes. For elementary and middle-grade kids. Register ahead."
+  hub_blurb: "Read aloud to a certified therapy dog."
 - name: "Lil' Gobbler Run"
   cost: "$20"
   setting: "Outdoor"
@@ -721,7 +710,6 @@
       label: "Lil’ Gobbler Run"
   description: "The kids race at the Kirkland Turkey Trot is a quarter-mile inside Juanita Beach Park, for ages 2 to 6. It starts at 9:30 a.m. Registration is $20. The 10K starts at 9:00 a.m. and the 5K at 9:05 a.m."
   hub_blurb: "The kids race at the Kirkland Turkey Trot is a quarter-mile inside Juanita Beach Park, for ages 2 to 6."
-
 - name: "A Christmas Story"
   setting: "Indoor"
   tags: [holiday-show]
@@ -746,7 +734,6 @@
     license: "organizer"
   description: "Studio East's musical for a cast in grades 3 through 12. Ralphie wants a Red Ryder BB gun, and the holiday obstacles include bunny pajamas, a department-store Santa, and a frozen flagpole. The run may be extended."
   hub_blurb: "Studio East's musical for a cast in grades 3 through 12."
-
 - name: "Solo Night"
   setting: "Indoor"
   start: "2026-12-11"
@@ -763,7 +750,6 @@
       label: "LWHS Theatre"
   description: "Lake Washington High School students perform solos for a live audience."
   hub_blurb: "Lake Washington High School students perform solos for a live audience."
-
 - name: "The Nutcracker: Symphony of Lights"
   setting: "Indoor"
   tags: [holiday-show]
@@ -782,7 +768,6 @@
       label: "The Nutcracker: Symphony of Lights"
   description: "Grand Kyiv Ballet's Nutcracker for families at Kirkland Performance Center, $74 for adults and $64 for youth. All three nights start at 7:00 p.m."
   hub_blurb: "Grand Kyiv Ballet's Nutcracker for families at Kirkland Performance Center, $74 for adults and $64 for youth."
-
 - name: "Almost, Maine"
   setting: "Indoor"
   start: "2027-01-08"
@@ -800,7 +785,6 @@
       label: "LWHS Theatre"
   description: "Student-directed stories from Lake Washington High School, set during one winter night under the northern lights. Love, loss, and a bit of magic."
   hub_blurb: "Student-directed stories from Lake Washington High School, set during one winter night under the northern lights."
-
 - name: "Romeo and Juliet"
   setting: "Indoor"
   start: "2027-01-22"
@@ -818,7 +802,6 @@
       label: "Studio East"
   description: "Studio East's production of Shakespeare's tragedy. Two young people from feuding families fall in love, with wit, sword fights, and a hard ending."
   hub_blurb: "Studio East's production of Shakespeare's tragedy."
-
 - name: "Miscast Cabaret"
   setting: "Indoor"
   start: "2027-02-19"
@@ -835,7 +818,6 @@
       label: "LWHS Theatre"
   description: "Lake Washington High School students sing roles they would not usually be cast in, including gender-bending and mismatched parts, as a musical-theatre showcase."
   hub_blurb: "Lake Washington High School students sing roles they would not usually be cast in, including gender-bending and mismatched parts, as a…"
-
 - name: "James and the Giant Peach"
   setting: "Indoor"
   start: "2027-03-19"

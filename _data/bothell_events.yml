@@ -1,30 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Bothell Historical Museum"
-  setting: "Indoor"
-  cost: "Free"
-  start: "2026-10-04T13:00:00-07:00"
-  end: "2026-10-04T16:00:00-07:00"
-  place: "Park at Bothell Landing, 9919 NE 180th St"
-  same_as: "https://www.bothellhistoricalmuseum.org/"
-  card: "bothell-historical-museum"
-  order: "0"
-  heading_id: "bothell-historical-museum"
-  when: "Sun Oct 4 · 1:00–4:00 p.m."
-  blurbs:
-    - "The museum in the park is open Sundays from April through October, 1:00 to 4:00 p.m. Admission is free. Later Sundays in this stretch are October 11, 18, and 25."
-  links:
-    - href: "https://www.bothellhistoricalmuseum.org/"
-      label: "Bothell Historical Museum"
-  photo:
-    src: "/assets/images/bothell/hannan-house.webp"
-    alt: "Hannan House, the 1893 building that houses the Bothell Historical Museum at Bothell Landing."
-    credit: "Photo: Joe Mabel, CC BY-SA 4.0"
-    source: "https://commons.wikimedia.org/wiki/File:Hannan_House_-_Bothell_Landing_01.jpg"
-  description: "The museum in the park is open Sundays from April through October, 1:00 to 4:00 p.m. Admission is free. Later Sundays in this stretch are October 11, 18, and 25."
-  hub_blurb: "The museum in the park is open Sundays from April through October, 1:00 to 4:00 p.m."
-
 - name: "Toddler Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -45,7 +21,6 @@
       label: "Toddler Story Time"
   description: "Stories, songs, and rhymes for toddlers about 18 months to age 3, with an adult. No registration. Doors close when the room is full, or 10 minutes after the start. The same half hour is also on Mon Oct 12 and Mon Oct 19."
   hub_blurb: "Stories, songs, and rhymes for toddlers about 18 months to age 3, with an adult."
-
 - name: "Baby Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -66,7 +41,6 @@
       label: "Baby Story Time"
   description: "A short story time for pre-walking babies, newborn to about 18 months, with an adult. No registration. Doors close when the room is full, or 10 minutes after the start. The same half hour is also on Mon Oct 12 and Mon Oct 19."
   hub_blurb: "A short story time for pre-walking babies, newborn to about 18 months, with an adult."
-
 - name: "Family Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -88,7 +62,6 @@
       label: "10:45 session"
   description: "Stories, music, movement, and rhymes. All ages with an adult. Registration is not required. Space is limited. Doors close when the room is full, or 10 minutes after the start. Attend one session only."
   hub_blurb: "Stories, music, movement, and rhymes."
-
 - name: "Family Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -98,7 +71,6 @@
   place: "Bothell Library, 18215 98th Ave NE"
   same_as: "https://kcls.bibliocommons.com/events/6a80df8ad4b10d003006ba65"
   card: "family-story-time"
-
 - name: "Fire Prevention Week Open House"
   cost: "Free"
   setting: "Indoor"
@@ -117,7 +89,6 @@
       label: "Open house"
   description: "The fire department's annual open house. Meet firefighters, tour the station, and watch live demonstrations. Free."
   hub_blurb: "The fire department's annual open house."
-
 - name: "Arbor Day Celebration"
   cost: "Free"
   ages: "All ages"
@@ -138,7 +109,6 @@
       label: "Arbor Day"
   description: "A short planting party for the 154th Arbor Day. Parks staff lead invasive-weed removal and tree planting. All ages. Registration is required, and spots are limited. Free."
   hub_blurb: "A short planting party for the 154th Arbor Day."
-
 - name: "Halloween in the Park Market"
   cost: "Free"
   setting: "Outdoor"
@@ -165,7 +135,6 @@
     source: "https://commons.wikimedia.org/wiki/File:Bothell_Landing_03.jpg"
   description: "A makers market with artisans, bakers, and food trucks. Treats and prizes for kids, a scavenger hunt, and an hourly raffle. Artisan Alley Shop organizes it."
   hub_blurb: "A makers market with artisans, bakers, and food trucks."
-
 - name: "Anderson School History and Art Tour"
   cost: "$20.31"
   ages: "All ages"
@@ -185,7 +154,6 @@
       label: "Oct 10 tour"
   description: "All ages. Tickets are $20.31 a person, and kids ages 3 and up need a ticket."
   hub_blurb: "All ages."
-
 - name: "Reading with Rover"
   cost: "Free"
   setting: "Indoor"
@@ -204,7 +172,6 @@
       label: "Reading with Rover"
   description: "School-age kids read aloud to a certified therapy dog. Registration is not required. Space is limited."
   hub_blurb: "School-age kids read aloud to a certified therapy dog."
-
 - name: "Glorydays"
   cost: "Free"
   setting: "Indoor"
@@ -223,7 +190,6 @@
       label: "Glorydays"
   description: "A collaborative storytelling game for middle school grades 6–8, funded by a City of Bothell Creative Arts Grant."
   hub_blurb: "A collaborative storytelling game for middle school grades 6–8, funded by a City of Bothell Creative Arts Grant."
-
 - name: "WAIA Diwali Mela"
   cost: "Free"
   setting: "Indoor"
@@ -246,7 +212,6 @@
       label: "Register"
   description: "A free evening of food, shopping, music, and performances from the Washington Indian Association. Registration is required. The night includes dance, henna, and activities for kids."
   hub_blurb: "A free evening of food, shopping, music, and performances from the Washington Indian Association."
-
 - name: "Northshore Y Fall Family Festival"
   setting: "Indoor"
   cost: "Free"
@@ -266,7 +231,6 @@
       label: "Fall festivals"
   description: "Carnival games, trunk-or-treat from decorated cars, and a bounce house. The Y describes these branch festivals as free and open to the community, and it asks adults not to wear masks. Costumes should stay family-friendly."
   hub_blurb: "Carnival games, trunk-or-treat from decorated cars, and a bounce house."
-
 - name: "Rangoli Demonstration"
   cost: "Free"
   setting: "Indoor"
@@ -287,7 +251,6 @@
       label: "Rangoli Demonstration"
   description: "Watch artist Rinkle Shah make a rangoli, the colored-powder floor design used for Diwali. All ages. Free, and registration is not required. Space is limited. Friends of the Bothell Library sponsor it."
   hub_blurb: "Watch artist Rinkle Shah make a rangoli, the colored-powder floor design used for Diwali."
-
 - name: "Trick-or-Treat on Main Street"
   cost: "Free"
   setting: "Outdoor"
@@ -307,7 +270,6 @@
       label: "Trick-or-Treat on Main Street"
   description: "A downtown stroll for costumes and candy. The city moved the date to Friday, Oct. 30, because of I-405 work and feedback from Main Street businesses."
   hub_blurb: "A downtown stroll for costumes and candy."
-
 - name: "Spooky Family Fun"
   cost: "Free"
   ages: "All ages"
@@ -328,7 +290,6 @@
       label: "Spooky Family Fun"
   description: "Free, and all ages are welcome. Come in costume for games, kid-friendly Halloween movies, trick-or-treating around the property, and a kids costume contest at 6:00 p.m. Food and drink specials are separate from the free admission."
   hub_blurb: "Free, and all ages are welcome."
-
 - name: "Evergreen Christmas Lights"
   setting: "Outdoor"
   cost: "Free"

@@ -1,78 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Salmon Days Festival"
-  setting: "Outdoor"
-  tags: [salmon]
-  start: "2026-10-03T10:00:00-07:00"
-  end: "2026-10-04T18:00:00-07:00"
-  place: "Historic downtown Issaquah"
-  same_as: "https://www.salmondays.org/sd-2026-festival-information"
-  card: "salmon-days-festival"
-  order: "1"
-  heading_id: "salmon-days-festival"
-  when: "Sat Oct 3 and Sun Oct 4 · 10:00 a.m.–6:00 p.m."
-  blurbs:
-    - "The 57th festival, hosted by the Greater Issaquah Chamber. Hours are 10:00 a.m.–6:00 p.m. both days. The star stop is the Issaquah Salmon Hatchery at 125 W Sunset Way. A bike valet sits at Rainier Blvd N and NW Dogwood St, staffed with Cascade Bicycle Club."
-  links:
-    - href: "https://www.salmondays.org/sd-2026-festival-information"
-      label: "Salmon Days"
-    - href: "https://www.issaquahwa.gov/m/calendar/event/detail/14734"
-      label: "City calendar"
-  photo:
-    src: "/assets/images/issaquah/salmon-hatchery.webp"
-    alt: "The Issaquah Salmon Hatchery, a long building with a gray roof beside a creek, with yellow trees in front."
-    credit: "Photo: Chris Light, CC BY-SA 4.0"
-    source: "https://commons.wikimedia.org/wiki/File:Hatchery_6921.jpg"
-  description: "The 57th festival, hosted by the Greater Issaquah Chamber. Hours are 10:00 a.m.–6:00 p.m. both days. The star stop is the Issaquah Salmon Hatchery at 125 W Sunset Way. A bike valet sits at Rainier Blvd N and NW Dogwood St, staffed with Cascade Bicycle Club."
-  hub_blurb: "The 57th festival, hosted by the Greater Issaquah Chamber."
-
-- name: "Feathers and Scales Gallery Open House"
-  setting: "Indoor"
-  cost: "Free"
-  tags: [free]
-  start: "2026-10-04T12:00:00-07:00"
-  end: "2026-10-04T13:30:00-07:00"
-  place: "Blakely Hall, Issaquah Highlands"
-  same_as: "https://issaquahhighlands.com/event/feathers-scales-gallery-open-house/"
-  card: "feathers-and-scales-gallery-open-house"
-  order: "2"
-  heading_id: "feathers-and-scales-gallery-open-house"
-  when: "Sun Oct 4 · 12:00–1:30 p.m."
-  blurbs:
-    - "A free open house for the Feathers and Scales show. Live music from Michael Thompson, a chance to meet artist Anita Wong, and refreshments. All ages, including kids under 4."
-  links:
-    - href: "https://issaquahhighlands.com/event/feathers-scales-gallery-open-house/"
-      label: "Feathers and Scales"
-  photo:
-    src: "/assets/images/themes/feather-plate.webp"
-    alt: "A printed plate of grouse feathers from a nineteenth-century bird handbook."
-    credit: "Plate: William Robert Ogilvie-Grant, public domain"
-    source: "https://commons.wikimedia.org/wiki/File:A_Hand-book_to_the_Game-Birds_-_Feathers_of_Scotch_Grouse.png"
-  description: "A free open house for the Feathers and Scales show. Live music from Michael Thompson, a chance to meet artist Anita Wong, and refreshments. All ages, including kids under 4."
-  hub_blurb: "A free open house for the Feathers and Scales show."
-
-- name: "Family Dance Party"
-  setting: "Indoor"
-  cost: "Free"
-  start: "2026-10-04T15:00:00-07:00"
-  end: "2026-10-04T18:00:00-07:00"
-  place: "Pickering Barn, 1730 10th Ave NW"
-  same_as: "https://www.issaquahwa.gov/m/calendar/event/detail/14731"
-  card: "family-dance-party"
-  order: "3"
-  heading_id: "family-dance-party"
-  when: "Sun Oct 4 · 3:00–6:00 p.m."
-  blurbs:
-    - "Free Hispanic Heritage Month dance with the city and The Circle. Music from Spanish-speaking countries, dance lessons, and snacks. Open to everyone. It is at Pickering Barn, not on Front Street."
-  links:
-    - href: "https://www.issaquahwa.gov/m/calendar/event/detail/14731"
-      label: "City calendar"
-    - href: "https://www.thecircle-wa.org/event-details-registration/hispanic-heritage-month-celebration-3"
-      label: "The Circle"
-  description: "Free Hispanic Heritage Month dance with the city and The Circle. Music from Spanish-speaking countries, dance lessons, and snacks. Open to everyone. It is at Pickering Barn, not on Front Street."
-  hub_blurb: "Free Hispanic Heritage Month dance with the city and The Circle."
-
 - name: "Story Stroll: Apple Pie Picnic"
   cost: "Free"
   setting: "Outdoor"
@@ -93,7 +21,6 @@
       label: "Oct 17"
   description: "The next downtown stroll, after Watercress comes down. Apple Pie Picnic, by Alicia Duran, illustrated by Brian Fitzgerald. Self-led from the library through historic downtown. KCLS lists both Saturdays as all day. Sponsored by the Downtown Issaquah Association and Friends of the Issaquah Library. Oct 17 is also Issaquah Goes Apples, so the pages are on the harvest route."
   hub_blurb: "The next downtown stroll, after Watercress comes down."
-
 - name: "Fall Farm Fresh Market"
   setting: "Outdoor"
   tags: [harvest]
@@ -119,7 +46,6 @@
     source: "https://commons.wikimedia.org/wiki/File:Restored_1940s_Shell_gas_station_in_Issaquah,_Washington,_in_2008.jpg"
   description: "Downtown Issaquah Association's fall market, with Ayala Farms. Saturdays from Oct 10 through Dec 5, 9:00 a.m.–2:00 p.m., with live music 11:00 a.m.–1:00 p.m. This Saturday, then Oct 24."
   hub_blurb: "Downtown Issaquah Association's fall market, with Ayala Farms."
-
 - name: "Annual Tree Planting Celebration"
   cost: "Free"
   ages: "All ages"
@@ -140,7 +66,6 @@
       label: "Annual Tree Planting Celebration"
   description: "A free family planting along Issaquah Creek with the Mountains to Sound Greenway Trust. Tools, instructions, and lunch are provided. Register ahead. Children under 13 come with an adult. An optional creek walk runs 1:00 to 2:00 p.m. for up to 30 people. Meet at the ParQ parking area near the Issaquah FedEx Ship Center. The planting site is down about a flight and a half of stairs, with no railing."
   hub_blurb: "A free family planting along Issaquah Creek with the Mountains to Sound Greenway Trust."
-
 - name: "Curiosity Collection Launch Party"
   cost: "Free"
   setting: "Indoor"
@@ -160,7 +85,6 @@
       label: "Curiosity Collection"
   description: "Issaquah is the first KCLS branch with a Library of Things, and this party opens the Curiosity Collection. Household tools and specialty equipment will be available to check out. Free."
   hub_blurb: "Issaquah is the first KCLS branch with a Library of Things, and this party opens the Curiosity Collection."
-
 - name: "Teen Climate Workshop"
   setting: "Indoor"
   cost: "Free"
@@ -185,7 +109,6 @@
     source: "https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg"
   description: "A free workshop for teens using the En-ROADS climate simulator. No RSVP. The posted time is 4:00 to 5:00 p.m., and it may run until 5:30."
   hub_blurb: "A free workshop for teens using the En-ROADS climate simulator."
-
 - name: "Snuggle Up Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -206,7 +129,6 @@
       label: "Snuggle Up Story Time"
   description: "Stories, music, and movement for newborns to 5 with an adult, then up to 30 minutes of play. No registration. Space is limited."
   hub_blurb: "Stories, music, and movement for newborns to 5 with an adult, then up to 30 minutes of play."
-
 - name: "Story Stroll: Apple Pie Picnic"
   cost: "Free"
   setting: "Outdoor"
@@ -214,7 +136,6 @@
   place: "Issaquah Library, 10 W Sunset Way"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa0a306442d35226f67899b"
   card: "story-stroll-apple-pie-picnic"
-
 - name: "Issaquah Goes Apples"
   setting: "Outdoor"
   tags: [harvest]
@@ -240,7 +161,6 @@
     source: "https://commons.wikimedia.org/wiki/File:Issaquah_Valley_Trolley_car_519_crossing_Front_St_in_2014.jpg"
   description: "The 11th annual harvest day, from the Downtown Issaquah Association. Farm Fresh Market, the Historically Hip Artisan Market, an apple cider press, scarecrow building, art, photo spots, and live music, 9:00 a.m.–2:00 p.m. at the Historic Shell Station."
   hub_blurb: "The 11th annual harvest day, from the Downtown Issaquah Association."
-
 - name: "Treats and Tails Halloween Event"
   cost: "Free"
   setting: "Indoor"
@@ -265,7 +185,6 @@
     source: "https://commons.wikimedia.org/wiki/File:Pumpkin_on_the_Porch_(52467890182).jpg"
   description: "Trick-or-treat for kids ages 3 to 10 with an adult. Bring a bag. The standby line is free. An optional $5 VIP ticket per trick-or-treating child holds a reserved slot. Adults and babies who are not collecting treats, and pets, do not need a ticket. Pets use a separate patio entrance (green tent, east side). Lines form outside."
   hub_blurb: "Trick-or-treat for kids ages 3 to 10 with an adult."
-
 - name: "Planting and Tree Care 101"
   setting: "Outdoor"
   cost: "Free"
@@ -285,7 +204,6 @@
       label: "Planting and Tree Care 101"
   description: "A free hands-on lesson in planting, mulching, watering, and pruning young trees. Sammamish city staff lead it through the Eastside Climate Partnership, and the work is at Confluence Park in Issaquah. Tools are provided."
   hub_blurb: "A free hands-on lesson in planting, mulching, watering, and pruning young trees."
-
 - name: "Monster Mash Parent Survival Night"
   cost: "$70"
   setting: "Indoor"
@@ -307,7 +225,6 @@
       label: "Monster Mash Parent Survival Night"
   description: "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night. The gym lists it at $70, for ages 3 to 8."
   hub_blurb: "A drop-off evening at the gym."
-
 - name: "Walk n Wag Harvest"
   cost: "Free"
   ages: "All ages"
@@ -328,7 +245,6 @@
       label: "Walk n Wag Harvest"
   description: "A free dog walk and harvest afternoon from Friends of Lake Sammamish State Park. The 3K starts at noon and winds through the apple orchard. A vendor village, talks, and a pet costume contest run until 4:00 p.m. Dogs stay on a leash."
   hub_blurb: "A free dog walk and harvest afternoon from Friends of Lake Sammamish State Park."
-
 - name: "T/ween ASL Social"
   cost: "Free"
   ages: "Teens"
@@ -348,7 +264,6 @@
       label: "T/ween ASL Social"
   description: "A voices-off hangout for middle and high schoolers who already know basic American Sign Language. A deaf librarian and a volunteer host games if the group wants them. It is practice, not a class. Free."
   hub_blurb: "A voices-off hangout for middle and high schoolers who already know basic American Sign Language."
-
 - name: "Reading with Rover"
   cost: "Free"
   setting: "Indoor"
@@ -368,7 +283,6 @@
       label: "Reading with Rover"
   description: "School-age kids read aloud to a certified therapy dog, with an adult. Free."
   hub_blurb: "School-age kids read aloud to a certified therapy dog, with an adult."
-
 - name: "Fall Farm Fresh Market"
   setting: "Outdoor"
   tags: [harvest]
@@ -394,7 +308,6 @@
     source: "https://commons.wikimedia.org/wiki/File:Restored_1940s_Shell_gas_station_in_Issaquah,_Washington,_in_2008.jpg"
   description: "9:00 a.m.–2:00 p.m., and the season continues through Dec 5. Live music is 11:00 a.m.–1:00 p.m."
   hub_blurb: "9:00 a.m.–2:00 p.m., and the season continues through Dec 5."
-
 - name: "Monster Mash 5K"
   cost: "$40 to $45"
   ages: "All ages"
@@ -416,7 +329,6 @@
       label: "Monster Mash 5K"
   description: "A family 5K on a flat paved out-and-back at the boat launch. Costumes are welcome, and all ages can walk or run. Registration is $40 through October 11 and $45 after that, plus a signup fee. Parking on site needs a Discover Pass."
   hub_blurb: "A family 5K on a flat paved out-and-back at the boat launch."
-
 - name: "Zombie Walk"
   cost: "Free"
   ages: "All ages"
@@ -437,7 +349,6 @@
       label: "Zombie Walk"
   description: "A free walk through downtown, open to all ages. Makeup starts at 1:30 at the Historic Shell Station, dance practice is at 3:00, the crawl to City Hall is at 4:30, and a dance runs from 5:00 to 5:30. Optional makeovers are sold separately."
   hub_blurb: "A free walk through downtown, open to all ages."
-
 - name: "BOO at the Barn"
   cost: "$15"
   setting: "Indoor"
@@ -458,7 +369,6 @@
       label: "BOO at the Barn"
   description: "Two sessions at Pickering Barn. From 2:00 to 4:00 p.m. the city runs carnival games and crafts. From 6:00 to 8:00 p.m. the haunted hay barn and trail are open, and that session is not recommended for children under 6. Door admission is $15, and children 3 and younger are free. Space is limited."
   hub_blurb: "Two sessions at Pickering Barn."
-
 - name: "Halloween at Cougar Mountain Zoo"
   setting: "Outdoor"
   tags: [halloween]
@@ -476,7 +386,6 @@
       label: "Zoo events"
   description: "Howl-O-ween at the zoo."
   hub_blurb: "Howl-O-ween at the zoo."
-
 - name: "Day of the Dead Celebration"
   cost: "Free"
   ages: "All ages"
@@ -498,7 +407,6 @@
       label: "Day of the Dead"
   description: "A free afternoon from The Circle, this year focused on Oaxaca. Families can decorate a mask made in Mexico, join art workshops, and see dancers and mariachi. Face painting and food are part of the afternoon. Each person needs a free ticket, and one order can hold up to five."
   hub_blurb: "A free afternoon from The Circle, this year focused on Oaxaca."
-
 - name: "Rise & Shine Story Time"
   setting: "Indoor"
   cost: "Free"
@@ -519,7 +427,6 @@
       label: "Rise & Shine Story Time"
   description: "Stories, music, movement, and rhymes for newborns to 5 with an adult, then up to 30 minutes of play. No registration. Space is limited."
   hub_blurb: "Stories, music, movement, and rhymes for newborns to 5 with an adult, then up to 30 minutes of play."
-
 - name: "Issaquah Highlands Holiday Tree Lighting"
   cost: "Free"
   setting: "Outdoor"
@@ -539,7 +446,6 @@
       label: "Holiday Tree Lighting"
   description: "A family tree lighting at Village Green Park, with free cocoa, Santa photos, and carols. Apple cider and cookies are served. The tree lights at 5:30 p.m., when Mayor Mark Mullet flips the switch. Santa and Mrs. Claus are there for photos, and Issaquah police and Eastside Fire & Rescue visit."
   hub_blurb: "A family tree lighting at Village Green Park, with free cocoa, Santa photos, and carols."
-
 - name: "Issaquah Reindeer Festival"
   setting: "Outdoor"
   tags: [santa]
@@ -558,7 +464,6 @@
       label: "Issaquah Reindeer Festival"
   description: "A reindeer festival for families at Cougar Mountain Zoo, with admission at the gate and Santa photos for an extra donation. Santa is there Nov 27 through Dec 23, 10:30 a.m.–4:00 p.m. Festival hours those days are 10:30 a.m.–4:30 p.m., or dusk. Dec 26 through Dec 30 the holiday fun continues 10:30 a.m.–3:30 p.m. without Santa. Members do not need to buy ahead for Dec 20–23 and Dec 26–30."
   hub_blurb: "A reindeer festival for families at Cougar Mountain Zoo, with admission at the gate and Santa photos for an extra donation."
-
 - name: "Turkey Trot Parent Survival Night"
   cost: "$70"
   setting: "Indoor"
@@ -580,7 +485,6 @@
       label: "Turkey Trot Parent Survival Night"
   description: "A drop-off evening at the gym. Kids run through games, then crafts and stories. The gym lists ages 3 to 10."
   hub_blurb: "A drop-off evening at the gym."
-
 - name: "Caroling at the Depot"
   setting: "Indoor"
   tags: [santa]
@@ -599,9 +503,9 @@
       label: "Caroling at the Depot"
   description: "A downtown sing-along of holiday songs, with hot chocolate and candy canes. Santa and Mrs. Claus are there for photos. Bring an instrument if you want, or just sing. All ages."
   hub_blurb: "A downtown sing-along of holiday songs, with hot chocolate and candy canes."
-
 - name: "KIDSTAGE Footloose"
   setting: "Indoor"
+  ages: "Teens"
   signup: true
   start: "2026-12-04"
   end: "2026-12-20"
@@ -618,7 +522,6 @@
       label: "KIDSTAGE Footloose"
   description: "Village Theatre KIDSTAGE's public production of Footloose, performed by students in grade 9 through age 20. Fridays and Saturdays are at 7:30 p.m. Sundays are at 2:00 p.m. The theatre stages it for teen actors and audiences. Expect mild language, a scene of underage drinking, some sexual content, and themes of grief and domestic violence. Tickets go on sale soon."
   hub_blurb: "Village Theatre KIDSTAGE's public production of Footloose, performed by students in grade 9 through age 20."
-
 - name: "Issaquah Dance Theatre Nutcracker"
   setting: "Indoor"
   signup: true

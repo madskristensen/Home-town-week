@@ -222,6 +222,26 @@
   description: "Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. Use the entrance off Cedar Falls Way. The group follows the Snoqualmie Valley School District calendar."
   hub_blurb: "Free drop-in play for children 12 to 36 months and a caregiver."
 
+- name: "Rainbow Social"
+  cost: "Free"
+  setting: "Indoor"
+  signup: true
+  start: "2026-10-27T17:00:00-07:00"
+  end: "2026-10-27T18:30:00-07:00"
+  place: "North Bend Library, 115 E 4th Street"
+  same_as: "https://kcls.bibliocommons.com/events/69c176218d5e2d093367186b"
+  card: "rainbow-social"
+  order: "10"
+  heading_id: "rainbow-social"
+  when: "Tue Oct 27 · 5:00–6:30 p.m."
+  blurbs:
+    - "A monthly social hour with Lambert House volunteers for LGBTQ+ youth ages 11 to 22, and for youth who are questioning. Ages 12 and younger need a parent or guardian's permission. Register with the host before you come."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/69c176218d5e2d093367186b"
+      label: "Rainbow Social"
+  description: "A monthly social hour with Lambert House volunteers for LGBTQ+ youth ages 11 to 22, and for youth who are questioning. Ages 12 and younger need a parent or guardian's permission. Register with the host before you come."
+  hub_blurb: "A monthly social hour with Lambert House volunteers for LGBTQ+ youth ages 11 to 22."
+
 - name: "Play and Learn"
   cost: "Free"
   ages: "Toddlers"

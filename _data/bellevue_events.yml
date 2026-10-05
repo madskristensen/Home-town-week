@@ -26,56 +26,6 @@
     license: "organizer"
   description: "A short Russian-language fairy tale from Theatre33 for little children, with older siblings and parents welcome. Games and a craft follow the story. Showtimes are Saturday, Oct 3 at 11:00 a.m. and 5:00 p.m., Saturday, Oct 10 at 11:00 a.m. and 5:00 p.m., and Sunday, Oct 11 at 11:00 a.m. Those performances are sold out."
   hub_blurb: "A short Russian-language fairy tale from Theatre33 for little children, with older siblings and parents welcome."
-
-- name: "Little Red Hen"
-  setting: "Indoor"
-  ages: "Toddlers"
-  signup: true
-  start: "2026-10-04T11:00:00-07:00"
-  end: "2026-10-04T11:45:00-07:00"
-  place: "Studio33, 13259 NE 20th St"
-  same_as: "https://theatre33.ludus.com/"
-  card: "little-red-hen"
-  order: "1"
-  heading_id: "little-red-hen"
-  when: "Sun Oct 4 · 11:00–11:45 a.m."
-  blurbs:
-    - "Theatre33’s first Little Play of the season, for ages 2 to 5. About 15 minutes of soft hand puppets, then play and a craft. It is sold out."
-  links:
-    - href: "https://theatre33.ludus.com/"
-      label: "Theatre33 tickets"
-  photo:
-    src: "/assets/images/bellevue/little-red-hen.webp"
-    alt: "Poster for The Little Red Hen, with an illustrated red hen in a straw hat."
-    credit: "Image: Theatre33"
-    source: "https://www.theatre33wa.org/"
-    license: "organizer"
-  description: "Theatre33's first Little Play of the season, for ages 2 to 5. About 15 minutes of soft hand puppets, then play and a craft. It is sold out."
-  hub_blurb: "Theatre33's first Little Play of the season, for ages 2 to 5."
-
-- name: "Superhero Salmon"
-  cost: "Free"
-  ages: "Kids"
-  setting: "Outdoor"
-  signup: true
-  start: "2026-10-04T14:30:00-07:00"
-  end: "2026-10-04T15:30:00-07:00"
-  place: "Lewis Creek Park Visitor Center, 5808 Lakemont Blvd SE"
-  same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-  card: "superhero-salmon"
-  order: "2"
-  heading_id: "superhero-salmon"
-  when: "Sun Oct 4 · 2:30–3:30 p.m."
-  blurbs:
-    - "A ranger walk for ages 5 to 10 about how salmon travel from a stream to the ocean and back. It is free. Register each child and adult. The same hour is also on Sat Oct 24."
-  links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-      label: "Activity guide"
-    - href: "https://register.bellevuewa.gov"
-      label: "Register"
-  description: "A ranger walk for ages 5 to 10 about how salmon travel from a stream to the ocean and back. It is free. Register each child and adult. The same hour is also on Sat Oct 24."
-  hub_blurb: "A ranger walk for ages 5 to 10 about how salmon travel from a stream to the ocean and back."
-
 - name: "Toddler Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -98,7 +48,6 @@
       label: "11:15 session"
   description: "Stories, music, movement, and rhymes for ages 1 and 2 with an adult. A short play time follows. No registration. Space is limited. Pick one session. Monday hours are 10:00 a.m.–6:00 p.m."
   hub_blurb: "Stories, music, movement, and rhymes for ages 1 and 2 with an adult."
-
 - name: "Toddler Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -109,7 +58,6 @@
   place: "Bellevue Library, 1111 110th Ave NE"
   same_as: "https://kcls.bibliocommons.com/events/6a8df1a6db86e4004d8722c0"
   card: "toddler-story-time"
-
 - name: "Baby Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -130,7 +78,6 @@
       label: "Baby Story Time"
   description: "Rhymes, songs, and stories for newborns through 12 months with an adult. About 30 minutes of play time follows. No registration."
   hub_blurb: "Rhymes, songs, and stories for newborns through 12 months with an adult."
-
 - name: "Family Story Time"
   cost: "Free"
   ages: "All ages"
@@ -151,7 +98,6 @@
       label: "Family Story Time"
   description: "Stories, music, and movement for all ages with an adult. A short play time follows. No registration."
   hub_blurb: "Stories, music, and movement for all ages with an adult."
-
 - name: "Kids in the Garden: Pumpkins & Seeds"
   cost: "$17.50 to $25"
   setting: "Outdoor"
@@ -180,7 +126,6 @@
     source: "https://commons.wikimedia.org/wiki/File:Bellevue_Botanical_Garden_Entrance.jpg"
   description: "Ages 3–5 with a parent or caregiver. A story, an art project, a song, snack, and time in the garden. The question on the series page is how pumpkins grow. Space is 12 children. Adults are free. A single session is $25 per child for non-members and $17.50 for garden-society members. A second child in the same registration is less. The Oct 7 session is full. The garden itself is still a free walk if the class is closed."
   hub_blurb: "Ages 3–5 with a parent or caregiver."
-
 - name: "Made in Bellevue"
   cost: "Free"
   ages: "All ages"
@@ -200,7 +145,6 @@
       label: "Made in Bellevue"
   description: "A free walk-up craft at The Meadow. This date is ferns and broad-leaf house plants. Drop in any time from noon to 2:00 p.m. Supplies are first come, first served, and it is open to everyone."
   hub_blurb: "A free walk-up craft at The Meadow."
-
 - name: "Art Cart"
   cost: "Free"
   setting: "Indoor"
@@ -219,7 +163,6 @@
       label: "Art Cart"
   description: "Craft supplies for ages 6 and older. Make your own project or try the week's suggested one. No registration. The Newport Way Library Association helps sponsor it. Space is limited."
   hub_blurb: "Craft supplies for ages 6 and older."
-
 - name: "Preschool Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -240,7 +183,6 @@
       label: "Preschool Story Time"
   description: "Stories, music, and movement for ages 3 to 5 with an adult. A short play time follows. No registration."
   hub_blurb: "Stories, music, and movement for ages 3 to 5 with an adult."
-
 - name: "Family Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -261,7 +203,6 @@
       label: "Family Story Time"
   description: "Stories, music, and rhymes for children from birth through age 5 with an adult. A short play time follows. No registration."
   hub_blurb: "Stories, music, and rhymes for children from birth through age 5 with an adult."
-
 - name: "Bilingual Kaleidoscope Play and Learn"
   cost: "Free"
   setting: "Indoor"
@@ -282,7 +223,6 @@
       label: "Kaleidoscope Play and Learn"
   description: "A Mandarin and English play-and-learn hour for toddlers and preschoolers with a caregiver. The morning can include stories, music, games, or a craft, and staff have parenting and child-care resources on hand. No registration. The same hours are also on Thu Oct 15."
   hub_blurb: "A Mandarin and English play-and-learn hour for toddlers and preschoolers with a caregiver."
-
 - name: "Story and Stroll"
   cost: "Free"
   setting: "Outdoor"
@@ -305,7 +245,6 @@
       label: "Register"
   description: "A ranger walk for ages 2 to 5 through the Mercer Slough wetlands, with a nature story along the way. It is free. Register each child and adult. Later Fridays at the same hour are Oct 16, Nov 13, Nov 20, Dec 11, and Dec 18."
   hub_blurb: "A ranger walk for ages 2 to 5 through the Mercer Slough wetlands, with a nature story along the way."
-
 - name: "Fall in Bellevue Celebration"
   cost: "Free"
   setting: "Outdoor"
@@ -325,7 +264,6 @@
       label: "Fall in Bellevue"
   description: "A free afternoon from the Bellevue Downtown Association. An urban pumpkin patch of 500 pumpkins, photo spots, and a pumpkin-decorating craft. Bellden Cafe is pouring complimentary hot cider and serving pumpkin-spiced scones and apple-cinnamon waffle sticks. The fall swings stay at The Meadow from September 19 through November 7."
   hub_blurb: "A free afternoon from the Bellevue Downtown Association."
-
 - name: "Sugar skull workshop"
   cost: "Free"
   setting: "Indoor"
@@ -348,7 +286,25 @@
       label: "Register"
   description: "A free workshop for all ages. Families mold sugar skulls and hear what the designs mean in Dia de los Muertos traditions. Register ahead."
   hub_blurb: "A free workshop for all ages."
-
+- name: "Korean Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  tags: [free, story-time]
+  start: "2026-10-09T16:45:00-07:00"
+  end: "2026-10-09T17:30:00-07:00"
+  place: "Newport Way Library, 14250 SE Newport Way"
+  same_as: "https://kcls.bibliocommons.com/events/6aa9c030101eb7003f3063e7"
+  card: "korean-story-time"
+  order: "14"
+  heading_id: "korean-story-time"
+  when: "Fri Oct 9 · 4:45–5:30 p.m."
+  blurbs:
+    - "Stories and songs in Korean, with a short look at Korean culture. For toddlers through early elementary with an adult. No registration. The same hour is also on Oct 16 and Oct 23."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6aa9c030101eb7003f3063e7"
+      label: "Korean Story Time"
+  description: "Stories and songs in Korean, with a short look at Korean culture. For toddlers through early elementary with an adult. No registration. The same hour is also on Oct 16 and Oct 23."
+  hub_blurb: "Stories and songs in Korean, with a short look at Korean culture."
 - name: "Night Hike at Mercer Slough"
   cost: "Free"
   setting: "Outdoor"
@@ -370,7 +326,6 @@
       label: "Register"
   description: "A ranger walk after dark through the wetlands, for all ages and aimed at ages 5 and up. It is free. Register each person, including adults. Later evenings are Fri Nov 13 and Fri Dec 11, both 6:30–8:00 p.m."
   hub_blurb: "A ranger walk after dark through the wetlands, for all ages and aimed at ages 5 and up."
-
 - name: "Dawn of the Deer"
   cost: "Free"
   setting: "Outdoor"
@@ -392,7 +347,6 @@
       label: "Register"
   description: "Ages 4 to 13. A ranger program on where deer feed in Bellevue parks, plus a deer craft to take home. It is free. Register each child and adult. The same hour is also on Sat Oct 24."
   hub_blurb: "Ages 4 to 13."
-
 - name: "Japan Week"
   cost: "Free"
   setting: "Outdoor"
@@ -411,7 +365,6 @@
       label: "Japan Week"
   description: "Bellevue College's Saturday Japan Week festival is free and open to the public. The day has cultural workshops, performances, a market, and contests on the main campus. Weekday sessions that week are for students."
   hub_blurb: "Bellevue College's Saturday Japan Week festival is free and open to the public."
-
 - name: "Ranger-led hike at Lewis Creek"
   cost: "Free"
   setting: "Outdoor"
@@ -433,7 +386,6 @@
       label: "Register"
   description: "An easy ranger hike, under 1.5 miles, through three habitats at Lewis Creek. All ages. It is free. Wear shoes for a trail and clothes for the weather. The same hour is also on Sat Nov 7 and Sat Dec 5."
   hub_blurb: "An easy ranger hike, under 1.5 miles, through three habitats at Lewis Creek."
-
 - name: "Fungi Forest"
   cost: "Free"
   setting: "Outdoor"
@@ -455,7 +407,6 @@
       label: "Register"
   description: "A guided walk for ages 5 to 10 about mushrooms and the other fungi in the forest. It is free. Register each child and adult."
   hub_blurb: "A guided walk for ages 5 to 10 about mushrooms and the other fungi in the forest."
-
 - name: "Lake Hills Greenbelt Ranger Walk"
   cost: "Free"
   setting: "Outdoor"
@@ -477,7 +428,6 @@
       label: "Register"
   description: "A free one-mile ranger hike for all ages on the mostly level gravel trails. The fall guide lists it Saturdays at 2:00 p.m. through Dec 26. Oct 3 is not on that list. Register ahead. Bring binoculars if you have them."
   hub_blurb: "A free one-mile ranger hike for all ages on the mostly level gravel trails."
-
 - name: "Bellevue Jazz Student Showcase"
   cost: "Free"
   setting: "Indoor"
@@ -496,7 +446,6 @@
       label: "Jazz and Blues lineup"
   description: "A free afternoon of school jazz at Meydenbauer Center Theatre. Six combos, from middle school and high school, each play a short set. You can stay for one or for the whole afternoon. No tickets."
   hub_blurb: "A free afternoon of school jazz at Meydenbauer Center Theatre."
-
 - name: "Drop-in Play at Kelsey Creek Farm"
   cost: "Free"
   ages: "Toddlers"
@@ -516,7 +465,6 @@
       label: "Drop-in Play at Kelsey Creek Farm"
   description: "Free drop-in play for ages 2 to 5. Toys, games, and hands-on activities are set out, and families can come and go through the morning."
   hub_blurb: "Free drop-in play for ages 2 to 5."
-
 - name: "Toddler Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -539,7 +487,6 @@
       label: "11:15 session"
   description: "Ages 1 and 2 with an adult. A short play time follows. No registration. Choose one session. The 11:15 session repeats the 10:15 session."
   hub_blurb: "Ages 1 and 2 with an adult."
-
 - name: "Kids in the Garden: Spider Web Wonders"
   setting: "Outdoor"
   ages: "Toddlers"
@@ -564,7 +511,6 @@
     source: "https://commons.wikimedia.org/wiki/File:Bellevue_Botanical_Garden_Entrance.jpg"
   description: "Ages 3–5 with an adult. Why spiders spin webs, plus a story, art, a song, snack, and the garden. The series page marks this session full. Individual price is $25 per child, or $17.50 for members. Adults free. Cap is 12 children."
   hub_blurb: "Ages 3–5 with an adult."
-
 - name: "Kelsey Creek Farm Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -584,7 +530,6 @@
       label: "Kelsey Creek Farm Story Time"
   description: "A free farm story and a visit with one of the animals. It is recommended for ages 1 to 5, and an adult comes with the child. No registration. The doors close when it starts or when the space is full."
   hub_blurb: "A free farm story and a visit with one of the animals."
-
 - name: "LEGO Brick Builders"
   cost: "Free"
   ages: "All ages"
@@ -607,7 +552,6 @@
       label: "LEGO Brick Builders"
   description: "Open building. Stay the hour or stop in. The library supplies the bricks. All ages with an adult. No registration. Space is limited. Bellevue Friends of the Library sponsors it. Wednesday hours are 11:00 a.m.–8:00 p.m."
   hub_blurb: "Open building."
-
 - name: "All Ages Inclusive Board Game Afternoon"
   cost: "Free"
   setting: "Indoor"
@@ -627,7 +571,6 @@
       label: "Board Game Afternoon"
   description: "Drop-in board games for all abilities. Use the library's games or bring one you like. Teen volunteers can teach a game or sit down and play. Newport Way Library Teen Volunteers sponsor it. No registration."
   hub_blurb: "Drop-in board games for all abilities."
-
 - name: "Aztec dance workshop"
   cost: "Free"
   setting: "Indoor"
@@ -650,9 +593,9 @@
       label: "Register"
   description: "A free afternoon for all ages with Nahui Ollin Tezcatlipocatl. The visit covers Aztec dance, music, and regalia, and how those traditions connect to Dia de los Muertos. Register ahead."
   hub_blurb: "A free afternoon for all ages with Nahui Ollin Tezcatlipocatl."
-
 - name: "Alice's Magical Adventure"
   setting: "Indoor"
+  ages: "Kids"
   signup: true
   start: "2026-10-17T13:00:00-07:00"
   end: "2026-10-18T16:00:00-07:00"
@@ -670,7 +613,6 @@
       label: "Theatre33 tickets"
   description: "Theatre33's Russian-language family play, about an hour, for ages 5 and older. Alice walks into a world of riddles and odd characters. Saturday is 1:00 p.m. and 5:00 p.m. Sunday is 1:00 p.m. and 4:00 p.m. 4Culture supports free and reduced admission."
   hub_blurb: "Theatre33's Russian-language family play, about an hour, for ages 5 and older."
-
 - name: "LEGO Block Party"
   cost: "Free"
   setting: "Indoor"
@@ -690,7 +632,6 @@
       label: "LEGO Block Party"
   description: "Open building with the library's bricks. Stay for the whole session or stop in for a few minutes. Ages 4 and older. No registration. Space is limited."
   hub_blurb: "Open building with the library's bricks."
-
 - name: "Diwali Sangam"
   cost: "$14.98 to $37.34"
   setting: "Indoor"
@@ -719,7 +660,6 @@
     license: "organizer"
   description: "A ticketed Festival of Lights afternoon at Yuan Ru Art Gallery. The ticket includes the gallery, Indian stories, a handmade Diwali decoration, and dance and music. Tickets are $14.98 to $37.34."
   hub_blurb: "A ticketed Festival of Lights afternoon at Yuan Ru Art Gallery."
-
 - name: "Diwali Jharokha Workshop"
   cost: "Free"
   setting: "Indoor"
@@ -741,7 +681,6 @@
       label: "Diwali Jharokha Workshop"
   description: "Decorate a wooden candle holder shaped like a traditional Indian jharokha window, for Diwali. All ages, and children need an adult with them. Free. Registration is encouraged, not required. Deepti Designs hosts it."
   hub_blurb: "Decorate a wooden candle holder shaped like a traditional Indian jharokha window, for Diwali."
-
 - name: "Kids in the Garden: Owls"
   setting: "Outdoor"
   ages: "Toddlers"
@@ -770,7 +709,6 @@
     source: "https://commons.wikimedia.org/wiki/File:Bellevue_Botanical_Garden_Entrance.jpg"
   description: "Ages 3–5 with an adult. Who flies in the garden at night. Story, art, a song, snack, and time outside. Twelve spots. Adults free. A single session is $25 per child, or $17.50 for Bellevue Botanical Garden Society members. A second child is $18, or $12.60 for members. Oct 7 and Oct 14 in this series were already marked full. The owl page still said spots were available. Register. Do not plan on walking in. The next session, Winter is Coming, is Wednesday, Oct 28, which is the following week."
   hub_blurb: "Ages 3–5 with an adult."
-
 - name: "Made in Bellevue"
   cost: "Free"
   ages: "All ages"
@@ -790,7 +728,6 @@
       label: "Made in Bellevue"
   description: "A free walk-up craft at The Meadow. This date is decorating a small pumpkin. Drop in any time from noon to 2:00 p.m. Supplies are first come, first served, and it is open to everyone."
   hub_blurb: "A free walk-up craft at The Meadow."
-
 - name: "Eastside Dia de los Muertos"
   cost: "Free"
   setting: "Indoor"
@@ -813,7 +750,6 @@
       label: "Register"
   description: "A free community celebration with the city, Youth Eastside Services, and Cafesito Mexican Bakery. The day has live music, cultural performances, crafts, and community altars. Food vendors are there, so meals are separate from the free admission. All ages."
   hub_blurb: "A free community celebration with the city, Youth Eastside Services, and Cafesito Mexican Bakery."
-
 - name: "Halloween on the Hill"
   setting: "Indoor"
   signup: true
@@ -835,7 +771,6 @@
       label: "Register"
   description: "A family carnival at South Bellevue Community Center, with inflatables, games, face painting, a climbing wall, and a play area for ages 3 and younger. Presale wristbands are $10. Wristbands the day of the event are $12. Adults 18 and older, and children 3 and younger, do not need one. The Great Pumpkin Race is the same day, with check-in at 9:45 a.m. and race times at 10:00 a.m. and noon. A racer kit is $25, and you bring your own pumpkin. Free demos are Sat Oct 17, 10:30–11:00 a.m., and Wed Oct 21, 6:30–7:00 p.m. A free build workshop is Fri Oct 23, 5:00–6:30 p.m."
   hub_blurb: "A family carnival at South Bellevue Community Center, with inflatables, games, face painting, a climbing wall, and a play area for ages 3 and younger."
-
 - name: "Trick or Treat with the Farm Animals"
   cost: "$30 to $36"
   signup: true
@@ -861,7 +796,6 @@
     source: "https://commons.wikimedia.org/wiki/File:Kelsey_Creek_Farm_04.jpg"
   description: "Come in costume and trick-or-treat with costumed farm animals. The afternoon also has a bag to decorate, farm crafts, spooky science, and pumpkin bowling. Most of it is outdoors. Pets are not allowed in the barnyard. Registration is $30 for Bellevue residents and $36 for everyone else. Day-of registration is available if space remains. On-site parking is free, with more at International School, 445 128th Ave SE."
   hub_blurb: "Come in costume and trick-or-treat with costumed farm animals."
-
 - name: "Kids Night Out"
   cost: "$55 to $65"
   setting: "Indoor"
@@ -883,7 +817,6 @@
       label: "Kids Night Out"
   description: "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten. Members pay $55 and non-members pay $65. Register ahead."
   hub_blurb: "Swimming, pizza, and a movie while you take the evening."
-
 - name: "Bellevue Family YMCA Fall Festival"
   setting: "Indoor"
   cost: "Free"
@@ -903,7 +836,6 @@
       label: "Fall festivals"
   description: "Trunk-or-treat, a robotics station, and a pumpkin pool. These branch festivals are free and open to the community, and adults are asked not to wear masks. Costumes should stay family-friendly."
   hub_blurb: "Trunk-or-treat, a robotics station, and a pumpkin pool."
-
 - name: "Monster Mash Parent Survival Night"
   cost: "$73"
   setting: "Indoor"
@@ -925,7 +857,6 @@
       label: "Monster Mash Parent Survival Night"
   description: "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night. The gym lists it at $73, for ages 4 to 10."
   hub_blurb: "A drop-off evening at the gym."
-
 - name: "Monster Mash Halloween Bash"
   cost: "Free"
   ages: "All ages"
@@ -946,7 +877,6 @@
       label: "Monster Mash Halloween Bash"
   description: "A free indoor trick-or-treat at the Northwest Arts Center, with themed crafts. The toddler play gym is open too. No registration. The fall activity guide lists it for all ages."
   hub_blurb: "A free indoor trick-or-treat at the Northwest Arts Center, with themed crafts."
-
 - name: "Sunset Stroll"
   cost: "Free"
   setting: "Outdoor"
@@ -968,7 +898,6 @@
       label: "Register"
   description: "A ranger walk around Larsen Lake at sunset, for all ages, about the animals that come out then. Bring a flashlight. Children need an adult with them. It is free. Register ahead."
   hub_blurb: "A ranger walk around Larsen Lake at sunset, for all ages, about the animals that come out then."
-
 - name: "Sleepy Hollow"
   cost: "$15"
   signup: true
@@ -990,7 +919,6 @@
       label: "Performances"
   description: "Bellevue Youth Theatre's family ghost story, with music and dancing. Tickets are $15. Seats are reserved, and there are no refunds or transfers. The sensory-friendly performance, with brighter house lights and lower sound, is Sat Oct 31 at 2:00 p.m. Other shows are Fri Oct 30 at 7:00 p.m., Sun Nov 1 at 2:00 p.m., Fri Nov 6 at 7:00 p.m., Sat Nov 7 at 2:00 and 7:00 p.m., and Sun Nov 8 at 2:00 p.m. Groups of 10 or more for one show time should call the box office at 425-452-7155."
   hub_blurb: "Bellevue Youth Theatre's family ghost story, with music and dancing."
-
 - name: "KidsQuest Halloween Spooktacular"
   setting: "Indoor"
   tags: [halloween]
@@ -1014,7 +942,6 @@
     source: "https://commons.wikimedia.org/wiki/File:KidsQuest_Children%27s_Museum_2.jpg"
   description: "The museum's Halloween day, this year set as a Haunted Hoedown. Costumes are encouraged. General admission is $16.75 for adults and children. Members are free. It opens at 9:00 a.m., so it is the morning half of Halloween if you also want Main Street."
   hub_blurb: "The museum's Halloween day, this year set as a Haunted Hoedown."
-
 - name: "Bellevue Farmers Market"
   setting: "Outdoor"
   start: "2026-10-31T10:00:00-07:00"
@@ -1032,7 +959,6 @@
       label: "Bellevue Farmers Market"
   description: "A Saturday market after the Thursday season. Hours are 10:00 a.m.–3:00 p.m. The next Saturday is Nov 21, same hours."
   hub_blurb: "A Saturday market after the Thursday season."
-
 - name: "Little Monsters on Main Street"
   cost: "Free"
   setting: "Outdoor"
@@ -1057,7 +983,6 @@
     source: "https://commons.wikimedia.org/wiki/File:Bellevue,_Washington_-_old_Main_Street_01.jpg"
   description: "A free costume afternoon from the Old Bellevue Merchants Association. Businesses, restaurants, and residential communities along Main Street hand out candy."
   hub_blurb: "A free costume afternoon from the Old Bellevue Merchants Association."
-
 - name: "Halloween Factoria"
   setting: "Outdoor"
   tags: [halloween]
@@ -1076,7 +1001,6 @@
       label: "Halloween Factoria"
   description: "The Marketplace at Factoria lists Halloween Factoria for this afternoon at the shopping center."
   hub_blurb: "The Marketplace at Factoria lists Halloween Factoria for this afternoon at the shopping center."
-
 - name: "Kelsey Creek Farm Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -1096,7 +1020,6 @@
       label: "Kelsey Creek Farm Story Time"
   description: "A free farm story and a visit with one of the animals. It is recommended for ages 1 to 5, and an adult comes with the child. No registration. The doors close when it starts or when the space is full."
   hub_blurb: "A free farm story and a visit with one of the animals."
-
 - name: "Story Time at the Garden"
   cost: "Free"
   ages: "Toddlers"
@@ -1116,7 +1039,6 @@
       label: "Story Time at the Garden"
   description: "A free story time for preschoolers in the Sharp Cabin, southwest of the Urban Meadow. The garden reads a garden book and follows it with a short activity. Adults stay with the children, and registration is not required."
   hub_blurb: "A free story time for preschoolers in the Sharp Cabin, southwest of the Urban Meadow."
-
 - name: "Drop-in Play at Kelsey Creek Farm"
   cost: "Free"
   ages: "Toddlers"
@@ -1136,7 +1058,6 @@
       label: "Drop-in Play at Kelsey Creek Farm"
   description: "Free drop-in play for ages 2 to 5. Toys, games, and hands-on activities are set out, and families can come and go through the morning."
   hub_blurb: "Free drop-in play for ages 2 to 5."
-
 - name: "Sugar Skulls, Calaveritas de Azucar"
   cost: "Free"
   ages: "All ages"
@@ -1158,7 +1079,6 @@
       label: "Sugar skulls"
   description: "Decorate a pre-molded sugar skull and hear how families set altars for Dia de los Muertos. All ages, and children need an adult. Registration is requested. Crayons and coloring pages are there for younger siblings."
   hub_blurb: "Decorate a pre-molded sugar skull and hear how families set altars for Dia de los Muertos."
-
 - name: "Horizon Line"
   cost: "$15"
   signup: true
@@ -1179,7 +1099,6 @@
       label: "Performances"
   description: "A family pirate adventure from Bellevue Youth Theatre. Tickets are $15, seats are reserved, and sales are final. The sensory-friendly show is Sat Nov 14 at 6:00 p.m. Other shows are Fri Nov 13 at 7:00 p.m., Sun Nov 15 at 2:00 p.m., Fri Nov 20 at 7:00 p.m., Sat Nov 21 at 2:00 and 7:00 p.m., and Sun Nov 22 at 2:00 p.m."
   hub_blurb: "A family pirate adventure from Bellevue Youth Theatre."
-
 - name: "Creature Crafts"
   cost: "Free"
   setting: "Indoor"
@@ -1201,7 +1120,6 @@
       label: "Register"
   description: "A nature craft hour for ages 3 to 7, with a new topic each session and a craft to take home. It is free. Register each child and adult. The same hour is also on Sun Dec 6."
   hub_blurb: "A nature craft hour for ages 3 to 7, with a new topic each session and a craft to take home."
-
 - name: "Kids Night Out"
   cost: "$55 to $65"
   setting: "Indoor"
@@ -1223,7 +1141,6 @@
       label: "Kids Night Out"
   description: "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten. Members pay $55 and non-members pay $65. Register ahead."
   hub_blurb: "Swimming, pizza, and a movie while you take the evening."
-
 - name: "Friendsgiving Parent Survival Night"
   cost: "$73"
   setting: "Indoor"
@@ -1245,7 +1162,6 @@
       label: "Friendsgiving Parent Survival Night"
   description: "A drop-off evening at the gym, set up like a kids' table that never sits still. $73. The gym lists ages 4 to 10."
   hub_blurb: "A drop-off evening at the gym, set up like a kids' table that never sits still."
-
 - name: "Robin Hood"
   cost: "$15"
   ages: "All ages"
@@ -1267,7 +1183,6 @@
       label: "Performances"
   description: "Bellevue Youth Theatre's Robin Hood, for audiences of all ages. Tickets are $15, seats are reserved, and sales are final. The sensory-friendly show is Sat Nov 28 at 5:00 p.m. Other shows are Fri Nov 27 at 7:00 p.m., Sun Nov 29 at 2:00 p.m., Fri Dec 4 at 7:00 p.m., Sat Dec 5 at 2:00 and 7:00 p.m., and Sun Dec 6 at 2:00 p.m."
   hub_blurb: "Bellevue Youth Theatre's Robin Hood, for audiences of all ages."
-
 - name: "Snowflake Lane"
   setting: "Outdoor"
   cost: "Free"
@@ -1289,7 +1204,6 @@
       label: "Snowflake Lane"
   description: "A free nightly parade on Bellevue Way for all ages, starting at 7:00 p.m. Floats, falling snow, music, toy drummers, and dancers run every night from Nov 27 through Dec 24. Parking in the Collection garages is free."
   hub_blurb: "A free nightly parade on Bellevue Way for all ages, starting at 7:00 p.m."
-
 - name: "Garden d'Lights"
   setting: "Outdoor"
   signup: true
@@ -1315,7 +1229,6 @@
     source: "https://commons.wikimedia.org/wiki/File:Garden_d%E2%80%99Lights_2008_at_the_Bellevue_Botanical_Garden,_img011.jpg"
   description: "Garden d'Lights is a ticketed after-dark walk through Bellevue Botanical Garden, with lights shaped into plants, animals, and waterfalls. Tickets go on sale October 15. Nightly hours for 2026 are still to come."
   hub_blurb: "Garden d'Lights is a ticketed after-dark walk through Bellevue Botanical Garden, with lights shaped into plants, animals, and waterfalls."
-
 - name: "Holiday Barn Lighting"
   cost: "Free"
   setting: "Outdoor"
@@ -1335,7 +1248,6 @@
       label: "Holiday Barn Lighting"
   description: "A family barn lighting at Kelsey Creek Farm with free admission, carols, Santa, and a countdown. Some activities are ticketed on site. Parking on the farm is limited, with more at International School, 445 128th Ave SE. Families can also meet the animals and watch them eat dinner inside the barn."
   hub_blurb: "A family barn lighting at Kelsey Creek Farm with free admission, carols, Santa, and a countdown."
-
 - name: "Annie JR."
   cost: "$15"
   signup: true
@@ -1356,7 +1268,6 @@
       label: "Performances"
   description: "A junior version of Annie for families, from Bellevue Youth Theatre. Tickets are $15, seats are reserved, and sales are final. The sensory-friendly show is Sat Dec 12 at 5:00 p.m. Other shows are Fri Dec 11 at 7:00 p.m., Sun Dec 13 at 2:00 p.m., Fri Dec 18 at 7:00 p.m., Sat Dec 19 at 2:00 and 7:00 p.m., and Sun Dec 20 at 2:00 p.m."
   hub_blurb: "A junior version of Annie for families, from Bellevue Youth Theatre."
-
 - name: "The Nutcracker"
   cost: "$45 to $70"
   setting: "Indoor"
@@ -1379,7 +1290,6 @@
       label: "The Nutcracker"
   description: "International Ballet Theatre's Nutcracker at Meydenbauer Theatre costs $45 for youth through 14 and $70 for ages 15 and up. Military and seniors 60 and older pay $55. Prices include fees. Every person needs a ticket, and babies in arms are not admitted. The program is 1 hour 50 minutes plus a 15-minute intermission. Friday Dec 11 and Friday Dec 18 are at 6:00 p.m. Saturday Dec 12, Saturday Dec 19, and Sunday Dec 20 have shows at 1:00 and 5:00 p.m. Sunday Dec 13 is 1:00 p.m. only. Monday Dec 21, Tuesday Dec 22, and Wednesday Dec 23 are at 1:00 p.m."
   hub_blurb: "International Ballet Theatre's Nutcracker at Meydenbauer Theatre costs $45 for youth through 14 and $70 for ages 15 and up."
-
 - name: "Solstice Stroll"
   cost: "Free"
   setting: "Outdoor"
