@@ -35,9 +35,9 @@ layout: default
     {%- assign hero_source = city.hero.source | append: "" | strip -%}
     {%- if hero_credit.size > 0 -%}
       {%- if hero_source.size > 0 -%}
-    <a class="photo-credit" href="{{ hero_source }}" rel="noopener">{{ hero_credit }}</a>
+    <figcaption><a href="{{ hero_source }}" rel="noopener">{{ hero_credit }}</a></figcaption>
       {%- else -%}
-    <span class="photo-credit">{{ hero_credit }}</span>
+    <figcaption>{{ hero_credit }}</figcaption>
       {%- endif -%}
     {%- endif -%}
   </figure>

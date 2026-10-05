@@ -1,7 +1,8 @@
 {%- comment -%}
   Photo and the credit strip on the image.
   src, alt, credit, width, height, source.
-  The credit text is the link when source is a URL. With no source it is the same banner as text.
+  The figcaption is the banner. The credit text is the link when source is a URL.
+  With no source, the figcaption is plain credit text.
   figure: class, default event-photo.
   loading: default lazy. priority: fetch priority, omitted when blank.
   sizes: the photo inside the card padding, not the full column.
@@ -26,9 +27,9 @@
        itemprop=include.itemprop -%}
   {%- if photo_credit.size > 0 -%}
     {%- if photo_source.size > 0 -%}
-  <a class="photo-credit" href="{{ photo_source }}" rel="noopener">{{ photo_credit }}</a>
+  <figcaption><a href="{{ photo_source }}" rel="noopener">{{ photo_credit }}</a></figcaption>
     {%- else -%}
-  <span class="photo-credit">{{ photo_credit }}</span>
+  <figcaption>{{ photo_credit }}</figcaption>
     {%- endif -%}
   {%- endif -%}
 </figure>
