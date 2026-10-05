@@ -119,8 +119,8 @@ jobs:
           # Custom domain www.eastsidecalendar.com: empty baseurl. Do not fall
           # back to /Home-town-week or the custom-domain CSS and images break.
           # CNAME in the published site must stay www.eastsidecalendar.com.
-          # The service worker cache name is this commit, so the new worker
-          # replaces the previous caches on activate.
+          # The service worker page cache is named from a hash of the shell
+          # files. The image cache keeps its name across deploys.
           # rcssmin minifies _css and fingerprints assets/css/<name>.<hash>.css
           # when Jekyll starts. minify-html then compacts the built pages,
           # inline scripts, and JSON-LD.

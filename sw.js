@@ -3,22 +3,17 @@ permalink: /sw.js
 sitemap: false
 ---
 {%- comment -%}
-  Built with the site so each deploy gets a new cache name. Page scripts
-  stay inline in the HTML. Any real stylesheet, script, or manifest is
-  listed from the files Jekyll copied.
+  The page cache name is a hash of the precached shell files, so a content
+  commit that does not change those files keeps the same worker. The image
+  cache name stays put across deploys. Page scripts stay inline. Leaflet
+  is not in this list. It loads after Show map.
 {%- endcomment -%}
-{%- assign cache_version = site.time | date: "%Y%m%d%H%M%S" -%}
-{%- if site.data.build -%}
-{%- assign build_sha = site.data.build.sha | append: "" -%}
-{%- if build_sha.size > 0 -%}
-{%- assign cache_version = build_sha -%}
-{%- endif -%}
-{%- endif -%}
 /* Eastside Family Calendar. Pages and images are cached apart. No push. */
-var VERSION = {{ cache_version | jsonify }};
+var VERSION = {{ site.data.shell.version | jsonify }};
 var PAGES = "eastside-pages-" + VERSION;
-var IMAGES = "eastside-images-" + VERSION;
+var IMAGES = "eastside-images";
 var IMAGE_CAP = 60;
+var PAGE_CAP = 80;
 var NAV_TIMEOUT = 3000;
 var imageWrite = Promise.resolve();
 
@@ -108,25 +103,54 @@ function putStamped(cache, request, response) {
   return cache.put(cacheKey(request), stamped).catch(function () {});
 }
 
+function byCachedAt(entries) {
+  entries.sort(function (a, b) {
+    if (a.at < b.at) return -1;
+    if (a.at > b.at) return 1;
+    return 0;
+  });
+  return entries;
+}
+
+function stampedEntries(cache, requests) {
+  return Promise.all(requests.map(function (request) {
+    return cache.match(request).then(function (response) {
+      var at = response && response.headers.get("X-Cached-At") || "";
+      return { request: request, at: at };
+    });
+  }));
+}
+
+function trimTo(cache, requests, cap) {
+  if (requests.length <= cap) return Promise.resolve();
+  return stampedEntries(cache, requests).then(function (entries) {
+    var extra = entries.length - cap;
+    return Promise.all(byCachedAt(entries).slice(0, extra).map(function (entry) {
+      return cache.delete(entry.request);
+    }));
+  });
+}
+
 function trimImages(cache) {
   return cache.keys().then(function (requests) {
-    if (requests.length <= IMAGE_CAP) return;
-    return Promise.all(requests.map(function (request) {
-      return cache.match(request).then(function (response) {
-        var at = response && response.headers.get("X-Cached-At") || "";
-        return { request: request, at: at };
-      });
-    })).then(function (entries) {
-      entries.sort(function (a, b) {
-        if (a.at < b.at) return -1;
-        if (a.at > b.at) return 1;
-        return 0;
-      });
-      var extra = entries.length - IMAGE_CAP;
-      return Promise.all(entries.slice(0, extra).map(function (entry) {
-        return cache.delete(entry.request);
-      }));
+    return trimTo(cache, requests, IMAGE_CAP);
+  });
+}
+
+function shellUrl(path) {
+  return new URL(path, self.location.origin).href;
+}
+
+function trimPages(cache) {
+  var shell = {};
+  SHELL_PAGES.forEach(function (path) {
+    shell[shellUrl(path)] = true;
+  });
+  return cache.keys().then(function (requests) {
+    var extras = requests.filter(function (request) {
+      return !shell[request.url];
     });
+    return trimTo(cache, extras, PAGE_CAP);
   });
 }
 
@@ -244,7 +268,9 @@ function networkFirstNavigation(event, request) {
     // as this navigation is allowed to finish.
     var copy = response.clone();
     return caches.open(PAGES).then(function (cache) {
-      return putStamped(cache, request, copy);
+      return putStamped(cache, request, copy).then(function () {
+        return trimPages(cache);
+      });
     });
   }).catch(function () {});
   event.waitUntil(caching);
@@ -263,6 +289,7 @@ function staleWhileRevalidate(event, request, cacheName) {
         var store = function () {
           return putStamped(cache, request, response).then(function () {
             if (cacheName === IMAGES) return trimImages(cache);
+            if (cacheName === PAGES) return trimPages(cache);
           });
         };
         var stored = cacheName === IMAGES ? enqueueImageWrite(store) : store();
