@@ -462,6 +462,32 @@
       label: "Día de los Muertos"
   description: "A free city celebration for all ages, with traditional activities, food, and music. On-site parking is limited. The garage under the library is the backup."
   hub_blurb: "A free city celebration for all ages, with traditional activities, food, and music."
+- name: "Treat Street at Kirkland Urban"
+  cost: "Free"
+  setting: "Outdoor"
+  ages: "All ages"
+  tags: [halloween]
+  start: "2026-10-24T17:00:00-07:00"
+  end: "2026-10-24T20:00:00-07:00"
+  place: "Kirkland Urban, 425 Urban Plaza"
+  same_as: "https://kirklandurban.com/2026/09/16/get-ready-for-a-spooktacular-day-at-kirkland-urban/"
+  card: "treat-street-at-kirkland-urban"
+  order: "24"
+  heading_id: "treat-street-at-kirkland-urban"
+  when: "Sat Oct 24 · 5:00–8:00 p.m."
+  blurbs:
+    - "Kirkland Urban’s Treat Street is back. Free and open to the public, with trick-or-treating at plaza businesses, a corn maze, balloon artists, a candy wall, and a monster dance party. Costumes are welcome. Kids stay with an adult."
+  links:
+    - href: "https://kirklandurban.com/2026/09/16/get-ready-for-a-spooktacular-day-at-kirkland-urban/"
+      label: "Treat Street"
+  description: "Kirkland Urban's Treat Street is back. Free and open to the public, with trick-or-treating at plaza businesses, a corn maze, balloon artists, a candy wall, and a monster dance party. Costumes are welcome. Kids stay with an adult."
+  hub_blurb: "Free Treat Street at Kirkland Urban, with trick-or-treating, a corn maze, and a monster dance party."
+  photo:
+    src: "/assets/images/kirkland/treat-street-2026.webp"
+    alt: "Treat Street flyer for Kirkland Urban, with cartoon bats, ghosts, and a friendly skeleton."
+    credit: "Image: Kirkland Urban"
+    source: "https://kirklandurban.com/2026/09/16/get-ready-for-a-spooktacular-day-at-kirkland-urban/"
+    license: organizer
 - name: "Mushroom Mania"
   cost: "Free"
   setting: "Outdoor"

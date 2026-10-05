@@ -220,7 +220,7 @@
       type: city_hall
       format: ical
       feed_url: "https://www.bothellwa.gov/common/modules/iCalendar/iCalendar.aspx?catID=23&feed=calendar"
-      notes: "City and parks events at City Hall Plaza and city parks."
+      notes: "City and parks events at City Hall Plaza and city parks. Cloud agents often get 403 or an empty calendar on the iCal URL. Fetch that feed from the Grok Bot box with a normal browser user-agent. The HTML browse page is the same url field."
     - name: "Anderson School"
       url: "https://www.mcmenamins.com/anderson-school"
       type: venue
@@ -621,9 +621,9 @@
       type: nature
       notes: "Public bird walks. List a walk when the page welcomes children. Skip classes, the book club, the photography group, and evening talks."
     - name: "Kirkland Urban"
-      url: "https://kirklandurban.com/"
+      url: "https://kirklandurban.com/things-to-do/"
       type: venue
-      notes: "Treat Street and other plaza events. The 2025 Treat Street page is not a 2026 date. Confirm the year."
+      notes: "Plaza events live under Things To Do (filter post-category=events). The old /events path is a permanent 404. Treat Street 2026 is Oct 24 on the Spooktacular post. Category archive: https://kirklandurban.com/category/events/"
     - name: "The Village at Totem Lake"
       url: "https://thevillageattotemlake.com/events"
       type: venue

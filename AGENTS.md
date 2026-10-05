@@ -81,6 +81,20 @@ Each Friday, scan the lead sites for about the next six weeks. The Yodel embed n
 - https://www.parentmap.com/ covers all 15 cities. No JavaScript. Use The Events Calendar API, for example /wp-json/tribe/events/v1/events?start_date=...&end_date=...&per_page=50&page=N, or /wp-json/wp/v2/tribe_events?event_region=39 for the Eastside. Send a normal browser user-agent. Plain curl gets a 403. Wait between pages. robots.txt disallows filtered /calendar? URLs, so use the API. Skip business self-submissions such as paid classes, school open houses, and gyms.
 - https://www.seattleschild.com/ is seasonal guides only. Check it monthly, on the first Friday of each month. Never link it, and never copy it. Use the WordPress posts API, /wp-json/wp/v2/posts, for the guides. The calendar adds little beyond ParentMap, and robots.txt blocks /calendar/page/*. Skip sponsored posts, directories, and camps. Useful timing: a Halloween roundup in mid-September, fun runs and turkey trots in September and October, holiday trains in September, and a volunteer list each month.
 
+
+## When a source fails
+
+A first failure (4xx, 5xx, empty body, or timeout) is temporary. Keep the recorded URL in `_data/cities.yml`. Skip that source for this run. Do not retire it, do not replace it, and do not flag Mads.
+
+Hunt for a replacement only when the same source has failed across a couple of consecutive daily runs, or the move is clearly permanent (redirect elsewhere, nav no longer lists the page, or a hard 404 on a path the site used to publish). Then, in order:
+
+1. Look for a moved URL: homepage nav, redirects, `robots.txt` sitemaps, site search, and Wayback of the old URL when it helps.
+2. Try an alternate official feed or hosted calendar (Trumba, Localist, CivicPlus RSS or iCal, Google Calendar, Eventbrite organizer, Squarespace or WordPress `/events?format=ical` or Tribe JSON).
+3. Fall back to the HTML calendar or events page itself.
+4. If a cloud agent gets 403 and the Grok Bot box path exists for that host, fetch from the box with a normal browser user-agent. Keep the recorded URL when the box still returns the feed.
+
+Never use proxies, feed validators, or header checkers to disguise requests. Never contact the organization. When you find a working replacement, update the `url` / `feed_url` / `notes` on that source in `_data/cities.yml`. Flag Mads only when no replacement can be found after that hunt.
+
 ## Weekend picks
 
 `/this-weekend/` is Friday through Sunday across the 15 cities. The home page shows a short pick of that list. Keep both in step with the city pages. Worth the Drive stays off that list.
