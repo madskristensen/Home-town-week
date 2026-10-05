@@ -1288,6 +1288,12 @@ figure figcaption {
   border-bottom-left-radius: inherit;
 }
 
+.event-card figure figcaption a.event-source,
+.event-card figure figcaption a.event-source:hover,
+.event-card figure figcaption a.event-source:focus,
+.event-card figure figcaption a.event-source:focus-visible,
+.event-card figure figcaption a.event-source:visited,
+.event-card figure figcaption a.event-source:active,
 figure figcaption a,
 figure figcaption a:hover,
 figure figcaption a:focus,
@@ -1297,6 +1303,7 @@ figure figcaption a:active {
   color: inherit;
   font-size: inherit;
   font-weight: inherit;
+  line-height: inherit;
   text-decoration: none;
 }
 

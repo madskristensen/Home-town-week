@@ -882,13 +882,19 @@ module EastsideCalendar
 
     # The outbound link under a card ("Meydenbauer calendar") is meta text.
     # A hard break before that link becomes its own line.
+    # The credit link inside the photo figcaption is not that outbound link.
     def mark_source_links(part)
       part = part.gsub(%r{<br\s*/?>\s*(?=<a\b)}i, "</p>\n<p class=\"event-links\">")
       part = part.gsub(%r{<p>(\s*(?:<a\b.*?<\/a>|·|&middot;|\s)+)</p>}m) do
         %(<p class="event-links">#{Regexp.last_match(1)}</p>)
       end
       part.gsub(%r{<a(?![^>]*\bclass=")([^>]*)>}m) do
-        %(<a class="event-source"#{Regexp.last_match(1)}>)
+        match = Regexp.last_match
+        pre = match.pre_match
+        in_caption = pre.scan(/<figcaption\b/).length > pre.scan(%r{</figcaption>}).length
+        next match[0] if in_caption
+
+        %(<a class="event-source"#{match[1]}>)
       end
     end
 
