@@ -22,6 +22,7 @@ jobs:
           # Full history so sitemap lastmod can use each file's commit time.
           # A depth of 1 makes every unchanged page look unmodified.
           fetch-depth: 0
+          filter: blob:none
 
       - name: Install Python packages
         run: python3 -m pip install --quiet -r requirements.txt
@@ -193,6 +194,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
+          filter: blob:none
 
       - name: Post changed URLs to IndexNow
         if: env.INDEXNOW_KEY != ''

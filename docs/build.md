@@ -12,7 +12,7 @@ IndexNow is told about URLs whose source files changed in a push, not the whole 
 
 Pushes to `main` run `.github/workflows/pages.yml`. The build job can read the repo. Only the deploy job has `pages: write` and `id-token: write`. Python packages are pinned in `requirements.txt`. Third-party actions are pinned to commits. Ruby is the version in `.ruby-version`.
 
-Checkout uses full history so sitemap lastmod can use each file's commit time. A depth of 1 makes every unchanged page look unmodified.
+Checkout uses full history so sitemap lastmod can use each file's commit time, with `filter: blob:none` so the blobs are not downloaded up front. A depth of 1 makes every unchanged page look unmodified.
 
 The home share image is cached on a hash of the Eastside map and `script/render-home-og.py`. `librsvg` and the Liberation fonts are installed only when that cache misses. Share-card JPEGs and image variants are cached the same way.
 
