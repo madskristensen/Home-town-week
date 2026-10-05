@@ -144,6 +144,7 @@ jobs:
           python3 script/minify-html.py
           python3 script/check-schema.py
           python3 script/check-components.py --rendered _site
+          python3 script/check-hrefs.py
           python3 script/check-calendars.py
 
       - name: Add IndexNow verification key

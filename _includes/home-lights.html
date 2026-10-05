@@ -49,7 +49,7 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
 {%- if lights_mailto.size > 0 -%}
 {%- include map-tip.html href=lights_mailto -%}
 {%- endif -%}
-<script type="application/json" id="home-lights-pins">{{ home_lights.pins | jsonify }}</script>
+<script type="application/json" id="home-lights-pins">{{ home_lights.pins | jsonify | replace: '<', '\u003c' }}</script>
 {%- include map-loader.html -%}
 <script>
 (function () {
@@ -78,7 +78,9 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
         iconAnchor: [14, 14]
       });
       var marker = L.marker([pin.lat, pin.lng], { icon: icon, title: pin.name, keyboard: true });
-      marker.bindTooltip(pin.name, { direction: "top" });
+      var tip = document.createElement("span");
+      tip.textContent = pin.name == null ? "" : String(pin.name);
+      marker.bindTooltip(tip, { direction: "top" });
       marker.on("click", function () {
         var card = document.getElementById("light-" + pin.id);
         if (!card) return;

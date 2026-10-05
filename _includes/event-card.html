@@ -240,7 +240,7 @@
 {%- if card_title.size > 0 or card_number.size > 0 -%}
 <h3{%- if card_is_event and card_href.size == 0 %} itemprop="name"{% endif -%}>{%- if card_schema.size > 0 -%}{{ card_schema }}{%- endif -%}{%- if card_number.size > 0 -%}<span class="home-num">{{ card_number | escape }}</span> {% endif -%}
 {%- if card_href.size > 0 -%}
-<a href="{% if include.external %}{{ card_href }}{% else %}{{ card_href | relative_url }}{% endif %}"{% if card_rel.size > 0 %} rel="{{ card_rel }}"{% endif %}{% if card_is_event %} itemprop="{% if url_on_title %}name url{% else %}name{% endif %}"{% endif %}>{{ card_title | escape }}</a>
+<a href="{% if include.external %}{{ card_href | escape }}{% else %}{{ card_href | relative_url }}{% endif %}"{% if card_rel.size > 0 %} rel="{{ card_rel }}"{% endif %}{% if card_is_event %} itemprop="{% if url_on_title %}name url{% else %}name{% endif %}"{% endif %}>{{ card_title | escape }}</a>
 {%- else -%}
 {{ card_title | escape }}
 {%- endif -%}
@@ -296,7 +296,7 @@
 {%- unless forloop.first %} · {% endunless -%}
 {%- assign card_link_label = card_link.label | append: "" | strip -%}
 {%- if card_link_label.size == 0 -%}{%- assign card_link_label = "Source" -%}{%- endif -%}
-<a class="event-source" href="{{ card_link.href }}">{{ card_link_label | escape }}</a>
+<a class="event-source" href="{{ card_link.href | escape }}">{{ card_link_label | escape }}</a>
 {%- endfor -%}</p>
 {%- else -%}
 {%- assign card_source_href = include.source_href | append: "" | strip -%}
@@ -306,8 +306,8 @@
 {%- assign card_also_label = include.also_label | append: "" | strip -%}
 {%- if card_source_label.size == 0 -%}{%- assign card_source_label = "Source" -%}{%- endif -%}
 {%- if card_also_label.size == 0 -%}{%- assign card_also_label = "Source" -%}{%- endif -%}
-<p class="event-links">{%- if card_source_href.size > 0 -%}<a class="event-source" href="{{ card_source_href }}">{{ card_source_label | escape }}</a>{%- endif -%}
-{%- if card_also_href.size > 0 -%}{% if card_source_href.size > 0 %} · {% endif %}<a class="event-source" href="{{ card_also_href }}">{{ card_also_label | escape }}</a>{%- endif -%}
+<p class="event-links">{%- if card_source_href.size > 0 -%}<a class="event-source" href="{{ card_source_href | escape }}">{{ card_source_label | escape }}</a>{%- endif -%}
+{%- if card_also_href.size > 0 -%}{% if card_source_href.size > 0 %} · {% endif %}<a class="event-source" href="{{ card_also_href | escape }}">{{ card_also_label | escape }}</a>{%- endif -%}
 </p>
 {%- endif -%}
 {%- endif -%}

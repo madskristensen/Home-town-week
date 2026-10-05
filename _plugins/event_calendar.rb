@@ -872,7 +872,10 @@ module EastsideCalendar
         remainder = visible_text(inner.gsub(/<a\b.*?<\/a>/m, " ")).gsub(/[·\u00b7]/, "").strip
         if !anchors.empty? && remainder.empty?
           anchors.each do |href, label|
-            source_links << { "href" => CGI.unescapeHTML(href), "label" => visible_text(label) }
+            href = safe_href(CGI.unescapeHTML(href))
+            next if href.empty?
+
+            source_links << { "href" => href, "label" => visible_text(label) }
           end
         else
           text = visible_text(inner)
@@ -1049,6 +1052,19 @@ module EastsideCalendar
 
     def http_url?(value)
       value.to_s.match?(%r{\Ahttps?://\S+\z})
+    end
+
+    # Links printed into href attributes. http(s), a relative path, a
+    # fragment, mailto, tel, or webcal. Anything else is dropped.
+    def safe_href(value)
+      text = value.to_s.strip
+      return "" if text.empty? || text.match?(/\A(?:javascript|data|vbscript):/i)
+      return text if text.match?(%r{\Ahttps?:\/\/}i)
+      return text if text.match?(/\A(?:mailto:|tel:|webcal:)/i)
+      return text if text.start_with?("#", "/", "?", "./", "../")
+      return "" if text.include?(":")
+
+      text
     end
 
     # GitHub-flavored heading ids, matching kramdown-parser-gfm. Digits

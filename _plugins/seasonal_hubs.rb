@@ -99,12 +99,31 @@ module EastsideCalendar
       "#{MONTHS[month - 1]} #{day}"
     end
 
+    SVG_TAGS = %w[svg g path circle rect ellipse line polyline polygon title desc].freeze
+    SVG_ATTRS = %w[
+      xmlns viewbox fill d cx cy r rx ry x y width height points
+      stroke stroke-width stroke-linecap stroke-linejoin
+      aria-hidden focusable transform opacity fill-rule clip-rule
+      x1 y1 x2 y2
+    ].freeze
+
+    # Motifs are small icons. Only those tags and presentation attributes
+    # are kept. A script, a handler, or an unknown tag drops the drawing.
     def safe_svg(value)
       svg = value.to_s.strip
       return "" if svg.empty?
       return "" unless svg.match?(/\A<svg\b/i) && svg.match?(%r{</svg>\z}i)
-      return "" if svg.match?(/<script|foreignObject|javascript:|on[a-z]+\s*=/i)
 
+      tags = svg.scan(%r{</?([A-Za-z0-9]+)}).flatten.map(&:downcase)
+      return "" unless tags.all? { |tag| SVG_TAGS.include?(tag) }
+
+      svg.scan(/<[^>]+>/).each do |tag|
+        return "" if tag.match?(/javascript:|data:/i)
+
+        tag.scan(/([A-Za-z_:][-A-Za-z0-9_:.]*)\s*=/).flatten.each do |attr|
+          return "" unless SVG_ATTRS.include?(attr.downcase)
+        end
+      end
       svg
     end
 
