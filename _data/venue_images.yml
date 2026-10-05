@@ -518,11 +518,11 @@ venues:
     license: CC0
     source: https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Sammamish_Library.jpg
   - keys: ["snoqualmie library"]
-    image: /assets/images/snoqualmie/snoqualmie-library.webp
-    alt: Snoqualmie Library, a modern building with a glass front and a covered entry.
-    credit: "Photo: SuddenFrost, CC0"
-    license: CC0
-    source: https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Snoqualmie_Library.jpg
+    image: /assets/images/snoqualmie/snoqualmie-library-dusk.webp
+    alt: Snoqualmie Library at dusk, with wood siding, a glass front, and the lit reading room.
+    credit: "Photo: King County Library System"
+    license: organizer
+    source: https://kcls.org/locations/snoqualmie/
   - keys: ["fall city library"]
     image: /assets/images/snoqualmie/fall-city-library.webp
     alt: Fall City Library, a small modern building with a deep roof and a glass entry.
