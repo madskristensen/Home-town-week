@@ -196,52 +196,6 @@ module EastsideCalendar
     end
   end
 
-  class FeedFile
-    def initialize(dir, name, content)
-      @dir = dir
-      @name = name
-      @content = content
-    end
-
-    def path
-      nil
-    end
-
-    def url
-      "/#{@dir}/#{@name}"
-    end
-
-    def relative_path
-      "#{@dir}/#{@name}"
-    end
-
-    def extname
-      File.extname(@name)
-    end
-
-    def write?
-      true
-    end
-
-    def destination(dest)
-      File.join(dest, @dir, @name)
-    end
-
-    def write(dest)
-      dest_path = destination(dest)
-      FileUtils.mkdir_p(File.dirname(dest_path))
-      File.binwrite(dest_path, @content)
-      true
-    end
-
-    def modified_time
-      Time.now
-    end
-
-    def mtime
-      Time.now
-    end
-  end
 end
 
 Jekyll::Hooks.register :pages, :pre_render do |page, payload|

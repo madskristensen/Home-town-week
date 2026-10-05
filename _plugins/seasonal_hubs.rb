@@ -2227,17 +2227,8 @@ module EastsideCalendar
       end
 
       pages = {}
-      public_hubs = []
       prepared.each do |hub|
         pages[hub["id"]] = hub
-        public_hubs << {
-          "title" => hub["title"],
-          "path" => hub["path"],
-          "llms" => hub["llms"],
-          "season_label" => hub["season_label"],
-          "footer" => hub["footer"],
-          "footer_label" => hub["footer_label"]
-        }
         site.pages << hub_page(site, hub)
       end
       pages[drive["id"]] = drive
@@ -2252,7 +2243,8 @@ module EastsideCalendar
         pages["summer-camps"] = { "id" => "summer-camps", "path" => "/summer-camps/" }
       end
       site.data["hub_pages"] = pages
-      site.data["seasonal_hubs"] = public_hubs
+      # Keep the YAML config in site.data["seasonal_hubs"]. The short list
+      # for menus is hub_pages. Do not replace the config with that list.
       site.data["footer_seasons"] = SeasonalHubs.footer_seasons(prepared)
       site.data["missing_tiles"] = SeasonalHubs.missing_tiles(
         site.data["share_cards"],

@@ -1441,44 +1441,6 @@ module EastsideCalendar
     end
   end
 
-  class CalendarFile
-    attr_reader :relative_path
-
-    def initialize(dir, name, content)
-      @dir = dir
-      @name = name
-      @content = content
-      @relative_path = "#{dir}/#{name}"
-    end
-
-    def path
-      nil
-    end
-
-    def url
-      "/#{@dir}/#{@name}"
-    end
-
-    def extname
-      ".ics"
-    end
-
-    def write?
-      true
-    end
-
-    def destination(dest)
-      File.join(dest, @dir, @name)
-    end
-
-    def write(dest)
-      dest_path = destination(dest)
-      FileUtils.mkdir_p(File.dirname(dest_path))
-      File.binwrite(dest_path, @content)
-      true
-    end
-  end
-
   class EventCalendarGenerator < Jekyll::Generator
     priority :low
 
