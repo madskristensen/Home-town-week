@@ -9,8 +9,6 @@
     --xmas-bg: #b71c1c;
     --xmas-ink: #fff8f2;
     --xmas-border: #ffd27a;
-    --xmas-btn: #d8ffe6;
-    --xmas-btn-hover: #b6f5d0;
   }
 }
 
@@ -46,50 +44,6 @@
   display: block;
   width: 100%;
   height: auto;
-}
-
-.lights-feature-art .eastside-svg .foothills {
-  fill: var(--foothills);
-}
-
-.lights-feature-art .eastside-svg .water {
-  fill: var(--water);
-  stroke: var(--water-edge);
-  stroke-width: 1.4;
-  stroke-linejoin: round;
-}
-
-.lights-feature-art .eastside-svg .river {
-  fill: none;
-  stroke: var(--water-edge);
-  stroke-width: 3.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.lights-feature-art .eastside-svg .island {
-  fill: var(--page);
-  stroke: var(--water-edge);
-  stroke-width: 1.4;
-  stroke-linejoin: round;
-}
-
-.lights-feature-art .eastside-svg .road {
-  fill: none;
-  stroke: var(--gold-line);
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  opacity: 0.9;
-}
-
-.lights-feature-art .eastside-svg .water-label,
-.lights-feature-art .eastside-svg .road-label {
-  fill: var(--muted);
-  font-family: var(--sans);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
 }
 
 .lights-feature-art .light-pin {

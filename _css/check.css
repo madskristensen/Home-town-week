@@ -1,0 +1,64 @@
+/* Printable checklists. */
+.check-list {
+  list-style: none;
+  margin: 0.2rem 0 0;
+  padding: 0;
+}
+
+.prose .check-list {
+  margin: 0.2rem 0 0;
+  padding: 0;
+}
+
+.check-list li {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.check-list label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.75rem;
+  align-items: start;
+  min-height: 3rem;
+  padding: 0.7rem 0;
+  cursor: pointer;
+  font-family: var(--sans);
+  line-height: 1.45;
+}
+
+.check-list .check-text {
+  min-width: 0;
+}
+
+.check-list input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0.15rem 0 0;
+  accent-color: var(--accent);
+}
+
+.check-list input:checked + .check-text {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
+.check-list input:checked + .check-text a {
+  color: inherit;
+  text-decoration-line: underline line-through;
+}
+
+.check-list input:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.check-print-foot {
+  display: none;
+}
+
+.print-list {
+  margin: 1rem 0 0;
+}

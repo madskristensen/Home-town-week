@@ -1,0 +1,75 @@
+/* Suggest-an-event page. */
+.suggest-page h2 {
+  margin-top: 1.15rem;
+}
+
+.suggest-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.15rem 0 0.85rem;
+}
+
+.suggest-actions .btn {
+  flex: 0 0 auto;
+}
+
+/* The template stays on the light sheet in dark mode too. A copy then
+   keeps dark ink, so it does not paste as white type into Gmail. */
+.suggest-sheet {
+  color-scheme: light;
+  margin: 0.2rem 0 0.4rem;
+  padding: 0.75rem 0.85rem 0.85rem;
+  border: 1px solid #d9ccb8;
+  border-radius: var(--radius);
+  background: #fffdf9;
+  color: #1a2822;
+}
+
+.suggest-sheet .suggest-address {
+  margin: 0 0 0.75rem;
+  color: #1a2822;
+  -webkit-text-fill-color: #1a2822;
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.suggest-sheet label {
+  display: block;
+  margin: 0 0 0.35rem;
+  color: #3f5148;
+  -webkit-text-fill-color: #3f5148;
+  font-size: 0.8rem;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.suggest-template {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 16rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  resize: vertical;
+  overflow: auto;
+  background: transparent;
+  color: #1a2822;
+  -webkit-text-fill-color: #1a2822;
+  caret-color: #1a2822;
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.45;
+  color-scheme: light;
+}
+
+.suggest-template::selection,
+.suggest-address::selection {
+  background: #e4d3a4;
+  color: #1a2822;
+  -webkit-text-fill-color: #1a2822;
+}
+

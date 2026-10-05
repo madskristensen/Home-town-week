@@ -1,0 +1,358 @@
+/* School calendars. District show/hide selectors are generated from _data/no_school_days.yml. */
+.no-school-empty {
+  margin: 0.35rem 0 0;
+  max-width: var(--read);
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.no-school-page > .page-intro {
+  margin-top: 0.85rem;
+}
+
+.no-school-page > .list-updated {
+  margin-top: 0.3rem;
+}
+
+.ns-panel {
+  margin-top: 1.5rem;
+  padding: 1rem 1.05rem 0.95rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--sheet) 42%, var(--page));
+}
+
+.ns-panel-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  align-items: center;
+  column-gap: 1rem;
+  row-gap: 0.75rem;
+  container-type: inline-size;
+}
+
+.ns-filter-row {
+  display: flex;
+  grid-column: 1;
+  grid-row: 1;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0;
+}
+
+.ns-filter-row label {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.ns-filter-row select {
+  width: 14.5rem;
+  max-width: 100%;
+  height: 2.4rem;
+  margin: 0;
+  padding: 0 2rem 0 0.85rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.ns-filter-row select:hover,
+.ns-filter-row select:focus-visible {
+  border-color: var(--ink);
+}
+
+.ns-filter-row select:focus {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.ns-hint {
+  margin: 0.7rem 0 0;
+  max-width: var(--read);
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+html[data-ns-chosen] .ns-hint {
+  display: none;
+}
+
+.ns-notes {
+  margin-top: 0.7rem;
+  max-width: var(--read);
+}
+
+.ns-weekly {
+  display: none;
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.ns-weekly a {
+  font-size: 0.85rem;
+}
+
+.ns-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  margin: 1.35rem 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.ns-key li {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.ns-sample {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: 0;
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--ink) 16%, var(--sheet));
+  flex: 0 0 auto;
+}
+
+.ns-sample.is-note {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+}
+
+.ns-sample.is-if {
+  background: transparent;
+  border: 1px dashed var(--ink);
+  box-shadow: none;
+}
+
+.ns-sub,
+.ns-sub .cal-subscribe {
+  display: contents;
+}
+
+.ns-sub .cal-subscribe summary {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  white-space: nowrap;
+}
+
+.ns-sub .cal-subscribe-panel {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  width: 100cqi;
+  max-width: 100cqi;
+  min-width: 0;
+}
+
+.ns-sub .cal-subscribe-panel > :first-child {
+  margin-top: 0;
+}
+
+.ns-sub .cal-subscribe summary::-webkit-details-marker {
+  display: none;
+}
+
+.ns-months {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.35rem 1.15rem;
+  width: 100%;
+  min-width: 0;
+  margin-top: 0.55rem;
+}
+
+.ns-made {
+  margin: 1.15rem 0 0;
+  max-width: var(--read);
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.ns-month {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+.ns-month h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.2rem;
+}
+
+.ns-grid {
+  display: grid;
+  flex: 0 0 auto;
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-rows: 1.15rem;
+  grid-auto-rows: auto;
+  align-items: start;
+  gap: 0;
+}
+
+.ns-dow,
+.ns-day {
+  min-width: 0;
+}
+
+.ns-dow {
+  height: 1.15rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.15rem;
+  text-align: center;
+}
+
+.ns-day {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  padding: 0.08rem 0.04rem;
+  overflow: visible;
+  border: 1px solid color-mix(in srgb, var(--rule) 55%, transparent);
+  background: transparent;
+  text-align: center;
+  container-type: inline-size;
+}
+
+.ns-day.is-pad {
+  border-color: transparent;
+  background: transparent;
+}
+
+.ns-day.is-past .ns-num {
+  color: var(--muted);
+}
+
+.ns-day.is-today {
+  border-color: var(--accent);
+}
+
+.ns-num {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.ns-one {
+  display: none;
+  margin-top: 0.04rem;
+  padding: 0.02rem 0.04rem;
+  border-radius: var(--radius);
+  color: var(--ink);
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.ns-label {
+  display: block;
+  overflow: hidden;
+  max-height: 2.1em;
+}
+
+@container (max-width: 58px) {
+  .ns-one {
+    font-size: 0.58rem;
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+}
+
+.ns-one.is-off {
+  background: color-mix(in srgb, var(--ink) 14%, var(--sheet));
+}
+
+.ns-one.is-grade,
+.ns-one.is-note {
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+
+.ns-one.is-if {
+  border: 1px dashed var(--ink);
+}
+
+.ns-reasons {
+  margin: 0.3rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.ns-line {
+  display: none;
+  margin: 0.22rem 0 0;
+}
+
+.ns-when {
+  font-weight: 700;
+}
+
+/* @ns-show */
+
+@media (max-width: 47.99rem) {
+  .ns-panel-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ns-filter-row select {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+  }
+
+  .ns-sub .cal-subscribe summary {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+  }
+
+  .ns-sub .cal-subscribe-panel {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (min-width: 48rem) {
+  .ns-day {
+    aspect-ratio: 5 / 6;
+    max-height: 60px;
+  }
+
+  .ns-months {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+/* @ns-days */

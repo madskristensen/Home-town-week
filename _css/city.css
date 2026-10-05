@@ -30,16 +30,6 @@
   flex: none;
 }
 
-.city-name {
-  margin: 0;
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: clamp(2.55rem, 10vw, 3.4rem);
-  font-weight: 600;
-  letter-spacing: -0.04em;
-  line-height: 0.96;
-}
-
 .also-close {
   margin: 1.35rem 0 0;
   padding-top: 0.95rem;

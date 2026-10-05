@@ -10,6 +10,7 @@ stays the file every page can cache. Run this before the site is read.
 
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -23,15 +24,74 @@ SRC = ROOT / "_css"
 DEST = ROOT / "assets" / "css"
 DATA = ROOT / "_data" / "css.yml"
 LINKED = ("site", "print")
-INLINE = ("home", "city", "seasonal", "feature", "map", "map_halloween", "playgrounds", "camps")
+INLINE = (
+    "home",
+    "city",
+    "seasonal",
+    "feature",
+    "map",
+    "map_halloween",
+    "playgrounds",
+    "camps",
+    "no_school",
+    "partner",
+    "suggest",
+    "check",
+)
 INLINE_DATA = ROOT / "_data" / "css_inline.json"
+NS_DEFAULT = "lwsd"
+
+
+def district_slugs():
+    text = (ROOT / "_data" / "no_school_days.yml").read_text(encoding="utf-8")
+    return re.findall(r"(?m)^    slug: ([a-z0-9-]+)\s*$", text)
+
+
+def district_block(kind):
+    slugs = district_slugs()
+    if NS_DEFAULT not in slugs:
+        sys.exit(f"no-school default {NS_DEFAULT} is not a district slug")
+    if kind == "show":
+        parts = [
+            f'html:not([data-ns]) .ns-one[data-d="{NS_DEFAULT}"]',
+            f'html:not([data-ns]) .ns-line[data-d="{NS_DEFAULT}"]',
+            f'html:not([data-ns]) .ns-weekly[data-d="{NS_DEFAULT}"]',
+        ]
+        for slug in slugs:
+            parts.extend(
+                [
+                    f'html[data-ns="{slug}"] .ns-one[data-d="{slug}"]',
+                    f'html[data-ns="{slug}"] .ns-line[data-d="{slug}"]',
+                    f'html[data-ns="{slug}"] .ns-weekly[data-d="{slug}"]',
+                ]
+            )
+        body = "  display: block;"
+    else:
+        parts = [f'html:not([data-ns]) .ns-day:has(.ns-one[data-d="{NS_DEFAULT}"])']
+        parts.extend(
+            f'html[data-ns="{slug}"] .ns-day:has(.ns-one[data-d="{slug}"])' for slug in slugs
+        )
+        body = "  background: color-mix(in srgb, var(--ink) 8%, var(--sheet));"
+    return ",\n".join(parts) + " {\n" + body + "\n}"
+
+
+def expand_districts(raw):
+    raw = raw.replace("/* @ns-show */", district_block("show"))
+    raw = raw.replace("/* @ns-days */", district_block("days"))
+    if "/* @ns-" in raw:
+        sys.exit("no-school.css still has a district marker")
+    return raw
 
 
 def minify(name):
     source = SRC / f"{name}.css"
+    if name == "no_school":
+        source = SRC / "no-school.css"
     if not source.is_file():
         sys.exit(f"missing stylesheet {source}")
     raw = source.read_text(encoding="utf-8")
+    if name == "no_school":
+        raw = expand_districts(raw)
     mini = rcssmin.cssmin(raw)
     if not mini.endswith("\n"):
         mini += "\n"

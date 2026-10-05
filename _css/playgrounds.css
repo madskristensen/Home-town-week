@@ -114,7 +114,7 @@
   height: 1.25rem;
   margin: 0;
   padding: 0.08rem;
-  border-radius: 999px;
+  border-radius: var(--pill);
   background: color-mix(in srgb, var(--gold) 22%, var(--sheet));
   color: var(--gold);
 }

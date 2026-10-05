@@ -47,7 +47,7 @@
   margin: 0;
   padding: 0 0.55rem;
   border: 1px solid var(--btn-bg);
-  border-radius: 999px;
+  border-radius: var(--pill);
   background: transparent;
   color: var(--ink);
   font-family: var(--sans);
@@ -74,7 +74,7 @@
 }
 
 .camp-pill:focus-visible {
-  outline: 2px solid var(--focus);
+  outline: var(--focus-ring);
   outline-offset: 2px;
 }
 

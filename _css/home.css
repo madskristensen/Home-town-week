@@ -1,17 +1,7 @@
 /* Home page: weekend list, Eastside map, and town list. */
-.home-title {
-  margin: 0;
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: clamp(2.55rem, 10vw, 3.4rem);
-  font-weight: 600;
-  letter-spacing: -0.04em;
-  line-height: 0.98;
-}
-
 .home-lead {
   margin: 0.75rem 0 0.15rem;
-  max-width: 40rem;
+  max-width: var(--read);
   color: var(--ink);
   font-family: var(--serif);
   font-size: clamp(1.2rem, 3.2vw, 1.45rem);
@@ -127,50 +117,6 @@
   height: auto;
 }
 
-.eastside-svg .foothills {
-  fill: var(--foothills);
-}
-
-.eastside-svg .water {
-  fill: var(--water);
-  stroke: var(--water-edge);
-  stroke-width: 1.4;
-  stroke-linejoin: round;
-}
-
-.eastside-svg .river {
-  fill: none;
-  stroke: var(--water-edge);
-  stroke-width: 3.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.eastside-svg .island {
-  fill: var(--page);
-  stroke: var(--water-edge);
-  stroke-width: 1.4;
-  stroke-linejoin: round;
-}
-
-.eastside-svg .road {
-  fill: none;
-  stroke: var(--gold-line);
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  opacity: 0.9;
-}
-
-.eastside-svg .water-label,
-.eastside-svg .road-label {
-  fill: var(--muted);
-  font-family: var(--sans);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-}
-
 .eastside-svg a {
   cursor: pointer;
   text-decoration: none;
@@ -208,7 +154,7 @@
 }
 
 .eastside-svg a:focus-visible {
-  outline: 2px solid var(--focus);
+  outline: var(--focus-ring);
   outline-offset: 2px;
 }
 
@@ -262,7 +208,7 @@
 }
 
 .city-key a:focus-visible {
-  outline: 2px solid var(--focus);
+  outline: var(--focus-ring);
   outline-offset: 2px;
   border-color: var(--forest);
   background: var(--wash);

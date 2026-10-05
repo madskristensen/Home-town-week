@@ -29,6 +29,10 @@
 {%- if page.map_id == "halloween" -%}{{ site.data.css_inline.map_halloween }}{%- endif -%}
 {%- if page.guide_id == "playgrounds" -%}{{ site.data.css_inline.playgrounds }}{%- endif -%}
 {%- if page.camps or page.partner -%}{{ site.data.css_inline.camps }}{%- endif -%}
+{%- if page.explore_id == "no-school-days" -%}{{ site.data.css_inline.no_school }}{%- endif -%}
+{%- if page.partner -%}{{ site.data.css_inline.partner }}{%- endif -%}
+{%- if page.url == "/suggest/" -%}{{ site.data.css_inline.suggest }}{%- endif -%}
+{%- if content contains "check-list" -%}{{ site.data.css_inline.check }}{%- endif -%}
 {%- endcapture -%}
 {%- assign layout_css = layout_css | strip -%}
 {%- if layout_css.size > 0 -%}

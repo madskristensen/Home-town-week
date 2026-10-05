@@ -7,7 +7,7 @@
 
 .hub-toc {
   margin: 0.85rem 0 0;
-  max-width: 40rem;
+  max-width: var(--read);
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.5;
@@ -65,7 +65,7 @@
 
 .hub-section-intro {
   margin: 0.45rem 0 0;
-  max-width: 40rem;
+  max-width: var(--read);
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.4;
