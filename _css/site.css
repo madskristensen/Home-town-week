@@ -638,6 +638,27 @@ picture {
   }
 }
 
+/* Cities is This weekend plus 15 towns. One column is taller than the
+   phone panel, so the list is two columns at every width. This weekend
+   spans the top row. The towns run down the first column, then down
+   the second, which matches source order and tab order. */
+#nav-panel-cities > .nav-links,
+#nav-phone-cities {
+  display: block;
+  columns: 2;
+  column-gap: 0;
+}
+
+#nav-panel-cities > .nav-links > li:first-child,
+#nav-phone-cities > li:first-child {
+  column-span: all;
+}
+
+#nav-panel-cities > .nav-links > li,
+#nav-phone-cities > li {
+  break-inside: avoid;
+}
+
 @media (max-width: 26rem) {
   .nav-mock-bar {
     justify-content: space-between;
