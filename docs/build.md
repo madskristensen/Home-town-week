@@ -16,7 +16,7 @@ Checkout uses full history so sitemap lastmod can use each file's commit time, w
 
 The home share image is cached on a hash of the Eastside map and `script/render-home-og.py`. `librsvg` and the Liberation fonts are installed only when that cache misses. Share-card JPEGs and image variants are cached the same way.
 
-`.github/workflows/prune.yml` runs at 09:17 UTC, with a backup at 10:47 UTC. That is early morning Pacific, after the date has rolled, and it avoids the crowded `:00` minute. The job rebases onto main before it pushes. It deletes events whose last day is before today in America/Los_Angeles from each `{city}/index.md` and from `_data/*_events.yml`, including Worth the Drive. Either way it starts the Pages deploy, so the home page weekend block is chosen again from the current date.
+`.github/workflows/prune.yml` runs at 09:17 UTC, with a backup at 10:47 UTC. That is early morning Pacific, after the date has rolled, and it avoids the crowded `:00` minute. The job rebases onto main before it pushes. It deletes events whose last day is before today in America/Los_Angeles from `_data/*_events.yml`, including Worth the Drive. City pages are not edited. Either way it starts the Pages deploy, so the home page weekend block is chosen again from the current date.
 
 ## Sitemap dates
 
@@ -26,7 +26,7 @@ A page with a source file uses that file's newest commit time. A city page also 
 
 Stylesheets live in `_css/` and are minified with rcssmin, then fingerprinted (`script/fingerprint-css.py`). Every page links `/assets/css/site.<hash>.css`. Smaller layout files are inlined in one `<style>` block. `site.css` stays the shared cached file. Do not inline it. Print CSS is `/assets/css/print.<hash>.css`, added after load.
 
-`_js/event-share.js` is published as `/assets/js/event-share.<hash>.js`. Page behavior scripts stay inline.
+`_js/event-share.js` is published as `/assets/js/event-share.<hash>.js`. `_js/page.js` is published as `/assets/js/page.<hash>.js` and loaded with `fetchpriority="low"`. The js class, the city hero reveal, and the past-event bucket pass stay inline so they do not wait on that file.
 
 The service worker precaches the home page, the fingerprinted stylesheet and script, the manifest, and the shell icons. Leaflet is not in that list. The page cache name is a hash of those shell files. The image cache name stays `eastside-images` across deploys. Stored HTML pages are capped. Each deploy does not wipe saved images.
 

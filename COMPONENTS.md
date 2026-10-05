@@ -21,7 +21,7 @@ Card and page markup lives in one include each. Pages, layouts, and the city cal
 | `_includes/page-head.html` | Page title and introduction. Optional lights promo and Updated line. |
 | `_includes/calendar-subscribe.html` | Subscribe control. City pages use `/calendar/{city}.ics`. Pass `path` for another feed, such as `/calendar/no-school/{district}.ics`. |
 
-The city plugin in `_plugins/event_calendar.rb` renders `card-grid.html` for each day bucket. That include renders `event-card.html`. The plugin still adds the calendar icon, the place link, and the source line before that render. Pass a page hash with `path` into Liquid registers. Do not pass the page object.
+`_plugins/event_designed.rb` renders `card-grid.html` for each day bucket. That include renders `event-card.html`. The card fields come from the event data. Pass a page hash with `path` into Liquid registers. Do not pass the page object.
 
 Each include starts with a Liquid comment that lists its parameters. Liquid comments are not in the built HTML.
 

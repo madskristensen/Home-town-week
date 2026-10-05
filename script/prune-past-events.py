@@ -6,7 +6,7 @@ last day is before today. When that row carries the card text, the text
 moves to the next row that shares its card id. It also edits
 _data/book_ahead.yml: a row comes off when its last day is before today,
 or when sold_out is true. It does not hide anything in the browser. A
-city page that loses every event keeps its front matter; the layout then
+city page is not edited. When a data file has no rows left, the layout
 says none are listed. Files that lose nothing are left byte for byte.
 
     python3 script/prune-past-events.py
@@ -30,7 +30,6 @@ DATE_RE = re.compile(
     re.I,
 )
 YEAR_RE = re.compile(r"\b(20\d{2})\b")
-WHEN_RE = re.compile(r'<p class="event-when">(.*?)</p>', re.I | re.S)
 MONTHS = {
     "jan": 1,
     "feb": 2,
@@ -120,158 +119,6 @@ def dates_in_when(when_text, today):
 
 def event_is_past(last_day, today):
     return last_day is not None and last_day < today
-
-
-def split_front_matter(text):
-    if not text.startswith("---\n"):
-        return None
-    rest = text[4:]
-    fence = rest.find("\n---")
-    if fence < 0:
-        return None
-    close = fence + len("\n---\n")
-    if not rest.startswith("\n---\n", fence) and not rest.startswith("\n---\r\n", fence):
-        # Closing fence with no trailing newline.
-        match = re.match(r"\n---[ \t]*$", rest[fence:])
-        if not match:
-            return None
-        close = fence + match.end()
-    prefix = text[: 4 + close]
-    body = text[4 + close :]
-    return prefix, body
-
-
-def split_markdown_events(body):
-    lines = body.splitlines(keepends=True)
-    prelude = []
-    events = []
-    index = 0
-    while index < len(lines) and not re.match(r"###[ \t]", lines[index]):
-        prelude.append(lines[index])
-        index += 1
-    while index < len(lines):
-        if not re.match(r"###[ \t]", lines[index]):
-            if events:
-                events[-1].append(lines[index])
-            else:
-                prelude.append(lines[index])
-            index += 1
-            continue
-        block = [lines[index]]
-        index += 1
-        while index < len(lines) and not re.match(r"###[ \t]", lines[index]):
-            block.append(lines[index])
-            index += 1
-        events.append(block)
-    return prelude, events
-
-
-def normalize_name(text):
-    import unicodedata
-
-    raw = unicodedata.normalize("NFD", text or "")
-    raw = "".join(ch for ch in raw if unicodedata.category(ch) != "Mn")
-    raw = raw.lower().replace("&", " and ")
-    return re.sub(r"[^a-z0-9]+", " ", raw).strip()
-
-
-def name_score(left, right):
-    if not left or not right:
-        return 0
-    if left == right:
-        return 100
-    shorter, longer = sorted((left, right), key=len)
-    if longer.startswith(shorter + " ") and (
-        len(shorter) >= 8 or (" " not in shorter and len(shorter) >= 7)
-    ):
-        return 90
-    return 0
-
-
-def yaml_rows_for_page(page_path):
-    data_path = page_path.parents[1] / "_data" / f"{page_path.parent.name}_events.yml"
-    if page_path.parent.name == "worth-the-drive":
-        data_path = page_path.parents[1] / "_data" / "worth_the_drive_events.yml"
-    if not data_path.is_file():
-        return []
-    loaded = yaml.safe_load(data_path.read_text(encoding="utf-8"))
-    if not isinstance(loaded, list):
-        return []
-    return [row for row in loaded if isinstance(row, dict)]
-
-
-def matching_yaml_last_day(heading, rows):
-    key = normalize_name(heading)
-    days = []
-    for row in rows:
-        if name_score(key, normalize_name(row.get("name"))) < 90:
-            continue
-        start = as_date(row.get("start"))
-        end = as_date(row.get("end"))
-        days.extend(item for item in (start, end) if item)
-    if not days:
-        return None
-    return max(days)
-
-
-def markdown_last_day(block, today, rows=None):
-    text = "".join(block)
-    heading = ""
-    for line in block:
-        match = re.match(r"###[ \t]+(.+?)\s*$", line)
-        if match:
-            heading = match.group(1).strip()
-            break
-    when = WHEN_RE.search(text)
-    when_text = re.sub(r"\s+", " ", when.group(1)) if when else ""
-    # An explicit year in the date line is that year, not a guess.
-    if YEAR_RE.search(when_text):
-        found = dates_in_when(when_text, today)
-        return max(found) if found else None
-    yaml_day = matching_yaml_last_day(heading, rows or [])
-    if yaml_day:
-        return yaml_day
-    found = dates_in_when(when_text, today)
-    if not found:
-        return None
-    return max(found)
-
-
-def prune_markdown(path, today, dry_run):
-    original = path.read_text(encoding="utf-8")
-    split = split_front_matter(original)
-    if split is None:
-        return 0
-    prefix, body = split
-    if "\nlayout: city\n" not in prefix and not prefix.startswith("---\nlayout: city\n"):
-        return 0
-    prelude, events = split_markdown_events(body)
-    if not events:
-        return 0
-    rows = yaml_rows_for_page(path)
-    kept = []
-    removed = 0
-    for block in events:
-        last_day = markdown_last_day(block, today, rows)
-        if event_is_past(last_day, today):
-            removed += 1
-            continue
-        kept.append(block)
-    if removed == 0:
-        return 0
-    parts = []
-    prelude_text = "".join(prelude).strip("\n")
-    if prelude_text:
-        parts.append(prelude_text)
-    for block in kept:
-        parts.append("".join(block).strip("\n"))
-    rebuilt = "\n\n".join(parts)
-    if rebuilt:
-        rebuilt += "\n"
-    updated = prefix + ("\n" if rebuilt else "") + rebuilt
-    if updated != original and not dry_run:
-        path.write_text(updated, encoding="utf-8")
-    return removed
 
 
 def split_yaml_events(text):
@@ -470,14 +317,8 @@ def main():
     else:
         today = today_in_pacific()
 
-    removed_pages = 0
     removed_rows = 0
     touched = []
-    for path in sorted(root.glob("*/index.md")):
-        count = prune_markdown(path, today, args.dry_run)
-        if count:
-            removed_pages += count
-            touched.append(f"{path.relative_to(root)}: {count} event{'s' if count != 1 else ''}")
     for path in sorted((root / "_data").glob("*_events.yml")):
         count = prune_yaml(path, today, args.dry_run)
         if count:
@@ -495,7 +336,7 @@ def main():
         return 0
     for line in touched:
         print(line)
-    print(f"Removed {removed_pages} page events and {removed_rows} data rows.")
+    print(f"Removed {removed_rows} data rows.")
     return 0
 
 

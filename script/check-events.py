@@ -133,22 +133,6 @@ def as_datetime(value):
         return None
 
 
-def headings(path):
-    heads = []
-    current = None
-    for line in path.read_text(encoding="utf-8").splitlines(keepends=True):
-        match = re.match(r"###[ \t]+(.+?)\s*$", line)
-        if match:
-            if current:
-                heads.append(current)
-            current = {"text": match.group(1).strip(), "body": ""}
-        elif current:
-            current["body"] += line
-    if current:
-        heads.append(current)
-    return heads
-
-
 def load_rows(path):
     loaded = yaml.safe_load(path.read_text(encoding="utf-8"))
     if loaded is None:
@@ -206,7 +190,7 @@ def check_row(path, event, errors):
 def check_pages(errors):
     for city in city_ids():
         page = ROOT / city / "index.md"
-        if headings(page):
+        if any(line.startswith("###") for line in page.read_text(encoding="utf-8").splitlines()):
             errors.append(("page", f"{city}/index.md", "event headings belong in the data file"))
         rows = load_rows(DATA / f"{city}_events.yml")
         groups = {}

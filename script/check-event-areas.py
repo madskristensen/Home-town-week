@@ -2,7 +2,7 @@
 """Reject events that resolve outside Washington or outside the Eastside.
 
 The 15 cities, Fall City, Covington, and the enclaves in _data/event_area.yml are
-allowed on city files. Worth the Drive towns and venues are allowed too.
+allowed on city event files. Worth the Drive towns and venues are allowed too.
 A price, a street number, and a direction such as Ave NE are not a place
 check. An AllEvents city index is not an event address.
 
@@ -322,47 +322,6 @@ class Fetcher:
         return "ok", chosen
 
 
-def split_front_matter(text):
-    if not text.startswith("---\n"):
-        return None
-    rest = text[4:]
-    fence = rest.find("\n---")
-    if fence < 0:
-        return None
-    close = fence + len("\n---\n")
-    if not rest.startswith("\n---\n", fence) and not rest.startswith("\n---\r\n", fence):
-        match = re.match(r"\n---[ \t]*$", rest[fence:])
-        if not match:
-            return None
-        close = fence + match.end()
-    return text[: 4 + close], text[4 + close :]
-
-
-def split_markdown_events(body):
-    lines = body.splitlines(keepends=True)
-    prelude = []
-    events = []
-    index = 0
-    while index < len(lines) and not re.match(r"###[ \t]", lines[index]):
-        prelude.append(lines[index])
-        index += 1
-    while index < len(lines):
-        if not re.match(r"###[ \t]", lines[index]):
-            if events:
-                events[-1].append(lines[index])
-            else:
-                prelude.append(lines[index])
-            index += 1
-            continue
-        block = [lines[index]]
-        index += 1
-        while index < len(lines) and not re.match(r"###[ \t]", lines[index]):
-            block.append(lines[index])
-            index += 1
-        events.append(block)
-    return prelude, events
-
-
 def split_yaml_events(text):
     lines = text.splitlines(keepends=True)
     header = []
@@ -395,30 +354,6 @@ def load_yaml_event(block):
     if not isinstance(loaded, dict):
         return None
     return loaded
-
-
-def markdown_event(block):
-    text = "".join(block)
-    heading = ""
-    for line in block:
-        match = re.match(r"###[ \t]+(.*)", line)
-        if match:
-            heading = match.group(1).strip()
-            break
-    place = ""
-    place_match = re.search(r'<p class="event-place">(.*?)</p>', text, re.I | re.S)
-    if place_match:
-        place = re.sub(r"<[^>]+>", "", place_match.group(1))
-        place = " ".join(place.split())
-    urls = re.findall(r"\((https?://[^)\s]+)\)", text)
-    same_as = ""
-    for url in urls:
-        if AGG_EVENT.search(url):
-            same_as = url
-            break
-    if not same_as and urls:
-        same_as = urls[0]
-    return {"name": heading, "place": place, "town": "", "blurb": "", "same_as": same_as}
 
 
 def looks_local(area, event, is_wtd):
@@ -495,48 +430,6 @@ def check_yaml(path, area, fetcher, remove, dry_run):
     updated = None
     if remove and len(kept) != len(blocks):
         candidate = "".join(header) + "".join("".join(block) for block in kept)
-        if candidate != original:
-            updated = candidate
-    return notes, (path, updated) if updated else None
-
-
-def check_markdown(path, area, fetcher, remove, dry_run):
-    original = path.read_text(encoding="utf-8")
-    split = split_front_matter(original)
-    if split is None:
-        return [], None
-    prefix, body = split
-    if "\nlayout: city\n" not in prefix and not prefix.startswith("---\nlayout: city\n"):
-        return [], None
-    prelude, events = split_markdown_events(body)
-    if not events:
-        return [], None
-    kept = []
-    notes = []
-    for block in events:
-        event = markdown_event(block)
-        if not event.get("name"):
-            kept.append(block)
-            continue
-        status, reason, where = judge(area, event, False, fetcher)
-        if status == "reject":
-            notes.append(("reject", rel(path), event["name"], reason, where))
-            continue
-        if status == "unresolved":
-            notes.append(("unresolved", rel(path), event["name"], reason, where))
-        kept.append(block)
-    updated = None
-    if remove and len(kept) != len(events):
-        parts = []
-        prelude_text = "".join(prelude).strip("\n")
-        if prelude_text:
-            parts.append(prelude_text)
-        for block in kept:
-            parts.append("".join(block).strip("\n"))
-        rebuilt = "\n\n".join(parts)
-        if rebuilt:
-            rebuilt += "\n"
-        candidate = prefix + ("\n" if rebuilt else "") + rebuilt
         if candidate != original:
             updated = candidate
     return notes, (path, updated) if updated else None
@@ -654,11 +547,6 @@ def main():
     fetcher = Fetcher()
     notes = []
     writes = []
-    for path in sorted(ROOT.glob("*/index.md")):
-        found, write = check_markdown(path, area, fetcher, args.remove, args.dry_run)
-        notes.extend(found)
-        if write:
-            writes.append(write)
     for path in sorted(DATA.glob("*_events.yml")):
         found, write = check_yaml(path, area, fetcher, args.remove, args.dry_run)
         notes.extend(found)

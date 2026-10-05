@@ -26,7 +26,7 @@ There is no `/preview/nav/` page. The header is the wordmark on its own row, the
 
 The home page opens with the weekend picks, then a featured-article line, then the Eastside map. The page heading is "Things to do with kids on the Eastside". A seasonal banner, when one qualifies, sits under the header.
 
-City URLs have no state segment and no year or week segment. Events stay in the order they are written. The build groups each `###` event into Today, Tomorrow, This week, This weekend, or Later from the first month and day on its gold date line. Empty groups are left out. If the Pacific date has moved past the build date, the browser moves the same cards into the current groups.
+City URLs have no state segment and no year or week segment. Events stay in the order of the data file. The build groups each card into Today, Tomorrow, This week, This weekend, or Later from the first month and day on its gold date line. Empty groups are left out. If the Pacific date has moved past the build date, the browser moves the same cards into the current groups.
 
 The home page count follows those cards, not every row in the data file. Each current event card carries its own event microdata. There is no visible breadcrumb. The JSON-LD graph still includes a BreadcrumbList for a city, hub, guide, or article page.
 
