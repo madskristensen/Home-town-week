@@ -42,7 +42,7 @@
   --focus: var(--gold);
   --on-accent: var(--accent-contrast);
   --wash: rgb(from var(--accent) r g b / 0.07);
-  --credit-bg: rgb(from var(--surface) r g b / 0.3);
+  --credit-bg: rgb(from var(--surface) r g b / 0.15);
   --credit-shadow: 0 0 2px rgb(from var(--surface) r g b / 0.8);
   --selection-bg: color-mix(in srgb, var(--gold) 32%, var(--surface));
   --selection-ink: var(--text);
@@ -98,7 +98,7 @@
 
     --forest-deep: color-mix(in srgb, var(--accent) 55%, white);
     --wash: rgb(from var(--accent) r g b / 0.18);
-    --credit-bg: rgb(from var(--bg) r g b / 0.3);
+    --credit-bg: rgb(from var(--bg) r g b / 0.15);
     --credit-shadow: 0 0 2px rgb(from var(--bg) r g b / 0.8);
     --selection-bg: color-mix(in srgb, var(--gold) 38%, var(--bg));
     --btn-bg-hover: color-mix(in srgb, var(--accent) 92%, white);
@@ -1052,7 +1052,7 @@ picture {
 }
 
 /* One credit strip for every photo. The figcaption is the banner:
-   0.30 white, full width, rounded with the picture. Type is 0.65rem.
+   0.15 surface, full width, rounded with the picture. Type is 0.65rem.
    The halo and blur stay so the ink still reads on the photo.
    The credit text is the link. No underline, and the color is the banner color. */
 figure figcaption {
@@ -1068,8 +1068,8 @@ figure figcaption {
   font-size: 0.65rem;
   line-height: 1.4;
   text-shadow: var(--credit-shadow);
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   border-bottom-right-radius: inherit;
   border-bottom-left-radius: inherit;
 }
