@@ -8,12 +8,12 @@
 {%- if pick_count > 0 -%}
 <section class="weekend-picks">
   <h2 id="weekend-picks-title">{%- if picks.ready -%}<a href="{{ '/this-weekend/' | relative_url }}">{{ picks.title }}</a>{%- else -%}{{ picks.title }}{%- endif -%}</h2>
-  <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
+  {%- include updated-line.html -%}
   {%- include card-grid.html events=picks.cards show_city=true eager=1 priority=true -%}
   {%- if picks.ready -%}
   <p class="weekend-more"><a href="{{ '/this-weekend/' | relative_url }}">See everything this weekend</a></p>
   {%- endif -%}
 </section>
 {%- else -%}
-<p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
+{%- include updated-line.html -%}
 {%- endif -%}

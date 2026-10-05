@@ -23,24 +23,16 @@ layout: default
   {%- include page-intro.html text=city_lead -%}
   {%- assign hero_image = city.hero.image | append: "" -%}
   {%- if hero_image.size > 0 -%}
-  <figure class="hero">
-    {%- include responsive-img.html
-         src=city.hero.image
-         alt=city.hero.alt
-         loading="eager"
-         priority="high"
-         hero="1"
-         sizes="(min-width: 47rem) 44rem, calc(100vw - 3rem)" -%}
-    {%- assign hero_credit = city.hero.credit | append: "" | strip -%}
-    {%- assign hero_source = city.hero.source | append: "" | strip -%}
-    {%- if hero_credit.size > 0 -%}
-      {%- if hero_source.size > 0 -%}
-    <figcaption><a href="{{ hero_source }}" rel="noopener">{{ hero_credit }}</a></figcaption>
-      {%- else -%}
-    <figcaption>{{ hero_credit }}</figcaption>
-      {%- endif -%}
-    {%- endif -%}
-  </figure>
+  {%- include event-photo.html
+       src=city.hero.image
+       alt=city.hero.alt
+       credit=city.hero.credit
+       source=city.hero.source
+       figure="hero"
+       loading="eager"
+       priority="high"
+       hero="1"
+       sizes="(min-width: 47rem) 44rem, calc(100vw - 3rem)" -%}
   {%- endif -%}
   {%- include page-intro.html text=page.hook -%}
   {%- include playground-promo.html city=page.city name=city.name -%}
@@ -53,13 +45,13 @@ layout: default
   {%- if event_copy != "" -%}
   <div class="event-list" data-today="{{ site.time | date: '%Y-%m-%d' }}">
     <h2>Upcoming</h2>
-    <p id="list-updated" class="list-updated">Events updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
+    {%- include updated-line.html id="list-updated" -%}
     {%- include calendar-subscribe.html city=page.city name=city.name -%}
     {%- include event-filters.html -%}
     {{ content }}
   </div>
   {%- else -%}
-  <p id="list-updated" class="list-updated">Events updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
+  {%- include updated-line.html id="list-updated" -%}
   {%- include calendar-subscribe.html city=page.city name=city.name -%}
   {%- include empty-suggest.html topic=city.name name=city.name -%}
   {%- include feed-note.html -%}

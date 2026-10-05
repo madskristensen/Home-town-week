@@ -4,9 +4,6 @@
 {%- endcomment -%}
 <script type="module" data-sw="{{ '/sw.js' | relative_url }}">
 (function () {
-  // Older keys are not written: hw-last-city, hw-last-state, hw-city-visits,
-  // hw-shared, and hw-install-dismissed.
-
   function runningInstalled() {
     try {
       if (window.matchMedia("(display-mode: standalone)").matches) return true;
@@ -26,9 +23,6 @@
 
   window.addEventListener("load", registerServiceWorker);
 
-  // DOM work waits for an idle turn, and each chunk is its own turn, so
-  // the module script does not spend a long task on first paint. A parser
-  // script here once forced a reflow of the map.
   function onIdle(fn) {
     if (window.requestIdleCallback) requestIdleCallback(fn, { timeout: 1500 });
     else setTimeout(fn, 1);
@@ -96,8 +90,6 @@
     return card.getAttribute("data-end") || card.getAttribute("data-date") || "";
   }
 
-  // Hide a card once its last day is over, including on a stale morning page.
-  // A multi-day event that is still running stays up.
   function hidePastEvents() {
     var today = pacificDay();
     if (!today) return;
@@ -134,7 +126,6 @@
     else node.parentNode.appendChild(next);
   }
 
-  // Rebuild groups only when the Pacific day has moved past the build day.
   function regroupEvents() {
     var eventList = document.querySelector("article.city-home .event-list");
     if (!eventList) return;
@@ -180,9 +171,6 @@
   hidePastEvents();
 
   onIdle(function () {
-  // Chips are in the first HTML. A tap hides cards. Nothing moves on load.
-  // Within ages or setting, checked chips OR. Across groups they AND.
-  // A price is text on the card, not a chip. Free is the cost chip.
   var filterBoxes = document.querySelectorAll(".event-filters input[data-group]");
   function selectedFilterGroups() {
     var groups = {};

@@ -13,32 +13,26 @@
 {%- endfor -%}
 {%- endcapture -%}
 {%- capture nav_seasons -%}
+{%- assign nav_season_rows = "fall|Fall|/fall/|hub,halloween|Halloween|/fall/#halloween|section,christmas|Christmas|/christmas/|hub,winter-break|Winter break|/winter-break/|hub,spring-break|Spring break|/spring-break/|hub,summer-camps|Summer camps|/summer-camps/|hub,worth-the-drive|Worth the drive|/worth-the-drive/|hub" | split: "," -%}
+{%- for nav_row in nav_season_rows -%}
+{%- assign nav_bits = nav_row | split: "|" -%}
+{%- assign nav_id = nav_bits[0] -%}
+{%- assign nav_show = false -%}
+{%- if nav_bits[3] == "section" -%}
 {%- assign nav_fall = site.data.hub_pages.fall -%}
 {%- if nav_fall -%}
-<li><a href="{{ '/fall/' | relative_url }}"{% if page.url == "/fall/" %} aria-current="page"{% endif %}>Fall</a></li>
-{%- assign nav_halloween = false -%}
 {%- for nav_section in nav_fall.sections -%}
-{%- if nav_section.id == "halloween" -%}{%- assign nav_halloween = true -%}{%- endif -%}
+{%- if nav_section.id == nav_id -%}{%- assign nav_show = true -%}{%- endif -%}
 {%- endfor -%}
-{%- if nav_halloween -%}
-<li><a href="{{ '/fall/#halloween' | relative_url }}">Halloween</a></li>
 {%- endif -%}
+{%- else -%}
+{%- assign nav_hub = site.data.hub_pages[nav_id] -%}
+{%- if nav_hub -%}{%- assign nav_show = true -%}{%- endif -%}
 {%- endif -%}
-{%- if site.data.hub_pages.christmas -%}
-<li><a href="{{ '/christmas/' | relative_url }}"{% if page.url == "/christmas/" %} aria-current="page"{% endif %}>Christmas</a></li>
+{%- if nav_show -%}
+<li><a href="{{ nav_bits[2] | relative_url }}"{% if nav_bits[3] != "section" and page.url == nav_bits[2] %} aria-current="page"{% endif %}>{{ nav_bits[1] }}</a></li>
 {%- endif -%}
-{%- if site.data.hub_pages["winter-break"] -%}
-<li><a href="{{ '/winter-break/' | relative_url }}"{% if page.url == "/winter-break/" %} aria-current="page"{% endif %}>Winter break</a></li>
-{%- endif -%}
-{%- if site.data.hub_pages["spring-break"] -%}
-<li><a href="{{ '/spring-break/' | relative_url }}"{% if page.url == "/spring-break/" %} aria-current="page"{% endif %}>Spring break</a></li>
-{%- endif -%}
-{%- if site.data.hub_pages["summer-camps"] -%}
-<li><a href="{{ '/summer-camps/' | relative_url }}"{% if page.url == "/summer-camps/" %} aria-current="page"{% endif %}>Summer camps</a></li>
-{%- endif -%}
-{%- if site.data.hub_pages["worth-the-drive"] -%}
-<li><a href="{{ '/worth-the-drive/' | relative_url }}"{% if page.url == "/worth-the-drive/" %} aria-current="page"{% endif %}>Worth the drive</a></li>
-{%- endif -%}
+{%- endfor -%}
 {%- endcapture -%}
 {%- capture nav_guides -%}
 {%- assign nav_guide_set = site.data.nav_guides -%}
@@ -54,11 +48,11 @@
 <li><a href="{{ '/articles/' | relative_url }}"{% if page.url == "/articles/" %} aria-current="page"{% endif %}>All guides</a></li>
 {%- endcapture -%}
 {%- capture nav_explore -%}
-<li><a href="{{ '/christmas/lights/' | relative_url }}"{% if page.url == "/christmas/lights/" %} aria-current="page"{% endif %}>Christmas lights map</a></li>
-<li><a href="{{ '/fall/decorations/' | relative_url }}"{% if page.url == "/fall/decorations/" %} aria-current="page"{% endif %}>Halloween decorations map</a></li>
-<li><a href="{{ '/playgrounds/' | relative_url }}"{% if page.url == "/playgrounds/" %} aria-current="page"{% endif %}>Playgrounds</a></li>
-<li><a href="{{ '/farmers-markets/' | relative_url }}"{% if page.url == "/farmers-markets/" %} aria-current="page"{% endif %}>Farmers markets</a></li>
-<li><a href="{{ '/book-ahead/' | relative_url }}"{% if page.url == "/book-ahead/" %} aria-current="page"{% endif %}>Book ahead</a></li>
+{%- assign nav_explore_rows = "Christmas lights map|/christmas/lights/,Halloween decorations map|/fall/decorations/,Playgrounds|/playgrounds/,Farmers markets|/farmers-markets/,Book ahead|/book-ahead/" | split: "," -%}
+{%- for nav_row in nav_explore_rows -%}
+{%- assign nav_bits = nav_row | split: "|" -%}
+<li><a href="{{ nav_bits[1] | relative_url }}"{% if page.url == nav_bits[1] %} aria-current="page"{% endif %}>{{ nav_bits[0] }}</a></li>
+{%- endfor -%}
 {%- endcapture -%}
 <header class="site-header nav-mock">
   <div class="nav-mock-wide home-mast">

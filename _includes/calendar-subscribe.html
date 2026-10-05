@@ -28,52 +28,12 @@
     <p class="cal-subscribe-note">Updates automatically. Google and Outlook can take several hours to refresh.</p>
     <ul class="cal-subscribe-links">
       <li><a href="{{ sub_webcal | escape }}">Apple, iPhone, and Mac</a></li>
-      <li><a href="https://calendar.google.com/calendar/r?cid={{ sub_webcal | mail_escape }}" rel="noopener">Google Calendar</a></li>
-      <li><a href="https://outlook.live.com/calendar/0/addfromweb?url={{ sub_https | mail_escape }}&amp;name={{ sub_title | mail_escape }}" rel="noopener">Outlook.com and new Outlook</a></li>
-      <li><a href="https://outlook.office.com/calendar/0/addfromweb?url={{ sub_https | mail_escape }}&amp;name={{ sub_title | mail_escape }}" rel="noopener">Outlook for work or school</a></li>
+      <li><a href="https://calendar.google.com/calendar/r?cid={{ sub_webcal | mail_escape }}">Google Calendar</a></li>
+      <li><a href="https://outlook.live.com/calendar/0/addfromweb?url={{ sub_https | mail_escape }}&amp;name={{ sub_title | mail_escape }}">Outlook.com and new Outlook</a></li>
+      <li><a href="https://outlook.office.com/calendar/0/addfromweb?url={{ sub_https | mail_escape }}&amp;name={{ sub_title | mail_escape }}">Outlook for work or school</a></li>
       <li><button type="button" class="cal-subscribe-copy" data-cal-copy data-cal-url="{{ sub_https | escape }}">Copy link</button></li>
     </ul>
     <p class="cal-subscribe-status visually-hidden" data-cal-status role="status"></p>
   </div>
 </details>
-<script>
-(function () {
-  var root = document.currentScript && document.currentScript.previousElementSibling;
-  while (root && !(root.classList && root.classList.contains("cal-subscribe"))) root = root.previousElementSibling;
-  if (!root) return;
-  var button = root.querySelector("[data-cal-copy]");
-  var status = root.querySelector("[data-cal-status]");
-  if (!button) return;
-  var url = button.getAttribute("data-cal-url") || "";
-  var label = button.textContent;
-  function copyText(text) {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      return navigator.clipboard.writeText(text);
-    }
-    return new Promise(function (resolve, reject) {
-      var area = document.createElement("textarea");
-      area.value = text;
-      area.setAttribute("readonly", "");
-      area.style.position = "fixed";
-      area.style.left = "-9999px";
-      document.body.appendChild(area);
-      area.select();
-      var ok = false;
-      try { ok = document.execCommand("copy"); } catch (error) { ok = false; }
-      document.body.removeChild(area);
-      if (ok) resolve();
-      else reject();
-    });
-  }
-  button.addEventListener("click", function () {
-    copyText(url).then(function () {
-      button.textContent = "Copied";
-      if (status) status.textContent = "Link copied.";
-      window.setTimeout(function () { button.textContent = label; if (status) status.textContent = ""; }, 1600);
-    }, function () {
-      if (status) status.textContent = "Could not copy the link.";
-    });
-  });
-})();
-</script>
 {%- endif -%}

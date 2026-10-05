@@ -1,0 +1,21 @@
+{%- comment -%}
+  Page title and introduction.
+  href (default page.url), title (default page.title), intro (default page.intro).
+  lights: "1" or "halloween" inserts the map promo between the title and the intro.
+  A page with feature_theme gets that promo unless lights is "0".
+  updated: "1" prints the shared Updated line. updated_id sets its id.
+{%- endcomment -%}
+<h1><a href="{{ include.href | default: page.url | relative_url }}">{{ include.title | default: page.title }}</a></h1>
+{%- assign head_lights = include.lights | append: "" | strip -%}
+{%- if head_lights == "halloween" -%}
+{%- include lights-feature.html theme="halloween" -%}
+{%- elsif head_lights == "1" -%}
+{%- include lights-feature.html -%}
+{%- elsif head_lights != "0" and page.feature_theme -%}
+{%- include lights-feature.html theme=page.feature_theme -%}
+{%- endif -%}
+{%- assign head_intro = include.intro | default: page.intro | append: "" -%}
+{%- include page-intro.html text=head_intro -%}
+{%- if include.updated == "1" -%}
+{%- include updated-line.html id=include.updated_id -%}
+{%- endif -%}

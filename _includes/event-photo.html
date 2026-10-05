@@ -24,10 +24,11 @@
        loading=photo_loading
        priority=include.priority
        sizes=photo_sizes
+       hero=include.hero
        itemprop=include.itemprop -%}
   {%- if photo_credit.size > 0 -%}
     {%- if photo_source.size > 0 -%}
-  <figcaption><a href="{{ photo_source }}" rel="noopener">{{ photo_credit }}</a></figcaption>
+  <figcaption><a href="{{ photo_source }}">{{ photo_credit }}</a></figcaption>
     {%- else -%}
   <figcaption>{{ photo_credit }}</figcaption>
     {%- endif -%}

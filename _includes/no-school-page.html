@@ -1,0 +1,182 @@
+{%- comment -%}
+  No-school days. The district picker, the month grids, and the feed
+  switch live here. seasonal.html only chooses this page.
+{%- endcomment -%}
+<article class="page wrap hub-page no-school-page">
+  {%- include page-head.html title=page.heading updated="1" -%}
+  {%- assign school = site.data.no_school_page -%}
+  {%- assign school_months = school.months -%}
+  {%- assign school_month_count = school_months | size -%}
+  <div class="ns-panel">
+    <div class="ns-panel-row">
+      <div class="ns-filter-row">
+        <label for="ns-district">District</label>
+        <select id="ns-district" autocomplete="off">
+          {%- for district in school.districts -%}
+          <option value="{{ district.slug }}"{% if district.slug == "lwsd" %} selected{% endif %}>{{ district.short }}</option>
+          {%- endfor -%}
+        </select>
+      </div>
+      <div class="ns-sub" id="ns-subscribe">
+    {%- assign ns_default = school.districts | where: "slug", "lwsd" | first -%}
+    {%- include calendar-subscribe.html city=ns_default.id name=ns_default.feed_name path=ns_default.feed_path plain=true -%}
+      </div>
+    </div>
+    <p class="ns-hint" id="ns-hint">Showing Lake Washington. Pick your district and we'll remember it.</p>
+    <div class="ns-notes">
+      {%- for district in school.districts -%}
+      <p class="ns-weekly" data-d="{{ district.slug }}">{{ district.weekly }} <a href="{{ district.source }}">District calendar</a></p>
+      {%- endfor -%}
+    </div>
+  </div>
+  <script>
+    (function () {
+      var sel = document.getElementById("ns-district");
+      if (!sel) return;
+      sel.value = document.documentElement.getAttribute("data-ns") || "lwsd";
+    })();
+  </script>
+  <script type="application/json" id="ns-feeds">
+    [
+    {%- for district in school.districts -%}
+    {%- capture ns_https -%}https://www.eastsidecalendar.com/{{ district.feed_path }}{%- endcapture -%}
+    {%- capture ns_webcal -%}webcal://www.eastsidecalendar.com/{{ district.feed_path }}{%- endcapture -%}
+    {"slug":"{{ district.slug }}","https":{{ ns_https | strip | jsonify }},"webcal":{{ ns_webcal | strip | jsonify }},"title":{{ district.feed_name | jsonify }}}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+    ]
+  </script>
+  <script>
+    (function () {
+      var feeds = [];
+      try { feeds = JSON.parse(document.getElementById("ns-feeds").textContent); } catch (e) {}
+      window.__nsApplyFeed = function (slug) {
+        var row = null;
+        for (var i = 0; i < feeds.length; i++) if (feeds[i].slug === slug) row = feeds[i];
+        var root = document.getElementById("ns-subscribe");
+        if (!root || !row) return;
+        var links = root.querySelectorAll("a");
+        var web = encodeURIComponent(row.webcal);
+        var https = encodeURIComponent(row.https);
+        var name = encodeURIComponent(row.title);
+        if (links[0]) links[0].href = row.webcal;
+        if (links[1]) links[1].href = "https://calendar.google.com/calendar/r?cid=" + web;
+        if (links[2]) links[2].href = "https://outlook.live.com/calendar/0/addfromweb?url=" + https + "&name=" + name;
+        if (links[3]) links[3].href = "https://outlook.office.com/calendar/0/addfromweb?url=" + https + "&name=" + name;
+        var button = root.querySelector("[data-cal-copy]");
+        if (button) button.setAttribute("data-cal-url", row.https);
+      };
+      window.__nsApplyFeed(document.documentElement.getAttribute("data-ns") || "lwsd");
+    })();
+  </script>
+  <ul class="ns-key">
+    <li><span class="ns-sample is-off" aria-hidden="true"></span> All students off</li>
+    <li><span class="ns-sample is-note" aria-hidden="true"></span> Some grades or shortened day</li>
+    <li><span class="ns-sample is-if" aria-hidden="true"></span> Off if needed</li>
+  </ul>
+  {%- if school_month_count == 0 -%}
+  <p class="no-school-empty">No upcoming no-school days are listed.</p>
+  {%- else -%}
+  <div class="ns-months">
+    {%- for month in school_months -%}
+    <section class="ns-month">
+      <h2 id="{{ month.id }}">{{ month.label }}</h2>
+      <div class="ns-grid">
+        <div class="ns-dow" aria-hidden="true">Su</div>
+        <div class="ns-dow" aria-hidden="true">Mo</div>
+        <div class="ns-dow" aria-hidden="true">Tu</div>
+        <div class="ns-dow" aria-hidden="true">We</div>
+        <div class="ns-dow" aria-hidden="true">Th</div>
+        <div class="ns-dow" aria-hidden="true">Fr</div>
+        <div class="ns-dow" aria-hidden="true">Sa</div>
+        {%- for week in month.weeks -%}
+        {%- for cell in week -%}
+        {%- if cell.pad -%}
+        <div class="ns-day is-pad" aria-hidden="true"></div>
+        {%- else -%}
+        <div class="ns-day{% if cell.past %} is-past{% endif %}{% if cell.today %} is-today{% endif %}"{% if cell.tips.lwsd %} title="{{ cell.tips.lwsd | escape }}"{% endif %}{% if cell.tips.size > 0 %} data-tips="{{ cell.tips | jsonify | escape }}"{% endif %}>
+          <span class="ns-num" aria-hidden="true">{{ cell.day }}</span>
+          {%- for mark in cell.marks -%}
+          <span class="ns-one is-{{ mark.kind }}" data-d="{{ mark.slug }}"><span class="ns-label">{{ mark.text }}</span></span>
+          {%- endfor -%}
+        </div>
+        {%- endif -%}
+        {%- endfor -%}
+        {%- endfor -%}
+      </div>
+      {%- assign ns_line_count = month.lines | size -%}
+      {%- if ns_line_count > 0 -%}
+      <ul class="ns-reasons">
+        {%- for line in month.lines -%}
+        <li class="ns-line" id="{{ line.id }}" data-d="{{ line.slug }}"><span class="ns-when">{{ line.when }}</span> {{ line.short }}. {{ line.reason }}</li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%}
+    </section>
+    {%- endfor -%}
+  </div>
+  {%- endif -%}
+  <p class="ns-made">Rainy day off? Our kids practice math facts and geography on <a href="https://mathtable.fun/">Math Table</a>, a free game that runs in the browser on phones and tablets, with no install needed.</p>
+  <script>
+    (function () {
+      var sel = document.getElementById("ns-district");
+      if (!sel) return;
+      var key = "no-school-district";
+      function known(slug) {
+        return !!(slug && sel.querySelector('option[value="' + slug + '"]'));
+      }
+      function remember(slug) {
+        try {
+          if (slug) localStorage.setItem(key, slug);
+          else localStorage.removeItem(key);
+        } catch (e) {}
+      }
+      function show(slug) {
+        if (!known(slug)) slug = "lwsd";
+        document.documentElement.setAttribute("data-ns", slug);
+        sel.value = slug;
+        applyTitles(slug);
+        return slug;
+      }
+      function applyTitles(slug) {
+        var days = document.querySelectorAll(".ns-day[data-tips]");
+        for (var i = 0; i < days.length; i++) {
+          var map = {};
+          try { map = JSON.parse(days[i].getAttribute("data-tips")); } catch (e) {}
+          var text = map[slug] || "";
+          if (text) days[i].setAttribute("title", text);
+          else days[i].removeAttribute("title");
+        }
+      }
+      applyTitles(document.documentElement.getAttribute("data-ns") || "lwsd");
+      function markChosen() {
+        document.documentElement.setAttribute("data-ns-chosen", "");
+      }
+      function fromLocation() {
+        var params = new URLSearchParams(location.search);
+        var picked = params.has("district") ? (params.get("district") || "") : "";
+        if (known(picked)) {
+          remember(show(picked));
+          markChosen();
+        } else {
+          try { localStorage.removeItem(key); } catch (e) {}
+          document.documentElement.removeAttribute("data-ns-chosen");
+          show("lwsd");
+        }
+        if (window.__nsApplyFeed) window.__nsApplyFeed(document.documentElement.getAttribute("data-ns") || "lwsd");
+      }
+      sel.addEventListener("change", function () {
+        var slug = show(sel.value);
+        remember(slug);
+        markChosen();
+        var url = new URL(location.href);
+        url.searchParams.set("district", slug);
+        var next = url.pathname + url.search + url.hash;
+        var now = location.pathname + location.search + location.hash;
+        if (next !== now) history.pushState(null, "", url);
+        if (window.__nsApplyFeed) window.__nsApplyFeed(slug);
+      });
+      window.addEventListener("popstate", fromLocation);
+    })();
+  </script>
+  {%- include map-tip.html kind="missing" -%}
+</article>

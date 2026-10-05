@@ -18,7 +18,7 @@ Card and page markup lives in one include each. Pages, layouts, and the city cal
 | `_includes/map-frame.html` | Map poster and canvas. Includes the shared loader unless `loader` is `false`. |
 | `_includes/map-tip.html` | One short muted line. Under a lights or decorations map, pass `href` and the line is "Know a display we're missing? Tip us off." `kind="missing"` is "Missing something? Tell us." and links to `/suggest/`. Hub pages and explore pages include that line once, at the end of the article. The farmers market page does not also put a tip under the map. |
 | `_includes/map-loader.html` | `loadMapCss` and `loadMapJs`. |
-| `_includes/guide-header.html` | Playground page title and introduction. The heading links to `/playgrounds/`. |
+| `_includes/page-head.html` | Page title and introduction. Optional lights promo and Updated line. |
 | `_includes/calendar-subscribe.html` | Subscribe control. City pages use `/calendar/{city}.ics`. Pass `path` for another feed, such as `/calendar/no-school/{district}.ics`. |
 
 The city plugin in `_plugins/event_calendar.rb` renders `card-grid.html` for each day bucket. That include renders `event-card.html`. The plugin still adds the calendar icon, the place link, and the source line before that render. Pass a page hash with `path` into Liquid registers. Do not pass the page object.

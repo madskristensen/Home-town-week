@@ -6,5 +6,5 @@
 {%- assign sponsor_url = include.url | append: "" | strip -%}
 {%- assign sponsor_kind = include.kind | append: "" | strip -%}
 {%- if sponsor_name.size > 0 and sponsor_url.size > 0 -%}
-<p class="sponsor-line{% if sponsor_kind.size > 0 %} {{ sponsor_kind }}{% endif %}"><span class="sponsor-mark">Sponsored</span> by <a href="{{ sponsor_url }}" rel="sponsored noopener">{{ sponsor_name | escape }}</a></p>
+<p class="sponsor-line{% if sponsor_kind.size > 0 %} {{ sponsor_kind }}{% endif %}"><span class="sponsor-mark">Sponsored</span> by <a href="{{ sponsor_url }}" rel="sponsored">{{ sponsor_name | escape }}</a></p>
 {%- endif -%}

@@ -937,6 +937,7 @@ module EastsideCalendar
         assigns["width"] = photo["width"] unless photo["width"].to_s.empty?
         assigns["height"] = photo["height"] unless photo["height"].to_s.empty?
       end
+      assigns["links"] = source_links unless source_links.empty?
       if source_links[0]
         assigns["source_href"] = source_links[0]["href"]
         assigns["source_label"] = source_links[0]["label"]
@@ -1612,35 +1613,9 @@ module EastsideCalendar
       StructuredData.short_description(input.to_s)
     end
 
-    def postal_of(input)
-      input.to_s[/\b(?:WA|Washington)\s+(\d{5})(?:-\d{4})?\b/i, 1].to_s
-    end
-
     def pacific_day(_input)
       site = @context.registers[:site]
       EventCalendar.pacific_today(site.time).iso8601
-    end
-
-    # Name and URL separated by a tab. Blank when this event has no host.
-    def organizer_pair(url, extra)
-      site = @context.registers[:site]
-      page = @context.registers[:page]
-      venue, locality, city_id, org_name, org_url = extra.to_s.split("\t", 5)
-      event = {
-        "organizer" => org_name.to_s,
-        "organizer_url" => org_url.to_s,
-        "city_id" => city_id.to_s,
-        "city" => locality.to_s,
-        "locality" => locality.to_s,
-        "place" => venue.to_s
-      }
-      unless page.respond_to?(:site) && page.site
-        page = Struct.new(:data, :site).new({ "city" => city_id.to_s }, site)
-      end
-      node = StructuredData.organizer_for(page, event, url.to_s, venue.to_s)
-      return "" unless node
-
-      "#{node["name"]}\t#{node["url"]}"
     end
 
     # Weekend picks stash one card hash per line. Liquid cannot append a hash.
@@ -1673,23 +1648,6 @@ module EastsideCalendar
       start = event["start_raw"].to_s
       start = event["start"].to_s if start.empty?
       EastsideCalendar::SeasonalHubs.calendar_href(page, { "name" => event["name"].to_s, "start_raw" => start })
-    end
-
-    # The city date line is already in the card body. The button hangs off
-    # that line; it is not a new row.
-    def with_event_share(html, button)
-      snippet = button.to_s.strip
-      return html.to_s if snippet.empty?
-
-      html.to_s.sub(%r{(<p class="event-when"[^>]*>)(.*?)(</p>)}m) do
-        "#{Regexp.last_match(1)}#{Regexp.last_match(2)}#{snippet}#{Regexp.last_match(3)}"
-      end
-    end
-
-    # The city heading is inside the card body. Name belongs on the h3,
-    # not the link, because an itemprop on an anchor uses the href.
-    def event_name_prop(html)
-      html.to_s.sub(/<h3\b(?![^>]*\bitemprop=)/, '<h3 itemprop="name"')
     end
   end
 end

@@ -35,7 +35,7 @@
       {%- assign park_place = park.address -%}
     {%- endif -%}
     <li id="{{ park.id }}" data-city="{{ city.id }}"{% if park.restrooms %} data-restrooms="1"{% endif %}{% if park.covered %} data-covered="1"{% endif %}{% if park.accessible %} data-accessible="1"{% endif %}{% if park.toddler %} data-toddler="1"{% endif %}{% if park.splash %} data-splash="1"{% endif %}>
-      <a class="playground-name" href="{{ park.page }}" rel="noopener"><span class="playground-name-text">{{ park.name }}</span>{%- for row in amenity_rows -%}{%- assign bits = row | split: "|" -%}{%- assign amenity_key = bits[0] -%}{%- if park[amenity_key] -%}<span class="park-badge badge-{{ amenity_key }}{% if amenity_key == "standout" %} standout-mark{% else %} amenity-mark{% endif %}" title="{{ bits[2] }}"><span class="visually-hidden">{{ bits[2] }}</span></span>{%- endif -%}{%- endfor -%}</a>
+      <a class="playground-name" href="{{ park.page }}"><span class="playground-name-text">{{ park.name }}</span>{%- for row in amenity_rows -%}{%- assign bits = row | split: "|" -%}{%- assign amenity_key = bits[0] -%}{%- if park[amenity_key] -%}<span class="park-badge badge-{{ amenity_key }}{% if amenity_key == "standout" %} standout-mark{% else %} amenity-mark{% endif %}" title="{{ bits[2] }}"><span class="visually-hidden">{{ bits[2] }}</span></span>{%- endif -%}{%- endfor -%}</a>
       <a class="addr" href="{{ park.address | map_search: city.name, park.name }}"><span class="addr-text">{{ park_place }}</span></a>
     </li>
     {%- endfor -%}

@@ -2,7 +2,7 @@
 layout: default
 ---
 <article class="page wrap guide-page">
-  {%- include guide-header.html -%}
+  {%- include page-head.html -%}
   {%- assign guide = site.data.guides[page.guide_id] -%}
   {%- if guide.groups and guide.groups.size > 0 -%}
   {%- include playground-map.html -%}

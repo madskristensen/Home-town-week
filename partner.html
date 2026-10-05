@@ -83,8 +83,7 @@ Option we're interested in:
 {%- endcapture -%}
 {%- capture partner_mailto -%}mailto:mads@eastsidecalendar.com?subject={{ partner_subject | strip | mail_escape }}&amp;body={{ partner_body | strip | mail_escape }}{%- endcapture -%}
 <article class="page wrap article-page">
-  <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
-  {%- include page-intro.html text="Help Eastside families find your farm, camp, class, or venue, with a clearly labeled spot on a calendar parents already trust." -%}
+  {%- include page-head.html intro="Help Eastside families find your farm, camp, class, or venue, with a clearly labeled spot on a calendar parents already trust." -%}
   <div class="prose">
     <p>Eastside Family Calendar is where local parents check what to do with their kids this weekend. It covers 15 cities, from Bothell and Kirkland to Snoqualmie and Maple Valley, plus the no-school days for ten school districts. It's free, it's made by a local family, and it has no ad networks.</p>
     <p>A few local businesses help keep it that way. If you run a place that Eastside kids love, we'd be glad to help more families find you.</p>

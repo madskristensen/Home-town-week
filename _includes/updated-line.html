@@ -1,0 +1,4 @@
+{%- comment -%}
+  One Updated line. id is optional and is how the morning script finds a city list.
+{%- endcomment -%}
+<p class="list-updated"{% if include.id %} id="{{ include.id }}"{% endif %}>Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>

@@ -578,6 +578,121 @@
     share(button);
   });
 
+  function fallbackCopy(value, onSuccess, onFail) {
+    var area = document.createElement("textarea");
+    area.value = value;
+    area.setAttribute("readonly", "");
+    area.className = "share-copy-buffer";
+    document.body.appendChild(area);
+    area.select();
+    var ok = false;
+    try {
+      ok = document.execCommand("copy");
+    } catch (err) {
+      ok = false;
+    }
+    document.body.removeChild(area);
+    if (ok) onSuccess();
+    else onFail();
+  }
+
+  function bindIssueShare() {
+    var root = document.querySelector(".issue-share");
+    if (!root) return;
+    var button = root.querySelector("[data-share]");
+    var label = root.querySelector("[data-label]");
+    var status = root.querySelector("[data-status]");
+    if (!button || !label) return;
+    var defaultLabel = label.textContent;
+    var copyTimer = 0;
+
+    function announce(message, visible) {
+      if (!status) return;
+      status.textContent = message;
+      status.classList.toggle("visually-hidden", !visible);
+    }
+
+    function markCopied() {
+      label.textContent = "Copied";
+      button.classList.add("is-copied");
+      announce("Link copied", false);
+      window.clearTimeout(copyTimer);
+      copyTimer = window.setTimeout(function () {
+        label.textContent = defaultLabel;
+        button.classList.remove("is-copied");
+        if (status && status.textContent === "Link copied") status.textContent = "";
+      }, 2000);
+    }
+
+    function copyUrl(url) {
+      var fail = function () {
+        announce("Copy the address from the address bar", true);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(markCopied).catch(function () {
+          fallbackCopy(url, markCopied, fail);
+        });
+      } else {
+        fallbackCopy(url, markCopied, fail);
+      }
+    }
+
+    button.addEventListener("click", function () {
+      var url = root.getAttribute("data-url") || "";
+      var title = root.getAttribute("data-title") || "";
+      var text = root.getAttribute("data-text") || "";
+      if (url.indexOf("https://") !== 0) return;
+      var payload = { title: title, text: text, url: url };
+      if (typeof navigator.share === "function") {
+        var allowed = true;
+        if (typeof navigator.canShare === "function") {
+          try {
+            allowed = navigator.canShare(payload);
+          } catch (err) {
+            allowed = true;
+          }
+        }
+        if (allowed) {
+          navigator.share(payload).catch(function (err) {
+            if (err && err.name === "AbortError") return;
+            copyUrl(url);
+          });
+          return;
+        }
+      }
+      copyUrl(url);
+    });
+  }
+
+  function bindCalendarCopy() {
+    var buttons = document.querySelectorAll("[data-cal-copy]");
+    var i;
+    for (i = 0; i < buttons.length; i++) {
+      (function (button) {
+        var root = button.closest ? button.closest(".cal-subscribe") : null;
+        var status = root ? root.querySelector("[data-cal-status]") : null;
+        var label = button.textContent;
+        button.addEventListener("click", function () {
+          copyText(button.getAttribute("data-cal-url") || "").then(function () {
+            button.textContent = "Copied";
+            if (status) status.textContent = "Link copied.";
+            window.setTimeout(function () {
+              button.textContent = label;
+              if (status) status.textContent = "";
+            }, 1600);
+          }, function () {
+            if (status) status.textContent = "Could not copy the link.";
+          });
+        });
+      })(buttons[i]);
+    }
+  }
+
+  if (typeof document !== "undefined") {
+    bindIssueShare();
+    bindCalendarCopy();
+  }
+
   if (typeof module !== "undefined" && module.exports) {
     module.exports = {
       shareMessage: shareMessage,

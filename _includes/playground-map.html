@@ -249,7 +249,7 @@
         html += "<p class=\"map-popup-address\"><a class=\"addr\" href=\"" + escapeHtml(mapsHref(pin.address, pin.city, pin.name)) + "\">"
           + "<span class=\"addr-text\">" + escapeHtml(pin.address) + "</span></a></p>";
       }
-      html += "<p class=\"map-popup-link\"><a href=\"" + escapeHtml(pin.page) + "\" rel=\"noopener\">" + escapeHtml(pin.page_label) + "</a></p>";
+      html += "<p class=\"map-popup-link\"><a href=\"" + escapeHtml(pin.page) + "\">" + escapeHtml(pin.page_label) + "</a></p>";
       marker.bindPopup(html);
       marker.__pin = pin;
       markers.push(marker);

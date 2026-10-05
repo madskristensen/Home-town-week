@@ -18,7 +18,7 @@
        loading="lazy"
        sizes="(min-width: 42rem) 18rem, calc(100vw - 4.5rem)" -%}
   {%- endif -%}
-  <p class="camp-name-line"><a href="{{ listing_url }}" rel="sponsored noopener">{{ listing_name | escape }}</a></p>
+  <p class="camp-name-line"><a href="{{ listing_url }}" rel="sponsored">{{ listing_name | escape }}</a></p>
   {%- assign listing_meta = listing.meta | append: "" | strip -%}
   {%- if listing_meta.size > 0 -%}
   <p class="camp-meta">{{ listing_meta | escape }}</p>

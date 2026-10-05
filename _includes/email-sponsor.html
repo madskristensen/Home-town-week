@@ -13,5 +13,5 @@
 {%- assign email_line = email_pack.line | append: "" | strip -%}
 {%- endif -%}
 {%- if email_name.size > 0 and email_url.size > 0 -%}
-<p class="email-sponsor"><span class="sponsor-mark">Sponsored</span> <a href="{{ email_url }}" rel="sponsored noopener">{{ email_name | escape }}</a>{%- if email_line.size > 0 -%}. {{ email_line | escape }}{%- endif -%}</p>
+<p class="email-sponsor"><span class="sponsor-mark">Sponsored</span> <a href="{{ email_url }}" rel="sponsored">{{ email_name | escape }}</a>{%- if email_line.size > 0 -%}. {{ email_line | escape }}{%- endif -%}</p>
 {%- endif -%}

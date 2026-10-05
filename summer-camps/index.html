@@ -8,8 +8,7 @@ camps: true
 intro: "I'm in Redmond with three kids, and the camp week is the one I cannot afford to miss. These are day camps for summer 2027, each one checked on that camp's own site. Most of next summer is not posted yet, so the line says so, and last year's timing is only a hint."
 ---
 <article class="page wrap camps-page">
-  <h1><a href="{{ page.url | relative_url }}">{{ page.heading | escape }}</a></h1>
-  {%- include page-intro.html text=page.intro -%}
+  {%- include page-head.html title=page.heading -%}
   {%- include season-sponsor.html -%}
   {%- include camp-directory.html -%}
   <section class="camp-tips">

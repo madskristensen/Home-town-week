@@ -557,20 +557,25 @@ module EastsideCalendar
       { events: events.length, towns: events.values.uniq.reject(&:empty?).length }
     end
 
+    def theme_style(theme)
+      theme = {} unless theme.is_a?(Hash)
+      dark = theme["dark"].is_a?(Hash) ? theme["dark"] : {}
+      [
+        "--season-bg-light: #{theme["background"]}",
+        "--season-ink-light: #{theme["ink"]}",
+        "--season-muted-light: #{theme["muted"]}",
+        "--season-link-light: #{theme["link"]}",
+        "--season-bg-dark: #{dark["background"]}",
+        "--season-ink-dark: #{dark["ink"]}",
+        "--season-muted-dark: #{dark["muted"]}",
+        "--season-link-dark: #{dark["link"]}"
+      ].join("; ")
+    end
+
     def banner_html(hub, baseurl)
       theme = hub["theme"] || {}
       href = "#{baseurl}#{hub["path"]}"
-      dark = theme["dark"].is_a?(Hash) ? theme["dark"] : {}
-      style = [
-        "--season-bg-light:#{theme["background"]}",
-        "--season-ink-light:#{theme["ink"]}",
-        "--season-muted-light:#{theme["muted"]}",
-        "--season-link-light:#{theme["link"]}",
-        "--season-bg-dark:#{dark["background"]}",
-        "--season-ink-dark:#{dark["ink"]}",
-        "--season-muted-dark:#{dark["muted"]}",
-        "--season-link-dark:#{dark["link"]}"
-      ].join(";")
+      style = theme_style(theme)
       <<~HTML.strip
         <nav class="season-banner" style="#{style}">
           <div class="wrap">
@@ -639,7 +644,7 @@ module EastsideCalendar
           },
           "svg" => svg
         }
-      }
+      }.tap { |row| row["theme_style"] = theme_style(row["theme"]) }
     end
 
     def intro_for(hub, label, in_season, sections)
@@ -1588,7 +1593,7 @@ module EastsideCalendar
           },
           "svg" => motif
         }
-      }
+      }.tap { |row| row["theme_style"] = theme_style(row["theme"]) }
     end
 
     # April break sentence for one district, from no_school_days.yml.
