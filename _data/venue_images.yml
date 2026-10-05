@@ -86,11 +86,11 @@ venues:
     license: CC BY-SA 4.0
     source: https://commons.wikimedia.org/wiki/File:Issaquah_Valley_Trolley_car_519_crossing_Front_St_in_2014.jpg
   - keys: ["mercer island library"]
-    image: /assets/images/mercer-island/library.webp
-    alt: Mercer Island Library, a King County Library System branch.
-    credit: "Photo: SuddenFrost, CC0"
-    license: CC0
-    source: https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Mercer_Island_Library.jpg
+    image: /assets/images/mercer-island/mercer-island-library-entrance.webp
+    alt: Mercer Island Library entrance, a brick front with a covered walkway, columns, and a bronze sculpture beside the doors.
+    credit: "Photo: King County Library System"
+    license: organizer
+    source: https://kcls.org/locations/mercer-island/
   - keys: ["stroum jewish community center"]
     image: /assets/images/mercer-island/stroum-jcc.webp
     alt: The Stroum Jewish Community Center on Mercer Island, a brick building with a curved roof.
@@ -368,11 +368,11 @@ venues:
     license: CC0
     source: https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Lake_Hills_Library.jpg
   - keys: ["newport way library"]
-    image: /assets/images/bellevue/newport-way-library.webp
-    alt: Newport Way Library, a low building with a broad glass front and a covered entry.
-    credit: "Photo: SuddenFrost, CC0"
-    license: CC0
-    source: https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Newport_Way_Library.jpg
+    image: /assets/images/bellevue/newport-way-library-entrance.webp
+    alt: Newport Way Library entrance, a brick and glass front with the library sign and trees behind the roof.
+    credit: "Photo: King County Library System"
+    license: organizer
+    source: https://kcls.org/locations/newport-way/
   - keys: ["meydenbauer"]
     image: /assets/images/bellevue/meydenbauer-center.webp
     alt: Meydenbauer Center in downtown Bellevue, a curved glass building beside the street.
