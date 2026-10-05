@@ -251,6 +251,16 @@ picture {
   display: block;
 }
 
+/* City card photos wait until the hero has decoded. Hidden without
+   JavaScript so the noscript picture is the one that shows. */
+picture.deferred-photo {
+  display: none;
+}
+
+.js picture.deferred-photo {
+  display: block;
+}
+
 .skip-link {
   position: absolute;
   left: 0.75rem;

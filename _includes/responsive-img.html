@@ -23,8 +23,23 @@
 {%- else -%}
 {%- capture img_srcset -%}{{ img_400 }} 400w, {{ img_640 }} 640w{%- endcapture -%}
 {%- endif -%}
+{%- assign img_defer = include.defer | append: "" | strip -%}
 {%- if include.preload -%}
 <link rel="preload" as="image" type="image/avif" fetchpriority="high" imagesizes="{{ img_sizes }}" imagesrcset="{{ img_srcset }}">
+{%- elsif img_defer == "1" -%}
+<picture class="deferred-photo">
+  <source type="image/avif" data-srcset="{{ img_srcset }}" sizes="{{ img_sizes }}">
+  <img
+    data-src="{{ img_jpg }}"
+    alt="{{ include.alt | escape }}"
+    {%- if img_title.size > 0 %} title="{{ img_title | escape }}"{% endif %}
+    width="{{ img_w }}"
+    height="{{ img_h }}"
+    loading="lazy"
+    fetchpriority="low"
+    decoding="async"
+    {%- if include.itemprop %} itemprop="{{ include.itemprop }}"{% endif %}>
+</picture>
 {%- else -%}
 <picture>
   <source type="image/avif" srcset="{{ img_srcset }}" sizes="{{ img_sizes }}">

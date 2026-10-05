@@ -17,6 +17,7 @@
 </script>
 {%- endif -%}
 {%- if page.layout == "city" and page.city and page.state -%}
+<script>document.documentElement.classList.add("js")</script>
 {%- assign preload_city = site.data.cities | where: "id", page.city | where: "state", page.state | first -%}
 {%- assign preload_src = preload_city.hero.image | append: "" | strip -%}
 {%- if preload_src.size > 0 -%}

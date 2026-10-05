@@ -348,7 +348,9 @@ module EastsideCalendar
       return "" if cards.empty?
 
       unless today
-        return render_card_grid(page, "events" => cards, "show_city" => false, "eager" => 0, "microdata" => "1")
+        assigns = { "events" => cards, "show_city" => false, "eager" => 0, "microdata" => "1" }
+        assigns["defer"] = "1" if page.data["layout"].to_s == "city"
+        return render_card_grid(page, assigns)
       end
 
       buckets = Hash.new { |hash, key| hash[key] = [] }
@@ -372,6 +374,7 @@ module EastsideCalendar
           "eager" => 0,
           "microdata" => "1"
         }
+        assigns["defer"] = "1" if page.data["layout"].to_s == "city"
         if key == :weekend
           assigns["share"] = "weekend"
           assigns["share_url"] = absolute_url(site, page.url)

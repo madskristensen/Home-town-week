@@ -39,7 +39,7 @@ layout: default
   {%- assign city_sponsor_cards = site.data.sponsors.cards.cities[page.city] -%}
   {%- assign city_sponsor_count = city_sponsor_cards | size -%}
   {%- if city_sponsor_count > 0 -%}
-  {%- include card-grid.html events=city_sponsor_cards show_city=true -%}
+  {%- include card-grid.html events=city_sponsor_cards show_city=true defer="1" -%}
   {%- endif -%}
   {%- assign event_copy = content | strip -%}
   {%- if event_copy != "" -%}
@@ -61,3 +61,27 @@ layout: default
   {%- endif -%}
   {%- include nearby-cities.html -%}
 </article>
+<script>
+(function () {
+  var pictures = document.querySelectorAll("picture.deferred-photo");
+  if (!pictures.length) return;
+  function reveal() {
+    var i, picture, sources, j, img;
+    for (i = 0; i < pictures.length; i++) {
+      picture = pictures[i];
+      sources = picture.querySelectorAll("source[data-srcset]");
+      for (j = 0; j < sources.length; j++) {
+        sources[j].srcset = sources[j].getAttribute("data-srcset");
+      }
+      img = picture.querySelector("img[data-src]");
+      if (img) img.src = img.getAttribute("data-src");
+    }
+  }
+  var hero = document.querySelector(".hero img");
+  function afterPaint() {
+    requestAnimationFrame(function () { requestAnimationFrame(reveal); });
+  }
+  if (hero && hero.decode) hero.decode().then(afterPaint, afterPaint);
+  else afterPaint();
+})();
+</script>
