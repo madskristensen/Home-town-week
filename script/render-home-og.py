@@ -8,17 +8,19 @@ labels shows up on the next deploy. The PNG is not committed.
 Needs rsvg-convert (librsvg2-bin) and the Liberation fonts.
 """
 
+import hashlib
 import re
 import shutil
 import subprocess
 import sys
 from pathlib import Path
 
-from PIL import ImageFont
-
 ROOT = Path(__file__).resolve().parents[1]
 MAP_INCLUDE = ROOT / "_includes" / "eastside-map.html"
 DEFAULT_OUT = ROOT / "assets" / "images" / "og-home.png"
+CACHE = ROOT / ".home-og-cache"
+CACHED_PNG = CACHE / "og-home.png"
+FINGERPRINT = CACHE / "fingerprint"
 
 W, H = 1200, 630
 
@@ -63,6 +65,57 @@ TITLE = ["Eastside Family", "Calendar"]
 TITLE_SIZE = 58
 SUBTITLE = ["Family events in 14 Eastside towns,", "updated daily."]
 SUBTITLE_SIZE = 26
+
+
+def load_font(path, size):
+    from PIL import ImageFont
+
+    return ImageFont.truetype(path, size)
+
+
+def source_files():
+    files = [Path(__file__).resolve()]
+
+    def walk(path, seen):
+        if path in seen or not path.is_file():
+            return
+        seen.append(path)
+        text = path.read_text(encoding="utf-8")
+        for name in re.findall(r"\{%-?\s*include\s+([^\s%]+)", text):
+            walk(ROOT / "_includes" / name.strip(), seen)
+
+    seen = []
+    walk(MAP_INCLUDE, seen)
+    files.extend(seen)
+    return files
+
+
+def fingerprint():
+    digest = hashlib.sha256()
+    for path in source_files():
+        digest.update(path.relative_to(ROOT).as_posix().encode())
+        digest.update(b"\0")
+        digest.update(path.read_bytes())
+        digest.update(b"\0")
+    return digest.hexdigest()
+
+
+def cache_ready():
+    if not FINGERPRINT.is_file() or not CACHED_PNG.is_file():
+        return False
+    return FINGERPRINT.read_text(encoding="utf-8").strip() == fingerprint()
+
+
+def publish_from_cache():
+    DEFAULT_OUT.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(CACHED_PNG, DEFAULT_OUT)
+    print(f"home og from cache -> {DEFAULT_OUT}")
+
+
+def remember(dest):
+    CACHE.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(dest, CACHED_PNG)
+    FINGERPRINT.write_text(fingerprint() + "\n", encoding="utf-8")
 
 
 def xml_escape(text):
@@ -144,7 +197,7 @@ def label_boxes(inner):
     boxes = []
     for cls, x, y, anchor, text in pattern.findall(inner):
         size = sizes.get(cls, CITY_SIZE)
-        font = ImageFont.truetype(SANS_BOLD, size)
+        font = load_font(SANS_BOLD, size)
         width = font.getlength(text)
         ascent, descent = font.getmetrics()
         x = float(x)
@@ -263,8 +316,8 @@ def card_svg():
     map_x = W - margin_right - map_w
     map_y = (H - map_h) / 2
 
-    title_font = ImageFont.truetype(SERIF_BOLD, TITLE_SIZE)
-    sub_font = ImageFont.truetype(SERIF, SUBTITLE_SIZE)
+    title_font = load_font(SERIF_BOLD, TITLE_SIZE)
+    sub_font = load_font(SERIF, SUBTITLE_SIZE)
     title_ascent, title_descent = title_font.getmetrics()
     sub_ascent, sub_descent = sub_font.getmetrics()
     title_gap = 70
@@ -334,13 +387,25 @@ def rasterize(svg, dest):
 
 
 def main():
+    if "--fingerprint" in sys.argv:
+        print(fingerprint())
+        return
+    if "--check-cache" in sys.argv:
+        sys.exit(0 if cache_ready() else 1)
+    if "--from-cache" in sys.argv:
+        if not cache_ready():
+            raise SystemExit("home og cache is missing")
+        publish_from_cache()
+        return
     dest = DEFAULT_OUT
     if len(sys.argv) == 3 and sys.argv[1] == "--out":
         dest = Path(sys.argv[2])
     elif len(sys.argv) != 1:
-        raise SystemExit("usage: render-home-og.py [--out PATH]")
+        raise SystemExit("usage: render-home-og.py [--fingerprint|--check-cache|--from-cache|--out PATH]")
     svg = card_svg()
     rasterize(svg, dest)
+    if dest == DEFAULT_OUT:
+        remember(dest)
     print(f"home og -> {dest}")
 
 

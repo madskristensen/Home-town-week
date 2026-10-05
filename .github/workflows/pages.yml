@@ -73,13 +73,30 @@ jobs:
             python3 script/render-image-variants.py
           fi
 
+      - name: Fingerprint the home share image
+        id: homeog
+        run: echo "hash=$(python3 script/render-home-og.py --fingerprint)" >> "$GITHUB_OUTPUT"
+
+      - name: Restore home share image cache
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
+        with:
+          path: .home-og-cache
+          key: home-og-v1-${{ steps.homeog.outputs.hash }}
+          restore-keys: |
+            home-og-v1-
+
       - name: Render the home share image
         run: |
           # One 1200x630 card from the Eastside map. A map edit on this
-          # push updates the image. The PNG is not committed.
-          sudo apt-get update
-          sudo apt-get install -y librsvg2-bin fonts-liberation
-          python3 script/render-home-og.py
+          # push updates the image. The PNG is not committed. System
+          # packages are installed only when the cache misses.
+          if python3 script/render-home-og.py --check-cache; then
+            python3 script/render-home-og.py --from-cache
+          else
+            sudo apt-get update
+            sudo apt-get install -y librsvg2-bin fonts-liberation
+            python3 script/render-home-og.py
+          fi
 
       - name: Setup Node
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7

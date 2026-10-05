@@ -12,6 +12,7 @@ __pycache__/
 assets/images/og-home.png
 assets/images/share/
 .share-cache/
+.home-og-cache/
 _data/share_manifest.yml
 .image-cache/
 node_modules
