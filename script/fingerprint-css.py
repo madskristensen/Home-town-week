@@ -125,6 +125,30 @@ def main():
 
     DATA.write_text("\n".join(lines) + "\n", encoding="utf-8")
     INLINE_DATA.write_text(json.dumps(inlined, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    fingerprint_js()
+
+
+def fingerprint_js():
+    """Publish event-share.js as assets/js/event-share.<hash>.js.
+
+    The source stays in _js so Jekyll does not also copy the unhashed file.
+    """
+    source = ROOT / "_js" / "event-share.js"
+    if not source.is_file():
+        sys.exit(f"missing script {source}")
+    raw = source.read_text(encoding="utf-8")
+    if not raw.endswith("\n"):
+        raw += "\n"
+    digest = hashlib.sha256(raw.encode("utf-8")).hexdigest()[:10]
+    dest_dir = ROOT / "assets" / "js"
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    for old in dest_dir.glob("event-share.*.js"):
+        old.unlink()
+    filename = f"event-share.{digest}.js"
+    (dest_dir / filename).write_text(raw, encoding="utf-8")
+    public = f"/assets/js/{filename}"
+    (ROOT / "_data" / "js.yml").write_text(f"event_share: {public}\n", encoding="utf-8")
+    print(f"event-share\t{public}\t{len(raw)}")
 
 
 if __name__ == "__main__":

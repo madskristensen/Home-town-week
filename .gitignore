@@ -17,10 +17,12 @@ _data/share_manifest.yml
 node_modules
 _data/build.yml
 _data/image_variants.yml
-# Fingerprinted stylesheets written by script/fingerprint-css.py.
+# Fingerprinted stylesheets and scripts written before Jekyll reads files.
 /assets/css/*.css
 /_data/css.yml
 /_data/css_inline.json
+/assets/js/event-share.*.js
+/_data/js.yml
 # Widths written by the Pages workflow. One source image stays in git.
 assets/images/**/*-400.avif
 assets/images/**/*-400.webp

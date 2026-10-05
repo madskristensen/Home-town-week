@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-# Fingerprint stylesheets before Jekyll reads static files and data,
-# so the head can link /assets/css/<name>.<hash>.css and the service
-# worker precaches those exact files.
+# Fingerprint stylesheets and event-share.js before Jekyll reads static
+# files and data, so the head can link the hashed files and the service
+# worker precaches those exact URLs.
 Jekyll::Hooks.register :site, :after_init do |site|
   leaflet = File.join(site.source, "script/trim-leaflet-css.py")
   unless system("python3", leaflet, chdir: site.source)

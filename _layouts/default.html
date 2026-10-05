@@ -69,7 +69,7 @@
     <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 12.4V3.6M4.1 7.3 8 3.4l3.9 3.9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
   </button>
   {%- include pwa.html -%}
-  <script src="{{ '/assets/js/event-share.js' | relative_url }}" defer fetchpriority="low"></script>
+  <script src="{{ site.data.js.event_share | relative_url }}" defer fetchpriority="low"></script>
   <script>
     (function () {
       var printHref = "{{ site.data.css.print | relative_url }}";
