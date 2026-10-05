@@ -6,9 +6,9 @@
   eager: how many leading cards load immediately. Default 0.
   priority: when true, the first card is fetchpriority high.
   Later eager cards are fetchpriority low so they do not compete with that image.
-  A city hash sets prebuilt and already holds photo_html, place_html, and the
-  other extracted fields. Hubs, weekend picks, and lights pass the event row.
+  Every row is plain fields. event-card.html renders the card.
   href and external are set when the row is built. The town name links to the city.
+  City pages set label_ready so the pills computed with the row are reused.
 {%- endcomment -%}
 {%- assign grid_heading = include.heading | append: "" | strip -%}
 {%- assign grid_share = include.share | append: "" | strip -%}
@@ -47,37 +47,6 @@
 {%- endif -%}
 <div class="card-grid">
 {%- for event in include.events -%}
-{%- if event.prebuilt -%}
-{%- include event-card.html
-     title=event.title
-     heading_id=event.heading_id
-     when=event.when
-     photo_html=event.photo_html
-     place_html=event.place_html
-     links_html=event.links_html
-     blurb_html=event.blurb_html
-     tags_html=event.tags_html
-     calendar_html=event.calendar_html
-     date=event.date
-     end=event.end
-     attrs=event.attrs
-     schema_start=event.schema_start
-     schema_end=event.schema_end
-     schema_description=event.schema_description
-     schema_url=event.schema_url
-     schema_place=event.schema_place
-     schema_street=event.schema_street
-     schema_locality=event.schema_locality
-     schema_cost=event.schema_cost
-     schema_name=event.schema_name
-     schema_share_start=event.schema_share_start
-     schema_share_end=event.schema_share_end
-     schema_image=event.schema_image
-     schema_organizer=event.schema_organizer
-     schema_organizer_url=event.schema_organizer_url
-     schema_added=event.schema_added
-     microdata=grid_micro -%}
-{%- else -%}
 {%- assign row = event -%}
 {%- if event.event -%}{%- assign row = event.event -%}{%- endif -%}
 {%- assign card_title = event.title | append: "" | strip -%}
@@ -119,6 +88,7 @@
 {%- assign card_date = event.date | append: "" | strip -%}
 {%- if card_date.size == 0 -%}{%- assign card_date = event.sort | append: "" | strip -%}{%- endif -%}
 {%- assign card_end = event.end_on | append: "" | strip -%}
+{%- if card_end.size == 0 -%}{%- assign card_end = event.end | append: "" | strip -%}{%- endif -%}
 {%- assign card_source_href = event.source_href | append: "" | strip -%}
 {%- if card_source_href.size == 0 and card_address.size > 0 -%}
 {%- assign card_raw_source = event.source | append: "" | strip -%}
@@ -137,6 +107,18 @@
 {%- if event.stretch -%}{%- assign card_stretch = "1" -%}{%- endif -%}
 {%- assign card_city_label = "" -%}
 {%- if card_sponsored -%}{%- assign card_city_label = card_place_city -%}{%- endif -%}
+{%- if event.label_ready -%}
+{%- assign card_price = event.price -%}
+{%- assign card_ages_text = event.ages_text -%}
+{%- assign card_labels = event.labels -%}
+{%- assign card_attrs = event.attrs -%}
+{%- else -%}
+{%- assign label_pack = row | card_label_pack -%}
+{%- assign card_price = label_pack.price -%}
+{%- assign card_ages_text = label_pack.ages_text -%}
+{%- assign card_labels = label_pack.labels -%}
+{%- assign card_attrs = label_pack.attrs -%}
+{%- endif -%}
 {%- include event-card.html
      id=card_id
      number=card_number
@@ -148,6 +130,7 @@
      event=row
      when=card_when
      calendar=event.calendar
+     calendars=event.calendars
      town=card_town
      town_href=card_town_href
      place=card_place
@@ -156,10 +139,13 @@
      drive=event.drive
      hours=event.hours
      blurb=card_blurb
+     blurbs=event.blurbs
      image=event.image
      alt=card_alt
      credit=card_credit
      source=event.image_source
+     width=event.width
+     height=event.height
      loading=card_loading
      priority=card_priority
      date=card_date
@@ -168,8 +154,26 @@
      source_label=event.source_label
      also_href=card_also_href
      also_label=event.also_source_label
+     price=card_price
+     ages_text=card_ages_text
+     labels=card_labels
+     attrs=card_attrs
+     schema_start=event.schema_start
+     schema_end=event.schema_end
+     schema_description=event.schema_description
+     schema_url=event.schema_url
+     schema_place=event.schema_place
+     schema_street=event.schema_street
+     schema_locality=event.schema_locality
+     schema_cost=event.schema_cost
+     schema_name=event.schema_name
+     schema_share_start=event.schema_share_start
+     schema_share_end=event.schema_share_end
+     schema_image=event.schema_image
+     schema_organizer=event.schema_organizer
+     schema_organizer_url=event.schema_organizer_url
+     schema_added=event.schema_added
      stretch=card_stretch
      microdata=grid_micro -%}
-{%- endif -%}
 {%- endfor -%}
 </div>

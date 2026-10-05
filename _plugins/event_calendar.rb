@@ -747,37 +747,6 @@ module EastsideCalendar
       when_label.empty? ? label : "#{label}, #{when_label}"
     end
 
-    def calendar_anchor(link, count)
-      label = calendar_label(link, count)
-      href = CGI.escapeHTML(link[:href])
-      safe = CGI.escapeHTML(label)
-      extra = count > 1 ? %(<span class="event-cal-when">#{CGI.escapeHTML(link[:when_label])}</span>) : ""
-      %(<a class="event-cal" href="#{href}" aria-label="#{safe}">#{extra}</a>)
-    end
-
-    def calendar_actions(links)
-      anchors = links.map { |link| calendar_anchor(link, links.length) }
-      joined = anchors.join
-      return joined if links.length < 2
-
-      %(<span class="event-cals">#{joined}</span>)
-    end
-
-    # Keep the icon on the same line as the last word of the date.
-    # A long date may wrap, but the icon does not land alone.
-    def glue_calendar(inner, snippet)
-      text = inner.to_s
-      core = text.sub(/\s+\z/, "")
-      trail = text[core.length..] || ""
-      return "#{snippet}#{trail}" if core.empty?
-
-      if (match = core.match(/\A(.*\s)(\S+)\z/m))
-        %(#{match[1]}<span class="event-when-tail">#{match[2]}#{snippet}</span>#{trail})
-      else
-        %(<span class="event-when-tail">#{core}#{snippet}</span>#{trail})
-      end
-    end
-
     def inject!(html, groups, dates, today, city_name = nil, labels = nil, page = nil, ends = nil, schemas = nil)
       return html unless html.is_a?(String)
 
@@ -848,54 +817,16 @@ module EastsideCalendar
         index = cursors[key]
         cursors[key] = index + 1
         links = bucket && bucket[index]
-        snippet = links && !links.empty? ? calendar_actions(links) : nil
         iso = dates[key] && dates[key][index]
         iso = nil if iso.to_s.empty?
         end_iso = ends && ends[key] && ends[key][index]
         end_iso = nil if end_iso.to_s.empty?
         info = labels[key] && labels[key][index]
-        part = link_event_place(part, city_name)
-        part = mark_source_links(part)
         schema = schemas && schemas[key] && schemas[key][index]
         city_id = page && page.data["city"]
-        cards << event_card_assigns(part, iso, info, end_iso, schema, snippet, city_id, page)
+        cards << event_card_assigns(part, iso, info, end_iso, schema, links, city_id, page, city_name)
       end
       [prelude + loose, cards]
-    end
-
-    # The place line stays plain text in the markdown. The link opens a map.
-    # The query is that line plus the town, not the event title.
-    def link_event_place(part, city_name)
-      part.sub(%r{(<p class="event-place">)(.*?)(</p>)}m) do
-        open_tag = Regexp.last_match(1)
-        inner = Regexp.last_match(2)
-        close_tag = Regexp.last_match(3)
-        next Regexp.last_match(0) if inner.include?("<a")
-
-        text = visible_text(inner)
-        next Regexp.last_match(0) if text.empty?
-
-        href = CGI.escapeHTML(MapLinks.href(text, city_name))
-        %(#{open_tag}<a class="addr" href="#{href}"><span class="addr-text">#{inner.strip}</span></a>#{close_tag})
-      end
-    end
-
-    # The outbound link under a card ("Meydenbauer calendar") is meta text.
-    # A hard break before that link becomes its own line.
-    # The credit link inside the photo figcaption is not that outbound link.
-    def mark_source_links(part)
-      part = part.gsub(%r{<br\s*/?>\s*(?=<a\b)}i, "</p>\n<p class=\"event-links\">")
-      part = part.gsub(%r{<p>(\s*(?:<a\b.*?<\/a>|·|&middot;|\s)+)</p>}m) do
-        %(<p class="event-links">#{Regexp.last_match(1)}</p>)
-      end
-      part.gsub(%r{<a(?![^>]*\bclass=")([^>]*)>}m) do
-        match = Regexp.last_match
-        pre = match.pre_match
-        in_caption = pre.scan(/<figcaption\b/).length > pre.scan(%r{</figcaption>}).length
-        next match[0] if in_caption
-
-        %(<a class="event-source"#{match[1]}>)
-      end
     end
 
     def excise(html, chunk)
@@ -907,7 +838,7 @@ module EastsideCalendar
       html[0, at] + html[(at + chunk.length)..]
     end
 
-    # Pull the city writeup into the same fields the shared card renders.
+    # Pull the city writeup into the plain fields event-card.html renders.
     def extract_card_fields(part)
       html = part.to_s.dup
       heading = html.match(/<h3\b([^>]*)>(.*?)<\/h3>/m)
@@ -915,9 +846,9 @@ module EastsideCalendar
       heading_id = heading ? heading[1][/id="([^"]*)"/, 1].to_s : ""
       html = excise(html, heading[0]) if heading
 
-      photo = ""
+      photo = {}
       while (fig = html[/<figure\b[^>]*\bclass="event-photo"[^>]*>.*?<\/figure>/m])
-        photo = fig if photo.empty?
+        photo = parse_card_photo(fig) if photo.empty?
         html = excise(html, fig)
       end
 
@@ -926,51 +857,110 @@ module EastsideCalendar
       when_tag = html[/<p class="event-when"[^>]*>.*?<\/p>/m]
       html = excise(html, when_tag)
 
-      places = html.scan(/<p class="event-place"[^>]*>.*?<\/p>/m)
-      places.each { |chunk| html = excise(html, chunk) }
-      links = html.scan(/<p class="event-links"[^>]*>.*?<\/p>/m)
-      links.each { |chunk| html = excise(html, chunk) }
+      place = ""
+      html.scan(/<p class="event-place"[^>]*>(.*?)<\/p>/m) do
+        text = visible_text(Regexp.last_match(1))
+        place = text if place.empty? && !text.empty?
+      end
+      html = html.gsub(/<p class="event-place"[^>]*>.*?<\/p>/m, "")
 
+      source_links = []
       blurbs = []
       html.scan(/<p\b[^>]*>(.*?)<\/p>/m) do
-        inner = Regexp.last_match(1).to_s.strip
-        next if visible_text(inner).empty?
-
-        blurbs << %(<p class="hub-blurb">#{inner}</p>)
+        inner = Regexp.last_match(1).to_s
+        anchors = inner.scan(/<a\b[^>]*href="([^"]+)"[^>]*>(.*?)<\/a>/m)
+        remainder = visible_text(inner.gsub(/<a\b.*?<\/a>/m, " ")).gsub(/[·\u00b7]/, "").strip
+        if !anchors.empty? && remainder.empty?
+          anchors.each do |href, label|
+            source_links << { "href" => CGI.unescapeHTML(href), "label" => visible_text(label) }
+          end
+        else
+          text = visible_text(inner)
+          blurbs << text unless text.empty?
+        end
       end
 
       {
         "title" => title,
         "heading_id" => heading_id,
         "when" => when_text,
-        "photo_html" => photo.strip,
-        "place_html" => places.join("\n"),
-        "links_html" => links.join("\n"),
-        "blurb_html" => blurbs.join("\n")
+        "place" => place,
+        "blurbs" => blurbs,
+        "links" => source_links,
+        "photo" => photo
       }
     end
 
-    # One card per event heading. card-grid.html renders event-card.html.
-    # The calendar icon is a separate action, not glued to the date.
-    def event_card_assigns(part, iso = nil, info = nil, end_iso = nil, schema = nil, calendar_html = nil, city_id = nil, page = nil)
-      body = part.sub(/\s+\z/, "")
-      fields = extract_card_fields(body)
-      tags = EventLabels.html(info)
-      assigns = { "prebuilt" => true }
-      assigns["title"] = fields["title"] unless fields["title"].empty?
+    def parse_card_photo(fig)
+      srcset = fig[/srcset="([^"]+)"/, 1].to_s
+      first = srcset.split(",").first.to_s.strip.split(/\s+/).first.to_s
+      src = first.sub(/-400\.avif\z/, ".webp")
+      img = fig[/<img\b[^>]*>/m].to_s
+      caption = fig[/<figcaption\b[^>]*>(.*?)<\/figcaption>/m, 1].to_s
+      {
+        "src" => CGI.unescapeHTML(src),
+        "alt" => CGI.unescapeHTML(img[/alt="([^"]*)"/, 1].to_s),
+        "width" => img[/width="([^"]+)"/, 1].to_s,
+        "height" => img[/height="([^"]+)"/, 1].to_s,
+        "credit" => visible_text(caption),
+        "source" => CGI.unescapeHTML(caption[/href="([^"]+)"/, 1].to_s)
+      }
+    end
+
+    # One card per event heading. card-grid.html renders event-card.html
+    # from these plain fields. The calendar icon is a separate action.
+    def event_card_assigns(part, iso = nil, info = nil, end_iso = nil, schema = nil, calendar_links = nil, city_id = nil, page = nil, city_name = nil)
+      fields = extract_card_fields(part.sub(/\s+\z/, ""))
+      label_source = info.is_a?(Hash) ? info : {}
+      photo = fields["photo"].is_a?(Hash) ? fields["photo"] : {}
+      source_links = Array(fields["links"])
+      assigns = {
+        "label_ready" => true,
+        "price" => EventLabels.price_text(label_source),
+        "ages_text" => EventLabels.ages_text(label_source),
+        "labels" => EventLabels.labels(label_source),
+        "attrs" => EventLabels.attrs(label_source),
+        "title" => fields["title"],
+        "name" => fields["title"],
+        "place_city" => city_name.to_s
+      }
       assigns["heading_id"] = fields["heading_id"] unless fields["heading_id"].empty?
       assigns["when"] = fields["when"] unless fields["when"].empty?
-      assigns["photo_html"] = fields["photo_html"] unless fields["photo_html"].empty?
-      assigns["place_html"] = fields["place_html"] unless fields["place_html"].empty?
-      assigns["links_html"] = fields["links_html"] unless fields["links_html"].empty?
-      assigns["blurb_html"] = fields["blurb_html"] unless fields["blurb_html"].empty?
-      assigns["tags_html"] = tags unless tags.empty?
-      assigns["calendar_html"] = calendar_html unless calendar_html.to_s.strip.empty?
+      assigns["place"] = fields["place"] unless fields["place"].empty?
+      assigns["blurbs"] = fields["blurbs"] unless fields["blurbs"].empty?
+      assigns["blurb"] = fields["blurbs"].first.to_s unless fields["blurbs"].empty?
+      unless photo["src"].to_s.empty?
+        assigns["image"] = photo["src"]
+        assigns["alt"] = photo["alt"].to_s
+        assigns["credit"] = photo["credit"].to_s
+        assigns["image_source"] = photo["source"].to_s
+        assigns["width"] = photo["width"] unless photo["width"].to_s.empty?
+        assigns["height"] = photo["height"] unless photo["height"].to_s.empty?
+      end
+      if source_links[0]
+        assigns["source_href"] = source_links[0]["href"]
+        assigns["source_label"] = source_links[0]["label"]
+      end
+      if source_links[1]
+        assigns["also_href"] = source_links[1]["href"]
+        assigns["also_label"] = source_links[1]["label"]
+        assigns["also_source_label"] = source_links[1]["label"]
+      end
+      if calendar_links && !calendar_links.empty?
+        count = calendar_links.length
+        assigns["calendars"] = calendar_links.map do |link|
+          {
+            "href" => link[:href].to_s,
+            "label" => calendar_label(link, count),
+            "when" => count > 1 ? link[:when_label].to_s : ""
+          }
+        end
+      end
       assigns["date"] = iso.to_s unless iso.to_s.empty?
+      # City cards keep using the start day as the microdata finish day.
+      # end is only the data-end attribute.
       assigns["end"] = end_iso.to_s unless end_iso.to_s.empty?
-      extra = EventLabels.attrs(info)
-      assigns["attrs"] = extra unless extra.to_s.empty?
-      same = info.is_a?(Hash) ? info["same_as"] : ""
+      same = label_source["same_as"]
       link = card_link(same, city_id, fields["title"])
       assigns["href"] = link["href"]
       assigns["external"] = link["external"]
@@ -986,16 +976,12 @@ module EastsideCalendar
         assigns["schema_name"] = schema["name"].to_s
         assigns["schema_share_start"] = schema["shareStart"].to_s
         assigns["schema_share_end"] = schema["shareEnd"].to_s
-        if assigns["schema_url"].empty?
-          found = body[/<a class="event-source"[^>]*href="([^"]+)"/, 1]
-          assigns["schema_url"] = CGI.unescapeHTML(found.to_s) if found
+        if assigns["schema_url"].empty? && source_links[0]
+          assigns["schema_url"] = source_links[0]["href"].to_s
         end
-        photo = body[/<img\b[^>]*\ssrc="([^"]+)"/, 1]
-        assigns["schema_image"] = CGI.unescapeHTML(photo.to_s) if photo
+        assigns["schema_image"] = photo["src"].to_s unless photo["src"].to_s.empty?
         assigns["schema_added"] = schema["added"].to_s
-        if assigns["schema_url"].to_s.empty?
-          assigns["schema_url"] = schema["url"].to_s
-        end
+        assigns["schema_url"] = schema["url"].to_s if assigns["schema_url"].to_s.empty?
         if page
           org_event = {
             "organizer" => schema["organizer"].to_s,
@@ -1655,41 +1641,6 @@ module EastsideCalendar
       return "" unless node
 
       "#{node["name"]}\t#{node["url"]}"
-    end
-
-    def mark_image(input)
-      html = input.to_s
-      return html if html.empty? || html.match?(/<img\b[^>]*\bitemprop=/i)
-
-      html.sub(/<img\b/i, '<img itemprop="image"')
-    end
-
-    def mark_blurb(input)
-      html = input.to_s
-      return html if html.empty? || html.include?("itemprop=")
-
-      html.sub('class="hub-blurb"', 'class="hub-blurb" itemprop="description"')
-    end
-
-    # Place on the existing place line. Address is the visible text.
-    # A hidden name is added only when that name is not already in the line.
-    def mark_place(input, name)
-      html = input.to_s
-      return html if html.empty? || html.include?("itemprop=")
-
-      venue = name.to_s.strip
-      loc = ' itemprop="location" itemscope itemtype="https://schema.org/Place"'
-      marked = html.sub('class="event-place"', "class=\"event-place\"#{loc}")
-      visible = marked.gsub(/<[^>]+>/, " ").gsub(/\s+/, " ").strip
-      shown = !venue.empty? && visible.downcase.include?(venue.downcase)
-      exact = shown && visible.casecmp(venue).zero?
-      if marked.include?('class="addr-text"')
-        prop = exact ? "name address" : "address"
-        marked = marked.sub('class="addr-text"', "class=\"addr-text\" itemprop=\"#{prop}\"")
-      end
-      return marked if shown || venue.empty?
-
-      marked.sub("</p>", %(<meta itemprop="name" content="#{CGI.escapeHTML(venue)}"></p>))
     end
 
     # Weekend picks stash one card hash per line. Liquid cannot append a hash.

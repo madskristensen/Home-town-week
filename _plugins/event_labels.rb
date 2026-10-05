@@ -159,20 +159,6 @@ module EastsideCalendar
       setting_label(event) == "Indoor"
     end
 
-    def html(event)
-      bits = []
-      price = price_text(event)
-      bits << %(<span class="event-price">#{CGI.escapeHTML(price)}</span>) unless price.empty?
-      plain_ages = ages_text(event)
-      bits << %(<span class="event-ages">#{CGI.escapeHTML(plain_ages)}</span>) unless plain_ages.empty?
-      list = labels(event)
-      unless list.empty?
-        items = list.map { |label| "<li>#{CGI.escapeHTML(label)}</li>" }
-        bits << %(<ul class="event-tags">#{items.join}</ul>)
-      end
-      bits.join("\n")
-    end
-
     def attrs(event)
       bits = []
       cost = cost_label(event)
@@ -268,12 +254,14 @@ module EastsideCalendar
   end
 
   module EventLabelFilter
-    def event_tag_html(event)
-      EventLabels.html(event)
-    end
-
-    def event_tag_attrs(event)
-      EventLabels.attrs(event)
+    # price, ages text, pill labels, and the data attributes, computed once.
+    def card_label_pack(event)
+      {
+        "price" => EventLabels.price_text(event),
+        "ages_text" => EventLabels.ages_text(event),
+        "labels" => EventLabels.labels(event),
+        "attrs" => EventLabels.attrs(event)
+      }
     end
   end
 end

@@ -1,61 +1,21 @@
 {%- comment -%}
-  Card tags for one event.
-  event: cost, ages, setting, drop_off, signup, and sensory.
+  Card tags. price, ages_text, and labels are computed once in Ruby.
   A pill is a real tag. Free is the only cost pill. A price is plain
   text, and All ages is plain text. Neither is a tag.
 {%- endcomment -%}
-{%- assign tag_event = include.event -%}
-{%- assign tag_cost = tag_event.cost | append: "" | strip -%}
-{%- assign tag_ages = tag_event.ages | append: "" | strip -%}
-{%- assign tag_setting = tag_event.setting | append: "" | strip -%}
-{%- assign tag_drop = tag_event.drop_off -%}
-{%- assign tag_signup = tag_event.signup -%}
-{%- assign tag_sensory = tag_event.sensory -%}
-{%- assign tag_cost_key = tag_cost | downcase -%}
-{%- assign tag_ages_key = tag_ages | downcase -%}
-{%- assign tag_show_cost = false -%}
-{%- assign tag_price = "" -%}
-{%- if tag_cost_key == "free" -%}
-  {%- assign tag_show_cost = true -%}
-  {%- assign tag_cost = "Free" -%}
-{%- elsif tag_cost != "" -%}
-  {%- assign tag_price = tag_cost -%}
-{%- else -%}
-  {%- for tag_item in tag_event.tags -%}
-    {%- assign tag_item_key = tag_item | append: "" | downcase | strip -%}
-    {%- if tag_item_key == "free" -%}
-      {%- assign tag_show_cost = true -%}
-      {%- assign tag_cost = "Free" -%}
-    {%- endif -%}
-  {%- endfor -%}
-{%- endif -%}
-{%- assign tag_show_ages = false -%}
-{%- assign tag_ages_text = "" -%}
-{%- if tag_ages_key == "toddlers" or tag_ages_key == "kids" or tag_ages_key == "teens" -%}
-  {%- assign tag_show_ages = true -%}
-  {%- if tag_ages_key == "toddlers" -%}{%- assign tag_ages = "Toddlers" -%}
-  {%- elsif tag_ages_key == "kids" -%}{%- assign tag_ages = "Kids" -%}
-  {%- else -%}{%- assign tag_ages = "Teens" -%}{%- endif -%}
-{%- elsif tag_ages_key == "all ages" -%}
-  {%- assign tag_ages_text = "All ages" -%}
-{%- endif -%}
-{%- assign tag_show_setting = false -%}
-{%- if tag_setting == "Indoor" or tag_setting == "Outdoor" -%}
-  {%- assign tag_show_setting = true -%}
-{%- endif -%}
+{%- assign tag_price = include.price | append: "" | strip -%}
+{%- assign tag_ages_text = include.ages_text | append: "" | strip -%}
 {%- if tag_price != "" -%}
-<span class="event-price">{{ tag_price }}</span>
+<span class="event-price">{{ tag_price | escape }}</span>
 {%- endif -%}
 {%- if tag_ages_text != "" -%}
-<span class="event-ages">{{ tag_ages_text }}</span>
+<span class="event-ages">{{ tag_ages_text | escape }}</span>
 {%- endif -%}
-{%- if tag_show_cost or tag_show_ages or tag_show_setting or tag_drop == true or tag_signup == true or tag_sensory == true -%}
+{%- assign tag_labels = include.labels -%}
+{%- if tag_labels.size > 0 -%}
 <ul class="event-tags">
-  {%- if tag_show_cost -%}<li>{{ tag_cost }}</li>{%- endif -%}
-  {%- if tag_show_ages -%}<li>{{ tag_ages }}</li>{%- endif -%}
-  {%- if tag_show_setting -%}<li>{{ tag_setting }}</li>{%- endif -%}
-  {%- if tag_drop == true -%}<li>Drop-off</li>{%- endif -%}
-  {%- if tag_signup == true -%}<li>Sign-up needed</li>{%- endif -%}
-  {%- if tag_sensory == true -%}<li>Sensory-friendly</li>{%- endif -%}
+  {%- for tag_label in tag_labels -%}
+  <li>{{ tag_label | escape }}</li>
+  {%- endfor -%}
 </ul>
 {%- endif -%}
