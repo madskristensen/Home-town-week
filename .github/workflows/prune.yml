@@ -2,9 +2,12 @@ name: Prune past events
 
 on:
   schedule:
-    # 09:00 UTC is 2:00am during Pacific Daylight Time and 1:00am during
-    # Pacific Standard Time, so the America/Los_Angeles date has already rolled.
-    - cron: "0 9 * * *"
+    # Avoid minute 0. GitHub often starts those crons hours late.
+    # 09:17 UTC is 2:17am PDT and 1:17am PST, after the Pacific date rolls.
+    # 10:47 UTC is the backup, about 90 minutes later, so a delayed first
+    # run still rebuilds the home page, hubs, and calendars early.
+    - cron: "17 9 * * *"
+    - cron: "47 10 * * *"
   workflow_dispatch:
 
 # A push made with this token does not start another workflow. This job
