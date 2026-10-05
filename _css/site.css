@@ -53,6 +53,7 @@
   --btn-bg-hover: color-mix(in srgb, var(--accent) 73%, black);
   --btn-ink: var(--accent-contrast);
   --icon-share: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 2.8v7.6' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round'/%3E%3Cpath d='M6.7 6.1 10 2.8l3.3 3.3' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4.8 9.2v6.2c0 .8.6 1.4 1.4 1.4h7.6c.8 0 1.4-.6 1.4-1.4V9.2' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --icon-cal: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1.75' y='2.75' width='12.5' height='11.5' rx='1.4' fill='none' stroke='%23000' stroke-width='1.4'/%3E%3Cpath d='M1.75 6.4h12.5M5 1.35v2.5M11 1.35v2.5' fill='none' stroke='%23000' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E");
   --menu-border: var(--border-strong);
   --menu-shadow: 0 0.55rem 1.6rem rgb(from var(--text) r g b / 0.18);
   --radius: 2px;
@@ -1050,13 +1051,6 @@ picture {
   object-fit: cover;
 }
 
-.icon-sprite {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-
 /* One credit strip for every photo. The figcaption is the banner:
    0.30 white, full width, rounded with the picture. Type is 0.65rem.
    The halo and blur stay so the ink still reads on the photo.
@@ -1867,8 +1861,8 @@ a.event-kicker:focus-visible,
   height: 1.15em;
   flex: none;
   background: currentColor;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1.75' y='2.75' width='12.5' height='11.5' rx='1.4' fill='none' stroke='%23000' stroke-width='1.4'/%3E%3Cpath d='M1.75 6.4h12.5M5 1.35v2.5M11 1.35v2.5' fill='none' stroke='%23000' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1.75' y='2.75' width='12.5' height='11.5' rx='1.4' fill='none' stroke='%23000' stroke-width='1.4'/%3E%3Cpath d='M1.75 6.4h12.5M5 1.35v2.5M11 1.35v2.5' fill='none' stroke='%23000' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  -webkit-mask: var(--icon-cal) center / contain no-repeat;
+  mask: var(--icon-cal) center / contain no-repeat;
 }
 
 .event-card a.event-cal:hover,
@@ -1994,11 +1988,15 @@ a.event-kicker:focus-visible,
   display: none;
 }
 
-.cal-subscribe .cal-icon {
+.cal-subscribe > summary::before {
+  content: "";
   display: block;
   width: 1.15em;
   height: 1.15em;
   flex: none;
+  background: currentColor;
+  -webkit-mask: var(--icon-cal) center / contain no-repeat;
+  mask: var(--icon-cal) center / contain no-repeat;
 }
 
 .cal-subscribe-note {

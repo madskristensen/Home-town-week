@@ -123,11 +123,15 @@
   margin: 0;
 }
 
-.share-icon {
+.share-button::before {
+  content: "";
   display: block;
   width: 0.95rem;
   height: 0.95rem;
   flex: none;
+  background: currentColor;
+  -webkit-mask: var(--icon-share) center / contain no-repeat;
+  mask: var(--icon-share) center / contain no-repeat;
 }
 
 @media (max-width: 36rem) {

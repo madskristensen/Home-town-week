@@ -234,14 +234,14 @@
     pins.forEach(function (pin) {
       var icon = L.divIcon({
         className: pin.standout ? "map-pin map-pin-standout" : "map-pin",
-        html: pin.standout ? "<svg class=\"standout-star\" aria-hidden=\"true\" focusable=\"false\" width=\"12\" height=\"12\"><use href=\"#standout-star\"></use></svg>" : "",
+        html: pin.standout ? "<span class=\"standout-star\" aria-hidden=\"true\"></span>" : "",
         iconSize: [22, 22],
         iconAnchor: [11, 11]
       });
       var marker = L.marker([pin.lat, pin.lng], { icon: icon, title: pin.standout ? pin.name + ", Standout playground" : pin.name, keyboard: true });
       var name = escapeHtml(pin.name);
       if (pin.standout) {
-        name += "<span class=\"standout-mark\"><svg class=\"standout-star\" aria-hidden=\"true\" focusable=\"false\" width=\"16\" height=\"16\"><use href=\"#standout-star\"></use></svg><span class=\"visually-hidden\"> Standout playground</span></span>";
+        name += "<span class=\"standout-mark\"><span class=\"standout-star\" aria-hidden=\"true\"></span><span class=\"visually-hidden\"> Standout playground</span></span>";
       }
       var html = "<p class=\"map-popup-name\">" + name + "</p>"
         + "<p class=\"map-popup-city\">" + escapeHtml(pin.city) + "</p>";

@@ -8,48 +8,17 @@
 {%- endcomment -%}
 <section class="playground-directory">
   <h2 id="every-playground">Every playground</h2>
-  <svg class="icon-sprite" aria-hidden="true" focusable="false">
-    <symbol id="standout-star" viewBox="0 0 16 16">
-      <path fill="currentColor" d="M8 1.6 9.5 5.94 14.09 6.02 10.43 8.79 11.76 13.18 8 10.55 4.24 13.18 5.57 8.79 1.91 6.02 6.5 5.94Z"/>
-    </symbol>
-    <symbol id="amenity-restrooms" viewBox="0 0 16 16">
-      <circle cx="4.15" cy="3.05" r="1.45" fill="currentColor"/>
-      <path fill="currentColor" d="M1.95 14.5 3.15 6.25h2l1.2 8.25Z"/>
-      <circle cx="11.85" cy="3.05" r="1.45" fill="currentColor"/>
-      <path fill="currentColor" d="M9.9 6.05h3.9v2.15h-3.9zM9.9 8.55h1.4v5.95H9.9zM12.4 8.55h1.4v5.95h-1.4z"/>
-    </symbol>
-    <symbol id="amenity-splash" viewBox="0 0 16 16">
-      <circle cx="8" cy="1.55" r="1.15" fill="currentColor"/>
-      <circle cx="2.35" cy="4.55" r="1.2" fill="currentColor"/>
-      <circle cx="13.65" cy="4.55" r="1.2" fill="currentColor"/>
-      <path fill="currentColor" d="M7.15 11.05V5.15c0-.5.4-.85.85-.85s.85.35.85.85v5.9z"/>
-      <path fill="currentColor" d="M6.85 10.6C5.4 9.35 4.15 8.15 3.7 6.85c.55.05 1.05.4 1.2.9.4.95 1.35 1.9 2.45 2.75z"/>
-      <path fill="currentColor" d="M9.15 10.6c1.45-1.25 2.7-2.45 3.15-3.75-.55.05-1.05.4-1.2.9-.4.95-1.35 1.9-2.45 2.75z"/>
-      <path fill="currentColor" d="M6.05 10.85h3.9l.75 2.6H5.3z"/>
-      <path fill="currentColor" d="M1.05 13.55h13.9v1.4H1.05z"/>
-    </symbol>
-    <symbol id="amenity-accessible" viewBox="0 0 16 16">
-      <circle cx="10.15" cy="2.15" r="1.32" fill="currentColor"/>
-      <path fill="currentColor" fill-rule="evenodd" d="M5.2 7.4a3.6 3.6 0 1 0 .02 0zM5.2 9.15a1.85 1.85 0 1 1-.02 0z"/>
-      <path fill="currentColor" d="M8.35 3.6h1.45v2.9H8.35zM8.35 6.15h3.15v1.2H8.35zM10.35 7.35h1.15l1.25 3.05H11.4zM11.85 10.25h1.7v1.1h-1.7z"/>
-      <circle cx="12.95" cy="12.55" r="1.28" fill="currentColor"/>
-    </symbol>
-    <symbol id="amenity-covered" viewBox="0 0 16 16">
-      <path fill="currentColor" d="M.85 7.45 8 1.4l7.15 6.05-1.85.05L8 3.2 2.7 7.5Z"/>
-      <path fill="currentColor" d="M2.75 7.6h1.7V14.4h-1.7zm8.8 0h1.7V14.4h-1.7z"/>
-    </symbol>
-    <symbol id="amenity-toddler" viewBox="0 0 16 16">
-      <circle cx="8" cy="4.55" r="2.2" fill="currentColor"/>
-      <path fill="currentColor" d="M5.05 14.5 6.25 8.15c.25-.7.9-1.15 1.75-1.15s1.5.45 1.75 1.15L10.95 14.5Z"/>
-    </symbol>
-  </svg>
+  {%- assign amenity_rows = "standout|Standout|Standout playground~restrooms|Restrooms|Restrooms~splash|Splash pad|Splash pad~accessible|Accessible|Accessible~covered|Covered|Covered or shade~toddler|Toddler area|Toddler area" | split: "~" -%}
   <ul class="badge-legend">
-    <li><span class="park-badge" aria-hidden="true"><svg class="park-badge-icon" width="16" height="16" focusable="false"><use href="#standout-star"></use></svg></span> Standout</li>
-    <li><span class="park-badge" aria-hidden="true"><svg class="park-badge-icon" width="16" height="16" focusable="false"><use href="#amenity-restrooms"></use></svg></span> Restrooms</li>
-    <li><span class="park-badge" aria-hidden="true"><svg class="park-badge-icon" width="16" height="16" focusable="false"><use href="#amenity-toddler"></use></svg></span> Toddler area</li>
-    <li><span class="park-badge" aria-hidden="true"><svg class="park-badge-icon" width="16" height="16" focusable="false"><use href="#amenity-splash"></use></svg></span> Splash pad</li>
-    <li><span class="park-badge" aria-hidden="true"><svg class="park-badge-icon" width="16" height="16" focusable="false"><use href="#amenity-accessible"></use></svg></span> Accessible</li>
-    <li><span class="park-badge" aria-hidden="true"><svg class="park-badge-icon" width="16" height="16" focusable="false"><use href="#amenity-covered"></use></svg></span> Covered</li>
+    {%- assign legend_order = "standout|restrooms|toddler|splash|accessible|covered" | split: "|" -%}
+    {%- for legend_key in legend_order -%}
+    {%- for row in amenity_rows -%}
+    {%- assign bits = row | split: "|" -%}
+    {%- if bits[0] == legend_key -%}
+    <li><span class="park-badge badge-{{ bits[0] }}" aria-hidden="true"></span> {{ bits[1] }}</li>
+    {%- endif -%}
+    {%- endfor -%}
+    {%- endfor -%}
   </ul>
   {%- include page-intro.html text="Public park playgrounds by city. Stars mark our favorites." -%}
   {%- for city in site.data.playground_map.cities -%}
@@ -66,7 +35,7 @@
       {%- assign park_place = park.address -%}
     {%- endif -%}
     <li id="{{ park.id }}" data-city="{{ city.id }}"{% if park.restrooms %} data-restrooms="1"{% endif %}{% if park.covered %} data-covered="1"{% endif %}{% if park.accessible %} data-accessible="1"{% endif %}{% if park.toddler %} data-toddler="1"{% endif %}{% if park.splash %} data-splash="1"{% endif %}>
-      <a class="playground-name" href="{{ park.page }}" rel="noopener"><span class="playground-name-text">{{ park.name }}</span>{%- if park.standout -%}<span class="park-badge standout-mark" title="Standout playground"><svg class="park-badge-icon standout-star" aria-hidden="true" focusable="false" width="16" height="16"><use href="#standout-star"></use></svg><span class="visually-hidden">Standout playground</span></span>{%- endif -%}{%- if park.restrooms -%}<span class="park-badge amenity-mark" title="Restrooms"><svg class="park-badge-icon" aria-hidden="true" focusable="false" width="16" height="16"><use href="#amenity-restrooms"></use></svg><span class="visually-hidden">Restrooms</span></span>{%- endif -%}{%- if park.splash -%}<span class="park-badge amenity-mark" title="Splash pad"><svg class="park-badge-icon" aria-hidden="true" focusable="false" width="16" height="16"><use href="#amenity-splash"></use></svg><span class="visually-hidden">Splash pad</span></span>{%- endif -%}{%- if park.accessible -%}<span class="park-badge amenity-mark" title="Accessible"><svg class="park-badge-icon" aria-hidden="true" focusable="false" width="16" height="16"><use href="#amenity-accessible"></use></svg><span class="visually-hidden">Accessible</span></span>{%- endif -%}{%- if park.covered -%}<span class="park-badge amenity-mark" title="Covered or shade"><svg class="park-badge-icon" aria-hidden="true" focusable="false" width="16" height="16"><use href="#amenity-covered"></use></svg><span class="visually-hidden">Covered or shade</span></span>{%- endif -%}{%- if park.toddler -%}<span class="park-badge amenity-mark" title="Toddler area"><svg class="park-badge-icon" aria-hidden="true" focusable="false" width="16" height="16"><use href="#amenity-toddler"></use></svg><span class="visually-hidden">Toddler area</span></span>{%- endif -%}</a>
+      <a class="playground-name" href="{{ park.page }}" rel="noopener"><span class="playground-name-text">{{ park.name }}</span>{%- for row in amenity_rows -%}{%- assign bits = row | split: "|" -%}{%- assign amenity_key = bits[0] -%}{%- if park[amenity_key] -%}<span class="park-badge badge-{{ amenity_key }}{% if amenity_key == "standout" %} standout-mark{% else %} amenity-mark{% endif %}" title="{{ bits[2] }}"><span class="visually-hidden">{{ bits[2] }}</span></span>{%- endif -%}{%- endfor -%}</a>
       <a class="addr" href="{{ park.address | map_search: city.name, park.name }}"><span class="addr-text">{{ park_place }}</span></a>
     </li>
     {%- endfor -%}

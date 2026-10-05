@@ -45,17 +45,6 @@
   {%- endif -%}
 </head>
 <body>
-  <svg class="icon-sprite" aria-hidden="true" focusable="false">
-    <symbol id="icon-cal" viewBox="0 0 16 16">
-      <rect x="1.75" y="2.75" width="12.5" height="11.5" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.4"></rect>
-      <path d="M1.75 6.4h12.5M5 1.35v2.5M11 1.35v2.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
-    </symbol>
-    <symbol id="icon-share" viewBox="0 0 20 20">
-      <path d="M10 2.8v7.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
-      <path d="M6.7 6.1 10 2.8l3.3 3.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
-      <path d="M4.8 9.2v6.2c0 .8.6 1.4 1.4 1.4h7.6c.8 0 1.4-.6 1.4-1.4V9.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
-    </symbol>
-  </svg>
   {%- assign print_title = page.title | default: site.title -%}
   <p class="print-mast">
     <span class="print-mast-title">{{ print_title | escape }}</span>

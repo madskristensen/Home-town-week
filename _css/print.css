@@ -236,6 +236,14 @@ figure,
   color: #000 !important;
 }
 
+.playground-list .park-badge::before,
+.badge-legend .park-badge::before {
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  background: #000;
+}
+
 .playground-list .amenity-mark .visually-hidden {
   position: static !important;
   width: auto !important;
