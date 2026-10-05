@@ -26,7 +26,7 @@ image_alt: The entrance sign and plantings at Bellevue Botanical Garden.
   <li><label><input id="fall-12" type="checkbox"><span class="check-text">Taste apples and watch the cider press at <a href="/issaquah/#issaquah-goes-apples">Issaquah Goes Apples</a></span></label></li>
   <li><label><input id="fall-13" type="checkbox"><span class="check-text">Watch salmon at the <a href="/articles/salmon-spawning/">Issaquah hatchery</a></span></label></li>
   <li><label><input id="fall-14" type="checkbox"><span class="check-text">Look for salmon on the <a href="/renton/#cedar-river-salmon-journey-at-cedar-river-park">Cedar River</a></span></label></li>
-  <li><label><input id="fall-15" type="checkbox"><span class="check-text">Go to <a href="/issaquah/#salmon-days-festival">Salmon Days</a> in Issaquah</span></label></li>
+  <li><label><input id="fall-15" type="checkbox"><span class="check-text">Go to <a href="https://www.salmondays.org/">Salmon Days</a> in Issaquah</span></label></li>
   <li><label><input id="fall-16" type="checkbox"><span class="check-text">Kick through a leaf pile on an <a href="/articles/easy-hikes-with-kids/">easy trail</a></span></label></li>
   <li><label><input id="fall-17" type="checkbox"><span class="check-text">Drive out for a <a href="/worth-the-drive/">corn maze worth the trip</a></span></label></li>
   <li><label><input id="fall-18" type="checkbox"><span class="check-text">See more patches and mazes on the <a href="/fall/#patches">fall page</a></span></label></li>
