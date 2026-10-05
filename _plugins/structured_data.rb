@@ -903,9 +903,8 @@ module EastsideCalendar
     end
   end
 
-  class StructuredDataGenerator < Jekyll::Generator
-    priority :lowest
-
+  # Called from SitePipeline after the hubs have chosen photos.
+  class StructuredDataGenerator
     def generate(site)
       StructuredData.attach_free_events(site)
       StructuredData.attach_toddler_events(site)

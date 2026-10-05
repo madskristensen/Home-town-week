@@ -20,7 +20,7 @@ module EastsideCalendar
 
       path = feed_path(page)
       page.data["atom_feed"] = path
-      photos = photos_by_name(page.content)
+      photos = {}
       Array(page.data["visible_events"]).each do |row|
         next unless row.is_a?(Hash)
 
@@ -48,18 +48,6 @@ module EastsideCalendar
     def feed_path(page)
       base = page.url.to_s.sub(%r{/\z}, "")
       "#{base}/feed.xml"
-    end
-
-    def photos_by_name(content)
-      map = {}
-      EventCalendar.markdown_headings(content).each do |heading|
-        photo = SeasonalHubs.parse_photo_include(heading[:body])
-        src = photo && photo["src"].to_s.strip
-        next if src.to_s.empty?
-
-        map[heading[:text].to_s] = src
-      end
-      map
     end
 
     def entry_for(event, photos)
