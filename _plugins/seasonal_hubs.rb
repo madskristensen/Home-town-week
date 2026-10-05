@@ -572,7 +572,7 @@ module EastsideCalendar
         "--season-link-dark:#{dark["link"]}"
       ].join(";")
       <<~HTML.strip
-        <nav class="season-banner" style="#{style}" aria-label="#{esc(hub["banner_title"])}">
+        <nav class="season-banner" style="#{style}">
           <div class="wrap">
             <a class="season-banner-link" href="#{esc(href)}">
               <span class="season-banner-motif" aria-hidden="true">#{theme["svg"]}</span>

@@ -154,7 +154,7 @@
 {%- assign pick_lines = picked | split: "~" -%}
 {%- assign used_photos = "|" -%}
 {%- if pick_count > 0 -%}
-<section class="weekend-picks" aria-labelledby="weekend-picks-title">
+<section class="weekend-picks">
   <h2 id="weekend-picks-title">{%- if weekend_ready -%}<a href="{{ '/this-weekend/' | relative_url }}">{{ picks_title }}</a>{%- else -%}{{ picks_title }}{%- endif -%}</h2>
   <p class="list-updated">Updated {{ page.last_modified_at | default: site.time | date: "%b %-d" }}</p>
   {%- assign home_cards = "" -%}

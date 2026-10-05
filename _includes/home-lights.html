@@ -113,7 +113,7 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
 })();
 </script>
 {%- for town in home_lights.towns -%}
-<section class="hub-section" aria-labelledby="town-{{ town.id }}">
+<section class="hub-section">
   <h2 id="town-{{ town.id }}">{{ town.name }}</h2>
   {%- if forloop.first -%}
   {%- include card-grid.html events=town.lights eager=1 priority=true -%}
@@ -124,13 +124,13 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
 {%- endfor -%}
 {%- if page.map_id == "markets" -%}
 {%- elsif page.map_id == "halloween" -%}
-<section class="hub-section" aria-labelledby="send-lights">
+<section class="hub-section">
   <h2 id="send-lights">Tell us about a decorated house</h2>
   <p class="hub-section-intro">Know a great decorated house or street? Tell us. Anyone can send one in.</p>
   <p class="suggest-event"><a href="{{ lights_mailto }}">Tell us</a></p>
 </section>
 {%- else -%}
-<section class="hub-section" aria-labelledby="send-lights">
+<section class="hub-section">
   <h2 id="send-lights">Tell us about the lights</h2>
   <p class="hub-section-intro">See a home or a street covered in lights? Tell us. Anyone can send one in. Photos are welcome and will be credited. We do not post a photo where a kid can be recognized.</p>
   <p class="suggest-event"><a href="{{ lights_mailto }}">Send a display</a></p>

@@ -67,47 +67,47 @@
     </div>
     <nav class="nav-mock-bar" aria-label="Primary">
       <details class="nav-fly" name="nav-desktop">
-        <summary aria-controls="nav-panel-cities" aria-expanded="false">Cities</summary>
+        <summary>Cities</summary>
         <div class="nav-fly-panel" id="nav-panel-cities">
           <ul class="nav-links is-wide">{{ nav_cities }}</ul>
         </div>
       </details>
       <details class="nav-fly" name="nav-desktop">
-        <summary aria-controls="nav-panel-seasons" aria-expanded="false">Seasons</summary>
+        <summary>Seasons</summary>
         <div class="nav-fly-panel" id="nav-panel-seasons">
           <ul class="nav-links">{{ nav_seasons }}</ul>
         </div>
       </details>
       <details class="nav-fly" name="nav-desktop">
-        <summary aria-controls="nav-panel-guides" aria-expanded="false">Guides</summary>
+        <summary>Guides</summary>
         <div class="nav-fly-panel" id="nav-panel-guides">
           <ul class="nav-links is-wide">{{ nav_guides }}</ul>
         </div>
       </details>
       <details class="nav-fly" name="nav-desktop">
-        <summary aria-controls="nav-panel-explore" aria-expanded="false">Explore</summary>
+        <summary>Explore</summary>
         <div class="nav-fly-panel" id="nav-panel-explore">
           <ul class="nav-links">{{ nav_explore }}</ul>
         </div>
       </details>
     </nav>
     <details class="nav-phone">
-      <summary aria-controls="nav-phone-panel" aria-expanded="false">Menu</summary>
+      <summary>Menu</summary>
       <div class="nav-phone-panel" id="nav-phone-panel">
         <details class="nav-section" name="nav-phone">
-          <summary aria-controls="nav-phone-cities" aria-expanded="false">Cities</summary>
+          <summary>Cities</summary>
           <ul class="nav-links" id="nav-phone-cities">{{ nav_cities }}</ul>
         </details>
         <details class="nav-section" name="nav-phone">
-          <summary aria-controls="nav-phone-seasons" aria-expanded="false">Seasons</summary>
+          <summary>Seasons</summary>
           <ul class="nav-links" id="nav-phone-seasons">{{ nav_seasons }}</ul>
         </details>
         <details class="nav-section" name="nav-phone">
-          <summary aria-controls="nav-phone-guides" aria-expanded="false">Guides</summary>
+          <summary>Guides</summary>
           <ul class="nav-links" id="nav-phone-guides">{{ nav_guides }}</ul>
         </details>
         <details class="nav-section" name="nav-phone">
-          <summary aria-controls="nav-phone-explore" aria-expanded="false">Explore</summary>
+          <summary>Explore</summary>
           <ul class="nav-links" id="nav-phone-explore">{{ nav_explore }}</ul>
         </details>
       </div>
@@ -119,10 +119,6 @@
   var header = document.querySelector(".nav-mock");
   if (!header) return;
   var menus = header.querySelectorAll("details");
-  function sync(details) {
-    var summary = details.querySelector(":scope > summary");
-    if (summary) summary.setAttribute("aria-expanded", details.open ? "true" : "false");
-  }
   function closeOthers(details) {
     var i, other;
     for (i = 0; i < menus.length; i++) {
@@ -132,21 +128,12 @@
       other.open = false;
     }
   }
-  function syncAll() {
-    var i;
-    for (i = 0; i < menus.length; i++) sync(menus[i]);
-  }
   var n;
   for (n = 0; n < menus.length; n++) {
-    sync(menus[n]);
     menus[n].addEventListener("toggle", function () {
-      sync(this);
       if (this.open) closeOthers(this);
     });
   }
-  header.addEventListener("click", function () {
-    window.setTimeout(syncAll, 0);
-  });
   document.addEventListener("keydown", function (event) {
     if (event.key !== "Escape") return;
     var open = header.querySelectorAll("details[open]");
@@ -157,7 +144,6 @@
     }
     if (!inner) return;
     inner.open = false;
-    sync(inner);
     var summary = inner.querySelector(":scope > summary");
     if (summary) summary.focus();
     event.preventDefault();
@@ -166,10 +152,7 @@
     var open = header.querySelectorAll("details[open]");
     var i;
     for (i = 0; i < open.length; i++) {
-      if (!open[i].contains(event.target)) {
-        open[i].open = false;
-        sync(open[i]);
-      }
+      if (!open[i].contains(event.target)) open[i].open = false;
     }
   });
 })();

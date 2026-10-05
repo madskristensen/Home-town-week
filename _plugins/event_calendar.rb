@@ -740,7 +740,11 @@ module EastsideCalendar
       name = link[:name].to_s.strip
       name = "this event" if name.empty?
       label = "Add #{name} to calendar"
-      count > 1 ? "#{label}, #{link[:when_label]}" : label
+      # A second date is visible inside the link, so the name has to include it.
+      return label if count < 2
+
+      when_label = link[:when_label].to_s.strip
+      when_label.empty? ? label : "#{label}, #{when_label}"
     end
 
     def calendar_anchor(link, count)

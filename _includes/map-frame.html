@@ -6,7 +6,7 @@
 {%- endcomment -%}
 {%- assign frame_count = include.count_label | append: "" | strip -%}
 {%- assign frame_loader = include.loader | append: "" | strip -%}
-<section class="map-section" aria-labelledby="{{ include.title_id }}">
+<section class="map-section">
   <h2 id="{{ include.title_id }}" class="visually-hidden">Map</h2>
   <div class="map-frame">
     <div id="{{ include.canvas_id }}" class="map-canvas" hidden></div>

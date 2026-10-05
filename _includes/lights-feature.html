@@ -5,7 +5,7 @@
   The drawing is the home page Eastside map. Pins are placed at build time.
 {%- endcomment -%}
 {%- assign feature_theme = include.theme | append: "" -%}
-<aside class="lights-feature{% if feature_theme == "halloween" %} lights-feature-halloween{% elsif feature_theme == "playgrounds" %} lights-feature-playgrounds{% endif %}" aria-label="{% if feature_theme == "halloween" %}Halloween decorations map{% elsif feature_theme == "playgrounds" %}Eastside playgrounds map{% else %}Christmas lights map{% endif %}">
+<aside class="lights-feature{% if feature_theme == "halloween" %} lights-feature-halloween{% elsif feature_theme == "playgrounds" %} lights-feature-playgrounds{% endif %}">
   <div class="lights-feature-layout">
     <div class="lights-feature-art">
       {%- include lights-feature-map.html theme=feature_theme -%}

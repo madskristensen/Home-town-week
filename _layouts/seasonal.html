@@ -103,7 +103,7 @@ layout: default
   {%- else -%}
   <div class="ns-months">
     {%- for month in school_months -%}
-    <section class="ns-month" aria-labelledby="{{ month.id }}">
+    <section class="ns-month">
       <h2 id="{{ month.id }}">{{ month.label }}</h2>
       <div class="ns-grid">
         <div class="ns-dow" aria-hidden="true">Su</div>
@@ -256,7 +256,7 @@ layout: default
     </ol>
   </nav>
   {%- for section in hub_sections -%}
-  <section class="hub-section" aria-labelledby="{{ section.id }}">
+  <section class="hub-section">
     <h2 id="{{ section.id }}">{{ section.title }}</h2>
     {%- assign section_intro = section.intro | append: "" -%}
     {%- if section_intro.size > 0 -%}
