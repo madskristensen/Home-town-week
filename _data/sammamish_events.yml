@@ -9,7 +9,7 @@
   place: "Sammamish Library, 825 228th Ave SE"
   same_as: "https://kcls.bibliocommons.com/events/69b0a317b48451fc3c08086e"
   card: "sammamish-lgbtq-youth-group"
-  order: "0"
+  order: "1"
   heading_id: "sammamish-lgbtq-youth-group"
   when: "Tue Oct 6 · 4:00–5:30 p.m."
   blurbs:
@@ -19,7 +19,6 @@
       label: "LGBTQ+ Youth Group"
   description: "A social hour with Lambert House volunteers for youth ages 11 to 22 who identify as LGBTQIA+, or who are questioning. Parent or guardian permission is required for ages 12 and younger. Email kcgroups@lamberthouse.org before you go. Friends of the Sammamish Library sponsor it."
   hub_blurb: "A social hour with Lambert House volunteers for youth ages 11 to 22 who identify as LGBTQIA+, or who are questioning."
-
 - name: "Reading Buddies"
   cost: "Free"
   setting: "Indoor"
@@ -29,7 +28,7 @@
   place: "Sammamish Library, 825 228th Ave SE"
   same_as: "https://kcls.bibliocommons.com/events/6aa0645e2f780f1bf01c79ad"
   card: "reading-buddies"
-  order: "1"
+  order: "2"
   heading_id: "reading-buddies"
   when: "Wed Oct 7 · 4:00–6:00 p.m."
   blurbs:
@@ -39,7 +38,6 @@
       label: "Reading Buddies"
   description: "Students in grades K through 8, and English learners through grade 12, read aloud to a volunteer. Add your name for a 30-minute spot. Look for the green shirt. The same hours are also on Wed Oct 14."
   hub_blurb: "Students in grades K through 8, and English learners through grade 12, read aloud to a volunteer."
-
 - name: "Teens Around the Fire"
   cost: "Free"
   ages: "Teens"
@@ -49,7 +47,7 @@
   place: "Sammamish Library, 825 228th Ave SE"
   same_as: "https://kcls.bibliocommons.com/events/6abeee7796ec3a003ad7a455"
   card: "teens-around-the-fire"
-  order: "2"
+  order: "3"
   heading_id: "teens-around-the-fire"
   when: "Thu Oct 8 · 3:45–5:30 p.m."
   blurbs:
@@ -59,7 +57,6 @@
       label: "Teens Around the Fire"
   description: "A hangout for high school students, with games or homework beside the library fire. No registration. It meets on the second and fourth Thursdays."
   hub_blurb: "A hangout for high school students, with games or homework beside the library fire."
-
 - name: "Creative Connect: Sew a Pouch"
   cost: "Free"
   setting: "Outdoor"
@@ -68,7 +65,7 @@
   place: "Lodge at Beaver Lake Park"
   same_as: "https://www.sammamish.us/news/events/events/arts-commission-events/10-08-26-creative-connect/"
   card: "creative-connect-sew-a-pouch"
-  order: "3"
+  order: "4"
   heading_id: "creative-connect-sew-a-pouch"
   when: "Thu Oct 8 · 6:30–8:00 p.m."
   blurbs:
@@ -83,7 +80,6 @@
     source: "https://commons.wikimedia.org/wiki/File:2022-06-13,_Lodge_at_Beaver_Lake,_Sammamish,_Washington.jpg"
   description: "Sew a tiny pouch inspired by the Chinese hebao, with sewist Miki Hau and the Arts Commission. Adults and older kids can try simple hand sewing. Younger makers can make a no-sew version. No sewing experience needed. The workshop is free."
   hub_blurb: "Sew a tiny pouch inspired by the Chinese hebao, with sewist Miki Hau and the Arts Commission."
-
 - name: "Sammamish Landing Planting"
   cost: "Free"
   setting: "Outdoor"
@@ -93,7 +89,7 @@
   place: "Sammamish Landing Park"
   same_as: "https://www.sammamish.us/news/events/events/volunteer-opportunities/10-10-sammamish-landing-planting/"
   card: "sammamish-landing-planting"
-  order: "4"
+  order: "5"
   heading_id: "sammamish-landing-planting"
   when: "Sat Oct 10 · 11:00 a.m.–2:00 p.m."
   blurbs:
@@ -103,7 +99,6 @@
       label: "Sammamish Landing Planting"
   description: "Help plant native plants along the shoreline. The city asks you to register on the event page. It is free."
   hub_blurb: "Help plant native plants along the shoreline."
-
 - name: "STEM Saturday: Make Your Own Slime"
   cost: "Free"
   setting: "Indoor"
@@ -113,7 +108,7 @@
   place: "Sammamish Library, 825 228th Ave SE"
   same_as: "https://kcls.bibliocommons.com/events/6a76c43274e3b8b75db87c9d"
   card: "stem-saturday-make-your-own-slime"
-  order: "5"
+  order: "6"
   heading_id: "stem-saturday-make-your-own-slime"
   when: "Sat Oct 10 · 2:00–4:00 p.m."
   blurbs:
@@ -123,7 +118,6 @@
       label: "STEM Saturday: Slime"
   description: "Eastlake High School's Science National Honor Society leads a chemistry workshop, and you take slime home. It is for kids and tweens. Registration is not required."
   hub_blurb: "Eastlake High School's Science National Honor Society leads a chemistry workshop, and you take slime home."
-
 - name: "Youth Chess Club"
   cost: "Free"
   setting: "Indoor"
@@ -132,7 +126,7 @@
   place: "Sammamish Library, 825 228th Ave SE"
   same_as: "https://kcls.bibliocommons.com/events/69580fa94a9fd98b7f753800"
   card: "youth-chess-club"
-  order: "6"
+  order: "7"
   heading_id: "youth-chess-club"
   when: "Tue Oct 13 · 6:00–7:45 p.m."
   blurbs:
@@ -142,7 +136,25 @@
       label: "Youth Chess Club"
   description: "Free play from 6:00 to 7:00 p.m., then instruction from chess coaches. All levels. Ages 11 and younger should come with an adult. Registration is not required. The club meets on the second and fourth Tuesdays. This date is the October second Tuesday. Snacks and instruction come from Friends of the Sammamish Library."
   hub_blurb: "Free play from 6:00 to 7:00 p.m., then instruction from chess coaches."
-
+- name: "Korean Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  tags: [story-time]
+  start: "2026-10-15T11:30:00-07:00"
+  end: "2026-10-15T12:00:00-07:00"
+  place: "Sammamish Library, 825 228th Ave SE"
+  same_as: "https://kcls.bibliocommons.com/events/694222b96f926136000b57e6"
+  card: "korean-story-time"
+  order: "8"
+  heading_id: "korean-story-time"
+  when: "Thu Oct 15 · 11:30 a.m.–12:00 p.m."
+  blurbs:
+    - "Korean picture books, songs, and a taste of Korean culture for young children and their families."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/694222b96f926136000b57e6"
+      label: "Korean Story Time"
+  description: "Korean picture books, songs, and a taste of Korean culture for young children and their families."
+  hub_blurb: "Korean picture books, songs, and a taste of Korean culture for young children."
 - name: "Friends of the Sammamish Library Book Sale"
   cost: "Free"
   setting: "Indoor"
@@ -151,7 +163,7 @@
   place: "Sammamish Library, 825 228th Ave SE"
   same_as: "https://kcls.bibliocommons.com/events/6a9a12d181e9d60947cd92bc"
   card: "friends-of-the-sammamish-library-book-sale"
-  order: "7"
+  order: "9"
   heading_id: "friends-of-the-sammamish-library-book-sale"
   when: "Fri Oct 16 · 10:00 a.m.–6:00 p.m.; Sat Oct 17 and Sun Oct 18 · 11:00 a.m.–6:00 p.m."
   blurbs:
@@ -165,7 +177,6 @@
       label: "Sunday"
   description: "Gently used books, with proceeds to Sammamish Library programs. The listing is open to kids through adults."
   hub_blurb: "Gently used books, with proceeds to Sammamish Library programs."
-
 - name: "Friends of the Sammamish Library Book Sale"
   cost: "Free"
   setting: "Indoor"
@@ -174,7 +185,6 @@
   place: "Sammamish Library, 825 228th Ave SE"
   same_as: "https://kcls.bibliocommons.com/events/6a9a12d181e9d60947cd92bd"
   card: "friends-of-the-sammamish-library-book-sale"
-
 - name: "Friends of the Sammamish Library Book Sale"
   cost: "Free"
   setting: "Indoor"
@@ -183,7 +193,6 @@
   place: "Sammamish Library, 825 228th Ave SE"
   same_as: "https://kcls.bibliocommons.com/events/6a9a12d181e9d60947cd92be"
   card: "friends-of-the-sammamish-library-book-sale"
-
 - name: "Tree Planting at Ebright Creek Park"
   cost: "Free"
   setting: "Outdoor"
@@ -193,7 +202,7 @@
   place: "Ebright Creek Park"
   same_as: "https://www.sammamish.us/news/events/events/volunteer-opportunities/10-21-tree-planting-at-ebright-creek-park/"
   card: "tree-planting-at-ebright-creek-park"
-  order: "8"
+  order: "10"
   heading_id: "tree-planting-at-ebright-creek-park"
   when: "Wed Oct 21 · 4:00 p.m."
   blurbs:
@@ -203,7 +212,6 @@
       label: "Tree Planting at Ebright Creek Park"
   description: "Plant native trees at a site started by Washington Native Plant Society stewards. Free. The city asks you to register on the event page. The posted time is 4:00 p.m."
   hub_blurb: "Plant native trees at a site started by Washington Native Plant Society stewards."
-
 - name: "Sammamish YMCA Fall Family Festival"
   setting: "Indoor"
   cost: "Free"
@@ -213,7 +221,7 @@
   place: "Sammamish Community YMCA, 831 228th Ave SE"
   same_as: "https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities"
   card: "sammamish-ymca-fall-family-festival"
-  order: "9"
+  order: "11"
   heading_id: "sammamish-ymca-fall-family-festival"
   when: "Sat Oct 24 · 4:00–7:00 p.m."
   blurbs:
@@ -223,7 +231,6 @@
       label: "Fall festivals"
   description: "A haunted walk, a bounce house, and carnival games. The Y describes these branch festivals as free and open to the community, and it asks adults not to wear masks. Costumes should stay family-friendly."
   hub_blurb: "A haunted walk, a bounce house, and carnival games."
-
 - name: "Pumpkins on the Plaza"
   setting: "Outdoor"
   cost: "Free"
@@ -233,7 +240,7 @@
   place: "Sammamish Commons, upper plaza"
   same_as: "https://www.sammamish.us/news/events/events/pumpkins-on-the-plaza/2026-pumpkins-on-the-plaza/"
   card: "pumpkins-on-the-plaza"
-  order: "10"
+  order: "12"
   heading_id: "pumpkins-on-the-plaza"
   when: "Thu Oct 29 · 4:00–7:00 p.m."
   blurbs:
@@ -248,7 +255,6 @@
     source: "https://commons.wikimedia.org/wiki/File:Sammamish_City_Hall2.jpg"
   description: "A free city party. There is a scavenger hunt with a prize, an animal encounter, and trick-or-treat at city booths and trunks, with allergy-friendly candy at every other stop. The library hosts a craft inside. Food vendors include The Cheese Pit. Costumes are welcome."
   hub_blurb: "A free city party."
-
 - name: "Sammamish Diwali Bazaar"
   cost: "Free"
   setting: "Indoor"
@@ -262,7 +268,7 @@
   organizer_url: "https://www.eventbrite.com/e/sammamish-diwali-bazaar-2026-tickets-1993428198403"
   same_as: "https://www.eventbrite.com/e/sammamish-diwali-bazaar-2026-tickets-1993428198403"
   card: "sammamish-diwali-bazaar"
-  order: "11"
+  order: "13"
   heading_id: "sammamish-diwali-bazaar"
   when: "Sun Nov 1 · 2:30–8:00 p.m."
   blurbs:

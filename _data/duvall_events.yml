@@ -9,7 +9,7 @@
   place: "Muddy Boots Pumpkins, 15505 W Snoqualmie River Road NE"
   same_as: "https://muddybootspumpkins.com/"
   card: "muddy-boots-pumpkins"
-  order: "0"
+  order: "1"
   heading_id: "muddy-boots-pumpkins"
   when: "Through Sat Oct 31 · Sun–Thu 10:00 a.m.–8:00 p.m., Fri–Sat 10:00 a.m.–10:00 p.m."
   blurbs:
@@ -19,7 +19,6 @@
       label: "Muddy Boots"
   description: "A pumpkin patch and corn maze that opened Sep 26 and stays open every day through Oct 31. Friday and Saturday include a night maze until 10:00 p.m."
   hub_blurb: "A pumpkin patch and corn maze that opened Sep 26 and stays open every day through Oct 31."
-
 - name: "Novelty Hill Farm pumpkin patch"
   cost: "Free"
   setting: "Outdoor"
@@ -29,7 +28,7 @@
   place: "Novelty Hill Farm, 26617 NE 124th Street"
   same_as: "https://noveltyhillfarm.com/pumpkin-patch-%26-fall-fun"
   card: "novelty-hill-farm-pumpkin-patch"
-  order: "1"
+  order: "2"
   heading_id: "novelty-hill-farm-pumpkin-patch"
   when: "Through Sat Oct 31 · Fri 3:00–6:00 p.m., Sat–Sun 10:00 a.m.–5:00 p.m."
   blurbs:
@@ -39,27 +38,6 @@
       label: "Pumpkin patch"
   description: "Five acres of pumpkins still on the vine, a corn maze with a shorter path for small children, and goats, pigs, and cows. Walking the patch and visiting the animals is free. The hay mow, maze, trike track, and corn crib are $5 for ages 5 and under and $10 for ages 6 and up. Infants are free. Leashed dogs are allowed. Groups can book weekdays. The farm has not posted a last day, so this listing stays up through October."
   hub_blurb: "Five acres of pumpkins still on the vine, a corn maze with a shorter path for small children, and goats, pigs, and cows."
-
-- name: "Baby Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  ages: "Toddlers"
-  start: "2026-10-05T10:30:00-07:00"
-  end: "2026-10-05T11:30:00-07:00"
-  place: "Duvall Library, 15508 Main Street NE"
-  same_as: "https://kcls.bibliocommons.com/v2/events/6a847417b20478002993ab03"
-  card: "baby-story-time"
-  order: "2"
-  heading_id: "baby-story-time"
-  when: "Mon Oct 5 · 10:30–11:30 a.m."
-  blurbs:
-    - "Rhymes, songs, and stories for newborns through 18 months, with an adult. Up to 30 minutes of play follows. Older children can be in the room. The same hour is also on Mon Oct 12, Mon Oct 19, and Mon Oct 26."
-  links:
-    - href: "https://kcls.bibliocommons.com/v2/events/6a847417b20478002993ab03"
-      label: "Baby Story Time"
-  description: "Rhymes, songs, and stories for newborns through 18 months, with an adult. Up to 30 minutes of play follows. Older children can be in the room. The same hour is also on Mon Oct 12, Mon Oct 19, and Mon Oct 26."
-  hub_blurb: "Rhymes, songs, and stories for newborns through 18 months, with an adult."
-
 - name: "Family Story Time"
   cost: "Free"
   ages: "All ages"
@@ -80,7 +58,6 @@
       label: "Family Story Time"
   description: "Stories, music, and movement for all ages with an adult, then a short play time. No registration. The same hour is also on Thu Oct 15, Thu Oct 22, and Thu Oct 29."
   hub_blurb: "Stories, music, and movement for all ages with an adult, then a short play time."
-
 - name: "Duvall Farmers Market"
   setting: "Outdoor"
   start: "2026-10-08T15:00:00-07:00"
@@ -98,7 +75,26 @@
       label: "Farmers market"
   description: "Produce, handmade goods, and a playground under the trees by the river. These are the last two Thursdays of the season, 3:00–7:00 p.m."
   hub_blurb: "Produce, handmade goods, and a playground under the trees by the river."
-
+- name: "Baby Story Time"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Indoor"
+  tags: [story-time]
+  start: "2026-10-12T10:30:00-07:00"
+  end: "2026-10-12T11:30:00-07:00"
+  place: "Duvall Library, 15508 Main Street NE"
+  same_as: "https://kcls.bibliocommons.com/events/6a847417b20478002993ab04"
+  card: "baby-story-time"
+  order: "5"
+  heading_id: "baby-story-time"
+  when: "Mon Oct 12 · 10:30–11:30 a.m."
+  blurbs:
+    - "Rhymes, songs, and stories for babies from newborn to 18 months with an adult, then up to half an hour of play. Older siblings are welcome. The same hour is also on Mon Oct 19."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a847417b20478002993ab04"
+      label: "Baby Story Time"
+  description: "Rhymes, songs, and stories for babies from newborn to 18 months with an adult, then up to half an hour of play. Older siblings are welcome. The same hour is also on Mon Oct 19."
+  hub_blurb: "Rhymes, songs, and stories for babies from newborn to 18 months."
 - name: "Drawing and Doughnuts"
   cost: "Free"
   setting: "Indoor"
@@ -107,7 +103,7 @@
   place: "Duvall Library, 15508 Main Street NE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a87761a60ccaf01c01fc8eb"
   card: "drawing-and-doughnuts"
-  order: "5"
+  order: "6"
   heading_id: "drawing-and-doughnuts"
   when: "Tue Oct 13 · 3:00–5:00 p.m."
   blurbs:
@@ -117,7 +113,6 @@
       label: "Drawing and Doughnuts"
   description: "Drop-in drawing for ages 11 to 18. The library sets out tools for flat artwork and serves doughnuts. Stay for part of the two hours or the whole block. Bring nothing but yourself."
   hub_blurb: "Drop-in drawing for ages 11 to 18."
-
 - name: "Art Cart for Kids"
   cost: "Free"
   setting: "Indoor"
@@ -126,7 +121,7 @@
   place: "Duvall Library, 15508 Main Street NE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a87762736204e08fbb5f8ea"
   card: "art-cart-for-kids"
-  order: "6"
+  order: "7"
   heading_id: "art-cart-for-kids"
   when: "Wed Oct 14 · 4:00–5:30 p.m."
   blurbs:
@@ -136,7 +131,26 @@
       label: "Art Cart"
   description: "Craft supplies for ages 6 and older. Make something to take home or try a material you have not used. The Friends of the Duvall Library sponsor it. No registration."
   hub_blurb: "Craft supplies for ages 6 and older."
-
+- name: "Family Story Time"
+  cost: "Free"
+  ages: "All ages"
+  setting: "Indoor"
+  tags: [story-time]
+  start: "2026-10-15T10:30:00-07:00"
+  end: "2026-10-15T11:30:00-07:00"
+  place: "Duvall Library, 15508 Main Street NE"
+  same_as: "https://kcls.bibliocommons.com/events/6a847411b20478002993aafe"
+  card: "family-story-time-1"
+  order: "8"
+  heading_id: "family-story-time-1"
+  when: "Thu Oct 15 · 10:30–11:30 a.m."
+  blurbs:
+    - "Stories, songs, rhymes, and movement, then a short play time. All ages with an adult. No registration."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a847411b20478002993aafe"
+      label: "Family Story Time"
+  description: "Stories, songs, rhymes, and movement, then a short play time. All ages with an adult. No registration."
+  hub_blurb: "Stories, songs, rhymes, and movement, then a short play time."
 - name: "LEGO Block Party"
   cost: "Free"
   ages: "All ages"
@@ -146,7 +160,7 @@
   place: "Duvall Library, 15508 Main Street NE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a8dfc9b29a7dd0d674697b3"
   card: "lego-block-party"
-  order: "7"
+  order: "9"
   heading_id: "lego-block-party"
   when: "Thu Oct 15 · 4:30–5:30 p.m."
   blurbs:
@@ -156,7 +170,6 @@
       label: "LEGO Block Party"
   description: "Open building for all ages. The bricks are the library's. Stay for the hour or a few minutes. No registration."
   hub_blurb: "Open building for all ages."
-
 - name: "Free Community Art Day"
   ages: "All ages"
   signup: true
@@ -169,7 +182,7 @@
   organizer_url: "https://northwestartcenter.org/"
   same_as: "https://www.valleyrecord.com/2026/09/25/snoqualmie-valley-community-calendar-sept-25-edition/"
   card: "free-community-art-day"
-  order: "8"
+  order: "10"
   heading_id: "free-community-art-day"
   when: "Sat Oct 17 · 11:00 a.m.–2:00 p.m."
   blurbs:
@@ -181,7 +194,6 @@
       label: "Northwest Art Center"
   description: "A free drop-in art day, with supplies for all ages. Children 14 and under need an adult. The 2026 art days are supported by 4Culture. Register on the center's events page."
   hub_blurb: "A free drop-in art day, with supplies for all ages."
-
 - name: "Duvall LGBTQ+ Youth Group"
   cost: "Free"
   setting: "Indoor"
@@ -190,7 +202,7 @@
   place: "Duvall Library, 15508 Main Street NE"
   same_as: "https://kcls.bibliocommons.com/events/6ab1b2b4ca248a002917741d"
   card: "duvall-lgbtq-youth-group"
-  order: "9"
+  order: "11"
   heading_id: "duvall-lgbtq-youth-group"
   when: "Tue Oct 20 · 4:00–5:30 p.m."
   blurbs:
@@ -200,7 +212,6 @@
       label: "Duvall LGBTQ+ Youth Group"
   description: "A social hour with Lambert House volunteers for youth ages 11 to 22. Each month has a different activity. No registration."
   hub_blurb: "A social hour with Lambert House volunteers for youth ages 11 to 22."
-
 - name: "Teen Space"
   cost: "Free"
   setting: "Indoor"
@@ -210,7 +221,7 @@
   place: "Duvall Library, 15508 Main Street NE"
   same_as: "https://kcls.bibliocommons.com/events/6a46e34086636e3d0052475b"
   card: "teen-space"
-  order: "10"
+  order: "12"
   heading_id: "teen-space"
   when: "Wed Oct 28 · 5:30–7:00 p.m."
   blurbs:
@@ -220,7 +231,6 @@
       label: "Teen Space"
   description: "A drop-in hangout for middle and high school students. Games, homework space, art supplies, and free snacks. No registration. Friends of the Duvall Library sponsor it."
   hub_blurb: "A drop-in hangout for middle and high school students."
-
 - name: "Novelty Hill Farm Christmas Tree Lighting"
   signup: true
   setting: "Outdoor"
@@ -230,7 +240,7 @@
   place: "Novelty Hill Farm, 26617 NE 124th Street"
   same_as: "https://noveltyhillfarm.com/christmas-season"
   card: "novelty-hill-farm-christmas-tree-lighting"
-  order: "11"
+  order: "13"
   heading_id: "novelty-hill-farm-christmas-tree-lighting"
   when: "Sat Nov 28 · 5:00–7:30 p.m."
   blurbs:
@@ -240,7 +250,6 @@
       label: "Christmas season"
   description: "A ticketed family tree lighting at Novelty Hill Farm, with Santa, a holiday market, cider, and a sing-along. Santa leads the countdown. The evening also has hot cocoa, s'mores, and a bonfire, then songs with the Cedarcrest High School and Tolt Middle School choirs. The ticket link goes up closer to the night."
   hub_blurb: "A ticketed family tree lighting at Novelty Hill Farm, with Santa, a holiday market, cider, and a sing-along."
-
 - name: "Light Up Duvall Tree Lighting"
   cost: "Free"
   setting: "Outdoor"
@@ -250,7 +259,7 @@
   place: "Depot Park, 26219 NE Burhen Way"
   same_as: "https://www.duvallwa.gov/528/Light-Up-Duvall---Tree-Lighting"
   card: "light-up-duvall-tree-lighting"
-  order: "12"
+  order: "14"
   heading_id: "light-up-duvall-tree-lighting"
   when: "Fri Dec 4 · 5:00–8:00 p.m."
   blurbs:
