@@ -3,7 +3,11 @@
 
 One JSON-LD graph per page, for WebSite, Organization, BreadcrumbList,
 and Article. Events are schema.org microdata on the shared card. They
-need name, startDate, endDate, and a Place whose address is text.
+need name as plain text, startDate, endDate, eventStatus
+EventScheduled, and a Place with a name and a text address. Property
+values follow the microdata spec, as Google reads them: a, area, and
+link give their href, img and media give src, meta gives content, and
+time gives datetime. So itemprop="name" on a link is a URL, not a name.
 Timed dates need a UTC offset. Date-only events stay dates. A timed
 event with no end clock ends two hours later, or on a later date when
 only that date is known. isAccessibleForFree is set only when the
@@ -27,6 +31,7 @@ SCRIPT = re.compile(
 )
 TIMED = re.compile(r"T\d{2}:\d{2}")
 OFFSET = re.compile(r"T\d{2}:\d{2}:\d{2}[+-]\d{2}:\d{2}\Z")
+URLISH = re.compile(r"\A(?:https?:|/)")
 DATE_ONLY = re.compile(r"\A\d{4}-\d{2}-\d{2}\Z")
 VALID_FROM = re.compile(r"\A\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+-]\d{2}:\d{2}\Z")
 
@@ -88,7 +93,8 @@ def check_sitewide(graph, rel):
         add(errors, rel, f"logo width {width} is under 112")
 
 
-URL_PROPS = {"url", "image"}
+SRC_TAGS = {"img", "audio", "video", "source", "embed", "iframe", "track"}
+HREF_TAGS = {"a", "area", "link"}
 PRICE = re.compile(r"\A\d+(?:\.\d+)?\Z")
 VOID = {
     "area", "base", "br", "col", "embed", "hr", "img", "input",
@@ -149,16 +155,18 @@ class MicrodataParser(HTMLParser):
             if tag == "meta":
                 for prop in props:
                     parent[prop] = ad.get("content", "")
-            elif tag == "img":
+            elif tag in SRC_TAGS:
                 for prop in props:
                     parent[prop] = ad.get("src", "")
-            elif tag in ("a", "link", "area"):
-                href = ad.get("href", "")
+            elif tag in HREF_TAGS:
                 for prop in props:
-                    if prop in URL_PROPS:
-                        parent[prop] = href
-                    else:
-                        self.texts.append((parent, prop, self.depth, []))
+                    parent[prop] = ad.get("href", "")
+            elif tag == "object":
+                for prop in props:
+                    parent[prop] = ad.get("data", "")
+            elif tag in ("data", "meter"):
+                for prop in props:
+                    parent[prop] = ad.get("value", "")
             elif tag == "time":
                 for prop in props:
                     parent[prop] = ad.get("datetime") or ""
@@ -197,10 +205,13 @@ def micro_events(html):
 
 
 def check_event(node, rel, index):
-    name = node.get("name") or f"event {index}"
+    raw_name = node.get("name")
+    name = raw_name if isinstance(raw_name, str) and raw_name else f"event {index}"
     label = f"Event {name!r}"
-    if not node.get("name"):
+    if not raw_name:
         add(errors, rel, f"{label} missing name")
+    elif not isinstance(raw_name, str) or URLISH.search(raw_name.strip()):
+        add(errors, rel, f"{label} name is not plain text (itemprop name on a link or item?)")
     start = node.get("startDate") or ""
     if not start:
         add(errors, rel, f"{label} missing startDate")
@@ -243,11 +254,14 @@ def check_event(node, rel, index):
             add(errors, rel, f"{label} missing addressCountry")
     else:
         add(errors, rel, f"{label} missing address")
+    place_name = location.get("name") if isinstance(location, dict) else None
+    if not isinstance(place_name, str) or not place_name.strip():
+        add(errors, rel, f"{label} location Place has no name")
     if location.get("name") and node.get("name") and location.get("name") == node.get("name"):
         add(warnings, rel, f"{label} location.name repeats the event name")
     status = node.get("eventStatus") or ""
-    if status and status != "https://schema.org/EventScheduled":
-        add(errors, rel, f"{label} eventStatus is {status}")
+    if status != "https://schema.org/EventScheduled":
+        add(errors, rel, f"{label} eventStatus is {status or 'missing'}")
     mode = node.get("eventAttendanceMode") or ""
     if mode and mode != "https://schema.org/OfflineEventAttendanceMode":
         add(errors, rel, f"{label} eventAttendanceMode is {mode}")
@@ -401,7 +415,65 @@ def wants_article(rel):
     return rel.startswith("articles/") and rel not in ("articles/index.html",)
 
 
+GOOD_CARD = """<article itemscope itemtype="https://schema.org/Event">
+<img src="/a.jpg" itemprop="image">
+<p><time itemprop="startDate" datetime="2026-10-10T10:00:00-07:00">Sat<meta itemprop="endDate" content="2026-10-10T11:00:00-07:00"></time></p>
+<h3 itemprop="name"><link itemprop="eventStatus" href="https://schema.org/EventScheduled"><a href="https://example.org/e" itemprop="url">Story Time</a></h3>
+<a class="addr" href="https://maps.example/?q=x" itemprop="location" itemscope itemtype="https://schema.org/Place"><span itemprop="address"><span itemprop="name">Kirkland Library</span>, 308 Kirkland Ave</span></a>
+<p itemprop="description">Songs and stories.</p>
+</article>"""
+
+
+def self_test():
+    """Feed known cards through the parser and checks. Exit 1 on a miss."""
+    good = micro_events(GOOD_CARD)
+    if len(good) != 1:
+        sys.exit("self-test: good card did not parse as one Event")
+    event = good[0]
+    want = {
+        "name": "Story Time",
+        "url": "https://example.org/e",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "startDate": "2026-10-10T10:00:00-07:00",
+    }
+    for key, value in want.items():
+        if event.get(key) != value:
+            sys.exit(f"self-test: good card {key} is {event.get(key)!r}, expected {value!r}")
+    place = event.get("location") or {}
+    if place.get("name") != "Kirkland Library" or place.get("address") != "Kirkland Library, 308 Kirkland Ave":
+        sys.exit(f"self-test: good card place is {place!r}")
+    errors.clear()
+    check_event(event, "good", 1)
+    if errors:
+        sys.exit(f"self-test: good card failed: {errors}")
+    bad_cases = {
+        "name on a link": (
+            GOOD_CARD.replace('<h3 itemprop="name">', "<h3>").replace('itemprop="url">', 'itemprop="name url">'),
+            "name is not plain text",
+        ),
+        "no eventStatus": (
+            GOOD_CARD.replace('<link itemprop="eventStatus" href="https://schema.org/EventScheduled">', ""),
+            "eventStatus",
+        ),
+        "no place name": (
+            GOOD_CARD.replace('<span itemprop="name">Kirkland Library</span>', "Kirkland Library"),
+            "Place has no name",
+        ),
+    }
+    for case, (html, expect) in bad_cases.items():
+        errors.clear()
+        for index, node in enumerate(micro_events(html), 1):
+            check_event(node, case, index)
+        if not any(expect in line for line in errors):
+            sys.exit(f"self-test: {case} was not caught (errors: {errors})")
+    errors.clear()
+    print(f"schema self-test ok (1 good card, {len(bad_cases)} bad cards caught)")
+
+
 def main():
+    if "--self-test" in sys.argv[1:]:
+        self_test()
+        return
     pages = sorted(SITE.rglob("*.html"))
     if not pages:
         sys.exit("no built HTML; run jekyll build first")

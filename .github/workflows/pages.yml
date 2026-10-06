@@ -31,6 +31,7 @@ jobs:
         run: |
           python3 script/check-event-areas.py --self-test
           python3 script/prune-past-events.py --self-test
+          python3 script/check-schema.py --self-test
           python3 script/check-rules.py
 
       - name: Check shared components

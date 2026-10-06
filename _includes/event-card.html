@@ -161,9 +161,22 @@
 {%- endif -%}
 {%- assign visible_place = include.place | append: "" | strip -%}
 {%- assign visible_place_down = visible_place | downcase -%}
+{%- assign place_head = "" -%}
+{%- assign place_tail = "" -%}
+{%- assign locality_down = schema_locality | downcase -%}
 {%- if schema_venue.size > 0 and visible_place_down contains venue_down -%}
   {%- assign place_shows_name = true -%}
-  {%- if visible_place_down == venue_down -%}{%- assign place_is_name = true -%}{%- endif -%}
+  {%- if visible_place_down == venue_down -%}
+    {%- assign place_is_name = true -%}
+  {%- elsif venue_down != locality_down -%}
+    {%- assign place_head = visible_place | slice: 0, schema_venue.size -%}
+    {%- assign place_head_down = place_head | downcase -%}
+    {%- if place_head_down == venue_down -%}
+      {%- assign place_tail = visible_place | slice: schema_venue.size, visible_place.size -%}
+    {%- else -%}
+      {%- assign place_head = "" -%}
+    {%- endif -%}
+  {%- endif -%}
 {%- endif -%}
 {%- if card_is_event -%}
   {%- assign schema_amount = schema_cost | offer_amount -%}
@@ -176,6 +189,7 @@
 {%- if card_is_event -%}
 {%- assign when_probe = include.when | append: "" | strip -%}
 {%- if when_probe.size == 0 -%}<meta itemprop="startDate" content="{{ micro_start | escape }}"><meta itemprop="endDate" content="{{ micro_end | escape }}">{%- endif -%}
+<link itemprop="eventStatus" href="https://schema.org/EventScheduled">
 {%- unless url_on_title -%}<link itemprop="url" href="{{ schema_url | escape }}">{%- endunless -%}
 {%- if schema_amount.size > 0 and schema_from.size > 0 -%}
 <span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="{{ schema_amount | escape }}"><meta itemprop="priceCurrency" content="USD"><meta itemprop="availability" content="https://schema.org/InStock"><link itemprop="url" href="{{ schema_url | escape }}"><meta itemprop="validFrom" content="{{ schema_from | escape }}"></span>
@@ -238,10 +252,14 @@
 {%- assign card_rel = "" -%}
 {%- assign card_sponsored_flag = include.sponsored | append: "" | strip -%}
 {%- if card_sponsored_flag == "true" -%}{%- assign card_rel = "sponsored" -%}{%- endif -%}
+{%- assign name_on_heading = false -%}
+{%- if card_is_event and card_number.size == 0 and card_kicker.size == 0 -%}{%- assign name_on_heading = true -%}{%- endif -%}
 {%- if card_title.size > 0 or card_number.size > 0 -%}
-<h3{%- if card_is_event and card_href.size == 0 %} itemprop="name"{% endif -%}>{%- if card_schema.size > 0 -%}{{ card_schema }}{%- endif -%}{%- if card_number.size > 0 -%}<span class="home-num">{{ card_number | escape }}</span> {% endif -%}
+<h3{%- if name_on_heading %} itemprop="name"{% endif -%}>{%- if card_schema.size > 0 -%}{{ card_schema }}{%- endif -%}{%- if card_number.size > 0 -%}<span class="home-num">{{ card_number | escape }}</span> {% endif -%}
 {%- if card_href.size > 0 -%}
-<a href="{% if include.external %}{{ card_href | escape }}{% else %}{{ card_href | relative_url }}{% endif %}"{% if card_rel.size > 0 %} rel="{{ card_rel }}"{% endif %}{% if card_is_event %} itemprop="{% if url_on_title %}name url{% else %}name{% endif %}"{% endif %}>{{ card_title | escape }}</a>
+<a href="{% if include.external %}{{ card_href | escape }}{% else %}{{ card_href | relative_url }}{% endif %}"{% if card_rel.size > 0 %} rel="{{ card_rel }}"{% endif %}{% if url_on_title %} itemprop="url"{% endif %}>{%- if card_is_event and name_on_heading == false -%}<span itemprop="name">{{ card_title | escape }}</span>{%- else -%}{{ card_title | escape }}{%- endif -%}</a>
+{%- elsif card_is_event and name_on_heading == false -%}
+<span itemprop="name">{{ card_title | escape }}</span>
 {%- else -%}
 {{ card_title | escape }}
 {%- endif -%}
@@ -257,14 +275,16 @@
 {%- assign addr_prop = "address" -%}
 {%- if place_is_name -%}{%- assign addr_prop = "name address" -%}{%- endif -%}
 {%- assign town_is_name = false -%}
-{%- if card_is_event and card_city.size > 0 and schema_venue.size > 0 -%}
+{%- if card_is_event and card_city.size > 0 and schema_venue.size > 0 and place_is_name == false and place_head.size == 0 -%}
 {%- assign city_down = card_city | downcase -%}
 {%- if city_down == venue_down -%}{%- assign town_is_name = true -%}{%- endif -%}
 {%- endif -%}
+{%- assign place_has_name = town_is_name -%}
+{%- if place_is_name or place_head.size > 0 -%}{%- assign place_has_name = true -%}{%- endif -%}
 {%- if card_place.size > 0 and card_city.size == 0 and card_drive.size == 0 -%}
-<a class="event-place addr" href="{{ card_place | map_search: include.place_city, include.place_name }}"{% if card_is_event %} itemprop="location" itemscope itemtype="https://schema.org/Place"{% endif %}><span class="addr-text"{% if card_is_event %} itemprop="{{ addr_prop }}"{% endif %}>{{ card_place | escape }}</span>{%- if card_is_event and place_shows_name == false and town_is_name == false and schema_venue.size > 0 -%}<meta itemprop="name" content="{{ schema_venue | escape }}">{%- endif -%}</a>
+<a class="event-place addr" href="{{ card_place | map_search: include.place_city, include.place_name }}"{% if card_is_event %} itemprop="location" itemscope itemtype="https://schema.org/Place"{% endif %}><span class="addr-text"{% if card_is_event %} itemprop="{{ addr_prop }}"{% endif %}>{%- if card_is_event and place_head.size > 0 -%}<span itemprop="name">{{ place_head | escape }}</span>{{ place_tail | escape }}{%- else -%}{{ card_place | escape }}{%- endif -%}</span>{%- if card_is_event and place_has_name == false and schema_venue.size > 0 -%}<meta itemprop="name" content="{{ schema_venue | escape }}">{%- endif -%}</a>
 {%- else -%}
-<p class="event-place"{% if card_is_event %} itemprop="location" itemscope itemtype="https://schema.org/Place"{% endif %}>{%- if card_place.size > 0 -%}<a class="addr" href="{{ card_place | map_search: include.place_city, include.place_name }}"><span class="addr-text"{% if card_is_event %} itemprop="{{ addr_prop }}"{% endif %}>{{ card_place | escape }}</span></a>{%- if card_city.size > 0 -%}, {% endif -%}{%- endif -%}
+<p class="event-place"{% if card_is_event %} itemprop="location" itemscope itemtype="https://schema.org/Place"{% endif %}>{%- if card_place.size > 0 -%}<a class="addr" href="{{ card_place | map_search: include.place_city, include.place_name }}"><span class="addr-text"{% if card_is_event %} itemprop="{{ addr_prop }}"{% endif %}>{%- if card_is_event and place_head.size > 0 -%}<span itemprop="name">{{ place_head | escape }}</span>{{ place_tail | escape }}{%- else -%}{{ card_place | escape }}{%- endif -%}</span></a>{%- if card_city.size > 0 -%}, {% endif -%}{%- endif -%}
 {%- if card_drive.size > 0 -%}
 {%- if card_city.size > 0 -%}<span class="place-town"{% if town_is_name %} itemprop="name"{% endif %}>{{ card_city | escape }}</span>{%- endif -%}<span class="drive-time">{{ card_drive | escape }}</span>
 {%- elsif card_city.size > 0 -%}
@@ -274,7 +294,7 @@
 <span class="place-town"{% if town_is_name %} itemprop="name"{% endif %}>{{ card_city | escape }}</span>
 {%- endif -%}
 {%- endif -%}
-{%- if card_is_event and place_shows_name == false and town_is_name == false and schema_venue.size > 0 -%}<meta itemprop="name" content="{{ schema_venue | escape }}">{%- endif -%}
+{%- if card_is_event and place_has_name == false and schema_venue.size > 0 -%}<meta itemprop="name" content="{{ schema_venue | escape }}">{%- endif -%}
 </p>
 {%- endif -%}
 {%- endif -%}

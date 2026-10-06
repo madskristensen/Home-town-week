@@ -61,3 +61,5 @@ Hub events are microdata on the shared cards. The page does not add an ItemList 
 ## Schema
 
 Every page carries one JSON-LD graph. The home page adds WebSite, Organization with the logo, and a Person. City, hub, guide, and article pages add a BreadcrumbList. Articles add Article markup. Event rich-result fields are microdata on the card, not a second event graph.
+
+The event name is the title text: `itemprop="name"` sits on the `h3`, never on the link, because a link's microdata value is its href. The title link carries `url` when it is the source page. Each event has one `<link itemprop="eventStatus" href="https://schema.org/EventScheduled">`. The Place name is the venue at the start of the visible place text, a `name` span inside the `address` span. A hidden `meta` name is only for a card whose place line does not show the venue. `python3 script/check-schema.py --self-test` fails if a name on a link, a missing eventStatus, or a Place with no name gets through.
