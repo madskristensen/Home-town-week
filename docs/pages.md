@@ -22,6 +22,10 @@
 
 There is no `/preview/nav/` page. The header is the wordmark on its own row, then Cities, Seasons, Guides, and Explore. A Menu button shows only when those four labels do not fit. The footer is About, Suggest an event, Partner with us, Request a city, and Feed.
 
+## Map links
+
+An event place and a playground address link to a Google Maps search (`https://www.google.com/maps/search/?api=1&query=`), built by `_plugins/map_links.rb` and the playground map script. Google works on every platform with no script. `_js/page.js` reads the query back from each `a.addr` link and points it at Apple Maps (`https://maps.apple.com/?q=`) on an iPhone, iPad, or Mac, unless a choice is saved. The footer's last row, "Open addresses in" with Apple Maps and Google Maps buttons, is hidden in the HTML. The script shows it only on a page with an address link. The pick is saved in `localStorage` as `map-app` and applies on every page. The card link stays the schema.org Place. Do not add a per-card menu or data attributes.
+
 ## Home and cities
 
 The home page opens with the weekend picks, then a featured-article line, then the Eastside map. The page heading is "Things to do with kids on the Eastside". A seasonal banner, when one qualifies, sits under the header.

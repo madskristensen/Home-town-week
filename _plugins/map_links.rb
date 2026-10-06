@@ -3,12 +3,17 @@
 require "cgi"
 
 module EastsideCalendar
-  # Apple Maps search link. The query is the place and the address.
+  # Google Maps search link. The query is the place and the address.
+  # Google works on every platform with no script. page.js reads the
+  # query back and points the link at Apple Maps on Apple devices, or
+  # at the app saved in the footer's map choice.
   module MapLinks
     module_function
 
+    GOOGLE = "https://www.google.com/maps/search/?api=1&query="
+
     def href(place, city = nil, name = nil)
-      "https://maps.apple.com/?q=#{encode(query_text(place, city, name))}"
+      "#{GOOGLE}#{encode(query_text(place, city, name))}"
     end
 
     # Venue and street, then the town, then WA.

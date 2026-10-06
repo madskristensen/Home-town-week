@@ -37,6 +37,6 @@ The home page share image is a 1200 by 630 PNG of the Eastside map, written by `
 
 ## Playgrounds
 
-`/playgrounds/` is every public park playground in the 15 cities, in `_data/playground_map.json`. The address is an Apple Maps link, the same query style as an event place. Bellevue, Kenmore, Mercer Island, and Sammamish are limited to parks named on the city directory or playground page. Fall City is listed under Snoqualmie.
+`/playgrounds/` is every public park playground in the 15 cities, in `_data/playground_map.json`. The address is a map link, the same query style as an event place. Bellevue, Kenmore, Mercer Island, and Sammamish are limited to parks named on the city directory or playground page. Fall City is listed under Snoqualmie.
 
 Show map loads Leaflet, marker clusters, and `/data/playgrounds.json`. Nothing from those files is requested before the tap. Leaflet's stylesheet is trimmed from `assets/leaflet/leaflet.full.css` at the start of the build and is not committed.

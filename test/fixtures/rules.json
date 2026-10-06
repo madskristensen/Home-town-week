@@ -46,6 +46,16 @@
     {"place": "125 W Sunset Way, Issaquah, WA", "city": "Redmond", "name": "", "query": "125 W Sunset Way, Issaquah, WA"},
     {"place": "", "city": "Kirkland", "name": "", "query": "Kirkland, WA"}
   ],
+  "map_links": [
+    {"place": "10201 NE 4th St, Bellevue, WA 98004", "city": "Bellevue", "name": "Downtown Park", "href": "https://www.google.com/maps/search/?api=1&query=Downtown%20Park%2C%2010201%20NE%204th%20St%2C%20Bellevue%2C%20WA"},
+    {"place": "", "city": "Kirkland", "name": "", "href": "https://www.google.com/maps/search/?api=1&query=Kirkland%2C%20WA"}
+  ],
+  "map_apps": [
+    {"href": "https://www.google.com/maps/search/?api=1&query=Kirkland%2C%20WA", "app": "apple", "out": "https://maps.apple.com/?q=Kirkland%2C%20WA"},
+    {"href": "https://maps.apple.com/?q=Kirkland%2C%20WA", "app": "google", "out": "https://www.google.com/maps/search/?api=1&query=Kirkland%2C%20WA"},
+    {"href": "https://www.google.com/maps/search/?api=1&query=Kirkland%2C%20WA", "app": "google", "out": "https://www.google.com/maps/search/?api=1&query=Kirkland%2C%20WA"},
+    {"href": "https://www.kirklandwa.gov/", "app": "apple", "out": null}
+  ],
   "encode": [
     {"text": "Bellevue, WA", "encoded": "Bellevue%2C%20WA"}
   ],

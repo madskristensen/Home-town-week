@@ -3,6 +3,8 @@
   Request a city, and Feed, plus the install link. Chrome, Edge, and
   Android show that link after beforeinstallprompt. iOS Safari shows
   Install app, which opens the how-to dialog. The family credit sits under that.
+  The map choice is the last row so showing it moves nothing. page.js
+  shows it on a page with an address link and saves the pick.
 {%- endcomment -%}
 {%- capture city_request_subject -%}Request a city{%- endcapture -%}
 {%- capture city_request_body -%}I would like Eastside Family Calendar to cover a city.
@@ -40,5 +42,12 @@ City:
       <button type="button" class="btn" data-install-close>Close</button>
     </dialog>
     <p class="footer-family">Made by an Eastside family, for Eastside families. We also blog at <a href="https://afterpickup.com">After Pickup</a>.</p>
+    <div class="map-choice" hidden>
+      <span id="map-choice-label">Open addresses in</span>
+      <div class="map-choice-pills" role="group" aria-labelledby="map-choice-label">
+        <button type="button" value="apple" aria-pressed="false">Apple Maps</button>
+        <button type="button" value="google" aria-pressed="false">Google Maps</button>
+      </div>
+    </div>
   </div>
 </footer>

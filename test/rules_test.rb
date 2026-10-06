@@ -70,6 +70,10 @@ class RulesTest < Minitest::Test
       query = EastsideCalendar::MapLinks.query_text(row["place"], row["city"], row["name"])
       assert_equal row["query"], query, row["place"]
     end
+    RULES["map_links"].each do |row|
+      href = EastsideCalendar::MapLinks.href(row["place"], row["city"], row["name"])
+      assert_equal row["href"], href, row["place"]
+    end
     RULES["encode"].each do |row|
       assert_equal row["encoded"], EastsideCalendar::MapLinks.encode(row["text"])
       assert_equal row["encoded"], EastsideCalendar::TextUtil.encode(row["text"])

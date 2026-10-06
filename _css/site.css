@@ -912,6 +912,46 @@ picture.deferred-photo {
   line-height: 1.45;
 }
 
+/* Map app choice. Last footer row, shown by page.js. */
+.map-choice:not([hidden]) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.map-choice-pills {
+  display: flex;
+  gap: 0.28rem;
+}
+
+.map-choice button {
+  min-height: 1.75rem;
+  margin: 0;
+  padding: 0 0.6rem;
+  border: 1px solid var(--btn-bg);
+  border-radius: var(--pill);
+  background: transparent;
+  color: var(--ink);
+  font: 600 0.75rem/1.2 var(--sans);
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.map-choice button[aria-pressed="true"] {
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+}
+
+.map-choice button:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
 .install-howto {
   width: min(22rem, calc(100vw - 2rem));
   max-height: calc(100dvh - 2rem);

@@ -344,7 +344,7 @@ if ("scrollRestoration" in history) history.scrollRestoration = "auto";
       }
 
       function hits(box) {
-        var nodes = document.querySelectorAll(".event-cal, .event-when > .event-share, .event-actions, .footer-meta a, .footer-meta button, .footer-family a, .leaflet-bottom");
+        var nodes = document.querySelectorAll(".event-cal, .event-when > .event-share, .event-actions, .footer-meta a, .footer-meta button, .footer-family a, .map-choice button, .leaflet-bottom");
         var found = null;
         for (var i = 0; i < nodes.length; i++) {
           var el = nodes[i];
@@ -403,3 +403,85 @@ if ("scrollRestoration" in history) history.scrollRestoration = "auto";
         if (reduce.matches && brand) brand.focus({ preventScroll: true });
       });
     })();
+
+/* Map app choice. Place links ship as Google Maps searches, which work
+   everywhere with no script. Apple devices get Apple Maps unless the
+   footer choice saved Google. The query is read back from each link,
+   so cards carry no extra markup. Playground map popups are added
+   later, so a link is pointed again when it is pressed. */
+(function () {
+  var key = "map-app";
+  var bases = {
+    google: "https://www.google.com/maps/search/?api=1&query=",
+    apple: "https://maps.apple.com/?q="
+  };
+
+  function mapQuery(href) {
+    var match = /^https:\/\/(?:www\.google\.com\/maps\/search\/\?api=1&query=|maps\.apple\.com\/\?q=)([^&#]*)$/.exec(href || "");
+    return match ? match[1] : null;
+  }
+
+  function mapHref(href, app) {
+    var query = mapQuery(href);
+    return query === null ? null : bases[app] + query;
+  }
+
+  var picked = null;
+
+  function chosenApp() {
+    if (picked) return picked;
+    var saved = null;
+    try { saved = localStorage.getItem(key); } catch (e) {}
+    if (saved === "apple" || saved === "google") return saved;
+    return /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent) ? "apple" : "google";
+  }
+
+  function point(link, app) {
+    var next = mapHref(link.getAttribute("href"), app);
+    if (next === null) return false;
+    if (next !== link.getAttribute("href")) link.setAttribute("href", next);
+    return true;
+  }
+
+  function apply(app) {
+    var links = document.querySelectorAll("a.addr");
+    var found = false;
+    for (var i = 0; i < links.length; i++) {
+      if (point(links[i], app)) found = true;
+    }
+    var row = document.querySelector(".map-choice");
+    if (!row) return found;
+    var buttons = row.querySelectorAll("button");
+    for (var n = 0; n < buttons.length; n++) {
+      buttons[n].setAttribute("aria-pressed", buttons[n].value === app ? "true" : "false");
+    }
+    if (found) row.hidden = false;
+    return found;
+  }
+
+  apply(chosenApp());
+
+  function repoint(event) {
+    var link = event.target.closest && event.target.closest("a.addr");
+    if (link) point(link, chosenApp());
+  }
+  document.addEventListener("pointerdown", repoint, true);
+  document.addEventListener("click", repoint, true);
+  window.addEventListener("pageshow", function (event) {
+    if (event.persisted) apply(chosenApp());
+  });
+
+  var row = document.querySelector(".map-choice");
+  if (!row) return;
+  row.addEventListener("click", function (event) {
+    var button = event.target.closest("button");
+    if (!button || !bases[button.value]) return;
+    try {
+      localStorage.setItem(key, button.value);
+      picked = null;
+    } catch (e) {
+      picked = button.value;
+    }
+    apply(button.value);
+  });
+})();
