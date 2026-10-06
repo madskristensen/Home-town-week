@@ -12,6 +12,10 @@ On a city page the city name is the heading and a link to `/{city}/`. "Family ev
 4. Add `_data/{city}_events.yml` as one chronological list. Each row has `name`, `start`, `end`, `place`, `same_as`, `tags`, and the card: `card`, `when`, `blurbs`, `links`, and `photo` when there is one. The build renders the city cards from those rows. The place line becomes an Apple Maps link. The query is the venue and the street address, then the town. The event title is not included. Dated rows become add-to-calendar files. Each city has a subscription feed at `/calendar/{city}.ics`. The city page links Apple, Google, and Outlook to that feed. Do not paste civic meetings, board sessions, or out-of-area listings. Delete a row when the event has ended.
 5. Put one source photo in `assets/images/{city}/` and set `hero.image` on the city entry. The share preview is the card the Pages build draws from that photo. A state outline can live at `assets/images/cities/wa/{city}.svg` for the home map. It is not a separate Open Graph PNG.
 
+## Blurbs
+
+New card blurbs are capped at about 250 characters, roughly two short sentences. Keep cost, ages, and sign-up when they fit. Do not rewrite older longer blurbs just to hit the cap.
+
 ## Labels
 
 Optional card labels are separate fields, not `tags`. Add one when the source page states it, or when the place makes it clear. Do not guess from the blurb, and do not invent a price.
