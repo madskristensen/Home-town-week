@@ -39,6 +39,6 @@
 <style>{{ layout_css }}</style>
 {%- endif -%}
 {%- comment -%}
-  Print CSS is added after load, from the script in default.html, so it
-  is not discovered while the first paint is still waiting.
+  Print CSS is added on beforeprint only, from page.js, so browsing never
+  downloads it and first paint never waits on it.
 {%- endcomment -%}

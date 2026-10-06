@@ -308,10 +308,7 @@ var slot = document.getElementById("eastside-map");
         document.head.appendChild(script);
       }
       window.addEventListener("beforeprint", addPrint);
-      window.addEventListener("load", function () {
-        addPrint();
-        addBeacon();
-      });
+      window.addEventListener("load", addBeacon);
     })();
 
 (function () {

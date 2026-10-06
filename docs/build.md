@@ -24,7 +24,7 @@ A page with a source file uses that file's newest commit time. A city page also 
 
 ## Styles and the service worker
 
-Stylesheets live in `_css/` and are minified with rcssmin, then fingerprinted (`script/fingerprint-css.py`). Every page links `/assets/css/site.<hash>.css`. Smaller layout files are inlined in one `<style>` block. `site.css` stays the shared cached file. Do not inline it. Print CSS is `/assets/css/print.<hash>.css`, added after load.
+Stylesheets live in `_css/` and are minified with rcssmin, then fingerprinted (`script/fingerprint-css.py`). Every page links `/assets/css/site.<hash>.css`. Smaller layout files are inlined in one `<style>` block. `site.css` stays the shared cached file. Do not inline it. Print CSS is `/assets/css/print.<hash>.css`, added on `beforeprint` only.
 
 `_js/event-share.js` is published as `/assets/js/event-share.<hash>.js`. `_js/page.js` is published as `/assets/js/page.<hash>.js` and loaded with `fetchpriority="low"`. The js class, the city hero reveal, and the past-event bucket pass stay inline so they do not wait on that file.
 
