@@ -169,6 +169,9 @@ a:visited {
 .issue-share,
 .share-button,
 .event-share,
+.event-actions,
+.event-cals,
+a.event-cal,
 .cal-subscribe,
 .season-banner,
 .map-section,
@@ -278,17 +281,6 @@ figure,
   display: block !important;
   min-height: 0 !important;
   padding-bottom: 5px;
-}
-
-.event-card > .event-when > :is(.event-actions, a.event-cal) {
-  display: flex !important;
-  width: max-content;
-  max-width: none !important;
-  margin: 0.15rem 0 0 !important;
-}
-
-.event-card > .event-when > .event-actions {
-  min-width: 0 !important;
 }
 
 .event-tags li {
