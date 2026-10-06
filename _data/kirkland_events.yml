@@ -704,33 +704,6 @@
     license: "organizer"
   description: "Kirkland Civic Orchestra opens its season with a free concert of Spanish and Spanish-inspired music, the first led by its new Music Director, Dr. James O. Welsch. The program has Ravel's Boléro, music from Granados' Goyescas, de Falla's The Three-Cornered Hat, Turina's Procesión del Rocío, and Bizet's Carmen Suite, drawing on Andalusian song and dance. Admission is free, but reserve tickets on Eventbrite. Doors open at 12:30 p.m. and the concert runs about two and a half hours. Very young kids may find the longer pieces hard, and screens in the lobby show the concert if someone needs a break."
   hub_blurb: "Kirkland Civic Orchestra opens its season with a free concert of Spanish and Spanish-inspired music, the first led by its new Music Director, Dr. James O. Welsch."
-- name: "Kirkland Civic Orchestra: Impressions of Spain"
-  cost: "Free"
-  setting: "Indoor"
-  signup: true
-  start: "2026-11-01T13:00:00-08:00"
-  end: "2026-11-01T15:30:00-08:00"
-  place: "Lake Washington High School Performing Arts Center, 12033 NE 80th St"
-  same_as: "https://www.eventbrite.com/e/impressions-of-spain-tickets-1999223128194"
-  organizer: "Kirkland Civic Orchestra"
-  organizer_url: "https://kirklandorchestra.org/"
-  card: "kirkland-civic-orchestra-impressions-of-spain"
-  order: "34"
-  heading_id: "kirkland-civic-orchestra-impressions-of-spain"
-  when: "Sun Nov 1 · 1:00–3:30 p.m."
-  blurbs:
-    - "Kirkland Civic Orchestra opens its season with music inspired by Spain, including Ravel’s Boléro and Bizet’s Carmen Suite, and welcomes its new music director. Admission is free with a ticket on Eventbrite. The orchestra calls it family friendly, though the longer pieces may be hard for very young kids, and the lobby screens show the concert. Doors open at 12:30 p.m."
-  links:
-    - href: "https://www.eventbrite.com/e/impressions-of-spain-tickets-1999223128194"
-      label: "Impressions of Spain tickets"
-  photo:
-    src: "/assets/images/kirkland/impressions-of-spain.jpg"
-    alt: "Poster for Impressions of Spain by Kirkland Civic Orchestra, with a colorful mosaic ceiling and the program list."
-    credit: "Image: Kirkland Civic Orchestra"
-    source: "https://kirklandorchestra.org/"
-    license: "organizer"
-  description: "Kirkland Civic Orchestra opens its season with music inspired by Spain, including Ravel's Boléro and Bizet's Carmen Suite, and welcomes its new music director. Admission is free with a ticket on Eventbrite. The orchestra calls it family friendly, though the longer pieces may be hard for very young kids, and the lobby screens show the concert. Doors open at 12:30 p.m."
-  hub_blurb: "Kirkland Civic Orchestra opens its season with music inspired by Spain, including Ravel's Boléro."
 - name: "Kandi Bracelets"
   cost: "Free"
   ages: "Teens"
@@ -740,7 +713,7 @@
   place: "Kingsgate Library, 12315 NE 143rd St"
   same_as: "https://kcls.bibliocommons.com/events/6abffb22035faf0033d9e253"
   card: "kandi-bracelets"
-  order: "36"
+  order: "35"
   heading_id: "kandi-bracelets"
   when: "Mon Nov 2 · 4:00–5:30 p.m."
   blurbs:
@@ -758,7 +731,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.bibliocommons.com/events/6ab6edb060748300382995b7"
   card: "steam-family-story-time"
-  order: "37"
+  order: "36"
   heading_id: "steam-family-story-time"
   when: "Mon Nov 2 · 4:30–5:30 p.m."
   blurbs:
@@ -779,7 +752,7 @@
   organizer_url: "https://www.finnhill.org/"
   same_as: "https://www.finnhill.org/event-details-registration/tracking-basics-learning-by-looking"
   card: "tracking-basics-learning-by-looking"
-  order: "38"
+  order: "37"
   heading_id: "tracking-basics-learning-by-looking"
   when: "Sat Nov 7 · 10:00 a.m.–12:00 p.m."
   blurbs:
@@ -805,7 +778,7 @@
   place: "Kingsgate Library, 12315 NE 143rd St"
   same_as: "https://kcls.bibliocommons.com/events/6ac00fd49dbc2b002c8bdacc"
   card: "reading-with-rover"
-  order: "39"
+  order: "38"
   heading_id: "reading-with-rover"
   when: "Sat Nov 7 · 1:00–1:15 p.m."
   blurbs:
@@ -825,7 +798,7 @@
   organizer_url: "https://kirklandturkeytrot.com/"
   same_as: "https://runsignup.com/Race/WA/Kirkland/KirklandTurkeyTrot"
   card: "lil-gobbler-run"
-  order: "40"
+  order: "39"
   heading_id: "lil-gobbler-run"
   title: "Lil’ Gobbler Run"
   when: "Sun Nov 15 · 9:30 a.m."
@@ -844,7 +817,7 @@
   place: "Studio East, 10718 NE 68th St"
   same_as: "https://studio-east.org/auditions/"
   card: "a-christmas-story"
-  order: "41"
+  order: "40"
   heading_id: "a-christmas-story"
   when: "Fri Dec 11 through Sun Dec 20"
   blurbs:
@@ -866,7 +839,7 @@
   place: "Lake Washington High School Performing Arts Center, 12033 NE 80th St"
   same_as: "https://www.lwhstheatre.com/"
   card: "solo-night"
-  order: "42"
+  order: "41"
   heading_id: "solo-night"
   when: "Fri Dec 11"
   blurbs:
@@ -884,7 +857,7 @@
   place: "Kirkland Performance Center, 350 Kirkland Ave"
   same_as: "https://www.kpcenter.org/event/the-nutcracker-symphony-of-lights/"
   card: "the-nutcracker-symphony-of-lights"
-  order: "43"
+  order: "42"
   heading_id: "the-nutcracker-symphony-of-lights"
   when: "Thu Dec 17 through Sat Dec 19 · 7:00 p.m."
   blurbs:
@@ -901,7 +874,7 @@
   place: "Lake Washington High School Performing Arts Center, 12033 NE 80th St"
   same_as: "https://www.lwhstheatre.com/"
   card: "almost-maine"
-  order: "44"
+  order: "43"
   heading_id: "almost-maine"
   when: "Fri Jan 8 through Sat Jan 16, 2027"
   blurbs:
@@ -918,7 +891,7 @@
   place: "Studio East, 10718 NE 68th St"
   same_as: "https://studio-east.org/auditions/"
   card: "romeo-and-juliet"
-  order: "45"
+  order: "44"
   heading_id: "romeo-and-juliet"
   when: "Fri Jan 22 through Sun Jan 31, 2027"
   blurbs:
@@ -934,7 +907,7 @@
   place: "Lake Washington High School Performing Arts Center, 12033 NE 80th St"
   same_as: "https://www.lwhstheatre.com/"
   card: "miscast-cabaret"
-  order: "46"
+  order: "45"
   heading_id: "miscast-cabaret"
   when: "Fri Feb 19, 2027"
   blurbs:
@@ -951,7 +924,7 @@
   place: "Studio East, 10718 NE 68th St"
   same_as: "https://studio-east.org/auditions/"
   card: "james-and-the-giant-peach"
-  order: "47"
+  order: "46"
   heading_id: "james-and-the-giant-peach"
   when: "Fri Mar 19 through Sun Mar 28, 2027"
   blurbs:
