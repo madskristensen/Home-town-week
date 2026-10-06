@@ -72,6 +72,10 @@ There is no `/winter/` hub and no redirect. Winter events stay on their city pag
 
 Each Friday, scan the lead sites for about the next six weeks. The Yodel embed needs a headless browser. For a new organizer or event in the 15 cities, verify it on the organizer's own page. Add a verified event with the organizer as the source link. Add a good organizer to `sources` in `_data/cities.yml`. Never link a lead site, and never copy its text. Skip a sponsored or paid listing unless the organizer's own page shows it is a real free or family event. Expect a lead site's clock to be off by an hour.
 
+### Movie theaters
+
+Movie theater sources in `_data/cities.yml` have `type: cinema`. Use them for kids series, sensory-friendly and special family screenings only. Skip regular showtimes, new releases on a normal run, and repertory or horror re-release series. What counts: a kids summer or holiday series (Regal Summer Movie Express, Cinemark Summer or Holiday Movie Clubhouse), a sensory-friendly or accessibility showing of a family film (AMC Sensory Friendly Films on the second and fourth Saturday, Regal My Way Matinee, North Bend Theatre Accessibility Screenings), a free or cheap kids matinee (Si View free summer matinees at North Bend Theatre), and a parks or library family movie night. Add a dated row only when the theater's own showtimes page lists that showing. Link that showtimes or ticket page. Skip AMC Wednesday evening sensory showings, which are for mature audiences, and anything rated R. Set `sensory: true` only when the page says sensory-friendly. Use the film's key art from the theater page as the photo, credited `Image: <theater>` with `license: organizer`.
+
 ### Lead sites (never cite or link)
 
 - https://the-eastside.macaronikid.com/ covers Redmond, Kirkland, Bothell, and Woodinville.

@@ -242,6 +242,25 @@
   description: "A monthly social hour with Lambert House volunteers for LGBTQ+ youth ages 11 to 22, and for youth who are questioning. Ages 12 and younger need a parent or guardian's permission. Register with the host before you come."
   hub_blurb: "A monthly social hour with Lambert House volunteers for LGBTQ+ youth ages 11 to 22."
 
+- name: "Accessibility Screening: Wildwood"
+  cost: "$8 to $10"
+  setting: "Indoor"
+  signup: true
+  start: "2026-10-29T19:00:00-07:00"
+  end: "2026-10-29T21:15:00-07:00"
+  place: "North Bend Theatre, 125 Bendigo Blvd N"
+  same_as: "https://tix.northbendtheatre.com/event/accessibility-screening-wildwood-thursday-oct-30th-7pm"
+  card: "wildwood-accessibility-screening"
+  order: "10"
+  heading_id: "wildwood-accessibility-screening"
+  when: "Thu Oct 29 · 7:00 p.m."
+  blurbs:
+    - "A gentler showing of LAIKA’s new stop-motion film Wildwood, from the studio behind Coraline. The theater keeps the lights and sound at a more comfortable level and adds open captions and audio description on screen. It is rated PG-13 and runs 2 hours 12 minutes, so it suits older kids and teens. Doors open 30 minutes early. Tickets are $8 to $10, and $8 for ages 3 to 11."
+  links:
+    - href: "https://tix.northbendtheatre.com/event/accessibility-screening-wildwood-thursday-oct-30th-7pm"
+      label: "Accessibility Screening: Wildwood"
+  description: "A gentler showing of LAIKA's new stop-motion film Wildwood, from the studio behind Coraline. The theater keeps the lights and sound at a more comfortable level and adds open captions and audio description on screen. It is rated PG-13 and runs 2 hours 12 minutes, so it suits older kids and teens. Doors open 30 minutes early. Tickets are $8 to $10, and $8 for ages 3 to 11."
+  hub_blurb: "A gentler showing of LAIKA's new stop-motion film Wildwood, with open captions and softer lights and sound."
 - name: "Play and Learn"
   cost: "Free"
   ages: "Toddlers"

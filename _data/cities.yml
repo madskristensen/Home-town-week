@@ -34,10 +34,11 @@
 #
 # sources: lives on each city entry here, not in a separate file. Each item
 # is a name, url, type, and notes. Types: city_hall, parks, allevents,
-# theater, market, library, downtown, venue, museum, nature, farm, school,
-# sports, and news. Prefer the city hall calendar, AllEvents for this city
-# and state, and a local theater (kids shows, family concerts, community
-# playhouses). Parks, markets, downtown, and the library stay on the list.
+# theater, cinema, market, library, downtown, venue, museum, nature, farm,
+# school, sports, and news. cinema is a movie theater: list only its kids
+# series, sensory-friendly showings, and special family screenings. Prefer
+# the city hall calendar, AllEvents for this city and state, and a local
+# theater (kids shows, family concerts, community playhouses). Parks, markets, downtown, and the library stay on the list.
 # A library branch gets its own row when the city has more than one.
 # Do not crawl Stay Happening, a wrong-city AllEvents page, or a library
 # calendar alone. A news site belongs here only when it carries dated
@@ -193,6 +194,21 @@
       url: "https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events"
       type: farm
       notes: "Farm Fair, sheep shearing, trick-or-treat with the animals, and holiday barn lighting at 410 130th Pl SE. Skip adult fiber classes."
+    - name: "Cinemark Lincoln Square Cinemas"
+      url: "https://www.cinemark.com/theatres/wa-bellevue/cinemark-lincoln-square-cinemas-and-imax"
+      type: cinema
+      format: html
+      notes: "Movie theater: kids series, sensory-friendly and special family screenings only; skip regular showtimes. 700 Bellevue Way NE. Holiday Movie Clubhouse runs late November to mid-December, family holiday classics at $5 a ticket (https://www.cinemark.com/movies-for-every-season-at-cinemark/holiday-movie-clubhouse/). Lincoln Square was on the 2025 list. 2026 dates and theaters were not posted on Oct 5, 2026. It was not on the 2026 Summer Movie Clubhouse list. No sensory-friendly program is listed here. The Reserve dine-in side is 21+."
+    - name: "Regal Crossroads"
+      url: "https://www.regmovies.com/theatres/regal-crossroads-bellevue-0905"
+      type: cinema
+      format: html
+      notes: "Movie theater: kids series, sensory-friendly and special family screenings only; skip regular showtimes. 1200 156th Ave NE. Regal Summer Movie Express runs June to mid-August, $1 family films Monday to Thursday at 11 a.m. (https://www.regmovies.com/promotions/summer-movie-express). Local 2026 listings named this theater, but Regal's own page does not list participating theaters, so add a date only when this theater's showtimes show SMX titles. Skip SOS horror re-releases and other repertory runs. Not on Regal's My Way Matinee list."
+    - name: "Crossroads Movies in the Park"
+      url: "https://bellevuewa.gov/events/crossroads-movies-park"
+      type: parks
+      format: html
+      notes: "City of Bellevue. Free PG outdoor movies on four Thursday evenings in August at Crossroads Park, 999 164th Ave NE (Aug 6 to 27 in 2026), with music and vendors first."
     - name: "AllEvents Bellevue"
       url: "https://allevents.in/bellevue"
       type: allevents
@@ -257,6 +273,11 @@
       url: "https://htccwa.org/"
       type: venue
       notes: "Bothell temple at 3818 212th St SE. Check for public Diwali and other festival days about six weeks out."
+    - name: "McMenamins Anderson School Theater"
+      url: "https://www.mcmenamins.com/anderson-school/anderson-school-theater"
+      type: cinema
+      format: html
+      notes: "Movie theater: kids series, sensory-friendly and special family screenings only; skip regular showtimes. 18607 Bothell Way NE. Baby Blockbusters is the first show every Tuesday, with lower volume, captions, and brighter lights for parents with babies. It is a standing weekly slot, so list it as one card for a month at most, not every Tuesday. Minors need a parent or guardian."
     - name: "AllEvents Bothell"
       url: "https://allevents.in/bothell"
       type: allevents
@@ -484,6 +505,11 @@
       url: "https://mtsgreenway.org/"
       type: nature
       notes: "The annual planting celebration and other family outings. Skip trail-crew days that are not posted for families."
+    - name: "Regal Issaquah Highlands"
+      url: "https://www.regmovies.com/theatres/regal-issaquah-highlands-1942"
+      type: cinema
+      format: html
+      notes: "Movie theater: kids series, sensory-friendly and special family screenings only; skip regular showtimes. 940 NE Park Dr. Regal Summer Movie Express runs June to mid-August, $1 family films Monday to Thursday at 11 a.m. (https://www.regmovies.com/promotions/summer-movie-express). Local 2026 listings named this theater, but Regal's own page does not list participating theaters, so add a date only when this theater's showtimes show SMX titles. Skip SOS horror re-releases and other repertory runs. Not on Regal's My Way Matinee list. Big Picture in downtown Issaquah is 21+ and is not a source."
     - name: "AllEvents Issaquah"
       url: "https://allevents.in/issaquah"
       type: allevents
@@ -656,6 +682,16 @@
       url: "https://www.finnhill.org/"
       type: neighborhood
       notes: "The homepage lists upcoming events. There is no public calendar feed. Family walks and festivals stay. Skip neighborhood meetings. DennyFest and the Christmas Ships bonfire are annual. Add a date only when this site posts one. A walk at Saint Edward State Park also goes on the Kenmore page."
+    - name: "Cinemark Totem Lake"
+      url: "https://www.cinemark.com/theatres/wa-kirkland/cinemark-totem-lake-kirkland-and-xd"
+      type: cinema
+      format: html
+      notes: "Movie theater: kids series, sensory-friendly and special family screenings only; skip regular showtimes. 12600 120th Ave NE. On the 2026 Summer Movie Clubhouse list (https://www.cinemark.com/participating-theatres/summer-movie-clubhouse-2026-participating-theatres/): family films for $1.75, Wednesdays at 9:30 a.m., June to early August. Check the Holiday Movie Clubhouse list each November. No sensory-friendly program is listed here."
+    - name: "Kirkland Outdoor Summer Movie Series"
+      url: "https://www.kirklandwa.gov/Whats-Happening/Community-Events/Parks-and-Community-Services/Outdoor-Summer-Movie-Series-Heritage-Park"
+      type: parks
+      format: html
+      notes: "City of Kirkland. Free outdoor double features at Heritage Park in August (Aug 8 and 15 in 2026). The city site often returns 403 to scripts."
     - name: "AllEvents Kirkland"
       url: "https://allevents.in/kirkland"
       type: allevents
@@ -845,7 +881,7 @@
     - name: "North Bend Theatre"
       url: "https://tix.northbendtheatre.com/"
       type: theater
-      notes: "Family films and shows at 125 Bendigo Blvd N."
+      notes: "Movie theater: kids series, sensory-friendly and special family screenings only; skip regular showtimes. 125 Bendigo Blvd N. Si View Metro Parks sponsors free summer matinees, Wednesday to Friday at 11 a.m. (https://www.northbendtheatre.com/si-view-matinees). Accessibility Screenings add open captions, audio description, and gentler light and sound. Live shows for families still count."
     - name: "Northwest Railway Museum"
       url: "https://trainmuseum.org/upcoming-events/"
       type: venue
@@ -952,6 +988,11 @@
       url: "https://www.marymoor.org/events.htm"
       type: parks
       notes: "2026 park calendar PDF. Keep a family movie or a kids run. Skip amphitheater concerts and club racing."
+    - name: "Regal Bella Bottega"
+      url: "https://www.regmovies.com/theatres/regal-bella-bottega-0904"
+      type: cinema
+      format: html
+      notes: "Movie theater: kids series, sensory-friendly and special family screenings only; skip regular showtimes. 8890 161st Ave NE. On Regal's My Way Matinee list (https://www.regmovies.com/promotions/my-way-matinee): sensory-friendly first show of the day on select Saturdays, lights up and sound down. No October 2026 date was posted on Oct 5. Regal Summer Movie Express runs June to mid-August, $1 family films Monday to Thursday at 11 a.m. (https://www.regmovies.com/promotions/summer-movie-express). Local 2026 listings named this theater, but Regal's own page does not list participating theaters, so add a date only when this theater's showtimes show SMX titles. Skip SOS horror re-releases and other repertory runs. Showtimes JSON: https://www.regmovies.com/api/getShowtimes?theatres=0904&date=MM-DD-YYYY. A sensory title ends in (Sensory)."
     - name: "AllEvents Redmond"
       url: "https://allevents.in/redmond"
       type: allevents
@@ -1040,6 +1081,11 @@
       url: "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Events"
       type: parks
       notes: "River Days, the Tuesday market, Hometown 4th of July, and the November holiday bazaar. The city site often returns 403 to scripts."
+    - name: "Regal The Landing"
+      url: "https://www.regmovies.com/theatres/regal-the-landing-1935"
+      type: cinema
+      format: html
+      notes: "Movie theater: kids series, sensory-friendly and special family screenings only; skip regular showtimes. 900 N 10th Pl. Regal Summer Movie Express runs June to mid-August, $1 family films Monday to Thursday at 11 a.m. (https://www.regmovies.com/promotions/summer-movie-express). Local 2026 listings named this theater, but Regal's own page does not list participating theaters, so add a date only when this theater's showtimes show SMX titles. Skip SOS horror re-releases and other repertory runs. Not on Regal's My Way Matinee list."
     - name: "AllEvents Renton"
       url: "https://allevents.in/renton"
       type: allevents
@@ -1252,6 +1298,11 @@
       url: "https://www.wmnorthwest.com/recyclingcenters/recyclingcentertours/"
       type: venue
       notes: "Tours at 14020 NE 190th St. List a date when a host page publishes one. Ages 10 and up."
+    - name: "AMC Woodinville 12"
+      url: "https://www.amctheatres.com/movie-theatres/seattle-tacoma/amc-woodinville-12"
+      type: cinema
+      format: html
+      notes: "Movie theater: kids series, sensory-friendly and special family screenings only; skip regular showtimes. 17640 Garden Way NE. On AMC's Sensory Friendly Films list (https://www.amctheatres.com/programs/sensory-friendly-films): family films on the second and fourth Saturday mornings, lights up, sound down, no trailers. Skip the Wednesday evening sensory showings, which are for mature audiences. Check /showtimes?date=YYYY-MM-DD for a title ending in Sensory Friendly Screening. The site sends a queue redirect first, so keep cookies between requests. AMC Factoria 8 in Bellevue is not on the sensory list."
     - name: "AllEvents Woodinville"
       url: "https://allevents.in/woodinville"
       type: allevents

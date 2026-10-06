@@ -136,6 +136,33 @@
       label: "Harvest Fest"
   description: "Free and family-friendly. The Farm Market patio has artisan and farmer vendors, live music, food, apple pressing, and pumpkins, including a guess-the-weight for the giant ones. 21 Acres and the Sammamish Valley Grange are the hosts. A guided tour of the Grange Heritage Garden is part of the day. Parking on site is limited. Carpool, bike, take the bus, or park in the neighborhood and walk."
   hub_blurb: "Free and family-friendly."
+- name: "Forgotten Island: Sensory Friendly Screening"
+  setting: "Indoor"
+  signup: true
+  sensory: true
+  start: "2026-10-10T10:45:00-07:00"
+  end: "2026-10-10T12:35:00-07:00"
+  place: "AMC Woodinville 12, 17640 Garden Way NE"
+  same_as: "https://www.amctheatres.com/movie-theatres/seattle-tacoma/amc-woodinville-12/showtimes?date=2026-10-10"
+  card: "forgotten-island-sensory-friendly"
+  order: "7"
+  heading_id: "forgotten-island-sensory-friendly"
+  when: "Sat Oct 10 · 10:45 a.m."
+  blurbs:
+    - "AMC’s sensory-friendly showing of the new DreamWorks film Forgotten Island, rated PG and just under two hours. The lights stay up and the sound is turned down, and kids are welcome to move around, talk, or sing. There are no trailers, so the movie starts right at 10:45. Tickets are regular matinee prices."
+  links:
+    - href: "https://www.amctheatres.com/movie-theatres/seattle-tacoma/amc-woodinville-12/showtimes?date=2026-10-10"
+      label: "Showtimes and tickets"
+    - href: "https://www.amctheatres.com/programs/sensory-friendly-films"
+      label: "AMC Sensory Friendly Films"
+  photo:
+    src: "/assets/images/woodinville/forgotten-island.webp"
+    alt: "Poster for the animated film Forgotten Island, with two friends and a grinning dog-like creature on a tropical beach."
+    credit: "Image: AMC Theatres"
+    source: "https://www.amctheatres.com/movies/forgotten-island-sensory-friendly-screening-84985"
+    license: "organizer"
+  description: "AMC's sensory-friendly showing of the new DreamWorks film Forgotten Island, rated PG and just under two hours. The lights stay up and the sound is turned down, and kids are welcome to move around, talk, or sing. There are no trailers, so the movie starts right at 10:45. Tickets are regular matinee prices."
+  hub_blurb: "AMC's sensory-friendly showing of the new DreamWorks film Forgotten Island, rated PG."
 - name: "Reading with Rover"
   cost: "Free"
   ages: "Kids"
