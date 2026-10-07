@@ -1,24 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Building Club"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-06T16:00:00-07:00"
-  end: "2026-10-06T17:00:00-07:00"
-  place: "Mercer Island Library, 4400 88th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/v2/events/6a63c74fe1bf262b5115d995"
-  card: "building-club"
-  order: "1"
-  heading_id: "building-club"
-  when: "Tue Oct 6 · 4:00–5:00 p.m."
-  blurbs:
-    - "An open building hour. The library supplies the materials and science toys. Ages 4 and older. Ages 4 to 7 need an adult. No registration."
-  links:
-    - href: "https://kcls.bibliocommons.com/v2/events/6a63c74fe1bf262b5115d995"
-      label: "Building Club"
-  description: "An open building hour. The library supplies the materials and science toys. Ages 4 and older. Ages 4 to 7 need an adult. No registration."
-  hub_blurb: "An open building hour."
 - name: "Story Time with a Bookseller"
   ages: "Toddlers"
   setting: "Indoor"
@@ -215,6 +197,45 @@
       label: "Family Story Time"
   description: "A Sunday story time with songs, rhymes, and movement for kids up to age 5 with an adult, then play time."
   hub_blurb: "A Sunday story time with songs, rhymes, and movement for kids up to age 5."
+- name: "Family Story Time"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Indoor"
+  tags: [story-time]
+  start: "2026-10-20T10:15:00-07:00"
+  end: "2026-10-20T11:00:00-07:00"
+  place: "Mercer Island Library, 4400 88th Ave SE"
+  same_as: "https://kcls.bibliocommons.com/events/6abacfc8e06996003a7fda8f"
+  card: "family-story-time-3"
+  order: "12"
+  heading_id: "family-story-time-3"
+  when: "Tue Oct 20 · 10:15–11:00 a.m."
+  blurbs:
+    - "A Tuesday morning story time with songs, movement, and rhymes for kids up to age 5 with an adult, then play time. Free."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6abacfc8e06996003a7fda8f"
+      label: "Family Story Time"
+  description: "A Tuesday morning story time with songs, movement, and rhymes for kids up to age 5 with an adult, then play time. Free."
+  hub_blurb: "A Tuesday morning story time with songs, movement, and rhymes for kids up to age 5 with an adult, then play time."
+- name: "Mandarin Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  tags: [story-time]
+  start: "2026-10-22T10:30:00-07:00"
+  end: "2026-10-22T11:00:00-07:00"
+  place: "Mercer Island Library, 4400 88th Ave SE"
+  same_as: "https://kcls.bibliocommons.com/events/6a6ba3514523092f0033b550"
+  card: "mandarin-story-time-2"
+  order: "13"
+  heading_id: "mandarin-story-time-2"
+  when: "Thu Oct 22 · 10:30–11:00 a.m."
+  blurbs:
+    - "Stories, songs, movement, and rhymes in Mandarin for young children with an adult. Speakers of every language are welcome. Free."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a6ba3514523092f0033b550"
+      label: "Mandarin Story Time"
+  description: "Stories, songs, movement, and rhymes in Mandarin for young children with an adult. Speakers of every language are welcome. Free."
+  hub_blurb: "Stories, songs, movement, and rhymes in Mandarin for young children with an adult."
 - name: "Tot Shabbat"
   ages: "Toddlers"
   setting: "Indoor"
@@ -224,7 +245,7 @@
   place: "Stroum Jewish Community Center, 3801 East Mercer Way"
   same_as: "https://sjcc.org/series/tot-shabbat/"
   card: "tot-shabbat-2"
-  order: "12"
+  order: "14"
   heading_id: "tot-shabbat-2"
   when: "Fri Oct 23 · 9:45–10:30 a.m."
   blurbs:
@@ -244,7 +265,7 @@
   place: "Homestead Park"
   same_as: "https://www.mercerisland.gov/parksrec/page/arbor-day-homestead-park"
   card: "arbor-day-at-homestead-park"
-  order: "13"
+  order: "15"
   heading_id: "arbor-day-at-homestead-park"
   when: "Sat Oct 24 · 10:00 a.m.–1:00 p.m."
   blurbs:
@@ -259,6 +280,26 @@
     source: "https://commons.wikimedia.org/wiki/File:Tree_Sapling_in_British_Columbia,_Canada_2019.jpg"
   description: "A work party for blackberry removal, planting, and mulch. Snacks, lunch, gloves, and tools are provided. Bring water and clothes that can get dirty. Register ahead."
   hub_blurb: "A work party for blackberry removal, planting, and mulch."
+- name: "Family Story Time"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Indoor"
+  tags: [story-time]
+  start: "2026-10-25T11:15:00-07:00"
+  end: "2026-10-25T12:00:00-07:00"
+  place: "Mercer Island Library, 4400 88th Ave SE"
+  same_as: "https://kcls.bibliocommons.com/events/6a7e21c1be14820029872db0"
+  card: "family-story-time-4"
+  order: "16"
+  heading_id: "family-story-time-4"
+  when: "Sun Oct 25 · 11:15 a.m.–12:00 p.m."
+  blurbs:
+    - "A Sunday story time with songs, movement, and rhymes for kids up to age 5 with an adult, then play time. Free."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a7e21c1be14820029872db0"
+      label: "Family Story Time"
+  description: "A Sunday story time with songs, movement, and rhymes for kids up to age 5 with an adult, then play time. Free."
+  hub_blurb: "A Sunday story time with songs, movement, and rhymes for kids up to age 5 with an adult, then play time."
 - name: "Night of 1000 Scares"
   setting: "Indoor"
   tags: [halloween]
@@ -266,7 +307,7 @@
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/auditions/"
   card: "night-of-1000-scares"
-  order: "14"
+  order: "17"
   heading_id: "night-of-1000-scares"
   when: "Sat Oct 25 · 7:00 p.m."
   blurbs:
@@ -285,7 +326,7 @@
   place: "Pioneer Park NW, Island Crest Way and SE 68th St"
   same_as: "https://www.mercerisland.gov/parksrec/page/nature-journaling-pioneer-park-1"
   card: "nature-journaling"
-  order: "15"
+  order: "18"
   heading_id: "nature-journaling"
   when: "Tue Oct 27 · 10:00 a.m.–12:00 p.m."
   blurbs:
@@ -309,7 +350,7 @@
   place: "Stroum Jewish Community Center, 3801 East Mercer Way"
   same_as: "https://sjcc.org/series/tot-shabbat/"
   card: "tot-shabbat-3"
-  order: "16"
+  order: "19"
   heading_id: "tot-shabbat-3"
   when: "Fri Oct 30 · 9:45–10:30 a.m."
   blurbs:
@@ -328,7 +369,7 @@
   place: "Town Center, Mercer Island"
   same_as: "https://www.mercerisland.gov/parksrec/page/town-center-trick-or-treat-2026"
   card: "town-center-trick-or-treat"
-  order: "17"
+  order: "20"
   heading_id: "town-center-trick-or-treat"
   when: "Fri Oct 30 · 4:00–6:00 p.m."
   blurbs:
@@ -347,7 +388,7 @@
   place: "Mercer Island Library, 4400 88th Ave SE"
   same_as: "https://kcls.bibliocommons.com/events/6aa8a358ca248a002915dc39"
   card: "discover-diwali"
-  order: "18"
+  order: "21"
   heading_id: "discover-diwali"
   when: "Sun Nov 1 · 2:30–4:00 p.m."
   blurbs:
@@ -366,7 +407,7 @@
   place: "Stroum Jewish Community Center, 3801 East Mercer Way"
   same_as: "https://sjcc.org/series/tot-shabbat/"
   card: "tot-shabbat-4"
-  order: "19"
+  order: "22"
   heading_id: "tot-shabbat-4"
   when: "Fri Nov 6 · 9:45–10:30 a.m."
   blurbs:
@@ -383,7 +424,7 @@
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/auditions/"
   card: "the-queen-in-the-cave"
-  order: "20"
+  order: "23"
   heading_id: "the-queen-in-the-cave"
   when: "Fri Nov 6 through Sun Nov 15"
   blurbs:
@@ -402,7 +443,7 @@
   place: "Mercer Island"
   same_as: "https://kcls.bibliocommons.com/events/6abacfc8e06996003a7fda92"
   card: "family-story-time"
-  order: "21"
+  order: "24"
   heading_id: "family-story-time"
   when: "Sun Oct 4 · 11:15 a.m.–12:00 p.m."
   blurbs:
@@ -421,7 +462,7 @@
   place: "Stroum Jewish Community Center, 3801 East Mercer Way"
   same_as: "https://sjcc.org/series/tot-shabbat/"
   card: "tot-shabbat-5"
-  order: "22"
+  order: "25"
   heading_id: "tot-shabbat-5"
   when: "Fri Nov 13 · 9:45–10:30 a.m."
   blurbs:
@@ -439,7 +480,7 @@
   place: "Mercerdale Park"
   same_as: "https://www.mercerisland.gov/parksrec/page/city-special-events"
   card: "holiday-tree-lighting"
-  order: "23"
+  order: "26"
   heading_id: "holiday-tree-lighting"
   when: "Thu Dec 3"
   blurbs:
@@ -457,7 +498,7 @@
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/auditions/"
   card: "its-a-wonderful-life"
-  order: "24"
+  order: "27"
   heading_id: "its-a-wonderful-life"
   title: "It’s a Wonderful Life"
   when: "Fri Dec 4 through Sun Dec 6"
@@ -479,7 +520,7 @@
   organizer_url: "https://www.mercerislandchamber.com/"
   same_as: "https://www.mercerislandchamber.com/holiday-market"
   card: "holiday-makers-market"
-  order: "25"
+  order: "28"
   heading_id: "holiday-makers-market"
   when: "Sat Dec 5 · 10:00 a.m.–3:00 p.m."
   blurbs:
@@ -497,7 +538,7 @@
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/auditions/"
   card: "the-nutcracker-and-the-mouse-king"
-  order: "26"
+  order: "29"
   heading_id: "the-nutcracker-and-the-mouse-king"
   when: "Sat Dec 5 through Sun Dec 13 · Saturdays and Sundays at 2:00 p.m."
   blurbs:
@@ -514,7 +555,7 @@
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/auditions/"
   card: "chaos-theory"
-  order: "27"
+  order: "30"
   heading_id: "chaos-theory"
   when: "Fri Dec 11 and Sat Dec 12 · 7:00 p.m."
   blurbs:
@@ -531,7 +572,7 @@
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/classes-and-camps/school-year-6th-up/"
   card: "macbeth"
-  order: "28"
+  order: "31"
   heading_id: "macbeth"
   when: "Fri Dec 18 and Sat Dec 19 · 7:00 p.m."
   blurbs:
@@ -547,7 +588,7 @@
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/auditions/"
   card: "staff-vs-students"
-  order: "29"
+  order: "32"
   heading_id: "staff-vs-students"
   when: "Sat Jan 30, 2027 · 7:00 p.m."
   blurbs:
@@ -564,7 +605,7 @@
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/auditions/"
   card: "urinetown"
-  order: "30"
+  order: "33"
   heading_id: "urinetown"
   when: "Fri Mar 12 through Sun Mar 28, 2027"
   blurbs:

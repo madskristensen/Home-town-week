@@ -1,25 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Play and Learn"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  start: "2026-10-06T09:30:00-07:00"
-  end: "2026-10-06T11:00:00-07:00"
-  place: "Cascade Covenant Church, 13225 436th Ave SE, North Bend"
-  same_as: "https://encompassnw.org/event/play-and-learn-playgroups-north-bend-snoqualmie-2026-10-06/"
-  card: "play-and-learn"
-  order: "1"
-  heading_id: "play-and-learn"
-  when: "Tue Oct 6 · 9:30–11:00 a.m."
-  blurbs:
-    - "Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. Use the entrance off Cedar Falls Way. The group follows the Snoqualmie Valley School District calendar."
-  links:
-    - href: "https://encompassnw.org/event/play-and-learn-playgroups-north-bend-snoqualmie-2026-10-06/"
-      label: "Play and Learn"
-  description: "Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. Use the entrance off Cedar Falls Way. The group follows the Snoqualmie Valley School District calendar."
-  hub_blurb: "Free drop-in play for children 12 to 36 months and a caregiver."
 - name: "Pajama Story Time"
   cost: "Free"
   setting: "Indoor"
