@@ -853,7 +853,7 @@ picture.deferred-photo {
 
 .footer-meta li {
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
   max-width: 100%;
   color: var(--forest);
   font-weight: 500;
