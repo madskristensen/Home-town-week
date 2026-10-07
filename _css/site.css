@@ -819,7 +819,7 @@ picture.deferred-photo {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.3rem;
-  padding-top: 1.25rem;
+  padding-top: 1.75rem;
 }
 
 .footer-family a {
@@ -1017,7 +1017,7 @@ picture.deferred-photo {
 }
 
 .newsletter-slot {
-  margin: 1.35rem auto 2.25rem;
+  margin: 2.5rem auto 3rem;
 }
 
 .newsletter {
