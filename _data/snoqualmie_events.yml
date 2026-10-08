@@ -38,49 +38,6 @@
       label: "Pumpkin contest"
   description: "Bring a finished paper mache pumpkin to the front desk any day the branch is open in October. Judges pick winners in a few categories, and the library will say who won by Nov 7. Paper is available at the desk if you need it."
   hub_blurb: "Bring a finished paper mache pumpkin to the front desk any day the branch is open in October."
-- name: "Free Wednesday at the Train Shed"
-  setting: "Indoor"
-  cost: "Free"
-  signup: true
-  start: "2026-10-07T11:00:00-07:00"
-  end: "2026-10-07T16:00:00-07:00"
-  place: "Train Shed Exhibit Hall, 9320 Stone Quarry Road, Snoqualmie"
-  same_as: "https://trainmuseum.org/upcoming-events/"
-  card: "free-wednesday-at-the-train-shed"
-  order: "3"
-  heading_id: "free-wednesday-at-the-train-shed"
-  when: "Wed Oct 7 · 11:00 a.m.–4:00 p.m."
-  blurbs:
-    - "The museum waives Train Shed admission on Wednesdays through December 16. The Railway History Campus is open 11:00 a.m. to 4:00 p.m. No ticket and no reservation. A story time starts at 11:00 a.m. in the shed that day."
-  links:
-    - href: "https://trainmuseum.org/upcoming-events/"
-      label: "Upcoming events"
-  photo:
-    src: "/assets/images/snoqualmie/train-shed.webp"
-    alt: "Historic rail cars inside the Train Shed Exhibit Hall at the Northwest Railway Museum in Snoqualmie."
-    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
-    source: "https://commons.wikimedia.org/wiki/File:2025-05-24,_Train_Shed_Exhibit_Hall,_Northwest_Railway_Museum_(Snoqualmie,_Washington),_142029.jpg"
-  description: "The museum waives Train Shed admission on Wednesdays through December 16. The Railway History Campus is open 11:00 a.m. to 4:00 p.m. No ticket and no reservation. A story time starts at 11:00 a.m. in the shed that day."
-  hub_blurb: "The museum waives Train Shed admission on Wednesdays through December 16."
-- name: "After School Hangout"
-  cost: "Free"
-  setting: "Indoor"
-  tags: [free]
-  start: "2026-10-07T15:00:00-07:00"
-  end: "2026-10-07T16:30:00-07:00"
-  place: "Fall City Library, 33415 SE 42nd Place"
-  same_as: "https://kcls.bibliocommons.com/events/6a90cee2aafa6100295fb1f0"
-  card: "after-school-hangout"
-  order: "4"
-  heading_id: "after-school-hangout"
-  when: "Wed Oct 7 · 3:00–4:30 p.m."
-  blurbs:
-    - "Crafts, tabletop games, a Nintendo Switch, and snacks for school-age kids through teens. No registration. Fall City Friends sponsor it. The same hours are also on Oct 14, Oct 21, and Oct 28."
-  links:
-    - href: "https://kcls.bibliocommons.com/events/6a90cee2aafa6100295fb1f0"
-      label: "After School Hangout"
-  description: "Crafts, tabletop games, a Nintendo Switch, and snacks for school-age kids through teens. No registration. Fall City Friends sponsor it. The same hours are also on Oct 14, Oct 21, and Oct 28."
-  hub_blurb: "Crafts, tabletop games, a Nintendo Switch, and snacks for school-age kids through teens."
 - name: "Toddler Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -91,7 +48,7 @@
   place: "Snoqualmie Library, 7824 Center Boulevard SE"
   same_as: "https://kcls.bibliocommons.com/events/6a80c10baafa6100295cdc4b"
   card: "toddler-story-time"
-  order: "5"
+  order: "3"
   heading_id: "toddler-story-time"
   when: "Thu Oct 8 · 10:15–10:45 a.m."
   blurbs:
@@ -110,7 +67,7 @@
   place: "Snoqualmie Library, 7824 Center Boulevard SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a80c1292dac6e00371f5445"
   card: "family-story-time"
-  order: "6"
+  order: "4"
   heading_id: "family-story-time"
   when: "Thu Oct 8 · 11:15–11:45 a.m."
   blurbs:
@@ -130,7 +87,7 @@
   place: "Fall City Library, 33415 SE 42nd Place"
   same_as: "https://kcls.bibliocommons.com/events/6a6cea16f4e5db3d00c5a385"
   card: "family-story-time-1"
-  order: "7"
+  order: "5"
   heading_id: "family-story-time-1"
   when: "Fri Oct 9 · 10:30–11:30 a.m."
   blurbs:
@@ -149,7 +106,7 @@
   organizer_url: "https://mshsdrama.weebly.com/"
   same_as: "https://livingsnoqualmie.com/event/mt-si-high-school-dramafest-26/"
   card: "mount-si-dramafest"
-  order: "8"
+  order: "6"
   heading_id: "mount-si-dramafest"
   when: "Fri Oct 9 and Sat Oct 10 · 7:00 p.m."
   blurbs:
@@ -169,7 +126,7 @@
   place: "Snoqualmie Depot, 38625 SE King Street"
   same_as: "https://trainmuseum.org/upcoming-events/halloween/"
   card: "halloween-train"
-  order: "9"
+  order: "7"
   heading_id: "halloween-train"
   when: "Sat Oct 10 and Sun Oct 11, then weekends Oct 17–18, Oct 24–25, and Oct 31–Nov 1"
   blurbs:
@@ -188,7 +145,7 @@
   place: "Snoqualmie Library, 7824 Center Boulevard SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa0a3736562d02296858c16"
   card: "lego-builders"
-  order: "10"
+  order: "8"
   heading_id: "lego-builders"
   when: "Sat Oct 10 · 3:00–4:30 p.m."
   blurbs:
@@ -216,7 +173,7 @@
   place: "Train Shed Exhibit Hall, 9320 Stone Quarry Road, Snoqualmie"
   same_as: "https://trainmuseum.org/upcoming-events/"
   card: "free-wednesday-at-the-train-shed-1"
-  order: "11"
+  order: "9"
   heading_id: "free-wednesday-at-the-train-shed-1"
   when: "Wed Oct 14 · 11:00 a.m.–4:00 p.m."
   blurbs:
@@ -235,7 +192,7 @@
   place: "Fall City Library, 33415 SE 42nd Place"
   same_as: "https://kcls.bibliocommons.com/events/6a90cee2aafa6100295fb1f1"
   card: "after-school-hangout-1"
-  order: "12"
+  order: "10"
   heading_id: "after-school-hangout-1"
   when: "Wed Oct 14 · 3:00–4:30 p.m."
   blurbs:
@@ -255,7 +212,7 @@
   place: "Snoqualmie Library, 7824 Center Boulevard SE"
   same_as: "https://kcls.bibliocommons.com/events/6a80c10baafa6100295cdc4d"
   card: "toddler-story-time-1"
-  order: "13"
+  order: "11"
   heading_id: "toddler-story-time-1"
   when: "Thu Oct 15 · 10:15–10:45 a.m."
   blurbs:
@@ -275,7 +232,7 @@
   place: "Snoqualmie Library, 7824 Center Boulevard SE"
   same_as: "https://kcls.bibliocommons.com/events/6a80c1292dac6e00371f5447"
   card: "family-story-time-2"
-  order: "14"
+  order: "12"
   heading_id: "family-story-time-2"
   when: "Thu Oct 15 · 11:15–11:45 a.m."
   blurbs:
@@ -295,7 +252,7 @@
   place: "Fall City Library, 33415 SE 42nd Place"
   same_as: "https://kcls.bibliocommons.com/events/6a6cea16f4e5db3d00c5a386"
   card: "family-story-time-3"
-  order: "15"
+  order: "13"
   heading_id: "family-story-time-3"
   when: "Fri Oct 16 · 10:30–11:30 a.m."
   blurbs:
@@ -315,7 +272,7 @@
   place: "Hoff Park, 7227 SE Hoff Street"
   same_as: "https://www.snoqualmiewa.gov/Calendar.aspx?EID=3420"
   card: "celebrate-arbor-day-at-hoff-park"
-  order: "16"
+  order: "14"
   heading_id: "celebrate-arbor-day-at-hoff-park"
   when: "Sat Oct 17 · 10:00 a.m.–2:00 p.m."
   blurbs:
@@ -335,7 +292,7 @@
   place: "Fall City Library, 33415 SE 42nd Place"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a90c89269166f088b956ef0"
   card: "lego-block-party-in-fall-city"
-  order: "17"
+  order: "15"
   heading_id: "lego-block-party-in-fall-city"
   when: "Sat Oct 17 · 1:00–3:00 p.m."
   blurbs:
@@ -354,7 +311,7 @@
   place: "Fall City Library, 33415 SE 42nd Place"
   same_as: "https://kcls.bibliocommons.com/events/6ab42bdba472a016061f3c59"
   card: "little-lab-stories-that-count"
-  order: "18"
+  order: "16"
   heading_id: "little-lab-stories-that-count"
   when: "Wed Oct 21 · 10:30–11:30 a.m."
   blurbs:
@@ -373,7 +330,7 @@
   place: "Train Shed Exhibit Hall, 9320 Stone Quarry Road, Snoqualmie"
   same_as: "https://trainmuseum.org/upcoming-events/"
   card: "free-wednesday-at-the-train-shed-2"
-  order: "19"
+  order: "17"
   heading_id: "free-wednesday-at-the-train-shed-2"
   when: "Wed Oct 21 · 11:00 a.m.–4:00 p.m."
   blurbs:
@@ -393,7 +350,7 @@
   place: "Fall City Library, 33415 SE 42nd Place"
   same_as: "https://kcls.bibliocommons.com/events/6a6cea16f4e5db3d00c5a387"
   card: "family-story-time-4"
-  order: "20"
+  order: "18"
   heading_id: "family-story-time-4"
   when: "Fri Oct 23 · 10:30–11:30 a.m."
   blurbs:
@@ -412,7 +369,7 @@
   place: "Starts at 35018 SE Ridge Street"
   same_as: "https://www.snoqualmiewa.gov/Calendar.aspx?EID=3412"
   card: "spooktacular-halloween"
-  order: "21"
+  order: "19"
   heading_id: "spooktacular-halloween"
   when: "Sat Oct 24 · 1:30–4:00 p.m."
   blurbs:
@@ -431,7 +388,7 @@
   place: "Train Shed Exhibit Hall, 9320 Stone Quarry Road, Snoqualmie"
   same_as: "https://trainmuseum.org/upcoming-events/"
   card: "free-wednesday-at-the-train-shed-3"
-  order: "22"
+  order: "20"
   heading_id: "free-wednesday-at-the-train-shed-3"
   when: "Wed Oct 28 · 11:00 a.m.–4:00 p.m."
   blurbs:
@@ -449,7 +406,7 @@
   place: "Fall City Library, 33415 SE 42nd Place"
   same_as: "https://kcls.bibliocommons.com/v2/events/6ab1c146ab7a8e0037c37bb4"
   card: "garden-super-heroes-in-fall-city"
-  order: "23"
+  order: "21"
   heading_id: "garden-super-heroes-in-fall-city"
   when: "Wed Oct 28 · 5:00–6:00 p.m."
   blurbs:
@@ -467,7 +424,7 @@
   place: "Snoqualmie Library, 7824 Center Boulevard SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a9266a63b6c71003e5c2cec"
   card: "treasure-hunt"
-  order: "24"
+  order: "22"
   heading_id: "treasure-hunt"
   when: "Wed Oct 28 · 5:30–7:00 p.m."
   blurbs:
@@ -477,6 +434,24 @@
       label: "Treasure Hunt"
   description: "Two clue trails, one for children and one for teens and adults. Finish the map and race for the prize. The first finishers in each trail win something, and there are snacks. The teen advisory board planned it, with help from the Friends of the library. Come alone or in a group."
   hub_blurb: "Two clue trails, one for children and one for teens and adults."
+- name: "Library Treasure Hunt"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-28T17:30:00-07:00"
+  end: "2026-10-28T19:00:00-07:00"
+  place: "Snoqualmie Library, 7824 Center Boulevard SE"
+  same_as: "https://kcls.bibliocommons.com/events/6a9266a63b6c71003e5c2cec"
+  card: "library-treasure-hunt"
+  order: "23"
+  heading_id: "library-treasure-hunt"
+  when: "Wed Oct 28 · 5:30–7:00 p.m."
+  blurbs:
+    - "Solve clues and riddles to find treasure hidden in the library, with one hunt for kids and one for teens and adults. Go solo or as a group. Free, with snacks. Planned by the teen advisory board."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a9266a63b6c71003e5c2cec"
+      label: "Library Treasure Hunt"
+  description: "Solve clues and riddles to find treasure hidden in the library, with one hunt for kids and one for teens and adults. Go solo or as a group. Free, with snacks. Planned by the teen advisory board."
+  hub_blurb: "Solve clues to find treasure hidden in the library, with a kids' hunt and a teen hunt."
 - name: "Halloween Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -487,7 +462,7 @@
   place: "Snoqualmie Library, 7824 Center Boulevard SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6ab1c1ccab7a8e0037c37c20"
   card: "halloween-story-time"
-  order: "25"
+  order: "24"
   heading_id: "halloween-story-time"
   when: "Thu Oct 29 · 10:30–11:15 a.m."
   blurbs:
@@ -507,7 +482,7 @@
   place: "Fall City Library, 33415 SE 42nd Place"
   same_as: "https://kcls.bibliocommons.com/events/6a8201542dac6e00371f7607"
   card: "paranormal-investigation-behind-the-hauntings"
-  order: "26"
+  order: "25"
   heading_id: "paranormal-investigation-behind-the-hauntings"
   when: "Sat Oct 31 · 2:00–4:00 p.m."
   blurbs:
@@ -526,7 +501,7 @@
   place: "Train Shed Exhibit Hall, 9320 Stone Quarry Road, Snoqualmie"
   same_as: "https://trainmuseum.org/upcoming-events/"
   card: "free-wednesday-at-the-train-shed-4"
-  order: "27"
+  order: "26"
   heading_id: "free-wednesday-at-the-train-shed-4"
   when: "Wed Nov 4 · 11:00 a.m.–4:00 p.m."
   blurbs:
@@ -545,7 +520,7 @@
   place: "Train Shed Exhibit Hall, 9320 Stone Quarry Road, Snoqualmie"
   same_as: "https://trainmuseum.org/upcoming-events/"
   card: "free-wednesday-at-the-train-shed-5"
-  order: "28"
+  order: "27"
   heading_id: "free-wednesday-at-the-train-shed-5"
   when: "Wed Nov 11 · 11:00 a.m.–4:00 p.m."
   blurbs:
@@ -564,7 +539,7 @@
   place: "Centennial Trail, from Salish Lodge to historic downtown"
   same_as: "https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights"
   card: "snoqualmie-winter-lights"
-  order: "29"
+  order: "28"
   heading_id: "snoqualmie-winter-lights"
   when: "Thu Nov 26 through Fri Jan 1"
   blurbs:
@@ -587,7 +562,7 @@
   place: "Snoqualmie Parkway, Snoqualmie Ridge"
   same_as: "https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights"
   card: "brilliant-blvd"
-  order: "30"
+  order: "29"
   heading_id: "brilliant-blvd"
   when: "Thu Nov 26 through Fri Jan 1"
   blurbs:
@@ -612,7 +587,7 @@
   place: "Snoqualmie Depot, 38625 SE King St"
   same_as: "https://trainmuseum.org/upcoming-events/santa/"
   card: "yuletide-express-santa-train"
-  order: "31"
+  order: "30"
   heading_id: "yuletide-express-santa-train"
   when: "Fri Dec 4 through Fri Dec 18"
   blurbs:
@@ -630,7 +605,7 @@
   place: "Railroad Park gazebo"
   same_as: "https://www.snoqualmiewa.gov/927/Snoqualmie-Winter-Lights"
   card: "snoqualmie-tree-lighting"
-  order: "32"
+  order: "31"
   heading_id: "snoqualmie-tree-lighting"
   when: "Sat Dec 5"
   blurbs:
@@ -649,7 +624,7 @@
   place: "Mount Si High School Performing Arts Center, 8651 Meadowbrook Way SE"
   same_as: "https://mshsdrama.weebly.com/a-midsummer-nights-dream.html"
   card: "a-midsummer-nights-dream"
-  order: "33"
+  order: "32"
   heading_id: "a-midsummer-nights-dream"
   title: "A Midsummer Night’s Dream"
   when: "Thu Dec 10 through Sat Dec 12"
@@ -669,7 +644,7 @@
   place: "Mini Treehouse, 8050 Railroad Ave"
   same_as: "https://www.snoqualmiewa.gov/calendar.aspx?EID=3418"
   card: "visit-with-santa"
-  order: "34"
+  order: "33"
   heading_id: "visit-with-santa"
   when: "Sun Dec 13 · 1:30–3:30 p.m."
   blurbs:

@@ -1,64 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Bird Walk at Juanita Bay Park"
-  cost: "Free"
-  setting: "Outdoor"
-  start: "2026-10-07T07:20:00-07:00"
-  end: "2026-10-07T11:00:00-07:00"
-  place: "Juanita Bay Park, 2201 Market Street, Kirkland"
-  same_as: "https://www.eastsideaudubon.org/calendar/2026/2/4/bird-walk-at-juanita-bay-park-wcjfz-ep5j2-bcm2c-zgezn-826lk-5cy52-wxn8h-7wydc-pxc82"
-  card: "bird-walk-at-juanita-bay-park"
-  order: "2"
-  heading_id: "bird-walk-at-juanita-bay-park"
-  when: "Wed Oct 7 · 7:20–11:00 a.m."
-  blurbs:
-    - "An early walk of about two miles at an easy pace. All levels are welcome, including children with an adult. Bring binoculars and meet at the upper end of the parking lot. The gates usually open by 7:15 a.m. This is Juanita Bay Park, not Juanita Beach."
-  links:
-    - href: "https://www.eastsideaudubon.org/calendar/2026/2/4/bird-walk-at-juanita-bay-park-wcjfz-ep5j2-bcm2c-zgezn-826lk-5cy52-wxn8h-7wydc-pxc82"
-      label: "Bird Walk at Juanita Bay Park"
-  description: "An early walk of about two miles at an easy pace. All levels are welcome, including children with an adult. Bring binoculars and meet at the upper end of the parking lot. The gates usually open by 7:15 a.m. This is Juanita Bay Park, not Juanita Beach."
-  hub_blurb: "An early walk of about two miles at an easy pace."
-- name: "Ozo-Town"
-  cost: "Free"
-  ages: "Kids"
-  setting: "Indoor"
-  signup: true
-  start: "2026-10-07T16:30:00-07:00"
-  end: "2026-10-07T17:45:00-07:00"
-  place: "Kirkland Library, 308 Kirkland Ave"
-  same_as: "https://kcls.bibliocommons.com/events/6abebb3a96ec3a003ad78fdd"
-  card: "ozo-town"
-  order: "3"
-  heading_id: "ozo-town"
-  when: "Wed Oct 7 · 4:30–5:45 p.m."
-  blurbs:
-    - "Build a town out of LEGOs and markers, then send an Ozobot through it. Marker codes tell the robot where to go. For ages 6 to 11. Free, and registration is required."
-  links:
-    - href: "https://kcls.bibliocommons.com/events/6abebb3a96ec3a003ad78fdd"
-      label: "Ozo-Town"
-  description: "Build a town out of LEGOs and markers, then send an Ozobot through it. Marker codes tell the robot where to go. For ages 6 to 11. Free, and registration is required."
-  hub_blurb: "Build a town out of LEGOs and markers, then send an Ozobot through it."
-- name: "Pajama Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags: [story-time]
-  start: "2026-10-07T19:00:00-07:00"
-  end: "2026-10-07T19:30:00-07:00"
-  place: "Kirkland Library, 308 Kirkland Ave"
-  same_as: "https://kcls.org/locations/kirkland/"
-  card: "pajama-story-time"
-  order: "4"
-  heading_id: "pajama-story-time"
-  when: "Wed Oct 7 · 7:00–7:30 p.m."
-  blurbs:
-    - "Stories, music, and movement in pajamas. Bring a stuffed animal or borrow one. A short play time follows. No registration. Wednesday hours run until 8:00 p.m."
-  links:
-    - href: "https://kcls.bibliocommons.com/v2/events?locations=1518"
-      label: "Kirkland Library events"
-  description: "Stories, music, and movement in pajamas. Bring a stuffed animal or borrow one. A short play time follows. No registration. Wednesday hours run until 8:00 p.m."
-  hub_blurb: "Stories, music, and movement in pajamas."
 - name: "Baby Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -68,7 +10,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.org/locations/kirkland/"
   card: "baby-story-time"
-  order: "5"
+  order: "1"
   heading_id: "baby-story-time"
   when: "Thu Oct 8 · 10:30–11:00 a.m."
   blurbs:
@@ -88,7 +30,7 @@
   place: "Kingsgate Library, 12315 NE 143rd St"
   same_as: "https://kcls.bibliocommons.com/events/6aa0a2e1a3fb9722897b273c"
   card: "japanese-story-time"
-  order: "6"
+  order: "2"
   heading_id: "japanese-story-time"
   when: "Fri Oct 9 · 10:30–11:00 a.m."
   blurbs:
@@ -108,7 +50,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.org/locations/kirkland/"
   card: "chess-club"
-  order: "7"
+  order: "3"
   heading_id: "chess-club"
   when: "Fri Oct 9 · 4:00–5:30 p.m."
   blurbs:
@@ -127,7 +69,7 @@
   place: "Kirkland City Hall, Peter Kirk Room, 123 5th Ave"
   same_as: "https://www.kirklandwa.gov/costumeswap"
   card: "halloween-costume-swap"
-  order: "8"
+  order: "4"
   heading_id: "halloween-costume-swap"
   when: "Sat Oct 10 · 10:00 a.m.–12:00 p.m."
   blurbs:
@@ -148,7 +90,7 @@
   place: "Kingsgate Library, 12315 NE 143rd St"
   same_as: "https://kcls.bibliocommons.com/events/6a7f4c9b4027d701ebc45c63"
   card: "summ-family-math-fun"
-  order: "9"
+  order: "5"
   heading_id: "summ-family-math-fun"
   when: "Sat Oct 10 · 11:30 a.m.–1:00 p.m."
   blurbs:
@@ -167,7 +109,7 @@
   place: "Juanita Beach Park, 9703 NE Juanita Dr"
   same_as: "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Recreation-Programs-Services/Community-Building-Events"
   card: "wheels-and-reels-drive-in-movie-hoppers"
-  order: "10"
+  order: "6"
   heading_id: "wheels-and-reels-drive-in-movie-hoppers"
   when: "Sat Oct 10 · 6:00 p.m."
   blurbs:
@@ -186,7 +128,7 @@
   place: "Kingsgate Library, 12315 NE 143rd St"
   same_as: "https://kcls.bibliocommons.com/events/6aa3301a6074830038261709"
   card: "after-school-hangout"
-  order: "11"
+  order: "7"
   heading_id: "after-school-hangout"
   when: "Mon Oct 12 · 3:30–5:00 p.m."
   blurbs:
@@ -206,7 +148,7 @@
   place: "Kingsgate Library, 12315 NE 143rd St"
   same_as: "https://kcls.bibliocommons.com/events/6a7f4c8060ccaf01c01e3ceb"
   card: "family-story-time-1"
-  order: "12"
+  order: "8"
   heading_id: "family-story-time-1"
   when: "Tue Oct 13 · 1:00–1:30 p.m."
   blurbs:
@@ -236,7 +178,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.bibliocommons.com/v2/events?locations=1518"
   card: "teen-hangout"
-  order: "13"
+  order: "9"
   heading_id: "teen-hangout"
   when: "Wed Oct 14 · 2:30–4:00 p.m."
   blurbs:
@@ -261,7 +203,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.bibliocommons.com/events/6940ba637ed7c62f00aaa71a"
   card: "beats-beyond-boundaries"
-  order: "14"
+  order: "10"
   heading_id: "beats-beyond-boundaries"
   when: "Wed Oct 14 · 5:30–6:15 p.m."
   blurbs:
@@ -280,7 +222,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a7fab8f386764026a1707e5"
   card: "pajama-story-time-1"
-  order: "15"
+  order: "11"
   heading_id: "pajama-story-time-1"
   when: "Wed Oct 14 · 7:00–7:30 p.m."
   blurbs:
@@ -299,7 +241,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a7faba35d8bc300315a702f"
   card: "baby-story-time-1"
-  order: "16"
+  order: "12"
   heading_id: "baby-story-time-1"
   when: "Thu Oct 15 · 10:30–11:00 a.m."
   blurbs:
@@ -316,7 +258,7 @@
   place: "Lake Washington High School Performing Arts Center, 12033 NE 80th St"
   same_as: "https://www.lwhstheatre.com/"
   card: "boy-gets-girl"
-  order: "17"
+  order: "13"
   heading_id: "boy-gets-girl"
   when: "Fri Oct 16 through Sat Oct 24"
   blurbs:
@@ -334,7 +276,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.org/locations/kirkland/"
   card: "mandarin-story-time"
-  order: "18"
+  order: "14"
   heading_id: "mandarin-story-time"
   when: "Fri Oct 16 · 10:30–11:00 a.m."
   blurbs:
@@ -357,7 +299,7 @@
   organizer_url: "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Green-Kirkland-Partnership"
   same_as: "https://www.eventbrite.com/e/juanita-bay-park-east-habitat-stewardship-day-tickets-2000273291260"
   card: "juanita-bay-park-east-habitat-stewardship"
-  order: "19"
+  order: "15"
   heading_id: "juanita-bay-park-east-habitat-stewardship"
   when: "Sat Oct 17 · 9:30 a.m.–12:00 p.m."
   blurbs:
@@ -375,7 +317,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.org/locations/kirkland/"
   card: "learning-about-dyslexia"
-  order: "20"
+  order: "16"
   heading_id: "learning-about-dyslexia"
   when: "Sat Oct 17 · 11:30 a.m.–1:00 p.m."
   blurbs:
@@ -395,7 +337,7 @@
   place: "Kingsgate Library, 12315 NE 143rd St"
   same_as: "https://kcls.bibliocommons.com/events/6aada826607483003827f38e"
   card: "family-story-time"
-  order: "21"
+  order: "17"
   heading_id: "family-story-time"
   when: "Tue Oct 20 · 6:30–7:00 p.m."
   blurbs:
@@ -415,7 +357,7 @@
   place: "Kingsgate Library, 12315 NE 143rd St"
   same_as: "https://kcls.bibliocommons.com/events/6aadaa17a5dbde002aa5a2fe"
   card: "family-story-time-2"
-  order: "22"
+  order: "18"
   heading_id: "family-story-time-2"
   when: "Wed Oct 21 · 10:30–11:00 a.m."
   blurbs:
@@ -436,7 +378,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa89ebc3dd190003e71fe3f"
   card: "spooky-clay-creations"
-  order: "23"
+  order: "19"
   heading_id: "spooky-clay-creations"
   when: "Wed Oct 21 · 3:30–5:00 p.m."
   blurbs:
@@ -461,7 +403,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.bibliocommons.com/events/6a7fab8f386764026a1707e6"
   card: "pajama-story-time-2"
-  order: "24"
+  order: "20"
   heading_id: "pajama-story-time-2"
   when: "Wed Oct 21 · 7:00–7:30 p.m."
   blurbs:
@@ -480,7 +422,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.bibliocommons.com/events/6a7faba35d8bc300315a7030"
   card: "baby-story-time-2"
-  order: "25"
+  order: "21"
   heading_id: "baby-story-time-2"
   when: "Thu Oct 22 · 10:30–11:00 a.m."
   blurbs:
@@ -500,7 +442,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.bibliocommons.com/events/6a63e1ecf494c55649eb13c9"
   card: "ukrainian-story-time"
-  order: "26"
+  order: "22"
   heading_id: "ukrainian-story-time"
   when: "Fri Oct 23 · 10:30–11:00 a.m."
   blurbs:
@@ -519,7 +461,7 @@
   place: "The Village at Totem Lake, 11901 NE Village Plaza"
   same_as: "https://thevillageattotemlake.com/events/village-halloween-celebration"
   card: "village-halloween-celebration"
-  order: "27"
+  order: "23"
   heading_id: "village-halloween-celebration"
   when: "Sat Oct 24 · 12:00–2:00 p.m."
   blurbs:
@@ -538,7 +480,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.bibliocommons.com/events/6abad22629c3d600332c3de1"
   card: "pokemon-club"
-  order: "28"
+  order: "24"
   heading_id: "pokemon-club"
   when: "Sat Oct 24 · 1:00–2:00 p.m."
   blurbs:
@@ -558,7 +500,7 @@
   place: "Peter Kirk Community Center, 352 Kirkland Ave"
   same_as: "https://www.kirklandwa.gov/Whats-Happening/Community-Events/Parks-and-Community-Services/D%C3%ADa-de-los-Muertos"
   card: "día-de-los-muertos"
-  order: "29"
+  order: "25"
   heading_id: "día-de-los-muertos"
   when: "Sat Oct 24 · 1:00–4:00 p.m."
   blurbs:
@@ -578,7 +520,7 @@
   place: "Kirkland Urban, 425 Urban Plaza"
   same_as: "https://kirklandurban.com/2026/09/16/get-ready-for-a-spooktacular-day-at-kirkland-urban/"
   card: "treat-street-at-kirkland-urban"
-  order: "30"
+  order: "26"
   heading_id: "treat-street-at-kirkland-urban"
   when: "Sat Oct 24 · 5:00–8:00 p.m."
   blurbs:
@@ -605,7 +547,7 @@
   organizer_url: "https://www.finnhill.org/"
   same_as: "https://www.finnhill.org/event-details-registration/mushroom-mania"
   card: "mushroom-mania"
-  order: "31"
+  order: "27"
   heading_id: "mushroom-mania"
   when: "Sun Oct 25 · 10:00 a.m.–12:00 p.m."
   blurbs:
@@ -628,7 +570,7 @@
   place: "Kirkland Performance Center, 350 Kirkland Ave"
   same_as: "https://www.kpcenter.org/get-tickets/"
   card: "keep-on-dancing"
-  order: "32"
+  order: "28"
   heading_id: "keep-on-dancing"
   when: "Sun Oct 25 · 7:00 p.m."
   blurbs:
@@ -644,7 +586,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.bibliocommons.com/events/6ab6ede786d845003118d290"
   card: "skeletons-stories-and-science"
-  order: "33"
+  order: "29"
   heading_id: "skeletons-stories-and-science"
   when: "Mon Oct 26 · 4:15–5:30 p.m."
   blurbs:
@@ -663,7 +605,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.bibliocommons.com/events/6a9264113b6c71003e5c2ce1"
   card: "teen-book-talk"
-  order: "34"
+  order: "30"
   heading_id: "teen-book-talk"
   when: "Wed Oct 28 · 2:30–3:30 p.m."
   blurbs:
@@ -684,7 +626,7 @@
   place: "North Kirkland Community Center, 12421 103rd Ave NE"
   same_as: "https://secure.rec1.com/WA/city-of-kirkland/catalog/index?filter=c2VhcmNoPW1vbnN0ZXIlMjBiYXNoJnJlbnRhbCU1QmZyb20lNUQ9JnJlbnRhbCU1QnRvJTVEPSZkYWU2MGY5ZjQyMmY5MjczODdkZWRiNjU2ODM3Zjk2Mz1mOWE4NDdjY2JiNzNiMWExOGM4Y2NhNTc2ODc1MjczMA%3D%3D"
   card: "pee-wee-monster-bash"
-  order: "35"
+  order: "31"
   heading_id: "pee-wee-monster-bash"
   when: "Fri Oct 30 · 10:00 a.m.–12:00 p.m."
   blurbs:
@@ -702,7 +644,7 @@
   place: "Studio East, 10718 NE 68th St"
   same_as: "https://studio-east.org/auditions/"
   card: "young-frankenstein"
-  order: "36"
+  order: "32"
   heading_id: "young-frankenstein"
   when: "Fri Oct 30 through Sun Nov 8"
   blurbs:
@@ -727,7 +669,7 @@
   place: "Marina Park, 25 Lakeshore Plaza"
   same_as: "https://www.explorekirkland.com/events/kirkland-catrina-walk/"
   card: "kirkland-catrina-walk"
-  order: "37"
+  order: "33"
   heading_id: "kirkland-catrina-walk"
   when: "Sat Oct 31 · 11:00 a.m.–8:30 p.m."
   blurbs:
@@ -747,7 +689,7 @@
   place: "Lake Washington High School Performing Arts Center, 12033 NE 80th St"
   same_as: "https://www.eventbrite.com/e/impressions-of-spain-tickets-1999223128194"
   card: "impressions-of-spain"
-  order: "38"
+  order: "34"
   heading_id: "impressions-of-spain"
   when: "Sun Nov 1 · 1:00–3:30 p.m."
   blurbs:
@@ -772,7 +714,7 @@
   place: "Kingsgate Library, 12315 NE 143rd St"
   same_as: "https://kcls.bibliocommons.com/events/6abffb22035faf0033d9e253"
   card: "kandi-bracelets"
-  order: "39"
+  order: "35"
   heading_id: "kandi-bracelets"
   when: "Mon Nov 2 · 4:00–5:30 p.m."
   blurbs:
@@ -790,7 +732,7 @@
   place: "Kirkland Library, 308 Kirkland Ave"
   same_as: "https://kcls.bibliocommons.com/events/6ab6edb060748300382995b7"
   card: "steam-family-story-time"
-  order: "40"
+  order: "36"
   heading_id: "steam-family-story-time"
   when: "Mon Nov 2 · 4:30–5:30 p.m."
   blurbs:
@@ -811,7 +753,7 @@
   organizer_url: "https://www.finnhill.org/"
   same_as: "https://www.finnhill.org/event-details-registration/tracking-basics-learning-by-looking"
   card: "tracking-basics-learning-by-looking"
-  order: "41"
+  order: "37"
   heading_id: "tracking-basics-learning-by-looking"
   when: "Sat Nov 7 · 10:00 a.m.–12:00 p.m."
   blurbs:
@@ -837,7 +779,7 @@
   place: "Kingsgate Library, 12315 NE 143rd St"
   same_as: "https://kcls.bibliocommons.com/events/6ac00fd49dbc2b002c8bdacc"
   card: "reading-with-rover"
-  order: "42"
+  order: "38"
   heading_id: "reading-with-rover"
   when: "Sat Nov 7 · 1:00–1:15 p.m."
   blurbs:
@@ -847,6 +789,25 @@
       label: "Reading with Rover"
   description: "Read aloud to a certified therapy dog. Each reader gets about 15 minutes. For elementary and middle-grade kids. Register ahead."
   hub_blurb: "Read aloud to a certified therapy dog."
+- name: "Living Voices: Native Vision"
+  cost: "Free"
+  ages: "Kids"
+  setting: "Indoor"
+  start: "2026-11-09T16:30:00-08:00"
+  end: "2026-11-09T17:30:00-08:00"
+  place: "Kirkland Library, 308 Kirkland Ave"
+  same_as: "https://kcls.bibliocommons.com/events/6ab6ee0e86d845003118d292"
+  card: "living-voices-native-vision"
+  order: "39"
+  heading_id: "living-voices-native-vision"
+  when: "Mon Nov 9 · 4:30–5:30 p.m."
+  blurbs:
+    - "A solo performance with archival film about Native American boarding schools and the Navajo Code Talkers of World War II. For ages 9 and up. Free, from the Friends of the Kirkland Library."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6ab6ee0e86d845003118d292"
+      label: "Living Voices: Native Vision"
+  description: "A solo performance with archival film about Native American boarding schools and the Navajo Code Talkers of World War II. For ages 9 and up. Free, from the Friends of the Kirkland Library."
+  hub_blurb: "A solo performance with archival film about boarding schools and the Navajo Code Talkers."
 - name: "Lil' Gobbler Run"
   cost: "$20"
   setting: "Outdoor"
@@ -857,7 +818,7 @@
   organizer_url: "https://kirklandturkeytrot.com/"
   same_as: "https://runsignup.com/Race/WA/Kirkland/KirklandTurkeyTrot"
   card: "lil-gobbler-run"
-  order: "43"
+  order: "40"
   heading_id: "lil-gobbler-run"
   title: "Lil’ Gobbler Run"
   when: "Sun Nov 15 · 9:30 a.m."
@@ -876,7 +837,7 @@
   place: "Studio East, 10718 NE 68th St"
   same_as: "https://studio-east.org/auditions/"
   card: "a-christmas-story"
-  order: "44"
+  order: "41"
   heading_id: "a-christmas-story"
   when: "Fri Dec 11 through Sun Dec 20"
   blurbs:
@@ -898,7 +859,7 @@
   place: "Lake Washington High School Performing Arts Center, 12033 NE 80th St"
   same_as: "https://www.lwhstheatre.com/"
   card: "solo-night"
-  order: "45"
+  order: "42"
   heading_id: "solo-night"
   when: "Fri Dec 11"
   blurbs:
@@ -916,7 +877,7 @@
   place: "Kirkland Performance Center, 350 Kirkland Ave"
   same_as: "https://www.kpcenter.org/event/the-nutcracker-symphony-of-lights/"
   card: "the-nutcracker-symphony-of-lights"
-  order: "46"
+  order: "43"
   heading_id: "the-nutcracker-symphony-of-lights"
   when: "Thu Dec 17 through Sat Dec 19 · 7:00 p.m."
   blurbs:
@@ -933,7 +894,7 @@
   place: "Lake Washington High School Performing Arts Center, 12033 NE 80th St"
   same_as: "https://www.lwhstheatre.com/"
   card: "almost-maine"
-  order: "47"
+  order: "44"
   heading_id: "almost-maine"
   when: "Fri Jan 8 through Sat Jan 16, 2027"
   blurbs:
@@ -950,7 +911,7 @@
   place: "Studio East, 10718 NE 68th St"
   same_as: "https://studio-east.org/auditions/"
   card: "romeo-and-juliet"
-  order: "48"
+  order: "45"
   heading_id: "romeo-and-juliet"
   when: "Fri Jan 22 through Sun Jan 31, 2027"
   blurbs:
@@ -966,7 +927,7 @@
   place: "Lake Washington High School Performing Arts Center, 12033 NE 80th St"
   same_as: "https://www.lwhstheatre.com/"
   card: "miscast-cabaret"
-  order: "49"
+  order: "46"
   heading_id: "miscast-cabaret"
   when: "Fri Feb 19, 2027"
   blurbs:
@@ -983,7 +944,7 @@
   place: "Studio East, 10718 NE 68th St"
   same_as: "https://studio-east.org/auditions/"
   card: "james-and-the-giant-peach"
-  order: "50"
+  order: "47"
   heading_id: "james-and-the-giant-peach"
   when: "Fri Mar 19 through Sun Mar 28, 2027"
   blurbs:

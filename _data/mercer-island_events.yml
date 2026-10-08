@@ -1,23 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Story Time with a Bookseller"
-  ages: "Toddlers"
-  setting: "Indoor"
-  start: "2026-10-07T10:30:00-07:00"
-  place: "Island Books, 3014 78th Ave SE"
-  same_as: "https://www.islandbooks.com/childrens-story-times"
-  card: "story-time-with-a-bookseller"
-  order: "2"
-  heading_id: "story-time-with-a-bookseller"
-  when: "Wed Oct 7 · 10:30 a.m."
-  blurbs:
-    - "A bookseller reads picture books. It is aimed at toddlers through kindergarten. Island Books lists this every Wednesday at 10:30 a.m."
-  links:
-    - href: "https://www.islandbooks.com/childrens-story-times"
-      label: "Story Time with a Bookseller"
-  description: "A bookseller reads picture books. It is aimed at toddlers through kindergarten. Island Books lists this every Wednesday at 10:30 a.m."
-  hub_blurb: "A bookseller reads picture books."
 - name: "Mandarin Story Time"
   cost: "Free"
   ages: "Toddlers"

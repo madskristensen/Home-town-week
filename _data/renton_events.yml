@@ -18,45 +18,6 @@
       label: "Noises Off"
   description: "Michael Frayn's backstage farce. Opening night is Fri Oct 2, a pay-what-you-can night is Mon Oct 12, and closing night is Sun Oct 18. Recommended for ages 10 and up. The humor includes innuendo, fast-paced chaos, and adult misunderstandings. No explicit content. The comedy is aimed at older kids, teens, and adults who can follow the farce."
   hub_blurb: "Michael Frayn's backstage farce."
-- name: "Spanish Story Time at Family First"
-  cost: "Free"
-  ages: "All ages"
-  setting: "Indoor"
-  tags: [free, story-time]
-  start: "2026-10-07T11:00:00-07:00"
-  end: "2026-10-07T12:00:00-07:00"
-  place: "Family First Community Center, 16200 116th Avenue SE"
-  same_as: "https://kcls.bibliocommons.com/events/6a46e2d4c52cdc3600ee7833"
-  card: "spanish-story-time-at-family-first"
-  order: "2"
-  heading_id: "spanish-story-time-at-family-first"
-  when: "Wed Oct 7 · 11:00 a.m.–12:00 p.m."
-  blurbs:
-    - "Stories, music, and movement in Spanish for all ages with an adult, then time to play. New visitors should arrive 15 minutes early for a one-time free form."
-  links:
-    - href: "https://kcls.bibliocommons.com/events/6a46e2d4c52cdc3600ee7833"
-      label: "Spanish Story Time"
-  description: "Stories, music, and movement in Spanish for all ages with an adult, then time to play. New visitors should arrive 15 minutes early for a one-time free form."
-  hub_blurb: "Stories, music, and movement in Spanish for all ages with an adult, then time to play."
-- name: "Spanish Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  tags: [free, story-time]
-  start: "2026-10-07T12:30:00-07:00"
-  end: "2026-10-07T13:00:00-07:00"
-  place: "Renton Library, 100 Mill Avenue S"
-  same_as: "https://kcls.bibliocommons.com/events/6a7f68a7aafa6100295ca6dd"
-  card: "spanish-story-time"
-  order: "3"
-  heading_id: "spanish-story-time"
-  when: "Wed Oct 7 · 12:30–1:00 p.m."
-  blurbs:
-    - "Stories, music, and rhymes in Spanish for young children. No registration."
-  links:
-    - href: "https://kcls.bibliocommons.com/events/6a7f68a7aafa6100295ca6dd"
-      label: "Spanish Story Time"
-  description: "Stories, music, and rhymes in Spanish for young children. No registration."
-  hub_blurb: "Stories, music, and rhymes in Spanish for young children."
 - name: "Salmon Stories and Science"
   cost: "Free"
   ages: "Toddlers"
@@ -67,7 +28,7 @@
   place: "Renton Library, 100 Mill Avenue S"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa0a274a3fb9722897b2737"
   card: "salmon-stories-and-science"
-  order: "4"
+  order: "2"
   heading_id: "salmon-stories-and-science"
   when: "Thu Oct 8 · 10:30–11:30 a.m."
   blurbs:
@@ -88,7 +49,7 @@
   place: "Family First Community Center, 16200 116th Avenue SE"
   same_as: "https://www.envsciencecenter.org/event-details/family-science-time-13"
   card: "family-science-time"
-  order: "5"
+  order: "3"
   heading_id: "family-science-time"
   when: "Thu Oct 8 · 5:30–7:30 p.m."
   blurbs:
@@ -110,7 +71,7 @@
   place: "Family First Community Center, 16200 116th Avenue SE"
   same_as: "https://www.envsciencecenter.org/event-details/nature-story-time-22"
   card: "nature-story-time"
-  order: "6"
+  order: "4"
   heading_id: "nature-story-time"
   when: "Fri Oct 9 · 10:00–11:00 a.m."
   blurbs:
@@ -130,7 +91,7 @@
   place: "Renton Highlands Library, 2801 NE 10th Street"
   same_as: "https://kcls.bibliocommons.com/events/6a6794c9cca66c2f00a6523d"
   card: "toddler-story-time"
-  order: "7"
+  order: "5"
   heading_id: "toddler-story-time"
   when: "Fri Oct 9 · 11:00–11:30 a.m."
   blurbs:
@@ -150,7 +111,7 @@
   place: "Renton Highlands Library, 2801 NE 10th Street"
   same_as: "https://kcls.bibliocommons.com/events/6a6794e40d65ac3600428927"
   card: "baby-story-time"
-  order: "8"
+  order: "6"
   heading_id: "baby-story-time"
   when: "Fri Oct 9 · 12:00–12:30 p.m."
   blurbs:
@@ -170,7 +131,7 @@
   place: "Renton Highlands Library, 2801 NE 10th Street"
   same_as: "https://kcls.bibliocommons.com/events/6a46e315c52cdc3600ee7851"
   card: "vietnamese-story-time"
-  order: "9"
+  order: "7"
   heading_id: "vietnamese-story-time"
   when: "Fri Oct 9 · 4:00–5:00 p.m."
   blurbs:
@@ -189,7 +150,7 @@
   place: "Cedar River Park, Renton"
   same_as: "https://www.seattleaquarium.org/explore-the-aquarium/programs/cedar-river-salmon-journey/"
   card: "cedar-river-salmon-journey-at-cedar-river-park"
-  order: "10"
+  order: "8"
   heading_id: "cedar-river-salmon-journey-at-cedar-river-park"
   when: "Sat Oct 10 · 10:00 a.m.–12:00 p.m."
   blurbs:
@@ -209,7 +170,7 @@
   place: "Renton Community Center, 1715 Maple Valley Hwy"
   same_as: "https://www.envsciencecenter.org/event-details/cedar-river-salmon-festival-1"
   card: "cedar-river-salmon-festival"
-  order: "11"
+  order: "9"
   heading_id: "cedar-river-salmon-festival"
   when: "Sat Oct 10 · 10:00 a.m.–12:00 p.m."
   blurbs:
@@ -228,7 +189,7 @@
   place: "Renton Highlands Library, 2801 NE 10th Street"
   same_as: "https://kcls.bibliocommons.com/events/6a304d968ea300e2631dd23f"
   card: "korean-story-time"
-  order: "12"
+  order: "10"
   heading_id: "korean-story-time"
   when: "Sat Oct 10 · 2:00–3:00 p.m."
   blurbs:
@@ -247,7 +208,7 @@
   place: "Renton Library, 100 Mill Avenue S"
   same_as: "https://www.seattleaquarium.org/explore-the-aquarium/programs/cedar-river-salmon-journey/"
   card: "cedar-river-salmon-journey-at-the-library"
-  order: "13"
+  order: "11"
   heading_id: "cedar-river-salmon-journey-at-the-library"
   when: "Sun Oct 11 · 10:00 a.m.–2:00 p.m."
   blurbs:
@@ -266,7 +227,7 @@
   place: "Cedar River Park, Renton"
   same_as: "https://www.seattleaquarium.org/explore-the-aquarium/programs/cedar-river-salmon-journey/"
   card: "cedar-river-salmon-journey-at-cedar-river-park-1"
-  order: "14"
+  order: "12"
   heading_id: "cedar-river-salmon-journey-at-cedar-river-park-1"
   when: "Sun Oct 11 · 10:00 a.m.–2:00 p.m."
   blurbs:
@@ -287,7 +248,7 @@
   place: "Fairwood Library, 17009 140th Avenue SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a9600084cb69d003e24c6be"
   card: "drawing-pumpkins"
-  order: "15"
+  order: "13"
   heading_id: "drawing-pumpkins"
   when: "Sun Oct 11 · 1:00–2:00 p.m."
   blurbs:
@@ -307,7 +268,7 @@
   place: "Renton Highlands Library, 2801 NE 10th Street"
   same_as: "https://kcls.bibliocommons.com/events/6aadbe8a86d8450031173159"
   card: "latine-heritage-month-with-marco-cortes"
-  order: "16"
+  order: "14"
   heading_id: "latine-heritage-month-with-marco-cortes"
   when: "Wed Oct 14 · 4:00–5:00 p.m."
   blurbs:
@@ -326,7 +287,7 @@
   place: "Fairwood Library, 17009 140th Avenue SE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa89b32ca248a002915dafe"
   card: "reading-with-rover"
-  order: "17"
+  order: "15"
   heading_id: "reading-with-rover"
   when: "Thu Oct 15 · 4:30–5:30 p.m."
   blurbs:
@@ -346,7 +307,7 @@
   place: "Fairwood Library, 17009 140th Avenue SE"
   same_as: "https://kcls.bibliocommons.com/events/6a85e4b0b20478002993f17a"
   card: "family-story-time"
-  order: "18"
+  order: "16"
   heading_id: "family-story-time"
   when: "Fri Oct 16 · 10:30–11:30 a.m."
   blurbs:
@@ -364,7 +325,7 @@
   place: "Renton Fire Station 11, 211 Mill Ave S"
   same_as: "https://www.rentonrfa.com/events/"
   card: "station-11-open-house"
-  order: "19"
+  order: "17"
   heading_id: "station-11-open-house"
   when: "Sat Oct 17 · 9:00–11:00 a.m."
   blurbs:
@@ -382,7 +343,7 @@
   place: "Renton Fire Station 12, 1209 Kirkland Ave NE"
   same_as: "https://www.rentonrfa.com/events/"
   card: "station-12-open-house"
-  order: "20"
+  order: "18"
   heading_id: "station-12-open-house"
   when: "Sat Oct 17 · 1:00–3:00 p.m."
   blurbs:
@@ -392,6 +353,27 @@
       label: "Renton RFA events"
   description: "Tour the engine, the aid unit, and the dive rig, including the water rescue boat. Try the gear and meet the firefighters. Free, no RSVP. In the bay, rain or shine. Street parking is nearby."
   hub_blurb: "Tour the engine, the aid unit, and the dive rig, including the water rescue boat."
+- name: "Explore Día de los Muertos with Studio VC"
+  cost: "Free"
+  ages: "Kids"
+  setting: "Indoor"
+  signup: true
+  tags: [dia-de-los-muertos]
+  start: "2026-10-18T13:00:00-07:00"
+  end: "2026-10-18T14:00:00-07:00"
+  place: "Renton Library, 100 Mill Avenue S"
+  same_as: "https://kcls.bibliocommons.com/events/6a922d261c197d11325b9b37"
+  card: "explore-d-a-de-los-muertos-with-studio-vc"
+  order: "19"
+  heading_id: "explore-d-a-de-los-muertos-with-studio-vc"
+  when: "Sun Oct 18 · 1:00–2:00 p.m."
+  blurbs:
+    - "Make a Día de los Muertos art piece with Hyunjoo Koo of Studio VC. All materials provided. Ages 5 and up. Free. Registration required."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a922d261c197d11325b9b37"
+      label: "Explore Día de los Muertos with Studio VC"
+  description: "Make a Día de los Muertos art piece with Hyunjoo Koo of Studio VC. All materials provided. Ages 5 and up. Free. Registration required."
+  hub_blurb: "Make a Día de los Muertos art piece with Studio VC. Ages 5 and up."
 - name: "Toddler Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -402,7 +384,7 @@
   place: "Renton Library, 100 Mill Avenue S"
   same_as: "https://kcls.bibliocommons.com/events/6a90b2edbe148200298a96d5"
   card: "toddler-story-time-1"
-  order: "21"
+  order: "20"
   heading_id: "toddler-story-time-1"
   when: "Mon Oct 19 · 10:30–11:00 a.m."
   blurbs:
@@ -421,7 +403,7 @@
   place: "Renton Highlands Library, 2801 NE 10th St"
   same_as: "https://kcls.bibliocommons.com/events/6aadbe8a86d845003117315a"
   card: "latine-heritage-month-with-marco-cortes-1"
-  order: "22"
+  order: "21"
   heading_id: "latine-heritage-month-with-marco-cortes-1"
   when: "Wed Oct 21 · 4:00–5:00 p.m."
   blurbs:
@@ -431,6 +413,34 @@
       label: "Latine Heritage Month with Marco Cortes"
   description: "Marco Cortes brings a bilingual show of songs, dancing, and stories that plays with Spanish words and rhythms. All ages. Free, no registration."
   hub_blurb: "Marco Cortes brings a bilingual show of songs, dancing, and stories that plays with Spanish words and rhythms."
+- name: "Spooky Stuffy Sleepover"
+  cost: "Free"
+  ages: "Teens"
+  setting: "Indoor"
+  drop_off: true
+  signup: true
+  tags: [halloween]
+  start: "2026-10-21T16:00:00-07:00"
+  end: "2026-10-21T17:00:00-07:00"
+  place: "Fairwood Library, 17009 140th Avenue SE"
+  same_as: "https://kcls.bibliocommons.com/events/6a925d643b6c71003e5c2c9d"
+  card: "spooky-stuffy-sleepover"
+  order: "22"
+  heading_id: "spooky-stuffy-sleepover"
+  when: "Wed Oct 21 · 4:00–5:00 p.m."
+  blurbs:
+    - "Drop off a stuffed animal for a spooky night at the library, then pick it up Thursday 5 to 6 p.m. with photos of its adventures. Crafts and a photo booth at drop-off. Ages 10 to 17. Free. Register."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a925d643b6c71003e5c2c9d"
+      label: "Spooky Stuffy Sleepover"
+  photo:
+    src: "/assets/images/renton/spooky-stuffy-sleepover.jpg"
+    alt: "A black and white skeleton plush toy leaning on an old library card catalog."
+    credit: "Image: King County Library System"
+    source: "https://kcls.bibliocommons.com/events/6a925d643b6c71003e5c2c9d"
+    license: "organizer"
+  description: "Drop off a stuffed animal for a spooky night at the library, then pick it up Thursday 5 to 6 p.m. with photos of its adventures. Crafts and a photo booth at drop-off. Ages 10 to 17. Free. Register."
+  hub_blurb: "Leave a stuffy for a spooky night at the library and get photos of its adventures."
 - name: "Firefighters and Friends Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -550,6 +560,27 @@
       label: "Family Science Time"
   description: "Drop in any time for hands-on science activities and crafts from the Environmental Science Center. Open to all ages and best for kids in kindergarten through 5th grade. Free, and no registration."
   hub_blurb: "Drop-in hands-on science activities and crafts, best for kids in kindergarten through 5th grade."
+- name: "Halloween Puzzle Party"
+  cost: "Free"
+  ages: "Teens"
+  setting: "Indoor"
+  signup: true
+  tags: [halloween]
+  start: "2026-10-27T17:30:00-07:00"
+  end: "2026-10-27T19:30:00-07:00"
+  place: "Renton Highlands Library, 2801 NE 10th Street"
+  same_as: "https://kcls.bibliocommons.com/events/6ab1c0a0001a4a0e055b1159"
+  card: "halloween-puzzle-party"
+  order: "29"
+  heading_id: "halloween-puzzle-party"
+  when: "Tue Oct 27 · 5:30–7:30 p.m."
+  blurbs:
+    - "Teams of two to four race to finish a jigsaw puzzle, keep it, and the winners get a prize. For teens 12 and up with friends or family. Costumes welcome. Free. Registration required."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6ab1c0a0001a4a0e055b1159"
+      label: "Halloween Puzzle Party"
+  description: "Teams of two to four race to finish a jigsaw puzzle, keep it, and the winners get a prize. For teens 12 and up with friends or family. Costumes welcome. Free. Registration required."
+  hub_blurb: "Teams race to finish a Halloween jigsaw puzzle. Teens 12 and up with friends or family."
 - name: "The Secret Life of Bats"
   cost: "Free"
   ages: "Teens"
@@ -561,7 +592,7 @@
   place: "Renton Library, 100 Mill Avenue S"
   same_as: "https://www.envsciencecenter.org/event-details/the-secret-life-of-bats"
   card: "the-secret-life-of-bats"
-  order: "29"
+  order: "30"
   heading_id: "the-secret-life-of-bats"
   when: "Wed Oct 28 · 6:00–7:00 p.m."
   blurbs:
@@ -571,6 +602,26 @@
       label: "The Secret Life of Bats"
   description: "The Environmental Science Center explains how bats live, why we rarely notice them, and how to help protect them here in Washington. Best for ages 13 and up. Free, and no registration."
   hub_blurb: "The Environmental Science Center explains how bats live and how to help protect them."
+- name: "Special Costume Story Time"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Outdoor"
+  tags: [halloween, story-time]
+  start: "2026-10-30T10:30:00-07:00"
+  end: "2026-10-30T11:30:00-07:00"
+  place: "Fairwood Library, 17009 140th Avenue SE"
+  same_as: "https://kcls.bibliocommons.com/events/6a85e69569166f088b934d6d"
+  card: "special-costume-story-time"
+  order: "31"
+  heading_id: "special-costume-story-time"
+  when: "Fri Oct 30 · 10:30–11:30 a.m."
+  blurbs:
+    - "Wear a costume, pajamas, or a favorite hat to a silly story time with songs and a parade around the library. All ages with an adult. Free, no registration."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a85e69569166f088b934d6d"
+      label: "Special Costume Story Time"
+  description: "Wear a costume, pajamas, or a favorite hat to a silly story time with songs and a parade around the library. All ages with an adult. Free, no registration."
+  hub_blurb: "A silly costume story time with songs and a parade around the library."
 - name: "Truck or Treat"
   cost: "$15 to $18"
   ages: "All ages"
@@ -583,7 +634,7 @@
   place: "Renton Community Center, 1715 Maple Valley Hwy"
   same_as: "https://www.rentonwa.gov/TruckorTreat"
   card: "truck-or-treat"
-  order: "30"
+  order: "32"
   heading_id: "truck-or-treat"
   when: "Fri Oct 30 · 5:00–7:30 p.m."
   blurbs:
@@ -601,7 +652,7 @@
   place: "Renton Fire Station 16, 12923 156th Ave SE"
   same_as: "https://www.rentonrfa.com/events/"
   card: "station-16-open-house"
-  order: "31"
+  order: "33"
   heading_id: "station-16-open-house"
   when: "Sat Oct 31 · 9:00–11:00 a.m."
   blurbs:
@@ -619,7 +670,7 @@
   place: "Renton Fire Station 17, 14810 SE Petrovitsky Rd"
   same_as: "https://www.rentonrfa.com/events/"
   card: "station-17-open-house"
-  order: "32"
+  order: "34"
   heading_id: "station-17-open-house"
   when: "Sat Oct 31 · 1:00–3:00 p.m."
   blurbs:
@@ -637,7 +688,7 @@
   place: "Renton Civic Theatre, 507 S Third St"
   same_as: "https://www.rentoncivictheatre.org/shows/scrooge"
   card: "scrooge"
-  order: "33"
+  order: "35"
   heading_id: "scrooge"
   when: "Fri Dec 4 through Sun Dec 20"
   blurbs:
