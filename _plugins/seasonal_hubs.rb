@@ -791,9 +791,9 @@ RowDates = Struct.new(
           end
           return EventCalendar.when_label(parsed, finish) if parsed
 
-          label = EventCalendar.month_day(start_on)
+          label = EventCalendar.day_label(start_on)
           if finish_on && finish_on > start_on
-            "#{label} to #{EventCalendar.month_day(finish_on)}"
+            "#{label} to #{EventCalendar.day_label(finish_on)}"
           else
             label
           end

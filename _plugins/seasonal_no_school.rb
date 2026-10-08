@@ -153,11 +153,9 @@ module EastsideCalendar
 
         def span_short(start_on, end_on)
           if start_on == end_on
-            "#{MONTHS[start_on.month - 1]} #{start_on.day}"
-          elsif start_on.month == end_on.month && start_on.year == end_on.year
-            "#{MONTHS[start_on.month - 1]} #{start_on.day} to #{end_on.day}"
+            EventCalendar.day_label(start_on)
           else
-            "#{MONTHS[start_on.month - 1]} #{start_on.day} to #{MONTHS[end_on.month - 1]} #{end_on.day}"
+            "#{EventCalendar.day_label(start_on)} to #{EventCalendar.day_label(end_on)}"
           end
         end
 

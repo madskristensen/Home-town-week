@@ -7,6 +7,7 @@ module EastsideCalendar
   module EventCalendar
     ZONE = "America/Los_Angeles"
     MONTHS = %w[Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec].freeze
+    DAYS = %w[Sun Mon Tue Wed Thu Fri Sat].freeze
     module_function
 
 
@@ -175,6 +176,11 @@ module EastsideCalendar
 
         def month_day(date)
           "#{MONTHS[date.month - 1]} #{date.day}"
+        end
+
+        # A visible date line, "Fri Oct 9", like the city cards.
+        def day_label(date)
+          "#{DAYS[date.wday]} #{month_day(date)}"
         end
 
         def clock(hour, min)

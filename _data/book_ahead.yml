@@ -11,7 +11,7 @@
   address: "Remlinger Farms, 32610 NE 32nd St"
   start: "2026-09-26"
   end: "2026-11-01"
-  when: "Fri Sep 26 through Sun Nov 1, 10 a.m. to 6 p.m."
+  when: "Sat Sep 26 through Sun Nov 1, 10 a.m. to 6 p.m."
   description: "The fall harvest festival at the farm, open Friday through Sunday, with rides and animals on the grounds. This is the ticketed farm day that sells out, not a holiday show. Online tickets are $33.95 for ages 2 to 65, $31.95 for ages 66 and up or a disability, and free under 2. The gate is $1 more. Saturdays in mid-October often sell out."
   source: https://remlingerfarms.com/fall-harvest-festival/
   source_label: Tickets
@@ -44,7 +44,7 @@
   address: "North Bend Depot, 205 E McClellan St"
   start: "2026-11-28"
   end: "2026-12-20"
-  when: "Nov 28 and 29, Dec 5 to 7, Dec 12 and 13, and Dec 19 and 20"
+  when: "Sat Nov 28 and Sun Nov 29, Sat Dec 5 to Mon Dec 7, Sat Dec 12 and Sun Dec 13, and Sat Dec 19 and Sun Dec 20"
   description: "A Santa train from the North Bend Depot, about two hours, with time in the Train Shed, a visit with Santa in the Chapel Car, a gift, cookies, and a hot drink. Tickets are $39 for ages 2 and up. Children under 2 do not need a ticket. These usually sell out before the first departure. The museum does not refund a ticket unless the train does not run."
   source: https://shop.trainmuseum.org/Events.aspx
   source_label: Tickets
@@ -60,7 +60,7 @@
   address: "Hunt Family Theatre, 120 Front St N"
   start: "2026-12-04"
   end: "2026-12-20"
-  when: "Dec 4 through Dec 20"
+  when: "Fri Dec 4 through Sun Dec 20"
   ticket_line: "Tickets go on sale soon."
   description: "Village Theatre KIDSTAGE presents Footloose at the Hunt Family Theatre in Issaquah. The theatre says tickets go on sale soon. A price and the showtimes are not posted yet."
   source: https://villagetheatre.org/two-great-kidstage-shows-coming-december-2026/
@@ -77,7 +77,7 @@
   address: "Snoqualmie Depot, 38625 SE King St"
   start: "2026-12-04"
   end: "2026-12-18"
-  when: "Dec 4, Dec 11, and Dec 18"
+  when: "Fri Dec 4, Fri Dec 11, and Fri Dec 18"
   description: "A shorter Santa train from the Snoqualmie Depot, about 40 minutes, running past Snoqualmie Falls. Santa visits each family, with a gift and a peppermint. Tickets are $30 for ages 2 and up. Children under 2 ride free. These usually sell out soon after they go on sale."
   source: https://shop.trainmuseum.org/Events.aspx
   source_label: Tickets
@@ -93,7 +93,7 @@
   address: "Longman Performing Arts Center, Issaquah High School"
   start: "2026-12-05"
   end: "2026-12-06"
-  when: "Dec 5 and Dec 6"
+  when: "Sat Dec 5 and Sun Dec 6"
   ticket_line: "A ticket price is not posted yet."
   description: "Issaquah Dance Theatre Ensemble's Nutcracker at Longman Performing Arts Center. Each day has an 11 a.m. one-hour show for a young audience, plus full shows at 1:30 p.m. and 5:30 p.m. A ticket price is not posted yet. Children under 2 on a lap do not need a ticket. Sales are final, and an exchange is $15."
   source: https://www.issaquahdance.com/nutcracker
@@ -110,7 +110,7 @@
   address: "Meydenbauer Theatre, 11100 NE 6th St"
   start: "2026-12-11"
   end: "2026-12-23"
-  when: "Dec 11 through Dec 23"
+  when: "Fri Dec 11 through Wed Dec 23"
   description: "International Ballet Theatre's Nutcracker at Meydenbauer Theatre. Reserved seats, fees included: $70 for ages 15 and up, $55 for military and for seniors 60 and older, and $45 for youth through age 14. Every person needs a ticket. Babies in arms are not admitted. The program is 1 hour 50 minutes, plus a 15-minute intermission. Friday Dec 11 and Friday Dec 18 are at 6 p.m. Saturday Dec 12, Saturday Dec 19, and Sunday Dec 20 are at 1 p.m. and 5 p.m. Sunday Dec 13 is at 1 p.m. only. Monday Dec 21, Tuesday Dec 22, and Wednesday Dec 23 are at 1 p.m."
   source: https://www.ibtbellevue.com/nutcracker-dec-2026
   source_label: Tickets
@@ -126,7 +126,7 @@
   address: "Kirkland Performance Center, 350 Kirkland Ave"
   start: "2026-12-17"
   end: "2026-12-19"
-  when: "Dec 17 through Dec 19, 7 p.m."
+  when: "Thu Dec 17 through Sat Dec 19, 7 p.m."
   description: "Grand Kyiv Ballet's Nutcracker: Symphony of Lights at Kirkland Performance Center. Thursday Dec 17, Friday Dec 18, and Saturday Dec 19, all at 7 p.m. Adult tickets are $74 and youth tickets are $64."
   source: https://www.kpcenter.org/event/the-nutcracker-symphony-of-lights/
   source_label: Tickets

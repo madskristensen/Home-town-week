@@ -53,11 +53,11 @@ module EastsideCalendar
           start_date = parsed[:date]
           if parsed[:time]
             hour, min, = parsed[:time]
-            "#{month_day(start_date)}, #{clock(hour, min)}"
+            "#{day_label(start_date)}, #{clock(hour, min)}"
           elsif finish && !finish[:time] && finish[:date] > start_date
-            "#{month_day(start_date)} to #{month_day(finish[:date])}"
+            "#{day_label(start_date)} to #{day_label(finish[:date])}"
           else
-            month_day(start_date)
+            day_label(start_date)
           end
         end
 
