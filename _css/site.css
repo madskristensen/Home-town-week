@@ -439,11 +439,6 @@ picture.deferred-photo {
   }
 }
 
-.nav-mock-wide {
-  width: min(100% - 3rem, 72rem);
-  margin-inline: auto;
-}
-
 .nav-mock .mast-title-row {
   justify-content: flex-start;
   gap: 0;
