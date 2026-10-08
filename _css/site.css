@@ -492,6 +492,12 @@ picture.deferred-photo {
   white-space: nowrap;
 }
 
+/* Pull the first item back by its padding so the menu text lines up
+   with the logo and the rule below it. */
+.nav-mock-bar > :first-child {
+  margin-inline-start: -0.75rem;
+}
+
 .nav-phone {
   display: none;
   width: 100%;
@@ -678,6 +684,10 @@ picture.deferred-photo {
     gap: 0.25rem;
     padding: 0 0.2rem;
     font-size: 0.84rem;
+  }
+
+  .nav-mock-bar > :first-child {
+    margin-inline-start: -0.2rem;
   }
 }
 
