@@ -1260,10 +1260,6 @@
       url: "https://21acres.org/events/"
       type: venue
       notes: "Farm events and family programs."
-    - name: "Brightwater Center"
-      url: "https://islandwood.org/brightwater-education-center/"
-      type: nature
-      notes: "IslandWood and King County programs at 22505 State Route 9 SE. Spooky Soils is the posted family day."
     - name: "Woodinville Chamber"
       url: "https://woodinvillechamber.org/"
       type: downtown
@@ -1298,11 +1294,6 @@
       url: "https://www.wmnorthwest.com/recyclingcenters/recyclingcentertours/"
       type: venue
       notes: "Tours at 14020 NE 190th St. List a date when a host page publishes one. Ages 10 and up."
-    - name: "AMC Woodinville 12"
-      url: "https://www.amctheatres.com/movie-theatres/seattle-tacoma/amc-woodinville-12"
-      type: cinema
-      format: html
-      notes: "Movie theater: kids series, sensory-friendly and special family screenings only; skip regular showtimes. 17640 Garden Way NE. On AMC's Sensory Friendly Films list (https://www.amctheatres.com/programs/sensory-friendly-films): family films on the second and fourth Saturday mornings, lights up, sound down, no trailers. Skip the Wednesday evening sensory showings, which are for mature audiences. Check /showtimes?date=YYYY-MM-DD for a title ending in Sensory Friendly Screening. The site sends a queue redirect first, so keep cookies between requests. AMC Factoria 8 in Bellevue is not on the sensory list."
     - name: "AllEvents Woodinville"
       url: "https://allevents.in/woodinville"
       type: allevents
