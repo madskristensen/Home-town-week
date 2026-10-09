@@ -153,6 +153,26 @@
       label: "Play and Learn"
   description: "Free drop-in play for children 12 to 36 months and a caregiver. Encompass uses play to practice social skills. No registration. The Friday group follows the Riverview School District calendar."
   hub_blurb: "Free drop-in play for children 12 to 36 months and a caregiver."
+- name: "Family Story Time"
+  cost: "Free"
+  ages: "All ages"
+  setting: "Indoor"
+  tags: [story-time]
+  start: "2026-10-16T10:15:00-07:00"
+  end: "2026-10-16T11:00:00-07:00"
+  place: "Carnation Library, 4804 Tolt Avenue"
+  same_as: "https://kcls.bibliocommons.com/events/6a721ddec7e02e3d006dc717"
+  card: "family-story-time-2"
+  order: "9"
+  heading_id: "family-story-time-2"
+  when: "Fri Oct 16 · 10:15–11:00 a.m."
+  blurbs:
+    - "Books, songs, rhymes, and movement for little ones with an adult, then open play from 10:45 to 11:00. All ages. Free."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6a721ddec7e02e3d006dc717"
+      label: "Family Story Time"
+  description: "Books, songs, rhymes, and movement for little ones with an adult, then open play from 10:45 to 11:00. All ages. Free."
+  hub_blurb: "Books, songs, rhymes, and movement, then open play."
 - name: "Pokemon Club"
   cost: "Free"
   ages: "Kids"
@@ -162,7 +182,7 @@
   place: "Carnation Library, 4804 Tolt Avenue"
   same_as: "https://kcls.bibliocommons.com/events/6abdd628ea50a10050a5ca02"
   card: "pokemon-club"
-  order: "9"
+  order: "10"
   heading_id: "pokemon-club"
   when: "Fri Oct 16 · 2:45–4:15 p.m."
   blurbs:
@@ -182,7 +202,7 @@
   place: "Oxbow Farm and Conservation Center, 10819 Carnation-Duvall Road NE"
   same_as: "https://www.oxbow.org/visit/events/oxtober/"
   card: "oxtober"
-  order: "10"
+  order: "11"
   heading_id: "oxtober"
   when: "Sat Oct 17 and Sun Oct 18, then Sat Oct 24 and Sun Oct 25 · 10:00 a.m.–4:00 p.m."
   blurbs:
@@ -200,7 +220,7 @@
   place: "Tolt-MacDonald Park, 31020 NE 40th St, Carnation"
   same_as: "https://www.eastsideaudubon.org/calendar/2026/bird-walk-at-tolt-macdonald-xldtt-hff82-gj7n6-czf3b-jry68"
   card: "bird-walk-at-tolt-macdonald-park"
-  order: "11"
+  order: "12"
   heading_id: "bird-walk-at-tolt-macdonald-park"
   when: "Sat Oct 17 · 7:45–10:45 a.m."
   blurbs:
@@ -218,7 +238,7 @@
   place: "Carnation Farms, 28901 NE Carnation Farm Road"
   same_as: "https://events.carnationfarms.org/event/2026-harvest-market/"
   card: "harvest-market"
-  order: "12"
+  order: "13"
   heading_id: "harvest-market"
   when: "Sat Oct 17 · 10:00 a.m.–3:00 p.m."
   blurbs:
@@ -238,7 +258,7 @@
   place: "Carnation Library, 4804 Tolt Avenue"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa324b6f9ed2e00384fb019"
   card: "mini-pumpkin-decorating"
-  order: "13"
+  order: "14"
   heading_id: "mini-pumpkin-decorating"
   when: "Thu Oct 22 · 4:15–5:30 p.m."
   blurbs:
@@ -257,7 +277,7 @@
   place: "Tolt Congregational Church, 4851 Tolt Ave, Carnation"
   same_as: "https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/"
   card: "play-and-learn-1"
-  order: "14"
+  order: "15"
   heading_id: "play-and-learn-1"
   when: "Fri Oct 23 · 9:00–10:30 a.m."
   blurbs:
@@ -277,7 +297,7 @@
   place: "Carnation Library, 4804 Tolt Avenue"
   same_as: "https://kcls.bibliocommons.com/events/6a721ddec7e02e3d006dc718"
   card: "family-story-time-1"
-  order: "15"
+  order: "16"
   heading_id: "family-story-time-1"
   when: "Fri Oct 23 · 10:15–11:00 a.m."
   blurbs:
@@ -296,7 +316,7 @@
   place: "Carnation Library, 4804 Tolt Avenue"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a721e5a0d65ac3600444d88"
   card: "wildlife-drawing-in-oil-pastels"
-  order: "16"
+  order: "17"
   heading_id: "wildlife-drawing-in-oil-pastels"
   when: "Tue Oct 27 · 4:15–5:45 p.m."
   blurbs:
@@ -315,7 +335,7 @@
   place: "Tolt Congregational Church, 4851 Tolt Ave, Carnation"
   same_as: "https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/"
   card: "play-and-learn-2"
-  order: "17"
+  order: "18"
   heading_id: "play-and-learn-2"
   when: "Fri Oct 30 · 9:00–10:30 a.m."
   blurbs:
@@ -334,7 +354,7 @@
   place: "Tolt Congregational Church, 4851 Tolt Ave, Carnation"
   same_as: "https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/"
   card: "play-and-learn-3"
-  order: "18"
+  order: "19"
   heading_id: "play-and-learn-3"
   when: "Fri Nov 6 · 9:00–10:30 a.m."
   blurbs:
@@ -353,7 +373,7 @@
   place: "Carnation Library, 4804 Tolt Avenue"
   same_as: "https://kcls.bibliocommons.com/events/6ab2bc78ab7a8e0037c39ca4"
   card: "yoga-and-mindfulness-for-tweens"
-  order: "19"
+  order: "20"
   heading_id: "yoga-and-mindfulness-for-tweens"
   when: "Mon Nov 9 · 4:30–5:00 p.m."
   blurbs:
@@ -372,7 +392,7 @@
   place: "Tolt Congregational Church, 4851 Tolt Ave, Carnation"
   same_as: "https://encompassnw.org/event/play-and-learn-playgroups-carnation-2026-10-02-2/"
   card: "play-and-learn-4"
-  order: "20"
+  order: "21"
   heading_id: "play-and-learn-4"
   when: "Fri Nov 13 · 9:00–10:30 a.m."
   blurbs:

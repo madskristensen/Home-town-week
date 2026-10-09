@@ -1,48 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Teens Around the Fire"
-  cost: "Free"
-  ages: "Teens"
-  setting: "Indoor"
-  start: "2026-10-08T15:45:00-07:00"
-  end: "2026-10-08T17:30:00-07:00"
-  place: "Sammamish Library, 825 228th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/events/6abeee7796ec3a003ad7a455"
-  card: "teens-around-the-fire"
-  order: "3"
-  heading_id: "teens-around-the-fire"
-  when: "Thu Oct 8 · 3:45–5:30 p.m."
-  blurbs:
-    - "A hangout for high school students, with games or homework beside the library fire. No registration. It meets on the second and fourth Thursdays."
-  links:
-    - href: "https://kcls.bibliocommons.com/events/6abeee7796ec3a003ad7a455"
-      label: "Teens Around the Fire"
-  description: "A hangout for high school students, with games or homework beside the library fire. No registration. It meets on the second and fourth Thursdays."
-  hub_blurb: "A hangout for high school students, with games or homework beside the library fire."
-- name: "Creative Connect: Sew a Pouch"
-  cost: "Free"
-  setting: "Outdoor"
-  start: "2026-10-08T18:30:00-07:00"
-  end: "2026-10-08T20:00:00-07:00"
-  place: "Lodge at Beaver Lake Park"
-  same_as: "https://www.sammamish.us/news/events/events/arts-commission-events/10-08-26-creative-connect/"
-  card: "creative-connect-sew-a-pouch"
-  order: "4"
-  heading_id: "creative-connect-sew-a-pouch"
-  when: "Thu Oct 8 · 6:30–8:00 p.m."
-  blurbs:
-    - "Sew a tiny pouch inspired by the Chinese hebao, with sewist Miki Hau and the Arts Commission. Adults and older kids can try simple hand sewing. Younger makers can make a no-sew version. No sewing experience needed. The workshop is free."
-  links:
-    - href: "https://www.sammamish.us/news/events/events/arts-commission-events/10-08-26-creative-connect/"
-      label: "Creative Connect"
-  photo:
-    src: "/assets/images/sammamish/beaver-lake.webp"
-    alt: "The lodge at Beaver Lake Park in Sammamish."
-    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
-    source: "https://commons.wikimedia.org/wiki/File:2022-06-13,_Lodge_at_Beaver_Lake,_Sammamish,_Washington.jpg"
-  description: "Sew a tiny pouch inspired by the Chinese hebao, with sewist Miki Hau and the Arts Commission. Adults and older kids can try simple hand sewing. Younger makers can make a no-sew version. No sewing experience needed. The workshop is free."
-  hub_blurb: "Sew a tiny pouch inspired by the Chinese hebao, with sewist Miki Hau and the Arts Commission."
 - name: "Sammamish Landing Planting"
   cost: "Free"
   setting: "Outdoor"

@@ -1,25 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Shaun the Sheep: The Beast of Mossy Bottom"
-  cost: "$8 to $10"
-  setting: "Indoor"
-  signup: true
-  start: "2026-10-08T18:00:00-07:00"
-  end: "2026-10-08T19:30:00-07:00"
-  place: "North Bend Theatre, 125 Bendigo Blvd N"
-  same_as: "https://tix.northbendtheatre.com/event/shaun-the-sheep-the-beast-of-mossy-bottom-thursday-oct-8th-6pm"
-  card: "shaun-the-sheep-the-beast-of-mossy-bottom"
-  order: "1"
-  heading_id: "shaun-the-sheep-the-beast-of-mossy-bottom"
-  when: "Thu Oct 8 · 6:00 p.m."
-  blurbs:
-    - "A PG animated film, about an hour and a half. On Halloween Eve at Mossy Bottom, the Farmer wrecks the pumpkin patch and Shaun’s fix goes sideways when a beast shows up in the woods. Doors open 30 minutes before the show. Tickets are $8 to $10."
-  links:
-    - href: "https://tix.northbendtheatre.com/event/shaun-the-sheep-the-beast-of-mossy-bottom-thursday-oct-8th-6pm"
-      label: "Shaun the Sheep"
-  description: "A PG animated film, about an hour and a half. On Halloween Eve at Mossy Bottom, the Farmer wrecks the pumpkin patch and Shaun's fix goes sideways when a beast shows up in the woods. Doors open 30 minutes before the show. Tickets are $8 to $10."
-  hub_blurb: "A PG animated film, about an hour and a half."
 - name: "Halloween Train"
   cost: "$16 to $32"
   setting: "Outdoor"
