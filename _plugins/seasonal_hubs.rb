@@ -789,6 +789,11 @@ RowDates = Struct.new(
           if ongoing_span?(parsed, start_on, finish_on)
             return "Through #{EventCalendar.month_day(finish_on)}"
           end
+          # A timed run over several days, such as a show with weekend
+          # performances. Show the whole run, not just the first date.
+          if parsed && multi_day_run?(start_on, finish_on, finish)
+            return "#{EventCalendar.day_label(start_on)} to #{EventCalendar.day_label(finish_on)}"
+          end
           return EventCalendar.when_label(parsed, finish) if parsed
 
           label = EventCalendar.day_label(start_on)
@@ -799,11 +804,21 @@ RowDates = Struct.new(
           end
         end
 
-        # A date-only run of a week or more, such as a pumpkin patch.
+        # A run of a week or more, such as a pumpkin patch or a nightly show.
         def ongoing_span?(parsed, start_on, finish_on)
-          return false unless parsed && parsed[:time].nil? && start_on && finish_on
+          return false unless parsed && start_on && finish_on
 
           (finish_on - start_on).to_i >= 7
+        end
+
+        # Ends on a later day. An evening event that ends after midnight
+        # is still one day.
+        def multi_day_run?(start_on, finish_on, finish)
+          return false unless finish_on && finish_on > start_on
+
+          days = (finish_on - start_on).to_i
+          early_end = finish && finish[:time] && finish[:time][0] < 6
+          !(days == 1 && early_end)
         end
 
         def section_payload(section, items)
