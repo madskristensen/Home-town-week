@@ -4,7 +4,7 @@ title: Bellevue
 city: bellevue
 state: wa
 description: Upcoming family events in Bellevue on the Eastside.
-hook: Under the Mushroom continues at Studio33 through Oct 11. Friday, October 9 is Korean story time at Newport Way Library and a free pumpkin afternoon at The Meadow, and Saturday is Japan Week. Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
+hook: Under the Mushroom continues at Studio33 through Oct 11. Saturday is Japan Week and a ranger-led hike at Lewis Creek, and Sunday is the Bellevue Jazz Student Showcase. Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
 ---
 
 

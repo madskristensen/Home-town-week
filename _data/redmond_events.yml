@@ -1,45 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Lap Sit Baby Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  signup: true
-  tags: [story-time]
-  start: "2026-10-09T10:30:00-07:00"
-  end: "2026-10-09T11:30:00-07:00"
-  place: "Redmond Library, 15990 NE 85th St"
-  same_as: "https://kcls.bibliocommons.com/events/6ab463b60c7bf418f4e3c6ba"
-  card: "lap-sit-baby-story-time"
-  order: "4"
-  heading_id: "lap-sit-baby-story-time"
-  when: "Fri Oct 9 · 10:30–11:30 a.m."
-  blurbs:
-    - "Stories, songs, and rhymes for infants and crawlers from newborn to 18 months with an adult, with up to 20 minutes of play after. Space is limited to 20 families. Free tickets are handed out at the front desk 30 minutes before."
-  links:
-    - href: "https://kcls.bibliocommons.com/events/6ab463b60c7bf418f4e3c6ba"
-      label: "Lap Sit Baby Story Time"
-  description: "Stories, songs, and rhymes for infants and crawlers from newborn to 18 months with an adult, with up to 20 minutes of play after. Space is limited to 20 families. Free tickets are handed out at the front desk 30 minutes before."
-  hub_blurb: "Stories, songs, and rhymes for infants and crawlers from newborn to 18 months."
-- name: "Station 11 Open House"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-09T17:00:00-07:00"
-  end: "2026-10-09T20:00:00-07:00"
-  place: "Redmond Fire Department Station 11, 8450 161st Ave NE, Redmond"
-  same_as: "https://www.redmond.gov/FirePreventionWeek"
-  card: "station-11-open-house"
-  order: "5"
-  heading_id: "station-11-open-house"
-  when: "Fri Oct 9 · 5:00–8:00 p.m."
-  blurbs:
-    - "The last open house of Fire Prevention Week, and it starts an hour earlier than the others. Cooking-fire demonstrations, a station tour, fire safety lessons, and family activities."
-  links:
-    - href: "https://www.redmond.gov/FirePreventionWeek"
-      label: "Fire Prevention Week"
-  description: "The last open house of Fire Prevention Week, and it starts an hour earlier than the others. Cooking-fire demonstrations, a station tour, fire safety lessons, and family activities."
-  hub_blurb: "The last open house of Fire Prevention Week, and it starts an hour earlier than the others."
 - name: "Redmond Saturday Market"
   setting: "Outdoor"
   start: "2026-10-10T09:00:00-07:00"
@@ -47,7 +8,7 @@
   place: "9900 Willows Rd NE"
   same_as: "http://redmondsaturdaymarket.org/Calendar.cshtml"
   card: "redmond-saturday-market"
-  order: "6"
+  order: "1"
   heading_id: "redmond-saturday-market"
   when: "Sat Oct 10 · 9:00 a.m.–2:00 p.m."
   blurbs:
@@ -73,7 +34,7 @@
   organizer_url: "https://www.brickandmortarbooks.com/"
   same_as: "https://www.brickandmortarbooks.com/bigfoot-kids-book-festival"
   card: "bigfoot-kids-book-festival"
-  order: "7"
+  order: "2"
   heading_id: "bigfoot-kids-book-festival"
   title: "Bigfoot Kids’ Book Festival"
   when: "Sat Oct 10 · 10:00 a.m.–4:00 p.m."
@@ -92,6 +53,25 @@
     license: "organizer"
   description: "Fourth annual, free, indoors. No tickets and no advance registration. Author read-alouds and activities are free. Brick & Mortar Books, the host shop, lists book signings, panels, and activities with children's authors and illustrators. The festival FAQ says it covers board books through young adult, and that you may bring books you already own. Disabled parking is at the center."
   hub_blurb: "Fourth annual, free, indoors."
+- name: "STEMsters: Hands-On STEM"
+  cost: "Free"
+  ages: "Kids"
+  setting: "Indoor"
+  start: "2026-10-11T16:30:00-07:00"
+  end: "2026-10-11T17:30:00-07:00"
+  place: "Redmond Library, 15990 NE 85th St"
+  same_as: "https://kcls.bibliocommons.com/events/6ac5826ee06996003a81d0c7"
+  card: "stemsters-hands-on-stem-2"
+  order: "3"
+  heading_id: "stemsters-hands-on-stem-2"
+  when: "Sun Oct 11 · 4:30–5:30 p.m."
+  blurbs:
+    - "Hands-on science, technology, engineering, and math experiments for kids about 6 to 11, designed and run by teen volunteers. Free, just drop in."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6ac5826ee06996003a81d0c7"
+      label: "STEMsters"
+  description: "Hands-on science, technology, engineering, and math experiments for kids about 6 to 11, designed and run by teen volunteers. Free, just drop in."
+  hub_blurb: "Hands-on STEM experiments for kids, run by teen volunteers."
 - name: "Toddler Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -103,7 +83,7 @@
   place: "Redmond Library, 15990 NE 85th St"
   same_as: "https://kcls.bibliocommons.com/events/6ab463b90c7bf418f4e3c6c3"
   card: "toddler-story-time-1"
-  order: "8"
+  order: "4"
   heading_id: "toddler-story-time-1"
   when: "Thu Oct 15 · 10:30–11:30 a.m."
   blurbs:
@@ -121,7 +101,7 @@
   place: "9900 Willows Rd NE"
   same_as: "http://redmondsaturdaymarket.org/Calendar.cshtml"
   card: "redmond-saturday-market-1"
-  order: "9"
+  order: "5"
   heading_id: "redmond-saturday-market-1"
   when: "Sat Oct 17 · 9:00 a.m.–2:00 p.m."
   blurbs:
@@ -149,7 +129,7 @@
   place: "Farrel-McWhirter Park, 19545 Redmond Road"
   same_as: "https://www.redmond.gov/calendar.aspx?EID=3559"
   card: "harvest-festival"
-  order: "10"
+  order: "6"
   heading_id: "harvest-festival"
   when: "Sat Oct 17 · 10:00 a.m.–3:00 p.m."
   blurbs:
@@ -173,7 +153,7 @@
   place: "The Archer Hotel Redmond and Redmond Town Center"
   same_as: "https://engage.oneredmond.org/howl-o-ween"
   card: "redmond-howl-o-ween-pup-parade"
-  order: "11"
+  order: "7"
   heading_id: "redmond-howl-o-ween-pup-parade"
   when: "Sat Oct 17 · 12:00–4:00 p.m."
   place_line: "Check-in at The Archer Hotel Redmond, then Redmond Town Center"
@@ -199,7 +179,7 @@
   place: "Redmond Library, 15990 NE 85th St"
   same_as: "https://kcls.bibliocommons.com/v2/events/6aa89dd94b3b06003083ca77"
   card: "digital-sat-practice-test-and-score-review"
-  order: "12"
+  order: "8"
   heading_id: "digital-sat-practice-test-and-score-review"
   when: "Sun Oct 18 · 2:00–5:30 p.m."
   blurbs:
@@ -217,7 +197,7 @@
   place: "Redmond Library, 15990 NE 85th St"
   same_as: "https://kcls.bibliocommons.com/events/6ab463b90c7bf418f4e3c6c4"
   card: "toddler-story-time-2"
-  order: "13"
+  order: "9"
   heading_id: "toddler-story-time-2"
   when: "Thu Oct 22 · 10:30–11:30 a.m."
   blurbs:
@@ -238,7 +218,7 @@
   place: "Redmond Library, 15990 NE 85th St"
   same_as: "https://kcls.bibliocommons.com/events/6ab463b60c7bf418f4e3c6bc"
   card: "lap-sit-baby-story-time-1"
-  order: "14"
+  order: "10"
   heading_id: "lap-sit-baby-story-time-1"
   when: "Fri Oct 23 · 10:30–11:30 a.m."
   blurbs:
@@ -255,7 +235,7 @@
   place: "9900 Willows Rd NE"
   same_as: "http://redmondsaturdaymarket.org/Calendar.cshtml"
   card: "redmond-saturday-market-2"
-  order: "15"
+  order: "11"
   heading_id: "redmond-saturday-market-2"
   when: "Sat Oct 24 · 9:00 a.m.–2:00 p.m."
   blurbs:
@@ -283,7 +263,7 @@
   organizer_url: "https://www.eventbrite.com/e/redmond-karwachauth-and-diwali-bazaar-2026-tickets-1987171722114"
   same_as: "https://www.eventbrite.com/e/redmond-karwachauth-and-diwali-bazaar-2026-tickets-1987171722114"
   card: "karwa-chauth-and-diwali-bazaar"
-  order: "16"
+  order: "12"
   heading_id: "karwa-chauth-and-diwali-bazaar"
   when: "Sat Oct 24 · 1:00–8:00 p.m."
   blurbs:
@@ -304,7 +284,7 @@
   place: "Redmond Community Center at Marymoor Village, 6505 176th Ave NE"
   same_as: "https://app.amilia.com/store/en/city-of-redmond/shop/activities/7084082"
   card: "trick-or-treat-at-marymoor-village"
-  order: "17"
+  order: "13"
   heading_id: "trick-or-treat-at-marymoor-village"
   when: "Sat Oct 24 · 4:30–7:30 p.m."
   blurbs:
@@ -324,7 +304,7 @@
   place: "Redmond Community Center at Marymoor Village, 6505 176th Ave NE"
   same_as: "https://app.amilia.com/store/en/city-of-redmond/shop/activities/7084090"
   card: "haunted-house-at-marymoor-village"
-  order: "18"
+  order: "14"
   heading_id: "haunted-house-at-marymoor-village"
   when: "Sat Oct 24 · 5:00–9:00 p.m."
   blurbs:
@@ -344,7 +324,7 @@
   place: "Sammamish River Trail, 15670 NE 85th St, Redmond"
   same_as: "https://www.orcarunning.com/race/captain-jacks-treasure-run/"
   card: "captain-jacks-treasure-run"
-  order: "19"
+  order: "15"
   heading_id: "captain-jacks-treasure-run"
   title: "Captain Jack’s Treasure Run"
   when: "Sun Oct 25 · 9:45 a.m.–12:30 p.m."
@@ -364,7 +344,7 @@
   place: "Redmond Library, 15990 NE 85th St"
   same_as: "https://kcls.bibliocommons.com/events/6a46e2cb86636e3d00524741"
   card: "sunday-crafternoon"
-  order: "20"
+  order: "16"
   heading_id: "sunday-crafternoon"
   when: "Sun Oct 25 · 12:30–1:30 p.m."
   blurbs:
@@ -383,7 +363,7 @@
   place: "Redmond Library, 15990 NE 85th St"
   same_as: "https://kcls.bibliocommons.com/events/6ac5826ee06996003a81d0c8"
   card: "stemsters-hands-on-stem"
-  order: "21"
+  order: "17"
   heading_id: "stemsters-hands-on-stem"
   when: "Sun Oct 25 · 4:30–5:30 p.m."
   blurbs:
@@ -402,7 +382,7 @@
   place: "Redmond Senior & Community Center, 8703 160th Ave NE"
   same_as: "https://www.redmond.gov/calendar.aspx?EID=3560"
   card: "spooky-spectacular"
-  order: "22"
+  order: "18"
   heading_id: "spooky-spectacular"
   when: "Mon Oct 26 · 6:00–7:30 p.m."
   blurbs:
@@ -428,7 +408,7 @@
   place: "Farrel-McWhirter Park, 19545 NE Redmond Road"
   same_as: "https://www.redmond.gov/register"
   card: "ofrenda-for-animals"
-  order: "23"
+  order: "19"
   heading_id: "ofrenda-for-animals"
   when: "Tue Oct 27 through Sun Nov 1 · 11:00 a.m.–4:00 p.m."
   blurbs:
@@ -449,7 +429,7 @@
   place: "Redmond Library, 15990 NE 85th St"
   same_as: "https://kcls.bibliocommons.com/events/6ab463b3825ea713bf67a7f6"
   card: "trick-or-treat-story-time"
-  order: "24"
+  order: "20"
   heading_id: "trick-or-treat-story-time"
   when: "Fri Oct 30 · 11:00 a.m.–1:00 p.m."
   blurbs:
@@ -475,7 +455,7 @@
   place: "Redmond City Hall, 15670 NE 85th Street"
   same_as: "https://www.redmond.gov/calendar.aspx?EID=3541"
   card: "trunk-or-treat-at-city-hall"
-  order: "25"
+  order: "21"
   heading_id: "trunk-or-treat-at-city-hall"
   when: "Fri Oct 30 · 5:00–7:30 p.m."
   blurbs:
@@ -493,7 +473,7 @@
   place: "Smith Woods, 176th Avenue NE and NE 124th Street"
   same_as: "https://www.redmond.gov/calendar.aspx?EID=3542"
   card: "green-redmond-day"
-  order: "26"
+  order: "22"
   heading_id: "green-redmond-day"
   when: "Sat Oct 31 · 9:00 a.m.–12:00 p.m."
   blurbs:
@@ -512,7 +492,7 @@
   place: "Redmond Library, 15990 NE 85th St"
   same_as: "https://kcls.bibliocommons.com/events/6a516aaff8c78974036239c6"
   card: "peter-ali-native-and-mesoamerican-flutes"
-  order: "27"
+  order: "23"
   heading_id: "peter-ali-native-and-mesoamerican-flutes"
   when: "Sun Nov 1 · 2:30–4:00 p.m."
   blurbs:
@@ -537,7 +517,7 @@
   place: "Redmond Senior & Community Center, 8703 160th Ave NE"
   same_as: "https://www.redmond.gov/calendar.aspx?EID=3561"
   card: "day-of-the-dead"
-  order: "28"
+  order: "24"
   heading_id: "day-of-the-dead"
   when: "Mon Nov 2 · 5:00–7:00 p.m."
   blurbs:
@@ -557,7 +537,7 @@
   place: "Redmond Senior & Community Center, 8703 160th Ave NE"
   same_as: "https://app.amilia.com/store/en/city-of-redmond/shop/activities/7053263"
   card: "the-zaniac-family-comedy-show"
-  order: "29"
+  order: "25"
   heading_id: "the-zaniac-family-comedy-show"
   when: "Fri Nov 6 · 6:00–7:30 p.m."
   blurbs:
@@ -576,7 +556,7 @@
   place: "Farrel-McWhirter Park, 19545 NE Redmond Road"
   same_as: "https://www.redmond.gov/register"
   card: "pumpkin-drop"
-  order: "30"
+  order: "26"
   heading_id: "pumpkin-drop"
   when: "Sat Nov 7 · 10:00 a.m.–2:00 p.m."
   blurbs:
@@ -595,7 +575,7 @@
   place: "BAPS Shri Swaminarayan Mandir, 15440 NE 95th Street"
   same_as: "https://www.baps.org/Global-Network/North-America/Seattle/Upcoming-Events.aspx"
   card: "kids-diwali-celebration"
-  order: "31"
+  order: "27"
   heading_id: "kids-diwali-celebration"
   when: "Sat Nov 7 · 2:00–6:00 p.m."
   blurbs:
@@ -614,7 +594,7 @@
   place: "Farrel-McWhirter Park, 19545 NE Redmond Road"
   same_as: "https://www.redmond.gov/register"
   card: "pumpkin-drop-1"
-  order: "32"
+  order: "28"
   heading_id: "pumpkin-drop-1"
   when: "Fri Nov 13 · 10:00 a.m.–2:00 p.m."
   blurbs:
@@ -633,7 +613,7 @@
   place: "Farrel-McWhirter Park, 19545 NE Redmond Road"
   same_as: "https://www.redmond.gov/register"
   card: "pumpkin-drop-2"
-  order: "33"
+  order: "29"
   heading_id: "pumpkin-drop-2"
   when: "Sat Nov 14 · 10:00 a.m.–2:00 p.m."
   blurbs:
@@ -653,7 +633,7 @@
   place: "Redmond Senior & Community Center, 8703 160th Ave NE"
   same_as: "https://app.amilia.com/store/en/city-of-redmond/shop/activities/7062544"
   card: "kids-superhero-adventure-day"
-  order: "34"
+  order: "30"
   heading_id: "kids-superhero-adventure-day"
   when: "Sat Nov 21 · 10:00 a.m.–12:00 p.m."
   blurbs:
@@ -672,7 +652,7 @@
   place: "Downtown Park, 16101 Redmond Way"
   same_as: "https://www.redmond.gov/1139/Redmond-Lights"
   card: "redmond-lights"
-  order: "35"
+  order: "31"
   heading_id: "redmond-lights"
   when: "Sat Dec 5 · 4:00–8:00 p.m."
   blurbs:
@@ -693,7 +673,7 @@
   place: "Farrel-McWhirter Park, 19545 Redmond Road"
   same_as: "https://www.redmond.gov/calendar.aspx?EID=3565"
   card: "solstice-at-the-farm"
-  order: "36"
+  order: "32"
   heading_id: "solstice-at-the-farm"
   when: "Mon Dec 21 · 5:00–8:00 p.m."
   blurbs:

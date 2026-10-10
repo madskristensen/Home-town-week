@@ -1,25 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Family Friendly Karaoke"
-  setting: "Indoor"
-  cost: "Free"
-  start: "2026-10-09T18:30:00-07:00"
-  end: "2026-10-09T20:00:00-07:00"
-  place: "Northlake Lutheran Church, 6620 NE 185th Street"
-  same_as: "https://findkenmore.org/event/imagine-presents-family-friendly-karaoke-4/"
-  card: "family-friendly-karaoke"
-  order: "0"
-  heading_id: "family-friendly-karaoke"
-  when: "Fri Oct 9 · 6:30–8:00 p.m."
-  blurbs:
-    - "IMAGINE hosts this on the second Friday. All ages. Sing, or stay and cheer. Free."
-  links:
-    - href: "https://findkenmore.org/event/imagine-presents-family-friendly-karaoke-4/"
-      label: "Family karaoke"
-  description: "IMAGINE hosts this on the second Friday. All ages. Sing, or stay and cheer. Free."
-  hub_blurb: "IMAGINE hosts this on the second Friday."
-
 - name: "ASL Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -39,7 +20,6 @@
       label: "ASL Story Time"
   description: "Teacher and storyteller Sam Sanders signs stories, movement, and rhymes for d/Deaf and hard-of-hearing children and their families. Families may stay afterward for 30 minutes of play."
   hub_blurb: "Teacher and storyteller Sam Sanders signs stories, movement, and rhymes for d/Deaf and hard-of-hearing children and their families."
-
 - name: "Family Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -60,7 +40,6 @@
       label: "Family Story Time"
   description: "Stories, music, and movement for all ages with an adult. Pick one session. No registration. The same mornings are also on Fri Oct 30, and a morning session is also on Fri Nov 6."
   hub_blurb: "Stories, music, and movement for all ages with an adult."
-
 - name: "Builders Club"
   cost: "Free"
   setting: "Indoor"
@@ -80,7 +59,6 @@
       label: "Builders Club"
   description: "Open building with materials the library supplies. Ages 8 and older can come on their own. Ages 5 to 7 need an adult. No registration."
   hub_blurb: "Open building with materials the library supplies."
-
 - name: "Dia de los Muertos"
   cost: "Free"
   setting: "Indoor"
@@ -100,7 +78,6 @@
       label: "Dia de los Muertos"
   description: "The third annual celebration, on Sunday, November 1. Free, with an ofrenda, performances, crafts, and activities."
   hub_blurb: "The third annual celebration, on Sunday, November 1."
-
 - name: "Alice in Wonderland"
   setting: "Indoor"
   start: "2026-11-06T19:00:00-08:00"
@@ -118,7 +95,6 @@
       label: "Inglemoor Theatre"
   description: "Inglemoor High School's fall play, in the Little Theatre on the south side of the school. Shows at 7:00 p.m. on Nov 6, 7, 13, and 14, a 2:00 p.m. matinee on Nov 14, and an understudy show at 7:00 p.m. on Nov 12."
   hub_blurb: "Inglemoor High School's fall play, in the Little Theatre on the south side of the school."
-
 - name: "Tracking Basics: Learning by Looking"
   cost: "Free"
   setting: "Outdoor"
@@ -146,7 +122,6 @@
     license: "CC BY-SA 3.0"
   description: "A free workshop on animal tracks. The group meets at the Environmental Education and Resource Center next to the Lodge, makes paw molds, then takes a flat 1 to 2 mile walk. Finn Hill Neighborhood Alliance and the CoSEE host it. Ages 12 and up. Wear shoes that can handle mud and rain. Tickets are free."
   hub_blurb: "A free workshop on animal tracks."
-
 - name: "Family Friendly Karaoke"
   setting: "Indoor"
   cost: "Free"
@@ -165,7 +140,6 @@
       label: "Family karaoke"
   description: "IMAGINE hosts this on the second Friday. All ages. Sing, or stay and cheer. Free."
   hub_blurb: "IMAGINE hosts this on the second Friday."
-
 - name: "Winterfest"
   setting: "Indoor"
   cost: "Free"
@@ -185,7 +159,6 @@
       label: "Winterfest"
   description: "A free city craft market for families at City Hall and the Hangar, with local makers and pop-up shops."
   hub_blurb: "A free city craft market for families at City Hall and the Hangar, with local makers and pop-up shops."
-
 - name: "Family Friendly Karaoke"
   setting: "Indoor"
   cost: "Free"

@@ -22,26 +22,6 @@
     license: "organizer"
   description: "Ken Ludwig's mystery-comedy, directed by Rael Esteves. Broadway star William Gillette, famous for playing Sherlock Holmes, hosts a weekend that turns into a murder hunt after a guest is stabbed. A killing is part of the plot. Treat it as a mystery for older kids and adults."
   hub_blurb: "Ken Ludwig's mystery-comedy, directed by Rael Esteves."
-- name: "Family Story Time"
-  cost: "Free"
-  ages: "All ages"
-  setting: "Indoor"
-  tags: [story-time]
-  start: "2026-10-09T11:00:00-07:00"
-  end: "2026-10-09T12:00:00-07:00"
-  place: "Woodinville Library, 17105 Avondale Road NE"
-  same_as: "https://kcls.bibliocommons.com/events/6aa899dc4b3b06003083c924"
-  card: "family-story-time"
-  order: "3"
-  heading_id: "family-story-time"
-  when: "Fri Oct 9 · 11:00 a.m.–12:00 p.m."
-  blurbs:
-    - "Stories, music, movement, and rhymes. Stay to play after. All ages with an adult."
-  links:
-    - href: "https://kcls.bibliocommons.com/events/6aa899dc4b3b06003083c924"
-      label: "Family Story Time"
-  description: "Stories, music, movement, and rhymes. Stay to play after. All ages with an adult."
-  hub_blurb: "Stories, music, movement, and rhymes."
 - name: "Sunflower Festival"
   setting: "Outdoor"
   signup: true
@@ -334,9 +314,19 @@
   cost: "Free"
   start: "2026-10-30T11:00:00-07:00"
   end: "2026-10-30T12:00:00-07:00"
-  place: "Woodinville"
+  place: "Woodinville Library, 17105 Avondale Road NE"
   same_as: "https://kcls.bibliocommons.com/events/6aa8a0884b3b06003083cbc6"
   card: "family-story-time"
+  order: "3"
+  heading_id: "family-story-time"
+  when: "Fri Oct 30 · 11:00 a.m.–12:00 p.m."
+  blurbs:
+    - "Stories, music, movement, and rhymes. Stay to play after. All ages with an adult."
+  links:
+    - href: "https://kcls.bibliocommons.com/events/6aa8a0884b3b06003083cbc6"
+      label: "Family Story Time"
+  description: "Stories, music, movement, and rhymes. Stay to play after. All ages with an adult."
+  hub_blurb: "Stories, music, movement, and rhymes."
 - name: "Spooky Soils"
   setting: "Indoor"
   tags: [halloween]

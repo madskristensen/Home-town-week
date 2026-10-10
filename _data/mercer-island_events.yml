@@ -1,25 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Tot Shabbat"
-  ages: "Toddlers"
-  setting: "Indoor"
-  cost: "Free"
-  start: "2026-10-09T09:45:00-07:00"
-  end: "2026-10-09T10:30:00-07:00"
-  place: "Stroum Jewish Community Center, 3801 East Mercer Way"
-  same_as: "https://sjcc.org/series/tot-shabbat/"
-  card: "tot-shabbat"
-  order: "4"
-  heading_id: "tot-shabbat"
-  when: "Fri Oct 9 · 9:45–10:30 a.m."
-  blurbs:
-    - "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome."
-  links:
-    - href: "https://sjcc.org/series/tot-shabbat/"
-      label: "Tot Shabbat"
-  description: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration. Everyone is welcome."
-  hub_blurb: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups."
 - name: "Mercer Island Farmers Market"
   setting: "Outdoor"
   start: "2026-10-11T10:00:00-07:00"
@@ -403,16 +384,16 @@
   ages: "Toddlers"
   start: "2026-11-10T10:15:00-08:00"
   end: "2026-11-10T11:00:00-08:00"
-  place: "Mercer Island"
+  place: "Mercer Island Library, 4400 88th Ave SE"
   same_as: "https://kcls.bibliocommons.com/events/6abacfc8e06996003a7fda92"
   card: "family-story-time"
   order: "24"
   heading_id: "family-story-time"
-  when: "Sun Oct 4 · 11:15 a.m.–12:00 p.m."
+  when: "Tue Nov 10 · 10:15–11:00 a.m."
   blurbs:
     - "Stories, music, movement, and rhymes, then play time. Recommended for ages 0 to 5 with an adult."
   links:
-    - href: "https://kcls.bibliocommons.com/v2/events/6a7e21c1be14820029872dad"
+    - href: "https://kcls.bibliocommons.com/events/6abacfc8e06996003a7fda92"
       label: "Family Story Time"
   description: "Stories, music, movement, and rhymes, then play time. Recommended for ages 0 to 5 with an adult."
   hub_blurb: "Stories, music, movement, and rhymes, then play time."
