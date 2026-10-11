@@ -150,7 +150,8 @@ module EastsideCalendar
       source = photo["credit_url"].to_s.strip
       return nil unless image.start_with?("/assets/images/")
       return nil if credit.empty? || !source.match?(%r{\Ahttps://})
-      return nil if kids_photo?(photo["alt"], image)
+      # A logo alt can name a brand like "Soulful Kids"; it is not a photo of kids.
+      return nil if !image.include?("/birthdays/logos/") && kids_photo?(photo["alt"], image)
 
       alt = photo["alt"].to_s.strip
       alt = name if alt.empty?

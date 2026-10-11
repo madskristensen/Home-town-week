@@ -15,6 +15,12 @@
   source: https://www.silveradventures.com/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/silver-adventures.webp
+    alt: The Silver Adventures laser tag trailer.
+    credit: 'Photo: Silver Adventures Laser Tag'
+    credit_url: https://www.silveradventures.com/
+    license: organizer
 - id: flee-mobile-escape
   name: FLEE Mobile Escape Rooms
   service_area: Serves the Eastside
@@ -25,6 +31,12 @@
   source: https://www.fleeescape.com/onsite-team-events
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/flee-mobile-escape.webp
+    alt: One of the FLEE portable escape room units.
+    credit: 'Photo: FLEE Mobile Escape Rooms'
+    credit_url: https://www.fleeescape.com/onsite-team-events
+    license: organizer
 - id: bounce-experience-co
   name: The Bounce Experience Co
   service_area: Serves the Eastside
@@ -34,6 +46,12 @@
   source: https://www.thebounceexperienceco.com/pages/bounce-house-rentals-redmond
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/bounce-experience-co.webp
+    alt: The Bounce Experience Co logo.
+    credit: 'Logo: The Bounce Experience Co'
+    credit_url: https://www.thebounceexperienceco.com/pages/bounce-house-rentals-redmond
+    license: organizer
 - id: wa-bounce-house
   name: WA Bounce House
   service_area: Serves the Eastside
@@ -43,6 +61,12 @@
   source: https://www.wabouncehouse.com/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/wa-bounce-house.webp
+    alt: An inflatable obstacle course with slides from WA Bounce House.
+    credit: 'Photo: WA Bounce House'
+    credit_url: https://www.wabouncehouse.com/
+    license: organizer
 - id: eastside-bounce-house
   name: Eastside Bounce House
   service_area: Serves the Eastside
@@ -53,6 +77,12 @@
   source: https://eastsidebouncehouse.com/rentals/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/eastside-bounce-house.webp
+    alt: Eastside Bounce House logo.
+    credit: 'Logo: Eastside Bounce House'
+    credit_url: https://eastsidebouncehouse.com/rentals/
+    license: organizer
 - id: clowns-unlimited
   name: Clowns Unlimited
   service_area: Serves the Eastside
@@ -63,6 +93,12 @@
   source: https://clownsunlimited.com/rent/entertainment/reptile-zoo/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/clowns-unlimited.webp
+    alt: Clowns Unlimited logo.
+    credit: 'Logo: Clowns Unlimited'
+    credit_url: https://clownsunlimited.com/rent/entertainment/reptile-zoo/
+    license: organizer
 - id: mad-science-sno-king
   name: Mad Science
   service_area: Serves the Eastside
@@ -83,6 +119,12 @@
   source: https://bricks4kidz.us/washington-redmond-bellevue/our-programs/birthday-parties/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/bricks-4-kidz.webp
+    alt: Bricks 4 Kidz Redmond-Bellevue logo.
+    credit: 'Logo: Bricks 4 Kidz Redmond-Bellevue'
+    credit_url: https://bricks4kidz.us/washington-redmond-bellevue/our-programs/birthday-parties/
+    license: organizer
 - id: snapology-eastside
   name: Snapology of Eastside
   service_area: Serves the Eastside
@@ -92,6 +134,12 @@
   source: https://snapologyofeastside.com/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/snapology-eastside.webp
+    alt: Snapology of Eastside logo.
+    credit: 'Logo: Snapology of Eastside'
+    credit_url: https://snapologyofeastside.com/
+    license: organizer
 - id: animal-encounters
   name: Animal Encounters
   service_area: Serves the Eastside
@@ -102,6 +150,12 @@
   source: https://animalencounters.com/encounters
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/animal-encounters.webp
+    alt: Animal Encounters logo.
+    credit: 'Logo: Animal Encounters'
+    credit_url: https://animalencounters.com/encounters
+    license: organizer
 - id: curious-critters
   name: Curious Critters
   service_area: Serves the Eastside
@@ -111,6 +165,12 @@
   source: https://curious-critters.org/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/curious-critters.webp
+    alt: A hedgehog held in a hand, from Curious Critters.
+    credit: 'Photo: Curious Critters'
+    credit_url: https://curious-critters.org/
+    license: organizer
 - id: plucky-palomino-mobile
   name: Plucky Palomino Mobile Petting Zoo
   service_area: Serves the Eastside
@@ -121,6 +181,12 @@
   source: https://www.pluckypalomino.com/mobilezoo
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/plucky-palomino-mobile.webp
+    alt: Two goats from the Plucky Palomino mobile petting zoo.
+    credit: 'Photo: Plucky Palomino Mobile Petting Zoo'
+    credit_url: https://www.pluckypalomino.com/mobilezoo
+    license: organizer
 - id: enchanted-farms-mobile
   name: Enchanted Farms Mobile Zoo
   service_area: Serves the Eastside
@@ -131,6 +197,12 @@
   source: https://www.enchantedfarmsduvall.com/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/enchanted-farms-mobile.webp
+    alt: A brown alpaca up close at Enchanted Farms.
+    credit: 'Photo: Enchanted Farms Mobile Zoo'
+    credit_url: https://www.enchantedfarmsduvall.com/
+    license: organizer
 - id: soulful-kids
   name: Soulful Kids
   service_area: Serves the Eastside
@@ -140,6 +212,12 @@
   source: https://www.soulful-kids.com/services-4
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/soulful-kids.webp
+    alt: Soulful Kids logo.
+    credit: 'Logo: Soulful Kids'
+    credit_url: https://www.soulful-kids.com/services-4
+    license: organizer
 - id: wonder-spark
   name: Wonder Spark
   service_area: Serves the Eastside
@@ -150,6 +228,12 @@
   source: https://wskidsparty.net/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/wonder-spark.webp
+    alt: Wonder Spark logo.
+    credit: 'Logo: Wonder Spark'
+    credit_url: https://wskidsparty.net/
+    license: organizer
 - id: painted-palace
   name: The Painted Palace
   service_area: Serves the Eastside
@@ -160,6 +244,12 @@
   source: https://www.paintedpalaceparties.com/traveling-character-parties
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/painted-palace.webp
+    alt: Four princess character performers from The Painted Palace.
+    credit: 'Photo: The Painted Palace'
+    credit_url: https://www.paintedpalaceparties.com/traveling-character-parties
+    license: organizer
 - id: seattle-princess-party
   name: Seattle Princess Party
   service_area: Serves the Eastside
@@ -169,6 +259,12 @@
   source: https://seattleprincessparty.com/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/seattle-princess-party.webp
+    alt: Seattle Princess Party logo.
+    credit: 'Logo: Seattle Princess Party'
+    credit_url: https://seattleprincessparty.com/
+    license: organizer
 - id: characters-io
   name: Characters.io Seattle
   service_area: Serves the Eastside
@@ -178,6 +274,12 @@
   source: https://seattle.characters.io/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/characters-io.webp
+    alt: A Spider-Man character performer posed against a city skyline.
+    credit: 'Photo: Characters.io Seattle'
+    credit_url: https://seattle.characters.io/
+    license: organizer
 - id: hoopla-face-painting
   name: Hoopla Face Painting and Balloons
   service_area: Serves the Eastside
@@ -187,6 +289,12 @@
   source: https://www.hooplafacepainting.com/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/hoopla-face-painting.webp
+    alt: Hoopla Face Painting and Balloons logo.
+    credit: 'Logo: Hoopla Face Painting and Balloons'
+    credit_url: https://www.hooplafacepainting.com/
+    license: organizer
 - id: glitterbuggie
   name: Glitterbuggie Entertainment
   service_area: Serves the Eastside
@@ -197,6 +305,12 @@
   source: https://www.glitterbuggie.com/clowns-balloons-face-painting-magic-show-airbrush-carnival-games-in-Bellevue
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/glitterbuggie.webp
+    alt: Glitterbuggie Entertainment logo.
+    credit: 'Logo: Glitterbuggie Entertainment'
+    credit_url: https://www.glitterbuggie.com/clowns-balloons-face-painting-magic-show-airbrush-carnival-games-in-Bellevue
+    license: organizer
 - id: evelinka-puppets
   name: Evelinka Puppets
   service_area: Serves the Eastside

@@ -18,7 +18,8 @@
 # CC BY-SA, or public domain. A venue photo uses credit "Photo: <name>"
 # and license organizer. No recognizable kids. With no photo the build
 # uses photo_key (a key in _data/venue_images.yml), then the designed
-# party card. Never a pool or themed photo: the picture must show the venue.
+# party card. A company logo is allowed (credit "Logo: <name>"), padded
+# on a plain background in assets/images/birthdays/logos/. Never a pool or themed photo: the picture must show the venue.
 # last_verified is the day the party page was checked, YYYY-MM-DD.
 - id: kidsquest
   name: KidsQuest Children's Museum
@@ -86,6 +87,12 @@
   source: https://www.safesplash.com/locations/bellevue-kelsey-creek-wa/swim-party
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/safesplash-bellevue.webp
+    alt: SafeSplash Bellevue (Kelsey Creek) logo.
+    credit: 'Logo: SafeSplash Bellevue (Kelsey Creek)'
+    credit_url: https://www.safesplash.com/locations/bellevue-kelsey-creek-wa/swim-party
+    license: organizer
 - id: wiggleworks-bellevue
   name: WiggleWorks Kids
   city: bellevue
@@ -102,6 +109,12 @@
   source: https://wiggleworkskids.com/parties/bellevue-parties
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/wiggleworks-bellevue.webp
+    alt: WiggleWorks Kids logo.
+    credit: 'Logo: WiggleWorks Kids'
+    credit_url: https://wiggleworkskids.com/parties/bellevue-parties
+    license: organizer
 - id: monster-mini-golf-bellevue
   name: Monster Mini Golf
   city: bellevue
@@ -117,6 +130,12 @@
   source: https://monsterminigolf.com/locations/us/wa/bellevue/birthday-parties/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/monster-mini-golf-bellevue.webp
+    alt: Glow-in-the-dark mini golf holes under black light at Monster Mini Golf.
+    credit: 'Photo: Monster Mini Golf'
+    credit_url: https://monsterminigolf.com/locations/us/wa/bellevue/birthday-parties/
+    license: organizer
 - id: little-gym-bellevue
   name: The Little Gym of Bellevue-Redmond
   city: bellevue
@@ -131,6 +150,12 @@
   source: https://www.thelittlegym.com/washington-bellevue-redmond/kids-birthday-parties/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/little-gym-bellevue.webp
+    alt: The Little Gym of Bellevue-Redmond logo.
+    credit: 'Logo: The Little Gym of Bellevue-Redmond'
+    credit_url: https://www.thelittlegym.com/washington-bellevue-redmond/kids-birthday-parties/
+    license: organizer
 - id: bellevue-park-shelters
   name: Bellevue park picnic sites
   city: bellevue
@@ -168,6 +193,12 @@
   source: https://www.arenasports.net/locations/redmond/events/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/arena-sports-redmond.webp
+    alt: Arena Sports Redmond logo.
+    credit: 'Logo: Arena Sports Redmond'
+    credit_url: https://www.arenasports.net/locations/redmond/events/
+    license: organizer
 - id: kids-magic-lab
   name: Kids Magic Lab
   city: redmond
@@ -185,8 +216,8 @@
   source_label: Party page
   last_verified: '2026-10-10'
   photo:
-    image: /assets/images/birthdays/kids-magic-lab.jpg
-    alt: A pastel balloon arch and Happy Birthday sign in the Kids Magic Lab party room.
+    image: /assets/images/birthdays/kids-magic-lab.webp
+    alt: The party room at the Redmond magic lab, with a long blue table set for guests.
     credit: 'Photo: Kids Magic Lab'
     credit_url: https://www.kidsmagiclab.com/parties
     license: organizer
@@ -204,6 +235,12 @@
   source: https://www.safesplash.com/locations/redmond-wa/swim-party
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/safesplash-redmond.webp
+    alt: SafeSplash Redmond logo.
+    credit: 'Logo: SafeSplash Redmond'
+    credit_url: https://www.safesplash.com/locations/redmond-wa/swim-party
+    license: organizer
 - id: redmond-park-shelters
   name: Redmond park pavilions
   city: redmond
@@ -238,6 +275,12 @@
   source: https://www.pumpitupparty.com/kirkland-wa/birthday-parties/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/pump-it-up-kirkland.webp
+    alt: Inflatable bounce houses and slides in the Pump It Up arena.
+    credit: 'Photo: Pump It Up'
+    credit_url: https://www.pumpitupparty.com/kirkland-wa/birthday-parties/
+    license: organizer
 - id: paint-kirkland
   name: Paint Kirkland
   city: kirkland
@@ -253,6 +296,12 @@
   source: https://www.paintkirkland.com/birthday-parties
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/paint-kirkland.webp
+    alt: Paint Kirkland logo.
+    credit: 'Logo: Paint Kirkland'
+    credit_url: https://www.paintkirkland.com/birthday-parties
+    license: organizer
 - id: al-art-studio
   name: AL Art Studio
   city: kirkland
@@ -267,6 +316,12 @@
   source: https://alstudioart.com/kids-teens-art-party/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/al-art-studio.webp
+    alt: Front deck and sign of AL Studio.
+    credit: 'Photo: AL Art Studio'
+    credit_url: https://alstudioart.com/kids-teens-art-party/
+    license: organizer
 - id: annas-art-lab
   name: Anna's Art Lab
   city: kirkland
@@ -322,6 +377,12 @@
   source: https://www.elevatedsportz.com/partypackages
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/elevated-sportz.webp
+    alt: Elevated Sportz logo.
+    credit: 'Logo: Elevated Sportz'
+    credit_url: https://www.elevatedsportz.com/partypackages
+    license: organizer
 - id: creart-studioz
   name: CreArt Studioz
   city: bothell
@@ -338,6 +399,12 @@
   source: https://creartstudioz.com/birthdays/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/creart-studioz.webp
+    alt: The bright CreArt Studioz room with a long worktable and art supplies on the wall.
+    credit: 'Photo: CreArt Studioz'
+    credit_url: https://creartstudioz.com/birthdays/
+    license: organizer
 - id: kidstrong-bothell
   name: KidStrong Bothell
   city: bothell
@@ -351,6 +418,12 @@
   source: https://bothell.kidstrong.com/parties
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/kidstrong-bothell.webp
+    alt: KidStrong Bothell logo.
+    credit: 'Logo: KidStrong Bothell'
+    credit_url: https://bothell.kidstrong.com/parties
+    license: organizer
 - id: kenmore-lanes
   name: Kenmore Lanes
   city: kenmore
@@ -366,6 +439,12 @@
   source: https://kenmore50lanes.com/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/kenmore-lanes.webp
+    alt: Kenmore Lanes logo.
+    credit: 'Logo: Kenmore Lanes'
+    credit_url: https://kenmore50lanes.com/
+    license: organizer
 - id: picket-fence-art-studio
   name: Picket Fence Art Studio
   city: woodinville
@@ -380,6 +459,12 @@
   source: https://picketfenceartstudio.com/art-parties-for-kids-unique-and-memorable-experiences/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/picket-fence-art-studio.webp
+    alt: Picket Fence Art Studio logo.
+    credit: 'Logo: Picket Fence Art Studio'
+    credit_url: https://picketfenceartstudio.com/art-parties-for-kids-unique-and-memorable-experiences/
+    license: organizer
 - id: west-family-martial-arts
   name: West Family Martial Arts
   city: woodinville
@@ -391,6 +476,12 @@
   source: https://westfamilyma.com/birthday-parties-woodinville/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/west-family-martial-arts.webp
+    alt: West Family Martial Arts logo.
+    credit: 'Logo: West Family Martial Arts'
+    credit_url: https://westfamilyma.com/birthday-parties-woodinville/
+    license: organizer
 - id: woodinville-sports-club
   name: Woodinville Sports Club
   city: woodinville
@@ -425,6 +516,12 @@
   source: https://tutuschool.com/sammamish/parties/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/tutu-school-sammamish.webp
+    alt: Tutu School Sammamish logo.
+    credit: 'Logo: Tutu School Sammamish'
+    credit_url: https://tutuschool.com/sammamish/parties/
+    license: organizer
 - id: arena-sports-issaquah
   name: Arena Sports Issaquah
   city: issaquah
@@ -443,6 +540,12 @@
   source_label: Party page
   last_verified: '2026-10-10'
   price_level: 3
+  photo:
+    image: /assets/images/birthdays/logos/arena-sports-issaquah.webp
+    alt: Arena Sports Issaquah logo.
+    credit: 'Logo: Arena Sports Issaquah'
+    credit_url: https://www.arenasports.net/locations/issaquah/events/
+    license: organizer
 - id: little-gym-issaquah
   name: The Little Gym of Issaquah
   city: issaquah
@@ -457,6 +560,12 @@
   source: https://www.thelittlegym.com/washington-issaquah/kids-birthday-parties/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/little-gym-issaquah.webp
+    alt: The Little Gym of Issaquah logo.
+    credit: 'Logo: The Little Gym of Issaquah'
+    credit_url: https://www.thelittlegym.com/washington-issaquah/kids-birthday-parties/
+    license: organizer
 - id: all-star-academy
   name: All-Star Academy
   city: issaquah
@@ -473,6 +582,12 @@
   source: https://www.allstaracademy.org/birthdays
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/all-star-academy.webp
+    alt: All-Star Academy logo.
+    credit: 'Logo: All-Star Academy'
+    credit_url: https://www.allstaracademy.org/birthdays
+    license: organizer
 - id: cougar-mountain-zoo
   name: Cougar Mountain Zoo
   city: issaquah
@@ -517,6 +632,12 @@
   source: https://nicksmagnificent.com/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/nicks-magnificent.webp
+    alt: The cafe seating area inside Nick's Magnificent.
+    credit: 'Photo: Nick''s Magnificent'
+    credit_url: https://nicksmagnificent.com/
+    license: organizer
 - id: mary-wayte-pool
   name: Mary Wayte Pool
   city: mercer-island
@@ -628,6 +749,12 @@
   source: https://www.thelittlegym.com/washington-maple-valley/kids-birthday-parties/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/little-gym-maple-valley.webp
+    alt: The Little Gym of Maple Valley logo.
+    credit: 'Logo: The Little Gym of Maple Valley'
+    credit_url: https://www.thelittlegym.com/washington-maple-valley/kids-birthday-parties/
+    license: organizer
 - id: young-chefs-covington
   name: Young Chefs Academy
   city: maple-valley
@@ -642,6 +769,12 @@
   source: https://youngchefsacademy.com/locations/covingtonwa/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/young-chefs-covington.webp
+    alt: Young Chefs Academy logo.
+    credit: 'Logo: Young Chefs Academy'
+    credit_url: https://youngchefsacademy.com/locations/covingtonwa/
+    license: organizer
 - id: dave-busters-bellevue
   name: Dave & Buster's
   city: bellevue
@@ -656,6 +789,12 @@
   source: https://www.daveandbusters.com/us/en/about/locations/bellevue
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/dave-busters-bellevue.webp
+    alt: Dave & Buster's logo.
+    credit: 'Logo: Dave & Buster''s'
+    credit_url: https://www.daveandbusters.com/us/en/about/locations/bellevue
+    license: organizer
 - id: lucky-strike-bellevue
   name: Lucky Strike Bellevue
   city: bellevue
@@ -669,6 +808,12 @@
   source: https://www.luckystrikeent.com/location/lucky-strike-bellevue/parties/kids-parties
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/lucky-strike-bellevue.webp
+    alt: Lucky Strike Bellevue logo.
+    credit: 'Logo: Lucky Strike Bellevue'
+    credit_url: https://www.luckystrikeent.com/location/lucky-strike-bellevue/parties/kids-parties
+    license: organizer
 - id: twinkle-land-bellevue
   name: Twinkle Land
   city: bellevue
@@ -685,6 +830,12 @@
   source: https://www.twinklelandplaycafe.com/bellevue-location
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/twinkle-land-bellevue.webp
+    alt: Ball pit and colorful indoor play area at Twinkle Land.
+    credit: 'Photo: Twinkle Land'
+    credit_url: https://www.twinklelandplaycafe.com/bellevue-location
+    license: organizer
 - id: taste-buds-kitchen-bellevue
   name: Taste Buds Kitchen
   city: bellevue
@@ -699,6 +850,12 @@
   source: https://tastebudskitchen.com/bellevue/kids-birthday-parties/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/taste-buds-kitchen-bellevue.webp
+    alt: Taste Buds Kitchen logo.
+    credit: 'Logo: Taste Buds Kitchen'
+    credit_url: https://tastebudskitchen.com/bellevue/kids-birthday-parties/
+    license: organizer
 - id: popcorn-play-party-cook
   name: 'Popcorn: Play, Party and Cook'
   city: bellevue
@@ -728,6 +885,12 @@
   source: https://www.bellevuestudio.com/art-parties
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/studio-fine-art-crossroads.webp
+    alt: The Studio Fine Art logo.
+    credit: 'Logo: The Studio Fine Art'
+    credit_url: https://www.bellevuestudio.com/art-parties
+    license: organizer
 - id: aafa-bellevue
   name: American Academy of Fine Arts
   city: bellevue
@@ -774,6 +937,12 @@
   source: https://www.k1speed.com/seattle-location/kids-birthday-parties.html
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/k1-speed-redmond.webp
+    alt: K1 Speed logo.
+    credit: 'Logo: K1 Speed'
+    credit_url: https://www.k1speed.com/seattle-location/kids-birthday-parties.html
+    license: organizer
 - id: playlive-redmond
   name: PLAYlive Nation
   city: redmond
@@ -788,6 +957,12 @@
   source: https://playlivenation.com/location/redmondtc/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/playlive-redmond.webp
+    alt: PLAYlive Nation logo.
+    credit: 'Logo: PLAYlive Nation'
+    credit_url: https://playlivenation.com/location/redmondtc/
+    license: organizer
 - id: flee-escape-redmond
   name: FLEE Escape Rooms
   city: redmond
@@ -802,6 +977,12 @@
   source: https://fleeescape.com/birthday-party-escape-room-vr-party
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/flee-escape-redmond.webp
+    alt: FLEE Escape Rooms logo.
+    credit: 'Logo: FLEE Escape Rooms'
+    credit_url: https://fleeescape.com/birthday-party-escape-room-vr-party
+    license: organizer
 - id: conundroom-redmond
   name: Conundroom
   city: redmond
@@ -837,6 +1018,12 @@
   source: https://flatstickpub.com/redmond/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/flatstick-redmond.webp
+    alt: Flatstick Pub Redmond logo.
+    credit: 'Logo: Flatstick Pub Redmond'
+    credit_url: https://flatstickpub.com/redmond/
+    license: organizer
 - id: giggle-jungle-redmond
   name: Giggle Jungle
   city: redmond
@@ -852,6 +1039,12 @@
   source: https://gigglejungle.com/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/giggle-jungle-redmond.webp
+    alt: Giggle Jungle logo.
+    credit: 'Logo: Giggle Jungle'
+    credit_url: https://gigglejungle.com/
+    license: organizer
 - id: premiere-dance-center
   name: Premiere Dance Center
   city: redmond
@@ -867,6 +1060,12 @@
   source: https://www.premieredancecenter.com/parties
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/premiere-dance-center.webp
+    alt: Premiere Dance Center logo.
+    credit: 'Logo: Premiere Dance Center'
+    credit_url: https://www.premieredancecenter.com/parties
+    license: organizer
 - id: my-gym-bellevue-redmond
   name: My Gym Bellevue-Redmond
   city: redmond
@@ -897,6 +1096,12 @@
   source: https://froglegskca.com/birthday-parties/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/froglegs-redmond.webp
+    alt: FrogLegs Cooking School Redmond logo.
+    credit: 'Logo: FrogLegs Cooking School Redmond'
+    credit_url: https://froglegskca.com/birthday-parties/
+    license: organizer
 - id: red-barn-farm
   name: The Red Barn Farm
   city: redmond
@@ -911,6 +1116,12 @@
   source: https://redbarnfarm.com/kidsbirthdays/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/red-barn-farm.webp
+    alt: The Red Barn Farm logo.
+    credit: 'Logo: The Red Barn Farm'
+    credit_url: https://redbarnfarm.com/kidsbirthdays/
+    license: organizer
 - id: redmond-petting-farm
   name: Redmond Petting Farm
   city: redmond
@@ -924,6 +1135,12 @@
   source: https://www.redmondpettingfarm.com/Programs/birthdays.html
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/redmond-petting-farm.webp
+    alt: A shaggy highland cow resting in the pasture at Redmond Petting Farm.
+    credit: 'Photo: Redmond Petting Farm'
+    credit_url: https://www.redmondpettingfarm.com/Programs/birthdays.html
+    license: organizer
 - id: flatstick-kirkland
   name: Flatstick Pub Kirkland
   city: kirkland
@@ -938,6 +1155,12 @@
   source: https://flatstickpub.com/parties-and-events/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/flatstick-kirkland.webp
+    alt: Flatstick Pub Kirkland logo.
+    credit: 'Logo: Flatstick Pub Kirkland'
+    credit_url: https://flatstickpub.com/parties-and-events/
+    license: organizer
 - id: lazerx-kirkland
   name: LazerX Arena
   city: kirkland
@@ -952,6 +1175,12 @@
   source: https://www.lazerxarena.com/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/lazerx-kirkland.webp
+    alt: LazerX Arena logo.
+    credit: 'Logo: LazerX Arena'
+    credit_url: https://www.lazerxarena.com/
+    license: organizer
 - id: sno-king-kirkland
   name: Sno-King Ice Arena Kirkland
   city: kirkland
@@ -966,6 +1195,12 @@
   source: https://www.snokingicearenas.com/program/birthday-parties/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/sno-king-kirkland.webp
+    alt: Sno-King Ice Arena Kirkland logo.
+    credit: 'Logo: Sno-King Ice Arena Kirkland'
+    credit_url: https://www.snokingicearenas.com/program/birthday-parties/
+    license: organizer
 - id: gymnastics-connection
   name: The Gymnastics Connection
   city: kirkland
@@ -981,6 +1216,12 @@
   source: https://gymnasticsconnection.com/birthday-parties
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/gymnastics-connection.webp
+    alt: The Gymnastics Connection logo.
+    credit: 'Logo: The Gymnastics Connection'
+    credit_url: https://gymnasticsconnection.com/birthday-parties
+    license: organizer
 - id: lavida-kirkland
   name: LaVida Dance Studio
   city: kirkland
@@ -996,6 +1237,12 @@
   source: https://www.lavidastudio.com/kids-birthday-parties/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/lavida-kirkland.webp
+    alt: LaVida Dance Studio logo.
+    credit: 'Logo: LaVida Dance Studio'
+    credit_url: https://www.lavidastudio.com/kids-birthday-parties/
+    license: organizer
 - id: froglegs-kirkland
   name: FrogLegs Cooking School Kirkland
   city: kirkland
@@ -1011,6 +1258,12 @@
   source: https://froglegskca.com/birthday-parties/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/froglegs-kirkland.webp
+    alt: FrogLegs Cooking School Kirkland logo.
+    credit: 'Logo: FrogLegs Cooking School Kirkland'
+    credit_url: https://froglegskca.com/birthday-parties/
+    license: organizer
 - id: northshore-ymca
   name: Northshore YMCA
   city: bothell
@@ -1041,6 +1294,12 @@
   source: https://www.bothellgymnasticsclub.com/home/events/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/bothell-gymnastics-club.webp
+    alt: Bothell Gymnastics Club logo.
+    credit: 'Logo: Bothell Gymnastics Club'
+    credit_url: https://www.bothellgymnasticsclub.com/home/events/
+    license: organizer
 - id: bothell-park-shelters
   name: Bothell park shelters
   city: bothell
@@ -1055,6 +1314,12 @@
   source: https://www.bothellwa.gov/1196/Parks-Recreation-Rental-Facilities
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/bothell-park-shelters.webp
+    alt: A covered picnic shelter on the lawn in a Bothell park.
+    credit: 'Photo: Bothell park shelters'
+    credit_url: https://www.bothellwa.gov/1196/Parks-Recreation-Rental-Facilities
+    license: organizer
 - id: sammamish-ymca
   name: Sammamish YMCA
   city: sammamish
@@ -1099,6 +1364,12 @@
   source: https://rockandrollrink.org/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/rock-and-roll-rink.webp
+    alt: Rock and Roll Rink logo.
+    credit: 'Logo: Rock and Roll Rink'
+    credit_url: https://rockandrollrink.org/
+    license: organizer
 - id: ninja-quest-adventures
   name: Ninja Quest Adventures
   city: issaquah
@@ -1112,6 +1383,12 @@
   source: https://www.ninjaquestadventures.com/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/ninja-quest-adventures.webp
+    alt: Ninja Quest Adventures logo.
+    credit: 'Logo: Ninja Quest Adventures'
+    credit_url: https://www.ninjaquestadventures.com/
+    license: organizer
 - id: kidstrong-issaquah
   name: KidStrong Issaquah
   city: issaquah
@@ -1125,6 +1402,12 @@
   source: https://issaquah.kidstrong.com/parties
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/kidstrong-issaquah.webp
+    alt: KidStrong Issaquah logo.
+    credit: 'Logo: KidStrong Issaquah'
+    credit_url: https://issaquah.kidstrong.com/parties
+    license: organizer
 - id: issaquah-dance-theatre
   name: Issaquah Dance Theatre
   city: issaquah
@@ -1139,6 +1422,12 @@
   source: https://www.issaquahdance.com/birthday-parties
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/issaquah-dance-theatre.webp
+    alt: An empty, mirrored dance studio at Issaquah Dance Theatre.
+    credit: 'Photo: Issaquah Dance Theatre'
+    credit_url: https://www.issaquahdance.com/birthday-parties
+    license: organizer
 - id: inspire-academy-of-dance
   name: Inspire Academy of Dance
   city: issaquah
@@ -1153,6 +1442,12 @@
   source: https://inspire.dance/birthday-parties
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/inspire-academy-of-dance.webp
+    alt: Front of the Inspire Academy of Dance studio building in Issaquah.
+    credit: 'Photo: Inspire Academy of Dance'
+    credit_url: https://inspire.dance/birthday-parties
+    license: organizer
 - id: museo-art-academy
   name: MUSEO Art Academy
   city: issaquah
@@ -1166,6 +1461,12 @@
   source: https://www.museoartacademy.com/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/museo-art-academy.webp
+    alt: MUSEO Art Academy logo.
+    credit: 'Logo: MUSEO Art Academy'
+    credit_url: https://www.museoartacademy.com/
+    license: organizer
 - id: little-gym-renton
   name: The Little Gym of Renton
   city: renton
@@ -1180,6 +1481,12 @@
   source: https://www.thelittlegym.com/washington-kent/kids-birthday-parties/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/little-gym-renton.webp
+    alt: The Little Gym of Renton logo.
+    credit: 'Logo: The Little Gym of Renton'
+    credit_url: https://www.thelittlegym.com/washington-kent/kids-birthday-parties/
+    license: organizer
 - id: icode-renton
   name: iCode Renton
   city: renton
@@ -1193,6 +1500,12 @@
   source: https://icodeschool.com/renton-wa/birthday-parties/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/icode-renton.webp
+    alt: iCode Renton logo.
+    credit: 'Logo: iCode Renton'
+    credit_url: https://icodeschool.com/renton-wa/birthday-parties/
+    license: organizer
 - id: color-me-mine-renton
   name: Color Me Mine Renton
   city: renton
@@ -1207,6 +1520,12 @@
   source: https://renton.colormemine.com/kids-parties/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/color-me-mine-renton.webp
+    alt: Color Me Mine Renton logo.
+    credit: 'Logo: Color Me Mine Renton'
+    credit_url: https://renton.colormemine.com/kids-parties/
+    license: organizer
 - id: sno-king-renton
   name: Sno-King Ice Arena Renton
   city: renton
@@ -1222,6 +1541,12 @@
   source: https://www.snokingicearenas.com/renton-birthday-parties/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/sno-king-renton.webp
+    alt: Sno-King Ice Arena Renton logo.
+    credit: 'Logo: Sno-King Ice Arena Renton'
+    credit_url: https://www.snokingicearenas.com/renton-birthday-parties/
+    license: organizer
 - id: snoqualmie-valley-ymca
   name: Snoqualmie Valley YMCA
   city: snoqualmie
@@ -1251,6 +1576,12 @@
   source: https://www.pluckypalomino.com/farmparties
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/plucky-palomino.webp
+    alt: The covered party pad at Plucky Palomino in North Bend.
+    credit: 'Photo: Plucky Palomino Petting Zoo'
+    credit_url: https://www.pluckypalomino.com/farmparties
+    license: organizer
 - id: enchanted-farms-duvall
   name: Enchanted Farms
   city: duvall
@@ -1264,3 +1595,9 @@
   source: https://www.enchantedfarmsduvall.com/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/enchanted-farms-duvall.webp
+    alt: Two farm hosts with sheep at Enchanted Farms in Duvall.
+    credit: 'Photo: Enchanted Farms'
+    credit_url: https://www.enchantedfarmsduvall.com/
+    license: organizer
