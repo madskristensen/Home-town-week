@@ -769,25 +769,6 @@ picture.deferred-photo {
   line-height: 0.98;
 }
 
-.city-name a,
-.page h1 a,
-.prose h1 a {
-  color: inherit;
-  font-weight: inherit;
-  text-decoration: none;
-}
-
-.city-name a:hover,
-.city-name a:focus-visible,
-.page h1 a:hover,
-.page h1 a:focus-visible,
-.prose h1 a:hover,
-.prose h1 a:focus-visible {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.08em;
-}
-
 .prose h3 a {
   color: inherit;
   font-weight: inherit;
