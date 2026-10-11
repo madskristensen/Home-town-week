@@ -8,6 +8,8 @@
 # snoqualmie). lat and lng feed the Distance sort; no map pin.
 # season_start and season_end drive the Open now line (when_open);
 # leave them off when the farm posts no season, and when_closed is shown.
+# setting: Outdoor only for a roadside or self-serve stand; others get no
+# setting tag.
 # self_serve: true only when the farm says self-serve or honor system.
 # photo is optional here: a real photo of that exact farm, credited and
 # linked, or no photo. No recognizable kids. No em dashes.
@@ -53,6 +55,13 @@
   source: https://www.soundsfarms.com/farm-stand
   source_label: Farm site
   last_verified: '2026-10-11'
+  photo:
+    image: /assets/images/markets/stands/sound-sustainable.webp
+    alt: Tomatoes, squash, and potatoes on wooden tables inside the Sound Sustainable Farms stand.
+    credit: 'Photo: Sound Sustainable Farms'
+    credit_url: https://www.soundsfarms.com/farm-stand
+    license: organizer
+
 - id: ecolibrium-farms-farm-store
   name: Ecolibrium Farms Farm Store
   city: redmond
@@ -67,6 +76,13 @@
   source: https://www.ecolibriumfarms.com/farm-store
   source_label: Farm site
   last_verified: '2026-10-11'
+  photo:
+    image: /assets/images/markets/stands/ecolibrium.webp
+    alt: Fruit and vegetable crates on wooden shelves inside the Ecolibrium Farms store.
+    credit: 'Photo: Ecolibrium Farms'
+    credit_url: https://www.ecolibriumfarms.com/farm-store
+    license: organizer
+
 - id: tonnemaker-valley-farm-stand
   name: Tonnemaker Valley Farm Stand
   city: woodinville
@@ -78,6 +94,13 @@
   source: https://www.tonnemaker.com/get-in-touch
   source_label: Farm site
   last_verified: '2026-10-11'
+  photo:
+    image: /assets/images/markets/stands/tonnemaker.webp
+    alt: Bins of apples, peaches, and pears on tables at the Tonnemaker Valley Farm stand.
+    credit: 'Photo: Tonnemaker Valley Farm'
+    credit_url: https://tonnemaker.com/home/
+    license: organizer
+
 - id: 21-acres-farm-market
   name: 21 Acres Farm Market
   city: woodinville
@@ -92,7 +115,15 @@
   source: https://21acres.org/farm-market/
   source_label: Farm site
   last_verified: '2026-10-11'
+  photo:
+    image: /assets/images/markets/stands/21-acres.webp
+    alt: Shoppers at the checkout counter inside the 21 Acres Farm Market.
+    credit: 'Photo: 21 Acres'
+    credit_url: https://21acres.org/farm-market/
+    license: organizer
+
 - id: frisky-girl-farm-stand
+  setting: Outdoor
   name: Frisky Girl Farm Stand
   city: north-bend
   address: 9905 428th Ave SE
@@ -106,6 +137,13 @@
   source: https://friskygirlfarm.com/
   source_label: Farm site
   last_verified: '2026-10-11'
+  photo:
+    image: /assets/images/markets/stands/frisky-girl.webp
+    alt: Painted Fresh Produce sign at the Frisky Girl Farm stand, with a farm dog beside it.
+    credit: 'Photo: Frisky Girl Farm'
+    credit_url: https://friskygirlfarm.com/
+    license: organizer
+
 - id: tollgate-farm-store
   name: Tollgate Farm Store
   city: north-bend
@@ -117,7 +155,15 @@
   source: https://www.tollgatefarmstore.com/
   source_label: Farm site
   last_verified: '2026-10-11'
+  photo:
+    image: /assets/images/markets/stands/tollgate.webp
+    alt: White Tollgate Farm building with an open door and a fresh produce sign.
+    credit: 'Photo: Tollgate Farm Store'
+    credit_url: https://www.tollgatefarmstore.com/
+    license: organizer
+
 - id: farm-among-us
+  setting: Outdoor
   name: Farm Among Us
   city: issaquah
   address: 10515 Upper Preston Rd SE
@@ -129,6 +175,13 @@
   source: https://www.farmamongus.com/
   source_label: Farm site
   last_verified: '2026-10-11'
+  photo:
+    image: /assets/images/markets/stands/farm-among-us.webp
+    alt: Produce on wooden tables under a canopy at the Farm Among Us stand.
+    credit: 'Photo: Farm Among Us'
+    credit_url: https://www.farmamongus.com/
+    license: organizer
+
 - id: celebration-farms-farm-shop
   name: Celebration Farms Farm Shop
   city: snoqualmie
@@ -140,3 +193,23 @@
   source: https://celebrationfarmsfallcity.com/shop
   source_label: Farm site
   last_verified: '2026-10-11'
+- id: jubilee-farm-barn-store
+  name: Jubilee Farm Barn Store
+  city: carnation
+  address: 229 W Snoqualmie River Rd NE
+  lat: 47.611781
+  lng: -121.934548
+  season_start: '2026-10-01'
+  season_end: '2026-10-31'
+  when_open: Open now in October. Weekdays, 12 to 5 p.m. Weekends, 10 a.m. to 5 p.m. during the harvest festival.
+  when_closed: Back in October. Check the farm site for other seasons.
+  description: Barn store in the farm's historic barn with Jubilee produce, pumpkin butter, and local artisan goods. Open every day in October alongside the pumpkin patch and weekend harvest festival.
+  source: https://www.jubileefarm.org/october
+  source_label: Farm site
+  last_verified: '2026-10-11'
+  photo:
+    image: /assets/images/markets/stands/jubilee.webp
+    alt: Red apples on a tree in the Jubilee Farm orchard.
+    credit: 'Photo: Jubilee Farm'
+    credit_url: https://www.jubileefarm.org/october
+    license: organizer

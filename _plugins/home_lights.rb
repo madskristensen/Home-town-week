@@ -316,6 +316,7 @@ module EastsideCalendar
         town = item["city"]
         item["address"] = "#{item["address"]}, #{town}" unless item["address"].include?(",")
         item["city_id"] = "farm-stands"
+        item["setting"] = row["setting"].to_s.strip.empty? ? "none" : row["setting"].to_s.strip
         item["card_id"] = "light-#{item["id"]}"
         item.delete("number")
         item

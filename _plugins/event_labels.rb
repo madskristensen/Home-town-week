@@ -72,6 +72,8 @@ module EastsideCalendar
 
     def setting_label(event)
       setting = text(event, "setting")
+      # "none" keeps a card with no setting tag (indoor farm stores).
+      return "" if setting.casecmp("none").zero?
       found = SETTINGS.find { |item| item.casecmp(setting).zero? }
       return found if found
 
