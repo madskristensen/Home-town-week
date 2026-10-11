@@ -140,6 +140,7 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
 {%- for town in home_lights.towns -%}
 <section class="hub-section">
   <h2 id="town-{{ town.id }}">{{ town.name }}</h2>
+  {%- if town.intro -%}<p class="hub-section-intro">{{ town.intro }}</p>{%- endif -%}
   {%- if forloop.first -%}
   {%- include card-grid.html events=town.lights eager=1 priority=true -%}
   {%- else -%}

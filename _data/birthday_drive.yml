@@ -1,0 +1,191 @@
+# Worth the drive, the third section of /birthday-venues/.
+# Big, destination-scale kids party venues just outside the 15 cities,
+# within about 30 minutes of Bellevue. Keep it to about 10 to 15.
+# Verify each on its own party page. place_city is the card's city line.
+# No map pins, so the map stays framed on the Eastside.
+# types, setting, party_room, price_level, and photo work as in
+# birthday_venues.yml.
+- id: flying-squirrel-everett
+  name: Flying Squirrel Everett
+  place_city: Everett
+  address: 1325 SE Everett Mall Way, Suite A, Everett
+  setting: Indoor
+  types:
+  - Play
+  party_room: true
+  price_level: 3
+  description: Big indoor trampoline park. Party packages give 10 or more guests 2.5 hours, with 2 hours of jump time, pizza, and a host. A glass cube VIP room is available for 25.
+  source: https://flyingsquirrelsports.us/everett-washington/party-landing-page/
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/flying-squirrel-everett.webp
+    alt: Flying Squirrel Everett logo.
+    credit: 'Logo: Flying Squirrel'
+    credit_url: https://flyingsquirrelsports.us/everett-washington/party-landing-page/
+    license: organizer
+- id: sky-zone-tukwila
+  name: Sky Zone Seattle
+  place_city: Tukwila
+  address: 455 Andover Park E, Tukwila
+  setting: Indoor
+  types:
+  - Play
+  party_room: true
+  price_level: 3
+  description: Trampoline park near Southcenter. Birthday packages are priced per jumper, with play time, a party space, food, and drinks.
+  source: https://www.skyzone.com/seattle/parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/sky-zone-tukwila.webp
+    alt: Sky Zone Seattle logo.
+    credit: 'Logo: Sky Zone Seattle'
+    credit_url: https://www.skyzone.com/seattle/parties/
+    license: organizer
+- id: urban-air-tukwila
+  name: Urban Air Tukwila
+  place_city: Tukwila
+  address: 400 Strander Blvd, Tukwila
+  setting: Indoor
+  types:
+  - Play
+  - Games and arcades
+  price_level: 3
+  description: Indoor adventure park with trampolines, an indoor zipline, ropes course, climbing walls, and more. Unlimited-play party packages; a private room is an add-on.
+  source: https://www.urbanair.com/washington-tukwila/kids-birthday-parties-2/
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/urban-air-tukwila.webp
+    alt: Urban Air Tukwila logo.
+    credit: 'Logo: Urban Air'
+    credit_url: https://www.urbanair.com/washington-tukwila/kids-birthday-parties-2/
+    license: organizer
+- id: bowlero-south-seattle
+  name: Bowlero South Seattle
+  place_city: Tukwila
+  address: 100 Andover Park W, Tukwila
+  setting: Indoor
+  types:
+  - Games and arcades
+  description: Bowling and arcade kids parties for ages 5 and up, with food and a party host. Book two to four weeks ahead.
+  source: https://www.bowlero.com/location/bowlero-south-seattle/parties/kids-parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/bowlero-south-seattle.webp
+    alt: Bowlero South Seattle logo.
+    credit: 'Logo: Bowlero South Seattle'
+    credit_url: https://www.bowlero.com/location/bowlero-south-seattle/parties/kids-parties
+    license: organizer
+- id: lucky-strike-lynnwood
+  name: Lucky Strike Lynnwood
+  place_city: Lynnwood
+  address: 1222 164th St SW, Lynnwood
+  setting: Indoor
+  types:
+  - Games and arcades
+  description: 'Bowling and arcade parties for ages 5 and up: 1.5 to 2 hours of bowling, arcade credits, kid food, and a party host.'
+  source: https://www.luckystrikeent.com/location/lucky-strike-lynnwood/parties/kids-parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/lucky-strike-lynnwood.webp
+    alt: Lucky Strike Lynnwood logo.
+    credit: 'Logo: Lucky Strike'
+    credit_url: https://www.luckystrikeent.com/location/lucky-strike-lynnwood/parties/kids-parties
+    license: organizer
+- id: arena-sports-mill-creek
+  name: Arena Sports Mill Creek
+  place_city: Mill Creek
+  address: 13500 Bothell Everett Hwy, Suite A, Mill Creek
+  setting: Indoor
+  types:
+  - Sports
+  - Games and arcades
+  description: '98,000 square feet of fun: six birthday packages built around laser tag, arcade, inflatables, a ropes course, and field games, with a host and a custom jersey.'
+  source: https://www.arenasports.net/locations/mill-creek/parties-and-events/
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/arena-sports-mill-creek.webp
+    alt: Arena Sports Mill Creek logo.
+    credit: 'Logo: Arena Sports'
+    credit_url: https://www.arenasports.net/locations/mill-creek/parties-and-events/
+    license: organizer
+- id: pacific-science-center
+  name: Pacific Science Center
+  place_city: Seattle
+  address: 200 Sue Bird Ct N, Seattle
+  setting: Indoor
+  types:
+  - Science
+  - Museum
+  party_room: true
+  price_level: 3
+  description: Weekend parties with a 20-minute guided science activity, a private room for 90 minutes for up to 30 guests, and museum admission at a discount.
+  source: https://pacificsciencecenter.org/visit/birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/pacific-science-center.webp
+    alt: Pacific Science Center logo.
+    credit: 'Logo: Pacific Science Center'
+    credit_url: https://pacificsciencecenter.org/visit/birthday-parties/
+    license: organizer
+- id: woodland-park-zoo
+  name: Woodland Park Zoo
+  place_city: Seattle
+  address: 5500 Phinney Ave N, Seattle
+  setting: Indoor
+  types:
+  - Animals and farms
+  party_room: true
+  price_level: 4
+  description: Party in the Historic Carousel building with all-day zoo admission and carousel tickets for 20 guests. Book at least four weeks ahead.
+  source: https://www.brambleandwoodwpz.com/venues/birthdays
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/woodland-park-zoo.webp
+    alt: Painted horses on the historic carousel at Woodland Park Zoo.
+    credit: 'Photo: Woodland Park Zoo'
+    credit_url: https://www.brambleandwoodwpz.com/venues/birthdays
+    license: organizer
+- id: museum-of-flight
+  name: The Museum of Flight
+  place_city: Seattle
+  address: 9404 E Marginal Way S, Seattle
+  setting: Indoor
+  types:
+  - Museum
+  party_room: true
+  price_level: 3
+  description: A private party room by Boeing Field, with museum admission for up to 40 guests on the day. Weekends only; an open-air pavilion among the planes in summer.
+  source: https://www.museumofflight.org/visit/private-events/birthday-parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/museum-of-flight.webp
+    alt: The Museum of Flight logo.
+    credit: 'Logo: The Museum of Flight'
+    credit_url: https://www.museumofflight.org/visit/private-events/birthday-parties
+    license: organizer
+- id: ifly-seattle
+  name: iFLY Seattle
+  place_city: Tukwila
+  address: 349 Tukwila Pkwy, Tukwila
+  setting: Indoor
+  types:
+  - Sports
+  description: Indoor skydiving in a wind tunnel. Book individual flyers or a whole session, with or without a party room and food.
+  source: https://www.iflyworld.com/seattle
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/logos/ifly-seattle.webp
+    alt: iFLY Seattle logo.
+    credit: 'Logo: iFLY Seattle'
+    credit_url: https://www.iflyworld.com/seattle
+    license: organizer

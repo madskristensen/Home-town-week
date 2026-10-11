@@ -350,12 +350,20 @@ module EastsideCalendar
         { "lat" => item["lat"], "lng" => item["lng"], "name" => item["name"], "id" => item["id"] }
       end
       Jekyll.logger.info("Birthday venues:", "#{items.size} venues, #{packed["pins"].size} on the map")
+      drive = collect_birthday_drive(site)
+      unless drive.empty?
+        packed["towns"] << {
+          "id" => "worth-the-drive", "name" => "Worth the drive", "lights" => drive,
+          "intro" => "Just outside the Eastside, but a favorite drive for big parties."
+        }
+        packed["count"] += drive.size
+      end
       mobile = collect_birthday_mobile(site)
       unless mobile.empty?
         packed["towns"] << { "id" => "comes-to-you", "name" => "Parties that come to you", "lights" => mobile }
         packed["count"] += mobile.size
       end
-      packed["filters"] = birthday_filters(items + mobile)
+      packed["filters"] = birthday_filters(items + drive + mobile)
       packed
     end
 
@@ -384,6 +392,35 @@ module EastsideCalendar
         photo = market_photo(row["photo"], name, site) || birthday_designed_photo(name, site)
         apply_photo!(item, photo)
         birthday_labels!(item, row.merge("setting" => "Comes to you"))
+        item
+      end
+    end
+
+    # Worth the drive: _data/birthday_drive.yml. Big venues just outside
+    # the 15 cities. Same card. The city is the card's first line and the
+    # address links to maps. No pins, so the map stays on the Eastside.
+    def collect_birthday_drive(site)
+      rows = Array(site.data["birthday_drive"]).select { |row| row.is_a?(Hash) }
+      rows = rows.sort_by { |row| [row["place_city"].to_s.downcase, row["name"].to_s.downcase] }
+      rows.filter_map do |row|
+        name = row["name"].to_s.strip
+        city = row["place_city"].to_s.strip
+        address = row["address"].to_s.gsub(/\s+/, " ").strip
+        source = row["source"].to_s.strip
+        description = row["description"].to_s.gsub(/\s+/, " ").strip
+        if name.empty? || city.empty? || address.empty? || description.empty? || !source.match?(%r{\Ahttps://\S+\z})
+          Jekyll.logger.error("Birthday venues:", "skipped #{name}")
+          next
+        end
+        id = slug(row["id"], name)
+        item = {
+          "id" => id, "card_id" => "light-#{id}", "name" => name, "nights" => city,
+          "place" => address, "place_city" => city, "blurb" => description,
+          "source_href" => source, "source_label" => row["source_label"].to_s.strip
+        }
+        photo = market_photo(row["photo"], name, site) || birthday_designed_photo(name, site)
+        apply_photo!(item, photo)
+        birthday_labels!(item, row)
         item
       end
     end
