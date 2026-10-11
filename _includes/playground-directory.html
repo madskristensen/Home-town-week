@@ -1,12 +1,14 @@
 {%- comment -%}
-  Playground list grouped by city. No parameters.
+  Playground list grouped by city, on the shared camp-directory rows and
+  Group by pills (Town, Distance). No parameters. Group ids stay
+  #all-{city} and row ids stay the park id, so old links still land.
   The heading carries the city and the count. The address line drops
   that city. The map link still searches the full address.
   Badges on the name line use the flags in playground_map.json:
   standout, restrooms, splash, accessible, covered, toddler.
   The legend under the heading uses the same badges.
 {%- endcomment -%}
-<section class="playground-directory">
+<section class="playground-directory camp-directory">
   <h2 id="every-playground">Every playground</h2>
   {%- assign amenity_rows = "standout|Standout|Standout playground~restrooms|Restrooms|Restrooms~splash|Splash pad|Splash pad~accessible|Accessible|Accessible~covered|Covered|Covered or shade~toddler|Toddler area|Toddler area" | split: "~" -%}
   <ul class="badge-legend">
@@ -21,24 +23,38 @@
     {%- endfor -%}
   </ul>
   {%- include page-intro.html text="Public park playgrounds by city. Stars mark our favorites." -%}
+  <div class="camp-group-row">
+    <span class="camp-group-label" id="camp-group-label">Group by</span>
+    <div class="camp-group-pills" role="group" aria-labelledby="camp-group-label">
+      <button type="button" class="camp-pill" data-group="town" aria-pressed="true">Town</button>
+      <button type="button" class="camp-pill" data-group="distance" aria-pressed="false">Distance</button>
+    </div>
+  </div>
+  <p class="camp-geo-note" role="status"></p>
+  <div id="camp-groups">
   {%- for city in site.data.playground_map.cities -%}
-  <h3 id="all-{{ city.id }}">{{ city.name }} ({{ city.parks.size }})</h3>
-  <ul class="playground-list">
-    {%- for park in city.parks -%}
-    {%- assign city_suffix = ", " | append: city.name -%}
-    {%- assign suffix_size = city_suffix | size -%}
-    {%- assign head_size = park.address | size | minus: suffix_size -%}
-    {%- assign place_tail = park.address | slice: head_size, suffix_size -%}
-    {%- if place_tail == city_suffix -%}
-      {%- assign park_place = park.address | slice: 0, head_size -%}
-    {%- else -%}
-      {%- assign park_place = park.address -%}
-    {%- endif -%}
-    <li id="{{ park.id }}" data-city="{{ city.id }}"{% if park.restrooms %} data-restrooms="1"{% endif %}{% if park.covered %} data-covered="1"{% endif %}{% if park.accessible %} data-accessible="1"{% endif %}{% if park.toddler %} data-toddler="1"{% endif %}{% if park.splash %} data-splash="1"{% endif %}>
-      <a class="playground-name" href="{{ park.page }}"><span class="playground-name-text">{{ park.name }}</span>{%- for row in amenity_rows -%}{%- assign bits = row | split: "|" -%}{%- assign amenity_key = bits[0] -%}{%- if park[amenity_key] -%}<span class="park-badge badge-{{ amenity_key }}{% if amenity_key == "standout" %} standout-mark{% else %} amenity-mark{% endif %}" title="{{ bits[2] }}"><span class="visually-hidden">{{ bits[2] }}</span></span>{%- endif -%}{%- endfor -%}</a>
-      <a class="addr" href="{{ park.address | map_search: city.name, park.name }}"><span class="addr-text">{{ park_place }}</span></a>
-    </li>
-    {%- endfor -%}
-  </ul>
+  <section class="camp-town" id="all-{{ city.id }}">
+    <h3 class="camp-town-title"><span class="camp-group-name">{{ city.name }}</span> (<span class="camp-group-count">{{ city.parks.size }}</span>)</h3>
+    <ul class="camp-list">
+      {%- for park in city.parks -%}
+      {%- assign city_suffix = ", " | append: city.name -%}
+      {%- assign suffix_size = city_suffix | size -%}
+      {%- assign head_size = park.address | size | minus: suffix_size -%}
+      {%- assign place_tail = park.address | slice: head_size, suffix_size -%}
+      {%- if place_tail == city_suffix -%}
+        {%- assign park_place = park.address | slice: 0, head_size -%}
+      {%- else -%}
+        {%- assign park_place = park.address -%}
+      {%- endif -%}
+      <li class="camp-row" id="{{ park.id }}" data-town="all-{{ city.id }}" data-town-name="{{ city.name | escape }}" data-town-order="{{ forloop.parentloop.index }}" data-sort="{{ forloop.index | prepend: '0000' | slice: -4, 4 }}" data-city="{{ city.id }}"{% if park.lat and park.lng %} data-lat="{{ park.lat }}" data-lng="{{ park.lng }}"{% endif %}{% if park.restrooms %} data-restrooms="1"{% endif %}{% if park.covered %} data-covered="1"{% endif %}{% if park.accessible %} data-accessible="1"{% endif %}{% if park.toddler %} data-toddler="1"{% endif %}{% if park.splash %} data-splash="1"{% endif %}>
+        <p class="camp-name-line"><a href="{{ park.page }}">{{ park.name }}{%- for row in amenity_rows -%}{%- assign bits = row | split: "|" -%}{%- assign amenity_key = bits[0] -%}{%- if park[amenity_key] -%}<span class="park-badge badge-{{ amenity_key }}" title="{{ bits[2] }}"><span class="visually-hidden">{{ bits[2] }}</span></span>{%- endif -%}{%- endfor -%}</a></p>
+        <p class="camp-signup"><a class="addr" href="{{ park.address | map_search: city.name, park.name }}"><span class="addr-text">{{ park_place }}</span></a></p>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </section>
   {%- endfor -%}
+  </div>
+  <div id="camp-sponsor-hold" hidden></div>
 </section>
+{%- include group-by-script.html -%}

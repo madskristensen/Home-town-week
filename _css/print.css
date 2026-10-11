@@ -211,11 +211,11 @@ figure,
   display: block !important;
 }
 
-.playground-list {
+.playground-directory .camp-list {
   columns: 1 !important;
 }
 
-.playground-list > li {
+.playground-directory .camp-list > li {
   margin: 0 0 0.35rem !important;
   padding: 0.1rem 0 0.28rem !important;
   border: 0 !important;
@@ -229,7 +229,7 @@ figure,
   color: #000 !important;
 }
 
-.playground-list .park-badge {
+.playground-directory .camp-list .park-badge {
   display: inline !important;
   width: auto !important;
   height: auto !important;
@@ -239,7 +239,7 @@ figure,
   color: #000 !important;
 }
 
-.playground-list .park-badge::before,
+.playground-directory .camp-list .park-badge::before,
 .badge-legend .park-badge::before {
   display: inline-block;
   width: 0.85em;
@@ -247,7 +247,7 @@ figure,
   background: #000;
 }
 
-.playground-list .amenity-mark .visually-hidden {
+.playground-directory .park-badge:not(.badge-standout) .visually-hidden {
   position: static !important;
   width: auto !important;
   height: auto !important;
@@ -258,12 +258,12 @@ figure,
   white-space: normal !important;
 }
 
-.playground-list a.addr {
+.playground-directory .camp-list a.addr {
   color: #000 !important;
 }
 
 .event-card,
-.playground-list li,
+.playground-directory .camp-list > li,
 .hub-section {
   break-inside: avoid;
   page-break-inside: avoid;

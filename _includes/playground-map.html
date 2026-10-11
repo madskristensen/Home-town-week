@@ -84,7 +84,7 @@
     var countEl = document.querySelector(".map-count");
     if (!countEl) return;
     var n = 0;
-    var items = document.querySelectorAll(".playground-list li");
+    var items = document.querySelectorAll(".playground-directory .camp-list > li");
     for (var i = 0; i < items.length; i++) {
       if (items[i].getClientRects().length) n++;
     }
@@ -115,27 +115,9 @@
     }, 50);
   }
 
-  function updateFilterEmpty() {
-    var note = document.querySelector(".guide-page .filter-empty");
-    if (!note) return;
-    var active = document.querySelector(".playground-filters input:checked");
-    if (!active) {
-      note.hidden = true;
-      return;
-    }
-    var items = document.querySelectorAll(".playground-list li");
-    var any = false;
-    var i;
-    for (i = 0; i < items.length; i++) {
-      if (items[i].getClientRects().length) any = true;
-    }
-    note.hidden = any;
-  }
-
   document.querySelectorAll(".playground-filters input").forEach(function (input) {
     input.addEventListener("change", function () {
       updatePosterCount();
-      updateFilterEmpty();
       applyMapFilters();
     });
   });

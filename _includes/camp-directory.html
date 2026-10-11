@@ -5,7 +5,7 @@
 {%- endcomment -%}
 {%- assign camp_page = site.data.summer_camps_page -%}
 {%- assign camp_listings = site.data.sponsors.listings -%}
-<section class="camp-directory">
+<section class="camp-directory" data-no-address="No fixed address">
   <div class="camp-group-row">
     <span class="camp-group-label" id="camp-group-label">Group by</span>
     <div class="camp-group-pills" role="group" aria-labelledby="camp-group-label">
@@ -13,8 +13,10 @@
       <button type="button" class="camp-pill" data-group="type" aria-pressed="false">Type</button>
       <button type="button" class="camp-pill" data-group="signup" aria-pressed="false">Sign-up</button>
       <button type="button" class="camp-pill" data-group="ages" aria-pressed="false">Ages</button>
+      <button type="button" class="camp-pill" data-group="distance" aria-pressed="false">Distance</button>
     </div>
   </div>
+  <p class="camp-geo-note" role="status"></p>
   <div id="camp-groups">
     {%- for town in camp_page.towns -%}
     {%- assign sponsor_count = 0 -%}

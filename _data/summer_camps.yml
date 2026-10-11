@@ -192,6 +192,8 @@
   day_label: "Half day or full day"
   full_day: true
   location: "KidsQuest Children's Museum, Bellevue"
+  lat: 47.620866
+  lng: -122.195904
   weeks: "2027 weeks are still TBD"
   price: "About $350 for a half-day week, or $525 for a full day"
   confirmed_2027: true
@@ -249,6 +251,8 @@
   day_label: "Full day, 9 a.m. to 4 p.m."
   full_day: true
   location: "Clark Elementary, Issaquah"
+  lat: 47.526007
+  lng: -122.035061
   weeks: "8 weeks, June through August in 2026"
   price: "Extended care was $50"
   hint: "In 2026, Issaquah residents registered March 21 and everyone else March 28."
@@ -264,6 +268,8 @@
   day_label: "Full day, 9 a.m. to 4 p.m."
   full_day: true
   location: "Issaquah Middle School"
+  lat: 47.524202
+  lng: -122.029461
   weeks: "9 weeks, June through August in 2026"
   price: "Extended care was $50"
   hint: "In 2026, Issaquah residents registered March 21 and everyone else March 28."
@@ -279,6 +285,8 @@
   day_label: "Full day, 9 a.m. to 4 p.m."
   full_day: true
   location: "Issaquah Community Center"
+  lat: 47.527273
+  lng: -122.034274
   weeks: "8 weeks, June through August in 2026"
   price: "Extended care was $50"
   hint: "In 2026, Issaquah residents registered March 21 and everyone else March 28."
@@ -294,6 +302,8 @@
   day_label: "Half day or full day, 9 a.m. to 4 p.m."
   full_day: true
   location: "2115 NW Poplar Way, Issaquah"
+  lat: 47.551161
+  lng: -122.070564
   weeks: "2027 weeks are not dated yet"
   confirmed_2027: true
   on_signup_list: true
@@ -361,6 +371,8 @@
   age_label: "Grades 2 to 9"
   day_label: "Day camp"
   location: "4114 W Lake Sammamish Pkwy SE, Bellevue"
+  lat: 47.570179
+  lng: -122.104378
   weeks: "June 21 through August 27, 2027"
   price: "About $997 a week"
   confirmed_2027: true
@@ -377,6 +389,8 @@
   age_label: "Ages on the camp page"
   day_label: "Day camp"
   location: "14230 Bel-Red Rd, Bellevue"
+  lat: 47.626083
+  lng: -122.149858
   weeks: "Selected weeks from June 22 to August 21 in 2026"
   hint: "In 2026, returning families registered February 4, members February 11, and everyone else February 18."
   source: "https://www.seattleymca.org/programs/camp-and-outdoor-leadership/day-camp/programs/swim-sports"
@@ -389,6 +403,8 @@
   age_label: "Ages on the camp page"
   day_label: "Day camp"
   location: "13750 Newcastle Golf Club Rd, Newcastle"
+  lat: 47.540969
+  lng: -122.155923
   weeks: "Selected weeks from June 22 to August 21 in 2026"
   hint: "In 2026, returning families registered February 4, members February 11, and everyone else February 18."
   source: "https://www.seattleymca.org/programs/camp-and-outdoor-leadership/day-camp/programs/swim-sports"
@@ -401,6 +417,8 @@
   age_label: "Ages on the camp page"
   day_label: "Day camp"
   location: "831 228th Ave SE, Sammamish"
+  lat: 47.600661
+  lng: -122.038773
   weeks: "Selected weeks from June 22 to August 21 in 2026"
   hint: "In 2026, returning families registered February 4, members February 11, and everyone else February 18."
   source: "https://www.seattleymca.org/programs/camp-and-outdoor-leadership/day-camp/programs/swim-sports"
@@ -440,6 +458,8 @@
   age_label: "Grades PreK to 8"
   day_label: "Day camp"
   location: "1625 118th Ave SE, Bellevue"
+  lat: 47.595898
+  lng: -122.183215
   weeks: "June 22 through August 21 in 2026"
   hint: "In 2026, members registered February 2 and everyone else February 9."
   source: "https://pacificsciencecenter.org/education/camps/"
@@ -453,6 +473,8 @@
   age_label: "Grades PreK to 8"
   day_label: "Day camp"
   location: "Woodinville Montessori, 19102 N Creek Pkwy, Bothell"
+  lat: 47.766897
+  lng: -122.183279
   weeks: "June 22 through August 21 in 2026"
   hint: "In 2026, members registered February 2 and everyone else February 9."
   source: "https://pacificsciencecenter.org/education/camps/"
@@ -466,6 +488,8 @@
   age_label: "Grades PreK to 8"
   day_label: "All outdoors"
   location: "14445 Juanita Dr NE, Kenmore"
+  lat: 47.733531
+  lng: -122.256648
   weeks: "June 22 through August 21 in 2026"
   hint: "In 2026, members registered February 2 and everyone else February 9. This site is all outdoors."
   source: "https://pacificsciencecenter.org/education/camps/"
@@ -504,6 +528,8 @@
   day_label: "9 a.m. to 3 p.m."
   full_day: true
   location: "Lake Sammamish State Park, Issaquah"
+  lat: 47.558673
+  lng: -122.059308
   weeks: "A posted 2026 week was June 22 to 26"
   hint: "In 2026, one posted week was June 22 to 26, 9 a.m. to 3 p.m., with cycling, swimming, hiking, and climbing."
   source: "https://outdoorsforall.org/events/youth-summer-camp-at-lake-sammamish/"

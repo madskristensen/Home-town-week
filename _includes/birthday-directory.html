@@ -5,15 +5,17 @@
   camp-sponsored row, pinned at the top of its town.
 {%- endcomment -%}
 <div class="camps-page">
-<section class="camp-directory">
+<section class="camp-directory" data-no-address="Parties that come to you">
   <div class="camp-group-row">
     <span class="camp-group-label" id="camp-group-label">Group by</span>
     <div class="camp-group-pills" role="group" aria-labelledby="camp-group-label">
       <button type="button" class="camp-pill" data-group="town" aria-pressed="true">Town</button>
       <button type="button" class="camp-pill" data-group="kind" aria-pressed="false">Type</button>
       <button type="button" class="camp-pill" data-group="price" aria-pressed="false">Price</button>
+      <button type="button" class="camp-pill" data-group="distance" aria-pressed="false">Distance</button>
     </div>
   </div>
+  <p class="camp-geo-note" role="status"></p>
   <div id="camp-groups">
     {%- for town in home_lights.towns -%}
     <section class="camp-town" id="{{ town.id }}">

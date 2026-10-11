@@ -40,8 +40,8 @@
   name: Bellevue Indoor Climbing Wall
   city: bellevue
   address: 14509 SE Newport Way, Bellevue
-  lat: 47.569052
-  lng: -122.145994
+  lat: 47.571395
+  lng: -122.157117
   setting: Indoor
   types:
   - Sports
@@ -469,6 +469,8 @@
   name: West Family Martial Arts
   city: woodinville
   address: 19011 Woodinville-Snohomish Rd NE, Suite 220, Woodinville
+  lat: 47.765495
+  lng: -122.154384
   setting: Indoor
   types:
   - Sports
@@ -592,8 +594,8 @@
   name: Cougar Mountain Zoo
   city: issaquah
   address: 19525 SE 54th St, Issaquah
-  lat: 47.552551
-  lng: -122.079941
+  lat: 47.552967
+  lng: -122.029354
   setting: Outdoor
   types:
   - Animals and farms
@@ -1126,8 +1128,8 @@
   name: Redmond Petting Farm
   city: redmond
   address: 25634 NE 80th St, Redmond
-  lat: 47.674869
-  lng: -122.121918
+  lat: 47.673965
+  lng: -121.997301
   setting: Outdoor
   types:
   - Animals and farms
@@ -1491,8 +1493,8 @@
   name: iCode Renton
   city: renton
   address: 14254 SE 176th St, Suite 05B, Renton
-  lat: 47.44522
-  lng: -122.184179
+  lat: 47.445152
+  lng: -122.149666
   setting: Indoor
   types:
   - Games and arcades
@@ -1586,8 +1588,8 @@
   name: Enchanted Farms
   city: duvall
   address: 31620 NE 129th St, Duvall
-  lat: 47.7175
-  lng: -121.9405
+  lat: 47.713341
+  lng: -121.915541
   setting: Outdoor
   types:
   - Animals and farms

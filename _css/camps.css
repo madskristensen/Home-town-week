@@ -17,7 +17,7 @@
 .camp-group-row {
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.45rem;
   margin: 0.15rem 0 0;
 }
@@ -34,7 +34,7 @@
 
 .camp-group-pills {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.28rem;
   min-width: 0;
@@ -216,4 +216,20 @@
   .camp-list > li {
     break-inside: avoid;
   }
+}
+
+/* The Distance pill's note when location is off. Empty takes no room. */
+.camp-geo-note {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.camp-geo-note:empty {
+  display: none;
+}
+
+.camp-pill:disabled {
+  opacity: 0.6;
+  cursor: progress;
 }

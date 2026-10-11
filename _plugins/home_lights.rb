@@ -349,7 +349,7 @@ module EastsideCalendar
 
         { "lat" => item["lat"], "lng" => item["lng"], "name" => item["name"], "id" => item["id"] }
       end
-      Jekyll.logger.info("Birthday venues:", "#{items.size} venues, #{packed["pins"].size} on the map")
+      Jekyll.logger.info("Birthday venues:", "#{items.size} venues, #{packed["pins"].size} with coordinates")
       drive = collect_birthday_drive(site)
       unless drive.empty?
         packed["towns"] << {
@@ -436,6 +436,7 @@ module EastsideCalendar
             %(data-price-label="#{CGI.escapeHTML(price_label)}"),
             %(data-price-order="#{price_group}"),
             %(data-sort="#{CGI.escapeHTML(item["name"].to_s.downcase)}"),
+            item["lat"] && item["lng"] ? %(data-lat="#{item["lat"]}" data-lng="#{item["lng"]}") : "",
             item["attrs"].to_s
           ].reject(&:empty?).join(" ")
           address = item["address"].to_s
@@ -479,6 +480,7 @@ module EastsideCalendar
         item = {
           "id" => id, "card_id" => "light-#{id}", "name" => name, "nights" => city,
           "place" => address, "place_city" => city, "blurb" => description,
+          "lat" => coordinate(row["lat"]), "lng" => coordinate(row["lng"]),
           "source_href" => source, "source_label" => row["source_label"].to_s.strip
         }
         photo = market_photo(row["photo"], name, site) || birthday_designed_photo(name, site)

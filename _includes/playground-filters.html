@@ -1,7 +1,8 @@
 {%- comment -%}
   Town chips always show. An amenity chip shows only when at least 10
-  playgrounds carry that OpenStreetMap tag. The list uses these checkboxes
-  before the map script runs.
+  playgrounds carry that OpenStreetMap tag. The shared filter script in
+  page.js hides rows: town chips OR, each amenity is its own group, so
+  amenities AND. The map script reads the same checkboxes.
 {%- endcomment -%}
 {%- assign amenity_min = 10 -%}
 {%- assign n_restrooms = 0 -%}
@@ -21,21 +22,21 @@
 <div class="event-filters playground-filters" role="group" aria-labelledby="playground-filter-label">
   <span class="filter-label" id="playground-filter-label">Filter:</span>
   {%- for city in site.data.playground_map.cities -%}
-  {%- include filter-chip.html label=city.name input_class="flt-town" city=city.id count=city.parks.size -%}
+  {%- include filter-chip.html label=city.name input_class="flt-town" group="city" value=city.id city=city.id count=city.parks.size -%}
   {%- endfor -%}
   {%- if n_restrooms >= amenity_min -%}
-  {%- include filter-chip.html label="Restrooms" input_class="flt-amenity" amenity="restrooms" -%}
+  {%- include filter-chip.html label="Restrooms" input_class="flt-amenity" group="restrooms" value="1" amenity="restrooms" -%}
   {%- endif -%}
   {%- if n_covered >= amenity_min -%}
-  {%- include filter-chip.html label="Covered or shade" input_class="flt-amenity" amenity="covered" -%}
+  {%- include filter-chip.html label="Covered or shade" input_class="flt-amenity" group="covered" value="1" amenity="covered" -%}
   {%- endif -%}
   {%- if n_accessible >= amenity_min -%}
-  {%- include filter-chip.html label="Accessible" input_class="flt-amenity" amenity="accessible" -%}
+  {%- include filter-chip.html label="Accessible" input_class="flt-amenity" group="accessible" value="1" amenity="accessible" -%}
   {%- endif -%}
   {%- if n_toddler >= amenity_min -%}
-  {%- include filter-chip.html label="Toddler area" input_class="flt-amenity" amenity="toddler" -%}
+  {%- include filter-chip.html label="Toddler area" input_class="flt-amenity" group="toddler" value="1" amenity="toddler" -%}
   {%- endif -%}
   {%- if n_splash >= amenity_min -%}
-  {%- include filter-chip.html label="Splash pad" input_class="flt-amenity" amenity="splash" -%}
+  {%- include filter-chip.html label="Splash pad" input_class="flt-amenity" group="splash" value="1" amenity="splash" -%}
   {%- endif -%}
 </div>

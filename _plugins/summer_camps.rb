@@ -124,6 +124,8 @@ module EastsideCalendar
 
       camp = {
         "id" => id,
+        "lat" => row["lat"].is_a?(Numeric) ? row["lat"] : nil,
+        "lng" => row["lng"].is_a?(Numeric) ? row["lng"] : nil,
         "name" => name,
         "town_id" => town,
         "town" => town_name,

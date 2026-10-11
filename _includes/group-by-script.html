@@ -1,14 +1,20 @@
 {%- comment -%}
   The Group by pills for a camp-directory list (summer camps and birthday
   parties). Rows carry data-{mode}, data-{mode}-label or -name, and
-  data-{mode}-order. "ages" is the camps' multi-group mode.
+  data-{mode}-order. "ages" is the camps' multi-group mode. "distance"
+  is one flat list, closest first, from data-lat and data-lng. Rows with
+  no coordinates go last under the list's data-no-address heading.
 {%- endcomment -%}
+{%- include near-me.html -%}
 <script>
 (function () {
   var root = document.querySelector(".camp-directory");
   var pills = root ? root.querySelector(".camp-group-pills") : null;
   var host = document.getElementById("camp-groups");
   if (!root || !pills || !host) return;
+  // New group headings keep the level the page started with.
+  var firstHead = host.querySelector(".camp-town-title");
+  var headTag = firstHead ? firstHead.tagName : "H2";
 
   var ages = [
     ["preschool", "Preschool 3-5"],
@@ -43,7 +49,7 @@
 
   function section(id, title, list, slots) {
     var block = document.createElement("section");
-    var heading = document.createElement("h2");
+    var heading = document.createElement(headTag);
     var name = document.createElement("span");
     var count = document.createElement("span");
     var ul = document.createElement("ul");
@@ -160,23 +166,83 @@
     return blocks;
   }
 
+  function clearMiles() {
+    Array.prototype.forEach.call(root.querySelectorAll(".row-miles"), function (span) {
+      span.remove();
+    });
+  }
+
+  function byDistance(rows, ads, here) {
+    var near = [];
+    var rest = [];
+    rows.concat(ads).forEach(function (row) {
+      var lat = parseFloat(row.getAttribute("data-lat"));
+      var lng = parseFloat(row.getAttribute("data-lng"));
+      if (isNaN(lat) || isNaN(lng)) {
+        rest.push(row);
+        return;
+      }
+      row.miles = window.milesTo(here, lat, lng);
+      var meta = row.querySelector(".camp-meta");
+      if (!meta) {
+        meta = document.createElement("p");
+        meta.className = "camp-meta";
+        row.querySelector(".camp-name-line").after(meta);
+      }
+      var span = document.createElement("span");
+      span.className = "row-miles";
+      span.textContent = (meta.textContent.trim() ? " · " : "") + window.milesLabel(row.miles);
+      meta.appendChild(span);
+      near.push(row);
+    });
+    near.sort(function (a, b) { return a.miles - b.miles; });
+    var blocks = [section("closest", "Closest first", near)];
+    if (rest.length) blocks.push(section("no-address", root.getAttribute("data-no-address") || "No fixed address", bySort(rest)));
+    return blocks;
+  }
+
+  function press(mode) {
+    Array.prototype.forEach.call(pills.querySelectorAll(".camp-pill"), function (button) {
+      button.setAttribute("aria-pressed", button.getAttribute("data-group") === mode ? "true" : "false");
+    });
+  }
+
   function paint(blocks) {
     dropClones();
     host.textContent = "";
     blocks.forEach(function (block) { host.appendChild(block); });
   }
 
+  var note = root.querySelector(".camp-geo-note");
+
+  function show(mode, here) {
+    var rows = originals();
+    var ads = sponsors();
+    clearMiles();
+    var blocks = mode === "distance" ? byDistance(rows, ads, here) : mode === "ages" ? byAges(rows, ads) : byKey(mode, rows, ads);
+    paint(blocks);
+    press(mode);
+    document.dispatchEvent(new CustomEvent("rows-regrouped"));
+  }
+
   pills.addEventListener("click", function (event) {
     var pill = event.target.closest ? event.target.closest(".camp-pill") : null;
     if (!pill || pill.getAttribute("aria-pressed") === "true") return;
     var mode = pill.getAttribute("data-group");
-    var rows = originals();
-    var ads = sponsors();
-    var blocks = mode === "ages" ? byAges(rows, ads) : byKey(mode, rows, ads);
-    paint(blocks);
-    document.dispatchEvent(new CustomEvent("rows-regrouped"));
-    Array.prototype.forEach.call(pills.querySelectorAll(".camp-pill"), function (button) {
-      button.setAttribute("aria-pressed", button === pill ? "true" : "false");
+    if (note) note.textContent = "";
+    if (mode !== "distance") {
+      show(mode);
+      return;
+    }
+    pill.disabled = true;
+    window.nearMe(function (here) {
+      pill.disabled = false;
+      if (here) {
+        show("distance", here);
+        return;
+      }
+      if (note) note.textContent = "Location is off, so the list stays by town.";
+      if (pills.querySelector("[aria-pressed='true']").getAttribute("data-group") !== "town") show("town");
     });
   });
 })();

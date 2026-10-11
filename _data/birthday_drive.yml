@@ -9,6 +9,8 @@
   name: Flying Squirrel Everett
   place_city: Everett
   address: 1325 SE Everett Mall Way, Suite A, Everett
+  lat: 47.914293
+  lng: -122.215583
   setting: Indoor
   types:
   - Play
@@ -28,6 +30,8 @@
   name: Sky Zone Seattle
   place_city: Tukwila
   address: 455 Andover Park E, Tukwila
+  lat: 47.451687
+  lng: -122.251816
   setting: Indoor
   types:
   - Play
@@ -47,6 +51,8 @@
   name: Urban Air Tukwila
   place_city: Tukwila
   address: 400 Strander Blvd, Tukwila
+  lat: 47.456204
+  lng: -122.252618
   setting: Indoor
   types:
   - Play
@@ -66,6 +72,8 @@
   name: Bowlero South Seattle
   place_city: Tukwila
   address: 100 Andover Park W, Tukwila
+  lat: 47.459718
+  lng: -122.253077
   setting: Indoor
   types:
   - Games and arcades
@@ -83,6 +91,8 @@
   name: Lucky Strike Lynnwood
   place_city: Lynnwood
   address: 1222 164th St SW, Lynnwood
+  lat: 47.848512
+  lng: -122.250214
   setting: Indoor
   types:
   - Games and arcades
@@ -100,6 +110,8 @@
   name: Arena Sports Mill Creek
   place_city: Mill Creek
   address: 13500 Bothell Everett Hwy, Suite A, Mill Creek
+  lat: 47.875715
+  lng: -122.215437
   setting: Indoor
   types:
   - Sports
@@ -118,6 +130,8 @@
   name: Pacific Science Center
   place_city: Seattle
   address: 200 Sue Bird Ct N, Seattle
+  lat: 47.619406
+  lng: -122.350778
   setting: Indoor
   types:
   - Science
@@ -138,6 +152,8 @@
   name: Woodland Park Zoo
   place_city: Seattle
   address: 5500 Phinney Ave N, Seattle
+  lat: 47.669143
+  lng: -122.350962
   setting: Indoor
   types:
   - Animals and farms
@@ -157,6 +173,8 @@
   name: The Museum of Flight
   place_city: Seattle
   address: 9404 E Marginal Way S, Seattle
+  lat: 47.518232
+  lng: -122.296111
   setting: Indoor
   types:
   - Museum
@@ -176,6 +194,8 @@
   name: iFLY Seattle
   place_city: Tukwila
   address: 349 Tukwila Pkwy, Tukwila
+  lat: 47.460995
+  lng: -122.252578
   setting: Indoor
   types:
   - Sports

@@ -213,6 +213,8 @@ var slot = document.getElementById("eastside-map");
   for (var filterIndex = 0; filterIndex < filterBoxes.length; filterIndex++) {
     filterBoxes[filterIndex].addEventListener("change", applyFilters);
   }
+  // A chip checked before this ran (the playground ?town= preset).
+  if (Object.keys(selectedFilterGroups()).length) applyFilters();
   });
 
   var installLink = document.getElementById("install-link");

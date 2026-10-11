@@ -1,0 +1,31 @@
+{%- comment -%}
+  Shared Distance sort helpers. No parameters. Include once per page.
+  nearMe asks for the location only when a Distance button is tapped.
+  The position stays in memory for this page view. It is never stored
+  or sent anywhere. milesTo and milesLabel give "3.2 mi" or "14 mi".
+{%- endcomment -%}
+<script>
+(function () {
+  if (window.nearMe) return;
+  var here = null;
+  window.nearMe = function (done) {
+    if (here) { done(here); return; }
+    if (!navigator.geolocation) { done(null); return; }
+    navigator.geolocation.getCurrentPosition(function (pos) {
+      here = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+      done(here);
+    }, function () { done(null); }, { timeout: 10000, maximumAge: 600000 });
+  };
+  window.milesTo = function (from, lat, lng) {
+    var rad = Math.PI / 180;
+    var dLat = (lat - from.lat) * rad;
+    var dLng = (lng - from.lng) * rad;
+    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(from.lat * rad) * Math.cos(lat * rad) * Math.sin(dLng / 2) * Math.sin(dLng / 2);
+    return 3958.8 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  };
+  window.milesLabel = function (miles) {
+    return (miles < 10 ? miles.toFixed(1) : String(Math.round(miles))) + " mi";
+  };
+})();
+</script>
