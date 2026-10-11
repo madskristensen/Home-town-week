@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Suggest an event or place
-description: Send a family event, a place, or a note to Eastside Family Calendar. Add the name, date and time, place, link, a short blurb, and a photo if you have one.
+description: Send a family event or place to Eastside Family Calendar. Paste a link, add a few words, and we check it before it goes on the site.
 permalink: /suggest/
 ---
 <article class="page wrap prose suggest-page">
@@ -12,31 +12,16 @@ permalink: /suggest/
     <select id="sg-kind" name="kind">
       <option value="event">An event</option>
       <option value="place">A place</option>
-      <option value="partner">Partner with us</option>
       <option value="other">Something else</option>
     </select>
-    <label for="sg-name">Name</label>
-    <input id="sg-name" name="name" maxlength="200" required>
-    <div class="suggest-pair">
-      <div>
-        <label for="sg-date">Date</label>
-        <input id="sg-date" name="date" maxlength="100" placeholder="Sat, Nov 7">
-      </div>
-      <div>
-        <label for="sg-time">Time</label>
-        <input id="sg-time" name="time" maxlength="100" placeholder="10 a.m. to noon">
-      </div>
-    </div>
-    <label for="sg-place">Place</label>
-    <input id="sg-place" name="place" maxlength="300" placeholder="Name and address or town">
     <label for="sg-link">Link</label>
     <input id="sg-link" name="link" type="url" maxlength="500" placeholder="https://">
-    <label for="sg-blurb">Short blurb</label>
-    <textarea id="sg-blurb" name="blurb" rows="5" maxlength="2000" placeholder="What it is and who it's for"></textarea>
+    <label for="sg-blurb">Tell us about it</label>
+    <textarea id="sg-blurb" name="blurb" rows="4" maxlength="2000" placeholder="What it is, when and where"></textarea>
     <label for="sg-photo">Photo (optional, no kids' faces)</label>
     <input id="sg-photo" name="photo" type="file" accept="image/*">
-    <label for="sg-email">Your email (optional, only if we need to ask)</label>
-    <input id="sg-email" name="contact_email" type="email" maxlength="200" autocomplete="email">
+    <label for="sg-email">Your email</label>
+    <input id="sg-email" name="contact_email" type="email" maxlength="200" autocomplete="email" required>
     <div class="suggest-trap" aria-hidden="true">
       <label for="sg-website">Leave this empty</label>
       <input id="sg-website" name="website" tabindex="-1" autocomplete="off">
@@ -53,11 +38,29 @@ permalink: /suggest/
     if (!form || !window.fetch) return;
     var kind = new URLSearchParams(location.search).get("kind");
     if (kind && form.kind.querySelector("option[value='" + kind.replace(/[^a-z]/g, "") + "']")) form.kind.value = kind;
+    var linkLabel = form.querySelector("label[for=sg-link]");
+    var words = {
+      event: ["Event page", "What it is, when and where"],
+      place: ["Place's website", "What it is and why kids love it"],
+      other: ["Link (optional)", "Tell us what's up"]
+    };
+    function fit() {
+      var w = words[form.kind.value] || words.event;
+      linkLabel.textContent = w[0];
+      form.blurb.placeholder = w[1];
+    }
+    form.kind.addEventListener("change", fit);
+    fit();
     form.addEventListener("submit", function (event) {
       event.preventDefault();
-      if (!form.name.value.trim() && !form.blurb.value.trim()) {
-        status.textContent = "Add a name or a short blurb.";
-        form.name.focus();
+      if (!form.link.value.trim() && !form.blurb.value.trim()) {
+        status.textContent = "Add a link or a few words about it.";
+        form.blurb.focus();
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.contact_email.value.trim())) {
+        status.textContent = "Add your email so we can reach you.";
+        form.contact_email.focus();
         return;
       }
       var file = form.photo.files[0];
@@ -74,6 +77,7 @@ permalink: /suggest/
         });
       }).then(function () {
         form.reset();
+        fit();
         status.textContent = "Thanks! We got it and will check it before the next update.";
       }).catch(function (err) {
         var why = {
