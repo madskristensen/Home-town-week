@@ -917,6 +917,17 @@ picture.deferred-photo {
   line-height: 1.45;
 }
 
+/* More from our family. Same quiet type as footer-meta. */
+.footer-sites {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
 /* Map app choice. Last footer row, shown by page.js. */
 .map-choice:not([hidden]) {
   display: flex;

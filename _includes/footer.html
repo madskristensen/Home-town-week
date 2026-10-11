@@ -2,7 +2,8 @@
   Site footer. One quiet row: About, Suggest an event, Partner with us,
   Request a city, and Feed, plus the install link. Chrome, Edge, and
   Android show that link after beforeinstallprompt. iOS Safari shows
-  Install app, which opens the how-to dialog. The family credit sits under that.
+  Install app, which opens the how-to dialog. The family credit sits under that, then the More from our family row
+  (After Pickup, Math Table, Game The Time).
   The map choice is the last row so showing it moves nothing. page.js
   shows it on a page with an address link and saves the pick.
 {%- endcomment -%}
@@ -41,7 +42,15 @@ City:
       </ol>
       <button type="button" class="btn" data-install-close>Close</button>
     </dialog>
-    <p class="footer-family">Made by an Eastside family, for Eastside families. We also blog at <a href="https://afterpickup.com">After Pickup</a>.</p>
+    <p class="footer-family">Made by an Eastside family, for Eastside families.</p>
+    <div class="footer-sites">
+      <span>More from our family</span>
+      <ul class="footer-meta">
+        <li><a href="https://afterpickup.com/">After Pickup</a></li>
+        <li><a href="https://mathtable.fun/">Math Table</a></li>
+        <li><a href="https://gamethetime.fun/">Game The Time</a></li>
+      </ul>
+    </div>
     <div class="map-choice" hidden>
       <span id="map-choice-label">Open addresses in</span>
       <div class="map-choice-pills" role="group" aria-labelledby="map-choice-label">
