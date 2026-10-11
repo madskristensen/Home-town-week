@@ -1,25 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "ASL Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  ages: "All ages"
-  start: "2026-10-10T11:15:00-07:00"
-  end: "2026-10-10T12:15:00-07:00"
-  place: "Kenmore Library, 6531 NE 181st Street"
-  same_as: "https://kcls.bibliocommons.com/events/6a76c37ce30fe4845967df1c"
-  card: "asl-story-time"
-  order: "1"
-  heading_id: "asl-story-time"
-  when: "Sat Oct 10 · 11:15 a.m.–12:15 p.m."
-  blurbs:
-    - "Teacher and storyteller Sam Sanders signs stories, movement, and rhymes for d/Deaf and hard-of-hearing children and their families. Families may stay afterward for 30 minutes of play."
-  links:
-    - href: "https://kcls.bibliocommons.com/events/6a76c37ce30fe4845967df1c"
-      label: "ASL Story Time"
-  description: "Teacher and storyteller Sam Sanders signs stories, movement, and rhymes for d/Deaf and hard-of-hearing children and their families. Families may stay afterward for 30 minutes of play."
-  hub_blurb: "Teacher and storyteller Sam Sanders signs stories, movement, and rhymes for d/Deaf and hard-of-hearing children and their families."
 - name: "Family Story Time"
   cost: "Free"
   setting: "Indoor"

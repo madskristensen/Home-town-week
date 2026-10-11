@@ -4,5 +4,5 @@ title: Issaquah
 city: issaquah
 state: wa
 description: Upcoming family events in Issaquah on the Eastside.
-hook: Saturday is a tree planting, a farm market, and the Curiosity Collection launch at the library. Oct 17 is Issaquah Goes Apples, and Oct 24 is BOO at the Barn.
+hook: Oct 17 is Issaquah Goes Apples and Treats and Tails trick-or-treating at Blakely Hall. Oct 24 stacks a zombie walk, the Monster Mash 5K, and BOO at the Barn.
 ---

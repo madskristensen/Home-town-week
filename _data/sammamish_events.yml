@@ -1,44 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Sammamish Landing Planting"
-  cost: "Free"
-  setting: "Outdoor"
-  signup: true
-  start: "2026-10-10T11:00:00-07:00"
-  end: "2026-10-10T14:00:00-07:00"
-  place: "Sammamish Landing Park"
-  same_as: "https://www.sammamish.us/news/events/events/volunteer-opportunities/10-10-sammamish-landing-planting/"
-  card: "sammamish-landing-planting"
-  order: "5"
-  heading_id: "sammamish-landing-planting"
-  when: "Sat Oct 10 · 11:00 a.m.–2:00 p.m."
-  blurbs:
-    - "Help plant native plants along the shoreline. The city asks you to register on the event page. It is free."
-  links:
-    - href: "https://www.sammamish.us/news/events/events/volunteer-opportunities/10-10-sammamish-landing-planting/"
-      label: "Sammamish Landing Planting"
-  description: "Help plant native plants along the shoreline. The city asks you to register on the event page. It is free."
-  hub_blurb: "Help plant native plants along the shoreline."
-- name: "STEM Saturday: Make Your Own Slime"
-  cost: "Free"
-  setting: "Indoor"
-  ages: "Kids"
-  start: "2026-10-10T14:00:00-07:00"
-  end: "2026-10-10T16:00:00-07:00"
-  place: "Sammamish Library, 825 228th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/events/6a76c43274e3b8b75db87c9d"
-  card: "stem-saturday-make-your-own-slime"
-  order: "6"
-  heading_id: "stem-saturday-make-your-own-slime"
-  when: "Sat Oct 10 · 2:00–4:00 p.m."
-  blurbs:
-    - "Eastlake High School’s Science National Honor Society leads a chemistry workshop, and you take slime home. It is for kids and tweens. Registration is not required."
-  links:
-    - href: "https://kcls.bibliocommons.com/events/6a76c43274e3b8b75db87c9d"
-      label: "STEM Saturday: Slime"
-  description: "Eastlake High School's Science National Honor Society leads a chemistry workshop, and you take slime home. It is for kids and tweens. Registration is not required."
-  hub_blurb: "Eastlake High School's Science National Honor Society leads a chemistry workshop, and you take slime home."
 - name: "Youth Chess Club"
   cost: "Free"
   setting: "Indoor"

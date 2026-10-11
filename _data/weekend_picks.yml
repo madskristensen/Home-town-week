@@ -1,12 +1,12 @@
 # Home-page picks for Friday Oct 9 through Sunday Oct 11, 2026.
-# Refreshed Monday Oct 5, checked Tuesday Oct 6 through Saturday Oct 10. Salmon festival, the book festival, and Japan Week
-# are Saturday. The harvest fest runs Saturday too.
+# Refreshed Sunday Oct 11: Saturday's picks have ended, so these are the Sunday standouts.
+# The Halloween Train and the Cedar River Salmon Journey both run Sunday.
 # Names match _data/{city}_events.yml.
+- city: snoqualmie
+  name: Halloween Train
 - city: renton
-  name: Cedar River Salmon Festival
-- city: redmond
-  name: Bigfoot Kids' Book Festival
-- city: bellevue
-  name: Japan Week
-- city: woodinville
-  name: Sammamish Valley Harvest Fest
+  name: Cedar River Salmon Journey at Cedar River Park
+- city: maple-valley
+  name: Haunted Forest Family Walk
+- city: mercer-island
+  name: Mercer Island Farmers Market

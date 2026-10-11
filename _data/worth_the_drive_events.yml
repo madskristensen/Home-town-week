@@ -90,20 +90,6 @@
   same_as: "https://knutsonfarmsinc.com/the-patch"
   tags: [pumpkin-patch, corn-maze]
   blurb: "A Sumner fall festival with pumpkin picking, a corn maze, farm animals, and rides. Open Oct 3 through Oct 31, closed Mondays, last admission 5:15 p.m. General admission is $16 online before fees, or $20.94 at the gate. Ages 2 and under are free. Tickets are required, and some activities cost extra. On Oct 10, 17, and 24 the farm stays open until 8 p.m. for fireworks at 7:30."
-- name: "Hometown Hoedown family hours"
-  setting: "Outdoor"
-  signup: true
-  cost: "$10"
-  start: "2026-10-10T11:00:00-07:00"
-  end: "2026-10-10T15:00:00-07:00"
-  place: "Emerald Downs, 2300 Ron Crockett Dr NW"
-  town: Auburn
-  drive: "about 35 min from Bellevue"
-  organizer: "253 Night Market"
-  organizer_url: "https://253nightmarket.com/"
-  same_as: "https://www.eventbrite.com/e/pnw-country-nights-2026-tickets-1990735195559"
-  tags: [family-day]
-  blurb: "Saturday family hours at Emerald Downs, 11 a.m.–3 p.m., with bounce houses, games, and other kid activities. Ages 15 and under are free with a ticketed adult. A limited free-admission hour runs 11 a.m.–noon if you reserve ahead, then family admission is $10. Daytime guests leave at 3 p.m., before the evening concert."
 - name: "WildLanterns"
   setting: "Outdoor"
   signup: true

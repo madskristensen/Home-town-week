@@ -4,5 +4,5 @@ title: Kirkland
 city: kirkland
 state: wa
 description: Upcoming family events in Kirkland on the Eastside.
-hook: Saturday, Oct 10 is a free Halloween costume swap, then a drive-in showing of Hoppers at Juanita Beach Park. November 2 is a teen bracelet workshop at Kingsgate Library. Studio East opens Young Frankenstein on October 30.
+hook: Wednesday is a relaxed music session for neurodivergent kids at the library, and Oct 24 brings Halloween at the Village at Totem Lake, Treat Street at Kirkland Urban, and Día de los Muertos. Studio East opens Young Frankenstein on October 30.
 ---

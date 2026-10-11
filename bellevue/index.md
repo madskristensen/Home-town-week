@@ -4,7 +4,7 @@ title: Bellevue
 city: bellevue
 state: wa
 description: Upcoming family events in Bellevue on the Eastside.
-hook: Under the Mushroom continues at Studio33 through Oct 11. Saturday is Japan Week and a ranger-led hike at Lewis Creek, and Sunday is the Bellevue Jazz Student Showcase. Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
+hook: Sunday is the Bellevue Jazz Student Showcase at Meydenbauer, and Saturday, Oct 17 brings Alice's Magical Adventure and a LEGO block party. Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
 ---
 
 
