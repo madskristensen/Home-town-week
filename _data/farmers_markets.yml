@@ -294,3 +294,43 @@
     alt: An empty parking lot at Woodinville Town Center.
     credit: "Photo: SounderBruce, CC BY-SA 4.0"
     credit_url: "https://commons.wikimedia.org/wiki/File:Woodinville_Town_Center_parking_lot,_2019.jpg"
+- id: maple-valley-farmers-market
+  name: Maple Valley Farmers Market
+  city: maple-valley
+  address: 25719 Maple Valley Black Diamond Rd SE
+  lat: 47.372016
+  lng: -122.023113
+  season_start: '2026-05-02'
+  season_end: '2026-10-31'
+  when_open: Open now, through Oct 31. Saturdays, 9 a.m. to 2 p.m.
+  when_closed: Back next May. Saturdays, 9 a.m. to 2 p.m., May through October.
+  description: Saturday market at the Maple Valley Legacy Site, next to Lake Wilderness. The market site lists 27 Saturdays in 2026, May 2 through Oct 31, 9 a.m. to 2 p.m. This is its 18th season.
+  source: https://www.maplevalleyfarmersmarket.com/
+  source_label: Market site
+  last_verified: '2026-10-11'
+  photo:
+    image: /assets/images/maple-valley/farmers-market.webp
+    alt: Vendor tents at the Maple Valley Farmers Market, along a path under the trees.
+    credit: 'Photo: Maple Valley Farmers Market'
+    credit_url: https://www.maplevalleyfarmersmarket.com/
+    license: organizer
+- id: issaquah-fall-farm-fresh-market
+  name: Fall Farm Fresh Market
+  city: issaquah
+  address: 232 Front St N
+  lat: 47.53224
+  lng: -122.03639
+  season_start: '2026-10-10'
+  season_end: '2026-12-05'
+  when_open: Open now, through Dec 5. Saturdays, 9 a.m. to 2 p.m.
+  when_closed: Back next fall. Saturdays, 9 a.m. to 2 p.m., Oct 10 to Dec 5 in 2026.
+  description: Fall and early winter market at the Historic Shell Station in downtown Issaquah, run by the Downtown Issaquah Association with Ayala Farms. Saturdays, Oct 10 through Dec 5, 9 a.m. to 2 p.m., with produce, flowers, baked goods, and live music from 11 to 1.
+  source: https://www.visitissaquahwa.com/event/fall-farm-fresh-market-2/2026-11-28/
+  source_label: Visit Issaquah
+  last_verified: '2026-10-11'
+  photo:
+    image: /assets/images/markets/issaquah-farm-fresh-logo.webp
+    alt: Farm Fresh Market logo in orange, green, and brown letters.
+    credit: 'Logo: Downtown Issaquah Association'
+    credit_url: https://www.visitissaquahwa.com/event/fall-farm-fresh-market-2/2026-11-28/
+    license: organizer

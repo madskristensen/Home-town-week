@@ -244,7 +244,68 @@ module EastsideCalendar
         end
       end
       Jekyll.logger.info("Farmers markets:", "#{items.size} markets, #{number} on the map")
-      pack_towns(items)
+      drive_rows = Array(site.data["farmers_market_drive"]).select { |row| row.is_a?(Hash) }
+      drive = market_drive_items(drive_rows, names, today, site)
+      packed = pack_towns(items + drive)
+      drive_town = packed["towns"].find { |town| town["id"] == "worth-the-drive" }
+      if drive_town
+        drive_town["name"] = "Worth the drive"
+        drive_town["intro"] = "Just outside the Eastside, but worth the drive for a big market morning."
+      end
+      market_groups!(packed, rows + drive_rows)
+      packed
+    end
+
+    # Worth the drive: standout markets just outside the 15 cities. The
+    # card shows the city with the address. No number, so no map pin.
+    def market_drive_items(rows, names, today, site)
+      rows.filter_map do |row|
+        place = row["place_city"].to_s.strip
+        item = market_item(row.merge("city" => names.keys.first), names, today)
+        next unless item && !place.empty?
+
+        photo = market_photo(row["photo"], item["name"], site)
+        unless photo
+          Jekyll.logger.error("Farmers markets:", "no usable photo for #{item["name"]}")
+          next
+        end
+        apply_photo!(item, photo)
+        item["city"] = place
+        item["city_id"] = "worth-the-drive"
+        item["address"] = "#{item["address"]}, #{place}"
+        item.delete("number")
+        item
+      end
+    end
+
+    MARKET_DAYS = %w[Monday Tuesday Wednesday Thursday Friday Saturday Sunday].freeze
+
+    # Data for the shared Group by pills (Town, Day, Distance) on each card.
+    # Town ids stay town-{city} so old #town- links still land.
+    def market_groups!(packed, rows)
+      by_id = rows.to_h { |row| [slug(row["id"], row["name"]), row] }
+      packed["towns"].each_with_index do |town, index|
+        town["count"] = town["lights"].size
+        town["lights"].each_with_index do |item, spot|
+          row = by_id[item["id"]] || {}
+          text = [row["when_open"], row["when_closed"], row["description"]].join(" ")
+          day = MARKET_DAYS.min_by { |name| text.index(name) || 9999 }
+          day = nil unless text.include?(day.to_s)
+          order = MARKET_DAYS.index(day) || 9
+          label = day ? "#{day}s" : "Other days"
+          day ||= "other"
+          if text.match?(/\bdaily\b/i)
+            day, label, order = "daily", "Every day", -1
+          end
+          bits = [
+            %(data-town="town-#{town["id"]}"), %(data-town-name="#{CGI.escapeHTML(town["name"].to_s)}"),
+            %(data-town-order="#{index + 1}"), %(data-sort="#{format("%02d%03d", index + 1, spot)}"),
+            %(data-day="#{day.downcase}"), %(data-day-label="#{label}"), %(data-day-order="#{order + 1}")
+          ]
+          bits << %(data-lat="#{item["lat"]}" data-lng="#{item["lng"]}") if item["lat"] && item["lng"]
+          item["group_attrs"] = bits.join(" ")
+        end
+      end
     end
 
     def market_item(row, names, today)

@@ -137,6 +137,8 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
 {%- endif -%}
 {%- if page.map_id == "birthdays" -%}
 {%- include birthday-directory.html -%}
+{%- elsif page.map_id == "markets" -%}
+{%- include market-directory.html -%}
 {%- else -%}
 {%- for town in home_lights.towns -%}
 <section class="hub-section">

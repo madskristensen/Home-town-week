@@ -1,0 +1,123 @@
+# Worth the drive on /farmers-markets/: standout markets just outside the
+# 15 cities that Eastside families drive to. Same fields as
+# farmers_markets.yml, but place_city is the plain city name, not a city id.
+# Verify each on its own market page. These get no map pin, so the map
+# stays on the Eastside, but lat and lng feed the Distance sort.
+- id: ballard-farmers-market
+  name: Ballard Farmers Market
+  place_city: Seattle
+  address: 5300 Ballard Ave NW
+  lat: 47.66663
+  lng: -122.38305
+  season_start: '2026-01-04'
+  season_end: '2026-12-27'
+  when_open: Open year-round. Sundays, 9 a.m. to 2 p.m.
+  when_closed: Back in January. Sundays, 9 a.m. to 2 p.m., year-round.
+  description: Year-round Sunday market on the cobblestones of Ballard Avenue NW, rain or shine, with Washington growers only. Sundays, 9 a.m. to 2 p.m.
+  source: https://www.sfmamarkets.com/visit-ballard-farmers-market
+  source_label: Market site
+  last_verified: '2026-10-11'
+  photo:
+    image: /assets/images/markets/ballard.webp
+    alt: Vegetable stalls under white tents at Ballard Farmers Market.
+    credit: 'Photo: Joe Mabel, CC BY-SA 3.0'
+    credit_url: https://commons.wikimedia.org/wiki/File:Ballard_Farmers%27_Market_-_vegetables.jpg
+- id: university-district-farmers-market
+  name: University District Farmers Market
+  place_city: Seattle
+  address: University Way NE and NE 50th St
+  lat: 47.665184
+  lng: -122.312973
+  season_start: '2026-01-03'
+  season_end: '2026-12-26'
+  when_open: Open year-round. Saturdays, 9 a.m. to 2 p.m.
+  when_closed: Back in January. Saturdays, 9 a.m. to 2 p.m., year-round.
+  description: Seattle's oldest farmers market fills the Ave between NE 50th and 52nd every Saturday, year-round, with more than 80 booths in peak season. Saturdays, 9 a.m. to 2 p.m.
+  source: https://seattlefarmersmarkets.org/udfm
+  source_label: Market site
+  last_verified: '2026-10-11'
+  photo:
+    image: /assets/images/markets/university-district.webp
+    alt: A market staffer holding up an apple in front of the University District Farmers Market banner.
+    credit: 'Photo: Neighborhood Farmers Markets'
+    credit_url: https://seattlefarmersmarkets.org/udfm
+    license: organizer
+- id: pike-place-market
+  name: Pike Place Market
+  place_city: Seattle
+  address: 85 Pike St
+  lat: 47.608501
+  lng: -122.340675
+  season_start: '2026-01-01'
+  season_end: '2026-12-31'
+  when_open: Open daily, year-round. Farm stalls in the main arcade.
+  when_closed: Open daily, year-round.
+  description: The public market under the Public Market Center sign, open every day of the year, with farm stalls, flowers, and the fish throwers in the main arcade. Hours vary by shop, so check the market site.
+  source: https://www.pikeplacemarket.org/
+  source_label: Market site
+  last_verified: '2026-10-11'
+  photo:
+    image: /assets/images/markets/pike-place.webp
+    alt: The red Public Market Center sign and clock over Pike Place Market.
+    credit: 'Photo: Kissmykumbaya, CC0'
+    credit_url: https://commons.wikimedia.org/wiki/File:Public_Market_Center_sign_at_Pike_Place.jpg
+- id: lake-forest-park-farmers-market
+  name: Lake Forest Park Farmers Market
+  place_city: Lake Forest Park
+  address: 17171 Bothell Way NE
+  lat: 47.754214
+  lng: -122.279642
+  season_start: '2026-05-10'
+  season_end: '2026-10-18'
+  when_open: Open now, through Oct 18. Sundays, 10 a.m. to 2 p.m.
+  when_closed: Back on Mother's Day. Sundays, 10 a.m. to 2 p.m., through mid-October.
+  description: Sunday market at Town Center at Lake Forest Park, next to Third Place Commons, just past Kenmore. It opens on Mother's Day and runs to the third Sunday of October, 10 a.m. to 2 p.m.
+  source: https://www.thirdplacecommons.org/farmers-market
+  source_label: Market site
+  last_verified: '2026-10-11'
+  photo:
+    image: /assets/images/markets/lake-forest-park-logo.webp
+    alt: Lake Forest Park Farmers Market logo with tomatoes, corn, and lettuce.
+    credit: 'Logo: Third Place Commons'
+    credit_url: https://www.thirdplacecommons.org/farmers-market
+    license: organizer
+- id: shoreline-farmers-market
+  name: Shoreline Farmers Market
+  place_city: Shoreline
+  address: 18821 Aurora Ave N
+  lat: 47.766704
+  lng: -122.346974
+  season_start: '2026-06-06'
+  season_end: '2026-10-31'
+  when_open: Open now, through Oct 31. Saturdays, 10 a.m. to 2 p.m.
+  when_closed: Back in June. Saturdays, 10 a.m. to 2 p.m., through October.
+  description: Saturday market at the BikeLink Park and Ride at 192nd and Aurora, across from Sky Nursery. June 6 through Oct 31, 10 a.m. to 2 p.m., with a POP Kids Club for young shoppers.
+  source: https://www.shorelinefarmersmarket.org/
+  source_label: Market site
+  last_verified: '2026-10-11'
+  photo:
+    image: /assets/images/markets/shoreline.webp
+    alt: Heirloom tomatoes and greens on a market table at Shoreline Farmers Market.
+    credit: 'Photo: Shoreline Farmers Market'
+    credit_url: https://www.shorelinefarmersmarket.org/
+    license: organizer
+- id: snohomish-farmers-market
+  name: Snohomish Farmers Market
+  place_city: Snohomish
+  address: 105 Cedar Ave
+  lat: 47.911119
+  lng: -122.091807
+  season_start: '2026-05-07'
+  season_end: '2026-10-29'
+  when_open: Open now, through Oct 29. Thursdays, 3 to 7 p.m.
+  when_closed: Back in May. Thursdays, 3 to 7 p.m., May through October.
+  description: Thursday market at Cedar and Pearl in historic downtown Snohomish, rain or shine, in its 36th year. May 7 through Oct 29, 3 to 7 p.m. The market says October hours may be shorter.
+  source: https://www.snohomishfarmersmarket.com/
+  source_label: Market site
+  last_verified: '2026-10-11'
+  photo:
+    image: /assets/images/markets/snohomish-logo.webp
+    alt: Snohomish Farmers Market round logo with flowers and vegetables.
+    credit: 'Logo: Snohomish Farmers Market'
+    credit_url: https://www.snohomishfarmersmarket.com/
+    license: organizer

@@ -1,0 +1,31 @@
+{%- comment -%}
+  Farmers markets by town, then Worth the drive, with the shared Group by
+  pills (Town, Day, Distance) from group-by-script.html. Cards stay the
+  shared card. Group ids stay town-{city} so old links still land.
+{%- endcomment -%}
+<section class="camp-directory market-directory" data-row=".card-grid > article" data-list="card-grid" data-meta=".event-when" data-no-address="No street address">
+  <div class="camp-group-row">
+    <span class="camp-group-label" id="camp-group-label">Group by</span>
+    <div class="camp-group-pills" role="group" aria-labelledby="camp-group-label">
+      <button type="button" class="camp-pill" data-group="town" aria-pressed="true">Town</button>
+      <button type="button" class="camp-pill" data-group="day" aria-pressed="false">Day</button>
+      <button type="button" class="camp-pill" data-group="distance" aria-pressed="false">Distance</button>
+    </div>
+  </div>
+  <p class="camp-geo-note" role="status"></p>
+  <div id="camp-groups">
+    {%- for town in home_lights.towns -%}
+    <section class="camp-town" id="town-{{ town.id }}">
+      <h2 class="camp-town-title"><span class="camp-group-name">{{ town.name | escape }}</span> (<span class="camp-group-count">{{ town.count }}</span>)</h2>
+      {%- if town.intro -%}<p class="hub-section-intro">{{ town.intro }}</p>{%- endif -%}
+      {%- if forloop.first -%}
+      {%- include card-grid.html events=town.lights eager=1 priority=true -%}
+      {%- else -%}
+      {%- include card-grid.html events=town.lights eager=0 -%}
+      {%- endif -%}
+    </section>
+    {%- endfor -%}
+  </div>
+  <div id="camp-sponsor-hold" hidden></div>
+</section>
+{%- include group-by-script.html -%}

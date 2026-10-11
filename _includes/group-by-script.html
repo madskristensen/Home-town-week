@@ -1,7 +1,8 @@
 {%- comment -%}
   The Group by pills for a camp-directory list (summer camps and birthday
   parties). Rows carry data-{mode}, data-{mode}-label or -name, and
-  data-{mode}-order. "ages" is the camps' multi-group mode. "distance"
+  data-{mode}-order. "ages" is the camps' multi-group mode. A card list
+  sets data-row, data-list, and data-meta on the .camp-directory root. "distance"
   is one flat list, closest first, from data-lat and data-lng. Rows with
   no coordinates go last under the list's data-no-address heading.
 {%- endcomment -%}
@@ -14,6 +15,10 @@
   if (!root || !pills || !host) return;
   // New group headings keep the level the page started with.
   var firstHead = host.querySelector(".camp-town-title");
+  // Card lists (farmers markets) set these on the root; rows are the default.
+  var rowSel = root.getAttribute("data-row") || ".camp-row";
+  var listClass = root.getAttribute("data-list") || "camp-list";
+  var metaSel = root.getAttribute("data-meta") || ".camp-meta";
   var headTag = firstHead ? firstHead.tagName : "H2";
 
   var ages = [
@@ -24,7 +29,7 @@
   ];
 
   function originals() {
-    return Array.prototype.filter.call(root.querySelectorAll(".camp-row"), function (row) {
+    return Array.prototype.filter.call(root.querySelectorAll(rowSel), function (row) {
       return row.getAttribute("data-clone") !== "1";
     });
   }
@@ -52,7 +57,7 @@
     var heading = document.createElement(headTag);
     var name = document.createElement("span");
     var count = document.createElement("span");
-    var ul = document.createElement("ul");
+    var ul = document.createElement(listClass === "camp-list" ? "ul" : "div");
     var pinned = slots || [];
     block.className = "camp-town";
     if (id) block.id = id;
@@ -65,7 +70,7 @@
     heading.appendChild(document.createTextNode(" ("));
     heading.appendChild(count);
     heading.appendChild(document.createTextNode(")"));
-    ul.className = "camp-list";
+    ul.className = listClass;
     pinned.forEach(function (row) { ul.appendChild(row); });
     list.forEach(function (row) { ul.appendChild(row); });
     block.appendChild(heading);
@@ -183,7 +188,7 @@
         return;
       }
       row.miles = window.milesTo(here, lat, lng);
-      var meta = row.querySelector(".camp-meta");
+      var meta = row.querySelector(metaSel);
       if (!meta) {
         meta = document.createElement("p");
         meta.className = "camp-meta";

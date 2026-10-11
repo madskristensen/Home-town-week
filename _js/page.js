@@ -180,7 +180,7 @@ var slot = document.getElementById("eastside-map");
       section.classList.toggle("is-filtered-out", active && !any);
     });
     document.querySelectorAll(".camp-town").forEach(function (section) {
-      var rows = section.querySelectorAll(".camp-list > li");
+      var rows = section.querySelectorAll(".camp-list > li, .event-card");
       var shown = 0;
       var i;
       for (i = 0; i < rows.length; i++) {

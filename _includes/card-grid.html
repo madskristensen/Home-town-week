@@ -119,6 +119,7 @@
 {%- assign card_labels = label_pack.labels -%}
 {%- assign card_attrs = label_pack.attrs -%}
 {%- endif -%}
+{%- if event.group_attrs -%}{%- assign card_attrs = card_attrs | append: " " | append: event.group_attrs | strip -%}{%- endif -%}
 {%- include event-card.html
      id=card_id
      number=card_number
