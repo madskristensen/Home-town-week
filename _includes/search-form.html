@@ -1,0 +1,15 @@
+{%- comment -%}
+  One search form for the header panel and /search/. A plain GET to
+  /search/?q= so it works with no script. _js/search.js fetches
+  /search.json only when the box gets focus, then filters as you type.
+  Parameters: id (prefix for the input and results ids), label.
+{%- endcomment -%}
+<form class="search-form" action="{{ '/search/' | relative_url }}" method="get" role="search" data-search data-index="{{ '/search.json' | relative_url }}">
+  <label for="{{ include.id }}-q">{{ include.label | default: "Search events, places, and guides" }}</label>
+  <div class="search-fields">
+    <input type="search" id="{{ include.id }}-q" name="q" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Pumpkins, library, trampoline" aria-describedby="{{ include.id }}-status">
+    <button type="submit" class="btn">Search</button>
+  </div>
+  <p class="search-status" id="{{ include.id }}-status" role="status"></p>
+  <ol class="search-results" id="{{ include.id }}-results"></ol>
+</form>

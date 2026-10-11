@@ -137,6 +137,7 @@ def fingerprint_js():
     sources = (
         ("event-share.js", "event_share"),
         ("page.js", "page"),
+        ("search.js", "search"),
     )
     dest_dir = ROOT / "assets" / "js"
     dest_dir.mkdir(parents=True, exist_ok=True)

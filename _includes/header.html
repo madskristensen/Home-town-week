@@ -4,6 +4,8 @@
   Guides follow site.data.nav_guides: articles in season, bucket
   lists in season, then All guides. Explore lists the maps,
   Playgrounds, Farmers markets, Birthday parties, Book ahead, and School calendars.
+  Search is the last item in the bar: a magnifier that opens the shared
+  search form. Under 340px the Menu panel ends with a Search link.
 {%- endcomment -%}
 {%- capture nav_cities -%}
 <li><a href="{{ '/this-weekend/' | relative_url }}"{% if page.url == "/this-weekend/" %} aria-current="page"{% endif %}>This weekend</a></li>
@@ -84,6 +86,12 @@
           <ul class="nav-links">{{ nav_explore }}</ul>
         </div>
       </details>
+      <details class="nav-fly nav-search" name="nav-desktop">
+        <summary><span class="nav-search-word">Search</span></summary>
+        <div class="nav-fly-panel" id="nav-panel-search">
+          {%- include search-form.html id="nav-search" -%}
+        </div>
+      </details>
     </nav>
     <details class="nav-phone">
       <summary>Menu</summary>
@@ -104,6 +112,7 @@
           <summary>Explore</summary>
           <ul class="nav-links" id="nav-phone-explore">{{ nav_explore }}</ul>
         </details>
+        <ul class="nav-links nav-phone-search"><li><a href="{{ '/search/' | relative_url }}"{% if page.url == "/search/" %} aria-current="page"{% endif %}>Search</a></li></ul>
       </div>
     </details>
   </div>

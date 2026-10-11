@@ -26,6 +26,7 @@ _data/image_variants.yml
 /_data/css_inline.json
 /assets/js/event-share.*.js
 /assets/js/page.*.js
+/assets/js/search.*.js
 /_data/js.yml
 # Widths written by the Pages workflow. One source image stays in git.
 assets/images/**/*-400.avif

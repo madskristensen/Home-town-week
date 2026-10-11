@@ -15,6 +15,7 @@
 | Summer camps | `/summer-camps/` |
 | School calendars | `/no-school-days/` |
 | Articles | `/articles/` |
+| Search | `/search/`, with `?q=`. The index is `/search.json` |
 | Feed | `/feed.xml`, plus `/{city}/feed.xml` and a feed for each hub and explore page that lists events |
 | LLM guide | `/llms.txt` |
 

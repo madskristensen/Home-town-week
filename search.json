@@ -1,0 +1,102 @@
+---
+permalink: /search.json
+layout: null
+sitemap: false
+---
+{%- comment -%}
+  Site search index for /search/ and the header search. Each row is
+  [title, type, city, date line, url, extra words]. type is an index
+  into t. Built at each deploy, so events whose last day is before
+  today in America/Los_Angeles are left out. No blurbs: keep it small.
+{%- endcomment -%}
+{%- assign today = site.data.pacific_today -%}
+{%- capture rows -%}
+{%- for city in site.data.cities -%}
+[{{ city.name | jsonify }},3,"","",{{ city.id | prepend: "/" | append: "/" | jsonify }},""],
+{%- assign key = city.id | append: "_events" -%}
+{%- for row in site.data[key] -%}
+{%- if row.when and row.href and row.href != "" -%}
+{%- assign last = row.end | default: row.start | slice: 0, 10 -%}
+{%- if last >= today -%}
+{%- assign venue = row.place | split: "," | first | strip -%}
+[{{ row.name | jsonify }},0,{{ city.name | jsonify }},{{ row.when | jsonify }},{{ row.href | jsonify }},{{ venue | jsonify }}],
+{%- endif -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endfor -%}
+{%- for row in site.data.worth_the_drive_events -%}
+{%- assign last = row.end | default: row.start | slice: 0, 10 -%}
+{%- if row.href and row.href != "" and last >= today -%}
+{%- assign venue = row.place | split: "," | first | strip -%}
+[{{ row.name | jsonify }},0,"Worth the drive","",{{ row.href | jsonify }},{{ venue | append: " " | append: row.town | jsonify }}],
+{%- endif -%}
+{%- endfor -%}
+{%- for row in site.data.articles -%}
+[{{ row.name | jsonify }},1,"","",{{ row.href | jsonify }},""],
+{%- endfor -%}
+{%- for hub in site.data.seasonal_hubs.hubs -%}
+{%- if site.data.hub_pages[hub.id] -%}
+[{{ hub.banner_title | default: hub.title | jsonify }},2,"","",{{ hub.path | jsonify }},{{ hub.hook | default: "" | jsonify }}],
+{%- endif -%}
+{%- endfor -%}
+{%- assign pages_list = "This weekend|/this-weekend/,Worth the drive|/worth-the-drive/,Fall bucket list|/fall/bucket-list/,Christmas lights map|/christmas/lights/,Halloween decorations map|/fall/decorations/,Playgrounds map|/playgrounds/,Farmers markets|/farmers-markets/,Birthday party places|/birthday-venues/,Book ahead|/book-ahead/,Summer camps|/summer-camps/,School calendars|/no-school-days/,Suggest an event|/suggest/,About|/about/" | split: "," -%}
+{%- for item in pages_list -%}
+{%- assign bits = item | split: "|" -%}
+[{{ bits[0] | jsonify }},4,"","",{{ bits[1] | jsonify }},""],
+{%- endfor -%}
+{%- for row in site.data.summer_camps -%}
+{%- unless row.in_directory == false -%}
+{%- assign town = site.data.cities | where: "id", row.town | first -%}
+[{{ row.name | jsonify }},5,{{ town.name | default: "" | jsonify }},"",{{ row.id | prepend: "/summer-camps/#" | jsonify }},{{ row.location | default: "" | jsonify }}],
+{%- endunless -%}
+{%- endfor -%}
+{%- comment -%} Places also carry the first sentence of their description,
+  cut to 90 characters, as search words only. It is never shown. {%- endcomment -%}
+{%- assign parties = site.data.birthday_venues | concat: site.data.birthday_drive | concat: site.data.birthday_mobile -%}
+{%- for row in parties -%}
+{%- assign town = site.data.cities | where: "id", row.city | first -%}
+{%- assign rid = row.id | default: row.name | slugify -%}
+{%- assign lead = row.description | split: ". " | first | truncate: 90, "" -%}
+[{{ row.name | jsonify }},6,{{ town.name | default: row.place_city | default: "" | jsonify }},"",{{ rid | prepend: "/birthday-venues/#light-" | jsonify }},{{ row.types | join: " " | append: " " | append: lead | jsonify }}],
+{%- endfor -%}
+{%- for pcity in site.data.playground_map.cities -%}
+{%- for park in pcity.parks -%}
+[{{ park.name | jsonify }},7,{{ pcity.name | jsonify }},"",{{ park.id | prepend: "/playgrounds/#" | jsonify }},""],
+{%- endfor -%}
+{%- endfor -%}
+{%- comment -%} Only a pinned Eastside market card carries an id. {%- endcomment -%}
+{%- for row in site.data.farmers_markets -%}
+{%- assign town = site.data.cities | where: "id", row.city | first -%}
+{%- assign rid = row.id | default: row.name | slugify -%}
+{%- if row.lat -%}{%- assign murl = rid | prepend: "/farmers-markets/#light-" -%}{%- else -%}{%- assign murl = "/farmers-markets/" -%}{%- endif -%}
+{%- assign lead = row.description | split: ". " | first | truncate: 90, "" -%}
+[{{ row.name | jsonify }},8,{{ town.name | default: "" | jsonify }},"",{{ murl | jsonify }},{{ lead | jsonify }}],
+{%- endfor -%}
+{%- for row in site.data.farmers_market_drive -%}
+[{{ row.name | jsonify }},8,{{ row.place_city | default: "" | jsonify }},"","/farmers-markets/","Worth the drive"],
+{%- endfor -%}
+{%- for row in site.data.holiday_lights -%}
+{%- if row.map -%}
+{%- assign town = site.data.cities | where: "id", row.city | first -%}
+{%- assign rid = row.id | default: row.name | slugify -%}
+[{{ row.name | jsonify }},9,{{ town.name | default: "" | jsonify }},"",{{ rid | prepend: "/christmas/lights/#light-" | jsonify }},"Christmas lights"],
+{%- endif -%}
+{%- endfor -%}
+{%- for row in site.data.halloween_decorations -%}
+{%- if row.map -%}
+{%- assign town = site.data.cities | where: "id", row.city | first -%}
+{%- assign rid = row.id | default: row.name | slugify -%}
+[{{ row.name | jsonify }},10,{{ town.name | default: "" | jsonify }},"",{{ rid | prepend: "/fall/decorations/#light-" | jsonify }},"Halloween decorations"],
+{%- endif -%}
+{%- endfor -%}
+{%- for row in site.data.book_ahead -%}
+{%- assign last = row.end | default: row.start | slice: 0, 10 -%}
+{%- if last >= today and row.sold_out != true -%}
+{%- assign town = site.data.cities | where: "id", row.city | first -%}
+[{{ row.name | jsonify }},11,{{ town.name | default: "" | jsonify }},{{ row.when | default: "" | jsonify }},"/book-ahead/","Tickets"],
+{%- endif -%}
+{%- endfor -%}
+{%- endcapture -%}
+{%- assign rows = rows | strip -%}
+{%- assign n = rows.size | minus: 1 -%}
+{"t":["Event","Guide","Season","City","Page","Camp","Birthday","Playground","Market","Lights","Halloween","Book ahead"],"i":[{{ rows | slice: 0, n }}]}
