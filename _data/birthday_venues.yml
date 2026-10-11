@@ -1,0 +1,644 @@
+# Kids birthday party venues for /birthday-venues/.
+# One row per venue in the 15 cities. Verify each row on the venue's own
+# party page and link that page in source. Never link or quote a lead site.
+# Required: id, name, city, address, description, source.
+# city is a city id from _data/cities.yml. Preston uses issaquah and
+# Covington uses maple-valley.
+# setting is Indoor or Outdoor. types are the filter chips (Play, Sports,
+# Art, Swim, Dance, Cooking, Museum, Animals and farms, Park shelter).
+# party_room: true when the package includes a private room or space.
+# toddlers: true only when the venue is aimed at under 5.
+# price_level is 1 to 4 from the published base party package. It shows as
+# a quiet $ marker by the town, never as a tag pill. Leave it off when the
+# venue publishes no price. 1 = free or under $150 (park shelters),
+# 2 = $150 to $299, 3 = $300 to $499, 4 = $500 and up.
+# description is our own words, about 250 characters, no em dashes.
+# photo is image, alt, credit, credit_url, license. Prefer CC0, CC BY,
+# CC BY-SA, or public domain. A venue photo uses credit "Photo: <name>"
+# and license organizer. No recognizable kids. With no photo the build
+# uses photo_key (a key in _data/venue_images.yml), then the name in
+# that file, then the general pool.
+# last_verified is the day the party page was checked, YYYY-MM-DD.
+- id: kidsquest
+  name: KidsQuest Children's Museum
+  city: bellevue
+  address: 1116 108th Ave NE, Bellevue
+  lat: 47.620866
+  lng: -122.195904
+  setting: Indoor
+  types:
+  - Museum
+  toddlers: true
+  description: After-hours private rentals of the whole museum, with more than 25 hands-on exhibits and staff on hand. Best for babies through about age 10.
+  source: https://www.kidsquestmuseum.org/partiesandmuseumrentals/
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo_key: kidsquest
+- id: bellevue-climbing-wall
+  name: Bellevue Indoor Climbing Wall
+  city: bellevue
+  address: 14509 SE Newport Way, Bellevue
+  lat: 47.569052
+  lng: -122.145994
+  setting: Indoor
+  types:
+  - Sports
+  party_room: true
+  price_level: 3
+  description: City climbing wall at South Bellevue Community Center. The party is two hours of climbing with two belay staff, gear, and an hour in the party space, for up to 12 climbers ages 6 and up.
+  source: https://bellevuewa.gov/city-government/departments/parks/community-centers/sbcc/climbing_wall
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/bellevue-climbing-wall.jpg
+    alt: Climbers on the textured rock wall at the Bellevue Indoor Climbing Wall.
+    credit: 'Photo: City of Bellevue'
+    credit_url: https://bellevuewa.gov/city-government/departments/parks/community-centers/sbcc/climbing_wall
+    license: organizer
+- id: kelsey-creek-farm
+  name: Kelsey Creek Farm
+  city: bellevue
+  address: 410 130th Pl SE, Bellevue
+  lat: 47.604018
+  lng: -122.163777
+  setting: Outdoor
+  types:
+  - Animals and farms
+  party_room: true
+  price_level: 3
+  description: Farm, bunny, or pony themed parties for ages 2 to 11. A guided farm tour and activity comes first, then an hour in an indoor room for cake. Up to 30 guests.
+  source: https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/birthday-parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo_key: kelsey creek
+- id: safesplash-bellevue
+  name: SafeSplash Bellevue (Kelsey Creek)
+  city: bellevue
+  address: 15053 Main St, Bellevue
+  lat: 47.609208
+  lng: -122.139661
+  setting: Indoor
+  types:
+  - Swim
+  party_room: true
+  description: Swim school parties with up to an hour in the heated indoor pool, a host who is also the lifeguard, and a party area for food and gifts.
+  source: https://www.safesplash.com/locations/bellevue-kelsey-creek-wa/swim-party
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: wiggleworks-bellevue
+  name: WiggleWorks Kids
+  city: bellevue
+  address: 15600 NE 8th St, Suite G2, Bellevue
+  lat: 47.619875
+  lng: -122.12871
+  setting: Indoor
+  types:
+  - Play
+  party_room: true
+  toddlers: true
+  price_level: 2
+  description: Indoor playground at Crossroads. Parties include all-day play for 14 kids, 90 minutes in the party room, and a coordinator for setup and cleanup. You can bring your own food.
+  source: https://wiggleworkskids.com/parties/bellevue-parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: monster-mini-golf-bellevue
+  name: Monster Mini Golf
+  city: bellevue
+  address: 4080 Factoria Square Mall SE, Bellevue
+  lat: 47.573885
+  lng: -122.170231
+  setting: Indoor
+  types:
+  - Play
+  party_room: true
+  description: Glow-in-the-dark mini golf with an arcade. Packages include 90 minutes in a private themed room, with staff handling setup, serving, and cleanup.
+  source: https://monsterminigolf.com/locations/us/wa/bellevue/birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: little-gym-bellevue
+  name: The Little Gym of Bellevue-Redmond
+  city: bellevue
+  address: 1800 130th Ave NE, Bellevue
+  lat: 47.626495
+  lng: -122.166595
+  setting: Indoor
+  types:
+  - Sports
+  party_room: true
+  description: 'A 90-minute private party for ages 1 to 12: about an hour of instructor-led games and music in the gym, then time in the party room. Paper goods, setup, and cleanup are included.'
+  source: https://www.thelittlegym.com/washington-bellevue-redmond/kids-birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: bellevue-park-shelters
+  name: Bellevue park picnic sites
+  city: bellevue
+  address: 5808 Lakemont Blvd SE, Bellevue
+  lat: 47.550556
+  lng: -122.127257
+  setting: Outdoor
+  types:
+  - Park shelter
+  price_level: 1
+  description: Bellevue rents small private sites and shelters in city parks for birthday picnics, including Lewis Creek Park. Send the request at least 10 days ahead.
+  source: https://bellevuewa.gov/city-government/departments/parks/rentals/outdoor-rentals
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/bellevue/lewis-creek-visitor-center.webp
+    alt: The back of the Lewis Creek Visitor Center, a wood building with a deck among the trees.
+    credit: 'Photo: City of Bellevue'
+    credit_url: https://bellevuewa.gov/city-government/departments/parks/nature-and-environment/visitor-centers-environmental-programs/lewis-creek-park-visitor-center
+    license: organizer
+- id: arena-sports-redmond
+  name: Arena Sports Redmond
+  city: redmond
+  address: 9040 Willows Rd NE, Redmond
+  lat: 47.686656
+  lng: -122.147004
+  setting: Indoor
+  types:
+  - Sports
+  - Play
+  party_room: true
+  toddlers: true
+  description: Hosted parties for 10 kids with an hour of activities and 45 minutes in the party room, plus a custom jersey. The Inflatable FunZone option is for ages 18 months to 12.
+  source: https://www.arenasports.net/locations/redmond/events/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: kids-magic-lab
+  name: Kids Magic Lab
+  city: redmond
+  address: 7325 166th Ave NE, F235, Redmond
+  lat: 47.669755
+  lng: -122.119696
+  setting: Indoor
+  types:
+  - Play
+  - Art
+  party_room: true
+  toddlers: true
+  description: Sensory play space in Redmond Town Center with STEAM classes. Party packages pair open play passes with the party room, a balloon setup, and a host who helps with cleanup.
+  source: https://www.kidsmagiclab.com/parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/kids-magic-lab.jpg
+    alt: A pastel balloon arch and Happy Birthday sign in the Kids Magic Lab party room.
+    credit: 'Photo: Kids Magic Lab'
+    credit_url: https://www.kidsmagiclab.com/parties
+    license: organizer
+- id: safesplash-redmond
+  name: SafeSplash Redmond
+  city: redmond
+  address: 7320 170th Ave NE, Redmond
+  lat: 47.669005
+  lng: -122.112439
+  setting: Indoor
+  types:
+  - Swim
+  party_room: true
+  description: Swim school parties with up to an hour in the heated indoor pool, a host who is also the lifeguard, and a party area for food and gifts.
+  source: https://www.safesplash.com/locations/redmond-wa/swim-party
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: redmond-park-shelters
+  name: Redmond park pavilions
+  city: redmond
+  address: 7031 148th Ave NE, Redmond
+  lat: 47.668156
+  lng: -122.143297
+  setting: Outdoor
+  types:
+  - Park shelter
+  price_level: 1
+  description: Redmond rents park picnic shelters and pavilions in spring and summer, such as at Grass Lawn Park. A pavilion fits about 30 people and sits by a playground and restrooms.
+  source: https://www.redmond.gov/188/Rentals
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/guides/grass-lawn.jpg
+    alt: Play structure and swings at Grass Lawn Park in Redmond.
+    credit: 'Photo: HominyGrits007, CC BY-SA 4.0'
+    credit_url: https://commons.wikimedia.org/wiki/File:Grass_Lawn_Park_Playground.jpg
+    license: CC BY-SA 4.0
+- id: pump-it-up-kirkland
+  name: Pump It Up
+  city: kirkland
+  address: 11605 NE 116th St, Kirkland
+  lat: 47.703652
+  lng: -122.185606
+  setting: Indoor
+  types:
+  - Play
+  party_room: true
+  description: Private inflatable arenas, then about 50 minutes in a party room with a throne for the birthday kid. Staff run the games and handle setup and cleanup.
+  source: https://www.pumpitupparty.com/kirkland-wa/birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: paint-kirkland
+  name: Paint Kirkland
+  city: kirkland
+  address: 425 Urban Plaza, Suite F245, Kirkland
+  lat: 47.677684
+  lng: -122.199141
+  setting: Indoor
+  types:
+  - Art
+  party_room: true
+  price_level: 2
+  description: Paint-your-own pottery and wood art studio in Kirkland Urban. Parties hold up to 20 guests, and you can bring your own decorations, food, and treats.
+  source: https://www.paintkirkland.com/birthday-parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: al-art-studio
+  name: AL Art Studio
+  city: kirkland
+  address: 1425 Market St, Kirkland
+  lat: 47.687154
+  lng: -122.210221
+  setting: Indoor
+  types:
+  - Art
+  party_room: true
+  description: Private art parties for ages 7 and up, with a minimum of 8 guests. Kids paint canvas, decorate tote bags, or work in air-dry clay and take the piece home. Supplies and decorations are included.
+  source: https://alstudioart.com/kids-teens-art-party/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: annas-art-lab
+  name: Anna's Art Lab
+  city: kirkland
+  address: 524 1st Ave S, Kirkland
+  lat: 47.674783
+  lng: -122.197514
+  setting: Indoor
+  types:
+  - Art
+  description: Small Kirkland art school that books private art events for birthdays, with projects inspired by artists and nature.
+  source: https://annasartlab.com/
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/annas-art-lab.jpg
+    alt: An artist painting at an easel in the bright Anna's Art Lab studio, with a dog on the rug.
+    credit: 'Photo: Anna''s Art Lab'
+    credit_url: https://annasartlab.com/
+    license: organizer
+- id: kirkland-park-shelters
+  name: Kirkland park shelters
+  city: kirkland
+  address: 9703 NE Juanita Dr, Kirkland
+  lat: 47.706738
+  lng: -122.214234
+  setting: Outdoor
+  types:
+  - Park shelter
+  price_level: 1
+  description: Kirkland rents picnic shelters for parties, including at Juanita Beach Park. Book at least 7 days ahead.
+  source: https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Park-Facility-Field-Rentals/Rent-an-Outdoor-Parks-Facility
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/guides/juanita-beach.jpg
+    alt: Play structure and swings at Juanita Beach Park in Kirkland, with the lake in the background.
+    credit: 'Photo: City of Kirkland'
+    credit_url: https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park/Juanita-Beach-Park
+    license: organizer
+- id: elevated-sportz
+  name: Elevated Sportz
+  city: bothell
+  address: '18311 Bothell Everett Hwy #140, Bothell'
+  lat: 47.83173
+  lng: -122.207835
+  setting: Indoor
+  types:
+  - Play
+  party_room: true
+  toddlers: true
+  price_level: 3
+  description: Wall-to-wall trampolines and a play structure. Parties run two hours with the party room, grip socks, invitations, and tableware. For walking kids through age 12.
+  source: https://www.elevatedsportz.com/partypackages
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/bothell/elevated-sportz.webp
+    alt: The Elevated Sportz sign on the front of the trampoline park building in Bothell.
+    credit: 'Photo: Elevated Sportz'
+    credit_url: https://www.elevatedsportz.com/
+    license: organizer
+- id: creart-studioz
+  name: CreArt Studioz
+  city: bothell
+  address: 1427 228th St SE, Bothell
+  lat: 47.791654
+  lng: -122.213732
+  setting: Indoor
+  types:
+  - Art
+  party_room: true
+  toddlers: true
+  price_level: 3
+  description: Two-hour themed art parties for ages 2 and up, from a sensory bin party for toddlers to clay. Supplies, setup, and cleanup are included, for up to 25 kids.
+  source: https://creartstudioz.com/birthdays/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: kidstrong-bothell
+  name: KidStrong Bothell
+  city: bothell
+  address: '19128 112th Ave NE #4, Bothell'
+  lat: 47.767822
+  lng: -122.191375
+  setting: Indoor
+  types:
+  - Sports
+  description: A 90-minute private, coach-led party with active games, for ages 1 to 11. Up to 15 kids, with the whole center to yourselves.
+  source: https://bothell.kidstrong.com/parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: kenmore-lanes
+  name: Kenmore Lanes
+  city: kenmore
+  address: 7638 NE Bothell Way, Kenmore
+  lat: 47.757759
+  lng: -122.23763
+  setting: Indoor
+  types:
+  - Sports
+  party_room: true
+  description: Bowling birthday parties with a party room, food, and arcade games.
+  source: https://kenmore50lanes.com/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: picket-fence-art-studio
+  name: Picket Fence Art Studio
+  city: woodinville
+  address: 14700 148th Ave NE, Woodinville
+  lat: 47.734783
+  lng: -122.142072
+  setting: Indoor
+  types:
+  - Art
+  party_room: true
+  description: 'Two-hour art parties for ages 5 and up: 90 minutes on a project such as painting or glass, then 30 minutes for cake and gifts.'
+  source: https://picketfenceartstudio.com/art-parties-for-kids-unique-and-memorable-experiences/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: west-family-martial-arts
+  name: West Family Martial Arts
+  city: woodinville
+  address: 19011 Woodinville-Snohomish Rd NE, Suite 220, Woodinville
+  setting: Indoor
+  types:
+  - Sports
+  description: 'A 90-minute martial arts party: a fast class mixed with games of skill, with the staff running the whole thing.'
+  source: https://westfamilyma.com/birthday-parties-woodinville/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: woodinville-sports-club
+  name: Woodinville Sports Club
+  city: woodinville
+  address: 15327 140th Pl NE, Woodinville
+  lat: 47.739391
+  lng: -122.142743
+  setting: Outdoor
+  types:
+  - Sports
+  party_room: true
+  description: Golf range and mini golf campus that hosts birthdays and sports parties, with indoor and outdoor event spaces.
+  source: https://www.woodinvillesportsclub.com/events-1
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/woodinville-sports-club.webp
+    alt: The lawn and tall evergreens at Woodinville Sports Club at sunset.
+    credit: 'Photo: Woodinville Sports Club'
+    credit_url: https://www.woodinvillesportsclub.com/events-1
+    license: organizer
+- id: tutu-school-sammamish
+  name: Tutu School Sammamish
+  city: sammamish
+  address: 4502 Klahanie Dr SE, Suite 601, Sammamish
+  lat: 47.565181
+  lng: -122.005051
+  setting: Indoor
+  types:
+  - Dance
+  toddlers: true
+  description: Ballet birthday parties with a short class, movement games, a story performance starring the birthday child, and a cupcake picnic. Three packages.
+  source: https://tutuschool.com/sammamish/parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: arena-sports-issaquah
+  name: Arena Sports Issaquah
+  city: issaquah
+  address: 2115 NW Poplar Way, Issaquah
+  lat: 47.551161
+  lng: -122.070564
+  setting: Indoor
+  types:
+  - Sports
+  - Play
+  party_room: true
+  toddlers: true
+  description: Hosted parties for 10 kids with an hour of activities and 45 minutes at a party table, plus a custom jersey. Choose laser tag and arcade, a sports simulator, or the inflatable FunZone.
+  source: https://www.arenasports.net/locations/issaquah/events/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: little-gym-issaquah
+  name: The Little Gym of Issaquah
+  city: issaquah
+  address: 82 Front St S, Issaquah
+  lat: 47.528991
+  lng: -122.034955
+  setting: Indoor
+  types:
+  - Sports
+  party_room: true
+  description: A 90-minute private party for ages 1 to 12, with instructor-led games and music in the gym and then the party room. Setup and cleanup are included.
+  source: https://www.thelittlegym.com/washington-issaquah/kids-birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: all-star-academy
+  name: All-Star Academy
+  city: issaquah
+  address: 30355 SE High Point Way, Preston
+  lat: 47.522282
+  lng: -121.933259
+  setting: Indoor
+  types:
+  - Animals and farms
+  - Play
+  party_room: true
+  price_level: 3
+  description: Fully staffed 90-minute parties for ages 3 to 10 in Preston, with about 30 minutes of horseback riding, then climbing and trampolines by the party room. Up to 12 kids.
+  source: https://www.allstaracademy.org/birthdays
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: cougar-mountain-zoo
+  name: Cougar Mountain Zoo
+  city: issaquah
+  address: 19525 SE 54th St, Issaquah
+  lat: 47.552551
+  lng: -122.079941
+  setting: Outdoor
+  types:
+  - Animals and farms
+  price_level: 2
+  description: A one-hour guided zoo tour, a photo on the Birthday Throne, a gift, and an hour on a covered patio. Admission for 10 is included, up to 25 people.
+  source: https://www.cougarmountainzoo.org/birthday-parties-at-the-zoo/
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo_key: cougar mountain zoo
+- id: julius-boehm-pool
+  name: Julius Boehm Pool
+  city: issaquah
+  address: 50 SE Clark St, Issaquah
+  lat: 47.527596
+  lng: -122.035905
+  setting: Indoor
+  types:
+  - Swim
+  party_room: true
+  price_level: 2
+  description: City pool parties with two hours in the party room and recreation swim for up to 25 guests, on Saturday afternoons and Sunday midday.
+  source: https://www.issaquahwa.gov/794/Birthday-Parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: nicks-magnificent
+  name: Nick's Magnificent
+  city: issaquah
+  address: 1430 NW Mall St, Suite A, Issaquah
+  lat: 47.54459
+  lng: -122.060273
+  setting: Indoor
+  types:
+  - Play
+  toddlers: true
+  description: Indoor playground that books private birthday events. Ask the staff for dates.
+  source: https://nicksmagnificent.com/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: mary-wayte-pool
+  name: Mary Wayte Pool
+  city: mercer-island
+  address: 8815 SE 40th St, Mercer Island
+  lat: 47.57418
+  lng: -122.220956
+  setting: Indoor
+  types:
+  - Swim
+  party_room: true
+  price_level: 2
+  description: Weekend pool parties, either during family swim or with the family pool to yourselves. Includes lifeguards, two hours on the balcony, and 90 minutes in the water. Book four weeks ahead.
+  source: https://mercerislandpool.com/pool-parties-and-rentals/
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/mary-wayte-pool.jpg
+    alt: The empty lap lanes and blue water at Mary Wayte Pool.
+    credit: 'Photo: Mary Wayte Pool'
+    credit_url: https://mercerislandpool.com/pool-parties-and-rentals/
+    license: organizer
+- id: henry-moses-aquatic-center
+  name: Henry Moses Aquatic Center
+  city: renton
+  address: 1719 Maple Valley Hwy, Renton
+  lat: 47.481527
+  lng: -122.194875
+  setting: Outdoor
+  types:
+  - Swim
+  price_level: 2
+  description: Summer water park with a wave pool, lazy river, and slides. Rent one of three party tents, each with 10 or 25 admissions, or the whole park on a weekend evening.
+  source: https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Things-To-Do/Henry-Moses-Aquatic-Center
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: northwest-railway-museum
+  name: Northwest Railway Museum
+  city: snoqualmie
+  address: 9312 Stone Quarry Rd, Snoqualmie
+  lat: 47.514444
+  lng: -121.814876
+  setting: Indoor
+  types:
+  - Museum
+  party_room: true
+  price_level: 2
+  description: Weekend parties with a train ride, the Train Shed Exhibit Hall, a private party space, an engineer's cap, and goodie bags. Offered February to June and August to September.
+  source: https://trainmuseum.org/upcoming-events/parties-rentals/
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo_key: train shed
+- id: si-view-pool
+  name: Si View Pool
+  city: north-bend
+  address: 400 SE Orchard Dr, North Bend
+  lat: 47.490467
+  lng: -121.784678
+  setting: Indoor
+  types:
+  - Swim
+  party_room: true
+  description: Private weekend pool rentals with lifeguards, life jackets, and pool toys. Add the community center social room for food and cake. Request two weeks ahead.
+  source: https://www.siviewpark.org/si-view-pool-rental.phtml
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo_key: si view
+- id: remlinger-farms
+  name: Remlinger Farms
+  city: carnation
+  address: 32610 NE 32nd St, Carnation
+  lat: 47.63946
+  lng: -121.901876
+  setting: Indoor
+  types:
+  - Animals and farms
+  - Play
+  party_room: true
+  price_level: 2
+  description: Farm and arcade parties with a two-hour private party room, pizza, drinks, and favors, for groups of about 15.
+  source: https://remlingerfarms.com/birthdays/
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo_key: remlinger
+- id: novelty-hill-farm
+  name: Novelty Hill Farm
+  city: duvall
+  address: 26617 NE 124th St, Duvall
+  lat: 47.709043
+  lng: -121.984068
+  setting: Outdoor
+  types:
+  - Animals and farms
+  description: Family farm with a red barn that rents the property year-round for private events, birthdays included.
+  source: https://noveltyhillfarm.com/
+  source_label: Party page
+  last_verified: '2026-10-10'
+  photo_key: novelty hill
+- id: little-gym-maple-valley
+  name: The Little Gym of Maple Valley
+  city: maple-valley
+  address: 27317 Maple Valley Black Diamond Rd SE, Suite A106, Maple Valley
+  lat: 47.356718
+  lng: -122.020583
+  setting: Indoor
+  types:
+  - Sports
+  party_room: true
+  description: A 90-minute private party for ages 1 to 12, with instructor-led games and music in the gym and then the party room. Setup and cleanup are included.
+  source: https://www.thelittlegym.com/washington-maple-valley/kids-birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: young-chefs-covington
+  name: Young Chefs Academy
+  city: maple-valley
+  address: '16908 SE 269th Pl #106, Covington'
+  lat: 47.360592
+  lng: -122.115313
+  setting: Indoor
+  types:
+  - Cooking
+  party_room: true
+  description: 'Cooking parties in Covington where kids make the food themselves. All-inclusive packages: you bring the guests, the studio brings the rest.'
+  source: https://youngchefsacademy.com/locations/covingtonwa/
+  source_label: Party page
+  last_verified: '2026-10-10'

@@ -2,6 +2,8 @@
   Lights, decorations, or farmers market map and the stop list.
   No parameters. page.map_id "halloween" uses the decorations data.
   page.map_id "markets" uses the farmers market data.
+  page.map_id "birthdays" uses the birthday venue data, with filter chips
+  built from that data.
   Each stop is the shared event card. The town name is the section heading.
 {%- endcomment -%}
 {%- if page.map_id == "halloween" -%}
@@ -21,6 +23,12 @@ What to know:{%- endcapture -%}
 {%- assign map_path = "/farmers-markets/" -%}
 {%- assign map_title = "Farmers markets" -%}
 {%- assign map_noun = "markets" -%}
+{%- assign lights_mailto = "" -%}
+{%- elsif page.map_id == "birthdays" -%}
+{%- assign home_lights = site.data.birthday_page -%}
+{%- assign map_path = "/birthday-venues/" -%}
+{%- assign map_title = "Birthday venues" -%}
+{%- assign map_noun = "venues" -%}
 {%- assign lights_mailto = "" -%}
 {%- else -%}
 {%- assign home_lights = site.data.home_lights -%}
@@ -114,6 +122,15 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
   });
 })();
 </script>
+{%- if page.map_id == "birthdays" and home_lights.filters.size > 0 -%}
+<div class="event-filters" role="group" aria-labelledby="event-filter-label">
+  <span class="filter-label" id="event-filter-label">Filter:</span>
+  {%- for chip in home_lights.filters -%}
+  {%- include filter-chip.html label=chip.label group=chip.group value=chip.value -%}
+  {%- endfor -%}
+</div>
+{%- include empty-suggest.html mode="filter" name=page.title -%}
+{%- endif -%}
 {%- for town in home_lights.towns -%}
 <section class="hub-section">
   <h2 id="town-{{ town.id }}">{{ town.name }}</h2>
@@ -124,7 +141,7 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
   {%- endif -%}
 </section>
 {%- endfor -%}
-{%- if page.map_id == "markets" -%}
+{%- if page.map_id == "markets" or page.map_id == "birthdays" -%}
 {%- elsif page.map_id == "halloween" -%}
 <section class="hub-section">
   <h2 id="send-lights">Tell us about a decorated house</h2>

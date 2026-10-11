@@ -12,6 +12,7 @@ module EastsideCalendar
       site.data["halloween_map"] = collect(site, "halloween_decorations", "halloween", "Halloween decorations photos:")
       site.data["farmers_market_page"] = collect_markets(site)
       site.data["book_ahead_cards"] = collect_book_ahead(site)
+      site.data["birthday_page"] = collect_birthdays(site)
       site.data["feature_map_pins"] = feature_map_pins(site)
     end
 
@@ -303,6 +304,122 @@ module EastsideCalendar
       path = File.join(site.source, built["src"].sub(%r{\A/}, ""))
       return nil unless File.file?(path)
 
+      built
+    end
+
+    # Kids birthday party venues for /birthday-venues/. Rows are
+    # _data/birthday_venues.yml. Each card is the shared event card. The
+    # type, setting, toddler, and party room labels are pills and chips.
+    # price_level is a quiet $ to $$$$ line, never a pill.
+    BIRTHDAY_LEVELS = { 1 => "$", 2 => "$$", 3 => "$$$", 4 => "$$$$" }.freeze
+
+    def collect_birthdays(site)
+      names = city_names(site.data["cities"])
+      rows = Array(site.data["birthday_venues"]).select { |row| row.is_a?(Hash) }
+      rows = rows.sort_by { |row| [names[row["city"].to_s].to_s.downcase, row["name"].to_s.downcase] }
+      venues = Array(site.data.dig("venue_images", "venues"))
+      pool = fallback_photos(site, "general")
+      used = {}
+      items = []
+      rows.each do |row|
+        item = light_item(row, names, 0)
+        unless item
+          Jekyll.logger.error("Birthday venues:", "skipped #{row["name"]}")
+          next
+        end
+        photo = market_photo(row["photo"], item["name"], site) ||
+                birthday_venue_photo(venues, row, site) ||
+                next_fallback(pool, used)
+        unless photo
+          Jekyll.logger.error("Birthday venues:", "no usable photo for #{item["name"]}")
+          next
+        end
+        apply_photo!(item, photo)
+        birthday_labels!(item, row)
+        items << item
+      end
+      number = 0
+      items.each do |item|
+        if item["lat"].nil? || item["lng"].nil?
+          item.delete("number")
+        else
+          number += 1
+          item["number"] = number
+        end
+      end
+      Jekyll.logger.info("Birthday venues:", "#{items.size} venues, #{number} on the map")
+      packed = pack_towns(items)
+      packed["filters"] = birthday_filters(items)
+      packed
+    end
+
+    def birthday_labels!(item, row)
+      setting = row["setting"].to_s.strip
+      setting = "" unless %w[Indoor Outdoor].include?(setting)
+      types = Array(row["types"]).map { |value| value.to_s.strip }.reject(&:empty?)
+      labels = []
+      labels << setting unless setting.empty?
+      labels << "Toddlers" if row["toddlers"] == true
+      labels.concat(types)
+      labels << "Party room" if row["party_room"] == true
+      bits = []
+      bits << %(data-setting="#{CGI.escapeHTML(setting)}") unless setting.empty?
+      bits << 'data-ages="Toddlers"' if row["toddlers"] == true
+      bits << %(data-type="#{CGI.escapeHTML(types.join("|"))}") unless types.empty?
+      bits << 'data-room="1"' if row["party_room"] == true
+      level = BIRTHDAY_LEVELS[row["price_level"].to_i].to_s
+      item["label_ready"] = true
+      item["price"] = level
+      item["ages_text"] = ""
+      item["labels"] = labels
+      item["attrs"] = bits.join(" ")
+      item["filter_setting"] = setting
+      item["filter_types"] = types
+      item["filter_toddlers"] = row["toddlers"] == true
+      item["filter_room"] = row["party_room"] == true
+    end
+
+    # Chips come from the data: a chip shows when at least one card has it.
+    def birthday_filters(items)
+      chips = []
+      %w[Indoor Outdoor].each do |setting|
+        chips << { "label" => setting, "group" => "setting", "value" => setting } if items.any? { |item| item["filter_setting"] == setting }
+      end
+      chips << { "label" => "Toddlers", "group" => "ages", "value" => "Toddlers" } if items.any? { |item| item["filter_toddlers"] }
+      types = items.flat_map { |item| item["filter_types"] }.tally
+      types.sort_by { |label, count| [-count, label] }.each do |label, _count|
+        chips << { "label" => label, "group" => "type", "value" => label }
+      end
+      chips << { "label" => "Party room", "group" => "room", "value" => "1" } if items.any? { |item| item["filter_room"] }
+      chips
+    end
+
+    def birthday_venue_photo(venues, row, site)
+      wanted = row["photo_key"].to_s.downcase.strip
+      text = "#{row["name"]} #{row["address"]}".downcase
+      best = nil
+      best_len = 0
+      venues.each do |venue|
+        next unless venue.is_a?(Hash)
+
+        Array(venue["keys"]).each do |key|
+          key = key.to_s.downcase
+          next if key.empty?
+          next unless key == wanted || text.include?(key)
+          next unless key.length > best_len
+
+          best = venue
+          best_len = key.length
+        end
+      end
+      return nil unless best
+
+      photo = {
+        "image" => best["image"], "alt" => best["alt"],
+        "credit" => best["credit"], "credit_url" => best["source"]
+      }
+      built = market_photo(photo, row["name"], site)
+      built["kind"] = "venue" if built
       built
     end
 

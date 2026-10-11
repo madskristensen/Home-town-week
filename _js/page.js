@@ -115,8 +115,14 @@ var slot = document.getElementById("eastside-map");
     var i;
     for (i = 0; i < names.length; i++) {
       var group = names[i];
-      var value = card.getAttribute("data-" + group) || "";
-      if (groups[group].indexOf(value) === -1) return false;
+      // A card can carry several values in one group, split by "|".
+      var values = (card.getAttribute("data-" + group) || "").split("|");
+      var hit = false;
+      var v;
+      for (v = 0; v < values.length; v++) {
+        if (groups[group].indexOf(values[v]) !== -1) hit = true;
+      }
+      if (!hit) return false;
     }
     return true;
   }

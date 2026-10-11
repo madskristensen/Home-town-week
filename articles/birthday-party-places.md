@@ -77,6 +77,8 @@ places:
     image_source: https://commons.wikimedia.org/wiki/File:Grass_Lawn_Park_Playground.jpg
 ---
 
+For every venue on one map, with filters and a rough price level, see [kids birthday party venues on the Eastside](/birthday-venues/).
+
 [KidsQuest Children's Museum](https://www.kidsquestmuseum.org/partiesandmuseumrentals/) at 1116 108th Ave NE hosts private parties, with a party room and time in the exhibits.
 
 The [Bellevue Indoor Climbing Wall](https://bellevuewa.gov/city-government/departments/parks/community-centers/sbcc/climbing_wall) is at South Bellevue Community Center, 14509 SE Newport Way. The city lists a climbing party for ages 6 and up, with staff to belay and a party space.

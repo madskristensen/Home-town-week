@@ -425,6 +425,7 @@ module EastsideCalendar
       case page.data["map_id"].to_s
       when "halloween" then page.site.data["halloween_map"]
       when "markets" then page.site.data["farmers_market_page"]
+      when "birthdays" then page.site.data["birthday_page"]
       else page.site.data["home_lights"]
       end
     end

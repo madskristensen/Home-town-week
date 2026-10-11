@@ -78,6 +78,13 @@
   alt: White vendor tents along a tree-lined path at Redmond Saturday Market.
   credit: "Photo: Redmond Saturday Market."
   license: organizer
+- id: birthday-venues
+  path: /birthday-venues/
+  title: Kids birthday venues
+  image: /assets/images/bellevue/kidsquest.webp
+  alt: Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance.
+  credit: "Photo: Julian Fong, CC BY-SA 4.0"
+  license: CC BY-SA 4.0
 - id: book-ahead
   path: /book-ahead/
   title: Book ahead
