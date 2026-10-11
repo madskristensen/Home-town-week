@@ -46,13 +46,18 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
 {%- assign lights_mailto = lights_mailto | append: "" | strip -%}
 {%- assign home_count = home_lights.count | default: 0 -%}
 {%- capture lights_count -%}{{ home_count }} {{ map_noun }}{%- endcapture -%}
+{%- if page.map_id == "birthdays" -%}
+{%- assign map_note = "Tap a pin to jump to that venue." -%}
+{%- else -%}
+{%- assign map_note = "Numbers on the map match the list." -%}
+{%- endif -%}
 {%- include map-frame.html
      title_id="lights-map-title"
      canvas_id="home-map-canvas"
      poster_id="home-map-poster"
      button_id="home-map-show"
      count_label=lights_count
-     note="Numbers on the map match the list."
+     note=map_note
      loader="false" %}
 {%- if lights_mailto.size > 0 -%}
 {%- include map-tip.html href=lights_mailto -%}
@@ -79,11 +84,12 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
     var bounds = [];
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     pins.forEach(function (pin) {
+      var plain = pin.n == null;
       var icon = L.divIcon({
         className: "map-pin",
-        html: String(pin.n),
-        iconSize: [28, 28],
-        iconAnchor: [14, 14]
+        html: plain ? "" : String(pin.n),
+        iconSize: plain ? [16, 16] : [28, 28],
+        iconAnchor: plain ? [8, 8] : [14, 14]
       });
       var marker = L.marker([pin.lat, pin.lng], { icon: icon, title: pin.name, keyboard: true });
       var tip = document.createElement("span");

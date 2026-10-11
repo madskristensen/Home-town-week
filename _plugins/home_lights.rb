@@ -338,17 +338,19 @@ module EastsideCalendar
         birthday_labels!(item, row)
         items << item
       end
-      number = 0
+      # No numbers on this page: plain pins, and each card keeps an id
+      # so a pin click still scrolls to its card.
       items.each do |item|
-        if item["lat"].nil? || item["lng"].nil?
-          item.delete("number")
-        else
-          number += 1
-          item["number"] = number
-        end
+        item.delete("number")
+        item["card_id"] = "light-#{item["id"]}"
       end
-      Jekyll.logger.info("Birthday venues:", "#{items.size} venues, #{number} on the map")
       packed = pack_towns(items)
+      packed["pins"] = items.filter_map do |item|
+        next if item["lat"].nil? || item["lng"].nil?
+
+        { "lat" => item["lat"], "lng" => item["lng"], "name" => item["name"], "id" => item["id"] }
+      end
+      Jekyll.logger.info("Birthday venues:", "#{items.size} venues, #{packed["pins"].size} on the map")
       packed["filters"] = birthday_filters(items)
       packed
     end

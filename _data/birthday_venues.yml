@@ -5,7 +5,8 @@
 # city is a city id from _data/cities.yml. Preston uses issaquah and
 # Covington uses maple-valley.
 # setting is Indoor or Outdoor. types are the filter chips (Play, Sports,
-# Art, Swim, Dance, Cooking, Museum, Animals and farms, Park shelter).
+# Art, Swim, Dance, Cooking, Museum, Animals and farms, Park shelter,
+# Games and arcades, Skating).
 # party_room: true when the package includes a private room or space.
 # toddlers: true only when the venue is aimed at under 5.
 # price_level is 1 to 4 from the published base party package. It shows as
@@ -110,6 +111,7 @@
   setting: Indoor
   types:
   - Play
+  - Games and arcades
   party_room: true
   description: Glow-in-the-dark mini golf with an arcade. Packages include 90 minutes in a private themed room, with staff handling setup, serving, and cleanup.
   source: https://monsterminigolf.com/locations/us/wa/bellevue/birthday-parties/
@@ -159,6 +161,7 @@
   types:
   - Sports
   - Play
+  - Games and arcades
   party_room: true
   toddlers: true
   description: Hosted parties for 10 kids with an hour of activities and 45 minutes in the party room, plus a custom jersey. The Inflatable FunZone option is for ages 18 months to 12.
@@ -363,6 +366,7 @@
   setting: Indoor
   types:
   - Sports
+  - Games and arcades
   party_room: true
   description: Bowling birthday parties with a party room, food, and arcade games.
   source: https://kenmore50lanes.com/
@@ -437,12 +441,14 @@
   types:
   - Sports
   - Play
+  - Games and arcades
   party_room: true
   toddlers: true
   description: Hosted parties for 10 kids with an hour of activities and 45 minutes at a party table, plus a custom jersey. Choose laser tag and arcade, a sports simulator, or the inflatable FunZone.
   source: https://www.arenasports.net/locations/issaquah/events/
   source_label: Party page
   last_verified: '2026-10-10'
+  price_level: 3
 - id: little-gym-issaquah
   name: The Little Gym of Issaquah
   city: issaquah
@@ -640,5 +646,619 @@
   party_room: true
   description: 'Cooking parties in Covington where kids make the food themselves. All-inclusive packages: you bring the guests, the studio brings the rest.'
   source: https://youngchefsacademy.com/locations/covingtonwa/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: dave-busters-bellevue
+  name: Dave & Buster's
+  city: bellevue
+  address: 11639 NE 4th St, Bellevue
+  lat: 47.612398
+  lng: -122.185251
+  setting: Indoor
+  types:
+  - Games and arcades
+  price_level: 2
+  description: Arcade and restaurant with hundreds of games. Kids birthday packages pair food with a game card for each guest. Busy and loud on weekend evenings, so a daytime party is calmer.
+  source: https://www.daveandbusters.com/us/en/about/locations/bellevue
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: lucky-strike-bellevue
+  name: Lucky Strike Bellevue
+  city: bellevue
+  address: 700 Bellevue Way NE, Suite 250, Bellevue
+  lat: 47.61672
+  lng: -122.200902
+  setting: Indoor
+  types:
+  - Games and arcades
+  description: Bowling and arcade kids parties at Lincoln Square, with a party host. The birthday kid bowls free with a party.
+  source: https://www.luckystrikeent.com/location/lucky-strike-bellevue/parties/kids-parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: twinkle-land-bellevue
+  name: Twinkle Land
+  city: bellevue
+  address: 15510 Lake Hills Blvd, Suite A1, Bellevue
+  lat: 47.603356
+  lng: -122.133298
+  setting: Indoor
+  types:
+  - Play
+  party_room: true
+  toddlers: true
+  price_level: 3
+  description: Indoor playground, DIY toy studio, arcade, and cafe for ages 1 to 10. Rent a private party area and add playground time, a build-and-take-home craft, or arcade games.
+  source: https://www.twinklelandplaycafe.com/bellevue-location
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: taste-buds-kitchen-bellevue
+  name: Taste Buds Kitchen
+  city: bellevue
+  address: 15015 Main St, Suite 109, Bellevue
+  lat: 47.608287
+  lng: -122.142531
+  setting: Indoor
+  types:
+  - Cooking
+  party_room: true
+  description: Hands-on cooking and baking parties of 1.5 or 2 hours in a kitchen studio reserved for your group, with a chef, cupcake decorating, and the candle moment. Gingerbread parties in November and December.
+  source: https://tastebudskitchen.com/bellevue/kids-birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: popcorn-play-party-cook
+  name: 'Popcorn: Play, Party and Cook'
+  city: bellevue
+  address: 13555 Bel-Red Rd, Suite 124, Bellevue
+  lat: 47.622549
+  lng: -122.160137
+  setting: Indoor
+  types:
+  - Cooking
+  - Art
+  party_room: true
+  description: Custom birthday parties built around cooking and crafts, such as donut making or fairy jars, for roughly ages 3 to 13.
+  source: https://partyandcook.com/home/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: studio-fine-art-crossroads
+  name: The Studio Fine Art
+  city: bellevue
+  address: 15600 NE 8th St, Bellevue
+  lat: 47.619875
+  lng: -122.12871
+  setting: Indoor
+  types:
+  - Art
+  price_level: 3
+  description: Drop-off art parties at the Crossroads studio for ages 5 to teen, with a directed lesson for up to 12 guests. Sundays only.
+  source: https://www.bellevuestudio.com/art-parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: aafa-bellevue
+  name: American Academy of Fine Arts
+  city: bellevue
+  address: 13635 NE 8th St, Suite 101, Bellevue
+  lat: 47.616855
+  lng: -122.157141
+  setting: Indoor
+  types:
+  - Art
+  party_room: true
+  price_level: 3
+  description: 'Two-hour art parties in a private studio for up to 10 kids: little-creator art for ages 3 to 5, clay, canvas painting, bracelets, or T-shirts. Also offered at the Sammamish studio.'
+  source: https://aafawa.com/aafa-parties-and-events/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: bellevue-family-ymca
+  name: Bellevue Family YMCA
+  city: bellevue
+  address: 14230 Bel-Red Rd, Bellevue
+  lat: 47.626083
+  lng: -122.149858
+  setting: Indoor
+  types:
+  - Swim
+  party_room: true
+  price_level: 2
+  description: Y birthday parties with pool games or play-area fun led by a host, then party room time. Book through the branch party coordinator.
+  source: https://www.seattleymca.org/programs/youth-family/birthday-parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: k1-speed-redmond
+  name: K1 Speed
+  city: redmond
+  address: 2207 NE Bel-Red Rd, Redmond
+  lat: 47.629853
+  lng: -122.135503
+  setting: Indoor
+  types:
+  - Games and arcades
+  party_room: true
+  price_level: 3
+  description: Indoor electric go-kart races with helmets, a podium ceremony, arcade cards, and reserved party space. Parties need at least 7 racers, and drivers must meet the height rule.
+  source: https://www.k1speed.com/seattle-location/kids-birthday-parties.html
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: playlive-redmond
+  name: PLAYlive Nation
+  city: redmond
+  address: 7330 164th Ave NE, Suite E252, Redmond
+  lat: 47.67041
+  lng: -122.121309
+  setting: Indoor
+  types:
+  - Games and arcades
+  price_level: 2
+  description: Video game lounge at Redmond Town Center. Gaming parties run two hours with one station per guest, pizza, drinks, and staff to help run things.
+  source: https://playlivenation.com/location/redmondtc/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: flee-escape-redmond
+  name: FLEE Escape Rooms
+  city: redmond
+  address: '2222 152nd Ave NE, #112, Redmond'
+  lat: 47.630555
+  lng: -122.137108
+  setting: Indoor
+  types:
+  - Games and arcades
+  price_level: 4
+  description: Escape room and free-roam VR party packages with a reserved lobby area for cake. Recommended for ages 9 and up, and younger kids need an adult in the room.
+  source: https://fleeescape.com/birthday-party-escape-room-vr-party
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: conundroom-redmond
+  name: Conundroom
+  city: redmond
+  address: 14824 NE 95th St, Redmond
+  lat: 47.686003
+  lng: -122.142863
+  setting: Indoor
+  types:
+  - Games and arcades
+  party_room: true
+  price_level: 3
+  description: 'Private escape rooms plus a decorated party room. The School of Magic package is built for ages 8 to 13: an hour in the game, then an hour in the room.'
+  source: https://conundroom.us/birthday-party/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: flatstick-redmond
+  name: Flatstick Pub Redmond
+  city: redmond
+  address: 7530 164th Ave NE, Suite A108, Redmond
+  lat: 47.671757
+  lng: -122.121195
+  setting: Indoor
+  types:
+  - Games and arcades
+  party_room: true
+  description: Mini golf and Duffleboard at Redmond Town Center with party spaces. It is a pub, so minors are allowed only during set hours. Check the Redmond page before you book.
+  source: https://flatstickpub.com/redmond/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: giggle-jungle-redmond
+  name: Giggle Jungle
+  city: redmond
+  address: 7330 164th Ave NE, Suite E165, Redmond
+  lat: 47.67041
+  lng: -122.121309
+  setting: Indoor
+  types:
+  - Play
+  party_room: true
+  toddlers: true
+  description: Soft-play indoor playground at Redmond Town Center with birthday party packages for little kids.
+  source: https://gigglejungle.com/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: premiere-dance-center
+  name: Premiere Dance Center
+  city: redmond
+  address: 14787 NE 95th St, Redmond
+  lat: 47.685828
+  lng: -122.143512
+  setting: Indoor
+  types:
+  - Dance
+  party_room: true
+  price_level: 3
+  description: Dance class, games, and an hour in the party room, based on 12 children. Simple, colorful, themed, and craft packages.
+  source: https://www.premieredancecenter.com/parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: my-gym-bellevue-redmond
+  name: My Gym Bellevue-Redmond
+  city: redmond
+  address: 4070 148th Ave NE, Redmond
+  lat: 47.646851
+  lng: -122.140812
+  setting: Indoor
+  types:
+  - Sports
+  party_room: true
+  toddlers: true
+  description: Children's fitness gym that hosts private birthday parties with games, songs, and play on the gym equipment. Popular for toddler and preschool birthdays.
+  source: https://www.mygym.com/bellevue/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: froglegs-redmond
+  name: FrogLegs Cooking School Redmond
+  city: redmond
+  address: 7430 164th Ave NE, Suite B240, Redmond
+  lat: 47.670705
+  lng: -122.1209
+  setting: Indoor
+  types:
+  - Cooking
+  party_room: true
+  price_level: 4
+  description: Two-hour drop-off cooking and baking parties, such as pizza or cupcakes, for 8 kids and up. Parents may stay.
+  source: https://froglegskca.com/birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: red-barn-farm
+  name: The Red Barn Farm
+  city: redmond
+  address: 5703 208th Ave NE, Redmond
+  lat: 47.658427
+  lng: -122.062986
+  setting: Outdoor
+  types:
+  - Animals and farms
+  party_room: true
+  description: 42-acre farm with indoor and outdoor party options. The base package is two hours in the barn and 15 feed bags so kids can feed every animal.
+  source: https://redbarnfarm.com/kidsbirthdays/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: redmond-petting-farm
+  name: Redmond Petting Farm
+  city: redmond
+  address: 25634 NE 80th St, Redmond
+  lat: 47.674869
+  lng: -122.121918
+  setting: Outdoor
+  types:
+  - Animals and farms
+  description: Small working farm with horses and mini animals that hosts farm birthdays by appointment.
+  source: https://www.redmondpettingfarm.com/Programs/birthdays.html
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: flatstick-kirkland
+  name: Flatstick Pub Kirkland
+  city: kirkland
+  address: 15 Lake St, Suite 100, Kirkland
+  lat: 47.675982
+  lng: -122.207325
+  setting: Indoor
+  types:
+  - Games and arcades
+  party_room: true
+  description: 'Nine-hole mini golf and Duffleboard by Marina Park, with party rooms. It is a pub: minors are allowed only in the golf course and party room area, until 7 p.m.'
+  source: https://flatstickpub.com/parties-and-events/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: lazerx-kirkland
+  name: LazerX Arena
+  city: kirkland
+  address: 210 8th St S, Suite 2, Kirkland
+  lat: 47.67418
+  lng: -122.192672
+  setting: Indoor
+  types:
+  - Games and arcades
+  party_room: true
+  description: Laser tag arena that hosts birthday parties, with rounds in the arena and a party room.
+  source: https://www.lazerxarena.com/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: sno-king-kirkland
+  name: Sno-King Ice Arena Kirkland
+  city: kirkland
+  address: 14326 124th Ave NE, Kirkland
+  lat: 47.730399
+  lng: -122.173728
+  setting: Indoor
+  types:
+  - Skating
+  party_room: true
+  description: Ice skating parties with party room time and public skate before or after.
+  source: https://www.snokingicearenas.com/program/birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: gymnastics-connection
+  name: The Gymnastics Connection
+  city: kirkland
+  address: 11611 NE 116th St, Kirkland
+  lat: 47.703016
+  lng: -122.185548
+  setting: Indoor
+  types:
+  - Sports
+  party_room: true
+  price_level: 3
+  description: 'Private gymnastics parties: an hour of gym fun, then 45 minutes in the party area, for up to 18 kids.'
+  source: https://gymnasticsconnection.com/birthday-parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: lavida-kirkland
+  name: LaVida Dance Studio
+  city: kirkland
+  address: 11961 124th Ave NE, Kirkland
+  lat: 47.706138
+  lng: -122.177682
+  setting: Indoor
+  types:
+  - Dance
+  party_room: true
+  price_level: 2
+  description: Themed dance parties, such as hip-hop or little dancers, for up to 12 kids, plus an hour in the party room for presents and treats.
+  source: https://www.lavidastudio.com/kids-birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: froglegs-kirkland
+  name: FrogLegs Cooking School Kirkland
+  city: kirkland
+  address: 501 Market St, Kirkland
+  lat: 47.67892
+  lng: -122.209964
+  setting: Indoor
+  types:
+  - Cooking
+  party_room: true
+  price_level: 4
+  description: Two-hour drop-off cooking and baking parties, such as pizza or cupcakes, for 8 kids and up. Parents may stay.
+  source: https://froglegskca.com/birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: northshore-ymca
+  name: Northshore YMCA
+  city: bothell
+  address: 11811 NE 195th St, Bothell
+  lat: 47.76771
+  lng: -122.181761
+  setting: Indoor
+  types:
+  - Swim
+  party_room: true
+  price_level: 2
+  description: Y birthday parties with pool games or play-area fun led by a host, then party room time. Book through the branch party coordinator.
+  source: https://www.seattleymca.org/programs/youth-family/birthday-parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: bothell-gymnastics-club
+  name: Bothell Gymnastics Club
+  city: bothell
+  address: 22214 20th Ave SE, Suite 103, Bothell
+  lat: 47.796182
+  lng: -122.205137
+  setting: Indoor
+  types:
+  - Sports
+  toddlers: true
+  price_level: 3
+  description: 'Saturday parties: open gym playtime for kids turning 1 to 5 with up to 20 guests, or staff-led activities for ages 6 to 12 with up to 12 guests.'
+  source: https://www.bothellgymnasticsclub.com/home/events/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: bothell-park-shelters
+  name: Bothell park shelters
+  city: bothell
+  address: 1130 208th St SE, Bothell
+  lat: 47.808677
+  lng: -122.217221
+  setting: Outdoor
+  types:
+  - Park shelter
+  price_level: 1
+  description: Bothell rents picnic shelters for birthday parties at parks such as Centennial Park and the Park at Bothell Landing, plus the small North Creek Schoolhouse.
+  source: https://www.bothellwa.gov/1196/Parks-Recreation-Rental-Facilities
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: sammamish-ymca
+  name: Sammamish YMCA
+  city: sammamish
+  address: 831 228th Ave SE, Sammamish
+  lat: 47.600661
+  lng: -122.038773
+  setting: Indoor
+  types:
+  - Swim
+  party_room: true
+  price_level: 2
+  description: Y birthday parties with pool games or play-area fun led by a host, then party room time. Book through the branch party coordinator.
+  source: https://www.seattleymca.org/programs/youth-family/birthday-parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: aafa-sammamish
+  name: American Academy of Fine Arts Sammamish
+  city: sammamish
+  address: 657 228th Ave NE, Sammamish
+  lat: 47.61546
+  lng: -122.03613
+  setting: Indoor
+  types:
+  - Art
+  party_room: true
+  price_level: 3
+  description: Two-hour art parties in a private studio for up to 10 kids, from little-creator art for ages 3 to 5 to clay and canvas painting.
+  source: https://aafawa.com/aafa-parties-and-events/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: rock-and-roll-rink
+  name: Rock and Roll Rink
+  city: issaquah
+  address: 5700 E Lake Sammamish Pkwy SE, Issaquah
+  lat: 47.550886
+  lng: -122.042472
+  setting: Indoor
+  types:
+  - Skating
+  description: Roller skating rink with birthday party packages, group tickets, and full-rink rentals.
+  source: https://rockandrollrink.org/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: ninja-quest-adventures
+  name: Ninja Quest Adventures
+  city: issaquah
+  address: 5712 E Lake Sammamish Pkwy SE, Issaquah
+  lat: 47.550764
+  lng: -122.043085
+  setting: Indoor
+  types:
+  - Sports
+  description: Ninja warrior gym with obstacle courses. Coaches run birthday parties and private events.
+  source: https://www.ninjaquestadventures.com/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: kidstrong-issaquah
+  name: KidStrong Issaquah
+  city: issaquah
+  address: 1145 NW Gilman Blvd, Issaquah
+  lat: 47.545169
+  lng: -122.055811
+  setting: Indoor
+  types:
+  - Sports
+  description: A 90-minute private, coach-led party with active, confidence-building games, and private use of the center.
+  source: https://issaquah.kidstrong.com/parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: issaquah-dance-theatre
+  name: Issaquah Dance Theatre
+  city: issaquah
+  address: 320 3rd Ave NE, Issaquah
+  lat: 47.533227
+  lng: -122.031001
+  setting: Indoor
+  types:
+  - Dance
+  price_level: 2
+  description: Pick a theme and a dance style, and a teacher leads a dance class for up to 10 kids. All ages welcome.
+  source: https://www.issaquahdance.com/birthday-parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: inspire-academy-of-dance
+  name: Inspire Academy of Dance
+  city: issaquah
+  address: 1575 NW Mall St, Issaquah
+  lat: 47.543834
+  lng: -122.061077
+  setting: Indoor
+  types:
+  - Dance
+  party_room: true
+  description: Dance birthday parties with instruction and room rental. Send a request form for a date.
+  source: https://inspire.dance/birthday-parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: museo-art-academy
+  name: MUSEO Art Academy
+  city: issaquah
+  address: 160 NW Gilman Blvd, Suite 251, Issaquah
+  lat: 47.540081
+  lng: -122.038366
+  setting: Indoor
+  types:
+  - Art
+  description: Downtown Issaquah art school that hosts private weekend birthday parties.
+  source: https://www.museoartacademy.com/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: little-gym-renton
+  name: The Little Gym of Renton
+  city: renton
+  address: 290 SW 43rd St, Renton
+  lat: 47.442394
+  lng: -122.221156
+  setting: Indoor
+  types:
+  - Sports
+  party_room: true
+  description: Private parties that mix free play and instructor-led games in the gym, then party time.
+  source: https://www.thelittlegym.com/washington-kent/kids-birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: icode-renton
+  name: iCode Renton
+  city: renton
+  address: 14254 SE 176th St, Suite 05B, Renton
+  lat: 47.44522
+  lng: -122.184179
+  setting: Indoor
+  types:
+  - Games and arcades
+  description: Gaming and robotics parties for up to 10 kids, with invitations, decorations, an instructor, pizza, and drinks included.
+  source: https://icodeschool.com/renton-wa/birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: color-me-mine-renton
+  name: Color Me Mine Renton
+  city: renton
+  address: 827 N 10th Pl, Suite D, Renton
+  lat: 47.498224
+  lng: -122.203504
+  setting: Indoor
+  types:
+  - Art
+  price_level: 2
+  description: Paint-your-own pottery parties for 10 to 24 painters, with reserved tables for two hours and a host. Pottery is priced per piece, ready a week later.
+  source: https://renton.colormemine.com/kids-parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: sno-king-renton
+  name: Sno-King Ice Arena Renton
+  city: renton
+  address: 12620 164th Ave SE, Renton
+  lat: 47.48983
+  lng: -122.121216
+  setting: Indoor
+  types:
+  - Skating
+  party_room: true
+  price_level: 3
+  description: Ice skating parties with an hour in a party room and public skate before or after.
+  source: https://www.snokingicearenas.com/renton-birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: snoqualmie-valley-ymca
+  name: Snoqualmie Valley YMCA
+  city: snoqualmie
+  address: 35018 SE Ridge St, Snoqualmie
+  lat: 47.532333
+  lng: -121.873022
+  setting: Indoor
+  types:
+  - Sports
+  party_room: true
+  price_level: 2
+  description: Y birthday parties with games led by a host, then party room time. Book through the branch party coordinator.
+  source: https://www.seattleymca.org/programs/youth-family/birthday-parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: plucky-palomino
+  name: Plucky Palomino Petting Zoo
+  city: north-bend
+  address: 901 Bendigo Blvd N, North Bend
+  lat: 47.502999
+  lng: -121.794242
+  setting: Outdoor
+  types:
+  - Animals and farms
+  price_level: 4
+  description: Three-hour farm parties on the party pad with animal time, for up to 10 kids and 15 people total.
+  source: https://www.pluckypalomino.com/farmparties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: enchanted-farms-duvall
+  name: Enchanted Farms
+  city: duvall
+  address: 31620 NE 129th St, Duvall
+  lat: 47.7175
+  lng: -121.9405
+  setting: Outdoor
+  types:
+  - Animals and farms
+  description: Private farm birthday afternoons with the alpaca herd and the bunny burrow. Book ahead.
+  source: https://www.enchantedfarmsduvall.com/
   source_label: Party page
   last_verified: '2026-10-10'
