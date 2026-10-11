@@ -17,8 +17,8 @@
 # photo is image, alt, credit, credit_url, license. Prefer CC0, CC BY,
 # CC BY-SA, or public domain. A venue photo uses credit "Photo: <name>"
 # and license organizer. No recognizable kids. With no photo the build
-# uses photo_key (a key in _data/venue_images.yml), then the name in
-# that file, then the general pool.
+# uses photo_key (a key in _data/venue_images.yml), then the designed
+# party card. Never a pool or themed photo: the picture must show the venue.
 # last_verified is the day the party page was checked, YYYY-MM-DD.
 - id: kidsquest
   name: KidsQuest Children's Museum
@@ -322,12 +322,6 @@
   source: https://www.elevatedsportz.com/partypackages
   source_label: Party page
   last_verified: '2026-10-10'
-  photo:
-    image: /assets/images/bothell/elevated-sportz.webp
-    alt: The Elevated Sportz sign on the front of the trampoline park building in Bothell.
-    credit: 'Photo: Elevated Sportz'
-    credit_url: https://www.elevatedsportz.com/
-    license: organizer
 - id: creart-studioz
   name: CreArt Studioz
   city: bothell
@@ -764,6 +758,7 @@
   source: https://www.seattleymca.org/programs/youth-family/birthday-parties
   source_label: Party page
   last_verified: '2026-10-10'
+  photo_key: bellevue family ymca
 - id: k1-speed-redmond
   name: K1 Speed
   city: redmond
@@ -822,6 +817,12 @@
   source: https://conundroom.us/birthday-party/
   source_label: Party page
   last_verified: '2026-10-10'
+  photo:
+    image: /assets/images/birthdays/conundroom-party-room.webp
+    alt: The Conundroom party room in Redmond, with a long banquet table, sofas, and a draped gold ceiling.
+    credit: 'Photo: Conundroom'
+    credit_url: https://conundroom.us/birthday-party/
+    license: organizer
 - id: flatstick-redmond
   name: Flatstick Pub Redmond
   city: redmond
@@ -1069,6 +1070,7 @@
   source: https://www.seattleymca.org/programs/youth-family/birthday-parties
   source_label: Party page
   last_verified: '2026-10-10'
+  photo_key: sammamish ymca
 - id: aafa-sammamish
   name: American Academy of Fine Arts Sammamish
   city: sammamish

@@ -40,7 +40,7 @@ sitemap: false
 
 ## Farmers markets
 
-- [Kids birthday party venues]({{ site.url }}{{ site.baseurl }}/birthday-venues/): Places in the 15 cities that host kids birthday parties, on a map, with filters and a rough $ to $$$$ price level.
+- [Kids birthday party ideas]({{ site.url }}{{ site.baseurl }}/birthday-venues/): Places in the 15 cities that host kids birthday parties, on a map, plus parties that come to your home, with filters and a rough $ to $$$$ price level.
 - [Farmers markets]({{ site.url }}{{ site.baseurl }}/farmers-markets/): Weekly farmers markets in the 15 cities, with the day, hours, and season. The page says which markets are open now.
 
 ## Book ahead

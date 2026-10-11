@@ -318,8 +318,6 @@ module EastsideCalendar
       rows = Array(site.data["birthday_venues"]).select { |row| row.is_a?(Hash) }
       rows = rows.sort_by { |row| [names[row["city"].to_s].to_s.downcase, row["name"].to_s.downcase] }
       venues = Array(site.data.dig("venue_images", "venues"))
-      pool = fallback_photos(site, "general")
-      used = {}
       items = []
       rows.each do |row|
         item = light_item(row, names, 0)
@@ -329,7 +327,7 @@ module EastsideCalendar
         end
         photo = market_photo(row["photo"], item["name"], site) ||
                 birthday_venue_photo(venues, row, site) ||
-                next_fallback(pool, used)
+                birthday_designed_photo(item["name"], site)
         unless photo
           Jekyll.logger.error("Birthday venues:", "no usable photo for #{item["name"]}")
           next
@@ -351,13 +349,56 @@ module EastsideCalendar
         { "lat" => item["lat"], "lng" => item["lng"], "name" => item["name"], "id" => item["id"] }
       end
       Jekyll.logger.info("Birthday venues:", "#{items.size} venues, #{packed["pins"].size} on the map")
-      packed["filters"] = birthday_filters(items)
+      mobile = collect_birthday_mobile(site)
+      unless mobile.empty?
+        packed["towns"] << { "id" => "comes-to-you", "name" => "Parties that come to you", "lights" => mobile }
+        packed["count"] += mobile.size
+      end
+      packed["filters"] = birthday_filters(items + mobile)
       packed
+    end
+
+    # Parties that come to you: _data/birthday_mobile.yml. Same card, no
+    # address and no pin. The service area is the card's place line.
+    def collect_birthday_mobile(site)
+      rows = Array(site.data["birthday_mobile"]).select { |row| row.is_a?(Hash) }
+      rows = rows.sort_by { |row| row["name"].to_s.downcase }
+      rows.filter_map do |row|
+        name = row["name"].to_s.strip
+        source = row["source"].to_s.strip
+        description = row["description"].to_s.gsub(/\s+/, " ").strip
+        if name.empty? || description.empty? || !source.match?(%r{\Ahttps://\S+\z})
+          Jekyll.logger.error("Birthday venues:", "skipped #{name}")
+          next
+        end
+        item = {
+          "id" => slug(row["id"], name),
+          "card_id" => "light-#{slug(row["id"], name)}",
+          "name" => name,
+          "nights" => row["service_area"].to_s.strip.then { |text| text.empty? ? "Serves the Eastside" : text },
+          "blurb" => description,
+          "source_href" => source,
+          "source_label" => row["source_label"].to_s.strip
+        }
+        photo = market_photo(row["photo"], name, site) || birthday_designed_photo(name, site)
+        apply_photo!(item, photo)
+        birthday_labels!(item, row.merge("setting" => "Comes to you"))
+        item
+      end
+    end
+
+    # The designed party card, used when there is no photo of the venue.
+    BIRTHDAY_DESIGNED = "/assets/images/birthdays/party-card.webp"
+
+    def birthday_designed_photo(_name, site)
+      return nil unless File.file?(File.join(site.source, BIRTHDAY_DESIGNED.sub(%r{\A/}, "")))
+
+      { "src" => BIRTHDAY_DESIGNED, "alt" => "Illustration of three party balloons and confetti.", "credit" => "", "source" => "", "kind" => "designed" }
     end
 
     def birthday_labels!(item, row)
       setting = row["setting"].to_s.strip
-      setting = "" unless %w[Indoor Outdoor].include?(setting)
+      setting = "" unless ["Indoor", "Outdoor", "Comes to you"].include?(setting)
       types = Array(row["types"]).map { |value| value.to_s.strip }.reject(&:empty?)
       labels = []
       labels << setting unless setting.empty?
@@ -384,7 +425,7 @@ module EastsideCalendar
     # Chips come from the data: a chip shows when at least one card has it.
     def birthday_filters(items)
       chips = []
-      %w[Indoor Outdoor].each do |setting|
+      ["Indoor", "Outdoor", "Comes to you"].each do |setting|
         chips << { "label" => setting, "group" => "setting", "value" => setting } if items.any? { |item| item["filter_setting"] == setting }
       end
       chips << { "label" => "Toddlers", "group" => "ages", "value" => "Toddlers" } if items.any? { |item| item["filter_toddlers"] }
@@ -398,7 +439,6 @@ module EastsideCalendar
 
     def birthday_venue_photo(venues, row, site)
       wanted = row["photo_key"].to_s.downcase.strip
-      text = "#{row["name"]} #{row["address"]}".downcase
       best = nil
       best_len = 0
       venues.each do |venue|
@@ -407,7 +447,7 @@ module EastsideCalendar
         Array(venue["keys"]).each do |key|
           key = key.to_s.downcase
           next if key.empty?
-          next unless key == wanted || text.include?(key)
+          next unless key == wanted
           next unless key.length > best_len
 
           best = venue

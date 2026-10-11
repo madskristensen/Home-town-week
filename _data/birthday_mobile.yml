@@ -1,0 +1,208 @@
+# Parties that come to you, for the second section of /birthday-venues/.
+# Companies that bring a kids birthday party to your home. Verify each on
+# its own site: it offers kids birthday parties at home, and its service
+# area names Eastside cities, King County, or the Seattle area including
+# the Eastside. Lead sites are never linked or quoted.
+# service_area is the line on the card. No address, no map pin.
+# types and price_level work as in birthday_venues.yml.
+# With no photo the card uses the designed party card.
+- id: silver-adventures
+  name: Silver Adventures Laser Tag
+  service_area: Serves the Eastside
+  types:
+  - Games and arcades
+  description: Mobile laser tag from a Kirkland company. Staff set up an outdoor or indoor arena at your home, park, or school and run the games for the birthday crew.
+  source: https://www.silveradventures.com/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: flee-mobile-escape
+  name: FLEE Mobile Escape Rooms
+  service_area: Serves the Eastside
+  types:
+  - Games and arcades
+  price_level: 2
+  description: Portable escape room units from FLEE in Redmond, brought to your house or event. A small party gets one unit; bigger groups get several. Best for about age 9 and up.
+  source: https://www.fleeescape.com/onsite-team-events
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: bounce-experience-co
+  name: The Bounce Experience Co
+  service_area: Serves the Eastside
+  types:
+  - Play
+  description: Bounce houses, slide combos, and party rentals delivered and set up across the Eastside, including Redmond, Bellevue, Kirkland, Sammamish, and Issaquah.
+  source: https://www.thebounceexperienceco.com/pages/bounce-house-rentals-redmond
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: wa-bounce-house
+  name: WA Bounce House
+  service_area: Serves the Eastside
+  types:
+  - Play
+  description: Themed bounce houses and inflatables delivered for backyard birthdays, with online booking. The service area includes most Eastside cities.
+  source: https://www.wabouncehouse.com/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: eastside-bounce-house
+  name: Eastside Bounce House
+  service_area: Serves the Eastside
+  types:
+  - Play
+  price_level: 2
+  description: Bounce house and water slide rentals delivered and set up at your home, plus tents, tables, and party bundles.
+  source: https://eastsidebouncehouse.com/rentals/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: clowns-unlimited
+  name: Clowns Unlimited
+  service_area: Serves the Eastside
+  types:
+  - Animals and farms
+  - Shows
+  description: Party entertainment and rentals, from a reptile zoo with snakes and lizards to inflatables and carnival games. Delivery covers Seattle and the Eastside.
+  source: https://clownsunlimited.com/rent/entertainment/reptile-zoo/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: mad-science-sno-king
+  name: Mad Science
+  service_area: Serves the Eastside
+  types:
+  - Science
+  price_level: 2
+  description: A one-hour science show at home with chemical reactions, rockets, and make-and-take slime for every child. Packages for up to 20 kids and more, for ages 5 to 12. Based in Redmond.
+  source: https://snoking.madscience.org/parents-birthdayparties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: bricks-4-kidz
+  name: Bricks 4 Kidz Redmond-Bellevue
+  service_area: Serves the Eastside
+  types:
+  - Science
+  price_level: 2
+  description: LEGO building parties at your home, with an instructor, themed builds, and games. Packages run 60 to 90 minutes for 10 kids.
+  source: https://bricks4kidz.us/washington-redmond-bellevue/our-programs/birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: snapology-eastside
+  name: Snapology of Eastside
+  service_area: Serves the Eastside
+  types:
+  - Science
+  description: Mobile STEAM birthday parties with LEGO bricks, robotics, or K'Nex for ages 4 to 14, run by Snapology staff. Covers Bellevue to Renton and Woodinville.
+  source: https://snapologyofeastside.com/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: animal-encounters
+  name: Animal Encounters
+  service_area: Serves the Eastside
+  types:
+  - Animals and farms
+  price_level: 3
+  description: Hands-on animal encounters for ages 4 and up, in your family room, yard, or garage. Cuddly mammals, then docile reptiles, for up to 15 kids. Based in Issaquah. Not in public parks.
+  source: https://animalencounters.com/encounters
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: curious-critters
+  name: Curious Critters
+  service_area: Serves the Eastside
+  types:
+  - Animals and farms
+  description: A traveling zoo that brings hedgehogs, pigs, and more to birthday parties. Each animal comes around the room so every child can see and touch it.
+  source: https://curious-critters.org/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: plucky-palomino-mobile
+  name: Plucky Palomino Mobile Petting Zoo
+  service_area: Serves the Eastside
+  types:
+  - Animals and farms
+  price_level: 3
+  description: A mobile petting zoo from the North Bend farm, priced by the hour, with a smaller indoor-friendly option for little kids. Serves King and Snohomish counties.
+  source: https://www.pluckypalomino.com/mobilezoo
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: enchanted-farms-mobile
+  name: Enchanted Farms Mobile Zoo
+  service_area: Serves the Eastside
+  types:
+  - Animals and farms
+  price_level: 4
+  description: The Duvall alpaca farm's mobile petting zoo, brought to your backyard party.
+  source: https://www.enchantedfarmsduvall.com/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: soulful-kids
+  name: Soulful Kids
+  service_area: Serves the Eastside
+  types:
+  - Shows
+  description: 'All-in-one themed parties at home: costumed entertainers, games, bubble or science shows, spa activities, face painting, and decor. Serves Bellevue, Kirkland, Redmond, Sammamish, Bothell, and Woodinville.'
+  source: https://www.soulful-kids.com/services-4
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: wonder-spark
+  name: Wonder Spark
+  service_area: Serves the Eastside
+  types:
+  - Shows
+  price_level: 3
+  description: 'Themed party hosts at your home, with games, music, and photo moments: superhero academy, princess, magic, spa, and slime. 60 to 90 minutes for ages 3 to 12.'
+  source: https://wskidsparty.net/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: painted-palace
+  name: The Painted Palace
+  service_area: Serves the Eastside
+  types:
+  - Shows
+  price_level: 2
+  description: Traveling character parties with storytime, games, photos, and the birthday song. Travel is included within 15 miles of Bellevue.
+  source: https://www.paintedpalaceparties.com/traveling-character-parties
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: seattle-princess-party
+  name: Seattle Princess Party
+  service_area: Serves the Eastside
+  types:
+  - Shows
+  description: Princess and character visits for birthday parties at home, with songs, games, and photos. The service list includes Bellevue, Redmond, Kirkland, and Issaquah.
+  source: https://seattleprincessparty.com/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: characters-io
+  name: Characters.io Seattle
+  service_area: Serves the Eastside
+  types:
+  - Shows
+  description: Costumed princess and superhero characters for home birthday parties across the Eastside, quoted per party.
+  source: https://seattle.characters.io/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: hoopla-face-painting
+  name: Hoopla Face Painting and Balloons
+  service_area: Serves the Eastside
+  types:
+  - Art
+  description: Face painters and balloon twisters for birthday parties at home, plus glitter tattoos. About 10 kids an hour for detailed designs.
+  source: https://www.hooplafacepainting.com/
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: glitterbuggie
+  name: Glitterbuggie Entertainment
+  service_area: Serves the Eastside
+  types:
+  - Art
+  - Shows
+  description: Clowns, face painting, balloon art, magic, and carnival games for birthday parties at home across the Eastside.
+  source: https://www.glitterbuggie.com/clowns-balloons-face-painting-magic-show-airbrush-carnival-games-in-Bellevue
+  source_label: Party page
+  last_verified: '2026-10-10'
+- id: evelinka-puppets
+  name: Evelinka Puppets
+  service_area: Serves the Eastside
+  types:
+  - Shows
+  description: A portable puppet theater that brings an interactive birthday show to your home, with a story you can customize.
+  source: https://www.befy.shop/
+  source_label: Party page
+  last_verified: '2026-10-10'
