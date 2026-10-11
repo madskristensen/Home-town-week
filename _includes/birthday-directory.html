@@ -1,0 +1,43 @@
+{%- comment -%}
+  Birthday parties as one camp-style list: compact rows grouped by town,
+  then Worth the drive and Parties that come to you. Same markup and
+  Group by pills as camp-directory.html. A sponsored venue is the
+  camp-sponsored row, pinned at the top of its town.
+{%- endcomment -%}
+<div class="camps-page">
+<section class="camp-directory">
+  <div class="camp-group-row">
+    <span class="camp-group-label" id="camp-group-label">Group by</span>
+    <div class="camp-group-pills" role="group" aria-labelledby="camp-group-label">
+      <button type="button" class="camp-pill" data-group="town" aria-pressed="true">Town</button>
+      <button type="button" class="camp-pill" data-group="kind" aria-pressed="false">Type</button>
+      <button type="button" class="camp-pill" data-group="price" aria-pressed="false">Price</button>
+    </div>
+  </div>
+  <div id="camp-groups">
+    {%- for town in home_lights.towns -%}
+    <section class="camp-town" id="{{ town.id }}">
+      <h2 class="camp-town-title"><span class="camp-group-name">{{ town.name | escape }}</span> (<span class="camp-group-count">{{ town.count }}</span>)</h2>
+      {%- if town.intro -%}<p class="hub-section-intro">{{ town.intro }}</p>{%- endif -%}
+      <ul class="camp-list">
+        {%- for listing in town.sponsored -%}
+        {%- include camp-sponsored.html listing=listing -%}
+        {%- endfor -%}
+        {%- for row in town.rows -%}
+        <li class="camp-row" id="{{ row.dom_id }}" {{ row.data }}>
+          <p class="camp-name-line"><a href="{{ row.url }}">{{ row.name | escape }}</a></p>
+          <p class="camp-meta">{{ row.meta | escape }}</p>
+          {%- assign row_address = row.address | append: "" | strip -%}
+          {%- if row_address.size > 0 -%}
+          <p class="camp-signup"><a class="addr" href="{{ row_address | map_search: row.place_city, row.name }}"><span class="addr-text">{{ row_address | escape }}</span></a></p>
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </section>
+    {%- endfor -%}
+  </div>
+  <div id="camp-sponsor-hold" hidden></div>
+</section>
+</div>
+{%- include group-by-script.html -%}

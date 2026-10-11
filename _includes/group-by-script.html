@@ -1,0 +1,183 @@
+{%- comment -%}
+  The Group by pills for a camp-directory list (summer camps and birthday
+  parties). Rows carry data-{mode}, data-{mode}-label or -name, and
+  data-{mode}-order. "ages" is the camps' multi-group mode.
+{%- endcomment -%}
+<script>
+(function () {
+  var root = document.querySelector(".camp-directory");
+  var pills = root ? root.querySelector(".camp-group-pills") : null;
+  var host = document.getElementById("camp-groups");
+  if (!root || !pills || !host) return;
+
+  var ages = [
+    ["preschool", "Preschool 3-5"],
+    ["kids", "Kids 6-10"],
+    ["tweens", "Tweens 11-13"],
+    ["teens", "Teens 14+"]
+  ];
+
+  function originals() {
+    return Array.prototype.filter.call(root.querySelectorAll(".camp-row"), function (row) {
+      return row.getAttribute("data-clone") !== "1";
+    });
+  }
+
+  function dropClones() {
+    Array.prototype.forEach.call(root.querySelectorAll("[data-clone='1']"), function (row) {
+      row.remove();
+    });
+  }
+
+  function bySort(list) {
+    return list.slice().sort(function (a, b) {
+      return a.getAttribute("data-sort").localeCompare(b.getAttribute("data-sort"));
+    });
+  }
+
+  function sponsors() {
+    return Array.prototype.filter.call(root.querySelectorAll(".camp-sponsored"), function (row) {
+      return row.getAttribute("data-clone") !== "1";
+    });
+  }
+
+  function section(id, title, list, slots) {
+    var block = document.createElement("section");
+    var heading = document.createElement("h2");
+    var name = document.createElement("span");
+    var count = document.createElement("span");
+    var ul = document.createElement("ul");
+    var pinned = slots || [];
+    block.className = "camp-town";
+    if (id) block.id = id;
+    heading.className = "camp-town-title";
+    name.className = "camp-group-name";
+    name.textContent = title;
+    count.className = "camp-group-count";
+    count.textContent = String(list.length + pinned.length);
+    heading.appendChild(name);
+    heading.appendChild(document.createTextNode(" ("));
+    heading.appendChild(count);
+    heading.appendChild(document.createTextNode(")"));
+    ul.className = "camp-list";
+    pinned.forEach(function (row) { ul.appendChild(row); });
+    list.forEach(function (row) { ul.appendChild(row); });
+    block.appendChild(heading);
+    block.appendChild(ul);
+    return block;
+  }
+
+  function take(pool, attr, value) {
+    var hit = [];
+    var rest = [];
+    pool.forEach(function (row) {
+      if (row.getAttribute(attr) === value) hit.push(row);
+      else rest.push(row);
+    });
+    return { hit: hit, rest: rest };
+  }
+
+  function withLeftovers(blocks, rest) {
+    var hold = document.getElementById("camp-sponsor-hold");
+    if (hold) rest.forEach(function (row) { hold.appendChild(row); });
+    return blocks;
+  }
+
+  function grouped(rows, keyFn) {
+    var map = Object.create(null);
+    var keys = [];
+    rows.forEach(function (row) {
+      var key = keyFn(row);
+      if (!map[key]) {
+        map[key] = [];
+        keys.push(key);
+      }
+      map[key].push(row);
+    });
+    return { map: map, keys: keys };
+  }
+
+  // Group by one data key: data-{mode}, its label (data-{mode}-label or
+  // data-{mode}-name), and data-{mode}-order. Town ids stay bare so #town
+  // links keep working.
+  function byKey(mode, rows, ads) {
+    var attr = "data-" + mode;
+    var groups = grouped(rows, function (row) { return row.getAttribute(attr + "-order"); });
+    groups.keys.sort(function (a, b) {
+      var x = Number(a);
+      var y = Number(b);
+      return isNaN(x) || isNaN(y) ? String(a).localeCompare(String(b)) : x - y;
+    });
+    var pool = ads.slice();
+    var blocks = groups.keys.map(function (key) {
+      var list = bySort(groups.map[key]);
+      var first = list[0];
+      var value = first.getAttribute(attr);
+      var label = first.getAttribute(attr + "-label") || first.getAttribute(attr + "-name");
+      var picked = take(pool, attr, value);
+      pool = picked.rest;
+      return section(mode === "town" ? value : mode + "-" + value, label, list, picked.hit);
+    });
+    return withLeftovers(blocks, pool);
+  }
+
+  function byAges(rows, ads) {
+    var blocks = [];
+    var placed = Object.create(null);
+    var adPlaced = Object.create(null);
+    ages.forEach(function (pair) {
+      var list = [];
+      rows.forEach(function (row) {
+        if (row.getAttribute("data-" + pair[0]) !== "1") return;
+        if (placed[row.id]) {
+          var copy = row.cloneNode(true);
+          copy.removeAttribute("id");
+          copy.setAttribute("data-clone", "1");
+          list.push(copy);
+        } else {
+          placed[row.id] = true;
+          list.push(row);
+        }
+      });
+      var pinned = [];
+      ads.forEach(function (row) {
+        if (row.getAttribute("data-" + pair[0]) !== "1") return;
+        if (adPlaced[row.id]) {
+          var copy = row.cloneNode(true);
+          copy.removeAttribute("id");
+          copy.setAttribute("data-clone", "1");
+          pinned.push(copy);
+        } else {
+          adPlaced[row.id] = true;
+          pinned.push(row);
+        }
+      });
+      if (list.length || pinned.length) blocks.push(section("age-" + pair[0], pair[1], bySort(list), pinned));
+    });
+    var rest = rows.filter(function (row) { return !placed[row.id]; });
+    var restAds = ads.filter(function (row) { return !adPlaced[row.id]; });
+    if (rest.length || restAds.length) blocks.push(section("age-unlisted", "Ages not listed", bySort(rest), restAds));
+    return blocks;
+  }
+
+  function paint(blocks) {
+    dropClones();
+    host.textContent = "";
+    blocks.forEach(function (block) { host.appendChild(block); });
+  }
+
+  pills.addEventListener("click", function (event) {
+    var pill = event.target.closest ? event.target.closest(".camp-pill") : null;
+    if (!pill || pill.getAttribute("aria-pressed") === "true") return;
+    var mode = pill.getAttribute("data-group");
+    var rows = originals();
+    var ads = sponsors();
+    var blocks = mode === "ages" ? byAges(rows, ads) : byKey(mode, rows, ads);
+    paint(blocks);
+    document.dispatchEvent(new CustomEvent("rows-regrouped"));
+    Array.prototype.forEach.call(pills.querySelectorAll(".camp-pill"), function (button) {
+      button.setAttribute("aria-pressed", button === pill ? "true" : "false");
+    });
+  });
+})();
+</script>

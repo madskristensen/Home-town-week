@@ -1,12 +1,17 @@
 {%- comment -%}
   One enhanced camp row. listing: name, url, town, meta, blurb, photo.
+  The birthday page passes data (its own data attributes) and dom_id.
   Sits at the top of its town. The Group by script moves it with the list.
 {%- endcomment -%}
 {%- assign listing = include.listing -%}
 {%- assign listing_name = listing.name | append: "" | strip -%}
 {%- assign listing_url = listing.url | append: "" | strip -%}
 {%- if listing_name.size > 0 and listing_url.size > 0 -%}
+{%- if listing.data -%}
+<li class="camp-sponsored" id="{{ listing.dom_id | escape }}" {{ listing.data }}>
+{%- else -%}
 <li class="camp-sponsored" id="sponsor-{{ listing.id | escape }}" data-town="{{ listing.town | escape }}" data-town-name="{{ listing.town_name | escape }}" data-town-order="{{ listing.town_order }}" data-type="{{ listing.type | escape }}" data-type-label="{{ listing.type_label | escape }}" data-type-order="{{ listing.type_order }}" data-signup="{{ listing.signup | escape }}" data-signup-label="{{ listing.signup_label | escape }}" data-signup-order="{{ listing.signup_order | escape }}"{% for age in listing.ages %} data-{{ age }}="1"{% endfor %}>
+{%- endif -%}
   <p class="sponsor-mark">Sponsored</p>
   {%- assign listing_image = listing.image | append: "" | strip -%}
   {%- if listing_image.size > 0 -%}

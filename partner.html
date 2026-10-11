@@ -50,6 +50,21 @@ sample_listing:
   alt: Juanita Beach Park, with the sandy shore, the pier, and Lake Washington.
   credit: "Photo: Joe Mabel, CC BY-SA 3.0"
   image_source: https://commons.wikimedia.org/wiki/File:Juanita_Beach_from_across_the_bay.jpg
+sample_birthday:
+  dom_id: sponsor-example-party-place
+  name: Example Party Place
+  url: https://example.com
+  data: 'data-town="redmond" data-town-name="Redmond" data-town-order="1" data-kind="play" data-kind-label="Play" data-kind-order="1"'
+  meta: Play, Party room · Toddlers · Redmond · $$$
+  blurb: "A private party room and two hours of open play for up to 15 kids. Pizza, juice, and a host who handles setup and cleanup. Best for ages 2 to 8."
+  image: /assets/images/birthdays/party-card.webp
+  alt: Illustration of three party balloons and confetti.
+  credit: ""
+  image_source: ""
+sample_birthday_row:
+  name: Example Climbing Gym
+  meta: Climbing, Party room · Redmond · $$
+  address: Example street, Redmond
 sample_camp:
   id: example-day-camp
   name: Example Day Camp
@@ -153,6 +168,24 @@ Option we're interested in:
           {%- include camp-sponsored.html listing=page.sample_listing -%}
           {%- assign camp = page.sample_camp -%}
           {%- include camp-row.html -%}
+        </ul>
+      </div>
+    </figure>
+
+    <h3><a href="{{ '/birthday-venues/' | relative_url }}">Featured birthday venue</a></h3>
+    <p>Every venue on the birthday parties page is listed free. A featured spot adds your photo, a short description, and the top of your town, labeled Sponsored. It stays at the top of your type too.</p>
+    <p><strong>Email for open spots and the monthly rate.</strong></p>
+    <figure class="sponsor-preview">
+      <figcaption class="sponsor-preview-label">Example · Birthday parties</figcaption>
+      <div class="camp-town">
+        <p class="camp-town-title"><span class="camp-group-name">Redmond</span> (<span class="camp-group-count">2</span>)</p>
+        <ul class="camp-list">
+          {%- include camp-sponsored.html listing=page.sample_birthday -%}
+          <li class="camp-row">
+            <p class="camp-name-line"><a href="https://example.com">{{ page.sample_birthday_row.name }}</a></p>
+            <p class="camp-meta">{{ page.sample_birthday_row.meta }}</p>
+            <p class="camp-signup">{{ page.sample_birthday_row.address }}</p>
+          </li>
         </ul>
       </div>
     </figure>

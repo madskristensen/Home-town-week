@@ -364,6 +364,7 @@ module EastsideCalendar
         packed["count"] += mobile.size
       end
       packed["filters"] = birthday_filters(items + drive + mobile)
+      birthday_rows!(packed)
       packed
     end
 
@@ -393,6 +394,68 @@ module EastsideCalendar
         apply_photo!(item, photo)
         birthday_labels!(item, row.merge("setting" => "Comes to you"))
         item
+      end
+    end
+
+    BIRTHDAY_PRICE_GROUPS = {
+      "$" => ["1", "$ · Free or under $150"], "$$" => ["2", "$$ · $150 to $299"],
+      "$$$" => ["3", "$$$ · $300 to $499"], "$$$$" => ["4", "$$$$ · $500 and up"]
+    }.freeze
+
+    # The page is a camp-style list: one compact row per venue, grouped by
+    # town, with the summer camps Group by pills (Town, Type, Price). A
+    # sponsored venue is the camp-sponsored row with its photo and blurb,
+    # pinned at the top of its town and its type.
+    def birthday_rows!(packed)
+      all = packed["towns"].flat_map { |town| town["lights"] }
+      kinds = all.map { |item| Array(item["filter_types"]).first.to_s }.reject(&:empty?).tally
+      kind_order = kinds.sort_by { |label, count| [-count, label] }.map(&:first)
+      packed["towns"].each_with_index do |town, index|
+        town["order"] = index + 1
+        town["rows"] = []
+        town["sponsored"] = []
+        town["lights"].each do |item|
+          kind = Array(item["filter_types"]).first.to_s
+          kind = "Other" if kind.empty?
+          price_group, price_label = BIRTHDAY_PRICE_GROUPS[item["price"].to_s] || ["9", "No price posted"]
+          place = item["place_city"].to_s
+          place = item["city"].to_s if place.empty?
+          place = item["nights"].to_s if place.empty?
+          meta = [Array(item["filter_types"]).join(", ")]
+          meta << "Toddlers" if item["filter_toddlers"]
+          meta << place
+          meta << item["price"].to_s
+          data = [
+            %(data-town="#{CGI.escapeHTML(town["id"].to_s)}"),
+            %(data-town-name="#{CGI.escapeHTML(town["name"].to_s)}"),
+            %(data-town-order="#{index + 1}"),
+            %(data-kind="#{slug(nil, kind)}"),
+            %(data-kind-label="#{CGI.escapeHTML(kind)}"),
+            %(data-kind-order="#{(kind_order.index(kind) || 98) + 1}"),
+            %(data-price="#{price_group}"),
+            %(data-price-label="#{CGI.escapeHTML(price_label)}"),
+            %(data-price-order="#{price_group}"),
+            %(data-sort="#{CGI.escapeHTML(item["name"].to_s.downcase)}"),
+            item["attrs"].to_s
+          ].reject(&:empty?).join(" ")
+          address = item["address"].to_s
+          address = item["place"].to_s if address.empty?
+          row = {
+            "dom_id" => "light-#{item["id"]}", "id" => item["id"], "name" => item["name"],
+            "url" => (item["source_href"] || item["source"]).to_s, "meta" => meta.reject(&:empty?).join(" · "),
+            "address" => address, "place_city" => place, "data" => data
+          }
+          if item["sponsored"]
+            row.merge!(
+              "blurb" => (item["blurb"] || item["description"]).to_s, "image" => item["image"],
+              "alt" => item["image_alt"], "credit" => item["image_credit"], "image_source" => item["image_source"]
+            )
+            town["sponsored"] << row
+          else
+            town["rows"] << row
+          end
+        end
+        town["count"] = town["rows"].size + town["sponsored"].size
       end
     end
 
@@ -457,6 +520,7 @@ module EastsideCalendar
       item["filter_setting"] = setting
       item["filter_types"] = types
       item["filter_toddlers"] = row["toddlers"] == true
+      item["sponsored"] = row["sponsored"] == true
       item["filter_room"] = row["party_room"] == true
     end
 

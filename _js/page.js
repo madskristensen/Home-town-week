@@ -130,7 +130,8 @@ var slot = document.getElementById("eastside-map");
     var groups = selectedFilterGroups();
     var active = Object.keys(groups).length > 0;
     var visible = 0;
-    document.querySelectorAll(".event-card").forEach(function (card) {
+    // Shared cards, and the compact rows of a camp-style list.
+    document.querySelectorAll(".event-card, .camp-list > li").forEach(function (card) {
       var show = !active || matchingCard(card, groups);
       card.classList.toggle("is-filtered-out", !show);
       if (show) visible += 1;
@@ -178,6 +179,17 @@ var slot = document.getElementById("eastside-map");
       }
       section.classList.toggle("is-filtered-out", active && !any);
     });
+    document.querySelectorAll(".camp-town").forEach(function (section) {
+      var rows = section.querySelectorAll(".camp-list > li");
+      var shown = 0;
+      var i;
+      for (i = 0; i < rows.length; i++) {
+        if (!rows[i].classList.contains("is-filtered-out")) shown += 1;
+      }
+      var count = section.querySelector(".camp-group-count");
+      if (count) count.textContent = String(shown);
+      section.classList.toggle("is-filtered-out", active && shown === 0);
+    });
     document.querySelectorAll(".hub-toc li").forEach(function (item) {
       var link = item.querySelector("a");
       if (!link) return;
@@ -196,6 +208,8 @@ var slot = document.getElementById("eastside-map");
       note.hidden = !active || visible > 0;
     });
   }
+  // The Group by pills rebuild the groups, so filter the new ones again.
+  document.addEventListener("rows-regrouped", applyFilters);
   for (var filterIndex = 0; filterIndex < filterBoxes.length; filterIndex++) {
     filterBoxes[filterIndex].addEventListener("change", applyFilters);
   }

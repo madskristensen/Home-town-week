@@ -1546,6 +1546,8 @@ a.addr .addr-text {
 .event-card.is-filtered-out,
 .card-grid.is-filtered-out,
 .hub-section.is-filtered-out,
+.camp-list > li.is-filtered-out,
+.camp-town.is-filtered-out,
 .event-list h2.event-bucket.is-filtered-out,
 .hub-toc li.is-filtered-out,
 .event-card.is-past,

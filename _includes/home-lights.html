@@ -137,6 +137,9 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
 </div>
 {%- include empty-suggest.html mode="filter" name=page.title -%}
 {%- endif -%}
+{%- if page.map_id == "birthdays" -%}
+{%- include birthday-directory.html -%}
+{%- else -%}
 {%- for town in home_lights.towns -%}
 <section class="hub-section">
   <h2 id="town-{{ town.id }}">{{ town.name }}</h2>
@@ -148,6 +151,7 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
   {%- endif -%}
 </section>
 {%- endfor -%}
+{%- endif -%}
 {%- if page.map_id == "markets" or page.map_id == "birthdays" -%}
 {%- elsif page.map_id == "halloween" -%}
 <section class="hub-section">
