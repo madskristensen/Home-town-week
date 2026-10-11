@@ -37,10 +37,10 @@
   source_label: "Market site"
   last_verified: "2026-10-01"
   photo:
-    image: /assets/images/bellevue/old-main-street.webp
-    alt: Old Main Street in Bellevue, with shops and a clock along the sidewalk.
-    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Bellevue,_Washington_-_old_Main_Street_01.jpg"
+    image: /assets/images/markets/bellevue-logo.webp
+    alt: Bellevue Farmers Market logo with a row of drawn vegetables.
+    credit: "Logo: Bellevue Farmers Market"
+    credit_url: "https://bellevuefarmersmarket.org/"
 - id: crossroads-farmers-market
   name: Crossroads Farmers Market
   city: bellevue
@@ -55,10 +55,10 @@
   source_label: "Market site"
   last_verified: "2026-10-01"
   photo:
-    image: /assets/images/bellevue/crossroads.webp
-    alt: West entrance of Crossroads Bellevue, with the mall sign and a row of flags.
-    credit: "Photo: Mark Yasuda, CC BY-SA 4.0"
-    credit_url: "https://commons.wikimedia.org/wiki/File:2018_Crossroads_Bellevue_west_entrance.jpg"
+    image: /assets/images/markets/crossroads-market.webp
+    alt: A shopper with sunflowers under the white tents at Crossroads Farmers Market.
+    credit: "Photo: Crossroads Bellevue"
+    credit_url: "https://crossroadsbellevue.com/farmersmarket/"
 - id: carnation-farmers-market
   name: Carnation Farmers Market
   city: carnation
@@ -73,10 +73,10 @@
   source_label: "Market site"
   last_verified: "2026-10-01"
   photo:
-    image: /assets/images/carnation/tolt-bridge.webp
-    alt: The pedestrian suspension bridge over the Snoqualmie River at Tolt-MacDonald Park in Carnation.
-    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
-    credit_url: "https://commons.wikimedia.org/wiki/File:2023-05-10,_Tolt-MacDonald_Park_footbridge,_24.jpg"
+    image: /assets/images/markets/carnation-market.webp
+    alt: Market tents and shoppers on the lawn by the red barn at Carnation Farmers Market.
+    credit: "Photo: Carnation Farmers Market"
+    credit_url: "https://carnationfarmersmarket.org/"
 - id: duvall-farmers-market
   name: Duvall Farmers Market
   city: duvall
@@ -92,10 +92,10 @@
   source_label: "Market site"
   last_verified: "2026-10-01"
   photo:
-    image: /assets/images/markets/duvall-bridge.webp
-    alt: The bridge over the Snoqualmie River into downtown Duvall.
-    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Duvall_WA_bridge_01.jpg"
+    image: /assets/images/markets/duvall-market.webp
+    alt: A blue canopy with the Duvall Farmers Market banner under tall trees.
+    credit: "Photo: Duvall Farmers Market"
+    credit_url: "https://duvallfarmersmarket.org/"
 - id: issaquah-farmers-market
   name: Issaquah Farmers Market
   city: issaquah
@@ -128,10 +128,10 @@
   source_label: "Market site"
   last_verified: "2026-10-01"
   photo:
-    image: /assets/images/kenmore/city-hall.webp
-    alt: Kenmore City Hall, a modern building with a glass front and a covered entry.
-    credit: "Photo: HistoryTheorist, CC BY-SA 4.0"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Frontal_View_of_Kenmore_City_Hall.png"
+    image: /assets/images/markets/kenmore-flowers.webp
+    alt: Bouquets of fresh flowers at a vendor stall at Kenmore Farmers Market.
+    credit: "Photo: Northshore Farmers Markets"
+    credit_url: "https://www.northshorefarmersmarkets.org/kenmore-farmers-market"
 - id: juanita-friday-market
   name: Juanita Friday Market
   city: kirkland
@@ -146,10 +146,10 @@
   source_label: "City of Kirkland"
   last_verified: "2026-10-01"
   photo:
-    image: /assets/images/kirkland/juanita-beach-park.webp
-    alt: Juanita Beach Park, with the sandy shore, the pier, and Lake Washington.
-    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Juanita_Beach_from_across_the_bay.jpg"
+    image: /assets/images/markets/juanita-logo.webp
+    alt: Juanita Friday Market logo with two raspberries.
+    credit: "Logo: City of Kirkland"
+    credit_url: "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Special-Event-Services/Juanita-Friday-Market"
 - id: kirkland-wednesday-market
   name: Kirkland Wednesday Market
   city: kirkland
@@ -164,10 +164,10 @@
   source_label: "Market site"
   last_verified: "2026-10-01"
   photo:
-    image: /assets/images/kirkland/marina-fall.webp
-    alt: Marina Park in fall, with yellow and orange trees along the shore of Lake Washington and the Seattle skyline across the water.
-    credit: "Photo: City of Kirkland"
-    credit_url: "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/PCS-Photo-Galleries/Marina-Park-Photo-Gallery"
+    image: /assets/images/markets/kirkland-wednesday.webp
+    alt: Vendors and shoppers at a stall under market tents in downtown Kirkland.
+    credit: "Photo: Kirkland Downtown Association"
+    credit_url: "https://kirklanddowntown.org/events/kirkland-market/"
 - id: mercer-island-farmers-market
   name: Mercer Island Farmers Market
   city: mercer-island
@@ -183,10 +183,10 @@
   source_label: "Market site"
   last_verified: "2026-10-01"
   photo:
-    image: /assets/images/mercer-island/mercerdale.webp
-    alt: The lawn and path at Mercerdale Park on Mercer Island, with downtown beyond the trees.
-    credit: "Photo: City of Mercer Island"
-    credit_url: "https://www.mercerisland.gov/parksrec/page/mercerdale-park"
+    image: /assets/images/markets/mercer-island-logo.webp
+    alt: Mercer Island Farmers Market logo with an orange carrot.
+    credit: "Logo: Mercer Island Farmers Market"
+    credit_url: "https://mifarmersmarket.org/"
 - id: north-bend-farmers-market
   name: North Bend Farmers Market
   city: north-bend
@@ -201,10 +201,10 @@
   source_label: "Market site"
   last_verified: "2026-10-01"
   photo:
-    image: /assets/images/north-bend/si-view.webp
-    alt: The Si View Park lodge in North Bend, a timber building with Mount Si behind it.
-    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
-    credit_url: "https://commons.wikimedia.org/wiki/File:North_Bend,_WA_-_Si_View_Park_02.jpg"
+    image: /assets/images/markets/north-bend-logo.webp
+    alt: North Bend Farmers Market at Si View Park logo with an apple and carrot.
+    credit: "Logo: Si View Metropolitan Park District"
+    credit_url: "https://www.siviewpark.org/farmers-market.phtml"
 - id: redmond-saturday-market
   name: Redmond Saturday Market
   city: redmond
@@ -256,10 +256,10 @@
   source_label: "Market site"
   last_verified: "2026-10-01"
   photo:
-    image: /assets/images/sammamish/commons.webp
-    alt: Sammamish City Hall and the plaza at Sammamish Commons at night.
-    credit: "Photo: Johnmoffatt2000, CC BY-SA 4.0"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Sammamish_City_Hall2.jpg"
+    image: /assets/images/markets/sammamish-market.webp
+    alt: White tents and a crowd of shoppers at Sammamish Farmers Market.
+    credit: "Photo: Sammamish Farmers Market"
+    credit_url: "https://sammamishfarmersmarket.org/"
 - id: fall-city-summer-market
   name: Fall City Summer Market
   city: snoqualmie
@@ -272,10 +272,10 @@
   source_label: "Market site"
   last_verified: "2026-10-01"
   photo:
-    image: /assets/images/markets/fall-city.webp
-    alt: Fall City, with the Snoqualmie River and the valley hills.
-    credit: "Photo: Kgrr, CC BY-SA 3.0"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Fall_City_WA.jpg"
+    image: /assets/images/markets/fall-city-logo.webp
+    alt: Fall City Summer Market and Gathering logo with a sunflower.
+    credit: "Logo: Fall City Community Association"
+    credit_url: "https://www.fallcity.org/summermarkets"
 - id: woodinville-farmers-market
   name: Woodinville Farmers Market
   city: woodinville
@@ -290,10 +290,10 @@
   source_label: "Market site"
   last_verified: "2026-10-01"
   photo:
-    image: /assets/images/markets/woodinville-lot.webp
-    alt: An empty parking lot at Woodinville Town Center.
-    credit: "Photo: SounderBruce, CC BY-SA 4.0"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Woodinville_Town_Center_parking_lot,_2019.jpg"
+    image: /assets/images/markets/woodinville-music.webp
+    alt: Handmade mugs on a vendor table, with a musician behind, at Woodinville Farmers Market.
+    credit: "Photo: Northshore Farmers Markets"
+    credit_url: "https://www.northshorefarmersmarkets.org/woodinville-farmers-market"
 - id: maple-valley-farmers-market
   name: Maple Valley Farmers Market
   city: maple-valley
