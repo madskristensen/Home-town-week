@@ -24,6 +24,11 @@
   font-size: 1rem;
 }
 
+.suggest-form ::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
 .suggest-form input[type="file"] {
   padding: 0.35rem 0;
   border: 0;
