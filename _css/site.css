@@ -2204,3 +2204,8 @@ a.event-kicker:focus-visible,
   letter-spacing: 0.03em;
 }
 
+
+/* Distance sort: the miles sit at the end of the row or card text. */
+.row-miles {
+  white-space: nowrap;
+}

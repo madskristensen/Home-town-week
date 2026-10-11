@@ -173,6 +173,8 @@
 
   function clearMiles() {
     Array.prototype.forEach.call(root.querySelectorAll(".row-miles"), function (span) {
+      var dot = span.previousSibling;
+      if (dot && dot.nodeType === 3 && dot.nodeValue === " · ") dot.remove();
       span.remove();
     });
   }
@@ -194,10 +196,21 @@
         meta.className = "camp-meta";
         row.querySelector(".camp-name-line").after(meta);
       }
+      // A card's when line is a grid, so the miles go inside the text
+      // itself, never as their own grid item.
+      var host = meta.querySelector(".row-when-text");
+      if (!host && meta.firstChild && meta.firstChild.nodeType === 3) {
+        host = document.createElement("span");
+        host.className = "row-when-text";
+        while (meta.firstChild && meta.firstChild.nodeType === 3) host.appendChild(meta.firstChild);
+        meta.insertBefore(host, meta.firstChild);
+      }
+      host = host || meta;
       var span = document.createElement("span");
       span.className = "row-miles";
-      span.textContent = (meta.textContent.trim() ? " · " : "") + window.milesLabel(row.miles);
-      meta.appendChild(span);
+      span.textContent = window.milesLabel(row.miles);
+      if (host.textContent.trim()) host.appendChild(document.createTextNode(" · "));
+      host.appendChild(span);
       near.push(row);
     });
     near.sort(function (a, b) { return a.miles - b.miles; });
