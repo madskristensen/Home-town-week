@@ -584,7 +584,7 @@ if ("scrollRestoration" in history) history.scrollRestoration = "auto";
     say("Sending your photo…");
     fetch(api.replace(/\/$/, "") + "/photo", { method: "POST", body: form }).then(function (res) {
       if (!res.ok) throw new Error(String(res.status));
-      say("Thanks! Your photo is pending review and will show for everyone after the next update.");
+      say("Thanks! We review new photos daily and may not use every one.");
     }).catch(function (err) {
       revert();
       var msg = err.message === "429" ? "Too many photos for now. Try again later." :
