@@ -1,11 +1,11 @@
 "use strict";
-// POST /api/suggest: an event, a place, or anything else.
+// POST /api/suggest: an event, a place, a city request, or anything else.
 // Saves pending/suggestions/{date}/{uuid}.json, plus the photo if sent.
 const crypto = require("node:crypto");
 const { app } = require("@azure/functions");
 const s = require("../lib/shared");
 
-const KINDS = ["event", "place", "other"];
+const KINDS = ["event", "place", "city", "other"];
 const LIMITS = { name: 200, date: 100, time: 100, place: 300, link: 500, blurb: 2000, contact_email: 200 };
 
 async function handler(request) {

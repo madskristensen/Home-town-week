@@ -12,6 +12,7 @@ permalink: /suggest/
     <select id="sg-kind" name="kind">
       <option value="event">An event</option>
       <option value="place">A place</option>
+      <option value="city">A city we don't cover</option>
       <option value="other">Something else</option>
     </select>
     <label for="sg-link">Link</label>
@@ -42,11 +43,14 @@ permalink: /suggest/
     var words = {
       event: ["Event page", "What it is, when and where"],
       place: ["Place's website", "What it is and why kids love it"],
+      city: ["", "Which city, and what would you want on it?"],
       other: ["Link (optional)", "Tell us what's up"]
     };
     function fit() {
       var w = words[form.kind.value] || words.event;
       linkLabel.textContent = w[0];
+      linkLabel.hidden = form.link.hidden = !w[0];
+      if (!w[0]) form.link.value = "";
       form.blurb.placeholder = w[1];
     }
     form.kind.addEventListener("change", fit);
