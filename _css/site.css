@@ -2226,8 +2226,15 @@ figure figcaption:has(.photo-swap) {
   border: 0;
   background: transparent;
   color: var(--ink);
+  opacity: 0.45;
   cursor: pointer;
   transform: translateY(-50%);
+  transition: opacity 0.15s;
+}
+
+.photo-swap:hover,
+.photo-swap:focus-visible {
+  opacity: 0.9;
 }
 
 .photo-swap::before,

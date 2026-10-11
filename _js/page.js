@@ -538,7 +538,7 @@ if ("scrollRestoration" in history) history.scrollRestoration = "auto";
     var button = document.createElement("button");
     button.type = "button";
     button.className = "photo-swap";
-    button.setAttribute("aria-label", "Suggest a better photo");
+    button.title = "Suggest a better photo of this place";
     strip.appendChild(button);
   });
 
