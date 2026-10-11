@@ -177,6 +177,9 @@
       if (dot && dot.nodeType === 3 && dot.nodeValue === " · ") dot.remove();
       span.remove();
     });
+    Array.prototype.forEach.call(root.querySelectorAll("[data-made]"), function (made) {
+      made.remove();
+    });
   }
 
   function byDistance(rows, ads, here) {
@@ -192,20 +195,25 @@
       row.miles = window.milesTo(here, lat, lng);
       var meta = row.querySelector(metaSel);
       if (!meta) {
+        // No detail line yet (a card out of season): add one in its place.
         meta = document.createElement("p");
-        meta.className = "camp-meta";
-        row.querySelector(".camp-name-line").after(meta);
+        meta.className = metaSel.slice(1);
+        meta.setAttribute("data-made", "");
+        var name = row.querySelector(".camp-name-line");
+        if (name) name.after(meta);
+        else row.querySelector("h2, h3").before(meta);
       }
       // A card's when line is a grid, so the miles go inside the text
       // itself, never as their own grid item.
       var host = meta.querySelector(".row-when-text");
-      if (!host && meta.firstChild && meta.firstChild.nodeType === 3) {
+      if (!host) {
         host = document.createElement("span");
         host.className = "row-when-text";
-        while (meta.firstChild && meta.firstChild.nodeType === 3) host.appendChild(meta.firstChild);
+        while (meta.firstChild && (meta.firstChild.nodeType === 3 || meta.firstChild.nodeName === "TIME")) {
+          host.appendChild(meta.firstChild);
+        }
         meta.insertBefore(host, meta.firstChild);
       }
-      host = host || meta;
       var span = document.createElement("span");
       span.className = "row-miles";
       span.textContent = window.milesLabel(row.miles);

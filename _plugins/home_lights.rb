@@ -69,11 +69,27 @@ module EastsideCalendar
           "id" => item["id"]
         }
       end
+      town_groups!(towns)
       {
         "towns" => towns,
         "pins" => pins,
         "count" => items.size
       }
+    end
+
+    # Data for the shared Group by pills (Town, Distance) on each map card.
+    def town_groups!(towns)
+      towns.each_with_index do |town, index|
+        town["count"] = town["lights"].size
+        town["lights"].each_with_index do |item, spot|
+          bits = [
+            %(data-town="town-#{town["id"]}"), %(data-town-name="#{CGI.escapeHTML(town["name"].to_s)}"),
+            %(data-town-order="#{index + 1}"), %(data-sort="#{format("%02d%03d", index + 1, spot)}")
+          ]
+          bits << %(data-lat="#{item["lat"]}" data-lng="#{item["lng"]}") if item["lat"] && item["lng"]
+          item["group_attrs"] = bits.join(" ")
+        end
+      end
     end
 
     def city_names(cities)

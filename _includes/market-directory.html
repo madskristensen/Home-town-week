@@ -1,14 +1,15 @@
 {%- comment -%}
-  Farmers markets by town, then Worth the drive, with the shared Group by
-  pills (Town, Day, Distance) from group-by-script.html. Cards stay the
-  shared card. Group ids stay town-{city} so old links still land.
+  Map stops by town (farmers markets, Christmas lights, Halloween
+  decorations), with the shared Group by pills from group-by-script.html:
+  Town and Distance, plus Day for markets. Cards stay the shared card.
+  Group ids stay town-{city} so old links still land.
 {%- endcomment -%}
-<section class="camp-directory market-directory" data-row=".card-grid > article" data-list="card-grid" data-meta=".event-when" data-no-address="No street address">
+<section class="camp-directory{% if page.map_id == "markets" %} market-directory{% endif %}" data-row=".card-grid > article" data-list="card-grid" data-meta=".event-when" data-no-address="{% if page.map_id == "markets" %}No street address{% else %}No map spot{% endif %}">
   <div class="camp-group-row">
     <span class="camp-group-label" id="camp-group-label">Group by</span>
     <div class="camp-group-pills" role="group" aria-labelledby="camp-group-label">
       <button type="button" class="camp-pill" data-group="town" aria-pressed="true">Town</button>
-      <button type="button" class="camp-pill" data-group="day" aria-pressed="false">Day</button>
+      {%- if page.map_id == "markets" -%}<button type="button" class="camp-pill" data-group="day" aria-pressed="false">Day</button>{%- endif -%}
       <button type="button" class="camp-pill" data-group="distance" aria-pressed="false">Distance</button>
     </div>
   </div>

@@ -4,7 +4,8 @@
   page.map_id "markets" uses the farmers market data.
   page.map_id "birthdays" uses the birthday venue data, with filter chips
   built from that data.
-  Each stop is the shared event card. The town name is the section heading.
+  Each stop is the shared event card, grouped by town with the shared
+  Group by pills (Town and Distance, plus Day for markets).
 {%- endcomment -%}
 {%- if page.map_id == "halloween" -%}
 {%- assign home_lights = site.data.halloween_map -%}
@@ -137,20 +138,8 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
 {%- endif -%}
 {%- if page.map_id == "birthdays" -%}
 {%- include birthday-directory.html -%}
-{%- elsif page.map_id == "markets" -%}
-{%- include market-directory.html -%}
 {%- else -%}
-{%- for town in home_lights.towns -%}
-<section class="hub-section">
-  <h2 id="town-{{ town.id }}">{{ town.name }}</h2>
-  {%- if town.intro -%}<p class="hub-section-intro">{{ town.intro }}</p>{%- endif -%}
-  {%- if forloop.first -%}
-  {%- include card-grid.html events=town.lights eager=1 priority=true -%}
-  {%- else -%}
-  {%- include card-grid.html events=town.lights eager=0 -%}
-  {%- endif -%}
-</section>
-{%- endfor -%}
+{%- include market-directory.html -%}
 {%- endif -%}
 {%- if page.map_id == "markets" or page.map_id == "birthdays" -%}
 {%- elsif page.map_id == "halloween" -%}
