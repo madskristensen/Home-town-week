@@ -1,0 +1,142 @@
+# Farm stands for the Farm stands section of /farmers-markets/.
+# A farm stand is a farm's own stand, shop, or self-serve shed that sells
+# to the public on the farm or from the farm's storefront. Not a CSA-only
+# pickup, not wholesale-only, not a u-pick-only pumpkin patch, not a
+# grocery store. Verify each on the farm's own site or social page and
+# link that page. Reddit, Tilth, and LocalHarvest are leads only.
+# Same fields as farmers_markets.yml: city is a city id (Fall City uses
+# snoqualmie). lat and lng feed the Distance sort; no map pin.
+# season_start and season_end drive the Open now line (when_open);
+# leave them off when the farm posts no season, and when_closed is shown.
+# self_serve: true only when the farm says self-serve or honor system.
+# photo is optional here: a real photo of that exact farm, credited and
+# linked, or no photo. No recognizable kids. No em dashes.
+- id: carnation-farms-farmstand
+  name: Carnation Farms Farmstand
+  city: carnation
+  address: 28901 NE Carnation Farm Rd
+  lat: 47.6717097
+  lng: -121.9442393
+  season_start: '2026-01-01'
+  season_end: '2026-12-31'
+  when_open: Open year-round. Wednesdays, 11 a.m. to 6 p.m. Thursdays to Sundays, 9 a.m. to 6 p.m.
+  when_closed: Open year-round, Wednesdays to Sundays.
+  description: Year-round farm store across the road from the Carnation Farms grounds, with the farm's organic produce, a butcher counter, and local goods. Open Wednesdays to Sundays, no event ticket needed.
+  source: https://farm.carnationfarms.org/farmstand/
+  source_label: Farm site
+  last_verified: '2026-10-11'
+- id: local-roots-farm-store
+  name: Local Roots Farm Store
+  city: duvall
+  address: 26331 NE Valley St
+  lat: 47.7375558
+  lng: -121.9862174
+  season_start: '2026-01-01'
+  season_end: '2026-12-31'
+  when_open: Open now. Mondays and Wednesdays to Fridays, 9 a.m. to 7 p.m. Weekends, 9 a.m. to 6 p.m. Closed Tuesdays.
+  when_closed: Mondays and Wednesdays to Sundays. Closed Tuesdays.
+  description: The storefront for a family vegetable farm down in the valley below Duvall, with vegetables and herbs from their own fields. Open six days a week, closed Tuesdays.
+  source: https://localrootsfarm.com/farm-stand/
+  source_label: Farm site
+  last_verified: '2026-10-11'
+- id: sound-sustainable-farms-farm-stand
+  name: Sound Sustainable Farms Farm Stand
+  city: redmond
+  address: 14017 NE 124th St
+  lat: 47.7108875
+  lng: -122.153559
+  season_start: '2026-01-01'
+  season_end: '2026-12-31'
+  when_open: Open year-round. Wednesdays, Fridays, and Saturdays, 10 a.m. to 5 p.m. Thursdays, 10 a.m. to 7 p.m.
+  when_closed: Open year-round, Wednesdays to Saturdays.
+  description: Certified organic vegetable farm in the Sammamish Valley with a walk-in cooler of its own produce plus apples, eggs, and local goods. Pumpkins and corn stalks in fall.
+  source: https://www.soundsfarms.com/farm-stand
+  source_label: Farm site
+  last_verified: '2026-10-11'
+- id: ecolibrium-farms-farm-store
+  name: Ecolibrium Farms Farm Store
+  city: redmond
+  address: 13607 Woodinville-Redmond Rd NE
+  lat: 47.722344
+  lng: -122.135435
+  season_start: '2026-04-01'
+  season_end: '2026-10-31'
+  when_open: Open for the 2026 season. Wednesdays to Fridays, 12 to 6 p.m. Saturdays, 10 a.m. to 4 p.m. Sundays, 12 to 4 p.m.
+  when_closed: Seasonal. Check the farm site for the next season.
+  description: Farm store with certified organic vegetables grown out back, plus Washington fruit, eggs, dairy, and pantry items. Open Wednesdays to Sundays in season.
+  source: https://www.ecolibriumfarms.com/farm-store
+  source_label: Farm site
+  last_verified: '2026-10-11'
+- id: tonnemaker-valley-farm-stand
+  name: Tonnemaker Valley Farm Stand
+  city: woodinville
+  address: 16211 140th Pl NE
+  lat: 47.745005
+  lng: -122.147786
+  when_closed: Wednesdays, Fridays, and Saturdays, 10 a.m. to 3 p.m. Thursdays, 10 a.m. to 5:30 p.m.
+  description: Organic farm stand in the Sammamish Valley with fruit from the family's Eastern Washington orchards and vegetables grown on site. Apples, pears, and tomatoes this fall.
+  source: https://www.tonnemaker.com/get-in-touch
+  source_label: Farm site
+  last_verified: '2026-10-11'
+- id: 21-acres-farm-market
+  name: 21 Acres Farm Market
+  city: woodinville
+  address: 13701 NE 171st St
+  lat: 47.7505797
+  lng: -122.1564236
+  season_start: '2026-01-01'
+  season_end: '2026-12-31'
+  when_open: Open year-round. Wednesdays to Fridays, 11 a.m. to 6 p.m. Saturdays, 10 a.m. to 4 p.m.
+  when_closed: Open year-round, Wednesdays to Saturdays.
+  description: Year-round market at the 21 Acres farm and education center, with organic or sustainably grown Washington produce, eggs, dairy, and grains. Open Wednesdays to Saturdays.
+  source: https://21acres.org/farm-market/
+  source_label: Farm site
+  last_verified: '2026-10-11'
+- id: frisky-girl-farm-stand
+  name: Frisky Girl Farm Stand
+  city: north-bend
+  address: 9905 428th Ave SE
+  lat: 47.513059
+  lng: -121.770932
+  season_start: '2026-05-01'
+  season_end: '2026-11-30'
+  when_open: Open every day, May through November, during daylight hours.
+  when_closed: Back in May. Every day, May through November, during daylight hours.
+  description: Blue roadside shed at the field entrance, two driveways north of the house, stocked with the farm's vegetables. Pay by cash, check, or app.
+  source: https://friskygirlfarm.com/
+  source_label: Farm site
+  last_verified: '2026-10-11'
+- id: tollgate-farm-store
+  name: Tollgate Farm Store
+  city: north-bend
+  address: 901 Bendigo Blvd N
+  lat: 47.5030015
+  lng: -121.7942401
+  when_closed: Fridays, 12 to 6 p.m. Saturdays and Sundays, 10 a.m. to 5 p.m.
+  description: Farm store run by the Frisky Girl Farm growers at Tollgate Farm, with Snoqualmie Valley vegetables, fruit, flowers, mushrooms, and pantry staples. Fridays to Sundays.
+  source: https://www.tollgatefarmstore.com/
+  source_label: Farm site
+  last_verified: '2026-10-11'
+- id: farm-among-us
+  name: Farm Among Us
+  city: issaquah
+  address: 10515 Upper Preston Rd SE
+  lat: 47.506717
+  lng: -121.908402
+  self_serve: true
+  when_closed: Self-serve stand, Mondays to Saturdays, from May 2. No end date posted, so check before a fall trip.
+  description: Small no-till market garden in Preston with more than 20 kinds of vegetables, herbs, and a few fruits. The farm stand is self-serve.
+  source: https://www.farmamongus.com/
+  source_label: Farm site
+  last_verified: '2026-10-11'
+- id: celebration-farms-farm-shop
+  name: Celebration Farms Farm Shop
+  city: snoqualmie
+  address: 31022 SE Redmond Fall City Rd, Fall City
+  lat: 47.577816
+  lng: -121.928148
+  when_closed: Fall hours, Fridays to Sundays, 10 a.m. to 6 p.m. Call ahead in other seasons.
+  description: Barn shop on a family farm west of Fall City with apples, pears, cider, specialty pumpkins, local jams, and honey. U-pick berries in summer and Christmas trees in December.
+  source: https://celebrationfarmsfallcity.com/shop
+  source_label: Farm site
+  last_verified: '2026-10-11'

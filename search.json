@@ -72,6 +72,12 @@ sitemap: false
 {%- assign lead = row.description | split: ". " | first | truncate: 90, "" -%}
 [{{ row.name | jsonify }},8,{{ town.name | default: "" | jsonify }},"",{{ murl | jsonify }},{{ lead | jsonify }}],
 {%- endfor -%}
+{%- for row in site.data.farm_stands -%}
+{%- assign town = site.data.cities | where: "id", row.city | first -%}
+{%- assign rid = row.id | default: row.name | slugify -%}
+{%- assign lead = row.description | split: ". " | first | truncate: 90, "" -%}
+[{{ row.name | jsonify }},8,{{ town.name | default: "" | jsonify }},"",{{ rid | prepend: "/farmers-markets/#light-" | jsonify }},{{ lead | prepend: "Farm stand " | jsonify }}],
+{%- endfor -%}
 {%- for row in site.data.farmers_market_drive -%}
 [{{ row.name | jsonify }},8,{{ row.place_city | default: "" | jsonify }},"","/farmers-markets/","Worth the drive"],
 {%- endfor -%}

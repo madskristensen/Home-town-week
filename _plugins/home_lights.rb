@@ -262,13 +262,20 @@ module EastsideCalendar
       Jekyll.logger.info("Farmers markets:", "#{items.size} markets, #{number} on the map")
       drive_rows = Array(site.data["farmers_market_drive"]).select { |row| row.is_a?(Hash) }
       drive = market_drive_items(drive_rows, names, today, site)
-      packed = pack_towns(items + drive)
+      stand_rows = Array(site.data["farm_stands"]).select { |row| row.is_a?(Hash) }
+      stands = farm_stand_items(stand_rows, names, today, site)
+      packed = pack_towns(items + stands + drive)
+      stand_town = packed["towns"].find { |town| town["id"] == "farm-stands" }
+      if stand_town
+        stand_town["name"] = "Farm stands"
+        stand_town["intro"] = "Farm stands and farm stores that sell their own harvest on the farm, checked on each farm's own page."
+      end
       drive_town = packed["towns"].find { |town| town["id"] == "worth-the-drive" }
       if drive_town
         drive_town["name"] = "Worth the drive"
         drive_town["intro"] = "Just outside the Eastside, but worth the drive for a big market morning."
       end
-      market_groups!(packed, rows + drive_rows)
+      market_groups!(packed, rows + stand_rows + drive_rows)
       packed
     end
 
@@ -289,6 +296,27 @@ module EastsideCalendar
         item["city"] = place
         item["city_id"] = "worth-the-drive"
         item["address"] = "#{item["address"]}, #{place}"
+        item.delete("number")
+        item
+      end
+    end
+
+    # Farm stands: _data/farm_stands.yml. One group after the markets.
+    # The town sits on the address line. Photo is optional: a real,
+    # credited photo of that farm, or none. No number, so no map pin.
+    def farm_stand_items(rows, names, today, site)
+      rows.sort_by { |row| [names[row["city"].to_s].to_s.downcase, row["name"].to_s.downcase] }.filter_map do |row|
+        item = market_item(row, names, today)
+        unless item
+          Jekyll.logger.error("Farm stands:", "skipped #{row["name"]}")
+          next
+        end
+        photo = row["photo"] && market_photo(row["photo"], item["name"], site)
+        apply_photo!(item, photo) if photo
+        town = item["city"]
+        item["address"] = "#{item["address"]}, #{town}" unless item["address"].include?(",")
+        item["city_id"] = "farm-stands"
+        item["card_id"] = "light-#{item["id"]}"
         item.delete("number")
         item
       end
