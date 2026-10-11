@@ -1,7 +1,7 @@
 {%- comment -%}
   One short muted line.
-  kind "missing": "Missing something? Tell us. Have a better photo? Send it."
-  Tell us links to /suggest/. Send it is a Better photo mailto.
+  kind "missing": "Missing something? Tell us. Have a better photo? Tap the
+  camera on any photo." Tell us links to the /suggest/ form.
   Use this at the end of a hub or explore page.
   kind "camp": "Know a camp we missed?" with a camp suggestion mailto.
   Otherwise pass href, the lights or decorations mailto, and the line stays
@@ -18,7 +18,7 @@ Link:
 {%- endcapture -%}
 <p class="map-tip">Know a camp we missed? <a href="mailto:suggestions@eastsidecalendar.com?subject={{ suggest_subject | strip | mail_escape }}&amp;body={{ suggest_body | strip | mail_escape }}">Tell us</a>.</p>
 {%- elsif include.kind == "missing" -%}
-<p class="map-tip">Missing something? <a href="{{ '/suggest/' | relative_url }}">Tell us</a>. Have a better photo? <a href="mailto:suggestions@eastsidecalendar.com?subject=Better%20photo&amp;body=Which%20place%20is%20this%20photo%20of%3F%0A%0AWho%20took%20it%3F">Send it</a>.</p>
+<p class="map-tip">Missing something? <a href="{{ '/suggest/' | relative_url }}">Tell us</a>. Have a better photo? Tap the camera on any photo.</p>
 {%- else -%}
 {%- assign tip_href = include.href | append: "" | strip -%}
 {%- if tip_href.size > 0 -%}

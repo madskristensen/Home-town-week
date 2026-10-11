@@ -1,0 +1,15 @@
+{
+  "name": "eastsidecal-submit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Photo and suggestion uploads for eastsidecalendar.com. Azure Functions v4, Node.js.",
+  "main": "src/functions/*.js",
+  "scripts": {
+    "start": "func start",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.5.0",
+    "@azure/storage-blob": "^12.24.0"
+  }
+}

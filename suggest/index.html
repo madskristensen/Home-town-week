@@ -1,72 +1,92 @@
 ---
 layout: default
-title: Suggest an event
-description: Send a family event for Eastside Family Calendar. Include the name, date and time, place, link, a short blurb, and who it's for.
+title: Suggest an event or place
+description: Send a family event, a place, or a note to Eastside Family Calendar. Add the name, date and time, place, link, a short blurb, and a photo if you have one.
 permalink: /suggest/
 ---
-{%- capture suggest_subject -%}Suggest an event{%- endcapture -%}
-{%- capture suggest_body -%}I would like to suggest an event for Eastside Family Calendar.
-
-Event name:
-Date and time:
-Place:
-Link:
-Short blurb:
-Who it's for (kids, families):
-{%- endcapture -%}
-{%- assign suggest_body = suggest_body | strip -%}
-{%- assign suggest_subject = suggest_subject | strip -%}
 <article class="page wrap prose suggest-page">
-  <h1>Suggest an event</h1>
-  <p>Send a family event, a school calendar, or a small thing we missed. We read every note.</p>
-  <h2>What to include</h2>
-  <ul>
-    <li>Event name</li>
-    <li>Date and time</li>
-    <li>Place</li>
-    <li>Link</li>
-    <li>Short blurb</li>
-    <li>Who it's for</li>
-  </ul>
-  <h2>How to send it</h2>
-  <div class="suggest-actions">
-    <a class="btn" href="mailto:suggestions@eastsidecalendar.com?subject={{ suggest_subject | mail_escape }}&amp;body={{ suggest_body | mail_escape }}">Email us</a>
-    <a class="btn" href="https://mail.google.com/mail/?view=cm&amp;to=suggestions@eastsidecalendar.com&amp;su={{ suggest_subject | mail_escape }}&amp;body={{ suggest_body | mail_escape }}" target="_blank" rel="noopener noreferrer">Open in Gmail</a>
-    <button type="button" class="btn" id="suggest-copy">Copy template</button>
-  </div>
-  <div class="suggest-sheet">
-    <p class="suggest-address">suggestions@eastsidecalendar.com</p>
-    <label for="suggest-template">Template</label>
-    <textarea id="suggest-template" class="suggest-template" readonly rows="8">{{ suggest_body | escape }}</textarea>
-  </div>
+  <h1>Suggest an event or place</h1>
+  <p>Send a family event, a place, a school calendar, or a small thing we missed. We read every note and check it before it goes on the site.</p>
+  <form class="suggest-form" id="suggest-form" action="{{ site.submit_api }}/suggest" method="post" enctype="multipart/form-data" novalidate>
+    <label for="sg-kind">What is it?</label>
+    <select id="sg-kind" name="kind">
+      <option value="event">An event</option>
+      <option value="place">A place</option>
+      <option value="partner">Partner with us</option>
+      <option value="other">Something else</option>
+    </select>
+    <label for="sg-name">Name</label>
+    <input id="sg-name" name="name" maxlength="200" required>
+    <div class="suggest-pair">
+      <div>
+        <label for="sg-date">Date</label>
+        <input id="sg-date" name="date" maxlength="100" placeholder="Sat, Nov 7">
+      </div>
+      <div>
+        <label for="sg-time">Time</label>
+        <input id="sg-time" name="time" maxlength="100" placeholder="10 a.m. to noon">
+      </div>
+    </div>
+    <label for="sg-place">Place</label>
+    <input id="sg-place" name="place" maxlength="300" placeholder="Name and address or town">
+    <label for="sg-link">Link</label>
+    <input id="sg-link" name="link" type="url" maxlength="500" placeholder="https://">
+    <label for="sg-blurb">Short blurb</label>
+    <textarea id="sg-blurb" name="blurb" rows="5" maxlength="2000" placeholder="What it is and who it's for"></textarea>
+    <label for="sg-photo">Photo (optional, no kids' faces)</label>
+    <input id="sg-photo" name="photo" type="file" accept="image/*">
+    <label for="sg-email">Your email (optional, only if we need to ask)</label>
+    <input id="sg-email" name="contact_email" type="email" maxlength="200" autocomplete="email">
+    <div class="suggest-trap" aria-hidden="true">
+      <label for="sg-website">Leave this empty</label>
+      <input id="sg-website" name="website" tabindex="-1" autocomplete="off">
+    </div>
+    <button type="submit" class="btn">Send</button>
+    <p class="suggest-status" id="suggest-status" role="status"></p>
+  </form>
+  <p class="suggest-alt">Or email <a href="mailto:suggestions@eastsidecalendar.com">suggestions@eastsidecalendar.com</a>.</p>
 </article>
 <script>
   (function () {
-    var button = document.getElementById("suggest-copy");
-    var field = document.getElementById("suggest-template");
-    if (!button || !field) return;
-    var label = button.textContent;
-    button.addEventListener("click", function () {
-      var text = field.value;
-      function done(ok) {
-        button.textContent = ok ? "Copied" : "Select the template";
-        if (!ok) {
-          field.focus();
-          field.select();
-        }
-        window.setTimeout(function () {
-          button.textContent = label;
-        }, 2000);
+    var form = document.getElementById("suggest-form");
+    var status = document.getElementById("suggest-status");
+    if (!form || !window.fetch) return;
+    var kind = new URLSearchParams(location.search).get("kind");
+    if (kind && form.kind.querySelector("option[value='" + kind.replace(/[^a-z]/g, "") + "']")) form.kind.value = kind;
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (!form.name.value.trim() && !form.blurb.value.trim()) {
+        status.textContent = "Add a name or a short blurb.";
+        form.name.focus();
+        return;
       }
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(function () {
-          done(true);
-        }, function () {
-          done(false);
+      var file = form.photo.files[0];
+      if (file && file.size > 8 * 1024 * 1024) {
+        status.textContent = "That photo is over 8 MB. Try a smaller one.";
+        return;
+      }
+      var button = form.querySelector("button[type=submit]");
+      button.disabled = true;
+      status.textContent = "Sending…";
+      fetch(form.action, { method: "POST", body: new FormData(form) }).then(function (res) {
+        return res.json().catch(function () { return {}; }).then(function (data) {
+          if (!res.ok || !data.ok) throw new Error(data.error || String(res.status));
         });
-      } else {
-        done(false);
-      }
+      }).then(function () {
+        form.reset();
+        status.textContent = "Thanks! We got it and will check it before the next update.";
+      }).catch(function (err) {
+        var why = {
+          rate: "Too many notes from here for now. Try again later.",
+          link: "Check the link. It should start with https://.",
+          email: "Check your email address.",
+          type: "That file is not a photo we can use. Try a JPEG or PNG.",
+          too_long: "Something is too long. Shorten the blurb and try again."
+        };
+        status.textContent = why[err.message] || "That did not send. Try again, or email us.";
+      }).then(function () {
+        button.disabled = false;
+      });
     });
   })();
 </script>

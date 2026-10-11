@@ -15,6 +15,9 @@ image: /assets/images/og-home.png
 image_alt: Eastside Family Calendar map of 14 Eastside towns. Family events, updated daily.
 repository: madskristensen/Home-town-week
 
+# Photo and suggestion uploads go to this Azure Function (code in /api).
+submit_api: https://eastsidecal-submit.azurewebsites.net/api
+
 # Optional Google Search Console token. Leave this empty until Search
 # Console gives you a value. An empty value does not print a meta tag.
 google_site_verification: ""
@@ -44,6 +47,7 @@ plugins:
   - jekyll-sitemap
 
 exclude:
+  - api
   - Gemfile
   - Gemfile.lock
   - README.md

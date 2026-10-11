@@ -504,3 +504,93 @@ if ("scrollRestoration" in history) history.scrollRestoration = "auto";
     apply(button.value);
   });
 })();
+
+/* Better photo: a camera button at the right end of each card photo's
+   credit strip. Picking a file shows it in place at once, then uploads it
+   to the submit API for review. On failure the old photo comes back. */
+(function () {
+  var node = document.querySelector("script[data-api]");
+  var api = node && node.getAttribute("data-api");
+  if (!api || !window.fetch || !window.FormData) return;
+  var strips = document.querySelectorAll(".event-card figure > figcaption, .camp-sponsored figure > figcaption");
+  if (!strips.length) return;
+  var picker = document.createElement("input");
+  picker.type = "file";
+  picker.accept = "image/*";
+  picker.hidden = true;
+  document.body.appendChild(picker);
+  var note = document.createElement("p");
+  note.className = "photo-note";
+  note.setAttribute("role", "status");
+  document.body.appendChild(note);
+  var noteTimer = 0;
+  var target = null;
+
+  function say(text, bad) {
+    note.textContent = text;
+    note.classList.toggle("is-bad", !!bad);
+    note.classList.add("is-on");
+    clearTimeout(noteTimer);
+    noteTimer = setTimeout(function () { note.classList.remove("is-on"); }, 6000);
+  }
+
+  Array.prototype.forEach.call(strips, function (strip) {
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "photo-swap";
+    button.setAttribute("aria-label", "Suggest a better photo");
+    strip.appendChild(button);
+  });
+
+  document.addEventListener("click", function (event) {
+    var button = event.target.closest && event.target.closest(".photo-swap");
+    if (!button) return;
+    target = button.closest("figure");
+    picker.value = "";
+    picker.click();
+  });
+
+  picker.addEventListener("change", function () {
+    var file = picker.files && picker.files[0];
+    var figure = target;
+    if (!file || !figure) return;
+    if (file.size > 8 * 1024 * 1024) {
+      say("That photo is over 8 MB. Try a smaller one.", true);
+      return;
+    }
+    var img = figure.querySelector("img");
+    var card = figure.closest("article, li");
+    var title = card && card.querySelector("h2, h3, .camp-name-line a");
+    var sources = figure.querySelectorAll("source");
+    var old = img ? { src: img.src, srcset: img.getAttribute("srcset") } : null;
+    var url = URL.createObjectURL(file);
+    if (img) {
+      Array.prototype.forEach.call(sources, function (s) { s.setAttribute("data-srcset", s.srcset); s.removeAttribute("srcset"); });
+      img.removeAttribute("srcset");
+      img.src = url;
+    }
+    function revert() {
+      if (!img) return;
+      Array.prototype.forEach.call(sources, function (s) { s.srcset = s.getAttribute("data-srcset"); });
+      if (old.srcset) img.setAttribute("srcset", old.srcset);
+      img.src = old.src;
+      URL.revokeObjectURL(url);
+    }
+    var form = new FormData();
+    form.append("photo", file);
+    form.append("page", location.pathname);
+    form.append("card_id", (card && card.id) || "");
+    form.append("card_name", title ? title.textContent.trim().replace(/^\d+\s+/, "").slice(0, 200) : "");
+    say("Sending your photo…");
+    fetch(api.replace(/\/$/, "") + "/photo", { method: "POST", body: form }).then(function (res) {
+      if (!res.ok) throw new Error(String(res.status));
+      say("Thanks! Your photo is pending review and will show for everyone after the next update.");
+    }).catch(function (err) {
+      revert();
+      var msg = err.message === "429" ? "Too many photos for now. Try again later." :
+        err.message === "415" ? "That file is not a photo we can use. Try a JPEG or PNG." :
+        "The photo did not send. Try again later.";
+      say(msg, true);
+    });
+  });
+})();
