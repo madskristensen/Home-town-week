@@ -104,10 +104,11 @@
     - href: "https://issaquahhighlands.com/event/treats-tails-halloween-event-4/"
       label: "Treats and Tails"
   photo:
-    src: "/assets/images/themes/trick-or-treat-porch.webp"
-    alt: "A glowing jack-o-lantern on a front porch at night."
-    credit: "Photo: Patrick Henry, CC BY 2.0"
-    source: "https://commons.wikimedia.org/wiki/File:Pumpkin_on_the_Porch_(52467890182).jpg"
+    src: "/assets/images/issaquah/treats-and-tails-2026.webp"
+    alt: "Treats and Tails event graphic with costumed cartoon kids and pets, Saturday Oct. 17, 12 to 2 PM."
+    credit: "Image: Issaquah Highlands Council"
+    source: "https://issaquahhighlands.com/event/treats-tails-halloween-event-4/"
+    license: "organizer"
   description: "Trick-or-treat for kids ages 3 to 10 with an adult. Bring a bag. The standby line is free. An optional $5 VIP ticket per trick-or-treating child holds a reserved slot. Adults and babies who are not collecting treats, and pets, do not need a ticket. Pets use a separate patio entrance (green tent, east side). Lines form outside."
   hub_blurb: "Trick-or-treat for kids ages 3 to 10 with an adult."
 - name: "Planting and Tree Care 101"
@@ -457,6 +458,31 @@
       label: "Holiday Tree Lighting"
   description: "A family tree lighting at Village Green Park, with free cocoa, Santa photos, and carols. Apple cider and cookies are served. The tree lights at 5:30 p.m., when Mayor Mark Mullet flips the switch. Santa and Mrs. Claus are there for photos, and Issaquah police and Eastside Fire & Rescue visit."
   hub_blurb: "A family tree lighting at Village Green Park, with free cocoa, Santa photos, and carols."
+- name: "The Village Market Holiday Pop-Up"
+  cost: "Free"
+  setting: "Indoor"
+  tags: [free, christmas]
+  start: "2026-11-22T10:00:00-08:00"
+  end: "2026-11-22T14:00:00-08:00"
+  place: "Blakely Hall, 2550 NE Park Drive, Issaquah Highlands"
+  same_as: "https://issaquahhighlands.com/event/the-village-market-holiday-pop-up-3/"
+  card: "village-market-holiday-pop-up"
+  order: "23"
+  heading_id: "village-market-holiday-pop-up"
+  when: "Sun Nov 22 · 10:00 a.m.–2:00 p.m."
+  blurbs:
+    - "A holiday pop-up market at Blakely Hall with local artisans and small vendors, a good stop for family gift shopping. Free to browse."
+  links:
+    - href: "https://issaquahhighlands.com/event/the-village-market-holiday-pop-up-3/"
+      label: "Village Market Holiday Pop-Up"
+  photo:
+    src: "/assets/images/issaquah/village-market-holiday-pop-up-2026.webp"
+    alt: "The Village Market Holiday Pop-Up graphic with a market stall drawing, Nov. 22, 10 a.m. to 2 p.m."
+    credit: "Image: Issaquah Highlands Council"
+    source: "https://issaquahhighlands.com/event/the-village-market-holiday-pop-up-3/"
+    license: "organizer"
+  description: "A holiday pop-up market at Blakely Hall with local artisans and small vendors, a good stop for family gift shopping. Free to browse."
+  hub_blurb: "A holiday pop-up market at Blakely Hall with local artisans and small vendors."
 - name: "Issaquah Reindeer Festival"
   setting: "Outdoor"
   tags: [santa]
@@ -465,7 +491,7 @@
   place: "Cougar Mountain Zoo, 19525 SE 54th St"
   same_as: "https://www.cougarmountainzoo.org/issaquah-reindeer-festival-offseason/"
   card: "issaquah-reindeer-festival"
-  order: "23"
+  order: "24"
   heading_id: "issaquah-reindeer-festival"
   when: "Fri Nov 27 through Wed Dec 30"
   blurbs:
@@ -486,7 +512,7 @@
   same_as: "https://www.thelittlegym.com/washington-issaquah/events-more/"
   blurb: "A drop-off evening at the gym. Kids run through games, then crafts and stories. The gym lists ages 3 to 10."
   card: "turkey-trot-parent-survival-night"
-  order: "24"
+  order: "25"
   heading_id: "turkey-trot-parent-survival-night"
   when: "Sat Nov 28 · 5:30–8:30 p.m."
   blurbs:
@@ -504,7 +530,7 @@
   place: "Issaquah Depot Museum, 78 1st Ave NE"
   same_as: "https://downtownissaquah.com/events/caroling-at-the-depot-2026/"
   card: "caroling-at-the-depot"
-  order: "25"
+  order: "26"
   heading_id: "caroling-at-the-depot"
   when: "Thu Dec 3 · 6:00–7:30 p.m."
   blurbs:
@@ -523,7 +549,7 @@
   place: "Hunt Family Theatre, 120 Front St N"
   same_as: "https://villagetheatre.org/two-great-kidstage-shows-coming-december-2026/"
   card: "kidstage-footloose"
-  order: "26"
+  order: "27"
   heading_id: "kidstage-footloose"
   when: "Fri Dec 4 through Sun Dec 20"
   blurbs:
@@ -542,7 +568,7 @@
   place: "Longman Performing Arts Center, Issaquah High School"
   same_as: "https://www.issaquahdance.com/nutcracker"
   card: "issaquah-dance-theatre-nutcracker"
-  order: "27"
+  order: "28"
   heading_id: "issaquah-dance-theatre-nutcracker"
   when: "Sat Dec 5 to Sun Dec 6"
   blurbs:
@@ -563,7 +589,7 @@
   organizer_url: "https://downtownissaquah.com/"
   same_as: "https://downtownissaquah.com/events/2026-issaquah-goes-apples-scarecrows-on-front-2/"
   card: "scarecrows-on-front"
-  order: "28"
+  order: "29"
   heading_id: "scarecrows-on-front"
   when: "Through Nov 1 · Entries due Oct 17"
   blurbs:
@@ -578,3 +604,30 @@
     source: "https://commons.wikimedia.org/wiki/File:Scarecrow_in_farm.jpg"
   description: "Build a scarecrow with an apple, drop it at the Historic Shell Station by Oct 17, then see them all downtown through Nov 1. Free straw from the Grange."
   hub_blurb: "Family-built scarecrows line downtown Issaquah through Nov 1."
+- name: "Highlands Parents Night Out"
+  setting: "Indoor"
+  drop_off: true
+  signup: true
+  ages: "Kids"
+  tags: [christmas]
+  start: "2026-12-11T18:00:00-08:00"
+  end: "2026-12-11T21:00:00-08:00"
+  place: "Blakely Hall, 2550 NE Park Drive, Issaquah Highlands"
+  same_as: "https://issaquahhighlands.com/event/parents-night-out-8/"
+  card: "highlands-parents-night-out"
+  order: "30"
+  heading_id: "highlands-parents-night-out"
+  when: "Fri Dec 11 · 6:00–9:00 p.m."
+  blurbs:
+    - "A drop-off evening for kids in kindergarten through 5th grade, with games, crafts, snacks, and a movie run by the teen Highlands Youth board. Pajamas encouraged. Room for 40 kids, so register ahead."
+  links:
+    - href: "https://issaquahhighlands.com/event/parents-night-out-8/"
+      label: "Parents Night Out"
+  photo:
+    src: "/assets/images/issaquah/highlands-parents-night-out-2026.webp"
+    alt: "Parents Night Out graphic with Blakely Hall in snow, Friday Dec. 11, 6 to 9 PM."
+    credit: "Image: Issaquah Highlands Council"
+    source: "https://issaquahhighlands.com/event/parents-night-out-8/"
+    license: "organizer"
+  description: "A drop-off evening for kids in kindergarten through 5th grade, with games, crafts, snacks, and a movie run by the teen Highlands Youth board. Pajamas encouraged. Room for 40 kids, so register ahead."
+  hub_blurb: "A drop-off evening for kids in K to 5th grade at Blakely Hall."
