@@ -322,6 +322,14 @@ var slot = document.getElementById("eastside-map");
         document.head.appendChild(link);
       }
       function addBeacon() {
+        try {
+          var m = /[?&]notrack=([01])/.exec(location.search);
+          if (m) {
+            if (m[1] === "1") localStorage.setItem("notrack", "1");
+            else localStorage.removeItem("notrack");
+          }
+          if (localStorage.getItem("notrack") === "1") return;
+        } catch (e) {}
         if (document.querySelector("script[data-cf-beacon]")) return;
         var script = document.createElement("script");
         script.src = "https://static.cloudflareinsights.com/beacon.min.js";
