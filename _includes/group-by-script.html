@@ -6,7 +6,8 @@
   is one flat list, closest first, from data-lat and data-lng. Rows with
   no coordinates go last under the list's data-no-address heading.
   "open" (farmers markets) reads data-season-start, data-season-end, and
-  data-season-extra and compares them with today in America/Los_Angeles
+  data-season-extra (or data-season-ranges for a row with several seasons)
+  and compares them with today in America/Los_Angeles
   in the browser: Open this season, Closed for the season, then Check
   before you go for rows with no season dates.
 {%- endcomment -%}
@@ -197,6 +198,14 @@
       var key = "check";
       if (start && end) key = today >= start && today <= end ? "open" : "closed";
       if (key !== "open" && extra.some(function (day) { return day >= today; })) key = "open";
+      // Several seasons a year: open only inside one of the ranges.
+      var ranges = (row.getAttribute("data-season-ranges") || "").split(" ").filter(Boolean);
+      if (ranges.length) {
+        key = ranges.some(function (range) {
+          var bits = range.split(":");
+          return today >= bits[0] && today <= bits[1];
+        }) ? "open" : "closed";
+      }
       var spot = seasonGroups.findIndex(function (pair) { return pair[0] === key; });
       row.setAttribute("data-open", key);
       row.setAttribute("data-open-label", seasonGroups[spot][1]);

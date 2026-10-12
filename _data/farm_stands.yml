@@ -188,11 +188,25 @@
   address: 31022 SE Redmond Fall City Rd, Fall City
   lat: 47.577816
   lng: -121.928148
-  when_closed: Fall hours, Fridays to Sundays, 10 a.m. to 6 p.m. Call ahead in other seasons.
-  description: Barn shop on a family farm west of Fall City with apples, pears, cider, specialty pumpkins, local jams, and honey. U-pick berries in summer and Christmas trees in December.
+  season_start: '2026-10-01'
+  season_end: '2027-08-15'
+  seasons:
+    - start: '2026-10-01'
+      end: '2026-10-31'
+      when_open: Open now. October, Fridays to Sundays, 10 a.m. to 6 p.m.
+    - start: '2026-11-21'
+      end: '2026-12-23'
+      when_open: Open now for the holidays, through Dec 23, 10 a.m. to 6 p.m.
+    - start: '2027-06-01'
+      end: '2027-08-15'
+      when_open: Open now for summer. Wednesdays to Sundays, 10 a.m. to 6 p.m.
+  when_open: Open now. Fridays to Sundays, 10 a.m. to 6 p.m. in October.
+  when_next: Back %s, 10 a.m. to 6 p.m.
+  when_closed: Back in June. Wednesdays to Sundays, 10 a.m. to 6 p.m., through mid-August.
+  description: Barn shop on a family farm west of Fall City. Fall brings apples, pears, cider, specialty pumpkins, jams, honey, and gifts. Christmas trees, wreaths, hot chocolate, and Santa visits for the holidays. Cherries, peaches, apricots, melons, and berries in summer.
   source: https://celebrationfarmsfallcity.com/shop
   source_label: Farm site
-  last_verified: '2026-10-11'
+  last_verified: '2026-10-12'
 - id: jubilee-farm-barn-store
   name: Jubilee Farm Barn Store
   city: carnation

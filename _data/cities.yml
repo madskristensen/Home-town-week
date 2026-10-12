@@ -336,7 +336,7 @@
     - name: "Carnation Farms"
       url: "https://events.carnationfarms.org/events/"
       type: venue
-      notes: "Harvest Market and other public days. Skip wine and cocktail nights."
+      notes: "Spring, Harvest, and Holiday markets each year, plus other public days. Skip wine and cocktail nights."
     - name: "Carnation Farmers Market"
       url: "https://carnationfarmersmarket.org/"
       type: market

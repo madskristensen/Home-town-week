@@ -357,6 +357,8 @@ module EastsideCalendar
           bits << %(data-season-end="#{row["season_end"]}") if market_date(row["season_end"])
           extra = Array(row["extra_dates"]).filter_map { |value| market_date(value)&.iso8601 }
           bits << %(data-season-extra="#{extra.join(" ")}") unless extra.empty?
+          ranges = market_seasons(row).map { |start_on, end_on, _| "#{start_on.iso8601}:#{end_on.iso8601}" }
+          bits << %(data-season-ranges="#{ranges.join(" ")}") unless ranges.empty?
           item["group_attrs"] = bits.join(" ")
         end
       end
@@ -374,7 +376,31 @@ module EastsideCalendar
       item
     end
 
+    # A row may list several seasons in a year (a farm shop with fall,
+    # holiday, and summer hours). Each season has start, end, and when_open.
+    def market_seasons(row)
+      Array(row["seasons"]).filter_map do |season|
+        next unless season.is_a?(Hash)
+        start_on = market_date(season["start"])
+        end_on = market_date(season["end"])
+        next unless start_on && end_on
+        [start_on, end_on, squash(season["when_open"])]
+      end.sort
+    end
+
     def market_status(row, today)
+      seasons = market_seasons(row)
+      unless seasons.empty?
+        current = seasons.find { |start_on, end_on, _| today >= start_on && today <= end_on }
+        return (current[2].empty? ? squash(row["when_open"]) : current[2]) if current
+        upcoming = seasons.find { |start_on, _, _| start_on > today }
+        template = row["when_next"].to_s.strip
+        if upcoming && template.include?("%s")
+          return format(template, upcoming[0].strftime("%b %-d"))
+        end
+        return squash(row["when_closed"])
+      end
+
       start_on = market_date(row["season_start"])
       end_on = market_date(row["season_end"])
       extras = Array(row["extra_dates"]).filter_map { |value| market_date(value) }.sort
