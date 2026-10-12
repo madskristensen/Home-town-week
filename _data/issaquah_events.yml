@@ -456,6 +456,12 @@
   links:
     - href: "https://issaquahhighlands.com/event/holiday-tree-lighting-4/"
       label: "Holiday Tree Lighting"
+  photo:
+    src: "/assets/images/issaquah/highlands-holiday-tree-lighting-2026.webp"
+    alt: "Holiday Tree Lighting graphic with a lit evergreen tree, Nov. 19, 5 PM, Village Green Park."
+    credit: "Image: Issaquah Highlands Council"
+    source: "https://issaquahhighlands.com/event/holiday-tree-lighting-4/"
+    license: "organizer"
   description: "A family tree lighting at Village Green Park, with free cocoa, Santa photos, and carols. Apple cider and cookies are served. The tree lights at 5:30 p.m., when Mayor Mark Mullet flips the switch. Santa and Mrs. Claus are there for photos, and Issaquah police and Eastside Fire & Rescue visit."
   hub_blurb: "A family tree lighting at Village Green Park, with free cocoa, Santa photos, and carols."
 - name: "The Village Market Holiday Pop-Up"
