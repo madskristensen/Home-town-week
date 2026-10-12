@@ -24,7 +24,7 @@ hubs:
     footer_label: Fall
     description: Eastside pumpkin patches, corn mazes, apple farms, harvest festivals, and Halloween plans from Sep 1 through Oct 31. Browse Bellevue, Bothell, and the rest of the Eastside.
     llms: Pumpkin patches, corn mazes, u-pick farms, harvest festivals, and Halloween plans for kids.
-    in_season_intro: Pumpkin patches, u-pick farms, harvest festivals, and Halloween plans across the Eastside, listed through Oct 31. For markets still open this month, see [farmers markets](/farmers-markets/).
+    in_season_intro: Pumpkin patches, u-pick farms, harvest festivals, and Halloween plans across the Eastside, listed through Oct 31. For farm hours and a map, see the [pumpkin patch guide](/articles/pumpkin-patches/). For markets still open this month, see [farmers markets](/farmers-markets/).
     off_season_intro: The season runs Sep 1 through Oct 31.
     off_season_listed: The season runs Sep 1 through Oct 31. Dates already set are listed below.
     empty: Nothing is listed yet. City pages are where each event is written up, and this page gathers the fall ones.

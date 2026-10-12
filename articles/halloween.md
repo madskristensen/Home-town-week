@@ -163,7 +163,7 @@ Libraries stay the calm option. [Pumpkin Painting](https://kcls.bibliocommons.co
 
 ## Pumpkin patches
 
-Pumpkin patches, corn mazes, and the farms worth the drive are on the [Fall hub](/fall/). This page does not repeat them.
+The farms, their hours, and a map are in the [pumpkin patch guide](/articles/pumpkin-patches/). Corn mazes and the farms worth the drive are also on the [Fall hub](/fall/). This page does not repeat them.
 
 ## Halloween decorations
 

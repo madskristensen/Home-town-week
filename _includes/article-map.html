@@ -1,0 +1,79 @@
+{%- comment -%}
+  Map of the places on an article. Plain pins from page.map_pins
+  (name, lat, lng, and card when the place has a card on the page).
+  A pin with a card scrolls to it. A pin without one opens the place's own page.
+  Leaflet loads only when the reader taps Show map.
+{%- endcomment -%}
+{%- assign map_pins = page.map_pins -%}
+{%- capture map_count -%}{{ map_pins.size }} places on the map{%- endcapture -%}
+{%- include map-frame.html
+     title_id="article-map-title"
+     canvas_id="article-map-canvas"
+     poster_id="article-map-poster"
+     button_id="article-map-show"
+     count_label=map_count
+     note=include.note
+     loader="false" %}
+<script type="application/json" id="article-map-pins">{{ map_pins | jsonify | replace: '<', '\u003c' }}</script>
+{%- include map-loader.html -%}
+<script>
+(function () {
+  var button = document.getElementById("article-map-show");
+  var poster = document.getElementById("article-map-poster");
+  var canvas = document.getElementById("article-map-canvas");
+  var data = document.getElementById("article-map-pins");
+  if (!button || !poster || !canvas || !data) return;
+  var cssUrl = {{ "/assets/leaflet/leaflet.css" | relative_url | jsonify }};
+  var jsUrl = {{ "/assets/leaflet/leaflet.js" | relative_url | jsonify }};
+  var started = false;
+
+  function showMap(pins) {
+    var map = L.map(canvas, { scrollWheelZoom: false });
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    var bounds = [];
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    pins.forEach(function (pin) {
+      var icon = L.divIcon({ className: "map-pin", html: "", iconSize: [16, 16], iconAnchor: [8, 8] });
+      var marker = L.marker([pin.lat, pin.lng], { icon: icon, title: pin.name, keyboard: true });
+      var tip = document.createElement("span");
+      tip.textContent = pin.name == null ? "" : String(pin.name);
+      marker.bindTooltip(tip, { direction: "top" });
+      marker.on("click", function () {
+        var card = pin.card ? document.getElementById(pin.card) : null;
+        if (card) {
+          card.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+        } else if (pin.href) {
+          window.open(pin.href, "_blank", "noopener");
+        }
+      });
+      marker.addTo(map);
+      bounds.push([pin.lat, pin.lng]);
+    });
+    if (bounds.length === 1) map.setView(bounds[0], 14);
+    else if (bounds.length > 1) map.fitBounds(bounds, { padding: [28, 28] });
+    window.setTimeout(function () { map.invalidateSize(); }, 50);
+  }
+
+  button.addEventListener("click", function () {
+    if (started) return;
+    started = true;
+    button.disabled = true;
+    button.textContent = "Loading map";
+    var pins = [];
+    try { pins = JSON.parse(data.textContent || "[]"); } catch (error) { pins = []; }
+    Promise.all([window.loadMapCss(cssUrl), window.loadMapJs(jsUrl)]).then(function () {
+      canvas.hidden = false;
+      poster.hidden = true;
+      showMap(pins);
+    }).catch(function () {
+      started = false;
+      button.disabled = false;
+      button.textContent = "Show map";
+      poster.insertAdjacentHTML("beforeend", "<p class=\"map-error\">The map did not load. The list below still has every farm.</p>");
+    });
+  });
+})();
+</script>

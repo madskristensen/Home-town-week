@@ -6,7 +6,7 @@
 {%- assign css_season = site.data.seasonal_banner.path | append: "" -%}
 {%- assign css_feature = false -%}
 {%- assign css_map = false -%}
-{%- if page.home_lights or page.guide_id == "playgrounds" -%}
+{%- if page.home_lights or page.guide_id == "playgrounds" or page.map_pins -%}
 {%- assign css_map = true -%}
 {%- endif -%}
 {%- if page.map_id == "birthdays" -%}{%- assign css_map = false -%}{%- endif -%}
