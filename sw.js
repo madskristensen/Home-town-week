@@ -292,10 +292,14 @@ function staleWhileRevalidate(event, request, cacheName) {
             if (cacheName === PAGES) return trimPages(cache);
           });
         };
+        if (!response || !response.ok || response.type !== "basic") return response;
+        // Hand the image back now. Cache from a clone in the background so
+        // a queued write or trim never holds a first-view image hostage.
+        var original = response;
+        response = response.clone();
         var stored = cacheName === IMAGES ? enqueueImageWrite(store) : store();
-        return stored.then(function () {
-          return response;
-        });
+        event.waitUntil(stored.catch(function () {}));
+        return original;
       }).catch(function () {
         return cached;
       });
