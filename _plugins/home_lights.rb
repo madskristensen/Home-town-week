@@ -250,16 +250,18 @@ module EastsideCalendar
         apply_photo!(item, photo)
         items << item
       end
-      number = 0
+      # No numbers on this page: plain pins, and each card keeps an id
+      # so a pin click and #light-{id} links still land on its card.
       items.each do |item|
-        if item["lat"].nil? || item["lng"].nil?
-          item.delete("number")
-        else
-          number += 1
-          item["number"] = number
-        end
+        item.delete("number")
+        item["card_id"] = "light-#{item["id"]}"
       end
-      Jekyll.logger.info("Farmers markets:", "#{items.size} markets, #{number} on the map")
+      pins = items.filter_map do |item|
+        next if item["lat"].nil? || item["lng"].nil?
+
+        { "lat" => item["lat"], "lng" => item["lng"], "name" => item["name"], "id" => item["id"] }
+      end
+      Jekyll.logger.info("Farmers markets:", "#{items.size} markets, #{pins.size} on the map")
       drive_rows = Array(site.data["farmers_market_drive"]).select { |row| row.is_a?(Hash) }
       drive = market_drive_items(drive_rows, names, today, site)
       stand_rows = Array(site.data["farm_stands"]).select { |row| row.is_a?(Hash) }
@@ -276,6 +278,7 @@ module EastsideCalendar
         drive_town["intro"] = "Just outside the Eastside, but worth the drive for a big market morning."
       end
       market_groups!(packed, rows + stand_rows + drive_rows)
+      packed["pins"] = pins
       packed
     end
 
@@ -295,6 +298,7 @@ module EastsideCalendar
         apply_photo!(item, photo)
         item["city"] = place
         item["city_id"] = "worth-the-drive"
+        item["card_id"] = "light-#{item["id"]}"
         item["address"] = "#{item["address"]}, #{place}"
         item.delete("number")
         item
@@ -348,6 +352,11 @@ module EastsideCalendar
             %(data-day="#{day.downcase}"), %(data-day-label="#{label}"), %(data-day-order="#{order + 1}")
           ]
           bits << %(data-lat="#{item["lat"]}" data-lng="#{item["lng"]}") if item["lat"] && item["lng"]
+          # Season dates for the Open now grouping, worked out in the browser.
+          bits << %(data-season-start="#{row["season_start"]}") if market_date(row["season_start"])
+          bits << %(data-season-end="#{row["season_end"]}") if market_date(row["season_end"])
+          extra = Array(row["extra_dates"]).filter_map { |value| market_date(value)&.iso8601 }
+          bits << %(data-season-extra="#{extra.join(" ")}") unless extra.empty?
           item["group_attrs"] = bits.join(" ")
         end
       end

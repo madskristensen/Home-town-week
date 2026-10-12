@@ -48,7 +48,11 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
 {%- assign home_count = home_lights.count | default: 0 -%}
 {%- capture lights_count -%}{{ home_count }} {{ map_noun }}{%- endcapture -%}
 {%- unless page.map_id == "birthdays" -%}
+{%- if page.map_id == "markets" -%}
+{%- assign map_note = "Tap a pin to jump to that market." -%}
+{%- else -%}
 {%- assign map_note = "Numbers on the map match the list." -%}
+{%- endif -%}
 {%- include map-frame.html
      title_id="lights-map-title"
      canvas_id="home-map-canvas"

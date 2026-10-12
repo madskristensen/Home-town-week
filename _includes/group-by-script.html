@@ -5,6 +5,10 @@
   sets data-row, data-list, and data-meta on the .camp-directory root. "distance"
   is one flat list, closest first, from data-lat and data-lng. Rows with
   no coordinates go last under the list's data-no-address heading.
+  "open" (farmers markets) reads data-season-start, data-season-end, and
+  data-season-extra and compares them with today in America/Los_Angeles
+  in the browser: Open this season, Closed for the season, then Check
+  before you go for rows with no season dates.
 {%- endcomment -%}
 {%- include near-me.html -%}
 <script>
@@ -171,6 +175,35 @@
     return blocks;
   }
 
+  // Season status from the row's dates, with today in Pacific time, so the
+  // groups stay right between daily builds. A row that is past its season
+  // but has an extra market day still ahead counts as open.
+  var seasonGroups = [["open", "Open this season"], ["closed", "Closed for the season"], ["check", "Check before you go"]];
+
+  function pacificToday() {
+    try {
+      return new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+    } catch (e) {
+      return new Date().toISOString().slice(0, 10);
+    }
+  }
+
+  function markSeasons(rows) {
+    var today = pacificToday();
+    rows.forEach(function (row) {
+      var start = row.getAttribute("data-season-start") || "";
+      var end = row.getAttribute("data-season-end") || "";
+      var extra = (row.getAttribute("data-season-extra") || "").split(" ").filter(Boolean);
+      var key = "check";
+      if (start && end) key = today >= start && today <= end ? "open" : "closed";
+      if (key !== "open" && extra.some(function (day) { return day >= today; })) key = "open";
+      var spot = seasonGroups.findIndex(function (pair) { return pair[0] === key; });
+      row.setAttribute("data-open", key);
+      row.setAttribute("data-open-label", seasonGroups[spot][1]);
+      row.setAttribute("data-open-order", String(spot + 1));
+    });
+  }
+
   function clearMiles() {
     Array.prototype.forEach.call(root.querySelectorAll(".row-miles"), function (span) {
       var dot = span.previousSibling;
@@ -245,6 +278,7 @@
     var rows = originals();
     var ads = sponsors();
     clearMiles();
+    if (mode === "open") markSeasons(rows.concat(ads));
     var blocks = mode === "distance" ? byDistance(rows, ads, here) : mode === "ages" ? byAges(rows, ads) : byKey(mode, rows, ads);
     paint(blocks);
     press(mode);
