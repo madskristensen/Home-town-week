@@ -16,15 +16,15 @@ banner:
 hubs:
   - id: fall
     path: /fall/
-    title: Fall and Halloween fun for kids on the Eastside
+    title: Pumpkin patches, fall festivals, and Halloween on the Eastside
     banner_title: Fall fun for kids
-    hook: Pumpkin patches, corn mazes, harvest festivals and Halloween.
+    hook: Pumpkin patches, corn mazes, harvest festivals, and Halloween.
     link_label: See events
     footer: true
     footer_label: Fall
-    description: Fall and Halloween fun for kids on the Eastside. Pumpkin patches, apple farms, harvest festivals, and trick-or-treat from Sep 1 through Oct 31.
+    description: Eastside pumpkin patches, corn mazes, apple farms, harvest festivals, and Halloween plans from Sep 1 through Oct 31. Browse Bellevue, Bothell, and the rest of the Eastside.
     llms: Pumpkin patches, corn mazes, u-pick farms, harvest festivals, and Halloween plans for kids.
-    in_season_intro: Pumpkin patches, u-pick farms, harvest festivals, and Halloween plans across the Eastside, listed through Oct 31.
+    in_season_intro: Pumpkin patches, u-pick farms, harvest festivals, and Halloween plans across the Eastside, listed through Oct 31. For markets still open this month, see [farmers markets](/farmers-markets/).
     off_season_intro: The season runs Sep 1 through Oct 31.
     off_season_listed: The season runs Sep 1 through Oct 31. Dates already set are listed below.
     empty: Nothing is listed yet. City pages are where each event is written up, and this page gathers the fall ones.
@@ -35,7 +35,7 @@ hubs:
       - id: patches
         title: Pumpkin patches and corn mazes
         toc: Pumpkin patches and corn mazes
-        intro: Pumpkin patches and corn mazes open across the Eastside.
+        intro: Pumpkin patches and corn mazes across Bellevue, Redmond, Issaquah, Bothell, and the rest of the Eastside.
         tags: [pumpkin-patch, corn-maze]
         keywords: [pumpkin patch]
       - id: u-pick
