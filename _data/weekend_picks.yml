@@ -1,12 +1,15 @@
-# Home-page picks for Friday Oct 9 through Sunday Oct 11, 2026.
-# Refreshed Sunday Oct 11: Saturday's picks have ended, so these are the Sunday standouts.
-# The Halloween Train and the Cedar River Salmon Journey both run Sunday.
+# Home-page picks for Friday Oct 16 through Sunday Oct 18, 2026.
+# Refreshed Monday Oct 12 for the upcoming weekend.
 # Names match _data/{city}_events.yml.
+- city: redmond
+  name: Harvest Festival
+- city: bellevue
+  name: Diwali Sangam
 - city: snoqualmie
   name: Halloween Train
-- city: renton
-  name: Cedar River Salmon Journey at Cedar River Park
 - city: maple-valley
   name: Haunted Forest Family Walk
-- city: mercer-island
-  name: Mercer Island Farmers Market
+- city: issaquah
+  name: Issaquah Goes Apples
+- city: north-bend
+  name: Oaktoberfest and Arbor Day planting

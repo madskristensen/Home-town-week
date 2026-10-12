@@ -1,31 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Under the Mushroom"
-  setting: "Indoor"
-  ages: "Toddlers"
-  signup: true
-  start: "2026-10-03T11:00:00-07:00"
-  end: "2026-10-11T11:00:00-07:00"
-  place: "Studio33, 13259 NE 20th St"
-  same_as: "https://theatre33.ludus.com/"
-  card: "under-the-mushroom"
-  order: "1"
-  heading_id: "under-the-mushroom"
-  when: "Sat Oct 3 through Sun Oct 11"
-  blurbs:
-    - "A short Russian-language fairy tale from Theatre33 for little children, with older siblings and parents welcome. Games and a craft follow the story. Showtimes are Saturday, Oct 3 at 11:00 a.m. and 5:00 p.m., Saturday, Oct 10 at 11:00 a.m. and 5:00 p.m., and Sunday, Oct 11 at 11:00 a.m. Those performances are sold out."
-  links:
-    - href: "https://theatre33.ludus.com/"
-      label: "Theatre33 tickets"
-  photo:
-    src: "/assets/images/bellevue/under-the-mushroom.webp"
-    alt: "Poster for Under the Mushroom, with illustrated forest animals around the title."
-    credit: "Image: Theatre33"
-    source: "https://www.theatre33wa.org/"
-    license: "organizer"
-  description: "A short Russian-language fairy tale from Theatre33 for little children, with older siblings and parents welcome. Games and a craft follow the story. Showtimes are Saturday, Oct 3 at 11:00 a.m. and 5:00 p.m., Saturday, Oct 10 at 11:00 a.m. and 5:00 p.m., and Sunday, Oct 11 at 11:00 a.m. Those performances are sold out."
-  hub_blurb: "A short Russian-language fairy tale from Theatre33 for little children, with older siblings and parents welcome."
 - name: "Lake Hills Greenbelt Ranger Walk"
   cost: "Free"
   setting: "Outdoor"
@@ -37,7 +12,7 @@
   card: "lake-hills-greenbelt-ranger-walk"
   order: "6"
   heading_id: "lake-hills-greenbelt-ranger-walk"
-  when: "Sat Oct 10 · 2:00–3:00 p.m."
+  when: "Saturdays through Dec 26 · 2:00–3:00 p.m."
   blurbs:
     - "A free one-mile ranger hike for all ages on the mostly level gravel trails. The fall guide lists it Saturdays at 2:00 p.m. through Dec 26. Oct 3 is not on that list. Register ahead. Bring binoculars if you have them."
   links:
@@ -47,24 +22,6 @@
       label: "Register"
   description: "A free one-mile ranger hike for all ages on the mostly level gravel trails. The fall guide lists it Saturdays at 2:00 p.m. through Dec 26. Oct 3 is not on that list. Register ahead. Bring binoculars if you have them."
   hub_blurb: "A free one-mile ranger hike for all ages on the mostly level gravel trails."
-- name: "Bellevue Jazz Student Showcase"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-11T11:00:00-07:00"
-  end: "2026-10-11T17:15:00-07:00"
-  place: "Meydenbauer Center Theatre, 11100 NE 6th Street"
-  same_as: "https://www.bellevuedowntown.com/jazz-and-blues-music-series/lineup"
-  card: "bellevue-jazz-student-showcase"
-  order: "8"
-  heading_id: "bellevue-jazz-student-showcase"
-  when: "Sun Oct 11 · 11:00 a.m.–5:15 p.m."
-  blurbs:
-    - "A free afternoon of school jazz at Meydenbauer Center Theatre. Six combos, from middle school and high school, each play a short set. You can stay for one or for the whole afternoon. No tickets."
-  links:
-    - href: "https://www.bellevuedowntown.com/jazz-and-blues-music-series/lineup"
-      label: "Jazz and Blues lineup"
-  description: "A free afternoon of school jazz at Meydenbauer Center Theatre. Six combos, from middle school and high school, each play a short set. You can stay for one or for the whole afternoon. No tickets."
-  hub_blurb: "A free afternoon of school jazz at Meydenbauer Center Theatre."
 - name: "Drop-in Play at Kelsey Creek Farm"
   cost: "Free"
   ages: "Toddlers"

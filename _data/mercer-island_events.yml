@@ -1,42 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Mercer Island Farmers Market"
-  setting: "Outdoor"
-  start: "2026-10-11T10:00:00-07:00"
-  end: "2026-10-11T14:00:00-07:00"
-  place: "7700 SE 32nd St"
-  same_as: "https://www.mifarmersmarket.org/"
-  card: "mercer-island-farmers-market-1"
-  order: "5"
-  heading_id: "mercer-island-farmers-market-1"
-  when: "Sun Oct 11 · 10:00 a.m.–2:00 p.m."
-  blurbs:
-    - "The last Sunday. The season ends Oct 11. Same hours, 10:00 a.m.–2:00 p.m."
-  links:
-    - href: "https://www.mercerisland.gov/community/page/mercer-island-farmers-market-0"
-      label: "City page"
-  description: "The last Sunday. The season ends Oct 11. Same hours, 10:00 a.m.–2:00 p.m."
-  hub_blurb: "The last Sunday."
-- name: "Family Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  ages: "Toddlers"
-  start: "2026-10-11T11:15:00-07:00"
-  end: "2026-10-11T12:00:00-07:00"
-  place: "Mercer Island Library, 4400 88th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/v2/events/6a7e21c1be14820029872dae"
-  card: "family-story-time-1"
-  order: "6"
-  heading_id: "family-story-time-1"
-  when: "Sun Oct 11 · 11:15 a.m.–12:00 p.m."
-  blurbs:
-    - "Stories and play time for ages 0 to 5 with an adult."
-  links:
-    - href: "https://kcls.bibliocommons.com/v2/events/6a7e21c1be14820029872dae"
-      label: "Family Story Time"
-  description: "Stories and play time for ages 0 to 5 with an adult."
-  hub_blurb: "Stories and play time for ages 0 to 5 with an adult."
 - name: "Pumpkin Painting"
   cost: "Free"
   ages: "All ages"
