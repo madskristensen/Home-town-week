@@ -534,6 +534,50 @@ if ("scrollRestoration" in history) history.scrollRestoration = "auto";
   var noteTimer = 0;
   var target = null;
 
+  // Photos are scaled so the long edge is at most 1600px, the widest
+  // variant the site serves (city hero srcset). Phone photos shrink from
+  // 3-12 MB to a few hundred KB. A file the browser cannot decode (HEIC
+  // on most non-Apple browsers) goes up as is.
+  var MAX_EDGE = 1600;
+  var MAX_BYTES = 8 * 1024 * 1024;
+
+  function decode(file) {
+    if (window.createImageBitmap) {
+      return createImageBitmap(file, { imageOrientation: "from-image" }).catch(function () {
+        return createImageBitmap(file);
+      });
+    }
+    return new Promise(function (resolve, reject) {
+      var url = URL.createObjectURL(file);
+      var im = new Image();
+      im.onload = function () { URL.revokeObjectURL(url); resolve(im); };
+      im.onerror = function () { URL.revokeObjectURL(url); reject(new Error("decode")); };
+      im.src = url;
+    });
+  }
+
+  function shrink(file) {
+    return decode(file).then(function (src) {
+      var w = src.naturalWidth || src.width;
+      var h = src.naturalHeight || src.height;
+      if (!w || !h) throw new Error("decode");
+      var scale = Math.min(1, MAX_EDGE / Math.max(w, h));
+      var canvas = document.createElement("canvas");
+      canvas.width = Math.max(1, Math.round(w * scale));
+      canvas.height = Math.max(1, Math.round(h * scale));
+      var ctx = canvas.getContext("2d");
+      ctx.fillStyle = "#fff";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(src, 0, 0, canvas.width, canvas.height);
+      if (src.close) src.close();
+      return new Promise(function (resolve) {
+        canvas.toBlob(function (blob) { resolve(blob && blob.size ? blob : file); }, "image/jpeg", 0.85);
+      });
+    }).catch(function () {
+      return file;
+    });
+  }
+
   function say(text, bad) {
     note.textContent = text;
     note.classList.toggle("is-bad", !!bad);
@@ -562,10 +606,6 @@ if ("scrollRestoration" in history) history.scrollRestoration = "auto";
     var file = picker.files && picker.files[0];
     var figure = target;
     if (!file || !figure) return;
-    if (file.size > 8 * 1024 * 1024) {
-      say("That photo is over 8 MB. Try a smaller one.", true);
-      return;
-    }
     var img = figure.querySelector("img");
     var card = figure.closest("article, li");
     var title = card && card.querySelector("h2, h3, .camp-name-line a");
@@ -584,19 +624,24 @@ if ("scrollRestoration" in history) history.scrollRestoration = "auto";
       img.src = old.src;
       URL.revokeObjectURL(url);
     }
-    var form = new FormData();
-    form.append("photo", file);
-    form.append("page", location.pathname);
-    form.append("card_id", (card && card.id) || "");
-    form.append("card_name", title ? title.textContent.trim().replace(/^\d+\s+/, "").slice(0, 200) : "");
+    var cardName = title ? title.textContent.trim().replace(/^\d+\s+/, "").slice(0, 200) : "";
     say("Sending your photo…");
-    fetch(api.replace(/\/$/, "") + "/photo", { method: "POST", body: form }).then(function (res) {
+    shrink(file).then(function (blob) {
+      if (blob.size > MAX_BYTES) throw new Error("413");
+      var form = new FormData();
+      form.append("photo", blob, blob === file ? file.name : "photo.jpg");
+      form.append("page", location.pathname);
+      form.append("card_id", (card && card.id) || "");
+      form.append("card_name", cardName);
+      return fetch(api.replace(/\/$/, "") + "/photo", { method: "POST", body: form });
+    }).then(function (res) {
       if (!res.ok) throw new Error(String(res.status));
       say("Thanks! We review new photos daily and may not use every one.");
     }).catch(function (err) {
       revert();
       var msg = err.message === "429" ? "Too many photos for now. Try again later." :
         err.message === "415" ? "That file is not a photo we can use. Try a JPEG or PNG." :
+        err.message === "413" ? "That photo is over 8 MB. Try a smaller one." :
         "The photo did not send. Try again later.";
       say(msg, true);
     });
