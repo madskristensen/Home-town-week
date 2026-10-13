@@ -1,7 +1,3 @@
-# Upcoming events for this city, earliest first.
-# Delete an event after it ends. Do not group these by week.
-# Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-# Covington events are listed on this page, the way Fall City is listed on Snoqualmie.
 - name: "Maple Valley Farmers Market"
   setting: "Outdoor"
   start: "2026-10-03T09:00:00-07:00"
@@ -13,17 +9,18 @@
   heading_id: "maple-valley-farmers-market"
   when: "Sat Oct 3 through Sat Oct 31 · Saturdays 9:00 a.m.–2:00 p.m."
   blurbs:
-    - "The Saturday market, open each Saturday from May 2 through Oct 31."
+  - "The Saturday market, open each Saturday from May 2 through Oct 31."
   links:
-    - href: "https://www.maplevalleyfarmersmarket.com/"
-      label: "Maple Valley Farmers Market"
+  - href: "https://www.maplevalleyfarmersmarket.com/"
+    label: "Maple Valley Farmers Market"
   description: "The Saturday market, open each Saturday from May 2 through Oct 31."
   hub_blurb: "The Saturday market, open each Saturday from May 2 through Oct 31."
 - name: "Haunted Forest Family Walk"
   cost: "$7"
   setting: "Outdoor"
   signup: true
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-04T12:00:00-07:00"
   end: "2026-10-25T15:00:00-07:00"
   place: "Royal Arch Park, 20821 Renton-Maple Valley Rd, Maple Valley"
@@ -33,51 +30,17 @@
   heading_id: "haunted-forest-family-walk"
   when: "Sundays Oct 18 and Oct 25 · 12:00–3:00 p.m."
   blurbs:
-    - "A daylight walk on the haunted trail, with no jump scares, and trick-or-treating while the candy lasts. Admission is $7. Ages 3 and under are free. The ticket booth closes at 2:30 p.m. This is the Sunday family walk. The Friday and Saturday night show is a separate, scarier ticket."
+  - "A daylight walk on the haunted trail, with no jump scares, and trick-or-treating while the candy\
+    \ lasts. Admission is $7. Ages 3 and under are free. The ticket booth closes at 2:30 p.m. This is\
+    \ the Sunday family walk. The Friday and Saturday night show is a separate, scarier ticket."
   links:
-    - href: "https://hauntedforestofmaplevalley.org/ticket-info"
-      label: "Ticket info"
-  description: "A daylight walk on the haunted trail, with no jump scares, and trick-or-treating while the candy lasts. Admission is $7. Ages 3 and under are free. The ticket booth closes at 2:30 p.m. This is the Sunday family walk. The Friday and Saturday night show is a separate, scarier ticket."
-  hub_blurb: "A daylight walk on the haunted trail, with no jump scares, and trick-or-treating while the candy lasts."
-- name: "Baby Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags: [story-time]
-  start: "2026-10-12T13:00:00-07:00"
-  end: "2026-10-12T14:00:00-07:00"
-  place: "Covington Library, 27100 164th Ave SE, Covington"
-  same_as: "https://kcls.bibliocommons.com/events/6a63c8a27d824676437d1589"
-  card: "baby-story-time"
-  order: "3"
-  heading_id: "baby-story-time"
-  when: "Mon Oct 12 · 1:00–2:00 p.m."
-  blurbs:
-    - "Rhymes, songs, and stories for babies from newborn to 12 months with an adult, then up to half an hour of play. Toddlers and older siblings are welcome. No registration, and space is limited."
-  links:
-    - href: "https://kcls.bibliocommons.com/events/6a63c8a27d824676437d1589"
-      label: "Baby Story Time"
-  description: "Rhymes, songs, and stories for babies from newborn to 12 months with an adult, then up to half an hour of play. Toddlers and older siblings are welcome. No registration, and space is limited."
-  hub_blurb: "Rhymes, songs, and stories for babies from newborn to 12 months."
-- name: "Creative Corner"
-  cost: "Free"
-  setting: "Indoor"
-  signup: true
-  start: "2026-10-12T16:30:00-07:00"
-  end: "2026-10-12T17:30:00-07:00"
-  place: "Covington Library, 27100 164th Ave SE, Covington"
-  same_as: "https://kcls.bibliocommons.com/events/6aa89f0a3dd190003e71fea5"
-  card: "creative-corner"
-  order: "4"
-  heading_id: "creative-corner"
-  when: "Mon Oct 12 · 4:30–5:30 p.m."
-  blurbs:
-    - "Make a mini ghost in a jar from air clay. Supplies are provided. Ages 9 to 12, and the age limit is enforced. Registration is required."
-  links:
-    - href: "https://kcls.bibliocommons.com/events/6aa89f0a3dd190003e71fea5"
-      label: "Creative Corner"
-  description: "Make a mini ghost in a jar from air clay. Supplies are provided. Ages 9 to 12, and the age limit is enforced. Registration is required."
-  hub_blurb: "Make a mini ghost in a jar from air clay."
+  - href: "https://hauntedforestofmaplevalley.org/ticket-info"
+    label: "Ticket info"
+  description: "A daylight walk on the haunted trail, with no jump scares, and trick-or-treating while\
+    \ the candy lasts. Admission is $7. Ages 3 and under are free. The ticket booth closes at 2:30 p.m.\
+    \ This is the Sunday family walk. The Friday and Saturday night show is a separate, scarier ticket."
+  hub_blurb: "A daylight walk on the haunted trail, with no jump scares, and trick-or-treating while the\
+    \ candy lasts."
 - name: "Afternoon Play Date"
   cost: "Free"
   setting: "Indoor"
@@ -90,18 +53,46 @@
   heading_id: "afternoon-play-date"
   when: "Tue Oct 13 · 3:00–4:00 p.m."
   blurbs:
-    - "A drop-in play session for a newborn through age 6, with an adult. Siblings can come. No registration."
+  - "A drop-in play session for a newborn through age 6, with an adult. Siblings can come. No registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a85d90bb20478002993ecfc"
-      label: "Afternoon Play Date"
-  description: "A drop-in play session for a newborn through age 6, with an adult. Siblings can come. No registration."
+  - href: "https://kcls.bibliocommons.com/events/6a85d90bb20478002993ecfc"
+    label: "Afternoon Play Date"
+  description: "A drop-in play session for a newborn through age 6, with an adult. Siblings can come.\
+    \ No registration."
   hub_blurb: "A drop-in play session for a newborn through age 6, with an adult."
+- name: "Teen Lounge"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-14T12:30:00-07:00"
+  end: "2026-10-14T14:30:00-07:00"
+  place: "Covington Library, 27100 164th Ave SE, Covington"
+  same_as: "https://kcls.bibliocommons.com/events/6a91f3d557c264087ad49149"
+  card: "teen-lounge"
+  heading_id: "teen-lounge"
+  when: "Wed Oct 14 · 12:30–2:30 p.m."
+  blurbs:
+  - "Games, homework, art, and free snacks for middle and high school students at Covington Library. Sponsored\
+    \ by the Friends of the Covington Library."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a91f3d557c264087ad49149"
+    label: "Teen Lounge"
+  description: "Games, homework, art, and free snacks for middle and high school students at Covington\
+    \ Library. Sponsored by the Friends of the Covington Library."
+  hub_blurb: "Games, homework help, and snacks for teens."
+  ages: "Teens"
+  photo:
+    src: "/assets/images/maple-valley/covington-library.webp"
+    alt: "Covington Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/covington/"
+    license: "organizer"
 - name: "Sugar Skulls with ArtMaranth"
   cost: "Free"
   ages: "Kids"
   setting: "Indoor"
   signup: true
-  tags: [dia-de-los-muertos]
+  tags:
+  - "dia-de-los-muertos"
   start: "2026-10-14T14:00:00-07:00"
   end: "2026-10-14T16:00:00-07:00"
   place: "Covington Library, 27100 164th Ave SE, Covington"
@@ -111,11 +102,13 @@
   heading_id: "sugar-skulls-with-artmaranth"
   when: "Wed Oct 14 · 2:00–4:00 p.m."
   blurbs:
-    - "Decorate a sugar skull with icing, sequins, and paper flowers, and learn how Día de los Muertos is celebrated. Bilingual, ages 9 and up. Free. Registration required."
+  - "Decorate a sugar skull with icing, sequins, and paper flowers, and learn how Día de los Muertos is\
+    \ celebrated. Bilingual, ages 9 and up. Free. Registration required."
   links:
-    - href: "https://kcls.bibliocommons.com/events/69d91753fca21471b7eecec1"
-      label: "Sugar Skulls with ArtMaranth"
-  description: "Decorate a sugar skull with icing, sequins, and paper flowers, and learn how Día de los Muertos is celebrated. Bilingual, ages 9 and up. Free. Registration required."
+  - href: "https://kcls.bibliocommons.com/events/69d91753fca21471b7eecec1"
+    label: "Sugar Skulls with ArtMaranth"
+  description: "Decorate a sugar skull with icing, sequins, and paper flowers, and learn how Día de los\
+    \ Muertos is celebrated. Bilingual, ages 9 and up. Free. Registration required."
   hub_blurb: "Decorate a sugar skull and learn how Día de los Muertos is celebrated."
 - name: "LEGO Block Party"
   cost: "Free"
@@ -130,12 +123,70 @@
   heading_id: "lego-block-party"
   when: "Wed Oct 14 · 3:30–4:30 p.m."
   blurbs:
-    - "Open building with the library's bricks plus other STEM toys and games. Drop in for a few minutes or the full hour. Kids 7 and under need an adult. Free, no registration."
+  - "Open building with the library's bricks plus other STEM toys and games. Drop in for a few minutes\
+    \ or the full hour. Kids 7 and under need an adult. Free, no registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/69027fee9b879341009331d8"
-      label: "LEGO Block Party"
-  description: "Open building with the library's bricks plus other STEM toys and games. Drop in for a few minutes or the full hour. Kids 7 and under need an adult. Free, no registration."
+  - href: "https://kcls.bibliocommons.com/events/69027fee9b879341009331d8"
+    label: "LEGO Block Party"
+  description: "Open building with the library's bricks plus other STEM toys and games. Drop in for a\
+    \ few minutes or the full hour. Kids 7 and under need an adult. Free, no registration."
   hub_blurb: "Open building with the library's bricks plus other STEM toys and games."
+- name: "Ukrainian Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-14T17:30:00-07:00"
+  end: "2026-10-14T18:00:00-07:00"
+  place: "Covington Library, 27100 164th Ave SE, Covington"
+  same_as: "https://kcls.bibliocommons.com/events/6a5a999a0e562e28009a98f8"
+  card: "ukrainian-story-time"
+  heading_id: "ukrainian-story-time"
+  when: "Wed Oct 14 · 5:30–6:00 p.m."
+  blurbs:
+  - "Ukrainian stories and songs for children of any age with an adult at Covington Library. Free Wednesday\
+    \ evenings."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a5a999a0e562e28009a98f8"
+    label: "Ukrainian Story Time"
+  description: "Ukrainian stories and songs for children of any age with an adult at Covington Library.\
+    \ Free Wednesday evenings."
+  hub_blurb: "Ukrainian stories and songs for families."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/maple-valley/covington-library.webp"
+    alt: "Covington Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/covington/"
+    license: "organizer"
+- name: "Friday Family Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-16T14:00:00-07:00"
+  end: "2026-10-16T15:00:00-07:00"
+  place: "Covington Library, 27100 164th Ave SE, Covington"
+  same_as: "https://kcls.bibliocommons.com/events/6a5a99a9f4e5db3d00c27c25"
+  card: "friday-family-story-time"
+  heading_id: "friday-family-story-time"
+  when: "Fri Oct 16 · 2:00–3:00 p.m."
+  blurbs:
+  - "Stories, songs, movement, bubbles, and play time for all ages with an adult at Covington Library.\
+    \ Free; skips Oct 30."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a5a99a9f4e5db3d00c27c25"
+    label: "Friday Family Story Time"
+  description: "Stories, songs, movement, bubbles, and play time for all ages with an adult at Covington\
+    \ Library. Free; skips Oct 30."
+  hub_blurb: "Friday stories, songs, and play at Covington Library."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/maple-valley/covington-library.webp"
+    alt: "Covington Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/covington/"
+    license: "organizer"
 - name: "Fun Fridays"
   cost: "Free"
   ages: "Kids"
@@ -150,17 +201,20 @@
   heading_id: "fun-fridays"
   when: "Fri Oct 16 · 4:00–5:00 p.m."
   blurbs:
-    - "A make-something hour. Ages 6 to 12, and ages 6 to 7 stay with an adult. Registration is required. Count only the children who will do the project."
+  - "A make-something hour. Ages 6 to 12, and ages 6 to 7 stay with an adult. Registration is required.\
+    \ Count only the children who will do the project."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a80e151d4b10d003006bb15"
-      label: "Fun Fridays"
-  description: "A make-something hour. Ages 6 to 12, and ages 6 to 7 stay with an adult. Registration is required. Count only the children who will do the project."
+  - href: "https://kcls.bibliocommons.com/events/6a80e151d4b10d003006bb15"
+    label: "Fun Fridays"
+  description: "A make-something hour. Ages 6 to 12, and ages 6 to 7 stay with an adult. Registration\
+    \ is required. Count only the children who will do the project."
   hub_blurb: "A make-something hour."
 - name: "Zombie Dash"
   cost: "$35"
   setting: "Outdoor"
   signup: true
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-17T09:45:00-07:00"
   end: "2026-10-17T11:00:00-07:00"
   place: "Lake Wilderness Park, Beach Lawn, Maple Valley"
@@ -170,11 +224,18 @@
   heading_id: "zombie-dash"
   when: "Sat Oct 17 · 9:45–11:00 a.m."
   blurbs:
-    - "A mile-long family fun run in the park. Waves start every 15 minutes from 9:45 to 11:00 a.m. Check in on the Beach Lawn at least 15 minutes before your wave. The fee is $35, and you pick a wave when you register. Ages 13 and older can run on their own. Ages 8 and older can join the 10:45 and 11:00 a.m. waves with an adult. Registration closes Mon Oct 12 at 8:00 a.m., or when a wave fills."
+  - "A mile-long family fun run in the park. Waves start every 15 minutes from 9:45 to 11:00 a.m. Check\
+    \ in on the Beach Lawn at least 15 minutes before your wave. The fee is $35, and you pick a wave when\
+    \ you register. Ages 13 and older can run on their own. Ages 8 and older can join the 10:45 and 11:00\
+    \ a.m. waves with an adult. Registration closes Mon Oct 12 at 8:00 a.m., or when a wave fills."
   links:
-    - href: "https://www.maplevalleywa.gov/government/departments/parks_and_recreation/special_events/zombie_dash.php"
-      label: "Zombie Dash"
-  description: "A mile-long family fun run in the park. Waves start every 15 minutes from 9:45 to 11:00 a.m. Check in on the Beach Lawn at least 15 minutes before your wave. The fee is $35, and you pick a wave when you register. Ages 13 and older can run on their own. Ages 8 and older can join the 10:45 and 11:00 a.m. waves with an adult. Registration closes Mon Oct 12 at 8:00 a.m., or when a wave fills."
+  - href: "https://www.maplevalleywa.gov/government/departments/parks_and_recreation/special_events/zombie_dash.php"
+    label: "Zombie Dash"
+  description: "A mile-long family fun run in the park. Waves start every 15 minutes from 9:45 to 11:00\
+    \ a.m. Check in on the Beach Lawn at least 15 minutes before your wave. The fee is $35, and you pick\
+    \ a wave when you register. Ages 13 and older can run on their own. Ages 8 and older can join the\
+    \ 10:45 and 11:00 a.m. waves with an adult. Registration closes Mon Oct 12 at 8:00 a.m., or when a\
+    \ wave fills."
   hub_blurb: "A mile-long family fun run in the park."
 - name: "Historical Society Museum"
   cost: "Free"
@@ -188,10 +249,10 @@
   heading_id: "historical-society-museum"
   when: "Sat Oct 17 · 10:00 a.m.–2:00 p.m."
   blurbs:
-    - "The third-Saturday open hours. Admission is always free."
+  - "The third-Saturday open hours. Admission is always free."
   links:
-    - href: "https://www.maplevalleyhistorical.com/upcoming-events"
-      label: "Historical Society"
+  - href: "https://www.maplevalleyhistorical.com/upcoming-events"
+    label: "Historical Society"
   description: "The third-Saturday open hours. Admission is always free."
   hub_blurb: "The third-Saturday open hours."
 - name: "Story Walk Read-Along"
@@ -206,12 +267,45 @@
   heading_id: "story-walk-read-along"
   when: "Sat Oct 17 · 10:30–11:00 a.m."
   blurbs:
-    - "Librarian Sharon reads the Story Walk book outside, then families can stay and play in the Children’s Forest. Meet at the information booth at 10:25 a.m. Dress for the weather. The library cancels for high winds, snow, or poor air. No registration. The next read-along is Sat Nov 21."
+  - "Librarian Sharon reads the Story Walk book outside, then families can stay and play in the Children’s\
+    \ Forest. Meet at the information booth at 10:25 a.m. Dress for the weather. The library cancels for\
+    \ high winds, snow, or poor air. No registration. The next read-along is Sat Nov 21."
   links:
-    - href: "https://kcls.bibliocommons.com/events/69557907111b9da65ca9d7fa"
-      label: "Story Walk"
-  description: "Librarian Sharon reads the Story Walk book outside, then families can stay and play in the Children's Forest. Meet at the information booth at 10:25 a.m. Dress for the weather. The library cancels for high winds, snow, or poor air. No registration. The next read-along is Sat Nov 21."
-  hub_blurb: "Librarian Sharon reads the Story Walk book outside, then families can stay and play in the Children's Forest."
+  - href: "https://kcls.bibliocommons.com/events/69557907111b9da65ca9d7fa"
+    label: "Story Walk"
+  description: "Librarian Sharon reads the Story Walk book outside, then families can stay and play in\
+    \ the Children's Forest. Meet at the information booth at 10:25 a.m. Dress for the weather. The library\
+    \ cancels for high winds, snow, or poor air. No registration. The next read-along is Sat Nov 21."
+  hub_blurb: "Librarian Sharon reads the Story Walk book outside, then families can stay and play in the\
+    \ Children's Forest."
+- name: "Saturday Family Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-17T11:00:00-07:00"
+  end: "2026-10-17T12:00:00-07:00"
+  place: "Covington Library, 27100 164th Ave SE, Covington"
+  same_as: "https://kcls.bibliocommons.com/events/6a5a99a50e562e28009a9917"
+  card: "saturday-family-story-time-2"
+  heading_id: "saturday-family-story-time-2"
+  when: "Sat Oct 17 · 11:00 a.m.–12:00 p.m."
+  blurbs:
+  - "Stories, songs, movement, bubbles, and play time for all ages with an adult at Covington Library.\
+    \ Free; skips Oct 31."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a5a99a50e562e28009a9917"
+    label: "Saturday Family Story Time"
+  description: "Stories, songs, movement, bubbles, and play time for all ages with an adult at Covington\
+    \ Library. Free; skips Oct 31."
+  hub_blurb: "Saturday stories, songs, and play at Covington Library."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/maple-valley/covington-library.webp"
+    alt: "Covington Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/covington/"
+    license: "organizer"
 - name: "Chess Club for All Ages"
   cost: "Free"
   ages: "Kids"
@@ -225,11 +319,13 @@
   heading_id: "chess-club-for-all-ages"
   when: "Sat Oct 17 · 2:30–4:30 p.m."
   blurbs:
-    - "Play and practice with volunteer coaches at Covington Library. Ages 5 and up; kids 7 and under need an adult. Free, no registration. Skips Oct 31."
+  - "Play and practice with volunteer coaches at Covington Library. Ages 5 and up; kids 7 and under need\
+    \ an adult. Free, no registration. Skips Oct 31."
   links:
-    - href: "https://kcls.bibliocommons.com/v2/events/69e2b7b6deee9abd8ee82149"
-      label: "Chess Club"
-  description: "Play and practice with volunteer coaches at Covington Library. Ages 5 and up; kids 7 and under need an adult. Free, no registration. Skips Oct 31."
+  - href: "https://kcls.bibliocommons.com/v2/events/69e2b7b6deee9abd8ee82149"
+    label: "Chess Club"
+  description: "Play and practice with volunteer coaches at Covington Library. Ages 5 and up; kids 7 and\
+    \ under need an adult. Free, no registration. Skips Oct 31."
   hub_blurb: "Drop-in chess with coaches for ages 5 and up."
 - name: "Preschool Building Party"
   cost: "Free"
@@ -244,12 +340,40 @@
   heading_id: "preschool-building-party"
   when: "Mon Oct 19 · 10:30–11:15 a.m."
   blurbs:
-    - "Building toys for ages 3 to 5. Small pieces, so it is not for age 2 and younger. No registration."
+  - "Building toys for ages 3 to 5. Small pieces, so it is not for age 2 and younger. No registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a80e1832dac6e00371f5a24"
-      label: "Preschool Building Party"
+  - href: "https://kcls.bibliocommons.com/events/6a80e1832dac6e00371f5a24"
+    label: "Preschool Building Party"
   description: "Building toys for ages 3 to 5. Small pieces, so it is not for age 2 and younger. No registration."
   hub_blurb: "Building toys for ages 3 to 5."
+- name: "Baby Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-19T13:00:00-07:00"
+  end: "2026-10-19T14:00:00-07:00"
+  place: "Covington Library, 27100 164th Ave SE, Covington"
+  same_as: "https://kcls.bibliocommons.com/events/6a63c8a27d824676437d158a"
+  card: "baby-story-time-covington"
+  heading_id: "baby-story-time-covington"
+  when: "Mon Oct 19 · 1:00–2:00 p.m."
+  blurbs:
+  - "Nursery rhymes, songs, and stories for newborns to 12 months with an adult at Covington Library.\
+    \ Toddlers and siblings welcome. Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a63c8a27d824676437d158a"
+    label: "Baby Story Time"
+  description: "Nursery rhymes, songs, and stories for newborns to 12 months with an adult at Covington\
+    \ Library. Toddlers and siblings welcome. Free."
+  hub_blurb: "Baby stories and songs at Covington Library."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/maple-valley/covington-library.webp"
+    alt: "Covington Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/covington/"
+    license: "organizer"
 - name: "Super Tuesdays: Awesome Anatomy"
   cost: "Free"
   ages: "Kids"
@@ -263,17 +387,21 @@
   heading_id: "super-tuesdays-awesome-anatomy"
   when: "Tue Oct 20 · 6:00–7:00 p.m."
   blurbs:
-    - "Drop in from 6:00 to 6:45 for hands-on science stations about the human body with Covington librarians. Ages 5 and up, and kids under 8 come with an adult. Free, no registration."
+  - "Drop in from 6:00 to 6:45 for hands-on science stations about the human body with Covington librarians.\
+    \ Ages 5 and up, and kids under 8 come with an adult. Free, no registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/69d91763fca21471b7eecec4"
-      label: "Super Tuesdays: Awesome Anatomy"
-  description: "Drop in from 6:00 to 6:45 for hands-on science stations about the human body with Covington librarians. Ages 5 and up, and kids under 8 come with an adult. Free, no registration."
-  hub_blurb: "Drop in from 6:00 to 6:45 for hands-on science stations about the human body with Covington librarians."
+  - href: "https://kcls.bibliocommons.com/events/69d91763fca21471b7eecec4"
+    label: "Super Tuesdays: Awesome Anatomy"
+  description: "Drop in from 6:00 to 6:45 for hands-on science stations about the human body with Covington\
+    \ librarians. Ages 5 and up, and kids under 8 come with an adult. Free, no registration."
+  hub_blurb: "Drop in from 6:00 to 6:45 for hands-on science stations about the human body with Covington\
+    \ librarians."
 - name: "Pajama Story Time"
   cost: "Free"
   ages: "Kids"
   setting: "Indoor"
-  tags: [story-time]
+  tags:
+  - "story-time"
   start: "2026-10-20T19:00:00-07:00"
   end: "2026-10-20T19:30:00-07:00"
   place: "Maple Valley Library, 21844 SE 248th St, Maple Valley"
@@ -283,11 +411,13 @@
   heading_id: "pajama-story-time-1"
   when: "Tue Oct 20 · 7:00–7:30 p.m."
   blurbs:
-    - "Bedtime stories and silly songs for newborns to age 7 with an adult. Come in pajamas and bring a stuffed animal or blanket. Good for kindergartners and first graders too. No registration."
+  - "Bedtime stories and silly songs for newborns to age 7 with an adult. Come in pajamas and bring a\
+    \ stuffed animal or blanket. Good for kindergartners and first graders too. No registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6ac29639295b3b0033ca89b8"
-      label: "Pajama Story Time"
-  description: "Bedtime stories and silly songs for newborns to age 7 with an adult. Come in pajamas and bring a stuffed animal or blanket. Good for kindergartners and first graders too. No registration."
+  - href: "https://kcls.bibliocommons.com/events/6ac29639295b3b0033ca89b8"
+    label: "Pajama Story Time"
+  description: "Bedtime stories and silly songs for newborns to age 7 with an adult. Come in pajamas and\
+    \ bring a stuffed animal or blanket. Good for kindergartners and first graders too. No registration."
   hub_blurb: "Bedtime stories and silly songs for newborns to age 7."
 - name: "Family Story Time"
   cost: "Free"
@@ -301,12 +431,40 @@
   heading_id: "family-story-time-1"
   when: "Wed Oct 21 · 10:30–11:00 a.m."
   blurbs:
-    - "Stories, music, movement, and rhymes, then play time. Best for ages 3 to 6, and younger and older siblings are welcome. Free, no registration."
+  - "Stories, music, movement, and rhymes, then play time. Best for ages 3 to 6, and younger and older\
+    \ siblings are welcome. Free, no registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6ac2963b11bbf300684af11d"
-      label: "Family Story Time"
-  description: "Stories, music, movement, and rhymes, then play time. Best for ages 3 to 6, and younger and older siblings are welcome. Free, no registration."
+  - href: "https://kcls.bibliocommons.com/events/6ac2963b11bbf300684af11d"
+    label: "Family Story Time"
+  description: "Stories, music, movement, and rhymes, then play time. Best for ages 3 to 6, and younger\
+    \ and older siblings are welcome. Free, no registration."
   hub_blurb: "Stories, music, movement, and rhymes, then play time."
+- name: "Teen Lounge"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-21T12:30:00-07:00"
+  end: "2026-10-21T14:30:00-07:00"
+  place: "Covington Library, 27100 164th Ave SE, Covington"
+  same_as: "https://kcls.bibliocommons.com/events/6a91f3d557c264087ad4914a"
+  card: "teen-lounge-2"
+  heading_id: "teen-lounge-2"
+  when: "Wed Oct 21 · 12:30–2:30 p.m."
+  blurbs:
+  - "Games, homework, art, and free snacks for middle and high school students at Covington Library. Sponsored\
+    \ by the Friends of the Covington Library."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a91f3d557c264087ad4914a"
+    label: "Teen Lounge"
+  description: "Games, homework, art, and free snacks for middle and high school students at Covington\
+    \ Library. Sponsored by the Friends of the Covington Library."
+  hub_blurb: "Games, homework help, and snacks for teens."
+  ages: "Teens"
+  photo:
+    src: "/assets/images/maple-valley/covington-library.webp"
+    alt: "Covington Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/covington/"
+    license: "organizer"
 - name: "Gaming Afternoon"
   cost: "Free"
   setting: "Indoor"
@@ -319,17 +477,20 @@
   heading_id: "gaming-afternoon"
   when: "Wed Oct 21 · 3:30–5:00 p.m."
   blurbs:
-    - "Board games and card games for tweens and teens. Bring a game to share if you want. Snacks are provided. No registration. The next afternoon is Wed Nov 18."
+  - "Board games and card games for tweens and teens. Bring a game to share if you want. Snacks are provided.\
+    \ No registration. The next afternoon is Wed Nov 18."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a6ce9fcf4e5db3d00c5a374"
-      label: "Gaming Afternoon"
-  description: "Board games and card games for tweens and teens. Bring a game to share if you want. Snacks are provided. No registration. The next afternoon is Wed Nov 18."
+  - href: "https://kcls.bibliocommons.com/events/6a6ce9fcf4e5db3d00c5a374"
+    label: "Gaming Afternoon"
+  description: "Board games and card games for tweens and teens. Bring a game to share if you want. Snacks\
+    \ are provided. No registration. The next afternoon is Wed Nov 18."
   hub_blurb: "Board games and card games for tweens and teens."
 - name: "Saturday Family Story Time"
   cost: "Free"
   ages: "All ages"
   setting: "Indoor"
-  tags: [story-time]
+  tags:
+  - "story-time"
   start: "2026-10-24T11:00:00-07:00"
   end: "2026-10-24T12:00:00-07:00"
   place: "Covington Library, 27100 164th Ave SE, Covington"
@@ -339,17 +500,20 @@
   heading_id: "saturday-family-story-time-1"
   when: "Sat Oct 24 · 11:00 a.m.–12:00 p.m."
   blurbs:
-    - "Stories, songs, movement, bubbles, and play for young children and their grown-ups. Free, no registration. There is no Saturday story time on Oct 31."
+  - "Stories, songs, movement, bubbles, and play for young children and their grown-ups. Free, no registration.\
+    \ There is no Saturday story time on Oct 31."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a5a99a50e562e28009a9918"
-      label: "Saturday Family Story Time"
-  description: "Stories, songs, movement, bubbles, and play for young children and their grown-ups. Free, no registration. There is no Saturday story time on Oct 31."
+  - href: "https://kcls.bibliocommons.com/events/6a5a99a50e562e28009a9918"
+    label: "Saturday Family Story Time"
+  description: "Stories, songs, movement, bubbles, and play for young children and their grown-ups. Free,\
+    \ no registration. There is no Saturday story time on Oct 31."
   hub_blurb: "Stories, songs, movement, bubbles, and play for young children and their grown-ups."
 - name: "Trick or Treat at the Library"
   cost: "Free"
   ages: "Kids"
   setting: "Indoor"
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-24T13:00:00-07:00"
   end: "2026-10-24T15:00:00-07:00"
   place: "Maple Valley Library, 21844 SE 248th St, Maple Valley"
@@ -359,15 +523,20 @@
   heading_id: "trick-or-treat-at-the-library"
   when: "Sat Oct 24 · 1:00–3:00 p.m."
   blurbs:
-    - "Drop in to trick-or-treat around the library, hear Halloween stories at 1:15, fold creepy origami, and swap up to five books. Tahoma reading specialists answer parents' questions. Ages 5 to 12. Free."
+  - "Drop in to trick-or-treat around the library, hear Halloween stories at 1:15, fold creepy origami,\
+    \ and swap up to five books. Tahoma reading specialists answer parents' questions. Ages 5 to 12. Free."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6ac2963dc6cddb004595a094"
-      label: "Trick or Treat at the Library"
-  description: "Drop in to trick-or-treat around the library, hear Halloween stories at 1:15, fold creepy origami, and swap up to five books. Tahoma reading specialists answer parents' questions. Ages 5 to 12. Free."
-  hub_blurb: "Drop in to trick-or-treat around the library, hear Halloween stories at 1:15, fold creepy origami, and swap up to five books."
+  - href: "https://kcls.bibliocommons.com/events/6ac2963dc6cddb004595a094"
+    label: "Trick or Treat at the Library"
+  description: "Drop in to trick-or-treat around the library, hear Halloween stories at 1:15, fold creepy\
+    \ origami, and swap up to five books. Tahoma reading specialists answer parents' questions. Ages 5\
+    \ to 12. Free."
+  hub_blurb: "Drop in to trick-or-treat around the library, hear Halloween stories at 1:15, fold creepy\
+    \ origami, and swap up to five books."
 - name: "Spooky Swim"
   setting: "Indoor"
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-24T16:30:00-07:00"
   end: "2026-10-24T19:30:00-07:00"
   place: "Covington Aquatic Center, 18230 SE 240th St, Covington"
@@ -377,18 +546,48 @@
   heading_id: "spooky-swim"
   when: "Sat Oct 24 · 4:30–5:30 p.m. or 6:30–7:30 p.m."
   blurbs:
-    - "A lights-out swim with underwater lights, water games, and a spooky room. Pick one of the two sessions."
+  - "A lights-out swim with underwater lights, water games, and a spooky room. Pick one of the two sessions."
   links:
-    - href: "https://www.covingtonwa.gov/events/index.php"
-      label: "Covington events"
-  description: "A lights-out swim with underwater lights, water games, and a spooky room. Pick one of the two sessions."
+  - href: "https://www.covingtonwa.gov/events/index.php"
+    label: "Covington events"
+  description: "A lights-out swim with underwater lights, water games, and a spooky room. Pick one of\
+    \ the two sessions."
   hub_blurb: "A lights-out swim with underwater lights, water games, and a spooky room."
+- name: "Pajama Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-27T19:00:00-07:00"
+  end: "2026-10-27T19:30:00-07:00"
+  place: "Maple Valley Library, 21844 SE 248th St, Maple Valley"
+  same_as: "https://kcls.bibliocommons.com/events/6ac29639295b3b0033ca89b9"
+  card: "pajama-story-time-2"
+  heading_id: "pajama-story-time-2"
+  when: "Tue Oct 27 · 7:00–7:30 p.m."
+  blurbs:
+  - "Bedtime stories and songs with Librarian Sharon. Wear pajamas and bring a stuffie. Newborn to age\
+    \ 7 with an adult. Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ac29639295b3b0033ca89b9"
+    label: "Pajama Story Time"
+  description: "Bedtime stories and songs with Librarian Sharon. Wear pajamas and bring a stuffie. Newborn\
+    \ to age 7 with an adult. Free."
+  hub_blurb: "Bedtime stories in pajamas at Maple Valley Library."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/maple-valley/library.webp"
+    alt: "Maple Valley Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/maple-valley/"
+    license: "organizer"
 - name: "Trick or Treat Tales: Puppets Please"
   cost: "Free"
   ages: "Toddlers"
   setting: "Indoor"
   signup: true
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-30T14:00:00-07:00"
   end: "2026-10-30T15:00:00-07:00"
   place: "Covington Library, 27100 164th Ave SE, Covington"
@@ -398,18 +597,21 @@
   heading_id: "trick-or-treat-tales-puppets-please"
   when: "Fri Oct 30 · 2:00–3:00 p.m."
   blurbs:
-    - "Come in costume for a singing, dancing puppet show, then trick-or-treat around the library. Treats suit ages 3 and up. Free. Register the kids who will trick-or-treat."
+  - "Come in costume for a singing, dancing puppet show, then trick-or-treat around the library. Treats\
+    \ suit ages 3 and up. Free. Register the kids who will trick-or-treat."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a5a99840e562e28009a98ea"
-      label: "Trick or Treat Tales: Puppets Please"
-  description: "Come in costume for a singing, dancing puppet show, then trick-or-treat around the library. Treats suit ages 3 and up. Free. Register the kids who will trick-or-treat."
+  - href: "https://kcls.bibliocommons.com/events/6a5a99840e562e28009a98ea"
+    label: "Trick or Treat Tales: Puppets Please"
+  description: "Come in costume for a singing, dancing puppet show, then trick-or-treat around the library.\
+    \ Treats suit ages 3 and up. Free. Register the kids who will trick-or-treat."
   hub_blurb: "A costume puppet show, then trick-or-treating around the library."
 - name: "Teen Halloween Party"
   cost: "Free"
   ages: "Teens"
   setting: "Indoor"
   signup: true
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-30T17:30:00-07:00"
   end: "2026-10-30T19:30:00-07:00"
   place: "Covington Library, 27100 164th Ave SE, Covington"
@@ -419,11 +621,13 @@
   heading_id: "teen-halloween-party"
   when: "Fri Oct 30 · 5:30–7:30 p.m."
   blurbs:
-    - "A first-ever Halloween party for middle and high school students, with snacks, music, and crafts. Costumes encouraged, but no masks or prop weapons. Free. Registration required."
+  - "A first-ever Halloween party for middle and high school students, with snacks, music, and crafts.\
+    \ Costumes encouraged, but no masks or prop weapons. Free. Registration required."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6ac55d28e06996003a81c411"
-      label: "Teen Halloween Party"
-  description: "A first-ever Halloween party for middle and high school students, with snacks, music, and crafts. Costumes encouraged, but no masks or prop weapons. Free. Registration required."
+  - href: "https://kcls.bibliocommons.com/events/6ac55d28e06996003a81c411"
+    label: "Teen Halloween Party"
+  description: "A first-ever Halloween party for middle and high school students, with snacks, music,\
+    \ and crafts. Costumes encouraged, but no masks or prop weapons. Free. Registration required."
   hub_blurb: "A Halloween party for middle and high schoolers, with snacks, music, and crafts."
 - name: "Crafts for 3s, 4s and 5s"
   cost: "Free"
@@ -439,11 +643,13 @@
   heading_id: "crafts-for-3s-4s-and-5s"
   when: "Mon Nov 2 · 10:30–11:15 a.m."
   blurbs:
-    - "A story and a craft for ages 3 to 5, with an adult. Registration is required. Count only the children who will do the craft."
+  - "A story and a craft for ages 3 to 5, with an adult. Registration is required. Count only the children\
+    \ who will do the craft."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a820170d4b10d003006de2c"
-      label: "Crafts for 3s, 4s and 5s"
-  description: "A story and a craft for ages 3 to 5, with an adult. Registration is required. Count only the children who will do the craft."
+  - href: "https://kcls.bibliocommons.com/events/6a820170d4b10d003006de2c"
+    label: "Crafts for 3s, 4s and 5s"
+  description: "A story and a craft for ages 3 to 5, with an adult. Registration is required. Count only\
+    \ the children who will do the craft."
   hub_blurb: "A story and a craft for ages 3 to 5, with an adult."
 - name: "The Nutcracker with Ensemble Ballet Theatre"
   cost: "Free"
@@ -459,17 +665,19 @@
   heading_id: "the-nutcracker-with-ensemble-ballet-theatre"
   when: "Sat Nov 7 · 1:00–1:45 p.m."
   blurbs:
-    - "Ensemble Ballet Theatre dances a 30-minute Nutcracker, and at intermission the dancers teach everyone a few steps. All ages. Free. Registration required."
+  - "Ensemble Ballet Theatre dances a 30-minute Nutcracker, and at intermission the dancers teach everyone\
+    \ a few steps. All ages. Free. Registration required."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a820570aafa6100295d01a6"
-      label: "The Nutcracker with Ensemble Ballet Theatre"
+  - href: "https://kcls.bibliocommons.com/events/6a820570aafa6100295d01a6"
+    label: "The Nutcracker with Ensemble Ballet Theatre"
   photo:
     src: "/assets/images/maple-valley/nutcracker-covington.png"
     alt: "A wooden nutcracker figure with a white beard and a tall black hat."
     credit: "Image: King County Library System"
     source: "https://kcls.bibliocommons.com/events/6a820570aafa6100295d01a6"
     license: "organizer"
-  description: "Ensemble Ballet Theatre dances a 30-minute Nutcracker, and at intermission the dancers teach everyone a few steps. All ages. Free. Registration required."
+  description: "Ensemble Ballet Theatre dances a 30-minute Nutcracker, and at intermission the dancers\
+    \ teach everyone a few steps. All ages. Free. Registration required."
   hub_blurb: "A 30-minute Nutcracker, with a short dance lesson at intermission."
 - name: "Gaming Afternoon"
   cost: "Free"
@@ -483,10 +691,10 @@
   heading_id: "gaming-afternoon-1"
   when: "Wed Nov 18 · 3:30–5:00 p.m."
   blurbs:
-    - "The next board and card game afternoon for tweens and teens. Snacks are provided. No registration."
+  - "The next board and card game afternoon for tweens and teens. Snacks are provided. No registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a6ce9fcf4e5db3d00c5a375"
-      label: "Gaming Afternoon"
+  - href: "https://kcls.bibliocommons.com/events/6a6ce9fcf4e5db3d00c5a375"
+    label: "Gaming Afternoon"
   description: "The next board and card game afternoon for tweens and teens. Snacks are provided. No registration."
   hub_blurb: "The next board and card game afternoon for tweens and teens."
 - name: "Story Walk Read-Along"
@@ -501,15 +709,19 @@
   heading_id: "story-walk-read-along-1"
   when: "Sat Nov 21 · 10:30–11:00 a.m."
   blurbs:
-    - "The November outdoor read-along. Meet at the information booth at 10:25 a.m., then stay and play in the Children’s Forest. Dress for the weather. No registration."
+  - "The November outdoor read-along. Meet at the information booth at 10:25 a.m., then stay and play\
+    \ in the Children’s Forest. Dress for the weather. No registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/69557907111b9da65ca9d7fb"
-      label: "Story Walk"
-  description: "The November outdoor read-along. Meet at the information booth at 10:25 a.m., then stay and play in the Children's Forest. Dress for the weather. No registration."
+  - href: "https://kcls.bibliocommons.com/events/69557907111b9da65ca9d7fb"
+    label: "Story Walk"
+  description: "The November outdoor read-along. Meet at the information booth at 10:25 a.m., then stay\
+    \ and play in the Children's Forest. Dress for the weather. No registration."
   hub_blurb: "The November outdoor read-along."
 - name: "Gnometown Holidays Tree Lighting"
   setting: "Outdoor"
-  tags: [tree-lighting, santa]
+  tags:
+  - "tree-lighting"
+  - "santa"
   start: "2026-12-03T18:00:00-08:00"
   end: "2026-12-03T20:00:00-08:00"
   place: "4 Corners, Maple Valley"
@@ -519,16 +731,20 @@
   heading_id: "gnometown-holidays-tree-lighting"
   when: "Thu Dec 3 · 6:00–8:00 p.m."
   blurbs:
-    - "A family tree lighting. The ceremony and the mayor’s welcome are at 6:15 p.m. Santa, live reindeer, a mini train, a wagon ride, and the youth symphony are part of the night."
+  - "A family tree lighting. The ceremony and the mayor’s welcome are at 6:15 p.m. Santa, live reindeer,\
+    \ a mini train, a wagon ride, and the youth symphony are part of the night."
   links:
-    - href: "https://www.maplevalleywa.gov/government/departments/parks_and_recreation/special_events/maple_valley_hometown_holidays.php"
-      label: "Gnometown Holidays"
-  description: "A family tree lighting. The ceremony and the mayor's welcome are at 6:15 p.m. Santa, live reindeer, a mini train, a wagon ride, and the youth symphony are part of the night."
+  - href: "https://www.maplevalleywa.gov/government/departments/parks_and_recreation/special_events/maple_valley_hometown_holidays.php"
+    label: "Gnometown Holidays"
+  description: "A family tree lighting. The ceremony and the mayor's welcome are at 6:15 p.m. Santa, live\
+    \ reindeer, a mini train, a wagon ride, and the youth symphony are part of the night."
   hub_blurb: "A family tree lighting."
 - name: "Community Tree Lighting"
   setting: "Outdoor"
   cost: "Free"
-  tags: [tree-lighting, santa]
+  tags:
+  - "tree-lighting"
+  - "santa"
   start: "2026-12-04T18:00:00-08:00"
   end: "2026-12-04T20:00:00-08:00"
   place: "Don Henning Roundabout, Covington"
@@ -538,11 +754,15 @@
   heading_id: "community-tree-lighting"
   when: "Fri Dec 4 · 6:00–8:00 p.m."
   blurbs:
-    - "Covington lights the community tree in the Fred Meyer parking lot by the Don Henning Roundabout. Crafts, cocoa, carols, and Santa. The lighting is about 7:15 p.m. The crafts and activities are free."
+  - "Covington lights the community tree in the Fred Meyer parking lot by the Don Henning Roundabout.\
+    \ Crafts, cocoa, carols, and Santa. The lighting is about 7:15 p.m. The crafts and activities are\
+    \ free."
   links:
-    - href: "https://www.covingtonwa.gov/events/index.php"
-      label: "Covington events"
-  description: "Covington lights the community tree in the Fred Meyer parking lot by the Don Henning Roundabout. Crafts, cocoa, carols, and Santa. The lighting is about 7:15 p.m. The crafts and activities are free."
+  - href: "https://www.covingtonwa.gov/events/index.php"
+    label: "Covington events"
+  description: "Covington lights the community tree in the Fred Meyer parking lot by the Don Henning Roundabout.\
+    \ Crafts, cocoa, carols, and Santa. The lighting is about 7:15 p.m. The crafts and activities are\
+    \ free."
   hub_blurb: "Covington lights the community tree in the Fred Meyer parking lot by the Don Henning Roundabout."
 - name: "Hollydaze Swim"
   setting: "Indoor"
@@ -555,9 +775,9 @@
   heading_id: "hollydaze-swim"
   when: "Sat Dec 19 · 4:30–5:30 p.m. or 6:30–7:30 p.m."
   blurbs:
-    - "A lights-out family swim with games and music. Pick one of the two sessions."
+  - "A lights-out family swim with games and music. Pick one of the two sessions."
   links:
-    - href: "https://www.covingtonwa.gov/events/index.php"
-      label: "Covington events"
+  - href: "https://www.covingtonwa.gov/events/index.php"
+    label: "Covington events"
   description: "A lights-out family swim with games and music. Pick one of the two sessions."
   hub_blurb: "A lights-out family swim with games and music."

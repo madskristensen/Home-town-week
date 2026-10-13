@@ -6,7 +6,7 @@
   setting: "Outdoor"
   signup: true
   tags: [halloween]
-  start: "2026-10-10"
+  start: '2026-10-17'
   end: "2026-11-01"
   place: "North Bend Depot, 205 E McClellan Street"
   same_as: "https://trainmuseum.org/upcoming-events/halloween/"
@@ -21,26 +21,6 @@
       label: "Halloween Train"
   description: "The Northwest Railway Museum boards this fall ride at the North Bend Depot, behind the Shell station, and also at the Snoqualmie Depot. The trip is just under two hours, with a stop for cider, apple pressing, crafts, and music. Costumes are welcome. Ages 2 and up need a ticket. North Bend departures start at 10:30 a.m. and leave every two hours. Arrive about 30 minutes early."
   hub_blurb: "The Northwest Railway Museum boards this fall ride at the North Bend Depot, behind the Shell station, and also at the Snoqualmie Depot."
-- name: "Kids Screening: Shaun the Sheep"
-  cost: "$5 to $10"
-  setting: "Indoor"
-  signup: true
-  tags: [halloween]
-  start: "2026-10-12T12:00:00-07:00"
-  end: "2026-10-12T13:30:00-07:00"
-  place: "North Bend Theatre, 125 Bendigo Blvd N"
-  same_as: "https://tix.northbendtheatre.com/event/kids-screening-shaun-the-sheep-the-beast-of-mossy-bottom-monday-oct-12th-12pm"
-  card: "kids-screening-shaun-the-sheep"
-  order: "3"
-  heading_id: "kids-screening-shaun-the-sheep"
-  when: "Mon Oct 12 · 12:00–1:30 p.m."
-  blurbs:
-    - "A kid-friendly noon showing of the new PG Shaun the Sheep Halloween film, with the lights and sound adjusted for a relaxed room. Tickets are $5 to $10. Doors open 30 minutes early."
-  links:
-    - href: "https://tix.northbendtheatre.com/event/kids-screening-shaun-the-sheep-the-beast-of-mossy-bottom-monday-oct-12th-12pm"
-      label: "Kids Screening: Shaun the Sheep"
-  description: "A kid-friendly noon showing of the new PG Shaun the Sheep Halloween film, with the lights and sound adjusted for a relaxed room. Tickets are $5 to $10. Doors open 30 minutes early."
-  hub_blurb: "A kid-friendly noon showing of the new Shaun the Sheep film, with softer lights and sound."
 - name: "Play and Learn"
   cost: "Free"
   ages: "Toddlers"

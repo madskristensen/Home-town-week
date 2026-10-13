@@ -1,6 +1,3 @@
-# Upcoming events for this city, earliest first.
-# Delete an event after it ends. Do not group these by week.
-# Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
 - name: "Lake Hills Greenbelt Ranger Walk"
   cost: "Free"
   setting: "Outdoor"
@@ -14,60 +11,24 @@
   heading_id: "lake-hills-greenbelt-ranger-walk"
   when: "Saturdays through Dec 26 · 2:00–3:00 p.m."
   blurbs:
-    - "A free one-mile ranger hike for all ages on the mostly level gravel trails. The fall guide lists it Saturdays at 2:00 p.m. through Dec 26. Oct 3 is not on that list. Register ahead. Bring binoculars if you have them."
+  - "A free one-mile ranger hike for all ages on the mostly level gravel trails. The fall guide lists\
+    \ it Saturdays at 2:00 p.m. through Dec 26. Oct 3 is not on that list. Register ahead. Bring binoculars\
+    \ if you have them."
   links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-      label: "Activity guide"
-    - href: "https://register.bellevuewa.gov"
-      label: "Register"
-  description: "A free one-mile ranger hike for all ages on the mostly level gravel trails. The fall guide lists it Saturdays at 2:00 p.m. through Dec 26. Oct 3 is not on that list. Register ahead. Bring binoculars if you have them."
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Activity guide"
+  - href: "https://register.bellevuewa.gov"
+    label: "Register"
+  description: "A free one-mile ranger hike for all ages on the mostly level gravel trails. The fall guide\
+    \ lists it Saturdays at 2:00 p.m. through Dec 26. Oct 3 is not on that list. Register ahead. Bring\
+    \ binoculars if you have them."
   hub_blurb: "A free one-mile ranger hike for all ages on the mostly level gravel trails."
-- name: "Drop-in Play at Kelsey Creek Farm"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Outdoor"
-  start: "2026-10-12T10:00:00-07:00"
-  end: "2026-10-12T11:30:00-07:00"
-  place: "Kelsey Creek Farm, 410 130th Pl SE"
-  same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-  card: "drop-in-play-at-kelsey-creek-farm"
-  order: "9"
-  heading_id: "drop-in-play-at-kelsey-creek-farm"
-  when: "Mon Oct 12 · 10:00–11:30 a.m."
-  blurbs:
-    - "Free drop-in play for ages 2 to 5. Toys, games, and hands-on activities are set out, and families can come and go through the morning."
-  links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-      label: "Drop-in Play at Kelsey Creek Farm"
-  description: "Free drop-in play for ages 2 to 5. Toys, games, and hands-on activities are set out, and families can come and go through the morning."
-  hub_blurb: "Free drop-in play for ages 2 to 5."
-- name: "Toddler Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  start: "2026-10-12T10:15:00-07:00"
-  end: "2026-10-12T11:00:00-07:00"
-  place: "Bellevue Library, 1111 110th Ave NE"
-  same_as: "https://kcls.bibliocommons.com/v2/events/6a8df1a881e9d60947cc7d4e"
-  card: "toddler-story-time-1"
-  order: "10"
-  heading_id: "toddler-story-time-1"
-  when: "Mon Oct 12 · 10:15–11:00 a.m., repeated at 11:15 a.m."
-  place_line: "Bellevue Library, third-floor programming room, 1111 110th Ave NE"
-  blurbs:
-    - "Ages 1 and 2 with an adult. A short play time follows. No registration. Choose one session. The 11:15 session repeats the 10:15 session."
-  links:
-    - href: "https://kcls.bibliocommons.com/v2/events/6a8df1a881e9d60947cc7d4e"
-      label: "10:15 session"
-    - href: "https://kcls.bibliocommons.com/v2/events/6a8df1a6db86e4004d8722c1"
-      label: "11:15 session"
-  description: "Ages 1 and 2 with an adult. A short play time follows. No registration. Choose one session. The 11:15 session repeats the 10:15 session."
-  hub_blurb: "Ages 1 and 2 with an adult."
 - name: "Baby Story Time"
   cost: "Free"
   ages: "Toddlers"
   setting: "Indoor"
-  tags: [story-time]
+  tags:
+  - "story-time"
   start: "2026-10-13T13:00:00-07:00"
   end: "2026-10-13T14:00:00-07:00"
   place: "Newport Way Library, 14250 SE Newport Way"
@@ -77,17 +38,20 @@
   heading_id: "baby-story-time-1"
   when: "Tue Oct 13 · 1:00–2:00 p.m."
   blurbs:
-    - "Nursery rhymes, songs, and stories for babies from newborn to 12 months with an adult, followed by up to half an hour of play. No registration, and space is limited."
+  - "Nursery rhymes, songs, and stories for babies from newborn to 12 months with an adult, followed by\
+    \ up to half an hour of play. No registration, and space is limited."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a85dcd64cb69d003e21d687"
-      label: "Baby Story Time"
-  description: "Nursery rhymes, songs, and stories for babies from newborn to 12 months with an adult, followed by up to half an hour of play. No registration, and space is limited."
+  - href: "https://kcls.bibliocommons.com/events/6a85dcd64cb69d003e21d687"
+    label: "Baby Story Time"
+  description: "Nursery rhymes, songs, and stories for babies from newborn to 12 months with an adult,\
+    \ followed by up to half an hour of play. No registration, and space is limited."
   hub_blurb: "Nursery rhymes, songs, and stories for babies from newborn to 12 months."
 - name: "Family Story Time"
   cost: "Free"
   ages: "All ages"
   setting: "Indoor"
-  tags: [story-time]
+  tags:
+  - "story-time"
   start: "2026-10-13T17:30:00-07:00"
   end: "2026-10-13T18:15:00-07:00"
   place: "Bellevue Library, 1111 110th Ave NE"
@@ -97,11 +61,13 @@
   heading_id: "family-story-time"
   when: "Tue Oct 13 · 5:30–6:15 p.m."
   blurbs:
-    - "An early-evening story time with books, songs, rhymes, and movement, then a little play time. All ages with an adult. Free, no registration."
+  - "An early-evening story time with books, songs, rhymes, and movement, then a little play time. All\
+    \ ages with an adult. Free, no registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a8df1a3db86e4004d8722bc"
-      label: "Family Story Time"
-  description: "An early-evening story time with books, songs, rhymes, and movement, then a little play time. All ages with an adult. Free, no registration."
+  - href: "https://kcls.bibliocommons.com/events/6a8df1a3db86e4004d8722bc"
+    label: "Family Story Time"
+  description: "An early-evening story time with books, songs, rhymes, and movement, then a little play\
+    \ time. All ages with an adult. Free, no registration."
   hub_blurb: "An early-evening story time with books, songs, rhymes, and movement."
 - name: "Kids in the Garden: Spider Web Wonders"
   setting: "Outdoor"
@@ -116,16 +82,20 @@
   heading_id: "kids-in-the-garden-spider-web-wonders"
   when: "Wed Oct 14 · 10:00–11:30 a.m."
   blurbs:
-    - "Ages 3–5 with an adult. Why spiders spin webs, plus a story, art, a song, snack, and the garden. The series page marks this session full. Individual price is $25 per child, or $17.50 for members. Adults free. Cap is 12 children."
+  - "Ages 3–5 with an adult. Why spiders spin webs, plus a story, art, a song, snack, and the garden.\
+    \ The series page marks this session full. Individual price is $25 per child, or $17.50 for members.\
+    \ Adults free. Cap is 12 children."
   links:
-    - href: "https://bellevuebotanical.org/kids-in-the-garden/"
-      label: "Kids in the Garden"
+  - href: "https://bellevuebotanical.org/kids-in-the-garden/"
+    label: "Kids in the Garden"
   photo:
     src: "/assets/images/bellevue/botanical-garden.webp"
     alt: "The entrance sign and plantings at Bellevue Botanical Garden."
     credit: "Photo: Heptazane, public domain"
     source: "https://commons.wikimedia.org/wiki/File:Bellevue_Botanical_Garden_Entrance.jpg"
-  description: "Ages 3–5 with an adult. Why spiders spin webs, plus a story, art, a song, snack, and the garden. The series page marks this session full. Individual price is $25 per child, or $17.50 for members. Adults free. Cap is 12 children."
+  description: "Ages 3–5 with an adult. Why spiders spin webs, plus a story, art, a song, snack, and the\
+    \ garden. The series page marks this session full. Individual price is $25 per child, or $17.50 for\
+    \ members. Adults free. Cap is 12 children."
   hub_blurb: "Ages 3–5 with an adult."
 - name: "Kelsey Creek Farm Story Time"
   cost: "Free"
@@ -140,11 +110,15 @@
   heading_id: "kelsey-creek-farm-story-time"
   when: "Wed Oct 14 · 10:00–10:30 a.m."
   blurbs:
-    - "A free farm story and a visit with one of the animals. It is recommended for ages 1 to 5, and an adult comes with the child. No registration. The doors close when it starts or when the space is full."
+  - "A free farm story and a visit with one of the animals. It is recommended for ages 1 to 5, and an\
+    \ adult comes with the child. No registration. The doors close when it starts or when the space is\
+    \ full."
   links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-      label: "Kelsey Creek Farm Story Time"
-  description: "A free farm story and a visit with one of the animals. It is recommended for ages 1 to 5, and an adult comes with the child. No registration. The doors close when it starts or when the space is full."
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Kelsey Creek Farm Story Time"
+  description: "A free farm story and a visit with one of the animals. It is recommended for ages 1 to\
+    \ 5, and an adult comes with the child. No registration. The doors close when it starts or when the\
+    \ space is full."
   hub_blurb: "A free farm story and a visit with one of the animals."
 - name: "LEGO Brick Builders"
   cost: "Free"
@@ -160,18 +134,23 @@
   when: "Wed Oct 14 · 1:30–2:30 p.m."
   place_line: "Bellevue Library, third-floor programming room, 1111 110th Ave NE"
   blurbs:
-    - "Open building. Stay the hour or stop in. The library supplies the bricks. All ages with an adult. No registration. Space is limited. Bellevue Friends of the Library sponsors it. Wednesday hours are 11:00 a.m.–8:00 p.m."
+  - "Open building. Stay the hour or stop in. The library supplies the bricks. All ages with an adult.\
+    \ No registration. Space is limited. Bellevue Friends of the Library sponsors it. Wednesday hours\
+    \ are 11:00 a.m.–8:00 p.m."
   links:
-    - href: "https://65203.blackbaudhosting.com/65203/Kids-in-the-Garden-7-2-Spider-Web-Wonders"
-      label: "Spider Web Wonders"
-    - href: "https://kcls.bibliocommons.com/v2/events/6a921fad2dac6e0037228089"
-      label: "LEGO Brick Builders"
-  description: "Open building. Stay the hour or stop in. The library supplies the bricks. All ages with an adult. No registration. Space is limited. Bellevue Friends of the Library sponsors it. Wednesday hours are 11:00 a.m.–8:00 p.m."
+  - href: "https://65203.blackbaudhosting.com/65203/Kids-in-the-Garden-7-2-Spider-Web-Wonders"
+    label: "Spider Web Wonders"
+  - href: "https://kcls.bibliocommons.com/v2/events/6a921fad2dac6e0037228089"
+    label: "LEGO Brick Builders"
+  description: "Open building. Stay the hour or stop in. The library supplies the bricks. All ages with\
+    \ an adult. No registration. Space is limited. Bellevue Friends of the Library sponsors it. Wednesday\
+    \ hours are 11:00 a.m.–8:00 p.m."
   hub_blurb: "Open building."
 - name: "All Ages Inclusive Board Game Afternoon"
   cost: "Free"
   setting: "Indoor"
-  tags: [free]
+  tags:
+  - "free"
   start: "2026-10-14T15:30:00-07:00"
   end: "2026-10-14T17:30:00-07:00"
   place: "Newport Way Library, 14250 SE Newport Way"
@@ -181,17 +160,46 @@
   heading_id: "all-ages-inclusive-board-game-afternoon"
   when: "Wed Oct 14 · 3:30–5:30 p.m."
   blurbs:
-    - "Drop-in board games for all abilities. Use the library’s games or bring one you like. Teen volunteers can teach a game or sit down and play. Newport Way Library Teen Volunteers sponsor it. No registration."
+  - "Drop-in board games for all abilities. Use the library’s games or bring one you like. Teen volunteers\
+    \ can teach a game or sit down and play. Newport Way Library Teen Volunteers sponsor it. No registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a7f806f3b6c71003e58e9a6"
-      label: "Board Game Afternoon"
-  description: "Drop-in board games for all abilities. Use the library's games or bring one you like. Teen volunteers can teach a game or sit down and play. Newport Way Library Teen Volunteers sponsor it. No registration."
+  - href: "https://kcls.bibliocommons.com/events/6a7f806f3b6c71003e58e9a6"
+    label: "Board Game Afternoon"
+  description: "Drop-in board games for all abilities. Use the library's games or bring one you like.\
+    \ Teen volunteers can teach a game or sit down and play. Newport Way Library Teen Volunteers sponsor\
+    \ it. No registration."
   hub_blurb: "Drop-in board games for all abilities."
+- name: "Teen Study Space"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-14T15:30:00-07:00"
+  end: "2026-10-14T17:30:00-07:00"
+  place: "Bellevue Library, 1111 110th Ave NE"
+  same_as: "https://kcls.bibliocommons.com/events/6a9227933b6c71003e5c271d"
+  card: "teen-study-space"
+  heading_id: "teen-study-space"
+  when: "Wed Oct 14 · 3:30–5:30 p.m."
+  blurbs:
+  - "A quiet monthly study block for middle and high school teens at Bellevue Library. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a9227933b6c71003e5c271d"
+    label: "Teen Study Space"
+  description: "A quiet monthly study block for middle and high school teens at Bellevue Library. Free,\
+    \ no registration."
+  hub_blurb: "A quiet monthly study block for middle and high school teens."
+  ages: "Teens"
+  photo:
+    src: "/assets/images/bellevue/bellevue-library.webp"
+    alt: "Bellevue Library building"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/bellevue/"
+    license: "organizer"
 - name: "Aztec dance workshop"
   cost: "Free"
   setting: "Indoor"
   signup: true
-  tags: [dia-de-los-muertos]
+  tags:
+  - "dia-de-los-muertos"
   start: "2026-10-14T17:00:00-07:00"
   end: "2026-10-14T19:30:00-07:00"
   place: "Crossroads Community Center, 16000 NE 10th St"
@@ -201,19 +209,22 @@
   heading_id: "aztec-dance-workshop"
   when: "Wed Oct 14 · 5:00–7:30 p.m."
   blurbs:
-    - "A free afternoon for all ages with Nahui Ollin Tezcatlipocatl. The visit covers Aztec dance, music, and regalia, and how those traditions connect to Dia de los Muertos. Register ahead."
+  - "A free afternoon for all ages with Nahui Ollin Tezcatlipocatl. The visit covers Aztec dance, music,\
+    \ and regalia, and how those traditions connect to Dia de los Muertos. Register ahead."
   links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-      label: "Activity guide"
-    - href: "https://register.bellevuewa.gov"
-      label: "Register"
-  description: "A free afternoon for all ages with Nahui Ollin Tezcatlipocatl. The visit covers Aztec dance, music, and regalia, and how those traditions connect to Dia de los Muertos. Register ahead."
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Activity guide"
+  - href: "https://register.bellevuewa.gov"
+    label: "Register"
+  description: "A free afternoon for all ages with Nahui Ollin Tezcatlipocatl. The visit covers Aztec\
+    \ dance, music, and regalia, and how those traditions connect to Dia de los Muertos. Register ahead."
   hub_blurb: "A free afternoon for all ages with Nahui Ollin Tezcatlipocatl."
 - name: "Danza Azteca"
   cost: "Free"
   ages: "All ages"
   setting: "Indoor"
-  tags: [dia-de-los-muertos]
+  tags:
+  - "dia-de-los-muertos"
   start: "2026-10-14T18:00:00-07:00"
   end: "2026-10-14T19:00:00-07:00"
   place: "Crossroads Community Center, 16000 NE 10th St"
@@ -223,17 +234,214 @@
   heading_id: "danza-azteca"
   when: "Wed Oct 14 · 6:00–7:00 p.m."
   blurbs:
-    - "Bellevue dance group Nahui Ollin Tezcatlipocatl performs traditional Aztec dance and explains how it honors ancestors ahead of Día de los Muertos. Free."
+  - "Bellevue dance group Nahui Ollin Tezcatlipocatl performs traditional Aztec dance and explains how\
+    \ it honors ancestors ahead of Día de los Muertos. Free."
   links:
-    - href: "https://bellevuewa.gov/events/danza-azteca"
-      label: "City of Bellevue"
-  description: "Bellevue dance group Nahui Ollin Tezcatlipocatl performs traditional Aztec dance and explains how it honors ancestors ahead of Día de los Muertos. Free."
+  - href: "https://bellevuewa.gov/events/danza-azteca"
+    label: "City of Bellevue"
+  description: "Bellevue dance group Nahui Ollin Tezcatlipocatl performs traditional Aztec dance and explains\
+    \ how it honors ancestors ahead of Día de los Muertos. Free."
   hub_blurb: "A free Aztec dance performance and talk ahead of Día de los Muertos."
+- name: "Reading with Rover"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-14T18:30:00-07:00"
+  end: "2026-10-14T19:30:00-07:00"
+  place: "Bellevue Library, 1111 110th Ave NE"
+  same_as: "https://kcls.bibliocommons.com/events/6a922bd33b6c71003e5c27af"
+  card: "reading-with-rover"
+  heading_id: "reading-with-rover"
+  when: "Wed Oct 14 · 6:30–7:30 p.m."
+  blurbs:
+  - "School-age kids read aloud to a certified therapy dog. Free drop-in at Bellevue Library; space is\
+    \ limited."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a922bd33b6c71003e5c27af"
+    label: "Reading with Rover"
+  description: "School-age kids read aloud to a certified therapy dog. Free drop-in at Bellevue Library;\
+    \ space is limited."
+  hub_blurb: "School-age kids read aloud to a certified therapy dog."
+  ages: "Kids"
+  photo:
+    src: "/assets/images/bellevue/bellevue-library.webp"
+    alt: "Bellevue Library building"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/bellevue/"
+    license: "organizer"
+- name: "Preschool Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-15T10:30:00-07:00"
+  end: "2026-10-15T11:15:00-07:00"
+  place: "Bellevue Library, 1111 110th Ave NE"
+  same_as: "https://kcls.bibliocommons.com/events/6a8df1aa81e9d60947cc7d53"
+  card: "preschool-story-time"
+  heading_id: "preschool-story-time"
+  when: "Thu Oct 15 · 10:30–11:15 a.m."
+  blurbs:
+  - "Stories, music, movement, and rhymes for ages 3 to 5 with an adult, then a short play time. Free,\
+    \ no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a8df1aa81e9d60947cc7d53"
+    label: "Preschool Story Time"
+  description: "Stories, music, movement, and rhymes for ages 3 to 5 with an adult, then a short play\
+    \ time. Free, no registration."
+  hub_blurb: "Stories and songs for ages 3 to 5."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/bellevue/bellevue-library.webp"
+    alt: "Bellevue Library building"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/bellevue/"
+    license: "organizer"
+- name: "Family Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-15T10:30:00-07:00"
+  end: "2026-10-15T11:15:00-07:00"
+  place: "Lake Hills Library, 15590 Lake Hills Blvd"
+  same_as: "https://kcls.bibliocommons.com/events/6a91f37c69166f088b95a911"
+  card: "family-story-time-lake-hills"
+  heading_id: "family-story-time-lake-hills"
+  when: "Thu Oct 15 · 10:30–11:15 a.m."
+  blurbs:
+  - "Stories, music, movement, and rhymes for ages 0 to 5 with an adult at Lake Hills Library. Free, no\
+    \ registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a91f37c69166f088b95a911"
+    label: "Family Story Time"
+  description: "Stories, music, movement, and rhymes for ages 0 to 5 with an adult at Lake Hills Library.\
+    \ Free, no registration."
+  hub_blurb: "Stories and songs for ages 0 to 5 at Lake Hills."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/bellevue/lake-hills-library.webp"
+    alt: "Lake Hills Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/lake-hills/"
+    license: "organizer"
+- name: "Bilingual Kaleidoscope Play and Learn"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-15T10:30:00-07:00"
+  end: "2026-10-15T12:00:00-07:00"
+  place: "Newport Way Library, 14250 SE Newport Way"
+  same_as: "https://kcls.bibliocommons.com/events/69d91c2766c3387a9d06651e"
+  card: "bilingual-kaleidoscope-play-and-learn-2"
+  heading_id: "bilingual-kaleidoscope-play-and-learn-2"
+  when: "Thu Oct 15 · 10:30 a.m.–12:00 p.m."
+  blurbs:
+  - "English and Mandarin stories, music, games, and crafts for young children with a caregiver at Newport\
+    \ Way Library. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/69d91c2766c3387a9d06651e"
+    label: "Bilingual Kaleidoscope Play and Learn"
+  description: "English and Mandarin stories, music, games, and crafts for young children with a caregiver\
+    \ at Newport Way Library. Free, no registration."
+  hub_blurb: "English and Mandarin play and learn for young children."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/bellevue/newport-way-library-entrance.webp"
+    alt: "Newport Way Library entrance"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/newport-way/"
+    license: "organizer"
+- name: "Baby Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-15T11:30:00-07:00"
+  end: "2026-10-15T12:15:00-07:00"
+  place: "Bellevue Library, 1111 110th Ave NE"
+  same_as: "https://kcls.bibliocommons.com/events/6a95fe8869166f088b9651a9"
+  card: "baby-story-time-2"
+  heading_id: "baby-story-time-2"
+  when: "Thu Oct 15 · 11:30 a.m.–12:15 p.m."
+  blurbs:
+  - "Nursery rhymes, songs, and stories for newborns to 12 months with an adult. Free, no registration;\
+    \ space is limited."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a95fe8869166f088b9651a9"
+    label: "Baby Story Time"
+  description: "Nursery rhymes, songs, and stories for newborns to 12 months with an adult. Free, no registration;\
+    \ space is limited."
+  hub_blurb: "Nursery rhymes and songs for babies under 1."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/bellevue/bellevue-library.webp"
+    alt: "Bellevue Library building"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/bellevue/"
+    license: "organizer"
+- name: "Baby and Toddler Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-16T10:30:00-07:00"
+  end: "2026-10-16T11:15:00-07:00"
+  place: "Lake Hills Library, 15590 Lake Hills Blvd"
+  same_as: "https://kcls.bibliocommons.com/events/6a91f37869166f088b95a90c"
+  card: "baby-and-toddler-story-time-lake-hills"
+  heading_id: "baby-and-toddler-story-time-lake-hills"
+  when: "Fri Oct 16 · 10:30–11:15 a.m."
+  blurbs:
+  - "Stories, music, and rhymes for newborns to 24 months with an adult at Lake Hills Library. Free, no\
+    \ registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a91f37869166f088b95a90c"
+    label: "Baby and Toddler Story Time"
+  description: "Stories, music, and rhymes for newborns to 24 months with an adult at Lake Hills Library.\
+    \ Free, no registration."
+  hub_blurb: "Stories for babies and toddlers at Lake Hills."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/bellevue/lake-hills-library.webp"
+    alt: "Lake Hills Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/lake-hills/"
+    license: "organizer"
+- name: "Family Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-16T10:45:00-07:00"
+  end: "2026-10-16T11:45:00-07:00"
+  place: "Newport Way Library, 14250 SE Newport Way"
+  same_as: "https://kcls.bibliocommons.com/events/6a85ddf057c264087ad2382a"
+  card: "family-story-time-newport-way"
+  heading_id: "family-story-time-newport-way"
+  when: "Fri Oct 16 · 10:45–11:45 a.m."
+  blurbs:
+  - "Stories, music, movement, and rhymes for all ages with an adult at Newport Way Library. Free, no\
+    \ registration; space is limited."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a85ddf057c264087ad2382a"
+    label: "Family Story Time"
+  description: "Stories, music, movement, and rhymes for all ages with an adult at Newport Way Library.\
+    \ Free, no registration; space is limited."
+  hub_blurb: "Family stories and songs at Newport Way Library."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/bellevue/newport-way-library-entrance.webp"
+    alt: "Newport Way Library entrance"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/newport-way/"
+    license: "organizer"
 - name: "Korean Story Time"
   cost: "Free"
   ages: "Toddlers"
   setting: "Indoor"
-  tags: [story-time]
+  tags:
+  - "story-time"
   start: "2026-10-16T16:45:00-07:00"
   end: "2026-10-16T17:30:00-07:00"
   place: "Newport Way Library, 14250 SE Newport Way"
@@ -243,11 +451,13 @@
   heading_id: "korean-story-time-1"
   when: "Fri Oct 16 · 4:45–5:30 p.m."
   blurbs:
-    - "Korean picture books and songs, with a little Korean culture mixed in. For toddlers through early elementary with an adult. Free, no registration."
+  - "Korean picture books and songs, with a little Korean culture mixed in. For toddlers through early\
+    \ elementary with an adult. Free, no registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6aa9c030101eb7003f3063e8"
-      label: "Korean Story Time"
-  description: "Korean picture books and songs, with a little Korean culture mixed in. For toddlers through early elementary with an adult. Free, no registration."
+  - href: "https://kcls.bibliocommons.com/events/6aa9c030101eb7003f3063e8"
+    label: "Korean Story Time"
+  description: "Korean picture books and songs, with a little Korean culture mixed in. For toddlers through\
+    \ early elementary with an adult. Free, no registration."
   hub_blurb: "Korean picture books and songs for toddlers through early elementary."
 - name: "Alice's Magical Adventure"
   setting: "Indoor"
@@ -263,16 +473,21 @@
   title: "Alice’s Magical Adventure"
   when: "Sat Oct 17 through Sun Oct 18"
   blurbs:
-    - "Theatre33’s Russian-language family play, about an hour, for ages 5 and older. Alice walks into a world of riddles and odd characters. Saturday is 1:00 p.m. and 5:00 p.m. Sunday is 1:00 p.m. and 4:00 p.m. 4Culture supports free and reduced admission."
+  - "Theatre33’s Russian-language family play, about an hour, for ages 5 and older. Alice walks into a\
+    \ world of riddles and odd characters. Saturday is 1:00 p.m. and 5:00 p.m. Sunday is 1:00 p.m. and\
+    \ 4:00 p.m. 4Culture supports free and reduced admission."
   links:
-    - href: "https://theatre33.ludus.com/"
-      label: "Theatre33 tickets"
-  description: "Theatre33's Russian-language family play, about an hour, for ages 5 and older. Alice walks into a world of riddles and odd characters. Saturday is 1:00 p.m. and 5:00 p.m. Sunday is 1:00 p.m. and 4:00 p.m. 4Culture supports free and reduced admission."
+  - href: "https://theatre33.ludus.com/"
+    label: "Theatre33 tickets"
+  description: "Theatre33's Russian-language family play, about an hour, for ages 5 and older. Alice walks\
+    \ into a world of riddles and odd characters. Saturday is 1:00 p.m. and 5:00 p.m. Sunday is 1:00 p.m.\
+    \ and 4:00 p.m. 4Culture supports free and reduced admission."
   hub_blurb: "Theatre33's Russian-language family play, about an hour, for ages 5 and older."
 - name: "LEGO Block Party"
   cost: "Free"
   setting: "Indoor"
-  tags: [free]
+  tags:
+  - "free"
   start: "2026-10-17T14:00:00-07:00"
   end: "2026-10-17T16:00:00-07:00"
   place: "Newport Way Library, 14250 SE Newport Way"
@@ -282,17 +497,20 @@
   heading_id: "lego-block-party"
   when: "Sat Oct 17 · 2:00–4:00 p.m."
   blurbs:
-    - "Open building with the library’s bricks. Stay for the whole session or stop in for a few minutes. Ages 4 and older. No registration. Space is limited."
+  - "Open building with the library’s bricks. Stay for the whole session or stop in for a few minutes.\
+    \ Ages 4 and older. No registration. Space is limited."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a91f39069166f088b95a921"
-      label: "LEGO Block Party"
-  description: "Open building with the library's bricks. Stay for the whole session or stop in for a few minutes. Ages 4 and older. No registration. Space is limited."
+  - href: "https://kcls.bibliocommons.com/events/6a91f39069166f088b95a921"
+    label: "LEGO Block Party"
+  description: "Open building with the library's bricks. Stay for the whole session or stop in for a few\
+    \ minutes. Ages 4 and older. No registration. Space is limited."
   hub_blurb: "Open building with the library's bricks."
 - name: "Diwali Sangam"
   cost: "$14.98 to $37.34"
   setting: "Indoor"
   signup: true
-  tags: [diwali]
+  tags:
+  - "diwali"
   start: "2026-10-17T14:00:00-07:00"
   end: "2026-10-17T17:00:00-07:00"
   place: "Yuan Ru Art Gallery, 12737 NE Bel Red Rd"
@@ -304,24 +522,28 @@
   heading_id: "diwali-sangam"
   when: "Sat Oct 17 · 2:00–5:00 p.m."
   blurbs:
-    - "A ticketed Festival of Lights afternoon at Yuan Ru Art Gallery. The ticket includes the gallery, Indian stories, a handmade Diwali decoration, and dance and music. Tickets are $14.98 to $37.34."
+  - "A ticketed Festival of Lights afternoon at Yuan Ru Art Gallery. The ticket includes the gallery,\
+    \ Indian stories, a handmade Diwali decoration, and dance and music. Tickets are $14.98 to $37.34."
   links:
-    - href: "https://www.eventbrite.com/e/diwali-celebration-tickets-2001421461468"
-      label: "Diwali Sangam"
+  - href: "https://www.eventbrite.com/e/diwali-celebration-tickets-2001421461468"
+    label: "Diwali Sangam"
   photo:
     src: "/assets/images/bellevue/diwali-sangam.webp"
     alt: "A poster for Diwali Sangam with a lit diya and two women in traditional dress."
     credit: "Image: Atelier By Priyanka"
     source: "https://www.eventbrite.com/e/diwali-celebration-tickets-2001421461468"
     license: "organizer"
-  description: "A ticketed Festival of Lights afternoon at Yuan Ru Art Gallery. The ticket includes the gallery, Indian stories, a handmade Diwali decoration, and dance and music. Tickets are $14.98 to $37.34."
+  description: "A ticketed Festival of Lights afternoon at Yuan Ru Art Gallery. The ticket includes the\
+    \ gallery, Indian stories, a handmade Diwali decoration, and dance and music. Tickets are $14.98 to\
+    \ $37.34."
   hub_blurb: "A ticketed Festival of Lights afternoon at Yuan Ru Art Gallery."
 - name: "Diwali Jharokha Workshop"
   cost: "Free"
   setting: "Indoor"
   ages: "All ages"
   signup: true
-  tags: [diwali]
+  tags:
+  - "diwali"
   start: "2026-10-18T13:00:00-07:00"
   end: "2026-10-18T15:00:00-07:00"
   place: "Crossroads Community Center, 16000 NE 10th St"
@@ -331,11 +553,15 @@
   heading_id: "diwali-jharokha-workshop"
   when: "Sun Oct 18 · 1:00–3:00 p.m."
   blurbs:
-    - "Decorate a wooden candle holder shaped like a traditional Indian jharokha window, for Diwali. All ages, and children need an adult with them. Free. Registration is encouraged, not required. Deepti Designs hosts it."
+  - "Decorate a wooden candle holder shaped like a traditional Indian jharokha window, for Diwali. All\
+    \ ages, and children need an adult with them. Free. Registration is encouraged, not required. Deepti\
+    \ Designs hosts it."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a46e2a7c52cdc3600ee781b"
-      label: "Diwali Jharokha Workshop"
-  description: "Decorate a wooden candle holder shaped like a traditional Indian jharokha window, for Diwali. All ages, and children need an adult with them. Free. Registration is encouraged, not required. Deepti Designs hosts it."
+  - href: "https://kcls.bibliocommons.com/events/6a46e2a7c52cdc3600ee781b"
+    label: "Diwali Jharokha Workshop"
+  description: "Decorate a wooden candle holder shaped like a traditional Indian jharokha window, for\
+    \ Diwali. All ages, and children need an adult with them. Free. Registration is encouraged, not required.\
+    \ Deepti Designs hosts it."
   hub_blurb: "Decorate a wooden candle holder shaped like a traditional Indian jharokha window, for Diwali."
 - name: "Kids in the Garden: Owls"
   setting: "Outdoor"
@@ -350,20 +576,28 @@
   heading_id: "kids-in-the-garden-owls"
   when: "Wed Oct 21 · 10:00–11:30 a.m."
   blurbs:
-    - "Ages 3–5 with an adult. Who flies in the garden at night. Story, art, a song, snack, and time outside. Twelve spots. Adults free. A single session is $25 per child, or $17.50 for Bellevue Botanical Garden Society members. A second child is $18, or $12.60 for members."
-    - "Oct 7 and Oct 14 in this series were already marked full. The owl page still said spots were available. Register. Do not plan on walking in."
-    - "The next session, Winter is Coming, is Wednesday, Oct 28, which is the following week."
+  - "Ages 3–5 with an adult. Who flies in the garden at night. Story, art, a song, snack, and time outside.\
+    \ Twelve spots. Adults free. A single session is $25 per child, or $17.50 for Bellevue Botanical Garden\
+    \ Society members. A second child is $18, or $12.60 for members."
+  - "Oct 7 and Oct 14 in this series were already marked full. The owl page still said spots were available.\
+    \ Register. Do not plan on walking in."
+  - "The next session, Winter is Coming, is Wednesday, Oct 28, which is the following week."
   links:
-    - href: "https://65203.blackbaudhosting.com/65203/Kids-in-the-Garden-7-3-Owls"
-      label: "Owls"
-    - href: "https://bellevuebotanical.org/kids-in-the-garden/"
-      label: "Series"
+  - href: "https://65203.blackbaudhosting.com/65203/Kids-in-the-Garden-7-3-Owls"
+    label: "Owls"
+  - href: "https://bellevuebotanical.org/kids-in-the-garden/"
+    label: "Series"
   photo:
     src: "/assets/images/bellevue/botanical-garden.webp"
     alt: "The entrance sign and plantings at Bellevue Botanical Garden."
     credit: "Photo: Heptazane, public domain"
     source: "https://commons.wikimedia.org/wiki/File:Bellevue_Botanical_Garden_Entrance.jpg"
-  description: "Ages 3–5 with an adult. Who flies in the garden at night. Story, art, a song, snack, and time outside. Twelve spots. Adults free. A single session is $25 per child, or $17.50 for Bellevue Botanical Garden Society members. A second child is $18, or $12.60 for members. Oct 7 and Oct 14 in this series were already marked full. The owl page still said spots were available. Register. Do not plan on walking in. The next session, Winter is Coming, is Wednesday, Oct 28, which is the following week."
+  description: "Ages 3–5 with an adult. Who flies in the garden at night. Story, art, a song, snack, and\
+    \ time outside. Twelve spots. Adults free. A single session is $25 per child, or $17.50 for Bellevue\
+    \ Botanical Garden Society members. A second child is $18, or $12.60 for members. Oct 7 and Oct 14\
+    \ in this series were already marked full. The owl page still said spots were available. Register.\
+    \ Do not plan on walking in. The next session, Winter is Coming, is Wednesday, Oct 28, which is the\
+    \ following week."
   hub_blurb: "Ages 3–5 with an adult."
 - name: "Made in Bellevue"
   cost: "Free"
@@ -378,11 +612,13 @@
   heading_id: "made-in-bellevue-1"
   when: "Wed Oct 21 · 12:00–2:00 p.m."
   blurbs:
-    - "A free walk-up craft at The Meadow. This date is decorating a small pumpkin. Drop in any time from noon to 2:00 p.m. Supplies are first come, first served, and it is open to everyone."
+  - "A free walk-up craft at The Meadow. This date is decorating a small pumpkin. Drop in any time from\
+    \ noon to 2:00 p.m. Supplies are first come, first served, and it is open to everyone."
   links:
-    - href: "https://www.bellevuedowntown.com/do/made-in-bellevue-ferns-broad-leaf-house-plants"
-      label: "Made in Bellevue"
-  description: "A free walk-up craft at The Meadow. This date is decorating a small pumpkin. Drop in any time from noon to 2:00 p.m. Supplies are first come, first served, and it is open to everyone."
+  - href: "https://www.bellevuedowntown.com/do/made-in-bellevue-ferns-broad-leaf-house-plants"
+    label: "Made in Bellevue"
+  description: "A free walk-up craft at The Meadow. This date is decorating a small pumpkin. Drop in any\
+    \ time from noon to 2:00 p.m. Supplies are first come, first served, and it is open to everyone."
   hub_blurb: "A free walk-up craft at The Meadow."
 - name: "LEGO Brick Builders"
   cost: "Free"
@@ -397,17 +633,22 @@
   heading_id: "lego-brick-builders-2"
   when: "Wed Oct 21 · 1:30–2:30 p.m."
   blurbs:
-    - "Drop in to build with the library's bricks at an open play hour, for a few minutes or the whole time. All ages with an adult. Free, no registration."
+  - "Drop in to build with the library's bricks at an open play hour, for a few minutes or the whole time.\
+    \ All ages with an adult. Free, no registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a921fad2dac6e003722808a"
-      label: "LEGO Brick Builders"
-  description: "Drop in to build with the library's bricks at an open play hour, for a few minutes or the whole time. All ages with an adult. Free, no registration."
-  hub_blurb: "Drop in to build with the library's bricks at an open play hour, for a few minutes or the whole time."
+  - href: "https://kcls.bibliocommons.com/events/6a921fad2dac6e003722808a"
+    label: "LEGO Brick Builders"
+  description: "Drop in to build with the library's bricks at an open play hour, for a few minutes or\
+    \ the whole time. All ages with an adult. Free, no registration."
+  hub_blurb: "Drop in to build with the library's bricks at an open play hour, for a few minutes or the\
+    \ whole time."
 - name: "Bilingual Kaleidoscope Play and Learn"
   cost: "Free"
   ages: "Toddlers"
   setting: "Indoor"
-  tags: [free, story-time]
+  tags:
+  - "free"
+  - "story-time"
   start: "2026-10-22T10:30:00-07:00"
   end: "2026-10-22T12:00:00-07:00"
   place: "Newport Way Library, 14250 SE Newport Way"
@@ -417,38 +658,48 @@
   heading_id: "bilingual-kaleidoscope-play-and-learn-1"
   when: "Thu Oct 22 · 10:30 a.m.–12:00 p.m."
   blurbs:
-    - "A Mandarin and English play group for toddlers and preschoolers with a caregiver, with stories, songs, games, and crafts that build school readiness. Free, no registration."
+  - "A Mandarin and English play group for toddlers and preschoolers with a caregiver, with stories, songs,\
+    \ games, and crafts that build school readiness. Free, no registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/69d91c2766c3387a9d06651f"
-      label: "Bilingual Kaleidoscope Play and Learn"
-  description: "A Mandarin and English play group for toddlers and preschoolers with a caregiver, with stories, songs, games, and crafts that build school readiness. Free, no registration."
-  hub_blurb: "A Mandarin and English play group for toddlers and preschoolers with a caregiver, with stories, songs, games, and crafts that build school readiness."
-- name: "Eastside Dia de los Muertos"
+  - href: "https://kcls.bibliocommons.com/events/69d91c2766c3387a9d06651f"
+    label: "Bilingual Kaleidoscope Play and Learn"
+  description: "A Mandarin and English play group for toddlers and preschoolers with a caregiver, with\
+    \ stories, songs, games, and crafts that build school readiness. Free, no registration."
+  hub_blurb: "A Mandarin and English play group for toddlers and preschoolers with a caregiver, with stories,\
+    \ songs, games, and crafts that build school readiness."
+- name: "Korean Story Time"
   cost: "Free"
   setting: "Indoor"
-  signup: true
-  tags: [dia-de-los-muertos]
-  start: "2026-10-24T12:00:00-07:00"
-  end: "2026-10-24T16:00:00-07:00"
-  place: "Crossroads Community Center, 16000 NE 10th St"
-  same_as: "https://bellevuewa.gov/events/eastside-dia-de-los-muertos-celebration"
-  card: "eastside-dia-de-los-muertos"
-  order: "28"
-  heading_id: "eastside-dia-de-los-muertos"
-  when: "Sat Oct 24 · 12:00–4:00 p.m."
+  start: "2026-10-23T16:45:00-07:00"
+  end: "2026-10-23T17:30:00-07:00"
+  place: "Newport Way Library, 14250 SE Newport Way"
+  same_as: "https://kcls.bibliocommons.com/events/6aa9c030101eb7003f3063e9"
+  card: "korean-story-time-2"
+  heading_id: "korean-story-time-2"
+  when: "Fri Oct 23 · 4:45–5:30 p.m."
   blurbs:
-    - "A free community celebration with the city, Youth Eastside Services, and Cafesito Mexican Bakery. The day has live music, cultural performances, crafts, and community altars. Food vendors are there, so meals are separate from the free admission. All ages."
+  - "Korean picture books and songs, with a little Korean culture mixed in. For toddlers through early\
+    \ elementary with an adult. Free, no registration."
   links:
-    - href: "https://bellevuewa.gov/events/eastside-dia-de-los-muertos-celebration"
-      label: "City of Bellevue"
-    - href: "https://register.bellevuewa.gov"
-      label: "Register"
-  description: "A free community celebration with the city, Youth Eastside Services, and Cafesito Mexican Bakery. The day has live music, cultural performances, crafts, and community altars. Food vendors are there, so meals are separate from the free admission. All ages."
-  hub_blurb: "A free community celebration with the city, Youth Eastside Services, and Cafesito Mexican Bakery."
+  - href: "https://kcls.bibliocommons.com/events/6aa9c030101eb7003f3063e9"
+    label: "Korean Story Time"
+  description: "Korean picture books and songs, with a little Korean culture mixed in. For toddlers through\
+    \ early elementary with an adult. Free, no registration."
+  hub_blurb: "Korean picture books and songs for toddlers through early elementary."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/bellevue/newport-way-library-entrance.webp"
+    alt: "Newport Way Library entrance"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/newport-way/"
+    license: "organizer"
 - name: "Halloween on the Hill"
   setting: "Indoor"
   signup: true
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-24T10:00:00-07:00"
   end: "2026-10-24T15:00:00-07:00"
   place: "South Bellevue Community Center, 14509 SE Newport Way"
@@ -458,19 +709,59 @@
   heading_id: "halloween-on-the-hill"
   when: "Sat Oct 24 · 10:00 a.m.–3:00 p.m."
   blurbs:
-    - "A family carnival at South Bellevue Community Center, with inflatables, games, face painting, a climbing wall, and a play area for ages 3 and younger. Presale wristbands are $10. Wristbands the day of the event are $12. Adults 18 and older, and children 3 and younger, do not need one. The Great Pumpkin Race is the same day, with check-in at 9:45 a.m. and race times at 10:00 a.m. and noon. A racer kit is $25, and you bring your own pumpkin. Free demos are Sat Oct 17, 10:30–11:00 a.m., and Wed Oct 21, 6:30–7:00 p.m. A free build workshop is Fri Oct 23, 5:00–6:30 p.m."
+  - "A family carnival at South Bellevue Community Center, with inflatables, games, face painting, a climbing\
+    \ wall, and a play area for ages 3 and younger. Presale wristbands are $10. Wristbands the day of\
+    \ the event are $12. Adults 18 and older, and children 3 and younger, do not need one. The Great Pumpkin\
+    \ Race is the same day, with check-in at 9:45 a.m. and race times at 10:00 a.m. and noon. A racer\
+    \ kit is $25, and you bring your own pumpkin. Free demos are Sat Oct 17, 10:30–11:00 a.m., and Wed\
+    \ Oct 21, 6:30–7:00 p.m. A free build workshop is Fri Oct 23, 5:00–6:30 p.m."
   links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-      label: "Activity guide"
-    - href: "https://register.bellevuewa.gov"
-      label: "Register"
-  description: "A family carnival at South Bellevue Community Center, with inflatables, games, face painting, a climbing wall, and a play area for ages 3 and younger. Presale wristbands are $10. Wristbands the day of the event are $12. Adults 18 and older, and children 3 and younger, do not need one. The Great Pumpkin Race is the same day, with check-in at 9:45 a.m. and race times at 10:00 a.m. and noon. A racer kit is $25, and you bring your own pumpkin. Free demos are Sat Oct 17, 10:30–11:00 a.m., and Wed Oct 21, 6:30–7:00 p.m. A free build workshop is Fri Oct 23, 5:00–6:30 p.m."
-  hub_blurb: "A family carnival at South Bellevue Community Center, with inflatables, games, face painting, a climbing wall, and a play area for ages 3 and younger."
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Activity guide"
+  - href: "https://register.bellevuewa.gov"
+    label: "Register"
+  description: "A family carnival at South Bellevue Community Center, with inflatables, games, face painting,\
+    \ a climbing wall, and a play area for ages 3 and younger. Presale wristbands are $10. Wristbands\
+    \ the day of the event are $12. Adults 18 and older, and children 3 and younger, do not need one.\
+    \ The Great Pumpkin Race is the same day, with check-in at 9:45 a.m. and race times at 10:00 a.m.\
+    \ and noon. A racer kit is $25, and you bring your own pumpkin. Free demos are Sat Oct 17, 10:30–11:00\
+    \ a.m., and Wed Oct 21, 6:30–7:00 p.m. A free build workshop is Fri Oct 23, 5:00–6:30 p.m."
+  hub_blurb: "A family carnival at South Bellevue Community Center, with inflatables, games, face painting,\
+    \ a climbing wall, and a play area for ages 3 and younger."
+- name: "Eastside Dia de los Muertos"
+  cost: "Free"
+  setting: "Indoor"
+  signup: true
+  tags:
+  - "dia-de-los-muertos"
+  start: "2026-10-24T12:00:00-07:00"
+  end: "2026-10-24T16:00:00-07:00"
+  place: "Crossroads Community Center, 16000 NE 10th St"
+  same_as: "https://bellevuewa.gov/events/eastside-dia-de-los-muertos-celebration"
+  card: "eastside-dia-de-los-muertos"
+  order: "28"
+  heading_id: "eastside-dia-de-los-muertos"
+  when: "Sat Oct 24 · 12:00–4:00 p.m."
+  blurbs:
+  - "A free community celebration with the city, Youth Eastside Services, and Cafesito Mexican Bakery.\
+    \ The day has live music, cultural performances, crafts, and community altars. Food vendors are there,\
+    \ so meals are separate from the free admission. All ages."
+  links:
+  - href: "https://bellevuewa.gov/events/eastside-dia-de-los-muertos-celebration"
+    label: "City of Bellevue"
+  - href: "https://register.bellevuewa.gov"
+    label: "Register"
+  description: "A free community celebration with the city, Youth Eastside Services, and Cafesito Mexican\
+    \ Bakery. The day has live music, cultural performances, crafts, and community altars. Food vendors\
+    \ are there, so meals are separate from the free admission. All ages."
+  hub_blurb: "A free community celebration with the city, Youth Eastside Services, and Cafesito Mexican\
+    \ Bakery."
 - name: "Trick or Treat with the Farm Animals"
   cost: "$30 to $36"
   signup: true
   setting: "Outdoor"
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-24T13:00:00-07:00"
   end: "2026-10-24T15:00:00-07:00"
   place: "Kelsey Creek Farm, 410 130th Pl SE"
@@ -480,16 +771,24 @@
   heading_id: "trick-or-treat-with-the-farm-animals"
   when: "Sat Oct 24 · 1:00–3:00 p.m."
   blurbs:
-    - "Come in costume and trick-or-treat with costumed farm animals. The afternoon also has a bag to decorate, farm crafts, spooky science, and pumpkin bowling. Most of it is outdoors. Pets are not allowed in the barnyard. Registration is $30 for Bellevue residents and $36 for everyone else. Day-of registration is available if space remains. On-site parking is free, with more at International School, 445 128th Ave SE."
+  - "Come in costume and trick-or-treat with costumed farm animals. The afternoon also has a bag to decorate,\
+    \ farm crafts, spooky science, and pumpkin bowling. Most of it is outdoors. Pets are not allowed in\
+    \ the barnyard. Registration is $30 for Bellevue residents and $36 for everyone else. Day-of registration\
+    \ is available if space remains. On-site parking is free, with more at International School, 445 128th\
+    \ Ave SE."
   links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/trick-treat-farm-animals"
-      label: "Trick or Treat with the Farm Animals"
+  - href: "https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/trick-treat-farm-animals"
+    label: "Trick or Treat with the Farm Animals"
   photo:
     src: "/assets/images/bellevue/kelsey-creek.webp"
     alt: "Barn and pasture at Kelsey Creek Farm in Bellevue."
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     source: "https://commons.wikimedia.org/wiki/File:Kelsey_Creek_Farm_04.jpg"
-  description: "Come in costume and trick-or-treat with costumed farm animals. The afternoon also has a bag to decorate, farm crafts, spooky science, and pumpkin bowling. Most of it is outdoors. Pets are not allowed in the barnyard. Registration is $30 for Bellevue residents and $36 for everyone else. Day-of registration is available if space remains. On-site parking is free, with more at International School, 445 128th Ave SE."
+  description: "Come in costume and trick-or-treat with costumed farm animals. The afternoon also has\
+    \ a bag to decorate, farm crafts, spooky science, and pumpkin bowling. Most of it is outdoors. Pets\
+    \ are not allowed in the barnyard. Registration is $30 for Bellevue residents and $36 for everyone\
+    \ else. Day-of registration is available if space remains. On-site parking is free, with more at International\
+    \ School, 445 128th Ave SE."
   hub_blurb: "Come in costume and trick-or-treat with costumed farm animals."
 - name: "Nature Club for Teens: Leaf Lanterns"
   cost: "Free"
@@ -505,11 +804,13 @@
   heading_id: "nature-club-for-teens-leaf-lanterns"
   when: "Sat Oct 24 · 2:30–4:30 p.m."
   blurbs:
-    - "Identify trees from pressed autumn leaves, turn your favorites into a paper mache lantern, and walk the library gardens. Grades 5 to 9. Free. Register, and bring a jacket."
+  - "Identify trees from pressed autumn leaves, turn your favorites into a paper mache lantern, and walk\
+    \ the library gardens. Grades 5 to 9. Free. Register, and bring a jacket."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6ac5555c29c3d600332e189c"
-      label: "Nature Club for Teens: Leaf Lanterns"
-  description: "Identify trees from pressed autumn leaves, turn your favorites into a paper mache lantern, and walk the library gardens. Grades 5 to 9. Free. Register, and bring a jacket."
+  - href: "https://kcls.bibliocommons.com/events/6ac5555c29c3d600332e189c"
+    label: "Nature Club for Teens: Leaf Lanterns"
+  description: "Identify trees from pressed autumn leaves, turn your favorites into a paper mache lantern,\
+    \ and walk the library gardens. Grades 5 to 9. Free. Register, and bring a jacket."
   hub_blurb: "Tree ID with pressed leaves, then a paper mache leaf lantern to take home."
 - name: "Kids Night Out"
   cost: "$55 to $65"
@@ -520,22 +821,27 @@
   end: "2026-10-24T20:30:00-07:00"
   place: "Samena Swim and Recreation Club, 15231 Lake Hills Blvd"
   same_as: "https://samena.com/events/"
-  blurb: "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten. Members pay $55 and non-members pay $65. Register ahead."
+  blurb: "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten.\
+    \ Members pay $55 and non-members pay $65. Register ahead."
   card: "kids-night-out"
   order: "32"
   heading_id: "kids-night-out"
   when: "Sat Oct 24 · 5:00–8:30 p.m."
   blurbs:
-    - "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten. Members pay $55 and non-members pay $65. Register ahead."
+  - "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten.\
+    \ Members pay $55 and non-members pay $65. Register ahead."
   links:
-    - href: "https://samena.com/events/"
-      label: "Kids Night Out"
-  description: "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten. Members pay $55 and non-members pay $65. Register ahead."
+  - href: "https://samena.com/events/"
+    label: "Kids Night Out"
+  description: "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten.\
+    \ Members pay $55 and non-members pay $65. Register ahead."
   hub_blurb: "Swimming, pizza, and a movie while you take the evening."
 - name: "Bellevue Family YMCA Fall Festival"
   setting: "Indoor"
   cost: "Free"
-  tags: [harvest, trunk-or-treat]
+  tags:
+  - "harvest"
+  - "trunk-or-treat"
   start: "2026-10-24T18:00:00-07:00"
   end: "2026-10-24T20:00:00-07:00"
   place: "Bellevue Family YMCA, 14230 Bel-Red Rd"
@@ -545,11 +851,13 @@
   heading_id: "bellevue-family-ymca-fall-festival"
   when: "Sat Oct 24 · 6:00–8:00 p.m."
   blurbs:
-    - "Trunk-or-treat, a robotics station, and a pumpkin pool. These branch festivals are free and open to the community, and adults are asked not to wear masks. Costumes should stay family-friendly."
+  - "Trunk-or-treat, a robotics station, and a pumpkin pool. These branch festivals are free and open\
+    \ to the community, and adults are asked not to wear masks. Costumes should stay family-friendly."
   links:
-    - href: "https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities"
-      label: "Fall festivals"
-  description: "Trunk-or-treat, a robotics station, and a pumpkin pool. These branch festivals are free and open to the community, and adults are asked not to wear masks. Costumes should stay family-friendly."
+  - href: "https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities"
+    label: "Fall festivals"
+  description: "Trunk-or-treat, a robotics station, and a pumpkin pool. These branch festivals are free\
+    \ and open to the community, and adults are asked not to wear masks. Costumes should stay family-friendly."
   hub_blurb: "Trunk-or-treat, a robotics station, and a pumpkin pool."
 - name: "Monster Mash Parent Survival Night"
   cost: "$73"
@@ -560,23 +868,109 @@
   end: "2026-10-24T21:00:00-07:00"
   place: "The Little Gym Bellevue-Redmond, 1800 130th Ave NE"
   same_as: "https://www.thelittlegym.com/washington-bellevue-redmond/events-more/"
-  blurb: "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night. The gym lists it at $73, for ages 4 to 10."
+  blurb: "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night.\
+    \ The gym lists it at $73, for ages 4 to 10."
   card: "monster-mash-parent-survival-night"
   order: "34"
   heading_id: "monster-mash-parent-survival-night"
   when: "Sat Oct 24 · 6:00–9:00 p.m."
   blurbs:
-    - "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night. The gym lists it at $73, for ages 4 to 10."
+  - "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night. The\
+    \ gym lists it at $73, for ages 4 to 10."
   links:
-    - href: "https://www.thelittlegym.com/washington-bellevue-redmond/events-more/"
-      label: "Monster Mash Parent Survival Night"
-  description: "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night. The gym lists it at $73, for ages 4 to 10."
+  - href: "https://www.thelittlegym.com/washington-bellevue-redmond/events-more/"
+    label: "Monster Mash Parent Survival Night"
+  description: "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the\
+    \ night. The gym lists it at $73, for ages 4 to 10."
   hub_blurb: "A drop-off evening at the gym."
+- name: "Teen Drop-In: Create With Us"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-28T14:30:00-07:00"
+  end: "2026-10-28T16:00:00-07:00"
+  place: "Newport Way Library, 14250 SE Newport Way"
+  same_as: "https://kcls.bibliocommons.com/events/6ac5584de06996003a81c17b"
+  card: "teen-drop-in-create-with-us"
+  heading_id: "teen-drop-in-create-with-us"
+  when: "Wed Oct 28 · 2:30–4:00 p.m."
+  blurbs:
+  - "Pop-up creation stations, puzzles, games, snacks, and new books for teens at Newport Way Library.\
+    \ Free drop-in."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ac5584de06996003a81c17b"
+    label: "Teen Drop-In: Create With Us"
+  description: "Pop-up creation stations, puzzles, games, snacks, and new books for teens at Newport Way\
+    \ Library. Free drop-in."
+  hub_blurb: "Pop-up crafts, games, and snacks for teens."
+  ages: "Teens"
+  photo:
+    src: "/assets/images/bellevue/newport-way-library-entrance.webp"
+    alt: "Newport Way Library entrance"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/newport-way/"
+    license: "organizer"
+- name: "Bilingual Kaleidoscope Play and Learn"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-29T10:30:00-07:00"
+  end: "2026-10-29T12:00:00-07:00"
+  place: "Newport Way Library, 14250 SE Newport Way"
+  same_as: "https://kcls.bibliocommons.com/events/69d91c2766c3387a9d066520"
+  card: "bilingual-kaleidoscope-play-and-learn-3"
+  heading_id: "bilingual-kaleidoscope-play-and-learn-3"
+  when: "Thu Oct 29 · 10:30 a.m.–12:00 p.m."
+  blurbs:
+  - "English and Mandarin stories, music, games, and crafts for young children with a caregiver at Newport\
+    \ Way Library. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/69d91c2766c3387a9d066520"
+    label: "Bilingual Kaleidoscope Play and Learn"
+  description: "English and Mandarin stories, music, games, and crafts for young children with a caregiver\
+    \ at Newport Way Library. Free, no registration."
+  hub_blurb: "English and Mandarin play and learn for young children."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/bellevue/newport-way-library-entrance.webp"
+    alt: "Newport Way Library entrance"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/newport-way/"
+    license: "organizer"
+- name: "Korean Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-30T16:45:00-07:00"
+  end: "2026-10-30T17:30:00-07:00"
+  place: "Newport Way Library, 14250 SE Newport Way"
+  same_as: "https://kcls.bibliocommons.com/events/6aa9c030101eb7003f3063ea"
+  card: "korean-story-time-3"
+  heading_id: "korean-story-time-3"
+  when: "Fri Oct 30 · 4:45–5:30 p.m."
+  blurbs:
+  - "Korean picture books and songs, with a little Korean culture mixed in. For toddlers through early\
+    \ elementary with an adult. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6aa9c030101eb7003f3063ea"
+    label: "Korean Story Time"
+  description: "Korean picture books and songs, with a little Korean culture mixed in. For toddlers through\
+    \ early elementary with an adult. Free, no registration."
+  hub_blurb: "Korean picture books and songs for toddlers through early elementary."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/bellevue/newport-way-library-entrance.webp"
+    alt: "Newport Way Library entrance"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/newport-way/"
+    license: "organizer"
 - name: "Monster Mash Halloween Bash"
   cost: "Free"
   ages: "All ages"
   setting: "Indoor"
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-30T17:30:00-07:00"
   end: "2026-10-30T20:00:00-07:00"
   place: "Northwest Arts Center, 9825 NE 24th St"
@@ -586,11 +980,13 @@
   heading_id: "monster-mash-halloween-bash"
   when: "Fri Oct 30 · 5:30–8:00 p.m."
   blurbs:
-    - "A free indoor trick-or-treat at the Northwest Arts Center, with themed crafts. The toddler play gym is open too. No registration. The fall activity guide lists it for all ages."
+  - "A free indoor trick-or-treat at the Northwest Arts Center, with themed crafts. The toddler play gym\
+    \ is open too. No registration. The fall activity guide lists it for all ages."
   links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-      label: "Monster Mash Halloween Bash"
-  description: "A free indoor trick-or-treat at the Northwest Arts Center, with themed crafts. The toddler play gym is open too. No registration. The fall activity guide lists it for all ages."
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Monster Mash Halloween Bash"
+  description: "A free indoor trick-or-treat at the Northwest Arts Center, with themed crafts. The toddler\
+    \ play gym is open too. No registration. The fall activity guide lists it for all ages."
   hub_blurb: "A free indoor trick-or-treat at the Northwest Arts Center, with themed crafts."
 - name: "Sunset Stroll"
   cost: "Free"
@@ -605,18 +1001,22 @@
   heading_id: "sunset-stroll"
   when: "Fri Oct 30 · 6:00–7:00 p.m."
   blurbs:
-    - "A ranger walk around Larsen Lake at sunset, for all ages, about the animals that come out then. Bring a flashlight. Children need an adult with them. It is free. Register ahead."
+  - "A ranger walk around Larsen Lake at sunset, for all ages, about the animals that come out then. Bring\
+    \ a flashlight. Children need an adult with them. It is free. Register ahead."
   links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-      label: "Activity guide"
-    - href: "https://register.bellevuewa.gov"
-      label: "Register"
-  description: "A ranger walk around Larsen Lake at sunset, for all ages, about the animals that come out then. Bring a flashlight. Children need an adult with them. It is free. Register ahead."
-  hub_blurb: "A ranger walk around Larsen Lake at sunset, for all ages, about the animals that come out then."
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Activity guide"
+  - href: "https://register.bellevuewa.gov"
+    label: "Register"
+  description: "A ranger walk around Larsen Lake at sunset, for all ages, about the animals that come\
+    \ out then. Bring a flashlight. Children need an adult with them. It is free. Register ahead."
+  hub_blurb: "A ranger walk around Larsen Lake at sunset, for all ages, about the animals that come out\
+    \ then."
 - name: "Youth Ofrenda Contest"
   cost: "Free"
   setting: "Indoor"
-  tags: [dia-de-los-muertos]
+  tags:
+  - "dia-de-los-muertos"
   start: "2026-10-30T18:00:00-07:00"
   end: "2026-10-30T21:00:00-07:00"
   place: "Sammamish High School, 100 140th Ave SE"
@@ -626,18 +1026,22 @@
   heading_id: "youth-ofrenda-contest"
   when: "Fri Oct 30 · 6:00–9:00 p.m."
   blurbs:
-    - "See and vote for Día de los Muertos ofrendas built by local school teams, and hear the Highland Middle School mariachi group. Free, from Latino H.E.A.T. and Bellevue's Cross-Cultural Center Without Walls."
+  - "See and vote for Día de los Muertos ofrendas built by local school teams, and hear the Highland Middle\
+    \ School mariachi group. Free, from Latino H.E.A.T. and Bellevue's Cross-Cultural Center Without Walls."
   links:
-    - href: "https://bellevuewa.gov/events/latino-heat-ofrenda-contest"
-      label: "Youth Ofrenda Contest"
-  description: "See and vote for Día de los Muertos ofrendas built by local school teams, and hear the Highland Middle School mariachi group. Free, from Latino H.E.A.T. and Bellevue's Cross-Cultural Center Without Walls."
+  - href: "https://bellevuewa.gov/events/latino-heat-ofrenda-contest"
+    label: "Youth Ofrenda Contest"
+  description: "See and vote for Día de los Muertos ofrendas built by local school teams, and hear the\
+    \ Highland Middle School mariachi group. Free, from Latino H.E.A.T. and Bellevue's Cross-Cultural\
+    \ Center Without Walls."
   hub_blurb: "Vote for Día de los Muertos ofrendas built by school teams, with a middle school mariachi."
 - name: "Sleepy Hollow"
   cost: "$15"
   signup: true
   sensory: true
   setting: "Indoor"
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-30T19:00:00-07:00"
   end: "2026-11-08T14:00:00-08:00"
   place: "Bellevue Youth Theatre, 16051 NE 10th St"
@@ -647,15 +1051,24 @@
   heading_id: "sleepy-hollow"
   when: "Fri Oct 30 through Sun Nov 8"
   blurbs:
-    - "Bellevue Youth Theatre’s family ghost story, with music and dancing. Tickets are $15. Seats are reserved, and there are no refunds or transfers. The sensory-friendly performance, with brighter house lights and lower sound, is Sat Oct 31 at 2:00 p.m. Other shows are Fri Oct 30 at 7:00 p.m., Sun Nov 1 at 2:00 p.m., Fri Nov 6 at 7:00 p.m., Sat Nov 7 at 2:00 and 7:00 p.m., and Sun Nov 8 at 2:00 p.m. Groups of 10 or more for one show time should call the box office at 425-452-7155."
+  - "Bellevue Youth Theatre’s family ghost story, with music and dancing. Tickets are $15. Seats are reserved,\
+    \ and there are no refunds or transfers. The sensory-friendly performance, with brighter house lights\
+    \ and lower sound, is Sat Oct 31 at 2:00 p.m. Other shows are Fri Oct 30 at 7:00 p.m., Sun Nov 1 at\
+    \ 2:00 p.m., Fri Nov 6 at 7:00 p.m., Sat Nov 7 at 2:00 and 7:00 p.m., and Sun Nov 8 at 2:00 p.m. Groups\
+    \ of 10 or more for one show time should call the box office at 425-452-7155."
   links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre/bellevue-youth-theatre-productions"
-      label: "Performances"
-  description: "Bellevue Youth Theatre's family ghost story, with music and dancing. Tickets are $15. Seats are reserved, and there are no refunds or transfers. The sensory-friendly performance, with brighter house lights and lower sound, is Sat Oct 31 at 2:00 p.m. Other shows are Fri Oct 30 at 7:00 p.m., Sun Nov 1 at 2:00 p.m., Fri Nov 6 at 7:00 p.m., Sat Nov 7 at 2:00 and 7:00 p.m., and Sun Nov 8 at 2:00 p.m. Groups of 10 or more for one show time should call the box office at 425-452-7155."
+  - href: "https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre/bellevue-youth-theatre-productions"
+    label: "Performances"
+  description: "Bellevue Youth Theatre's family ghost story, with music and dancing. Tickets are $15.\
+    \ Seats are reserved, and there are no refunds or transfers. The sensory-friendly performance, with\
+    \ brighter house lights and lower sound, is Sat Oct 31 at 2:00 p.m. Other shows are Fri Oct 30 at\
+    \ 7:00 p.m., Sun Nov 1 at 2:00 p.m., Fri Nov 6 at 7:00 p.m., Sat Nov 7 at 2:00 and 7:00 p.m., and\
+    \ Sun Nov 8 at 2:00 p.m. Groups of 10 or more for one show time should call the box office at 425-452-7155."
   hub_blurb: "Bellevue Youth Theatre's family ghost story, with music and dancing."
 - name: "KidsQuest Halloween Spooktacular"
   setting: "Indoor"
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-31T09:00:00-07:00"
   end: "2026-10-31T16:00:00-07:00"
   place: "KidsQuest Children's Museum, 1116 108th Ave NE"
@@ -665,16 +1078,20 @@
   heading_id: "kidsquest-halloween-spooktacular"
   when: "Sat Oct 31 · 9:00 a.m.–4:00 p.m."
   blurbs:
-    - "The museum’s Halloween day, this year set as a Haunted Hoedown. Costumes are encouraged. General admission is $16.75 for adults and children. Members are free. It opens at 9:00 a.m., so it is the morning half of Halloween if you also want Main Street."
+  - "The museum’s Halloween day, this year set as a Haunted Hoedown. Costumes are encouraged. General\
+    \ admission is $16.75 for adults and children. Members are free. It opens at 9:00 a.m., so it is the\
+    \ morning half of Halloween if you also want Main Street."
   links:
-    - href: "https://www.bellevuedowntown.com/do/spooktacular"
-      label: "Spooktacular"
+  - href: "https://www.bellevuedowntown.com/do/spooktacular"
+    label: "Spooktacular"
   photo:
     src: "/assets/images/bellevue/kidsquest.webp"
     alt: "Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance."
     credit: "Photo: Julian Fong, CC BY-SA 4.0"
     source: "https://commons.wikimedia.org/wiki/File:KidsQuest_Children%27s_Museum_2.jpg"
-  description: "The museum's Halloween day, this year set as a Haunted Hoedown. Costumes are encouraged. General admission is $16.75 for adults and children. Members are free. It opens at 9:00 a.m., so it is the morning half of Halloween if you also want Main Street."
+  description: "The museum's Halloween day, this year set as a Haunted Hoedown. Costumes are encouraged.\
+    \ General admission is $16.75 for adults and children. Members are free. It opens at 9:00 a.m., so\
+    \ it is the morning half of Halloween if you also want Main Street."
   hub_blurb: "The museum's Halloween day, this year set as a Haunted Hoedown."
 - name: "Bellevue Farmers Market"
   setting: "Outdoor"
@@ -687,16 +1104,19 @@
   heading_id: "bellevue-farmers-market"
   when: "Sat Oct 31 · 10:00 a.m.–3:00 p.m."
   blurbs:
-    - "A Saturday market after the Thursday season. Hours are 10:00 a.m.–3:00 p.m. The next Saturday is Nov 21, same hours."
+  - "A Saturday market after the Thursday season. Hours are 10:00 a.m.–3:00 p.m. The next Saturday is\
+    \ Nov 21, same hours."
   links:
-    - href: "https://bellevuefarmersmarket.org/"
-      label: "Bellevue Farmers Market"
-  description: "A Saturday market after the Thursday season. Hours are 10:00 a.m.–3:00 p.m. The next Saturday is Nov 21, same hours."
+  - href: "https://bellevuefarmersmarket.org/"
+    label: "Bellevue Farmers Market"
+  description: "A Saturday market after the Thursday season. Hours are 10:00 a.m.–3:00 p.m. The next Saturday\
+    \ is Nov 21, same hours."
   hub_blurb: "A Saturday market after the Thursday season."
 - name: "Trick or Treat at the Library"
   cost: "Free"
   setting: "Indoor"
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-31T11:00:00-07:00"
   end: "2026-10-31T18:00:00-07:00"
   place: "Bellevue Library, 1111 110th Ave NE"
@@ -706,16 +1126,19 @@
   heading_id: "trick-or-treat-at-the-library"
   when: "Sat Oct 31 · 11:00 a.m.–6:00 p.m."
   blurbs:
-    - "Stop by the children's desk any time on Halloween for a free treat from the Bellevue Friends of the Library. Costumes welcome. No registration."
+  - "Stop by the children's desk any time on Halloween for a free treat from the Bellevue Friends of the\
+    \ Library. Costumes welcome. No registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6aa8a30a4b3b06003083cceb"
-      label: "Trick or Treat at the Library"
-  description: "Stop by the children's desk any time on Halloween for a free treat from the Bellevue Friends of the Library. Costumes welcome. No registration."
+  - href: "https://kcls.bibliocommons.com/events/6aa8a30a4b3b06003083cceb"
+    label: "Trick or Treat at the Library"
+  description: "Stop by the children's desk any time on Halloween for a free treat from the Bellevue Friends\
+    \ of the Library. Costumes welcome. No registration."
   hub_blurb: "A free treat at the children's desk any time on Halloween."
 - name: "Little Monsters on Main Street"
   cost: "Free"
   setting: "Outdoor"
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-31T13:00:00-07:00"
   end: "2026-10-31T15:00:00-07:00"
   place: "Main Street, Old Bellevue"
@@ -725,20 +1148,23 @@
   heading_id: "little-monsters-on-main-street"
   when: "Sat Oct 31 · 1:00–3:00 p.m."
   blurbs:
-    - "A free costume afternoon from the Old Bellevue Merchants Association. Businesses, restaurants, and residential communities along Main Street hand out candy."
+  - "A free costume afternoon from the Old Bellevue Merchants Association. Businesses, restaurants, and\
+    \ residential communities along Main Street hand out candy."
   links:
-    - href: "https://www.visitoldbellevue.com/events/little-monsters-on-main-street-2026"
-      label: "Little Monsters on Main Street"
+  - href: "https://www.visitoldbellevue.com/events/little-monsters-on-main-street-2026"
+    label: "Little Monsters on Main Street"
   photo:
     src: "/assets/images/bellevue/old-main-street.webp"
     alt: "Old Main Street in Bellevue, with shops and a clock along the sidewalk."
     credit: "Photo: Joe Mabel, CC BY-SA 3.0"
     source: "https://commons.wikimedia.org/wiki/File:Bellevue,_Washington_-_old_Main_Street_01.jpg"
-  description: "A free costume afternoon from the Old Bellevue Merchants Association. Businesses, restaurants, and residential communities along Main Street hand out candy."
+  description: "A free costume afternoon from the Old Bellevue Merchants Association. Businesses, restaurants,\
+    \ and residential communities along Main Street hand out candy."
   hub_blurb: "A free costume afternoon from the Old Bellevue Merchants Association."
 - name: "Halloween Factoria"
   setting: "Outdoor"
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-31T14:00:00-07:00"
   end: "2026-10-31T16:00:00-07:00"
   place: "The Marketplace at Factoria, Bellevue"
@@ -748,12 +1174,14 @@
   heading_id: "halloween-factoria"
   when: "Sat Oct 31 · 2:00–4:00 p.m."
   blurbs:
-    - "The Marketplace at Factoria lists Halloween Factoria for this afternoon at the shopping center."
+  - "The Marketplace at Factoria lists Halloween Factoria for this afternoon at the shopping center."
   links:
-    - href: "https://marketplaceatfactoria.shopkimco.com/events"
-      label: "Halloween Factoria"
-  description: "The Marketplace at Factoria lists Halloween Factoria for this afternoon at the shopping center."
-  hub_blurb: "The Marketplace at Factoria lists Halloween Factoria for this afternoon at the shopping center."
+  - href: "https://marketplaceatfactoria.shopkimco.com/events"
+    label: "Halloween Factoria"
+  description: "The Marketplace at Factoria lists Halloween Factoria for this afternoon at the shopping\
+    \ center."
+  hub_blurb: "The Marketplace at Factoria lists Halloween Factoria for this afternoon at the shopping\
+    \ center."
 - name: "Kelsey Creek Farm Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -767,17 +1195,22 @@
   heading_id: "kelsey-creek-farm-story-time-1"
   when: "Wed Nov 4 · 10:00–10:30 a.m."
   blurbs:
-    - "A free farm story and a visit with one of the animals. It is recommended for ages 1 to 5, and an adult comes with the child. No registration. The doors close when it starts or when the space is full."
+  - "A free farm story and a visit with one of the animals. It is recommended for ages 1 to 5, and an\
+    \ adult comes with the child. No registration. The doors close when it starts or when the space is\
+    \ full."
   links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-      label: "Kelsey Creek Farm Story Time"
-  description: "A free farm story and a visit with one of the animals. It is recommended for ages 1 to 5, and an adult comes with the child. No registration. The doors close when it starts or when the space is full."
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Kelsey Creek Farm Story Time"
+  description: "A free farm story and a visit with one of the animals. It is recommended for ages 1 to\
+    \ 5, and an adult comes with the child. No registration. The doors close when it starts or when the\
+    \ space is full."
   hub_blurb: "A free farm story and a visit with one of the animals."
 - name: "Art Cart"
   cost: "Free"
   ages: "Kids"
   setting: "Indoor"
-  tags: [free]
+  tags:
+  - "free"
   start: "2026-11-04T15:00:00-08:00"
   end: "2026-11-04T17:00:00-08:00"
   place: "Newport Way Library, 14250 SE Newport Way"
@@ -787,11 +1220,13 @@
   heading_id: "art-cart-newport-way"
   when: "Wed Nov 4 · 3:00–5:00 p.m."
   blurbs:
-    - "A drop-in craft table for kids and teens 6 and up. Make your own piece or try the art project of the week. Free, no registration, but space is limited."
+  - "A drop-in craft table for kids and teens 6 and up. Make your own piece or try the art project of\
+    \ the week. Free, no registration, but space is limited."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a921fd3aafa6100295ff1dd"
-      label: "Art Cart"
-  description: "A drop-in craft table for kids and teens 6 and up. Make your own piece or try the art project of the week. Free, no registration, but space is limited."
+  - href: "https://kcls.bibliocommons.com/events/6a921fd3aafa6100295ff1dd"
+    label: "Art Cart"
+  description: "A drop-in craft table for kids and teens 6 and up. Make your own piece or try the art\
+    \ project of the week. Free, no registration, but space is limited."
   hub_blurb: "A drop-in craft table for kids and teens 6 and up."
 - name: "Story Time at the Garden"
   cost: "Free"
@@ -806,18 +1241,23 @@
   heading_id: "story-time-at-the-garden"
   when: "Fri Nov 6 · 10:00–10:30 a.m."
   blurbs:
-    - "A free story time for preschoolers in the Sharp Cabin, southwest of the Urban Meadow. The garden reads a garden book and follows it with a short activity. Adults stay with the children, and registration is not required."
+  - "A free story time for preschoolers in the Sharp Cabin, southwest of the Urban Meadow. The garden\
+    \ reads a garden book and follows it with a short activity. Adults stay with the children, and registration\
+    \ is not required."
   links:
-    - href: "https://bellevuebotanical.org/event/story-time-at-the-garden-for-preschoolers-2/2026-11-06/"
-      label: "Story Time at the Garden"
-  description: "A free story time for preschoolers in the Sharp Cabin, southwest of the Urban Meadow. The garden reads a garden book and follows it with a short activity. Adults stay with the children, and registration is not required."
+  - href: "https://bellevuebotanical.org/event/story-time-at-the-garden-for-preschoolers-2/2026-11-06/"
+    label: "Story Time at the Garden"
+  description: "A free story time for preschoolers in the Sharp Cabin, southwest of the Urban Meadow.\
+    \ The garden reads a garden book and follows it with a short activity. Adults stay with the children,\
+    \ and registration is not required."
   hub_blurb: "A free story time for preschoolers in the Sharp Cabin, southwest of the Urban Meadow."
 - name: "Diwali Family Fest with Hindi Time Kids"
   cost: "Free"
   ages: "Kids"
   setting: "Indoor"
   signup: true
-  tags: [diwali]
+  tags:
+  - "diwali"
   start: "2026-11-07T15:00:00-08:00"
   end: "2026-11-07T16:00:00-08:00"
   place: "Lake Hills Library, 15590 Lake Hills Blvd"
@@ -827,11 +1267,13 @@
   heading_id: "diwali-family-fest-with-hindi-time-kids"
   when: "Sat Nov 7 · 3:00–4:00 p.m."
   blurbs:
-    - "A Hindi-English Diwali story with puppets and rhymes, then crafts like painting clay diyas and making rangoli. For ages 0 to 10 with an adult. Free. Registration required."
+  - "A Hindi-English Diwali story with puppets and rhymes, then crafts like painting clay diyas and making\
+    \ rangoli. For ages 0 to 10 with an adult. Free. Registration required."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6ac56e5eebad220045439218"
-      label: "Diwali Family Fest with Hindi Time Kids"
-  description: "A Hindi-English Diwali story with puppets and rhymes, then crafts like painting clay diyas and making rangoli. For ages 0 to 10 with an adult. Free. Registration required."
+  - href: "https://kcls.bibliocommons.com/events/6ac56e5eebad220045439218"
+    label: "Diwali Family Fest with Hindi Time Kids"
+  description: "A Hindi-English Diwali story with puppets and rhymes, then crafts like painting clay diyas\
+    \ and making rangoli. For ages 0 to 10 with an adult. Free. Registration required."
   hub_blurb: "A Hindi-English Diwali story with puppets, then diya painting and rangoli crafts."
 - name: "Drop-in Play at Kelsey Creek Farm"
   cost: "Free"
@@ -846,18 +1288,21 @@
   heading_id: "drop-in-play-at-kelsey-creek-farm-1"
   when: "Mon Nov 9 · 10:00–11:30 a.m."
   blurbs:
-    - "Free drop-in play for ages 2 to 5. Toys, games, and hands-on activities are set out, and families can come and go through the morning."
+  - "Free drop-in play for ages 2 to 5. Toys, games, and hands-on activities are set out, and families\
+    \ can come and go through the morning."
   links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-      label: "Drop-in Play at Kelsey Creek Farm"
-  description: "Free drop-in play for ages 2 to 5. Toys, games, and hands-on activities are set out, and families can come and go through the morning."
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Drop-in Play at Kelsey Creek Farm"
+  description: "Free drop-in play for ages 2 to 5. Toys, games, and hands-on activities are set out, and\
+    \ families can come and go through the morning."
   hub_blurb: "Free drop-in play for ages 2 to 5."
 - name: "Sugar Skulls, Calaveritas de Azucar"
   cost: "Free"
   ages: "All ages"
   setting: "Indoor"
   signup: true
-  tags: [dia-de-los-muertos]
+  tags:
+  - "dia-de-los-muertos"
   start: "2026-11-12T16:00:00-08:00"
   end: "2026-11-12T17:15:00-08:00"
   place: "Lake Hills Library, 15590 Lake Hills Blvd"
@@ -867,11 +1312,15 @@
   heading_id: "sugar-skulls-calaveritas-de-azucar"
   when: "Thu Nov 12 · 4:00–5:15 p.m."
   blurbs:
-    - "Decorate a pre-molded sugar skull and hear how families set altars for Dia de los Muertos. All ages, and children need an adult. Registration is requested. Crayons and coloring pages are there for younger siblings."
+  - "Decorate a pre-molded sugar skull and hear how families set altars for Dia de los Muertos. All ages,\
+    \ and children need an adult. Registration is requested. Crayons and coloring pages are there for\
+    \ younger siblings."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a926ad23b6c71003e5c2d42"
-      label: "Sugar skulls"
-  description: "Decorate a pre-molded sugar skull and hear how families set altars for Dia de los Muertos. All ages, and children need an adult. Registration is requested. Crayons and coloring pages are there for younger siblings."
+  - href: "https://kcls.bibliocommons.com/events/6a926ad23b6c71003e5c2d42"
+    label: "Sugar skulls"
+  description: "Decorate a pre-molded sugar skull and hear how families set altars for Dia de los Muertos.\
+    \ All ages, and children need an adult. Registration is requested. Crayons and coloring pages are\
+    \ there for younger siblings."
   hub_blurb: "Decorate a pre-molded sugar skull and hear how families set altars for Dia de los Muertos."
 - name: "Horizon Line"
   cost: "$15"
@@ -887,11 +1336,17 @@
   heading_id: "horizon-line"
   when: "Fri Nov 13 through Sun Nov 22"
   blurbs:
-    - "A family pirate adventure from Bellevue Youth Theatre. Tickets are $15, seats are reserved, and sales are final. The sensory-friendly show is Sat Nov 14 at 6:00 p.m. Other shows are Fri Nov 13 at 7:00 p.m., Sun Nov 15 at 2:00 p.m., Fri Nov 20 at 7:00 p.m., Sat Nov 21 at 2:00 and 7:00 p.m., and Sun Nov 22 at 2:00 p.m."
+  - "A family pirate adventure from Bellevue Youth Theatre. Tickets are $15, seats are reserved, and sales\
+    \ are final. The sensory-friendly show is Sat Nov 14 at 6:00 p.m. Other shows are Fri Nov 13 at 7:00\
+    \ p.m., Sun Nov 15 at 2:00 p.m., Fri Nov 20 at 7:00 p.m., Sat Nov 21 at 2:00 and 7:00 p.m., and Sun\
+    \ Nov 22 at 2:00 p.m."
   links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre/bellevue-youth-theatre-productions"
-      label: "Performances"
-  description: "A family pirate adventure from Bellevue Youth Theatre. Tickets are $15, seats are reserved, and sales are final. The sensory-friendly show is Sat Nov 14 at 6:00 p.m. Other shows are Fri Nov 13 at 7:00 p.m., Sun Nov 15 at 2:00 p.m., Fri Nov 20 at 7:00 p.m., Sat Nov 21 at 2:00 and 7:00 p.m., and Sun Nov 22 at 2:00 p.m."
+  - href: "https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre/bellevue-youth-theatre-productions"
+    label: "Performances"
+  description: "A family pirate adventure from Bellevue Youth Theatre. Tickets are $15, seats are reserved,\
+    \ and sales are final. The sensory-friendly show is Sat Nov 14 at 6:00 p.m. Other shows are Fri Nov\
+    \ 13 at 7:00 p.m., Sun Nov 15 at 2:00 p.m., Fri Nov 20 at 7:00 p.m., Sat Nov 21 at 2:00 and 7:00 p.m.,\
+    \ and Sun Nov 22 at 2:00 p.m."
   hub_blurb: "A family pirate adventure from Bellevue Youth Theatre."
 - name: "Creature Crafts"
   cost: "Free"
@@ -906,13 +1361,15 @@
   heading_id: "creature-crafts"
   when: "Sat Nov 21 · 10:30–11:30 a.m."
   blurbs:
-    - "A nature craft hour for ages 3 to 7, with a new topic each session and a craft to take home. It is free. Register each child and adult. The same hour is also on Sun Dec 6."
+  - "A nature craft hour for ages 3 to 7, with a new topic each session and a craft to take home. It is\
+    \ free. Register each child and adult. The same hour is also on Sun Dec 6."
   links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-      label: "Activity guide"
-    - href: "https://register.bellevuewa.gov"
-      label: "Register"
-  description: "A nature craft hour for ages 3 to 7, with a new topic each session and a craft to take home. It is free. Register each child and adult. The same hour is also on Sun Dec 6."
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Activity guide"
+  - href: "https://register.bellevuewa.gov"
+    label: "Register"
+  description: "A nature craft hour for ages 3 to 7, with a new topic each session and a craft to take\
+    \ home. It is free. Register each child and adult. The same hour is also on Sun Dec 6."
   hub_blurb: "A nature craft hour for ages 3 to 7, with a new topic each session and a craft to take home."
 - name: "Kids Night Out"
   cost: "$55 to $65"
@@ -923,17 +1380,20 @@
   end: "2026-11-21T20:30:00-08:00"
   place: "Samena Swim and Recreation Club, 15231 Lake Hills Blvd"
   same_as: "https://samena.com/events/"
-  blurb: "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten. Members pay $55 and non-members pay $65. Register ahead."
+  blurb: "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten.\
+    \ Members pay $55 and non-members pay $65. Register ahead."
   card: "kids-night-out-1"
   order: "52"
   heading_id: "kids-night-out-1"
   when: "Sat Nov 21 · 5:00–8:30 p.m."
   blurbs:
-    - "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten. Members pay $55 and non-members pay $65. Register ahead."
+  - "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten.\
+    \ Members pay $55 and non-members pay $65. Register ahead."
   links:
-    - href: "https://samena.com/events/"
-      label: "Kids Night Out"
-  description: "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten. Members pay $55 and non-members pay $65. Register ahead."
+  - href: "https://samena.com/events/"
+    label: "Kids Night Out"
+  description: "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten.\
+    \ Members pay $55 and non-members pay $65. Register ahead."
   hub_blurb: "Swimming, pizza, and a movie while you take the evening."
 - name: "Friendsgiving Parent Survival Night"
   cost: "$73"
@@ -944,22 +1404,26 @@
   end: "2026-11-21T21:00:00-08:00"
   place: "The Little Gym Bellevue-Redmond, 1800 130th Ave NE"
   same_as: "https://www.thelittlegym.com/washington-bellevue-redmond/events-more/"
-  blurb: "A drop-off evening at the gym, set up like a kids' table that never sits still. $73. The gym lists ages 4 to 10."
+  blurb: "A drop-off evening at the gym, set up like a kids' table that never sits still. $73. The gym\
+    \ lists ages 4 to 10."
   card: "friendsgiving-parent-survival-night"
   order: "53"
   heading_id: "friendsgiving-parent-survival-night"
   when: "Sat Nov 21 · 6:00–9:00 p.m."
   blurbs:
-    - "A drop-off evening at the gym, set up like a kids’ table that never sits still. $73. The gym lists ages 4 to 10."
+  - "A drop-off evening at the gym, set up like a kids’ table that never sits still. $73. The gym lists\
+    \ ages 4 to 10."
   links:
-    - href: "https://www.thelittlegym.com/washington-bellevue-redmond/events-more/"
-      label: "Friendsgiving Parent Survival Night"
-  description: "A drop-off evening at the gym, set up like a kids' table that never sits still. $73. The gym lists ages 4 to 10."
+  - href: "https://www.thelittlegym.com/washington-bellevue-redmond/events-more/"
+    label: "Friendsgiving Parent Survival Night"
+  description: "A drop-off evening at the gym, set up like a kids' table that never sits still. $73. The\
+    \ gym lists ages 4 to 10."
   hub_blurb: "A drop-off evening at the gym, set up like a kids' table that never sits still."
 - name: "Snowflake Lane"
   setting: "Outdoor"
   cost: "Free"
-  tags: [parade]
+  tags:
+  - "parade"
   start: "2026-11-27"
   end: "2026-12-24"
   place: "Bellevue Way, between NE 4th St and NE 8th St"
@@ -971,11 +1435,15 @@
   heading_id: "snowflake-lane"
   when: "Fri Nov 27 through Thu Dec 24 · 7:00 p.m."
   blurbs:
-    - "A free nightly parade on Bellevue Way for all ages, starting at 7:00 p.m. Floats, falling snow, music, toy drummers, and dancers run every night from Nov 27 through Dec 24. Parking in the Collection garages is free."
+  - "A free nightly parade on Bellevue Way for all ages, starting at 7:00 p.m. Floats, falling snow, music,\
+    \ toy drummers, and dancers run every night from Nov 27 through Dec 24. Parking in the Collection\
+    \ garages is free."
   links:
-    - href: "https://bellevuecollection.com/snowflakelane/"
-      label: "Snowflake Lane"
-  description: "A free nightly parade on Bellevue Way for all ages, starting at 7:00 p.m. Floats, falling snow, music, toy drummers, and dancers run every night from Nov 27 through Dec 24. Parking in the Collection garages is free."
+  - href: "https://bellevuecollection.com/snowflakelane/"
+    label: "Snowflake Lane"
+  description: "A free nightly parade on Bellevue Way for all ages, starting at 7:00 p.m. Floats, falling\
+    \ snow, music, toy drummers, and dancers run every night from Nov 27 through Dec 24. Parking in the\
+    \ Collection garages is free."
   hub_blurb: "A free nightly parade on Bellevue Way for all ages, starting at 7:00 p.m."
 - name: "Robin Hood"
   cost: "$15"
@@ -992,16 +1460,23 @@
   heading_id: "robin-hood"
   when: "Fri Nov 27 through Sun Dec 6"
   blurbs:
-    - "Bellevue Youth Theatre’s Robin Hood, for audiences of all ages. Tickets are $15, seats are reserved, and sales are final. The sensory-friendly show is Sat Nov 28 at 5:00 p.m. Other shows are Fri Nov 27 at 7:00 p.m., Sun Nov 29 at 2:00 p.m., Fri Dec 4 at 7:00 p.m., Sat Dec 5 at 2:00 and 7:00 p.m., and Sun Dec 6 at 2:00 p.m."
+  - "Bellevue Youth Theatre’s Robin Hood, for audiences of all ages. Tickets are $15, seats are reserved,\
+    \ and sales are final. The sensory-friendly show is Sat Nov 28 at 5:00 p.m. Other shows are Fri Nov\
+    \ 27 at 7:00 p.m., Sun Nov 29 at 2:00 p.m., Fri Dec 4 at 7:00 p.m., Sat Dec 5 at 2:00 and 7:00 p.m.,\
+    \ and Sun Dec 6 at 2:00 p.m."
   links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre/bellevue-youth-theatre-productions"
-      label: "Performances"
-  description: "Bellevue Youth Theatre's Robin Hood, for audiences of all ages. Tickets are $15, seats are reserved, and sales are final. The sensory-friendly show is Sat Nov 28 at 5:00 p.m. Other shows are Fri Nov 27 at 7:00 p.m., Sun Nov 29 at 2:00 p.m., Fri Dec 4 at 7:00 p.m., Sat Dec 5 at 2:00 and 7:00 p.m., and Sun Dec 6 at 2:00 p.m."
+  - href: "https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre/bellevue-youth-theatre-productions"
+    label: "Performances"
+  description: "Bellevue Youth Theatre's Robin Hood, for audiences of all ages. Tickets are $15, seats\
+    \ are reserved, and sales are final. The sensory-friendly show is Sat Nov 28 at 5:00 p.m. Other shows\
+    \ are Fri Nov 27 at 7:00 p.m., Sun Nov 29 at 2:00 p.m., Fri Dec 4 at 7:00 p.m., Sat Dec 5 at 2:00\
+    \ and 7:00 p.m., and Sun Dec 6 at 2:00 p.m."
   hub_blurb: "Bellevue Youth Theatre's Robin Hood, for audiences of all ages."
 - name: "Garden d'Lights"
   setting: "Outdoor"
   signup: true
-  tags: [holiday-lights]
+  tags:
+  - "holiday-lights"
   start: "2026-11-28"
   end: "2027-01-03"
   place: "Bellevue Botanical Garden, 12001 Main St"
@@ -1012,21 +1487,28 @@
   title: "Garden d’Lights"
   when: "Sat Nov 28 through Sun Jan 3"
   blurbs:
-    - "Garden d’Lights is a ticketed after-dark walk through Bellevue Botanical Garden, with lights shaped into plants, animals, and waterfalls. Tickets go on sale October 15. Nightly hours for 2026 are still to come."
+  - "Garden d’Lights is a ticketed after-dark walk through Bellevue Botanical Garden, with lights shaped\
+    \ into plants, animals, and waterfalls. Tickets go on sale October 15. Nightly hours for 2026 are\
+    \ still to come."
   links:
-    - href: "https://bellevuebotanical.org/garden-dlights/"
-      label: "Garden d’Lights"
+  - href: "https://bellevuebotanical.org/garden-dlights/"
+    label: "Garden d’Lights"
   photo:
     src: "/assets/images/lights/garden-dlights.webp"
     alt: "Light sculptures along a path at Bellevue Botanical Garden."
     credit: "Photo: Steven Pavlov, CC BY 4.0"
     source: "https://commons.wikimedia.org/wiki/File:Garden_d%E2%80%99Lights_2008_at_the_Bellevue_Botanical_Garden,_img011.jpg"
-  description: "Garden d'Lights is a ticketed after-dark walk through Bellevue Botanical Garden, with lights shaped into plants, animals, and waterfalls. Tickets go on sale October 15. Nightly hours for 2026 are still to come."
-  hub_blurb: "Garden d'Lights is a ticketed after-dark walk through Bellevue Botanical Garden, with lights shaped into plants, animals, and waterfalls."
+  description: "Garden d'Lights is a ticketed after-dark walk through Bellevue Botanical Garden, with\
+    \ lights shaped into plants, animals, and waterfalls. Tickets go on sale October 15. Nightly hours\
+    \ for 2026 are still to come."
+  hub_blurb: "Garden d'Lights is a ticketed after-dark walk through Bellevue Botanical Garden, with lights\
+    \ shaped into plants, animals, and waterfalls."
 - name: "Holiday Barn Lighting"
   cost: "Free"
   setting: "Outdoor"
-  tags: [holiday-lights, santa]
+  tags:
+  - "holiday-lights"
+  - "santa"
   start: "2026-12-05T17:00:00-08:00"
   end: "2026-12-05T18:30:00-08:00"
   place: "Kelsey Creek Farm, 410 130th Pl SE"
@@ -1036,17 +1518,24 @@
   heading_id: "holiday-barn-lighting"
   when: "Sat Dec 5 · 5:00–6:30 p.m."
   blurbs:
-    - "A family barn lighting at Kelsey Creek Farm with free admission, carols, Santa, and a countdown. Some activities are ticketed on site. Parking on the farm is limited, with more at International School, 445 128th Ave SE. Families can also meet the animals and watch them eat dinner inside the barn."
+  - "A family barn lighting at Kelsey Creek Farm with free admission, carols, Santa, and a countdown.\
+    \ Some activities are ticketed on site. Parking on the farm is limited, with more at International\
+    \ School, 445 128th Ave SE. Families can also meet the animals and watch them eat dinner inside the\
+    \ barn."
   links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/holiday-barn-lighting"
-      label: "Holiday Barn Lighting"
-  description: "A family barn lighting at Kelsey Creek Farm with free admission, carols, Santa, and a countdown. Some activities are ticketed on site. Parking on the farm is limited, with more at International School, 445 128th Ave SE. Families can also meet the animals and watch them eat dinner inside the barn."
+  - href: "https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/holiday-barn-lighting"
+    label: "Holiday Barn Lighting"
+  description: "A family barn lighting at Kelsey Creek Farm with free admission, carols, Santa, and a\
+    \ countdown. Some activities are ticketed on site. Parking on the farm is limited, with more at International\
+    \ School, 445 128th Ave SE. Families can also meet the animals and watch them eat dinner inside the\
+    \ barn."
   hub_blurb: "A family barn lighting at Kelsey Creek Farm with free admission, carols, Santa, and a countdown."
 - name: "The Nutcracker"
   cost: "$45 to $70"
   setting: "Indoor"
   signup: true
-  tags: [holiday-show]
+  tags:
+  - "holiday-show"
   start: "2026-12-11"
   end: "2026-12-23"
   place: "Meydenbauer Theatre, 11100 NE 6th St"
@@ -1058,12 +1547,23 @@
   heading_id: "the-nutcracker"
   when: "Fri Dec 11 through Wed Dec 23"
   blurbs:
-    - "International Ballet Theatre’s Nutcracker at Meydenbauer Theatre costs $45 for youth through 14 and $70 for ages 15 and up. Military and seniors 60 and older pay $55. Prices include fees. Every person needs a ticket, and babies in arms are not admitted. The program is 1 hour 50 minutes plus a 15-minute intermission. Friday Dec 11 and Friday Dec 18 are at 6:00 p.m. Saturday Dec 12, Saturday Dec 19, and Sunday Dec 20 have shows at 1:00 and 5:00 p.m. Sunday Dec 13 is 1:00 p.m. only. Monday Dec 21, Tuesday Dec 22, and Wednesday Dec 23 are at 1:00 p.m."
+  - "International Ballet Theatre’s Nutcracker at Meydenbauer Theatre costs $45 for youth through 14 and\
+    \ $70 for ages 15 and up. Military and seniors 60 and older pay $55. Prices include fees. Every person\
+    \ needs a ticket, and babies in arms are not admitted. The program is 1 hour 50 minutes plus a 15-minute\
+    \ intermission. Friday Dec 11 and Friday Dec 18 are at 6:00 p.m. Saturday Dec 12, Saturday Dec 19,\
+    \ and Sunday Dec 20 have shows at 1:00 and 5:00 p.m. Sunday Dec 13 is 1:00 p.m. only. Monday Dec 21,\
+    \ Tuesday Dec 22, and Wednesday Dec 23 are at 1:00 p.m."
   links:
-    - href: "https://www.ibtbellevue.com/nutcracker-dec-2026"
-      label: "The Nutcracker"
-  description: "International Ballet Theatre's Nutcracker at Meydenbauer Theatre costs $45 for youth through 14 and $70 for ages 15 and up. Military and seniors 60 and older pay $55. Prices include fees. Every person needs a ticket, and babies in arms are not admitted. The program is 1 hour 50 minutes plus a 15-minute intermission. Friday Dec 11 and Friday Dec 18 are at 6:00 p.m. Saturday Dec 12, Saturday Dec 19, and Sunday Dec 20 have shows at 1:00 and 5:00 p.m. Sunday Dec 13 is 1:00 p.m. only. Monday Dec 21, Tuesday Dec 22, and Wednesday Dec 23 are at 1:00 p.m."
-  hub_blurb: "International Ballet Theatre's Nutcracker at Meydenbauer Theatre costs $45 for youth through 14 and $70 for ages 15 and up."
+  - href: "https://www.ibtbellevue.com/nutcracker-dec-2026"
+    label: "The Nutcracker"
+  description: "International Ballet Theatre's Nutcracker at Meydenbauer Theatre costs $45 for youth through\
+    \ 14 and $70 for ages 15 and up. Military and seniors 60 and older pay $55. Prices include fees. Every\
+    \ person needs a ticket, and babies in arms are not admitted. The program is 1 hour 50 minutes plus\
+    \ a 15-minute intermission. Friday Dec 11 and Friday Dec 18 are at 6:00 p.m. Saturday Dec 12, Saturday\
+    \ Dec 19, and Sunday Dec 20 have shows at 1:00 and 5:00 p.m. Sunday Dec 13 is 1:00 p.m. only. Monday\
+    \ Dec 21, Tuesday Dec 22, and Wednesday Dec 23 are at 1:00 p.m."
+  hub_blurb: "International Ballet Theatre's Nutcracker at Meydenbauer Theatre costs $45 for youth through\
+    \ 14 and $70 for ages 15 and up."
 - name: "Annie JR."
   cost: "$15"
   signup: true
@@ -1078,11 +1578,17 @@
   heading_id: "annie-jr"
   when: "Fri Dec 11 through Sun Dec 20"
   blurbs:
-    - "A junior version of Annie for families, from Bellevue Youth Theatre. Tickets are $15, seats are reserved, and sales are final. The sensory-friendly show is Sat Dec 12 at 5:00 p.m. Other shows are Fri Dec 11 at 7:00 p.m., Sun Dec 13 at 2:00 p.m., Fri Dec 18 at 7:00 p.m., Sat Dec 19 at 2:00 and 7:00 p.m., and Sun Dec 20 at 2:00 p.m."
+  - "A junior version of Annie for families, from Bellevue Youth Theatre. Tickets are $15, seats are reserved,\
+    \ and sales are final. The sensory-friendly show is Sat Dec 12 at 5:00 p.m. Other shows are Fri Dec\
+    \ 11 at 7:00 p.m., Sun Dec 13 at 2:00 p.m., Fri Dec 18 at 7:00 p.m., Sat Dec 19 at 2:00 and 7:00 p.m.,\
+    \ and Sun Dec 20 at 2:00 p.m."
   links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre/bellevue-youth-theatre-productions"
-      label: "Performances"
-  description: "A junior version of Annie for families, from Bellevue Youth Theatre. Tickets are $15, seats are reserved, and sales are final. The sensory-friendly show is Sat Dec 12 at 5:00 p.m. Other shows are Fri Dec 11 at 7:00 p.m., Sun Dec 13 at 2:00 p.m., Fri Dec 18 at 7:00 p.m., Sat Dec 19 at 2:00 and 7:00 p.m., and Sun Dec 20 at 2:00 p.m."
+  - href: "https://bellevuewa.gov/city-government/departments/parks/community-centers/bellevue-youth-theatre/bellevue-youth-theatre-productions"
+    label: "Performances"
+  description: "A junior version of Annie for families, from Bellevue Youth Theatre. Tickets are $15,\
+    \ seats are reserved, and sales are final. The sensory-friendly show is Sat Dec 12 at 5:00 p.m. Other\
+    \ shows are Fri Dec 11 at 7:00 p.m., Sun Dec 13 at 2:00 p.m., Fri Dec 18 at 7:00 p.m., Sat Dec 19\
+    \ at 2:00 and 7:00 p.m., and Sun Dec 20 at 2:00 p.m."
   hub_blurb: "A junior version of Annie for families, from Bellevue Youth Theatre."
 - name: "Solstice Stroll"
   cost: "Free"
@@ -1097,11 +1603,13 @@
   heading_id: "solstice-stroll"
   when: "Sun Dec 20 · 10:30–11:30 a.m."
   blurbs:
-    - "A free ranger walk for all ages on the shortest day of the year, with a warm drink. Register each child and adult."
+  - "A free ranger walk for all ages on the shortest day of the year, with a warm drink. Register each\
+    \ child and adult."
   links:
-    - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-      label: "Activity guide"
-    - href: "https://register.bellevuewa.gov"
-      label: "Register"
-  description: "A free ranger walk for all ages on the shortest day of the year, with a warm drink. Register each child and adult."
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Activity guide"
+  - href: "https://register.bellevuewa.gov"
+    label: "Register"
+  description: "A free ranger walk for all ages on the shortest day of the year, with a warm drink. Register\
+    \ each child and adult."
   hub_blurb: "A free ranger walk for all ages on the shortest day of the year, with a warm drink."

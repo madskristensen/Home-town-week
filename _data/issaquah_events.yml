@@ -1,11 +1,42 @@
-# Upcoming events for this city, earliest first.
-# Delete an event after it ends. Do not group these by week.
-# Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
+- name: "Scarecrows on Front"
+  cost: "Free"
+  setting: "Outdoor"
+  tags:
+  - "free"
+  - "harvest"
+  start: "2026-10-03"
+  end: "2026-11-01"
+  place: "Front Street, historic downtown Issaquah"
+  organizer: "Downtown Issaquah Association"
+  organizer_url: "https://downtownissaquah.com/"
+  same_as: "https://downtownissaquah.com/events/2026-issaquah-goes-apples-scarecrows-on-front-2/"
+  card: "scarecrows-on-front"
+  order: "29"
+  heading_id: "scarecrows-on-front"
+  when: "Through Nov 1 · Entries due Oct 17"
+  blurbs:
+  - "Build a scarecrow at home and add an apple to it, then drop it off at the Historic Shell Station\
+    \ (232 Front St N) by Oct 17. The Grange (145 NE Gilman Blvd) has free straw and a burlap head bag\
+    \ through Oct 17. The scarecrows line downtown through Nov 1, so you can stroll by and look even if\
+    \ you don't build one."
+  links:
+  - href: "https://downtownissaquah.com/events/2026-issaquah-goes-apples-scarecrows-on-front-2/"
+    label: "Scarecrows on Front"
+  photo:
+    src: "/assets/images/themes/fall-festival-scarecrow.webp"
+    alt: "A scarecrow standing in a farm field."
+    credit: "Photo: Mohsen H. Rahimi, CC0"
+    source: "https://commons.wikimedia.org/wiki/File:Scarecrow_in_farm.jpg"
+  description: "Build a scarecrow with an apple, drop it at the Historic Shell Station by Oct 17, then\
+    \ see them all downtown through Nov 1. Free straw from the Grange."
+  hub_blurb: "Family-built scarecrows line downtown Issaquah through Nov 1."
 - name: "Snuggle Up Story Time"
   cost: "Free"
   ages: "Toddlers"
   setting: "Indoor"
-  tags: [free, story-time]
+  tags:
+  - "free"
+  - "story-time"
   start: "2026-10-13T18:30:00-07:00"
   end: "2026-10-13T19:00:00-07:00"
   place: "Issaquah Library, 10 W Sunset Way"
@@ -15,17 +46,20 @@
   heading_id: "snuggle-up-story-time"
   when: "Tue Oct 13 · 6:30–7:00 p.m."
   blurbs:
-    - "Stories, music, and movement for newborns to 5 with an adult, then up to 30 minutes of play. No registration. Space is limited."
+  - "Stories, music, and movement for newborns to 5 with an adult, then up to 30 minutes of play. No registration.\
+    \ Space is limited."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a7104e288e9bf2800354858"
-      label: "Snuggle Up Story Time"
-  description: "Stories, music, and movement for newborns to 5 with an adult, then up to 30 minutes of play. No registration. Space is limited."
+  - href: "https://kcls.bibliocommons.com/events/6a7104e288e9bf2800354858"
+    label: "Snuggle Up Story Time"
+  description: "Stories, music, and movement for newborns to 5 with an adult, then up to 30 minutes of\
+    \ play. No registration. Space is limited."
   hub_blurb: "Stories, music, and movement for newborns to 5 with an adult, then up to 30 minutes of play."
 - name: "Rise & Shine Story Time"
   cost: "Free"
   ages: "Toddlers"
   setting: "Indoor"
-  tags: [story-time]
+  tags:
+  - "story-time"
   start: "2026-10-15T10:30:00-07:00"
   end: "2026-10-15T11:00:00-07:00"
   place: "Issaquah Library, 10 W Sunset Way"
@@ -35,11 +69,13 @@
   heading_id: "rise-shine-story-time"
   when: "Thu Oct 15 · 10:30–11:00 a.m."
   blurbs:
-    - "A morning story time with songs, rhymes, and movement for newborns to age 5 with an adult, followed by up to 30 minutes of play. No registration, and space is limited."
+  - "A morning story time with songs, rhymes, and movement for newborns to age 5 with an adult, followed\
+    \ by up to 30 minutes of play. No registration, and space is limited."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a710898c7e02e3d006da0ef"
-      label: "Rise & Shine Story Time"
-  description: "A morning story time with songs, rhymes, and movement for newborns to age 5 with an adult, followed by up to 30 minutes of play. No registration, and space is limited."
+  - href: "https://kcls.bibliocommons.com/events/6a710898c7e02e3d006da0ef"
+    label: "Rise & Shine Story Time"
+  description: "A morning story time with songs, rhymes, and movement for newborns to age 5 with an adult,\
+    \ followed by up to 30 minutes of play. No registration, and space is limited."
   hub_blurb: "A morning story time with songs, rhymes, and movement for newborns to age 5."
 - name: "Story Stroll: Apple Pie Picnic"
   cost: "Free"
@@ -53,17 +89,24 @@
   when: "Sat Oct 17 · Any time"
   place_line: "Starts at Issaquah Library, 10 W Sunset Way"
   blurbs:
-    - "The next downtown stroll, after Watercress comes down. Apple Pie Picnic, by Alicia Duran, illustrated by Brian Fitzgerald. Self-led from the library through historic downtown. KCLS lists both Saturdays as all day. Sponsored by the Downtown Issaquah Association and Friends of the Issaquah Library. Oct 17 is also Issaquah Goes Apples, so the pages are on the harvest route."
+  - "The next downtown stroll, after Watercress comes down. Apple Pie Picnic, by Alicia Duran, illustrated\
+    \ by Brian Fitzgerald. Self-led from the library through historic downtown. KCLS lists both Saturdays\
+    \ as all day. Sponsored by the Downtown Issaquah Association and Friends of the Issaquah Library.\
+    \ Oct 17 is also Issaquah Goes Apples, so the pages are on the harvest route."
   links:
-    - href: "https://kcls.bibliocommons.com/v2/events/6aa0a306442d35226f67899a"
-      label: "Oct 10"
-    - href: "https://kcls.bibliocommons.com/v2/events/6aa0a306442d35226f67899b"
-      label: "Oct 17"
-  description: "The next downtown stroll, after Watercress comes down. Apple Pie Picnic, by Alicia Duran, illustrated by Brian Fitzgerald. Self-led from the library through historic downtown. KCLS lists both Saturdays as all day. Sponsored by the Downtown Issaquah Association and Friends of the Issaquah Library. Oct 17 is also Issaquah Goes Apples, so the pages are on the harvest route."
+  - href: "https://kcls.bibliocommons.com/v2/events/6aa0a306442d35226f67899a"
+    label: "Oct 10"
+  - href: "https://kcls.bibliocommons.com/v2/events/6aa0a306442d35226f67899b"
+    label: "Oct 17"
+  description: "The next downtown stroll, after Watercress comes down. Apple Pie Picnic, by Alicia Duran,\
+    \ illustrated by Brian Fitzgerald. Self-led from the library through historic downtown. KCLS lists\
+    \ both Saturdays as all day. Sponsored by the Downtown Issaquah Association and Friends of the Issaquah\
+    \ Library. Oct 17 is also Issaquah Goes Apples, so the pages are on the harvest route."
   hub_blurb: "The next downtown stroll, after Watercress comes down."
 - name: "Issaquah Goes Apples"
   setting: "Outdoor"
-  tags: [harvest]
+  tags:
+  - "harvest"
   start: "2026-10-17T09:00:00-07:00"
   end: "2026-10-17T14:00:00-07:00"
   place: "Historic Shell Station, 232 Front St N"
@@ -75,21 +118,28 @@
   heading_id: "issaquah-goes-apples"
   when: "Sat Oct 17 · 9:00 a.m.–2:00 p.m."
   blurbs:
-    - "The 11th annual harvest day, from the Downtown Issaquah Association. Farm Fresh Market, the Historically Hip Artisan Market, an apple cider press, scarecrow building, art, photo spots, and live music, 9:00 a.m.–2:00 p.m. at the Historic Shell Station."
+  - "The 11th annual harvest day, from the Downtown Issaquah Association. Farm Fresh Market, the Historically\
+    \ Hip Artisan Market, an apple cider press, scarecrow building, art, photo spots, and live music,\
+    \ 9:00 a.m.–2:00 p.m. at the Historic Shell Station."
   links:
-    - href: "https://www.visitissaquahwa.com/event/issaquah-goes-apples/"
-      label: "Issaquah Goes Apples"
+  - href: "https://www.visitissaquahwa.com/event/issaquah-goes-apples/"
+    label: "Issaquah Goes Apples"
   photo:
     src: "/assets/images/issaquah/front-street-trolley.webp"
-    alt: "A yellow and green Issaquah Valley Trolley streetcar crossing Front Street, with downtown buildings behind it."
+    alt: "A yellow and green Issaquah Valley Trolley streetcar crossing Front Street, with downtown buildings\
+      \ behind it."
     credit: "Photo: Steve Morgan, CC BY-SA 4.0"
     source: "https://commons.wikimedia.org/wiki/File:Issaquah_Valley_Trolley_car_519_crossing_Front_St_in_2014.jpg"
-  description: "The 11th annual harvest day, from the Downtown Issaquah Association. Farm Fresh Market, the Historically Hip Artisan Market, an apple cider press, scarecrow building, art, photo spots, and live music, 9:00 a.m.–2:00 p.m. at the Historic Shell Station."
+  description: "The 11th annual harvest day, from the Downtown Issaquah Association. Farm Fresh Market,\
+    \ the Historically Hip Artisan Market, an apple cider press, scarecrow building, art, photo spots,\
+    \ and live music, 9:00 a.m.–2:00 p.m. at the Historic Shell Station."
   hub_blurb: "The 11th annual harvest day, from the Downtown Issaquah Association."
 - name: "Treats and Tails Halloween Event"
   cost: "Free"
   setting: "Indoor"
-  tags: [free, halloween]
+  tags:
+  - "free"
+  - "halloween"
   start: "2026-10-17T12:00:00-07:00"
   end: "2026-10-17T14:00:00-07:00"
   place: "Blakely Hall, Issaquah Highlands"
@@ -99,22 +149,30 @@
   heading_id: "treats-and-tails-halloween-event"
   when: "Sat Oct 17 · 12:00–2:00 p.m."
   blurbs:
-    - "Trick-or-treat for kids ages 3 to 10 with an adult. Bring a bag. The standby line is free. An optional $5 VIP ticket per trick-or-treating child holds a reserved slot. Adults and babies who are not collecting treats, and pets, do not need a ticket. Pets use a separate patio entrance (green tent, east side). Lines form outside."
+  - "Trick-or-treat for kids ages 3 to 10 with an adult. Bring a bag. The standby line is free. An optional\
+    \ $5 VIP ticket per trick-or-treating child holds a reserved slot. Adults and babies who are not collecting\
+    \ treats, and pets, do not need a ticket. Pets use a separate patio entrance (green tent, east side).\
+    \ Lines form outside."
   links:
-    - href: "https://issaquahhighlands.com/event/treats-tails-halloween-event-4/"
-      label: "Treats and Tails"
+  - href: "https://issaquahhighlands.com/event/treats-tails-halloween-event-4/"
+    label: "Treats and Tails"
   photo:
     src: "/assets/images/issaquah/treats-and-tails-2026.webp"
-    alt: "Treats and Tails event graphic with costumed cartoon kids and pets, Saturday Oct. 17, 12 to 2 PM."
+    alt: "Treats and Tails event graphic with costumed cartoon kids and pets, Saturday Oct. 17, 12 to\
+      \ 2 PM."
     credit: "Image: Issaquah Highlands Council"
     source: "https://issaquahhighlands.com/event/treats-tails-halloween-event-4/"
     license: "organizer"
-  description: "Trick-or-treat for kids ages 3 to 10 with an adult. Bring a bag. The standby line is free. An optional $5 VIP ticket per trick-or-treating child holds a reserved slot. Adults and babies who are not collecting treats, and pets, do not need a ticket. Pets use a separate patio entrance (green tent, east side). Lines form outside."
+  description: "Trick-or-treat for kids ages 3 to 10 with an adult. Bring a bag. The standby line is free.\
+    \ An optional $5 VIP ticket per trick-or-treating child holds a reserved slot. Adults and babies who\
+    \ are not collecting treats, and pets, do not need a ticket. Pets use a separate patio entrance (green\
+    \ tent, east side). Lines form outside."
   hub_blurb: "Trick-or-treat for kids ages 3 to 10 with an adult."
 - name: "Planting and Tree Care 101"
   setting: "Outdoor"
   cost: "Free"
-  tags: [free]
+  tags:
+  - "free"
   start: "2026-10-17T13:00:00-07:00"
   end: "2026-10-17T14:30:00-07:00"
   place: "Confluence Park, 595 Rainier Blvd N, Issaquah"
@@ -124,11 +182,15 @@
   heading_id: "planting-and-tree-care-101"
   when: "Sat Oct 17 · 1:00–2:30 p.m."
   blurbs:
-    - "A free hands-on lesson in planting, mulching, watering, and pruning young trees. Sammamish city staff lead it through the Eastside Climate Partnership, and the work is at Confluence Park in Issaquah. Tools are provided."
+  - "A free hands-on lesson in planting, mulching, watering, and pruning young trees. Sammamish city staff\
+    \ lead it through the Eastside Climate Partnership, and the work is at Confluence Park in Issaquah.\
+    \ Tools are provided."
   links:
-    - href: "https://www.sammamish.us/news/events/events/tree-giveaway/october-17-2026-planting-and-tree-care-101/"
-      label: "Planting and Tree Care 101"
-  description: "A free hands-on lesson in planting, mulching, watering, and pruning young trees. Sammamish city staff lead it through the Eastside Climate Partnership, and the work is at Confluence Park in Issaquah. Tools are provided."
+  - href: "https://www.sammamish.us/news/events/events/tree-giveaway/october-17-2026-planting-and-tree-care-101/"
+    label: "Planting and Tree Care 101"
+  description: "A free hands-on lesson in planting, mulching, watering, and pruning young trees. Sammamish\
+    \ city staff lead it through the Eastside Climate Partnership, and the work is at Confluence Park\
+    \ in Issaquah. Tools are provided."
   hub_blurb: "A free hands-on lesson in planting, mulching, watering, and pruning young trees."
 - name: "Monster Mash Parent Survival Night"
   cost: "$70"
@@ -139,17 +201,20 @@
   end: "2026-10-17T20:30:00-07:00"
   place: "The Little Gym Issaquah, 82 Front St S"
   same_as: "https://www.thelittlegym.com/washington-issaquah/events-more/"
-  blurb: "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night. The gym lists it at $70, for ages 3 to 8."
+  blurb: "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night.\
+    \ The gym lists it at $70, for ages 3 to 8."
   card: "monster-mash-parent-survival-night"
   order: "7"
   heading_id: "monster-mash-parent-survival-night"
   when: "Sat Oct 17 · 5:30–8:30 p.m."
   blurbs:
-    - "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night. The gym lists it at $70, for ages 3 to 8."
+  - "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night. The\
+    \ gym lists it at $70, for ages 3 to 8."
   links:
-    - href: "https://www.thelittlegym.com/washington-issaquah/events-more/"
-      label: "Monster Mash Parent Survival Night"
-  description: "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night. The gym lists it at $70, for ages 3 to 8."
+  - href: "https://www.thelittlegym.com/washington-issaquah/events-more/"
+    label: "Monster Mash Parent Survival Night"
+  description: "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the\
+    \ night. The gym lists it at $70, for ages 3 to 8."
   hub_blurb: "A drop-off evening at the gym."
 - name: "Salmon Discovery Walk at Lake Sammamish State Park"
   cost: "Free"
@@ -163,17 +228,20 @@
   heading_id: "salmon-discovery-walk-lake-sammamish"
   when: "Sun Oct 18 · 10:00 a.m.–2:00 p.m."
   blurbs:
-    - "Friends of the Issaquah Salmon Hatchery leads free 30-minute walks on the boardwalk with a scavenger hunt about salmon and habitat. Finish for a prize. You may spot fish in the creek."
+  - "Friends of the Issaquah Salmon Hatchery leads free 30-minute walks on the boardwalk with a scavenger\
+    \ hunt about salmon and habitat. Finish for a prize. You may spot fish in the creek."
   links:
-    - href: "https://www.issaquahfish.org/discoverywalk/"
-      label: "Salmon Discovery Walk"
-  description: "Friends of the Issaquah Salmon Hatchery leads free 30-minute walks on the boardwalk with a scavenger hunt about salmon and habitat. Finish for a prize. You may spot fish in the creek."
+  - href: "https://www.issaquahfish.org/discoverywalk/"
+    label: "Salmon Discovery Walk"
+  description: "Friends of the Issaquah Salmon Hatchery leads free 30-minute walks on the boardwalk with\
+    \ a scavenger hunt about salmon and habitat. Finish for a prize. You may spot fish in the creek."
   hub_blurb: "Free guided boardwalk walks and a salmon scavenger hunt."
 - name: "Walk n Wag Harvest"
   cost: "Free"
   ages: "All ages"
   setting: "Outdoor"
-  tags: [harvest]
+  tags:
+  - "harvest"
   start: "2026-10-18T12:00:00-07:00"
   end: "2026-10-18T16:00:00-07:00"
   place: "Lake Sammamish State Park, 2010 NW Sammamish Rd"
@@ -183,17 +251,22 @@
   heading_id: "walk-n-wag-harvest"
   when: "Sun Oct 18 · 12:00–4:00 p.m."
   blurbs:
-    - "A free dog walk and harvest afternoon from Friends of Lake Sammamish State Park. The 3K starts at noon and winds through the apple orchard. A vendor village, talks, and a pet costume contest run until 4:00 p.m. Dogs stay on a leash."
+  - "A free dog walk and harvest afternoon from Friends of Lake Sammamish State Park. The 3K starts at\
+    \ noon and winds through the apple orchard. A vendor village, talks, and a pet costume contest run\
+    \ until 4:00 p.m. Dogs stay on a leash."
   links:
-    - href: "https://www.lakesammamishfriends.org/events-old/2026/10/18/walk-n-wag-harvest"
-      label: "Walk n Wag Harvest"
-  description: "A free dog walk and harvest afternoon from Friends of Lake Sammamish State Park. The 3K starts at noon and winds through the apple orchard. A vendor village, talks, and a pet costume contest run until 4:00 p.m. Dogs stay on a leash."
+  - href: "https://www.lakesammamishfriends.org/events-old/2026/10/18/walk-n-wag-harvest"
+    label: "Walk n Wag Harvest"
+  description: "A free dog walk and harvest afternoon from Friends of Lake Sammamish State Park. The 3K\
+    \ starts at noon and winds through the apple orchard. A vendor village, talks, and a pet costume contest\
+    \ run until 4:00 p.m. Dogs stay on a leash."
   hub_blurb: "A free dog walk and harvest afternoon from Friends of Lake Sammamish State Park."
 - name: "Snuggle Up Story Time"
   cost: "Free"
   ages: "Toddlers"
   setting: "Indoor"
-  tags: [story-time]
+  tags:
+  - "story-time"
   start: "2026-10-20T18:30:00-07:00"
   end: "2026-10-20T19:00:00-07:00"
   place: "Issaquah Library, 10 W Sunset Way"
@@ -203,11 +276,13 @@
   heading_id: "snuggle-up-story-time-1"
   when: "Tue Oct 20 · 6:30–7:00 p.m."
   blurbs:
-    - "An evening story time with songs, rhymes, and movement for newborns to age 5 with an adult, then up to 30 minutes of play. No registration, and space is limited."
+  - "An evening story time with songs, rhymes, and movement for newborns to age 5 with an adult, then\
+    \ up to 30 minutes of play. No registration, and space is limited."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a7104e288e9bf2800354859"
-      label: "Snuggle Up Story Time"
-  description: "An evening story time with songs, rhymes, and movement for newborns to age 5 with an adult, then up to 30 minutes of play. No registration, and space is limited."
+  - href: "https://kcls.bibliocommons.com/events/6a7104e288e9bf2800354859"
+    label: "Snuggle Up Story Time"
+  description: "An evening story time with songs, rhymes, and movement for newborns to age 5 with an adult,\
+    \ then up to 30 minutes of play. No registration, and space is limited."
   hub_blurb: "An evening story time with songs, rhymes, and movement for newborns to age 5."
 - name: "T/ween ASL Social"
   cost: "Free"
@@ -222,16 +297,22 @@
   heading_id: "tween-asl-social"
   when: "Wed Oct 21 · 5:30–6:30 p.m."
   blurbs:
-    - "A voices-off hangout for middle and high schoolers who already know basic American Sign Language. A deaf librarian and a volunteer host games if the group wants them. It is practice, not a class. Free."
+  - "A voices-off hangout for middle and high schoolers who already know basic American Sign Language.\
+    \ A deaf librarian and a volunteer host games if the group wants them. It is practice, not a class.\
+    \ Free."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a63ce693edb05633e902d50"
-      label: "T/ween ASL Social"
-  description: "A voices-off hangout for middle and high schoolers who already know basic American Sign Language. A deaf librarian and a volunteer host games if the group wants them. It is practice, not a class. Free."
-  hub_blurb: "A voices-off hangout for middle and high schoolers who already know basic American Sign Language."
+  - href: "https://kcls.bibliocommons.com/events/6a63ce693edb05633e902d50"
+    label: "T/ween ASL Social"
+  description: "A voices-off hangout for middle and high schoolers who already know basic American Sign\
+    \ Language. A deaf librarian and a volunteer host games if the group wants them. It is practice, not\
+    \ a class. Free."
+  hub_blurb: "A voices-off hangout for middle and high schoolers who already know basic American Sign\
+    \ Language."
 - name: "Reading with Rover"
   cost: "Free"
   setting: "Indoor"
-  tags: [free]
+  tags:
+  - "free"
   start: "2026-10-21T18:30:00-07:00"
   end: "2026-10-21T19:30:00-07:00"
   place: "Issaquah Library, 10 W Sunset Way"
@@ -241,17 +322,19 @@
   heading_id: "reading-with-rover"
   when: "Wed Oct 21 · 6:30–7:30 p.m."
   blurbs:
-    - "School-age kids read aloud to a certified therapy dog, with an adult. Free."
+  - "School-age kids read aloud to a certified therapy dog, with an adult. Free."
   links:
-    - href: "https://kcls.bibliocommons.com/events/697182f81e64afd01e55e554"
-      label: "Reading with Rover"
+  - href: "https://kcls.bibliocommons.com/events/697182f81e64afd01e55e554"
+    label: "Reading with Rover"
   description: "School-age kids read aloud to a certified therapy dog, with an adult. Free."
   hub_blurb: "School-age kids read aloud to a certified therapy dog, with an adult."
 - name: "Rise & Shine Story Time"
   cost: "Free"
   ages: "Toddlers"
   setting: "Indoor"
-  tags: [free, story-time]
+  tags:
+  - "free"
+  - "story-time"
   start: "2026-10-22T10:30:00-07:00"
   end: "2026-10-22T11:00:00-07:00"
   place: "Issaquah Library, 10 W Sunset Way"
@@ -261,12 +344,15 @@
   heading_id: "rise-shine-story-time-1"
   when: "Thu Oct 22 · 10:30–11:00 a.m."
   blurbs:
-    - "Stories, songs, and rhymes for newborns to age 5 with an adult, followed by up to 30 minutes of play. Free, no registration. Space is limited."
+  - "Stories, songs, and rhymes for newborns to age 5 with an adult, followed by up to 30 minutes of play.\
+    \ Free, no registration. Space is limited."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a710898c7e02e3d006da0f0"
-      label: "Rise & Shine Story Time"
-  description: "Stories, songs, and rhymes for newborns to age 5 with an adult, followed by up to 30 minutes of play. Free, no registration. Space is limited."
-  hub_blurb: "Stories, songs, and rhymes for newborns to age 5 with an adult, followed by up to 30 minutes of play."
+  - href: "https://kcls.bibliocommons.com/events/6a710898c7e02e3d006da0f0"
+    label: "Rise & Shine Story Time"
+  description: "Stories, songs, and rhymes for newborns to age 5 with an adult, followed by up to 30 minutes\
+    \ of play. Free, no registration. Space is limited."
+  hub_blurb: "Stories, songs, and rhymes for newborns to age 5 with an adult, followed by up to 30 minutes\
+    \ of play."
 - name: "Story Stroll: Apple Pie Picnic"
   cost: "Free"
   ages: "Kids"
@@ -280,15 +366,18 @@
   heading_id: "story-stroll-apple-pie-picnic-2"
   when: "Sat Oct 24 and Sat Oct 31 · Any time"
   blurbs:
-    - "A self-guided picture book walk. Start at the Issaquah Library and follow the pages of Apple Pie Picnic along a route through historic downtown. Good for ages 3 to 8. Free."
+  - "A self-guided picture book walk. Start at the Issaquah Library and follow the pages of Apple Pie\
+    \ Picnic along a route through historic downtown. Good for ages 3 to 8. Free."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6aa0a306442d35226f67899c"
-      label: "Story Stroll"
-  description: "A self-guided picture book walk. Start at the Issaquah Library and follow the pages of Apple Pie Picnic along a route through historic downtown. Good for ages 3 to 8. Free."
+  - href: "https://kcls.bibliocommons.com/events/6aa0a306442d35226f67899c"
+    label: "Story Stroll"
+  description: "A self-guided picture book walk. Start at the Issaquah Library and follow the pages of\
+    \ Apple Pie Picnic along a route through historic downtown. Good for ages 3 to 8. Free."
   hub_blurb: "A self-guided picture book walk through historic downtown Issaquah."
 - name: "Fall Farm Fresh Market"
   setting: "Outdoor"
-  tags: [harvest]
+  tags:
+  - "harvest"
   start: "2026-10-24T09:00:00-07:00"
   end: "2026-10-24T14:00:00-07:00"
   place: "Historic Shell Station, 232 Front St N"
@@ -300,23 +389,26 @@
   heading_id: "fall-farm-fresh-market-1"
   when: "Sat Oct 24 · 9:00 a.m.–2:00 p.m."
   blurbs:
-    - "9:00 a.m.–2:00 p.m., and the season continues through Dec 5. Live music is 11:00 a.m.–1:00 p.m."
+  - "9:00 a.m.–2:00 p.m., and the season continues through Dec 5. Live music is 11:00 a.m.–1:00 p.m."
   links:
-    - href: "https://www.visitissaquahwa.com/series/fall-farm-fresh-market-3/"
-      label: "Fall market series"
+  - href: "https://www.visitissaquahwa.com/series/fall-farm-fresh-market-3/"
+    label: "Fall market series"
   photo:
     src: "/assets/images/issaquah/shell-station.webp"
-    alt: "The restored Historic Shell Station on Front Street in Issaquah, a white building with a red roof and vintage gas pumps."
+    alt: "The restored Historic Shell Station on Front Street in Issaquah, a white building with a red\
+      \ roof and vintage gas pumps."
     credit: "Photo: Steve Morgan, CC BY-SA 3.0"
     source: "https://commons.wikimedia.org/wiki/File:Restored_1940s_Shell_gas_station_in_Issaquah,_Washington,_in_2008.jpg"
-  description: "9:00 a.m.–2:00 p.m., and the season continues through Dec 5. Live music is 11:00 a.m.–1:00 p.m."
+  description: "9:00 a.m.–2:00 p.m., and the season continues through Dec 5. Live music is 11:00 a.m.–1:00\
+    \ p.m."
   hub_blurb: "9:00 a.m.–2:00 p.m., and the season continues through Dec 5."
 - name: "Monster Mash 5K"
   cost: "$40 to $45"
   ages: "All ages"
   setting: "Outdoor"
   signup: true
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-24T10:00:00-07:00"
   end: "2026-10-24T12:00:00-07:00"
   place: "Lake Sammamish Boat Launch, 4455 East Lake Sammamish Pkwy SE"
@@ -326,17 +418,22 @@
   heading_id: "monster-mash-5k"
   when: "Sat Oct 24 · 10:00 a.m.–12:00 p.m."
   blurbs:
-    - "A family 5K on a flat paved out-and-back at the boat launch. Costumes are welcome, and all ages can walk or run. Registration is $40 through October 11 and $45 after that, plus a signup fee. Parking on site needs a Discover Pass."
+  - "A family 5K on a flat paved out-and-back at the boat launch. Costumes are welcome, and all ages can\
+    \ walk or run. Registration is $40 through October 11 and $45 after that, plus a signup fee. Parking\
+    \ on site needs a Discover Pass."
   links:
-    - href: "https://isfdn.org/events/2026-monster-mash-5k/"
-      label: "Monster Mash 5K"
-  description: "A family 5K on a flat paved out-and-back at the boat launch. Costumes are welcome, and all ages can walk or run. Registration is $40 through October 11 and $45 after that, plus a signup fee. Parking on site needs a Discover Pass."
+  - href: "https://isfdn.org/events/2026-monster-mash-5k/"
+    label: "Monster Mash 5K"
+  description: "A family 5K on a flat paved out-and-back at the boat launch. Costumes are welcome, and\
+    \ all ages can walk or run. Registration is $40 through October 11 and $45 after that, plus a signup\
+    \ fee. Parking on site needs a Discover Pass."
   hub_blurb: "A family 5K on a flat paved out-and-back at the boat launch."
 - name: "Zombie Walk"
   cost: "Free"
   ages: "All ages"
   setting: "Outdoor"
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-24T13:30:00-07:00"
   end: "2026-10-24T17:30:00-07:00"
   place: "Historic Shell Station, 232 Front Street N, Issaquah"
@@ -346,17 +443,22 @@
   heading_id: "zombie-walk"
   when: "Sat Oct 24 · 1:30–5:30 p.m."
   blurbs:
-    - "A free walk through downtown, open to all ages. Makeup starts at 1:30 at the Historic Shell Station, dance practice is at 3:00, the crawl to City Hall is at 4:30, and a dance runs from 5:00 to 5:30. Optional makeovers are sold separately."
+  - "A free walk through downtown, open to all ages. Makeup starts at 1:30 at the Historic Shell Station,\
+    \ dance practice is at 3:00, the crawl to City Hall is at 4:30, and a dance runs from 5:00 to 5:30.\
+    \ Optional makeovers are sold separately."
   links:
-    - href: "https://downtownissaquah.com/events/zombie-walk-17/"
-      label: "Zombie Walk"
-  description: "A free walk through downtown, open to all ages. Makeup starts at 1:30 at the Historic Shell Station, dance practice is at 3:00, the crawl to City Hall is at 4:30, and a dance runs from 5:00 to 5:30. Optional makeovers are sold separately."
+  - href: "https://downtownissaquah.com/events/zombie-walk-17/"
+    label: "Zombie Walk"
+  description: "A free walk through downtown, open to all ages. Makeup starts at 1:30 at the Historic\
+    \ Shell Station, dance practice is at 3:00, the crawl to City Hall is at 4:30, and a dance runs from\
+    \ 5:00 to 5:30. Optional makeovers are sold separately."
   hub_blurb: "A free walk through downtown, open to all ages."
 - name: "BOO at the Barn"
   cost: "$15"
   setting: "Indoor"
   signup: true
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-24T14:00:00-07:00"
   end: "2026-10-24T20:00:00-07:00"
   place: "Pickering Barn, 1730 10th Ave NW"
@@ -366,15 +468,49 @@
   heading_id: "boo-at-the-barn"
   when: "Sat Oct 24 · 2:00–8:00 p.m."
   blurbs:
-    - "Two sessions at Pickering Barn. From 2:00 to 4:00 p.m. the city runs carnival games and crafts. From 6:00 to 8:00 p.m. the haunted hay barn and trail are open, and that session is not recommended for children under 6. Door admission is $15, and children 3 and younger are free. Space is limited."
+  - "Two sessions at Pickering Barn. From 2:00 to 4:00 p.m. the city runs carnival games and crafts. From\
+    \ 6:00 to 8:00 p.m. the haunted hay barn and trail are open, and that session is not recommended for\
+    \ children under 6. Door admission is $15, and children 3 and younger are free. Space is limited."
   links:
-    - href: "https://www.issaquahwa.gov/calendar.aspx?EID=14732"
-      label: "BOO at the Barn"
-  description: "Two sessions at Pickering Barn. From 2:00 to 4:00 p.m. the city runs carnival games and crafts. From 6:00 to 8:00 p.m. the haunted hay barn and trail are open, and that session is not recommended for children under 6. Door admission is $15, and children 3 and younger are free. Space is limited."
+  - href: "https://www.issaquahwa.gov/calendar.aspx?EID=14732"
+    label: "BOO at the Barn"
+  description: "Two sessions at Pickering Barn. From 2:00 to 4:00 p.m. the city runs carnival games and\
+    \ crafts. From 6:00 to 8:00 p.m. the haunted hay barn and trail are open, and that session is not\
+    \ recommended for children under 6. Door admission is $15, and children 3 and younger are free. Space\
+    \ is limited."
   hub_blurb: "Two sessions at Pickering Barn."
+- name: "Snuggle Up Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-27T18:30:00-07:00"
+  end: "2026-10-27T19:00:00-07:00"
+  place: "Issaquah Library, 10 W Sunset Way"
+  same_as: "https://kcls.bibliocommons.com/events/6a7104e288e9bf280035485a"
+  card: "snuggle-up-story-time-2"
+  heading_id: "snuggle-up-story-time-2"
+  when: "Tue Oct 27 · 6:30–7:00 p.m."
+  blurbs:
+  - "Stories, music, and rhymes for newborns to 5 with an adult, then up to 30 minutes of play. Free;\
+    \ space is limited."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a7104e288e9bf280035485a"
+    label: "Snuggle Up Story Time"
+  description: "Stories, music, and rhymes for newborns to 5 with an adult, then up to 30 minutes of play.\
+    \ Free; space is limited."
+  hub_blurb: "Evening snuggle-up stories at Issaquah Library."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/issaquah/issaquah-library.webp"
+    alt: "Issaquah Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/issaquah/"
+    license: "organizer"
 - name: "Halloween at Cougar Mountain Zoo"
   setting: "Outdoor"
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-31"
   place: "Cougar Mountain Zoo, 19525 SE 54th St"
   same_as: "https://www.cougarmountainzoo.org/events-at-the-zoo/"
@@ -383,10 +519,10 @@
   heading_id: "halloween-at-cougar-mountain-zoo"
   when: "Sat Oct 31 · Time not posted"
   blurbs:
-    - "Howl-O-ween at the zoo."
+  - "Howl-O-ween at the zoo."
   links:
-    - href: "https://www.cougarmountainzoo.org/events-at-the-zoo/"
-      label: "Zoo events"
+  - href: "https://www.cougarmountainzoo.org/events-at-the-zoo/"
+    label: "Zoo events"
   description: "Howl-O-ween at the zoo."
   hub_blurb: "Howl-O-ween at the zoo."
 - name: "Story Stroll: Apple Pie Picnic"
@@ -403,7 +539,8 @@
   ages: "All ages"
   setting: "Indoor"
   signup: true
-  tags: [dia-de-los-muertos]
+  tags:
+  - "dia-de-los-muertos"
   start: "2026-11-01T13:00:00-08:00"
   end: "2026-11-01T17:00:00-08:00"
   place: "Issaquah Community Center, 301 Rainier Blvd S"
@@ -413,17 +550,23 @@
   heading_id: "day-of-the-dead-celebration"
   when: "Sun Nov 1 · 1:00–5:00 p.m."
   blurbs:
-    - "A free afternoon from The Circle, this year focused on Oaxaca. Families can decorate a mask made in Mexico, join art workshops, and see dancers and mariachi. Face painting and food are part of the afternoon. Each person needs a free ticket, and one order can hold up to five."
+  - "A free afternoon from The Circle, this year focused on Oaxaca. Families can decorate a mask made\
+    \ in Mexico, join art workshops, and see dancers and mariachi. Face painting and food are part of\
+    \ the afternoon. Each person needs a free ticket, and one order can hold up to five."
   links:
-    - href: "https://www.thecircle-wa.org/event-details-registration/day-of-the-dead-celebration-3"
-      label: "Day of the Dead"
-  description: "A free afternoon from The Circle, this year focused on Oaxaca. Families can decorate a mask made in Mexico, join art workshops, and see dancers and mariachi. Face painting and food are part of the afternoon. Each person needs a free ticket, and one order can hold up to five."
+  - href: "https://www.thecircle-wa.org/event-details-registration/day-of-the-dead-celebration-3"
+    label: "Day of the Dead"
+  description: "A free afternoon from The Circle, this year focused on Oaxaca. Families can decorate a\
+    \ mask made in Mexico, join art workshops, and see dancers and mariachi. Face painting and food are\
+    \ part of the afternoon. Each person needs a free ticket, and one order can hold up to five."
   hub_blurb: "A free afternoon from The Circle, this year focused on Oaxaca."
 - name: "Rise & Shine Story Time"
   setting: "Indoor"
   cost: "Free"
   ages: "Toddlers"
-  tags: [free, story-time]
+  tags:
+  - "free"
+  - "story-time"
   start: "2026-11-05T10:30:00-08:00"
   end: "2026-11-05T11:00:00-08:00"
   place: "Issaquah Library, 10 W Sunset Way"
@@ -433,16 +576,21 @@
   heading_id: "rise--shine-story-time"
   when: "Thu Nov 5 · 10:30–11:00 a.m."
   blurbs:
-    - "Stories, music, movement, and rhymes for newborns to 5 with an adult, then up to 30 minutes of play. No registration. Space is limited."
+  - "Stories, music, movement, and rhymes for newborns to 5 with an adult, then up to 30 minutes of play.\
+    \ No registration. Space is limited."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a710898c7e02e3d006da0f2"
-      label: "Rise & Shine Story Time"
-  description: "Stories, music, movement, and rhymes for newborns to 5 with an adult, then up to 30 minutes of play. No registration. Space is limited."
-  hub_blurb: "Stories, music, movement, and rhymes for newborns to 5 with an adult, then up to 30 minutes of play."
+  - href: "https://kcls.bibliocommons.com/events/6a710898c7e02e3d006da0f2"
+    label: "Rise & Shine Story Time"
+  description: "Stories, music, movement, and rhymes for newborns to 5 with an adult, then up to 30 minutes\
+    \ of play. No registration. Space is limited."
+  hub_blurb: "Stories, music, movement, and rhymes for newborns to 5 with an adult, then up to 30 minutes\
+    \ of play."
 - name: "Issaquah Highlands Holiday Tree Lighting"
   cost: "Free"
   setting: "Outdoor"
-  tags: [tree-lighting, santa]
+  tags:
+  - "tree-lighting"
+  - "santa"
   start: "2026-11-19T17:00:00-08:00"
   end: "2026-11-19T18:30:00-08:00"
   place: "Village Green Park, 2550 NE Park Drive"
@@ -452,22 +600,29 @@
   heading_id: "issaquah-highlands-holiday-tree-lighting"
   when: "Thu Nov 19 · 5:00–6:30 p.m."
   blurbs:
-    - "A family tree lighting at Village Green Park, with free cocoa, Santa photos, and carols. Apple cider and cookies are served. The tree lights at 5:30 p.m., when Mayor Mark Mullet flips the switch. Santa and Mrs. Claus are there for photos, and Issaquah police and Eastside Fire & Rescue visit."
+  - "A family tree lighting at Village Green Park, with free cocoa, Santa photos, and carols. Apple cider\
+    \ and cookies are served. The tree lights at 5:30 p.m., when Mayor Mark Mullet flips the switch. Santa\
+    \ and Mrs. Claus are there for photos, and Issaquah police and Eastside Fire & Rescue visit."
   links:
-    - href: "https://issaquahhighlands.com/event/holiday-tree-lighting-4/"
-      label: "Holiday Tree Lighting"
+  - href: "https://issaquahhighlands.com/event/holiday-tree-lighting-4/"
+    label: "Holiday Tree Lighting"
   photo:
     src: "/assets/images/issaquah/highlands-holiday-tree-lighting-2026.webp"
     alt: "Holiday Tree Lighting graphic with a lit evergreen tree, Nov. 19, 5 PM, Village Green Park."
     credit: "Image: Issaquah Highlands Council"
     source: "https://issaquahhighlands.com/event/holiday-tree-lighting-4/"
     license: "organizer"
-  description: "A family tree lighting at Village Green Park, with free cocoa, Santa photos, and carols. Apple cider and cookies are served. The tree lights at 5:30 p.m., when Mayor Mark Mullet flips the switch. Santa and Mrs. Claus are there for photos, and Issaquah police and Eastside Fire & Rescue visit."
+  description: "A family tree lighting at Village Green Park, with free cocoa, Santa photos, and carols.\
+    \ Apple cider and cookies are served. The tree lights at 5:30 p.m., when Mayor Mark Mullet flips the\
+    \ switch. Santa and Mrs. Claus are there for photos, and Issaquah police and Eastside Fire & Rescue\
+    \ visit."
   hub_blurb: "A family tree lighting at Village Green Park, with free cocoa, Santa photos, and carols."
 - name: "The Village Market Holiday Pop-Up"
   cost: "Free"
   setting: "Indoor"
-  tags: [free, christmas]
+  tags:
+  - "free"
+  - "christmas"
   start: "2026-11-22T10:00:00-08:00"
   end: "2026-11-22T14:00:00-08:00"
   place: "Blakely Hall, 2550 NE Park Drive, Issaquah Highlands"
@@ -477,21 +632,25 @@
   heading_id: "village-market-holiday-pop-up"
   when: "Sun Nov 22 · 10:00 a.m.–2:00 p.m."
   blurbs:
-    - "A holiday pop-up market at Blakely Hall with local artisans and small vendors, a good stop for family gift shopping. Free to browse."
+  - "A holiday pop-up market at Blakely Hall with local artisans and small vendors, a good stop for family\
+    \ gift shopping. Free to browse."
   links:
-    - href: "https://issaquahhighlands.com/event/the-village-market-holiday-pop-up-3/"
-      label: "Village Market Holiday Pop-Up"
+  - href: "https://issaquahhighlands.com/event/the-village-market-holiday-pop-up-3/"
+    label: "Village Market Holiday Pop-Up"
   photo:
     src: "/assets/images/issaquah/village-market-holiday-pop-up-2026.webp"
-    alt: "The Village Market Holiday Pop-Up graphic with a market stall drawing, Nov. 22, 10 a.m. to 2 p.m."
+    alt: "The Village Market Holiday Pop-Up graphic with a market stall drawing, Nov. 22, 10 a.m. to 2\
+      \ p.m."
     credit: "Image: Issaquah Highlands Council"
     source: "https://issaquahhighlands.com/event/the-village-market-holiday-pop-up-3/"
     license: "organizer"
-  description: "A holiday pop-up market at Blakely Hall with local artisans and small vendors, a good stop for family gift shopping. Free to browse."
+  description: "A holiday pop-up market at Blakely Hall with local artisans and small vendors, a good\
+    \ stop for family gift shopping. Free to browse."
   hub_blurb: "A holiday pop-up market at Blakely Hall with local artisans and small vendors."
 - name: "Issaquah Reindeer Festival"
   setting: "Outdoor"
-  tags: [santa]
+  tags:
+  - "santa"
   start: "2026-11-27"
   end: "2026-12-30"
   place: "Cougar Mountain Zoo, 19525 SE 54th St"
@@ -501,12 +660,19 @@
   heading_id: "issaquah-reindeer-festival"
   when: "Fri Nov 27 through Wed Dec 30"
   blurbs:
-    - "A reindeer festival for families at Cougar Mountain Zoo, with admission at the gate and Santa photos for an extra donation. Santa is there Nov 27 through Dec 23, 10:30 a.m.–4:00 p.m. Festival hours those days are 10:30 a.m.–4:30 p.m., or dusk. Dec 26 through Dec 30 the holiday fun continues 10:30 a.m.–3:30 p.m. without Santa. Members do not need to buy ahead for Dec 20–23 and Dec 26–30."
+  - "A reindeer festival for families at Cougar Mountain Zoo, with admission at the gate and Santa photos\
+    \ for an extra donation. Santa is there Nov 27 through Dec 23, 10:30 a.m.–4:00 p.m. Festival hours\
+    \ those days are 10:30 a.m.–4:30 p.m., or dusk. Dec 26 through Dec 30 the holiday fun continues 10:30\
+    \ a.m.–3:30 p.m. without Santa. Members do not need to buy ahead for Dec 20–23 and Dec 26–30."
   links:
-    - href: "https://www.cougarmountainzoo.org/issaquah-reindeer-festival-offseason/"
-      label: "Issaquah Reindeer Festival"
-  description: "A reindeer festival for families at Cougar Mountain Zoo, with admission at the gate and Santa photos for an extra donation. Santa is there Nov 27 through Dec 23, 10:30 a.m.–4:00 p.m. Festival hours those days are 10:30 a.m.–4:30 p.m., or dusk. Dec 26 through Dec 30 the holiday fun continues 10:30 a.m.–3:30 p.m. without Santa. Members do not need to buy ahead for Dec 20–23 and Dec 26–30."
-  hub_blurb: "A reindeer festival for families at Cougar Mountain Zoo, with admission at the gate and Santa photos for an extra donation."
+  - href: "https://www.cougarmountainzoo.org/issaquah-reindeer-festival-offseason/"
+    label: "Issaquah Reindeer Festival"
+  description: "A reindeer festival for families at Cougar Mountain Zoo, with admission at the gate and\
+    \ Santa photos for an extra donation. Santa is there Nov 27 through Dec 23, 10:30 a.m.–4:00 p.m. Festival\
+    \ hours those days are 10:30 a.m.–4:30 p.m., or dusk. Dec 26 through Dec 30 the holiday fun continues\
+    \ 10:30 a.m.–3:30 p.m. without Santa. Members do not need to buy ahead for Dec 20–23 and Dec 26–30."
+  hub_blurb: "A reindeer festival for families at Cougar Mountain Zoo, with admission at the gate and\
+    \ Santa photos for an extra donation."
 - name: "Turkey Trot Parent Survival Night"
   cost: "$70"
   setting: "Indoor"
@@ -516,21 +682,25 @@
   end: "2026-11-28T20:30:00-08:00"
   place: "The Little Gym Issaquah, 82 Front St S"
   same_as: "https://www.thelittlegym.com/washington-issaquah/events-more/"
-  blurb: "A drop-off evening at the gym. Kids run through games, then crafts and stories. The gym lists ages 3 to 10."
+  blurb: "A drop-off evening at the gym. Kids run through games, then crafts and stories. The gym lists\
+    \ ages 3 to 10."
   card: "turkey-trot-parent-survival-night"
   order: "25"
   heading_id: "turkey-trot-parent-survival-night"
   when: "Sat Nov 28 · 5:30–8:30 p.m."
   blurbs:
-    - "A drop-off evening at the gym. Kids run through games, then crafts and stories. The gym lists ages 3 to 10."
+  - "A drop-off evening at the gym. Kids run through games, then crafts and stories. The gym lists ages\
+    \ 3 to 10."
   links:
-    - href: "https://www.thelittlegym.com/washington-issaquah/events-more/"
-      label: "Turkey Trot Parent Survival Night"
-  description: "A drop-off evening at the gym. Kids run through games, then crafts and stories. The gym lists ages 3 to 10."
+  - href: "https://www.thelittlegym.com/washington-issaquah/events-more/"
+    label: "Turkey Trot Parent Survival Night"
+  description: "A drop-off evening at the gym. Kids run through games, then crafts and stories. The gym\
+    \ lists ages 3 to 10."
   hub_blurb: "A drop-off evening at the gym."
 - name: "Caroling at the Depot"
   setting: "Indoor"
-  tags: [santa]
+  tags:
+  - "santa"
   start: "2026-12-03T18:00:00-08:00"
   end: "2026-12-03T19:30:00-08:00"
   place: "Issaquah Depot Museum, 78 1st Ave NE"
@@ -540,11 +710,13 @@
   heading_id: "caroling-at-the-depot"
   when: "Thu Dec 3 · 6:00–7:30 p.m."
   blurbs:
-    - "A downtown sing-along of holiday songs, with hot chocolate and candy canes. Santa and Mrs. Claus are there for photos. Bring an instrument if you want, or just sing. All ages."
+  - "A downtown sing-along of holiday songs, with hot chocolate and candy canes. Santa and Mrs. Claus\
+    \ are there for photos. Bring an instrument if you want, or just sing. All ages."
   links:
-    - href: "https://downtownissaquah.com/events/caroling-at-the-depot-2026/"
-      label: "Caroling at the Depot"
-  description: "A downtown sing-along of holiday songs, with hot chocolate and candy canes. Santa and Mrs. Claus are there for photos. Bring an instrument if you want, or just sing. All ages."
+  - href: "https://downtownissaquah.com/events/caroling-at-the-depot-2026/"
+    label: "Caroling at the Depot"
+  description: "A downtown sing-along of holiday songs, with hot chocolate and candy canes. Santa and\
+    \ Mrs. Claus are there for photos. Bring an instrument if you want, or just sing. All ages."
   hub_blurb: "A downtown sing-along of holiday songs, with hot chocolate and candy canes."
 - name: "KIDSTAGE Footloose"
   setting: "Indoor"
@@ -559,16 +731,24 @@
   heading_id: "kidstage-footloose"
   when: "Fri Dec 4 through Sun Dec 20"
   blurbs:
-    - "Village Theatre KIDSTAGE’s public production of Footloose, performed by students in grade 9 through age 20. Fridays and Saturdays are at 7:30 p.m. Sundays are at 2:00 p.m. The theatre stages it for teen actors and audiences. Expect mild language, a scene of underage drinking, some sexual content, and themes of grief and domestic violence. Tickets go on sale soon."
+  - "Village Theatre KIDSTAGE’s public production of Footloose, performed by students in grade 9 through\
+    \ age 20. Fridays and Saturdays are at 7:30 p.m. Sundays are at 2:00 p.m. The theatre stages it for\
+    \ teen actors and audiences. Expect mild language, a scene of underage drinking, some sexual content,\
+    \ and themes of grief and domestic violence. Tickets go on sale soon."
   links:
-    - href: "https://villagetheatre.org/two-great-kidstage-shows-coming-december-2026/"
-      label: "KIDSTAGE Footloose"
-  description: "Village Theatre KIDSTAGE's public production of Footloose, performed by students in grade 9 through age 20. Fridays and Saturdays are at 7:30 p.m. Sundays are at 2:00 p.m. The theatre stages it for teen actors and audiences. Expect mild language, a scene of underage drinking, some sexual content, and themes of grief and domestic violence. Tickets go on sale soon."
-  hub_blurb: "Village Theatre KIDSTAGE's public production of Footloose, performed by students in grade 9 through age 20."
+  - href: "https://villagetheatre.org/two-great-kidstage-shows-coming-december-2026/"
+    label: "KIDSTAGE Footloose"
+  description: "Village Theatre KIDSTAGE's public production of Footloose, performed by students in grade\
+    \ 9 through age 20. Fridays and Saturdays are at 7:30 p.m. Sundays are at 2:00 p.m. The theatre stages\
+    \ it for teen actors and audiences. Expect mild language, a scene of underage drinking, some sexual\
+    \ content, and themes of grief and domestic violence. Tickets go on sale soon."
+  hub_blurb: "Village Theatre KIDSTAGE's public production of Footloose, performed by students in grade\
+    \ 9 through age 20."
 - name: "Issaquah Dance Theatre Nutcracker"
   setting: "Indoor"
   signup: true
-  tags: [holiday-show]
+  tags:
+  - "holiday-show"
   start: "2026-12-05"
   end: "2026-12-06"
   place: "Longman Performing Arts Center, Issaquah High School"
@@ -578,44 +758,24 @@
   heading_id: "issaquah-dance-theatre-nutcracker"
   when: "Sat Dec 5 to Sun Dec 6"
   blurbs:
-    - "Issaquah Dance Theatre’s family Nutcracker needs a ticket, except children under 2 on a lap. Each day has a one-hour show at 11:00 a.m. for a young audience, plus full shows at 1:30 and 5:30 p.m. Sales are final, and an exchange costs $15."
+  - "Issaquah Dance Theatre’s family Nutcracker needs a ticket, except children under 2 on a lap. Each\
+    \ day has a one-hour show at 11:00 a.m. for a young audience, plus full shows at 1:30 and 5:30 p.m.\
+    \ Sales are final, and an exchange costs $15."
   links:
-    - href: "https://www.issaquahdance.com/nutcracker"
-      label: "The Nutcracker"
-  description: "Issaquah Dance Theatre's family Nutcracker needs a ticket, except children under 2 on a lap. Each day has a one-hour show at 11:00 a.m. for a young audience, plus full shows at 1:30 and 5:30 p.m. Sales are final, and an exchange costs $15."
-  hub_blurb: "Issaquah Dance Theatre's family Nutcracker needs a ticket, except children under 2 on a lap."
-- name: "Scarecrows on Front"
-  cost: "Free"
-  setting: "Outdoor"
-  tags: [free, harvest]
-  start: "2026-10-03"
-  end: "2026-11-01"
-  place: "Front Street, historic downtown Issaquah"
-  organizer: "Downtown Issaquah Association"
-  organizer_url: "https://downtownissaquah.com/"
-  same_as: "https://downtownissaquah.com/events/2026-issaquah-goes-apples-scarecrows-on-front-2/"
-  card: "scarecrows-on-front"
-  order: "29"
-  heading_id: "scarecrows-on-front"
-  when: "Through Nov 1 · Entries due Oct 17"
-  blurbs:
-    - "Build a scarecrow at home and add an apple to it, then drop it off at the Historic Shell Station (232 Front St N) by Oct 17. The Grange (145 NE Gilman Blvd) has free straw and a burlap head bag through Oct 17. The scarecrows line downtown through Nov 1, so you can stroll by and look even if you don't build one."
-  links:
-    - href: "https://downtownissaquah.com/events/2026-issaquah-goes-apples-scarecrows-on-front-2/"
-      label: "Scarecrows on Front"
-  photo:
-    src: "/assets/images/themes/fall-festival-scarecrow.webp"
-    alt: "A scarecrow standing in a farm field."
-    credit: "Photo: Mohsen H. Rahimi, CC0"
-    source: "https://commons.wikimedia.org/wiki/File:Scarecrow_in_farm.jpg"
-  description: "Build a scarecrow with an apple, drop it at the Historic Shell Station by Oct 17, then see them all downtown through Nov 1. Free straw from the Grange."
-  hub_blurb: "Family-built scarecrows line downtown Issaquah through Nov 1."
+  - href: "https://www.issaquahdance.com/nutcracker"
+    label: "The Nutcracker"
+  description: "Issaquah Dance Theatre's family Nutcracker needs a ticket, except children under 2 on\
+    \ a lap. Each day has a one-hour show at 11:00 a.m. for a young audience, plus full shows at 1:30\
+    \ and 5:30 p.m. Sales are final, and an exchange costs $15."
+  hub_blurb: "Issaquah Dance Theatre's family Nutcracker needs a ticket, except children under 2 on a\
+    \ lap."
 - name: "Highlands Parents Night Out"
-  setting: "Indoor"
+  setting: "Outdoor"
   drop_off: true
   signup: true
   ages: "Kids"
-  tags: [christmas]
+  tags:
+  - "christmas"
   start: "2026-12-11T18:00:00-08:00"
   end: "2026-12-11T21:00:00-08:00"
   place: "Blakely Hall, 2550 NE Park Drive, Issaquah Highlands"
@@ -625,15 +785,18 @@
   heading_id: "highlands-parents-night-out"
   when: "Fri Dec 11 · 6:00–9:00 p.m."
   blurbs:
-    - "A drop-off evening for kids in kindergarten through 5th grade, with games, crafts, snacks, and a movie run by the teen Highlands Youth board. Pajamas encouraged. Room for 40 kids, so register ahead."
+  - "A drop-off evening for kids in kindergarten through 5th grade, with games, crafts, snacks, and a\
+    \ movie run by the teen Highlands Youth board. Pajamas encouraged. Room for 40 kids, so register ahead."
   links:
-    - href: "https://issaquahhighlands.com/event/parents-night-out-8/"
-      label: "Parents Night Out"
+  - href: "https://issaquahhighlands.com/event/parents-night-out-8/"
+    label: "Parents Night Out"
   photo:
     src: "/assets/images/issaquah/highlands-parents-night-out-2026.webp"
     alt: "Parents Night Out graphic with Blakely Hall in snow, Friday Dec. 11, 6 to 9 PM."
     credit: "Image: Issaquah Highlands Council"
     source: "https://issaquahhighlands.com/event/parents-night-out-8/"
     license: "organizer"
-  description: "A drop-off evening for kids in kindergarten through 5th grade, with games, crafts, snacks, and a movie run by the teen Highlands Youth board. Pajamas encouraged. Room for 40 kids, so register ahead."
+  description: "A drop-off evening for kids in kindergarten through 5th grade, with games, crafts, snacks,\
+    \ and a movie run by the teen Highlands Youth board. Pajamas encouraged. Room for 40 kids, so register\
+    \ ahead."
   hub_blurb: "A drop-off evening for kids in K to 5th grade at Blakely Hall."

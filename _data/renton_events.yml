@@ -1,6 +1,3 @@
-# Upcoming events for this city, earliest first.
-# Delete an event after it ends. Do not group these by week.
-# Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
 - name: "Noises Off"
   setting: "Indoor"
   start: "2026-10-02"
@@ -12,52 +9,18 @@
   heading_id: "noises-off"
   when: "Fri Oct 2–Sun Oct 18"
   blurbs:
-    - "Michael Frayn’s backstage farce. Opening night is Fri Oct 2, a pay-what-you-can night is Mon Oct 12, and closing night is Sun Oct 18. Recommended for ages 10 and up. The humor includes innuendo, fast-paced chaos, and adult misunderstandings. No explicit content. The comedy is aimed at older kids, teens, and adults who can follow the farce."
+  - "Michael Frayn’s backstage farce. Opening night is Fri Oct 2, a pay-what-you-can night is Mon Oct\
+    \ 12, and closing night is Sun Oct 18. Recommended for ages 10 and up. The humor includes innuendo,\
+    \ fast-paced chaos, and adult misunderstandings. No explicit content. The comedy is aimed at older\
+    \ kids, teens, and adults who can follow the farce."
   links:
-    - href: "https://www.rentoncivictheatre.org/shows/noises-off"
-      label: "Noises Off"
-  description: "Michael Frayn's backstage farce. Opening night is Fri Oct 2, a pay-what-you-can night is Mon Oct 12, and closing night is Sun Oct 18. Recommended for ages 10 and up. The humor includes innuendo, fast-paced chaos, and adult misunderstandings. No explicit content. The comedy is aimed at older kids, teens, and adults who can follow the farce."
+  - href: "https://www.rentoncivictheatre.org/shows/noises-off"
+    label: "Noises Off"
+  description: "Michael Frayn's backstage farce. Opening night is Fri Oct 2, a pay-what-you-can night\
+    \ is Mon Oct 12, and closing night is Sun Oct 18. Recommended for ages 10 and up. The humor includes\
+    \ innuendo, fast-paced chaos, and adult misunderstandings. No explicit content. The comedy is aimed\
+    \ at older kids, teens, and adults who can follow the farce."
   hub_blurb: "Michael Frayn's backstage farce."
-- name: "Toddler Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags: [story-time]
-  start: "2026-10-12T10:30:00-07:00"
-  end: "2026-10-12T11:00:00-07:00"
-  place: "Renton Library, 100 Mill Avenue S"
-  same_as: "https://kcls.bibliocommons.com/events/6a90b2edbe148200298a96d4"
-  card: "toddler-story-time-2"
-  order: "2"
-  heading_id: "toddler-story-time-2"
-  when: "Mon Oct 12 · 10:30–11:00 a.m."
-  blurbs:
-    - "Books, songs, rhymes, and movement for ages 1 to 3 with an adult. Free, no registration."
-  links:
-    - href: "https://kcls.bibliocommons.com/events/6a90b2edbe148200298a96d4"
-      label: "Toddler Story Time"
-  description: "Books, songs, rhymes, and movement for ages 1 to 3 with an adult. Free, no registration."
-  hub_blurb: "Books, songs, rhymes, and movement for ages 1 to 3."
-- name: "Baby Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags: [story-time]
-  start: "2026-10-12T11:15:00-07:00"
-  end: "2026-10-12T11:45:00-07:00"
-  place: "Renton Library, 100 Mill Avenue S"
-  same_as: "https://kcls.bibliocommons.com/events/6a90b2e8be148200298a96c6"
-  card: "baby-story-time-1"
-  order: "3"
-  heading_id: "baby-story-time-1"
-  when: "Mon Oct 12 · 11:15–11:45 a.m."
-  blurbs:
-    - "Nursery rhymes, songs, and stories for babies from newborn to 18 months with an adult, plus time to meet other families. Free, no registration."
-  links:
-    - href: "https://kcls.bibliocommons.com/events/6a90b2e8be148200298a96c6"
-      label: "Baby Story Time"
-  description: "Nursery rhymes, songs, and stories for babies from newborn to 18 months with an adult, plus time to meet other families. Free, no registration."
-  hub_blurb: "Nursery rhymes, songs, and stories for babies from newborn to 18 months."
 - name: "Tuesday Crafternoon"
   cost: "Free"
   ages: "Kids"
@@ -71,12 +34,125 @@
   heading_id: "tuesday-crafternoon"
   when: "Tue Oct 13 and Tue Oct 20 · 3:30–5:00 p.m."
   blurbs:
-    - "Drop in at the children's library for a seasonal craft or art project. Supplies are ready. Aimed at ages 5 and up. Free, no registration."
+  - "Drop in at the children's library for a seasonal craft or art project. Supplies are ready. Aimed\
+    \ at ages 5 and up. Free, no registration."
   links:
-    - href: "https://kcls.bibliocommons.com/v2/events/6a95fe6169166f088b965155"
-      label: "Tuesday Crafternoon"
-  description: "Drop in at the children's library for a seasonal craft or art project. Supplies are ready. Aimed at ages 5 and up. Free, no registration."
+  - href: "https://kcls.bibliocommons.com/v2/events/6a95fe6169166f088b965155"
+    label: "Tuesday Crafternoon"
+  description: "Drop in at the children's library for a seasonal craft or art project. Supplies are ready.\
+    \ Aimed at ages 5 and up. Free, no registration."
   hub_blurb: "A drop-in seasonal craft afternoon for ages 5 and up."
+- name: "Amharic and Tigrigna Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-13T18:00:00-07:00"
+  end: "2026-10-13T18:30:00-07:00"
+  place: "Family First Community Center, 16200 116th Avenue SE"
+  same_as: "https://kcls.bibliocommons.com/events/6a76c2c174e3b8b75db87c83"
+  card: "amharic-and-tigrigna-story-time"
+  heading_id: "amharic-and-tigrigna-story-time"
+  when: "Tue Oct 13 · 6:00–6:30 p.m."
+  blurbs:
+  - "Amharic and Tigrigna stories, music, and songs for children with a caregiver at Family First Community\
+    \ Center. Free Tuesday evenings through mid-November."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a76c2c174e3b8b75db87c83"
+    label: "Amharic and Tigrigna Story Time"
+  description: "Amharic and Tigrigna stories, music, and songs for children with a caregiver at Family\
+    \ First Community Center. Free Tuesday evenings through mid-November."
+  hub_blurb: "Amharic and Tigrigna stories for families."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/themes/library-hall.webp"
+    alt: "Indoor community program space with bookshelves"
+    credit: "Photo: King County Library System programs at Family First."
+    source: "https://kcls.org/locations/fairwood/"
+    license: "organizer"
+- name: "Chess Club"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-13T18:00:00-07:00"
+  end: "2026-10-13T19:30:00-07:00"
+  place: "Renton Highlands Library, 4301 NE 4th St"
+  same_as: "https://kcls.bibliocommons.com/events/6a6ce9f1e9de6536001f9671"
+  card: "chess-club-highlands"
+  heading_id: "chess-club-highlands"
+  when: "Tue Oct 13 · 6:00–7:30 p.m."
+  blurbs:
+  - "Drop-in chess for all skill levels at Renton Highlands Library, with high school volunteers to coach.\
+    \ Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a6ce9f1e9de6536001f9671"
+    label: "Chess Club"
+  description: "Drop-in chess for all skill levels at Renton Highlands Library, with high school volunteers\
+    \ to coach. Free."
+  hub_blurb: "Drop-in chess with teen coaches at Renton Highlands."
+  ages: "Kids"
+  photo:
+    src: "/assets/images/renton/renton-highlands-library.webp"
+    alt: "Renton Highlands Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/renton-highlands/"
+    license: "organizer"
+- name: "Spanish Story Time at Family First"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-14T11:00:00-07:00"
+  end: "2026-10-14T12:00:00-07:00"
+  place: "Family First Community Center, 16200 116th Avenue SE"
+  same_as: "https://kcls.bibliocommons.com/events/6a46e2d4c52cdc3600ee7834"
+  card: "spanish-story-time-family-first"
+  heading_id: "spanish-story-time-family-first"
+  when: "Wed Oct 14 · 11:00 a.m.–12:00 p.m."
+  blurbs:
+  - "Spanish stories, music, movement, and rhymes for all ages with an adult at Family First Community\
+    \ Center. Hosted with Fairwood Library. Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a46e2d4c52cdc3600ee7834"
+    label: "Spanish Story Time at Family First"
+  description: "Spanish stories, music, movement, and rhymes for all ages with an adult at Family First\
+    \ Community Center. Hosted with Fairwood Library. Free."
+  hub_blurb: "Spanish stories at Family First Community Center."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/themes/library-hall.webp"
+    alt: "Indoor community program space with bookshelves"
+    credit: "Photo: King County Library System programs at Family First."
+    source: "https://kcls.org/locations/fairwood/"
+    license: "organizer"
+- name: "Spanish Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  signup: true
+  start: "2026-10-14T12:30:00-07:00"
+  end: "2026-10-14T13:00:00-07:00"
+  place: "Renton Library, 100 Mill Ave S"
+  same_as: "https://kcls.bibliocommons.com/events/6a7f68a7aafa6100295ca6de"
+  card: "spanish-story-time"
+  heading_id: "spanish-story-time"
+  when: "Wed Oct 14 · 12:30–1:00 p.m."
+  blurbs:
+  - "Stories, music, movement, and rhymes in Spanish that build early literacy. Free at Renton Library;\
+    \ registration details are on the listing."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a7f68a7aafa6100295ca6de"
+    label: "Spanish Story Time"
+  description: "Stories, music, movement, and rhymes in Spanish that build early literacy. Free at Renton\
+    \ Library; registration details are on the listing."
+  hub_blurb: "Spanish stories and songs for young children."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/themes/library-hall.webp"
+    alt: "Public library reading room"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/renton/"
+    license: "organizer"
 - name: "Latine Heritage Month with Marco Cortes"
   cost: "Free"
   ages: "All ages"
@@ -91,11 +167,13 @@
   heading_id: "latine-heritage-month-with-marco-cortes"
   when: "Wed Oct 14 · 4:00–5:00 p.m."
   blurbs:
-    - "A lively bilingual music and story show with songs, dancing, and Spanish words to learn along the way. All ages. No registration."
+  - "A lively bilingual music and story show with songs, dancing, and Spanish words to learn along the\
+    \ way. All ages. No registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6aadbe8a86d8450031173159"
-      label: "Latine Heritage Month with Marco Cortes"
-  description: "A lively bilingual music and story show with songs, dancing, and Spanish words to learn along the way. All ages. No registration."
+  - href: "https://kcls.bibliocommons.com/events/6aadbe8a86d8450031173159"
+    label: "Latine Heritage Month with Marco Cortes"
+  description: "A lively bilingual music and story show with songs, dancing, and Spanish words to learn\
+    \ along the way. All ages. No registration."
   hub_blurb: "A lively bilingual music and story show with songs, dancing, and Spanish words to learn."
 - name: "Reading with Rover"
   cost: "Free"
@@ -110,17 +188,20 @@
   heading_id: "reading-with-rover"
   when: "Thu Oct 15 · 4:30–5:30 p.m."
   blurbs:
-    - "School-age kids read aloud to a certified therapy dog. Reading with Rover works with schools and libraries in the greater Seattle area."
+  - "School-age kids read aloud to a certified therapy dog. Reading with Rover works with schools and\
+    \ libraries in the greater Seattle area."
   links:
-    - href: "https://kcls.bibliocommons.com/v2/events/6aa89b32ca248a002915dafe"
-      label: "Reading with Rover"
-  description: "School-age kids read aloud to a certified therapy dog. Reading with Rover works with schools and libraries in the greater Seattle area."
+  - href: "https://kcls.bibliocommons.com/v2/events/6aa89b32ca248a002915dafe"
+    label: "Reading with Rover"
+  description: "School-age kids read aloud to a certified therapy dog. Reading with Rover works with schools\
+    \ and libraries in the greater Seattle area."
   hub_blurb: "School-age kids read aloud to a certified therapy dog."
 - name: "Family Story Time"
   cost: "Free"
   ages: "All ages"
   setting: "Indoor"
-  tags: [story-time]
+  tags:
+  - "story-time"
   start: "2026-10-16T10:30:00-07:00"
   end: "2026-10-16T11:30:00-07:00"
   place: "Fairwood Library, 17009 140th Avenue SE"
@@ -130,17 +211,20 @@
   heading_id: "family-story-time"
   when: "Fri Oct 16 · 10:30–11:30 a.m."
   blurbs:
-    - "Stories, songs, and movement for young children, with time after to read, color, and meet other families. All ages with an adult. No registration."
+  - "Stories, songs, and movement for young children, with time after to read, color, and meet other families.\
+    \ All ages with an adult. No registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a85e4b0b20478002993f17a"
-      label: "Family Story Time"
-  description: "Stories, songs, and movement for young children, with time after to read, color, and meet other families. All ages with an adult. No registration."
+  - href: "https://kcls.bibliocommons.com/events/6a85e4b0b20478002993f17a"
+    label: "Family Story Time"
+  description: "Stories, songs, and movement for young children, with time after to read, color, and meet\
+    \ other families. All ages with an adult. No registration."
   hub_blurb: "Stories, songs, and movement for young children, with time after to read and color."
 - name: "Toddler Story Time"
   cost: "Free"
   ages: "Toddlers"
   setting: "Indoor"
-  tags: [story-time]
+  tags:
+  - "story-time"
   start: "2026-10-16T11:00:00-07:00"
   end: "2026-10-16T11:30:00-07:00"
   place: "Renton Highlands Library, 2801 NE 10th Street"
@@ -150,12 +234,42 @@
   heading_id: "toddler-story-time-3"
   when: "Fri Oct 16 · 11:00–11:30 a.m."
   blurbs:
-    - "Books, songs, rhymes, and movement for ages 1 to 3 with an adult at the Highlands branch. Free, no registration, and space is limited."
+  - "Books, songs, rhymes, and movement for ages 1 to 3 with an adult at the Highlands branch. Free, no\
+    \ registration, and space is limited."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a6794c9cca66c2f00a6523e"
-      label: "Toddler Story Time"
-  description: "Books, songs, rhymes, and movement for ages 1 to 3 with an adult at the Highlands branch. Free, no registration, and space is limited."
+  - href: "https://kcls.bibliocommons.com/events/6a6794c9cca66c2f00a6523e"
+    label: "Toddler Story Time"
+  description: "Books, songs, rhymes, and movement for ages 1 to 3 with an adult at the Highlands branch.\
+    \ Free, no registration, and space is limited."
   hub_blurb: "Books, songs, rhymes, and movement for ages 1 to 3."
+- name: "Baby Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-16T12:00:00-07:00"
+  end: "2026-10-16T12:30:00-07:00"
+  place: "Renton Highlands Library, 4301 NE 4th St"
+  same_as: "https://kcls.bibliocommons.com/events/6a6794e40d65ac3600428928"
+  card: "baby-story-time-highlands"
+  heading_id: "baby-story-time-highlands"
+  when: "Fri Oct 16 · 12:00–12:30 p.m."
+  blurbs:
+  - "Nursery rhymes, songs, and stories for newborns to 18 months with an adult. Bring a mat or blanket.\
+    \ Free; space is limited."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a6794e40d65ac3600428928"
+    label: "Baby Story Time"
+  description: "Nursery rhymes, songs, and stories for newborns to 18 months with an adult. Bring a mat\
+    \ or blanket. Free; space is limited."
+  hub_blurb: "Baby stories at Renton Highlands Library."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/renton/renton-highlands-library.webp"
+    alt: "Renton Highlands Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/renton-highlands/"
+    license: "organizer"
 - name: "Station 11 Open House"
   cost: "Free"
   setting: "Outdoor"
@@ -168,12 +282,17 @@
   heading_id: "station-11-open-house"
   when: "Sat Oct 17 · 9:00–11:00 a.m."
   blurbs:
-    - "Tour the ladder truck, fire engine, and medic unit, try on firefighter gear, and meet the crew. Free, no RSVP. It is in the apparatus bay, rain or shine. Parking at the station is limited. The library across the street has more."
+  - "Tour the ladder truck, fire engine, and medic unit, try on firefighter gear, and meet the crew. Free,\
+    \ no RSVP. It is in the apparatus bay, rain or shine. Parking at the station is limited. The library\
+    \ across the street has more."
   links:
-    - href: "https://www.rentonrfa.com/events/"
-      label: "Renton RFA events"
-  description: "Tour the ladder truck, fire engine, and medic unit, try on firefighter gear, and meet the crew. Free, no RSVP. It is in the apparatus bay, rain or shine. Parking at the station is limited. The library across the street has more."
-  hub_blurb: "Tour the ladder truck, fire engine, and medic unit, try on firefighter gear, and meet the crew."
+  - href: "https://www.rentonrfa.com/events/"
+    label: "Renton RFA events"
+  description: "Tour the ladder truck, fire engine, and medic unit, try on firefighter gear, and meet\
+    \ the crew. Free, no RSVP. It is in the apparatus bay, rain or shine. Parking at the station is limited.\
+    \ The library across the street has more."
+  hub_blurb: "Tour the ladder truck, fire engine, and medic unit, try on firefighter gear, and meet the\
+    \ crew."
 - name: "Station 12 Open House"
   cost: "Free"
   setting: "Outdoor"
@@ -186,18 +305,22 @@
   heading_id: "station-12-open-house"
   when: "Sat Oct 17 · 1:00–3:00 p.m."
   blurbs:
-    - "Tour the engine, the aid unit, and the dive rig, including the water rescue boat. Try the gear and meet the firefighters. Free, no RSVP. In the bay, rain or shine. Street parking is nearby."
+  - "Tour the engine, the aid unit, and the dive rig, including the water rescue boat. Try the gear and\
+    \ meet the firefighters. Free, no RSVP. In the bay, rain or shine. Street parking is nearby."
   links:
-    - href: "https://www.rentonrfa.com/events/"
-      label: "Renton RFA events"
-  description: "Tour the engine, the aid unit, and the dive rig, including the water rescue boat. Try the gear and meet the firefighters. Free, no RSVP. In the bay, rain or shine. Street parking is nearby."
+  - href: "https://www.rentonrfa.com/events/"
+    label: "Renton RFA events"
+  description: "Tour the engine, the aid unit, and the dive rig, including the water rescue boat. Try\
+    \ the gear and meet the firefighters. Free, no RSVP. In the bay, rain or shine. Street parking is\
+    \ nearby."
   hub_blurb: "Tour the engine, the aid unit, and the dive rig, including the water rescue boat."
 - name: "Explore Día de los Muertos with Studio VC"
   cost: "Free"
   ages: "Kids"
   setting: "Indoor"
   signup: true
-  tags: [dia-de-los-muertos]
+  tags:
+  - "dia-de-los-muertos"
   start: "2026-10-18T13:00:00-07:00"
   end: "2026-10-18T14:00:00-07:00"
   place: "Renton Library, 100 Mill Avenue S"
@@ -207,17 +330,20 @@
   heading_id: "explore-d-a-de-los-muertos-with-studio-vc"
   when: "Sun Oct 18 · 1:00–2:00 p.m."
   blurbs:
-    - "Make a Día de los Muertos art piece with Hyunjoo Koo of Studio VC. All materials provided. Ages 5 and up. Free. Registration required."
+  - "Make a Día de los Muertos art piece with Hyunjoo Koo of Studio VC. All materials provided. Ages 5\
+    \ and up. Free. Registration required."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a922d261c197d11325b9b37"
-      label: "Explore Día de los Muertos with Studio VC"
-  description: "Make a Día de los Muertos art piece with Hyunjoo Koo of Studio VC. All materials provided. Ages 5 and up. Free. Registration required."
+  - href: "https://kcls.bibliocommons.com/events/6a922d261c197d11325b9b37"
+    label: "Explore Día de los Muertos with Studio VC"
+  description: "Make a Día de los Muertos art piece with Hyunjoo Koo of Studio VC. All materials provided.\
+    \ Ages 5 and up. Free. Registration required."
   hub_blurb: "Make a Día de los Muertos art piece with Studio VC. Ages 5 and up."
 - name: "Toddler Story Time"
   cost: "Free"
   ages: "Toddlers"
   setting: "Indoor"
-  tags: [story-time]
+  tags:
+  - "story-time"
   start: "2026-10-19T10:30:00-07:00"
   end: "2026-10-19T11:00:00-07:00"
   place: "Renton Library, 100 Mill Avenue S"
@@ -227,12 +353,40 @@
   heading_id: "toddler-story-time-1"
   when: "Mon Oct 19 · 10:30–11:00 a.m."
   blurbs:
-    - "Stories, songs, movement, and rhymes for ages 1 to 3 with an adult. Free, no registration."
+  - "Stories, songs, movement, and rhymes for ages 1 to 3 with an adult. Free, no registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a90b2edbe148200298a96d5"
-      label: "Toddler Story Time"
+  - href: "https://kcls.bibliocommons.com/events/6a90b2edbe148200298a96d5"
+    label: "Toddler Story Time"
   description: "Stories, songs, movement, and rhymes for ages 1 to 3 with an adult. Free, no registration."
   hub_blurb: "Stories, songs, movement, and rhymes for ages 1 to 3 with an adult."
+- name: "Baby Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-19T11:15:00-07:00"
+  end: "2026-10-19T11:45:00-07:00"
+  place: "Renton Library, 100 Mill Ave S"
+  same_as: "https://kcls.bibliocommons.com/events/6a90b2e8be148200298a96c7"
+  card: "baby-story-time-renton"
+  heading_id: "baby-story-time-renton"
+  when: "Mon Oct 19 · 11:15–11:45 a.m."
+  blurbs:
+  - "Nursery rhymes, songs, and stories for newborns to 18 months with an adult at Renton Library. Free,\
+    \ no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a90b2e8be148200298a96c7"
+    label: "Baby Story Time"
+  description: "Nursery rhymes, songs, and stories for newborns to 18 months with an adult at Renton Library.\
+    \ Free, no registration."
+  hub_blurb: "Baby stories at Renton Library."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/themes/library-hall.webp"
+    alt: "Public library reading room"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/renton/"
+    license: "organizer"
 - name: "Tuesday Crafternoon"
   cost: "Free"
   ages: "Kids"
@@ -242,6 +396,117 @@
   place: "Renton Library, 100 Mill Avenue S"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a95fe6169166f088b965156"
   card: "tuesday-crafternoon"
+- name: "Amharic and Tigrigna Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-20T18:00:00-07:00"
+  end: "2026-10-20T18:30:00-07:00"
+  place: "Family First Community Center, 16200 116th Avenue SE"
+  same_as: "https://kcls.bibliocommons.com/events/6a76c2c174e3b8b75db87c84"
+  card: "amharic-and-tigrigna-story-time-2"
+  heading_id: "amharic-and-tigrigna-story-time-2"
+  when: "Tue Oct 20 · 6:00–6:30 p.m."
+  blurbs:
+  - "Amharic and Tigrigna stories, music, and songs for children with a caregiver at Family First Community\
+    \ Center. Free Tuesday evenings through mid-November."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a76c2c174e3b8b75db87c84"
+    label: "Amharic and Tigrigna Story Time"
+  description: "Amharic and Tigrigna stories, music, and songs for children with a caregiver at Family\
+    \ First Community Center. Free Tuesday evenings through mid-November."
+  hub_blurb: "Amharic and Tigrigna stories for families."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/themes/library-hall.webp"
+    alt: "Indoor community program space with bookshelves"
+    credit: "Photo: King County Library System programs at Family First."
+    source: "https://kcls.org/locations/fairwood/"
+    license: "organizer"
+- name: "Chess Club"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-20T18:00:00-07:00"
+  end: "2026-10-20T19:30:00-07:00"
+  place: "Renton Highlands Library, 4301 NE 4th St"
+  same_as: "https://kcls.bibliocommons.com/events/6a6ce9f1e9de6536001f9672"
+  card: "chess-club-highlands-2"
+  heading_id: "chess-club-highlands-2"
+  when: "Tue Oct 20 · 6:00–7:30 p.m."
+  blurbs:
+  - "Drop-in chess for all skill levels at Renton Highlands Library, with high school volunteers to coach.\
+    \ Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a6ce9f1e9de6536001f9672"
+    label: "Chess Club"
+  description: "Drop-in chess for all skill levels at Renton Highlands Library, with high school volunteers\
+    \ to coach. Free."
+  hub_blurb: "Drop-in chess with teen coaches at Renton Highlands."
+  ages: "Kids"
+  photo:
+    src: "/assets/images/renton/renton-highlands-library.webp"
+    alt: "Renton Highlands Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/renton-highlands/"
+    license: "organizer"
+- name: "Spanish Story Time at Family First"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-21T11:00:00-07:00"
+  end: "2026-10-21T12:00:00-07:00"
+  place: "Family First Community Center, 16200 116th Avenue SE"
+  same_as: "https://kcls.bibliocommons.com/events/6a46e2d4c52cdc3600ee7835"
+  card: "spanish-story-time-family-first-2"
+  heading_id: "spanish-story-time-family-first-2"
+  when: "Wed Oct 21 · 11:00 a.m.–12:00 p.m."
+  blurbs:
+  - "Spanish stories, music, movement, and rhymes for all ages with an adult at Family First Community\
+    \ Center. Hosted with Fairwood Library. Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a46e2d4c52cdc3600ee7835"
+    label: "Spanish Story Time at Family First"
+  description: "Spanish stories, music, movement, and rhymes for all ages with an adult at Family First\
+    \ Community Center. Hosted with Fairwood Library. Free."
+  hub_blurb: "Spanish stories at Family First Community Center."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/themes/library-hall.webp"
+    alt: "Indoor community program space with bookshelves"
+    credit: "Photo: King County Library System programs at Family First."
+    source: "https://kcls.org/locations/fairwood/"
+    license: "organizer"
+- name: "Spanish Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  signup: true
+  start: "2026-10-21T12:30:00-07:00"
+  end: "2026-10-21T13:00:00-07:00"
+  place: "Renton Library, 100 Mill Ave S"
+  same_as: "https://kcls.bibliocommons.com/events/6a7f68a7aafa6100295ca6df"
+  card: "spanish-story-time-2"
+  heading_id: "spanish-story-time-2"
+  when: "Wed Oct 21 · 12:30–1:00 p.m."
+  blurbs:
+  - "Stories, music, movement, and rhymes in Spanish that build early literacy. Free at Renton Library;\
+    \ registration details are on the listing."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a7f68a7aafa6100295ca6df"
+    label: "Spanish Story Time"
+  description: "Stories, music, movement, and rhymes in Spanish that build early literacy. Free at Renton\
+    \ Library; registration details are on the listing."
+  hub_blurb: "Spanish stories and songs for young children."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/themes/library-hall.webp"
+    alt: "Public library reading room"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/renton/"
+    license: "organizer"
 - name: "Latine Heritage Month with Marco Cortes"
   cost: "Free"
   ages: "All ages"
@@ -255,19 +520,23 @@
   heading_id: "latine-heritage-month-with-marco-cortes-1"
   when: "Wed Oct 21 · 4:00–5:00 p.m."
   blurbs:
-    - "Marco Cortes brings a bilingual show of songs, dancing, and stories that plays with Spanish words and rhythms. All ages. Free, no registration."
+  - "Marco Cortes brings a bilingual show of songs, dancing, and stories that plays with Spanish words\
+    \ and rhythms. All ages. Free, no registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6aadbe8a86d845003117315a"
-      label: "Latine Heritage Month with Marco Cortes"
-  description: "Marco Cortes brings a bilingual show of songs, dancing, and stories that plays with Spanish words and rhythms. All ages. Free, no registration."
-  hub_blurb: "Marco Cortes brings a bilingual show of songs, dancing, and stories that plays with Spanish words and rhythms."
+  - href: "https://kcls.bibliocommons.com/events/6aadbe8a86d845003117315a"
+    label: "Latine Heritage Month with Marco Cortes"
+  description: "Marco Cortes brings a bilingual show of songs, dancing, and stories that plays with Spanish\
+    \ words and rhythms. All ages. Free, no registration."
+  hub_blurb: "Marco Cortes brings a bilingual show of songs, dancing, and stories that plays with Spanish\
+    \ words and rhythms."
 - name: "Spooky Stuffy Sleepover"
   cost: "Free"
   ages: "Teens"
   setting: "Indoor"
   drop_off: true
   signup: true
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-21T16:00:00-07:00"
   end: "2026-10-21T17:00:00-07:00"
   place: "Fairwood Library, 17009 140th Avenue SE"
@@ -277,23 +546,27 @@
   heading_id: "spooky-stuffy-sleepover"
   when: "Wed Oct 21 · 4:00–5:00 p.m."
   blurbs:
-    - "Drop off a stuffed animal for a spooky night at the library, then pick it up Thursday 5 to 6 p.m. with photos of its adventures. Crafts and a photo booth at drop-off. Ages 10 to 17. Free. Register."
+  - "Drop off a stuffed animal for a spooky night at the library, then pick it up Thursday 5 to 6 p.m.\
+    \ with photos of its adventures. Crafts and a photo booth at drop-off. Ages 10 to 17. Free. Register."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a925d643b6c71003e5c2c9d"
-      label: "Spooky Stuffy Sleepover"
+  - href: "https://kcls.bibliocommons.com/events/6a925d643b6c71003e5c2c9d"
+    label: "Spooky Stuffy Sleepover"
   photo:
     src: "/assets/images/renton/spooky-stuffy-sleepover.jpg"
     alt: "A black and white skeleton plush toy leaning on an old library card catalog."
     credit: "Image: King County Library System"
     source: "https://kcls.bibliocommons.com/events/6a925d643b6c71003e5c2c9d"
     license: "organizer"
-  description: "Drop off a stuffed animal for a spooky night at the library, then pick it up Thursday 5 to 6 p.m. with photos of its adventures. Crafts and a photo booth at drop-off. Ages 10 to 17. Free. Register."
+  description: "Drop off a stuffed animal for a spooky night at the library, then pick it up Thursday\
+    \ 5 to 6 p.m. with photos of its adventures. Crafts and a photo booth at drop-off. Ages 10 to 17.\
+    \ Free. Register."
   hub_blurb: "Leave a stuffy for a spooky night at the library and get photos of its adventures."
 - name: "Firefighters and Friends Story Time"
   cost: "Free"
   ages: "Toddlers"
   setting: "Indoor"
-  tags: [story-time]
+  tags:
+  - "story-time"
   start: "2026-10-22T10:00:00-07:00"
   end: "2026-10-22T11:00:00-07:00"
   place: "Fairwood Library, 17009 140th Avenue SE"
@@ -303,17 +576,48 @@
   heading_id: "firefighters-and-friends-story-time"
   when: "Thu Oct 22 · 10:00–11:00 a.m."
   blurbs:
-    - "Meet Renton Regional Fire Authority firefighters, hear stories, and learn fire safety. A fire truck may visit if it is not needed on a call. Free, no registration. Space is limited."
+  - "Meet Renton Regional Fire Authority firefighters, hear stories, and learn fire safety. A fire truck\
+    \ may visit if it is not needed on a call. Free, no registration. Space is limited."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6aa32626101eb7003f2f226c"
-      label: "Firefighters and Friends Story Time"
-  description: "Meet Renton Regional Fire Authority firefighters, hear stories, and learn fire safety. A fire truck may visit if it is not needed on a call. Free, no registration. Space is limited."
+  - href: "https://kcls.bibliocommons.com/events/6aa32626101eb7003f2f226c"
+    label: "Firefighters and Friends Story Time"
+  description: "Meet Renton Regional Fire Authority firefighters, hear stories, and learn fire safety.\
+    \ A fire truck may visit if it is not needed on a call. Free, no registration. Space is limited."
   hub_blurb: "Meet Renton Regional Fire Authority firefighters, hear stories, and learn fire safety."
+- name: "Autumn Quilling Magnets"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-22T14:00:00-07:00"
+  end: "2026-10-22T15:00:00-07:00"
+  place: "Fairwood Library, 17009 140th Avenue SE"
+  same_as: "https://kcls.bibliocommons.com/events/6a9603d069166f088b9653fc"
+  card: "autumn-quilling-magnets"
+  heading_id: "autumn-quilling-magnets"
+  when: "Thu Oct 22 · 2:00–3:00 p.m."
+  blurbs:
+  - "Make autumn and Halloween magnets with paper quilling. Supplies provided; walk-ins welcome. Free\
+    \ at Fairwood Library."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a9603d069166f088b9653fc"
+    label: "Autumn Quilling Magnets"
+  description: "Make autumn and Halloween magnets with paper quilling. Supplies provided; walk-ins welcome.\
+    \ Free at Fairwood Library."
+  hub_blurb: "Halloween paper-quilling magnets at Fairwood Library."
+  ages: "Kids"
+  tags:
+  - "halloween"
+  photo:
+    src: "/assets/images/renton/fairwood-library.webp"
+    alt: "Fairwood Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/fairwood/"
+    license: "organizer"
 - name: "Spooky Nature Science"
   cost: "Free"
   ages: "All ages"
   setting: "Indoor"
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-22T16:00:00-07:00"
   end: "2026-10-22T17:30:00-07:00"
   place: "Renton Library, 100 Mill Avenue S"
@@ -323,12 +627,44 @@
   heading_id: "spooky-nature-science"
   when: "Thu Oct 22 · 4:00–5:30 p.m."
   blurbs:
-    - "A drop-in science and craft hour with the Environmental Science Center. Mix a color-changing potion and take a look at some creepy-crawlies. It is for all ages, and you may get a little dusty. No registration."
+  - "A drop-in science and craft hour with the Environmental Science Center. Mix a color-changing potion\
+    \ and take a look at some creepy-crawlies. It is for all ages, and you may get a little dusty. No\
+    \ registration."
   links:
-    - href: "https://www.envsciencecenter.org/event-details/spooky-nature-science"
-      label: "Spooky Nature Science"
-  description: "A drop-in science and craft hour with the Environmental Science Center. Mix a color-changing potion and take a look at some creepy-crawlies. It is for all ages, and you may get a little dusty. No registration."
+  - href: "https://www.envsciencecenter.org/event-details/spooky-nature-science"
+    label: "Spooky Nature Science"
+  description: "A drop-in science and craft hour with the Environmental Science Center. Mix a color-changing\
+    \ potion and take a look at some creepy-crawlies. It is for all ages, and you may get a little dusty.\
+    \ No registration."
   hub_blurb: "A drop-in science and craft hour with the Environmental Science Center."
+- name: "Family Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-23T10:30:00-07:00"
+  end: "2026-10-23T11:30:00-07:00"
+  place: "Fairwood Library, 17009 140th Avenue SE"
+  same_as: "https://kcls.bibliocommons.com/events/6a85e4b0b20478002993f17b"
+  card: "family-story-time-fairwood"
+  heading_id: "family-story-time-fairwood"
+  when: "Fri Oct 23 · 10:30–11:30 a.m."
+  blurbs:
+  - "Stories, songs, and movement for all ages with an adult at Fairwood Library, with time to stay and\
+    \ color afterward. Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a85e4b0b20478002993f17b"
+    label: "Family Story Time"
+  description: "Stories, songs, and movement for all ages with an adult at Fairwood Library, with time\
+    \ to stay and color afterward. Free."
+  hub_blurb: "Family stories at Fairwood Library."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/renton/fairwood-library.webp"
+    alt: "Fairwood Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/fairwood/"
+    license: "organizer"
 - name: "Station 13 Open House"
   cost: "Free"
   start: "2026-10-24T09:00:00-07:00"
@@ -340,11 +676,15 @@
   heading_id: "station-13-open-house"
   when: "Sat Oct 24 · 9:00–11:00 a.m."
   blurbs:
-    - "Tour the engine and aid unit, try the gear, and pick up fire-safety information. Free, no RSVP. In the bay, rain or shine. Parking in the station lot is limited. The closest spaces in the Aliberto’s lot next door are open to guests."
+  - "Tour the engine and aid unit, try the gear, and pick up fire-safety information. Free, no RSVP. In\
+    \ the bay, rain or shine. Parking in the station lot is limited. The closest spaces in the Aliberto’s\
+    \ lot next door are open to guests."
   links:
-    - href: "https://www.rentonrfa.com/events/"
-      label: "Renton RFA events"
-  description: "Tour the engine and aid unit, try the gear, and pick up fire-safety information. Free, no RSVP. In the bay, rain or shine. Parking in the station lot is limited. The closest spaces in the Aliberto's lot next door are open to guests."
+  - href: "https://www.rentonrfa.com/events/"
+    label: "Renton RFA events"
+  description: "Tour the engine and aid unit, try the gear, and pick up fire-safety information. Free,\
+    \ no RSVP. In the bay, rain or shine. Parking in the station lot is limited. The closest spaces in\
+    \ the Aliberto's lot next door are open to guests."
   hub_blurb: "Tour the engine and aid unit, try the gear, and pick up fire-safety information."
 - name: "Station 15 Open House"
   cost: "Free"
@@ -358,15 +698,20 @@
   heading_id: "station-15-open-house"
   when: "Sat Oct 24 · 1:00–3:00 p.m."
   blurbs:
-    - "Tour the engine and look for the hidden images on the Kennydale water tower behind the station. Free, no RSVP. In the bay, rain or shine. Park at the park-and-ride on the corner of N 30th Street and Park Ave N."
+  - "Tour the engine and look for the hidden images on the Kennydale water tower behind the station. Free,\
+    \ no RSVP. In the bay, rain or shine. Park at the park-and-ride on the corner of N 30th Street and\
+    \ Park Ave N."
   links:
-    - href: "https://www.rentonrfa.com/events/"
-      label: "Renton RFA events"
-  description: "Tour the engine and look for the hidden images on the Kennydale water tower behind the station. Free, no RSVP. In the bay, rain or shine. Park at the park-and-ride on the corner of N 30th Street and Park Ave N."
+  - href: "https://www.rentonrfa.com/events/"
+    label: "Renton RFA events"
+  description: "Tour the engine and look for the hidden images on the Kennydale water tower behind the\
+    \ station. Free, no RSVP. In the bay, rain or shine. Park at the park-and-ride on the corner of N\
+    \ 30th Street and Park Ave N."
   hub_blurb: "Tour the engine and look for the hidden images on the Kennydale water tower behind the station."
 - name: "Olde Fashioned Halloween Party"
   setting: "Outdoor"
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-24T13:00:00-07:00"
   end: "2026-10-24T16:00:00-07:00"
   place: "Downtown Renton, then Legacy Square"
@@ -376,16 +721,22 @@
   heading_id: "olde-fashioned-halloween-party"
   when: "Sat Oct 24 · 1:00–4:00 p.m."
   blurbs:
-    - "The Renton Downtown Partnership’s family afternoon. Start with trick-or-treating at downtown businesses, then go to Legacy Square for zombie makeup, photos, games, and prizes. Costume contest categories include pets, kids, teens, and adults. At 3:00 p.m. the crowd learns the Thriller dance and joins the worldwide simultaneous performance."
+  - "The Renton Downtown Partnership’s family afternoon. Start with trick-or-treating at downtown businesses,\
+    \ then go to Legacy Square for zombie makeup, photos, games, and prizes. Costume contest categories\
+    \ include pets, kids, teens, and adults. At 3:00 p.m. the crowd learns the Thriller dance and joins\
+    \ the worldwide simultaneous performance."
   links:
-    - href: "https://www.rentondowntown.com/events/halloween"
-      label: "Olde Fashioned Halloween Party"
+  - href: "https://www.rentondowntown.com/events/halloween"
+    label: "Olde Fashioned Halloween Party"
   photo:
     src: "/assets/images/renton/downtown.webp"
     alt: "Downtown Renton, with storefronts along the street."
     credit: "Photo: Chris Light, CC BY-SA 4.0"
     source: "https://commons.wikimedia.org/wiki/File:Renton_Downtown_2015-06_722.jpg"
-  description: "The Renton Downtown Partnership's family afternoon. Start with trick-or-treating at downtown businesses, then go to Legacy Square for zombie makeup, photos, games, and prizes. Costume contest categories include pets, kids, teens, and adults. At 3:00 p.m. the crowd learns the Thriller dance and joins the worldwide simultaneous performance."
+  description: "The Renton Downtown Partnership's family afternoon. Start with trick-or-treating at downtown\
+    \ businesses, then go to Legacy Square for zombie makeup, photos, games, and prizes. Costume contest\
+    \ categories include pets, kids, teens, and adults. At 3:00 p.m. the crowd learns the Thriller dance\
+    \ and joins the worldwide simultaneous performance."
   hub_blurb: "The Renton Downtown Partnership's family afternoon."
 - name: "Family Science Time"
   cost: "Free"
@@ -402,18 +753,75 @@
   heading_id: "family-science-time-1"
   when: "Sat Oct 24 · 1:00–3:00 p.m."
   blurbs:
-    - "Drop in any time for hands-on science activities and crafts from the Environmental Science Center. Open to all ages and best for kids in kindergarten through 5th grade. Free, and no registration."
+  - "Drop in any time for hands-on science activities and crafts from the Environmental Science Center.\
+    \ Open to all ages and best for kids in kindergarten through 5th grade. Free, and no registration."
   links:
-    - href: "https://www.envsciencecenter.org/event-details/family-science-time-14"
-      label: "Family Science Time"
-  description: "Drop in any time for hands-on science activities and crafts from the Environmental Science Center. Open to all ages and best for kids in kindergarten through 5th grade. Free, and no registration."
-  hub_blurb: "Drop-in hands-on science activities and crafts, best for kids in kindergarten through 5th grade."
+  - href: "https://www.envsciencecenter.org/event-details/family-science-time-14"
+    label: "Family Science Time"
+  description: "Drop in any time for hands-on science activities and crafts from the Environmental Science\
+    \ Center. Open to all ages and best for kids in kindergarten through 5th grade. Free, and no registration."
+  hub_blurb: "Drop-in hands-on science activities and crafts, best for kids in kindergarten through 5th\
+    \ grade."
+- name: "Pokemon Club"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-25T13:00:00-07:00"
+  end: "2026-10-25T14:00:00-07:00"
+  place: "Renton Library, 100 Mill Ave S"
+  same_as: "https://kcls.bibliocommons.com/events/6aa0a03a6562d02296858b3c"
+  card: "pokemon-club"
+  heading_id: "pokemon-club"
+  when: "Sun Oct 25 · 1:00–2:00 p.m."
+  blurbs:
+  - "Draw Pokemon, try themed activities, and learn the trading card game with a guided deck. Best for\
+    \ ages 5 to 10. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6aa0a03a6562d02296858b3c"
+    label: "Pokemon Club"
+  description: "Draw Pokemon, try themed activities, and learn the trading card game with a guided deck.\
+    \ Best for ages 5 to 10. Free, no registration."
+  hub_blurb: "Pokemon drawing, activities, and cards for ages 5 to 10."
+  ages: "Kids"
+  photo:
+    src: "/assets/images/themes/library-hall.webp"
+    alt: "Public library reading room"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/renton/"
+    license: "organizer"
+- name: "Toddler Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-10-26T10:30:00-07:00"
+  end: "2026-10-26T11:00:00-07:00"
+  place: "Renton Library, 100 Mill Ave S"
+  same_as: "https://kcls.bibliocommons.com/events/6a90b2edbe148200298a96d6"
+  card: "toddler-story-time-renton"
+  heading_id: "toddler-story-time-renton"
+  when: "Mon Oct 26 · 10:30–11:00 a.m."
+  blurbs:
+  - "Stories, music, movement, and rhymes for ages 1 to 3 with an adult at Renton Library. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a90b2edbe148200298a96d6"
+    label: "Toddler Story Time"
+  description: "Stories, music, movement, and rhymes for ages 1 to 3 with an adult at Renton Library.\
+    \ Free, no registration."
+  hub_blurb: "Toddler stories at Renton Library."
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  photo:
+    src: "/assets/images/themes/library-hall.webp"
+    alt: "Public library reading room"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/renton/"
+    license: "organizer"
 - name: "Halloween Puzzle Party"
   cost: "Free"
   ages: "Teens"
   setting: "Indoor"
   signup: true
-  tags: [halloween]
+  tags:
+  - "halloween"
   start: "2026-10-27T17:30:00-07:00"
   end: "2026-10-27T19:30:00-07:00"
   place: "Renton Highlands Library, 2801 NE 10th Street"
@@ -423,11 +831,13 @@
   heading_id: "halloween-puzzle-party"
   when: "Tue Oct 27 · 5:30–7:30 p.m."
   blurbs:
-    - "Teams of two to four race to finish a jigsaw puzzle, keep it, and the winners get a prize. For teens 12 and up with friends or family. Costumes welcome. Free. Registration required."
+  - "Teams of two to four race to finish a jigsaw puzzle, keep it, and the winners get a prize. For teens\
+    \ 12 and up with friends or family. Costumes welcome. Free. Registration required."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6ab1c0a0001a4a0e055b1159"
-      label: "Halloween Puzzle Party"
-  description: "Teams of two to four race to finish a jigsaw puzzle, keep it, and the winners get a prize. For teens 12 and up with friends or family. Costumes welcome. Free. Registration required."
+  - href: "https://kcls.bibliocommons.com/events/6ab1c0a0001a4a0e055b1159"
+    label: "Halloween Puzzle Party"
+  description: "Teams of two to four race to finish a jigsaw puzzle, keep it, and the winners get a prize.\
+    \ For teens 12 and up with friends or family. Costumes welcome. Free. Registration required."
   hub_blurb: "Teams race to finish a Halloween jigsaw puzzle. Teens 12 and up with friends or family."
 - name: "The Secret Life of Bats"
   cost: "Free"
@@ -444,17 +854,21 @@
   heading_id: "the-secret-life-of-bats"
   when: "Wed Oct 28 · 6:00–7:00 p.m."
   blurbs:
-    - "The Environmental Science Center explains how bats live, why we rarely notice them, and how to help protect them here in Washington. Best for ages 13 and up. Free, and no registration."
+  - "The Environmental Science Center explains how bats live, why we rarely notice them, and how to help\
+    \ protect them here in Washington. Best for ages 13 and up. Free, and no registration."
   links:
-    - href: "https://www.envsciencecenter.org/event-details/the-secret-life-of-bats"
-      label: "The Secret Life of Bats"
-  description: "The Environmental Science Center explains how bats live, why we rarely notice them, and how to help protect them here in Washington. Best for ages 13 and up. Free, and no registration."
+  - href: "https://www.envsciencecenter.org/event-details/the-secret-life-of-bats"
+    label: "The Secret Life of Bats"
+  description: "The Environmental Science Center explains how bats live, why we rarely notice them, and\
+    \ how to help protect them here in Washington. Best for ages 13 and up. Free, and no registration."
   hub_blurb: "The Environmental Science Center explains how bats live and how to help protect them."
 - name: "Special Costume Story Time"
   cost: "Free"
   ages: "Toddlers"
   setting: "Outdoor"
-  tags: [halloween, story-time]
+  tags:
+  - "halloween"
+  - "story-time"
   start: "2026-10-30T10:30:00-07:00"
   end: "2026-10-30T11:30:00-07:00"
   place: "Fairwood Library, 17009 140th Avenue SE"
@@ -464,11 +878,13 @@
   heading_id: "special-costume-story-time"
   when: "Fri Oct 30 · 10:30–11:30 a.m."
   blurbs:
-    - "Wear a costume, pajamas, or a favorite hat to a silly story time with songs and a parade around the library. All ages with an adult. Free, no registration."
+  - "Wear a costume, pajamas, or a favorite hat to a silly story time with songs and a parade around the\
+    \ library. All ages with an adult. Free, no registration."
   links:
-    - href: "https://kcls.bibliocommons.com/events/6a85e69569166f088b934d6d"
-      label: "Special Costume Story Time"
-  description: "Wear a costume, pajamas, or a favorite hat to a silly story time with songs and a parade around the library. All ages with an adult. Free, no registration."
+  - href: "https://kcls.bibliocommons.com/events/6a85e69569166f088b934d6d"
+    label: "Special Costume Story Time"
+  description: "Wear a costume, pajamas, or a favorite hat to a silly story time with songs and a parade\
+    \ around the library. All ages with an adult. Free, no registration."
   hub_blurb: "A silly costume story time with songs and a parade around the library."
 - name: "Truck or Treat"
   cost: "$15 to $18"
@@ -476,7 +892,9 @@
   setting: "Indoor"
   signup: true
   sensory: true
-  tags: [halloween, trunk-or-treat]
+  tags:
+  - "halloween"
+  - "trunk-or-treat"
   start: "2026-10-30T17:00:00-07:00"
   end: "2026-10-30T19:30:00-07:00"
   place: "Renton Community Center, 1715 Maple Valley Hwy"
@@ -486,11 +904,17 @@
   heading_id: "truck-or-treat"
   when: "Fri Oct 30 · 5:00–7:30 p.m."
   blurbs:
-    - "Two sessions, inside the community center and outside with the trucks. The sensory-friendly stroll is 5:00–6:00 p.m., with flashing lights, noise, and music kept down. The walk-through is 6:00–7:30 p.m., with treat stations, specialty vehicles, and Halloween music. Costumes are welcome. All ages can come. Registration is $15 for Renton residents and $18 for everyone else."
+  - "Two sessions, inside the community center and outside with the trucks. The sensory-friendly stroll\
+    \ is 5:00–6:00 p.m., with flashing lights, noise, and music kept down. The walk-through is 6:00–7:30\
+    \ p.m., with treat stations, specialty vehicles, and Halloween music. Costumes are welcome. All ages\
+    \ can come. Registration is $15 for Renton residents and $18 for everyone else."
   links:
-    - href: "https://www.rentonwa.gov/TruckorTreat"
-      label: "Truck or Treat"
-  description: "Two sessions, inside the community center and outside with the trucks. The sensory-friendly stroll is 5:00–6:00 p.m., with flashing lights, noise, and music kept down. The walk-through is 6:00–7:30 p.m., with treat stations, specialty vehicles, and Halloween music. Costumes are welcome. All ages can come. Registration is $15 for Renton residents and $18 for everyone else."
+  - href: "https://www.rentonwa.gov/TruckorTreat"
+    label: "Truck or Treat"
+  description: "Two sessions, inside the community center and outside with the trucks. The sensory-friendly\
+    \ stroll is 5:00–6:00 p.m., with flashing lights, noise, and music kept down. The walk-through is\
+    \ 6:00–7:30 p.m., with treat stations, specialty vehicles, and Halloween music. Costumes are welcome.\
+    \ All ages can come. Registration is $15 for Renton residents and $18 for everyone else."
   hub_blurb: "Two sessions, inside the community center and outside with the trucks."
 - name: "Station 16 Open House"
   cost: "Free"
@@ -504,11 +928,14 @@
   heading_id: "station-16-open-house"
   when: "Sat Oct 31 · 9:00–11:00 a.m."
   blurbs:
-    - "Tour the station engine and a classic engine kept by the firefighters’ local. Try the gear and meet the crew. Free, no RSVP. In the bay, rain or shine. Park behind the station, not along the road."
+  - "Tour the station engine and a classic engine kept by the firefighters’ local. Try the gear and meet\
+    \ the crew. Free, no RSVP. In the bay, rain or shine. Park behind the station, not along the road."
   links:
-    - href: "https://www.rentonrfa.com/events/"
-      label: "Renton RFA events"
-  description: "Tour the station engine and a classic engine kept by the firefighters' local. Try the gear and meet the crew. Free, no RSVP. In the bay, rain or shine. Park behind the station, not along the road."
+  - href: "https://www.rentonrfa.com/events/"
+    label: "Renton RFA events"
+  description: "Tour the station engine and a classic engine kept by the firefighters' local. Try the\
+    \ gear and meet the crew. Free, no RSVP. In the bay, rain or shine. Park behind the station, not along\
+    \ the road."
   hub_blurb: "Tour the station engine and a classic engine kept by the firefighters' local."
 - name: "Station 17 Open House"
   cost: "Free"
@@ -522,15 +949,20 @@
   heading_id: "station-17-open-house"
   when: "Sat Oct 31 · 1:00–3:00 p.m."
   blurbs:
-    - "Renton RFA and Fire District 40 host this one. Tour the engine and aid unit, try the gear, and meet firefighters and district commissioners. Free, no RSVP. Park at the KinderCare lot across Petrovitsky Road and wait for the crossing crew. Do not stop in front of the station."
+  - "Renton RFA and Fire District 40 host this one. Tour the engine and aid unit, try the gear, and meet\
+    \ firefighters and district commissioners. Free, no RSVP. Park at the KinderCare lot across Petrovitsky\
+    \ Road and wait for the crossing crew. Do not stop in front of the station."
   links:
-    - href: "https://www.rentonrfa.com/events/"
-      label: "Renton RFA events"
-  description: "Renton RFA and Fire District 40 host this one. Tour the engine and aid unit, try the gear, and meet firefighters and district commissioners. Free, no RSVP. Park at the KinderCare lot across Petrovitsky Road and wait for the crossing crew. Do not stop in front of the station."
+  - href: "https://www.rentonrfa.com/events/"
+    label: "Renton RFA events"
+  description: "Renton RFA and Fire District 40 host this one. Tour the engine and aid unit, try the gear,\
+    \ and meet firefighters and district commissioners. Free, no RSVP. Park at the KinderCare lot across\
+    \ Petrovitsky Road and wait for the crossing crew. Do not stop in front of the station."
   hub_blurb: "Renton RFA and Fire District 40 host this one."
 - name: "Scrooge!"
   setting: "Indoor"
-  tags: [holiday-show]
+  tags:
+  - "holiday-show"
   start: "2026-12-04"
   end: "2026-12-20"
   place: "Renton Civic Theatre, 507 S Third St"
@@ -540,9 +972,11 @@
   heading_id: "scrooge"
   when: "Fri Dec 4 through Sun Dec 20"
   blurbs:
-    - "A puppet musical of A Christmas Carol for families at Renton Civic Theatre. It opens Dec 4, has an industry night Dec 14, and closes Dec 20."
+  - "A puppet musical of A Christmas Carol for families at Renton Civic Theatre. It opens Dec 4, has an\
+    \ industry night Dec 14, and closes Dec 20."
   links:
-    - href: "https://www.rentoncivictheatre.org/shows/scrooge"
-      label: "Scrooge!"
-  description: "A puppet musical of A Christmas Carol for families at Renton Civic Theatre. It opens Dec 4, has an industry night Dec 14, and closes Dec 20."
+  - href: "https://www.rentoncivictheatre.org/shows/scrooge"
+    label: "Scrooge!"
+  description: "A puppet musical of A Christmas Carol for families at Renton Civic Theatre. It opens Dec\
+    \ 4, has an industry night Dec 14, and closes Dec 20."
   hub_blurb: "A puppet musical of A Christmas Carol for families at Renton Civic Theatre."
