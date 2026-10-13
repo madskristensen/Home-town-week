@@ -315,3 +315,41 @@
     \ 24."
   hub_blurb: "A free walk at Evergreen Church, nightly from 6:00 to 9:00 p.m., with light tunnels, a show\
     \ set to music, a train, and a snow play area."
+- name: "St. Brendan Holiday Craft Fair"
+  setting: "Indoor"
+  tags:
+  - "holiday-market"
+  start: "2026-11-14T09:00:00-08:00"
+  end: "2026-11-14T16:00:00-08:00"
+  place: "St. Brendan Catholic School, 10049 NE 195th St"
+  organizer: "St. Brendan Catholic School"
+  organizer_url: "https://school.saintbrendan.org/"
+  same_as: "https://www.facebook.com/events/1432897891415460/"
+  card: "st-brendan-holiday-craft-fair"
+  order: "18"
+  heading_id: "st-brendan-holiday-craft-fair"
+  when: "Sat Nov 14 · 9:00 a.m.–4:00 p.m."
+  blurbs:
+  - "The school's 46th annual fair fills its halls with more than 100 small vendors, a big bake sale, and student sellers from St. Brendan. An easy early start on holiday shopping with kids along."
+  links:
+  - href: "https://www.facebook.com/events/1432897891415460/"
+    label: "St. Brendan Catholic School"
+- name: "Bothell Holiday Market"
+  setting: "Outdoor"
+  tags:
+  - "holiday-market"
+  start: "2026-12-12T11:00:00-08:00"
+  end: "2026-12-12T16:00:00-08:00"
+  place: "18415 101st Ave NE"
+  organizer: "Artisan Alley PNW"
+  organizer_url: "https://www.artisanalleypnw.com/"
+  same_as: "https://www.facebook.com/events/1546097190857806/"
+  card: "bothell-holiday-market"
+  order: "19"
+  heading_id: "bothell-holiday-market"
+  when: "Sat Dec 12 · 11:00 a.m.–4:00 p.m."
+  blurbs:
+  - "Local makers sell handmade gifts at this one-day market from Artisan Alley PNW: pottery, candles, jewelry, soap, stationery, chocolates, and baked treats."
+  links:
+  - href: "https://www.facebook.com/events/1546097190857806/"
+    label: "Artisan Alley PNW"

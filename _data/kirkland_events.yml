@@ -1162,3 +1162,22 @@
   description: "Studio East's family musical for a cast in grades 1 through 8. James and a crew of oversized\
     \ insects ride a magic peach across the ocean."
   hub_blurb: "Studio East's family musical for a cast in grades 1 through 8."
+- name: "Muir Maker's Market and Auction"
+  setting: "Outdoor"
+  tags:
+  - "holiday-market"
+  start: "2026-12-12T10:00:00-08:00"
+  end: "2026-12-12T16:00:00-08:00"
+  place: "John Muir Elementary, 14012 132nd Ave NE"
+  organizer: "John Muir Elementary PTSA"
+  organizer_url: "https://www.muirptsa.org/"
+  same_as: "https://www.muirptsa.org/"
+  card: "muir-makers-market-and-auction"
+  order: "47"
+  heading_id: "muir-makers-market-and-auction"
+  when: "Sat Dec 12 · 10:00 a.m.–4:00 p.m."
+  blurbs:
+  - "The Muir PTSA's fourth annual market brings local makers, food, live music, and a winter scavenger hunt for kids. Sales and an online auction help send fifth graders to outdoor school."
+  links:
+  - href: "https://www.muirptsa.org/"
+    label: "John Muir Elementary PTSA"
