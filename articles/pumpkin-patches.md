@@ -96,10 +96,9 @@ places:
     city_id: duvall
     href: https://noveltyhillfarm.com/pumpkin-patch-%26-fall-fun
     external: true
-    image: /assets/images/duvall/novelty-hill-barn.webp
-    alt: A red barn with white trim at Novelty Hill Farm in Duvall.
-    credit: "Photo: Novelty Hill Farm"
-    image_source: https://noveltyhillfarm.com/history
+    image: /assets/images/duvall/novelty-hill-pumpkin-patch.webp
+    alt: The white barn and a hay wagon loaded with pumpkins at Novelty Hill Farm in Duvall.
+    credit: "Photo from a reader"
   - name: Muddy Boots Pumpkins
     card_id: patch-muddy-boots
     when: Daily · 10:00 a.m.–8:00 p.m.

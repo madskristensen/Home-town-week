@@ -382,10 +382,11 @@ PhotoIndex = Struct.new(
           alt.match?(/\b(child|children|teen|teens|toddler|baby)\b/i)
         end
 
-        # Credit text, a source URL, and either an open license or license "organizer".
-        # Open licenses are CC0, CC BY, CC BY-SA, and public domain. An organizer
-        # or venue photo with no open license still runs. The credit text links
-        # to the source.
+        # Credit text, a source URL, and either an open license or license
+        # "organizer". Open licenses are CC0, CC BY, CC BY-SA, and public
+        # domain. An organizer or venue photo with no open license still runs.
+        # The credit text links to the source. A reader photo (credit "Photo
+        # from a reader", license "reader") has no link and needs no source.
         def licensed_photo(photo)
           return nil unless photo.is_a?(Hash)
 
@@ -395,11 +396,13 @@ PhotoIndex = Struct.new(
           license = photo["license"].to_s.strip
           return nil if src.empty? || credit.empty?
           return nil unless src.start_with?("/")
-          return nil unless source.match?(%r{\Ahttps?://}i)
+
+          reader = credit.match?(/\APhoto from a reader\z/i) || license.match?(/\breader\b/i)
+          return nil unless reader || source.match?(%r{\Ahttps?://}i)
 
           open_license = "#{credit} #{license}".match?(/\b(?:CC0|CC\s*BY(?:-SA)?|public domain)\b/i)
           organizer = license.match?(/\borganizer\b/i)
-          return nil unless open_license || organizer
+          return nil unless open_license || organizer || reader
 
           photo.merge("src" => src, "credit" => credit, "source" => source, "license" => license)
         end
