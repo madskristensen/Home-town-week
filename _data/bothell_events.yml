@@ -334,22 +334,3 @@
   links:
   - href: "https://www.facebook.com/events/1432897891415460/"
     label: "St. Brendan Catholic School"
-- name: "Bothell Holiday Market"
-  setting: "Outdoor"
-  tags:
-  - "holiday-market"
-  start: "2026-12-12T11:00:00-08:00"
-  end: "2026-12-12T16:00:00-08:00"
-  place: "18415 101st Ave NE"
-  organizer: "Artisan Alley PNW"
-  organizer_url: "https://www.artisanalleypnw.com/"
-  same_as: "https://www.facebook.com/events/1546097190857806/"
-  card: "bothell-holiday-market"
-  order: "19"
-  heading_id: "bothell-holiday-market"
-  when: "Sat Dec 12 · 11:00 a.m.–4:00 p.m."
-  blurbs:
-  - "Local makers sell handmade gifts at this one-day market from Artisan Alley PNW: pottery, candles, jewelry, soap, stationery, chocolates, and baked treats."
-  links:
-  - href: "https://www.facebook.com/events/1546097190857806/"
-    label: "Artisan Alley PNW"
