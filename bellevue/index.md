@@ -4,7 +4,7 @@ title: Bellevue
 city: bellevue
 state: wa
 description: Upcoming family events in Bellevue on the Eastside.
-hook: Sunday is the Bellevue Jazz Student Showcase at Meydenbauer, and Saturday, Oct 17 brings Alice's Magical Adventure and a LEGO block party. Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
+hook: Saturday, Oct 17 brings Alice's Magical Adventure, a LEGO block party, and Diwali Sangam. Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
 ---
 
 

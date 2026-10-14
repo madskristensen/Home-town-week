@@ -4,5 +4,5 @@ title: Bothell
 city: bothell
 state: wa
 description: Upcoming family events in Bothell on the Eastside.
-hook: Sunday is Reading with Rover at the library. The Anderson School history tours run Saturdays from Oct 17, and Oct 24 brings a Diwali mela and the Northshore Y fall festival.
+hook: Oct 17 is Crow Fest on Main Street and a history tour at Anderson School. Oct 24 brings a Diwali mela and the Northshore Y fall festival, and Main Street trick-or-treat is Oct 30.
 ---

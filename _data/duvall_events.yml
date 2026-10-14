@@ -55,26 +55,6 @@
     \ listing stays up through October."
   hub_blurb: "Five acres of pumpkins still on the vine, a corn maze with a shorter path for small children,\
     \ and goats, pigs, and cows."
-- name: "Drawing and Doughnuts"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-13T15:00:00-07:00"
-  end: "2026-10-13T17:00:00-07:00"
-  place: "Duvall Library, 15508 Main Street NE"
-  same_as: "https://kcls.bibliocommons.com/v2/events/6a87761a60ccaf01c01fc8eb"
-  card: "drawing-and-doughnuts"
-  order: "4"
-  heading_id: "drawing-and-doughnuts"
-  when: "Tue Oct 13 · 3:00–5:00 p.m."
-  blurbs:
-  - "Drop-in drawing for ages 11 to 18. The library sets out tools for flat artwork and serves doughnuts.\
-    \ Stay for part of the two hours or the whole block. Bring nothing but yourself."
-  links:
-  - href: "https://kcls.bibliocommons.com/v2/events/6a87761a60ccaf01c01fc8eb"
-    label: "Drawing and Doughnuts"
-  description: "Drop-in drawing for ages 11 to 18. The library sets out tools for flat artwork and serves\
-    \ doughnuts. Stay for part of the two hours or the whole block. Bring nothing but yourself."
-  hub_blurb: "Drop-in drawing for ages 11 to 18."
 - name: "Art Cart for Kids"
   cost: "Free"
   setting: "Indoor"
