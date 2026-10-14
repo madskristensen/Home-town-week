@@ -1,0 +1,8 @@
+{
+  "name": "eastsidecal-fetch-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Allowlisted fetch proxy for source scraping. Azure Functions v4, Node.js.",
+  "main": "src/functions/*.js",
+  "dependencies": { "@azure/functions": "^4.5.0" }
+}

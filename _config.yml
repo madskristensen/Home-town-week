@@ -48,6 +48,7 @@ plugins:
 
 exclude:
   - api
+  - azure
   - Gemfile
   - Gemfile.lock
   - README.md
