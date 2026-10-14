@@ -436,7 +436,18 @@
       type: city_hall
       format: ical
       feed_url: "https://www.issaquahwa.gov/common/modules/iCalendar/iCalendar.aspx?catID=35&feed=calendar"
-      notes: "City parks and civic programs. This iCal is thin. The HTML list and RSSFeed.aspx?ModID=58&CID=All-0 carry more of the month."
+      notes: "City parks and civic programs. Blocked: since Oct 10, 2026 www.issaquahwa.gov (calendar, iCal, RSS) returns a Cloudflare 403 to curl, WebFetch and headless Chrome. Use the mirror source below. Link event rows to the www.issaquahwa.gov detail page."
+    - name: "City of Issaquah calendar (CivicPlus mirror)"
+      url: "https://wa-issaquah2.civicplus.com/m/calendar"
+      type: city_hall
+      format: rss
+      feed_url: "https://wa-issaquah2.civicplus.com/RSSFeed.aspx?ModID=58&CID=All-0"
+      notes: "Same CivicPlus calendar on the vendor host, readable with curl (Oct 2026). The RSS carries the full month with date, time and address; item links point at www.issaquahwa.gov. The catID=35 iCal on this host only holds cultural holidays. Skip council, boards and commissions."
+    - name: "Issaquah Parks events (PerfectMind)"
+      url: "https://cityofissaquah.perfectmind.com/Contacts/BookMe4BookingPages/BookingCoursesPage?calendarId=db6722d5-bb0a-47b3-8f4a-3448faa80a59&widgetId=15f6af07-39c5-473e-b053-96653f77a406&embed=False"
+      type: parks
+      format: html
+      notes: "City registration catalog, Events > Fall calendar (BOO at the Barn etc.) with ages, times, place and price. JavaScript page: render with headless Chrome. Other calendars (Winter Break Camps, Preschool) are classes, skip. The seasonal calendar id may change; find it from the widget start page."
     - name: "Downtown Issaquah events"
       url: "https://downtownissaquah.com/events/"
       type: downtown
@@ -1255,7 +1266,17 @@
       type: city_hall
       format: ical
       feed_url: "https://www.woodinville.gov/common/modules/iCalendar/iCalendar.aspx?catID=14&feed=calendar"
-      notes: "City and Festival Street events."
+      notes: "City and Festival Street events. Blocked: since Oct 10, 2026 www.woodinville.gov returns a Cloudflare 403 to curl, WebFetch and headless Chrome. Use the mirror source below."
+    - name: "City of Woodinville calendar (CivicPlus mirror)"
+      url: "https://wa-woodinville.civicplus.com/calendar.aspx"
+      type: city_hall
+      format: ical
+      feed_url: "https://wa-woodinville.civicplus.com/common/modules/iCalendar/iCalendar.aspx?catID=14&feed=calendar"
+      notes: "Same CivicPlus calendar on the vendor host, readable with curl (Oct 2026). Mostly meetings; keep family days such as Trick or Tree. Link event rows to the www.woodinville.gov page."
+    - name: "Celebrate Woodinville"
+      url: "https://www.celebratewoodinville.com/winterfest/"
+      type: downtown
+      notes: "Chamber-run festival site: Winterfest Holiday Fair and Tree Lighting at DeYoung Park and the lighted car parade. The /events/ list is empty; read the festival pages."
     - name: "21 Acres"
       url: "https://21acres.org/events/"
       type: venue
