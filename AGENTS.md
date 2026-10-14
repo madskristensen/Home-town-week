@@ -195,7 +195,7 @@ Rejected and processed blobs can be deleted after 30 days.
 
 ## Fetch proxy for blocked city sites (Issaquah, Woodinville)
 
-issaquahwa.gov and woodinvillewa.gov block automated fetches (Cloudflare 403 / TLS reset), even from Azure. Their CivicPlus origin hosts are not blocked. Fetch them through the fetch proxy (Azure Function `eastsidecal-fetch`, code in `azure/fetch-proxy/`):
+issaquahwa.gov and woodinville.gov block automated fetches (Cloudflare 403 / TLS reset), even from Azure. Their CivicPlus origin hosts are not blocked. Fetch them through the fetch proxy (Azure Function `eastsidecal-fetch`, code in `azure/fetch-proxy/`):
 
 ```
 . /home/box/.secrets/fetch-proxy.env
@@ -203,6 +203,6 @@ curl -sG "$FETCH_PROXY_URL" --data-urlencode "url=https://wa-issaquah2.civicplus
 ```
 
 - Issaquah: use `https://wa-issaquah2.civicplus.com/...` (calendar.aspx, RSSFeed.aspx?ModID=58&CID=All-0) instead of www.issaquahwa.gov.
-- Woodinville: use `https://wa-woodinville.civicplus.com/...` instead of www.woodinvillewa.gov.
+- Woodinville: use `https://wa-woodinville.civicplus.com/...` instead of www.woodinville.gov.
 - Issaquah recreation: `https://cityofissaquah.perfectmind.com/` works too.
 - Only https hosts in the app setting `ALLOWED_HOSTS` are fetched. Anything else gets a 403 from the proxy. Never print or commit the key. Use event links on the public www domains in site content, not the civicplus hosts.

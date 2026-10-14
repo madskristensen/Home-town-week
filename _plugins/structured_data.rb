@@ -19,7 +19,7 @@ module EastsideCalendar
       "bothellwa.gov" => ["City of Bothell", "https://www.bothellwa.gov/"],
       "mercerisland.gov" => ["City of Mercer Island", "https://www.mercerisland.gov/"],
       "rentonwa.gov" => ["City of Renton", "https://www.rentonwa.gov/"],
-      "woodinvillewa.gov" => ["City of Woodinville", "https://www.ci.woodinville.wa.us/"],
+      "woodinville.gov" => ["City of Woodinville", "https://www.woodinville.gov/"],
       "woodinville.gov" => ["City of Woodinville", "https://www.woodinville.gov/"],
       "ci.woodinville.wa.us" => ["City of Woodinville", "https://www.woodinville.gov/"],
       "maplevalleywa.gov" => ["City of Maple Valley", "https://www.maplevalleywa.gov/"],

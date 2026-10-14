@@ -1,7 +1,7 @@
 const { app } = require('@azure/functions');
 
 const TIMEOUT_MS = 10000, MAX_BYTES = 5 * 1024 * 1024, MAX_REDIRECTS = 5;
-const DEFAULT_HOSTS = 'issaquahwa.gov,www.issaquahwa.gov,woodinvillewa.gov,www.woodinvillewa.gov,wa-issaquah2.civicplus.com,wa-woodinville.civicplus.com,cityofissaquah.perfectmind.com';
+const DEFAULT_HOSTS = 'issaquahwa.gov,www.issaquahwa.gov,woodinville.gov,www.woodinville.gov,wa-issaquah2.civicplus.com,wa-woodinville.civicplus.com,cityofissaquah.perfectmind.com';
 const HEADERS = {
   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36',
   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
