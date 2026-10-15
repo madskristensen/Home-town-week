@@ -127,6 +127,13 @@
   alt: Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance.
   credit: "Photo: Julian Fong, CC BY-SA 4.0"
   license: CC BY-SA 4.0
+- id: indoor-pools-swim-lessons
+  path: /articles/indoor-pools-swim-lessons/
+  title: Indoor pools and swim lessons
+  image: /assets/images/bellevue/bellevue-aquatic-center.jpg
+  alt: The Warm Springs pool at Bellevue Aquatic Center, with a long entry ramp and handrails along one side.
+  credit: "Photo: City of Bellevue"
+  license: organizer
 - id: free-things-to-do
   path: /articles/free-things-to-do/
   title: Free things to do with kids

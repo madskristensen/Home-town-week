@@ -107,7 +107,7 @@ King County Library System branches are the easiest rainy-day default. You can w
 
 For a quiet hour at home or in the car, our kids play [Math Table](https://mathtable.fun/), a free math and geography game that runs in the browser on phones and tablets, with no install needed.
 
-[Bellevue Aquatic Center](https://bellevuewa.gov/city-government/departments/parks/sports-and-athletics/bellevue-aquatic-center) at 601 143rd Ave NE has two indoor pools and swim lessons. The city posts the hours and the session dates. [Mary Wayte Pool](https://mercerislandpool.com/) is the indoor pool on Mercer Island.
+[Bellevue Aquatic Center](https://bellevuewa.gov/city-government/departments/parks/sports-and-athletics/bellevue-aquatic-center) at 601 143rd Ave NE has open swim every day in Warm Springs, a pool kept at 92°. [Mary Wayte Pool](https://mercerislandpool.com/) is the indoor pool on Mercer Island. Every Eastside pool with family swim times, toddler-friendly water, and lesson sign-up dates is in our [indoor pools and swim lessons guide](/articles/indoor-pools-swim-lessons/).
 
 [Crossroads Community Center](https://bellevuewa.gov/city-government/departments/parks/community-centers/crossroads) at 16000 NE 10th St has a games room. The city also lists drop-in youth hours, including a free makerspace. Confirm the day's hours on the city page.
 

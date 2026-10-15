@@ -81,6 +81,8 @@ The tot lots at [Inspiration Playground](https://bellevuewa.gov/city-government/
 
 [KidsQuest Children's Museum](https://www.kidsquestmuseum.org/) at 1116 108th Ave NE is indoor and built for younger kids. [Bellevue Library](https://kcls.org/locations/bellevue/) next door is free to walk into. [Kelsey Creek Farm](https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm) does not charge admission or parking. [Bellevue Botanical Garden](https://bellevuebotanical.org/) is a short walk, not a hike.
 
+On a wet morning, a warm pool is a good toddler outing too. The [indoor pools and swim lessons guide](/articles/indoor-pools-swim-lessons/) lists the warm-water pools, family swim times, and parent and baby lessons.
+
 Programs for kids under 5 are listed below when one is coming up.
 
 {% include card-grid.html events=page.places show_city=true eager=2 priority=true %}

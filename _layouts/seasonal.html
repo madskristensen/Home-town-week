@@ -43,6 +43,8 @@ layout: default
   {%- endif -%}
   {%- if page.hub_id == "fall" -%}
   <p class="hub-section-intro">Want something to check off together? <a href="{{ '/fall/bucket-list/' | relative_url }}">The fall family bucket list</a> prints on one page.</p>
+  {%- elsif page.hub_id == "rainy-day" -%}
+  <p class="hub-section-intro">Guides for wet days: <a href="{{ '/articles/rainy-day-indoor-play/' | relative_url }}">rainy day activities</a> and <a href="{{ '/articles/indoor-pools-swim-lessons/' | relative_url }}">indoor pools and swim lessons</a>.</p>
   {%- elsif page.hub_id == "christmas" -%}
   <p class="hub-section-intro">Guides for the season: <a href="{{ '/articles/christmas-lights/' | relative_url }}">best Christmas lights</a>, <a href="{{ '/articles/meeting-santa/' | relative_url }}">meeting Santa</a>, and <a href="{{ '/articles/new-years-eve/' | relative_url }}">New Year's Eve with kids</a>.</p>
   {%- endif -%}
