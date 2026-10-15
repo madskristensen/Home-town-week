@@ -426,13 +426,14 @@ module EastsideCalendar
       when "halloween" then page.site.data["halloween_map"]
       when "markets" then page.site.data["farmers_market_page"]
       when "birthdays" then page.site.data["birthday_page"]
+      when "play" then page.site.data["indoor_play_page"]
       else page.site.data["home_lights"]
       end
     end
 
     def guide_items(page)
       if page.data["article_index"]
-        return Array(page.site.data["articles"]).select { |row| row.is_a?(Hash) }
+        return Array(page.site.data["articles_seasonal"] || page.site.data["articles"]).select { |row| row.is_a?(Hash) }
       end
 
       Array(page.data["places"]).select { |row| row.is_a?(Hash) && !row["href"].to_s.empty? }

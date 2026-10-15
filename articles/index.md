@@ -9,4 +9,4 @@ image: /assets/images/bellevue/bellevue-library.webp
 image_alt: Bellevue Library, a glass and brick building with a covered walkway and trees in front.
 ---
 
-{% include card-grid.html events=site.data.articles eager=2 priority=true %}
+{% include card-grid.html events=site.data.articles_seasonal eager=2 priority=true %}
