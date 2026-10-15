@@ -359,6 +359,9 @@
   hub_blurb: "A free look at what happens to recycling after it is picked up."
 - name: "Winterfest Holiday Fair and Tree Lighting"
   setting: "Outdoor"
+  tags:
+    - "tree-lighting"
+    - "santa"
   start: "2026-12-05T15:00:00-08:00"
   end: "2026-12-05T18:00:00-08:00"
   place: "DeYoung Park, Woodinville"
