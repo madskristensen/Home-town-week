@@ -55,26 +55,6 @@
     \ listing stays up through October."
   hub_blurb: "Five acres of pumpkins still on the vine, a corn maze with a shorter path for small children,\
     \ and goats, pigs, and cows."
-- name: "Art Cart for Kids"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-14T16:00:00-07:00"
-  end: "2026-10-14T17:30:00-07:00"
-  place: "Duvall Library, 15508 Main Street NE"
-  same_as: "https://kcls.bibliocommons.com/v2/events/6a87762736204e08fbb5f8ea"
-  card: "art-cart-for-kids"
-  order: "5"
-  heading_id: "art-cart-for-kids"
-  when: "Wed Oct 14 · 4:00–5:30 p.m."
-  blurbs:
-  - "Craft supplies for ages 6 and older. Make something to take home or try a material you have not used.\
-    \ The Friends of the Duvall Library sponsor it. No registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/v2/events/6a87762736204e08fbb5f8ea"
-    label: "Art Cart"
-  description: "Craft supplies for ages 6 and older. Make something to take home or try a material you\
-    \ have not used. The Friends of the Duvall Library sponsor it. No registration."
-  hub_blurb: "Craft supplies for ages 6 and older."
 - name: "Family Story Time"
   cost: "Free"
   ages: "All ages"
@@ -86,7 +66,7 @@
   place: "Duvall Library, 15508 Main Street NE"
   same_as: "https://kcls.bibliocommons.com/events/6a847411b20478002993aafe"
   card: "family-story-time-1"
-  order: "6"
+  order: "3"
   heading_id: "family-story-time-1"
   when: "Thu Oct 15 · 10:30–11:30 a.m."
   blurbs:
@@ -104,7 +84,7 @@
   place: "Taylor Landing, 16201 Main Street NE"
   same_as: "https://duvallfarmersmarket.org/"
   card: "duvall-farmers-market"
-  order: "7"
+  order: "4"
   heading_id: "duvall-farmers-market"
   when: "Thu Oct 15 · 3:00–7:00 p.m."
   blurbs:
@@ -125,7 +105,7 @@
   place: "Duvall Library, 15508 Main Street NE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6a8dfc9b29a7dd0d674697b3"
   card: "lego-block-party"
-  order: "8"
+  order: "5"
   heading_id: "lego-block-party"
   when: "Thu Oct 15 · 4:30–5:30 p.m."
   blurbs:
@@ -149,7 +129,7 @@
   organizer_url: "https://northwestartcenter.org/"
   same_as: "https://www.valleyrecord.com/2026/09/25/snoqualmie-valley-community-calendar-sept-25-edition/"
   card: "free-community-art-day"
-  order: "9"
+  order: "6"
   heading_id: "free-community-art-day"
   when: "Sat Oct 17 · 11:00 a.m.–2:00 p.m."
   blurbs:
@@ -202,7 +182,7 @@
   place: "Duvall Library, 15508 Main Street NE"
   same_as: "https://kcls.bibliocommons.com/events/6ac810e6ebad220045440c9f"
   card: "sew-a-3-d-pumpkin-plushie"
-  order: "10"
+  order: "7"
   heading_id: "sew-a-3-d-pumpkin-plushie"
   when: "Mon Oct 19 · 4:00–5:30 p.m."
   blurbs:
@@ -222,7 +202,7 @@
   place: "Duvall Library, 15508 Main Street NE"
   same_as: "https://kcls.bibliocommons.com/events/6ab1b2b4ca248a002917741d"
   card: "duvall-lgbtq-youth-group"
-  order: "11"
+  order: "8"
   heading_id: "duvall-lgbtq-youth-group"
   when: "Tue Oct 20 · 4:00–5:30 p.m."
   blurbs:
@@ -245,7 +225,7 @@
   place: "Duvall Library, 15508 Main Street NE"
   same_as: "https://kcls.bibliocommons.com/events/6aa89174ca248a002915d999"
   card: "family-story-time"
-  order: "12"
+  order: "9"
   heading_id: "family-story-time"
   when: "Thu Oct 22 · 10:30–11:30 a.m."
   blurbs:
@@ -266,7 +246,7 @@
   place: "Duvall Library, 15508 Main Street NE"
   same_as: "https://kcls.bibliocommons.com/events/6a46e34086636e3d0052475b"
   card: "teen-space"
-  order: "13"
+  order: "10"
   heading_id: "teen-space"
   when: "Wed Oct 28 · 5:30–7:00 p.m."
   blurbs:
@@ -289,7 +269,7 @@
   place: "Duvall Library, 15508 Main Street NE"
   same_as: "https://kcls.bibliocommons.com/events/6ac81cf7a85a2c00337e2eed"
   card: "tabletop-role-playing-games-club"
-  order: "14"
+  order: "11"
   heading_id: "tabletop-role-playing-games-club"
   when: "Sun Nov 1 · 3:30–5:30 p.m."
   blurbs:
@@ -301,6 +281,59 @@
   description: "A club for ages 10 to 18 that tries a different tabletop role-playing game each meeting,\
     \ from indie and solo games to art RPGs. No experience or materials needed. Free, no registration."
   hub_blurb: "Try a new tabletop role-playing game each meeting, ages 10 to 18."
+- name: "Family Story Time"
+  cost: "Free"
+  ages: "All ages"
+  setting: "Indoor"
+  tags:
+  - "story-time"
+  start: "2026-11-05T10:30:00-08:00"
+  end: "2026-11-05T11:30:00-08:00"
+  place: "Duvall Library, 15508 Main Street NE"
+  same_as: "https://kcls.bibliocommons.com/events/6aa89174ca248a002915d99b"
+  card: "family-story-time-nov-5"
+  order: "12"
+  heading_id: "family-story-time-nov-5"
+  when: "Thu Nov 5 · 10:30–11:30 a.m."
+  blurbs:
+  - "Stories, songs, rhymes, and movement, then a short play time. All ages with an adult. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6aa89174ca248a002915d99b"
+    label: "Family Story Time"
+  photo:
+    src: "/assets/images/duvall/duvall-library.webp"
+    alt: "Duvall Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/duvall/"
+    license: "organizer"
+  description: "Stories, songs, rhymes, and movement, then a short play time. All ages with an adult. Free, no registration."
+  hub_blurb: "Stories, songs, rhymes, and movement, then a short play time."
+- name: "Teen Writer's Workshop"
+  cost: "Free"
+  setting: "Indoor"
+  ages: "Teens"
+  performer: "Adaline Haley"
+  start: "2026-11-05T16:30:00-08:00"
+  end: "2026-11-05T17:30:00-08:00"
+  place: "Duvall Library, 15508 Main Street NE"
+  same_as: "https://kcls.bibliocommons.com/events/6acd1c0d29c3d600332f69f7"
+  card: "teen-writer-s-workshop-nov-5"
+  order: "13"
+  heading_id: "teen-writer-s-workshop-nov-5"
+  when: "Thu Nov 5 · 4:30–5:30 p.m."
+  blurbs:
+  - "A monthly writing hangout for ages 11 to 18 led by author Adaline Haley, with prompts, writing games, and snacks. Any skill level or genre. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6acd1c0d29c3d600332f69f7"
+    label: "Teen Writer's Workshop"
+  photo:
+    src: "/assets/images/duvall/duvall-library.webp"
+    alt: "Duvall Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/duvall/"
+    license: "organizer"
+  description: "A monthly writing hangout for ages 11 to 18 led by author Adaline Haley, with prompts, writing games, and snacks. Any skill level or genre. Free, no registration."
+  hub_blurb: "Writing prompts and games for teens with author Adaline Haley."
 - name: "Anime Club"
   cost: "Free"
   ages: "Teens"
@@ -310,7 +343,7 @@
   place: "Duvall Library, 15508 Main Street NE"
   same_as: "https://kcls.bibliocommons.com/v2/events/6ac5543c29c3d600332e1881"
   card: "anime-club"
-  order: "15"
+  order: "14"
   heading_id: "anime-club"
   when: "Sun Nov 8 · 1:00–3:00 p.m."
   blurbs:
@@ -334,7 +367,7 @@
   place: "Novelty Hill Farm, 26617 NE 124th Street"
   same_as: "https://noveltyhillfarm.com/christmas-season"
   card: "novelty-hill-farm-christmas-tree-lighting"
-  order: "16"
+  order: "15"
   heading_id: "novelty-hill-farm-christmas-tree-lighting"
   when: "Sat Nov 28 · 5:00–7:30 p.m."
   blurbs:
@@ -363,7 +396,7 @@
   place: "Depot Park, 26219 NE Burhen Way"
   same_as: "https://www.duvallwa.gov/528/Light-Up-Duvall---Tree-Lighting"
   card: "light-up-duvall-tree-lighting"
-  order: "17"
+  order: "16"
   heading_id: "light-up-duvall-tree-lighting"
   when: "Fri Dec 4 · 5:00–8:00 p.m."
   blurbs:

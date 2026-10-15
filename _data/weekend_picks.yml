@@ -1,12 +1,14 @@
 # Home-page picks for Friday Oct 16 through Sunday Oct 18, 2026.
-# Refreshed Tuesday Oct 13 for the upcoming weekend.
+# Refreshed Thursday Oct 15 for the upcoming weekend.
 # Names match _data/{city}_events.yml.
 - city: redmond
   name: Harvest Festival
-- city: bellevue
-  name: Diwali Sangam
+- city: bothell
+  name: Crow Fest
 - city: snoqualmie
   name: Halloween Train
+- city: bellevue
+  name: Diwali Sangam
 - city: maple-valley
   name: Haunted Forest Family Walk
 - city: issaquah

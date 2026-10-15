@@ -9,7 +9,7 @@
   place: "Bothell Library, 18215 98th Ave NE"
   same_as: "https://kcls.bibliocommons.com/events/6a80df8ad4b10d003006ba64"
   card: "family-story-time-1"
-  order: "8"
+  order: "1"
   heading_id: "family-story-time-1"
   when: "Thu Oct 15 · 10:00–10:30 a.m."
   blurbs:
@@ -59,7 +59,7 @@
   place: "Anderson School, 18607 Bothell Way NE"
   same_as: "https://www.mcmenamins.com/events/278719-anderson-schools-history-art-tour"
   card: "anderson-school-history-and-art-tour"
-  order: "9"
+  order: "2"
   heading_id: "anderson-school-history-and-art-tour"
   when: "Sat Oct 17 · 1:00 p.m."
   blurbs:
@@ -85,7 +85,7 @@
   place: "Bothell Library, 18215 98th Ave NE"
   same_as: "https://kcls.bibliocommons.com/events/6a5538311006a63d00221d2a"
   card: "glorydays"
-  order: "10"
+  order: "3"
   heading_id: "glorydays"
   when: "Sat Oct 17 · 2:00–4:00 p.m."
   blurbs:
@@ -165,7 +165,7 @@
   place: "Bothell Library, 18215 98th Ave NE"
   same_as: "https://kcls.bibliocommons.com/events/6a80df8ad4b10d003006ba66"
   card: "family-story-time-2"
-  order: "11"
+  order: "4"
   heading_id: "family-story-time-2"
   when: "Thu Oct 22 · 10:00–10:30 a.m. and 10:45–11:15 a.m."
   blurbs:
@@ -201,7 +201,7 @@
   place: "North Creek High School Commons, 3613 191st Pl SE"
   same_as: "https://www.waia4us.org/"
   card: "waia-diwali-mela"
-  order: "12"
+  order: "5"
   heading_id: "waia-diwali-mela"
   when: "Sat Oct 24 · 3:00–9:00 p.m."
   blurbs:
@@ -226,7 +226,7 @@
   place: "Northshore YMCA, 11811 NE 195th St"
   same_as: "https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities"
   card: "northshore-y-fall-family-festival"
-  order: "13"
+  order: "6"
   heading_id: "northshore-y-fall-family-festival"
   when: "Sat Oct 24 · 5:30–8:00 p.m."
   blurbs:
@@ -251,7 +251,7 @@
   place: "Bothell Library, 18215 98th Ave NE"
   same_as: "https://kcls.bibliocommons.com/events/6a85e616b20478002993f1ea"
   card: "rangoli-demonstration"
-  order: "14"
+  order: "7"
   heading_id: "rangoli-demonstration"
   when: "Sun Oct 25 · 1:00–3:00 p.m."
   blurbs:
@@ -360,7 +360,7 @@
   place: "Main Street and 101st Ave NE, Downtown Bothell"
   same_as: "https://www.bothellwa.gov/1203/Trick-or-Treat-on-Main-Street"
   card: "trick-or-treat-on-main-street"
-  order: "15"
+  order: "8"
   heading_id: "trick-or-treat-on-main-street"
   when: "Fri Oct 30 · 5:00–7:00 p.m."
   blurbs:
@@ -383,7 +383,7 @@
   place: "Anderson School, 18607 Bothell Way NE"
   same_as: "https://www.mcmenamins.com/events/278333-spooky-family-fun"
   card: "spooky-family-fun"
-  order: "16"
+  order: "9"
   heading_id: "spooky-family-fun"
   when: "Sat Oct 31 · 3:00–8:00 p.m."
   blurbs:
@@ -397,6 +397,60 @@
     \ trick-or-treating around the property, and a kids costume contest at 6:00 p.m. Food and drink specials\
     \ are separate from the free admission."
   hub_blurb: "Free, and all ages are welcome."
+- name: "Toddler Story Time"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Indoor"
+  tags:
+  - "story-time"
+  start: "2026-11-02T10:00:00-08:00"
+  end: "2026-11-02T10:30:00-08:00"
+  place: "Bothell Library, 18215 98th Ave NE"
+  same_as: "https://kcls.bibliocommons.com/events/6a80c21d3b6c71003e5919e3"
+  card: "toddler-story-time-nov-2"
+  order: "10"
+  heading_id: "toddler-story-time-nov-2"
+  when: "Mon Nov 2 · 10:00–10:30 a.m."
+  blurbs:
+  - "Stories, music, and rhymes for ages 18 months to 3 with an adult at Bothell Library. Free; doors close when the room is full."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a80c21d3b6c71003e5919e3"
+    label: "Toddler Story Time"
+  photo:
+    src: "/assets/images/bothell/bothell-library.webp"
+    alt: "Bothell Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/bothell/"
+    license: "organizer"
+  description: "Stories, music, and rhymes for ages 18 months to 3 with an adult at Bothell Library. Free; doors close when the room is full."
+  hub_blurb: "Toddler stories at Bothell Library."
+- name: "Baby Story Time"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Indoor"
+  tags:
+  - "story-time"
+  start: "2026-11-02T11:00:00-08:00"
+  end: "2026-11-02T11:30:00-08:00"
+  place: "Bothell Library, 18215 98th Ave NE"
+  same_as: "https://kcls.bibliocommons.com/events/6a80c2312dac6e00371f5494"
+  card: "baby-story-time-nov-2"
+  order: "11"
+  heading_id: "baby-story-time-nov-2"
+  when: "Mon Nov 2 · 11:00–11:30 a.m."
+  blurbs:
+  - "Nursery rhymes, songs, and stories for pre-walking babies, newborn to 18 months with an adult. Free; space is limited."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a80c2312dac6e00371f5494"
+    label: "Baby Story Time"
+  photo:
+    src: "/assets/images/bothell/bothell-library.webp"
+    alt: "Bothell Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/bothell/"
+    license: "organizer"
+  description: "Nursery rhymes, songs, and stories for pre-walking babies, newborn to 18 months with an adult. Free; space is limited."
+  hub_blurb: "Baby stories at Bothell Library."
 - name: "Evergreen Christmas Lights"
   setting: "Outdoor"
   cost: "Free"
@@ -408,7 +462,7 @@
   place: "Evergreen Church, 3429 240th St SE"
   same_as: "https://evergreenchristmaslights.com/"
   card: "evergreen-christmas-lights"
-  order: "17"
+  order: "12"
   heading_id: "evergreen-christmas-lights"
   when: "Tue Dec 1 through Thu Dec 24 · 6:00–9:00 p.m."
   blurbs:
@@ -438,7 +492,7 @@
   organizer_url: "https://school.saintbrendan.org/"
   same_as: "https://www.facebook.com/events/1432897891415460/"
   card: "st-brendan-holiday-craft-fair"
-  order: "18"
+  order: "13"
   heading_id: "st-brendan-holiday-craft-fair"
   when: "Sat Nov 14 · 9:00 a.m.–4:00 p.m."
   blurbs:

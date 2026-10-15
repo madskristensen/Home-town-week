@@ -8,4 +8,4 @@ hook: Saturday, Oct 17 brings Alice's Magical Adventure, a LEGO block party, and
 ---
 
 
-The Thursday market season ended Oct 1. Two Saturday markets remain, Oct 31 and Nov 21, both 10:00 a.m.–3:00 p.m.
+The farmers market has two Saturday markets left, Oct 31 and Nov 21, both 10:00 a.m.–3:00 p.m.

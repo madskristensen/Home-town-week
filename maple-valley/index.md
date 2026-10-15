@@ -4,5 +4,5 @@ title: Maple Valley
 city: maple-valley
 state: wa
 description: Upcoming family events in Maple Valley and Covington on the Eastside.
-hook: The farmers market runs Saturdays through Oct 31. Oct 17 is the Zombie Dash at Lake Wilderness, and Sundays Oct 18 and 25 bring daylight walks at the Haunted Forest.
+hook: The farmers market runs Saturdays through Oct 31, and Sundays Oct 18 and 25 bring daylight walks at the Haunted Forest.
 ---

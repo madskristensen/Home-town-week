@@ -7,99 +7,14 @@
   card: "noises-off"
   order: "1"
   heading_id: "noises-off"
-  when: "Fri Oct 2–Sun Oct 18"
+  when: "Through Sun Oct 18"
   blurbs:
-  - "Michael Frayn’s backstage farce. Opening night is Fri Oct 2, a pay-what-you-can night is Mon Oct\
-    \ 12, and closing night is Sun Oct 18. Recommended for ages 10 and up. The humor includes innuendo,\
-    \ fast-paced chaos, and adult misunderstandings. No explicit content. The comedy is aimed at older\
-    \ kids, teens, and adults who can follow the farce."
+  - "Michael Frayn’s backstage farce. Opening night is Fri Oct 2, a pay-what-you-can night is Mon Oct 12, and closing night is Sun Oct 18. Recommended for ages 10 and up. The humor includes innuendo, fast-paced chaos, and adult misunderstandings. No explicit content. The comedy is aimed at older kids, teens, and adults who can follow the farce."
   links:
   - href: "https://www.rentoncivictheatre.org/shows/noises-off"
     label: "Noises Off"
-  description: "Michael Frayn's backstage farce. Opening night is Fri Oct 2, a pay-what-you-can night\
-    \ is Mon Oct 12, and closing night is Sun Oct 18. Recommended for ages 10 and up. The humor includes\
-    \ innuendo, fast-paced chaos, and adult misunderstandings. No explicit content. The comedy is aimed\
-    \ at older kids, teens, and adults who can follow the farce."
+  description: "Michael Frayn's backstage farce. Opening night is Fri Oct 2, a pay-what-you-can night is Mon Oct 12, and closing night is Sun Oct 18. Recommended for ages 10 and up. The humor includes innuendo, fast-paced chaos, and adult misunderstandings. No explicit content. The comedy is aimed at older kids, teens, and adults who can follow the farce."
   hub_blurb: "Michael Frayn's backstage farce."
-- name: "Spanish Story Time at Family First"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-14T11:00:00-07:00"
-  end: "2026-10-14T12:00:00-07:00"
-  place: "Family First Community Center, 16200 116th Avenue SE"
-  same_as: "https://kcls.bibliocommons.com/events/6a46e2d4c52cdc3600ee7834"
-  card: "spanish-story-time-family-first"
-  heading_id: "spanish-story-time-family-first"
-  when: "Wed Oct 14 · 11:00 a.m.–12:00 p.m."
-  blurbs:
-  - "Spanish stories, music, movement, and rhymes for all ages with an adult at Family First Community\
-    \ Center. Hosted with Fairwood Library. Free."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a46e2d4c52cdc3600ee7834"
-    label: "Spanish Story Time at Family First"
-  description: "Spanish stories, music, movement, and rhymes for all ages with an adult at Family First\
-    \ Community Center. Hosted with Fairwood Library. Free."
-  hub_blurb: "Spanish stories at Family First Community Center."
-  ages: "Toddlers"
-  tags:
-  - "story-time"
-  photo:
-    src: "/assets/images/themes/library-hall.webp"
-    alt: "Indoor community program space with bookshelves"
-    credit: "Photo: King County Library System programs at Family First."
-    source: "https://kcls.org/locations/fairwood/"
-    license: "organizer"
-- name: "Spanish Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  signup: true
-  start: "2026-10-14T12:30:00-07:00"
-  end: "2026-10-14T13:00:00-07:00"
-  place: "Renton Library, 100 Mill Ave S"
-  same_as: "https://kcls.bibliocommons.com/events/6a7f68a7aafa6100295ca6de"
-  card: "spanish-story-time"
-  heading_id: "spanish-story-time"
-  when: "Wed Oct 14 · 12:30–1:00 p.m."
-  blurbs:
-  - "Stories, music, movement, and rhymes in Spanish that build early literacy. Free at Renton Library;\
-    \ registration details are on the listing."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a7f68a7aafa6100295ca6de"
-    label: "Spanish Story Time"
-  description: "Stories, music, movement, and rhymes in Spanish that build early literacy. Free at Renton\
-    \ Library; registration details are on the listing."
-  hub_blurb: "Spanish stories and songs for young children."
-  ages: "Toddlers"
-  tags:
-  - "story-time"
-  photo:
-    src: "/assets/images/themes/library-hall.webp"
-    alt: "Public library reading room"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/renton/"
-    license: "organizer"
-- name: "Latine Heritage Month with Marco Cortes"
-  cost: "Free"
-  ages: "All ages"
-  setting: "Indoor"
-  performer: "Marco Cortes"
-  start: "2026-10-14T16:00:00-07:00"
-  end: "2026-10-14T17:00:00-07:00"
-  place: "Renton Highlands Library, 2801 NE 10th Street"
-  same_as: "https://kcls.bibliocommons.com/events/6aadbe8a86d8450031173159"
-  card: "latine-heritage-month-with-marco-cortes"
-  order: "5"
-  heading_id: "latine-heritage-month-with-marco-cortes"
-  when: "Wed Oct 14 · 4:00–5:00 p.m."
-  blurbs:
-  - "A lively bilingual music and story show with songs, dancing, and Spanish words to learn along the\
-    \ way. All ages. No registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6aadbe8a86d8450031173159"
-    label: "Latine Heritage Month with Marco Cortes"
-  description: "A lively bilingual music and story show with songs, dancing, and Spanish words to learn\
-    \ along the way. All ages. No registration."
-  hub_blurb: "A lively bilingual music and story show with songs, dancing, and Spanish words to learn."
 - name: "Reading with Rover"
   cost: "Free"
   ages: "Kids"
