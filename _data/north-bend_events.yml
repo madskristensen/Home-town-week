@@ -374,7 +374,7 @@
 - name: "Si View Holiday Bazaar"
   cost: "Free"
   setting: "Indoor"
-  tags: [christmas]
+  tags: [holiday-market]
   start: "2026-12-05T09:00:00-08:00"
   end: "2026-12-05T15:00:00-08:00"
   place: "Si View Community Center, 400 SE Orchard Drive"
