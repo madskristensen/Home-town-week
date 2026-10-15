@@ -14,6 +14,7 @@ module EastsideCalendar
       site.data["book_ahead_cards"] = collect_book_ahead(site)
       site.data["birthday_page"] = collect_birthdays(site)
       site.data["indoor_play_page"] = collect_directory(site, "indoor_play", "Indoor play:")
+      site.data["kid_eats_page"] = collect_directory(site, "kid_eats", "Kid-friendly eats:")
       site.data["feature_map_pins"] = feature_map_pins(site)
     end
 
@@ -714,9 +715,10 @@ module EastsideCalendar
     end
 
     # Directory pages in the birthday list style with no price: /indoor-play/
-    # from _data/indoor_play.yml. A row with birthday_id reuses name, city,
-    # address, lat, and lng from that birthday venue. Chips are Toddlers,
-    # Free, Drop-in, then the types. The when line joins the meta line.
+    # from _data/indoor_play.yml and /kid-friendly-restaurants/ from
+    # _data/kid_eats.yml. A row with birthday_id reuses name, city, address,
+    # lat, and lng from that birthday venue. Chips are the DIRECTORY_FLAGS a
+    # row sets, then the types. The when line joins the meta line.
     def collect_directory(site, data_key, log_label)
       names = city_names(site.data["cities"])
       parties = Array(site.data["birthday_venues"]).select { |row| row.is_a?(Hash) }.to_h { |row| [row["id"].to_s, row] }
@@ -749,17 +751,21 @@ module EastsideCalendar
       packed
     end
 
+    # Flag field, chip label, and data attribute group, in chip order.
+    DIRECTORY_FLAGS = [
+      %w[toddlers Toddlers ages],
+      %w[free Free cost],
+      %w[drop_in Drop-in drop],
+      ["play_area", "Play area", "play"]
+    ].freeze
+
     def directory_labels!(item, row)
       types = Array(row["types"]).map { |value| value.to_s.strip }.reject(&:empty?)
-      flags = []
-      flags << "Toddlers" if row["toddlers"] == true
-      flags << "Free" if row["free"] == true
-      flags << "Drop-in" if row["drop_in"] == true
+      set = DIRECTORY_FLAGS.select { |field, _label, _group| row[field] == true }
+      flags = set.map { |_field, label, _group| label }
       bits = []
       bits << %(data-type="#{CGI.escapeHTML(types.join("|"))}") unless types.empty?
-      bits << 'data-ages="Toddlers"' if row["toddlers"] == true
-      bits << 'data-cost="Free"' if row["free"] == true
-      bits << 'data-drop="Drop-in"' if row["drop_in"] == true
+      set.each { |_field, label, group| bits << %(data-#{group}="#{label}") }
       item["label_ready"] = true
       item["price"] = ""
       item["ages_text"] = ""
@@ -775,7 +781,7 @@ module EastsideCalendar
 
     def directory_filters(items)
       chips = []
-      [["Toddlers", "ages"], ["Free", "cost"], ["Drop-in", "drop"]].each do |label, group|
+      DIRECTORY_FLAGS.each do |_field, label, group|
         chips << { "label" => label, "group" => group, "value" => label } if items.any? { |item| Array(item["filter_flags"]).include?(label) }
       end
       items.flat_map { |item| item["filter_types"] }.tally.sort_by { |label, count| [-count, label] }.each do |label, _count|

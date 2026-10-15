@@ -1,0 +1,174 @@
+# Kid-friendly restaurants, breweries, and cafes for /kid-friendly-restaurants/.
+# One row per place in the 15 cities. A place goes on only when its own page
+# says kids are welcome (or it is a play cafe), and that page is the source.
+# Never link or quote a lead site or Reddit. Taprooms that are 21 and over
+# stay off.
+# Required: id, name, city, address, description, source. A row with
+# birthday_id reuses name, city, address, lat, and lng from that row in
+# _data/birthday_venues.yml when they are left off here.
+# types are the filter chips: Brewery, Restaurant, Play cafe, Games.
+# play_area: true only when the place has its own play space for kids. It
+# makes the Play area chip. No price chips.
+# when is the short line in the row's meta line, our own words: the kids
+# rule, hours limits, or what there is for kids. description is our own
+# words, about 250 characters, no em dashes, used for search and structured
+# data. last_verified is YYYY-MM-DD.
+- id: bellevue-brewing
+  name: Bellevue Brewing Company
+  city: bellevue
+  address: 12190 NE District Way, Bellevue
+  lat: 47.621394
+  lng: -122.177815
+  types: [Brewery]
+  when: Kids welcome in the restaurant and on the patio, not in the bar
+  description: Brewpub in the Spring District with pub food and a big outdoor beer garden. Kids are welcome in the restaurant and on the patio, and the splash park is right there in summer. No reservations, first come first served.
+  source: https://www.bellevuebrewing.com/
+  source_label: Bellevue Brewing
+  last_verified: '2026-10-15'
+- id: resonate-brewery
+  name: Resonate Brewery + Pizzeria
+  city: bellevue
+  address: 5606 119th Ave SE, Bellevue
+  lat: 47.55232
+  lng: -122.177482
+  types: [Brewery]
+  when: Pizza and house beer, started as a family-friendly spot
+  description: Neighborhood brewery and pizzeria in south Bellevue. The owners started it because the area had too few family-friendly places with good beer, and the pizza menu makes it an easy dinner with kids.
+  source: https://resonatebrewery.com/index.php/about/
+  source_label: About Resonate
+  last_verified: '2026-10-15'
+- id: twinkle-land-cafe
+  birthday_id: twinkle-land-bellevue
+  types: [Play cafe]
+  play_area: true
+  when: Indoor playground with cafe seating, ages 1 to 10
+  description: Play cafe in Lake Hills with an indoor playground for ages 1 to 10, a build-a-toy studio, an arcade, and cafe seating for the grown-ups. Admission is by playground time.
+  source: https://www.twinklelandplaycafe.com/bellevue-location
+  source_label: Twinkle Land Bellevue
+  last_verified: '2026-10-15'
+- id: postdoc-redmond
+  name: Postdoc Brewing Redmond
+  city: redmond
+  address: 17625 NE 65th St, Suite 100, Redmond
+  lat: 47.66365
+  lng: -122.105422
+  types: [Brewery]
+  when: Kids welcome, with family games and non-alcoholic drinks
+  description: The original Postdoc taproom and beer garden, a crosswalk from Marymoor Park. Kids are welcome, and there are non-alcoholic drinks, snacks, family games, and a food truck most days.
+  source: https://www.postdocbrewing.com/
+  source_label: Postdoc Brewing
+  last_verified: '2026-10-15'
+- id: flatstick-redmond-eats
+  birthday_id: flatstick-redmond
+  types: [Games]
+  when: Kids allowed until 9 p.m., not at bar seating
+  description: Mini golf and Duffleboard pub at Redmond Town Center with food. Minors are allowed until 9 p.m. daily, except in the bar seating areas.
+  source: https://flatstickpub.com/faqs/
+  source_label: Flatstick FAQ
+  last_verified: '2026-10-15'
+- id: flatstick-kirkland
+  name: Flatstick Pub Kirkland
+  city: kirkland
+  address: 15 Lake St, Suite 100, Kirkland
+  lat: 47.675982
+  lng: -122.207325
+  types: [Games]
+  when: Kids allowed until 9 p.m. on the golf course and in the party room
+  description: Mini golf pub in downtown Kirkland near Marina Park. Minors are allowed until 9 p.m. daily on the golf course and in the party room area.
+  source: https://flatstickpub.com/faqs/
+  source_label: Flatstick FAQ
+  last_verified: '2026-10-15'
+- id: postdoc-kenmore
+  name: Postdoc Brewing Kenmore
+  city: kenmore
+  address: 7204 NE 175th St, Kenmore
+  lat: 47.757142
+  lng: -122.244086
+  types: [Brewery]
+  when: Kids welcome, with family games and non-alcoholic drinks
+  description: Neighborhood taproom and beer garden just off the Burke-Gilman Trail. Kids are welcome, with non-alcoholic drinks, snacks, family games, and daily food trucks.
+  source: https://www.postdocbrewing.com/
+  source_label: Postdoc Brewing
+  last_verified: '2026-10-15'
+- id: mcmenamins-anderson-school
+  name: McMenamins Anderson School
+  city: bothell
+  address: 18607 Bothell Way NE, Bothell
+  lat: 47.762372
+  lng: -122.208728
+  types: [Restaurant]
+  when: All ages, with restaurants, gardens, movies, and a pool
+  description: The old Anderson School campus, now restaurants, bars, gardens, a movie theater, and the North Shore Lagoon pool, open to visitors of all ages. Five acres to wander after dinner.
+  source: https://www.mcmenamins.com/anderson-school
+  source_label: McMenamins Anderson School
+  last_verified: '2026-10-15'
+- id: black-raven-woodinville
+  name: Black Raven Brewing Woodinville
+  city: woodinville
+  address: 15902 Woodinville-Redmond Rd NE, Woodinville
+  lat: 47.744206
+  lng: -122.157335
+  types: [Brewery]
+  when: All ages welcome, pizza inside
+  description: Woodinville taproom where all ages are welcome, with pizza from The Bird inside. The Redmond taproom is 21 and over, so bring the kids here.
+  source: https://blackravenbrewing.com/pages/woodinville-tap-room
+  source_label: Woodinville Tap Room
+  last_verified: '2026-10-15'
+- id: triplehorn-brewing
+  name: Triplehorn Brewing
+  city: woodinville
+  address: 19510 144th Ave NE, Suite E6, Woodinville
+  lat: 47.769198
+  lng: -122.147648
+  types: [Brewery]
+  when: Kid and dog friendly, food trucks
+  description: Family-run taproom in the Woodinville warehouse district. Kids and dogs are welcome, and food trucks park outside.
+  source: https://triplehornbrewing.com/
+  source_label: Triplehorn Brewing
+  last_verified: '2026-10-15'
+- id: pizza-coop
+  name: The Pizza Coop & Ale House
+  city: woodinville
+  address: 13317 NE 175th St, Woodinville
+  lat: 47.75373
+  lng: -122.161082
+  types: [Restaurant]
+  when: Kids menu, crayons, and board games
+  description: Family-owned Detroit-style pizza place in downtown Woodinville. All ages are welcome, with a kids menu, crayons, and board games. They take reservations.
+  source: https://www.thepizzacoop.com/contact-us
+  source_label: About and FAQ
+  last_verified: '2026-10-15'
+- id: formula-brewing
+  name: Formula Brewing
+  city: issaquah
+  address: 1875 NW Poplar Way, Issaquah
+  lat: 47.549571
+  lng: -122.066306
+  types: [Brewery]
+  when: Family-friendly taproom, pizza, and beer garden
+  description: Issaquah's own brewery, with a family-friendly taproom, hand-tossed pizza, and a beer garden with room for a group.
+  source: https://www.formulabrewing.com/
+  source_label: Formula Brewing
+  last_verified: '2026-10-15'
+- id: nicks-magnificent-cafe
+  birthday_id: nicks-magnificent
+  types: [Play cafe]
+  play_area: true
+  when: Cafe inside the indoor playground
+  description: The cafe inside Nick's Magnificent, the 1930s Art Deco indoor playground. Muffins, pretzels, grilled cheese, flatbread pizzas, and sandwiches between rounds of play, for grown-ups and kids on a playground visit.
+  source: https://nicksmagnificent.com/cafe-menu
+  source_label: Cafe menu
+  last_verified: '2026-10-15'
+- id: south-fork-north-bend
+  name: South Fork
+  city: north-bend
+  address: 14303 436th Ave SE, North Bend
+  lat: 47.470945
+  lng: -121.758455
+  types: [Restaurant]
+  play_area: true
+  when: Beer garden with a kids play space, closed Tuesdays
+  description: Cafe and bar at the edge of the mountains in North Bend, with coffee, food, and a big heated beer garden that has a space for the kids to play. Kids stay with a grown-up at all times. Open Wednesday to Monday, 8 a.m. to 9 p.m.
+  source: https://southforknorthbend.com/
+  source_label: South Fork
+  last_verified: '2026-10-15'

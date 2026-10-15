@@ -3,7 +3,8 @@
   No parameters. page.map_id "halloween" uses the decorations data.
   page.map_id "markets" uses the farmers market data.
   page.map_id "birthdays" uses the birthday venue data, with filter chips
-  built from that data. page.map_id "play" is /indoor-play/, the same list.
+  built from that data. page.map_id "play" is /indoor-play/ and "eats" is
+  /kid-friendly-restaurants/, the same list.
   Each stop is the shared event card, grouped by town with the shared
   Group by pills (Town and Distance, plus Day for markets).
 {%- endcomment -%}
@@ -37,6 +38,12 @@ What to know:{%- endcapture -%}
 {%- assign map_title = "Indoor play" -%}
 {%- assign map_noun = "places" -%}
 {%- assign lights_mailto = "" -%}
+{%- elsif page.map_id == "eats" -%}
+{%- assign home_lights = site.data.kid_eats_page -%}
+{%- assign map_path = "/kid-friendly-restaurants/" -%}
+{%- assign map_title = "Kid-friendly restaurants" -%}
+{%- assign map_noun = "places" -%}
+{%- assign lights_mailto = "" -%}
 {%- else -%}
 {%- assign home_lights = site.data.home_lights -%}
 {%- assign map_path = "/christmas/lights/" -%}
@@ -52,7 +59,7 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
 {%- endif -%}
 {%- assign lights_mailto = lights_mailto | append: "" | strip -%}
 {%- assign list_page = false -%}
-{%- if page.map_id == "birthdays" or page.map_id == "play" -%}{%- assign list_page = true -%}{%- endif -%}
+{%- if page.map_id == "birthdays" or page.map_id == "play" or page.map_id == "eats" -%}{%- assign list_page = true -%}{%- endif -%}
 {%- assign home_count = home_lights.count | default: 0 -%}
 {%- capture lights_count -%}{{ home_count }} {{ map_noun }}{%- endcapture -%}
 {%- unless list_page -%}

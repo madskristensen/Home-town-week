@@ -12,6 +12,7 @@
 | Halloween decorations map | `/fall/decorations/` |
 | Farmers markets | `/farmers-markets/` |
 | Indoor play | `/indoor-play/` |
+| Kid-friendly restaurants | `/kid-friendly-restaurants/` |
 | Book ahead | `/book-ahead/` |
 | Summer camps | `/summer-camps/` |
 | School calendars | `/no-school-days/` |

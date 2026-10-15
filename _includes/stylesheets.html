@@ -9,7 +9,7 @@
 {%- if page.home_lights or page.guide_id == "playgrounds" or page.map_pins -%}
 {%- assign css_map = true -%}
 {%- endif -%}
-{%- if page.map_id == "birthdays" or page.map_id == "play" -%}{%- assign css_map = false -%}{%- endif -%}
+{%- if page.map_id == "birthdays" or page.map_id == "play" or page.map_id == "eats" -%}{%- assign css_map = false -%}{%- endif -%}
 {%- if page.hub_id == "christmas" or page.hub_id == "fall" -%}
 {%- unless page.home_lights -%}
 {%- assign css_feature = true -%}

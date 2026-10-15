@@ -42,6 +42,7 @@ sitemap: false
 
 - [Kids birthday party ideas]({{ site.url }}{{ site.baseurl }}/birthday-venues/): Places in the 15 cities that host kids birthday parties, on a map, plus parties that come to your home, with filters and a rough $ to $$$$ price level.
 - [Indoor play]({{ site.url }}{{ site.baseurl }}/indoor-play/): Indoor playgrounds, community center toddler drop-ins, bounce houses, open gyms, and climbing walls in the 15 cities, with Toddlers, Free, and Drop-in filters.
+- [Kid-friendly restaurants]({{ site.url }}{{ site.baseurl }}/kid-friendly-restaurants/): Breweries, restaurants, and play cafes in the 15 cities whose own pages say kids are welcome, with the kids rule for each and a Play area filter.
 - [Farmers markets]({{ site.url }}{{ site.baseurl }}/farmers-markets/): Weekly farmers markets in the 15 cities, with the day, hours, and season. The page says which markets are open now.
 
 ## Book ahead

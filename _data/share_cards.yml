@@ -92,6 +92,13 @@
   alt: The empty play room at The Sand Garden in Issaquah, with a white sandbox, wooden benches, and a wall of greenery.
   credit: "Photo: The Sand Garden"
   license: organizer
+- id: kid-friendly-restaurants
+  path: /kid-friendly-restaurants/
+  title: Kid-friendly restaurants on the Eastside
+  image: /assets/images/issaquah/formula-beer-garden.jpg
+  alt: A sunny afternoon in the Formula Brewing beer garden in Issaquah, with picnic tables under black tents and yellow umbrellas and hills behind.
+  credit: "Photo: Formula Brewing"
+  license: organizer
 - id: book-ahead
   path: /book-ahead/
   title: Book ahead

@@ -85,6 +85,8 @@ On a wet morning, a warm pool is a good toddler outing too. The [indoor pools an
 
 For indoor running room, the [indoor play directory](/indoor-play/) has the community center toddler drop-ins, like Issaquah's Toddler Time and the Si View Indoor Playground, plus soft play spaces built for under 5.
 
+For lunch after, the [kid-friendly restaurants list](/kid-friendly-restaurants/) has breweries and restaurants that say kids are welcome, plus the cafes inside Twinkle Land and Nick's Magnificent where the little ones can play while you eat.
+
 Programs for kids under 5 are listed below when one is coming up.
 
 {% include card-grid.html events=page.places show_city=true eager=2 priority=true %}
