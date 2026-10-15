@@ -56,6 +56,7 @@ sitemap: false
 - [Articles]({{ site.url }}{{ site.baseurl }}/articles/): Evergreen guides for Eastside families.
 - [Halloween with kids on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/halloween/): Trunk-or-treats, downtown candy walks, and quieter plans for little kids.
 - [Pumpkin patches near Bellevue and Redmond]({{ site.url }}{{ site.baseurl }}/articles/pumpkin-patches/): Ten Eastside pumpkin farms with 2026 hours, a map, and the town trick-or-treats.
+- [Christmas tree farms near Bellevue and Redmond]({{ site.url }}{{ site.baseurl }}/articles/christmas-tree-farms/): U-cut and pre-cut tree farms from Redmond to North Bend, with 2026 opening days and a map.
 - [Best Christmas lights on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/christmas-lights/): Public displays, two posted home shows, and zoo light walks within reach.
 - [Meeting Santa on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/meeting-santa/): Free and low-cost Santa visits, tree lightings, and the Santa trains.
 - [Winter break with kids on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/winter-break/): Break dates, indoor plans, and a snow day at Snoqualmie Pass.

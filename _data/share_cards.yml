@@ -225,6 +225,13 @@
   alt: Rows of orange pumpkins in a field at Muddy Boots Pumpkins.
   credit: "Photo: Muddy Boots Pumpkins"
   license: organizer
+- id: christmas-tree-farms
+  path: /articles/christmas-tree-farms/
+  title: Christmas tree farms near Bellevue and Redmond
+  image: /assets/images/issaquah/trinity-tree-farm-rows.webp
+  alt: A row of Christmas trees at Trinity Tree Farm in Issaquah, with string lights on posts along the path.
+  credit: "Photo: Trinity Tree Farm"
+  license: organizer
 - id: snow-play
   path: /articles/snow-play/
   title: Snow play nearby

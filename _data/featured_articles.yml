@@ -23,10 +23,20 @@ windows:
         article: rainy-day-indoor-play
       - text: Free things to do with kids
         article: free-things-to-do
+  - id: trees
+    start: "11-03"
+    end: "11-15"
+    items:
+      - text: Christmas tree farms near Bellevue and Redmond
+        article: christmas-tree-farms
+      - text: Rainy weekend? Indoor places to play
+        article: rainy-day-indoor-play
   - id: lights
     start: "11-16"
     end: "11-30"
     items:
+      - text: Cut your own Christmas tree
+        article: christmas-tree-farms
       - text: Out to see the Christmas lights?
         article: christmas-lights
       - text: Where to meet Santa
@@ -96,6 +106,10 @@ guides:
       ranges:
         - start: "11-16"
           end: "12-24"
+    - article: christmas-tree-farms
+      ranges:
+        - start: "11-01"
+          end: "12-13"
     - article: winter-break
       ranges:
         - start: "12-01"
