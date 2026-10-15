@@ -11,6 +11,7 @@
 | Christmas lights map | `/christmas/lights/` |
 | Halloween decorations map | `/fall/decorations/` |
 | Farmers markets | `/farmers-markets/` |
+| Indoor play | `/indoor-play/` |
 | Book ahead | `/book-ahead/` |
 | Summer camps | `/summer-camps/` |
 | School calendars | `/no-school-days/` |

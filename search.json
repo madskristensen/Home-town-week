@@ -39,7 +39,7 @@ sitemap: false
 [{{ hub.banner_title | default: hub.title | jsonify }},2,"","",{{ hub.path | jsonify }},{{ hub.hook | default: "" | jsonify }}],
 {%- endif -%}
 {%- endfor -%}
-{%- assign pages_list = "This weekend|/this-weekend/,Worth the drive|/worth-the-drive/,Fall bucket list|/fall/bucket-list/,Christmas lights map|/christmas/lights/,Halloween decorations map|/fall/decorations/,Playgrounds map|/playgrounds/,Farmers markets|/farmers-markets/,Birthday party places|/birthday-venues/,Book ahead|/book-ahead/,Summer camps|/summer-camps/,School calendars|/no-school-days/,Suggest an event|/suggest/,About|/about/" | split: "," -%}
+{%- assign pages_list = "This weekend|/this-weekend/,Worth the drive|/worth-the-drive/,Fall bucket list|/fall/bucket-list/,Christmas lights map|/christmas/lights/,Halloween decorations map|/fall/decorations/,Playgrounds map|/playgrounds/,Farmers markets|/farmers-markets/,Birthday party places|/birthday-venues/,Indoor play|/indoor-play/,Book ahead|/book-ahead/,Summer camps|/summer-camps/,School calendars|/no-school-days/,Suggest an event|/suggest/,About|/about/" | split: "," -%}
 {%- for item in pages_list -%}
 {%- assign bits = item | split: "|" -%}
 [{{ bits[0] | jsonify }},4,"","",{{ bits[1] | jsonify }},""],
@@ -58,6 +58,12 @@ sitemap: false
 {%- assign rid = row.id | default: row.name | slugify -%}
 {%- assign lead = row.description | split: ". " | first | truncate: 90, "" -%}
 [{{ row.name | jsonify }},6,{{ town.name | default: row.place_city | default: "" | jsonify }},"",{{ rid | prepend: "/birthday-venues/#light-" | jsonify }},{{ row.types | join: " " | append: " " | append: lead | jsonify }}],
+{%- endfor -%}
+{%- for town in site.data.indoor_play_page.towns -%}
+{%- for row in town.lights -%}
+{%- assign lead = row.description | split: ". " | first | truncate: 90, "" -%}
+[{{ row.name | jsonify }},12,{{ town.name | jsonify }},"",{{ row.id | prepend: "/indoor-play/#light-" | jsonify }},{{ row.filter_types | join: " " | append: " " | append: lead | jsonify }}],
+{%- endfor -%}
 {%- endfor -%}
 {%- for pcity in site.data.playground_map.cities -%}
 {%- for park in pcity.parks -%}
@@ -105,4 +111,4 @@ sitemap: false
 {%- endcapture -%}
 {%- assign rows = rows | strip -%}
 {%- assign n = rows.size | minus: 1 -%}
-{"t":["Event","Guide","Season","City","Page","Camp","Birthday","Playground","Market","Lights","Halloween","Book ahead"],"i":[{{ rows | slice: 0, n }}]}
+{"t":["Event","Guide","Season","City","Page","Camp","Birthday","Playground","Market","Lights","Halloween","Book ahead","Indoor play"],"i":[{{ rows | slice: 0, n }}]}

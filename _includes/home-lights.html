@@ -3,7 +3,7 @@
   No parameters. page.map_id "halloween" uses the decorations data.
   page.map_id "markets" uses the farmers market data.
   page.map_id "birthdays" uses the birthday venue data, with filter chips
-  built from that data.
+  built from that data. page.map_id "play" is /indoor-play/, the same list.
   Each stop is the shared event card, grouped by town with the shared
   Group by pills (Town and Distance, plus Day for markets).
 {%- endcomment -%}
@@ -31,6 +31,12 @@ What to know:{%- endcapture -%}
 {%- assign map_title = "Birthday venues" -%}
 {%- assign map_noun = "venues" -%}
 {%- assign lights_mailto = "" -%}
+{%- elsif page.map_id == "play" -%}
+{%- assign home_lights = site.data.indoor_play_page -%}
+{%- assign map_path = "/indoor-play/" -%}
+{%- assign map_title = "Indoor play" -%}
+{%- assign map_noun = "places" -%}
+{%- assign lights_mailto = "" -%}
 {%- else -%}
 {%- assign home_lights = site.data.home_lights -%}
 {%- assign map_path = "/christmas/lights/" -%}
@@ -45,9 +51,11 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
 {%- capture lights_mailto -%}mailto:suggestions@eastsidecalendar.com?subject={{ lights_subject | strip | append: " " | mail_escape }}&body={{ lights_body | strip | mail_escape }}{%- endcapture -%}
 {%- endif -%}
 {%- assign lights_mailto = lights_mailto | append: "" | strip -%}
+{%- assign list_page = false -%}
+{%- if page.map_id == "birthdays" or page.map_id == "play" -%}{%- assign list_page = true -%}{%- endif -%}
 {%- assign home_count = home_lights.count | default: 0 -%}
 {%- capture lights_count -%}{{ home_count }} {{ map_noun }}{%- endcapture -%}
-{%- unless page.map_id == "birthdays" -%}
+{%- unless list_page -%}
 {%- if page.map_id == "markets" -%}
 {%- assign map_note = "Tap a pin to jump to that market." -%}
 {%- else -%}
@@ -131,7 +139,7 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
 })();
 </script>
 {%- endunless -%}
-{%- if page.map_id == "birthdays" and home_lights.filters.size > 0 -%}
+{%- if list_page and home_lights.filters.size > 0 -%}
 <div class="event-filters" role="group" aria-labelledby="event-filter-label">
   <span class="filter-label" id="event-filter-label">Filter:</span>
   {%- for chip in home_lights.filters -%}
@@ -140,12 +148,12 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
 </div>
 {%- include empty-suggest.html mode="filter" name=page.title -%}
 {%- endif -%}
-{%- if page.map_id == "birthdays" -%}
+{%- if list_page -%}
 {%- include birthday-directory.html -%}
 {%- else -%}
 {%- include market-directory.html -%}
 {%- endif -%}
-{%- if page.map_id == "markets" or page.map_id == "birthdays" -%}
+{%- if page.map_id == "markets" or list_page -%}
 {%- elsif page.map_id == "halloween" -%}
 <section class="hub-section">
   <h2 id="send-lights">Tell us about a decorated house</h2>

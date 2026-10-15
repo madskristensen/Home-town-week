@@ -101,6 +101,8 @@ places:
 
 When the rain settles in, the useful indoor stops are the ones that do not need a sunny park. Start with a museum or a library, then a community center or a pool if the kids still have energy.
 
+For running around, our [indoor play directory](/indoor-play/) lists the play cafes, bounce houses, open gyms, and climbing walls, plus the community center toddler mornings that cost a few dollars. Filter it for Toddlers, Free, or Drop-in.
+
 [KidsQuest Children's Museum](https://www.kidsquestmuseum.org/) sits at 1116 108th Ave NE in downtown Bellevue, next to Bellevue Library. It is built for younger kids. Check the museum site for hours and tickets before you go. Parking in the museum lot is paid.
 
 King County Library System branches are the easiest rainy-day default. You can walk in, read, and catch a story time. This week's story times and other programs are on the city pages, not on a separate library calendar here.

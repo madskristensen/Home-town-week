@@ -13,6 +13,7 @@ module EastsideCalendar
       site.data["farmers_market_page"] = collect_markets(site)
       site.data["book_ahead_cards"] = collect_book_ahead(site)
       site.data["birthday_page"] = collect_birthdays(site)
+      site.data["indoor_play_page"] = collect_directory(site, "indoor_play", "Indoor play:")
       site.data["feature_map_pins"] = feature_map_pins(site)
     end
 
@@ -564,8 +565,10 @@ module EastsideCalendar
           place = item["nights"].to_s if place.empty?
           meta = [Array(item["filter_types"]).join(", ")]
           meta << "Toddlers" if item["filter_toddlers"]
+          meta.concat(Array(item["meta_extra"]))
           meta << place
           meta << item["price"].to_s
+          meta << item["when_text"].to_s
           data = [
             %(data-town="#{CGI.escapeHTML(town["id"].to_s)}"),
             %(data-town-name="#{CGI.escapeHTML(town["name"].to_s)}"),
@@ -708,6 +711,77 @@ module EastsideCalendar
       built = market_photo(photo, row["name"], site)
       built["kind"] = "venue" if built
       built
+    end
+
+    # Directory pages in the birthday list style with no price: /indoor-play/
+    # from _data/indoor_play.yml. A row with birthday_id reuses name, city,
+    # address, lat, and lng from that birthday venue. Chips are Toddlers,
+    # Free, Drop-in, then the types. The when line joins the meta line.
+    def collect_directory(site, data_key, log_label)
+      names = city_names(site.data["cities"])
+      parties = Array(site.data["birthday_venues"]).select { |row| row.is_a?(Hash) }.to_h { |row| [row["id"].to_s, row] }
+      rows = Array(site.data[data_key]).select { |row| row.is_a?(Hash) }.map do |row|
+        base = parties[row["birthday_id"].to_s]
+        next row unless base
+
+        merged = row.dup
+        %w[name city address lat lng].each { |key| merged[key] = base[key] if merged[key].to_s.strip.empty? }
+        merged
+      end
+      rows = rows.sort_by { |row| [names[row["city"].to_s].to_s.downcase, row["name"].to_s.downcase] }
+      items = rows.filter_map do |row|
+        item = light_item(row, names, 0)
+        unless item
+          Jekyll.logger.error(log_label, "skipped #{row["name"] || row["id"]}")
+          next
+        end
+        item.delete("number")
+        item["card_id"] = "light-#{item["id"]}"
+        directory_labels!(item, row)
+        item
+      end
+      packed = pack_towns(items)
+      packed["pins"] = []
+      packed["filters"] = directory_filters(items)
+      packed["no_price"] = true
+      birthday_rows!(packed)
+      Jekyll.logger.info(log_label, "#{items.size} places, #{items.count { |item| item["lat"] }} with coordinates")
+      packed
+    end
+
+    def directory_labels!(item, row)
+      types = Array(row["types"]).map { |value| value.to_s.strip }.reject(&:empty?)
+      flags = []
+      flags << "Toddlers" if row["toddlers"] == true
+      flags << "Free" if row["free"] == true
+      flags << "Drop-in" if row["drop_in"] == true
+      bits = []
+      bits << %(data-type="#{CGI.escapeHTML(types.join("|"))}") unless types.empty?
+      bits << 'data-ages="Toddlers"' if row["toddlers"] == true
+      bits << 'data-cost="Free"' if row["free"] == true
+      bits << 'data-drop="Drop-in"' if row["drop_in"] == true
+      item["label_ready"] = true
+      item["price"] = ""
+      item["ages_text"] = ""
+      item["labels"] = types + flags
+      item["attrs"] = bits.join(" ")
+      item["filter_types"] = types
+      item["filter_flags"] = flags
+      item["filter_toddlers"] = false
+      item["meta_extra"] = flags
+      item["when_text"] = row["when"].to_s.gsub(/\s+/, " ").strip
+      item["sponsored"] = row["sponsored"] == true
+    end
+
+    def directory_filters(items)
+      chips = []
+      [["Toddlers", "ages"], ["Free", "cost"], ["Drop-in", "drop"]].each do |label, group|
+        chips << { "label" => label, "group" => group, "value" => label } if items.any? { |item| Array(item["filter_flags"]).include?(label) }
+      end
+      items.flat_map { |item| item["filter_types"] }.tally.sort_by { |label, count| [-count, label] }.each do |label, _count|
+        chips << { "label" => label, "group" => "type", "value" => label }
+      end
+      chips
     end
 
     # Book-ahead rows leave the page when the last day has passed or the

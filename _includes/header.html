@@ -3,7 +3,7 @@
   and Explore are a bar under it. A Menu button shows only under 340px.
   Guides follow site.data.nav_guides: articles in season, bucket
   lists in season, then All guides. Explore lists the maps,
-  Playgrounds, Farmers markets, Birthday parties, Book ahead, and School calendars.
+  Playgrounds, Farmers markets, Birthday parties, Indoor play, Book ahead, and School calendars.
   Search is the last item in the bar: a magnifier that opens the shared
   search form. Under 340px the Menu panel ends with a Search link.
 {%- endcomment -%}
@@ -50,7 +50,7 @@
 <li><a href="{{ '/articles/' | relative_url }}"{% if page.url == "/articles/" %} aria-current="page"{% endif %}>All guides</a></li>
 {%- endcapture -%}
 {%- capture nav_explore -%}
-{%- assign nav_explore_rows = "Christmas lights map|/christmas/lights/,Halloween decorations map|/fall/decorations/,Playgrounds|/playgrounds/,Farmers markets|/farmers-markets/,Birthday parties|/birthday-venues/,Book ahead|/book-ahead/,No school days|/no-school-days/" | split: "," -%}
+{%- assign nav_explore_rows = "Christmas lights map|/christmas/lights/,Halloween decorations map|/fall/decorations/,Playgrounds|/playgrounds/,Farmers markets|/farmers-markets/,Birthday parties|/birthday-venues/,Indoor play|/indoor-play/,Book ahead|/book-ahead/,No school days|/no-school-days/" | split: "," -%}
 {%- for nav_row in nav_explore_rows -%}
 {%- assign nav_bits = nav_row | split: "|" -%}
 <li><a href="{{ nav_bits[1] | relative_url }}"{% if page.url == nav_bits[1] %} aria-current="page"{% endif %}>{{ nav_bits[0] }}</a></li>

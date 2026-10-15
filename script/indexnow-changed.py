@@ -113,6 +113,9 @@ def urls_for(paths):
         if path == "_data/birthday_venues.yml":
             found.add(f"{SITE}/birthday-venues/")
             continue
+        if path == "_data/indoor_play.yml":
+            found.add(f"{SITE}/indoor-play/")
+            continue
         if path == "_data/book_ahead.yml":
             found.add(f"{SITE}/book-ahead/")
             continue
@@ -173,7 +176,7 @@ def date_rolled_pages():
         head = path.read_text(encoding="utf-8")[:500]
         if "layout: city" in head:
             urls.add(f"{SITE}/{path.parent.name}/")
-    for extra in ("/no-school-days/", "/summer-camps/", "/book-ahead/", "/farmers-markets/", "/birthday-venues/"):
+    for extra in ("/no-school-days/", "/summer-camps/", "/book-ahead/", "/farmers-markets/", "/birthday-venues/", "/indoor-play/"):
         urls.add(f"{SITE}{extra}")
     return sorted(urls)
 

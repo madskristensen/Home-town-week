@@ -1,0 +1,365 @@
+# Indoor play spaces and drop-in toddler play for /indoor-play/.
+# One row per place or drop-in program in the 15 cities. Verify each row on
+# the organizer's own page and link that page in source. Never link or quote
+# a lead site or Reddit. Story times stay off this page.
+# Required: id, name, city, address, description, source. A row with
+# birthday_id reuses name, city, address, lat, and lng from that row in
+# _data/birthday_venues.yml when they are left off here.
+# types are the filter chips: Play space, Community center, Bounce and
+# trampoline, Climbing, Open gym, Museum, Library, Mall play area.
+# toddlers: true only when the place or program is aimed at under 5.
+# free: true only when the organizer posts it as free. Free is the only cost
+# chip; prices stay in when or description text, never in a chip.
+# drop_in: true when you can come without booking a class or a session series.
+# when is the short schedule line, our own words, shown in the row's meta
+# line. description is our own words, about 250 characters, no em dashes,
+# used for search and structured data. last_verified is YYYY-MM-DD.
+- id: sbcc-indoor-play
+  name: South Bellevue Community Center Indoor Play
+  city: bellevue
+  address: 14509 SE Newport Way, Bellevue
+  lat: 47.571395
+  lng: -122.157117
+  types: [Community center]
+  toddlers: true
+  drop_in: true
+  when: Mon, Wed, and Fri mornings in the school year, ages 5 and under
+  description: The gym fills with toys, bounce houses, and mats for kids 5 and under, Mondays, Wednesdays, and Fridays from 10:30 a.m. to noon. $4 for Bellevue residents, $5 for everyone else. No play on school breaks.
+  source: https://bellevuewa.gov/city-government/departments/parks/community-centers/sbcc/south-bellevue-community-center-programs
+  source_label: Indoor Play
+  last_verified: '2026-10-15'
+- id: highland-indoor-play
+  name: Highland Community Center Indoor Play
+  city: bellevue
+  address: 14224 Bel-Red Rd, Bellevue
+  lat: 47.625579
+  lng: -122.150528
+  types: [Community center]
+  toddlers: true
+  drop_in: true
+  when: Wed and Fri 9 a.m. to noon through Dec 11, ages 8 and under
+  description: Drop-in gym play for kids 8 and under with a grown-up, Wednesdays and Fridays 9 a.m. to noon this fall. $4 for Bellevue residents, $5 for everyone else, per the city activity guide.
+  source: https://bellevuewa.gov/sites/default/files/media/pdf_document/2026/pcs-26-80486-activity-book-fall-web.pdf
+  source_label: Fall activity guide
+  last_verified: '2026-10-15'
+- id: crossroads-indoor-play
+  name: Crossroads Community Center Indoor Play
+  city: bellevue
+  address: 16000 NE 10th St, Bellevue
+  lat: 47.619371
+  lng: -122.127787
+  types: [Community center]
+  toddlers: true
+  drop_in: true
+  when: Fridays 8 to 11 a.m. this fall, ages 5 and under
+  description: Friday morning indoor play for kids 5 and under, 8 to 11 a.m. through the fall session. $4 for Bellevue residents, $5 for everyone else, per the city activity guide.
+  source: https://bellevuewa.gov/sites/default/files/media/pdf_document/2026/pcs-26-80486-activity-book-fall-web.pdf
+  source_label: Fall activity guide
+  last_verified: '2026-10-15'
+- id: nbcc-indoor-play
+  name: North Bellevue Community Center Indoor Play
+  city: bellevue
+  address: 4063 148th Ave NE, Bellevue
+  lat: 47.647471
+  lng: -122.145101
+  types: [Community center]
+  toddlers: true
+  free: true
+  drop_in: true
+  when: Thursdays 1:30 to 3:45 p.m. through December, ages 5 and under
+  description: A free Thursday afternoon indoor play time for kids 5 and under and their grown-ups, 1:30 to 3:45 p.m. through December, per the city activity guide.
+  source: https://bellevuewa.gov/sites/default/files/media/pdf_document/2026/pcs-26-80486-activity-book-fall-web.pdf
+  source_label: Fall activity guide
+  last_verified: '2026-10-15'
+- id: kids-cove-bellevue-square
+  name: Kids' Cove at Bellevue Square
+  city: bellevue
+  address: 575 Bellevue Square, Bellevue
+  lat: 47.615654
+  lng: -122.203676
+  types: [Mall play area]
+  toddlers: true
+  drop_in: true
+  when: Level 3 near JCPenney, during mall hours
+  description: A soft play area for little ones on Level 3 of Bellevue Square, near JCPenney. Handy for a wiggle break on a shopping day. Bellevue Square is open 10 a.m. to 9 p.m. Monday to Saturday and 11 a.m. to 7 p.m. Sunday.
+  source: https://www.visitbellevue.com/blog/post/family-friendly-rainy-day-things-to-do-in-bellevue-indoor/
+  source_label: Visit Bellevue
+  last_verified: '2026-10-15'
+- id: kidsquest
+  birthday_id: kidsquest
+  types: [Museum]
+  toddlers: true
+  when: Tue to Sun, closed Mondays, babies under 1 free
+  description: More than 25 hands-on exhibits in downtown Bellevue, including Tot Orchard, a space just for babies and toddlers with a nursing area nearby. Closed Mondays. Kids 1 and up and adults are $16.75, babies under 1 are free.
+  source: https://www.kidsquestmuseum.org/plan-your-visit/
+  source_label: Hours and admission
+  last_verified: '2026-10-15'
+- id: wiggleworks-bellevue
+  birthday_id: wiggleworks-bellevue
+  types: [Play space]
+  toddlers: true
+  drop_in: true
+  when: Daily at Crossroads, for kids under 48 inches
+  description: A soft play space at Crossroads built for babies through preschoolers, where most of the equipment spins, bounces, or swings. Walk in any time it is open. $13.59 Monday to Thursday and $15.99 Friday to Sunday, one adult included.
+  source: https://wiggleworkskids.com/bellevue
+  source_label: Hours and rates
+  last_verified: '2026-10-15'
+- id: twinkle-land-bellevue
+  birthday_id: twinkle-land-bellevue
+  types: [Play space]
+  when: Open daily, playground for ages 1 to 10
+  description: An indoor playground for ages 1 to 10 with a cafe, a DIY studio where kids build a toy to take home, and an arcade. $23 for two hours or $28 for the day, with one adult free per child. Free underground parking.
+  source: https://www.twinklelandplaycafe.com/bellevue-location/pricing-guide
+  source_label: Pricing
+  last_verified: '2026-10-15'
+- id: funtastic-playtorium-factoria
+  name: Funtastic Playtorium
+  city: bellevue
+  address: 4077 Factoria Square Mall SE, Bellevue
+  lat: 47.57389
+  lng: -122.17023
+  types: [Play space]
+  when: Factoria Square Mall, unlimited play for kids 10 and under
+  description: An indoor playground in Factoria Square Mall where kids 10 and under can climb and slide as long as they like. $12.99 Monday to Thursday and $15.99 Friday to Sunday, with one adult free per paid child.
+  source: https://www.funtasticplaytorium.com/pricing
+  source_label: Pricing
+  last_verified: '2026-10-15'
+- id: edgeworks-bellevue
+  name: Edgeworks Bellevue
+  city: bellevue
+  address: 15600 NE 8th St, Suite C-1, Bellevue
+  lat: 47.619875
+  lng: -122.128709
+  types: [Climbing]
+  when: Day passes, kids under 14 climb with an adult
+  description: A climbing gym at Crossroads with day passes. Kids under 14 must be directly supervised by an adult, and young kids stay within arm's reach of a grown-up who is not climbing. Youth classes and camps too.
+  source: https://edgeworksclimbing.com/bellevue/youth_climbing.html
+  source_label: Climbing with kids
+  last_verified: '2026-10-15'
+- id: bellevue-climbing-wall
+  birthday_id: bellevue-climbing-wall
+  types: [Climbing]
+  when: Staffed belay sessions for ages 6 and up, register ahead
+  description: The city's 33-foot climbing wall at South Bellevue Community Center. In a staffed belay session, staff belay everyone and gear is included. Ages 6 and up, $8 for residents and $10 for everyone else. Register ahead.
+  source: https://bellevuewa.gov/city-government/departments/parks/community-centers/sbcc/climbing_wall
+  source_label: Climbing wall
+  last_verified: '2026-10-15'
+- id: newport-way-play-learn
+  name: Bilingual Kaleidoscope Play & Learn at Newport Way Library
+  city: bellevue
+  address: 14250 SE Newport Way, Bellevue
+  lat: 47.570514
+  lng: -122.149064
+  types: [Library]
+  toddlers: true
+  when: Thursdays 10:30 a.m. to noon through Dec 17, English and Mandarin
+  description: A weekly play group for young kids and their caregivers in English and Mandarin, with music, games, crafts, and stories. Thursdays 10:30 a.m. to noon through December 17 at the Newport Way Library.
+  source: https://kcls.bibliocommons.com/v2/events?series=69ceb68bb6c4ac1fedc9ceed
+  source_label: KCLS events
+  last_verified: '2026-10-15'
+- id: redmond-drop-in-play
+  name: Drop-In Indoor Play at Redmond Community Center at Marymoor Village
+  city: redmond
+  address: 6505 176th Ave NE, Redmond
+  lat: 47.664262
+  lng: -122.10619
+  types: [Community center]
+  toddlers: true
+  drop_in: true
+  when: Tue and Thu 10 a.m. to noon through Dec 29, ages 0 to 5
+  description: Gym play for kids up to 5 with a grown-up who stays, Tuesdays and Thursdays 10 a.m. to noon through December 29. $5 to $6 a visit, with a Redmond resident rate.
+  source: https://app.amilia.com/store/en/city-of-redmond/api/Activity/Search?days=0&SelectedTags=6700701%2C6700700
+  source_label: Redmond registration
+  last_verified: '2026-10-15'
+- id: red-barn-toddler-play
+  name: Red Barn Drop-In Toddler Play
+  city: redmond
+  address: 19545 NE Redmond Rd, Redmond
+  lat: 47.692468
+  lng: -122.078808
+  types: [Community center]
+  toddlers: true
+  free: true
+  drop_in: true
+  when: Fridays 10 to 11 a.m., Nov 6 to Dec 11, register for each drop-in
+  description: Free Friday morning toddler play at Farrel-McWhirter Park, 10 to 11 a.m. from November 6 to December 11. Sign up for the drop-in through Redmond's registration site.
+  source: https://app.amilia.com/store/en/city-of-redmond/api/Activity/Search?days=0&SelectedTags=6700701%2C6700700
+  source_label: Redmond registration
+  last_verified: '2026-10-15'
+- id: kids-magic-lab
+  birthday_id: kids-magic-lab
+  types: [Play space]
+  toddlers: true
+  when: Open play most days 9:30 a.m. to 5:30 p.m., book a session
+  description: An educational indoor play space for kids 9 months to 8 years, with open play most days 9:30 a.m. to 5:30 p.m. Book a session online, since weekends often close early for private events. Socks required.
+  source: https://www.kidsmagiclab.com/open-play
+  source_label: Open play
+  last_verified: '2026-10-15'
+- id: giggle-jungle-redmond
+  birthday_id: giggle-jungle-redmond
+  types: [Play space]
+  toddlers: true
+  when: Soft play for babies, toddlers, and young kids
+  description: An indoor playground for babies, toddlers, and young kids with soft play structures, climbing walls, slides, and pretend play stations, with separate areas by age.
+  source: https://gigglejungle.com/
+  source_label: Giggle Jungle
+  last_verified: '2026-10-15'
+- id: arena-sports-redmond-funzone
+  birthday_id: arena-sports-redmond
+  name: Arena Sports Redmond Inflatable FunZone
+  types: [Bounce and trampoline]
+  drop_in: true
+  when: Bounce houses for ages 18 months to 12, book ahead to hold a spot
+  description: An indoor bounce house zone for kids 18 months to 12 years. Drop-in space is first come, first served, so booking online is the safer bet.
+  source: https://www.arenasports.net/activities/inflatable-playground/
+  source_label: FunZone
+  last_verified: '2026-10-15'
+- id: pump-it-up-kirkland-open-jump
+  birthday_id: pump-it-up-kirkland
+  name: Pump It Up Kirkland Pre-K Open Jump
+  types: [Bounce and trampoline]
+  toddlers: true
+  when: Pre-K Open Jump Tue and Wed 10 a.m. to noon, ages 6 and under
+  description: Big inflatables for kids 6 and under on Tuesday and Wednesday mornings, plus an all-ages open jump and a monthly Family Jump Night. Reserve a spot online and check the calendar for the current schedule.
+  source: https://www.pumpitupparty.com/kirkland-wa/other-ways-to-play/open-jump/
+  source_label: Open Jump
+  last_verified: '2026-10-15'
+- id: nkcc-indoor-playground
+  name: North Kirkland Community Center Indoor Playground
+  city: kirkland
+  address: 12421 103rd Ave NE, Kirkland
+  lat: 47.71207
+  lng: -122.204175
+  types: [Community center]
+  toddlers: true
+  drop_in: true
+  when: Wednesdays 10 a.m. to 1 p.m., mid-September through May
+  description: A big room of ride-on cars, push toys, roller coasters, slides, and baby toys. Drop in Wednesdays 10 a.m. to 1 p.m. from mid-September through May. Grown-ups stay, and no snacks. Fees are in the city's recreation guide.
+  source: https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Recreation-Programs-Services/Community-Centers
+  source_label: Kirkland community centers
+  last_verified: '2026-10-15'
+- id: bothell-gymnastics-preschool-playtime
+  name: Bothell Gymnastics Club Preschool Playtime
+  city: bothell
+  address: 22214 20th Ave SE, Suite 103, Bothell
+  lat: 47.796182
+  lng: -122.205137
+  types: [Open gym]
+  toddlers: true
+  when: Sun to Fri 11:30 a.m. to 12:30 p.m., reserve online the same day
+  description: Open gym for kids 5 and under, with a foam pit, trampolines, a tumble track, and obstacle courses. Sunday to Friday 11:30 a.m. to 12:30 p.m., September to June. Reserve online from 12:01 a.m. that day. $8 for members, $10 for others.
+  source: https://www.bothellgymnasticsclub.com/home/events/
+  source_label: Preschool Playtime
+  last_verified: '2026-10-15'
+- id: elevated-sportz
+  birthday_id: elevated-sportz
+  types: [Bounce and trampoline, Play space]
+  drop_in: true
+  when: Daily, trampolines for ages 3 and up, Kidz Adventure for the littlest
+  description: Wall-to-wall trampolines, a foam pit, a ninja course, and arcades, plus Kidz Adventure, a two-story soft play structure with a ball pit for the littlest jumpers. Trampolines are for ages 3 and up.
+  source: https://www.elevatedsportz.com/activities
+  source_label: Activities
+  last_verified: '2026-10-15'
+- id: the-ridge-play-zone
+  name: The Ridge Play Zone
+  city: bothell
+  address: 3827 Maltby Rd, Bothell
+  lat: 47.813184
+  lng: -122.182193
+  types: [Play space]
+  toddlers: true
+  when: Play structure, water and sand tables, separate zone for under 2
+  description: A climbing play structure with racing slides, plus a water table and an interactive sand table. A separate enclosed Toddler Zone is just for kids under 2. Play Zone time starts at $14 for an hour. Socks required.
+  source: https://theridge.fun/playzone/
+  source_label: Play Zone
+  last_verified: '2026-10-15'
+- id: issaquah-toddler-time
+  name: Issaquah Community Center Toddler Time
+  city: issaquah
+  address: 301 Rainier Blvd S, Issaquah
+  lat: 47.52738
+  lng: -122.033425
+  types: [Community center]
+  toddlers: true
+  drop_in: true
+  when: Wed and Fri 7 to 11:30 a.m. in the school year, ages 4 and under
+  description: The gym turns into an indoor playground of cars, bikes, slides, and wagons for kids 4 and under, Wednesdays and Fridays 7 to 11:30 a.m. during the school year. $2 per child. Snacks in the lobby only.
+  source: https://www.issaquahwa.gov/1098/Toddler-Time
+  source_label: Toddler Time
+  last_verified: '2026-10-15'
+- id: nicks-magnificent
+  birthday_id: nicks-magnificent
+  types: [Play space]
+  toddlers: true
+  drop_in: true
+  when: Open daily, Tiny Tykes Town for little ones, adults free
+  description: A screen-free indoor playground in a 1930s Art Deco space, with ziplines, a dress-up Tiny Town, ride-on excavators, and Tiny Tykes Town for the littlest kids. You pay only for kids over 12 months. Cafe on site.
+  source: https://nicksmagnificent.com/faqs/
+  source_label: FAQs
+  last_verified: '2026-10-15'
+- id: sand-garden-issaquah
+  name: The Sand Garden
+  city: issaquah
+  address: 660 NW Gilman Blvd, C-2, Issaquah
+  lat: 47.545658
+  lng: -122.065476
+  types: [Play space]
+  toddlers: true
+  drop_in: true
+  when: Daily 9 a.m. to 5 p.m., indoor sandboxes for ages 0 to 10
+  description: Two big indoor sandboxes for kids up to 10, open daily 9 a.m. to 5 p.m. $22 a child for the day, $10 for babies under 1 who play. Half price Tuesday and Thursday 2 to 5 p.m. at check-in.
+  source: https://www.thesandgardenllc.com/pricing
+  source_label: Pricing
+  last_verified: '2026-10-15'
+- id: arena-sports-issaquah-funzone
+  birthday_id: arena-sports-issaquah
+  name: Arena Sports Issaquah Inflatable FunZone
+  types: [Bounce and trampoline]
+  drop_in: true
+  when: Bounce houses for kids up to 10, book ahead to hold a spot
+  description: An indoor bounce house zone, open to kids up to 10 at the Issaquah site. Drop-in space is first come, first served, so booking online is the safer bet.
+  source: https://www.arenasports.net/activities/inflatable-playground/
+  source_label: FunZone
+  last_verified: '2026-10-15'
+- id: mercer-island-indoor-playground
+  name: Mercer Island Community and Event Center Indoor Playground
+  city: mercer-island
+  address: 8236 SE 24th St, Mercer Island
+  lat: 47.58986
+  lng: -122.227346
+  types: [Community center]
+  toddlers: true
+  drop_in: true
+  when: Mon, Wed, Fri, and Sat 9:30 a.m. to noon in the East Gym
+  description: Indoor Playground time in the East Gym on the city's drop-in schedule, Monday, Wednesday, Friday, and Saturday 9:30 a.m. to noon. The posted schedule runs through October 31, so check for the next one.
+  source: https://www.mercerisland.gov/parksrec/page/drop-sports
+  source_label: Drop-in schedule
+  last_verified: '2026-10-15'
+- id: si-view-indoor-playground
+  name: Si View Indoor Playground
+  city: north-bend
+  address: 400 SE Orchard Dr, North Bend
+  lat: 47.490467
+  lng: -121.784678
+  types: [Community center]
+  toddlers: true
+  drop_in: true
+  when: Mon and Wed 9:30 to 11 a.m. through Dec 16, ages 0 to 5
+  description: Room to run, jump, and pretend for kids 5 and under, Mondays and Wednesdays 9:30 to 11 a.m. through December 16, closed on school breaks. $3 for residents, $3.60 for others. Pre-register for each day to check in fast.
+  source: https://www.siviewpark.org/toddler-programs.phtml
+  source_label: Toddler programs
+  last_verified: '2026-10-15'
+- id: si-view-grandparent-toddler-play
+  name: Si View Grandparent and Toddler Play
+  city: north-bend
+  address: 400 SE Orchard Dr, North Bend
+  lat: 47.490467
+  lng: -121.784678
+  types: [Community center]
+  toddlers: true
+  drop_in: true
+  when: Tuesdays 10:30 to 11:30 a.m. through Dec 15, ages 0 to 5
+  description: A relaxed play hour of toys and movement for grandparents and little ones, Tuesdays 10:30 to 11:30 a.m. through December 15. $3 for residents, $3.60 for others. Pre-register for the dates you want.
+  source: https://www.siviewpark.org/toddler-programs.phtml
+  source_label: Toddler programs
+  last_verified: '2026-10-15'

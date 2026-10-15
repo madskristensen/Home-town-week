@@ -85,6 +85,13 @@
   alt: Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance.
   credit: "Photo: Julian Fong, CC BY-SA 4.0"
   license: CC BY-SA 4.0
+- id: indoor-play
+  path: /indoor-play/
+  title: Indoor play on the Eastside
+  image: /assets/images/issaquah/sand-garden.jpg
+  alt: The empty play room at The Sand Garden in Issaquah, with a white sandbox, wooden benches, and a wall of greenery.
+  credit: "Photo: The Sand Garden"
+  license: organizer
 - id: book-ahead
   path: /book-ahead/
   title: Book ahead

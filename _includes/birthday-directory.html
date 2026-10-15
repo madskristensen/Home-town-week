@@ -1,6 +1,7 @@
 {%- comment -%}
   Birthday parties as one camp-style list: compact rows grouped by town,
-  then Worth the drive and Parties that come to you. Same markup and
+  then Worth the drive and Parties that come to you. /indoor-play/ uses
+  the same list with home_lights.no_price, which drops the Price pill. Same markup and
   Group by pills as camp-directory.html. A sponsored venue is the
   camp-sponsored row, pinned at the top of its town.
 {%- endcomment -%}
@@ -11,7 +12,9 @@
     <div class="camp-group-pills" role="group" aria-labelledby="camp-group-label">
       <button type="button" class="camp-pill" data-group="town" aria-pressed="true">Town</button>
       <button type="button" class="camp-pill" data-group="kind" aria-pressed="false">Type</button>
+      {%- unless home_lights.no_price -%}
       <button type="button" class="camp-pill" data-group="price" aria-pressed="false">Price</button>
+      {%- endunless -%}
       <button type="button" class="camp-pill" data-group="distance" aria-pressed="false">Distance</button>
     </div>
   </div>

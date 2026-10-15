@@ -83,6 +83,8 @@ The tot lots at [Inspiration Playground](https://bellevuewa.gov/city-government/
 
 On a wet morning, a warm pool is a good toddler outing too. The [indoor pools and swim lessons guide](/articles/indoor-pools-swim-lessons/) lists the warm-water pools, family swim times, and parent and baby lessons.
 
+For indoor running room, the [indoor play directory](/indoor-play/) has the community center toddler drop-ins, like Issaquah's Toddler Time and the Si View Indoor Playground, plus soft play spaces built for under 5.
+
 Programs for kids under 5 are listed below when one is coming up.
 
 {% include card-grid.html events=page.places show_city=true eager=2 priority=true %}

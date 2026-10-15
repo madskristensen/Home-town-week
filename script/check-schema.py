@@ -404,7 +404,7 @@ def wants_breadcrumb(rel):
     if wants_events(rel):
         return True
     extras = (
-        "playgrounds/", "farmers-markets/", "birthday-venues/", "book-ahead/", "no-school-days/",
+        "playgrounds/", "farmers-markets/", "birthday-venues/", "indoor-play/", "book-ahead/", "no-school-days/",
         "summer-camps/",
         "fall/decorations/", "fall/bucket-list/", "christmas/lights/",
     )
