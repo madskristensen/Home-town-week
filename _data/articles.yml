@@ -85,6 +85,10 @@
 - name: Ice and roller skating with kids on the Eastside
   blurb: The Bellevue holiday rink, Sno-King's year-round ice, and the Issaquah roller rink, with toddler tips and lessons.
   href: /articles/ice-roller-skating/
+  season:
+    start: "11-13"
+    end: "01-18"
+    lead: "11-01"
   image: /assets/images/bellevue/downtown-park-ice-rink.jpg
   alt: The covered Bellevue Downtown Ice Rink seen across the reflecting pond in Bellevue Downtown Park.
   credit: "Photo: Joe Mabel, CC BY-SA 3.0"

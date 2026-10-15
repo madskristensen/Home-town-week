@@ -51,6 +51,8 @@ windows:
         article: meeting-santa
       - text: Winter break with kids
         article: winter-break
+      - text: Ice skating with kids
+        article: ice-roller-skating
   - id: christmas-day
     start: "12-25"
     end: "12-25"
@@ -69,6 +71,8 @@ windows:
     items:
       - text: Snow play near the Eastside
         article: snow-play
+      - text: Ice and roller skating with kids
+        article: ice-roller-skating
       - text: Rainy weekend? Indoor places to play
         article: rainy-day-indoor-play
 
@@ -122,6 +126,10 @@ guides:
       ranges:
         - start: "01-01"
           end: "02-29"
+    - article: ice-roller-skating
+      ranges:
+        - start: "11-13"
+          end: "01-18"
     - article: no-school-day-ideas
       ranges:
         - start: "12-15"

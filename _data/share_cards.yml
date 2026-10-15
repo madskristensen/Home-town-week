@@ -232,6 +232,13 @@
   alt: A row of Christmas trees at Trinity Tree Farm in Issaquah, with string lights on posts along the path.
   credit: "Photo: Trinity Tree Farm"
   license: organizer
+- id: ice-roller-skating
+  path: /articles/ice-roller-skating/
+  title: Ice and roller skating with kids on the Eastside
+  image: /assets/images/bellevue/downtown-park-ice-rink.jpg
+  alt: The covered Bellevue Downtown Ice Rink seen across the reflecting pond in Bellevue Downtown Park.
+  credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+  license: CC BY-SA 3.0
 - id: snow-play
   path: /articles/snow-play/
   title: Snow play nearby

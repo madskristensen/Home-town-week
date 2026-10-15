@@ -62,6 +62,7 @@ sitemap: false
 - [Winter break with kids on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/winter-break/): Break dates, indoor plans, and a snow day at Snoqualmie Pass.
 - [New Year's Eve with kids on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/new-years-eve/): What is open on December 31, and which noon countdowns are still unannounced.
 - [Indoor pools and swim lessons on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/indoor-pools-swim-lessons/): Family and open swim times, warm pools for toddlers, and when swim lesson sign-up opens at each Eastside pool and swim school.
+- [Ice and roller skating with kids on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/ice-roller-skating/): The Bellevue holiday rink, Sno-King's year-round ice, and the Issaquah roller rink, with toddler tips and lessons.
 - [Snow play near the Eastside]({{ site.url }}{{ site.baseurl }}/articles/snow-play/): Summit tubing, the Hyak sledding hill, and the pass check.
 
 ## Sitemap
