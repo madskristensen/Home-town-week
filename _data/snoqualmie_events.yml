@@ -69,52 +69,6 @@
     \ two hours."
   hub_blurb: "The Northwest Railway Museum runs a family ride from the Snoqualmie Depot, with another\
     \ boarding point in North Bend."
-- name: "Toddler Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-10-15T10:15:00-07:00"
-  end: "2026-10-15T10:45:00-07:00"
-  place: "Snoqualmie Library, 7824 Center Boulevard SE"
-  same_as: "https://kcls.bibliocommons.com/events/6a80c10baafa6100295cdc4d"
-  card: "toddler-story-time-1"
-  order: "4"
-  heading_id: "toddler-story-time-1"
-  when: "Thu Oct 15 · 10:15–10:45 a.m."
-  blurbs:
-  - "Stories, songs, and rhymes for babies and toddlers up to 36 months with an adult, then a short play\
-    \ time with bubbles. Older kids are welcome. No registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a80c10baafa6100295cdc4d"
-    label: "Toddler Story Time"
-  description: "Stories, songs, and rhymes for babies and toddlers up to 36 months with an adult, then\
-    \ a short play time with bubbles. Older kids are welcome. No registration."
-  hub_blurb: "Stories, songs, and rhymes for babies and toddlers up to 36 months."
-- name: "Family Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-10-15T11:15:00-07:00"
-  end: "2026-10-15T11:45:00-07:00"
-  place: "Snoqualmie Library, 7824 Center Boulevard SE"
-  same_as: "https://kcls.bibliocommons.com/events/6a80c1292dac6e00371f5447"
-  card: "family-story-time-2"
-  order: "5"
-  heading_id: "family-story-time-2"
-  when: "Thu Oct 15 · 11:15–11:45 a.m."
-  blurbs:
-  - "Stories, songs, rhymes, and movement for young children with an adult, then a short play time that\
-    \ ends with bubbles. No registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a80c1292dac6e00371f5447"
-    label: "Family Story Time"
-  description: "Stories, songs, rhymes, and movement for young children with an adult, then a short play\
-    \ time that ends with bubbles. No registration."
-  hub_blurb: "Stories, songs, rhymes, and movement for young children, ending with bubbles."
 - name: "Family Story Time"
   cost: "Free"
   ages: "Toddlers"

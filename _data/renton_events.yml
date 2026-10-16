@@ -15,27 +15,6 @@
     label: "Noises Off"
   description: "Michael Frayn's backstage farce. Opening night is Fri Oct 2, a pay-what-you-can night is Mon Oct 12, and closing night is Sun Oct 18. Recommended for ages 10 and up. The humor includes innuendo, fast-paced chaos, and adult misunderstandings. No explicit content. The comedy is aimed at older kids, teens, and adults who can follow the farce."
   hub_blurb: "Michael Frayn's backstage farce."
-- name: "Reading with Rover"
-  cost: "Free"
-  ages: "Kids"
-  setting: "Indoor"
-  start: "2026-10-15T16:30:00-07:00"
-  end: "2026-10-15T17:30:00-07:00"
-  place: "Fairwood Library, 17009 140th Avenue SE"
-  same_as: "https://kcls.bibliocommons.com/v2/events/6aa89b32ca248a002915dafe"
-  card: "reading-with-rover"
-  order: "6"
-  heading_id: "reading-with-rover"
-  when: "Thu Oct 15 · 4:30–5:30 p.m."
-  blurbs:
-  - "School-age kids read aloud to a certified therapy dog. Reading with Rover works with schools and\
-    \ libraries in the greater Seattle area."
-  links:
-  - href: "https://kcls.bibliocommons.com/v2/events/6aa89b32ca248a002915dafe"
-    label: "Reading with Rover"
-  description: "School-age kids read aloud to a certified therapy dog. Reading with Rover works with schools\
-    \ and libraries in the greater Seattle area."
-  hub_blurb: "School-age kids read aloud to a certified therapy dog."
 - name: "Family Story Time"
   cost: "Free"
   ages: "All ages"

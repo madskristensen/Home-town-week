@@ -1,53 +1,3 @@
-- name: "Mandarin Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-10-15T10:30:00-07:00"
-  end: "2026-10-15T11:00:00-07:00"
-  place: "Mercer Island Library, 4400 88th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/events/6a6ba3514523092f0033b54f"
-  card: "mandarin-story-time-1"
-  order: "1"
-  heading_id: "mandarin-story-time-1"
-  when: "Thu Oct 15 · 10:30–11:00 a.m."
-  blurbs:
-  - "Stories, songs, rhymes, and movement in Mandarin for young children and families. Speakers of any\
-    \ language are welcome."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a6ba3514523092f0033b54f"
-    label: "Mandarin Story Time"
-  description: "Stories, songs, rhymes, and movement in Mandarin for young children and families. Speakers\
-    \ of any language are welcome."
-  hub_blurb: "Stories, songs, rhymes, and movement in Mandarin for young children and families."
-- name: "Plant ID Walk"
-  cost: "Free"
-  ages: "All ages"
-  setting: "Outdoor"
-  signup: true
-  tags:
-  - "free"
-  start: "2026-10-15T13:00:00-07:00"
-  end: "2026-10-15T15:00:00-07:00"
-  place: "Pioneer Park, meet at Island Crest Way and SE 68th St"
-  same_as: "https://www.mercerisland.gov/parksrec/page/plant-id-walk-pioneer-park-3"
-  card: "plant-id-walk"
-  order: "2"
-  heading_id: "plant-id-walk"
-  when: "Thu Oct 15 · 1:00–3:00 p.m."
-  blurbs:
-  - "A walk to learn common plants at Pioneer Park. All ages, and no experience is needed. Register ahead."
-  links:
-  - href: "https://www.mercerisland.gov/parksrec/page/plant-id-walk-pioneer-park-3"
-    label: "Plant ID Walk"
-  photo:
-    src: "/assets/images/themes/autumn-forest.webp"
-    alt: "A trail through an autumn forest, with yellow and orange leaves."
-    credit: "Photo: Thomas, CC BY-SA 2.0"
-    source: "https://commons.wikimedia.org/wiki/File:Autumn_forest_-_Darlington_Trail,_Middletown_-_PA.jpg"
-  description: "A walk to learn common plants at Pioneer Park. All ages, and no experience is needed.\
-    \ Register ahead."
-  hub_blurb: "A walk to learn common plants at Pioneer Park."
 - name: "Tot Shabbat"
   ages: "Toddlers"
   setting: "Indoor"
@@ -792,3 +742,30 @@
   place: "Youth Theatre Northwest, 4400 86th Ave SE"
   same_as: "https://youththeatre.org/auditions/"
   card: "chaos-theory"
+- name: "Family Story Time"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Indoor"
+  tags:
+  - "story-time"
+  start: "2026-11-08T11:15:00-08:00"
+  end: "2026-11-08T12:00:00-08:00"
+  place: "Mercer Island Library, 4400 88th Ave SE"
+  same_as: "https://kcls.bibliocommons.com/events/6a7e21c1be14820029872db2"
+  card: "family-story-time-nov-8"
+  order: "30"
+  heading_id: "family-story-time-nov-8"
+  when: "Sun Nov 8 · 11:15 a.m.–12:00 p.m."
+  blurbs:
+  - "A Sunday story time with songs, rhymes, and movement for kids up to age 5 with an adult, then play time."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a7e21c1be14820029872db2"
+    label: "Family Story Time"
+  photo:
+    src: "/assets/images/mercer-island/mercer-island-library-entrance.webp"
+    alt: "Mercer Island Library entrance, a brick front with a covered walkway, columns, and a bronze sculpture beside the doors."
+    credit: "Photo: King County Library System"
+    license: "organizer"
+    source: "https://kcls.org/locations/mercer-island/"
+  description: "A Sunday story time with songs, rhymes, and movement for kids up to age 5 with an adult, then play time."
+  hub_blurb: "A Sunday story time with songs, rhymes, and movement for kids up to age 5."

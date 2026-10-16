@@ -1,24 +1,3 @@
-- name: "Baby Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  ages: "Toddlers"
-  start: "2026-10-15T10:30:00-07:00"
-  end: "2026-10-15T11:00:00-07:00"
-  place: "Kirkland Library, 308 Kirkland Ave"
-  same_as: "https://kcls.bibliocommons.com/v2/events/6a7faba35d8bc300315a702f"
-  card: "baby-story-time-1"
-  order: "1"
-  heading_id: "baby-story-time-1"
-  when: "Thu Oct 15 · 10:30–11:00 a.m."
-  blurbs:
-  - "Newborns to 12 months with an adult. No registration. First come, first seated. Thursday hours are\
-    \ 10:00 a.m.–6:00 p.m."
-  links:
-  - href: "https://kcls.bibliocommons.com/v2/events?locations=1518"
-    label: "Kirkland Library events"
-  description: "Newborns to 12 months with an adult. No registration. First come, first seated. Thursday\
-    \ hours are 10:00 a.m.–6:00 p.m."
-  hub_blurb: "Newborns to 12 months with an adult."
 - name: "Boy Gets Girl"
   setting: "Indoor"
   start: "2026-10-16"
@@ -837,6 +816,7 @@
   cost: "Free"
   setting: "Indoor"
   ages: "Toddlers"
+  signup: true
   tags:
   - "story-time"
   start: "2026-11-03T11:00:00-08:00"
@@ -1292,3 +1272,44 @@
   - href: "https://www.muirptsa.org/"
     label: "John Muir Elementary PTSA"
   hub_blurb: "Local makers, food, live music, and a winter scavenger hunt for kids at John Muir Elementary."
+- name: "Toddler Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  ages: "Toddlers"
+  signup: true
+  tags:
+  - "story-time"
+  start: "2026-11-10T10:15:00-08:00"
+  end: "2026-11-10T10:45:00-08:00"
+  place: "Kirkland Library, 308 Kirkland Ave"
+  same_as: "https://kcls.bibliocommons.com/events/6ab6edcf86d845003118d25d"
+  card: "toddler-story-time-nov-10"
+  order: "48"
+  heading_id: "toddler-story-time-nov-10"
+  when: "Tue Nov 10 · 10:15–10:45 a.m. and 11:00–11:30 a.m."
+  blurbs:
+  - "Stories, music, movement, and rhymes for ages 1 to 3 with an adult, at 10:15 or 11:00. Staff hand out free tickets at 10:00 for the first session, and space is limited."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ab6edcf86d845003118d25d"
+    label: "10:15 a.m. session"
+  - href: "https://kcls.bibliocommons.com/events/6ab6edcf86d845003118d25e"
+    label: "11:00 a.m. session"
+  photo:
+    src: "/assets/images/kirkland/kirkland-library.webp"
+    alt: "Kirkland Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/kirkland/"
+    license: "organizer"
+  description: "Stories, music, movement, and rhymes for ages 1 to 3 with an adult, at 10:15 or 11:00. Staff hand out free tickets at 10:00 for the first session, and space is limited."
+  hub_blurb: "Stories, songs, and rhymes for ages 1 to 3 at Kirkland Library."
+- name: "Toddler Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  ages: "Toddlers"
+  tags:
+  - "story-time"
+  start: "2026-11-10T11:00:00-08:00"
+  end: "2026-11-10T11:30:00-08:00"
+  place: "Kirkland Library, 308 Kirkland Ave"
+  same_as: "https://kcls.bibliocommons.com/events/6ab6edcf86d845003118d25e"
+  card: "toddler-story-time-nov-10"
