@@ -329,3 +329,33 @@
     label: "Family karaoke"
   description: "IMAGINE hosts this on the second Friday. All ages. Sing, or stay and cheer. Free."
   hub_blurb: "IMAGINE hosts this on the second Friday."
+- name: "Christmas Ship at Log Boom Park"
+  cost: "Free"
+  setting: "Outdoor"
+  tags:
+  - "christmas"
+  - "parade"
+  organizer: "Argosy Cruises"
+  organizer_url: "https://www.argosycruises.com/"
+  start: "2026-12-18T20:40:00-08:00"
+  end: "2026-12-18T21:00:00-08:00"
+  place: "Log Boom Park, 17415 61st Ave NE"
+  same_as: "https://www.argosycruises.com/christmas-ship-festival-schedule/"
+  card: "christmas-ship-log-boom-park"
+  heading_id: "christmas-ship-log-boom-park"
+  when: "Fri Dec 18 · 8:40–9:00 p.m."
+  blurbs:
+  - "The lighted Argosy Christmas Ship stops off Log Boom Park and its choir sings carols you can hear\
+    \ from the beach. Free to watch from shore. A public bonfire or shore event is planned."
+  links:
+  - href: "https://www.argosycruises.com/christmas-ship-festival-schedule/"
+    label: "Christmas Ship schedule"
+  photo:
+    src: "/assets/images/themes/argosy-christmas-ship.webp"
+    alt: "The Argosy Christmas Ship lit up with strings of lights on the water at night."
+    credit: "Photo: Argosy Cruises"
+    source: "https://www.argosycruises.com/christmas-ship-festival-schedule/"
+    license: "organizer"
+  description: "The lighted Argosy Christmas Ship stops off Log Boom Park and its choir sings carols\
+    \ you can hear from the beach. Free to watch from shore. A public bonfire or shore event is planned."
+  hub_blurb: "The lighted Christmas Ship and its choir, free to watch from Log Boom Park."

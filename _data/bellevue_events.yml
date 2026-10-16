@@ -1647,3 +1647,288 @@
     source: "https://commons.wikimedia.org/wiki/File:King_County_Library_System_-_Lake_Hills_Library.jpg"
   description: "A free Greener Living class on reusing mason jars at home. All ages are welcome with an adult, and you take home a jar and tips. Register on the City of Bellevue Greener Living page by 5:00 p.m. the day before."
   hub_blurb: "A free all-ages Greener Living class on reusing mason jars."
+- name: "Dawn of the Deer"
+  cost: "Free"
+  ages: "Kids"
+  setting: "Outdoor"
+  signup: true
+  start: "2026-10-24T10:00:00-07:00"
+  end: "2026-10-24T11:00:00-07:00"
+  place: "Lake Hills Greenbelt Ranger Station, 15416 SE 16th St"
+  same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+  card: "dawn-of-the-deer"
+  heading_id: "dawn-of-the-deer"
+  when: "Sat Oct 24 · 10:00–11:00 a.m."
+  blurbs:
+  - "A ranger walk to find where deer browse in the greenbelt, then a deer craft. Free for ages 4 to 13.\
+    \ Everyone, adults too, registers ahead."
+  links:
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Activity guide"
+  - href: "https://register.bellevuewa.gov"
+    label: "Register"
+  description: "A ranger walk to find where deer browse in the greenbelt, then a deer craft. Free for\
+    \ ages 4 to 13. Everyone, adults too, registers ahead."
+  hub_blurb: "A ranger walk about deer, then a deer craft."
+- name: "Superhero Salmon"
+  cost: "Free"
+  ages: "Kids"
+  setting: "Outdoor"
+  signup: true
+  start: "2026-10-24T14:30:00-07:00"
+  end: "2026-10-24T15:30:00-07:00"
+  place: "Lewis Creek Park Visitor Center, 5808 Lakemont Blvd SE"
+  same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+  card: "superhero-salmon"
+  heading_id: "superhero-salmon"
+  when: "Sat Oct 24 · 2:30–3:30 p.m."
+  blurbs:
+  - "A short ranger walk along Lewis Creek about the salmon life cycle and how kids can help protect it.\
+    \ Free for ages 5 to 10. Kids and adults both register ahead."
+  links:
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Activity guide"
+  - href: "https://register.bellevuewa.gov"
+    label: "Register"
+  description: "A short ranger walk along Lewis Creek about the salmon life cycle and how kids can help\
+    \ protect it. Free for ages 5 to 10. Kids and adults both register ahead."
+  hub_blurb: "A short ranger walk about salmon along Lewis Creek."
+- name: "Samena Spooktacular"
+  cost: "$20"
+  ages: "Kids"
+  signup: true
+  tags:
+  - "halloween"
+  start: "2026-10-31T13:00:00-07:00"
+  end: "2026-10-31T15:00:00-07:00"
+  place: "Samena Swim and Recreation Club, 15231 Lake Hills Blvd"
+  same_as: "https://samena.com/spooktacular/"
+  card: "samena-spooktacular"
+  heading_id: "samena-spooktacular"
+  when: "Sat Oct 31 · 1:00–3:00 p.m."
+  blurbs:
+  - "A haunted trail with candy and games, a costume contest, then a spooky swim for swimmers 5 and up\
+    \ and songs and stories for preschoolers. Best for ages 3 to 13. $20, or $15 for members. Register\
+    \ ahead."
+  links:
+  - href: "https://samena.com/spooktacular/"
+    label: "Spooktacular"
+  description: "A haunted trail with candy and games, a costume contest, then a spooky swim for swimmers\
+    \ 5 and up and songs and stories for preschoolers. Best for ages 3 to 13. $20, or $15 for members.\
+    \ Register ahead."
+  hub_blurb: "A haunted trail, costume contest, and spooky swim."
+- name: "Ranger-Led Hike at Lewis Creek Park"
+  cost: "Free"
+  setting: "Outdoor"
+  signup: true
+  start: "2026-11-07T10:30:00-08:00"
+  end: "2026-11-07T11:30:00-08:00"
+  place: "Lewis Creek Park Visitor Center, 5808 Lakemont Blvd SE"
+  same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+  card: "ranger-hike-lewis-creek-nov-7"
+  heading_id: "ranger-hike-lewis-creek-nov-7"
+  when: "Sat Nov 7 · 10:30–11:30 a.m."
+  blurbs:
+  - "An easy ranger hike of under 1.5 miles through three kinds of habitat, looking for signs of wildlife.\
+    \ Free for all ages. Wear sturdy shoes."
+  links:
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Activity guide"
+  - href: "https://register.bellevuewa.gov"
+    label: "Register"
+  description: "An easy ranger hike of under 1.5 miles through three kinds of habitat, looking for signs\
+    \ of wildlife. Free for all ages. Wear sturdy shoes."
+  hub_blurb: "An easy ranger hike under 1.5 miles, free for all ages."
+- name: "Ranger-Led Hike at Mercer Slough"
+  cost: "Free"
+  setting: "Outdoor"
+  signup: true
+  start: "2026-11-08T14:00:00-08:00"
+  end: "2026-11-08T15:30:00-08:00"
+  place: "Mercer Slough Environmental Education Center, 1625 118th Ave SE"
+  same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+  card: "ranger-hike-mercer-slough-nov-8"
+  heading_id: "ranger-hike-mercer-slough-nov-8"
+  when: "Sun Nov 8 · 2:00–3:30 p.m."
+  blurbs:
+  - "A family ranger hike of about 1.5 miles to the bridge in the middle of Mercer Slough, looking at\
+    \ plants, birds, and wildlife. Free for all ages, best for 5 and up. Register ahead."
+  links:
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Activity guide"
+  - href: "https://register.bellevuewa.gov"
+    label: "Register"
+  description: "A family ranger hike of about 1.5 miles to the bridge in the middle of Mercer Slough,\
+    \ looking at plants, birds, and wildlife. Free for all ages, best for 5 and up. Register ahead."
+  hub_blurb: "A 1.5-mile family ranger hike through Mercer Slough."
+- name: "A Slough of Senses"
+  cost: "Free"
+  setting: "Outdoor"
+  signup: true
+  start: "2026-11-13T18:30:00-08:00"
+  end: "2026-11-13T20:00:00-08:00"
+  place: "Mercer Slough Environmental Education Center, 1625 118th Ave SE"
+  same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+  card: "a-slough-of-senses"
+  heading_id: "a-slough-of-senses"
+  when: "Fri Nov 13 · 6:30–8:00 p.m."
+  blurbs:
+  - "An evening ranger walk through Mercer Slough as it gets dark, listening and looking for the wetland\
+    \ at night. Free for all ages, designed for 5 and up. Everyone registers ahead."
+  links:
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Activity guide"
+  - href: "https://register.bellevuewa.gov"
+    label: "Register"
+  description: "An evening ranger walk through Mercer Slough as it gets dark, listening and looking\
+    \ for the wetland at night. Free for all ages, designed for 5 and up. Everyone registers ahead."
+  hub_blurb: "An evening ranger walk through the wetland at dusk."
+- name: "Nocturnal in November"
+  cost: "Free"
+  ages: "Kids"
+  signup: true
+  start: "2026-11-14T14:00:00-08:00"
+  end: "2026-11-14T15:00:00-08:00"
+  place: "Mercer Slough Environmental Education Center, 1625 118th Ave SE"
+  same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+  card: "nocturnal-in-november"
+  heading_id: "nocturnal-in-november"
+  when: "Sat Nov 14 · 2:00–3:00 p.m."
+  blurbs:
+  - "Learn about the owls that live in Bellevue's parks, then dissect an owl pellet to see what they ate.\
+    \ Free for ages 5 to 10. Everyone, adults too, registers ahead."
+  links:
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Activity guide"
+  - href: "https://register.bellevuewa.gov"
+    label: "Register"
+  description: "Learn about the owls that live in Bellevue's parks, then dissect an owl pellet to see\
+    \ what they ate. Free for ages 5 to 10. Everyone, adults too, registers ahead."
+  hub_blurb: "Owls and an owl pellet dissection with a ranger."
+- name: "Fall Forest Fungi"
+  cost: "Free"
+  setting: "Outdoor"
+  signup: true
+  start: "2026-11-14T10:00:00-08:00"
+  end: "2026-11-14T11:00:00-08:00"
+  place: "Lake Hills Greenbelt Ranger Station, 15416 SE 16th St"
+  same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+  card: "fall-forest-fungi"
+  heading_id: "fall-forest-fungi"
+  when: "Sat Nov 14 and Nov 21 · 10:00–11:00 a.m."
+  blurbs:
+  - "A ranger walk looking at the colors and shapes of mushrooms and other fungi along the trail. Free\
+    \ for ages 4 and up. Everyone, adults too, registers ahead."
+  links:
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Activity guide"
+  - href: "https://register.bellevuewa.gov"
+    label: "Register"
+  description: "A ranger walk looking at the colors and shapes of mushrooms and other fungi along the\
+    \ trail. Free for ages 4 and up. Everyone, adults too, registers ahead."
+  hub_blurb: "A ranger walk looking for mushrooms and fungi."
+- name: "Fall Forest Fungi"
+  cost: "Free"
+  setting: "Outdoor"
+  signup: true
+  start: "2026-11-21T10:00:00-08:00"
+  end: "2026-11-21T11:00:00-08:00"
+  place: "Lake Hills Greenbelt Ranger Station, 15416 SE 16th St"
+  same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+  card: "fall-forest-fungi"
+  heading_id: "fall-forest-fungi"
+- name: "Fall Feathers"
+  cost: "Free"
+  ages: "Kids"
+  setting: "Outdoor"
+  signup: true
+  start: "2026-11-14T14:30:00-08:00"
+  end: "2026-11-14T15:30:00-08:00"
+  place: "Lewis Creek Park Visitor Center, 5808 Lakemont Blvd SE"
+  same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+  card: "fall-feathers"
+  heading_id: "fall-feathers"
+  when: "Sat Nov 14 and Sun Nov 22 · 2:30–3:30 p.m."
+  blurbs:
+  - "A short walk to learn which birds stay in Bellevue for winter and which fly south, then a bird craft\
+    \ to take home. Free for ages 5 to 10. Kids and adults both register ahead."
+  links:
+  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+    label: "Activity guide"
+  - href: "https://register.bellevuewa.gov"
+    label: "Register"
+  description: "A short walk to learn which birds stay in Bellevue for winter and which fly south, then\
+    \ a bird craft to take home. Free for ages 5 to 10. Kids and adults both register ahead."
+  hub_blurb: "A short bird walk and a take-home bird craft."
+- name: "Fall Feathers"
+  cost: "Free"
+  ages: "Kids"
+  setting: "Outdoor"
+  signup: true
+  start: "2026-11-22T14:30:00-08:00"
+  end: "2026-11-22T15:30:00-08:00"
+  place: "Lewis Creek Park Visitor Center, 5808 Lakemont Blvd SE"
+  same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
+  card: "fall-feathers"
+  heading_id: "fall-feathers"
+- name: "KidsQuest Gingerbread Workshops"
+  cost: "$42"
+  setting: "Indoor"
+  signup: true
+  tags:
+  - "christmas"
+  organizer: "KidsQuest Children's Museum"
+  organizer_url: "https://www.kidsquestmuseum.org/"
+  start: "2026-11-27T13:00:00-08:00"
+  end: "2026-11-27T19:00:00-08:00"
+  place: "Hyatt Regency Bellevue, 900 Bellevue Way NE"
+  same_as: "https://www.kidsquestmuseum.org/programs/gingerbread-events/"
+  card: "kidsquest-gingerbread-workshops"
+  heading_id: "kidsquest-gingerbread-workshops"
+  when: "Fri Nov 27 and Sat Nov 28 · sessions from 10:00 a.m."
+  blurbs:
+  - "KidsQuest's yearly family gingerbread build, with a candy buffet and all the supplies. $42 for one\
+    \ house, $12 per extra guest. A Nutcracker session with a ballet performance is Friday evening. Sessions\
+    \ sell out, so book ahead."
+  links:
+  - href: "https://www.kidsquestmuseum.org/programs/gingerbread-events/"
+    label: "Gingerbread Workshops"
+  description: "KidsQuest's yearly family gingerbread build, with a candy buffet and all the supplies.\
+    \ $42 for one house, $12 per extra guest. A Nutcracker session with a ballet performance is Friday\
+    \ evening. Sessions sell out, so book ahead."
+  hub_blurb: "The yearly KidsQuest family gingerbread house build."
+- name: "KidsQuest Gingerbread Workshops"
+  cost: "$42"
+  setting: "Indoor"
+  signup: true
+  tags:
+  - "christmas"
+  start: "2026-11-28T10:00:00-08:00"
+  end: "2026-11-28T16:00:00-08:00"
+  place: "Hyatt Regency Bellevue, 900 Bellevue Way NE"
+  same_as: "https://www.kidsquestmuseum.org/programs/gingerbread-events/"
+  card: "kidsquest-gingerbread-workshops"
+  heading_id: "kidsquest-gingerbread-workshops"
+- name: "Turkey Waddle"
+  cost: "$35"
+  setting: "Outdoor"
+  signup: true
+  tags:
+  - "thanksgiving"
+  organizer: "Backpack Brigade"
+  start: "2026-11-28T08:30:00-08:00"
+  end: "2026-11-28T10:30:00-08:00"
+  place: "Crossroads Park, 16000 NE 10th St"
+  same_as: "https://secure.qgiv.com/for/turkeywaddle/event/turkeywaddle/"
+  card: "turkey-waddle"
+  heading_id: "turkey-waddle"
+  when: "Sat Nov 28 · 8:30 a.m."
+  blurbs:
+  - "A family walk around Crossroads Park with treat tents, face painting, and a kids dash, raising money\
+    \ for Backpack Brigade's weekend meals. $35 adults, $20 youth, under 2 free."
+  links:
+  - href: "https://secure.qgiv.com/for/turkeywaddle/event/turkeywaddle/"
+    label: "Turkey Waddle"
+  description: "A family walk around Crossroads Park with treat tents, face painting, and a kids dash,\
+    \ raising money for Backpack Brigade's weekend meals. $35 adults, $20 youth, under 2 free."
+  hub_blurb: "A family fundraiser walk with treats and a kids dash."

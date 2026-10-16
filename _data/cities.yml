@@ -209,6 +209,10 @@
       type: parks
       format: html
       notes: "City of Bellevue. Free PG outdoor movies on four Thursday evenings in August at Crossroads Park, 999 164th Ave NE (Aug 6 to 27 in 2026), with music and vendors first."
+    - name: "Samena Swim and Recreation Club"
+      url: "https://samena.com/spooktacular/"
+      type: venue
+      notes: "Private club at 15231 Lake Hills Blvd that opens its Halloween Spooktacular to non-members (Oct 31, 2026, $20). Check the club homepage for other public family events."
     - name: "AllEvents Bellevue"
       url: "https://allevents.in/bellevue"
       type: allevents
@@ -575,6 +579,10 @@
       url: "https://www.inglemoortheatreboosters.com/services-1"
       type: school
       notes: "Public shows at Inglemoor High School Little Theatre, 15500 Simonds Road NE. Fall 2026 is Alice in Wonderland. Winter and spring titles are not posted yet. The spring musical is at Northshore Performing Arts Center in Bothell."
+    - name: "Argosy Christmas Ship Festival schedule"
+      url: "https://www.argosycruises.com/christmas-ship-festival-schedule/"
+      type: venue
+      notes: "Late Nov to Dec 23. The 2026 public bonfire stop in Kenmore is Log Boom Park, Dec 18. Skip private-event stops and onboard ticketed sailings."
     - name: "AllEvents Kenmore"
       url: "https://allevents.in/kenmore"
       type: allevents
@@ -703,6 +711,10 @@
       type: parks
       format: html
       notes: "City of Kirkland. Free outdoor double features at Heritage Park in August (Aug 8 and 15 in 2026). The city site often returns 403 to scripts."
+    - name: "Argosy Christmas Ship Festival schedule"
+      url: "https://www.argosycruises.com/christmas-ship-festival-schedule/"
+      type: venue
+      notes: "Late Nov to Dec 23. Free shoreline choir stops from the lighted Christmas Ship at O.O. Denny, Juanita Beach, Kirkland Marina Park, Medina, and Yarrow Point. An asterisk means a public bonfire or shore event. Skip private-event stops and onboard ticketed sailings. Add each public Kirkland stop with its time."
     - name: "AllEvents Kirkland"
       url: "https://allevents.in/kirkland"
       type: allevents
@@ -1097,6 +1109,10 @@
       type: cinema
       format: html
       notes: "Movie theater: kids series, sensory-friendly and special family screenings only; skip regular showtimes. 900 N 10th Pl. Regal Summer Movie Express runs June to mid-August, $1 family films Monday to Thursday at 11 a.m. (https://www.regmovies.com/promotions/summer-movie-express). Local 2026 listings named this theater, but Regal's own page does not list participating theaters, so add a date only when this theater's showtimes show SMX titles. Skip SOS horror re-releases and other repertory runs. Not on Regal's My Way Matinee list."
+    - name: "Argosy Christmas Ship Festival schedule"
+      url: "https://www.argosycruises.com/christmas-ship-festival-schedule/"
+      type: venue
+      notes: "Late Nov to Dec 23. The 2026 public stop in Renton is Gene Coulon Memorial Beach Park, Dec 4, the same night Clam Lights opens. Skip private-event stops and onboard ticketed sailings."
     - name: "AllEvents Renton"
       url: "https://allevents.in/renton"
       type: allevents
