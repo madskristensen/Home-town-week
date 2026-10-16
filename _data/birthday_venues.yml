@@ -1143,6 +1143,28 @@
     credit: 'Photo: Redmond Petting Farm'
     credit_url: https://www.redmondpettingfarm.com/Programs/birthdays.html
     license: organizer
+- id: little-green-acres
+  name: Little Green Acres Farm
+  city: redmond
+  address: 20911 NE Novelty Hill Rd, Redmond
+  lat: 47.689209
+  lng: -122.060168
+  setting: Outdoor
+  types:
+  - Animals and farms
+  - Art
+  party_room: true
+  price_level: 3
+  description: A 10-acre organic farm with a lake and a craft studio. Two-hour parties include a craft picked for the age group, petting zoo time with goats, sheep, alpacas, and chickens, and balloons. Bring your own food and cake, and adults come free.
+  source: https://littlegreenacres.com/parties-youth
+  source_label: Party page
+  last_verified: '2026-10-16'
+  photo:
+    image: /assets/images/birthdays/little-green-acres.webp
+    alt: A calm lake ringed by tall firs under a blue sky at Little Green Acres Farm.
+    credit: 'Photo: Little Green Acres Farm'
+    credit_url: https://littlegreenacres.com/about-%2B-contact
+    license: organizer
 - id: flatstick-kirkland
   name: Flatstick Pub Kirkland
   city: kirkland
