@@ -17,27 +17,6 @@
   description: "Lake Washington High School's fall play. A magazine writer is stalked after a blind date,\
     \ and the story turns into a thriller. For teens and adults."
   hub_blurb: "Lake Washington High School's fall play."
-- name: "Mandarin Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-16T10:30:00-07:00"
-  end: "2026-10-16T11:00:00-07:00"
-  place: "Kirkland Library, 308 Kirkland Ave"
-  same_as: "https://kcls.org/locations/kirkland/"
-  card: "mandarin-story-time"
-  order: "3"
-  heading_id: "mandarin-story-time"
-  when: "Fri Oct 16 · 10:30–11:00 a.m."
-  blurbs:
-  - "Stories, music, and movement in Mandarin. The listing welcomes families with young children and people\
-    \ who want to learn Chinese. No registration. Friends of the Kirkland Library sponsors it."
-  links:
-  - href: "https://kcls.bibliocommons.com/v2/events?locations=1518"
-    label: "Kirkland Library events"
-  description: "Stories, music, and movement in Mandarin. The listing welcomes families with young children\
-    \ and people who want to learn Chinese. No registration. Friends of the Kirkland Library sponsors\
-    \ it."
-  hub_blurb: "Stories, music, and movement in Mandarin."
 - name: "Juanita Bay Park East Habitat Stewardship"
   cost: "Free"
   ages: "All ages"

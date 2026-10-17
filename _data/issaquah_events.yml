@@ -551,6 +551,26 @@
     \ mask made in Mexico, join art workshops, and see dancers and mariachi. Face painting and food are\
     \ part of the afternoon. Each person needs a free ticket, and one order can hold up to five."
   hub_blurb: "A free afternoon from The Circle, this year focused on Oaxaca."
+- name: "Chess Club"
+  cost: "Free"
+  ages: "Teens"
+  setting: "Indoor"
+  tags:
+  - "free"
+  start: "2026-11-03T15:30:00-08:00"
+  end: "2026-11-03T17:30:00-08:00"
+  place: "Issaquah Library, 10 W Sunset Way"
+  same_as: "https://kcls.bibliocommons.com/events/6ad2a13496ec3a003adb1c45"
+  card: "chess-club-nov-3"
+  heading_id: "chess-club-nov-3"
+  when: "Tue Nov 3 · 3:30–5:30 p.m."
+  blurbs:
+  - "Middle and high schoolers play, practice, and try mini tournaments with coaching from three-time regional champion Chouchan Airapetian. Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ad2a13496ec3a003adb1c45"
+    label: "Chess Club"
+  description: "Middle and high schoolers play, practice, and try mini tournaments with coaching from three-time regional champion Chouchan Airapetian. Free."
+  hub_blurb: "Chess games and coaching for middle and high schoolers."
 - name: "Snuggle Up Story Time"
   cost: "Free"
   ages: "Toddlers"

@@ -19,85 +19,6 @@
     label: "Register"
   description: "A free one-mile ranger hike for all ages on the mostly level gravel trails. The fall guide lists it Saturdays at 2:00 p.m. through Dec 26. Register ahead. Bring binoculars if you have them."
   hub_blurb: "A free one-mile ranger hike for all ages on the mostly level gravel trails."
-- name: "Baby and Toddler Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-16T10:30:00-07:00"
-  end: "2026-10-16T11:15:00-07:00"
-  place: "Lake Hills Library, 15590 Lake Hills Blvd"
-  same_as: "https://kcls.bibliocommons.com/events/6a91f37869166f088b95a90c"
-  card: "baby-and-toddler-story-time-lake-hills"
-  heading_id: "baby-and-toddler-story-time-lake-hills"
-  when: "Fri Oct 16 · 10:30–11:15 a.m."
-  blurbs:
-  - "Stories, music, and rhymes for newborns to 24 months with an adult at Lake Hills Library. Free, no\
-    \ registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a91f37869166f088b95a90c"
-    label: "Baby and Toddler Story Time"
-  description: "Stories, music, and rhymes for newborns to 24 months with an adult at Lake Hills Library.\
-    \ Free, no registration."
-  hub_blurb: "Stories for babies and toddlers at Lake Hills."
-  ages: "Toddlers"
-  tags:
-  - "story-time"
-  photo:
-    src: "/assets/images/bellevue/lake-hills-library.webp"
-    alt: "Lake Hills Library"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/lake-hills/"
-    license: "organizer"
-- name: "Family Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-16T10:45:00-07:00"
-  end: "2026-10-16T11:45:00-07:00"
-  place: "Newport Way Library, 14250 SE Newport Way"
-  same_as: "https://kcls.bibliocommons.com/events/6a85ddf057c264087ad2382a"
-  card: "family-story-time-newport-way"
-  heading_id: "family-story-time-newport-way"
-  when: "Fri Oct 16 · 10:45–11:45 a.m."
-  blurbs:
-  - "Stories, music, movement, and rhymes for all ages with an adult at Newport Way Library. Free, no\
-    \ registration; space is limited."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a85ddf057c264087ad2382a"
-    label: "Family Story Time"
-  description: "Stories, music, movement, and rhymes for all ages with an adult at Newport Way Library.\
-    \ Free, no registration; space is limited."
-  hub_blurb: "Family stories and songs at Newport Way Library."
-  ages: "Toddlers"
-  tags:
-  - "story-time"
-  photo:
-    src: "/assets/images/bellevue/newport-way-library-entrance.webp"
-    alt: "Newport Way Library entrance"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/newport-way/"
-    license: "organizer"
-- name: "Korean Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-10-16T16:45:00-07:00"
-  end: "2026-10-16T17:30:00-07:00"
-  place: "Newport Way Library, 14250 SE Newport Way"
-  same_as: "https://kcls.bibliocommons.com/events/6aa9c030101eb7003f3063e8"
-  card: "korean-story-time-1"
-  order: "2"
-  heading_id: "korean-story-time-1"
-  when: "Fri Oct 16 · 4:45–5:30 p.m."
-  blurbs:
-  - "Korean picture books and songs, with a little Korean culture mixed in. For toddlers through early\
-    \ elementary with an adult. Free, no registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6aa9c030101eb7003f3063e8"
-    label: "Korean Story Time"
-  description: "Korean picture books and songs, with a little Korean culture mixed in. For toddlers through\
-    \ early elementary with an adult. Free, no registration."
-  hub_blurb: "Korean picture books and songs for toddlers through early elementary."
 - name: "Alice's Magical Adventure"
   setting: "Indoor"
   ages: "Kids"
@@ -1568,32 +1489,6 @@
   links:
   - href: "http://www.ataseattle.org/"
     label: "ATA Seattle"
-- name: "Community Night at Crossroads: Pumpkin Painting"
-  cost: "Free"
-  setting: "Indoor"
-  tags:
-  - "halloween"
-  start: "2026-10-16T18:00:00-07:00"
-  end: "2026-10-16T20:00:00-07:00"
-  place: "Crossroads Community Center, 16000 NE 10th St"
-  same_as: "https://bellevuewa.gov/city-government/departments/parks/community-centers/crossroads-community-center"
-  card: "community-night-crossroads-pumpkin-painting"
-  order: "54"
-  heading_id: "community-night-crossroads-pumpkin-painting"
-  when: "Fri Oct 16 · 6:00–8:00 p.m."
-  blurbs:
-  - "A free all-ages community night at Crossroads Community Center with a pumpkin-painting theme. Drop in, paint a pumpkin, and hang out. Hosted by Bellevue Parks."
-  links:
-  - href: "https://bellevuewa.gov/city-government/departments/parks/community-centers/crossroads-community-center"
-    label: "Community Nights at Crossroads"
-  photo:
-    src: "/assets/images/bellevue/crossroads-community-center.webp"
-    alt: "The games room at Crossroads Community Center, with foosball and air hockey tables and orange chairs."
-    credit: "Photo: City of Bellevue"
-    license: "organizer"
-    source: "https://bellevuewa.gov/city-government/departments/parks/community-centers/crossroads"
-  description: "A free all-ages community night at Crossroads Community Center with a pumpkin-painting theme. Drop in, paint a pumpkin, and hang out. Hosted by Bellevue Parks."
-  hub_blurb: "Free pumpkin painting at Crossroads Community Center."
 - name: "Community Night at Crossroads: Celebrate Diwali"
   cost: "Free"
   setting: "Indoor"
@@ -1786,6 +1681,7 @@
 - name: "Nocturnal in November"
   cost: "Free"
   ages: "Kids"
+  setting: "Indoor"
   signup: true
   start: "2026-11-14T14:00:00-08:00"
   end: "2026-11-14T15:00:00-08:00"

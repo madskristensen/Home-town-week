@@ -15,80 +15,6 @@
     label: "Noises Off"
   description: "Michael Frayn's backstage farce. Opening night is Fri Oct 2, a pay-what-you-can night is Mon Oct 12, and closing night is Sun Oct 18. Recommended for ages 10 and up. The humor includes innuendo, fast-paced chaos, and adult misunderstandings. No explicit content. The comedy is aimed at older kids, teens, and adults who can follow the farce."
   hub_blurb: "Michael Frayn's backstage farce."
-- name: "Family Story Time"
-  cost: "Free"
-  ages: "All ages"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-10-16T10:30:00-07:00"
-  end: "2026-10-16T11:30:00-07:00"
-  place: "Fairwood Library, 17009 140th Avenue SE"
-  same_as: "https://kcls.bibliocommons.com/events/6a85e4b0b20478002993f17a"
-  card: "family-story-time"
-  order: "7"
-  heading_id: "family-story-time"
-  when: "Fri Oct 16 · 10:30–11:30 a.m."
-  blurbs:
-  - "Stories, songs, and movement for young children, with time after to read, color, and meet other families.\
-    \ All ages with an adult. No registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a85e4b0b20478002993f17a"
-    label: "Family Story Time"
-  description: "Stories, songs, and movement for young children, with time after to read, color, and meet\
-    \ other families. All ages with an adult. No registration."
-  hub_blurb: "Stories, songs, and movement for young children, with time after to read and color."
-- name: "Toddler Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-10-16T11:00:00-07:00"
-  end: "2026-10-16T11:30:00-07:00"
-  place: "Renton Highlands Library, 2801 NE 10th Street"
-  same_as: "https://kcls.bibliocommons.com/events/6a6794c9cca66c2f00a6523e"
-  card: "toddler-story-time-3"
-  order: "8"
-  heading_id: "toddler-story-time-3"
-  when: "Fri Oct 16 · 11:00–11:30 a.m."
-  blurbs:
-  - "Books, songs, rhymes, and movement for ages 1 to 3 with an adult at the Highlands branch. Free, no\
-    \ registration, and space is limited."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a6794c9cca66c2f00a6523e"
-    label: "Toddler Story Time"
-  description: "Books, songs, rhymes, and movement for ages 1 to 3 with an adult at the Highlands branch.\
-    \ Free, no registration, and space is limited."
-  hub_blurb: "Books, songs, rhymes, and movement for ages 1 to 3."
-- name: "Baby Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-16T12:00:00-07:00"
-  end: "2026-10-16T12:30:00-07:00"
-  place: "Renton Highlands Library, 2801 NE 10th Street"
-  same_as: "https://kcls.bibliocommons.com/events/6a6794e40d65ac3600428928"
-  card: "baby-story-time-highlands"
-  heading_id: "baby-story-time-highlands"
-  when: "Fri Oct 16 · 12:00–12:30 p.m."
-  blurbs:
-  - "Nursery rhymes, songs, and stories for newborns to 18 months with an adult. Bring a mat or blanket.\
-    \ Free; space is limited."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a6794e40d65ac3600428928"
-    label: "Baby Story Time"
-  description: "Nursery rhymes, songs, and stories for newborns to 18 months with an adult. Bring a mat\
-    \ or blanket. Free; space is limited."
-  hub_blurb: "Baby stories at Renton Highlands Library."
-  ages: "Toddlers"
-  tags:
-  - "story-time"
-  photo:
-    src: "/assets/images/renton/renton-highlands-library.webp"
-    alt: "Renton Highlands Library"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/renton-highlands/"
-    license: "organizer"
 - name: "Station 11 Open House"
   cost: "Free"
   setting: "Outdoor"
@@ -846,6 +772,26 @@
     credit: "Photo: King County Library System programs at Family First."
     source: "https://kcls.org/locations/fairwood/"
     license: "organizer"
+- name: "Mason Bee Care Workshop"
+  cost: "Free"
+  setting: "Indoor"
+  signup: true
+  tags:
+  - "free"
+  start: "2026-10-27T18:00:00-07:00"
+  end: "2026-10-27T19:30:00-07:00"
+  place: "Renton Library, 100 Mill Ave S"
+  same_as: "https://kcls.bibliocommons.com/events/6a9261f91c197d11325ba1be"
+  card: "mason-bee-care-workshop"
+  heading_id: "mason-bee-care-workshop"
+  when: "Tue Oct 27 · 6:00–7:30 p.m."
+  blurbs:
+  - "Learn how native mason bees live, compare bee houses, and help harvest real cocoons to take home ideas for your yard. For teens and adults, and ages 8 to 12 with an adult. Free, registration required."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a9261f91c197d11325ba1be"
+    label: "Mason Bees Learning and Hands-On Pollinator Care Workshop"
+  description: "Learn how native mason bees live, compare bee houses, and help harvest real cocoons. For teens and adults, and ages 8 to 12 with an adult. Free, registration required."
+  hub_blurb: "Hands-on mason bee care for ages 8 and up."
 - name: "Spanish Story Time at Family First"
   cost: "Free"
   ages: "Toddlers"

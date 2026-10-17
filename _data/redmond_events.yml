@@ -1,31 +1,3 @@
-- name: "Lap Sit Baby Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-16T10:30:00-07:00"
-  end: "2026-10-16T11:30:00-07:00"
-  place: "Redmond Library, 15990 NE 85th St"
-  same_as: "https://kcls.bibliocommons.com/events/6ab463b60c7bf418f4e3c6bb"
-  card: "lap-sit-baby-story-time-2"
-  heading_id: "lap-sit-baby-story-time-2"
-  when: "Fri Oct 16 · 10:30–11:30 a.m."
-  blurbs:
-  - "Stories, music, and rhymes for newborns to 18 months (infants and crawlers) with an adult, then play\
-    \ time. Free at Redmond Library."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6ab463b60c7bf418f4e3c6bb"
-    label: "Lap Sit Baby Story Time"
-  description: "Stories, music, and rhymes for newborns to 18 months (infants and crawlers) with an adult,\
-    \ then play time. Free at Redmond Library."
-  hub_blurb: "Lap-sit stories for babies at Redmond Library."
-  ages: "Toddlers"
-  tags:
-  - "story-time"
-  photo:
-    src: "/assets/images/redmond/redmond-library.webp"
-    alt: "Redmond Library"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/redmond/"
-    license: "organizer"
 - name: "Redmond Saturday Market"
   setting: "Outdoor"
   cost: "Free"
@@ -433,6 +405,26 @@
     \ the visit. It runs 11:00 a.m. to 4:00 p.m. each day. Register for a session."
   hub_blurb: "A free remembrance at the farm for animals and pets who have died, with art as part of the\
     \ visit."
+- name: "Stress Less: Yoga for Teens"
+  cost: "Free"
+  ages: "Teens"
+  setting: "Indoor"
+  tags:
+  - "free"
+  start: "2026-10-27T18:00:00-07:00"
+  end: "2026-10-27T19:00:00-07:00"
+  place: "Redmond Library, 15990 NE 85th St"
+  same_as: "https://kcls.bibliocommons.com/events/6abad45829c3d600332c3f0e"
+  card: "stress-less-yoga-for-teens"
+  heading_id: "stress-less-yoga-for-teens"
+  when: "Tue Oct 27 · 6:00–7:00 p.m."
+  blurbs:
+  - "Gentle yoga, breathing, and a short meditation to help teens handle school stress, with tools they can use at home. Free, from the Friends of the Redmond Library."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6abad45829c3d600332c3f0e"
+    label: "Stress Less: Yoga for Calming Anxiety"
+  description: "Gentle yoga, breathing, and a short meditation to help teens handle school stress, with tools they can use at home. Free, from the Friends of the Redmond Library."
+  hub_blurb: "Gentle yoga and breathing to help teens handle stress."
 - name: "Toddler Story Time"
   cost: "Free"
   ages: "Toddlers"
