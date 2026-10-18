@@ -69,52 +69,6 @@
     \ two hours."
   hub_blurb: "The Northwest Railway Museum runs a family ride from the Snoqualmie Depot, with another\
     \ boarding point in North Bend."
-- name: "Celebrate Arbor Day at Hoff Park"
-  cost: "Free"
-  ages: "All ages"
-  setting: "Outdoor"
-  signup: true
-  start: "2026-10-17T10:00:00-07:00"
-  end: "2026-10-17T14:00:00-07:00"
-  place: "Hoff Park, 7227 SE Hoff Street"
-  same_as: "https://www.snoqualmiewa.gov/Calendar.aspx?EID=3420"
-  card: "celebrate-arbor-day-at-hoff-park"
-  order: "7"
-  heading_id: "celebrate-arbor-day-at-hoff-park"
-  when: "Sat Oct 17 · 10:00 a.m.–2:00 p.m."
-  blurbs:
-  - "Help plant 16 new shade trees beside the new playground at Hoff Park, with a scavenger hunt, pizza,\
-    \ and the mayor's Arbor Day proclamation. Everyone gets to plant at least one tree. Free. The city\
-    \ asks you to sign up first."
-  links:
-  - href: "https://www.snoqualmiewa.gov/Calendar.aspx?EID=3420"
-    label: "Celebrate Arbor Day at Hoff Park"
-  - href: "https://www.snoqualmiewa.gov/green"
-    label: "Sign up"
-  description: "Help plant 16 new shade trees beside the new playground at Hoff Park, with a scavenger\
-    \ hunt, pizza, and the mayor's Arbor Day proclamation. Everyone gets to plant at least one tree. Free.\
-    \ The city asks you to sign up first."
-  hub_blurb: "Help plant 16 new shade trees beside the new playground, with a scavenger hunt and pizza."
-- name: "LEGO Block Party in Fall City"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-17T13:00:00-07:00"
-  end: "2026-10-17T15:00:00-07:00"
-  place: "Fall City Library, 33415 SE 42nd Place"
-  same_as: "https://kcls.bibliocommons.com/v2/events/6a90c89269166f088b956ef0"
-  card: "lego-block-party-in-fall-city"
-  order: "8"
-  heading_id: "lego-block-party-in-fall-city"
-  when: "Sat Oct 17 · 1:00–3:00 p.m."
-  blurbs:
-  - "Another Fall City listing on this page. Ages 4 and older can build with the library’s bricks and\
-    \ leave when they are done. No registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/v2/events/6a90c89269166f088b956ef0"
-    label: "LEGO Block Party"
-  description: "Another Fall City listing on this page. Ages 4 and older can build with the library's\
-    \ bricks and leave when they are done. No registration."
-  hub_blurb: "Another Fall City listing on this page."
 - name: "Little Lab: Stories that Count"
   cost: "Free"
   setting: "Indoor"
@@ -649,6 +603,65 @@
     label: "Family Story Time"
   description: "Stories, songs, rhymes, and movement for young children with an adult, then a short play time that ends with bubbles. No registration."
   hub_blurb: "Stories, songs, rhymes, and movement for young children, ending with bubbles."
+- name: "Madhubani Art on Wooden Keepsakes"
+  cost: "Free"
+  setting: "Indoor"
+  tags:
+  - "free"
+  start: "2026-11-14T14:00:00-08:00"
+  end: "2026-11-14T15:30:00-08:00"
+  place: "Fall City Library, 33415 SE 42nd Place"
+  same_as: "https://kcls.bibliocommons.com/events/6ab2bdf8ab7a8e0037c39ce5"
+  card: "madhubani-art-fall-city"
+  heading_id: "madhubani-art-fall-city"
+  when: "Sat Nov 14 · 2:00–3:30 p.m."
+  blurbs:
+  - "Learn about Madhubani, a folk painting style from India, then paint your own wooden frame, coasters, or bookmarks to take home. Best for ages 9 and up; ages 5 to 8 come with an adult. Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ab2bdf8ab7a8e0037c39ce5"
+    label: "Indian Traditional Arts on Functional Wooden Pieces"
+  description: "Learn about Madhubani, a folk painting style from India, then paint your own wooden frame, coasters, or bookmarks to take home. Best for ages 9 and up; ages 5 to 8 come with an adult. Free."
+  hub_blurb: "Paint Indian Madhubani designs on wooden keepsakes."
+- name: "Toddler Story Time"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Indoor"
+  tags:
+  - "story-time"
+  start: "2026-11-19T10:15:00-08:00"
+  end: "2026-11-19T10:45:00-08:00"
+  place: "Snoqualmie Library, 7824 Center Boulevard SE"
+  same_as: "https://kcls.bibliocommons.com/events/6ad02a5c96ec3a003adaac2c"
+  card: "toddler-story-time-nov-19"
+  heading_id: "toddler-story-time-nov-19"
+  when: "Thu Nov 19 · 10:15–10:45 a.m."
+  blurbs:
+  - "Stories, songs, rhymes, and movement for babies and toddlers up to 36 months with an adult, then playtime and bubbles. Older siblings welcome. Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ad02a5c96ec3a003adaac2c"
+    label: "Toddler Story Time"
+  description: "Stories, songs, rhymes, and movement for babies and toddlers up to 36 months with an adult, then playtime and bubbles. Older siblings welcome. Free."
+  hub_blurb: "Stories and songs for babies and toddlers, then bubbles."
+- name: "Family Story Time"
+  cost: "Free"
+  ages: "All ages"
+  setting: "Indoor"
+  tags:
+  - "story-time"
+  start: "2026-11-19T11:15:00-08:00"
+  end: "2026-11-19T11:45:00-08:00"
+  place: "Snoqualmie Library, 7824 Center Boulevard SE"
+  same_as: "https://kcls.bibliocommons.com/events/6ad02a5b96ec3a003adaac27"
+  card: "family-story-time-nov-19"
+  heading_id: "family-story-time-nov-19"
+  when: "Thu Nov 19 · 11:15–11:45 a.m."
+  blurbs:
+  - "Stories, songs, rhymes, and movement for young children with an adult, then a short playtime that ends with bubbles. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ad02a5b96ec3a003adaac27"
+    label: "Family Story Time"
+  description: "Stories, songs, rhymes, and movement for young children with an adult, then a short playtime that ends with bubbles. Free, no registration."
+  hub_blurb: "Stories and songs for young kids, then bubbles."
 - name: "Snoqualmie Winter Lights"
   setting: "Outdoor"
   cost: "Free"

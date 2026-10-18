@@ -1,17 +1,13 @@
 # Home-page picks for Friday Oct 16 through Sunday Oct 18, 2026.
-# Confirmed Saturday Oct 17 daily refresh.
+# Refreshed Sunday Oct 18 daily refresh for events still running today.
 # Names match _data/{city}_events.yml.
-- city: redmond
-  name: Harvest Festival
-- city: bothell
-  name: Crow Fest
 - city: snoqualmie
   name: Halloween Train
-- city: bellevue
-  name: Diwali Sangam
+- city: issaquah
+  name: Salmon Discovery Walk at Lake Sammamish State Park
+- city: carnation
+  name: Oxtober
 - city: maple-valley
   name: Haunted Forest Family Walk
-- city: issaquah
-  name: Issaquah Goes Apples
-- city: north-bend
-  name: Oaktoberfest and Arbor Day planting
+- city: bellevue
+  name: Diwali Jharokha Workshop

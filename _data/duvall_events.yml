@@ -55,32 +55,6 @@
     \ listing stays up through October."
   hub_blurb: "Five acres of pumpkins still on the vine, a corn maze with a shorter path for small children,\
     \ and goats, pigs, and cows."
-- name: "Free Community Art Day"
-  ages: "All ages"
-  signup: true
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-17T11:00:00-07:00"
-  end: "2026-10-17T14:00:00-07:00"
-  place: "Northwest Art Center, 15705 Main Street NE, Suite F"
-  organizer: "Northwest Art Center"
-  organizer_url: "https://northwestartcenter.org/"
-  same_as: "https://www.valleyrecord.com/2026/09/25/snoqualmie-valley-community-calendar-sept-25-edition/"
-  card: "free-community-art-day"
-  order: "6"
-  heading_id: "free-community-art-day"
-  when: "Sat Oct 17 · 11:00 a.m.–2:00 p.m."
-  blurbs:
-  - "A free drop-in art day, with supplies for all ages. Children 14 and under need an adult. The 2026\
-    \ art days are supported by 4Culture. Register on the center’s events page."
-  links:
-  - href: "https://www.valleyrecord.com/2026/09/25/snoqualmie-valley-community-calendar-sept-25-edition/"
-    label: "Valley Record calendar"
-  - href: "https://northwestartcenter.org/events/community-events/"
-    label: "Northwest Art Center"
-  description: "A free drop-in art day, with supplies for all ages. Children 14 and under need an adult.\
-    \ The 2026 art days are supported by 4Culture. Register on the center's events page."
-  hub_blurb: "A free drop-in art day, with supplies for all ages."
 - name: "Baby Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -271,6 +245,46 @@
   description: "Teens watch anime, try a short Japanese lesson, make a themed craft, and snack together.\
     \ Free drop-in for teens and young adults who love anime and manga."
   hub_blurb: "A teen anime meetup with crafts, snacks, and a mini language lesson."
+- name: "Family Story Time"
+  cost: "Free"
+  ages: "All ages"
+  setting: "Indoor"
+  tags:
+  - "story-time"
+  start: "2026-11-19T10:30:00-08:00"
+  end: "2026-11-19T11:30:00-08:00"
+  place: "Duvall Library, 15508 Main Street NE"
+  same_as: "https://kcls.bibliocommons.com/events/6aa89174ca248a002915d99c"
+  card: "family-story-time-nov-19"
+  heading_id: "family-story-time-nov-19"
+  when: "Thu Nov 19 · 10:30–11:30 a.m."
+  blurbs:
+  - "Stories, songs, rhymes, and movement to build early reading skills, then a short play time. All ages with an adult. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6aa89174ca248a002915d99c"
+    label: "Family Story Time"
+  description: "Stories, songs, rhymes, and movement to build early reading skills, then a short play time. All ages with an adult. Free, no registration."
+  hub_blurb: "Stories, songs, and rhymes, then a short play time."
+- name: "LEGO Block Party"
+  cost: "Free"
+  ages: "All ages"
+  setting: "Indoor"
+  tags:
+  - "free"
+  start: "2026-11-19T16:30:00-08:00"
+  end: "2026-11-19T17:30:00-08:00"
+  place: "Duvall Library, 15508 Main Street NE"
+  same_as: "https://kcls.bibliocommons.com/events/6a8dfc9b29a7dd0d674697b4"
+  card: "lego-block-party-nov-19"
+  heading_id: "lego-block-party-nov-19"
+  when: "Thu Nov 19 · 4:30–5:30 p.m."
+  blurbs:
+  - "An open LEGO building hour at the library. The bricks are supplied, so just bring ideas, and stay the whole time or drop in. All ages. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a8dfc9b29a7dd0d674697b4"
+    label: "LEGO Block Party"
+  description: "An open LEGO building hour at the library. The bricks are supplied, so just bring ideas, and stay the whole time or drop in. All ages. Free, no registration."
+  hub_blurb: "Open LEGO building for all ages."
 - name: "Novelty Hill Farm Christmas Tree Lighting"
   signup: true
   setting: "Outdoor"

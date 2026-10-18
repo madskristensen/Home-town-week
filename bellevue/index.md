@@ -4,7 +4,7 @@ title: Bellevue
 city: bellevue
 state: wa
 description: Upcoming family events in Bellevue on the Eastside.
-hook: Saturday, Oct 17 brings Alice's Magical Adventure, a LEGO block party, and Diwali Sangam. Halloween week brings the farm animals, the Bellevue Y, KidsQuest, Little Monsters on Main Street, and Sleepy Hollow at the youth theatre.
+hook: Oct 18 brings Alice's Magical Adventure and a Diwali Jharokha workshop. Oct 24 brings Halloween on the Hill, trick-or-treat with the farm animals, and Eastside Día de los Muertos, and Sleepy Hollow opens at the youth theatre Oct 30.
 ---
 
 
