@@ -70,12 +70,12 @@
   lng: -122.135435
   season_start: '2026-04-01'
   season_end: '2026-10-31'
-  when_open: Open for the 2026 season. Wednesdays to Fridays, 12 to 6 p.m. Saturdays, 10 a.m. to 4 p.m. Sundays, 12 to 4 p.m.
+  when_open: Open for the 2026 season. Fall hours from Oct 21, Wednesdays to Fridays, 12 to 5 p.m. Saturdays, 10 a.m. to 4 p.m. Sundays, 12 to 4 p.m.
   when_closed: Seasonal. Check the farm site for the next season.
   description: Farm store with certified organic vegetables grown out back, plus Washington fruit, eggs, dairy, and pantry items. Open Wednesdays to Sundays in season.
   source: https://www.ecolibriumfarms.com/farm-store
   source_label: Farm site
-  last_verified: '2026-10-11'
+  last_verified: '2026-10-18'
   photo:
     image: /assets/images/markets/stands/ecolibrium.webp
     alt: Fruit and vegetable crates on wooden shelves inside the Ecolibrium Farms store.
