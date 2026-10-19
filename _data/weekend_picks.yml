@@ -1,13 +1,15 @@
-# Home-page picks for Friday Oct 16 through Sunday Oct 18, 2026.
-# Refreshed Sunday Oct 18 daily refresh for events still running today.
+# Home-page picks for Friday Oct 23 through Sunday Oct 25, 2026.
+# Set Monday Oct 19 daily refresh for the Halloween weekend ahead.
 # Names match _data/{city}_events.yml.
 - city: snoqualmie
   name: Halloween Train
-- city: issaquah
-  name: Salmon Discovery Walk at Lake Sammamish State Park
-- city: carnation
-  name: Oxtober
-- city: maple-valley
-  name: Haunted Forest Family Walk
+- city: kirkland
+  name: Treat Street at Kirkland Urban
 - city: bellevue
-  name: Diwali Jharokha Workshop
+  name: Eastside Dia de los Muertos
+- city: renton
+  name: Olde Fashioned Halloween Party
+- city: north-bend
+  name: Great Si View Spooktacular
+- city: issaquah
+  name: Tract-or-Treat at Infinity Farm

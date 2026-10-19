@@ -19,56 +19,6 @@
     label: "Register"
   description: "A free one-mile ranger hike for all ages on the mostly level gravel trails. The fall guide lists it Saturdays at 2:00 p.m. through Dec 26. Register ahead. Bring binoculars if you have them."
   hub_blurb: "A free one-mile ranger hike for all ages on the mostly level gravel trails."
-- name: "Alice's Magical Adventure"
-  setting: "Indoor"
-  ages: "Kids"
-  signup: true
-  start: "2026-10-17T13:00:00-07:00"
-  end: "2026-10-18T16:00:00-07:00"
-  place: "Meydenbauer Center, 11100 NE 6th St"
-  same_as: "https://theatre33.ludus.com/"
-  card: "alices-magical-adventure"
-  order: "3"
-  heading_id: "alices-magical-adventure"
-  title: "Alice’s Magical Adventure"
-  when: "Sat Oct 17 through Sun Oct 18"
-  blurbs:
-  - "Theatre33’s Russian-language family play, about an hour, for ages 5 and older. Alice walks into a\
-    \ world of riddles and odd characters. Saturday is 1:00 p.m. and 5:00 p.m. Sunday is 1:00 p.m. and\
-    \ 4:00 p.m. 4Culture supports free and reduced admission."
-  links:
-  - href: "https://theatre33.ludus.com/"
-    label: "Theatre33 tickets"
-  description: "Theatre33's Russian-language family play, about an hour, for ages 5 and older. Alice walks\
-    \ into a world of riddles and odd characters. Saturday is 1:00 p.m. and 5:00 p.m. Sunday is 1:00 p.m.\
-    \ and 4:00 p.m. 4Culture supports free and reduced admission."
-  hub_blurb: "Theatre33's Russian-language family play, about an hour, for ages 5 and older."
-- name: "Diwali Jharokha Workshop"
-  cost: "Free"
-  setting: "Indoor"
-  ages: "All ages"
-  signup: true
-  tags:
-  - "diwali"
-  start: "2026-10-18T13:00:00-07:00"
-  end: "2026-10-18T15:00:00-07:00"
-  place: "Crossroads Community Center, 16000 NE 10th St"
-  same_as: "https://kcls.bibliocommons.com/events/6a46e2a7c52cdc3600ee781b"
-  card: "diwali-jharokha-workshop"
-  order: "6"
-  heading_id: "diwali-jharokha-workshop"
-  when: "Sun Oct 18 · 1:00–3:00 p.m."
-  blurbs:
-  - "Decorate a wooden candle holder shaped like a traditional Indian jharokha window, for Diwali. All\
-    \ ages, and children need an adult with them. Free. Registration is encouraged, not required. Deepti\
-    \ Designs hosts it."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a46e2a7c52cdc3600ee781b"
-    label: "Diwali Jharokha Workshop"
-  description: "Decorate a wooden candle holder shaped like a traditional Indian jharokha window, for\
-    \ Diwali. All ages, and children need an adult with them. Free. Registration is encouraged, not required.\
-    \ Deepti Designs hosts it."
-  hub_blurb: "Decorate a wooden candle holder shaped like a traditional Indian jharokha window, for Diwali."
 - name: "Kids in the Garden: Owls"
   setting: "Outdoor"
   ages: "Toddlers"

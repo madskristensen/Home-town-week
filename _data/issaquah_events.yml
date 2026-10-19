@@ -30,51 +30,6 @@
   description: "Build a scarecrow with an apple, drop it at the Historic Shell Station by Oct 17, then\
     \ see them all downtown through Nov 1. Free straw from the Grange."
   hub_blurb: "Family-built scarecrows line downtown Issaquah through Nov 1."
-- name: "Salmon Discovery Walk at Lake Sammamish State Park"
-  cost: "Free"
-  setting: "Outdoor"
-  start: "2026-10-18T10:00:00-07:00"
-  end: "2026-10-18T14:00:00-07:00"
-  place: "Lake Sammamish State Park, 2000 NW Sammamish Road"
-  same_as: "https://www.issaquahfish.org/discoverywalk/"
-  card: "salmon-discovery-walk-lake-sammamish"
-  order: "8"
-  heading_id: "salmon-discovery-walk-lake-sammamish"
-  when: "Sun Oct 18 · 10:00 a.m.–2:00 p.m."
-  blurbs:
-  - "Friends of the Issaquah Salmon Hatchery leads free 30-minute walks on the boardwalk with a scavenger\
-    \ hunt about salmon and habitat. Finish for a prize. You may spot fish in the creek."
-  links:
-  - href: "https://www.issaquahfish.org/discoverywalk/"
-    label: "Salmon Discovery Walk"
-  description: "Friends of the Issaquah Salmon Hatchery leads free 30-minute walks on the boardwalk with\
-    \ a scavenger hunt about salmon and habitat. Finish for a prize. You may spot fish in the creek."
-  hub_blurb: "Free guided boardwalk walks and a salmon scavenger hunt."
-- name: "Walk n Wag Harvest"
-  cost: "Free"
-  ages: "All ages"
-  setting: "Outdoor"
-  tags:
-  - "harvest"
-  start: "2026-10-18T12:00:00-07:00"
-  end: "2026-10-18T16:00:00-07:00"
-  place: "Lake Sammamish State Park, 2010 NW Sammamish Rd"
-  same_as: "https://www.lakesammamishfriends.org/events-old/2026/10/18/walk-n-wag-harvest"
-  card: "walk-n-wag-harvest"
-  order: "9"
-  heading_id: "walk-n-wag-harvest"
-  when: "Sun Oct 18 · 12:00–4:00 p.m."
-  blurbs:
-  - "A free dog walk and harvest afternoon from Friends of Lake Sammamish State Park. The 3K starts at\
-    \ noon and winds through the apple orchard. A vendor village, talks, and a pet costume contest run\
-    \ until 4:00 p.m. Dogs stay on a leash."
-  links:
-  - href: "https://www.lakesammamishfriends.org/events-old/2026/10/18/walk-n-wag-harvest"
-    label: "Walk n Wag Harvest"
-  description: "A free dog walk and harvest afternoon from Friends of Lake Sammamish State Park. The 3K\
-    \ starts at noon and winds through the apple orchard. A vendor village, talks, and a pet costume contest\
-    \ run until 4:00 p.m. Dogs stay on a leash."
-  hub_blurb: "A free dog walk and harvest afternoon from Friends of Lake Sammamish State Park."
 - name: "Snuggle Up Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -293,6 +248,31 @@
     \ recommended for children under 6. Door admission is $15, and children 3 and younger are free. Space\
     \ is limited."
   hub_blurb: "Two sessions at Pickering Barn."
+- name: "Rick Rizzs Road Celebration"
+  cost: "Free"
+  setting: "Outdoor"
+  tags:
+  - "free"
+  start: "2026-10-27T16:30:00-07:00"
+  end: "2026-10-27T17:30:00-07:00"
+  place: "Dodd Field, School District Road, Issaquah"
+  same_as: "https://www.issaquahwa.gov/calendar.aspx?EID=14772"
+  card: "rick-rizzs-road-celebration"
+  heading_id: "rick-rizzs-road-celebration"
+  when: "Tue Oct 27 · 4:30–5:30 p.m."
+  blurbs:
+  - "The city names School District Road, the way to Issaquah Valley Elementary and the Little League field, for longtime Mariners broadcaster Rick Rizzs. Hear from the mayor and Rick, with Mariners guests on hand. Free."
+  links:
+  - href: "https://www.issaquahwa.gov/calendar.aspx?EID=14772"
+    label: "Rick Rizzs Road Celebration"
+  photo:
+    src: "/assets/images/issaquah/rick-rizzs.webp"
+    alt: "Rick Rizzs, left, in a Mariners jacket, on stage at a Seattle Mariners FanFest."
+    credit: "Photo: Mark Sobba, CC BY 2.0"
+    source: "https://commons.wikimedia.org/wiki/File:Rick_Rizzs_and_Jack_Zduriencik.jpg"
+    license: "CC BY 2.0"
+  description: "The city names School District Road, the way to Issaquah Valley Elementary and the Little League field, for longtime Mariners broadcaster Rick Rizzs. Hear from the mayor and Rick, with Mariners guests on hand. Free."
+  hub_blurb: "Issaquah names a street for Mariners voice Rick Rizzs."
 - name: "Snuggle Up Story Time"
   cost: "Free"
   setting: "Indoor"
