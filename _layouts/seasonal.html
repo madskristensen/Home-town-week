@@ -4,6 +4,13 @@ layout: default
 {%- if page.home_lights -%}
 <article class="page wrap hub-page{% if page.map_id == "halloween" %} map-theme-halloween{% endif %}">
   {%- include page-head.html -%}
+  {%- if page.map_id == "markets" -%}
+  {%- assign markets_note = site.data.markets_open_note | append: "" | strip -%}
+  {%- if markets_note.size > 0 -%}
+  <p class="hub-section-intro">{{ markets_note }}</p>
+  {%- endif -%}
+  <p class="hub-section-intro">For pumpkin patches, see <a href="{{ '/fall/' | relative_url }}">fall events</a>. For u-cut trees, see <a href="{{ '/articles/christmas-tree-farms/' | relative_url }}">Christmas tree farms</a>.</p>
+  {%- endif -%}
   {%- include season-sponsor.html -%}
   {%- include updated-line.html -%}
   {%- include home-lights.html -%}
@@ -42,8 +49,12 @@ layout: default
   {%- include card-grid.html events=weekend_cards show_city=true eager=1 -%}
   {%- endif -%}
   {%- endif -%}
+  {%- if page.hub_id == "this-weekend" -%}
+  {%- assign fall_hub = site.data.hub_pages.fall -%}
+  <p class="hub-section-intro">{%- if fall_hub.in_season -%}<a href="{{ '/fall/#patches' | relative_url }}">Pumpkin patches and corn mazes</a> are listed through Oct 31. {% endif %}<a href="{{ '/no-school-days/' | relative_url }}">No-school days</a> for the Eastside districts.</p>
+  {%- endif -%}
   {%- if page.hub_id == "fall" -%}
-  <p class="hub-section-intro">Want something to check off together? <a href="{{ '/fall/bucket-list/' | relative_url }}">The fall family bucket list</a> prints on one page.</p>
+  <p class="hub-section-intro">Farm hours and a map are in the <a href="{{ '/articles/pumpkin-patches/' | relative_url }}">pumpkin patch guide</a>. Markets still open are on <a href="{{ '/farmers-markets/' | relative_url }}">farmers markets</a>. <a href="{{ '/fall/bucket-list/' | relative_url }}">The fall family bucket list</a> prints on one page.</p>
   {%- elsif page.hub_id == "rainy-day" -%}
   <p class="hub-section-intro">Guides for wet days: <a href="{{ '/articles/rainy-day-indoor-play/' | relative_url }}">rainy day activities</a>, <a href="{{ '/indoor-play/' | relative_url }}">indoor play spaces and toddler drop-ins</a>, <a href="{{ '/articles/indoor-pools-swim-lessons/' | relative_url }}">indoor pools and swim lessons</a>, and <a href="{{ '/articles/ice-roller-skating/' | relative_url }}">ice and roller skating</a>.</p>
   {%- elsif page.hub_id == "christmas" -%}

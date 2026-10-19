@@ -636,6 +636,7 @@ RowDates = Struct.new(
             "id" => id,
             "path" => path,
             "title" => title,
+            "title_plain" => hub["title_plain"] == true,
             "description" => hub["description"].to_s.strip,
             "banner_title" => presence(hub["banner_title"], title),
             "hook" => hub["hook"].to_s.strip,
@@ -1003,6 +1004,7 @@ RowDates = Struct.new(
       page = Jekyll::PageWithoutAFile.new(site, site.source, hub["id"], "index.html")
       page.data["layout"] = "seasonal"
       page.data["title"] = hub["title"]
+      page.data["title_plain"] = true if hub["title_plain"]
       page.data["description"] = hub["description"]
       page.data["permalink"] = hub["path"]
       page.data["hub_id"] = hub["id"]

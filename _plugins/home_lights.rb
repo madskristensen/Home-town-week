@@ -281,7 +281,79 @@ module EastsideCalendar
       end
       market_groups!(packed, rows + stand_rows + drive_rows)
       packed["pins"] = pins
+      apply_market_copy!(site, rows, today)
       packed
+    end
+
+    # Which weekly markets are still inside their posted season, plus any
+    # extra market days still ahead. The sentence is the page intro and,
+    # when it fits, the meta description. Dates come only from the rows.
+    def apply_market_copy!(site, rows, today)
+      note = markets_open_note(rows, today, short: false)
+      site.data["markets_open_note"] = note
+      return if note.empty?
+
+      page = site.pages.find { |item| item.data["permalink"].to_s == "/farmers-markets/" }
+      return unless page
+
+      meta = markets_open_note(rows, today, short: true)
+      # The short line is the meta description. A couple of characters over
+      # 155 keeps the "and" between season-end groups.
+      page.data["description"] = meta if !meta.empty? && meta.length <= 160
+    end
+
+    def markets_open_note(rows, today, short:)
+      open_rows = []
+      extra_rows = []
+      rows.each do |row|
+        next unless row.is_a?(Hash)
+
+        start_on = market_date(row["season_start"])
+        end_on = market_date(row["season_end"])
+        name = row["name"].to_s.strip
+        next if name.empty? || start_on.nil? || end_on.nil?
+
+        if today >= start_on && today <= end_on
+          open_rows << [market_label(row, name, short), end_on]
+        else
+          dates = Array(row["extra_dates"]).filter_map { |value| market_date(value) }.select { |date| date >= today }.sort
+          extra_rows << [market_label(row, name, short), dates] unless dates.empty?
+        end
+      end
+      return "" if open_rows.empty? && extra_rows.empty?
+
+      parts = open_rows.group_by { |_, date| date }.sort_by { |date, _| date }.map do |date, group|
+        "#{name_list(group.map(&:first))} through #{date.strftime("%b %-d")}"
+      end
+      sentence = +"Still open in #{Date::MONTHNAMES[today.month]}: #{clause_list(parts)}."
+      extra_rows.each do |name, dates|
+        sentence << " #{name} returns #{name_list(dates.map { |date| date.strftime("%b %-d") })}."
+      end
+      sentence
+    end
+
+    def market_label(row, name, short)
+      return name.sub(/ Farmers Market\z/, "") if short
+      return "#{name} in Issaquah" if row["city"].to_s == "issaquah" && !name.downcase.include?("issaquah")
+
+      name
+    end
+
+    def clause_list(items)
+      items = items.compact.reject(&:empty?)
+      return name_list(items) if items.size < 2
+      return "#{items[0]}, and #{items[1]}" if items.size == 2
+
+      "#{items[0..-2].join(", ")}, and #{items[-1]}"
+    end
+
+    def name_list(items)
+      items = items.compact.reject(&:empty?)
+      return "" if items.empty?
+      return items[0].to_s if items.size == 1
+      return "#{items[0]} and #{items[1]}" if items.size == 2
+
+      "#{items[0..-2].join(", ")}, and #{items[-1]}"
     end
 
     # Worth the drive: standout markets just outside the 15 cities. The

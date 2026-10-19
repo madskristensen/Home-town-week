@@ -318,6 +318,8 @@ module EastsideCalendar
         "Family events and things to do with kids in #{city_name(page)} | #{page.site.config["title"]}"
       elsif page.url == "/"
         "Things to do with kids on the Eastside | #{page.site.config["title"]}"
+      elsif page.data["title_plain"]
+        page.data["title"].to_s
       elsif page.data["title"].to_s == page.site.config["title"].to_s
         "#{page.site.config["title"]} | #{page.site.config["tagline"]}"
       else

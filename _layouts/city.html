@@ -61,5 +61,7 @@ layout: default
   {%- if event_copy != "" or city_cards != "" -%}
   {%- include suggest-event.html -%}
   {%- endif -%}
+  {%- assign fall_hub = site.data.hub_pages.fall -%}
+  <p class="suggest-event">{%- if fall_hub.in_season -%}<a href="{{ '/fall/#patches' | relative_url }}">Pumpkin patches and corn mazes</a> are listed through Oct 31. {% endif %}<a href="{{ '/no-school-days/' | relative_url }}">No-school days</a> for the Eastside districts.</p>
   {%- include nearby-cities.html -%}
 </article>

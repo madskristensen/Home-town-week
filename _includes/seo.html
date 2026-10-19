@@ -55,6 +55,8 @@
 {%- capture head_title -%}Family events and things to do with kids in {{ city.name }} | {{ site.title }}{%- endcapture -%}
 {%- elsif page.layout == "home" -%}
 {%- capture head_title -%}Things to do with kids on the Eastside | {{ site.title }}{%- endcapture -%}
+{%- elsif page.title_plain -%}
+{%- capture head_title -%}{{ seo_title }}{%- endcapture -%}
 {%- elsif seo_title == site.title -%}
 {%- capture head_title -%}{{ site.title }} | {{ site.tagline }}{%- endcapture -%}
 {%- else -%}

@@ -16,15 +16,16 @@ banner:
 hubs:
   - id: fall
     path: /fall/
-    title: Pumpkin patches, fall festivals, and Halloween on the Eastside
+    title: Pumpkin patches and corn mazes on the Eastside
+    title_plain: true
     banner_title: Fall fun for kids
     hook: Pumpkin patches, corn mazes, harvest festivals, and Halloween.
     link_label: See events
     footer: true
     footer_label: Fall
-    description: Eastside pumpkin patches, corn mazes, apple farms, harvest festivals, and Halloween plans from Sep 1 through Oct 31. Browse Bellevue, Bothell, and the rest of the Eastside.
+    description: Pumpkin patches and corn mazes in Duvall, Carnation, and Fall City, and farms a drive from Bellevue. Harvest festivals in Bellevue, Bothell, and Issaquah.
     llms: Pumpkin patches, corn mazes, u-pick farms, harvest festivals, and Halloween plans for kids.
-    in_season_intro: Pumpkin patches, u-pick farms, harvest festivals, and Halloween plans across the Eastside, listed through Oct 31. For farm hours and a map, see the [pumpkin patch guide](/articles/pumpkin-patches/). For markets still open this month, see [farmers markets](/farmers-markets/).
+    in_season_intro: Pumpkin patches and corn mazes in Duvall, Carnation, and Fall City, plus farms a short drive from Bellevue, listed through Oct 31.
     off_season_intro: The season runs Sep 1 through Oct 31.
     off_season_listed: The season runs Sep 1 through Oct 31. Dates already set are listed below.
     empty: Nothing is listed yet. City pages are where each event is written up, and this page gathers the fall ones.
@@ -35,7 +36,7 @@ hubs:
       - id: patches
         title: Pumpkin patches and corn mazes
         toc: Pumpkin patches and corn mazes
-        intro: Pumpkin patches and corn mazes across Bellevue, Redmond, Issaquah, Bothell, and the rest of the Eastside.
+        intro: Pumpkin patches and corn mazes in Duvall, Carnation, and Fall City.
         tags: [pumpkin-patch, corn-maze]
         keywords: [pumpkin patch]
       - id: u-pick
@@ -69,17 +70,18 @@ hubs:
 
   - id: christmas
     path: /christmas/
-    title: Christmas events for kids on the Eastside
+    title: Eastside Christmas events for kids
+    title_plain: true
     banner_title: Christmas for kids
     hook: Tree lightings, lights, Santa, and shows.
     link_label: See events
     footer: true
     footer_label: Christmas
-    description: Christmas events for kids on the Eastside. Tree lightings, holiday lights, Santa visits, markets, shows, and parades, from Nov 10 through Dec 31.
+    description: Eastside Christmas events for kids from Nov 10 through Dec 31. Tree lightings, holiday lights, Santa visits, shows, and parades.
     llms: Tree lightings, holiday lights, Santa visits, markets, shows, and parades for kids.
-    in_season_intro: Tree lightings, lights, Santa, markets, shows, and parades across the Eastside, listed through Dec 31.
+    in_season_intro: Eastside Christmas events for kids, listed through Dec 31. Tree lightings, holiday lights, Santa visits, shows, and parades.
     off_season_intro: The season runs Nov 10 through Dec 31.
-    off_season_listed: The season runs Nov 10 through Dec 31. Dates already set are listed below.
+    off_season_listed: The season runs Nov 10 through Dec 31. Tree lightings, holiday lights, Santa visits, shows, and parades already set are listed below.
     empty: Nothing is listed yet. City pages are where each event is written up, and this page gathers the Christmas ones.
     season:
       start: "11-10"
