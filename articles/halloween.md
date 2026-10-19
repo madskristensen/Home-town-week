@@ -1,7 +1,8 @@
 ---
 layout: article
 title: Halloween with kids on the Eastside
-description: Trunk-or-treats, downtown candy walks, and quieter Halloween plans for little kids on the Eastside, with the 2026 dates from the organizers.
+seo_title: Halloween Events for Kids 2026: Eastside Trick-or-Treat
+description: Free trunk-or-treats, candy walks and fall festivals for kids in Bellevue, Redmond, Kirkland, Sammamish and Bothell, with 2026 dates from organizers.
 intro: Community candy walks and trunk-or-treats already on the 2026 calendars, plus quieter stops for little kids. The full set is on the Fall hub.
 article_id: halloween
 permalink: /articles/halloween/

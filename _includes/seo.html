@@ -51,8 +51,10 @@
   {%- assign seo_image_mime = "image/png" -%}
 {%- endif -%}
 {%- assign seo_title = page.title | default: site.title -%}
-{%- if page.layout == "city" and city -%}
-{%- capture head_title -%}Family events and things to do with kids in {{ city.name }} | {{ site.title }}{%- endcapture -%}
+{%- if page.seo_title -%}
+{%- capture head_title -%}{{ page.seo_title }}{%- endcapture -%}
+{%- elsif page.layout == "city" and city -%}
+{%- capture head_title -%}Things to Do with Kids in {{ city.name }} This Week{%- endcapture -%}
 {%- elsif page.layout == "home" -%}
 {%- capture head_title -%}Things to do with kids on the Eastside | {{ site.title }}{%- endcapture -%}
 {%- elsif page.title_plain -%}
