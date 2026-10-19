@@ -494,9 +494,9 @@ CardAssign = Struct.new(
           city = city_name.to_s.strip
           event = event_name.to_s.gsub(/[—–]/, " ").gsub(/\s+/, " ").strip
           when_phrase = soon ? "this week" : "coming up"
-          phrase = "Family events and things to do with kids in #{city}"
-          tail = " Parks, markets, library story times, and other plans for families. Updated daily."
-          short_tail = " Parks, markets, and library plans. Updated daily."
+          phrase = "Free and low-cost things to do with kids in #{city}"
+          tail = " Story times, playgrounds, parks, and markets, updated daily."
+          short_tail = " Parks and story times, updated daily."
           unless event.empty?
             lead = "#{phrase} #{when_phrase}, like "
             suffix = ".#{tail}"
