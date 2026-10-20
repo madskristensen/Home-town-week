@@ -263,14 +263,16 @@
 - id: fall-city-summer-market
   name: Fall City Summer Market
   city: snoqualmie
-  address: "Fall City"
+  address: "Aroma Coffee, 33429 SE Fall City-Redmond Rd, Fall City"
+  lat: 47.568537
+  lng: -121.893177
   season_start: "2026-05-29"
   season_end: "2026-08-28"
   when_closed: "Back next May. Last Friday of May through August, 4 to 7 p.m."
-  description: "Last-Friday market in Fall City. The 2026 dates were May 29, June 26, July 31, and August 28, 4 to 7 p.m. The page lists produce, crafts, live music, and activities for kids. It does not publish a street address, so this one is not on the map."
+  description: "Last-Friday market at Aroma Coffee in Fall City, held the last Friday of each month from May through August, 4 to 7 p.m. The page lists produce, crafts, live music, and activities for kids."
   source: "https://www.fallcity.org/summermarkets"
   source_label: "Market site"
-  last_verified: "2026-10-01"
+  last_verified: "2026-10-19"
   photo:
     image: /assets/images/markets/fall-city-logo.webp
     alt: Fall City Summer Market and Gathering logo with a sunflower.
