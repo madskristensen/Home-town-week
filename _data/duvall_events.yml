@@ -55,57 +55,6 @@
     \ listing stays up through October."
   hub_blurb: "Five acres of pumpkins still on the vine, a corn maze with a shorter path for small children,\
     \ and goats, pigs, and cows."
-- name: "Baby Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-19T10:30:00-07:00"
-  end: "2026-10-19T11:30:00-07:00"
-  place: "Duvall Library, 15508 Main Street NE"
-  same_as: "https://kcls.bibliocommons.com/events/6aa897a3ab7a8e0037c1d173"
-  card: "baby-story-time"
-  heading_id: "baby-story-time"
-  when: "Mon Oct 19 · 10:30–11:30 a.m."
-  blurbs:
-  - "Nursery rhymes, songs, and stories for newborns to 18 months with an adult at Duvall Library, then\
-    \ play time. Free."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6aa897a3ab7a8e0037c1d173"
-    label: "Baby Story Time"
-  description: "Nursery rhymes, songs, and stories for newborns to 18 months with an adult at Duvall Library,\
-    \ then play time. Free."
-  hub_blurb: "Baby stories at Duvall Library."
-  ages: "Toddlers"
-  tags:
-  - "story-time"
-  photo:
-    src: "/assets/images/duvall/duvall-library.webp"
-    alt: "Duvall Library"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/duvall/"
-    license: "organizer"
-- name: "Sew a 3-D Pumpkin Plushie"
-  cost: "Free"
-  ages: "Kids"
-  setting: "Indoor"
-  tags:
-  - "halloween"
-  start: "2026-10-19T16:00:00-07:00"
-  end: "2026-10-19T17:30:00-07:00"
-  place: "Duvall Library, 15508 Main Street NE"
-  same_as: "https://kcls.bibliocommons.com/events/6ac810e6ebad220045440c9f"
-  card: "sew-a-3-d-pumpkin-plushie"
-  order: "7"
-  heading_id: "sew-a-3-d-pumpkin-plushie"
-  when: "Mon Oct 19 · 4:00–5:30 p.m."
-  blurbs:
-  - "A beginner felt-sewing project that ends with a tiny pumpkin to take home. Ages 8 to 18, and kids\
-    \ 8 to 10 need an adult along. Free, no registration, space is limited."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6ac810e6ebad220045440c9f"
-    label: "Sew a 3-D Pumpkin Plushie"
-  description: "A beginner felt-sewing project that ends with a tiny pumpkin to take home. Ages 8 to 18,\
-    \ and kids 8 to 10 need an adult along. Free, no registration, space is limited."
-  hub_blurb: "A beginner felt-sewing project that ends with a tiny pumpkin to take home."
 - name: "Duvall LGBTQ+ Youth Group"
   cost: "Free"
   setting: "Indoor"
@@ -245,6 +194,26 @@
   description: "Teens watch anime, try a short Japanese lesson, make a themed craft, and snack together.\
     \ Free drop-in for teens and young adults who love anime and manga."
   hub_blurb: "A teen anime meetup with crafts, snacks, and a mini language lesson."
+- name: "Baby Story Time"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Indoor"
+  tags:
+  - "story-time"
+  start: "2026-11-09T10:30:00-08:00"
+  end: "2026-11-09T11:30:00-08:00"
+  place: "Duvall Library, 15508 Main Street NE"
+  same_as: "https://kcls.bibliocommons.com/events/6ad65f08fee2d21deb245921"
+  card: "baby-story-time-nov-9"
+  heading_id: "baby-story-time-nov-9"
+  when: "Mon Nov 9 · 10:30–11:30 a.m."
+  blurbs:
+  - "Rhymes, songs, and stories for babies up to 18 months with an adult, then up to half an hour of play. Older siblings are welcome. Free. There is no session on Nov 16."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ad65f08fee2d21deb245921"
+    label: "Baby Story Time"
+  description: "Rhymes, songs, and stories for babies up to 18 months with an adult, then up to half an hour of play. Older siblings are welcome. Free. There is no session on Nov 16."
+  hub_blurb: "Baby rhymes and songs, then play time, at Duvall Library."
 - name: "Family Story Time"
   cost: "Free"
   ages: "All ages"
@@ -285,6 +254,26 @@
     label: "LEGO Block Party"
   description: "An open LEGO building hour at the library. The bricks are supplied, so just bring ideas, and stay the whole time or drop in. All ages. Free, no registration."
   hub_blurb: "Open LEGO building for all ages."
+- name: "Game On!"
+  cost: "Free"
+  ages: "Teens"
+  setting: "Indoor"
+  tags:
+  - "free"
+  start: "2026-11-22T13:00:00-08:00"
+  end: "2026-11-22T15:00:00-08:00"
+  place: "Duvall Library, 15508 Main Street NE"
+  same_as: "https://kcls.bibliocommons.com/events/6ad6697729c3d6003331092e"
+  card: "game-on-duvall-nov-22"
+  heading_id: "game-on-duvall-nov-22"
+  when: "Sun Nov 22 · 1:00–3:00 p.m."
+  blurbs:
+  - "Teens 11 to 18 play Mario Kart, Smash Bros, Splatoon, and Mario Party on the library's Switch, or Minecraft and Roblox on library laptops. Bring your own console if you like. Snacks from the Friends of the Library. Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ad6697729c3d6003331092e"
+    label: "Game On!"
+  description: "Teens 11 to 18 play Mario Kart, Smash Bros, Splatoon, and Mario Party on the library's Switch, or Minecraft and Roblox on library laptops. Bring your own console if you like. Snacks from the Friends of the Library. Free."
+  hub_blurb: "Switch, Minecraft, and Roblox afternoon for teens."
 - name: "Novelty Hill Farm Christmas Tree Lighting"
   signup: true
   setting: "Outdoor"

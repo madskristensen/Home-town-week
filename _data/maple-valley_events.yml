@@ -41,53 +41,6 @@
     \ This is the Sunday family walk. The Friday and Saturday night show is a separate, scarier ticket."
   hub_blurb: "A daylight walk on the haunted trail, with no jump scares, and trick-or-treating while the\
     \ candy lasts."
-- name: "Preschool Building Party"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  start: "2026-10-19T10:30:00-07:00"
-  end: "2026-10-19T11:15:00-07:00"
-  place: "Maple Valley Library, 21844 SE 248th St, Maple Valley"
-  same_as: "https://kcls.bibliocommons.com/events/6a80e1832dac6e00371f5a24"
-  card: "preschool-building-party"
-  order: "9"
-  heading_id: "preschool-building-party"
-  when: "Mon Oct 19 · 10:30–11:15 a.m."
-  blurbs:
-  - "Building toys for ages 3 to 5. Small pieces, so it is not for age 2 and younger. No registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a80e1832dac6e00371f5a24"
-    label: "Preschool Building Party"
-  description: "Building toys for ages 3 to 5. Small pieces, so it is not for age 2 and younger. No registration."
-  hub_blurb: "Building toys for ages 3 to 5."
-- name: "Baby Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-19T13:00:00-07:00"
-  end: "2026-10-19T14:00:00-07:00"
-  place: "Covington Library, 27100 164th Ave SE, Covington"
-  same_as: "https://kcls.bibliocommons.com/events/6a63c8a27d824676437d158a"
-  card: "baby-story-time-covington"
-  heading_id: "baby-story-time-covington"
-  when: "Mon Oct 19 · 1:00–2:00 p.m."
-  blurbs:
-  - "Nursery rhymes, songs, and stories for newborns to 12 months with an adult at Covington Library.\
-    \ Toddlers and siblings welcome. Free."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a63c8a27d824676437d158a"
-    label: "Baby Story Time"
-  description: "Nursery rhymes, songs, and stories for newborns to 12 months with an adult at Covington\
-    \ Library. Toddlers and siblings welcome. Free."
-  hub_blurb: "Baby stories and songs at Covington Library."
-  ages: "Toddlers"
-  tags:
-  - "story-time"
-  photo:
-    src: "/assets/images/maple-valley/covington-library.webp"
-    alt: "Covington Library"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/covington/"
-    license: "organizer"
 - name: "Super Tuesdays: Awesome Anatomy"
   cost: "Free"
   ages: "Kids"

@@ -497,9 +497,9 @@
     - name: "Issaquah Highlands events"
       url: "https://issaquahhighlands.com/events/"
       type: venue
-      format: ical
-      feed_url: "https://issaquahhighlands.com/events/?ical=1"
-      notes: "Tribe calendar for Blakely Hall and the Highlands. Skip co-working, HOA meetings, and 18+ nights. The iCal is shorter than the JSON feed."
+      format: rss
+      feed_url: "https://wa-issaquah2.civicplus.com/RSSFeed.aspx?ModID=58&CID=Community-Events-37"
+      notes: "Tribe calendar for Blakely Hall and the Highlands. Skip co-working, HOA meetings, and 18+ nights. Since 2026-10-19 the whole issaquahhighlands.com host (iCal ?ical=1, /events/, Tribe JSON, even robots.txt) returns an nginx 403 to the Grok Bot box, two daily runs in a row; the site itself is still up from other networks, so keep url for links. Replacement feed (2026-10-20): the City of Issaquah Community Events RSS on the CivicPlus host, which carries the Highlands Council public family events (tree lighting, Village Green holiday pop-up, Parents Night Out, Blakely Hall talks). Visit Issaquah's Tribe JSON (https://www.visitissaquahwa.com/wp-json/tribe/events/v1/events?categories=blakely-hall) also mirrors Blakely Hall events. Link the Highlands or city www page, never the CivicPlus host."
     - name: "Issaquah Farmers Market"
       url: "https://www.issaquahwa.gov/778/Farmers-Market"
       type: market
