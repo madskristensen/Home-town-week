@@ -23,29 +23,6 @@
   setting: "Indoor"
   tags:
   - "story-time"
-  start: "2026-10-20T18:30:00-07:00"
-  end: "2026-10-20T19:00:00-07:00"
-  place: "Kingsgate Library, 12315 NE 143rd St"
-  same_as: "https://kcls.bibliocommons.com/events/6aada826607483003827f38e"
-  card: "family-story-time"
-  order: "6"
-  heading_id: "family-story-time"
-  when: "Tue Oct 20 · 6:30–7:00 p.m."
-  blurbs:
-  - "An evening story time with songs, rhymes, and movement for newborns to age 6 with an adult. Free,\
-    \ no registration. Kingsgate repeats it Wed Oct 21 at 10:30 a.m."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6aada826607483003827f38e"
-    label: "Family Story Time"
-  description: "An evening story time with songs, rhymes, and movement for newborns to age 6 with an adult.\
-    \ Free, no registration. Kingsgate repeats it Wed Oct 21 at 10:30 a.m."
-  hub_blurb: "An evening story time with songs, rhymes, and movement for newborns to age 6 with an adult."
-- name: "Family Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
   start: "2026-10-21T10:30:00-07:00"
   end: "2026-10-21T11:00:00-07:00"
   place: "Kingsgate Library, 12315 NE 143rd St"
@@ -1090,6 +1067,26 @@
     label: "Family Story Time"
   description: "An evening story time with books, songs, movement, and rhymes for newborns to age 6 with an adult. Free, no registration."
   hub_blurb: "Evening stories and songs for ages 0 to 6."
+- name: "Family Story Time"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Indoor"
+  tags:
+  - "story-time"
+  start: "2026-11-18T10:30:00-08:00"
+  end: "2026-11-18T11:00:00-08:00"
+  place: "Kingsgate Library, 12315 NE 143rd St"
+  same_as: "https://kcls.bibliocommons.com/events/6aadaa30607483003827f42e"
+  card: "family-story-time-kingsgate-nov-18"
+  heading_id: "family-story-time-kingsgate-nov-18"
+  when: "Wed Nov 18 · 10:30–11:00 a.m."
+  blurbs:
+  - "Stories, music, movement, and rhymes for kids from newborn to 6 with an adult at Kingsgate Library. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6aadaa30607483003827f42e"
+    label: "Family Story Time"
+  description: "Stories, music, movement, and rhymes for kids from newborn to 6 with an adult at Kingsgate Library. Free, no registration."
+  hub_blurb: "Family stories and songs at Kingsgate Library."
 - name: "After School Art: Card Making"
   cost: "Free"
   ages: "Kids"

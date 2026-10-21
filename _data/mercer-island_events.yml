@@ -1,27 +1,3 @@
-- name: "Family Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-10-20T10:15:00-07:00"
-  end: "2026-10-20T11:00:00-07:00"
-  place: "Mercer Island Library, 4400 88th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/events/6abacfc8e06996003a7fda8f"
-  card: "family-story-time-3"
-  order: "5"
-  heading_id: "family-story-time-3"
-  when: "Tue Oct 20 · 10:15–11:00 a.m."
-  blurbs:
-  - "A Tuesday morning story time with songs, movement, and rhymes for kids up to age 5 with an adult,\
-    \ then play time. Free."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6abacfc8e06996003a7fda8f"
-    label: "Family Story Time"
-  description: "A Tuesday morning story time with songs, movement, and rhymes for kids up to age 5 with\
-    \ an adult, then play time. Free."
-  hub_blurb: "A Tuesday morning story time with songs, movement, and rhymes for kids up to age 5 with\
-    \ an adult, then play time."
 - name: "Mandarin Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -463,6 +439,32 @@
   description: "Stories, music, movement, and rhymes, then play time. Recommended for ages 0 to 5 with\
     \ an adult."
   hub_blurb: "Stories, music, movement, and rhymes, then play time."
+- name: "Mandarin Story Time"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Indoor"
+  tags:
+  - "story-time"
+  start: "2026-11-12T10:30:00-08:00"
+  end: "2026-11-12T11:00:00-08:00"
+  place: "Mercer Island Library, 4400 88th Ave SE"
+  same_as: "https://kcls.bibliocommons.com/events/6a6ba3514523092f0033b553"
+  card: "mandarin-story-time-nov-12"
+  heading_id: "mandarin-story-time-nov-12"
+  when: "Thu Nov 12 · 10:30–11:00 a.m."
+  blurbs:
+  - "Mandarin stories, music, movement, and rhymes for families, including learners. Free at Mercer Island Library."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a6ba3514523092f0033b553"
+    label: "Mandarin Story Time"
+  photo:
+    src: "/assets/images/mercer-island/mercer-island-library-entrance.webp"
+    alt: "Mercer Island Library entrance"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/mercer-island/"
+    license: "organizer"
+  description: "Mandarin stories, music, movement, and rhymes for families, including learners. Free at Mercer Island Library."
+  hub_blurb: "Mandarin stories for families."
 - name: "Tot Shabbat"
   ages: "Toddlers"
   setting: "Indoor"
