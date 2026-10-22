@@ -2400,3 +2400,25 @@ figure figcaption:has(.photo-swap) {
   background: #8a1c1c;
   color: #fff;
 }
+
+/* Highlight the card or section a #fragment link lands on, then fade out. */
+[id] {
+  scroll-margin-top: 1rem;
+}
+
+:target:not(h1, h2, h3, h4, section, main, body) {
+  border-radius: 12px;
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+  animation: target-flash 2.6s ease-out 0.4s forwards;
+}
+
+@keyframes target-flash {
+  to { outline-color: transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :target:not(h1, h2, h3, h4, section, main, body) {
+    animation: none;
+  }
+}
