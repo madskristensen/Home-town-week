@@ -1737,3 +1737,112 @@
   source: https://www.mtsigymnasticsacademy.com/birthday-parties/
   source_label: Party page
   last_verified: '2026-10-22'
+- id: emler-swim-klahanie
+  name: Emler Swim School Klahanie
+  city: sammamish
+  address: 4506 Klahanie Dr SE, Sammamish
+  lat: 47.565386
+  lng: -122.005167
+  setting: Indoor
+  types:
+  - Swim
+  party_room: true
+  price_level: 3
+  description: Two-hour weekend pool parties in a warm indoor pool, with lifeguards on deck, a party host, and a private room for cake and gifts. Fits up to 25 swimmers, and you do not need to be enrolled.
+  source: https://emlerswimschool.com/programs/emler-swim-birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: northwest-pottery-collective
+  name: Northwest Pottery Collective
+  city: issaquah
+  address: 1445 NW Mall St, Suite 3, Issaquah
+  lat: 47.543985
+  lng: -122.059953
+  setting: Indoor
+  types:
+  - Art
+  price_level: 3
+  description: Clay parties with two hours of private studio time, choosing hand building for ages 6 to 15 or the pottery wheel for ages 10 to 15. Fits up to 12 kids, and each guest gets a keepsake piece.
+  source: https://www.nwpotterycollective.com/events
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: mudhouse-pottery-issaquah
+  name: Mudhouse Pottery Painting
+  city: issaquah
+  address: 317 NW Gilman Blvd, Suite 40, Issaquah
+  lat: 47.539784
+  lng: -122.04072
+  setting: Indoor
+  types:
+  - Art
+  description: Paint-your-own pottery parties at Gilman Village, with reserved tables for a two-hour painting celebration. Kids pick their own piece to paint and take it home after firing.
+  source: https://mudhousepottery.com/kids-painting-parties/
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: creative-hands-studio
+  name: Creative Hands Studio
+  city: bothell
+  address: 19525 Bothell-Everett Hwy, Bothell
+  lat: 47.769112
+  lng: -122.211743
+  setting: Indoor
+  types:
+  - Art
+  description: Crafty art parties with projects like pottery painting, slime, and candle making. A cozy pick for kids who love to make something to take home.
+  source: https://www.creativehandsstudio.net/birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: fairwood-martial-arts
+  name: Fairwood Martial Arts
+  city: renton
+  address: 17138 116th Ave SE, Renton
+  lat: 47.449412
+  lng: -122.185247
+  setting: Indoor
+  types:
+  - Sports
+  description: Two-hour martial arts parties with a fast, game-filled class where kids kick, punch, and jump their way through the fun. Decorations and snacks are part of the party.
+  source: https://fairwoodmartialarts.com/birthday-parties-renton/
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: spotlight-dance-renton
+  name: Spotlight Dance
+  city: renton
+  address: 704 S 3rd St, Unit B-1, Renton
+  lat: 47.479704
+  lng: -122.209945
+  setting: Indoor
+  types:
+  - Dance
+  description: Weekend dance parties shaped around the birthday child's age and interests, from ballet and tap to jazz, creative movement, and acrobatics. A fun way to twirl and tumble with friends downtown.
+  source: https://www.spotlightdance.net/
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: tutu-school-renton
+  name: Tutu School Renton
+  city: renton
+  address: 1630 Duvall Ave NE, Suite D, Renton
+  lat: 47.506473
+  lng: -122.155433
+  setting: Indoor
+  types:
+  - Dance
+  toddlers: true
+  price_level: 3
+  description: Ballet birthday parties with a short class full of movement games, a birthday story starring the guest of honor, a cupcake picnic, and party favors. Made for little dancers.
+  source: https://tutuschool.com/renton/parties/
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: code-wiz-kirkland
+  name: Code Wiz Kirkland
+  city: kirkland
+  address: 13131 NE 85th St, Kirkland
+  lat: 47.679274
+  lng: -122.164376
+  setting: Indoor
+  types:
+  - Games and arcades
+  description: Coding birthday parties where kids team up to build games, try robotics, and play with design. A good fit for curious kids who like to make things on screen.
+  source: https://codewiz.com/kirkland-wa/programs/additional-programs/
+  source_label: Party page
+  last_verified: '2026-10-22'
