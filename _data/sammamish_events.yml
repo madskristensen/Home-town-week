@@ -1,52 +1,3 @@
-- name: "Toddler Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-21T11:00:00-07:00"
-  end: "2026-10-21T12:00:00-07:00"
-  place: "Sammamish Library, 825 228th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/events/6acd24a4901b02002cc1df10"
-  card: "toddler-story-time"
-  heading_id: "toddler-story-time"
-  when: "Wed Oct 21 · 11:00 a.m.–12:00 p.m."
-  blurbs:
-  - "Stories, music, movement, and rhymes for toddlers, then a short play time. Free at Sammamish Library."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6acd24a4901b02002cc1df10"
-    label: "Toddler Story Time"
-  description: "Stories, music, movement, and rhymes for toddlers, then a short play time. Free at Sammamish\
-    \ Library."
-  hub_blurb: "Toddler stories at Sammamish Library."
-  ages: "Toddlers"
-  tags:
-  - "story-time"
-  photo:
-    src: "/assets/images/sammamish/sammamish-library.webp"
-    alt: "Sammamish Library"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/sammamish/"
-    license: "organizer"
-- name: "Tree Planting at Ebright Creek Park"
-  cost: "Free"
-  setting: "Outdoor"
-  signup: true
-  tags:
-  - "free"
-  start: "2026-10-21T16:00:00-07:00"
-  place: "Ebright Creek Park"
-  same_as: "https://www.sammamish.us/news/events/events/volunteer-opportunities/10-21-tree-planting-at-ebright-creek-park/"
-  card: "tree-planting-at-ebright-creek-park"
-  order: "10"
-  heading_id: "tree-planting-at-ebright-creek-park"
-  when: "Wed Oct 21 · 4:00 p.m."
-  blurbs:
-  - "Plant native trees at a site started by Washington Native Plant Society stewards. Free. The city\
-    \ asks you to register on the event page. The posted time is 4:00 p.m."
-  links:
-  - href: "https://www.sammamish.us/news/events/events/volunteer-opportunities/10-21-tree-planting-at-ebright-creek-park/"
-    label: "Tree Planting at Ebright Creek Park"
-  description: "Plant native trees at a site started by Washington Native Plant Society stewards. Free.\
-    \ The city asks you to register on the event page. The posted time is 4:00 p.m."
-  hub_blurb: "Plant native trees at a site started by Washington Native Plant Society stewards."
 - name: "Teens Around the Fire"
   cost: "Free"
   setting: "Indoor"
@@ -282,6 +233,24 @@
   description: "A free all-ages bazaar of Diwali clothes, jewelry, and festival goods. Free parking. Get\
     \ a free ticket."
   hub_blurb: "A free all-ages bazaar of Diwali clothes, jewelry, and festival goods."
+- name: "Toddler Story Time"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Indoor"
+  start: "2026-11-04T11:00:00-08:00"
+  end: "2026-11-04T12:00:00-08:00"
+  place: "Sammamish Library, 825 228th Ave SE"
+  same_as: "https://kcls.bibliocommons.com/events/6acd2500a85a2c00337efcf1"
+  card: "toddler-story-time-nov-4"
+  heading_id: "toddler-story-time-nov-4"
+  when: "Wed Nov 4 · 11:00 a.m.–12:00 p.m."
+  blurbs:
+  - "Stories, songs, rhymes, and movement for toddlers, with a short play time after. Free at the Sammamish Library."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6acd2500a85a2c00337efcf1"
+    label: "Toddler Story Time"
+  description: "Stories, songs, rhymes, and movement for toddlers, with a short play time after. Free at the Sammamish Library."
+  hub_blurb: "Stories, songs, and rhymes for toddlers, then play time."
 - name: "Paint a Diya for Diwali"
   cost: "Free"
   ages: "All ages"
