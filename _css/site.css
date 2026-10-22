@@ -2407,7 +2407,6 @@ figure figcaption:has(.photo-swap) {
 }
 
 :target:not(h1, h2, h3, h4, section, main, body) {
-  border-radius: 12px;
   outline: 3px solid var(--gold);
   outline-offset: 4px;
   animation: target-flash 2.6s ease-out 0.4s forwards;
