@@ -1625,3 +1625,115 @@
     credit: 'Photo: Enchanted Farms'
     credit_url: https://www.enchantedfarmsduvall.com/
     license: organizer
+- id: redmond-art-works
+  name: Redmond Art Works
+  city: redmond
+  address: 6825 176th Ave NE, Suite A-110, Redmond
+  lat: 47.666299
+  lng: -122.10668
+  setting: Indoor
+  types:
+  - Art
+  description: Art studio celebrations with activities picked to fit the birthday child's age, from clay and pottery painting to mixed media. The studio brings the art supplies, and the birthday child takes home a keepsake plate.
+  source: https://www.redmondartworks.com/Articles.asp?ID=263
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: emerald-city-gymnastics
+  name: Emerald City Gymnastics Academy
+  city: redmond
+  address: 17965 NE 65th St, Redmond
+  lat: 47.662469
+  lng: -122.100979
+  setting: Indoor
+  types:
+  - Sports
+  party_room: true
+  price_level: 3
+  description: Two-hour gym parties with trampoline, ninja course, and foam pits, then time in the party room. Coaches set up and clean up, with a parent and child option for little ones from 18 months.
+  source: https://emeraldcitygymnasticsacademy.com/birthdays/
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: movefree-academy
+  name: Movefree Academy
+  city: woodinville
+  address: 16110 Woodinville-Redmond Rd NE, Woodinville
+  lat: 47.74502
+  lng: -122.159837
+  setting: Indoor
+  types:
+  - Sports
+  price_level: 3
+  description: Private Sunday parkour parties for ages 6 to 16, with a coach leading obstacle courses, climbing challenges, rope swings, and a team game, then time for treats and gifts.
+  source: https://www.movefreeacademy.com/birthdayparty
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: slime-factory-bellevue
+  name: The Slime Factory
+  city: bellevue
+  address: 3929 Factoria Square Mall SE, Suite D4, Bellevue
+  lat: 47.573885
+  lng: -122.17023
+  setting: Indoor
+  types:
+  - Art
+  description: Hands-on slime making with a big choice of colors, scents, and beads. Book a party area for a smaller group or take over the whole studio at Marketplace at Factoria.
+  source: https://bellevue.theslimefactory.com/
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: creatively-yours-bellevue
+  name: Creatively Yours
+  city: bellevue
+  address: 15600 NE 8th St, Bellevue
+  lat: 47.619875
+  lng: -122.12871
+  setting: Indoor
+  types:
+  - Art
+  price_level: 2
+  description: Paint-your-own pottery parties at Crossroads, with reserved tables and a staff painter to help for an hour and a half. Fits up to 16 kids, and the pieces come back after firing.
+  source: https://www.creativelyyoursbellevue.com/birthday-party
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: tumbles-renton
+  name: Tumbles Renton
+  city: renton
+  address: 2848 NE Sunset Blvd, Renton
+  lat: 47.500906
+  lng: -122.17978
+  setting: Indoor
+  types:
+  - Play
+  - Sports
+  price_level: 3
+  description: Themed gym parties for ages 1 to 10 with instructor-led games, music, swinging, and zip lines in a private gym. Staff handle setup and cleanup, and adults do not count toward the guest list.
+  source: https://renton.tumbles.net/parties
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: art-major-studio
+  name: Art Major Studio
+  city: snoqualmie
+  address: 8030 Railroad Ave SE, Snoqualmie
+  lat: 47.528512
+  lng: -121.824638
+  setting: Indoor
+  types:
+  - Art
+  party_room: true
+  description: Inclusive art studio with a private party space and a host who guides guests through painting, collage, or building projects. Themes and favorite colors are welcome, and everyone takes their art home.
+  source: https://artmajorstudio.com/birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: mt-si-gymnastics
+  name: Mt. Si Gymnastics Academy
+  city: north-bend
+  address: 1546 Boalch Ave NW, North Bend
+  lat: 47.506963
+  lng: -121.796163
+  setting: Indoor
+  types:
+  - Sports
+  price_level: 3
+  description: Saturday gym parties for ages 2 to 16, with an hour of coach-led gymnastics and games, then food and cake in a party area. Tablecloths, plates, and decorations are included, for up to 24 kids.
+  source: https://www.mtsigymnasticsacademy.com/birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-22'
