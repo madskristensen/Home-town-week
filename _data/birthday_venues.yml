@@ -6,7 +6,7 @@
 # Covington uses maple-valley.
 # setting is Indoor or Outdoor. types are the filter chips (Play, Sports,
 # Art, Swim, Dance, Cooking, Museum, Animals and farms, Park shelter,
-# Games and arcades, Skating).
+# Games and arcades, Skating, Music).
 # party_room: true when the package includes a private room or space.
 # toddlers: true only when the venue is aimed at under 5.
 # price_level is 1 to 4 from the published base party package. It shows as
@@ -1737,21 +1737,6 @@
   source: https://www.mtsigymnasticsacademy.com/birthday-parties/
   source_label: Party page
   last_verified: '2026-10-22'
-- id: emler-swim-klahanie
-  name: Emler Swim School Klahanie
-  city: sammamish
-  address: 4506 Klahanie Dr SE, Sammamish
-  lat: 47.565386
-  lng: -122.005167
-  setting: Indoor
-  types:
-  - Swim
-  party_room: true
-  price_level: 3
-  description: Two-hour weekend pool parties in a warm indoor pool, with lifeguards on deck, a party host, and a private room for cake and gifts. Fits up to 25 swimmers, and you do not need to be enrolled.
-  source: https://emlerswimschool.com/programs/emler-swim-birthday-parties/
-  source_label: Party page
-  last_verified: '2026-10-22'
 - id: northwest-pottery-collective
   name: Northwest Pottery Collective
   city: issaquah
@@ -1844,5 +1829,112 @@
   - Games and arcades
   description: Coding birthday parties where kids team up to build games, try robotics, and play with design. A good fit for curious kids who like to make things on screen.
   source: https://codewiz.com/kirkland-wa/programs/additional-programs/
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: bach-to-rock-redmond
+  name: Bach to Rock Redmond
+  city: redmond
+  address: 8451 164th Ave NE, Suite 120, Redmond
+  lat: 47.67791
+  lng: -122.122022
+  setting: Indoor
+  types:
+  - Music
+  description: Music school parties where kids get to be rock stars for the day, with Rock City parties for ages 4 to 6, plus karaoke and rock band parties for older kids. No musical experience needed.
+  source: https://www.bachtorock.com/redmond/
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: school-of-rock-bellevue
+  name: School of Rock Bellevue
+  city: bellevue
+  address: 14330 NE 20th St, Suite C, Bellevue
+  lat: 47.62832
+  lng: -122.14904
+  setting: Indoor
+  types:
+  - Music
+  price_level: 2
+  description: Rock music birthday parties at the Bellevue music school, booked right on its class schedule. A loud, happy choice for kids who love to sing and jam.
+  source: https://bellevue-sor.pike13.com/group_classes/38929
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: bellevue-academy-arts-music
+  name: Bellevue Academy of Arts and Music
+  city: bellevue
+  address: 12356 Northup Way, Suite 103, Bellevue
+  lat: 47.630058
+  lng: -122.17595
+  setting: Indoor
+  types:
+  - Music
+  party_room: true
+  price_level: 3
+  description: Weekend birthday concerts in the academy's Stage Hall. The birthday child can perform for guests, or the academy can bring in a musician, with food service and decorations as part of the plan.
+  source: https://www.bellevueacademy.com/eventsrentals/birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: icode-bellevue
+  name: iCode Bellevue
+  city: bellevue
+  address: 1415 158th Pl NE, Bellevue
+  lat: 47.622247
+  lng: -122.129906
+  setting: Indoor
+  types:
+  - Games and arcades
+  description: Coding school birthday parties with gaming and robotics activities led by instructors. A fun pick for kids who love tech and teamwork.
+  source: https://icodeschool.com/bellevue119/birthday-parties/
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: farrel-mcwhirter-park
+  name: Farrel-McWhirter Farm Park
+  city: redmond
+  address: 19545 NE Redmond Rd, Redmond
+  lat: 47.692469
+  lng: -122.078809
+  setting: Outdoor
+  types:
+  - Animals and farms
+  description: City farm park with a barnyard of animals, trails, and a play area. Redmond Parks runs birthday parties here, with pony rides for little ones or a farm tour.
+  source: https://www.redmond.gov/288/Farrel-McWhirter-Park
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: mcmurtrey-farm
+  name: McMurtrey Farm
+  city: redmond
+  address: 13925 Redmond-Woodinville Rd NE, Redmond
+  lat: 47.683544
+  lng: -122.124299
+  setting: Outdoor
+  types:
+  - Animals and farms
+  description: Family flower, pumpkin, and Christmas tree farm with a roomy outdoor setting for birthday parties. Lots of space for kids to run, play, and explore.
+  source: https://www.mcmurtreyfarm.com/weddingvenue
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: ar-workshop-maple-valley
+  name: AR Workshop Maple Valley
+  city: maple-valley
+  address: 26300 238th Ln SE, Suite 102, Maple Valley
+  lat: 47.365796
+  lng: -122.022382
+  setting: Indoor
+  types:
+  - Art
+  description: DIY craft studio with youth birthday parties where each guest picks a project, such as a wood sign, canvas pillow, or tote bag, and takes it home finished the same day.
+  source: https://www.arworkshop.com/maplevalley/
+  source_label: Party page
+  last_verified: '2026-10-22'
+- id: steamboat-studio
+  name: STEAMboat Studio
+  city: maple-valley
+  address: 23330 Maple Valley Black Diamond Rd SE, Suite D, Maple Valley
+  lat: 47.391586
+  lng: -122.045451
+  setting: Indoor
+  types:
+  - Art
+  description: Two-hour STEAM birthday parties that mix learning and fun, with demonstrations and hands-on creative activities, then time for cake and presents.
+  source: https://steamboatstudio.com/
   source_label: Party page
   last_verified: '2026-10-22'
