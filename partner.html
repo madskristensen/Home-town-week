@@ -120,10 +120,14 @@ Option we're interested in:
     </ul>
 
     <h2>Ways to partner</h2>
+    <p>Pick an option below and pay online. Email is still open for custom asks or questions.</p>
 
     <h3>Featured sponsored card</h3>
     <p>Your card in the weekend picks on the home page and on This weekend, or near the top of one city page. One sponsor per spot at a time.</p>
-    <p><strong>$150 a month in the weekend picks. $60 a month on a city page.</strong></p>
+    <p class="partner-buy">
+      <a class="btn" href="https://buy.stripe.com/cNidRa0DX95C6nJdJA2Nq00">Buy weekend picks · $150/mo</a>
+      <a class="btn" href="https://buy.stripe.com/00wbJ23Q9a9GbI3axo2Nq01">Buy city page · $60/mo</a>
+    </p>
     <figure class="sponsor-preview">
       <figcaption class="sponsor-preview-label">Example · Weekend picks</figcaption>
       {%- include card-grid.html events=page.featured_cards show_city=true -%}
@@ -131,11 +135,23 @@ Option we're interested in:
 
     <h3>Seasonal sponsor</h3>
     <p>Be the only sponsor of a seasonal page for its whole season, with a "Sponsored by" line and your card at the top.</p>
-    <ul>
-      <li><strong><a href="{{ '/christmas/' | relative_url }}">Christmas</a> and the <a href="{{ '/christmas/lights/' | relative_url }}">Christmas lights map</a></strong>, November and December: $400 for the season</li>
-      <li><strong><a href="{{ '/fall/' | relative_url }}">Fall</a>, <a href="{{ '/fall/#halloween' | relative_url }}">Halloween</a>, and the <a href="{{ '/fall/decorations/' | relative_url }}">decorations map</a></strong>, September and October: $300 for the season</li>
-      <li><strong><a href="{{ '/spring-break/' | relative_url }}">Spring break</a></strong>, mid-March through spring break week: $150 for the season</li>
-      <li><strong><a href="{{ '/summer-camps/' | relative_url }}">Summer camps guide</a></strong>, January through June: $300 for the season</li>
+    <ul class="partner-offer-list">
+      <li>
+        <strong><a href="{{ '/christmas/' | relative_url }}">Christmas</a> and the <a href="{{ '/christmas/lights/' | relative_url }}">Christmas lights map</a></strong>, November and December: $400 for the season
+        <p class="partner-buy"><a class="btn" href="https://buy.stripe.com/bJebJ2biBfu03bx5d42Nq03">Buy Christmas · $400</a></p>
+      </li>
+      <li>
+        <strong><a href="{{ '/fall/' | relative_url }}">Fall</a>, <a href="{{ '/fall/#halloween' | relative_url }}">Halloween</a>, and the <a href="{{ '/fall/decorations/' | relative_url }}">decorations map</a></strong>, September and October: $300 for the season
+        <p class="partner-buy"><a class="btn" href="https://buy.stripe.com/eVq6oI72l3Li3bxfRI2Nq04">Buy Fall/Halloween · $300</a></p>
+      </li>
+      <li>
+        <strong><a href="{{ '/spring-break/' | relative_url }}">Spring break</a></strong>, mid-March through spring break week: $150 for the season
+        <p class="partner-buy"><a class="btn" href="https://buy.stripe.com/00w4gAdqJepWcM720S2Nq05">Buy Spring break · $150</a></p>
+      </li>
+      <li>
+        <strong><a href="{{ '/summer-camps/' | relative_url }}">Summer camps guide</a></strong>, January through June: $300 for the season
+        <p class="partner-buy"><a class="btn" href="https://buy.stripe.com/28E7sMeuN0z613p4902Nq06">Buy Summer camps · $300</a></p>
+      </li>
     </ul>
     <figure class="sponsor-preview">
       <figcaption class="sponsor-preview-label">Example · Christmas lights</figcaption>
@@ -149,7 +165,10 @@ Option we're interested in:
 
     <h3>Weekly email sponsor</h3>
     <p>The weekly Eastside Family Calendar email goes out every Thursday with hand-picked weekend events. A sponsored spot in that email is one option: one short, labeled line. One sponsor per issue.</p>
-    <p><strong>$35 an issue, or $120 for four issues in a row.</strong></p>
+    <p class="partner-buy">
+      <a class="btn" href="https://buy.stripe.com/bJe6oIdqJ0z6eUf5d42Nq07">Buy one issue · $35</a>
+      <a class="btn" href="https://buy.stripe.com/14AcN64Udfu013pdJA2Nq08">Buy four issues · $120</a>
+    </p>
     <figure class="sponsor-preview">
       <figcaption class="sponsor-preview-label">Example · Thursday email</figcaption>
       <p class="email-sample-kicker">Eastside Family Calendar · Thursday</p>
@@ -159,7 +178,7 @@ Option we're interested in:
 
     <h3><a href="{{ '/summer-camps/' | relative_url }}">Enhanced summer camp listing</a></h3>
     <p>Basic camp listings are free. An enhanced listing adds a photo, a longer description, and the top spot for its town, labeled Sponsored. It stays at the top of that age group too.</p>
-    <p><strong>$49 per camp for the season.</strong></p>
+    <p class="partner-buy"><a class="btn" href="https://buy.stripe.com/8x2cN63Q9chOeUf34W2Nq09">Buy enhanced listing · $49</a></p>
     <figure class="sponsor-preview">
       <figcaption class="sponsor-preview-label">Example · Top of its town</figcaption>
       <div class="camp-town">
@@ -174,7 +193,7 @@ Option we're interested in:
 
     <h3><a href="{{ '/birthday-venues/' | relative_url }}">Featured birthday venue</a></h3>
     <p>Every venue on the birthday parties page is listed free. A featured spot adds your photo, a short description, and the top of your town, labeled Sponsored. It stays at the top of your type too.</p>
-    <p><strong>$100 a month.</strong></p>
+    <p class="partner-buy"><a class="btn" href="https://buy.stripe.com/28E8wQ5Yha9G4fB9tk2Nq02">Buy birthday venue · $100/mo</a></p>
     <figure class="sponsor-preview">
       <figcaption class="sponsor-preview-label">Example · Birthday parties</figcaption>
       <div class="camp-town">
@@ -201,6 +220,6 @@ Option we're interested in:
     </ul>
 
     <h2>Get in touch</h2>
-    <p>Email <a href="{{ partner_mailto }}">mads@eastsidecalendar.com</a> with your business name, your town, and what you'd like to promote. We'll reply with open dates and help you put your card together.</p>
+    <p>To buy one of the options above, use the Buy button next to it. For a custom package, a question, or help choosing a spot, email <a href="{{ partner_mailto }}">mads@eastsidecalendar.com</a> with your business name, your town, and what you'd like to promote. We'll reply with open dates and help you put your card together.</p>
   </div>
 </article>
