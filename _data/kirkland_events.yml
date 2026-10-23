@@ -1422,3 +1422,53 @@
     \ carols you can hear from the beach. Free to watch from shore. A public bonfire or shore event is\
     \ planned."
   hub_blurb: "The lighted Christmas Ship and its choir, free to watch from Kirkland Marina Park."
+- name: "Silent Santa at The Village at Totem Lake"
+  cost: "$39.99"
+  setting: "Indoor"
+  signup: true
+  sensory: true
+  tags:
+  - "santa"
+  organizer: "Souvenir Photograph"
+  start: "2026-11-29T10:00:00-08:00"
+  end: "2026-11-29T11:30:00-08:00"
+  place: "The Village at Totem Lake, 11901 NE Village Plaza, Suite 199"
+  same_as: "https://spphotostation.com/book/VILLAGE-AT-TOTEM-LAKE?service=d4d0fde6-10c0-4ae8-8a6a-d4858e805aea"
+  card: "silent-santa-village-totem-lake"
+  heading_id: "silent-santa-village-totem-lake"
+  when: "Sun Nov 29, Dec 6 and Dec 13 · 10:00–11:30 a.m."
+  blurbs:
+  - "Quiet, sensory-friendly Santa photo visits before the shopping center opens, in 15-minute slots with only two families each. Book ahead; a $19.99 deposit goes toward photo packages from $39.99."
+  links:
+  - href: "https://spphotostation.com/book/VILLAGE-AT-TOTEM-LAKE?service=d4d0fde6-10c0-4ae8-8a6a-d4858e805aea"
+    label: "Book Silent Santa"
+  description: "Quiet, sensory-friendly Santa photo visits before the shopping center opens, in 15-minute slots with only two families each. Book ahead; a $19.99 deposit goes toward photo packages from $39.99."
+  hub_blurb: "Quiet, sensory-friendly Santa photos before the shops open."
+- name: "Silent Santa at The Village at Totem Lake"
+  cost: "$39.99"
+  setting: "Indoor"
+  signup: true
+  sensory: true
+  tags:
+  - "santa"
+  organizer: "Souvenir Photograph"
+  start: "2026-12-06T10:00:00-08:00"
+  end: "2026-12-06T11:30:00-08:00"
+  place: "The Village at Totem Lake, 11901 NE Village Plaza, Suite 199"
+  same_as: "https://spphotostation.com/book/VILLAGE-AT-TOTEM-LAKE?service=d4d0fde6-10c0-4ae8-8a6a-d4858e805aea"
+  card: "silent-santa-village-totem-lake"
+  heading_id: "silent-santa-village-totem-lake"
+- name: "Silent Santa at The Village at Totem Lake"
+  cost: "$39.99"
+  setting: "Indoor"
+  signup: true
+  sensory: true
+  tags:
+  - "santa"
+  organizer: "Souvenir Photograph"
+  start: "2026-12-13T10:00:00-08:00"
+  end: "2026-12-13T11:30:00-08:00"
+  place: "The Village at Totem Lake, 11901 NE Village Plaza, Suite 199"
+  same_as: "https://spphotostation.com/book/VILLAGE-AT-TOTEM-LAKE?service=d4d0fde6-10c0-4ae8-8a6a-d4858e805aea"
+  card: "silent-santa-village-totem-lake"
+  heading_id: "silent-santa-village-totem-lake"
