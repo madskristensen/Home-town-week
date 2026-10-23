@@ -1,10 +1,26 @@
-/* Partner page: quiet offers and borderless examples. */
+/* Partner page: quiet offers and washed examples. */
+
+.prose > h2 {
+  margin-top: 2.6rem;
+}
+
+.prose > h3 {
+  margin-top: 2.15rem;
+  padding-top: 0.35rem;
+}
+
+.prose > h2:first-of-type,
+.prose > h3:first-of-type {
+  margin-top: 1.35rem;
+}
 
 .sponsor-preview {
   position: relative;
-  margin: 0.85rem 0 1.35rem;
-  padding: 0;
+  margin: 1.15rem 0 0.35rem;
+  padding: 0.85rem 0.9rem 1rem;
   border: 0;
+  border-radius: calc(var(--radius) + 4px);
+  background: var(--wash);
 }
 
 figure.sponsor-preview > figcaption.sponsor-preview-label {
@@ -13,7 +29,7 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
   z-index: auto;
   display: block;
   width: auto;
-  margin: 0 0 0.55rem;
+  margin: 0 0 0.65rem;
   padding: 0;
   background: none;
   color: var(--muted);
@@ -39,6 +55,11 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
 
 .sponsor-preview-label + .sponsor-line {
   margin-top: 0;
+}
+
+.sponsor-preview .event-card {
+  /* Preview sits on wash; keep the card sheet readable. */
+  max-width: 22rem;
 }
 
 .email-sample-kicker,
@@ -71,6 +92,10 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
 
 .sponsor-preview .email-sponsor {
   margin: 0.55rem 0 0;
+  padding: 0.55rem 0.65rem;
+  border-radius: var(--radius);
+  background: var(--sheet);
+  border: 1px solid var(--rule);
 }
 
 .sponsor-preview .event-kicker {
@@ -81,9 +106,25 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
   margin: 0.35rem 0 0;
 }
 
+.sponsor-preview .camp-town {
+  margin-top: 0;
+}
+
+.sponsor-preview .camp-list {
+  margin-top: 0.15rem;
+}
+
+.sponsor-preview .camp-name-line,
+.sponsor-preview .camp-meta,
+.sponsor-preview .camp-signup,
+.sponsor-preview .camp-blurb,
+.sponsor-preview .sponsor-mark {
+  margin: 0;
+}
+
 .partner-options {
   list-style: none;
-  margin: 0.85rem 0 1rem;
+  margin: 1rem 0 1.35rem;
   padding: 0;
   border-top: 1px solid var(--rule);
 }
@@ -98,7 +139,7 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
   row-gap: 0.12rem;
   align-items: center;
   margin: 0;
-  padding: 0.7rem 0;
+  padding: 0.85rem 0;
   border-bottom: 1px solid var(--rule);
 }
 
@@ -146,10 +187,4 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
 .prose a.partner-buy-link:hover,
 .prose a.partner-buy-link:focus-visible {
   text-decoration: underline;
-}
-
-@media (max-width: 34rem) {
-  .partner-options > li {
-    grid-template-columns: minmax(0, 1fr) auto;
-  }
 }

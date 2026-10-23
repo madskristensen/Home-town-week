@@ -1731,6 +1731,13 @@ h2.event-bucket.is-past {
   }
 }
 
+@media screen {
+  .event-card.is-sponsored {
+    border-color: color-mix(in srgb, var(--forest) 55%, var(--rule));
+    box-shadow: inset 3px 0 0 var(--forest);
+  }
+}
+
 .event-card h3 {
   margin: 0;
   color: var(--ink);
