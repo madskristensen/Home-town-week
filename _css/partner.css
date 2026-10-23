@@ -107,11 +107,24 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
 }
 
 
+.partner-lead {
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.prose > h2.partner-ways {
+  margin-top: 1.1rem;
+}
+
 .partner-options {
   list-style: none;
-  margin: 1rem 0 1.35rem;
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.85rem 0 1.15rem;
   padding: 0;
-  border-top: 1px solid var(--rule);
+  border: 0;
 }
 
 .partner-options > li {
@@ -121,11 +134,14 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
     "name price"
     "meta price";
   column-gap: 1rem;
-  row-gap: 0.12rem;
+  row-gap: 0.15rem;
   align-items: center;
   margin: 0;
-  padding: 0.85rem 0;
-  border-bottom: 1px solid var(--rule);
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: calc(var(--radius) + 2px);
+  background: var(--sheet);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--ink) 4%, transparent);
 }
 
 .partner-option-name {
@@ -151,8 +167,12 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
   grid-area: price;
   justify-self: end;
   align-self: center;
+  display: inline-block;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--link) 14%, transparent);
   color: var(--link);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
   line-height: 1.2;
   text-decoration: none;
@@ -161,7 +181,8 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
 
 .partner-buy-link:hover,
 .partner-buy-link:focus-visible {
-  text-decoration: underline;
+  background: color-mix(in srgb, var(--link) 22%, transparent);
+  text-decoration: none;
 }
 
 .prose a.partner-buy-link {
@@ -171,7 +192,18 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
 
 .prose a.partner-buy-link:hover,
 .prose a.partner-buy-link:focus-visible {
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+.partner-notes {
+  margin: 0.75rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.partner-notes li + li {
+  margin-top: 0.35rem;
 }
 
 

@@ -55,10 +55,10 @@ sample_birthday:
   name: Example Party Place
   url: https://example.com
   data: 'data-town="redmond" data-town-name="Redmond" data-town-order="1" data-kind="play" data-kind-label="Play" data-kind-order="1"'
-  meta: Play, Party room · Toddlers · Redmond · $$$
-  blurb: "A private party room and two hours of open play for up to 15 kids. Pizza, juice, and a host who handles setup and cleanup. Best for ages 2 to 8."
-  image: /assets/images/birthdays/party-card.webp
-  alt: Illustration of three party balloons and confetti.
+  meta: Soft play, Party room · Toddlers · Redmond · $$$
+  blurb: "A private party room and open play for up to 15 kids, with pizza, juice, and a host who handles setup and cleanup. Best for ages 2 to 8."
+  image: /assets/images/birthdays/twinkle-land-bellevue.webp
+  alt: Soft-play ball pit with orange and cream balls and a colorful tunnel slide.
   credit: ""
   image_source: ""
 sample_birthday_row:
@@ -98,29 +98,11 @@ Option we're interested in:
 {%- endcapture -%}
 {%- capture partner_mailto -%}mailto:mads@eastsidecalendar.com?subject={{ partner_subject | strip | mail_escape }}&amp;body={{ partner_body | strip | mail_escape }}{%- endcapture -%}
 <article class="page wrap article-page">
-  {%- include page-head.html intro="Help Eastside families find your farm, camp, class, or venue, with a clearly labeled spot on a calendar parents already trust." -%}
+  {%- include page-head.html intro="A clearly labeled sponsored spot on the calendar Eastside parents already open for weekend plans." -%}
   <div class="prose">
-    <p>Eastside Family Calendar is where local parents check what to do with their kids this weekend. It covers 15 cities, from Bothell and Kirkland to Snoqualmie and Maple Valley, plus the no-school days for ten school districts. It's free, it's made by a local family, and it has no ad networks.</p>
-    <p>A few local businesses help keep it that way. If you run a place that Eastside kids love, we'd be glad to help more families find you.</p>
+    <p class="partner-lead">Pick an option, pay online, then send your photo and blurb. For a custom package or a question, email <a href="{{ partner_mailto }}">mads@eastsidecalendar.com</a>.</p>
 
-    <h2>Who you'll reach</h2>
-    <ul>
-      <li>Parents of toddlers through teens in Bellevue, Bothell, Carnation, Duvall, Issaquah, Kenmore, Kirkland, Maple Valley, Mercer Island, North Bend, Redmond, Renton, Sammamish, Snoqualmie, and Woodinville.</li>
-      <li>Families planning the weekend, the next no-school day, the holidays, or the summer.</li>
-      <li>Readers of the weekly Eastside Family Calendar email, every Thursday, with hand-picked weekend events.</li>
-      <li>More than 400 upcoming family events on the calendar right now, updated every day.</li>
-    </ul>
-
-    <h2>What sponsors get</h2>
-    <ul>
-      <li>A card that looks like the rest of the calendar, with a real photo, a short blurb, and a link straight to your site.</li>
-      <li>A clear "Sponsored" label, so parents know exactly what they're looking at and keep trusting it.</li>
-      <li>A link tagged with our name, so your own site stats show the visits that came from us.</li>
-      <li>A real person to work with. Mads, a Redmond dad of three, reads and answers every email.</li>
-    </ul>
-
-    <h2>Ways to partner</h2>
-    <p>Pick an option and pay online. Email is still open for custom asks or questions.</p>
+    <h2 class="partner-ways">Ways to partner</h2>
 
     <h3>Featured sponsored card</h3>
     <p>Your card in the weekend picks on the home page and on This weekend, or near the top of one city page. One sponsor per spot at a time.</p>
@@ -224,17 +206,12 @@ Option we're interested in:
       </ul>
     </figure>
 
-    <h2>Our standards</h2>
-    <ul>
-      <li>Every paid spot says "Sponsored." Always.</li>
-      <li>Family only: camps, classes, farms, museums, venues, and kids' activities we'd happily take our own three kids to.</li>
-      <li>We say no when something isn't a fit, and we don't take alcohol, cannabis, vaping, gambling, or anything meant for adults only.</li>
-      <li>Free events stay free. Nobody pays to have an event listed, and sponsoring doesn't change what we list or what we write about anyone.</li>
-      <li>No ad networks, and we never collect kids' data.</li>
-      <li>Sponsored spots are few, so the calendar stays a calendar.</li>
+    <h2>How it works</h2>
+    <ul class="partner-notes">
+      <li>Your card matches the rest of the calendar: real photo, short blurb, link to your site, and a clear Sponsored label.</li>
+      <li>We reach Eastside parents of toddlers through teens across 15 cities, plus the Thursday email.</li>
+      <li>Every paid spot says Sponsored. Family only. No ad networks, and we never collect kids' data.</li>
+      <li>After you pay, you'll land on a thank-you page to upload your photo and blurb, or email them to <a href="{{ partner_mailto }}">mads@eastsidecalendar.com</a>.</li>
     </ul>
-
-    <h2>Get in touch</h2>
-    <p>Tap Sponsor next to an option to pay online. After you pay, we'll send you to a thank-you page where you can upload your photo and blurb, or email them to <a href="{{ partner_mailto }}">mads@eastsidecalendar.com</a>. For a custom package or a question, use that same address.</p>
   </div>
 </article>
