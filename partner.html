@@ -202,15 +202,10 @@ Option we're interested in:
       </li>
     </ul>
     <figure class="sponsor-preview">
-      <figcaption class="sponsor-preview-label">Example · Top of its town</figcaption>
-      <div class="camp-town">
-        <p class="camp-town-title"><span class="camp-group-name">Kirkland</span> (<span class="camp-group-count">2</span>)</p>
-        <ul class="camp-list">
-          {%- include camp-sponsored.html listing=page.sample_listing -%}
-          {%- assign camp = page.sample_camp -%}
-          {%- include camp-row.html -%}
-        </ul>
-      </div>
+      <figcaption class="sponsor-preview-label">Example · Enhanced listing at the top of Kirkland</figcaption>
+      <ul class="camp-list partner-camp-preview">
+        {%- include camp-sponsored.html listing=page.sample_listing -%}
+      </ul>
     </figure>
 
     <h3><a href="{{ '/birthday-venues/' | relative_url }}">Featured birthday venue</a></h3>
@@ -223,18 +218,10 @@ Option we're interested in:
       </li>
     </ul>
     <figure class="sponsor-preview">
-      <figcaption class="sponsor-preview-label">Example · Birthday parties</figcaption>
-      <div class="camp-town">
-        <p class="camp-town-title"><span class="camp-group-name">Redmond</span> (<span class="camp-group-count">2</span>)</p>
-        <ul class="camp-list">
-          {%- include camp-sponsored.html listing=page.sample_birthday -%}
-          <li class="camp-row">
-            <p class="camp-name-line"><a href="https://example.com">{{ page.sample_birthday_row.name }}</a></p>
-            <p class="camp-meta">{{ page.sample_birthday_row.meta }}</p>
-            <p class="camp-signup">{{ page.sample_birthday_row.address }}</p>
-          </li>
-        </ul>
-      </div>
+      <figcaption class="sponsor-preview-label">Example · Featured venue at the top of Redmond</figcaption>
+      <ul class="camp-list partner-camp-preview">
+        {%- include camp-sponsored.html listing=page.sample_birthday -%}
+      </ul>
     </figure>
 
     <h2>Our standards</h2>

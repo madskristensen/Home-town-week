@@ -106,21 +106,6 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
   margin: 0.35rem 0 0;
 }
 
-.sponsor-preview .camp-town {
-  margin-top: 0;
-}
-
-.sponsor-preview .camp-list {
-  margin-top: 0.15rem;
-}
-
-.sponsor-preview .camp-name-line,
-.sponsor-preview .camp-meta,
-.sponsor-preview .camp-signup,
-.sponsor-preview .camp-blurb,
-.sponsor-preview .sponsor-mark {
-  margin: 0;
-}
 
 .partner-options {
   list-style: none;
@@ -187,4 +172,48 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
 .prose a.partner-buy-link:hover,
 .prose a.partner-buy-link:focus-visible {
   text-decoration: underline;
+}
+
+
+/* Camp and birthday previews: one enhanced row, never the 2-column list. */
+.sponsor-preview .camp-list,
+.sponsor-preview .partner-camp-preview {
+  columns: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sponsor-preview .camp-list > li,
+.sponsor-preview .partner-camp-preview > li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  break-inside: auto;
+}
+
+.sponsor-preview .camp-sponsored .event-photo {
+  width: min(100%, 22rem);
+  aspect-ratio: 16 / 9;
+  margin: 0.45rem 0 0.55rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.sponsor-preview .camp-sponsored .sponsor-mark {
+  margin: 0 0 0.15rem;
+}
+
+.sponsor-preview .camp-sponsored .camp-name-line {
+  margin: 0;
+  font-size: 1.12rem;
+}
+
+.sponsor-preview .camp-sponsored .camp-meta {
+  margin: 0.2rem 0 0;
+}
+
+.sponsor-preview .camp-sponsored .camp-blurb {
+  margin: 0.35rem 0 0;
+  max-width: 36rem;
 }

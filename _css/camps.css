@@ -216,6 +216,10 @@
   .camp-list > li {
     break-inside: avoid;
   }
+
+  .sponsor-preview .camp-list {
+    columns: 1;
+  }
 }
 
 /* The Distance pill's note when location is off. Empty takes no room. */
