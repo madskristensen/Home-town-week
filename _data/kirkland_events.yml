@@ -17,27 +17,6 @@
   description: "Lake Washington High School's fall play. A magazine writer is stalked after a blind date,\
     \ and the story turns into a thriller. For teens and adults."
   hub_blurb: "Lake Washington High School's fall play."
-- name: "Baby Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  start: "2026-10-22T10:30:00-07:00"
-  end: "2026-10-22T11:00:00-07:00"
-  place: "Kirkland Library, 308 Kirkland Ave"
-  same_as: "https://kcls.bibliocommons.com/events/6a7faba35d8bc300315a7030"
-  card: "baby-story-time-2"
-  order: "10"
-  heading_id: "baby-story-time-2"
-  when: "Thu Oct 22 · 10:30–11:00 a.m."
-  blurbs:
-  - "Stories, songs, and rhymes for babies up to 12 months with an adult, then a short play time. Free.\
-    \ First come, first seated."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a7faba35d8bc300315a7030"
-    label: "Baby Story Time"
-  description: "Stories, songs, and rhymes for babies up to 12 months with an adult, then a short play\
-    \ time. Free. First come, first seated."
-  hub_blurb: "Stories, songs, and rhymes for babies up to 12 months with an adult, then a short play time."
 - name: "Ukrainian Story Time"
   cost: "Free"
   ages: "All ages"

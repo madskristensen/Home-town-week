@@ -55,28 +55,6 @@
     \ listing stays up through October."
   hub_blurb: "Five acres of pumpkins still on the vine, a corn maze with a shorter path for small children,\
     \ and goats, pigs, and cows."
-- name: "Family Story Time"
-  cost: "Free"
-  ages: "All ages"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-10-22T10:30:00-07:00"
-  end: "2026-10-22T11:30:00-07:00"
-  place: "Duvall Library, 15508 Main Street NE"
-  same_as: "https://kcls.bibliocommons.com/events/6aa89174ca248a002915d999"
-  card: "family-story-time"
-  order: "9"
-  heading_id: "family-story-time"
-  when: "Thu Oct 22 · 10:30–11:30 a.m."
-  blurbs:
-  - "Stories, songs, rhymes, and movement, then a short play time. All ages with an adult. Free, no registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6aa89174ca248a002915d999"
-    label: "Family Story Time"
-  description: "Stories, songs, rhymes, and movement, then a short play time. All ages with an adult.\
-    \ Free, no registration."
-  hub_blurb: "Stories, songs, rhymes, and movement, then a short play time."
 - name: "Tabletop Role-Playing Games Club"
   cost: "Free"
   ages: "Teens"

@@ -1,79 +1,3 @@
-- name: "Firefighters and Friends Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-10-22T10:00:00-07:00"
-  end: "2026-10-22T11:00:00-07:00"
-  place: "Fairwood Library, 17009 140th Avenue SE"
-  same_as: "https://kcls.bibliocommons.com/events/6aa32626101eb7003f2f226c"
-  card: "firefighters-and-friends-story-time"
-  order: "15"
-  heading_id: "firefighters-and-friends-story-time"
-  when: "Thu Oct 22 · 10:00–11:00 a.m."
-  blurbs:
-  - "Meet Renton Regional Fire Authority firefighters, hear stories, and learn fire safety. A fire truck\
-    \ may visit if it is not needed on a call. Free, no registration. Space is limited."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6aa32626101eb7003f2f226c"
-    label: "Firefighters and Friends Story Time"
-  description: "Meet Renton Regional Fire Authority firefighters, hear stories, and learn fire safety.\
-    \ A fire truck may visit if it is not needed on a call. Free, no registration. Space is limited."
-  hub_blurb: "Meet Renton Regional Fire Authority firefighters, hear stories, and learn fire safety."
-- name: "Autumn Quilling Magnets"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-22T14:00:00-07:00"
-  end: "2026-10-22T15:00:00-07:00"
-  place: "Fairwood Library, 17009 140th Avenue SE"
-  same_as: "https://kcls.bibliocommons.com/events/6a9603d069166f088b9653fc"
-  card: "autumn-quilling-magnets"
-  heading_id: "autumn-quilling-magnets"
-  when: "Thu Oct 22 · 2:00–3:00 p.m."
-  blurbs:
-  - "Make autumn and Halloween magnets with paper quilling. Supplies provided; walk-ins welcome. Free\
-    \ at Fairwood Library."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a9603d069166f088b9653fc"
-    label: "Autumn Quilling Magnets"
-  description: "Make autumn and Halloween magnets with paper quilling. Supplies provided; walk-ins welcome.\
-    \ Free at Fairwood Library."
-  hub_blurb: "Halloween paper-quilling magnets at Fairwood Library."
-  ages: "Kids"
-  tags:
-  - "halloween"
-  photo:
-    src: "/assets/images/renton/fairwood-library.webp"
-    alt: "Fairwood Library"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/fairwood/"
-    license: "organizer"
-- name: "Spooky Nature Science"
-  cost: "Free"
-  ages: "All ages"
-  setting: "Indoor"
-  tags:
-  - "halloween"
-  start: "2026-10-22T16:00:00-07:00"
-  end: "2026-10-22T17:30:00-07:00"
-  place: "Renton Library, 100 Mill Avenue S"
-  same_as: "https://www.envsciencecenter.org/event-details/spooky-nature-science"
-  card: "spooky-nature-science"
-  order: "16"
-  heading_id: "spooky-nature-science"
-  when: "Thu Oct 22 · 4:00–5:30 p.m."
-  blurbs:
-  - "A drop-in science and craft hour with the Environmental Science Center. Mix a color-changing potion\
-    \ and take a look at some creepy-crawlies. It is for all ages, and you may get a little dusty. No\
-    \ registration."
-  links:
-  - href: "https://www.envsciencecenter.org/event-details/spooky-nature-science"
-    label: "Spooky Nature Science"
-  description: "A drop-in science and craft hour with the Environmental Science Center. Mix a color-changing\
-    \ potion and take a look at some creepy-crawlies. It is for all ages, and you may get a little dusty.\
-    \ No registration."
-  hub_blurb: "A drop-in science and craft hour with the Environmental Science Center."
 - name: "Family Story Time"
   cost: "Free"
   setting: "Indoor"
@@ -168,6 +92,25 @@
     label: "Vietnamese Story Time"
   description: "Stories, music, and rhymes in Vietnamese and English for families with young children, with an adult. Free."
   hub_blurb: "Vietnamese family stories and songs."
+- name: "Halloween Spooktacular at The Landing"
+  cost: "Free"
+  setting: "Outdoor"
+  tags:
+  - "halloween"
+  start: "2026-10-23T17:00:00-07:00"
+  end: "2026-10-23T19:00:00-07:00"
+  place: "The Landing, plaza across from Regal, Renton"
+  same_as: "https://thelandinginrenton.com/events/the-landing-in-renton-halloween-spooktacular-at-the-landing/"
+  card: "halloween-spooktacular-at-the-landing"
+  heading_id: "halloween-spooktacular-at-the-landing"
+  when: "Fri Oct 23 · 5:00–7:00 p.m."
+  blurbs:
+  - "Come in costume and trick-or-treat from store to store at The Landing, with music and photo booths in the plaza across from Regal. Free and family friendly."
+  links:
+  - href: "https://thelandinginrenton.com/events/the-landing-in-renton-halloween-spooktacular-at-the-landing/"
+    label: "The Landing"
+  description: "Come in costume and trick-or-treat from store to store at The Landing, with music and photo booths in the plaza across from Regal. Free and family friendly."
+  hub_blurb: "Store-to-store trick-or-treating, music, and photo booths at The Landing."
 - name: "Station 13 Open House"
   cost: "Free"
   start: "2026-10-24T09:00:00-07:00"
@@ -774,6 +717,24 @@
     label: "Baby Story Time"
   description: "Nursery rhymes, songs, and stories for newborns to 18 months with an adult at Renton Library, right after toddler story time. Free, no registration."
   hub_blurb: "Baby stories at Renton Library."
+- name: "Spanish Story Time"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Indoor"
+  start: "2026-11-04T12:30:00-08:00"
+  end: "2026-11-04T13:00:00-08:00"
+  place: "Renton Library, 100 Mill Ave S"
+  same_as: "https://kcls.bibliocommons.com/events/6a7f68a7aafa6100295ca6e1"
+  card: "spanish-story-time-nov-4"
+  heading_id: "spanish-story-time-nov-4"
+  when: "Wed Nov 4 · 12:30–1:00 p.m."
+  blurbs:
+  - "Stories, music, movement, and rhymes in Spanish and English to build early literacy skills, aimed at preschoolers. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a7f68a7aafa6100295ca6e1"
+    label: "Spanish Story Time"
+  description: "Stories, music, movement, and rhymes in Spanish and English to build early literacy skills, aimed at preschoolers. Free, no registration."
+  hub_blurb: "Bilingual Spanish and English stories and songs for preschoolers."
 - name: "Scrooge!"
   setting: "Indoor"
   tags:
