@@ -30,15 +30,7 @@ seasons:
     url: ""
 
 cards:
-  weekend:
-    - title: "Kristensen Digital Test"
-      href: "https://www.kristensendigital.com/"
-      blurb: "A production-test sponsored weekend card for Eastside parents. Soft play, birthdays, and rainy-day fun."
-      image: "/assets/images/sponsors/kristensen-digital-test-7353f267.webp"
-      image_alt: "Rows of rental roller skates"
-      image_credit: "Kristensen Digital Test"
-      town: "Sponsored"
-      sponsored: true
+  weekend: []
   cities: {}
 
 listings: []
