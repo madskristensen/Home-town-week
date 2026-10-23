@@ -205,6 +205,9 @@
 {%- assign card_image_prop = "" -%}
 {%- if card_is_event -%}{%- assign card_image_prop = "image" -%}{%- endif -%}
 <article class="event-card{% if include.sponsored %} is-sponsored{% endif %}"{% if include.stretch == "1" %} data-stretch{% endif %}{% if card_id.size > 0 %} id="{{ card_id | escape }}"{% endif %}{% if card_date.size > 0 %} data-date="{{ card_date }}"{% endif %}{% if card_end.size > 0 %} data-end="{{ card_end }}"{% endif %}{% if card_attrs.size > 0 %} {{ card_attrs }}{% endif %}{%- if card_is_event %} itemscope itemtype="https://schema.org/Event"{% endif %}>
+{%- if include.sponsored -%}
+<p class="sponsor-mark">Sponsored</p>
+{%- endif -%}
 {%- assign card_image = include.image | append: "" | strip -%}
 {%- if card_image.size > 0 -%}
 {%- include event-photo.html

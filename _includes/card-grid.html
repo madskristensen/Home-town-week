@@ -106,7 +106,14 @@
 {%- assign card_stretch = "" -%}
 {%- if event.stretch -%}{%- assign card_stretch = "1" -%}{%- endif -%}
 {%- assign card_city_label = "" -%}
-{%- if card_sponsored -%}{%- assign card_city_label = card_place_city -%}{%- endif -%}
+{%- if card_sponsored -%}
+{%- assign card_city_label = card_place_city -%}
+{%- comment -%}Keep the city as the kicker; the Sponsored pill is on the card.{%- endcomment -%}
+{%- if card_town == "Sponsored" or card_town == "" -%}
+{%- assign card_town = card_place_city -%}
+{%- assign card_town_href = "" -%}
+{%- endif -%}
+{%- endif -%}
 {%- if event.label_ready -%}
 {%- assign card_price = event.price -%}
 {%- assign card_ages_text = event.ages_text -%}

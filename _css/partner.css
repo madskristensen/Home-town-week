@@ -386,3 +386,10 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
   margin: 0.35rem 0 0;
   max-width: 36rem;
 }
+
+
+/* Featured sponsored card in partner previews */
+.sponsor-preview .event-card.is-sponsored,
+.sponsor-preview .camp-sponsored {
+  max-width: 24rem;
+}
