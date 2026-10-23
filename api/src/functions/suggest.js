@@ -1,12 +1,62 @@
 "use strict";
 // POST /api/suggest: an event, a place, a city request, or anything else.
 // Saves pending/suggestions/{date}/{uuid}.json, plus the photo if sent.
+// Partner kind also POSTs to PARTNER_WEBHOOK_URL when that setting is set.
 const crypto = require("node:crypto");
 const { app } = require("@azure/functions");
 const s = require("../lib/shared");
 
 const KINDS = ["event", "place", "city", "partner", "other"];
-const LIMITS = { name: 200, date: 100, time: 100, place: 300, link: 500, blurb: 2000, contact_email: 200 };
+const LIMITS = {
+  name: 200,
+  date: 100,
+  time: 100,
+  place: 300,
+  link: 500,
+  blurb: 2000,
+  contact_email: 200,
+  town: 80
+};
+const PHOTO_B64_MAX = Math.floor(1.5 * 1024 * 1024);
+
+async function notifyPartnerWebhook(record, photoBuf, photoBlob) {
+  const url = (process.env.PARTNER_WEBHOOK_URL || "").trim();
+  if (!url) return;
+  const payload = {
+    ...record,
+    offering: record.place || "",
+    photo_blob: photoBlob || ""
+  };
+  if (photoBlob) {
+    try {
+      payload.photo_sas = s.photoSasUrl(photoBlob);
+      payload.photo_url = payload.photo_sas;
+    } catch (err) {
+      console.error("partner webhook SAS failed", err && err.message ? err.message : err);
+      if (photoBuf && photoBuf.length <= PHOTO_B64_MAX) {
+        payload.photo_base64 = photoBuf.toString("base64");
+      }
+    }
+  }
+  const headers = { "Content-Type": "application/json" };
+  const key = (process.env.PARTNER_WEBHOOK_KEY || "").trim();
+  if (key) headers["Authorization"] = "Bearer " + key;
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers,
+      body: JSON.stringify(payload)
+    });
+    if (!res.ok) {
+      const text = await res.text().catch(() => "");
+      console.error("partner webhook failed", res.status, text.slice(0, 300));
+      return;
+    }
+    console.log("partner webhook ok", record.id);
+  } catch (err) {
+    console.error("partner webhook error", err && err.message ? err.message : err);
+  }
+}
 
 async function handler(request) {
   if (request.method === "OPTIONS") return { status: 204, headers: s.corsHeaders(request) };
@@ -42,9 +92,11 @@ async function handler(request) {
   const id = crypto.randomUUID();
   const base = `pending/suggestions/${s.datePath()}/${id}`;
   let file = "";
+  let photoBlob = "";
   if (body.photo) {
     file = `${id}.${s.IMAGE_TYPES[type]}`;
-    await s.putBlob(`pending/suggestions/${s.datePath()}/${file}`, body.photo, type);
+    photoBlob = `pending/suggestions/${s.datePath()}/${file}`;
+    await s.putBlob(photoBlob, body.photo, type);
   }
   const record = {
     id, kind, ...out, photo: file,
@@ -53,8 +105,13 @@ async function handler(request) {
     ip_hash: hash
   };
   await s.putBlob(`${base}.json`, JSON.stringify(record, null, 2), "application/json");
+  if (kind === "partner") {
+    // Await so Flex Consumption does not freeze mid-request. Errors are
+    // swallowed inside notifyPartnerWebhook; the browser still gets 200.
+    await notifyPartnerWebhook(record, body.photo, photoBlob);
+  }
   return s.reply(request, 200, { ok: true, id });
 }
 
 app.http("suggest", { methods: ["POST", "OPTIONS"], authLevel: "anonymous", route: "suggest", handler });
-module.exports = { handler };
+module.exports = { handler, notifyPartnerWebhook };

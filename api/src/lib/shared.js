@@ -4,8 +4,14 @@
 //   SUBMIT_STORAGE (or AzureWebJobsStorage): storage connection string
 //   IP_SALT: random string mixed into the IP hash
 //   ALLOWED_ORIGINS: optional comma list, overrides the default list
+//   PARTNER_WEBHOOK_URL / PARTNER_WEBHOOK_KEY: optional partner fulfillment
 const crypto = require("node:crypto");
-const { BlobServiceClient } = require("@azure/storage-blob");
+const {
+  BlobServiceClient,
+  BlobSASPermissions,
+  StorageSharedKeyCredential,
+  generateBlobSASQueryParameters
+} = require("@azure/storage-blob");
 
 const CONTAINER = "submissions";
 const MAX_PHOTO = 8 * 1024 * 1024;
@@ -78,6 +84,40 @@ async function putBlob(name, data, contentType) {
   const blob = container().getBlockBlobClient(name);
   const bytes = Buffer.isBuffer(data) ? data : Buffer.from(String(data), "utf8");
   await blob.uploadData(bytes, { blobHTTPHeaders: { blobContentType: contentType } });
+}
+
+function storageCred() {
+  const conn = process.env.SUBMIT_STORAGE || process.env.AzureWebJobsStorage;
+  if (!conn) throw new Error("No storage connection setting");
+  const parts = Object.fromEntries(
+    conn.split(";").filter(Boolean).map((p) => {
+      const i = p.indexOf("=");
+      return [p.slice(0, i), p.slice(i + 1)];
+    })
+  );
+  if (!parts.AccountName || !parts.AccountKey) {
+    throw new Error("Storage connection string needs AccountName and AccountKey");
+  }
+  return {
+    accountName: parts.AccountName,
+    credential: new StorageSharedKeyCredential(parts.AccountName, parts.AccountKey),
+    suffix: parts.EndpointSuffix || "core.windows.net"
+  };
+}
+
+// Read-only SAS URL for a blob in the submissions container, valid about 7 days.
+function photoSasUrl(blobName, days = 7) {
+  const { accountName, credential, suffix } = storageCred();
+  const startsOn = new Date(Date.now() - 60 * 1000);
+  const expiresOn = new Date(Date.now() + days * 24 * 60 * 60 * 1000);
+  const sas = generateBlobSASQueryParameters({
+    containerName: CONTAINER,
+    blobName,
+    permissions: BlobSASPermissions.parse("r"),
+    startsOn,
+    expiresOn
+  }, credential).toString();
+  return `https://${accountName}.blob.${suffix}/${CONTAINER}/${blobName}?${sas}`;
 }
 
 // Best effort: one small blob per hashed IP per hour, bumped with an ETag
@@ -188,6 +228,6 @@ async function readBody(request) {
 }
 
 module.exports = {
-  MAX_PHOTO, IMAGE_TYPES, corsHeaders, originOk, reply, ipHash, putBlob, rateLimited,
+  MAX_PHOTO, IMAGE_TYPES, corsHeaders, originOk, reply, ipHash, putBlob, photoSasUrl, rateLimited,
   sniffImage, clean, datePath, readBody
 };
