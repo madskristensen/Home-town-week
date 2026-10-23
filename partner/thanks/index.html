@@ -22,23 +22,11 @@ Blurb:
 <article class="page wrap prose suggest-page">
   <h1>Thanks for partnering</h1>
   <p>Your payment went through. Send the photo and text for your spot below, and we'll put it together. No kids' faces in the photo, please.</p>
+  <p class="suggest-hint" id="partner-offering-label" hidden></p>
 
   <form class="suggest-form" id="partner-form" action="{{ site.submit_api }}/suggest" method="post" enctype="multipart/form-data" novalidate>
     <input type="hidden" name="kind" value="partner">
-    <label for="pt-offering">Which option did you buy?</label>
-    <select id="pt-offering" name="place">
-      <option value="">Choose one</option>
-      <option value="featured-weekend">Featured weekend picks</option>
-      <option value="featured-city">Featured city page</option>
-      <option value="birthday-featured">Featured birthday venue</option>
-      <option value="seasonal-christmas">Seasonal Christmas</option>
-      <option value="seasonal-fall">Seasonal Fall / Halloween</option>
-      <option value="seasonal-spring-break">Seasonal Spring break</option>
-      <option value="seasonal-summer-camps">Seasonal Summer camps</option>
-      <option value="email-one">Email · one issue</option>
-      <option value="email-four">Email · four issues</option>
-      <option value="camp-enhanced">Enhanced summer camp listing</option>
-    </select>
+    <input type="hidden" name="place" id="pt-offering" value="">
     <label for="pt-name">Business name</label>
     <input id="pt-name" name="name" type="text" maxlength="200" autocomplete="organization" required>
     <label for="pt-link">Website</label>
@@ -64,13 +52,33 @@ Blurb:
   (function () {
     var form = document.getElementById("partner-form");
     var status = document.getElementById("partner-status");
+    var label = document.getElementById("partner-offering-label");
     if (!form || !window.fetch) return;
-    var offering = new URLSearchParams(location.search).get("offering");
-    if (offering && form.place.querySelector("option[value='" + offering.replace(/[^a-z0-9-]/g, "") + "']")) {
-      form.place.value = offering;
+    var names = {
+      "featured-weekend": "Featured weekend picks",
+      "featured-city": "Featured city page",
+      "birthday-featured": "Featured birthday venue",
+      "seasonal-christmas": "Seasonal Christmas",
+      "seasonal-fall": "Seasonal Fall / Halloween",
+      "seasonal-spring-break": "Seasonal Spring break",
+      "seasonal-summer-camps": "Seasonal Summer camps",
+      "email-one": "Email · one issue",
+      "email-four": "Email · four issues",
+      "camp-enhanced": "Enhanced summer camp listing"
+    };
+    var raw = (new URLSearchParams(location.search).get("offering") || "").replace(/[^a-z0-9-]/g, "");
+    var offering = names[raw] ? raw : "";
+    form.place.value = offering;
+    if (offering && label) {
+      label.hidden = false;
+      label.textContent = "For: " + names[offering];
     }
     form.addEventListener("submit", function (event) {
       event.preventDefault();
+      if (!form.place.value) {
+        status.textContent = "Open this page from your Stripe receipt link, or email mads@eastsidecalendar.com with your photo and blurb.";
+        return;
+      }
       if (!form.name.value.trim()) {
         status.textContent = "Add your business name.";
         form.name.focus();
@@ -105,9 +113,7 @@ Blurb:
         });
       }).then(function () {
         form.reset();
-        if (offering && form.place.querySelector("option[value='" + offering.replace(/[^a-z0-9-]/g, "") + "']")) {
-          form.place.value = offering;
-        }
+        form.place.value = offering;
         status.textContent = "Got it. We'll review the photo and blurb and follow up if we need anything.";
       }).catch(function (err) {
         var why = {
