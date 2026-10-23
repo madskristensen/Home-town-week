@@ -1,12 +1,12 @@
-/* Partner page: quiet offers and washed examples. */
+/* Partner page: quiet offers, proof strip, FAQ, washed examples. */
 
 .prose > h2 {
-  margin-top: 2.6rem;
+  margin-top: 2.75rem;
 }
 
 .prose > h3 {
-  margin-top: 2.15rem;
-  padding-top: 0.35rem;
+  margin-top: 0.35rem;
+  padding-top: 0;
 }
 
 .prose > h2:first-of-type,
@@ -108,14 +108,54 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
 
 
 .partner-lead {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.85rem;
   color: var(--muted);
   font-size: 0.98rem;
   line-height: 1.45;
 }
 
+.partner-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.45rem;
+  list-style: none;
+  margin: 0 0 0.9rem;
+  padding: 0;
+}
+
+.partner-proof > li {
+  margin: 0;
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--pill);
+  background: var(--sheet);
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.partner-jump {
+  margin: 0 0 0.15rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
 .prose > h2.partner-ways {
-  margin-top: 1.1rem;
+  margin-top: 1.55rem;
+}
+
+.partner-group {
+  margin: 0 0 2.1rem;
+}
+
+.partner-group > h3 {
+  margin-top: 0;
+}
+
+.partner-group > p {
+  margin: 0.35rem 0 0;
 }
 
 .partner-options {
@@ -137,11 +177,38 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
   row-gap: 0.15rem;
   align-items: center;
   margin: 0;
-  padding: 0.85rem 1rem;
+  padding: 0.9rem 1.05rem;
   border: 1px solid var(--rule);
   border-radius: calc(var(--radius) + 2px);
   background: var(--sheet);
   box-shadow: 0 1px 0 color-mix(in srgb, var(--ink) 4%, transparent);
+}
+
+.partner-option-popular {
+  grid-template-areas:
+    "badge price"
+    "name price"
+    "meta price";
+  border-color: color-mix(in srgb, var(--forest) 42%, var(--rule));
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--forest) 18%, transparent),
+    0 1px 0 color-mix(in srgb, var(--ink) 4%, transparent);
+}
+
+.partner-popular-badge {
+  grid-area: badge;
+  justify-self: start;
+  display: inline-block;
+  margin: 0 0 0.2rem;
+  padding: 0.12rem 0.55rem;
+  border-radius: var(--pill);
+  background: color-mix(in srgb, var(--forest) 14%, transparent);
+  color: var(--forest);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+  text-transform: uppercase;
 }
 
 .partner-option-name {
@@ -168,9 +235,9 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
   justify-self: end;
   align-self: center;
   display: inline-block;
-  padding: 0.45rem 0.8rem;
+  padding: 0.5rem 0.9rem;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--link) 14%, transparent);
+  background: color-mix(in srgb, var(--link) 18%, transparent);
   color: var(--link);
   font-size: 0.9rem;
   font-weight: 700;
@@ -181,8 +248,19 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
 
 .partner-buy-link:hover,
 .partner-buy-link:focus-visible {
-  background: color-mix(in srgb, var(--link) 22%, transparent);
+  background: color-mix(in srgb, var(--link) 28%, transparent);
   text-decoration: none;
+}
+
+.partner-buy-link-primary {
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+}
+
+.partner-buy-link-primary:hover,
+.partner-buy-link-primary:focus-visible {
+  background: var(--btn-bg-hover);
+  color: var(--btn-ink);
 }
 
 .prose a.partner-buy-link {
@@ -203,7 +281,66 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
 }
 
 .partner-notes li + li {
-  margin-top: 0.35rem;
+  margin-top: 0.4rem;
+}
+
+.partner-faq {
+  margin: 0.85rem 0 0;
+  padding: 0;
+}
+
+.partner-faq dt {
+  margin: 1rem 0 0.25rem;
+  color: var(--ink);
+  font-size: 0.98rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.partner-faq dt:first-child {
+  margin-top: 0;
+}
+
+.partner-faq dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.partner-email-cta {
+  margin: 2rem 0 0;
+  padding: 0.95rem 1.05rem;
+  border: 1px solid var(--rule);
+  border-radius: calc(var(--radius) + 2px);
+  background: var(--wash);
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 34rem) {
+  .partner-options > li {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "meta"
+      "price";
+    row-gap: 0.35rem;
+  }
+
+  .partner-option-popular {
+    grid-template-areas:
+      "badge"
+      "name"
+      "meta"
+      "price";
+  }
+
+  .partner-buy-link {
+    justify-self: start;
+    margin-top: 0.2rem;
+  }
 }
 
 

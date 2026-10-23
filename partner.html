@@ -100,118 +100,158 @@ Option we're interested in:
 <article class="page wrap article-page">
   {%- include page-head.html intro="Sponsored spots put your farm, camp, class, or venue where Eastside families already look for weekend plans." -%}
   <div class="prose">
-    <p class="partner-lead">Show up on the weekend picks, a city page, a seasonal guide, the Thursday email, or the birthday and camps lists. Pick an option below, or email <a href="{{ partner_mailto }}">mads@eastsidecalendar.com</a> for a custom package.</p>
+    <p class="partner-lead">Reach parents who are already choosing somewhere to take the kids. Pick a spot below (from $35), or <a href="{{ partner_mailto }}">email for a custom package</a>.</p>
 
-    <h2 class="partner-ways">Ways to partner</h2>
-
-    <h3>Featured sponsored card</h3>
-    <p>Your card in the weekend picks on the home page and on This weekend, or near the top of one city page. One sponsor per spot at a time.</p>
-    <ul class="partner-options">
-      <li>
-        <span class="partner-option-name">Weekend picks</span>
-        <span class="partner-option-meta">Home page and This weekend</span>
-        <a class="partner-buy-link" href="https://buy.stripe.com/cNidRa0DX95C6nJdJA2Nq00">Sponsor · $150/mo</a>
-      </li>
-      <li>
-        <span class="partner-option-name">City page</span>
-        <span class="partner-option-meta">One city, near the top</span>
-        <a class="partner-buy-link" href="https://buy.stripe.com/00wbJ23Q9a9GbI3axo2Nq01">Sponsor · $60/mo</a>
-      </li>
+    <ul class="partner-proof" aria-label="Who you reach">
+      <li>15 Eastside cities</li>
+      <li>400+ upcoming family events</li>
+      <li>Thursday email</li>
+      <li>Family-run in Redmond</li>
+      <li>No ad networks</li>
+      <li>Always labeled Sponsored</li>
     </ul>
-    <figure class="sponsor-preview">
-      <figcaption class="sponsor-preview-label">Example · Weekend picks</figcaption>
-      {%- include card-grid.html events=page.featured_cards show_city=true -%}
-    </figure>
 
-    <h3>Seasonal sponsor</h3>
-    <p>Be the only sponsor of a seasonal page for its whole season, with a "Sponsored by" line and your card at the top.</p>
-    <ul class="partner-options">
-      <li>
-        <span class="partner-option-name"><a href="{{ '/christmas/' | relative_url }}">Christmas</a> + <a href="{{ '/christmas/lights/' | relative_url }}">lights map</a></span>
-        <span class="partner-option-meta">Nov to Dec</span>
-        <a class="partner-buy-link" href="https://buy.stripe.com/bJebJ2biBfu03bx5d42Nq03">Sponsor · $400</a>
-      </li>
-      <li>
-        <span class="partner-option-name"><a href="{{ '/fall/' | relative_url }}">Fall</a> / <a href="{{ '/fall/#halloween' | relative_url }}">Halloween</a> + <a href="{{ '/fall/decorations/' | relative_url }}">decorations map</a></span>
-        <span class="partner-option-meta">Sep to Oct</span>
-        <a class="partner-buy-link" href="https://buy.stripe.com/eVq6oI72l3Li3bxfRI2Nq04">Sponsor · $300</a>
-      </li>
-      <li>
-        <span class="partner-option-name"><a href="{{ '/spring-break/' | relative_url }}">Spring break</a></span>
-        <span class="partner-option-meta">Mid-March through break week</span>
-        <a class="partner-buy-link" href="https://buy.stripe.com/00w4gAdqJepWcM720S2Nq05">Sponsor · $150</a>
-      </li>
-      <li>
-        <span class="partner-option-name"><a href="{{ '/summer-camps/' | relative_url }}">Summer camps guide</a></span>
-        <span class="partner-option-meta">Jan to Jun</span>
-        <a class="partner-buy-link" href="https://buy.stripe.com/28E7sMeuN0z613p4902Nq06">Sponsor · $300</a>
-      </li>
-    </ul>
-    <figure class="sponsor-preview">
-      <figcaption class="sponsor-preview-label">Example · Christmas lights</figcaption>
-      {%- include sponsor-line.html name="Example Lights Co" url="https://example.com" -%}
-      {%- include card-grid.html events=page.lights_cards show_city=true -%}
-    </figure>
+    <p class="partner-jump"><a href="#packages">See packages</a> · <a href="#faq">FAQ</a> · From $35</p>
 
-    <h3>Weekly email sponsor</h3>
-    <p>One short, labeled line in the Thursday email. One sponsor per issue.</p>
-    <ul class="partner-options">
-      <li>
-        <span class="partner-option-name">One issue</span>
-        <span class="partner-option-meta">A single Thursday</span>
-        <a class="partner-buy-link" href="https://buy.stripe.com/bJe6oIdqJ0z6eUf5d42Nq07">Sponsor · $35</a>
-      </li>
-      <li>
-        <span class="partner-option-name">Four issues</span>
-        <span class="partner-option-meta">Four Thursdays in a row</span>
-        <a class="partner-buy-link" href="https://buy.stripe.com/14AcN64Udfu013pdJA2Nq08">Sponsor · $120</a>
-      </li>
-    </ul>
-    <figure class="sponsor-preview">
-      <figcaption class="sponsor-preview-label">Example · Thursday email</figcaption>
-      <p class="email-sample-kicker">Eastside Family Calendar · Thursday</p>
-      <p class="email-sample-subject">This weekend on the Eastside</p>
-      {%- include email-sponsor.html name="Example Music Class" url="https://example.com" line="Saturday classes for ages 5 to 12 in Kirkland" -%}
-    </figure>
+    <h2 class="partner-ways" id="packages">Ways to partner</h2>
 
-    <h3><a href="{{ '/summer-camps/' | relative_url }}">Enhanced summer camp listing</a></h3>
-    <p>Basic camp listings are free. An enhanced listing adds a photo, a longer description, and the top spot for its town, labeled Sponsored.</p>
-    <ul class="partner-options">
-      <li>
-        <span class="partner-option-name">Enhanced listing</span>
-        <span class="partner-option-meta">One camp, for the season</span>
-        <a class="partner-buy-link" href="https://buy.stripe.com/8x2cN63Q9chOeUf34W2Nq09">Sponsor · $49</a>
-      </li>
-    </ul>
-    <figure class="sponsor-preview">
-      <figcaption class="sponsor-preview-label">Example · Enhanced listing at the top of Kirkland</figcaption>
-      <ul class="camp-list partner-camp-preview">
-        {%- include camp-sponsored.html listing=page.sample_listing -%}
+    <section class="partner-group" aria-labelledby="partner-featured">
+      <h3 id="partner-featured">Featured sponsored card</h3>
+      <p>Your card in the weekend picks on the home page and on This weekend, or near the top of one city page. One sponsor per spot at a time.</p>
+      <ul class="partner-options">
+        <li>
+          <span class="partner-option-name">Weekend picks</span>
+          <span class="partner-option-meta">Home page and This weekend</span>
+          <a class="partner-buy-link" href="https://buy.stripe.com/cNidRa0DX95C6nJdJA2Nq00">Sponsor · $150/mo</a>
+        </li>
+        <li class="partner-option-popular">
+          <span class="partner-popular-badge">Best for local shops</span>
+          <span class="partner-option-name">City page</span>
+          <span class="partner-option-meta">One city, near the top</span>
+          <a class="partner-buy-link partner-buy-link-primary" href="https://buy.stripe.com/00wbJ23Q9a9GbI3axo2Nq01">Sponsor · $60/mo</a>
+        </li>
       </ul>
-    </figure>
+      <figure class="sponsor-preview">
+        <figcaption class="sponsor-preview-label">Example · Weekend picks</figcaption>
+        {%- include card-grid.html events=page.featured_cards show_city=true -%}
+      </figure>
+    </section>
 
-    <h3><a href="{{ '/birthday-venues/' | relative_url }}">Featured birthday venue</a></h3>
-    <p>Every venue is listed free. A featured spot adds your photo, a short description, and the top of your town, labeled Sponsored.</p>
-    <ul class="partner-options">
-      <li>
-        <span class="partner-option-name">Featured venue</span>
-        <span class="partner-option-meta">Top of your town and type</span>
-        <a class="partner-buy-link" href="https://buy.stripe.com/28E8wQ5Yha9G4fB9tk2Nq02">Sponsor · $100/mo</a>
-      </li>
-    </ul>
-    <figure class="sponsor-preview">
-      <figcaption class="sponsor-preview-label">Example · Featured venue at the top of Redmond</figcaption>
-      <ul class="camp-list partner-camp-preview">
-        {%- include camp-sponsored.html listing=page.sample_birthday -%}
+    <section class="partner-group" aria-labelledby="partner-seasonal">
+      <h3 id="partner-seasonal">Seasonal sponsor</h3>
+      <p>Be the only sponsor of a seasonal page for its whole season, with a "Sponsored by" line and your card at the top.</p>
+      <ul class="partner-options">
+        <li>
+          <span class="partner-option-name"><a href="{{ '/christmas/' | relative_url }}">Christmas</a> + <a href="{{ '/christmas/lights/' | relative_url }}">lights map</a></span>
+          <span class="partner-option-meta">Nov to Dec</span>
+          <a class="partner-buy-link" href="https://buy.stripe.com/bJebJ2biBfu03bx5d42Nq03">Sponsor · $400</a>
+        </li>
+        <li>
+          <span class="partner-option-name"><a href="{{ '/fall/' | relative_url }}">Fall</a> / <a href="{{ '/fall/#halloween' | relative_url }}">Halloween</a> + <a href="{{ '/fall/decorations/' | relative_url }}">decorations map</a></span>
+          <span class="partner-option-meta">Sep to Oct</span>
+          <a class="partner-buy-link" href="https://buy.stripe.com/eVq6oI72l3Li3bxfRI2Nq04">Sponsor · $300</a>
+        </li>
+        <li>
+          <span class="partner-option-name"><a href="{{ '/spring-break/' | relative_url }}">Spring break</a></span>
+          <span class="partner-option-meta">Mid-March through break week</span>
+          <a class="partner-buy-link" href="https://buy.stripe.com/00w4gAdqJepWcM720S2Nq05">Sponsor · $150</a>
+        </li>
+        <li>
+          <span class="partner-option-name"><a href="{{ '/summer-camps/' | relative_url }}">Summer camps guide</a></span>
+          <span class="partner-option-meta">Jan to Jun</span>
+          <a class="partner-buy-link" href="https://buy.stripe.com/28E7sMeuN0z613p4902Nq06">Sponsor · $300</a>
+        </li>
       </ul>
-    </figure>
+      <figure class="sponsor-preview">
+        <figcaption class="sponsor-preview-label">Example · Christmas lights</figcaption>
+        {%- include sponsor-line.html name="Example Lights Co" url="https://example.com" -%}
+        {%- include card-grid.html events=page.lights_cards show_city=true -%}
+      </figure>
+    </section>
 
-    <h2>How it works</h2>
+    <section class="partner-group" aria-labelledby="partner-email">
+      <h3 id="partner-email">Weekly email sponsor</h3>
+      <p>One short, labeled line in the Thursday email. One sponsor per issue.</p>
+      <ul class="partner-options">
+        <li>
+          <span class="partner-option-name">One issue</span>
+          <span class="partner-option-meta">A single Thursday</span>
+          <a class="partner-buy-link" href="https://buy.stripe.com/bJe6oIdqJ0z6eUf5d42Nq07">Sponsor · $35</a>
+        </li>
+        <li>
+          <span class="partner-option-name">Four issues</span>
+          <span class="partner-option-meta">Four Thursdays in a row</span>
+          <a class="partner-buy-link" href="https://buy.stripe.com/14AcN64Udfu013pdJA2Nq08">Sponsor · $120</a>
+        </li>
+      </ul>
+      <figure class="sponsor-preview">
+        <figcaption class="sponsor-preview-label">Example · Thursday email</figcaption>
+        <p class="email-sample-kicker">Eastside Family Calendar · Thursday</p>
+        <p class="email-sample-subject">This weekend on the Eastside</p>
+        {%- include email-sponsor.html name="Example Music Class" url="https://example.com" line="Saturday classes for ages 5 to 12 in Kirkland" -%}
+      </figure>
+    </section>
+
+    <section class="partner-group" aria-labelledby="partner-camps">
+      <h3 id="partner-camps"><a href="{{ '/summer-camps/' | relative_url }}">Enhanced summer camp listing</a></h3>
+      <p>Basic camp listings are free. An enhanced listing adds a photo, a longer description, and the top spot for its town, labeled Sponsored.</p>
+      <ul class="partner-options">
+        <li>
+          <span class="partner-option-name">Enhanced listing</span>
+          <span class="partner-option-meta">One camp, for the season</span>
+          <a class="partner-buy-link" href="https://buy.stripe.com/8x2cN63Q9chOeUf34W2Nq09">Sponsor · $49</a>
+        </li>
+      </ul>
+      <figure class="sponsor-preview">
+        <figcaption class="sponsor-preview-label">Example · Enhanced listing at the top of Kirkland</figcaption>
+        <ul class="camp-list partner-camp-preview">
+          {%- include camp-sponsored.html listing=page.sample_listing -%}
+        </ul>
+      </figure>
+    </section>
+
+    <section class="partner-group" aria-labelledby="partner-birthday">
+      <h3 id="partner-birthday"><a href="{{ '/birthday-venues/' | relative_url }}">Featured birthday venue</a></h3>
+      <p>Every venue is listed free. A featured spot adds your photo, a short description, and the top of your town, labeled Sponsored.</p>
+      <ul class="partner-options">
+        <li>
+          <span class="partner-option-name">Featured venue</span>
+          <span class="partner-option-meta">Top of your town and type</span>
+          <a class="partner-buy-link" href="https://buy.stripe.com/28E8wQ5Yha9G4fB9tk2Nq02">Sponsor · $100/mo</a>
+        </li>
+      </ul>
+      <figure class="sponsor-preview">
+        <figcaption class="sponsor-preview-label">Example · Featured venue at the top of Redmond</figcaption>
+        <ul class="camp-list partner-camp-preview">
+          {%- include camp-sponsored.html listing=page.sample_birthday -%}
+        </ul>
+      </figure>
+    </section>
+
+    <h2 id="how-it-works">How it works</h2>
     <ul class="partner-notes">
       <li>Parents see a card that looks like the rest of the calendar: your photo, a short blurb, and a link straight to your site, with a clear Sponsored label.</li>
       <li>You're reaching Eastside parents of toddlers through teens across 15 cities, plus readers of the Thursday email.</li>
       <li>Every paid spot says Sponsored. Family only. No ad networks, and we never collect kids' data.</li>
       <li>After you pay, upload your photo and blurb on the thank-you page, or email them to <a href="{{ partner_mailto }}">mads@eastsidecalendar.com</a>.</li>
     </ul>
+
+    <h2 id="faq">FAQ</h2>
+    <dl class="partner-faq">
+      <dt>What do I get?</dt>
+      <dd>A labeled Sponsored spot in the place you pick: weekend picks, a city page, a seasonal guide, the Thursday email, or the camps and birthday lists. Your photo, short blurb, and link go to your site.</dd>
+      <dt>What creative do you need?</dt>
+      <dd>A photo and a short blurb. After you pay, the thank-you page takes both. No kids' faces in the photo, please.</dd>
+      <dt>When does it go live?</dt>
+      <dd>Usually within a few days of receiving your photo and blurb. Seasonal spots run for that season. Monthly spots renew until you cancel.</dd>
+      <dt>Can I cancel or change?</dt>
+      <dd>Yes. Email <a href="{{ partner_mailto }}">mads@eastsidecalendar.com</a> and we'll stop the next renewal or move you to a different spot when one is free.</dd>
+      <dt>Who can sponsor?</dt>
+      <dd>Family-friendly places and events only. Farms, camps, classes, venues, and local shops parents would take kids to. No adult-only ads.</dd>
+      <dt>Need something custom?</dt>
+      <dd>Email <a href="{{ partner_mailto }}">mads@eastsidecalendar.com</a>. We can combine spots or build a short package that fits your season.</dd>
+    </dl>
+
+    <p class="partner-email-cta">Questions, or want a custom package? <a href="{{ partner_mailto }}">Email mads@eastsidecalendar.com</a>. I'm a Redmond dad of three, and I run this calendar for Eastside families.</p>
   </div>
 </article>
