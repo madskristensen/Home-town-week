@@ -182,9 +182,11 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
   border-radius: calc(var(--radius) + 2px);
   background: var(--sheet);
   box-shadow: 0 1px 0 color-mix(in srgb, var(--ink) 4%, transparent);
+  overflow: visible;
+  min-width: 0;
 }
 
-.partner-option-popular {
+.partner-options > li.partner-option-popular {
   grid-template-areas:
     "badge price"
     "name price"
@@ -193,6 +195,10 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
   box-shadow:
     0 0 0 1px color-mix(in srgb, var(--forest) 18%, transparent),
     0 1px 0 color-mix(in srgb, var(--ink) 4%, transparent);
+}
+
+.partner-options > li.partner-option-popular .partner-buy-link {
+  align-self: center;
 }
 
 .partner-popular-badge {
@@ -319,7 +325,7 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
   line-height: 1.45;
 }
 
-@media (max-width: 34rem) {
+@media (max-width: 40rem) {
   .partner-options > li {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -329,7 +335,7 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
     row-gap: 0.35rem;
   }
 
-  .partner-option-popular {
+  .partner-options > li.partner-option-popular {
     grid-template-areas:
       "badge"
       "name"
@@ -353,12 +359,16 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
   list-style: none;
 }
 
-.sponsor-preview .camp-list > li,
-.sponsor-preview .partner-camp-preview > li {
+.sponsor-preview .camp-list > li:not(.camp-sponsored),
+.sponsor-preview .partner-camp-preview > li:not(.camp-sponsored) {
   margin: 0;
   padding: 0;
   border: 0;
   break-inside: auto;
+}
+
+.sponsor-preview .camp-sponsored {
+  margin: 0;
 }
 
 .sponsor-preview .camp-sponsored .event-photo {
@@ -370,7 +380,7 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
 }
 
 .sponsor-preview .camp-sponsored .sponsor-mark {
-  margin: 0 0 0.15rem;
+  margin: 0 0 0.45rem;
 }
 
 .sponsor-preview .camp-sponsored .camp-name-line {
