@@ -89,7 +89,7 @@ The free nights are mostly one-evening tree lightings. The visits that run for w
 
 ### Issaquah
 
-[Issaquah Highlands Holiday Tree Lighting](https://issaquahhighlands.com/event/holiday-tree-lighting-4/) is Thursday, November 19, 2026, from 5 to 6:30 p.m., at Village Green Park, 2550 NE Park Drive. The Highlands list free hot chocolate, apple cider, and cookies, carols, and photos with Santa and Mrs. Claus. The tree lights at 5:30 p.m.
+[Issaquah Highlands Holiday Tree Lighting](https://issaquahhighlands.com/event/holiday-tree-lighting-4/) is Thursday, November 19, 2026, from 5 to 6:30 p.m., at Village Green Park, 2550 NE Park Drive. The Highlands list free hot chocolate, apple cider, and cookies, carols, and photos with Santa and Mrs. Claus. The tree lights at 5:15 p.m.
 
 [Issaquah Reindeer Festival](https://www.cougarmountainzoo.org/issaquah-reindeer-festival-offseason/) at Cougar Mountain Zoo, 19525 SE 54th Street, brings Santa back November 27, 2026. Santa is there November 27 through December 23, from 10:30 a.m. to 4:00 p.m. Festival hours those days are 10:30 a.m. to 4:30 p.m., or dusk. December 26 through 30 the holiday fun continues from 10:30 a.m. to 3:30 p.m. without Santa. Admission is at the gate. Santa photos ask for an extra donation. The photo is a tiger at the zoo, not the reindeer yard.
 
