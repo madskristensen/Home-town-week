@@ -126,7 +126,7 @@ figure.sponsor-preview > figcaption.sponsor-preview-label {
   justify-self: end;
   align-self: center;
   color: var(--link);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   line-height: 1.2;
   text-decoration: none;
