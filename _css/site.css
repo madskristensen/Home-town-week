@@ -869,8 +869,8 @@ picture {
 .prose h1,
 .page h1 {
   margin: 0 0 0.85rem;
-  padding-bottom: 0.55rem;
-  border-bottom: 2px solid var(--ink);
+  padding-bottom: 0;
+  border-bottom: 0;
   font-size: clamp(2.2rem, 8vw, 2.85rem);
 }
 
