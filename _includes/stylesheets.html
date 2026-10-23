@@ -32,7 +32,7 @@
 {%- if page.camps or page.partner or page.home_lights or page.guide_id == "playgrounds" -%}{{ site.data.css_inline.camps }}{%- endif -%}
 {%- if page.explore_id == "no-school-days" -%}{{ site.data.css_inline.no_school }}{%- endif -%}
 {%- if page.partner -%}{{ site.data.css_inline.partner }}{%- endif -%}
-{%- if page.url == "/suggest/" -%}{{ site.data.css_inline.suggest }}{%- endif -%}
+{%- if page.url == "/suggest/" or page.url == "/partner/thanks/" -%}{{ site.data.css_inline.suggest }}{%- endif -%}
 {%- if content contains "check-list" -%}{{ site.data.css_inline.check }}{%- endif -%}
 {%- endcapture -%}
 {%- assign layout_css = layout_css | strip -%}

@@ -5,7 +5,7 @@ const crypto = require("node:crypto");
 const { app } = require("@azure/functions");
 const s = require("../lib/shared");
 
-const KINDS = ["event", "place", "city", "other"];
+const KINDS = ["event", "place", "city", "partner", "other"];
 const LIMITS = { name: 200, date: 100, time: 100, place: 300, link: 500, blurb: 2000, contact_email: 200 };
 
 async function handler(request) {
@@ -23,7 +23,11 @@ async function handler(request) {
     if (value === null) return s.reply(request, 400, { ok: false, error: "too_long", field: key });
     out[key] = value;
   }
-  if (!out.name && !out.blurb && !out.link) return s.reply(request, 400, { ok: false, error: "empty" });
+  if (kind === "partner") {
+    if (!out.name || !out.blurb || !out.link) return s.reply(request, 400, { ok: false, error: "empty" });
+  } else if (!out.name && !out.blurb && !out.link) {
+    return s.reply(request, 400, { ok: false, error: "empty" });
+  }
   if (out.link && !/^https?:\/\/\S+$/i.test(out.link)) return s.reply(request, 400, { ok: false, error: "link" });
   if (!out.contact_email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(out.contact_email)) {
     return s.reply(request, 400, { ok: false, error: "email" });

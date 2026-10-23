@@ -1,0 +1,127 @@
+---
+layout: default
+title: Thanks for partnering
+description: Send your photo and blurb for your Eastside Family Calendar sponsored spot, or email them to Mads.
+permalink: /partner/thanks/
+partner: true
+---
+{%- capture partner_subject -%}Partner creative for Eastside Family Calendar{%- endcapture -%}
+{%- capture partner_body -%}Hi Mads,
+
+Here's the creative for our sponsored spot.
+
+Business name:
+Town:
+Website:
+Offering:
+Blurb:
+
+(Photo attached)
+{%- endcapture -%}
+{%- capture partner_mailto -%}mailto:mads@eastsidecalendar.com?subject={{ partner_subject | strip | mail_escape }}&amp;body={{ partner_body | strip | mail_escape }}{%- endcapture -%}
+<article class="page wrap prose suggest-page">
+  <h1>Thanks for partnering</h1>
+  <p>Your payment went through. Send the photo and text for your spot below, and we'll put it together. No kids' faces in the photo, please.</p>
+
+  <form class="suggest-form" id="partner-form" action="{{ site.submit_api }}/suggest" method="post" enctype="multipart/form-data" novalidate>
+    <input type="hidden" name="kind" value="partner">
+    <label for="pt-offering">Which option did you buy?</label>
+    <select id="pt-offering" name="place">
+      <option value="">Choose one</option>
+      <option value="featured-weekend">Featured weekend picks</option>
+      <option value="featured-city">Featured city page</option>
+      <option value="birthday-featured">Featured birthday venue</option>
+      <option value="seasonal-christmas">Seasonal Christmas</option>
+      <option value="seasonal-fall">Seasonal Fall / Halloween</option>
+      <option value="seasonal-spring-break">Seasonal Spring break</option>
+      <option value="seasonal-summer-camps">Seasonal Summer camps</option>
+      <option value="email-one">Email · one issue</option>
+      <option value="email-four">Email · four issues</option>
+      <option value="camp-enhanced">Enhanced summer camp listing</option>
+    </select>
+    <label for="pt-name">Business name</label>
+    <input id="pt-name" name="name" type="text" maxlength="200" autocomplete="organization" required>
+    <label for="pt-link">Website</label>
+    <input id="pt-link" name="link" type="url" maxlength="500" placeholder="https://" required>
+    <label for="pt-blurb">Blurb for the card</label>
+    <textarea id="pt-blurb" name="blurb" rows="4" maxlength="2000" placeholder="A short line parents will read. Keep it friendly and specific." required></textarea>
+    <label for="pt-photo">Photo</label>
+    <input id="pt-photo" name="photo" type="file" accept="image/*">
+    <p class="suggest-hint">JPEG or PNG, under 8 MB. A wide landscape works best. No kids' faces.</p>
+    <label for="pt-email">Your email</label>
+    <input id="pt-email" name="contact_email" type="email" maxlength="200" autocomplete="email" required>
+    <div class="suggest-trap" aria-hidden="true">
+      <label for="pt-website">Leave this empty</label>
+      <input id="pt-website" name="website" tabindex="-1" autocomplete="off">
+    </div>
+    <button type="submit" class="btn">Send creative</button>
+    <p class="suggest-status" id="partner-status" role="status"></p>
+  </form>
+
+  <p class="suggest-alt">Prefer email? Send the same details and photo to <a href="{{ partner_mailto }}">mads@eastsidecalendar.com</a>.</p>
+</article>
+<script>
+  (function () {
+    var form = document.getElementById("partner-form");
+    var status = document.getElementById("partner-status");
+    if (!form || !window.fetch) return;
+    var offering = new URLSearchParams(location.search).get("offering");
+    if (offering && form.place.querySelector("option[value='" + offering.replace(/[^a-z0-9-]/g, "") + "']")) {
+      form.place.value = offering;
+    }
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (!form.name.value.trim()) {
+        status.textContent = "Add your business name.";
+        form.name.focus();
+        return;
+      }
+      if (!/^https?:\/\/\S+$/i.test(form.link.value.trim())) {
+        status.textContent = "Add a website that starts with https://.";
+        form.link.focus();
+        return;
+      }
+      if (!form.blurb.value.trim()) {
+        status.textContent = "Add a short blurb for the card.";
+        form.blurb.focus();
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.contact_email.value.trim())) {
+        status.textContent = "Add your email so we can reach you.";
+        form.contact_email.focus();
+        return;
+      }
+      var file = form.photo.files[0];
+      if (file && file.size > 8 * 1024 * 1024) {
+        status.textContent = "That photo is over 8 MB. Try a smaller one.";
+        return;
+      }
+      var button = form.querySelector("button");
+      button.disabled = true;
+      status.textContent = "Sending…";
+      fetch(form.action, { method: "POST", body: new FormData(form) }).then(function (res) {
+        return res.json().catch(function () { return {}; }).then(function (data) {
+          if (!res.ok || !data.ok) throw new Error(data.error || String(res.status));
+        });
+      }).then(function () {
+        form.reset();
+        if (offering && form.place.querySelector("option[value='" + offering.replace(/[^a-z0-9-]/g, "") + "']")) {
+          form.place.value = offering;
+        }
+        status.textContent = "Got it. We'll review the photo and blurb and follow up if we need anything.";
+      }).catch(function (err) {
+        var why = {
+          rate: "Too many notes from here for now. Try again later.",
+          link: "Check the website. It should start with https://.",
+          email: "Check your email address.",
+          type: "That file is not a photo we can use. Try a JPEG or PNG.",
+          too_long: "Something is too long. Shorten the blurb and try again.",
+          empty: "Add your business name, website, and blurb."
+        };
+        status.textContent = why[err.message] || "That did not send. Try again, or email mads@eastsidecalendar.com.";
+      }).then(function () {
+        button.disabled = false;
+      });
+    });
+  })();
+</script>
