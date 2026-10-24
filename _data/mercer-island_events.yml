@@ -1,24 +1,3 @@
-- name: "Tot Shabbat"
-  ages: "Toddlers"
-  setting: "Indoor"
-  cost: "Free"
-  start: "2026-10-23T09:45:00-07:00"
-  end: "2026-10-23T10:30:00-07:00"
-  place: "Stroum Jewish Community Center, 3801 East Mercer Way"
-  same_as: "https://sjcc.org/series/tot-shabbat/"
-  card: "tot-shabbat-2"
-  order: "7"
-  heading_id: "tot-shabbat-2"
-  when: "Fri Oct 23 · 9:45–10:30 a.m."
-  blurbs:
-  - "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration.\
-    \ Everyone is welcome."
-  links:
-  - href: "https://sjcc.org/series/tot-shabbat/"
-    label: "Tot Shabbat"
-  description: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups.\
-    \ No registration. Everyone is welcome."
-  hub_blurb: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups."
 - name: "Arbor Day at Homestead Park"
   cost: "Free"
   setting: "Outdoor"

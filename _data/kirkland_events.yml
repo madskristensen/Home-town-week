@@ -17,56 +17,6 @@
   description: "Lake Washington High School's fall play. A magazine writer is stalked after a blind date,\
     \ and the story turns into a thriller. For teens and adults."
   hub_blurb: "Lake Washington High School's fall play."
-- name: "Ukrainian Story Time"
-  cost: "Free"
-  ages: "All ages"
-  setting: "Indoor"
-  tags:
-  - "free"
-  - "story-time"
-  start: "2026-10-23T10:30:00-07:00"
-  end: "2026-10-23T11:00:00-07:00"
-  place: "Kirkland Library, 308 Kirkland Ave"
-  same_as: "https://kcls.bibliocommons.com/events/6a63e1ecf494c55649eb13c9"
-  card: "ukrainian-story-time"
-  order: "11"
-  heading_id: "ukrainian-story-time"
-  when: "Fri Oct 23 · 10:30–11:00 a.m."
-  blurbs:
-  - "Stories and simple songs in Ukrainian for children of any age with an adult. No registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a63e1ecf494c55649eb13c9"
-    label: "Ukrainian Story Time"
-  description: "Stories and simple songs in Ukrainian for children of any age with an adult. No registration."
-  hub_blurb: "Stories and simple songs in Ukrainian for children of any age with an adult."
-- name: "Japanese Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-23T10:30:00-07:00"
-  end: "2026-10-23T11:00:00-07:00"
-  place: "Kingsgate Library, 12315 NE 143rd St"
-  same_as: "https://kcls.bibliocommons.com/events/6aa1eacb65abe8002a77f678"
-  card: "japanese-story-time"
-  heading_id: "japanese-story-time"
-  when: "Fri Oct 23 · 10:30–11:00 a.m."
-  blurbs:
-  - "Stories, music, movement, and rhymes in Japanese for all ages with an adult at Kingsgate Library.\
-    \ Free, no registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6aa1eacb65abe8002a77f678"
-    label: "Japanese Story Time"
-  description: "Stories, music, movement, and rhymes in Japanese for all ages with an adult at Kingsgate\
-    \ Library. Free, no registration."
-  hub_blurb: "Japanese stories and songs for families."
-  ages: "Toddlers"
-  tags:
-  - "story-time"
-  photo:
-    src: "/assets/images/kirkland/kingsgate-library.webp"
-    alt: "Kingsgate Library"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/kingsgate/"
-    license: "organizer"
 - name: "Village Halloween Celebration"
   setting: "Outdoor"
   cost: "Free"

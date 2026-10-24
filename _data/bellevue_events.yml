@@ -19,34 +19,6 @@
     label: "Register"
   description: "A free one-mile ranger hike for all ages on the mostly level gravel trails. The fall guide lists it Saturdays at 2:00 p.m. through Dec 26. Register ahead. Bring binoculars if you have them."
   hub_blurb: "A free one-mile ranger hike for all ages on the mostly level gravel trails."
-- name: "Korean Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-23T16:45:00-07:00"
-  end: "2026-10-23T17:30:00-07:00"
-  place: "Newport Way Library, 14250 SE Newport Way"
-  same_as: "https://kcls.bibliocommons.com/events/6aa9c030101eb7003f3063e9"
-  card: "korean-story-time-2"
-  heading_id: "korean-story-time-2"
-  when: "Fri Oct 23 · 4:45–5:30 p.m."
-  blurbs:
-  - "Korean picture books and songs, with a little Korean culture mixed in. For toddlers through early\
-    \ elementary with an adult. Free, no registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6aa9c030101eb7003f3063e9"
-    label: "Korean Story Time"
-  description: "Korean picture books and songs, with a little Korean culture mixed in. For toddlers through\
-    \ early elementary with an adult. Free, no registration."
-  hub_blurb: "Korean picture books and songs for toddlers through early elementary."
-  ages: "Toddlers"
-  tags:
-  - "story-time"
-  photo:
-    src: "/assets/images/bellevue/newport-way-library-entrance.webp"
-    alt: "Newport Way Library entrance"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/newport-way/"
-    license: "organizer"
 - name: "Halloween on the Hill"
   setting: "Indoor"
   signup: true
