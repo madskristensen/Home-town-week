@@ -1,15 +1,15 @@
 # Home-page picks for Friday Oct 23 through Sunday Oct 25, 2026.
-# Set Monday Oct 19 daily refresh for the Halloween weekend ahead; rechecked Friday Oct 23.
+# Set Monday Oct 19 daily refresh for the Halloween weekend ahead; refreshed Sunday Oct 25 with events still on today.
 # Names match _data/{city}_events.yml.
 - city: snoqualmie
   name: Halloween Train
+- city: carnation
+  name: Oxtober
+- city: maple-valley
+  name: Haunted Forest Family Walk
+- city: redmond
+  name: Captain Jack's Treasure Run
 - city: kirkland
-  name: Treat Street at Kirkland Urban
-- city: bellevue
-  name: Eastside Dia de los Muertos
-- city: renton
-  name: Olde Fashioned Halloween Party
-- city: north-bend
-  name: Great Si View Spooktacular
-- city: issaquah
-  name: Tract-or-Treat at Infinity Farm
+  name: Mushroom Mania
+- city: carnation
+  name: Fall Harvest Festival at Remlinger Farms

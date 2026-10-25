@@ -4,5 +4,5 @@ title: Bothell
 city: bothell
 state: wa
 description: Upcoming family events in Bothell on the Eastside.
-hook: Oct 24 brings a Diwali mela and the Northshore Y fall festival, and Oct 25 is a rangoli demonstration at the library. Main Street trick-or-treat is Oct 30.
+hook: Main Street trick-or-treat is Oct 30, and Oct 31 brings Spooky Family Fun. Kids can read to a therapy dog at the library Nov 8.
 ---

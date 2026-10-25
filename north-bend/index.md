@@ -4,5 +4,5 @@ title: North Bend
 city: north-bend
 state: wa
 description: Upcoming family events in North Bend on the Eastside.
-hook: The Halloween Train runs weekends through Nov 1. Oct 24 stacks the Si View Spooktacular, a pumpkin patch swim, and downtown trick-or-treat.
+hook: The Halloween Train runs its last weekend Oct 31 and Nov 1. Oct 29 is an accessibility screening at North Bend Theatre, and Nov 6 is an all-ages hoedown.
 ---

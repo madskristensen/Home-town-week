@@ -19,250 +19,6 @@
     label: "Register"
   description: "A free one-mile ranger hike for all ages on the mostly level gravel trails. The fall guide lists it Saturdays at 2:00 p.m. through Dec 26. Register ahead. Bring binoculars if you have them."
   hub_blurb: "A free one-mile ranger hike for all ages on the mostly level gravel trails."
-- name: "Halloween on the Hill"
-  setting: "Indoor"
-  signup: true
-  tags:
-  - "halloween"
-  start: "2026-10-24T10:00:00-07:00"
-  end: "2026-10-24T15:00:00-07:00"
-  place: "South Bellevue Community Center, 14509 SE Newport Way"
-  same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-  card: "halloween-on-the-hill"
-  order: "11"
-  heading_id: "halloween-on-the-hill"
-  when: "Sat Oct 24 · 10:00 a.m.–3:00 p.m."
-  blurbs:
-  - "A family carnival at South Bellevue Community Center, with inflatables, games, face painting, a climbing\
-    \ wall, and a play area for ages 3 and younger. Presale wristbands are $10. Wristbands the day of\
-    \ the event are $12. Adults 18 and older, and children 3 and younger, do not need one. The Great Pumpkin\
-    \ Race is the same day, with check-in at 9:45 a.m. and race times at 10:00 a.m. and noon. A racer\
-    \ kit is $25, and you bring your own pumpkin. Free demos are Sat Oct 17, 10:30–11:00 a.m., and Wed\
-    \ Oct 21, 6:30–7:00 p.m. A free build workshop is Fri Oct 23, 5:00–6:30 p.m."
-  links:
-  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-    label: "Activity guide"
-  - href: "https://register.bellevuewa.gov"
-    label: "Register"
-  description: "A family carnival at South Bellevue Community Center, with inflatables, games, face painting,\
-    \ a climbing wall, and a play area for ages 3 and younger. Presale wristbands are $10. Wristbands\
-    \ the day of the event are $12. Adults 18 and older, and children 3 and younger, do not need one.\
-    \ The Great Pumpkin Race is the same day, with check-in at 9:45 a.m. and race times at 10:00 a.m.\
-    \ and noon. A racer kit is $25, and you bring your own pumpkin. Free demos are Sat Oct 17, 10:30–11:00\
-    \ a.m., and Wed Oct 21, 6:30–7:00 p.m. A free build workshop is Fri Oct 23, 5:00–6:30 p.m."
-  hub_blurb: "A family carnival at South Bellevue Community Center, with inflatables, games, face painting,\
-    \ a climbing wall, and a play area for ages 3 and younger."
-- name: "Eastside Dia de los Muertos"
-  cost: "Free"
-  setting: "Indoor"
-  signup: true
-  tags:
-  - "dia-de-los-muertos"
-  start: "2026-10-24T12:00:00-07:00"
-  end: "2026-10-24T16:00:00-07:00"
-  place: "Crossroads Community Center, 16000 NE 10th St"
-  same_as: "https://bellevuewa.gov/events/eastside-dia-de-los-muertos-celebration"
-  card: "eastside-dia-de-los-muertos"
-  order: "12"
-  heading_id: "eastside-dia-de-los-muertos"
-  when: "Sat Oct 24 · 12:00–4:00 p.m."
-  blurbs:
-  - "A free community celebration with the city, Youth Eastside Services, and Cafesito Mexican Bakery.\
-    \ The day has live music, cultural performances, crafts, and community altars. Food vendors are there,\
-    \ so meals are separate from the free admission. All ages."
-  links:
-  - href: "https://bellevuewa.gov/events/eastside-dia-de-los-muertos-celebration"
-    label: "City of Bellevue"
-  - href: "https://register.bellevuewa.gov"
-    label: "Register"
-  description: "A free community celebration with the city, Youth Eastside Services, and Cafesito Mexican\
-    \ Bakery. The day has live music, cultural performances, crafts, and community altars. Food vendors\
-    \ are there, so meals are separate from the free admission. All ages."
-  hub_blurb: "A free community celebration with the city, Youth Eastside Services, and Cafesito Mexican\
-    \ Bakery."
-- name: "Trick or Treat with the Farm Animals"
-  cost: "$30 to $36"
-  signup: true
-  setting: "Outdoor"
-  tags:
-  - "halloween"
-  start: "2026-10-24T13:00:00-07:00"
-  end: "2026-10-24T15:00:00-07:00"
-  place: "Kelsey Creek Farm, 410 130th Pl SE"
-  same_as: "https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/trick-treat-farm-animals"
-  card: "trick-or-treat-with-the-farm-animals"
-  order: "13"
-  heading_id: "trick-or-treat-with-the-farm-animals"
-  when: "Sat Oct 24 · 1:00–3:00 p.m."
-  blurbs:
-  - "Come in costume and trick-or-treat with costumed farm animals. The afternoon also has a bag to decorate,\
-    \ farm crafts, spooky science, and pumpkin bowling. Most of it is outdoors. Pets are not allowed in\
-    \ the barnyard. Registration is $30 for Bellevue residents and $36 for everyone else. Day-of registration\
-    \ is available if space remains. On-site parking is free, with more at International School, 445 128th\
-    \ Ave SE."
-  links:
-  - href: "https://bellevuewa.gov/city-government/departments/parks/community-centers/kelsey-creek-farm/events/trick-treat-farm-animals"
-    label: "Trick or Treat with the Farm Animals"
-  photo:
-    src: "/assets/images/bellevue/kelsey-creek.webp"
-    alt: "Barn and pasture at Kelsey Creek Farm in Bellevue."
-    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
-    source: "https://commons.wikimedia.org/wiki/File:Kelsey_Creek_Farm_04.jpg"
-  description: "Come in costume and trick-or-treat with costumed farm animals. The afternoon also has\
-    \ a bag to decorate, farm crafts, spooky science, and pumpkin bowling. Most of it is outdoors. Pets\
-    \ are not allowed in the barnyard. Registration is $30 for Bellevue residents and $36 for everyone\
-    \ else. Day-of registration is available if space remains. On-site parking is free, with more at International\
-    \ School, 445 128th Ave SE."
-  hub_blurb: "Come in costume and trick-or-treat with costumed farm animals."
-- name: "Crossroads Bellevue Fall Festival"
-  setting: "Outdoor"
-  cost: "Free"
-  tags:
-  - "fall"
-  start: "2026-10-24T13:00:00-07:00"
-  end: "2026-10-24T15:00:00-07:00"
-  place: "Crossroads Bellevue, outside Crossroads Library, 15600 NE 8th St"
-  same_as: "https://crossroadsbellevue.com/events/crossroads-bellevue-fall-festival/"
-  card: "crossroads-bellevue-fall-festival"
-  heading_id: "crossroads-bellevue-fall-festival"
-  when: "Sat Oct 24 · 1:00–3:00 p.m."
-  blurbs:
-  - "Climb into fire trucks and other vehicles at a touch-a-truck, watch a master carver work on a giant pumpkin, and try fall crafts, face painting, and balloon art, with live music. Outside the Crossroads Library."
-  links:
-  - href: "https://crossroadsbellevue.com/events/crossroads-bellevue-fall-festival/"
-    label: "Crossroads Bellevue"
-  description: "Climb into fire trucks and other vehicles at a touch-a-truck, watch a master carver work on a giant pumpkin, and try fall crafts, face painting, and balloon art, with live music. Outside the Crossroads Library."
-  hub_blurb: "Touch-a-truck, live pumpkin carving, crafts, and face painting at the mall."
-- name: "Math Club: Math Games"
-  cost: "Free"
-  ages: "Kids"
-  setting: "Indoor"
-  start: "2026-10-24T14:00:00-07:00"
-  end: "2026-10-24T16:00:00-07:00"
-  place: "Bellevue Library, 1111 110th Ave NE"
-  same_as: "https://kcls.bibliocommons.com/events/6a7fa3f72dac6e00371f2c06"
-  card: "math-club-math-games-oct-24"
-  heading_id: "math-club-math-games-oct-24"
-  when: "Sat Oct 24 · 2:00–4:00 p.m."
-  blurbs:
-  - "Drop-in logic puzzles for kids in grades K-5, with activities sorted by grade level at Bellevue Library. Free, no registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a7fa3f72dac6e00371f2c06"
-    label: "Math Club: Math Games"
-  description: "Drop-in logic puzzles for kids in grades K-5, with activities sorted by grade level at Bellevue Library. Free, no registration."
-  hub_blurb: "Drop-in math games for kids in grades K-5."
-- name: "Nature Club for Teens: Leaf Lanterns"
-  cost: "Free"
-  ages: "Teens"
-  setting: "Indoor"
-  signup: true
-  start: "2026-10-24T14:30:00-07:00"
-  end: "2026-10-24T16:30:00-07:00"
-  place: "Newport Way Library, 14250 SE Newport Way"
-  same_as: "https://kcls.bibliocommons.com/events/6ac5555c29c3d600332e189c"
-  card: "nature-club-for-teens-leaf-lanterns"
-  order: "14"
-  heading_id: "nature-club-for-teens-leaf-lanterns"
-  when: "Sat Oct 24 · 2:30–4:30 p.m."
-  blurbs:
-  - "Identify trees from pressed autumn leaves, turn your favorites into a paper mache lantern, and walk\
-    \ the library gardens. Grades 5 to 9. Free. Register, and bring a jacket."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6ac5555c29c3d600332e189c"
-    label: "Nature Club for Teens: Leaf Lanterns"
-  description: "Identify trees from pressed autumn leaves, turn your favorites into a paper mache lantern,\
-    \ and walk the library gardens. Grades 5 to 9. Free. Register, and bring a jacket."
-  hub_blurb: "Tree ID with pressed leaves, then a paper mache leaf lantern to take home."
-- name: "Kids Night Out"
-  cost: "$55 to $65"
-  setting: "Indoor"
-  drop_off: true
-  signup: true
-  start: "2026-10-24T17:00:00-07:00"
-  end: "2026-10-24T20:30:00-07:00"
-  place: "Samena Swim and Recreation Club, 15231 Lake Hills Blvd"
-  same_as: "https://samena.com/events/"
-  blurb: "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten.\
-    \ Members pay $55 and non-members pay $65. Register ahead."
-  card: "kids-night-out"
-  order: "15"
-  heading_id: "kids-night-out"
-  when: "Sat Oct 24 · 5:00–8:30 p.m."
-  blurbs:
-  - "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten.\
-    \ Members pay $55 and non-members pay $65. Register ahead."
-  links:
-  - href: "https://samena.com/events/"
-    label: "Kids Night Out"
-  description: "Swimming, pizza, and a movie while you take the evening. A 5-year-old needs to be in kindergarten.\
-    \ Members pay $55 and non-members pay $65. Register ahead."
-  hub_blurb: "Swimming, pizza, and a movie while you take the evening."
-- name: "Bellevue Family YMCA Fall Festival"
-  setting: "Indoor"
-  cost: "Free"
-  tags:
-  - "harvest"
-  - "trunk-or-treat"
-  start: "2026-10-24T18:00:00-07:00"
-  end: "2026-10-24T20:00:00-07:00"
-  place: "Bellevue Family YMCA, 14230 Bel-Red Rd"
-  same_as: "https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities"
-  card: "bellevue-family-ymca-fall-festival"
-  order: "16"
-  heading_id: "bellevue-family-ymca-fall-festival"
-  when: "Sat Oct 24 · 6:00–8:00 p.m."
-  blurbs:
-  - "Trunk-or-treat, a robotics station, and a pumpkin pool. These branch festivals are free and open\
-    \ to the community, and adults are asked not to wear masks. Costumes should stay family-friendly."
-  links:
-  - href: "https://www.seattleymca.org/programs/youth-family/family-activities-events/fall-festivals-activities"
-    label: "Fall festivals"
-  description: "Trunk-or-treat, a robotics station, and a pumpkin pool. These branch festivals are free\
-    \ and open to the community, and adults are asked not to wear masks. Costumes should stay family-friendly."
-  hub_blurb: "Trunk-or-treat, a robotics station, and a pumpkin pool."
-- name: "Monster Mash Parent Survival Night"
-  cost: "$73"
-  setting: "Indoor"
-  drop_off: true
-  signup: true
-  start: "2026-10-24T18:00:00-07:00"
-  end: "2026-10-24T21:00:00-07:00"
-  place: "The Little Gym Bellevue-Redmond, 1800 130th Ave NE"
-  same_as: "https://www.thelittlegym.com/washington-bellevue-redmond/events-more/"
-  blurb: "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night.\
-    \ The gym lists it at $73, for ages 4 to 10."
-  card: "monster-mash-parent-survival-night"
-  order: "17"
-  heading_id: "monster-mash-parent-survival-night"
-  when: "Sat Oct 24 · 6:00–9:00 p.m."
-  blurbs:
-  - "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the night. The\
-    \ gym lists it at $73, for ages 4 to 10."
-  links:
-  - href: "https://www.thelittlegym.com/washington-bellevue-redmond/events-more/"
-    label: "Monster Mash Parent Survival Night"
-  description: "A drop-off evening at the gym. The kids stay for games and gymnastics, and you get the\
-    \ night. The gym lists it at $73, for ages 4 to 10."
-  hub_blurb: "A drop-off evening at the gym."
-- name: "Do the Dandiya"
-  cost: "$15 to $35"
-  setting: "Indoor"
-  ages: "Toddlers"
-  signup: true
-  start: "2026-10-24T18:00:00-07:00"
-  end: "2026-10-24T21:30:00-07:00"
-  place: "Tillicum Middle School, 16020 SE 16th St, Bellevue"
-  same_as: "https://www.campkindnesscounts.org/dandiya"
-  card: "do-the-dandiya-camp-kindness-counts"
-  heading_id: "do-the-dandiya-camp-kindness-counts"
-  when: "Sat Oct 24 · 6:00–9:30 p.m."
-  blurbs:
-  - "A family dandiya night with a DJ that raises money for Camp Kindness Counts. Kids can help make kindness kits, and families can bring new or gently used socks to donate. Tickets $35, kids 5 to 10 $15, under 5 free."
-  links:
-  - href: "https://www.campkindnesscounts.org/dandiya"
-    label: "Camp Kindness Counts"
-  description: "A family dandiya night with a DJ that raises money for Camp Kindness Counts. Kids can help make kindness kits, and families can bring new or gently used socks to donate. Tickets $35, kids 5 to 10 $15, under 5 free."
-  hub_blurb: "A family dandiya dance night with a kindness project for kids."
 - name: "LEGO Brick Builders"
   cost: "Free"
   setting: "Indoor"
@@ -1364,52 +1120,6 @@
     source: "https://bellevuewa.gov/city-government/departments/parks/community-centers/crossroads"
   description: "A free all-ages community night at Crossroads Community Center with a Diwali theme. Drop in for crafts and connection. Hosted by Bellevue Parks."
   hub_blurb: "Free Diwali-themed community night at Crossroads."
-- name: "Dawn of the Deer"
-  cost: "Free"
-  ages: "Kids"
-  setting: "Outdoor"
-  signup: true
-  start: "2026-10-24T10:00:00-07:00"
-  end: "2026-10-24T11:00:00-07:00"
-  place: "Lake Hills Greenbelt Ranger Station, 15416 SE 16th St"
-  same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-  card: "dawn-of-the-deer"
-  heading_id: "dawn-of-the-deer"
-  when: "Sat Oct 24 · 10:00–11:00 a.m."
-  blurbs:
-  - "A ranger walk to find where deer browse in the greenbelt, then a deer craft. Free for ages 4 to 13.\
-    \ Everyone, adults too, registers ahead."
-  links:
-  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-    label: "Activity guide"
-  - href: "https://register.bellevuewa.gov"
-    label: "Register"
-  description: "A ranger walk to find where deer browse in the greenbelt, then a deer craft. Free for\
-    \ ages 4 to 13. Everyone, adults too, registers ahead."
-  hub_blurb: "A ranger walk about deer, then a deer craft."
-- name: "Superhero Salmon"
-  cost: "Free"
-  ages: "Kids"
-  setting: "Outdoor"
-  signup: true
-  start: "2026-10-24T14:30:00-07:00"
-  end: "2026-10-24T15:30:00-07:00"
-  place: "Lewis Creek Park Visitor Center, 5808 Lakemont Blvd SE"
-  same_as: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-  card: "superhero-salmon"
-  heading_id: "superhero-salmon"
-  when: "Sat Oct 24 · 2:30–3:30 p.m."
-  blurbs:
-  - "A short ranger walk along Lewis Creek about the salmon life cycle and how kids can help protect it.\
-    \ Free for ages 5 to 10. Kids and adults both register ahead."
-  links:
-  - href: "https://bellevuewa.gov/city-government/departments/parks/activity-guide"
-    label: "Activity guide"
-  - href: "https://register.bellevuewa.gov"
-    label: "Register"
-  description: "A short ranger walk along Lewis Creek about the salmon life cycle and how kids can help\
-    \ protect it. Free for ages 5 to 10. Kids and adults both register ahead."
-  hub_blurb: "A short ranger walk about salmon along Lewis Creek."
 - name: "Samena Spooktacular"
   cost: "$20"
   ages: "Kids"
@@ -1650,3 +1360,21 @@
   description: "A family walk around Crossroads Park with treat tents, face painting, and a kids dash,\
     \ raising money for Backpack Brigade's weekend meals. $35 adults, $20 youth, under 2 free."
   hub_blurb: "A family fundraiser walk with treats and a kids dash."
+- name: "Math Club: Math Games"
+  cost: "Free"
+  ages: "Kids"
+  setting: "Indoor"
+  start: "2026-10-31T14:00:00-07:00"
+  end: "2026-10-31T16:00:00-07:00"
+  place: "Bellevue Library, 1111 110th Ave NE"
+  same_as: "https://kcls.bibliocommons.com/events/6a7fa3f72dac6e00371f2c07"
+  card: "math-club-oct-31"
+  heading_id: "math-club-oct-31"
+  when: "Sat Oct 31 · 2:00–4:00 p.m."
+  blurbs:
+  - "Math games and puzzles for elementary kids, with activities grouped for grades K-1, 2-3, and 4-5. Kids pick their own level. Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a7fa3f72dac6e00371f2c07"
+    label: "Math Club"
+  description: "Math games and puzzles for elementary kids, with activities grouped for grades K-1, 2-3, and 4-5. Kids pick their own level. Free."
+  hub_blurb: "Math games for grades K to 5 at Bellevue Library."

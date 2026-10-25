@@ -4,5 +4,5 @@ title: Renton
 city: renton
 state: wa
 description: Upcoming family events in Renton on the Eastside.
-hook: Oct 24 is the Olde Fashioned Halloween Party downtown, and fire stations open their doors Oct 24 and 31. Oct 28 is a teen Scary Story Slam at the Fairwood library.
+hook: Oct 30 is Truck or Treat, and fire stations 16 and 17 open their doors Oct 31. Nov 1 brings Ballet in Motion for little dancers and a Día de los Muertos drawing class at Fairwood.
 ---

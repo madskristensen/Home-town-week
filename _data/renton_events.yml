@@ -1,120 +1,3 @@
-- name: "Station 13 Open House"
-  cost: "Free"
-  start: "2026-10-24T09:00:00-07:00"
-  end: "2026-10-24T11:00:00-07:00"
-  place: "Renton Fire Station 13, 18002 108th Ave SE"
-  same_as: "https://www.rentonrfa.com/events/"
-  card: "station-13-open-house"
-  order: "17"
-  heading_id: "station-13-open-house"
-  when: "Sat Oct 24 · 9:00–11:00 a.m."
-  blurbs:
-  - "Tour the engine and aid unit, try the gear, and pick up fire-safety information. Free, no RSVP. In\
-    \ the bay, rain or shine. Parking in the station lot is limited. The closest spaces in the Aliberto’s\
-    \ lot next door are open to guests."
-  links:
-  - href: "https://www.rentonrfa.com/events/"
-    label: "Renton RFA events"
-  description: "Tour the engine and aid unit, try the gear, and pick up fire-safety information. Free,\
-    \ no RSVP. In the bay, rain or shine. Parking in the station lot is limited. The closest spaces in\
-    \ the Aliberto's lot next door are open to guests."
-  hub_blurb: "Tour the engine and aid unit, try the gear, and pick up fire-safety information."
-- name: "Station 15 Open House"
-  cost: "Free"
-  setting: "Outdoor"
-  start: "2026-10-24T13:00:00-07:00"
-  end: "2026-10-24T15:00:00-07:00"
-  place: "Renton Fire Station 15, 1404 N 30th St"
-  same_as: "https://www.rentonrfa.com/events/"
-  card: "station-15-open-house"
-  order: "18"
-  heading_id: "station-15-open-house"
-  when: "Sat Oct 24 · 1:00–3:00 p.m."
-  blurbs:
-  - "Tour the engine and look for the hidden images on the Kennydale water tower behind the station. Free,\
-    \ no RSVP. In the bay, rain or shine. Park at the park-and-ride on the corner of N 30th Street and\
-    \ Park Ave N."
-  links:
-  - href: "https://www.rentonrfa.com/events/"
-    label: "Renton RFA events"
-  description: "Tour the engine and look for the hidden images on the Kennydale water tower behind the\
-    \ station. Free, no RSVP. In the bay, rain or shine. Park at the park-and-ride on the corner of N\
-    \ 30th Street and Park Ave N."
-  hub_blurb: "Tour the engine and look for the hidden images on the Kennydale water tower behind the station."
-- name: "Olde Fashioned Halloween Party"
-  setting: "Outdoor"
-  tags:
-  - "halloween"
-  start: "2026-10-24T13:00:00-07:00"
-  end: "2026-10-24T16:00:00-07:00"
-  place: "Downtown Renton, then Legacy Square"
-  same_as: "https://www.rentondowntown.com/events/halloween"
-  card: "olde-fashioned-halloween-party"
-  order: "19"
-  heading_id: "olde-fashioned-halloween-party"
-  when: "Sat Oct 24 · 1:00–4:00 p.m."
-  blurbs:
-  - "The Renton Downtown Partnership’s family afternoon. Start with trick-or-treating at downtown businesses,\
-    \ then go to Legacy Square for zombie makeup, photos, games, and prizes. Costume contest categories\
-    \ include pets, kids, teens, and adults. At 3:00 p.m. the crowd learns the Thriller dance and joins\
-    \ the worldwide simultaneous performance."
-  links:
-  - href: "https://www.rentondowntown.com/events/halloween"
-    label: "Olde Fashioned Halloween Party"
-  photo:
-    src: "/assets/images/renton/downtown.webp"
-    alt: "Downtown Renton, with storefronts along the street."
-    credit: "Photo: Chris Light, CC BY-SA 4.0"
-    source: "https://commons.wikimedia.org/wiki/File:Renton_Downtown_2015-06_722.jpg"
-  description: "The Renton Downtown Partnership's family afternoon. Start with trick-or-treating at downtown\
-    \ businesses, then go to Legacy Square for zombie makeup, photos, games, and prizes. Costume contest\
-    \ categories include pets, kids, teens, and adults. At 3:00 p.m. the crowd learns the Thriller dance\
-    \ and joins the worldwide simultaneous performance."
-  hub_blurb: "The Renton Downtown Partnership's family afternoon."
-- name: "Family Science Time"
-  cost: "Free"
-  ages: "Kids"
-  setting: "Indoor"
-  organizer: "Environmental Science Center"
-  organizer_url: "https://www.envsciencecenter.org/"
-  start: "2026-10-24T13:00:00-07:00"
-  end: "2026-10-24T15:00:00-07:00"
-  place: "Family First Community Center, 16200 116th Avenue SE"
-  same_as: "https://www.envsciencecenter.org/event-details/family-science-time-14"
-  card: "family-science-time-1"
-  order: "20"
-  heading_id: "family-science-time-1"
-  when: "Sat Oct 24 · 1:00–3:00 p.m."
-  blurbs:
-  - "Drop in any time for hands-on science activities and crafts from the Environmental Science Center.\
-    \ Open to all ages and best for kids in kindergarten through 5th grade. Free, and no registration."
-  links:
-  - href: "https://www.envsciencecenter.org/event-details/family-science-time-14"
-    label: "Family Science Time"
-  description: "Drop in any time for hands-on science activities and crafts from the Environmental Science\
-    \ Center. Open to all ages and best for kids in kindergarten through 5th grade. Free, and no registration."
-  hub_blurb: "Drop-in hands-on science activities and crafts, best for kids in kindergarten through 5th\
-    \ grade."
-- name: "Korean Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-10-24T14:00:00-07:00"
-  end: "2026-10-24T15:00:00-07:00"
-  place: "Renton Highlands Library, 2801 NE 10th Street"
-  same_as: "https://kcls.bibliocommons.com/events/6a304d968ea300e2631dd241"
-  card: "korean-story-time-oct-24"
-  heading_id: "korean-story-time-oct-24"
-  when: "Sat Oct 24 · 2:00–3:00 p.m."
-  blurbs:
-  - "Korean stories, songs, and a hands-on culture activity with a children's librarian at Renton Highlands Library, Saturdays at 2:00. Free, no registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a304d968ea300e2631dd241"
-    label: "Korean Story Time"
-  description: "Korean stories, songs, and a hands-on culture activity with a children's librarian at Renton Highlands Library, Saturdays at 2:00. Free, no registration."
-  hub_blurb: "Korean stories and songs on Saturday afternoons."
 - name: "Pokemon Club"
   cost: "Free"
   setting: "Indoor"
@@ -673,3 +556,54 @@
   description: "The lighted Argosy Christmas Ship stops off Gene Coulon Park and its choir sings carols\
     \ you can hear from the beach. Free to watch from shore. A public bonfire or shore event is planned."
   hub_blurb: "The lighted Christmas Ship and its choir, free to watch from Gene Coulon Park."
+- name: "Korean Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  tags:
+  - "story-time"
+  start: "2026-10-31T14:00:00-07:00"
+  end: "2026-10-31T15:00:00-07:00"
+  place: "Renton Highlands Library, 2801 NE 10th Street"
+  same_as: "https://kcls.bibliocommons.com/events/6a304d968ea300e2631dd242"
+  card: "korean-story-time-oct-31"
+  heading_id: "korean-story-time-oct-31"
+  when: "Sat Oct 31 · 2:00–3:00 p.m."
+  blurbs:
+  - "Korean picture books, songs, and a hands-on culture activity with a children's librarian. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a304d968ea300e2631dd242"
+    label: "Korean Story Time"
+  photo:
+    src: "/assets/images/renton/renton-highlands-library.webp"
+    alt: "Renton Highlands Library"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/renton-highlands/"
+    license: "organizer"
+  description: "Korean picture books, songs, and a hands-on culture activity with a children's librarian. Free, no registration."
+  hub_blurb: "Korean stories, songs, and a culture activity at Renton Highlands Library."
+- name: "Dia de los Muertos and Motif Drawing"
+  cost: "Free"
+  ages: "All ages"
+  setting: "Indoor"
+  tags:
+  - "dia-de-los-muertos"
+  start: "2026-11-01T15:30:00-08:00"
+  end: "2026-11-01T16:30:00-08:00"
+  place: "Fairwood Library, 17009 140th Avenue SE"
+  same_as: "https://kcls.bibliocommons.com/events/6a926919aafa6100295ffa22"
+  card: "dia-de-los-muertos-drawing-nov-1"
+  heading_id: "dia-de-los-muertos-drawing-nov-1"
+  when: "Sun Nov 1 · 3:30–4:30 p.m."
+  blurbs:
+  - "Local art teacher Ely Corum leads a pencil sketching class on Día de los Muertos motifs. All ages and skill levels, supplies provided. Free, and walk-ins are welcome."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a926919aafa6100295ffa22"
+    label: "Dia de los Muertos and Motif Drawing"
+  photo:
+    src: "/assets/images/themes/library-hall.webp"
+    alt: "Public library reading room"
+    credit: "Photo: King County Library System."
+    source: "https://kcls.org/locations/fairwood/"
+    license: "organizer"
+  description: "Local art teacher Ely Corum leads a pencil sketching class on Día de los Muertos motifs. All ages and skill levels, supplies provided. Free, and walk-ins are welcome."
+  hub_blurb: "A free all-ages Día de los Muertos sketching class."

@@ -305,3 +305,23 @@
   description: "A town tree lighting for families at Depot Park, with free Santa photos in the Depot Building.\
     \ The city and the Duvall Chamber host it, with community craft booths."
   hub_blurb: "A town tree lighting for families at Depot Park, with free Santa photos in the Depot Building."
+- name: "Baby Story Time"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Indoor"
+  tags:
+  - "story-time"
+  start: "2026-11-02T10:30:00-08:00"
+  end: "2026-11-02T11:30:00-08:00"
+  place: "Duvall Library, 15508 Main Street NE"
+  same_as: "https://kcls.bibliocommons.com/events/6ad65f08fee2d21deb245920"
+  card: "baby-story-time-nov-2"
+  heading_id: "baby-story-time-nov-2"
+  when: "Mon Nov 2 · 10:30–11:30 a.m."
+  blurbs:
+  - "Rhymes, songs, and stories for babies up to 18 months with an adult, then up to half an hour of play. Older siblings are welcome. Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ad65f08fee2d21deb245920"
+    label: "Baby Story Time"
+  description: "Rhymes, songs, and stories for babies up to 18 months with an adult, then up to half an hour of play. Older siblings are welcome. Free."
+  hub_blurb: "Baby rhymes and songs, then play time, at Duvall Library."

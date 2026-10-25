@@ -1,31 +1,3 @@
-- name: "Arbor Day at Homestead Park"
-  cost: "Free"
-  setting: "Outdoor"
-  signup: true
-  tags:
-  - "free"
-  start: "2026-10-24T10:00:00-07:00"
-  end: "2026-10-24T13:00:00-07:00"
-  place: "Homestead Park"
-  same_as: "https://www.mercerisland.gov/parksrec/page/arbor-day-homestead-park"
-  card: "arbor-day-at-homestead-park"
-  order: "8"
-  heading_id: "arbor-day-at-homestead-park"
-  when: "Sat Oct 24 · 10:00 a.m.–1:00 p.m."
-  blurbs:
-  - "A work party for blackberry removal, planting, and mulch. Snacks, lunch, gloves, and tools are provided.\
-    \ Bring water and clothes that can get dirty. Register ahead."
-  links:
-  - href: "https://www.mercerisland.gov/parksrec/page/arbor-day-homestead-park"
-    label: "Arbor Day"
-  photo:
-    src: "/assets/images/themes/tree-sapling.webp"
-    alt: "A young tree sapling growing in a forest."
-    credit: "Photo: Ben Hemmings, CC BY-SA 4.0"
-    source: "https://commons.wikimedia.org/wiki/File:Tree_Sapling_in_British_Columbia,_Canada_2019.jpg"
-  description: "A work party for blackberry removal, planting, and mulch. Snacks, lunch, gloves, and tools\
-    \ are provided. Bring water and clothes that can get dirty. Register ahead."
-  hub_blurb: "A work party for blackberry removal, planting, and mulch."
 - name: "Family Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -695,6 +667,32 @@
   - "A Sunday story time with songs, rhymes, and movement for kids up to age 5 with an adult, then play time."
   links:
   - href: "https://kcls.bibliocommons.com/events/6a7e21c1be14820029872db2"
+    label: "Family Story Time"
+  photo:
+    src: "/assets/images/mercer-island/mercer-island-library-entrance.webp"
+    alt: "Mercer Island Library entrance, a brick front with a covered walkway, columns, and a bronze sculpture beside the doors."
+    credit: "Photo: King County Library System"
+    license: "organizer"
+    source: "https://kcls.org/locations/mercer-island/"
+  description: "A Sunday story time with songs, rhymes, and movement for kids up to age 5 with an adult, then play time."
+  hub_blurb: "A Sunday story time with songs, rhymes, and movement for kids up to age 5."
+- name: "Family Story Time"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Indoor"
+  tags:
+  - "story-time"
+  start: "2026-11-15T11:15:00-08:00"
+  end: "2026-11-15T12:00:00-08:00"
+  place: "Mercer Island Library, 4400 88th Ave SE"
+  same_as: "https://kcls.bibliocommons.com/events/6a7e21c1be14820029872db3"
+  card: "family-story-time-nov-15"
+  heading_id: "family-story-time-nov-15"
+  when: "Sun Nov 15 · 11:15 a.m.–12:00 p.m."
+  blurbs:
+  - "A Sunday story time with songs, rhymes, and movement for kids up to age 5 with an adult, then play time."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a7e21c1be14820029872db3"
     label: "Family Story Time"
   photo:
     src: "/assets/images/mercer-island/mercer-island-library-entrance.webp"

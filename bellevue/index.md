@@ -4,7 +4,7 @@ title: Bellevue
 city: bellevue
 state: wa
 description: Upcoming family events in Bellevue on the Eastside.
-hook: Oct 24 brings Halloween on the Hill, trick-or-treat with the farm animals, and Eastside Día de los Muertos. Sleepy Hollow opens at the youth theatre Oct 30, and Oct 31 is the KidsQuest Spooktacular and Little Monsters on Main Street.
+hook: Sleepy Hollow opens at the youth theatre Oct 30, and Oct 31 brings the KidsQuest Spooktacular, Little Monsters on Main Street, and the last Saturday farmers market until Nov 21. Diwali Family Fest is Nov 7.
 ---
 
 
