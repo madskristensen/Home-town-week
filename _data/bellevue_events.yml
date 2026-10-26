@@ -1378,3 +1378,23 @@
     label: "Math Club"
   description: "Math games and puzzles for elementary kids, with activities grouped for grades K-1, 2-3, and 4-5. Kids pick their own level. Free."
   hub_blurb: "Math games for grades K to 5 at Bellevue Library."
+- name: "Teen Book Babble"
+  cost: "Free"
+  ages: "Teens"
+  setting: "Indoor"
+  tags:
+  - "free"
+  start: "2026-10-28T15:30:00-07:00"
+  end: "2026-10-28T17:30:00-07:00"
+  place: "Bellevue Library, 1111 110th Ave NE"
+  same_as: "https://kcls.bibliocommons.com/events/6a9264d8aafa6100295ff999"
+  card: "teen-book-babble-oct"
+  heading_id: "teen-book-babble-oct"
+  when: "Wed Oct 28 · 3:30–5:30 p.m."
+  blurbs:
+  - "Middle and high schoolers who love books swap what they're reading and what's new, then settle in for about an hour of quiet reading. Monthly on the fourth Wednesday. Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a9264d8aafa6100295ff999"
+    label: "Teen Book Babble"
+  description: "Middle and high schoolers who love books swap what they're reading and what's new, then settle in for about an hour of quiet reading. Monthly on the fourth Wednesday. Free."
+  hub_blurb: "Teens talk books, then read together."

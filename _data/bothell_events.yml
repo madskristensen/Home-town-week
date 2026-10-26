@@ -1,28 +1,3 @@
-- name: "Rangoli Demonstration"
-  cost: "Free"
-  setting: "Indoor"
-  ages: "All ages"
-  tags:
-  - "diwali"
-  start: "2026-10-25T13:00:00-07:00"
-  end: "2026-10-25T15:00:00-07:00"
-  place: "Bothell Library, 18215 98th Ave NE"
-  same_as: "https://kcls.bibliocommons.com/events/6a85e616b20478002993f1ea"
-  card: "rangoli-demonstration"
-  order: "7"
-  heading_id: "rangoli-demonstration"
-  when: "Sun Oct 25 · 1:00–3:00 p.m."
-  blurbs:
-  - "Watch artist Rinkle Shah make a rangoli, the colored-powder floor design used for Diwali. All ages.\
-    \ Free, and registration is not required. Space is limited. Friends of the Bothell Library sponsor\
-    \ it."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a85e616b20478002993f1ea"
-    label: "Rangoli Demonstration"
-  description: "Watch artist Rinkle Shah make a rangoli, the colored-powder floor design used for Diwali.\
-    \ All ages. Free, and registration is not required. Space is limited. Friends of the Bothell Library\
-    \ sponsor it."
-  hub_blurb: "Watch artist Rinkle Shah make a rangoli, the colored-powder floor design used for Diwali."
 - name: "Toddler Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -364,7 +339,7 @@
   cost: "Free"
   ages: "All ages"
   setting: "Indoor"
-  tags: &id001
+  tags:
   - "story-time"
   start: "2026-11-05T10:00:00-08:00"
   end: "2026-11-05T10:30:00-08:00"
@@ -386,7 +361,8 @@
   cost: "Free"
   ages: "All ages"
   setting: "Indoor"
-  tags: *id001
+  tags:
+  - "story-time"
   start: "2026-11-05T10:45:00-08:00"
   end: "2026-11-05T11:15:00-08:00"
   place: "Bothell Library, 18215 98th Ave NE"
@@ -396,7 +372,7 @@
   cost: "Free"
   ages: "All ages"
   setting: "Indoor"
-  tags: &id002
+  tags:
   - "story-time"
   start: "2026-11-12T10:00:00-08:00"
   end: "2026-11-12T10:30:00-08:00"
@@ -418,9 +394,29 @@
   cost: "Free"
   ages: "All ages"
   setting: "Indoor"
-  tags: *id002
+  tags:
+  - "story-time"
   start: "2026-11-12T10:45:00-08:00"
   end: "2026-11-12T11:15:00-08:00"
   place: "Bothell Library, 18215 98th Ave NE"
   same_as: "https://kcls.bibliocommons.com/events/6a80df8ad4b10d003006ba6d"
   card: "family-story-time-nov-12"
+- name: "Glorydays: A Tabletop Roleplaying Game"
+  cost: "Free"
+  setting: "Indoor"
+  tags:
+  - "free"
+  start: "2026-11-07T14:00:00-08:00"
+  end: "2026-11-07T16:00:00-08:00"
+  place: "Bothell Library, 18215 98th Ave NE"
+  same_as: "https://kcls.bibliocommons.com/events/6a553848fb418a28009aad54"
+  card: "glorydays-tabletop-rpg"
+  heading_id: "glorydays-tabletop-rpg"
+  when: "Sat Nov 7 · 2:00–4:00 p.m."
+  blurbs:
+  - "Roll dice and solve problems together in a shapeshifting make-believe storytelling game, funded by a City of Bothell arts grant. Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a553848fb418a28009aad54"
+    label: "Glorydays: A Tabletop Roleplaying Game"
+  description: "Roll dice and solve problems together in a shapeshifting make-believe storytelling game, funded by a City of Bothell arts grant. Free."
+  hub_blurb: "A cooperative make-believe tabletop game at the library."

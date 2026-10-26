@@ -1,15 +1,15 @@
-# Home-page picks for Friday Oct 23 through Sunday Oct 25, 2026.
-# Set Monday Oct 19 daily refresh for the Halloween weekend ahead; refreshed Sunday Oct 25 with events still on today.
+# Home-page picks for Friday Oct 30 through Sunday Nov 1, 2026 (Halloween weekend).
+# Set Monday Oct 26 daily refresh.
 # Names match _data/{city}_events.yml.
+- city: bellevue
+  name: Little Monsters on Main Street
+- city: redmond
+  name: Trunk-or-Treat at City Hall
 - city: snoqualmie
   name: Halloween Train
-- city: carnation
-  name: Oxtober
-- city: maple-valley
-  name: Haunted Forest Family Walk
-- city: redmond
-  name: Captain Jack's Treasure Run
-- city: kirkland
-  name: Mushroom Mania
-- city: carnation
-  name: Fall Harvest Festival at Remlinger Farms
+- city: bellevue
+  name: KidsQuest Halloween Spooktacular
+- city: issaquah
+  name: Day of the Dead Celebration
+- city: sammamish
+  name: Sammamish Diwali Bazaar

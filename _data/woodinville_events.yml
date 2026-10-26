@@ -1,27 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "The Game's Afoot"
-  setting: "Indoor"
-  start: "2026-10-02"
-  end: "2026-10-25"
-  place: "Woodinville Repertory Theatre, 14300 NE 145th St, Suite 100"
-  same_as: "https://www.woodinvillerep.org/the-games-afoot/"
-  card: "the-games-afoot"
-  order: "1"
-  heading_id: "the-games-afoot"
-  title: "The Game’s Afoot"
-  when: "Through Sun Oct 25 · Time not posted"
-  blurbs:
-  - "Ken Ludwig’s mystery-comedy, directed by Rael Esteves. Broadway star William Gillette, famous for playing Sherlock Holmes, hosts a weekend that turns into a murder hunt after a guest is stabbed. A killing is part of the plot. Treat it as a mystery for older kids and adults. The Game’s Afoot"
-  photo:
-    src: "/assets/images/woodinville/games-afoot.webp"
-    alt: "Poster for The Game's Afoot, with a top hat, a revolver, and a magnifying glass on a red curtain."
-    credit: "Image: Woodinville Repertory Theatre"
-    source: "https://www.woodinvillerep.org/the-games-afoot/"
-    license: "organizer"
-  description: "Ken Ludwig's mystery-comedy, directed by Rael Esteves. Broadway star William Gillette, famous for playing Sherlock Holmes, hosts a weekend that turns into a murder hunt after a guest is stabbed. A killing is part of the plot. Treat it as a mystery for older kids and adults."
-  hub_blurb: "Ken Ludwig's mystery-comedy, directed by Rael Esteves."
 - name: "Full STEAM Ahead"
   cost: "Free"
   setting: "Indoor"

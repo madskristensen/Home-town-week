@@ -770,3 +770,22 @@
     license: "organizer"
   description: "Arts and crafts, tabletop games, Nintendo Switch, and light snacks for school-age kids, tweens, and teens. Free drop-in at Fall City Library."
   hub_blurb: "Games, crafts, and snacks after school in Fall City."
+- name: "Learn to Play Go"
+  cost: "Free"
+  setting: "Indoor"
+  tags:
+  - "free"
+  start: "2026-11-22T14:00:00-08:00"
+  end: "2026-11-22T17:00:00-08:00"
+  place: "Snoqualmie Library, 7824 Center Boulevard SE"
+  same_as: "https://kcls.bibliocommons.com/events/6ac54435de300e004518a46d"
+  card: "learn-to-play-go-nov22"
+  heading_id: "learn-to-play-go-nov22"
+  when: "Sun Nov 22 · 2:00–5:00 p.m."
+  blurbs:
+  - "Volunteers from the Seattle Go Center teach the ancient board game, with open play for anyone who already knows it. Aimed at tweens, teens, and adults. Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ac54435de300e004518a46d"
+    label: "Learn to Play Go"
+  description: "Volunteers from the Seattle Go Center teach the ancient board game, with open play for anyone who already knows it. Aimed at tweens, teens, and adults. Free."
+  hub_blurb: "Volunteers from the Seattle Go Center teach the ancient board game."

@@ -1,48 +1,3 @@
-- name: "Mushroom Mania"
-  cost: "Free"
-  setting: "Outdoor"
-  signup: true
-  start: "2026-10-25T10:00:00-07:00"
-  end: "2026-10-25T12:00:00-07:00"
-  place: "O. O. Denny Park, 12302 Holmes Point Dr NE, Kirkland"
-  organizer: "Finn Hill Neighborhood Alliance"
-  organizer_url: "https://www.finnhill.org/"
-  same_as: "https://www.finnhill.org/event-details-registration/mushroom-mania"
-  card: "mushroom-mania"
-  order: "16"
-  heading_id: "mushroom-mania"
-  when: "Sun Oct 25 · 10:00 a.m.–12:00 p.m."
-  blurbs:
-  - "A free forest walk to look for mushrooms and learn how they support the woods around them. Finn Hill\
-    \ Neighborhood Alliance and the CoSEE host it. Ages 8 and up. Some paths are narrow and have a moderate\
-    \ slope. Meet in the parking lot across from the playground. Tickets are free."
-  links:
-  - href: "https://www.finnhill.org/event-details-registration/mushroom-mania"
-    label: "Mushroom Mania"
-  photo:
-    src: "/assets/images/kirkland/oo-denny-park.webp"
-    alt: "A sunny lakeshore at O. O. Denny Park, framed by pines and a flowering tree."
-    credit: "Photo: Joe Mabel, CC BY-SA 4.0"
-    source: "https://commons.wikimedia.org/wiki/File:O.O._Denny_Park_06.jpg"
-    license: "CC BY-SA 4.0"
-  description: "A free forest walk to look for mushrooms and learn how they support the woods around them.\
-    \ Finn Hill Neighborhood Alliance and the CoSEE host it. Ages 8 and up. Some paths are narrow and\
-    \ have a moderate slope. Meet in the parking lot across from the playground. Tickets are free."
-  hub_blurb: "A free forest walk to look for mushrooms and learn how they support the woods around them."
-- name: "Keep on Dancing"
-  setting: "Indoor"
-  signup: true
-  start: "2026-10-25T19:00:00-07:00"
-  place: "Kirkland Performance Center, 350 Kirkland Ave"
-  same_as: "https://www.kpcenter.org/get-tickets/"
-  card: "keep-on-dancing"
-  order: "17"
-  heading_id: "keep-on-dancing"
-  when: "Sun Oct 25 · 7:00 p.m."
-  blurbs:
-  - "Tina’s Dance Studios’ annual showcase, with dancers of all ages and levels. KPC tickets"
-  description: "Tina's Dance Studios' annual showcase, with dancers of all ages and levels."
-  hub_blurb: "Tina's Dance Studios' annual showcase, with dancers of all ages and levels."
 - name: "After School Hangout"
   cost: "Free"
   setting: "Indoor"
@@ -1344,7 +1299,7 @@
   ages: "Toddlers"
   setting: "Indoor"
   signup: true
-  tags: &id001
+  tags:
   - "story-time"
   start: "2026-11-17T10:15:00-08:00"
   end: "2026-11-17T10:45:00-08:00"
@@ -1373,7 +1328,8 @@
   ages: "Toddlers"
   setting: "Indoor"
   signup: true
-  tags: *id001
+  tags:
+  - "story-time"
   start: "2026-11-17T11:00:00-08:00"
   end: "2026-11-17T11:30:00-08:00"
   place: "Kirkland Library, 308 Kirkland Ave"

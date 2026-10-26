@@ -41,26 +41,6 @@
     label: "Fall Harvest Festival"
   description: "One festival, open Friday through Sunday after the opening weekend. Gates close at 6:00 p.m. The grounds include rides, a pumpkin village, a corn maze included with admission, and u-pick pumpkins. The farm is closed Monday through Thursday."
   hub_blurb: "One festival, open Friday through Sunday after the opening weekend."
-- name: "Oxtober"
-  cost: "$6 to $7"
-  setting: "Outdoor"
-  signup: true
-  tags: [harvest]
-  start: "2026-10-17"
-  end: "2026-10-25"
-  place: "Oxbow Farm and Conservation Center, 10819 Carnation-Duvall Road NE"
-  same_as: "https://www.oxbow.org/visit/events/oxtober/"
-  card: "oxtober"
-  order: "6"
-  heading_id: "oxtober"
-  when: "Sat Oct 17 and Sun Oct 18, then Sat Oct 24 and Sun Oct 25 · 10:00 a.m.–4:00 p.m."
-  blurbs:
-    - "Oxbow’s fall festival: pumpkins, a kids’ farm tour, outdoor play, and music. Admission is $6 in advance and $7 at the door. Ages 0 to 3 are free. A ticket covers parking, activities, and tours. Pumpkins, food, and a few workshops cost extra. Food trucks stay until about 3:30 p.m."
-  links:
-    - href: "https://www.oxbow.org/visit/events/oxtober/"
-      label: "Oxtober"
-  description: "Oxbow's fall festival: pumpkins, a kids' farm tour, outdoor play, and music. Admission is $6 in advance and $7 at the door. Ages 0 to 3 are free. A ticket covers parking, activities, and tours. Pumpkins, food, and a few workshops cost extra. Food trucks stay until about 3:30 p.m."
-  hub_blurb: "Oxbow's fall festival: pumpkins, a kids' farm tour, outdoor play, and music."
 - name: "Wildlife drawing in oil pastels"
   cost: "Free"
   ages: "Kids"
