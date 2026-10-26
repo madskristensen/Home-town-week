@@ -172,3 +172,457 @@
   source: https://southforknorthbend.com/
   source_label: South Fork
   last_verified: '2026-10-15'
+- id: red-robin-redmond
+  name: Red Robin Redmond Town Center
+  city: redmond
+  address: 7597 170th Ave NE, Redmond
+  lat: 47.670465
+  lng: -122.114889
+  types: [Restaurant]
+  when: Kids menu, crayons, and bottomless fries
+  description: 'Burgers, bottomless steak fries, and milkshakes at Redmond Town Center, a short walk from the kids'' favorite shops. An easy, noisy-is-fine dinner with a kids menu and room for the whole crew.'
+  source: https://www.redrobin.com/locations/wa/redmond/redmond-town-center-134
+  source_label: Red Robin Redmond
+  last_verified: '2026-10-26'
+- id: red-robin-factoria
+  name: Red Robin Factoria
+  city: bellevue
+  address: 3909 Factoria Blvd SE, Bellevue
+  lat: 47.575304
+  lng: -122.171483
+  types: [Restaurant]
+  when: Kids menu, crayons, and bottomless fries
+  description: The Factoria Mall Red Robin, handy after a round at the mini golf next door. Burgers, Donatos pizza, shakes, and a kids menu make it an easy family pick in south Bellevue.
+  source: https://www.redrobin.com/locations/wa/bellevue/factoria-mall-147
+  source_label: Red Robin Factoria
+  last_verified: '2026-10-26'
+- id: red-robin-bothell
+  name: Red Robin Bothell
+  city: bothell
+  address: 21215 Bothell Everett Hwy, Bothell
+  lat: 47.805524
+  lng: -122.206057
+  types: [Restaurant]
+  when: Kids menu, crayons, and bottomless fries
+  description: 'Bothell''s Red Robin on the Bothell Everett Highway. Burgers, bottomless fries, and milkshakes, with a kids menu and booths that fit a family after practice.'
+  source: https://www.redrobin.com/locations/wa/bothell/bothell-540
+  source_label: Red Robin Bothell
+  last_verified: '2026-10-26'
+- id: red-robin-woodinville
+  name: Red Robin Woodinville
+  city: woodinville
+  address: 18029 Garden Way NE, Woodinville
+  lat: 47.757757
+  lng: -122.153384
+  types: [Restaurant]
+  when: Kids menu, crayons, and bottomless fries
+  description: 'Woodinville''s Red Robin. Burgers, bottomless fries, Donatos pizza, and a kids menu for a no-fuss family dinner.'
+  source: https://www.redrobin.com/locations/wa/woodinville/woodinville-133
+  source_label: Red Robin Woodinville
+  last_verified: '2026-10-26'
+- id: original-pancake-house-redmond
+  name: The Original Pancake House Redmond
+  city: redmond
+  address: 7425 166th Ave NE, Suite C205, Redmond
+  lat: 47.670346
+  lng: -122.119141
+  types: [Restaurant]
+  when: Breakfast and brunch, pancakes all day
+  description: 'Redmond Town Center''s pancake house, famous for the puffy Dutch baby and apple pancake. A weekend breakfast tradition for a lot of Eastside families, so expect a short wait on Saturday morning.'
+  source: https://iloveoph.com/locations/redmond-wa
+  source_label: Original Pancake House Redmond
+  last_verified: '2026-10-26'
+- id: original-pancake-house-bothell
+  name: The Original Pancake House Bothell
+  city: bothell
+  address: 1904 201st Pl SE, Bothell
+  lat: 47.815959
+  lng: -122.207085
+  types: [Restaurant]
+  when: Breakfast and brunch, pancakes all day
+  description: 'Bothell''s Original Pancake House, with the Dutch baby, buttermilk pancakes, and big omelets. A cozy breakfast stop for families in north Bothell and Mill Creek.'
+  source: https://iloveoph.com/locations/bothell-wa
+  source_label: Original Pancake House Bothell
+  last_verified: '2026-10-26'
+- id: original-pancake-house-maple-valley
+  name: The Original Pancake House Maple Valley
+  city: maple-valley
+  address: 26820 Maple Valley Hwy, Maple Valley
+  lat: 47.3588
+  lng: -122.0215
+  types: [Restaurant]
+  when: Breakfast and brunch, pancakes all day
+  description: 'Maple Valley''s pancake house near Four Corners, a family breakfast favorite for Maple Valley and Covington. Dutch babies, waffles, and generous plates for sharing.'
+  source: https://iloveoph.com/locations/maple-valley-wa
+  source_label: Original Pancake House Maple Valley
+  last_verified: '2026-10-26'
+- id: family-pancake-house-redmond
+  name: Family Pancake House
+  city: redmond
+  address: 17621 Redmond Way, Redmond
+  lat: 47.668387
+  lng: -122.104445
+  types: [Restaurant]
+  when: Family-owned breakfast, lunch, and dinner, open daily
+  description: 'Redmond''s other pancake house, family owned and run since 1963. Buttermilk and Swedish pancakes, French toast, and diner dinners, with family-style platters that feed three or four.'
+  source: https://www.familypancakehouse.com/locations
+  source_label: Family Pancake House
+  last_verified: '2026-10-26'
+- id: ihop-bellevue
+  name: IHOP Bellevue
+  city: bellevue
+  address: 14747 NE 20th St, Bellevue
+  lat: 47.62713
+  lng: -122.143682
+  types: [Restaurant]
+  when: Pancakes any time, open 24 hours
+  description: 'Bellevue''s IHOP near Crossroads, open around the clock. Pancakes, waffles, and a kids menu for an easy breakfast or a late dinner when everyone is hungry at once.'
+  source: https://restaurants.ihop.com/en-us/wa/bellevue/
+  source_label: IHOP Bellevue
+  last_verified: '2026-10-26'
+- id: ihop-issaquah
+  name: IHOP Issaquah
+  city: issaquah
+  address: 1433 NW Sammamish Rd, Issaquah
+  lat: 47.551241
+  lng: -122.060166
+  types: [Restaurant]
+  when: Pancakes for breakfast, lunch, and dinner
+  description: 'Issaquah''s IHOP just off I-90 by the Highlands exit. Pancakes, waffles, and a kids menu, handy before or after a Lake Sammamish or Tiger Mountain day.'
+  source: https://restaurants.ihop.com/en-us/wa/issaquah/
+  source_label: IHOP Issaquah
+  last_verified: '2026-10-26'
+- id: ihop-renton
+  name: IHOP Renton
+  city: renton
+  address: 610 Rainier Ave S, Renton
+  lat: 47.474712
+  lng: -122.214197
+  types: [Restaurant]
+  when: Pancakes for breakfast, lunch, and dinner
+  description: 'Renton''s IHOP on Rainier Avenue. Stacks of pancakes, waffles, and a kids menu for a casual family breakfast any day of the week.'
+  source: https://restaurants.ihop.com/en-us/wa/renton/
+  source_label: IHOP Renton
+  last_verified: '2026-10-26'
+- id: mcdonalds-redmond-way
+  name: 'McDonald''s Redmond Way'
+  city: redmond
+  address: 16975 Redmond Way, Redmond
+  lat: 47.671515
+  lng: -122.114188
+  types: [Restaurant]
+  play_area: true
+  when: Indoor PlayPlace
+  description: 'A Redmond McDonald''s with an indoor PlayPlace, so little ones can climb while the grown-ups finish their coffee. A rainy-day lifesaver near downtown Redmond.'
+  source: https://www.mcdonalds.com/us/en-us/location/WA/REDMOND/16975-REDMOND-WAY/4594.html
+  source_label: 'McDonald''s Redmond Way'
+  last_verified: '2026-10-26'
+- id: mcdonalds-kirkland-100th
+  name: 'McDonald''s Kirkland 100th Ave NE'
+  city: kirkland
+  address: 13636 100th Ave NE, Kirkland
+  lat: 47.722784
+  lng: -122.20729
+  types: [Restaurant]
+  play_area: true
+  when: Indoor PlayPlace
+  description: 'North Kirkland McDonald''s near Juanita with an indoor PlayPlace. An easy rainy-afternoon stop for a Happy Meal and some climbing.'
+  source: https://www.mcdonalds.com/us/en-us/location/WA/KIRKLAND/13636-100TH-AVE-NE/5773.html
+  source_label: 'McDonald''s Kirkland'
+  last_verified: '2026-10-26'
+- id: mcdonalds-sammamish
+  name: 'McDonald''s Sammamish'
+  city: sammamish
+  address: 615 228th Ave NE, Sammamish
+  lat: 47.614917
+  lng: -122.03596
+  types: [Restaurant]
+  play_area: true
+  when: Indoor PlayPlace
+  description: 'The Sammamish McDonald''s on 228th, with an indoor PlayPlace for burning off energy on a wet day. Close to the Sammamish Commons and the library.'
+  source: https://www.mcdonalds.com/us/en-us/location/WA/SAMMAMISH/615-228TH-AVE-NE/11996.html
+  source_label: 'McDonald''s Sammamish'
+  last_verified: '2026-10-26'
+- id: mcdonalds-issaquah-gilman
+  name: 'McDonald''s Issaquah Gilman'
+  city: issaquah
+  address: 1305 NW Gilman Blvd, Issaquah
+  lat: 47.545425
+  lng: -122.058611
+  types: [Restaurant]
+  play_area: true
+  when: Indoor PlayPlace
+  description: 'Issaquah McDonald''s on Gilman Boulevard with an indoor PlayPlace. A quick stop with kids near Costco and the Issaquah Commons.'
+  source: https://www.mcdonalds.com/us/en-us/location/WA/ISSAQUAH/1305-NW-GILMAN-BLVD/4965.html
+  source_label: 'McDonald''s Issaquah'
+  last_verified: '2026-10-26'
+- id: mcdonalds-renton-sunset
+  name: 'McDonald''s Renton Sunset Blvd'
+  city: renton
+  address: 4411 NE Sunset Blvd, Renton
+  lat: 47.504227
+  lng: -122.159714
+  types: [Restaurant]
+  play_area: true
+  when: Indoor PlayPlace
+  description: 'Renton Highlands McDonald''s with an indoor PlayPlace. Handy for a Happy Meal and a climb on a rainy day.'
+  source: https://www.mcdonalds.com/us/en-us/location/WA/RENTON/4411-NE-SUNSET-BLVD/5356.html
+  source_label: 'McDonald''s Renton'
+  last_verified: '2026-10-26'
+- id: mcdonalds-maple-valley
+  name: 'McDonald''s Maple Valley'
+  city: maple-valley
+  address: 23225 Maple Valley Hwy, Maple Valley
+  lat: 47.393246
+  lng: -122.046328
+  types: [Restaurant]
+  play_area: true
+  when: Indoor PlayPlace
+  description: 'Maple Valley McDonald''s on the highway with an indoor PlayPlace for little climbers. An easy rainy-day stop on the way home.'
+  source: https://www.mcdonalds.com/us/en-us/location/WA/MAPLE-VALLEY/23225-MAPLE-VALLEY-HWY/12295.html
+  source_label: 'McDonald''s Maple Valley'
+  last_verified: '2026-10-26'
+- id: mcdonalds-covington
+  name: 'McDonald''s Covington'
+  city: maple-valley
+  address: 17431 SE 272nd St, Covington
+  lat: 47.35789
+  lng: -122.108374
+  types: [Restaurant]
+  play_area: true
+  when: Indoor PlayPlace
+  description: 'Covington McDonald''s on 272nd with an indoor PlayPlace. A handy indoor break for Covington and Maple Valley families on a wet afternoon.'
+  source: https://www.mcdonalds.com/us/en-us/location/WA/COVINGTON/17431-SE-272ND-ST/5884.html
+  source_label: 'McDonald''s Covington'
+  last_verified: '2026-10-26'
+- id: chick-fil-a-canyon-park
+  name: Chick-fil-A Bothell Canyon Park
+  city: bothell
+  address: 1220 228th St SE, Bothell
+  lat: 47.790897
+  lng: -122.215666
+  types: [Restaurant]
+  play_area: true
+  when: Playground on site, closed Sundays
+  description: Canyon Park Chick-fil-A with a playground for kids. Nuggets, waffle fries, and a kids meal, and a spot for the little ones to climb. Closed on Sundays.
+  source: https://www.chick-fil-a.com/locations/wa/bothell-canyon-park
+  source_label: Chick-fil-A Canyon Park
+  last_verified: '2026-10-26'
+- id: chick-fil-a-totem-lake
+  name: Chick-fil-A Totem Lake
+  city: kirkland
+  address: 12026 NE 124th St, Kirkland
+  lat: 47.709224
+  lng: -122.179043
+  types: [Restaurant]
+  play_area: true
+  when: Playground on site, closed Sundays
+  description: Totem Lake Chick-fil-A with a playground for kids. A quick nuggets-and-fries dinner where the little ones can climb while you finish. Closed on Sundays.
+  source: https://www.chick-fil-a.com/locations/wa/totem-lake
+  source_label: Chick-fil-A Totem Lake
+  last_verified: '2026-10-26'
+- id: chick-fil-a-maple-valley
+  name: Chick-fil-A Maple Valley
+  city: maple-valley
+  address: 27264 Maple Valley Black Diamond Rd SE, Maple Valley
+  lat: 47.35825
+  lng: -122.020369
+  types: [Restaurant]
+  play_area: true
+  when: Playground on site, closed Sundays
+  description: Maple Valley Chick-fil-A at Four Corners with a playground for kids. Kids meals, waffle fries, and room to climb. Closed on Sundays.
+  source: https://www.chick-fil-a.com/locations/wa/maple-valley-hwy-271st
+  source_label: Chick-fil-A Maple Valley
+  last_verified: '2026-10-26'
+- id: ivars-kirkland
+  name: 'Ivar''s Seafood Bar Kirkland'
+  city: kirkland
+  address: 5910 Lake Washington Blvd NE, Kirkland
+  lat: 47.660562
+  lng: -122.206062
+  types: [Restaurant]
+  when: Fish and chips near the lake
+  description: 'Ivar''s walk-up seafood bar in Houghton, a short hop from the Lake Washington beaches. Fish and chips and clam chowder for a casual family dinner.'
+  source: https://www.ivars.com/kirkland-seafood-bar
+  source_label: 'Ivar''s Kirkland'
+  last_verified: '2026-10-26'
+- id: ivars-bellevue
+  name: 'Ivar''s Seafood Bar Bellevue'
+  city: bellevue
+  address: 1505 156th Ave NE, Bellevue
+  lat: 47.623452
+  lng: -122.132795
+  types: [Restaurant]
+  when: Fish and chips and chowder
+  description: 'Ivar''s seafood bar near Crossroads in Bellevue. Fish and chips and chowder, quick and casual enough for a weeknight with the family.'
+  source: https://www.ivars.com/bellevue-seafood-bar
+  source_label: 'Ivar''s Bellevue'
+  last_verified: '2026-10-26'
+- id: ivars-issaquah
+  name: 'Ivar''s Seafood Bar Issaquah'
+  city: issaquah
+  address: 6150 E Lake Sammamish Pkwy SE, Issaquah
+  lat: 47.547185
+  lng: -122.040331
+  types: [Restaurant]
+  when: Fish and chips and chowder
+  description: 'Ivar''s seafood bar near Lake Sammamish State Park. Fish and chips and chowder for an easy dinner after a beach or park day.'
+  source: https://www.ivars.com/issaquah-seafood-bar
+  source_label: 'Ivar''s Issaquah'
+  last_verified: '2026-10-26'
+- id: ivars-renton
+  name: 'Ivar''s Seafood Bar Renton'
+  city: renton
+  address: 1201 Lake Washington Blvd N, Suite B, Renton
+  lat: 47.506918
+  lng: -122.202065
+  types: [Restaurant]
+  when: Fish and chips by the beach at Gene Coulon
+  description: 'Ivar''s walk-up seafood bar inside Gene Coulon Memorial Beach Park. Grab fish and chips, then let the kids loose on the playground and the beach.'
+  source: https://www.ivars.com/renton-seafood-bar
+  source_label: 'Ivar''s Renton'
+  last_verified: '2026-10-26'
+- id: kidd-valley-renton
+  name: Kidd Valley Renton
+  city: renton
+  address: 1201 Lake Washington Blvd N, Renton
+  lat: 47.506918
+  lng: -122.202065
+  types: [Restaurant]
+  when: Burgers and shakes by the beach at Gene Coulon
+  description: Local burger stand inside Gene Coulon Memorial Beach Park. Burgers, fries, and real milkshakes, with the beach, the playground right outside.
+  source: https://www.kiddvalley.com/locations-1
+  source_label: Kidd Valley
+  last_verified: '2026-10-26'
+- id: kidd-valley-kenmore
+  name: Kidd Valley Kenmore
+  city: kenmore
+  address: 6434 Bothell Way NE, Kenmore
+  lat: 47.758992
+  lng: -122.254967
+  types: [Restaurant]
+  when: Burgers, fries, and shakes
+  description: 'Kenmore''s Kidd Valley on Bothell Way, a local burger stand. Burgers, fries, and thick shakes for a quick family dinner.'
+  source: https://www.kiddvalley.com/locations-1
+  source_label: Kidd Valley
+  last_verified: '2026-10-26'
+- id: burgermaster-bellevue
+  name: Burgermaster Bellevue
+  city: bellevue
+  address: 10606 NE Northup Way, Bellevue
+  lat: 47.6326
+  lng: -122.1985
+  types: [Restaurant]
+  when: Drive-in with car hop service
+  description: Old-fashioned drive-in where you order from the car and eat in the parking stall. Family owned since 1952, and kids love flashing the headlights for service.
+  source: https://burgermaster.com/
+  source_label: Burgermaster
+  last_verified: '2026-10-26'
+- id: burgermaster-issaquah
+  name: Burgermaster Issaquah
+  city: issaquah
+  address: 98 NE Gilman Blvd, Issaquah
+  lat: 47.53803
+  lng: -122.035029
+  types: [Restaurant]
+  when: Drive-in with car hop service
+  description: 'Burgermaster''s drive-in at the old Triple XXX spot on Gilman. Order from the car, eat in the stall, and finish with a shake. Family owned since 1952.'
+  source: https://burgermaster.com/menus/issaquah/
+  source_label: Burgermaster Issaquah
+  last_verified: '2026-10-26'
+- id: zeeks-bellevue
+  name: Zeeks Pizza Bellevue
+  city: bellevue
+  address: 10201 NE 10th St, Bellevue
+  lat: 47.619098
+  lng: -122.203951
+  types: [Restaurant]
+  when: Local pizza, easy family dinner
+  description: Local Northwest pizza chain in downtown Bellevue. Hand-tossed pies and simple cheese slices that please picky eaters, with booths for a relaxed family dinner.
+  source: https://zeekspizza.com/location/bellevue/
+  source_label: Zeeks Bellevue
+  last_verified: '2026-10-26'
+- id: zeeks-bothell
+  name: Zeeks Pizza Bothell
+  city: bothell
+  address: 1715 228th St SE, Bothell
+  lat: 47.791741
+  lng: -122.212006
+  types: [Restaurant]
+  when: Local pizza, easy family dinner
+  description: Zeeks in Canyon Park, a casual pizza parlor that suits a team party or a Friday night with the kids.
+  source: https://zeekspizza.com/location/bothell/
+  source_label: Zeeks Bothell
+  last_verified: '2026-10-26'
+- id: zeeks-duvall
+  name: Zeeks Pizza Duvall
+  city: duvall
+  address: 15630 Main St, Duvall
+  lat: 47.741478
+  lng: -121.985742
+  types: [Restaurant]
+  when: Local pizza on Main Street
+  description: 'Zeeks on Duvall''s Main Street, a friendly pizza stop for Snoqualmie Valley families after the park or the library.'
+  source: https://zeekspizza.com/location/duvall/
+  source_label: Zeeks Duvall
+  last_verified: '2026-10-26'
+- id: zeeks-issaquah
+  name: Zeeks Pizza Issaquah
+  city: issaquah
+  address: 2525 NE Park Dr, Issaquah
+  lat: 47.547574
+  lng: -121.997503
+  types: [Restaurant]
+  when: Local pizza in the Highlands
+  description: Zeeks in the Issaquah Highlands, an easy pizza dinner close to the Highlands parks and trails.
+  source: https://zeekspizza.com/location/issaquah/
+  source_label: Zeeks Issaquah
+  last_verified: '2026-10-26'
+- id: zeeks-kirkland
+  name: Zeeks Pizza Kirkland
+  city: kirkland
+  address: 124 Park Ln, Kirkland
+  lat: 47.676278
+  lng: -122.206109
+  types: [Restaurant]
+  when: Local pizza near the waterfront
+  description: Zeeks on Park Lane in downtown Kirkland, a block from Marina Park. Pizza first, then a walk to the beach.
+  source: https://zeekspizza.com/location/kirkland/
+  source_label: Zeeks Kirkland
+  last_verified: '2026-10-26'
+- id: zeeks-redmond
+  name: Zeeks Pizza Redmond
+  city: redmond
+  address: 16015 Cleveland St, Suite 100, Redmond
+  lat: 47.674389
+  lng: -122.127159
+  types: [Restaurant]
+  when: Local pizza in downtown Redmond
+  description: Zeeks in downtown Redmond, near the Redmond Central Connector and Downtown Park. A casual family pizza night.
+  source: https://zeekspizza.com/location/redmond/
+  source_label: Zeeks Redmond
+  last_verified: '2026-10-26'
+- id: zeeks-sammamish
+  name: Zeeks Pizza Sammamish
+  city: sammamish
+  address: 22610 SE 4th St, Suite 404, Sammamish
+  lat: 47.60575
+  lng: -122.037374
+  types: [Restaurant]
+  when: Local pizza near the Commons
+  description: Zeeks in Sammamish near the Sammamish Commons. Pizza, salads, and a relaxed room for families.
+  source: https://zeekspizza.com/location/sammamish/
+  source_label: Zeeks Sammamish
+  last_verified: '2026-10-26'
+- id: twedes-cafe
+  name: 'Twede''s Cafe'
+  city: north-bend
+  address: 137 W North Bend Way, North Bend
+  lat: 47.495216
+  lng: -121.78676
+  types: [Restaurant]
+  when: Diner burgers, pie, and shakes
+  description: 'North Bend''s classic diner, made famous by Twin Peaks. Burgers, milkshakes, sundaes, and cherry pie make it a fun stop with kids on the way to or from the mountains.'
+  source: https://www.twedescafe.com/visit-twedes-cafe
+  source_label: 'Twede''s Cafe'
+  last_verified: '2026-10-26'
