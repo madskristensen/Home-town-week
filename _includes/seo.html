@@ -83,7 +83,9 @@
 <meta name="theme-color" content="#f4efe6">
 <meta name="theme-color" content="#243044" media="(prefers-color-scheme: dark)">
 {%- if page.robots %}
-<meta name="robots" content="{{ page.robots }}">
+<meta name="robots" content="{{ page.robots }}, max-image-preview:large">
+{%- else %}
+<meta name="robots" content="max-image-preview:large">
 {%- endif %}
 {%- unless page.url == "/404.html" %}
 <link rel="canonical" href="{{ canonical_url }}">

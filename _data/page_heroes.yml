@@ -1,0 +1,120 @@
+# The visible photo under the title on pages that are not a city. One
+# row per page path. Each row is a real photo of a place, usually the
+# same photo as the page's share card. image, alt, credit, source.
+# The Pages build writes the hero widths for these images, the same as a
+# city hero. Leave a page out to show no photo.
+- path: /
+  image: /assets/images/hikes/snoqualmie-falls.webp
+  alt: Snoqualmie Falls, a wide waterfall dropping into a gorge with mist at the bottom.
+  credit: "Photo: Kurt Kaiser, CC0"
+  source: https://commons.wikimedia.org/wiki/File:Snoqualmie_Falls_2.jpg
+- path: /about/
+  image: /assets/images/bellevue/kelsey-creek.webp
+  alt: The white barns at Kelsey Creek Farm in Bellevue, with goats in the pen out front.
+  credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+  source: https://commons.wikimedia.org/wiki/File:Kelsey_Creek_Farm_04.jpg
+- path: /fall/
+  image: /assets/images/themes/pumpkin-field.webp
+  alt: Rows of orange pumpkins in a field.
+  credit: "Photo: Rodney Campbell, CC BY 2.0"
+  source: https://commons.wikimedia.org/wiki/File:Pumpkin_Field.jpg
+- path: /birthday-venues/
+  image: /assets/images/bellevue/kidsquest.webp
+  alt: Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance.
+  credit: "Photo: Julian Fong, CC BY-SA 4.0"
+  source: https://commons.wikimedia.org/wiki/File:KidsQuest_Children%27s_Museum_2.jpg
+- path: /articles/
+  image: /assets/images/bellevue/bellevue-library.webp
+  alt: Bellevue Library, a glass and brick building with a covered walkway and trees in front.
+  credit: "Photo: SuddenFrost, CC0"
+  source: https://commons.wikimedia.org/wiki/File:Bellevue_Library.jpg
+- path: /articles/rainy-day-indoor-play/
+  image: /assets/images/bellevue/kidsquest.webp
+  alt: Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance.
+  credit: "Photo: Julian Fong, CC BY-SA 4.0"
+  source: https://commons.wikimedia.org/wiki/File:KidsQuest_Children%27s_Museum_2.jpg
+- path: /articles/indoor-pools-swim-lessons/
+  image: /assets/images/maple-valley/aquatic-center.webp
+  alt: A metal seahorse sculpture in front of the Covington Aquatic Center.
+  credit: "Photo: City of Covington"
+  source: https://www.covingtonwa.gov/parks/covingtonaquaticcenter.php
+- path: /articles/free-things-to-do/
+  image: /assets/images/bellevue/botanical-garden.webp
+  alt: The entrance sign and plantings at Bellevue Botanical Garden.
+  credit: "Photo: Heptazane, public domain"
+  source: https://commons.wikimedia.org/wiki/File:Bellevue_Botanical_Garden_Entrance.jpg
+- path: /articles/salmon-spawning/
+  image: /assets/images/issaquah/salmon-hatchery.webp
+  alt: The Issaquah Salmon Hatchery, a long building with a gray roof beside a creek, with yellow trees in front.
+  credit: "Photo: Chris Light, CC BY-SA 4.0"
+  source: https://commons.wikimedia.org/wiki/File:Hatchery_6921.jpg
+- path: /articles/no-school-day-ideas/
+  image: /assets/images/guides/inspiration.jpg
+  alt: Play structure with slides and climbing nets at Inspiration Playground in Bellevue Downtown Park.
+  credit: "Photo: City of Bellevue"
+  source: https://bellevuewa.gov/city-government/departments/parks/parks-and-trails/parks/bellevue-downtown-park
+- path: /articles/toddler-friendly-outings/
+  image: /assets/images/bellevue/kelsey-creek.webp
+  alt: The white barns at Kelsey Creek Farm in Bellevue, with goats in the pen out front.
+  credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+  source: https://commons.wikimedia.org/wiki/File:Kelsey_Creek_Farm_04.jpg
+- path: /articles/best-playgrounds/
+  image: /assets/images/guides/pine-lake.jpg
+  alt: Play structure and swings at Pine Lake Park in Sammamish.
+  credit: "Photo: City of Sammamish"
+  source: https://www.sammamish.us/our-community/recreation/parks-trails/pine-lake-park/
+- path: /articles/birthday-party-places/
+  image: /assets/images/bellevue/kidsquest.webp
+  alt: Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance.
+  credit: "Photo: Julian Fong, CC BY-SA 4.0"
+  source: https://commons.wikimedia.org/wiki/File:KidsQuest_Children%27s_Museum_2.jpg
+- path: /articles/easy-hikes-with-kids/
+  image: /assets/images/hikes/snoqualmie-falls.webp
+  alt: Snoqualmie Falls, a wide waterfall dropping into a gorge with mist at the bottom.
+  credit: "Photo: Kurt Kaiser, CC0"
+  source: https://commons.wikimedia.org/wiki/File:Snoqualmie_Falls_2.jpg
+- path: /articles/christmas-lights/
+  image: /assets/images/lights/garden-dlights.webp
+  alt: Light sculptures along a path at Bellevue Botanical Garden.
+  credit: "Photo: Steven Pavlov, CC BY 4.0"
+  source: https://commons.wikimedia.org/wiki/File:Garden_d%E2%80%99Lights_2008_at_the_Bellevue_Botanical_Garden,_img011.jpg
+- path: /articles/meeting-santa/
+  image: /assets/images/bellevue/kelsey-creek.webp
+  alt: The white barns at Kelsey Creek Farm in Bellevue, with goats in the pen out front.
+  credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+  source: https://commons.wikimedia.org/wiki/File:Kelsey_Creek_Farm_04.jpg
+- path: /articles/winter-break/
+  image: /assets/images/bellevue/kidsquest.webp
+  alt: Front of KidsQuest Children's Museum in downtown Bellevue, with the museum sign over the entrance.
+  credit: "Photo: Julian Fong, CC BY-SA 4.0"
+  source: https://commons.wikimedia.org/wiki/File:KidsQuest_Children%27s_Museum_2.jpg
+- path: /articles/new-years-eve/
+  image: /assets/images/worth-the-drive/woodland-park-zoo.jpg
+  alt: A pond and autumn trees at Woodland Park Zoo.
+  credit: "Photo: Bernie Ongewe, CC BY-SA 4.0"
+  source: https://commons.wikimedia.org/wiki/File:Woodland_Park_Zoo_2.jpg
+- path: /articles/halloween/
+  image: /assets/images/themes/jack-o-lantern-night.webp
+  alt: A carved jack-o-lantern glowing at night.
+  credit: "Photo: Alabama Extension, CC0"
+  source: https://commons.wikimedia.org/wiki/File:Jack-O-Lantern_at_night.jpg
+- path: /articles/pumpkin-patches/
+  image: /assets/images/duvall/muddy-boots.webp
+  alt: Rows of orange pumpkins in a field at Muddy Boots Pumpkins.
+  credit: "Photo: Muddy Boots Pumpkins"
+  source: https://muddybootspumpkins.com/
+- path: /articles/christmas-tree-farms/
+  image: /assets/images/issaquah/trinity-tree-farm-rows.webp
+  alt: A row of Christmas trees at Trinity Tree Farm in Issaquah, with string lights on posts along the path.
+  credit: "Photo: Trinity Tree Farm"
+  source: https://www.trinitytreefarm.com/christmas-tree-farm
+- path: /articles/ice-roller-skating/
+  image: /assets/images/bellevue/downtown-park-ice-rink.jpg
+  alt: The covered Bellevue Downtown Ice Rink seen across the reflecting pond in Bellevue Downtown Park.
+  credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+  source: https://commons.wikimedia.org/wiki/File:Bellevue,_WA_-_Downtown_Park_-_skating_rink_01.jpg
+- path: /articles/snow-play/
+  image: /assets/images/hikes/snoqualmie-pass-snow.webp
+  alt: Snow on the trees beside the highway at Snoqualmie Pass.
+  credit: "Photo: Leslie Seaton, CC BY 2.0"
+  source: https://commons.wikimedia.org/wiki/File:Snow_at_the_pass_(8167962840).jpg

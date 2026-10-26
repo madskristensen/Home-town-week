@@ -7,6 +7,7 @@ permalink: /about/
 
 <article class="page wrap prose">
   <h1>About</h1>
+  {% include page-hero.html %}
   <p>I'm Mads. My wife and I have three kids, and we always struggled to find fun local events. We missed a lot of them simply because we didn't know they were happening.</p>
   <p>Not the big festivals, but the little things we only heard about afterward: the library's Saturday craft hour, a farm's first pumpkin weekend, a church Nerf war, a ranger walk at the park down the street.</p>
   <p>With the kids, we love getting out and experiencing things together. That's why I built Eastside Family Calendar. We're an Eastside family, and we made this for other families here. So it mattered to us to include even the smallest venues and the most hyper-local activities.</p>

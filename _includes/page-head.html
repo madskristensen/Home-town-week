@@ -16,6 +16,7 @@
 {%- endif -%}
 {%- assign head_intro = include.intro | default: page.intro | append: "" -%}
 {%- include page-intro.html text=head_intro -%}
+{%- include page-hero.html -%}
 {%- if include.updated == "1" -%}
 {%- include updated-line.html id=include.updated_id -%}
 {%- endif -%}

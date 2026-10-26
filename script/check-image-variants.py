@@ -39,6 +39,10 @@ def hero_paths():
         if not match:
             continue
         found.add(match.group(1).strip().strip("\"'").lstrip("/"))
+    page_heroes = ROOT / "_data" / "page_heroes.yml"
+    if page_heroes.exists():
+        for m in re.finditer(r"^\s+image:\s*(\S+)", page_heroes.read_text(encoding="utf-8"), re.M):
+            found.add(m.group(1).strip().strip("\"'").lstrip("/"))
     return found
 
 

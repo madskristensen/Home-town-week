@@ -60,7 +60,21 @@ def hero_paths():
         if not match:
             continue
         found.add(match.group(1).strip().strip("\"'").lstrip("/"))
+    found |= page_hero_paths()
     return found
+
+
+def page_hero_paths():
+    """Page heroes in _data/page_heroes.yml get the hero widths too."""
+    path = os.path.join("_data", "page_heroes.yml")
+    if not os.path.exists(path):
+        return set()
+    with open(path, encoding="utf-8") as handle:
+        text = handle.read()
+    return {
+        m.group(1).strip().strip("\"'").lstrip("/")
+        for m in re.finditer(r"^\s+image:\s*(\S+)", text, re.M)
+    }
 
 
 def is_hero(path, heroes):

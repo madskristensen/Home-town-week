@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Pumpkin patches near Bellevue and Redmond
-description: Pumpkin patches for kids on the Eastside in October 2026, from Redmond, Woodinville, and Issaquah to Carnation, Duvall, and Fall City, with hours, admission, and trick-or-treat dates.
+description: Pumpkin patches for kids on the Eastside in October 2026, with hours and admission for each farm, free-admission patches like Jubilee Farm and Celebration Farms, and trick-or-treat dates.
 intro: Ten Eastside pumpkin farms with their 2026 hours from each farm's own site, then the town trick-or-treats for the end of the month.
 article_id: pumpkin-patches
 permalink: /articles/pumpkin-patches/

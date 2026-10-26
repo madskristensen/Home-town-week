@@ -1,0 +1,21 @@
+{%- comment -%}
+  The visible photo near the top of a page that is not a city.
+  Rows live in _data/page_heroes.yml, matched on page.url.
+  Same figure as a city hero: eager, high priority, hero widths.
+{%- endcomment -%}
+{%- assign page_hero = nil -%}
+{%- for row in site.data.page_heroes -%}
+  {%- if row.path == page.url -%}{%- assign page_hero = row -%}{%- endif -%}
+{%- endfor -%}
+{%- if page_hero -%}
+{%- include event-photo.html
+     src=page_hero.image
+     alt=page_hero.alt
+     credit=page_hero.credit
+     source=page_hero.source
+     figure="hero page-hero"
+     loading="eager"
+     priority="high"
+     hero="1"
+     sizes="(min-width: 47rem) 44rem, calc(100vw - 3rem)" -%}
+{%- endif -%}

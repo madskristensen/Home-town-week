@@ -19,6 +19,7 @@ Card and page markup lives in one include each. Pages, layouts, and the city cal
 | `_includes/map-tip.html` | One short muted line. Under a lights or decorations map, pass `href` and the line is "Know a display we're missing? Tip us off." `kind="missing"` is "Missing something? Tell us. Have a better photo? Tap the camera on any photo." Tell us links to the `/suggest/` form. The camera is the `.photo-swap` button page.js adds to each card photo credit strip. Hub pages and explore pages include that line once, at the end of the article. The farmers market page does not also put a tip under the map. |
 | `_includes/map-loader.html` | `loadMapCss` and `loadMapJs`. |
 | `_includes/page-head.html` | Page title and introduction. Optional lights promo and Updated line. |
+| `_includes/page-hero.html` | Visible photo under the title on a non-city page, from `_data/page_heroes.yml` by path. Same figure as a city hero. |
 | `_includes/calendar-subscribe.html` | Subscribe control. City pages use `/calendar/{city}.ics`. Pass `path` for another feed, such as `/calendar/no-school/{district}.ics`. |
 
 `_plugins/event_designed.rb` renders `card-grid.html` for each day bucket. That include renders `event-card.html`. The card fields come from the event data. Pass a page hash with `path` into Liquid registers. Do not pass the page object.
