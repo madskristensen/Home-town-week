@@ -23,7 +23,7 @@ hubs:
     link_label: See events
     footer: true
     footer_label: Fall
-    description: Pumpkin patches and corn mazes in Duvall, Carnation, and Fall City, and farms a drive from Bellevue. Harvest festivals in Bellevue, Bothell, and Issaquah.
+    description: Pumpkin patches and corn mazes near Bellevue, Redmond, and Bothell, from Duvall, Carnation, and Fall City farms to harvest festivals and Halloween trick-or-treat events.
     llms: Pumpkin patches, corn mazes, u-pick farms, harvest festivals, and Halloween plans for kids.
     in_season_intro: Pumpkin patches and corn mazes in Duvall, Carnation, and Fall City, plus farms a short drive from Bellevue, listed through Oct 31.
     off_season_intro: The season runs Sep 1 through Oct 31.
