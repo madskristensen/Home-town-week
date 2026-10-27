@@ -25,36 +25,6 @@
     license: "organizer"
   description: "A ticketed three-hour farm visit with a petting zoo and feed bag, barrel train rides, face painting, a giant bubble station, fall crafts, and a pumpkin patch. Kids 1 to 17 are $20, adults $12, babies free. Book ahead."
   hub_blurb: "Petting zoo, barrel train, crafts, and a pumpkin patch on the farm."
-- name: "Spooky Spectacular"
-  cost: "Free"
-  setting: "Indoor"
-  tags:
-  - "halloween"
-  start: "2026-10-26T18:00:00-07:00"
-  end: "2026-10-26T19:30:00-07:00"
-  place: "Redmond Senior & Community Center, 8703 160th Ave NE"
-  same_as: "https://www.redmond.gov/calendar.aspx?EID=3560"
-  card: "spooky-spectacular"
-  order: "16"
-  heading_id: "spooky-spectacular"
-  when: "Mon Oct 26 · 6:00–7:30 p.m."
-  blurbs:
-  - "All ages. Come in costume for a photo booth, face painting, crafts, pumpkin decorating, and mini\
-    \ games. Bring your own pumpkin. The center supplies the decorating materials and there is no carving.\
-    \ Hot dogs, veggie dogs, chips, candy, and drinks are part of the evening."
-  links:
-  - href: "https://www.redmond.gov/calendar.aspx?EID=3560"
-    label: "Spooky Spectacular"
-  photo:
-    src: "/assets/images/redmond/senior-center.webp"
-    alt: "The east entry of the Redmond Senior and Community Center, beside a bright geometric art wall."
-    credit: "Photo: City of Redmond"
-    source: "https://www.redmond.gov/ImageRepository/Document?documentID=24797"
-    license: "organizer"
-  description: "All ages. Come in costume for a photo booth, face painting, crafts, pumpkin decorating,\
-    \ and mini games. Bring your own pumpkin. The center supplies the decorating materials and there is\
-    \ no carving. Hot dogs, veggie dogs, chips, candy, and drinks are part of the evening."
-  hub_blurb: "All ages."
 - name: "Ofrenda for Animals"
   cost: "Free"
   setting: "Outdoor"
