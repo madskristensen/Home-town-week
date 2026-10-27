@@ -218,3 +218,5 @@ curl -sG "$FETCH_PROXY_URL" --data-urlencode "url=https://wa-issaquah2.civicplus
 - Woodinville: use `https://wa-woodinville.civicplus.com/...` instead of www.woodinville.gov.
 - Issaquah recreation: `https://cityofissaquah.perfectmind.com/` works too.
 - Only https hosts in the app setting `ALLOWED_HOSTS` are fetched. Anything else gets a 403 from the proxy. Never print or commit the key. Use event links on the public www domains in site content, not the civicplus hosts.
+
+City pages with `hook_first: true` show the hook as the first paragraph, above the hero, and the tagline or slogan after the hero (answer first, Mads 2026-10-27). Keep that hook current: only events still ahead, updated by the daily routine.

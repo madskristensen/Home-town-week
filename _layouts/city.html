@@ -20,7 +20,11 @@ layout: default
   {%- if city_lead.size == 0 -%}
   {%- assign city_lead = city.tagline | append: "" -%}
   {%- endif -%}
+  {%- if page.hook_first -%}
+  {%- include page-intro.html text=page.hook -%}
+  {%- else -%}
   {%- include page-intro.html text=city_lead -%}
+  {%- endif -%}
   {%- assign hero_image = city.hero.image | append: "" -%}
   {%- if hero_image.size > 0 -%}
   {%- include event-photo.html
@@ -34,7 +38,11 @@ layout: default
        hero="1"
        sizes="(min-width: 47rem) 44rem, calc(100vw - 3rem)" -%}
   {%- endif -%}
+  {%- if page.hook_first -%}
+  {%- include page-intro.html text=city_lead -%}
+  {%- else -%}
   {%- include page-intro.html text=page.hook -%}
+  {%- endif -%}
   {%- assign city_sponsor_cards = site.data.sponsors.cards.cities[page.city] -%}
   {%- assign city_sponsor_count = city_sponsor_cards | size -%}
   {%- if city_sponsor_count > 0 -%}

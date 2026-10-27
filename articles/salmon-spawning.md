@@ -2,7 +2,7 @@
 layout: article
 title: Where to see salmon spawning on the Eastside
 description: Where to see salmon spawning on the Eastside, from the Issaquah hatchery to the Cedar River in Renton and Bear Creek in Redmond.
-intro: Chinook come in late summer, then coho. The hatchery, the Cedar River, and Bear Creek are where families go to watch.
+intro: The Issaquah hatchery, the Cedar River in Renton, and Bear Creek in Redmond are where families go to watch. Chinook come in late summer, then coho.
 article_id: salmon-spawning
 permalink: /articles/salmon-spawning/
 date: 2026-10-02
