@@ -322,8 +322,8 @@
     - name: "Living Snoqualmie"
       url: "https://livingsnoqualmie.com/events/"
       type: news
-      format: ical
-      feed_url: "https://livingsnoqualmie.com/events/list/?ical=1"
+      format: json
+      feed_url: "https://livingsnoqualmie.com/wp-json/tribe/events/v1/events?per_page=50"
       notes: "Valley-wide calendar. Keep Carnation addresses. Skip wine, cocktail, and dinner-ticket nights. The feed's morning start time for Dramafest is wrong; the event page says 7:00 p.m."
     - name: "Remlinger Farms"
       url: "https://remlingerfarms.com/fall-harvest-festival/"
@@ -390,8 +390,8 @@
     - name: "Living Snoqualmie"
       url: "https://livingsnoqualmie.com/events/"
       type: news
-      format: ical
-      feed_url: "https://livingsnoqualmie.com/events/list/?ical=1"
+      format: json
+      feed_url: "https://livingsnoqualmie.com/wp-json/tribe/events/v1/events?per_page=50"
       notes: "Valley-wide calendar. Keep Duvall addresses. The flood forum is a preparedness meeting, not a kids event."
     - name: "Duvall Farmers Market"
       url: "https://duvallfarmersmarket.org/"
@@ -886,8 +886,8 @@
     - name: "Living Snoqualmie"
       url: "https://livingsnoqualmie.com/events/"
       type: news
-      format: ical
-      feed_url: "https://livingsnoqualmie.com/events/list/?ical=1"
+      format: json
+      feed_url: "https://livingsnoqualmie.com/wp-json/tribe/events/v1/events?per_page=50"
       notes: "Valley paper. Book launches and school shows. Prefer the organizer page when the feed clock disagrees."
     - name: "North Bend Downtown Foundation"
       url: "https://www.northbenddowntown.org/all-events"
@@ -1230,8 +1230,8 @@
     - name: "Living Snoqualmie"
       url: "https://livingsnoqualmie.com/events/"
       type: news
-      format: ical
-      feed_url: "https://livingsnoqualmie.com/events/list/?ical=1"
+      format: json
+      feed_url: "https://livingsnoqualmie.com/wp-json/tribe/events/v1/events?per_page=50"
       notes: "Best valley-wide feed. Skip Upstage the Rage (the ticket includes drinks) and 21+ nights."
     - name: "Northwest Railway Museum"
       url: "https://trainmuseum.org/upcoming-events/"
