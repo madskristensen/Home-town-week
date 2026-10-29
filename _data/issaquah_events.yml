@@ -546,3 +546,22 @@
     label: "Upcycled Ornaments Crafting"
   description: "A free City of Issaquah class that turns reclaimed materials into holiday ornaments. Supplies are provided, or bring things from home to reuse. Everyone is welcome and no registration is needed."
   hub_blurb: "Make holiday ornaments from reclaimed materials, free."
+- name: "Come From Away"
+  cost: "$33"
+  signup: true
+  setting: "Indoor"
+  start: "2026-11-10T19:30:00-08:00"
+  end: "2026-12-27"
+  place: "Village Theatre, Francis J. Gaudette Theatre, 303 Front St N"
+  same_as: "https://villagetheatre.org/mainstage/comefromaway/"
+  card: "come-from-away"
+  heading_id: "come-from-away"
+  when: "Tue Nov 10 through Sun Dec 27"
+  blurbs:
+  - "Village Theatre's Tony-winning musical about the town of Gander welcoming stranded travelers after 9/11. The tone is hopeful, and it runs about 1 hour 40 minutes with no intermission. Tickets start at $42, or $33 for Lucky Draw seats."
+  - "Opening night is Fri Nov 13. Evening shows are at 7:30 p.m., with 2:00 p.m. matinees. The ASL show is Sat Nov 28 at 2:00 p.m., and the captioned show is Sat Dec 12 at 2:00 p.m."
+  links:
+  - href: "https://villagetheatre.org/mainstage/comefromaway/"
+    label: "Come From Away"
+  description: "Village Theatre's Tony-winning musical about the town of Gander welcoming stranded travelers after 9/11. The tone is hopeful, and it runs about 1 hour 40 minutes with no intermission. Tickets start at $42, or $33 for Lucky Draw seats."
+  hub_blurb: "Village Theatre's hopeful Tony-winning musical about Gander welcoming stranded travelers after 9/11."

@@ -1433,3 +1433,29 @@
     label: "Baby Story Time"
   description: "Nursery rhymes, songs, and stories for newborns to 12 months with an adult, then up to 30 minutes of play with other families. Free, no registration."
   hub_blurb: "Baby rhymes and play at Newport Way Library."
+- name: "Bellevue Downtown Ice Rink"
+  cost: "$12"
+  setting: "Outdoor"
+  signup: true
+  tags:
+  - "skating"
+  start: "2026-11-13"
+  end: "2027-01-18"
+  place: "Bellevue Downtown Park, 10201 NE 4th St"
+  same_as: "https://www.bellevueicerink.com/admission"
+  card: "bellevue-downtown-ice-rink"
+  heading_id: "bellevue-downtown-ice-rink"
+  when: "Fri Nov 13 through Mon Jan 18"
+  blurbs:
+  - "The covered holiday rink in Downtown Park, by Inspiration Playground, with more than 9,000 square feet of real ice. Skate rental is included: $12 Mondays, $16 Tuesday to Thursday, $22 Friday to Sunday, and $24 Dec 18 to Jan 3. Book online."
+  links:
+  - href: "https://www.bellevueicerink.com/admission"
+    label: "Tickets"
+  photo:
+    src: "/assets/images/bellevue/downtown-park-ice-rink.jpg"
+    alt: "The covered Bellevue Downtown Ice Rink seen across the reflecting pond in Bellevue Downtown Park."
+    credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+    source: "https://commons.wikimedia.org/wiki/File:Bellevue,_WA_-_Downtown_Park_-_skating_rink_01.jpg"
+    license: "CC BY-SA 3.0"
+  description: "The covered holiday rink in Downtown Park, by Inspiration Playground, with more than 9,000 square feet of real ice. Skate rental is included: $12 Mondays, $16 Tuesday to Thursday, $22 Friday to Sunday, and $24 Dec 18 to Jan 3. Book online."
+  hub_blurb: "The covered holiday rink in Downtown Park, with real ice and skate rental included."
