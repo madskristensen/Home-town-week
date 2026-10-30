@@ -1,47 +1,11 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Baby and Toddler Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  start: "2026-10-29T10:30:00-07:00"
-  end: "2026-10-29T11:30:00-07:00"
-  place: "Woodinville Library, 17105 Avondale Road NE"
-  same_as: "https://kcls.bibliocommons.com/events/6aa899af3dd190003e71fd16"
-  card: "baby-and-toddler-story-time-oct-29"
-  heading_id: "baby-and-toddler-story-time-oct-29"
-  when: "Thu Oct 29 · 10:30–11:30 a.m."
-  blurbs:
-  - "Rhymes, songs, and bounces for newborns to 24 months with a caregiver. Siblings are welcome. No registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6aa899af3dd190003e71fd16"
-    label: "Baby and Toddler Story Time"
-  description: "Rhymes, songs, and bounces for newborns to 24 months with a caregiver. Siblings are welcome. No registration."
-  hub_blurb: "Rhymes, songs, and bounces for newborns to 24 months with a caregiver."
-- name: "Trick or Tree"
-  cost: "Free"
-  ages: "All ages"
-  setting: "Indoor"
-  tags: [halloween]
-  start: "2026-10-29T15:00:00-07:00"
-  end: "2026-10-29T18:00:00-07:00"
-  place: "Woodinville City Hall, 17301 133rd Ave NE"
-  same_as: "https://www.woodinville.gov/calendar.aspx?EID=765"
-  card: "trick-or-tree"
-  order: "12"
-  heading_id: "trick-or-tree"
-  when: "Thu Oct 29 · 3:00–6:00 p.m."
-  blurbs:
-    - "A free city afternoon for kids and families. Make a spooky treat bag, try crafts and games, get your face painted, meet some creepy crawlies, and take home a free tree."
-  links:
-    - href: "https://www.woodinville.gov/calendar.aspx?EID=765"
-      label: "Trick or Tree"
-  description: "A free city afternoon for kids and families. Make a spooky treat bag, try crafts and games, get your face painted, meet some creepy crawlies, and take home a free tree."
-  hub_blurb: "A free city afternoon for kids and families."
 - name: "Family Story Time"
   setting: "Indoor"
   cost: "Free"
+  tags:
+  - "story-time"
   start: "2026-10-30T11:00:00-07:00"
   end: "2026-10-30T12:00:00-07:00"
   place: "Woodinville Library, 17105 Avondale Road NE"
@@ -138,6 +102,8 @@
   cost: "Free"
   ages: "Toddlers"
   setting: "Indoor"
+  tags:
+  - "story-time"
   start: "2026-11-05T10:30:00-08:00"
   end: "2026-11-05T11:30:00-08:00"
   place: "Woodinville Library, 17105 Avondale Road NE"
@@ -156,6 +122,8 @@
 - name: "Family Story Time"
   cost: "Free"
   setting: "Indoor"
+  tags:
+  - "story-time"
   start: "2026-11-06T11:00:00-08:00"
   end: "2026-11-06T12:00:00-08:00"
   place: "Woodinville Library, 17105 Avondale Road NE"
@@ -175,6 +143,8 @@
   cost: "Free"
   ages: "Toddlers"
   setting: "Indoor"
+  tags:
+  - "story-time"
   start: "2026-11-12T10:30:00-08:00"
   end: "2026-11-12T11:30:00-08:00"
   place: "Woodinville Library, 17105 Avondale Road NE"
@@ -250,6 +220,8 @@
 - name: "Family Story Time"
   cost: "Free"
   setting: "Indoor"
+  tags:
+  - "story-time"
   start: "2026-11-13T11:00:00-08:00"
   end: "2026-11-13T12:00:00-08:00"
   place: "Woodinville Library, 17105 Avondale Road NE"
@@ -268,6 +240,8 @@
   cost: "Free"
   ages: "Toddlers"
   setting: "Indoor"
+  tags:
+  - "story-time"
   start: "2026-11-19T10:30:00-08:00"
   end: "2026-11-19T11:30:00-08:00"
   place: "Woodinville Library, 17105 Avondale Road NE"

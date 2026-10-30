@@ -30,26 +30,6 @@
   description: "Build a scarecrow with an apple, drop it at the Historic Shell Station by Oct 17, then\
     \ see them all downtown through Nov 1. Free straw from the Grange."
   hub_blurb: "Family-built scarecrows line downtown Issaquah through Nov 1."
-- name: "Rise & Shine Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-10-29T10:30:00-07:00"
-  end: "2026-10-29T11:00:00-07:00"
-  place: "Issaquah Library, 10 W Sunset Way"
-  same_as: "https://kcls.bibliocommons.com/events/6a710898c7e02e3d006da0f1"
-  card: "rise-shine-story-time-oct-29"
-  heading_id: "rise-shine-story-time-oct-29"
-  when: "Thu Oct 29 · 10:30–11:00 a.m."
-  blurbs:
-  - "A morning story time with songs, rhymes, and movement for newborns to age 5 with an adult, followed by up to 30 minutes of play. No registration, and space is limited."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a710898c7e02e3d006da0f1"
-    label: "Rise & Shine Story Time"
-  description: "A morning story time with songs, rhymes, and movement for newborns to age 5 with an adult, followed by up to 30 minutes of play. No registration, and space is limited."
-  hub_blurb: "A morning story time with songs, rhymes, and movement for newborns to age 5."
 - name: "Model UN Basics"
   cost: "Free"
   ages: "Teens"

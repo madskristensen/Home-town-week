@@ -1,31 +1,3 @@
-- name: "Mandarin Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  start: "2026-10-29T10:30:00-07:00"
-  end: "2026-10-29T11:00:00-07:00"
-  place: "Mercer Island Library, 4405 88th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/events/6a6ba3514523092f0033b551"
-  card: "mandarin-story-time-3"
-  heading_id: "mandarin-story-time-3"
-  when: "Thu Oct 29 · 10:30–11:00 a.m."
-  blurbs:
-  - "Mandarin stories, music, movement, and rhymes for families, including learners. Free at Mercer Island\
-    \ Library."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a6ba3514523092f0033b551"
-    label: "Mandarin Story Time"
-  description: "Mandarin stories, music, movement, and rhymes for families, including learners. Free at\
-    \ Mercer Island Library."
-  hub_blurb: "Mandarin stories for families."
-  ages: "Toddlers"
-  tags:
-  - "story-time"
-  photo:
-    src: "/assets/images/mercer-island/mercer-island-library-entrance.webp"
-    alt: "Mercer Island Library entrance"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/mercer-island/"
-    license: "organizer"
 - name: "Tot Shabbat"
   ages: "Toddlers"
   setting: "Indoor"
@@ -119,6 +91,8 @@
   cost: "Free"
   ages: "Toddlers"
   setting: "Indoor"
+  tags:
+  - "story-time"
   start: "2026-11-03T10:15:00-08:00"
   end: "2026-11-03T11:00:00-08:00"
   place: "Mercer Island Library, 4400 88th Ave SE"
@@ -226,6 +200,8 @@
   setting: "Indoor"
   cost: "Free"
   ages: "Toddlers"
+  tags:
+  - "story-time"
   start: "2026-11-10T10:15:00-08:00"
   end: "2026-11-10T11:00:00-08:00"
   place: "Mercer Island Library, 4400 88th Ave SE"

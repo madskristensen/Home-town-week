@@ -49,27 +49,6 @@
     \ the visit. It runs 11:00 a.m. to 4:00 p.m. each day. Register for a session."
   hub_blurb: "A free remembrance at the farm for animals and pets who have died, with art as part of the\
     \ visit."
-- name: "Toddler Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  signup: true
-  tags:
-  - "story-time"
-  start: "2026-10-29T10:30:00-07:00"
-  end: "2026-10-29T11:30:00-07:00"
-  place: "Redmond Library, 15990 NE 85th St"
-  same_as: "https://kcls.bibliocommons.com/events/6ab463b90c7bf418f4e3c6c5"
-  card: "toddler-story-time-oct-29"
-  heading_id: "toddler-story-time-oct-29"
-  when: "Thu Oct 29 · 10:30–11:30 a.m."
-  blurbs:
-  - "Stories, songs, rhymes, and movement for ages 18 months to 3 with an adult, then 20 to 30 minutes of play. Free tickets are handed out at the front desk 30 minutes before, and space is limited."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6ab463b90c7bf418f4e3c6c5"
-    label: "Toddler Story Time"
-  description: "Stories, songs, rhymes, and movement for ages 18 months to 3 with an adult, then 20 to 30 minutes of play. Free tickets are handed out at the front desk 30 minutes before, and space is limited."
-  hub_blurb: "Stories, songs, rhymes, and movement for ages 18 months to 3."
 - name: "Trick-or-Treat Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -249,7 +228,9 @@
   hub_blurb: "Teen volunteers lead hands-on science, technology, engineering, and math experiments for kids and tweens."
 - name: "Day of the Dead"
   cost: "Free"
+  ages: "All ages"
   setting: "Indoor"
+  signup: true
   tags:
   - "dia-de-los-muertos"
   start: "2026-11-02T17:00:00-08:00"
@@ -261,14 +242,14 @@
   heading_id: "day-of-the-dead"
   when: "Mon Nov 2 · 5:00–7:00 p.m."
   blurbs:
-  - "All ages. A joyful visit with loved ones who have died, with crafts, music, food, and a short look\
-    \ at the tradition."
+  - "A free, all-ages Día de los Muertos evening with crafts, music, food, and a community altar honoring loved ones who have died. Register ahead on the city's recreation site."
   links:
   - href: "https://www.redmond.gov/calendar.aspx?EID=3561"
     label: "Day of the Dead"
-  description: "All ages. A joyful visit with loved ones who have died, with crafts, music, food, and\
-    \ a short look at the tradition."
-  hub_blurb: "All ages."
+  - href: "https://app.amilia.com/store/en/city-of-redmond/shop/activities/7117283"
+    label: "Register"
+  description: "A free, all-ages Día de los Muertos evening with crafts, music, food, and a community altar honoring loved ones who have died. Register ahead on the city's recreation site."
+  hub_blurb: "A free Día de los Muertos evening with crafts, music, and a community altar."
 - name: "The Zaniac Family Comedy Show"
   cost: "$14.17 to $17"
   setting: "Indoor"
@@ -312,6 +293,26 @@
   description: "A free pumpkin drop-in at Farrel-McWhirter Park, 10:00 a.m. to 2:00 p.m. Register on the\
     \ city's recreation site."
   hub_blurb: "A free pumpkin drop-in at Farrel-McWhirter Park, 10:00 a.m."
+- name: "Garden and Nature Science for Kids"
+  cost: "Free"
+  ages: "Kids"
+  setting: "Indoor"
+  tags:
+  - "free"
+  start: "2026-11-07T11:30:00-08:00"
+  end: "2026-11-07T12:30:00-08:00"
+  place: "Redmond Library, 15990 NE 85th St"
+  same_as: "https://kcls.bibliocommons.com/events/6ad6603929c3d6003331069f"
+  card: "garden-nature-science-redmond-nov-7"
+  heading_id: "garden-nature-science-redmond-nov-7"
+  when: "Sat Nov 7 · 11:30 a.m.–12:30 p.m."
+  blurbs:
+  - "King County Master Gardeners lead a hands-on science hour for ages 5 to 12 with an adult. November's theme is A Walk in the Rain, and each child takes home a kit. Free, no registration, kits for the first 25 kids."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ad6603929c3d6003331069f"
+    label: "Garden and Nature Science for Kids"
+  description: "King County Master Gardeners lead a hands-on science hour for ages 5 to 12 with an adult. November's theme is A Walk in the Rain, and each child takes home a kit. Free, no registration, kits for the first 25 kids."
+  hub_blurb: "Hands-on garden science for ages 5 to 12 with Master Gardeners."
 - name: "Kids' Diwali Celebration"
   setting: "Indoor"
   signup: true

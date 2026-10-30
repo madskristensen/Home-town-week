@@ -151,7 +151,7 @@
   lat: 47.670540
   lng: -122.197945
   description: "Lights along the Eastrail at Feriton Spur Park, with a community lighting night to open the season."
-  nights: "Last seen 2025, Dec 5 to Jan 9."
+  nights: "Lighting night Fri Dec 4, 2026, 4 to 6 p.m. Last season ran into early January."
   hours: ""
   photo:
     image: /assets/images/themes/lights-cold.webp
@@ -160,9 +160,9 @@
     license: CC BY 2.0
     credit_url: "https://commons.wikimedia.org/wiki/File:Cold_White_Christmas_lights_(8322726666).jpg"
     kind: theme
-  source: "https://www.parentmap.com/things-to-do/best-holiday-light-displays-seattle/"
+  source: "https://kirklanddowntown.org/events/kirkland-downtown-winter-events/"
   free: true
-  last_verified: "2026-09-29"
+  last_verified: "2026-10-30"
 - id: kingsgate-kringle
   name: "Kingsgate Kringle House"
   type: house

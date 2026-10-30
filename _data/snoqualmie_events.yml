@@ -69,30 +69,6 @@
     \ two hours."
   hub_blurb: "The Northwest Railway Museum runs a family ride from the Snoqualmie Depot, with another\
     \ boarding point in North Bend."
-- name: "Halloween Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "halloween"
-  - "story-time"
-  start: "2026-10-29T10:30:00-07:00"
-  end: "2026-10-29T11:15:00-07:00"
-  place: "Snoqualmie Library, 7824 Center Boulevard SE"
-  same_as: "https://kcls.bibliocommons.com/v2/events/6ab1c1ccab7a8e0037c37c20"
-  card: "halloween-story-time"
-  order: "18"
-  heading_id: "halloween-story-time"
-  when: "Thu Oct 29 · 10:30–11:15 a.m."
-  blurbs:
-  - "A Halloween round of stories, music, and movement for young children with an adult. Costumes are\
-    \ fine. Play time and bubbles come after the stories. No registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/v2/events/6ab1c1ccab7a8e0037c37c20"
-    label: "Halloween Story Time"
-  description: "A Halloween round of stories, music, and movement for young children with an adult. Costumes\
-    \ are fine. Play time and bubbles come after the stories. No registration."
-  hub_blurb: "A Halloween round of stories, music, and movement for young children with an adult."
 - name: "Family Story Time"
   cost: "Free"
   ages: "Toddlers"

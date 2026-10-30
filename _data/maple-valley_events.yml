@@ -15,32 +15,6 @@
     label: "Maple Valley Farmers Market"
   description: "The Saturday market, open each Saturday from May 2 through Oct 31."
   hub_blurb: "The Saturday market, open each Saturday from May 2 through Oct 31."
-- name: "Fiestas de alfabetización temprana"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-10-29T13:00:00-07:00"
-  end: "2026-10-29T14:30:00-07:00"
-  place: "Covington Library, 27100 164th Ave SE, Covington"
-  same_as: "https://kcls.bibliocommons.com/events/6a80d8462dac6e00371f5869"
-  card: "fiestas-alfabetizacion-oct-29"
-  heading_id: "fiestas-alfabetizacion-oct-29"
-  when: "Thu Oct 29 · 1:00–2:30 p.m."
-  blurbs:
-  - "A free kindergarten-readiness workshop in Spanish for young kids and their parents, with songs, stories, crafts, and activities. Each week has a new theme. No registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a80d8462dac6e00371f5869"
-    label: "Fiestas de alfabetización temprana"
-  photo:
-    src: "/assets/images/maple-valley/covington-library.webp"
-    alt: "Covington Library, a low King County Library System branch with a covered entry."
-    credit: "Photo: Senapa, CC BY-SA 4.0"
-    source: "https://commons.wikimedia.org/wiki/File:Covington,_WA_%E2%80%94_Covington_Library_(2021-08-23).jpg"
-    license: "CC BY-SA 4.0"
-  description: "A free kindergarten-readiness workshop in Spanish for young kids and their parents, with songs, stories, crafts, and activities. Each week has a new theme. No registration."
-  hub_blurb: "A free Spanish early-literacy workshop for preschoolers at Covington Library."
 - name: "Trick or Treat Tales: Puppets Please"
   cost: "Free"
   ages: "Toddlers"
@@ -141,6 +115,8 @@
 - name: "Family Story Time"
   cost: "Free"
   setting: "Indoor"
+  tags:
+  - "story-time"
   start: "2026-11-04T10:30:00-08:00"
   end: "2026-11-04T11:00:00-08:00"
   place: "Maple Valley Library, 21844 SE 248th St, Maple Valley"
@@ -188,6 +164,8 @@
   ages: "All ages"
   setting: "Indoor"
   signup: true
+  tags:
+  - "holiday-show"
   start: "2026-11-07T13:00:00-08:00"
   end: "2026-11-07T13:45:00-08:00"
   place: "Covington Library, 27100 164th Ave SE, Covington"
@@ -283,6 +261,8 @@
 - name: "Pajama Story Time"
   cost: "Free"
   setting: "Indoor"
+  tags:
+  - "story-time"
   start: "2026-11-17T19:00:00-08:00"
   end: "2026-11-17T19:30:00-08:00"
   place: "Maple Valley Library, 21844 SE 248th St, Maple Valley"
@@ -512,6 +492,8 @@
 - name: "Family Story Time"
   cost: "Free"
   setting: "Indoor"
+  tags:
+  - "story-time"
   start: "2026-11-18T10:30:00-08:00"
   end: "2026-11-18T11:00:00-08:00"
   place: "Maple Valley Library, 21844 SE 248th St, Maple Valley"
