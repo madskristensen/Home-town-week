@@ -1,10 +1,10 @@
 # Home-page picks for Friday Oct 30 through Sunday Nov 1, 2026 (Halloween weekend).
-# Set Monday Oct 26 daily refresh.
+# Set Monday Oct 26 daily refresh; Redmond pick swapped Oct 31 after Trunk-or-Treat ended.
 # Names match _data/{city}_events.yml.
 - city: bellevue
   name: Little Monsters on Main Street
 - city: redmond
-  name: Trunk-or-Treat at City Hall
+  name: "Creature Feature! Family Film Screening"
 - city: snoqualmie
   name: Halloween Train
 - city: bellevue

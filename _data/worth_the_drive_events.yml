@@ -24,17 +24,6 @@
   same_as: "https://bobscorn.com/"
   tags: [pumpkin-patch, corn-maze]
   blurb: "U-pick pumpkins and a corn maze, open daily 10 a.m.–7 p.m. through Nov 1, last admission 5 p.m. The night maze is Friday and Saturday only, 6–11 p.m., and starts Oct 3."
-- name: "Thomasson Family Farm Pumpkin Patch"
-  cost: "$18.50 to $26"
-  setting: "Outdoor"
-  start: "2026-09-26"
-  end: "2026-10-30"
-  place: "Thomasson Family Farm, 38223 236th Avenue SE"
-  town: Enumclaw
-  drive: "about 55 min from Bellevue"
-  same_as: "https://www.thomassonfarm.com/pumpkins/"
-  tags: [pumpkin-patch, corn-maze]
-  blurb: "A 10-acre you-pick pumpkin patch and a 5-acre corn maze, open daily 9:30 a.m.–5:30 p.m. through Oct 30. Closed Oct 31. Admission is charged, weekdays cost less than weekends, and ages 2 and under are free."
 - name: "Maris Farms Fall Fest"
   setting: "Outdoor"
   signup: true

@@ -69,26 +69,6 @@
     \ two hours."
   hub_blurb: "The Northwest Railway Museum runs a family ride from the Snoqualmie Depot, with another\
     \ boarding point in North Bend."
-- name: "Family Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-10-30T10:30:00-07:00"
-  end: "2026-10-30T11:30:00-07:00"
-  place: "Fall City Library, 33415 SE 42nd Place"
-  same_as: "https://kcls.bibliocommons.com/events/6a6cea16f4e5db3d00c5a388"
-  card: "family-story-time-oct-30"
-  heading_id: "family-story-time-oct-30"
-  when: "Fri Oct 30 · 10:30–11:30 a.m."
-  blurbs:
-  - "Stories, songs, rhymes, movement, and play for newborns to age 5 with an adult. No registration, and space is limited."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a6cea16f4e5db3d00c5a388"
-    label: "Family Story Time"
-  description: "Stories, songs, rhymes, movement, and play for newborns to age 5 with an adult. No registration, and space is limited."
-  hub_blurb: "Stories, songs, rhymes, movement, and play for newborns to age 5."
 - name: "Paranormal Investigation: Behind the Hauntings"
   cost: "Free"
   ages: "All ages"

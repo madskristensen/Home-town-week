@@ -30,24 +30,6 @@
   description: "Build a scarecrow with an apple, drop it at the Historic Shell Station by Oct 17, then\
     \ see them all downtown through Nov 1. Free straw from the Grange."
   hub_blurb: "Family-built scarecrows line downtown Issaquah through Nov 1."
-- name: "Model UN Basics"
-  cost: "Free"
-  ages: "Teens"
-  setting: "Indoor"
-  start: "2026-10-30T16:00:00-07:00"
-  end: "2026-10-30T17:30:00-07:00"
-  place: "Issaquah Library, 10 W Sunset Way"
-  same_as: "https://kcls.bibliocommons.com/events/6ab1c2d0001a4a0e055b118f"
-  card: "model-un-basics-oct-30"
-  heading_id: "model-un-basics-oct-30"
-  when: "Fri Oct 30 · 4:00–5:30 p.m."
-  blurbs:
-  - "Sammamish Youth Model UN shows middle and high school students how Model UN works, then runs an hour of practice debate. Free."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6ab1c2d0001a4a0e055b118f"
-    label: "Model UN Basics"
-  description: "Sammamish Youth Model UN shows middle and high school students how Model UN works, then runs an hour of practice debate. Free."
-  hub_blurb: "Teens learn Model UN from a youth-led group."
 - name: "Halloween at Cougar Mountain Zoo"
   setting: "Outdoor"
   tags:
@@ -203,6 +185,25 @@
     label: "Story Stroll"
   description: "A self-guided picture book walk. Start at the Issaquah Library and follow the pages of Apple Pie Picnic along a route through historic downtown. Good for ages 3 to 8. Free."
   hub_blurb: "A self-guided picture book walk through historic downtown Issaquah."
+- name: "Model UN Basics with SYMUN"
+  cost: "Free"
+  ages: "Teens"
+  setting: "Indoor"
+  start: "2026-11-13T16:00:00-08:00"
+  end: "2026-11-13T17:30:00-08:00"
+  place: "Issaquah Library, 10 W Sunset Way"
+  same_as: "https://kcls.bibliocommons.com/events/6ab1c2d0001a4a0e055b1190"
+  signup: true
+  card: "model-un-basics-nov-13"
+  heading_id: "model-un-basics-nov-13"
+  when: "Fri Nov 13 · 4:00–5:30 p.m."
+  blurbs:
+  - "Sammamish Youth Model UN, a student-run group, teaches grades 6 to 12 how Model UN works, then runs an hour of practice debate at Issaquah Library. Free. Registration requested, walk-ins if space allows."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ab1c2d0001a4a0e055b1190"
+    label: "Model UN Basics with SYMUN"
+  description: "Sammamish Youth Model UN, a student-run group, teaches grades 6 to 12 how Model UN works, then runs an hour of practice debate at Issaquah Library. Free. Registration requested, walk-ins if space allows."
+  hub_blurb: "Students teach middle and high schoolers how Model UN works, then run a practice session."
 - name: "Tots and Trees"
   setting: "Outdoor"
   signup: true

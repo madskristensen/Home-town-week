@@ -1,29 +1,3 @@
-- name: "Pee Wee Monster Bash"
-  cost: "$18"
-  ages: "Toddlers"
-  setting: "Outdoor"
-  signup: true
-  tags:
-  - "halloween"
-  start: "2026-10-30T10:00:00-07:00"
-  end: "2026-10-30T12:00:00-07:00"
-  place: "North Kirkland Community Center, 12421 103rd Ave NE"
-  same_as: "https://secure.rec1.com/WA/city-of-kirkland/catalog/index?filter=c2VhcmNoPW1vbnN0ZXIlMjBiYXNoJnJlbnRhbCU1QmZyb20lNUQ9JnJlbnRhbCU1QnRvJTVEPSZkYWU2MGY5ZjQyMmY5MjczODdkZWRiNjU2ODM3Zjk2Mz1mOWE4NDdjY2JiNzNiMWExOGM4Y2NhNTc2ODc1MjczMA%3D%3D"
-  card: "pee-wee-monster-bash"
-  order: "21"
-  heading_id: "pee-wee-monster-bash"
-  when: "Fri Oct 30 · 10:00 a.m.–12:00 p.m."
-  blurbs:
-  - "Carnival games, a cookie stroll, bowling, and skee ball for ages 1 to 5. Kirkland Parks calls it\
-    \ kooky, not scary. Costumes are encouraged. $18 per child. Pre-register. It sells out, and the city\
-    \ asks families to leave strollers at home."
-  links:
-  - href: "https://secure.rec1.com/WA/city-of-kirkland/catalog/index?filter=c2VhcmNoPW1vbnN0ZXIlMjBiYXNoJnJlbnRhbCU1QmZyb20lNUQ9JnJlbnRhbCU1QnRvJTVEPSZkYWU2MGY5ZjQyMmY5MjczODdkZWRiNjU2ODM3Zjk2Mz1mOWE4NDdjY2JiNzNiMWExOGM4Y2NhNTc2ODc1MjczMA%3D%3D"
-    label: "Pee Wee Monster Bash"
-  description: "Carnival games, a cookie stroll, bowling, and skee ball for ages 1 to 5. Kirkland Parks\
-    \ calls it kooky, not scary. Costumes are encouraged. $18 per child. Pre-register. It sells out, and\
-    \ the city asks families to leave strollers at home."
-  hub_blurb: "Carnival games, a cookie stroll, bowling, and skee ball for ages 1 to 5."
 - name: "Young Frankenstein"
   setting: "Indoor"
   signup: true

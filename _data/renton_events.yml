@@ -1,123 +1,3 @@
-- name: "Special Costume Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Outdoor"
-  tags:
-  - "halloween"
-  - "story-time"
-  start: "2026-10-30T10:30:00-07:00"
-  end: "2026-10-30T11:30:00-07:00"
-  place: "Fairwood Library, 17009 140th Avenue SE"
-  same_as: "https://kcls.bibliocommons.com/events/6a85e69569166f088b934d6d"
-  card: "special-costume-story-time"
-  order: "23"
-  heading_id: "special-costume-story-time"
-  when: "Fri Oct 30 · 10:30–11:30 a.m."
-  blurbs:
-  - "Wear a costume, pajamas, or a favorite hat to a silly story time with songs and a parade around the\
-    \ library. All ages with an adult. Free, no registration."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a85e69569166f088b934d6d"
-    label: "Special Costume Story Time"
-  description: "Wear a costume, pajamas, or a favorite hat to a silly story time with songs and a parade\
-    \ around the library. All ages with an adult. Free, no registration."
-  hub_blurb: "A silly costume story time with songs and a parade around the library."
-- name: "Toddler Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-10-30T11:00:00-07:00"
-  end: "2026-10-30T11:30:00-07:00"
-  place: "Renton Highlands Library, 2801 NE 10th Street"
-  same_as: "https://kcls.bibliocommons.com/events/6a6794c9cca66c2f00a65240"
-  card: "toddler-story-time-oct-30"
-  heading_id: "toddler-story-time-oct-30"
-  when: "Fri Oct 30 · 11:00–11:30 a.m."
-  blurbs:
-  - "Books, songs, rhymes, and movement for ages 1 to 3 with an adult at the Highlands branch. Free, no registration, and space is limited."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a6794c9cca66c2f00a65240"
-    label: "Toddler Story Time"
-  description: "Books, songs, rhymes, and movement for ages 1 to 3 with an adult at the Highlands branch. Free, no registration, and space is limited."
-  hub_blurb: "Books, songs, rhymes, and movement for ages 1 to 3."
-- name: "Baby Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-10-30T12:00:00-07:00"
-  end: "2026-10-30T12:30:00-07:00"
-  place: "Renton Highlands Library, 2801 NE 10th Street"
-  same_as: "https://kcls.bibliocommons.com/events/6a6794e40d65ac360042892a"
-  card: "baby-story-time-oct-30"
-  heading_id: "baby-story-time-oct-30"
-  when: "Fri Oct 30 · 12:00–12:30 p.m."
-  blurbs:
-  - "Nursery rhymes, songs, and stories for newborns to 18 months with an adult. Bring a mat or blanket. Free; space is limited."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a6794e40d65ac360042892a"
-    label: "Baby Story Time"
-  description: "Nursery rhymes, songs, and stories for newborns to 18 months with an adult. Bring a mat or blanket. Free; space is limited."
-  hub_blurb: "Baby stories at Renton Highlands Library."
-  photo:
-    src: "/assets/images/renton/renton-highlands-library.webp"
-    alt: "Renton Highlands Library"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/renton-highlands/"
-    license: "organizer"
-- name: "Vietnamese Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-10-30T16:00:00-07:00"
-  end: "2026-10-30T17:00:00-07:00"
-  place: "Renton Highlands Library, 2801 NE 10th Street"
-  same_as: "https://kcls.bibliocommons.com/events/6a46e315c52cdc3600ee7853"
-  card: "vietnamese-story-time-oct-30"
-  heading_id: "vietnamese-story-time-oct-30"
-  when: "Fri Oct 30 · 4:00–5:00 p.m."
-  blurbs:
-  - "Stories, music, and rhymes in Vietnamese and English for families with young children, with an adult. Free."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a46e315c52cdc3600ee7853"
-    label: "Vietnamese Story Time"
-  description: "Stories, music, and rhymes in Vietnamese and English for families with young children, with an adult. Free."
-  hub_blurb: "Vietnamese family stories and songs."
-- name: "Truck or Treat"
-  cost: "$15 to $18"
-  ages: "All ages"
-  setting: "Indoor"
-  signup: true
-  sensory: true
-  tags:
-  - "halloween"
-  - "trunk-or-treat"
-  start: "2026-10-30T17:00:00-07:00"
-  end: "2026-10-30T19:30:00-07:00"
-  place: "Renton Community Center, 1715 Maple Valley Hwy"
-  same_as: "https://www.rentonwa.gov/TruckorTreat"
-  card: "truck-or-treat"
-  order: "24"
-  heading_id: "truck-or-treat"
-  when: "Fri Oct 30 · 5:00–7:30 p.m."
-  blurbs:
-  - "Two sessions, inside the community center and outside with the trucks. The sensory-friendly stroll\
-    \ is 5:00–6:00 p.m., with flashing lights, noise, and music kept down. The walk-through is 6:00–7:30\
-    \ p.m., with treat stations, specialty vehicles, and Halloween music. Costumes are welcome. All ages\
-    \ can come. Registration is $15 for Renton residents and $18 for everyone else."
-  links:
-  - href: "https://www.rentonwa.gov/TruckorTreat"
-    label: "Truck or Treat"
-  description: "Two sessions, inside the community center and outside with the trucks. The sensory-friendly\
-    \ stroll is 5:00–6:00 p.m., with flashing lights, noise, and music kept down. The walk-through is\
-    \ 6:00–7:30 p.m., with treat stations, specialty vehicles, and Halloween music. Costumes are welcome.\
-    \ All ages can come. Registration is $15 for Renton residents and $18 for everyone else."
-  hub_blurb: "Two sessions, inside the community center and outside with the trucks."
 - name: "Station 16 Open House"
   cost: "Free"
   setting: "Outdoor"
@@ -278,6 +158,23 @@
     label: "Spanish Story Time"
   description: "Stories, music, movement, and rhymes in Spanish and English to build early literacy skills, aimed at preschoolers. Free, no registration."
   hub_blurb: "Bilingual Spanish and English stories and songs for preschoolers."
+- name: "Vietnamese Story Time"
+  cost: "Free"
+  setting: "Indoor"
+  start: "2026-11-06T16:00:00-08:00"
+  end: "2026-11-06T17:00:00-08:00"
+  place: "Renton Highlands Library, 2801 NE 10th St"
+  same_as: "https://kcls.bibliocommons.com/events/6ae13ed29dbc2b002c9182f2"
+  card: "vietnamese-story-time-nov-6"
+  heading_id: "vietnamese-story-time-nov-6"
+  when: "Fri Nov 6 · 4:00–5:00 p.m."
+  blurbs:
+  - "A family story time in Vietnamese and English at Renton Highlands Library, with stories, songs, movement, and rhymes for kids of any age with a grown-up. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ae13ed29dbc2b002c9182f2"
+    label: "Vietnamese Story Time"
+  description: "A family story time in Vietnamese and English at Renton Highlands Library, with stories, songs, movement, and rhymes for kids of any age with a grown-up. Free, no registration."
+  hub_blurb: "Stories, songs, and rhymes in Vietnamese and English for the whole family."
 - name: "Scrooge!"
   setting: "Indoor"
   tags:
