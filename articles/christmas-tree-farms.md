@@ -4,6 +4,7 @@ title: Christmas tree farms near Bellevue and Redmond
 description: U-cut Christmas tree farms near the Eastside for 2026, from Redmond and Issaquah to Carnation, Duvall, Fall City, North Bend, and Maple Valley, with opening days, hours, and what each farm has besides trees.
 intro: U-cut and pre-cut Christmas tree farms in and near the Eastside, with the 2026 opening days each farm has posted on its own site so far.
 article_id: christmas-tree-farms
+newsletter_lead: Holiday lights and Santa picks, every Thursday
 permalink: /articles/christmas-tree-farms/
 date: 2026-10-15
 image: /assets/images/issaquah/trinity-tree-farm-rows.webp

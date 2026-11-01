@@ -70,18 +70,18 @@ hubs:
 
   - id: christmas
     path: /christmas/
-    title: Eastside Christmas events for kids
+    title: "Eastside Christmas 2026 for kids: holiday lights, Santa, shows"
     title_plain: true
     banner_title: Christmas for kids
     hook: Tree lightings, lights, Santa, and shows.
     link_label: See events
     footer: true
     footer_label: Christmas
-    description: Eastside Christmas events for kids from Nov 10 through Dec 31. Tree lightings, holiday lights, Santa visits, shows, and parades.
+    description: Where to see holiday lights and meet Santa on the Eastside in 2026, plus tree lightings, Nutcracker shows, and parades for kids, by date through Dec 31.
     llms: Tree lightings, holiday lights, Santa visits, markets, shows, and parades for kids.
-    in_season_intro: Eastside Christmas events for kids, listed through Dec 31. Tree lightings, holiday lights, Santa visits, shows, and parades.
+    in_season_intro: Where to see holiday lights and meet Santa on the Eastside in 2026, with tree lightings, Nutcracker shows, and parades for kids, listed by date through Dec 31.
     off_season_intro: The season runs Nov 10 through Dec 31.
-    off_season_listed: The season runs Nov 10 through Dec 31. Tree lightings, holiday lights, Santa visits, shows, and parades already set are listed below.
+    off_season_listed: Where to see holiday lights and meet Santa on the Eastside in 2026, with tree lightings, Nutcracker shows, and parades already dated. The season runs Nov 10 through Dec 31.
     empty: Nothing is listed yet. City pages are where each event is written up, and this page gathers the Christmas ones.
     season:
       start: "11-10"
@@ -93,11 +93,11 @@ hubs:
         tags: [tree-lighting]
       - id: holiday-lights
         title: Holiday lights
-        intro: Public light displays.
+        intro: Public holiday light displays for 2026.
         tags: [holiday-lights]
       - id: santa
         title: Santa visits and photos
-        intro: Santa visits and photo times.
+        intro: Where to meet Santa in 2026, with photo times.
         tags: [santa]
       - id: holiday-market
         title: Holiday markets and bazaars

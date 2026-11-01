@@ -4,6 +4,7 @@ title: Best Christmas lights on the Eastside
 description: Public Christmas lights on the Eastside, from Snowflake Lane and Garden d'Lights to Redmond Lights, Snoqualmie, and zoo light walks within reach.
 intro: Public displays and a few home shows already on our lights map, with the nights and the ticket notes posted by the organizers.
 article_id: christmas-lights
+newsletter_lead: Holiday lights and Santa picks, every Thursday
 permalink: /articles/christmas-lights/
 date: 2026-10-03
 image: /assets/images/lights/garden-dlights.webp

@@ -58,7 +58,7 @@ layout: default
   {%- elsif page.hub_id == "rainy-day" -%}
   <p class="hub-section-intro">Guides for wet days: <a href="{{ '/articles/rainy-day-indoor-play/' | relative_url }}">rainy day activities</a>, <a href="{{ '/indoor-play/' | relative_url }}">indoor play spaces and toddler drop-ins</a>, <a href="{{ '/articles/indoor-pools-swim-lessons/' | relative_url }}">indoor pools and swim lessons</a>, and <a href="{{ '/articles/ice-roller-skating/' | relative_url }}">ice and roller skating</a>.</p>
   {%- elsif page.hub_id == "christmas" -%}
-  <p class="hub-section-intro">Guides for the season: <a href="{{ '/articles/christmas-tree-farms/' | relative_url }}">Christmas tree farms</a>, <a href="{{ '/articles/christmas-lights/' | relative_url }}">best Christmas lights</a>, <a href="{{ '/articles/meeting-santa/' | relative_url }}">meeting Santa</a>, <a href="{{ '/articles/ice-roller-skating/' | relative_url }}">ice skating</a>, and <a href="{{ '/articles/new-years-eve/' | relative_url }}">New Year's Eve with kids</a>.</p>
+  <p class="hub-section-intro">Guides for the season: <a href="{{ '/articles/christmas-tree-farms/' | relative_url }}">Christmas tree farms</a>, <a href="{{ '/articles/christmas-lights/' | relative_url }}">best Christmas lights</a>, <a href="{{ '/articles/meeting-santa/' | relative_url }}">meeting Santa</a>, <a href="{{ '/articles/nutcracker-holiday-shows/' | relative_url }}">Nutcracker and holiday shows</a>, <a href="{{ '/articles/ice-roller-skating/' | relative_url }}">ice skating</a>, <a href="{{ '/articles/winter-break/' | relative_url }}">winter break</a>, and <a href="{{ '/articles/new-years-eve/' | relative_url }}">New Year's Eve with kids</a>.</p>
   {%- endif -%}
   {%- include updated-line.html -%}
   {%- assign suggest_lead = hub.suggest_lead | append: "" -%}
@@ -104,6 +104,8 @@ layout: default
     <p class="hub-section-intro"><a href="{{ '/articles/christmas-lights/' | relative_url }}">Best Christmas lights on the Eastside</a> covers the public displays and the zoo walks within reach.</p>
     {%- elsif page.hub_id == "christmas" and section.id == "santa" -%}
     <p class="hub-section-intro"><a href="{{ '/articles/meeting-santa/' | relative_url }}">Meeting Santa on the Eastside</a> lists the free visits, tree lightings, and the Santa trains.</p>
+    {%- elsif page.hub_id == "christmas" and section.id == "holiday-show" -%}
+    <p class="hub-section-intro"><a href="{{ '/articles/nutcracker-holiday-shows/' | relative_url }}">Nutcracker and holiday shows for kids</a> has the times and ticket prices for each show.</p>
     {%- endif -%}
     {%- assign section_events = section.events | size -%}
     {%- if section_events > 0 -%}
@@ -117,6 +119,9 @@ layout: default
     {%- include card-grid.html events=section.events show_city=true eager=section_eager priority=forloop.first -%}
     {%- endif -%}
   </section>
+  {%- if page.hub_id == "christmas" and forloop.index == 2 -%}
+  {%- include newsletter.html inline="1" id="newsletter-inline" lead="Holiday lights and Santa picks, every Thursday" -%}
+  {%- endif -%}
   {%- endfor -%}
   {%- endif -%}
   {%- include map-tip.html kind="missing" -%}

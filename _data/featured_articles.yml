@@ -110,6 +110,10 @@ guides:
       ranges:
         - start: "11-16"
           end: "12-24"
+    - article: nutcracker-holiday-shows
+      ranges:
+        - start: "11-20"
+          end: "12-20"
     - article: christmas-tree-farms
       ranges:
         - start: "11-01"

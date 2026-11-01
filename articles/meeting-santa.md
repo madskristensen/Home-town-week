@@ -4,6 +4,7 @@ title: Meeting Santa on the Eastside
 description: Free and low-cost Santa visits, tree lightings, and holiday parades on the Eastside, with the dates organizers have posted for 2026.
 intro: Tree lightings and Santa visits that cities and organizers have dated for 2026, plus the two Santa trains.
 article_id: meeting-santa
+newsletter_lead: Holiday lights and Santa picks, every Thursday
 permalink: /articles/meeting-santa/
 date: 2026-10-03
 image: /assets/images/bellevue/kelsey-creek.webp

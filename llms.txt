@@ -61,6 +61,7 @@ sitemap: false
 - [Christmas tree farms near Bellevue and Redmond]({{ site.url }}{{ site.baseurl }}/articles/christmas-tree-farms/): U-cut and pre-cut tree farms from Redmond to North Bend, with 2026 opening days and a map.
 - [Best Christmas lights on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/christmas-lights/): Public displays, two posted home shows, and zoo light walks within reach.
 - [Meeting Santa on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/meeting-santa/): Free and low-cost Santa visits, tree lightings, and the Santa trains.
+- [Nutcracker and holiday shows for kids on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/nutcracker-holiday-shows/): Five Nutcrackers and three family holiday plays, with 2026 dates and ticket prices.
 - [Winter break with kids on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/winter-break/): Break dates, indoor plans, and a snow day at Snoqualmie Pass.
 - [New Year's Eve with kids on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/new-years-eve/): What is open on December 31, and which noon countdowns are still unannounced.
 - [Indoor pools and swim lessons on the Eastside]({{ site.url }}{{ site.baseurl }}/articles/indoor-pools-swim-lessons/): Family and open swim times, warm pools for toddlers, and when swim lesson sign-up opens at each Eastside pool and swim school.

@@ -60,6 +60,7 @@ layout: default
     {{ content }}
     {{ page.city_cards_html }}
   </div>
+  {%- include newsletter.html inline="1" id="newsletter-inline" -%}
   {%- else -%}
   {%- include updated-line.html id="list-updated" -%}
   {%- include calendar-subscribe.html city=page.city name=city.name -%}
@@ -71,5 +72,9 @@ layout: default
   {%- endif -%}
   {%- assign fall_hub = site.data.hub_pages.fall -%}
   <p class="suggest-event">{%- if fall_hub.in_season -%}<a href="{{ '/fall/#patches' | relative_url }}">Pumpkin patches and corn mazes</a> are listed through Oct 31. {% endif %}<a href="{{ '/no-school-days/' | relative_url }}">No-school days</a> for the Eastside districts.</p>
+  {%- assign holiday_md = site.data.pacific_today | slice: 5, 5 -%}
+  {%- if holiday_md >= "11-01" or holiday_md <= "01-01" -%}
+  <p class="suggest-event">Holiday guides: <a href="{{ '/articles/christmas-lights/' | relative_url }}">Christmas lights</a>, <a href="{{ '/articles/meeting-santa/' | relative_url }}">meeting Santa</a>, <a href="{{ '/articles/nutcracker-holiday-shows/' | relative_url }}">Nutcracker and holiday shows</a>, <a href="{{ '/articles/winter-break/' | relative_url }}">winter break</a>, and <a href="{{ '/articles/new-years-eve/' | relative_url }}">New Year's Eve</a>.</p>
+  {%- endif -%}
   {%- include nearby-cities.html -%}
 </article>

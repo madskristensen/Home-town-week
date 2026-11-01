@@ -60,6 +60,17 @@
   alt: Barn and pasture at Kelsey Creek Farm in Bellevue.
   credit: "Photo: Joe Mabel, CC BY-SA 3.0"
   image_source: https://commons.wikimedia.org/wiki/File:Kelsey_Creek_Farm_04.jpg
+- name: Nutcracker and holiday shows for kids
+  blurb: Five Nutcrackers and three family holiday plays on the Eastside, with 2026 dates and ticket prices.
+  href: /articles/nutcracker-holiday-shows/
+  season:
+    start: "11-20"
+    end: "12-23"
+    lead: "11-01"
+  image: /assets/images/renton/civic-theatre.webp
+  alt: The front of Renton Civic Theatre, with the marquee over the entrance.
+  credit: "Photo: Joe Mabel, CC BY-SA 3.0"
+  image_source: https://commons.wikimedia.org/wiki/File:Renton,_WA_-_Renton_Civic_Theater.jpg
 - name: Winter break with kids on the Eastside
   blurb: District break dates, KidsQuest hours, libraries, and a snow day at the pass.
   href: /articles/winter-break/
