@@ -1,14 +1,24 @@
 {%- comment -%}
   One Eastside newsletter, not one per city. Plain HTML, no script.
-  Sits at the end of main, above the footer rule. Once per page.
+  The full form sits at the end of main, above the footer rule.
+  The same form appears inline partway down articles and guides and
+  after the event list on city pages: include it with inline="1".
+  lead= overrides the line (page.newsletter_lead sets a seasonal one).
+  id= keeps the field ids unique when a page has two forms.
 {%- endcomment -%}
-<form class="newsletter" action="https://buttondown.com/api/emails/embed-subscribe/madskristensen" method="post">
-  <p class="newsletter-lead">Weekend picks by email, every Thursday</p>
+{%- assign nl_id = include.id | default: "newsletter" -%}
+{%- if include.inline -%}
+{%- assign nl_lead = include.lead | default: page.newsletter_lead | default: "Get the weekend picks every Thursday" -%}
+{%- else -%}
+{%- assign nl_lead = include.lead | default: "Weekend picks by email, every Thursday" -%}
+{%- endif -%}
+<form class="newsletter{% if include.inline %} newsletter-inline{% endif %}" action="https://buttondown.com/api/emails/embed-subscribe/madskristensen" method="post" aria-labelledby="{{ nl_id }}-lead">
+  <p class="newsletter-lead" id="{{ nl_id }}-lead">{{ nl_lead | escape }}</p>
   <div class="newsletter-fields">
-    <label class="visually-hidden" for="newsletter-email">Email</label>
-    <input id="newsletter-email" name="email" type="email" required autocomplete="email" placeholder="Email address" aria-describedby="newsletter-note">
+    <label class="visually-hidden" for="{{ nl_id }}-email">Email</label>
+    <input id="{{ nl_id }}-email" name="email" type="email" required autocomplete="email" placeholder="Email address" aria-describedby="{{ nl_id }}-note">
     <input type="hidden" name="tag" value="website">
     <button type="submit" class="btn">Subscribe</button>
   </div>
-  <p class="newsletter-fine" id="newsletter-note">One email a week. Unsubscribe anytime.</p>
+  <p class="newsletter-fine" id="{{ nl_id }}-note">One email a week. Unsubscribe anytime.</p>
 </form>

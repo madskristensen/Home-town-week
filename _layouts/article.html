@@ -1,9 +1,27 @@
 ---
 layout: default
 ---
+{%- comment -%}
+  The inline sign-up goes partway down: before the second prose h3 when the
+  guide has three or more (card titles are h3 with no id), otherwise after the second paragraph.
+{%- endcomment -%}
+{%- capture nl_inline -%}{%- include newsletter.html inline="1" id="newsletter-inline" -%}{%- endcapture -%}
+{%- assign nl_grid = '<div class="card' | append: '-grid"' -%}
+{%- assign nl_head = content | split: nl_grid | first -%}
+{%- assign nl_head_h3 = nl_head | split: '<h3 id="' -%}
+{%- assign nl_head_p = nl_head | split: "</p>" -%}
 <article class="page wrap article-page">
   {%- include page-head.html -%}
   <div class="prose">
+    {%- if nl_head_h3.size > 3 -%}
+    {%- assign nl_parts = content | split: '<h3 id="' -%}
+    {%- for part in nl_parts -%}{%- if forloop.index0 == 2 -%}{{ nl_inline }}{%- endif -%}{%- unless forloop.first -%}<h3 id="{%- endunless -%}{{ part }}{%- endfor -%}
+    {%- elsif nl_head_p.size > 3 -%}
+    {%- assign nl_parts = content | split: "</p>" -%}
+    {%- for part in nl_parts -%}{{ part }}{%- unless forloop.last -%}</p>{%- endunless -%}{%- if forloop.index == 2 -%}{{ nl_inline }}{%- endif -%}{%- endfor -%}
+    {%- else -%}
     {{ content }}
+    {{ nl_inline }}
+    {%- endif -%}
   </div>
 </article>
