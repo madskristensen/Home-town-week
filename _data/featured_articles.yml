@@ -134,6 +134,10 @@ guides:
       ranges:
         - start: "11-13"
           end: "01-18"
+    - article: midwinter-break
+      ranges:
+        - start: "01-05"
+          end: "02-19"
     - article: no-school-day-ideas
       ranges:
         - start: "12-15"
