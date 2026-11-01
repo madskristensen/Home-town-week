@@ -4,7 +4,7 @@ title: Bellevue
 city: bellevue
 state: wa
 description: Upcoming family events in Bellevue on the Eastside.
-hook: Oct 31 brings the KidsQuest Spooktacular, Little Monsters on Main Street, and the last Saturday farmers market until Nov 21. Sleepy Hollow plays at the youth theatre through Nov 8, and Diwali Family Fest is Nov 7.
+hook: Sleepy Hollow plays at the youth theatre through Nov 8. Nov 7 brings Diwali at Bellevue Square and Diwali Family Fest, and the Downtown Ice Rink opens Nov 13.
 ---
 
 

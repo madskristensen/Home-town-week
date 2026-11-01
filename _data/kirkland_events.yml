@@ -30,28 +30,6 @@
     \ are Sat Oct 31 at 7:00 p.m., Sun Nov 1 at 2:00 p.m., Thu Nov 5 at 7:00 p.m., Fri Nov 6 at 7:00 p.m.,\
     \ Sat Nov 7 at 2:00 and 7:00 p.m., and Sun Nov 8 at 2:00 p.m. Tickets go on sale October 5."
   hub_blurb: "Studio East's youth cast, ages 9 to 20, in Mel Brooks' musical comedy."
-- name: "Kirkland Catrina Walk"
-  cost: "Free"
-  setting: "Outdoor"
-  tags:
-  - "dia-de-los-muertos"
-  start: "2026-10-31T11:00:00-07:00"
-  end: "2026-10-31T20:30:00-07:00"
-  place: "Marina Park, 25 Lakeshore Plaza"
-  same_as: "https://www.explorekirkland.com/events/kirkland-catrina-walk/"
-  card: "kirkland-catrina-walk"
-  order: "23"
-  heading_id: "kirkland-catrina-walk"
-  when: "Sat Oct 31 · 11:00 a.m.–8:30 p.m."
-  blurbs:
-  - "A free Día de Muertos celebration at Marina Park, presented by Mundo Catrina. The day has music,\
-    \ performances, art, vendors, family activities, and a walk through downtown Kirkland."
-  links:
-  - href: "https://www.explorekirkland.com/events/kirkland-catrina-walk/"
-    label: "Kirkland Catrina Walk"
-  description: "A free Día de Muertos celebration at Marina Park, presented by Mundo Catrina. The day\
-    \ has music, performances, art, vendors, family activities, and a walk through downtown Kirkland."
-  hub_blurb: "A free Día de Muertos celebration at Marina Park, presented by Mundo Catrina."
 - name: "Kirkland Civic Orchestra: Impressions of Spain"
   cost: "Free"
   ages: "All ages"
@@ -1182,3 +1160,22 @@
     label: "Chess Club"
   description: "Drop in to play chess with boards and pieces provided, open to kids, teens, and grownups. Free, no registration, from the Friends of the Library of Kirkland."
   hub_blurb: "Free drop-in chess for kids and families."
+- name: "Bath Salts Gift"
+  cost: "Free"
+  ages: "Teens"
+  setting: "Indoor"
+  signup: true
+  start: "2026-12-07T16:00:00-08:00"
+  end: "2026-12-07T17:30:00-08:00"
+  place: "Kingsgate Library, 12315 NE 143rd St"
+  same_as: "https://kcls.bibliocommons.com/events/6ade7231ebad22004547ea37"
+  card: "bath-salts-gift-kingsgate-dec-7"
+  heading_id: "bath-salts-gift-kingsgate-dec-7"
+  when: "Mon Dec 7 · 4:00–5:30 p.m."
+  blurbs:
+  - "Middle and high schoolers mix their own jar of bath salts to give as a holiday gift, with optional wrapping. Free, and registration opens Nov 23."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ade7231ebad22004547ea37"
+    label: "Bath Salts Gift"
+  description: "Middle and high schoolers mix their own jar of bath salts to give as a holiday gift, with optional wrapping. Free, and registration opens Nov 23."
+  hub_blurb: "Teens make a jar of bath salts to give as a holiday gift."

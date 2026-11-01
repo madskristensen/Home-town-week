@@ -30,45 +30,6 @@
   description: "Build a scarecrow with an apple, drop it at the Historic Shell Station by Oct 17, then\
     \ see them all downtown through Nov 1. Free straw from the Grange."
   hub_blurb: "Family-built scarecrows line downtown Issaquah through Nov 1."
-- name: "Halloween at Cougar Mountain Zoo"
-  setting: "Outdoor"
-  tags:
-  - "halloween"
-  start: "2026-10-31"
-  place: "Cougar Mountain Zoo, 19525 SE 54th St"
-  same_as: "https://www.cougarmountainzoo.org/events-at-the-zoo/"
-  card: "halloween-at-cougar-mountain-zoo"
-  order: "19"
-  heading_id: "halloween-at-cougar-mountain-zoo"
-  when: "Sat Oct 31 · Time not posted"
-  blurbs:
-  - "Howl-O-ween at the zoo."
-  links:
-  - href: "https://www.cougarmountainzoo.org/events-at-the-zoo/"
-    label: "Zoo events"
-  description: "Howl-O-ween at the zoo."
-  hub_blurb: "Howl-O-ween at the zoo."
-- name: "Story Stroll: Apple Pie Picnic"
-  cost: "Free"
-  ages: "Kids"
-  setting: "Outdoor"
-  start: "2026-10-31"
-  end: "2026-10-31"
-  place: "Issaquah Library, 10 W Sunset Way"
-  same_as: "https://kcls.bibliocommons.com/events/6aa0a306442d35226f67899d"
-  card: "story-stroll-apple-pie-picnic-2"
-  order: "14"
-  heading_id: "story-stroll-apple-pie-picnic-2"
-  when: "Sat Oct 24 and Sat Oct 31 · Any time"
-  blurbs:
-  - "A self-guided picture book walk. Start at the Issaquah Library and follow the pages of Apple Pie\
-    \ Picnic along a route through historic downtown. Good for ages 3 to 8. Free."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6aa0a306442d35226f67899c"
-    label: "Story Stroll"
-  description: "A self-guided picture book walk. Start at the Issaquah Library and follow the pages of\
-    \ Apple Pie Picnic along a route through historic downtown. Good for ages 3 to 8. Free."
-  hub_blurb: "A self-guided picture book walk through historic downtown Issaquah."
 - name: "Day of the Dead Celebration"
   cost: "Free"
   ages: "All ages"

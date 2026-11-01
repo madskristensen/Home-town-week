@@ -1,15 +1,15 @@
-# Home-page picks for Friday Oct 30 through Sunday Nov 1, 2026 (Halloween weekend).
-# Set Monday Oct 26 daily refresh; Redmond pick swapped Oct 31 after Trunk-or-Treat ended.
+# Home-page picks for Friday Oct 30 through Sunday Nov 1, 2026.
+# Sunday Nov 1 daily refresh: Saturday-only picks ended, so only Sunday events remain.
 # Names match _data/{city}_events.yml.
-- city: bellevue
-  name: Little Monsters on Main Street
-- city: redmond
-  name: "Creature Feature! Family Film Screening"
 - city: snoqualmie
   name: Halloween Train
-- city: bellevue
-  name: KidsQuest Halloween Spooktacular
 - city: issaquah
   name: Day of the Dead Celebration
 - city: sammamish
   name: Sammamish Diwali Bazaar
+- city: kenmore
+  name: Dia de los Muertos
+- city: mercer-island
+  name: Discover Diwali
+- city: redmond
+  name: Diwali Craft Celebration

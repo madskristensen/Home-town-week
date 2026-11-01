@@ -1,26 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Jubilee Farm Harvest Festival"
-  setting: "Outdoor"
-  tags:
-  - "harvest"
-  - "pumpkin-patch"
-  start: "2026-10-01"
-  end: "2026-10-31"
-  place: "Jubilee Farm, 229 W Snoqualmie River Rd NE"
-  same_as: "https://www.jubileefarm.org/contact-us"
-  card: "jubilee-farm-harvest-festival"
-  order: "1"
-  heading_id: "jubilee-farm-harvest-festival"
-  when: "Through Sat Oct 31"
-  blurbs:
-  - "Jubilee’s October harvest festival. Saturdays and Sundays run 10:00 a.m.–5:00 p.m. The weekday u-pick pumpkin patch is Monday through Friday, noon–5:00 p.m."
-  links:
-  - href: "https://www.jubileefarm.org/contact-us"
-    label: "Jubilee Farm"
-  description: "Jubilee's October harvest festival. Saturdays and Sundays run 10:00 a.m.–5:00 p.m. The weekday u-pick pumpkin patch is Monday through Friday, noon–5:00 p.m."
-  hub_blurb: "Jubilee's October harvest festival."
 - name: "Fall Harvest Festival at Remlinger Farms"
   cost: "$33.95 to $34.95"
   setting: "Outdoor"
@@ -313,3 +293,21 @@
       label: "Holiday Market"
   description: "The farm's yearly holiday market, with local makers, handmade gifts, and seasonal food and treats. The farm calls it a day for the whole family and asks visitors to leave pets at home."
   hub_blurb: "The farm's yearly holiday market, with local makers and handmade gifts."
+- name: "Needle Felted Animals"
+  cost: "Free"
+  ages: "Kids"
+  setting: "Indoor"
+  start: "2026-12-08T16:30:00-08:00"
+  end: "2026-12-08T18:00:00-08:00"
+  place: "Carnation Library, 4804 Tolt Ave"
+  same_as: "https://kcls.bibliocommons.com/events/6ac5844f29c3d600332e2bb4"
+  card: "needle-felted-animals-carnation-dec-8"
+  heading_id: "needle-felted-animals-carnation-dec-8"
+  when: "Tue Dec 8 · 4:30–6:00 p.m."
+  blurbs:
+  - "Kids and teens ages 8 to 18 learn needle felting and make a small animal to take home. Free with supplies included, no registration, and room for 12, first come first served."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ac5844f29c3d600332e2bb4"
+    label: "Needle Felted Animals"
+  description: "Kids and teens ages 8 to 18 learn needle felting and make a small animal to take home. Free with supplies included, no registration, and room for 12, first come first served."
+  hub_blurb: "Ages 8 to 18 make a needle-felted animal to take home."

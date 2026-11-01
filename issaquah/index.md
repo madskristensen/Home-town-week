@@ -5,5 +5,5 @@ city: issaquah
 state: wa
 hook_first: true
 description: Upcoming family events in Issaquah on the Eastside.
-hook: Scarecrows line Front Street through Nov 1, and Oct 31 is Halloween at Cougar Mountain Zoo. Nov 1 brings a Day of the Dead celebration.
+hook: Nov 7 brings a Story Stroll and upcycled ornament crafting, and Village Theatre's Come From Away opens Nov 10. Tots and Trees is Nov 14.
 ---

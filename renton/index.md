@@ -5,5 +5,5 @@ city: renton
 state: wa
 hook_first: true
 description: Upcoming family events in Renton on the Eastside.
-hook: Fire stations 16 and 17 open their doors Oct 31. Nov 1 brings Ballet in Motion for little dancers and a Día de los Muertos drawing class at Fairwood.
+hook: Vietnamese Story Time is Nov 6 at the Renton Highlands Library, and Nov 7 brings a free Nutcracker preview there. Amharic and Tigrigna story times run Tuesdays through Nov 17.
 ---
