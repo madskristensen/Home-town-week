@@ -6,6 +6,7 @@ intro: Five Nutcrackers and three family holiday plays are dated for December 20
 article_id: nutcracker-holiday-shows
 permalink: /articles/nutcracker-holiday-shows/
 date: 2026-11-01
+newsletter_headline: Never wonder what to do with the kids this holiday season.
 newsletter_lead: Holiday shows, lights, and Santa picks, every Thursday
 image: /assets/images/renton/civic-theatre.webp
 image_alt: The front of Renton Civic Theatre, with the marquee over the entrance.

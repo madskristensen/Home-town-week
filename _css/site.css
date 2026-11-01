@@ -1162,6 +1162,13 @@ picture {
   line-height: 1.35;
 }
 
+.newsletter-lead + .newsletter-sub {
+  margin: -0.5rem 0 0.75rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
 .newsletter-fields {
   display: flex;
   flex-wrap: nowrap;

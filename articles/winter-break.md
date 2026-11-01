@@ -4,6 +4,7 @@ title: Winter break with kids on the Eastside
 description: Winter break plans for Eastside kids, with district break dates, KidsQuest hours, libraries, and a snow day at Snoqualmie Pass.
 intro: What is open during winter break, and where to confirm your district's dates.
 article_id: winter-break
+newsletter_headline: Never wonder what to do with the kids over winter break.
 newsletter_lead: Winter break and holiday picks, every Thursday
 permalink: /articles/winter-break/
 date: 2026-10-03

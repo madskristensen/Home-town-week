@@ -4,6 +4,7 @@ title: New Year's Eve with kids on the Eastside
 description: New Year's Eve with kids on the Eastside. What is open on December 31, 2026, and which noon countdowns are still unannounced.
 intro: December 31 plans that organizers have posted, and the noon countdowns that are not on the calendar yet.
 article_id: new-years-eve
+newsletter_headline: Never wonder what to do with the kids over winter break.
 newsletter_lead: Winter break and holiday picks, every Thursday
 permalink: /articles/new-years-eve/
 date: 2026-10-03
