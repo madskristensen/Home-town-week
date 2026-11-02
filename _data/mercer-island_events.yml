@@ -4,50 +4,6 @@
   setting: "Indoor"
   tags:
   - "story-time"
-  start: "2026-11-01T11:15:00-08:00"
-  end: "2026-11-01T12:00:00-08:00"
-  place: "Mercer Island Library, 4400 88th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/events/6a7e21c1be14820029872db1"
-  card: "family-story-time-nov-1"
-  heading_id: "family-story-time-nov-1"
-  when: "Sun Nov 1 · 11:15 a.m.–12:00 p.m."
-  blurbs:
-  - "A Sunday story time with songs, rhymes, and movement for kids up to age 5 with an adult, then play time."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a7e21c1be14820029872db1"
-    label: "Family Story Time"
-  description: "A Sunday story time with songs, rhymes, and movement for kids up to age 5 with an adult, then play time."
-  hub_blurb: "A Sunday story time with songs, rhymes, and movement for kids up to age 5."
-- name: "Discover Diwali"
-  cost: "Free"
-  setting: "Indoor"
-  tags:
-  - "diwali"
-  start: "2026-11-01T14:30:00-08:00"
-  end: "2026-11-01T16:00:00-08:00"
-  place: "Mercer Island Library, 4400 88th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/events/6aa8a358ca248a002915dc39"
-  card: "discover-diwali"
-  order: "14"
-  heading_id: "discover-diwali"
-  when: "Sun Nov 1 · 2:30–4:00 p.m."
-  blurbs:
-  - "A story about Diwali, then a giant rangoli the library will display, plus a diya magnet kit to decorate.\
-    \ Recommended for kids 3 and up. Free. Registration is not required, and supplies are limited."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6aa8a358ca248a002915dc39"
-    label: "Discover Diwali"
-  description: "A story about Diwali, then a giant rangoli the library will display, plus a diya magnet\
-    \ kit to decorate. Recommended for kids 3 and up. Free. Registration is not required, and supplies\
-    \ are limited."
-  hub_blurb: "A story about Diwali, then a giant rangoli the library will display, plus a diya magnet\
-    \ kit to decorate."
-- name: "Family Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
   start: "2026-11-03T10:15:00-08:00"
   end: "2026-11-03T11:00:00-08:00"
   place: "Mercer Island Library, 4400 88th Ave SE"

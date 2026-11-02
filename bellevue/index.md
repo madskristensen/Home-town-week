@@ -8,4 +8,4 @@ hook: Sleepy Hollow plays at the youth theatre through Nov 8. Nov 7 brings Diwal
 ---
 
 
-The farmers market has two Saturday markets left, Oct 31 and Nov 21, both 10:00 a.m.–3:00 p.m.
+The farmers market has one Saturday market left this season, Nov 21, 10:00 a.m.–3:00 p.m.

@@ -5,22 +5,6 @@
 # when the organizer posts it. Price stays in the blurb. Do not set cost.
 # ticket_line replaces the on-sale sentence. tickets_on is the sale date.
 # Verify dates, price, and ticket status on the organizer's ticket page.
-- id: remlinger-harvest
-  name: Remlinger Farms Fall Harvest Festival
-  city: carnation
-  address: "Remlinger Farms, 32610 NE 32nd St"
-  start: "2026-09-26"
-  end: "2026-11-01"
-  when: "Sat Sep 26 through Sun Nov 1, 10 a.m. to 6 p.m."
-  description: "The fall harvest festival at the farm, open Friday through Sunday, with rides and animals on the grounds. This is the ticketed farm day that sells out, not a holiday show. Online tickets are $33.95 for ages 2 to 65, $31.95 for ages 66 and up or a disability, and free under 2. The gate is $1 more. Saturdays in mid-October often sell out."
-  source: https://remlingerfarms.com/fall-harvest-festival/
-  source_label: Tickets
-  last_verified: "2026-10-01"
-  photo:
-    image: /assets/images/carnation/remlinger-farms.webp
-    alt: Remlinger Farms at sunset, with the farm grounds, rides, and the Snoqualmie Valley hills behind them.
-    credit: "Photo: Remlinger1, CC BY-SA 4.0"
-    credit_url: https://commons.wikimedia.org/wiki/File:Remlinger_Farms_at_Sunset.jpg
 - id: garden-dlights
   name: "Garden d'Lights"
   city: bellevue

@@ -1,26 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Halloween Train"
-  cost: "$16 to $32"
-  setting: "Outdoor"
-  signup: true
-  tags: [halloween]
-  start: '2026-10-17'
-  end: "2026-11-01"
-  place: "North Bend Depot, 205 E McClellan Street"
-  same_as: "https://trainmuseum.org/upcoming-events/halloween/"
-  card: "halloween-train"
-  order: "1"
-  heading_id: "halloween-train"
-  when: "Weekends Oct 17–18, Oct 24–25, and Oct 31–Nov 1"
-  blurbs:
-    - "The Northwest Railway Museum boards this fall ride at the North Bend Depot, behind the Shell station, and also at the Snoqualmie Depot. The trip is just under two hours, with a stop for cider, apple pressing, crafts, and music. Costumes are welcome. Ages 2 and up need a ticket. North Bend departures start at 10:30 a.m. and leave every two hours. Arrive about 30 minutes early."
-  links:
-    - href: "https://trainmuseum.org/upcoming-events/halloween/"
-      label: "Halloween Train"
-  description: "The Northwest Railway Museum boards this fall ride at the North Bend Depot, behind the Shell station, and also at the Snoqualmie Depot. The trip is just under two hours, with a stop for cider, apple pressing, crafts, and music. Costumes are welcome. Ages 2 and up need a ticket. North Bend departures start at 10:30 a.m. and leave every two hours. Arrive about 30 minutes early."
-  hub_blurb: "The Northwest Railway Museum boards this fall ride at the North Bend Depot, behind the Shell station, and also at the Snoqualmie Depot."
 - name: "Play and Learn"
   cost: "Free"
   ages: "Toddlers"
@@ -190,6 +170,26 @@
       label: "Teen Nights registration"
   description: "A middle school night for grades 6 to 8 built around a Nerf battle, with games, challenges, and time with friends. Snacks are sold. Pre-register, since walk-in spots are limited."
   hub_blurb: "A Nerf battle night for grades 6 to 8 at the Si View Community Center."
+- name: "Library Holiday Bazaar"
+  cost: "Free"
+  setting: "Indoor"
+  tags:
+  - "free"
+  - "christmas"
+  start: "2026-11-21T11:00:00-08:00"
+  end: "2026-11-21T17:30:00-08:00"
+  place: "North Bend Library, 115 E 4th St"
+  same_as: "https://kcls.bibliocommons.com/events/6ad122ed29c3d60033302bcd"
+  card: "library-holiday-bazaar-north-bend-nov-21"
+  heading_id: "library-holiday-bazaar-north-bend-nov-21"
+  when: "Sat Nov 21 · 11:00 a.m.–5:30 p.m."
+  blurbs:
+  - "The Friends of the North Bend Library sell holiday books, gifts, and decor, new or close to it, so kids can pick out a small present. Free to browse, and every sale supports library programs."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ad122ed29c3d60033302bcd"
+    label: "Holiday Bazaar"
+  description: "The Friends of the North Bend Library sell holiday books, gifts, and decor, new or close to it, so kids can pick out a small present. Free to browse, and every sale supports library programs."
+  hub_blurb: "Holiday books, gifts, and decor from the Friends of the North Bend Library."
 - name: "North Pole Limited Santa Train"
   cost: "$39"
   setting: "Outdoor"
@@ -259,3 +259,24 @@
   organizer_url: "https://www.northbenddowntown.org/"
   description: "North Bend's winter festival downtown, with the mayor lighting the tree, fireside s'mores, local music, and free photos with Santa. Free."
   hub_blurb: "Tree lighting, s'mores, and Santa photos downtown."
+- name: "DIY Origami Lantern String Lights"
+  cost: "Free"
+  setting: "Indoor"
+  signup: true
+  tags:
+  - "free"
+  - "christmas"
+  start: "2026-12-12T14:00:00-08:00"
+  end: "2026-12-12T16:00:00-08:00"
+  place: "North Bend Library, 115 E 4th St"
+  same_as: "https://kcls.bibliocommons.com/events/6ae3a15e035faf0033dffcab"
+  card: "origami-lantern-lights-north-bend-dec-12"
+  heading_id: "origami-lantern-lights-north-bend-dec-12"
+  when: "Sat Dec 12 · 2:00–4:00 p.m."
+  blurbs:
+  - "Tweens, teens, and adults fold origami lanterns and turn them into a string of mini lights to give or keep. Beginner friendly, and all materials are provided. Free, registration required."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ae3a15e035faf0033dffcab"
+    label: "DIY Origami Lantern String Lights"
+  description: "Tweens, teens, and adults fold origami lanterns and turn them into a string of mini lights to give or keep. Beginner friendly, and all materials are provided. Free, registration required."
+  hub_blurb: "Fold origami lanterns into a string of lights, tweens and up."

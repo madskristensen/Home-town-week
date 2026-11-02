@@ -1,28 +1,3 @@
-- name: "Sammamish Diwali Bazaar"
-  cost: "Free"
-  setting: "Indoor"
-  ages: "All ages"
-  signup: true
-  tags:
-  - "diwali"
-  start: "2026-11-01T14:30:00-08:00"
-  end: "2026-11-01T20:00:00-08:00"
-  place: "Pine Lake Community Club, 21333 SE 20th St"
-  organizer: "CRAFT BAZAAR"
-  organizer_url: "https://www.eventbrite.com/e/sammamish-diwali-bazaar-2026-tickets-1993428198403"
-  same_as: "https://www.eventbrite.com/e/sammamish-diwali-bazaar-2026-tickets-1993428198403"
-  card: "sammamish-diwali-bazaar"
-  order: "14"
-  heading_id: "sammamish-diwali-bazaar"
-  when: "Sun Nov 1 · 2:30–8:00 p.m."
-  blurbs:
-  - "A free all-ages bazaar of Diwali clothes, jewelry, and festival goods. Free parking. Get a free ticket."
-  links:
-  - href: "https://www.eventbrite.com/e/sammamish-diwali-bazaar-2026-tickets-1993428198403"
-    label: "Sammamish Diwali Bazaar"
-  description: "A free all-ages bazaar of Diwali clothes, jewelry, and festival goods. Free parking. Get\
-    \ a free ticket."
-  hub_blurb: "A free all-ages bazaar of Diwali clothes, jewelry, and festival goods."
 - name: "Toddler Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -168,3 +143,24 @@
     label: "Elementary Kid Crafternoon at Sammamish Library"
   description: "A drop-in craft hour for elementary schoolers in the children's area, with supplies out while they last. Free for ages 6 to 12, no registration."
   hub_blurb: "A free drop-in craft hour for kids 6 to 12."
+- name: "Frosty Fest: Magical Movie in a Winter Wonderland"
+  cost: "Free"
+  ages: "All ages"
+  setting: "Indoor"
+  tags:
+  - "free"
+  - "christmas"
+  start: "2026-12-11T16:00:00-08:00"
+  end: "2026-12-11T20:00:00-08:00"
+  place: "Building 120, 120 228th Ave NE"
+  same_as: "https://www.sammamish.us/news/events/events/frosty-fest/frosty-fest-2026-magical-movie-in-a-winter-wonderland/"
+  card: "frosty-fest-2026"
+  heading_id: "frosty-fest-2026"
+  when: "Fri Dec 11 · evening"
+  blurbs:
+  - "Sammamish Parks' free family night: wear cozy pajamas, make an ornament, meet Frozen characters, then settle in for a movie with popcorn and cocoa. Food trucks on site. The city lists both 4 to 7 and 5 to 8 p.m., so check before you go."
+  links:
+  - href: "https://www.sammamish.us/news/events/events/frosty-fest/frosty-fest-2026-magical-movie-in-a-winter-wonderland/"
+    label: "Frosty Fest 2026"
+  description: "Sammamish Parks' free family night: wear cozy pajamas, make an ornament, meet Frozen characters, then settle in for a movie with popcorn and cocoa. Food trucks on site. The city lists both 4 to 7 and 5 to 8 p.m., so check before you go."
+  hub_blurb: "A free pajama movie night with Frozen characters, cocoa, and crafts."

@@ -1,26 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Fall Harvest Festival at Remlinger Farms"
-  cost: "$33.95 to $34.95"
-  setting: "Outdoor"
-  tags:
-  - "harvest"
-  start: "2026-10-02"
-  end: "2026-11-01"
-  place: "Remlinger Farms, 32610 NE 32nd Street"
-  same_as: "https://remlingerfarms.com/fall-harvest-festival/"
-  card: "fall-harvest-festival-at-remlinger-farms"
-  order: "2"
-  heading_id: "fall-harvest-festival-at-remlinger-farms"
-  when: "Through Sun Nov 1 · Fri–Sun 10:00 a.m.–6:00 p.m."
-  blurbs:
-  - "One festival, open Friday through Sunday after the opening weekend. Gates close at 6:00 p.m. The grounds include rides, a pumpkin village, a corn maze included with admission, and u-pick pumpkins. The farm is closed Monday through Thursday."
-  links:
-  - href: "https://remlingerfarms.com/fall-harvest-festival/"
-    label: "Fall Harvest Festival"
-  description: "One festival, open Friday through Sunday after the opening weekend. Gates close at 6:00 p.m. The grounds include rides, a pumpkin village, a corn maze included with admission, and u-pick pumpkins. The farm is closed Monday through Thursday."
-  hub_blurb: "One festival, open Friday through Sunday after the opening weekend."
 - name: "Yoga and Mindfulness for Tweens"
   cost: "Free"
   setting: "Indoor"

@@ -142,6 +142,27 @@
   description: "Ensemble Ballet Theatre dances a 30-minute Nutcracker, and at intermission the dancers\
     \ teach everyone a few steps. All ages. Free. Registration required."
   hub_blurb: "A 30-minute Nutcracker, with a short dance lesson at intermission."
+- name: "Creative Corner: Tween Paint and Sip"
+  cost: "Free"
+  ages: "Kids"
+  setting: "Indoor"
+  signup: true
+  tags:
+  - "free"
+  start: "2026-11-09T16:30:00-08:00"
+  end: "2026-11-09T17:30:00-08:00"
+  place: "Covington Library, 27100 164th Ave SE"
+  same_as: "https://kcls.bibliocommons.com/events/6a6ce9cf9006f753531412d7"
+  card: "tween-paint-and-sip-covington-nov-9"
+  heading_id: "tween-paint-and-sip-covington-nov-9"
+  when: "Mon Nov 9 · 4:30–5:30 p.m."
+  blurbs:
+  - "A painting hour for ages 9 to 12 at the Covington Library, with all supplies and a cup of hot chocolate. Free, registration required, and the age range is enforced."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a6ce9cf9006f753531412d7"
+    label: "Tween Paint and Sip"
+  description: "A painting hour for ages 9 to 12 at the Covington Library, with all supplies and a cup of hot chocolate. Free, registration required, and the age range is enforced."
+  hub_blurb: "Painting and hot chocolate for ages 9 to 12 at the Covington Library."
 - name: "Afternoon Play Date"
   cost: "Free"
   ages: "Toddlers"

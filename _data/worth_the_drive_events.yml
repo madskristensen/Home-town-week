@@ -3,27 +3,6 @@
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
 # drive is a rough trip from Bellevue before traffic. Keep this list short.
 # These rows stay off city pages and off the home weekend picks.
-- name: "Craven Farm Fall Festival"
-  setting: "Outdoor"
-  start: "2026-09-19"
-  end: "2026-11-01"
-  place: "Craven Farm, 13817 Shorts School Road"
-  town: Snohomish
-  drive: "about 40 min from Bellevue"
-  same_as: "https://www.cravenfarm.com/fall-festival"
-  tags: [pumpkin-patch, corn-maze]
-  blurb: "A Snohomish pumpkin patch and corn maze, open Wednesday through Sunday, 10 a.m.–6 p.m., through Nov 1."
-- name: "Bob's Corn and Pumpkin Farm"
-  cost: "$19.95 to $28.95"
-  setting: "Outdoor"
-  start: "2026-09-19"
-  end: "2026-11-01"
-  place: "Bob's Corn and Pumpkin Farm, 10917 Elliott Road"
-  town: Snohomish
-  drive: "about 40 min from Bellevue"
-  same_as: "https://bobscorn.com/"
-  tags: [pumpkin-patch, corn-maze]
-  blurb: "U-pick pumpkins and a corn maze, open daily 10 a.m.–7 p.m. through Nov 1, last admission 5 p.m. The night maze is Friday and Saturday only, 6–11 p.m., and starts Oct 3."
 - name: "WildLanterns"
   setting: "Outdoor"
   signup: true
@@ -66,6 +45,17 @@
   same_as: "https://www.pdza.org/event/zoolights/"
   tags: [holiday-lights]
   blurb: "A nighttime stroll through more than a million lights, 4:30–10 p.m., Nov 27 through Jan 3. Closed Dec 24 and 25. Online timed tickets are required. The animals are sleeping and the aquariums are closed during the event. Parking is free."
+- name: "Seattle Center Winterfest"
+  cost: "Free"
+  setting: "Outdoor"
+  start: "2026-11-27"
+  end: "2026-12-31"
+  place: "Seattle Center, 305 Harrison Street"
+  town: Seattle
+  drive: "about 20 min from Bellevue"
+  same_as: "https://www.seattlecenter.com/winterfest"
+  tags: [christmas, holiday-lights, free]
+  blurb: "Seattle Center's free holiday season, Nov 27 through Dec 31: the Winter Train and Village, ice carving on Saturdays at noon, holiday music and family shows on weekends, Friday holiday movies, and twinkling lights across the grounds after dark."
 - name: "Holiday Magic"
   setting: "Indoor"
   start: "2026-12-04"

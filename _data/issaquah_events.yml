@@ -1,61 +1,3 @@
-- name: "Scarecrows on Front"
-  cost: "Free"
-  setting: "Outdoor"
-  tags:
-  - "free"
-  - "harvest"
-  start: "2026-10-03"
-  end: "2026-11-01"
-  place: "Front Street, historic downtown Issaquah"
-  organizer: "Downtown Issaquah Association"
-  organizer_url: "https://downtownissaquah.com/"
-  same_as: "https://downtownissaquah.com/events/2026-issaquah-goes-apples-scarecrows-on-front-2/"
-  card: "scarecrows-on-front"
-  order: "1"
-  heading_id: "scarecrows-on-front"
-  when: "Through Nov 1 · Entries due Oct 17"
-  blurbs:
-  - "Build a scarecrow at home and add an apple to it, then drop it off at the Historic Shell Station\
-    \ (232 Front St N) by Oct 17. The Grange (145 NE Gilman Blvd) has free straw and a burlap head bag\
-    \ through Oct 17. The scarecrows line downtown through Nov 1, so you can stroll by and look even if\
-    \ you don't build one."
-  links:
-  - href: "https://downtownissaquah.com/events/2026-issaquah-goes-apples-scarecrows-on-front-2/"
-    label: "Scarecrows on Front"
-  photo:
-    src: "/assets/images/themes/fall-festival-scarecrow.webp"
-    alt: "A scarecrow standing in a farm field."
-    credit: "Photo: Mohsen H. Rahimi, CC0"
-    source: "https://commons.wikimedia.org/wiki/File:Scarecrow_in_farm.jpg"
-  description: "Build a scarecrow with an apple, drop it at the Historic Shell Station by Oct 17, then\
-    \ see them all downtown through Nov 1. Free straw from the Grange."
-  hub_blurb: "Family-built scarecrows line downtown Issaquah through Nov 1."
-- name: "Day of the Dead Celebration"
-  cost: "Free"
-  ages: "All ages"
-  setting: "Indoor"
-  signup: true
-  tags:
-  - "dia-de-los-muertos"
-  start: "2026-11-01T13:00:00-08:00"
-  end: "2026-11-01T17:00:00-08:00"
-  place: "Issaquah Community Center, 301 Rainier Blvd S"
-  same_as: "https://www.thecircle-wa.org/event-details-registration/day-of-the-dead-celebration-3"
-  card: "day-of-the-dead-celebration"
-  order: "20"
-  heading_id: "day-of-the-dead-celebration"
-  when: "Sun Nov 1 · 1:00–5:00 p.m."
-  blurbs:
-  - "A free afternoon from The Circle, this year focused on Oaxaca. Families can decorate a mask made\
-    \ in Mexico, join art workshops, and see dancers and mariachi. Face painting and food are part of\
-    \ the afternoon. Each person needs a free ticket, and one order can hold up to five."
-  links:
-  - href: "https://www.thecircle-wa.org/event-details-registration/day-of-the-dead-celebration-3"
-    label: "Day of the Dead"
-  description: "A free afternoon from The Circle, this year focused on Oaxaca. Families can decorate a\
-    \ mask made in Mexico, join art workshops, and see dancers and mariachi. Face painting and food are\
-    \ part of the afternoon. Each person needs a free ticket, and one order can hold up to five."
-  hub_blurb: "A free afternoon from The Circle, this year focused on Oaxaca."
 - name: "Chess Club"
   cost: "Free"
   ages: "Teens"
@@ -146,6 +88,26 @@
     label: "Story Stroll"
   description: "A self-guided picture book walk. Start at the Issaquah Library and follow the pages of Apple Pie Picnic along a route through historic downtown. Good for ages 3 to 8. Free."
   hub_blurb: "A self-guided picture book walk through historic downtown Issaquah."
+- name: "Friends of the Issaquah Library Book Sale"
+  cost: "Free"
+  ages: "All ages"
+  setting: "Indoor"
+  tags:
+  - "free"
+  start: "2026-11-07"
+  end: "2026-11-07"
+  place: "Issaquah Library, 10 W Sunset Way"
+  same_as: "https://kcls.bibliocommons.com/events/6aadb00aa5dbde002aa5a537"
+  card: "issaquah-library-book-sale-nov-7"
+  heading_id: "issaquah-library-book-sale-nov-7"
+  when: "Sat Nov 7 · during library hours"
+  blurbs:
+  - "The Friends of the Issaquah Library fill the shelves with gently used books and media for every age, from picture books to teen reads. Free to browse, and sales help pay for library programs."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6aadb00aa5dbde002aa5a537"
+    label: "Friends of the Issaquah Library Book Sale"
+  description: "The Friends of the Issaquah Library fill the shelves with gently used books and media for every age, from picture books to teen reads. Free to browse, and sales help pay for library programs."
+  hub_blurb: "Gently used books for every age, with sales funding library programs."
 - name: "Model UN Basics with SYMUN"
   cost: "Free"
   ages: "Teens"
@@ -184,6 +146,26 @@
   organizer: "Green Issaquah"
   description: "A drop-in planting morning for families with kids 6 and under. Little ones help plant and mulch small shrubs and trees around Pickering Farm. Hosted by Green Issaquah and Trout Unlimited, with online registration."
   hub_blurb: "Drop-in tree planting for families with kids 6 and under."
+- name: "Planting Party at Timberlake Park"
+  cost: "Free"
+  setting: "Outdoor"
+  signup: true
+  tags:
+  - "free"
+  start: "2026-11-15T09:00:00-08:00"
+  end: "2026-11-15T12:00:00-08:00"
+  place: "Timberlake Park, 4500 W Lake Sammamish Pkwy SE"
+  same_as: "https://www.issaquahwa.gov/calendar.aspx?EID=14584"
+  card: "planting-party-timberlake-nov-15"
+  heading_id: "planting-party-timberlake-nov-15"
+  when: "Sun Nov 15 · 9:00 a.m.–noon"
+  blurbs:
+  - "Help Green Issaquah plant native trees and shrubs at Timberlake Park, a good morning out for families who like getting muddy. Gloves, tools, and know-how are provided. Free, reserve a spot online."
+  links:
+  - href: "https://www.issaquahwa.gov/calendar.aspx?EID=14584"
+    label: "Planting Party at Timberlake Park"
+  description: "Help Green Issaquah plant native trees and shrubs at Timberlake Park, a good morning out for families who like getting muddy. Gloves, tools, and know-how are provided. Free, reserve a spot online."
+  hub_blurb: "Plant native trees with Green Issaquah at Timberlake Park."
 - name: "Issaquah Highlands Holiday Tree Lighting"
   cost: "Free"
   setting: "Outdoor"
@@ -399,27 +381,6 @@
     \ and a movie run by the teen Highlands Youth board. Pajamas encouraged. Room for 40 kids, so register\
     \ ahead."
   hub_blurb: "A drop-off evening for kids in K to 5th grade at Blakely Hall."
-- name: "FISH Salmon Talks at the Hatchery"
-  cost: "Free"
-  setting: "Outdoor"
-  tags:
-  - "salmon"
-  start: "2026-10-17T12:00:00-07:00"
-  end: "2026-11-01T14:20:00-08:00"
-  place: "Issaquah Salmon Hatchery, 125 W Sunset Way"
-  same_as: "https://www.issaquahfish.org/iatc-hikes/"
-  card: "fish-salmon-talks"
-  heading_id: "fish-salmon-talks"
-  when: "Saturdays and Sundays this fall · 12:00 and 2:00 p.m."
-  blurbs:
-  - "A 15 to 20 minute talk by the viewing windows, where kids can see real salmon eggs and feel what\
-    \ they are like. Free, walk up, no registration."
-  links:
-  - href: "https://www.issaquahfish.org/iatc-hikes/"
-    label: "FISH talks"
-  description: "A 15 to 20 minute talk by the viewing windows, where kids can see real salmon eggs and\
-    \ feel what they are like. Free, walk up, no registration."
-  hub_blurb: "A short weekend salmon talk where kids can touch real eggs."
 - name: "Snuggle Up Story Time"
   cost: "Free"
   ages: "Toddlers"

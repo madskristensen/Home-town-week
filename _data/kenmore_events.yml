@@ -1,25 +1,3 @@
-- name: "Dia de los Muertos"
-  cost: "Free"
-  setting: "Indoor"
-  tags:
-  - "dia-de-los-muertos"
-  start: "2026-11-01T11:00:00-08:00"
-  end: "2026-11-01T15:00:00-08:00"
-  place: "The Hangar, Kenmore Town Square, 6728 NE 181st St"
-  same_as: "https://www.kenmorewa.gov/our-city/special-events/dia-de-los-muertos"
-  card: "dia-de-los-muertos"
-  order: "3"
-  heading_id: "dia-de-los-muertos"
-  when: "Sun Nov 1 · 11:00 a.m.–3:00 p.m."
-  blurbs:
-  - "The third annual celebration, on Sunday, November 1. Free, with an ofrenda, performances, crafts,\
-    \ and activities."
-  links:
-  - href: "https://www.kenmorewa.gov/our-city/special-events/dia-de-los-muertos"
-    label: "Dia de los Muertos"
-  description: "The third annual celebration, on Sunday, November 1. Free, with an ofrenda, performances,\
-    \ crafts, and activities."
-  hub_blurb: "The third annual celebration, on Sunday, November 1."
 - name: "Family Story Time"
   cost: "Free"
   ages: "All ages"

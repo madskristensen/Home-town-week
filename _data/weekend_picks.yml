@@ -1,15 +1,14 @@
-# Home-page picks for Friday Oct 30 through Sunday Nov 1, 2026.
-# Sunday Nov 1 daily refresh: Saturday-only picks ended, so only Sunday events remain.
+# Home-page picks for Friday Nov 6 through Sunday Nov 8, 2026.
 # Names match _data/{city}_events.yml.
-- city: snoqualmie
-  name: Halloween Train
-- city: issaquah
-  name: Day of the Dead Celebration
-- city: sammamish
-  name: Sammamish Diwali Bazaar
-- city: kenmore
-  name: Dia de los Muertos
-- city: mercer-island
-  name: Discover Diwali
+- city: bellevue
+  name: Diwali Celebration at Bellevue Square
+- city: maple-valley
+  name: The Nutcracker with Ensemble Ballet Theatre
 - city: redmond
-  name: Diwali Craft Celebration
+  name: The Zaniac Family Comedy Show
+- city: north-bend
+  name: All Ages Hoedown
+- city: mercer-island
+  name: The Queen in the Cave
+- city: snoqualmie
+  name: "Peter Ali: Native and Mesoamerican Flutes"

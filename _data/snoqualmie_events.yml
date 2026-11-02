@@ -1,33 +1,3 @@
-- name: "Halloween Train"
-  cost: "$16 to $32"
-  setting: "Outdoor"
-  signup: true
-  tags:
-  - "halloween"
-  start: '2026-10-17'
-  end: "2026-11-01"
-  place: "Snoqualmie Depot, 38625 SE King Street"
-  same_as: "https://trainmuseum.org/upcoming-events/halloween/"
-  card: "halloween-train"
-  order: "3"
-  heading_id: "halloween-train"
-  when: "Weekends Oct 17–18, Oct 24–25, and Oct 31–Nov 1"
-  blurbs:
-  - "The Northwest Railway Museum runs a family ride from the Snoqualmie Depot, with another boarding\
-    \ point in North Bend. Coaches are dressed for fall. At the stop by the Train Shed there is cider\
-    \ pressing, apple coring, crafts, and music. Costumes are welcome if you can manage the steps. Tickets\
-    \ are required for ages 2 and up. Departures from Snoqualmie start at 11:00 a.m. and run every two\
-    \ hours."
-  links:
-  - href: "https://trainmuseum.org/upcoming-events/halloween/"
-    label: "Halloween Train"
-  description: "The Northwest Railway Museum runs a family ride from the Snoqualmie Depot, with another\
-    \ boarding point in North Bend. Coaches are dressed for fall. At the stop by the Train Shed there\
-    \ is cider pressing, apple coring, crafts, and music. Costumes are welcome if you can manage the steps.\
-    \ Tickets are required for ages 2 and up. Departures from Snoqualmie start at 11:00 a.m. and run every\
-    \ two hours."
-  hub_blurb: "The Northwest Railway Museum runs a family ride from the Snoqualmie Depot, with another\
-    \ boarding point in North Bend."
 - name: "Free Wednesday at the Train Shed"
   cost: "Free"
   setting: "Indoor"
@@ -291,6 +261,26 @@
     label: "Little Lab"
   description: "A KidsQuest educator reads a story, then kids 3 to 6 explore numbers and counting at hands-on stations with an adult. Free, no registration."
   hub_blurb: "Story and counting stations with KidsQuest in Fall City."
+- name: "Let's Get Growing Indoors!"
+  cost: "Free"
+  setting: "Indoor"
+  tags:
+  - "free"
+  performer: "Lisa Taylor"
+  start: "2026-11-18T17:00:00-08:00"
+  end: "2026-11-18T18:30:00-08:00"
+  place: "Snoqualmie Library, 7824 Center Blvd SE"
+  same_as: "https://kcls.bibliocommons.com/events/6ab2ccefab7a8e0037c3a06c"
+  card: "growing-indoors-snoqualmie-nov-18"
+  heading_id: "growing-indoors-snoqualmie-nov-18"
+  when: "Wed Nov 18 · 5:00–6:30 p.m."
+  blurbs:
+  - "Garden educator Lisa Taylor shows families how to start seeds indoors under lights, and everyone plants seeds to take home. A fun winter project for the whole family. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ab2ccefab7a8e0037c3a06c"
+    label: "Let's Get Growing Indoors!"
+  description: "Garden educator Lisa Taylor shows families how to start seeds indoors under lights, and everyone plants seeds to take home. A fun winter project for the whole family. Free, no registration."
+  hub_blurb: "Start seeds indoors with garden educator Lisa Taylor."
 - name: "Toddler Story Time"
   cost: "Free"
   ages: "Toddlers"
