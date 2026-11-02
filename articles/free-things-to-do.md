@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Free things to do with kids on the Eastside
-description: Free things to do with kids in Bellevue, Kirkland, Redmond, and nearby Eastside towns. Parks, libraries, and upcoming free events.
+description: Free things to do with kids near you on the Eastside, in Bellevue, Kirkland, Redmond, Issaquah and nearby towns. Free parks, playgrounds, libraries, and this month's free family events.
 intro: Places you can walk into for free, and the next free events on the city calendars.
 article_id: free-things-to-do
 permalink: /articles/free-things-to-do/

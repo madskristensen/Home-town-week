@@ -1,7 +1,7 @@
 ---
 layout: article
-title: Ice and roller skating with kids on the Eastside
-description: Where to ice skate and roller skate with kids on the Eastside, from the Bellevue Downtown Ice Rink to Sno-King's year-round rinks and the Issaquah roller rink, with toddler tips, learn-to-skate classes, and 2026 holiday rink dates.
+title: Ice skating and roller rinks for kids near Bellevue and Sammamish
+description: Where to ice skate and roller skate with kids near Bellevue, Sammamish, Issaquah and Kirkland. The Bellevue Downtown Ice Rink, Sno-King rinks in Kirkland, Renton and Snoqualmie, and the Issaquah roller rink, with toddler tips, lessons, and 2026 holiday rink dates.
 intro: Public skate sessions, learn-to-skate classes, and what to know before you bring a toddler, at the ice and roller rinks in and near the Eastside.
 article_id: ice-roller-skating
 permalink: /articles/ice-roller-skating/
