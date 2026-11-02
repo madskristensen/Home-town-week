@@ -322,6 +322,8 @@ var slot = document.getElementById("eastside-map");
         document.head.appendChild(link);
       }
       function addBeacon() {
+        var h = location.hostname;
+        if (h !== "eastsidecalendar.com" && h !== "www.eastsidecalendar.com") return;
         try {
           var m = /[?&]notrack=([01])/.exec(location.search);
           if (m) {
