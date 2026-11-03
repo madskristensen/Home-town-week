@@ -1,25 +1,3 @@
-- name: "Crafts for 3s, 4s and 5s"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  signup: true
-  start: "2026-11-02T10:30:00-08:00"
-  end: "2026-11-02T11:15:00-08:00"
-  place: "Maple Valley Library, 21844 SE 248th St, Maple Valley"
-  same_as: "https://kcls.bibliocommons.com/events/6a820170d4b10d003006de2c"
-  card: "crafts-for-3s-4s-and-5s"
-  order: "19"
-  heading_id: "crafts-for-3s-4s-and-5s"
-  when: "Mon Nov 2 · 10:30–11:15 a.m."
-  blurbs:
-  - "A story and a craft for ages 3 to 5, with an adult. Registration is required. Count only the children\
-    \ who will do the craft."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a820170d4b10d003006de2c"
-    label: "Crafts for 3s, 4s and 5s"
-  description: "A story and a craft for ages 3 to 5, with an adult. Registration is required. Count only\
-    \ the children who will do the craft."
-  hub_blurb: "A story and a craft for ages 3 to 5, with an adult."
 - name: "Pajama Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -395,32 +373,6 @@
     label: "Covington events"
   description: "A lights-out family swim with games and music. Pick one of the two sessions."
   hub_blurb: "A lights-out family swim with games and music."
-- name: "Baby Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-11-02T13:00:00-08:00"
-  end: "2026-11-02T14:00:00-08:00"
-  place: "Covington Library, 27100 164th Ave SE, Covington"
-  same_as: "https://kcls.bibliocommons.com/events/6a63c8a27d824676437d158c"
-  card: "baby-story-time-nov-2"
-  heading_id: "baby-story-time-nov-2"
-  when: "Mon Nov 2 · 1:00–2:00 p.m."
-  blurbs:
-  - "Nursery rhymes, songs, and stories for newborns to 12 months with an adult at Covington Library. Toddlers and siblings welcome. Free."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a63c8a27d824676437d158c"
-    label: "Baby Story Time"
-  photo:
-    src: "/assets/images/maple-valley/covington-library.webp"
-    alt: "Covington Library"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/covington/"
-    license: "organizer"
-  description: "Nursery rhymes, songs, and stories for newborns to 12 months with an adult at Covington Library. Toddlers and siblings welcome. Free."
-  hub_blurb: "Baby stories and songs at Covington Library."
 - name: "Teen Lounge"
   cost: "Free"
   ages: "Teens"
