@@ -172,6 +172,27 @@
     label: "Baby Story Time"
   description: "Rhymes, songs, and stories for babies up to 18 months with an adult, then up to half an hour of play. Older siblings are welcome. Free."
   hub_blurb: "Baby rhymes and songs, then play time, at Duvall Library."
+- name: "Sew a Felt Poinsettia"
+  cost: "Free"
+  ages: "Kids"
+  setting: "Indoor"
+  tags:
+  - "free"
+  - "christmas"
+  start: "2026-11-25T16:00:00-08:00"
+  end: "2026-11-25T17:30:00-08:00"
+  place: "Duvall Library, 15508 Main Street NE"
+  same_as: "https://kcls.bibliocommons.com/events/6aea5a9ede685359098db74b"
+  card: "felt-poinsettia-duvall-nov-25"
+  heading_id: "felt-poinsettia-duvall-nov-25"
+  when: "Wed Nov 25 · 4:00–5:30 p.m."
+  blurbs:
+  - "Kids and teens ages 8 to 18 hand-sew a felt poinsettia to take home, no sewing experience needed. Ages 8 to 10 come with an adult. Free, no registration, but space is limited."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6aea5a9ede685359098db74b"
+    label: "Sew a Felt Poinsettia"
+  description: "Kids and teens ages 8 to 18 hand-sew a felt poinsettia to take home, no sewing experience needed. Ages 8 to 10 come with an adult. Free, no registration, but space is limited."
+  hub_blurb: "Hand-sew a felt poinsettia, ages 8 to 18, at the Duvall Library."
 - name: "Novelty Hill Farm Christmas Tree Lighting"
   signup: true
   setting: "Outdoor"

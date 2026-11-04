@@ -30,48 +30,6 @@
     \ are Sat Oct 31 at 7:00 p.m., Sun Nov 1 at 2:00 p.m., Thu Nov 5 at 7:00 p.m., Fri Nov 6 at 7:00 p.m.,\
     \ Sat Nov 7 at 2:00 and 7:00 p.m., and Sun Nov 8 at 2:00 p.m. Tickets go on sale October 5."
   hub_blurb: "Studio East's youth cast, ages 9 to 20, in Mel Brooks' musical comedy."
-- name: "Toddler Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  ages: "Toddlers"
-  signup: true
-  tags:
-  - "story-time"
-  start: "2026-11-03T10:15:00-08:00"
-  end: "2026-11-03T10:45:00-08:00"
-  place: "Kirkland Library, 308 Kirkland Ave"
-  same_as: "https://kcls.bibliocommons.com/events/6ab6edcf86d845003118d25b"
-  card: "toddler-story-time-nov-3"
-  order: "28"
-  heading_id: "toddler-story-time-nov-3"
-  when: "Tue Nov 3 · 10:15–10:45 a.m. and 11:00–11:30 a.m."
-  blurbs:
-  - "Stories, music, movement, and rhymes for ages 1 to 3 with an adult, at 10:15 or 11:00. Staff hand out free tickets at 10:00 for the first session, and space is limited."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6ab6edcf86d845003118d25b"
-    label: "10:15 a.m. session"
-  - href: "https://kcls.bibliocommons.com/events/6ab6edcf86d845003118d25c"
-    label: "11:00 a.m. session"
-  photo:
-    src: "/assets/images/kirkland/kirkland-library.webp"
-    alt: "Kirkland Library"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/kirkland/"
-    license: "organizer"
-  description: "Stories, music, movement, and rhymes for ages 1 to 3 with an adult, at 10:15 or 11:00. Staff hand out free tickets at 10:00 for the first session, and space is limited."
-  hub_blurb: "Stories, songs, and rhymes for ages 1 to 3 at Kirkland Library."
-- name: "Toddler Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  ages: "Toddlers"
-  signup: true
-  tags:
-  - "story-time"
-  start: "2026-11-03T11:00:00-08:00"
-  end: "2026-11-03T11:30:00-08:00"
-  place: "Kirkland Library, 308 Kirkland Ave"
-  same_as: "https://kcls.bibliocommons.com/events/6ab6edcf86d845003118d25c"
-  card: "toddler-story-time-nov-3"
 - name: "Family Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -794,6 +752,7 @@
   cost: "Free"
   setting: "Indoor"
   ages: "Toddlers"
+  signup: true
   tags:
   - "story-time"
   start: "2026-11-10T11:00:00-08:00"
