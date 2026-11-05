@@ -1249,6 +1249,7 @@
   heading_id: "santa-paws-marketplace-factoria"
 - name: "Fruitful Hill Artisans Handcrafted Gift & Art Market"
   setting: "Indoor"
+  cost: "Free"
   tags:
   - "market"
   - "holiday"
