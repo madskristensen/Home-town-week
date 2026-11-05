@@ -80,6 +80,25 @@
     label: "Model UN Basics with SYMUN"
   description: "Sammamish Youth Model UN, a student-run group, teaches grades 6 to 12 how Model UN works, then runs an hour of practice debate at Issaquah Library. Free. Registration requested, walk-ins if space allows."
   hub_blurb: "Students teach middle and high schoolers how Model UN works, then run a practice session."
+- name: "Harry Potter Night"
+  cost: "$22"
+  ages: "Kids"
+  setting: "Indoor"
+  signup: true
+  start: "2026-11-13T17:30:00-08:00"
+  end: "2026-11-13T20:00:00-08:00"
+  place: "Issaquah Community Center, 301 Rainier Blvd S"
+  same_as: "https://www.issaquahwa.gov/m/calendar/event/detail/14801"
+  card: "harry-potter-night-issaquah-nov-13"
+  heading_id: "harry-potter-night-issaquah-nov-13"
+  when: "Fri Nov 13 · 5:30–8:00 p.m."
+  blurbs:
+  - "Young witches and wizards ages 7 to 11 get sorted into houses, craft wands, mix butterbeer and potions, and play Quidditch with Issaquah Parks. $22 for residents, $26 otherwise. Register ahead."
+  links:
+  - href: "https://www.issaquahwa.gov/m/calendar/event/detail/14801"
+    label: "Harry Potter Night"
+  description: "Young witches and wizards ages 7 to 11 get sorted into houses, craft wands, mix butterbeer and potions, and play Quidditch with Issaquah Parks. $22 for residents, $26 otherwise. Register ahead."
+  hub_blurb: "Wand crafting, butterbeer, and Quidditch for ages 7 to 11."
 - name: "Tots and Trees"
   setting: "Outdoor"
   signup: true
@@ -278,6 +297,26 @@
     \ content, and themes of grief and domestic violence. Tickets go on sale soon."
   hub_blurb: "Village Theatre KIDSTAGE's public production of Footloose, performed by students in grade\
     \ 9 through age 20."
+- name: "Winter Wonderland Family Event"
+  cost: "$15"
+  setting: "Indoor"
+  signup: true
+  tags:
+  - "christmas"
+  start: "2026-12-04T18:00:00-08:00"
+  end: "2026-12-04T20:00:00-08:00"
+  place: "Issaquah Community Center, 301 Rainier Blvd S"
+  same_as: "https://www.issaquahwa.gov/m/calendar/event/detail/14802"
+  card: "winter-wonderland-issaquah-dec-4"
+  heading_id: "winter-wonderland-issaquah-dec-4"
+  when: "Fri Dec 4 · 6:00–8:00 p.m."
+  blurbs:
+  - "A cozy family night at the Issaquah Community Center with sugar cookie decorating, hot chocolate, crafts, a classic holiday movie, and games for prizes. $15 for residents, $18 otherwise. Register ahead."
+  links:
+  - href: "https://www.issaquahwa.gov/m/calendar/event/detail/14802"
+    label: "Winter Wonderland Family Event"
+  description: "A cozy family night at the Issaquah Community Center with sugar cookie decorating, hot chocolate, crafts, a classic holiday movie, and games for prizes. $15 for residents, $18 otherwise. Register ahead."
+  hub_blurb: "Cookie decorating, hot chocolate, crafts, and a holiday movie."
 - name: "Issaquah Dance Theatre Nutcracker"
   setting: "Indoor"
   signup: true

@@ -1,26 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Toddler and Preschool Yoga"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags: [free]
-  start: "2026-11-04T10:00:00-08:00"
-  end: "2026-11-04T10:30:00-08:00"
-  place: "Carnation Library, 4804 Tolt Avenue"
-  same_as: "https://kcls.bibliocommons.com/events/6ac81456a85a2c00337e2c9f"
-  card: "toddler-and-preschool-yoga"
-  order: "15"
-  heading_id: "toddler-and-preschool-yoga"
-  when: "Wed Nov 4 · 10:00–10:30 a.m."
-  blurbs:
-    - "Movement songs, simple poses, stories, and scarves for little ones and their grown-ups, led by Lena of Yoga with Smile. A child comes with an adult. Free, first come, first served."
-  links:
-    - href: "https://kcls.bibliocommons.com/events/6ac81456a85a2c00337e2c9f"
-      label: "Toddler and Preschool Yoga"
-  description: "Movement songs, simple poses, stories, and scarves for little ones and their grown-ups, led by Lena of Yoga with Smile. A child comes with an adult. Free, first come, first served."
-  hub_blurb: "Playful yoga with songs and scarves for little ones and a grown-up."
 - name: "Play and Learn"
   cost: "Free"
   ages: "Toddlers"

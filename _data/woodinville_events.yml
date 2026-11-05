@@ -1,25 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Rainbow Youth Group"
-  cost: "Free"
-  setting: "Indoor"
-  ages: "Teens"
-  start: "2026-11-04T16:00:00-08:00"
-  end: "2026-11-04T17:30:00-08:00"
-  place: "Woodinville Library, 17105 Avondale Road NE"
-  same_as: "https://kcls.bibliocommons.com/events/69585df86724c63d00e9ec51"
-  card: "rainbow-youth-group-nov-4"
-  order: "17"
-  heading_id: "rainbow-youth-group-nov-4"
-  when: "Wed Nov 4 · 4:00–5:30 p.m."
-  blurbs:
-  - "A monthly social group with Lambert House volunteers for LGBTQIA+ and questioning youth ages 11 to 22, with a different activity each time. Free."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/69585df86724c63d00e9ec51"
-    label: "Rainbow Youth Group"
-  description: "A monthly social group with Lambert House volunteers for LGBTQIA+ and questioning youth ages 11 to 22, with a different activity each time. Free."
-  hub_blurb: "A monthly Lambert House social group for LGBTQIA+ youth ages 11 to 22."
 - name: "Baby and Toddler Story Time"
   cost: "Free"
   ages: "Toddlers"
