@@ -30,33 +30,6 @@
     \ are Sat Oct 31 at 7:00 p.m., Sun Nov 1 at 2:00 p.m., Thu Nov 5 at 7:00 p.m., Fri Nov 6 at 7:00 p.m.,\
     \ Sat Nov 7 at 2:00 and 7:00 p.m., and Sun Nov 8 at 2:00 p.m. Tickets go on sale October 5."
   hub_blurb: "Studio East's youth cast, ages 9 to 20, in Mel Brooks' musical comedy."
-- name: "Baby Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-11-05T10:30:00-08:00"
-  end: "2026-11-05T11:00:00-08:00"
-  place: "Kirkland Library, 308 Kirkland Ave"
-  same_as: "https://kcls.bibliocommons.com/events/6ac810b5901b02002cc110ad"
-  card: "baby-story-time-nov-5"
-  order: "31"
-  heading_id: "baby-story-time-nov-5"
-  when: "Thu Nov 5 · 10:30–11:00 a.m."
-  blurbs:
-  - "Stories, music, and rhymes for newborns to 12 months with an adult at Kirkland Library. Free, first come, first seated."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6ac810b5901b02002cc110ad"
-    label: "Baby Story Time"
-  photo:
-    src: "/assets/images/kirkland/kirkland-library.webp"
-    alt: "Kirkland Library"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/kirkland/"
-    license: "organizer"
-  description: "Stories, music, and rhymes for newborns to 12 months with an adult at Kirkland Library. Free, first come, first seated."
-  hub_blurb: "Baby stories and songs at Kirkland Library."
 - name: "Mandarin Story Time"
   cost: "Free"
   setting: "Indoor"
