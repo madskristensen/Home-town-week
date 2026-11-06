@@ -709,17 +709,21 @@
   - "parade"
   organizer: "Argosy Cruises"
   organizer_url: "https://www.argosycruises.com/"
-  start: "2026-11-28T14:35:00-08:00"
+  start: "2026-11-28T13:30:00-08:00"
   end: "2026-11-28T14:55:00-08:00"
   place: "O.O. Denny Park, 12400 Holmes Point Dr NE"
   same_as: "https://www.argosycruises.com/christmas-ship-festival-schedule/"
   card: "christmas-ship-oo-denny-park"
   heading_id: "christmas-ship-oo-denny-park"
-  when: "Sat Nov 28 · 2:35–2:55 p.m."
+  when: "Sat Nov 28 · 1:30 p.m. bonfire · ship 2:35–2:55 p.m."
   blurbs:
-  - "The lighted Argosy Christmas Ship stops off O.O. Denny Park and its choir sings carols you can hear\
-    \ from the beach. Free to watch from shore. No bonfire is planned at this stop."
+  - "City of Kirkland lights a community bonfire at 1:30 p.m. and Finn Hill Neighborhood Alliance\
+    \ brings hot cocoa while you wait for the lighted Argosy Christmas Ship. The ship stops off O.O.\
+    \ Denny Park around 2:35 p.m. and its choir sings until about 2:55. Free. Parking is limited, so\
+    \ arrive early or carpool."
   links:
+  - href: "https://www.kirklandwa.gov/Whats-Happening/Community-Events/Parks-and-Community-Services/Community-Bonfires-at-the-Park"
+    label: "Community bonfire details"
   - href: "https://www.argosycruises.com/christmas-ship-festival-schedule/"
     label: "Christmas Ship schedule"
   photo:
@@ -728,9 +732,11 @@
     credit: "Photo: Argosy Cruises"
     source: "https://www.argosycruises.com/christmas-ship-festival-schedule/"
     license: "organizer"
-  description: "The lighted Argosy Christmas Ship stops off O.O. Denny Park and its choir sings carols\
-    \ you can hear from the beach. Free to watch from shore. No bonfire is planned at this stop."
-  hub_blurb: "The lighted Christmas Ship and its choir, free to watch from O.O. Denny Park."
+  description: "City of Kirkland lights a community bonfire at 1:30 p.m. and Finn Hill Neighborhood Alliance\
+    \ brings hot cocoa while you wait for the lighted Argosy Christmas Ship. The ship stops off O.O.\
+    \ Denny Park around 2:35 p.m. and its choir sings until about 2:55. Free. Parking is limited, so\
+    \ arrive early or carpool."
+  hub_blurb: "Community bonfire and hot cocoa before the Christmas Ship choir at O.O. Denny Park."
 - name: "Christmas Ship at Juanita Beach Park"
   cost: "Free"
   setting: "Outdoor"
