@@ -198,7 +198,7 @@
       url: "https://www.cinemark.com/theatres/wa-bellevue/cinemark-lincoln-square-cinemas-and-imax"
       type: cinema
       format: html
-      notes: "Movie theater: kids series, sensory-friendly and special family screenings only; skip regular showtimes. 700 Bellevue Way NE. Holiday Movie Clubhouse runs late November to mid-December, family holiday classics at $5 a ticket (https://www.cinemark.com/movies-for-every-season-at-cinemark/holiday-movie-clubhouse/). Lincoln Square was on the 2025 list. 2026 dates and theaters were not posted on Oct 5, 2026. It was not on the 2026 Summer Movie Clubhouse list. No sensory-friendly program is listed here. The Reserve dine-in side is 21+."
+      notes: "Movie theater: kids series, sensory-friendly and special family screenings only; skip regular showtimes. 700 Bellevue Way NE. Holiday Movie Clubhouse runs late November to mid-December, family holiday classics at $5 a ticket (https://www.cinemark.com/movies-for-every-season-at-cinemark/holiday-movie-clubhouse/). 2026 Holiday Movie Clubhouse runs Nov 28 to Dec 14 (Grinch, Polar Express, Elf at $5; https://www.cinemark.com/movies-for-every-season-at-cinemark/holiday-movie-clubhouse/). Lincoln Square is not on the 2026 participating theatres list (https://www.cinemark.com/hmctheatres2026; WA listings are Federal Way and Olympia). Do not add dated rows until the Lincoln Square showtimes page lists a Clubhouse showing. No sensory-friendly program is listed here. The Reserve dine-in side is 21+."
     - name: "Regal Crossroads"
       url: "https://www.regmovies.com/theatres/regal-crossroads-bellevue-0905"
       type: cinema
@@ -511,7 +511,7 @@
     - name: "Infinity Farm"
       url: "https://www.infinityfarmissaquah.com/upcoming-events"
       type: farm
-      notes: "16523 Issaquah-Hobart Road SE. Fall Y'all Market and Tract-or-Treat when the farm page posts the date."
+      notes: "16523 Issaquah-Hobart Road SE. Holiday Market Sat Dec 12, 2026, 10 a.m.–3 p.m. (free public). Toddler Tuesdays are a paid weekly drop-in. Fall Y'all Market and Tract-or-Treat when the farm page posts the date."
     - name: "Issaquah Schools Foundation"
       url: "https://isfdn.org/upcoming-events/"
       type: school
@@ -705,7 +705,7 @@
       url: "https://www.cinemark.com/theatres/wa-kirkland/cinemark-totem-lake-kirkland-and-xd"
       type: cinema
       format: html
-      notes: "Movie theater: kids series, sensory-friendly and special family screenings only; skip regular showtimes. 12600 120th Ave NE. On the 2026 Summer Movie Clubhouse list (https://www.cinemark.com/participating-theatres/summer-movie-clubhouse-2026-participating-theatres/): family films for $1.75, Wednesdays at 9:30 a.m., June to early August. Check the Holiday Movie Clubhouse list each November. No sensory-friendly program is listed here."
+      notes: "Movie theater: kids series, sensory-friendly and special family screenings only; skip regular showtimes. 12600 120th Ave NE. On the 2026 Summer Movie Clubhouse list (https://www.cinemark.com/participating-theatres/summer-movie-clubhouse-2026-participating-theatres/): family films for $1.75, Wednesdays at 9:30 a.m., June to early August. 2026 Holiday Movie Clubhouse runs Nov 28 to Dec 14 at $5 (https://www.cinemark.com/movies-for-every-season-at-cinemark/holiday-movie-clubhouse/), but Totem Lake is not on the participating theatres list (https://www.cinemark.com/hmctheatres2026). Do not add dated rows until its showtimes page lists a Clubhouse showing. No sensory-friendly program is listed here."
     - name: "Kirkland Outdoor Summer Movie Series"
       url: "https://www.kirklandwa.gov/Whats-Happening/Community-Events/Parks-and-Community-Services/Outdoor-Summer-Movie-Series-Heritage-Park"
       type: parks
@@ -768,7 +768,7 @@
     - name: "Lake Wilderness Arboretum"
       url: "https://www.lakewildernessarboretum.org/events/"
       type: nature
-      notes: "Story Walk meets at the information booth. Confirm the date on the library listing."
+      notes: "StoryWalk trail is open dawn to dusk year-round (free). StoryWalk Read-Alongs with the Maple Valley librarian are third Saturdays at 10:30 a.m. in the meadow (Nov 21 and Dec 19, 2026 on the arboretum home page)."
     - name: "Maple Valley Historical Society"
       url: "https://www.maplevalleyhistorical.com/upcoming-events"
       type: museum

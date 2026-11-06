@@ -176,3 +176,30 @@
     label: "The Nutcracker Ballet"
   description: "Young dancers from Ensemble Ballet Theatre perform a short preview of their Nutcracker at the library. Free and open to all ages, with no registration."
   hub_blurb: "A short, free Nutcracker preview by Ensemble Ballet Theatre's young dancers."
+
+- name: "Clam Lights"
+  cost: "Free"
+  setting: "Outdoor"
+  tags:
+  - "holiday-lights"
+  - "free"
+  start: "2026-12-05T16:00:00-08:00"
+  end: "2027-01-03T21:00:00-08:00"
+  place: "Gene Coulon Memorial Beach Park, 1201 Lake Washington Blvd N"
+  same_as: "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Recreation-Events/Events-Calendar/Clam-Lights"
+  card: "clam-lights"
+  heading_id: "clam-lights"
+  when: "Sat Dec 5 through Sun Jan 3 · 4:00–9:00 p.m. nightly"
+  blurbs:
+  - "Renton's free waterfront holiday lights at Gene Coulon Park, with lit walkways, trees, and reflections on Lake Washington. Lit nightly 4:00 to 9:00 p.m. from Dec 5 through Jan 3."
+  links:
+  - href: "https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Recreation-Events/Events-Calendar/Clam-Lights"
+    label: "Clam Lights"
+  photo:
+    src: "/assets/images/renton/coulon-sailboats.webp"
+    alt: "Sailboats on the water at Gene Coulon Memorial Beach Park in Renton."
+    credit: "Photo: Steven Pavlov, CC BY-SA 4.0"
+    source: "https://commons.wikimedia.org/wiki/File:2009-05-09,_Gene_Coulon_Memorial_Beach_Park_(Renton,_Washington),_175718.jpg"
+    license: "CC BY-SA 4.0"
+  description: "Renton's free waterfront holiday lights at Gene Coulon Park, with lit walkways, trees, and reflections on Lake Washington. Lit nightly 4:00 to 9:00 p.m. from Dec 5 through Jan 3."
+  hub_blurb: "Free waterfront holiday lights at Gene Coulon Park, lit nightly through Jan 3."

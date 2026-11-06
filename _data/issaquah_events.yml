@@ -597,3 +597,48 @@
     label: "Mommy Meetup Wednesdays"
   description: "A relaxed Wednesday morning meetup for moms, nannies, and caregivers with little ones, while the kids dig and play in two big indoor sandboxes. Drop in any week. Regular open play admission applies."
   hub_blurb: "A cozy weekly drop-in for moms, nannies, and caregivers with little ones."
+
+- name: "Infinity Farm Holiday Market"
+  cost: "Free"
+  setting: "Outdoor"
+  tags:
+  - "holiday-market"
+  - "free"
+  start: "2026-12-12T10:00:00-08:00"
+  end: "2026-12-12T15:00:00-08:00"
+  place: "Infinity Farm, 16523 Issaquah-Hobart Road SE"
+  same_as: "https://www.infinityfarmissaquah.com/upcoming-events"
+  card: "infinity-farm-holiday-market"
+  heading_id: "infinity-farm-holiday-market"
+  when: "Sat Dec 12 · 10:00 a.m.–3:00 p.m."
+  blurbs:
+  - "A free public holiday market at Infinity Farm on Issaquah-Hobart Road. Come for local vendors and a farm day with the kids. Details on the farm's upcoming-events page."
+  links:
+  - href: "https://www.infinityfarmissaquah.com/upcoming-events"
+    label: "Infinity Farm Holiday Market"
+  description: "A free public holiday market at Infinity Farm on Issaquah-Hobart Road. Come for local vendors and a farm day with the kids. Details on the farm's upcoming-events page."
+  hub_blurb: "A free public holiday market at Infinity Farm."
+- name: "Historically Hip Artisan Market"
+  setting: "Outdoor"
+  tags:
+  - "holiday-market"
+  start: "2026-11-28T11:00:00-08:00"
+  end: "2026-12-13T16:00:00-08:00"
+  place: "Historic Shell Station, 232 Front Street North"
+  same_as: "https://downtownissaquah.com/events/historically-hip-artisan-market-shop-local/"
+  card: "historically-hip-artisan-market"
+  heading_id: "historically-hip-artisan-market"
+  when: "Sat–Sun Nov 28–29 and Dec 12–13 · 11:00 a.m.–4:00 p.m."
+  blurbs:
+  - "Local makers and vintage finds outside the Historic Shell Station and in the Experience Tea breezeway. Nov 28 is Shop Local Saturday and Nov 29 is Artist Sunday. The Shell Holiday Shop also runs Fridays through Sundays from Thanksgiving to New Year's, 11:00 a.m. to 4:00 p.m."
+  links:
+  - href: "https://downtownissaquah.com/events/historically-hip-artisan-market-shop-local/"
+    label: "Historically Hip Artisan Market"
+  photo:
+    src: "/assets/images/issaquah/shell-station.webp"
+    alt: "The restored Historic Shell Station on Front Street in Issaquah."
+    credit: "Photo: Steve Morgan, CC BY-SA 3.0"
+    source: "https://commons.wikimedia.org/wiki/File:Restored_1940s_Shell_gas_station_in_Issaquah,_Washington,_in_2008.jpg"
+    license: "CC BY-SA 3.0"
+  description: "Local makers and vintage finds outside the Historic Shell Station and in the Experience Tea breezeway. Nov 28 is Shop Local Saturday and Nov 29 is Artist Sunday. The Shell Holiday Shop also runs Fridays through Sundays from Thanksgiving to New Year's, 11:00 a.m. to 4:00 p.m."
+  hub_blurb: "Local makers and vintage finds at the Historic Shell Station on select holiday weekends."
