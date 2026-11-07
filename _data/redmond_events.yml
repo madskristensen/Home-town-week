@@ -1,25 +1,3 @@
-- name: "The Zaniac Family Comedy Show"
-  cost: "$14.17 to $17"
-  setting: "Indoor"
-  signup: true
-  performer: "Alex Zerbe"
-  start: "2026-11-06T18:00:00-08:00"
-  end: "2026-11-06T19:30:00-08:00"
-  place: "Redmond Senior & Community Center, 8703 160th Ave NE"
-  same_as: "https://app.amilia.com/store/en/city-of-redmond/shop/activities/7053263"
-  card: "the-zaniac-family-comedy-show"
-  order: "23"
-  heading_id: "the-zaniac-family-comedy-show"
-  when: "Fri Nov 6 · 6:00–7:30 p.m."
-  blurbs:
-  - "Alex Zerbe, the Zaniac, brings juggling and physical comedy for ages 3 and up. Tickets are $14.17\
-    \ to $17. The show is in the Red Oak Community Room."
-  links:
-  - href: "https://app.amilia.com/store/en/city-of-redmond/shop/activities/7053263"
-    label: "Tickets"
-  description: "Alex Zerbe, the Zaniac, brings juggling and physical comedy for ages 3 and up. Tickets\
-    \ are $14.17 to $17. The show is in the Red Oak Community Room."
-  hub_blurb: "Alex Zerbe, the Zaniac, brings juggling and physical comedy for ages 3 and up."
 - name: "Pumpkin Drop"
   cost: "Free"
   setting: "Outdoor"

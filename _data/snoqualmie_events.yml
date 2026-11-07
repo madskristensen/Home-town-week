@@ -1,24 +1,3 @@
-- name: "Family Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-11-06T10:30:00-08:00"
-  end: "2026-11-06T11:30:00-08:00"
-  place: "Fall City Library, 33415 SE 42nd Place"
-  same_as: "https://kcls.bibliocommons.com/events/6a6cea16f4e5db3d00c5a389"
-  card: "family-story-time-nov-6"
-  order: "22"
-  heading_id: "family-story-time-nov-6"
-  when: "Fri Nov 6 · 10:30–11:30 a.m."
-  blurbs:
-  - "Stories, songs, rhymes, movement, and play for newborns to age 5 with an adult. No registration, and space is limited."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a6cea16f4e5db3d00c5a389"
-    label: "Family Story Time"
-  description: "Stories, songs, rhymes, movement, and play for newborns to age 5 with an adult. No registration, and space is limited."
-  hub_blurb: "Stories, songs, rhymes, movement, and play for newborns to age 5."
 - name: "Peter Ali: Native and Mesoamerican Flutes"
   cost: "Free"
   setting: "Indoor"
@@ -175,6 +154,26 @@
     label: "Family Story Time"
   description: "Stories, songs, rhymes, and movement for young children with an adult, then a short play time that ends with bubbles. No registration."
   hub_blurb: "Stories, songs, rhymes, and movement for young children, ending with bubbles."
+- name: "Valley-Wide Holiday Open House"
+  cost: "Free"
+  setting: "Indoor"
+  tags:
+  - "free"
+  - "christmas"
+  start: "2026-11-14T11:00:00-08:00"
+  end: "2026-11-14T18:00:00-08:00"
+  place: "Shops across Snoqualmie, North Bend, and Fall City"
+  same_as: "https://www.snoqualmiewa.gov/Calendar.aspx?EID=3421"
+  card: "valley-wide-holiday-open-house-nov-14"
+  heading_id: "valley-wide-holiday-open-house-nov-14"
+  when: "Sat Nov 14 · 11:00 a.m.–6:00 p.m."
+  blurbs:
+  - "Local shops, boutiques, and restaurants across Snoqualmie, North Bend, and Fall City open their doors for holiday browsing, treats, and small-business shopping. Free."
+  links:
+  - href: "https://www.snoqualmiewa.gov/Calendar.aspx?EID=3421"
+    label: "Valley-Wide Holiday Open House"
+  description: "Local shops, boutiques, and restaurants across Snoqualmie, North Bend, and Fall City open their doors for holiday browsing, treats, and small-business shopping. Free."
+  hub_blurb: "Holiday shopping and treats at valley shops across three towns."
 - name: "Madhubani Art on Wooden Keepsakes"
   cost: "Free"
   setting: "Indoor"
@@ -428,6 +427,47 @@
     label: "Snoqualmie Winter Lights"
   description: "An outdoor winter market fills historic downtown from noon with gifts and treats, then Santa arrives and the town tree lights up at 5:30. Free."
   hub_blurb: "A town tree lighting for families at the Railroad Park gazebo."
+- name: "Snoqualmie Winter Market"
+  cost: "Free"
+  setting: "Outdoor"
+  tags:
+  - "free"
+  - "christmas"
+  - "market"
+  start: "2026-12-05T12:00:00-08:00"
+  end: "2026-12-05T18:00:00-08:00"
+  place: "Historic Downtown Snoqualmie"
+  same_as: "https://www.snoqualmiewa.gov/Calendar.aspx?EID=3427"
+  card: "snoqualmie-winter-market-dec-5"
+  heading_id: "snoqualmie-winter-market-dec-5"
+  when: "Sat Dec 5 · 12:00–6:00 p.m."
+  blurbs:
+  - "A winter market in historic downtown Snoqualmie with local makers and holiday shopping before the evening tree lighting. Free to stroll."
+  links:
+  - href: "https://www.snoqualmiewa.gov/Calendar.aspx?EID=3427"
+    label: "Snoqualmie Winter Market"
+  description: "A winter market in historic downtown Snoqualmie with local makers and holiday shopping before the evening tree lighting. Free to stroll."
+  hub_blurb: "Local makers and holiday shopping in historic downtown Snoqualmie."
+- name: "Festival of LEGO Lights"
+  cost: "Free"
+  setting: "Indoor"
+  tags:
+  - "free"
+  - "christmas"
+  start: "2026-12-05T14:00:00-08:00"
+  end: "2026-12-05T19:00:00-08:00"
+  place: "Fall City Library, 33415 SE 42nd Place"
+  same_as: "https://kcls.bibliocommons.com/events/6ad99e49377296003a4db14c"
+  card: "festival-of-lego-lights-fall-city-dec-5"
+  heading_id: "festival-of-lego-lights-fall-city-dec-5"
+  when: "Sat Dec 5 · 2:00–7:00 p.m."
+  blurbs:
+  - "Build with LEGO at Fall City Library and add lights so your creation can join the Fall City Festival of Lights display. All ages, bricks provided, drop in anytime. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ad99e49377296003a4db14c"
+    label: "Festival of LEGO Lights"
+  description: "Build with LEGO at Fall City Library and add lights so your creation can join the Fall City Festival of Lights display. All ages, bricks provided, drop in anytime. Free, no registration."
+  hub_blurb: "Build lighted LEGO creations for the Fall City Festival of Lights."
 - name: "A Midsummer Night's Dream"
   cost: "$10 to $15"
   setting: "Indoor"
@@ -554,11 +594,11 @@
     label: "Learn to Play Go"
   description: "Volunteers from the Seattle Go Center teach the ancient board game, with open play for anyone who already knows it. Aimed at tweens, teens, and adults. Free."
   hub_blurb: "Volunteers from the Seattle Go Center teach the ancient board game."
-
 - name: "Train Shed Story Time"
   cost: "Free"
   ages: "All ages"
   setting: "Indoor"
+  signup: true
   tags:
   - "story-time"
   - "free"
@@ -576,11 +616,11 @@
     label: "Train Shed Story Time"
   description: "Free stories, a hands-on activity, and time to tour the Train Shed for families. Held on the 1st, 3rd, and 5th Wednesdays at 11:00 a.m. No ticket needed."
   hub_blurb: "Free stories, a hands-on activity, and a Train Shed tour for families."
-
 - name: "Train Shed Story Time"
   cost: "Free"
   ages: "All ages"
   setting: "Indoor"
+  signup: true
   tags:
   - "story-time"
   - "free"
@@ -598,11 +638,11 @@
     label: "Train Shed Story Time"
   description: "Free stories, a hands-on activity, and time to tour the Train Shed for families. Held on the 1st, 3rd, and 5th Wednesdays at 11:00 a.m. No ticket needed."
   hub_blurb: "Free stories, a hands-on activity, and a Train Shed tour for families."
-
 - name: "Train Shed Story Time"
   cost: "Free"
   ages: "All ages"
   setting: "Indoor"
+  signup: true
   tags:
   - "story-time"
   - "free"
@@ -620,10 +660,10 @@
     label: "Train Shed Story Time"
   description: "Free stories, a hands-on activity, and time to tour the Train Shed for families. Held on the 1st, 3rd, and 5th Wednesdays at 11:00 a.m. No ticket needed."
   hub_blurb: "Free stories, a hands-on activity, and a Train Shed tour for families."
-
 - name: "Free Wednesday at the Train Shed"
   cost: "Free"
   setting: "Indoor"
+  signup: true
   start: "2026-11-25T11:00:00-08:00"
   end: "2026-11-25T16:00:00-08:00"
   place: "Train Shed Exhibit Hall, 9320 Stone Quarry Road, Snoqualmie"
@@ -638,10 +678,10 @@
     label: "Free Wednesday at the Train Shed"
   description: "The museum waives Train Shed admission on Wednesdays through December 16. The Railway History Campus is open 11:00 a.m. to 4:00 p.m. No ticket and no reservation."
   hub_blurb: "The museum waives Train Shed admission on Wednesdays through December 16."
-
 - name: "Free Wednesday at the Train Shed"
   cost: "Free"
   setting: "Indoor"
+  signup: true
   start: "2026-12-09T11:00:00-08:00"
   end: "2026-12-09T16:00:00-08:00"
   place: "Train Shed Exhibit Hall, 9320 Stone Quarry Road, Snoqualmie"

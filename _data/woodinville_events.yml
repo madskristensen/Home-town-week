@@ -1,26 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Family Story Time"
-  cost: "Free"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-11-06T11:00:00-08:00"
-  end: "2026-11-06T12:00:00-08:00"
-  place: "Woodinville Library, 17105 Avondale Road NE"
-  same_as: "https://kcls.bibliocommons.com/events/6aa8a0884b3b06003083cbc7"
-  card: "family-story-time-nov-6"
-  order: "19"
-  heading_id: "family-story-time-nov-6"
-  when: "Fri Nov 6 · 11:00 a.m.–12:00 p.m."
-  blurbs:
-  - "Stories, music, movement, and rhymes. Stay to play after. All ages with an adult."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6aa8a0884b3b06003083cbc7"
-    label: "Family Story Time"
-  description: "Stories, music, movement, and rhymes. Stay to play after. All ages with an adult."
-  hub_blurb: "Stories, music, movement, and rhymes."
 - name: "Baby and Toddler Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -101,6 +81,29 @@
     label: "Corazón Ornaments"
   description: "Teens and adults stitch a felt heart ornament with a pom-pom, led by Amaranta Sandys of the ArtMaranth Mobile School. All supplies provided. Free, registration required."
   hub_blurb: "Teens stitch a felt heart ornament at the Woodinville Library."
+- name: "Rainbow Youth Group"
+  cost: "Free"
+  ages: "Teens"
+  setting: "Indoor"
+  signup: true
+  tags:
+  - "free"
+  organizer: "Lambert House"
+  organizer_url: "https://www.lamberthouse.org/"
+  start: "2026-12-02T16:00:00-08:00"
+  end: "2026-12-02T17:30:00-08:00"
+  place: "Woodinville Library, 17105 Avondale Road NE"
+  same_as: "https://kcls.bibliocommons.com/events/69585df86724c63d00e9ec52"
+  card: "rainbow-youth-group-woodinville-dec-2"
+  heading_id: "rainbow-youth-group-woodinville-dec-2"
+  when: "Wed Dec 2 · 4:00–5:30 p.m."
+  blurbs:
+  - "A monthly social for LGBTQIA+ youth and friends ages 11 to 22, with Lambert House volunteers and a new activity each month. Free. Parent permission needed for younger teens."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/69585df86724c63d00e9ec52"
+    label: "Rainbow Youth Group"
+  description: "A monthly social for LGBTQIA+ youth and friends ages 11 to 22, with Lambert House volunteers and a new activity each month. Free. Parent permission needed for younger teens."
+  hub_blurb: "A monthly LGBTQIA+ youth social with Lambert House at Woodinville Library."
 - name: "Winterfest Holiday Fair and Tree Lighting"
   setting: "Outdoor"
   tags:
