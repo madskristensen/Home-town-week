@@ -1,14 +1,22 @@
-# Home-page picks for Friday Nov 6 through Sunday Nov 8, 2026.
+# Home-page picks. Sunday Nov 8, 2026 first (today), then Friday Nov 13
+# through Sunday Nov 15, 2026. The build skips a pick once it has ended,
+# so the Nov 13-15 picks take over on Monday.
 # Names match _data/{city}_events.yml.
 - city: bellevue
-  name: Diwali Celebration at Bellevue Square
-- city: maple-valley
-  name: The Nutcracker with Ensemble Ballet Theatre
-- city: redmond
-  name: Pumpkin Drop
-- city: mercer-island
-  name: Parents Night Out at the J
+  name: Sleepy Hollow
+- city: kirkland
+  name: Young Frankenstein
 - city: mercer-island
   name: The Queen in the Cave
-- city: snoqualmie
-  name: "Peter Ali: Native and Mesoamerican Flutes"
+- city: redmond
+  name: "STEMsters: Hands-On STEM"
+- city: bellevue
+  name: Bellevue Downtown Ice Rink
+- city: redmond
+  name: Pumpkin Drop
+- city: north-bend
+  name: Valley-Wide Holiday Open House
+- city: kirkland
+  name: Lil' Gobbler Run
+- city: north-bend
+  name: Holly Days Window Fest

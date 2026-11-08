@@ -5,5 +5,5 @@ city: redmond
 state: wa
 hook_first: true
 description: Upcoming family events in Redmond on the Eastside.
-hook: November 7 brings the Pumpkin Drop and a kids' Diwali afternoon at the BAPS mandir. STEMsters hands-on STEM is Nov 8.
+hook: The Pumpkin Drop at Farrel-McWhirter Park is Nov 13 and 14, and Kids Superhero Adventure Day is Nov 21. Redmond Lights is Dec 5.
 ---

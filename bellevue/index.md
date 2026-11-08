@@ -4,7 +4,7 @@ title: Bellevue
 city: bellevue
 state: wa
 description: Upcoming family events in Bellevue on the Eastside.
-hook: Sleepy Hollow plays at the youth theatre through Nov 8. Nov 7 brings Diwali at Bellevue Square and Diwali Family Fest, and the Downtown Ice Rink opens Nov 13.
+hook: The Downtown Ice Rink opens Nov 13, and Nov 14 brings Nocturnal in November and a teen D&D intro at the library. Kids Night Out and a LEGO Block Party are Nov 21.
 ---
 
 

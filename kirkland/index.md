@@ -5,5 +5,5 @@ city: kirkland
 state: wa
 hook_first: true
 description: Upcoming family events in Kirkland on the Eastside.
-hook: Studio East's Young Frankenstein runs through Nov 8, and kids can read to therapy dogs at the library Nov 7. The Lil' Gobbler Run is Nov 15, and Teen Hangout returns Dec 2.
+hook: The Lil' Gobbler Run is Nov 15, and Santa's Arrival Party at The Village at Totem Lake is Nov 21. Teen Hangout returns Dec 2, and Kol Ami hosts a kids Hanukkah glow party Dec 11.
 ---

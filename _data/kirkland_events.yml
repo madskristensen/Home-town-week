@@ -30,78 +30,6 @@
     \ are Sat Oct 31 at 7:00 p.m., Sun Nov 1 at 2:00 p.m., Thu Nov 5 at 7:00 p.m., Fri Nov 6 at 7:00 p.m.,\
     \ Sat Nov 7 at 2:00 and 7:00 p.m., and Sun Nov 8 at 2:00 p.m. Tickets go on sale October 5."
   hub_blurb: "Studio East's youth cast, ages 9 to 20, in Mel Brooks' musical comedy."
-- name: "Tracking Basics: Learning by Looking"
-  cost: "Free"
-  setting: "Outdoor"
-  signup: true
-  tags:
-  - "free"
-  start: "2026-11-07T10:00:00-08:00"
-  end: "2026-11-07T12:00:00-08:00"
-  place: "Environmental Education and Research Center, Saint Edward State Park, 14445 Juanita Dr NE, Kenmore"
-  organizer: "CoSEE, UW Bothell"
-  organizer_url: "https://www.uwb.edu/cosee/"
-  same_as: "https://www.eventbrite.com/e/tracking-basics-learning-by-looking-tickets-2002321302918"
-  card: "tracking-basics-learning-by-looking"
-  order: "33"
-  heading_id: "tracking-basics-learning-by-looking"
-  when: "Sat Nov 7 · 10:00 a.m.–12:00 p.m."
-  blurbs:
-  - "Learn to read animal tracks and signs with CoSEE at the Environmental Education and Research Center, then cast a plaster print and walk 1 to 2 flat, muddy miles looking for more. Free. Ages 12 and up. Sign up on Eventbrite."
-  links:
-  - href: "https://www.eventbrite.com/e/tracking-basics-learning-by-looking-tickets-2002321302918"
-    label: "Sign up on Eventbrite"
-  photo:
-    src: "/assets/images/kenmore/tracking-basics-paw-print.webp"
-    alt: "An animal paw print pressed into wet mud."
-    credit: "Photo: CoSEE, UW Bothell"
-    source: "https://www.eventbrite.com/e/tracking-basics-learning-by-looking-tickets-2002321302918"
-    license: "organizer"
-  description: "Learn to read animal tracks and signs with CoSEE at the Environmental Education and Research Center, then cast a plaster print and walk 1 to 2 flat, muddy miles looking for more. Free. Ages 12 and up. Sign up on Eventbrite."
-  hub_blurb: "A free animal tracking workshop and muddy walk with CoSEE."
-- name: "Reading with Rover"
-  cost: "Free"
-  ages: "Kids"
-  setting: "Indoor"
-  signup: true
-  start: "2026-11-07T13:00:00-08:00"
-  end: "2026-11-07T13:15:00-08:00"
-  place: "Kingsgate Library, 12315 NE 143rd St"
-  same_as: "https://kcls.bibliocommons.com/events/6ac00fd49dbc2b002c8bdacc"
-  card: "reading-with-rover"
-  order: "34"
-  heading_id: "reading-with-rover"
-  when: "Sat Nov 7 · 1:00–1:15 p.m."
-  blurbs:
-  - "Read aloud to a certified therapy dog. Each reader gets about 15 minutes. For elementary and middle-grade\
-    \ kids. Register ahead."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6ac00fd49dbc2b002c8bdacc"
-    label: "Reading with Rover"
-  description: "Read aloud to a certified therapy dog. Each reader gets about 15 minutes. For elementary\
-    \ and middle-grade kids. Register ahead."
-  hub_blurb: "Read aloud to a certified therapy dog."
-- name: "Reading with Rover"
-  cost: "Free"
-  ages: "Kids"
-  setting: "Indoor"
-  signup: true
-  tags:
-  - "free"
-  start: "2026-11-07T13:15:00-08:00"
-  end: "2026-11-07T14:00:00-08:00"
-  place: "Kingsgate Library, 12315 NE 143rd St"
-  same_as: "https://kcls.bibliocommons.com/events/6ac00fcf035faf0033d9e7cb"
-  card: "reading-with-rover-nov-7"
-  heading_id: "reading-with-rover-nov-7"
-  when: "Sat Nov 7 · 15-minute slots from 1:15 p.m."
-  blurbs:
-  - "Kids practice reading aloud to a certified therapy dog, about 15 minutes each. For ages 6 to 11. Free, registration required."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6ac00fcf035faf0033d9e7cb"
-    label: "Reading with Rover"
-  description: "Kids practice reading aloud to a certified therapy dog, about 15 minutes each. For ages 6 to 11. Free, registration required."
-  hub_blurb: "Kids read aloud to a therapy dog."
 - name: "After School Hangout"
   cost: "Free"
   ages: "Teens"
@@ -508,6 +436,29 @@
     label: "LWHS Theatre"
   description: "Lake Washington High School students perform solos for a live audience."
   hub_blurb: "Lake Washington High School students perform solos for a live audience."
+- name: "Kids Hanukkah Glow Party"
+  cost: "Free"
+  setting: "Indoor"
+  signup: true
+  tags:
+  - "free"
+  - "hanukkah"
+  organizer: "Kol Ami"
+  organizer_url: "https://www.kolaminw.org/"
+  start: "2026-12-11T17:30:00-08:00"
+  end: "2026-12-11T18:30:00-08:00"
+  place: "Kol Ami, 308 4th Ave S"
+  same_as: "https://www.kolaminw.org/copy-of-community-events"
+  card: "kids-hanukkah-glow-party-dec-11"
+  heading_id: "kids-hanukkah-glow-party-dec-11"
+  when: "Fri Dec 11 · 5:30–6:30 p.m."
+  blurbs:
+  - "A free glow party for kids during Kol Ami's Hanukkah celebration, before a latke dinner (paid) and the grand menorah lighting at 7:30 p.m. RSVP on the Kol Ami page."
+  links:
+  - href: "https://www.kolaminw.org/copy-of-community-events"
+    label: "Kol Ami Hanukkah season"
+  description: "A free glow party for kids during Kol Ami's Hanukkah celebration, before a latke dinner (paid) and the grand menorah lighting at 7:30 p.m. RSVP on the Kol Ami page."
+  hub_blurb: "A free kids glow party at Kol Ami's Hanukkah celebration."
 - name: "The Nutcracker: Symphony of Lights"
   setting: "Indoor"
   tags:

@@ -1,33 +1,3 @@
-- name: "The Nutcracker with Ensemble Ballet Theatre"
-  cost: "Free"
-  ages: "All ages"
-  setting: "Indoor"
-  signup: true
-  tags:
-  - "holiday-show"
-  start: "2026-11-07T13:00:00-08:00"
-  end: "2026-11-07T13:45:00-08:00"
-  place: "Covington Library, 27100 164th Ave SE, Covington"
-  same_as: "https://kcls.bibliocommons.com/events/6a820570aafa6100295d01a6"
-  card: "the-nutcracker-with-ensemble-ballet-theatre"
-  order: "22"
-  heading_id: "the-nutcracker-with-ensemble-ballet-theatre"
-  when: "Sat Nov 7 · 1:00–1:45 p.m."
-  blurbs:
-  - "Ensemble Ballet Theatre dances a 30-minute Nutcracker, and at intermission the dancers teach everyone\
-    \ a few steps. All ages. Free. Registration required."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a820570aafa6100295d01a6"
-    label: "The Nutcracker with Ensemble Ballet Theatre"
-  photo:
-    src: "/assets/images/maple-valley/nutcracker-covington.png"
-    alt: "A wooden nutcracker figure with a white beard and a tall black hat."
-    credit: "Image: King County Library System"
-    source: "https://kcls.bibliocommons.com/events/6a820570aafa6100295d01a6"
-    license: "organizer"
-  description: "Ensemble Ballet Theatre dances a 30-minute Nutcracker, and at intermission the dancers\
-    \ teach everyone a few steps. All ages. Free. Registration required."
-  hub_blurb: "A 30-minute Nutcracker, with a short dance lesson at intermission."
 - name: "Creative Corner: Tween Paint and Sip"
   cost: "Free"
   ages: "Kids"
@@ -236,6 +206,27 @@
     label: "Gaming Afternoon"
   description: "The next board and card game afternoon for tweens and teens. Snacks are provided. No registration."
   hub_blurb: "The next board and card game afternoon for tweens and teens."
+- name: "Goat Soap Making with Green Apple Alpacas"
+  cost: "Free"
+  ages: "Teens"
+  setting: "Indoor"
+  signup: true
+  tags:
+  - "free"
+  start: "2026-11-18T18:00:00-08:00"
+  end: "2026-11-18T19:30:00-08:00"
+  place: "Covington Library, 27100 164th Ave SE, Covington"
+  same_as: "https://kcls.bibliocommons.com/events/6ad9925febad22004547175a"
+  card: "goat-soap-making-covington-nov-18"
+  heading_id: "goat-soap-making-covington-nov-18"
+  when: "Wed Nov 18 · 6:00–7:30 p.m."
+  blurbs:
+  - "Teens and their grown-ups make goat milk soap with a local artist from Green Apple Alpacas at the Covington Library. Free, registration required, and the age range is enforced."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ad9925febad22004547175a"
+    label: "Goat Soap Making with Green Apple Alpacas"
+  description: "Teens and their grown-ups make goat milk soap with a local artist from Green Apple Alpacas at the Covington Library. Free, registration required, and the age range is enforced."
+  hub_blurb: "Teens and a grown-up make goat milk soap at the Covington Library."
 - name: "Fun Fridays"
   cost: "Free"
   ages: "Kids"

@@ -416,26 +416,6 @@
     source: "https://kcls.org/locations/mercer-island/"
   description: "A Sunday story time with songs, rhymes, and movement for kids up to age 5 with an adult, then play time."
   hub_blurb: "A Sunday story time with songs, rhymes, and movement for kids up to age 5."
-- name: "Parents Night Out at the J"
-  cost: "$62 to $69"
-  setting: "Indoor"
-  drop_off: true
-  signup: true
-  start: "2026-11-07T17:00:00-08:00"
-  end: "2026-11-07T21:00:00-08:00"
-  place: "Stroum Jewish Community Center, 3801 East Mercer Way"
-  same_as: "https://sjcc.org/event/november-parents-night-out/"
-  card: "sjcc-parents-night-out-nov"
-  order: "32"
-  heading_id: "sjcc-parents-night-out-nov"
-  when: "Sat Nov 7 · 5:00–9:00 p.m."
-  blurbs:
-  - "Drop the kids at the SJCC for four hours of swimming, dinner, and games while you take the evening. Open to members and guests. $62 to $69, register ahead. The next one is Sat Dec 5."
-  links:
-  - href: "https://sjcc.org/event/november-parents-night-out/"
-    label: "Parents Night Out"
-  description: "Drop the kids at the SJCC for four hours of swimming, dinner, and games while you take the evening. Open to members and guests. $62 to $69, register ahead."
-  hub_blurb: "Swimming, dinner, and games for the kids while you take the evening."
 - name: "Havdalah Pool Party"
   cost: "$5 to $15"
   setting: "Indoor"
