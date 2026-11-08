@@ -932,3 +932,33 @@
     label: "Book Santa photos"
   description: "A real-bearded Santa poses for family photos in Suite 199 at The Village. Book a time online to skip the line or just walk up. Print and digital packages are paid."
   hub_blurb: "Santa photos at The Village, booked ahead or walk-up."
+
+- name: "Big Tots Hanukkah Shabbat"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Indoor"
+  tags:
+  - "free"
+  - "hanukkah"
+  organizer: "Kol Ami"
+  organizer_url: "https://www.kolaminw.org/"
+  start: "2026-12-05T09:15:00-08:00"
+  end: "2026-12-05T10:15:00-08:00"
+  place: "Kol Ami at Northlake UUC, 308 4th Ave S"
+  same_as: "https://www.kolaminw.org/events-1/in-person-big-tots-hanukkah-shabbat-2026-12-05-09-15"
+  card: "big-tots-hanukkah-shabbat-dec-5"
+  heading_id: "big-tots-hanukkah-shabbat-dec-5"
+  when: "Sat Dec 5 · 9:15–10:15 a.m."
+  blurbs:
+  - "Hanukkah songs, stories, and blessings for babies through first graders with their grown-ups, led by Annie Erlich and friends. Free drop-in; all families welcome."
+  links:
+  - href: "https://www.kolaminw.org/events-1/in-person-big-tots-hanukkah-shabbat-2026-12-05-09-15"
+    label: "Kol Ami Hanukkah Tot Shabbat"
+  photo:
+    src: "/assets/images/kirkland/kol-ami-tot-shabbat.png"
+    alt: "Kol Ami Tot Shabbat flyer with a hand-drawn hamsa and program details."
+    credit: "Image: Kol Ami"
+    source: "https://www.kolaminw.org/events-1/in-person-big-tots-hanukkah-shabbat-2026-12-05-09-15"
+    license: "organizer"
+  description: "Hanukkah songs, stories, and blessings for babies through first graders with their grown-ups, led by Annie Erlich and friends. Free drop-in; all families welcome."
+  hub_blurb: "Free Hanukkah songs and stories for babies through first graders with their grown-ups."

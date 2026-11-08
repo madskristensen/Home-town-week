@@ -665,6 +665,11 @@
       url: "https://www.eastsideaudubon.org/calendar"
       type: nature
       notes: "Public bird walks. List a walk when the page welcomes children. Skip classes, the book club, the photography group, and evening talks."
+    - name: "Kol Ami"
+      url: "https://kolaminw.org/copy-of-community-events"
+      type: community
+      format: html
+      notes: "Kirkland synagogue at 308 4th Ave S. Check dated family holiday celebrations, story times, and children's events. Events may be in Bellevue; list each in its venue's city. Verify times and locations on individual event pages. Skip fundraising appeals, donation drives, adult programs, and online-only services."
     - name: "Kirkland Urban"
       url: "https://kirklandurban.com/things-to-do/"
       type: venue
