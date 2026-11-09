@@ -1,22 +1,23 @@
-# Home-page picks. Sunday Nov 8, 2026 first (today), then Friday Nov 13
-# through Sunday Nov 15, 2026. The build skips a pick once it has ended,
-# so the Nov 13-15 picks take over on Monday.
+# Home-page picks for Friday Nov 13 through Sunday Nov 15, 2026.
+# The build skips a pick once it has ended.
 # Names match _data/{city}_events.yml.
-- city: bellevue
-  name: Sleepy Hollow
-- city: kirkland
-  name: Young Frankenstein
-- city: mercer-island
-  name: The Queen in the Cave
-- city: redmond
-  name: "STEMsters: Hands-On STEM"
 - city: bellevue
   name: Bellevue Downtown Ice Rink
 - city: redmond
   name: Pumpkin Drop
+- city: issaquah
+  name: Harry Potter Night
 - city: north-bend
   name: Valley-Wide Holiday Open House
+- city: bellevue
+  name: Nocturnal in November
+- city: mercer-island
+  name: The Queen in the Cave
 - city: kirkland
   name: Lil' Gobbler Run
 - city: north-bend
   name: Holly Days Window Fest
+- city: issaquah
+  name: Tots and Trees
+- city: sammamish
+  name: Fall Into Fun

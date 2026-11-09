@@ -1,35 +1,3 @@
-- name: "Young Frankenstein"
-  setting: "Indoor"
-  signup: true
-  start: "2026-10-30T19:00:00-07:00"
-  end: "2026-11-08T14:00:00-08:00"
-  place: "Studio East, 10718 NE 68th St"
-  same_as: "https://studio-east.org/auditions/"
-  card: "young-frankenstein"
-  order: "22"
-  heading_id: "young-frankenstein"
-  when: "Fri Oct 30 through Sun Nov 8"
-  blurbs:
-  - "Studio East’s youth cast, ages 9 to 20, in Mel Brooks’ musical comedy. The company recommends it\
-    \ for teens and adults. Expect mature jokes, sexual innuendo, mild profanity, brief stage violence,\
-    \ and spooky stage effects. Friday, Oct 30 at 7:00 p.m. is a pay-what-you-will preview. Other shows\
-    \ are Sat Oct 31 at 7:00 p.m., Sun Nov 1 at 2:00 p.m., Thu Nov 5 at 7:00 p.m., Fri Nov 6 at 7:00 p.m.,\
-    \ Sat Nov 7 at 2:00 and 7:00 p.m., and Sun Nov 8 at 2:00 p.m. Tickets go on sale October 5."
-  links:
-  - href: "https://studio-east.org/auditions/"
-    label: "Studio East"
-  photo:
-    src: "/assets/images/kirkland/young-frankenstein.webp"
-    alt: "Poster for Young Frankenstein, with an illustrated green monster, a bride, and a castle."
-    credit: "Image: Studio East"
-    source: "https://studio-east.org/season"
-    license: "organizer"
-  description: "Studio East's youth cast, ages 9 to 20, in Mel Brooks' musical comedy. The company recommends\
-    \ it for teens and adults. Expect mature jokes, sexual innuendo, mild profanity, brief stage violence,\
-    \ and spooky stage effects. Friday, Oct 30 at 7:00 p.m. is a pay-what-you-will preview. Other shows\
-    \ are Sat Oct 31 at 7:00 p.m., Sun Nov 1 at 2:00 p.m., Thu Nov 5 at 7:00 p.m., Fri Nov 6 at 7:00 p.m.,\
-    \ Sat Nov 7 at 2:00 and 7:00 p.m., and Sun Nov 8 at 2:00 p.m. Tickets go on sale October 5."
-  hub_blurb: "Studio East's youth cast, ages 9 to 20, in Mel Brooks' musical comedy."
 - name: "After School Hangout"
   cost: "Free"
   ages: "Teens"
@@ -932,7 +900,6 @@
     label: "Book Santa photos"
   description: "A real-bearded Santa poses for family photos in Suite 199 at The Village. Book a time online to skip the line or just walk up. Print and digital packages are paid."
   hub_blurb: "Santa photos at The Village, booked ahead or walk-up."
-
 - name: "Big Tots Hanukkah Shabbat"
   cost: "Free"
   ages: "Toddlers"

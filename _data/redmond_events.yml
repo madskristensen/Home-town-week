@@ -40,6 +40,26 @@
   description: "A free pumpkin drop-in at Farrel-McWhirter Park, 10:00 a.m. to 2:00 p.m. Register on the\
     \ city's recreation site."
   hub_blurb: "A free pumpkin drop-in at Farrel-McWhirter Park, 10:00 a.m."
+- name: "STEMsters: Hands-On STEM"
+  cost: "Free"
+  ages: "Kids"
+  setting: "Indoor"
+  tags:
+  - "free"
+  start: "2026-11-15T16:30:00-08:00"
+  end: "2026-11-15T17:30:00-08:00"
+  place: "Redmond Library, 15990 NE 85th St"
+  same_as: "https://kcls.bibliocommons.com/events/6ac5826ee06996003a81d0cb"
+  card: "stemsters-redmond-nov-15"
+  heading_id: "stemsters-redmond-nov-15"
+  when: "Sun Nov 15 · 4:30–5:30 p.m."
+  blurbs:
+  - "Teen volunteers lead kids 6 to 11 through hands-on science, engineering, and math experiments at Redmond Library, sponsored by the Friends of the Redmond Library. Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ac5826ee06996003a81d0cb"
+    label: "STEMsters: Hands-On STEM"
+  description: "Teen volunteers lead kids 6 to 11 through hands-on science, engineering, and math experiments at Redmond Library, sponsored by the Friends of the Redmond Library. Free."
+  hub_blurb: "Teen-led hands-on STEM experiments for kids 6 to 11."
 - name: "Kids Superhero Adventure Day"
   cost: "$42.50 to $51"
   ages: "Kids"
@@ -138,21 +158,3 @@
     \ Registration is $15 for Redmond residents and $18 for everyone else. Dress for the weather. Most\
     \ of it is outdoors."
   hub_blurb: "An all-ages evening at the farm on the longest night of the year."
-- name: "STEMsters: Hands-On STEM"
-  cost: "Free"
-  ages: "Kids"
-  setting: "Indoor"
-  start: "2026-11-08T16:30:00-08:00"
-  end: "2026-11-08T17:30:00-08:00"
-  place: "Redmond Library, 15990 NE 85th St"
-  same_as: "https://kcls.bibliocommons.com/events/6ac5826ee06996003a81d0ca"
-  card: "stemsters-hands-on-stem-nov-8"
-  heading_id: "stemsters-hands-on-stem-nov-8"
-  when: "Sun Nov 8 · 4:30–5:30 p.m."
-  blurbs:
-  - "Teen volunteers lead hands-on science, technology, engineering, and math experiments for kids and tweens. Free."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6ac5826ee06996003a81d0ca"
-    label: "STEMsters: Hands-On STEM"
-  description: "Teen volunteers lead hands-on science, technology, engineering, and math experiments for kids and tweens. Free."
-  hub_blurb: "Teen volunteers lead hands-on science, technology, engineering, and math experiments for kids and tweens."
