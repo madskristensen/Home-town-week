@@ -19,28 +19,6 @@
     \ Three sisters go into the forest looking for a queen who lives in a cave. Fridays at 7:00 p.m.,\
     \ Saturdays at 2:00 and 7:00 p.m., and Sundays at 2:00 p.m."
   hub_blurb: "A world-premiere play from Júlia Sardà's picture book, performed by Youth Theatre Northwest."
-- name: "Family Story Time"
-  setting: "Indoor"
-  cost: "Free"
-  ages: "Toddlers"
-  tags:
-  - "story-time"
-  start: "2026-11-10T10:15:00-08:00"
-  end: "2026-11-10T11:00:00-08:00"
-  place: "Mercer Island Library, 4400 88th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/events/6abacfc8e06996003a7fda92"
-  card: "family-story-time"
-  order: "20"
-  heading_id: "family-story-time"
-  when: "Tue Nov 10 · 10:15–11:00 a.m."
-  blurbs:
-  - "Stories, music, movement, and rhymes, then play time. Recommended for ages 0 to 5 with an adult."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6abacfc8e06996003a7fda92"
-    label: "Family Story Time"
-  description: "Stories, music, movement, and rhymes, then play time. Recommended for ages 0 to 5 with\
-    \ an adult."
-  hub_blurb: "Stories, music, movement, and rhymes, then play time."
 - name: "Mandarin Story Time"
   cost: "Free"
   ages: "Toddlers"
@@ -88,6 +66,27 @@
   description: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups.\
     \ No registration. Everyone is welcome."
   hub_blurb: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups."
+- name: "Singing and Stories with Nancy Stewart"
+  cost: "Free"
+  ages: "Toddlers"
+  setting: "Indoor"
+  tags:
+  - "story-time"
+  performer: "Nancy Stewart"
+  start: "2026-11-14T09:30:00-08:00"
+  end: "2026-11-14T10:00:00-08:00"
+  place: "Island Books, 3014 78th Ave SE"
+  same_as: "https://www.islandbooks.com/childrens-story-times"
+  card: "nancy-stewart-island-books-nov-14"
+  heading_id: "nancy-stewart-island-books-nov-14"
+  when: "Sat Nov 14 · 9:30–10:00 a.m."
+  blurbs:
+  - "Award-winning Mercer Island songwriter Nancy Stewart leads songs and stories for 1 to 4 year olds at Island Books. Free; it runs most Saturdays, so check the store calendar for off dates."
+  links:
+  - href: "https://www.islandbooks.com/childrens-story-times"
+    label: "Singing and Stories at Island Books"
+  description: "Award-winning Mercer Island songwriter Nancy Stewart leads songs and stories for 1 to 4 year olds at Island Books. Free; it runs most Saturdays, so check the store calendar for off dates."
+  hub_blurb: "Songs and stories for 1 to 4 year olds with Nancy Stewart."
 - name: "Building Club"
   cost: "Free"
   ages: "Kids"
