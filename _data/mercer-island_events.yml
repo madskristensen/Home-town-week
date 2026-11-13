@@ -19,32 +19,6 @@
     \ Three sisters go into the forest looking for a queen who lives in a cave. Fridays at 7:00 p.m.,\
     \ Saturdays at 2:00 and 7:00 p.m., and Sundays at 2:00 p.m."
   hub_blurb: "A world-premiere play from Júlia Sardà's picture book, performed by Youth Theatre Northwest."
-- name: "Mandarin Story Time"
-  cost: "Free"
-  ages: "Toddlers"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-11-12T10:30:00-08:00"
-  end: "2026-11-12T11:00:00-08:00"
-  place: "Mercer Island Library, 4400 88th Ave SE"
-  same_as: "https://kcls.bibliocommons.com/events/6a6ba3514523092f0033b553"
-  card: "mandarin-story-time-nov-12"
-  heading_id: "mandarin-story-time-nov-12"
-  when: "Thu Nov 12 · 10:30–11:00 a.m."
-  blurbs:
-  - "Mandarin stories, music, movement, and rhymes for families, including learners. Free at Mercer Island Library."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6a6ba3514523092f0033b553"
-    label: "Mandarin Story Time"
-  photo:
-    src: "/assets/images/mercer-island/mercer-island-library-entrance.webp"
-    alt: "Mercer Island Library entrance"
-    credit: "Photo: King County Library System."
-    source: "https://kcls.org/locations/mercer-island/"
-    license: "organizer"
-  description: "Mandarin stories, music, movement, and rhymes for families, including learners. Free at Mercer Island Library."
-  hub_blurb: "Mandarin stories for families."
 - name: "Tot Shabbat"
   ages: "Toddlers"
   setting: "Indoor"
