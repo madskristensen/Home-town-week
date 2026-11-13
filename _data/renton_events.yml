@@ -288,3 +288,94 @@
     license: "CC BY-SA 4.0"
   description: "Renton's free waterfront holiday lights at Gene Coulon Park, with lit walkways, trees, and reflections on Lake Washington. Lit nightly 4:00 to 9:00 p.m. from Dec 5 through Jan 3."
   hub_blurb: "Free waterfront holiday lights at Gene Coulon Park, lit nightly through Jan 3."
+- name: Chanukah Village at The Landing
+  cost: Free
+  setting: Outdoor
+  signup: true
+  organizer: Chabad Jewish Center of Renton
+  organizer_url: https://www.jewishrenton.com/
+  tags:
+  - free
+  - hanukkah
+  start: '2026-12-06T15:30:00-08:00'
+  end: '2026-12-06T17:00:00-08:00'
+  place: The Landing plaza, across from Regal Cinemas, Renton
+  same_as: https://www.jewishrenton.com/chanukah
+  card: chanukah-village-landing-2026
+  heading_id: chanukah-village-landing-2026
+  when: Sun Dec 6 · 3:30 p.m.
+  blurbs:
+  - 'The Landing turns into a Chanukah village: pick up a map at 3:30 p.m. for treats and crafts at shops,
+    then a giant menorah lighting, fire truck gelt drop, and DJ at 4:15 p.m. Free with an advance RSVP.'
+  links:
+  - href: https://www.jewishrenton.com/chanukah
+    label: Chanukah at The Landing
+  photo:
+    src: /assets/images/renton/chabad-chanukah-village.png
+    alt: Chanukah Village poster with a lit menorah above a silhouetted crowd.
+    credit: 'Image: Chabad Jewish Center of Renton'
+    source: https://www.jewishrenton.com/chanukah
+    license: organizer
+  description: 'The Landing turns into a Chanukah village: pick up a map at 3:30 p.m. for treats and crafts
+    at shops, then a giant menorah lighting, fire truck gelt drop, and DJ at 4:15 p.m. Free with an advance
+    RSVP.'
+  hub_blurb: A giant menorah lighting and fire truck gelt drop at The Landing, 4:15 p.m.
+- name: Museum Tree Lighting
+  cost: Free
+  setting: Outdoor
+  tags:
+  - free
+  - tree-lighting
+  - christmas
+  start: '2026-11-28T17:00:00-08:00'
+  end: '2026-11-28T18:30:00-08:00'
+  place: Renton History Museum, 235 Mill Ave S
+  same_as: https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Recreation-Events/Events-Calendar/2026-Museum-Tree-Lighting
+  card: renton-museum-tree-lighting-2026
+  heading_id: renton-museum-tree-lighting-2026
+  when: Sat Nov 28 · 5:00–6:30 p.m.
+  blurbs:
+  - Hot cocoa, ornament making, and the annual tree lighting outside the Renton History Museum downtown.
+    Free.
+  links:
+  - href: https://www.rentonwa.gov/Government/Departments-and-Offices/Parks-and-Recreation/Parks-and-Recreation-Events/Events-Calendar/2026-Museum-Tree-Lighting
+    label: Museum Tree Lighting
+  photo:
+    src: /assets/images/hubs/christmas/christmas-tree-lights.jpg
+    alt: A Christmas tree covered in blue and white lights at night.
+    credit: 'Photo: Hullian111, CC BY-SA 4.0'
+    source: https://commons.wikimedia.org/wiki/File:Kirk_Ella_%27Golden_Mile%27_Christmas_Lights_2023,_West_Ella_Christmas_Tree.jpg
+    license: CC BY-SA 4.0
+  description: Hot cocoa, ornament making, and the annual tree lighting outside the Renton History Museum
+    downtown. Free.
+  hub_blurb: Hot cocoa, ornament making, and a tree lighting at the Renton History Museum.
+- name: 'Battle of the Badges: Holiday Lights'
+  cost: Free
+  setting: Outdoor
+  tags:
+  - free
+  - holiday-lights
+  - christmas
+  start: '2026-12-12T17:30:00-08:00'
+  end: '2026-12-12T20:00:00-08:00'
+  place: Renton Technical College, Renton
+  same_as: https://www.rentonwa.gov/Government/Departments-and-Offices/Police/Community-Engagement/Battle-of-the-Badges
+  card: battle-of-the-badges-2026
+  heading_id: battle-of-the-badges-2026
+  when: Sat Dec 12 · 5:30–8:00 p.m.
+  blurbs:
+  - Police, fire, and rescue crews from around the region light up their vehicles, and you walk through
+    and vote for a favorite. Holiday music and food trucks. Free; bring a food bank donation if you can.
+  links:
+  - href: https://www.rentonwa.gov/Government/Departments-and-Offices/Police/Community-Engagement/Battle-of-the-Badges
+    label: Battle of the Badges
+  photo:
+    src: /assets/images/themes/lights-street-town.webp
+    alt: Christmas lights along a small-town street.
+    credit: 'Photo: mattbuck, CC BY-SA 3.0'
+    source: https://commons.wikimedia.org/wiki/File:Beeston_MMB_70.jpg
+    license: CC BY-SA 3.0
+  description: Police, fire, and rescue crews from around the region light up their vehicles, and you
+    walk through and vote for a favorite. Holiday music and food trucks. Free; bring a food bank donation
+    if you can.
+  hub_blurb: Lit-up police and fire vehicles to walk past and vote on, with food trucks.

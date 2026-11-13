@@ -842,3 +842,31 @@
     license: "organizer"
   description: "Hanukkah songs, stories, and blessings for babies through first graders with their grown-ups, led by Annie Erlich and friends. Free drop-in; all families welcome."
   hub_blurb: "Free Hanukkah songs and stories for babies through first graders with their grown-ups."
+- name: Reindeer and Reels
+  cost: Free
+  setting: Outdoor
+  tags:
+  - free
+  - christmas
+  start: '2026-12-11T17:30:00-08:00'
+  end: '2026-12-11T20:30:00-08:00'
+  place: Peter Kirk Park, 202 3rd St
+  same_as: https://www.kirklandwa.gov/Whats-Happening/Community-Events/Parks-and-Community-Services/Reindeer-and-Reels
+  card: reindeer-and-reels-2026
+  heading_id: reindeer-and-reels-2026
+  when: Fri Dec 11 · 5:30–8:30 p.m.
+  blurbs:
+  - 'Kirkland''s new winter night in Peter Kirk Park: kids crafts, food trucks, real reindeer, a surprise
+    princess visit, and Frozen on the big outdoor screen. Free.'
+  links:
+  - href: https://www.kirklandwa.gov/Whats-Happening/Community-Events/Parks-and-Community-Services/Reindeer-and-Reels
+    label: Reindeer and Reels
+  photo:
+    src: /assets/images/themes/santa-reindeer.webp
+    alt: Statues of Santa Claus and a reindeer in the snow.
+    credit: 'Photo: Artaxerxes, CC BY 4.0'
+    source: https://commons.wikimedia.org/wiki/File:Santa_Claus_reindeer_statues_Swanzey_NH_January_2025.jpg
+    license: CC BY 4.0
+  description: 'Kirkland''s new winter night in Peter Kirk Park: kids crafts, food trucks, real reindeer,
+    a surprise princess visit, and Frozen on the big outdoor screen. Free.'
+  hub_blurb: Real reindeer, kids crafts, and Frozen on an outdoor screen in Peter Kirk Park.

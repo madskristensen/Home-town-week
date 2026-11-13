@@ -948,6 +948,10 @@
     Bicycle Capital of the Northwest.
   slogan: "Bicycle Capital of the Northwest."
   sources:
+    - name: "Little Bit Therapeutic Riding Center"
+      url: "https://www.littlebit.org/events"
+      type: venue
+      notes: "Free public days at the Redmond riding center, such as the December holiday drive-through and fall compost day."
     - name: "City of Redmond calendar"
       url: "https://www.redmond.gov/Calendar.aspx"
       type: city_hall
@@ -1043,6 +1047,10 @@
     Where the Cedar River meets Lake Washington.
   tagline: "Where the Cedar River meets Lake Washington."
   sources:
+    - name: "Chabad Jewish Center of Renton"
+      url: "https://www.jewishrenton.com/"
+      type: venue
+      notes: "Chanukah at The Landing (menorah lighting, gelt drop) and other family holiday events. Check /chanukah each fall."
     - name: "City of Renton"
       url: "https://www.rentonwa.gov/"
       type: city_hall

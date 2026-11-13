@@ -178,3 +178,62 @@
     \ Registration is $15 for Redmond residents and $18 for everyone else. Dress for the weather. Most\
     \ of it is outdoors."
   hub_blurb: "An all-ages evening at the farm on the longest night of the year."
+- name: Little Bit Community Holiday Drive-Through
+  cost: Free
+  setting: Outdoor
+  signup: true
+  tags:
+  - free
+  - christmas
+  start: '2026-12-06T10:00:00-08:00'
+  end: '2026-12-06T15:00:00-08:00'
+  place: Little Bit Therapeutic Riding Center, 18675 NE 106th St
+  same_as: https://www.littlebit.org/events/holiday-drive-through
+  card: little-bit-holiday-drive-through-2026
+  heading_id: little-bit-holiday-drive-through-2026
+  when: Sun Dec 6 · 10:00 a.m.–3:00 p.m.
+  blurbs:
+  - Drive through Little Bit's farm to see the horses and staff dressed for the holidays without leaving
+    your car. Free, but book an arrival time; one registration per car.
+  links:
+  - href: https://www.littlebit.org/events/holiday-drive-through
+    label: Community Holiday Drive-Through
+  photo:
+    src: /assets/images/themes/lights-path.webp
+    alt: A path lined with blue and white lights at night.
+    credit: 'Photo: Yoonahkim, CC BY-SA 3.0'
+    source: https://commons.wikimedia.org/wiki/File:Luminescent_lights.jpg
+    license: CC BY-SA 3.0
+  description: Drive through Little Bit's farm to see the horses and staff dressed for the holidays without
+    leaving your car. Free, but book an arrival time; one registration per car.
+  hub_blurb: See Little Bit's horses in holiday gear from your car. Free, book a time.
+- name: Rumble in Redmond Robot Combat
+  cost: Free
+  setting: Indoor
+  organizer: OneRedmond
+  organizer_url: https://www.oneredmond.org/
+  tags:
+  - free
+  - stem
+  start: '2026-11-21T10:30:00-08:00'
+  end: '2026-11-21T17:00:00-08:00'
+  place: Redmond Middle School, 10055 166th Ave NE
+  same_as: https://www.eventbrite.com/e/rumble-in-redmond-robot-combat-competition-tickets-2003998023033
+  card: rumble-in-redmond-2026
+  heading_id: rumble-in-redmond-2026
+  when: Sat Nov 21 · 10:30 a.m.–5:00 p.m.
+  blurbs:
+  - Watch 1- and 3-pound robots battle in two arenas, then try hands-on activities in the STEAM Discovery
+    Zone. Free; register ahead for a souvenir sticker while they last.
+  links:
+  - href: https://www.eventbrite.com/e/rumble-in-redmond-robot-combat-competition-tickets-2003998023033
+    label: Rumble in Redmond
+  photo:
+    src: /assets/images/redmond/rumble-in-redmond-2026.jpg
+    alt: Rumble in Redmond 2026 robot combat logo over blue and red lightning.
+    credit: 'Image: OneRedmond'
+    source: https://www.eventbrite.com/e/rumble-in-redmond-robot-combat-competition-tickets-2003998023033
+    license: organizer
+  description: Watch 1- and 3-pound robots battle in two arenas, then try hands-on activities in the STEAM
+    Discovery Zone. Free; register ahead for a souvenir sticker while they last.
+  hub_blurb: Small robots battle in two arenas, plus a hands-on STEAM zone. Free.

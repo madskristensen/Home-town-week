@@ -376,6 +376,12 @@
   links:
   - href: "https://www.snoqualmiewa.gov/calendar.aspx?EID=3418"
     label: "Visit with Santa"
+  photo:
+    src: "/assets/images/snoqualmie/mini-treehouse-santa.jpg"
+    alt: "Santa Claus by a decorated tree on a red flyer for Mini Treehouse."
+    credit: "Image: City of Snoqualmie"
+    source: "https://www.snoqualmiewa.gov/calendar.aspx?EID=3418"
+    license: "organizer"
   description: "A free visit with Santa. The first 30 minutes are held for families with special needs."
   hub_blurb: "A free visit with Santa."
 - name: "Family Story Time"
