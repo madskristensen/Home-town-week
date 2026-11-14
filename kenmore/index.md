@@ -5,5 +5,5 @@ city: kenmore
 state: wa
 hook_first: true
 description: Upcoming family events in Kenmore on the Eastside.
-hook: Inglemoor's Alice in Wonderland runs through Nov 14. Family Friendly Karaoke is Nov 13, ASL Story Time is Nov 14, and Builders Club is Nov 21.
+hook: Inglemoor's Alice in Wonderland wraps up Nov 14, the same day as ASL Story Time. Builders Club is Nov 21, and Winterfest is Dec 5.
 ---

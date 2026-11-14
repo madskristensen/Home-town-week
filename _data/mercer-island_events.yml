@@ -19,27 +19,6 @@
     \ Three sisters go into the forest looking for a queen who lives in a cave. Fridays at 7:00 p.m.,\
     \ Saturdays at 2:00 and 7:00 p.m., and Sundays at 2:00 p.m."
   hub_blurb: "A world-premiere play from Júlia Sardà's picture book, performed by Youth Theatre Northwest."
-- name: "Tot Shabbat"
-  ages: "Toddlers"
-  setting: "Indoor"
-  cost: "Free"
-  start: "2026-11-13T09:45:00-08:00"
-  end: "2026-11-13T10:30:00-08:00"
-  place: "Stroum Jewish Community Center, 3801 East Mercer Way"
-  same_as: "https://sjcc.org/series/tot-shabbat/"
-  card: "tot-shabbat-5"
-  order: "21"
-  heading_id: "tot-shabbat-5"
-  when: "Fri Nov 13 · 9:45–10:30 a.m."
-  blurbs:
-  - "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups. No registration.\
-    \ Everyone is welcome."
-  links:
-  - href: "https://sjcc.org/series/tot-shabbat/"
-    label: "Tot Shabbat"
-  description: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups.\
-    \ No registration. Everyone is welcome."
-  hub_blurb: "Singing, dancing, and Shabbat for babies, toddlers, preschoolers, and their grown-ups."
 - name: "Singing and Stories with Nancy Stewart"
   cost: "Free"
   ages: "Toddlers"
