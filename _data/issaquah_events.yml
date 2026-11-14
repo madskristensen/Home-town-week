@@ -583,6 +583,7 @@
   hub_blurb: "Local makers and vintage finds at the Historic Shell Station on select holiday weekends."
 - name: Yuletide on Front
   cost: Free
+  setting: "Outdoor"
   organizer: Downtown Issaquah Association
   organizer_url: https://downtownissaquah.com/
   tags:

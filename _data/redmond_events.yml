@@ -189,6 +189,7 @@
 - name: Rumble in Redmond Robot Combat
   cost: Free
   setting: Indoor
+  signup: true
   organizer: OneRedmond
   organizer_url: https://www.oneredmond.org/
   tags:
