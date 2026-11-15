@@ -3,21 +3,21 @@
 # Names match _data/{city}_events.yml.
 - city: bellevue
   name: Bellevue Downtown Ice Rink
-- city: redmond
-  name: Pumpkin Drop
+- city: bellevue
+  name: Horizon Line
 - city: renton
   name: Festive Spiral Ornaments Workshop
-- city: north-bend
-  name: Valley-Wide Holiday Open House
-- city: bellevue
-  name: Nocturnal in November
 - city: mercer-island
   name: The Queen in the Cave
 - city: kirkland
   name: Lil' Gobbler Run
-- city: north-bend
-  name: Holly Days Window Fest
 - city: issaquah
-  name: Tots and Trees
+  name: Planting Party at Timberlake Park
+- city: mercer-island
+  name: Family Story Time
 - city: sammamish
-  name: Fall Into Fun
+  name: Elementary Kid Crafternoon
+- city: redmond
+  name: "STEMsters: Hands-On STEM"
+- city: issaquah
+  name: Spanish Story Time
