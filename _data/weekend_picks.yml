@@ -1,23 +1,23 @@
-# Home-page picks for Friday Nov 13 through Sunday Nov 15, 2026.
+# Home-page picks for Friday Nov 20 through Sunday Nov 22, 2026.
 # The build skips a pick once it has ended.
 # Names match _data/{city}_events.yml.
+- city: redmond
+  name: Rumble in Redmond Robot Combat
+- city: kirkland
+  name: Santa's Arrival Party
 - city: bellevue
-  name: Bellevue Downtown Ice Rink
+  name: Kids Night Out
 - city: bellevue
   name: Horizon Line
-- city: renton
-  name: Festive Spiral Ornaments Workshop
-- city: mercer-island
-  name: The Queen in the Cave
-- city: kirkland
-  name: Lil' Gobbler Run
-- city: issaquah
-  name: Planting Party at Timberlake Park
-- city: mercer-island
-  name: Family Story Time
-- city: sammamish
-  name: Elementary Kid Crafternoon
 - city: redmond
-  name: "STEMsters: Hands-On STEM"
+  name: Kids Superhero Adventure Day
+- city: mercer-island
+  name: DINOvember Party
+- city: sammamish
+  name: "STEM Saturday: Building Bridges"
+- city: north-bend
+  name: Library Holiday Bazaar
 - city: issaquah
-  name: Spanish Story Time
+  name: The Village Market Holiday Pop-Up
+- city: renton
+  name: "Stories Take the Stage: Reader's Theater Encore"

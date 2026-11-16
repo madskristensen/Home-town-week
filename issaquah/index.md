@@ -5,5 +5,5 @@ city: issaquah
 state: wa
 hook_first: true
 description: Upcoming family events in Issaquah on the Eastside.
-hook: Village Theatre's Come From Away runs through Dec 27. Spanish Story Time is today, the Issaquah Highlands tree lighting is Nov 19, and the Reindeer Festival opens Nov 27.
+hook: Village Theatre's Come From Away runs through Dec 27. Reading with Rover is Nov 18, the Issaquah Highlands tree lighting is Nov 19, and the Reindeer Festival opens Nov 27.
 ---

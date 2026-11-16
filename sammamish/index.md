@@ -5,5 +5,5 @@ city: sammamish
 state: wa
 hook_first: true
 description: Upcoming family events in Sammamish on the Eastside.
-hook: An elementary kid crafternoon is today, D&D Club is Nov 20, and STEM Saturday builds bridges Nov 21. Frosty Fest brings a free pajama movie night Dec 11.
+hook: Teens can try two-color drawing Nov 18, D&D Club is Nov 20, and STEM Saturday builds bridges Nov 21. Frosty Fest brings a free pajama movie night Dec 11.
 ---
