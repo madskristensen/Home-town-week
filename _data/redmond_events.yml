@@ -176,3 +176,22 @@
   description: Watch 1- and 3-pound robots battle in two arenas, then try hands-on activities in the STEAM
     Discovery Zone. Free; register ahead for a souvenir sticker while they last.
   hub_blurb: Small robots battle in two arenas, plus a hands-on STEAM zone. Free.
+- name: "Pocket Sized History: A World Tour in Banknotes"
+  cost: "Free"
+  setting: "Indoor"
+  tags:
+  - "free"
+  start: "2026-11-18T16:00:00-08:00"
+  end: "2026-11-18T19:00:00-08:00"
+  place: "Redmond Library, 15990 NE 85th St"
+  same_as: "https://kcls.bibliocommons.com/events/6ae23996de300e00451d7d26"
+  card: "pocket-sized-history-redmond"
+  heading_id: "pocket-sized-history-redmond"
+  when: "Wed Nov 18 · 4:00–7:00 p.m."
+  blurbs:
+  - "An Eastlake High student shows his collection of more than 500 banknotes from around the world, with a short talk at 4:00 and time to browse after. A fun pick for curious kids. Free, drop in."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ae23996de300e00451d7d26"
+    label: "Pocket Sized History"
+  description: "An Eastlake High student shows his collection of more than 500 banknotes from around the world, with a short talk at 4:00 and time to browse after. A fun pick for curious kids. Free, drop in."
+  hub_blurb: "A one-day world banknote exhibit by a local high schooler at Redmond Library."

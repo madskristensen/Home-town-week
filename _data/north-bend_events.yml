@@ -1,25 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Story Time at the Snoqualmie Valley Museum"
-  ages: "Kids"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  start: "2026-11-16T11:00:00-08:00"
-  end: "2026-11-16T12:00:00-08:00"
-  place: "Snoqualmie Valley Museum, 320 Bendigo Blvd S, North Bend"
-  same_as: "https://snoqualmievalleymuseum.org/"
-  card: "museum-story-time-north-bend-nov-16"
-  heading_id: "museum-story-time-north-bend-nov-16"
-  when: "Mon Nov 16 · 11:00 a.m."
-  blurbs:
-  - "The museum's every-other-Monday story time for little ones, with stories in the historic museum in downtown North Bend."
-  links:
-  - href: "https://snoqualmievalleymuseum.org/"
-    label: "Snoqualmie Valley Museum"
-  description: "The museum's every-other-Monday story time for little ones, with stories in the historic museum in downtown North Bend."
-  hub_blurb: "Every-other-Monday story time at the Snoqualmie Valley Museum."
 - name: "Dig into Dinos with Mikey the Rad Scientist"
   cost: "Free"
   ages: "Kids"

@@ -441,3 +441,24 @@
     walk through and vote for a favorite. Holiday music and food trucks. Free; bring a food bank donation
     if you can.
   hub_blurb: Lit-up police and fire vehicles to walk past and vote on, with food trucks.
+- name: "Tuesday Crafternoon at Renton Library"
+  cost: "Free"
+  ages: "Kids"
+  setting: "Indoor"
+  tags:
+  - "free"
+  - "crafts"
+  start: "2026-11-24T16:00:00-08:00"
+  end: "2026-11-24T17:00:00-08:00"
+  place: "Renton Library, 100 Mill Ave S"
+  same_as: "https://kcls.bibliocommons.com/events/6adfe676fee2d21deb25f197"
+  card: "tuesday-crafternoon-renton-nov-24"
+  heading_id: "tuesday-crafternoon-renton-nov-24"
+  when: "Tue Nov 24 · 4:00–5:00 p.m."
+  blurbs:
+  - "Kids 5 and up drop into the children's area of the Renton Library for a seasonal craft, with all the supplies set out. Free, no registration."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6adfe676fee2d21deb25f197"
+    label: "Tuesday Crafternoon"
+  description: "Kids 5 and up drop into the children's area of the Renton Library for a seasonal craft, with all the supplies set out. Free, no registration."
+  hub_blurb: "A drop-in seasonal craft for kids 5 and up at Renton Library."
