@@ -4,5 +4,5 @@ title: Duvall
 city: duvall
 state: wa
 description: Upcoming family events in Duvall on the Eastside.
-hook: An LGBTQ+ youth group meets at the library Nov 17, a LEGO Block Party is Nov 19, and a teen writers' workshop returns Dec 3. Baby and family story times run every week.
+hook: "A LEGO Block Party is Nov 19, and kids can sew a felt poinsettia Nov 25. Novelty Hill Farm lights its tree Nov 28, and Light Up Duvall is Dec 4."
 ---
