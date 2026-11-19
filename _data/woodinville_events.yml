@@ -1,24 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Aesop and Art"
-  cost: "Free"
-  ages: "Kids"
-  setting: "Indoor"
-  start: "2026-11-18T16:30:00-08:00"
-  end: "2026-11-18T17:30:00-08:00"
-  place: "Woodinville Library, 17105 Avondale Road NE"
-  same_as: "https://kcls.bibliocommons.com/events/6aa8a06d4b3b06003083cbc2"
-  card: "aesop-and-art-nov-18"
-  heading_id: "aesop-and-art-nov-18"
-  when: "Wed Nov 18 · 4:30–5:30 p.m."
-  blurbs:
-  - "Hear and talk about The Ant and the Grasshopper, then make an art project tied to the fable. Ages 6 to 12, wear clothes that can get messy. Free, no registration, space is limited."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6aa8a06d4b3b06003083cbc2"
-    label: "Aesop and Art"
-  description: "Hear and talk about The Ant and the Grasshopper, then make an art project tied to the fable. Ages 6 to 12, wear clothes that can get messy. Free, no registration, space is limited."
-  hub_blurb: "An Aesop fable and a matching art project for ages 6 to 12."
 - name: "Corazón Ornaments"
   cost: "Free"
   ages: "Teens"

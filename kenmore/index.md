@@ -5,5 +5,5 @@ city: kenmore
 state: wa
 hook_first: true
 description: Upcoming family events in Kenmore on the Eastside.
-hook: The Kenmore LGBTQ+ Youth Group meets Nov 18, Family Story Time is Nov 20, and Builders Club is Nov 21. Winterfest is Dec 5.
+hook: "Family Story Time is Nov 20, Builders Club is Nov 21, and the Woodinville Symphonic Winds play Americana Nov 22. Winterfest is Dec 5."
 ---
