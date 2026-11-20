@@ -120,3 +120,30 @@
     label: "Frosty Fest 2026"
   description: "Sammamish Parks' free family night: wear cozy pajamas, make an ornament, meet Frozen characters, then settle in for a movie with popcorn and cocoa. Food trucks on site. The city lists both 4 to 7 and 5 to 8 p.m., so check before you go."
   hub_blurb: "A free pajama movie night with Frozen characters, cocoa, and crafts."
+- name: "Holidays in Sammamish: Sammamish Symphony Orchestra"
+  cost: "$20"
+  setting: "Indoor"
+  signup: true
+  tags:
+  - "christmas"
+  - "music"
+  start: "2026-12-06T14:00:00-08:00"
+  end: "2026-12-06T16:00:00-08:00"
+  place: "Eastlake Performing Arts Center, 400 228th Ave NE"
+  same_as: "https://www.sammamishsymphony.org/"
+  card: "holidays-in-sammamish-symphony-2026"
+  heading_id: "holidays-in-sammamish-symphony-2026"
+  when: "Sun Dec 6 · 2:00 p.m."
+  blurbs:
+  - "The community orchestra's holiday concert mixes carols, holiday songs from big movies, Hansel and Gretel excerpts, and a few surprises. Adults $20; youth 5 to 18 get in free."
+  links:
+  - href: "https://www.sammamishsymphony.org/"
+    label: "Sammamish Symphony Orchestra"
+  photo:
+    src: "/assets/images/sammamish/sammamish-symphony-holidays-2026.png"
+    alt: "Holidays in Sammamish concert poster with an old engraving of a family gathered around a candlelit Christmas tree."
+    credit: "Image: Sammamish Symphony Orchestra"
+    source: "https://www.sammamishsymphony.org/"
+    license: "organizer"
+  description: "The community orchestra's holiday concert mixes carols, holiday songs from big movies, Hansel and Gretel excerpts, and a few surprises. Adults $20; youth 5 to 18 get in free."
+  hub_blurb: "A holiday orchestra concert with movie songs and carols; youth 5 to 18 free."

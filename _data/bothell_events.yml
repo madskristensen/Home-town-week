@@ -75,3 +75,24 @@
     label: "STEM+Art Fair (Dec 9)"
   description: "UW Bothell students set up hands-on science and art stations kids can wander between, with different activities each day. Ages 6 and up. Free, drop in."
   hub_blurb: "Drop-in hands-on science and art stations from UW Bothell students at Bothell Library."
+- name: "Breakfast with Santa at McMenamins Anderson School"
+  cost: "$265 per table of 8"
+  setting: "Indoor"
+  signup: true
+  tags:
+  - "christmas"
+  - "santa"
+  start: "2026-12-06T09:00:00-08:00"
+  end: "2026-12-06T13:30:00-08:00"
+  place: "Haynes' Hall, McMenamins Anderson School, 18607 Bothell Way NE"
+  same_as: "https://www.mcmenamins.com/events/279271-breakfast-with-santa"
+  card: "mcmenamins-breakfast-with-santa-2026"
+  heading_id: "mcmenamins-breakfast-with-santa-2026"
+  when: "Sun Dec 6 · 9:00 a.m. and noon seatings"
+  blurbs:
+  - "A sit-down holiday breakfast with eggs, bacon, French toast sticks, and cocoa, plus a chance for kids to chat with Santa. Tables of 8 are $265; seatings at 9 a.m. and noon. All ages."
+  links:
+  - href: "https://www.mcmenamins.com/events/279271-breakfast-with-santa"
+    label: "Breakfast with Santa"
+  description: "A sit-down holiday breakfast with eggs, bacon, French toast sticks, and cocoa, plus a chance for kids to chat with Santa. Tables of 8 are $265; seatings at 9 a.m. and noon. All ages."
+  hub_blurb: "A sit-down holiday breakfast with Santa at Anderson School, two seatings."

@@ -1152,6 +1152,10 @@
       url: "https://www.sammamish.us/"
       type: city_hall
       notes: "City site for Beaver Lake, Pine Lake, the Commons, and civic events."
+    - name: "Sammamish Symphony Orchestra"
+      url: "https://www.sammamishsymphony.org/"
+      type: venue
+      notes: "Community orchestra at Eastlake Performing Arts Center. Youth 5 to 18 free; the December Holidays in Sammamish concert is the family pick."
     - name: "Sammamish Library"
       url: "https://kcls.org/locations/sammamish/"
       type: library
