@@ -1,46 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Olaf's Frozen Adventure Story Time"
-  cost: "Free"
-  ages: "All ages"
-  setting: "Indoor"
-  tags:
-  - "story-time"
-  - "free"
-  start: "2026-11-19T10:15:00-08:00"
-  end: "2026-11-19T11:00:00-08:00"
-  place: "Carnation Library, 4804 Tolt Avenue"
-  same_as: "https://kcls.bibliocommons.com/events/6ac943b79d27a000454fcde5"
-  card: "olafs-frozen-adventure-story-time"
-  heading_id: "olafs-frozen-adventure-story-time"
-  when: "Thu Nov 19 · 10:15–11:00 a.m."
-  blurbs:
-  - "An interactive story time with songs and the Snow Sisters from Tales of Enchantment, then a chance to meet them for a photo (be in line by 11). Costumes welcome. All ages. Free."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6ac943b79d27a000454fcde5"
-    label: "Olaf's Frozen Adventure Story Time with the Snow Sisters"
-  description: "An interactive story time with songs and the Snow Sisters from Tales of Enchantment, then a chance to meet them for a photo (be in line by 11). Costumes welcome. All ages. Free."
-  hub_blurb: "A Frozen story time with the Snow Sisters and photos after."
-- name: "Drawing and Donuts"
-  cost: "Free"
-  setting: "Indoor"
-  tags:
-  - "free"
-  start: "2026-11-19T15:30:00-08:00"
-  end: "2026-11-19T17:15:00-08:00"
-  place: "Carnation Library, 4804 Tolt Avenue"
-  same_as: "https://kcls.bibliocommons.com/events/6ac57144e06996003a81cb46"
-  card: "drawing-and-donuts-nov-19"
-  heading_id: "drawing-and-donuts-nov-19"
-  when: "Thu Nov 19 · 3:30–5:15 p.m."
-  blurbs:
-  - "Drop in to draw just for fun, with how-to books for ideas, all supplies, and donuts from the Carnation Friends of the Library. Ages 9 and older. Free."
-  links:
-  - href: "https://kcls.bibliocommons.com/events/6ac57144e06996003a81cb46"
-    label: "Drawing & Donuts"
-  description: "Drop in to draw just for fun, with how-to books for ideas, all supplies, and donuts from the Carnation Friends of the Library. Ages 9 and older. Free."
-  hub_blurb: "Drop-in drawing and donuts for ages 9 and up."
 - name: "Family Story Time"
   cost: "Free"
   ages: "All ages"

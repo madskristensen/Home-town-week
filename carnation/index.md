@@ -5,5 +5,5 @@ city: carnation
 state: wa
 hook_first: true
 description: Upcoming family events in Carnation on the Eastside.
-hook: "Olaf's Frozen Adventure Story Time is Nov 19, and Pokemon Club is Nov 20. Stealth Robotics STEM night is Dec 1, and kids can decorate felt cookies Dec 4."
+hook: "Pokemon Club is Nov 20 at the library. Stealth Robotics STEM night is Dec 1, kids can decorate felt cookies Dec 4, and the Holiday Market is Dec 12."
 ---
