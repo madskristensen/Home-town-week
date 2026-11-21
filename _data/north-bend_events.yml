@@ -1,26 +1,6 @@
 # Upcoming events for this city, earliest first.
 # Delete an event after it ends. Do not group these by week.
 # Optional labels: cost, ages, setting, drop_off, signup, sensory. Library, park, and community center events are Free unless a price is listed. Library, museum, theater, and community center events are Indoor unless the event is outdoors.
-- name: "Teen Night: Nerf War"
-  ages: "Teens"
-  setting: "Indoor"
-  cost: "Free"
-  signup: true
-  start: "2026-11-20T19:00:00-08:00"
-  end: "2026-11-20T21:30:00-08:00"
-  place: "Si View Community Center, 400 SE Orchard Drive"
-  same_as: "https://apps.daysmartrecreation.com/dash/x/siview/activity-finder/programs/21/levels/7325?facility_ids=1&season_id=1964"
-  card: "teen-night-nerf-war"
-  order: "17"
-  heading_id: "teen-night-nerf-war"
-  when: "Fri Nov 20 · 7:00–9:30 p.m."
-  blurbs:
-    - "A middle school night for grades 6 to 8 built around a Nerf battle, with games, challenges, and time with friends. Snacks are sold. Pre-register, since walk-in spots are limited."
-  links:
-    - href: "https://apps.daysmartrecreation.com/dash/x/siview/activity-finder/programs/21/levels/7325?facility_ids=1&season_id=1964"
-      label: "Teen Nights registration"
-  description: "A middle school night for grades 6 to 8 built around a Nerf battle, with games, challenges, and time with friends. Snacks are sold. Pre-register, since walk-in spots are limited."
-  hub_blurb: "A Nerf battle night for grades 6 to 8 at the Si View Community Center."
 - name: "Library Holiday Bazaar"
   cost: "Free"
   setting: "Indoor"
