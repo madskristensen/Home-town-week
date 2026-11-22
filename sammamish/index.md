@@ -5,5 +5,5 @@ city: sammamish
 state: wa
 hook_first: true
 description: Upcoming family events in Sammamish on the Eastside.
-hook: "STEM Saturday builds bridges Nov 21, and Youth Chess Club meets Nov 24. Frosty Fest brings a free pajama movie night Dec 11."
+hook: "Youth Chess Club meets Nov 24 at the library. The Sammamish Symphony plays Holidays in Sammamish Dec 6, and Frosty Fest brings a free pajama movie night Dec 11."
 ---

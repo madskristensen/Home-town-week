@@ -1,23 +1,28 @@
-# Home-page picks for Friday Nov 20 through Sunday Nov 22, 2026.
-# The build skips a pick once it has ended.
+# Home-page picks. Sunday Nov 22, 2026 first (today), then Friday Nov 27
+# through Sunday Nov 29, 2026 (Thanksgiving weekend). The build skips a
+# pick once it has ended, so the Nov 27-29 picks take over on Monday.
 # Names match _data/{city}_events.yml.
-- city: redmond
-  name: Rumble in Redmond Robot Combat
-- city: kirkland
-  name: Santa's Arrival Party
-- city: bellevue
-  name: Kids Night Out
 - city: bellevue
   name: Horizon Line
-- city: redmond
-  name: Kids Superhero Adventure Day
 - city: mercer-island
   name: DINOvember Party
-- city: sammamish
-  name: "STEM Saturday: Building Bridges"
-- city: north-bend
-  name: Library Holiday Bazaar
 - city: issaquah
   name: The Village Market Holiday Pop-Up
+- city: bellevue
+  name: Snowflake Lane
+- city: kirkland
+  name: WinterFest at Kirkland Urban
+- city: kirkland
+  name: Christmas Ship at O.O. Denny Park
+- city: north-bend
+  name: North Pole Limited Santa Train
+- city: bellevue
+  name: Robin Hood
 - city: renton
-  name: Holiday Tree Lighting and Laser Light Show at The Landing
+  name: Museum Tree Lighting
+- city: issaquah
+  name: Issaquah Reindeer Festival
+- city: snoqualmie
+  name: Snoqualmie Winter Lights
+- city: redmond
+  name: Santa Photos at Redmond Town Center
