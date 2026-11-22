@@ -461,6 +461,8 @@
 - name: "Storytime for Kids at Island Books"
   cost: "Free"
   setting: "Indoor"
+  ages: "Toddlers"
+  signup: true
   tags:
   - "free"
   - "storytime"
