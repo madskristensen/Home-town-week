@@ -41,6 +41,8 @@ windows:
         article: christmas-lights
       - text: Where to meet Santa
         article: meeting-santa
+      - text: Holiday giving with kids
+        article: holiday-giving
   - id: december
     start: "12-01"
     end: "12-24"
@@ -53,6 +55,8 @@ windows:
         article: winter-break
       - text: Ice skating with kids
         article: ice-roller-skating
+      - text: Holiday giving with kids
+        article: holiday-giving
   - id: christmas-day
     start: "12-25"
     end: "12-25"
@@ -106,6 +110,10 @@ guides:
       ranges:
         - start: "11-16"
           end: "12-31"
+    - article: holiday-giving
+      ranges:
+        - start: "11-10"
+          end: "12-20"
     - article: meeting-santa
       ranges:
         - start: "11-16"
