@@ -58,6 +58,14 @@ worth_the_drive:
     - Pfaff's Christmas Trees
     - Point Defiance Zoo
     - Washington State Fair
+  # Standing sources for Worth the Drive, same fields as a city source in
+  # cities.yml. Do not add Seattle or other drive towns as cities there.
+  sources:
+    - name: "Downtown Seattle Association events"
+      url: "https://downtownseattle.org/events/"
+      type: downtown
+      feed_url: "https://downtownseattle.org/wp-json/tribe/events/v1/events?per_page=50"
+      notes: "Public downtown events, including the Westlake carousel, tree lighting, and other free family days. Tribe JSON. Keep Public, family events; skip DSA Member-Only mixers such as Sip & Connect. An iCal export also works at https://downtownseattle.org/events/?ical=1. The site-wide /feed/ is a blog feed, not the calendar."
 
 # Eastside ZIPs, including Fall City 98024, Kenmore 98028, and the enclaves.
 eastside_zips:

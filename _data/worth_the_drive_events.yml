@@ -56,16 +56,17 @@
   same_as: "https://www.seattlecenter.com/winterfest"
   tags: [christmas, holiday-lights, free]
   blurb: "Seattle Center's free holiday season, Nov 27 through Dec 31: the Winter Train and Village, ice carving on Saturdays at noon, holiday music and family shows on weekends, Friday holiday movies, and twinkling lights across the grounds after dark."
-- name: "Holiday Magic"
-  setting: "Indoor"
-  start: "2026-12-04"
-  end: "2026-12-23"
-  place: "Washington State Fair Event Center, 110 9th Avenue SW"
-  town: Puyallup
-  drive: "about 45 min from Bellevue"
-  same_as: "https://www.thefair.com/holiday-magic/"
-  tags: [holiday-lights]
-  blurb: "A walk-through holiday festival with millions of lights, rides included with admission, an ice rink, and free Santa photos. Open 4:30–9:30 p.m. on Dec 4, 5, 6, 11, 12, 13, and 18 through 23. Not open the other days in that stretch. Ages 2 and under are free. Parking is free."
+- name: "Tree Lighting Celebration at Westlake Park"
+  cost: "Free"
+  setting: "Outdoor"
+  start: "2026-11-27"
+  end: "2026-11-27"
+  place: "Westlake Park, 401 Pine Street"
+  town: Seattle
+  drive: "about 20 min from Bellevue"
+  same_as: "https://downtownseattle.org/event/tree-lighting-celebration-at-westlake-park/"
+  tags: [christmas, holiday-lights, free]
+  blurb: "A free kickoff at Westlake Park on Friday, Nov 27. Family crafts, costumes, and treats start at 11 a.m., then the tree and star light at 5 p.m., followed by fireworks."
 - name: "Westlake Park Holiday Carousel"
   setting: "Outdoor"
   start: "2026-11-27"
@@ -76,3 +77,68 @@
   same_as: "https://downtownseattle.org/event/westlake-park-carousel/"
   tags: [christmas]
   blurb: "The downtown holiday carousel is back for the first time since 2019, open 11 a.m.–8 p.m. daily Nov 27 through Jan 3. It closes at 3 p.m. Dec 24 and 31 and is closed Christmas Day. Rides are a suggested $4 donation, and a parent riding with a child under 12 rides free. Opening day is the free Tree Lighting Celebration, with crafts from 11 a.m. and the tree lit at 5 p.m., then fireworks."
+- name: "Holiday Train Window Display"
+  cost: "Free"
+  setting: "Outdoor"
+  start: "2026-11-27"
+  end: "2027-01-03"
+  place: "Pacific Place, 600 Pine Street"
+  town: Seattle
+  drive: "about 20 min from Bellevue"
+  same_as: "https://downtownseattle.org/event/holiday-train-window-display/"
+  tags: [christmas, free]
+  blurb: "A free model train window display at Pacific Place, at Sixth and Pine, viewable 24 hours a day from Nov 27 through Jan 3. It sits a block from the Westlake light rail station, across from Nordstrom."
+- name: "The Dickens Carolers at Pioneer Park"
+  cost: "Free"
+  setting: "Outdoor"
+  start: "2026-12-03"
+  end: "2026-12-17"
+  place: "Pioneer Park, 100 Yesler Way"
+  town: Seattle
+  drive: "about 20 min from Bellevue"
+  same_as: "https://downtownseattle.org/event/the-dickens-carolers-at-pioneer-park/"
+  tags: [christmas, free]
+  blurb: "The Dickens Carolers roam Pioneer Square on Thursdays, Dec 3, 10, and 17, from 3–5 p.m. The pop-up performances are free."
+- name: "Holiday Magic"
+  setting: "Indoor"
+  start: "2026-12-04"
+  end: "2026-12-23"
+  place: "Washington State Fair Event Center, 110 9th Avenue SW"
+  town: Puyallup
+  drive: "about 45 min from Bellevue"
+  same_as: "https://www.thefair.com/holiday-magic/"
+  tags: [holiday-lights]
+  blurb: "A walk-through holiday festival with millions of lights, rides included with admission, an ice rink, and free Santa photos. Open 4:30–9:30 p.m. on Dec 4, 5, 6, 11, 12, 13, and 18 through 23. Not open the other days in that stretch. Ages 2 and under are free. Parking is free."
+- name: "Gnome for the Holidays"
+  cost: "Free"
+  setting: "Outdoor"
+  start: "2026-12-04"
+  end: "2027-01-03"
+  place: "Downtown parks and public spaces"
+  town: Seattle
+  drive: "about 20 min from Bellevue"
+  same_as: "https://downtownseattle.org/event/gnome-for-the-holidays/"
+  tags: [christmas, free]
+  blurb: "Free 25-foot holiday gnomes stand in downtown parks and public spaces from Dec 4 through Jan 3, each with its own look, for a family photo walk."
+- name: "Sips & S'mores at Bell Street Park"
+  cost: "Free"
+  setting: "Outdoor"
+  start: "2026-12-11"
+  end: "2026-12-11"
+  place: "Bell Street Park, First to Fifth avenues on Bell Street"
+  town: Seattle
+  drive: "about 20 min from Bellevue"
+  same_as: "https://downtownseattle.org/event/sips-smores-at-bell-street-park/"
+  tags: [christmas, free]
+  blurb: "Free hot drinks, sweet treats, and live music at Bell Street Park on Friday, Dec 11, from 4–7 p.m."
+- name: "Holiday Ice Skating Rink in Occidental Square"
+  cost: "Free"
+  setting: "Outdoor"
+  start: "2026-12-12"
+  end: "2026-12-20"
+  place: "Occidental Square, 117 S Washington Street"
+  town: Seattle
+  drive: "about 20 min from Bellevue"
+  same_as: "https://downtownseattle.org/event/holiday-ice-skating-rink-in-occidental-square/"
+  tags: [christmas, free]
+  blurb: "A free pop-up rink in Occidental Square, noon to 6 p.m. daily Dec 12 through 20. Skates are free to borrow for all ages, and a holiday bazaar with local makers runs beside the rink on opening day, Dec 12, from noon to 5 p.m."

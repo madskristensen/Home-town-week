@@ -1,6 +1,6 @@
 # Cities and events
 
-`_data/cities.yml` stays in alphabetical order. The home page and the header menu use that order. The footer does not list the cities. Do not publish an empty page just to make a name clickable.
+`_data/cities.yml` stays in alphabetical order. The home page and the header menu use that order. The footer does not list the cities. Do not publish an empty page just to make a name clickable. Standing sources for Worth the Drive live under `worth_the_drive.sources` in `_data/event_area.yml`, not as extra cities in this file.
 
 On a city page the city name is the heading and a link to `/{city}/`. "Family events and things to do with kids in {City}" stays in the title, the meta description, and the structured data. It is not visible text. There is no visible breadcrumb. The JSON-LD graph includes a BreadcrumbList. A hub title links to that hub's path the same way.
 

@@ -12,7 +12,7 @@ Leave out adult concerts, bar nights, brewery festivals, fitness classes for old
 
 Bellevue, Bothell, Carnation, Duvall, Issaquah, Kenmore, Kirkland, Maple Valley, Mercer Island, North Bend, Redmond, Renton, Sammamish, Snoqualmie, and Woodinville. Fall City is part of the Snoqualmie page, not its own page. Covington is part of the Maple Valley page, not its own page. Newcastle has no page.
 
-Worth the Drive is a separate short list in `_data/worth_the_drive_events.yml` for family venues outside those 15 cities and within about an hour of Bellevue. It does not go on a city page or on the home weekend picks. Cross-listing one Eastside event onto another city's page is fine when the event is useful there. A name that says Seattle can still be an Eastside event when the place is here, such as a race at Marymoor Park.
+Worth the Drive is a separate short list in `_data/worth_the_drive_events.yml` for family venues outside those 15 cities and within about an hour of Bellevue. It does not go on a city page or on the home weekend picks. Standing sources for that list live under `worth_the_drive.sources` in `_data/event_area.yml`, using the same fields as a city source. Do not add Seattle or other drive towns as cities in `_data/cities.yml`. Cross-listing one Eastside event onto another city's page is fine when the event is useful there. A name that says Seattle can still be an Eastside event when the place is here, such as a race at Marymoor Park.
 
 ## Location
 
@@ -70,7 +70,7 @@ There is no `/winter/` hub and no redirect. Winter events stay on their city pag
 
 ## Friday source hunt
 
-Each Friday, scan the lead sites for about the next six weeks. The Yodel embed needs a headless browser. For a new organizer or event in the 15 cities, verify it on the organizer's own page. Add a verified event with the organizer as the source link. Add a good organizer to `sources` in `_data/cities.yml`. Never link a lead site, and never copy its text. Skip a sponsored or paid listing unless the organizer's own page shows it is a real free or family event. Expect a lead site's clock to be off by an hour.
+Each Friday, scan the lead sites for about the next six weeks. The Yodel embed needs a headless browser. For a new organizer or event in the 15 cities, verify it on the organizer's own page. Add a verified event with the organizer as the source link. Add a good organizer to `sources` in `_data/cities.yml`, or to `worth_the_drive.sources` in `_data/event_area.yml` when the venue is outside the 15 cities. Never link a lead site, and never copy its text. Skip a sponsored or paid listing unless the organizer's own page shows it is a real free or family event. Expect a lead site's clock to be off by an hour.
 
 ### Movie theaters
 
