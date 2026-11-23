@@ -1,27 +1,26 @@
-# Home-page picks. Sunday Nov 22, 2026 first (today), then Friday Nov 27
-# through Sunday Nov 29, 2026 (Thanksgiving weekend). The build skips a
-# pick once it has ended, so the Nov 27-29 picks take over on Monday.
+# Home-page picks for Friday Nov 27 through Sunday Nov 29, 2026
+# (Thanksgiving weekend). The build skips a pick once it has ended.
 # Names match _data/{city}_events.yml.
 - city: bellevue
-  name: Horizon Line
-- city: mercer-island
-  name: DINOvember Party
-- city: issaquah
-  name: The Village Market Holiday Pop-Up
-- city: bellevue
   name: Snowflake Lane
-- city: kirkland
-  name: WinterFest at Kirkland Urban
 - city: kirkland
   name: Christmas Ship at O.O. Denny Park
 - city: north-bend
   name: North Pole Limited Santa Train
 - city: bellevue
-  name: Robin Hood
+  name: Garden d'Lights
+- city: kirkland
+  name: WinterFest at Kirkland Urban
 - city: renton
   name: Museum Tree Lighting
+- city: duvall
+  name: Novelty Hill Farm Christmas Tree Lighting
 - city: issaquah
   name: Issaquah Reindeer Festival
+- city: bellevue
+  name: Robin Hood
+- city: issaquah
+  name: Historically Hip Author Fair
 - city: snoqualmie
   name: Snoqualmie Winter Lights
 - city: redmond
