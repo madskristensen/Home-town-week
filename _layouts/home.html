@@ -7,6 +7,8 @@ layout: default
   <p class="home-jump"><a href="#cities">Pick your town</a></p>
   {%- include page-hero.html -%}
   {%- include weekend-picks.html -%}
+  {%- comment -%} Growth test 2026-11-23: second sign-up right after the weekend picks, judged around Dec 21. {%- endcomment -%}
+  {%- include newsletter.html inline="1" id="newsletter-inline" headline="Never wonder what to do with the kids this weekend." -%}
   {%- include featured-article.html -%}
   {%- assign season_path = site.data.seasonal_banner.path | append: "" -%}
   {%- if season_path == "/christmas/" -%}
