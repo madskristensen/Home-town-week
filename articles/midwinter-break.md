@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Midwinter break 2027 with kids on the Eastside
+seo_title: "Mid-Winter Break 2027 Dates: Bellevue, Issaquah, Lake Washington"
 description: Midwinter break 2027 dates for Lake Washington, Bellevue, Issaquah, and Northshore schools, plus Eastside break camps with posted dates and indoor ideas for the week.
 intro: Midwinter break 2027 is Monday, February 15 through Friday, February 19 for Bellevue, Issaquah, and Northshore. Lake Washington is off earlier, Thursday, February 11 through Monday, February 15.
 article_id: midwinter-break

@@ -155,6 +155,10 @@ Photo: attach one if you have it. We will credit you. We do not post a photo whe
 </div>
 {%- include empty-suggest.html mode="filter" name=page.title -%}
 {%- endif -%}
+{%- comment -%} Growth test 2026-11-23: inline sign-up between the map and the stop list on /christmas/lights/ only. {%- endcomment -%}
+{%- if page.url == "/christmas/lights/" -%}
+{%- include newsletter.html inline="1" id="newsletter-inline" headline="Never wonder what to do with the kids this holiday season." lead="Holiday lights and Santa picks, every Thursday" -%}
+{%- endif -%}
 {%- if list_page -%}
 {%- include birthday-directory.html -%}
 {%- else -%}
