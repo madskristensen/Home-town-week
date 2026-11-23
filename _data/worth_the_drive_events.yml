@@ -75,7 +75,7 @@
   town: Seattle
   drive: "about 20 min from Bellevue"
   same_as: "https://downtownseattle.org/event/westlake-park-carousel/"
-  tags: [christmas]
+  tags: [christmas, holiday-outing]
   blurb: "The downtown holiday carousel is back for the first time since 2019, open 11 a.m.–8 p.m. daily Nov 27 through Jan 3. It closes at 3 p.m. Dec 24 and 31 and is closed Christmas Day. Rides are a suggested $4 donation, and a parent riding with a child under 12 rides free. Opening day is the free Tree Lighting Celebration, with crafts from 11 a.m. and the tree lit at 5 p.m., then fireworks."
 - name: "Holiday Train Window Display"
   cost: "Free"
@@ -86,7 +86,7 @@
   town: Seattle
   drive: "about 20 min from Bellevue"
   same_as: "https://downtownseattle.org/event/holiday-train-window-display/"
-  tags: [christmas, free]
+  tags: [christmas, free, holiday-outing]
   blurb: "A free model train window display at Pacific Place, at Sixth and Pine, viewable 24 hours a day from Nov 27 through Jan 3. It sits a block from the Westlake light rail station, across from Nordstrom."
 - name: "The Dickens Carolers at Pioneer Park"
   cost: "Free"
@@ -97,7 +97,7 @@
   town: Seattle
   drive: "about 20 min from Bellevue"
   same_as: "https://downtownseattle.org/event/the-dickens-carolers-at-pioneer-park/"
-  tags: [christmas, free]
+  tags: [christmas, free, holiday-outing]
   blurb: "The Dickens Carolers roam Pioneer Square on Thursdays, Dec 3, 10, and 17, from 3–5 p.m. The pop-up performances are free."
 - name: "Holiday Magic"
   setting: "Indoor"
@@ -118,7 +118,7 @@
   town: Seattle
   drive: "about 20 min from Bellevue"
   same_as: "https://downtownseattle.org/event/gnome-for-the-holidays/"
-  tags: [christmas, free]
+  tags: [christmas, free, holiday-outing]
   blurb: "Free 25-foot holiday gnomes stand in downtown parks and public spaces from Dec 4 through Jan 3, each with its own look, for a family photo walk."
 - name: "Sips & S'mores at Bell Street Park"
   cost: "Free"
@@ -129,7 +129,7 @@
   town: Seattle
   drive: "about 20 min from Bellevue"
   same_as: "https://downtownseattle.org/event/sips-smores-at-bell-street-park/"
-  tags: [christmas, free]
+  tags: [christmas, free, holiday-outing]
   blurb: "Free hot drinks, sweet treats, and live music at Bell Street Park on Friday, Dec 11, from 4–7 p.m."
 - name: "Holiday Ice Skating Rink in Occidental Square"
   cost: "Free"
@@ -140,5 +140,5 @@
   town: Seattle
   drive: "about 20 min from Bellevue"
   same_as: "https://downtownseattle.org/event/holiday-ice-skating-rink-in-occidental-square/"
-  tags: [christmas, free]
+  tags: [christmas, free, holiday-outing]
   blurb: "A free pop-up rink in Occidental Square, noon to 6 p.m. daily Dec 12 through 20. Skates are free to borrow for all ages, and a holiday bazaar with local makers runs beside the rink on opening day, Dec 12, from noon to 5 p.m."

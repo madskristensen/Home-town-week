@@ -143,7 +143,7 @@ RowDates = Struct.new(
         # section is omitted when nothing matches.
         DRIVE_HUB_TAGS = {
           "fall" => %w[pumpkin-patch corn-maze u-pick harvest],
-          "christmas" => %w[holiday-lights tree-farm]
+          "christmas" => %w[holiday-lights tree-farm holiday-outing]
         }.freeze
 
         DRIVE_PAGE_SECTIONS = [
@@ -174,6 +174,13 @@ RowDates = Struct.new(
             "toc" => "Light shows",
             "intro" => "Big holiday light walks the kids will talk about on the way home.",
             "tags" => %w[holiday-lights]
+          },
+          {
+            "id" => "holiday-outings",
+            "title" => "Holiday outings",
+            "toc" => "Holiday outings",
+            "intro" => "Carousels, skating, and other holiday stops a short drive from the Eastside.",
+            "tags" => %w[holiday-outing]
           }
         ].freeze
 
@@ -371,7 +378,7 @@ RowDates = Struct.new(
             "id" => "worth-the-drive",
             "path" => "/worth-the-drive/",
             "title" => "Family outings worth the drive",
-            "description" => "Pumpkin patches, corn mazes, tree farms, and big light shows a little outside the Eastside. Each card shows the town and a rough drive time from Bellevue.",
+            "description" => "Pumpkin patches, corn mazes, tree farms, light shows, and holiday outings a little outside the Eastside. Each card shows the town and a rough drive time from Bellevue.",
             "banner_title" => "Worth the drive",
             "hook" => "A little outside the Eastside, and worth the trip.",
             "link_label" => "See events",
@@ -381,7 +388,7 @@ RowDates = Struct.new(
             "ends_on" => nil,
             "footer" => false,
             "footer_label" => "Worth the drive",
-            "intro" => "These places sit a little outside the Eastside. We only list them when the trip is worth it: a big pumpkin patch, a corn maze, a tree farm, or a light show the kids will still be talking about on the way home. The time on each card is a rough drive from Bellevue, before traffic.",
+            "intro" => "These places sit a little outside the Eastside. We only list them when the trip is worth it: a big pumpkin patch, a corn maze, a tree farm, a light show the kids will still be talking about on the way home, or a holiday outing such as a downtown carousel or ice rink. The time on each card is a rough drive from Bellevue, before traffic.",
             "empty" => "Nothing is listed right now. We add a place only when the dates are set and the trip is worth it.",
             "suggest_lead" => "",
             "suggest_link" => "",
