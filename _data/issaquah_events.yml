@@ -617,3 +617,45 @@
     license: "organizer"
   description: "Local makers sell handmade gifts and holiday treats at the Meadow Shelter in Lake Sammamish State Park. It is also pickup day for living trees adopted through the Greenway Trust, which get replanted in spring."
   hub_blurb: "Handmade gifts and treats at a holiday market in Lake Sammamish State Park."
+- name: "Issaquah Turkey Trot"
+  cost: "$40"
+  ages: "All ages"
+  setting: "Outdoor"
+  signup: true
+  tags:
+  - "thanksgiving"
+  organizer: "Issaquah Food & Clothing Bank"
+  start: "2026-11-26T09:00:00-08:00"
+  end: "2026-11-26T11:00:00-08:00"
+  place: "1st Ave SE and SE Bush St, Issaquah"
+  same_as: "https://runsignup.com/Race/WA/Issaquah/IssaquahTurkeyTrot"
+  card: "issaquah-turkey-trot"
+  heading_id: "issaquah-turkey-trot"
+  when: "Thu Nov 26 · 9:00 a.m."
+  blurbs:
+  - "A casual 3-mile Thanksgiving run, walk, or stroll through downtown Issaquah that raises money for the Issaquah Food & Clothing Bank. Kids can do the Gobble Wobble, and costumes are welcome. $40 for 11 and up, $15 for 10 and under."
+  links:
+  - href: "https://runsignup.com/Race/WA/Issaquah/IssaquahTurkeyTrot"
+    label: "Issaquah Turkey Trot"
+  description: "A casual 3-mile Thanksgiving run, walk, or stroll through downtown Issaquah that raises money for the Issaquah Food & Clothing Bank. Kids can do the Gobble Wobble, and costumes are welcome. $40 for 11 and up, $15 for 10 and under."
+  hub_blurb: "A Thanksgiving morning fun run through downtown Issaquah."
+- name: "Rock and Roll Hanukkah Skate"
+  setting: "Indoor"
+  signup: true
+  tags:
+  - "hanukkah"
+  organizer: "Chabad of the Central Cascades"
+  start: "2026-12-06T17:00:00-08:00"
+  end: "2026-12-06T19:00:00-08:00"
+  place: "Rock and Roll Roller Rink, 5700 E Lake Sammamish Pkwy SE, Issaquah"
+  same_as: "https://www.chabadissaquah.com/templates/section_cdo/aid/7562943/jewish/Chanukah-5787.htm"
+  card: "rock-and-roll-hanukkah-skate"
+  heading_id: "rock-and-roll-hanukkah-skate"
+  when: "Sun Dec 6 · 5:00–7:00 p.m."
+  blurbs:
+  - "Chabad of the Central Cascades takes Hanukkah to the roller rink, with music, skating, donuts, and latkes on the third night. Check the Chabad page for tickets."
+  links:
+  - href: "https://www.chabadissaquah.com/templates/section_cdo/aid/7562943/jewish/Chanukah-5787.htm"
+    label: "Chanukah at Chabad"
+  description: "Chabad of the Central Cascades takes Hanukkah to the roller rink, with music, skating, donuts, and latkes on the third night. Check the Chabad page for tickets."
+  hub_blurb: "Hanukkah skating with music, donuts, and latkes."
