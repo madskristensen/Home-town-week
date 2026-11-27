@@ -641,3 +641,23 @@
     label: "City of Issaquah calendar"
   description: "Chabad of the Central Cascades lights a big menorah on Front Street on the second night of Hanukkah, with latkes, donuts, gelt, dreidels, and music. Free."
   hub_blurb: "A free menorah lighting with latkes and gelt on Front Street."
+- name: Polar Plunge at Lake Sammamish State Park
+  setting: Outdoor
+  tags:
+  - new-years
+  organizer: Friends of Lake Sammamish State Park
+  organizer_url: https://www.lakesammamishfriends.org/
+  start: '2027-01-01T10:00:00-08:00'
+  end: '2027-01-01T12:00:00-08:00'
+  place: Lake Sammamish State Park, 2010 NW Sammamish Rd, Issaquah
+  same_as: https://www.lakesammamishfriends.org/events/2027/polar-plunge
+  card: lake-sammamish-polar-plunge-2027
+  heading_id: lake-sammamish-polar-plunge-2027
+  when: Fri Jan 1 · 10:00 a.m.–12:00 p.m.
+  blurbs:
+  - Start the year with a dip in Lake Sammamish at the Friends of Lake Sammamish State Park plunge. Bring water shoes and warm layers. More details are still to come on the Friends page.
+  links:
+  - href: https://www.lakesammamishfriends.org/events/2027/polar-plunge
+    label: Friends of Lake Sammamish State Park
+  description: Start the year with a dip in Lake Sammamish at the Friends of Lake Sammamish State Park plunge. Bring water shoes and warm layers. More details are still to come on the Friends page.
+  hub_blurb: A New Year's Day plunge into Lake Sammamish.

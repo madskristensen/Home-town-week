@@ -642,3 +642,22 @@
     label: "Clarke Beach work party"
   description: "Start the new year planting native trees and shrubs, then spreading mulch, in the Clarke Beach Park forest. All ages, no experience needed. Free, sign up ahead, and kids 14 and under come with an adult."
   hub_blurb: "Plant native trees and shrubs at Clarke Beach Park."
+- name: January Parents Night Out at the J
+  cost: $62 to $69
+  setting: Indoor
+  drop_off: true
+  signup: true
+  start: '2027-01-09T17:00:00-08:00'
+  end: '2027-01-09T21:00:00-08:00'
+  place: Stroum Jewish Community Center, 3801 East Mercer Way
+  same_as: https://sjcc.org/event/january-parents-night-out/
+  card: sjcc-parents-night-out-jan
+  heading_id: sjcc-parents-night-out-jan
+  when: Sat Jan 9 · 5:00–9:00 p.m.
+  blurbs:
+  - Drop the kids at the SJCC for four hours of swimming, dinner, and games while you take the evening. $62 to $69, register ahead.
+  links:
+  - href: https://sjcc.org/event/january-parents-night-out/
+    label: January Parents Night Out
+  description: Drop the kids at the SJCC for four hours of swimming, dinner, and games while you take the evening. $62 to $69, register ahead.
+  hub_blurb: Swimming, dinner, and games for the kids while you take the evening.

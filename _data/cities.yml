@@ -217,6 +217,11 @@
       url: "https://samena.com/spooktacular/"
       type: venue
       notes: "Private club at 15231 Lake Hills Blvd that opens its Halloween Spooktacular to non-members (Oct 31, 2026, $20). Check the club homepage for other public family events."
+    - name: "Chabad of Downtown Bellevue"
+      url: "https://www.chabaddowntownbellevue.org/menorah"
+      type: community
+      format: html
+      notes: "Public Hanukkah menorah lighting at 510 Bellevue Way NE (the former Bellevue Arts Museum), free, Dec 6, 2026. Check each fall for the date. Skip adult classes and services."
     - name: "AllEvents Bellevue"
       url: "https://allevents.in/bellevue"
       type: allevents
@@ -1352,6 +1357,11 @@
       url: "https://www.wmnorthwest.com/recyclingcenters/recyclingcentertours/"
       type: venue
       notes: "Tours at 14020 NE 190th St. List a date when a host page publishes one. Ages 10 and up."
+    - name: "IslandWood at Brightwater"
+      url: "https://islandwood.org/events/"
+      type: nature
+      format: html
+      notes: "Free family programs with King County at Brightwater Center, 22505 State Route 9 SE (Winter Art Extravaganza, Dec 5, 2026). islandwood.org returns a Cloudflare challenge to curl; the day pages (/events/YYYY-MM-DD/) show up in web search, and registration is on the IslandWood Eventbrite page. Skip the Bainbridge Island campus programs."
     - name: "AllEvents Woodinville"
       url: "https://allevents.in/woodinville"
       type: allevents

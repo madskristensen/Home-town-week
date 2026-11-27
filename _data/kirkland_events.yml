@@ -383,19 +383,19 @@
   heading_id: "christmas-ship-juanita-beach-park"
   when: "Sat Dec 12 · 5:35–5:55 p.m."
   blurbs:
-  - "The lighted Argosy Christmas Ship stops off Juanita Beach Park and its choir sings carols you can\
-    \ hear from the beach. Free to watch from shore. A public bonfire or shore event is planned."
+  - "The lighted Argosy Christmas Ship stops off Juanita Beach Park and its choir sings carols you can hear from the beach. Kirkland Parks lights a free community bonfire on the shore, weather and burn bans allowing."
   links:
   - href: "https://www.argosycruises.com/christmas-ship-festival-schedule/"
     label: "Christmas Ship schedule"
+  - href: "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Recreation-Programs-Services/Community-Building-Events"
+    label: "Community bonfire details"
   photo:
     src: "/assets/images/themes/argosy-christmas-ship.webp"
     alt: "The Argosy Christmas Ship lit up with strings of lights on the water at night."
     credit: "Photo: Argosy Cruises"
     source: "https://www.argosycruises.com/christmas-ship-festival-schedule/"
     license: "organizer"
-  description: "The lighted Argosy Christmas Ship stops off Juanita Beach Park and its choir sings carols\
-    \ you can hear from the beach. Free to watch from shore. A public bonfire or shore event is planned."
+  description: "The lighted Argosy Christmas Ship stops off Juanita Beach Park and its choir sings carols you can hear from the beach. Kirkland Parks lights a free community bonfire on the shore, weather and burn bans allowing."
   hub_blurb: "The lighted Christmas Ship and its choir, free to watch from Juanita Beach Park."
 - name: "Christmas Ship at Kirkland Marina Park"
   cost: "Free"
@@ -413,20 +413,19 @@
   heading_id: "christmas-ship-kirkland-marina-park"
   when: "Fri Dec 18 · 5:10–5:30 p.m."
   blurbs:
-  - "The lighted Argosy Christmas Ship stops off Kirkland Marina Park and its choir sings carols you can\
-    \ hear from the beach. Free to watch from shore. A public bonfire or shore event is planned."
+  - "The lighted Argosy Christmas Ship stops off Kirkland Marina Park and its choir sings carols you can hear from the beach. Kirkland Parks lights a free community bonfire on the shore, weather and burn bans allowing."
   links:
   - href: "https://www.argosycruises.com/christmas-ship-festival-schedule/"
     label: "Christmas Ship schedule"
+  - href: "https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Recreation-Programs-Services/Community-Building-Events"
+    label: "Community bonfire details"
   photo:
     src: "/assets/images/themes/argosy-christmas-ship.webp"
     alt: "The Argosy Christmas Ship lit up with strings of lights on the water at night."
     credit: "Photo: Argosy Cruises"
     source: "https://www.argosycruises.com/christmas-ship-festival-schedule/"
     license: "organizer"
-  description: "The lighted Argosy Christmas Ship stops off Kirkland Marina Park and its choir sings\
-    \ carols you can hear from the beach. Free to watch from shore. A public bonfire or shore event is\
-    \ planned."
+  description: "The lighted Argosy Christmas Ship stops off Kirkland Marina Park and its choir sings carols you can hear from the beach. Kirkland Parks lights a free community bonfire on the shore, weather and burn bans allowing."
   hub_blurb: "The lighted Christmas Ship and its choir, free to watch from Kirkland Marina Park."
 - name: "Silent Santa at The Village at Totem Lake"
   cost: "$39.99"
@@ -801,3 +800,66 @@
     label: "After School Hangout"
   description: "Middle and high schoolers play games, make crafts, do homework, or just hang out at Kingsgate Library. Free snacks, no registration."
   hub_blurb: "Games, crafts, and snacks for middle and high schoolers."
+- name: Kirkland Snowflake Ball
+  cost: $37
+  ages: Kids
+  setting: Indoor
+  signup: true
+  tags:
+  - christmas
+  organizer: City of Kirkland
+  organizer_url: https://www.kirklandwa.gov/
+  start: '2026-12-04T18:30:00-08:00'
+  end: '2026-12-04T20:30:00-08:00'
+  place: North Kirkland Community Center, 12421 103rd Ave NE
+  same_as: https://secure.rec1.com/WA/city-of-kirkland/catalog/index/3f293bb209b4ae45417eab4b21efd44e?filter=c2VhcmNoPXNub3dmbGFrZSUyMGJhbGw=
+  card: kirkland-snowflake-ball-dec-4
+  heading_id: kirkland-snowflake-ball-dec-4
+  when: Fri Dec 4 · 6:30–8:30 p.m.
+  blurbs:
+  - Dress up for a winter dance at North Kirkland Community Center, with music, a craft, light snacks, and a free professional photo. Ages 3 to 10 with one adult; $37 per child and caregiver pair.
+  links:
+  - href: https://secure.rec1.com/WA/city-of-kirkland/catalog/index/3f293bb209b4ae45417eab4b21efd44e?filter=c2VhcmNoPXNub3dmbGFrZSUyMGJhbGw=
+    label: Register
+  description: Dress up for a winter dance at North Kirkland Community Center, with music, a craft, light snacks, and a free professional photo. Ages 3 to 10 with one adult; $37 per child and caregiver pair.
+  hub_blurb: A dress-up winter dance with a craft and a free photo, ages 3 to 10.
+- name: Cereal with Santa
+  cost: $15
+  ages: Kids
+  setting: Indoor
+  signup: true
+  tags:
+  - christmas
+  - santa
+  organizer: City of Kirkland
+  organizer_url: https://www.kirklandwa.gov/
+  start: '2026-12-12T09:00:00-08:00'
+  end: '2026-12-12T10:00:00-08:00'
+  place: North Kirkland Community Center, 12421 103rd Ave NE
+  same_as: https://secure.rec1.com/WA/city-of-kirkland/catalog/index/1fc4d76c6da6b9b5e19b8c494e086e39?filter=c2VhcmNoPWNlcmVhbCUyMHdpdGglMjBzYW50YQ==
+  card: kirkland-cereal-with-santa-dec-12
+  heading_id: kirkland-cereal-with-santa-dec-12
+  when: Sat Dec 12 · 9:00 and 10:30 a.m.
+  blurbs:
+  - 'A pajama breakfast with Santa: pick from his favorite cereals, make a Santa craft, and take photos. Ages 2 to 9, two one-hour sessions; $15 per child and caregiver pair, register the child only.'
+  links:
+  - href: https://secure.rec1.com/WA/city-of-kirkland/catalog/index/1fc4d76c6da6b9b5e19b8c494e086e39?filter=c2VhcmNoPWNlcmVhbCUyMHdpdGglMjBzYW50YQ==
+    label: Register
+  description: 'A pajama breakfast with Santa: pick from his favorite cereals, make a Santa craft, and take photos. Ages 2 to 9, two one-hour sessions; $15 per child and caregiver pair, register the child only.'
+  hub_blurb: A pajama cereal breakfast with Santa, a craft, and photos.
+- name: Cereal with Santa
+  cost: $15
+  ages: Kids
+  setting: Indoor
+  signup: true
+  tags:
+  - christmas
+  - santa
+  organizer: City of Kirkland
+  organizer_url: https://www.kirklandwa.gov/
+  start: '2026-12-12T10:30:00-08:00'
+  end: '2026-12-12T11:30:00-08:00'
+  place: North Kirkland Community Center, 12421 103rd Ave NE
+  same_as: https://secure.rec1.com/WA/city-of-kirkland/catalog/index/1fc4d76c6da6b9b5e19b8c494e086e39?filter=c2VhcmNoPWNlcmVhbCUyMHdpdGglMjBzYW50YQ==
+  card: kirkland-cereal-with-santa-dec-12
+  heading_id: kirkland-cereal-with-santa-dec-12

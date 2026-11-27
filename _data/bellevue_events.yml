@@ -839,3 +839,240 @@
     label: "LEGO Brick Builders"
   description: "An open LEGO build at the Bellevue Library. The library brings the bricks, and kids can stay the whole hour or pop in. All ages with an adult. Free, no registration, space is limited."
   hub_blurb: "A free drop-in LEGO build at the Bellevue Library."
+- name: Hanukkah Menorah Lighting in Downtown Bellevue
+  cost: Free
+  tags:
+  - free
+  - hanukkah
+  organizer: Chabad of Downtown Bellevue
+  organizer_url: https://www.chabaddowntownbellevue.org/
+  start: '2026-12-06T16:30:00-08:00'
+  end: '2026-12-06T17:30:00-08:00'
+  place: 510 Bellevue Way NE, Bellevue (former Bellevue Arts Museum)
+  same_as: https://www.chabaddowntownbellevue.org/menorah
+  card: chabad-downtown-bellevue-menorah-dec-6
+  heading_id: chabad-downtown-bellevue-menorah-dec-6
+  when: Sun Dec 6 · 4:30 p.m.
+  blurbs:
+  - Chabad of Downtown Bellevue lights a public menorah on the third night of Hanukkah, with songs, hot drinks, and Hanukkah giveaways for the whole family. Free; RSVP on the Chabad page helps them plan.
+  links:
+  - href: https://www.chabaddowntownbellevue.org/menorah
+    label: Chabad of Downtown Bellevue
+  description: Chabad of Downtown Bellevue lights a public menorah on the third night of Hanukkah, with songs, hot drinks, and Hanukkah giveaways for the whole family. Free; RSVP on the Chabad page helps them plan.
+  hub_blurb: A free family menorah lighting with songs and hot drinks.
+- name: Dinner and Dancing at KidsQuest
+  cost: $10 to $20
+  setting: Indoor
+  signup: true
+  tags:
+  - christmas
+  organizer: KidsQuest Children's Museum
+  organizer_url: https://www.kidsquestmuseum.org/
+  start: '2026-12-11T18:00:00-08:00'
+  end: '2026-12-11T20:00:00-08:00'
+  place: KidsQuest Children's Museum, 1116 108th Ave NE
+  same_as: https://www.kidsquestmuseum.org/programs/special_events_for_all_ages/
+  card: kidsquest-dinner-dancing-dec-11
+  heading_id: kidsquest-dinner-dancing-dec-11
+  when: Fri Dec 11 · 6:00–8:00 p.m.
+  blurbs:
+  - An evening at KidsQuest with museum play from 6 p.m. and a winter dance show at 7, then a chance to meet the dancers. Tickets $20 per child and $10 per adult, with an optional $7 pizza dinner.
+  links:
+  - href: https://www.kidsquestmuseum.org/programs/special_events_for_all_ages/
+    label: KidsQuest special events
+  description: An evening at KidsQuest with museum play from 6 p.m. and a winter dance show at 7, then a chance to meet the dancers. Tickets $20 per child and $10 per adult, with an optional $7 pizza dinner.
+  hub_blurb: Evening museum play and a winter dance show at KidsQuest.
+- name: New Year's Eve Countdown at KidsQuest
+  cost: $10 to $18
+  setting: Indoor
+  signup: true
+  tags:
+  - new-years
+  organizer: KidsQuest Children's Museum
+  organizer_url: https://www.kidsquestmuseum.org/
+  start: '2026-12-31T09:30:00-08:00'
+  end: '2026-12-31T17:00:00-08:00'
+  place: KidsQuest Children's Museum, 1116 108th Ave NE
+  same_as: https://www.kidsquestmuseum.org/programs/special_events_for_all_ages/
+  card: kidsquest-new-years-eve-countdown
+  heading_id: kidsquest-new-years-eve-countdown
+  when: Thu Dec 31 · 9:30 a.m.–5:00 p.m.
+  blurbs:
+  - A daytime New Year's party for young kids, with activities every hour and countdowns at 10 a.m., noon, 2 and 4 p.m. so nobody has to stay up. $18 per child and adult, $10 for member adults.
+  links:
+  - href: https://www.kidsquestmuseum.org/programs/special_events_for_all_ages/
+    label: Buy tickets
+  description: A daytime New Year's party for young kids, with activities every hour and countdowns at 10 a.m., noon, 2 and 4 p.m. so nobody has to stay up. $18 per child and adult, $10 for member adults.
+  hub_blurb: Daytime New Year's countdowns every two hours at KidsQuest.
+- name: A Slough of Senses Night Walk
+  cost: Free
+  setting: Outdoor
+  signup: true
+  tags:
+  - free
+  - nature
+  start: '2026-12-11T18:30:00-08:00'
+  end: '2026-12-11T20:00:00-08:00'
+  place: Mercer Slough Environmental Education Center, 1625 118th Ave SE
+  same_as: https://bellevuewa.gov/city-government/departments/parks/activity-guide
+  card: slough-of-senses-dec-11
+  heading_id: slough-of-senses-dec-11
+  when: Fri Dec 11 · 6:30–8:00 p.m.
+  blurbs:
+  - A park ranger leads an evening walk through Mercer Slough to listen, look, and feel the wetland after dark. Free for all ages, best for 5 and up. Register every child and adult (program 15763).
+  links:
+  - href: https://bellevuewa.gov/city-government/departments/parks/activity-guide
+    label: Activity guide
+  - href: https://register.bellevuewa.gov
+    label: Register
+  description: A park ranger leads an evening walk through Mercer Slough to listen, look, and feel the wetland after dark. Free for all ages, best for 5 and up. Register every child and adult (program 15763).
+  hub_blurb: A free ranger-led night walk through the Mercer Slough wetland.
+- name: Story and Stroll at Mercer Slough
+  cost: Free
+  ages: Toddlers
+  setting: Outdoor
+  signup: true
+  tags:
+  - free
+  - nature
+  - story-time
+  start: '2026-12-11T10:30:00-08:00'
+  end: '2026-12-11T11:30:00-08:00'
+  place: Mercer Slough Environmental Education Center, 1625 118th Ave SE
+  same_as: https://bellevuewa.gov/city-government/departments/parks/activity-guide
+  card: story-and-stroll-mercer-slough
+  heading_id: story-and-stroll-mercer-slough
+  when: Fri Dec 11 and Dec 18 · 10:30–11:30 a.m.
+  blurbs:
+  - A ranger walks little ones through the forested wetland at Mercer Slough, then shares a nature story. Free for ages 2 to 5 with a grown-up. Register each child and adult.
+  links:
+  - href: https://bellevuewa.gov/city-government/departments/parks/activity-guide
+    label: Activity guide
+  - href: https://register.bellevuewa.gov
+    label: Register
+  description: A ranger walks little ones through the forested wetland at Mercer Slough, then shares a nature story. Free for ages 2 to 5 with a grown-up. Register each child and adult.
+  hub_blurb: A free ranger walk and nature story for ages 2 to 5.
+- name: Story and Stroll at Mercer Slough
+  cost: Free
+  ages: Toddlers
+  setting: Outdoor
+  signup: true
+  tags:
+  - free
+  - nature
+  - story-time
+  start: '2026-12-18T10:30:00-08:00'
+  end: '2026-12-18T11:30:00-08:00'
+  place: Mercer Slough Environmental Education Center, 1625 118th Ave SE
+  same_as: https://bellevuewa.gov/city-government/departments/parks/activity-guide
+  card: story-and-stroll-mercer-slough
+  heading_id: story-and-stroll-mercer-slough
+- name: Winter Movie and Snacks at Crossroads
+  cost: Free
+  setting: Indoor
+  tags:
+  - free
+  - movie
+  start: '2026-12-18T18:00:00-08:00'
+  end: '2026-12-18T20:00:00-08:00'
+  place: Crossroads Community Center, 16000 NE 10th St
+  same_as: https://bellevuewa.gov/city-government/departments/parks/activity-guide
+  card: crossroads-winter-movie-dec-18
+  heading_id: crossroads-winter-movie-dec-18
+  when: Fri Dec 18 · 6:00–8:00 p.m.
+  blurbs:
+  - Crossroads Community Center's free Community Night shows Frozen, with warm drinks, snacks, and winter crafts like painted wooden snowflakes and snow globe sun catchers. All ages (program 15544).
+  links:
+  - href: https://bellevuewa.gov/city-government/departments/parks/activity-guide
+    label: Activity guide
+  - href: https://register.bellevuewa.gov
+    label: Register
+  description: Crossroads Community Center's free Community Night shows Frozen, with warm drinks, snacks, and winter crafts like painted wooden snowflakes and snow globe sun catchers. All ages (program 15544).
+  hub_blurb: A free Frozen movie night with winter crafts and snacks.
+- name: Kelsey Creek Farm Story Time
+  cost: Free
+  tags:
+  - free
+  - story-time
+  start: '2026-12-09T10:00:00-08:00'
+  end: '2026-12-09T10:30:00-08:00'
+  place: Kelsey Creek Farm, 410 130th Pl SE
+  same_as: https://bellevuewa.gov/city-government/departments/parks/activity-guide
+  card: kelsey-creek-farm-story-time-dec-9
+  heading_id: kelsey-creek-farm-story-time-dec-9
+  when: Wed Dec 9 · 10:00–10:30 a.m.
+  blurbs:
+  - A short, free farm story time at Kelsey Creek Farm for all ages. Stay after to visit the barnyard animals.
+  links:
+  - href: https://bellevuewa.gov/city-government/departments/parks/activity-guide
+    label: Activity guide
+  - href: https://register.bellevuewa.gov
+    label: Register
+  description: A short, free farm story time at Kelsey Creek Farm for all ages. Stay after to visit the barnyard animals.
+  hub_blurb: A free farm story time at Kelsey Creek.
+- name: Drop-in Play at Kelsey Creek Farm
+  cost: Free
+  ages: Toddlers
+  tags:
+  - free
+  start: '2026-12-14T10:00:00-08:00'
+  end: '2026-12-14T11:30:00-08:00'
+  place: Kelsey Creek Farm, 410 130th Pl SE
+  same_as: https://bellevuewa.gov/city-government/departments/parks/activity-guide
+  card: kelsey-creek-drop-in-play-dec-14
+  heading_id: kelsey-creek-drop-in-play-dec-14
+  when: Mon Dec 14 · 10:00–11:30 a.m.
+  blurbs:
+  - A relaxed morning of toys, games, and hands-on play at the farm for ages 2 to 5 with a caregiver. Free; come and go at your own pace (program 16102).
+  links:
+  - href: https://bellevuewa.gov/city-government/departments/parks/activity-guide
+    label: Activity guide
+  - href: https://register.bellevuewa.gov
+    label: Register
+  description: A relaxed morning of toys, games, and hands-on play at the farm for ages 2 to 5 with a caregiver. Free; come and go at your own pace (program 16102).
+  hub_blurb: Free self-guided play at the farm for ages 2 to 5.
+- name: Tractor Tales at Kelsey Creek Farm
+  cost: $25 to $30
+  ages: Kids
+  signup: true
+  start: '2026-12-19T13:00:00-08:00'
+  end: '2026-12-19T14:00:00-08:00'
+  place: Kelsey Creek Farm, 410 130th Pl SE
+  same_as: https://bellevuewa.gov/city-government/departments/parks/activity-guide
+  card: kelsey-creek-tractor-tales-dec-19
+  heading_id: kelsey-creek-tractor-tales-dec-19
+  when: Sat Dec 19 · 1:00–2:00 p.m.
+  blurbs:
+  - Kids ages 4 to 8 ride toy tractors, sit in a real one for a photo, watch farm equipment work, and make a tractor craft. One child and one adult per team; $25 residents, $30 others (program 16098).
+  links:
+  - href: https://bellevuewa.gov/city-government/departments/parks/activity-guide
+    label: Activity guide
+  - href: https://register.bellevuewa.gov
+    label: Register
+  description: Kids ages 4 to 8 ride toy tractors, sit in a real one for a photo, watch farm equipment work, and make a tractor craft. One child and one adult per team; $25 residents, $30 others (program 16098).
+  hub_blurb: Toy tractors, a real tractor photo, and a craft for ages 4 to 8.
+- name: Creature Crafts at Lewis Creek Park
+  cost: Free
+  ages: Kids
+  setting: Indoor
+  signup: true
+  tags:
+  - free
+  - nature
+  - crafts
+  start: '2026-12-06T10:30:00-08:00'
+  end: '2026-12-06T11:30:00-08:00'
+  place: Lewis Creek Park Visitor Center, 5808 Lakemont Blvd SE
+  same_as: https://bellevuewa.gov/city-government/departments/parks/activity-guide
+  card: lewis-creek-creature-crafts-dec-6
+  heading_id: lewis-creek-creature-crafts-dec-6
+  when: Sun Dec 6 · 10:30–11:30 a.m.
+  blurbs:
+  - A free nature craft hour at Lewis Creek for ages 3 to 7, with a take-home craft and hands-on activities about a new animal topic. Register each child and adult (program 15872).
+  links:
+  - href: https://bellevuewa.gov/city-government/departments/parks/activity-guide
+    label: Activity guide
+  - href: https://register.bellevuewa.gov
+    label: Register
+  description: A free nature craft hour at Lewis Creek for ages 3 to 7, with a take-home craft and hands-on activities about a new animal topic. Register each child and adult (program 15872).
+  hub_blurb: A free nature craft hour for ages 3 to 7.
