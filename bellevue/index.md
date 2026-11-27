@@ -4,7 +4,7 @@ title: Bellevue
 city: bellevue
 state: wa
 description: Upcoming family events in Bellevue on the Eastside.
-hook: "Bellevue Youth Theatre's Robin Hood opens Nov 27, the same night Snowflake Lane starts its free nightly parade on Bellevue Way. Garden d'Lights glows at the Botanical Garden from Nov 28, and the Downtown Ice Rink is open."
+hook: "Bellevue Youth Theatre's Robin Hood is on stage, and Snowflake Lane's free nightly parade runs on Bellevue Way. Garden d'Lights glows at the Botanical Garden from Nov 28, and the Downtown Ice Rink is open."
 ---
 
 

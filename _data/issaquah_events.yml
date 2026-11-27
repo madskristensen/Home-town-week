@@ -599,28 +599,6 @@
     license: "organizer"
   description: "Local makers sell handmade gifts and holiday treats at the Meadow Shelter in Lake Sammamish State Park. It is also pickup day for living trees adopted through the Greenway Trust, which get replanted in spring."
   hub_blurb: "Handmade gifts and treats at a holiday market in Lake Sammamish State Park."
-- name: "Issaquah Turkey Trot"
-  cost: "$40"
-  ages: "All ages"
-  setting: "Outdoor"
-  signup: true
-  tags:
-  - "thanksgiving"
-  organizer: "Issaquah Food & Clothing Bank"
-  start: "2026-11-26T09:00:00-08:00"
-  end: "2026-11-26T11:00:00-08:00"
-  place: "1st Ave SE and SE Bush St, Issaquah"
-  same_as: "https://runsignup.com/Race/WA/Issaquah/IssaquahTurkeyTrot"
-  card: "issaquah-turkey-trot"
-  heading_id: "issaquah-turkey-trot"
-  when: "Thu Nov 26 · 9:00 a.m."
-  blurbs:
-  - "A casual 3-mile Thanksgiving run, walk, or stroll through downtown Issaquah that raises money for the Issaquah Food & Clothing Bank. Kids can do the Gobble Wobble, and costumes are welcome. $40 for 11 and up, $15 for 10 and under."
-  links:
-  - href: "https://runsignup.com/Race/WA/Issaquah/IssaquahTurkeyTrot"
-    label: "Issaquah Turkey Trot"
-  description: "A casual 3-mile Thanksgiving run, walk, or stroll through downtown Issaquah that raises money for the Issaquah Food & Clothing Bank. Kids can do the Gobble Wobble, and costumes are welcome. $40 for 11 and up, $15 for 10 and under."
-  hub_blurb: "A Thanksgiving morning fun run through downtown Issaquah."
 - name: "Rock and Roll Hanukkah Skate"
   setting: "Indoor"
   signup: true
