@@ -302,13 +302,12 @@
   signup: true
   tags:
   - "christmas"
-  organizer: "KidsQuest Children's Museum"
-  organizer_url: "https://www.kidsquestmuseum.org/"
-  start: "2026-11-27T13:00:00-08:00"
-  end: "2026-11-27T19:00:00-08:00"
+  start: "2026-11-28T10:00:00-08:00"
+  end: "2026-11-28T16:00:00-08:00"
   place: "Hyatt Regency Bellevue, 900 Bellevue Way NE"
   same_as: "https://www.kidsquestmuseum.org/programs/gingerbread-events/"
   card: "kidsquest-gingerbread-workshops"
+  heading_id: "kidsquest-gingerbread-workshops"
   heading_id: "kidsquest-gingerbread-workshops"
   when: "Fri Nov 27 and Sat Nov 28 · sessions from 10:00 a.m."
   blurbs:
@@ -322,18 +321,6 @@
     \ $42 for one house, $12 per extra guest. A Nutcracker session with a ballet performance is Friday\
     \ evening. Sessions sell out, so book ahead."
   hub_blurb: "The yearly KidsQuest family gingerbread house build."
-- name: "KidsQuest Gingerbread Workshops"
-  cost: "$42"
-  setting: "Indoor"
-  signup: true
-  tags:
-  - "christmas"
-  start: "2026-11-28T10:00:00-08:00"
-  end: "2026-11-28T16:00:00-08:00"
-  place: "Hyatt Regency Bellevue, 900 Bellevue Way NE"
-  same_as: "https://www.kidsquestmuseum.org/programs/gingerbread-events/"
-  card: "kidsquest-gingerbread-workshops"
-  heading_id: "kidsquest-gingerbread-workshops"
 - name: "Turkey Waddle"
   cost: "$35"
   setting: "Outdoor"
@@ -498,28 +485,6 @@
   same_as: "https://www.spphotostation.com/book/marketplace-at-factoria"
   card: "santa-paws-marketplace-factoria"
   heading_id: "santa-paws-marketplace-factoria"
-- name: "Harvest Harmony Thanksgiving Celebration"
-  cost: "Free"
-  setting: "Indoor"
-  tags:
-  - "free"
-  - "thanksgiving"
-  start: "2026-11-27T15:00:00-08:00"
-  end: "2026-11-27T17:00:00-08:00"
-  place: "Factoria Mall, 4053 Factoria Mall SE"
-  same_as: "https://bellevuewa.gov/events/harvest-harmony-thanksgiving-cultural-celebration"
-  card: "harvest-harmony-factoria"
-  heading_id: "harvest-harmony-factoria"
-  when: "Fri Nov 27 · 3:00–5:00 p.m."
-  blurbs:
-  - "More than 50 young musicians and dancers from Little Masters Club perform festive music from around the world the day after Thanksgiving, with gratitude activities and holiday card-making. Free and family-friendly."
-  links:
-  - href: "https://www.littlemastersclub.org/events/nov-27th-2026-harvest-harmony-concert-at-factoria-mall-to-celebrate-thanksgiving-with-community"
-    label: "Little Masters Club"
-  - href: "https://bellevuewa.gov/events/harvest-harmony-thanksgiving-cultural-celebration"
-    label: "City listing"
-  description: "More than 50 young musicians and dancers from Little Masters Club perform festive music from around the world the day after Thanksgiving, with gratitude activities and holiday card-making. Free and family-friendly."
-  hub_blurb: "Free day-after-Thanksgiving music and dance by young performers at Factoria Mall."
 - name: "Chinese Winter Cultural Market"
   cost: "Free"
   setting: "Indoor"
@@ -713,34 +678,6 @@
     label: "New Year's Eve Night Market"
   description: "A New Year's Eve street market on Old Bellevue's Main Street, with local makers, artists, food vendors and family-friendly entertainment, early enough for kids to enjoy before bedtime. Free to attend."
   hub_blurb: "A free New Year's Eve market with family entertainment on Old Main."
-- name: "Winterfest Family Holiday Party at Forum Social House"
-  cost: "$7"
-  ages: "All ages"
-  signup: true
-  setting: "Indoor"
-  tags:
-  - "christmas"
-  - "santa"
-  start: "2026-11-27T15:00:00-08:00"
-  end: "2026-11-27T18:00:00-08:00"
-  place: "Forum Social House, 700 Bellevue Way NE, Suite 300, Bellevue"
-  same_as: "https://www.forumsocialhouse.com/family-events"
-  card: "forum-social-winterfest-2026"
-  heading_id: "forum-social-winterfest-2026"
-  when: "Fri Nov 27 · 3:00–6:00 p.m."
-  blurbs:
-  - "An all-ages holiday party the day after Thanksgiving, with Santa and the Grinch for photos, a hot cocoa bar, a DJ, and a round of mini golf included. Tickets about $7 to $18."
-  links:
-  - href: "https://www.forumsocialhouse.com/family-events"
-    label: "Forum Social House family events"
-  photo:
-    src: "/assets/images/bellevue/forum-social-winterfest-2026.webp"
-    alt: "Winterfest family holiday party poster with a snow globe castle."
-    credit: "Image: Forum Social House"
-    source: "https://www.forumsocialhouse.com/family-events"
-    license: "organizer"
-  description: "An all-ages holiday party the day after Thanksgiving, with Santa and the Grinch for photos, a hot cocoa bar, a DJ, and a round of mini golf included. Tickets about $7 to $18."
-  hub_blurb: "Santa and the Grinch, cocoa, a DJ, and mini golf at a family holiday party."
 - name: "Bellevue Festival of the Nativity"
   cost: "Free"
   ages: "All ages"
@@ -841,6 +778,7 @@
   hub_blurb: "A free drop-in LEGO build at the Bellevue Library."
 - name: Hanukkah Menorah Lighting in Downtown Bellevue
   cost: Free
+  setting: "Outdoor"
   tags:
   - free
   - hanukkah
@@ -991,6 +929,7 @@
   hub_blurb: A free Frozen movie night with winter crafts and snacks.
 - name: Kelsey Creek Farm Story Time
   cost: Free
+  setting: "Outdoor"
   tags:
   - free
   - story-time
@@ -1013,6 +952,7 @@
 - name: Drop-in Play at Kelsey Creek Farm
   cost: Free
   ages: Toddlers
+  setting: "Outdoor"
   tags:
   - free
   start: '2026-12-14T10:00:00-08:00'
@@ -1034,6 +974,7 @@
 - name: Tractor Tales at Kelsey Creek Farm
   cost: $25 to $30
   ages: Kids
+  setting: "Outdoor"
   signup: true
   start: '2026-12-19T13:00:00-08:00'
   end: '2026-12-19T14:00:00-08:00'
@@ -1076,3 +1017,47 @@
     label: Register
   description: A free nature craft hour at Lewis Creek for ages 3 to 7, with a take-home craft and hands-on activities about a new animal topic. Register each child and adult (program 15872).
   hub_blurb: A free nature craft hour for ages 3 to 7.
+- name: "Crafternoon and Supply Swap at Newport Way Library"
+  cost: "Free"
+  ages: "All ages"
+  setting: "Indoor"
+  tags:
+  - "free"
+  - "crafts"
+  - "winter-break"
+  start: "2026-12-22T12:00:00-08:00"
+  end: "2026-12-22T19:00:00-08:00"
+  place: "Newport Way Library, 14250 SE Newport Way, Bellevue"
+  same_as: "https://kcls.bibliocommons.com/events/6ae0ef7cde300e00451d283b"
+  card: "newport-way-crafternoon-swap-dec-22"
+  heading_id: "newport-way-crafternoon-swap-dec-22"
+  when: "Tue Dec 22 · 12:00–7:00 p.m."
+  blurbs:
+  - "A winter break afternoon of drop-in art for all ages, a robot meet and greet with a local robotics team at 2, and a craft supply swap. Bring a bag of spare supplies or just come take some. Free."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6ae0ef7cde300e00451d283b"
+    label: "Crafternoon & Supply Swap"
+  description: "A winter break afternoon of drop-in art for all ages, a robot meet and greet with a local robotics team at 2, and a craft supply swap. Bring a bag of spare supplies or just come take some. Free."
+  hub_blurb: "Drop-in art, a robot meet and greet, and a craft supply swap."
+- name: "Teen Art Circle at Bellevue Library"
+  cost: "Free"
+  ages: "Teens"
+  setting: "Indoor"
+  tags:
+  - "free"
+  - "crafts"
+  - "teens"
+  start: "2026-12-02T15:30:00-08:00"
+  end: "2026-12-02T17:30:00-08:00"
+  place: "Bellevue Library, 1111 110th Ave NE, Bellevue"
+  same_as: "https://kcls.bibliocommons.com/events/6a9269ba1c197d11325ba26a"
+  card: "bellevue-teen-art-circle-dec-2"
+  heading_id: "bellevue-teen-art-circle-dec-2"
+  when: "Wed Dec 2 · 3:30–5:30 p.m."
+  blurbs:
+  - "A monthly art hangout for middle and high schoolers, with a set project or room to work on your own drawing, writing, knitting, or bracelets. Free, just drop in."
+  links:
+  - href: "https://kcls.bibliocommons.com/events/6a9269ba1c197d11325ba26a"
+    label: "Teen Art Circle"
+  description: "A monthly art hangout for middle and high schoolers, with a set project or room to work on your own drawing, writing, knitting, or bracelets. Free, just drop in."
+  hub_blurb: "A monthly drop-in art hangout for teens at the library."

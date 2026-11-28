@@ -696,7 +696,7 @@
       type: sports
       notes: "The Lil' Gobbler Run is the kids race at Juanita Beach Park. Use the registration page for the current price and start time."
     - name: "Explore Kirkland"
-      url: "https://www.explorekirkland.com/events"
+      url: "https://www.explorekirkland.com/events/"
       type: downtown
       notes: "Visitor events, including the Catrina Walk. Skip nightlife."
     - name: "City of Kirkland community events"
@@ -894,9 +894,9 @@
       type: downtown
       notes: "Visitors bureau. Repeats Trick-or-Treat Street and points at the downtown foundation."
     - name: "North Bend Art and Industry"
-      url: "https://www.northbendartandindustry.org/all/p/novel-engineering"
+      url: "https://www.northbendartandindustry.org/events"
       type: venue
-      notes: "Center for Creativity, 1533 Bendigo Blvd N. Novel Engineering is a free Tuesday class for grades 3 to 5."
+      notes: "Center for Creativity, 1533 Bendigo Blvd N. Free 4Culture-funded meetups: Curious Creators (Sundays, ages 6 to 10 with an adult) and Teen Maker Thursday (ages 11 to 18). The old Novel Engineering class page is a 404 since Nov 2026. Skip adult writers' groups and game night."
     - name: "Living Snoqualmie"
       url: "https://livingsnoqualmie.com/events/"
       type: news
@@ -972,9 +972,9 @@
       type: parks
       notes: "Parks and community programs hub."
     - name: "Redmond Saturday Market"
-      url: "http://www.redmondsaturdaymarket.org/"
+      url: "https://redmondsaturdaymarket.org/"
       type: market
-      notes: "Saturday market season. HTTPS certificate fails; use the HTTP site."
+      notes: "Saturday market season, May 1 to Oct 31. Since Nov 2026 the HTTPS site without www works and the old HTTP www address returns a 500."
     - name: "Redmond Library"
       url: "https://kcls.org/locations/redmond/"
       type: library

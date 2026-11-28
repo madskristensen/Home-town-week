@@ -56,17 +56,6 @@
   same_as: "https://www.seattlecenter.com/winterfest"
   tags: [christmas, holiday-lights, free]
   blurb: "Seattle Center's free holiday season, Nov 27 through Dec 31: the Winter Train and Village, ice carving on Saturdays at noon, holiday music and family shows on weekends, Friday holiday movies, and twinkling lights across the grounds after dark."
-- name: "Tree Lighting Celebration at Westlake Park"
-  cost: "Free"
-  setting: "Outdoor"
-  start: "2026-11-27"
-  end: "2026-11-27"
-  place: "Westlake Park, 401 Pine Street"
-  town: Seattle
-  drive: "about 20 min from Bellevue"
-  same_as: "https://downtownseattle.org/event/tree-lighting-celebration-at-westlake-park/"
-  tags: [christmas, holiday-lights, free]
-  blurb: "A free kickoff at Westlake Park on Friday, Nov 27. Family crafts, costumes, and treats start at 11 a.m., then the tree and star light at 5 p.m., followed by fireworks."
 - name: "Westlake Park Holiday Carousel"
   setting: "Outdoor"
   start: "2026-11-27"
